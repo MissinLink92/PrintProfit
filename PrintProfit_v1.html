@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrintProfit — 3D Printing Cost Calculator</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--panel2:#1e232c;--text:#f3f5f7;--muted:#9da6b2;--accent:#7dd3fc;--good:#86efac;--border:#2b323d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:28px 18px 50px}.top{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:22px}
+h1{margin:0;font-size:32px}.sub{color:var(--muted);margin-top:5px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px}
+h2{font-size:17px;margin:0 0 14px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}input,select{width:100%;background:var(--panel2);border:1px solid var(--border);border-radius:9px;color:var(--text);padding:10px;font-size:14px}
+.row{display:flex;gap:9px;align-items:center}.row>*:first-child{flex:0 0 50%;min-width:0}.row input{min-width:0;width:100%}.row select{flex:1}
+button{border:1px solid var(--border);background:var(--panel2);color:var(--text);padding:9px 12px;border-radius:9px;cursor:pointer}button:hover{border-color:var(--accent)}
+.result{grid-column:1/-1}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.card{background:var(--panel2);border-radius:11px;padding:14px}.num{font-size:23px;font-weight:700}.small{font-size:12px;color:var(--muted)}
+.help{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;margin-left:5px;border:1px solid #667080;border-radius:50%;font-size:11px;font-weight:700;color:#cbd5e1;cursor:help;vertical-align:middle;position:relative}
+.help:hover{border-color:var(--accent);color:var(--accent)}
+.help::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%);width:250px;padding:10px 11px;background:#0b0d11;border:1px solid var(--border);border-radius:9px;color:var(--text);font-size:12px;font-weight:400;line-height:1.45;text-align:left;box-shadow:0 8px 24px rgba(0,0,0,.35);opacity:0;pointer-events:none;z-index:20;transition:opacity .12s ease}
+.help:hover::after,.help:focus::after{opacity:1}
+.help:focus{outline:2px solid var(--accent);outline-offset:2px}
+.break{margin-top:14px}.line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}.total{font-weight:700;font-size:17px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.good{color:var(--good)}.warn{color:#fde68a}
+.note{color:var(--muted);font-size:12px;margin-top:10px;line-height:1.45}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.fields,.cards{grid-template-columns:1fr 1fr}.result{grid-column:auto}.row{gap:7px}.row>*:first-child{flex-basis:50%}.row select{flex:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><div><h1>PrintProfit</h1><div class="sub">A simple offline 3D-printing cost & pricing calculator.</div></div><button onclick="resetAll()">Reset</button></div>
+
+<div class="grid">
+<section class="panel">
+<h2>🧵 Filament</h2>
+<div class="fields">
+<div><label>Spool price (£)<span class="help" tabindex="0" data-tip="Enter what you paid for the whole filament spool. Check your order confirmation, receipt or the price shown by the retailer.">?</span></label><input id="spoolPrice" type="number" step=".01" value="20"></div>
+<div><label>Spool weight<span class="help" tabindex="0" data-tip="Enter the amount of filament on the spool, not the weight of the empty reel. You can usually find this on the filament box, spool label or product listing.">?</span></label><div class="row"><input id="spoolWeight" type="number" value="1" step=".001"><select id="spoolUnit"><option value="g">grams (g)</option><option value="kg" selected>kilograms (kg)</option></select></div></div>
+<div><label>Filament used<span class="help" tabindex="0" data-tip="Enter how much filament the print uses. Orca Slicer shows this in the sliced-file information before you print. Enter the value shown by your slicer.">?</span></label><div class="row"><input id="used" type="number" step=".001" value="120"><select id="usedUnit"><option value="g" selected>grams (g)</option><option value="kg">kilograms (kg)</option></select></div></div>
+<div><label>Failed-print allowance (%)<span class="help" tabindex="0" data-tip="Adds a percentage to your filament cost to cover failed prints, test pieces and wasted material. If you rarely have failures, try 5%.">?</span></label><input id="failure" type="number" step=".1" value="5"></div>
+</div>
+</section>
+
+<section class="panel">
+<h2>⚡ Electricity & printer</h2>
+<div class="fields">
+<div><label>Printer power (W)<span class="help" tabindex="0" data-tip="Use the printer’s typical electrical power draw. Check the printer specification/manual, or measure it with a plug-in energy meter for a more accurate figure.">?</span></label><input id="watts" type="number" value="150"></div>
+<div><label>Electricity (£/kWh)<span class="help" tabindex="0" data-tip="This is your electricity price per kilowatt-hour. Check a recent electricity bill or your current tariff. On a bill it may be listed as pence per kWh; divide by 100 to enter pounds.">?</span></label><input id="kwh" type="number" step=".001" value=".30"></div>
+<div><label>Print time<span class="help" tabindex="0" data-tip="Enter the estimated print duration from your slicer after slicing the model. Orca Slicer shows the estimated print time in the sliced-file information.">?</span></label><div class="row"><input id="hours" type="number" step=".01" value="6"><select id="timeUnit"><option value="min">minutes</option><option value="hr" selected>hours</option></select></div></div>
+<div><label>Printer purchase price (£)<span class="help" tabindex="0" data-tip="Enter what you paid for the printer itself. This is used to estimate depreciation over its expected printing life.">?</span></label><input id="printerPrice" type="number" step=".01" value="220"></div>
+<div><label>Expected lifetime (print hours)<span class="help" tabindex="0" data-tip="Your estimate of how many hours the printer will produce prints before you consider it worn out or due for replacement. This is an estimate, not a guaranteed lifespan.">?</span></label><input id="life" type="number" value="3000"></div>
+<div><label>Maintenance allowance (£/print hour)<span class="help" tabindex="0" data-tip="A small allowance for nozzles, beds, belts, lubricants, repairs and other maintenance. If you do not know, start with a small estimate and adjust it as you learn your real costs.">?</span></label><input id="maint" type="number" step=".001" value=".05"></div>
+</div>
+</section>
+
+<section class="panel">
+<h2>👷 Labour & packaging</h2>
+<div class="fields">
+<div><label>Your labour rate (£/hour)<span class="help" tabindex="0" data-tip="What you want to value your own time at per hour. This can include preparing the print, removing supports, cleaning, assembly and packing.">?</span></label><input id="labourRate" type="number" step=".01" value="10"></div>
+<div><label>Hands-on time (hours)<span class="help" tabindex="0" data-tip="Only count time you actually spend working on the order. For example: slicing, preparing the printer, removing the print, cleaning, assembly and packing. The printer running unattended is covered by print time.">?</span></label><input id="labourHours" type="number" step=".01" value=".25"></div>
+<div><label>Packaging (£)<span class="help" tabindex="0" data-tip="Enter the cost of packaging used for one order: boxes, bags, bubble wrap, tape, labels and similar materials.">?</span></label><input id="packaging" type="number" step=".01" value=".50"></div>
+<div><label>Other fixed cost (£)<span class="help" tabindex="0" data-tip="Use this for other per-print costs that do not fit elsewhere, such as magnets, screws, glue, inserts or other consumables.">?</span></label><input id="other" type="number" step=".01" value="0"></div>
+</div>
+</section>
+
+<section class="panel">
+<h2>🛒 Selling</h2>
+<div class="fields">
+<div><label>Selling price (£)<span class="help" tabindex="0" data-tip="The price you plan to charge the customer, before the marketplace and payment fees calculated below.">?</span></label><input id="sell" type="number" step=".01" value="15"></div>
+<div><label>Marketplace fee (%)<span class="help" tabindex="0" data-tip="Enter the percentage fee charged by the selling platform. Check that platform’s current fee schedule because fees can change.">?</span></label><input id="feePct" type="number" step=".01" value="6.5"></div>
+<div><label>Payment fee (%)<span class="help" tabindex="0" data-tip="Enter any percentage charged by your payment provider. Check the provider’s current pricing or the fee shown on your payout statement.">?</span></label><input id="payPct" type="number" step=".01" value="0"></div>
+<div><label>Payment fixed fee (£)<span class="help" tabindex="0" data-tip="Enter any fixed amount charged per transaction, in addition to a percentage fee. Check your payment provider’s fee schedule.">?</span></label><input id="payFixed" type="number" step=".01" value="0"></div>
+</div>
+<div class="actions"><button onclick="priceForTarget(0.3)">30% margin</button><button onclick="priceForTarget(0.5)">50% margin</button><button onclick="priceForTarget(0.6)">60% margin</button></div>
+</section>
+
+<section class="panel result">
+<h2>💰 Result</h2>
+<div class="cards">
+<div class="card"><div class="small">True cost</div><div class="num" id="cost">£0.00</div></div>
+<div class="card"><div class="small">Fees</div><div class="num" id="fees">£0.00</div></div>
+<div class="card"><div class="small">Profit</div><div class="num good" id="profit">£0.00</div></div>
+<div class="card"><div class="small">Margin</div><div class="num" id="margin">0%</div></div>
+</div>
+<div class="break" id="breakdown"></div>
+<div class="note">Tip: Hover over (or focus) any <strong>?</strong> for an explanation and suggestions for where to find the information. “Margin” is profit ÷ selling price. Electricity is estimated from average printer power; actual consumption varies by printer, bed/nozzle temperature and environment.</div>
+</section>
+</div>
+</div>
+<script>
+const ids=['spoolPrice','spoolWeight','spoolUnit','used','usedUnit','failure','watts','kwh','hours','timeUnit','printerPrice','life','maint','labourRate','labourHours','packaging','other','sell','feePct','payPct','payFixed'];
+const $=id=>document.getElementById(id), n=id=>Math.max(0,parseFloat($(id).value)||0), money=x=>'£'+x.toFixed(2);
+function calc(){
+ const spool=n('spoolPrice'), sw=n('spoolWeight')*( $('spoolUnit').value==='kg' ? 1000 : 1), used=n('used')*( $('usedUnit').value==='kg' ? 1000 : 1), fail=n('failure');
+ const hours=n('hours')*( $('timeUnit').value==='min' ? 1/60 : 1);
+ const filament=sw?spool/sw*used*(1+fail/100):0;
+ const electricity=n('watts')/1000*hours*n('kwh');
+ const depreciation=n('life')?n('printerPrice')/n('life')*hours:0;
+ const maintenance=n('maint')*hours;
+ const labour=n('labourRate')*n('labourHours');
+ const fixed=filament+electricity+depreciation+maintenance+labour+n('packaging')+n('other');
+ const sell=n('sell');
+ const fees=sell*(n('feePct')+n('payPct'))/100+n('payFixed');
+ const profit=sell-fixed-fees, margin=sell?profit/sell:0;
+ $('cost').textContent=money(fixed);$('fees').textContent=money(fees);$('profit').textContent=money(profit);$('margin').textContent=(margin*100).toFixed(1)+'%';
+ $('profit').className='num '+(profit>=0?'good':'warn');
+ $('breakdown').innerHTML=[
+ ['Filament',filament],['Electricity',electricity],['Printer depreciation',depreciation],['Maintenance',maintenance],['Labour',labour],['Packaging + other',n('packaging')+n('other')],['Marketplace/payment fees',fees]
+ ].map(x=>`<div class="line"><span>${x[0]}</span><strong>${money(x[1])}</strong></div>`).join('');
+}
+function priceForTarget(target){
+ const spool=n('spoolPrice'), sw=n('spoolWeight')*( $('spoolUnit').value==='kg' ? 1000 : 1), used=n('used')*( $('usedUnit').value==='kg' ? 1000 : 1), fail=n('failure');
+ const hours=n('hours')*( $('timeUnit').value==='min' ? 1/60 : 1);
+ const base=(sw?spool/sw*used*(1+fail/100):0)+(n('watts')/1000*hours*n('kwh'))+(n('life')?n('printerPrice')/n('life')*hours:0)+n('maint')*hours+n('labourRate')*n('labourHours')+n('packaging')+n('other');
+ const rate=(n('feePct')+n('payPct'))/100, fixed=n('payFixed');
+ // target margin = (P - base - rate*P - fixed)/P
+ const p=(base+fixed)/(1-rate-target);
+ $('sell').value=isFinite(p)&&p>0?p.toFixed(2):'0';calc();
+}
+function resetAll(){location.reload()}
+ids.forEach(id=>$(id).addEventListener('input',calc));calc();
+</script>
+</body></html>
