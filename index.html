@@ -50,7 +50,8 @@
   function loadHeaderHeroFix(){return loadScript('./header-hero-fix.js?v=3','Could not load PrintProfit header and hero layout.');}
   function loadFinalTheme(){return loadScript('./final-theme.js?v=3','Could not load PrintProfit master theme.');}
   function loadReferenceTheme(){return loadScript('./reference-theme.js?v=1','Could not load PrintProfit reference header and hero.');}
-  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadGcodeReader(){return loadScript('./gcode-reader.js?v=1','Could not load PrintProfit reliable G-code reader.');}
+  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
