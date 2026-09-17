@@ -50,9 +50,7 @@ jobs:
           end = html.find(box8_start, start)
           if end < 0:
               raise SystemExit('Box 8 start marker not found')
-          guides_end = end
-          guides_inner_start = start + len(guides_start_marker)
-          guides_inner = html[guides_inner_start:guides_end]
+          guides_inner = html[start + len(guides_start_marker):end]
 
           section_matches = list(re.finditer(r'<section class="panel">(.*?)</section>', guides_inner, re.S))
           if len(section_matches) != 4:
@@ -83,6 +81,7 @@ jobs:
           replacement = '<div class="two" id="guides">' + merged4 + merged5 + '</div>\n' + box8_start.replace('8. Quantity / Batch Pricing','6. Quantity / Batch Pricing')
           html = html[:start] + replacement + html[end + len(box8_start):]
 
+          # Hard safety checks: the merge must not alter JavaScript blocks or form element IDs.
           if scripts(html) != original_scripts:
               raise SystemExit('JavaScript changed during visual-only patch')
           if ids(html) != original_ids:
@@ -98,7 +97,7 @@ jobs:
               if marker not in html:
                   raise SystemExit(f'Missing required marker after patch: {marker}')
 
-          if html.count('class="merged-group"') != 2:
+          if html.count('merged-group') != 2:
               raise SystemExit('Expected exactly two merged groups')
           if html.count('id="guides"') != 1:
               raise SystemExit('Expected exactly one guides container')
