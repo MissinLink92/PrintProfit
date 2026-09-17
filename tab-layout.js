@@ -25,8 +25,6 @@
 .layout{display:block!important;width:100%!important}
 .layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}
-
-/* The stage flow lives directly above the calculator so it cannot be pushed to the bottom by layout styling. */
 .pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important}
 .pp-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;width:100%;margin:0;padding:0;background:linear-gradient(180deg,rgba(11,28,38,.96),rgba(6,18,26,.96));border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #0004}
 .pp-step{position:relative;min-height:62px;border:0;background:transparent;color:var(--muted);padding:9px 14px;display:flex;align-items:center;justify-content:center;gap:10px;font:700 13px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;transition:background .18s ease,color .18s ease}
@@ -40,7 +38,6 @@
 .pp-step-copy{text-align:left;line-height:1.15}
 .pp-step-copy strong{display:block;font-size:13px;color:inherit}
 .pp-step-copy span{display:block;margin-top:3px;font-size:10px;font-weight:500;color:var(--muted)}
-
 .pp-tab-panel{display:none}
 .pp-tab-panel.active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
 .pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
@@ -49,7 +46,6 @@
 .pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
 .pp-cost-block+.pp-cost-block{margin-top:0}
 .pp-cost-block>.panel{margin:0!important;width:100%!important}
-
 @media(max-width:950px){
   .pp-progress{grid-template-columns:1fr}
   .pp-step{justify-content:flex-start;border-bottom:1px solid var(--line);min-height:50px}
@@ -81,6 +77,10 @@
 <button type="button" class="pp-step" data-tab="machine" role="tab" aria-selected="false" aria-label="Step 2: Printer and Filament"><span class="pp-step-number">2</span><span class="pp-step-copy"><strong>Printer &amp; Filament</strong><span>Machine &amp; material</span></span></button>
 <button type="button" class="pp-step" data-tab="costs" role="tab" aria-selected="false" aria-label="Step 3: Costs and Fees"><span class="pp-step-number">3</span><span class="pp-step-copy"><strong>Costs &amp; Fees</strong><span>Running &amp; selling costs</span></span></button>`;
 
+    const workspace=document.createElement('div');
+    workspace.id='ppTabbedLayout';
+    workspace.className='pp-workspace';
+
     const panels={};
     for(const id of ['details','machine','costs']){
       const panel=document.createElement('div');
@@ -111,7 +111,6 @@
     costs5.appendChild(box5);
     panels.costs.appendChild(costs5);
 
-    workspace.appendChild(progress);
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));
 
     layout.innerHTML='';
