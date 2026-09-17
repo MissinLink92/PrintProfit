@@ -27,7 +27,7 @@ async function boot(){
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
     const src=node.getAttribute('src')||'';
     if(!/tab-layout\.js/i.test(src)){
-      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.name);s.textContent=node.textContent||'';document.head.appendChild(s);
+      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.value);s.textContent=node.textContent||'';document.head.appendChild(s);
     }
    }else document.head.appendChild(document.importNode(node,true));
   }
@@ -35,7 +35,7 @@ async function boot(){
   for(const node of parsed.body.childNodes){
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'&&/tab-layout\.js/i.test(node.getAttribute('src')||''))continue;
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
-    const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.name);s.textContent=node.textContent||'';document.body.appendChild(s);
+    const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.value);s.textContent=node.textContent||'';document.body.appendChild(s);
    }else document.body.appendChild(document.importNode(node,true));
   }
   document.dispatchEvent(new Event('DOMContentLoaded',{bubbles:true}));
