@@ -40,7 +40,8 @@
   function loadResetFix(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./reset-fix.js?v=7';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit reset fixes.'));document.body.appendChild(script);});}
   function loadEnhancements(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./app-enhancements.js?v=5';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit interface enhancements.'));document.body.appendChild(script);});}
   function loadTabLayout(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./tab-layout.js?v=7';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit tabbed workspace.'));document.body.appendChild(script);});}
-  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadUIEnhancements(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./ui-enhancements.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit UI enhancements.'));document.body.appendChild(script);});}
+  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
