@@ -13,6 +13,30 @@
     if(calc)calc.click();
   }
 
+  function installSellSetterFix(){
+    if(window.__printProfitSellSetterFixInstalled)return;
+    window.__printProfitSellSetterFixInstalled=true;
+
+    const descriptor=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value');
+    if(!descriptor||typeof descriptor.get!=='function'||typeof descriptor.set!=='function')return;
+
+    const originalGet=descriptor.get;
+    const originalSet=descriptor.set;
+
+    Object.defineProperty(HTMLInputElement.prototype,'value',{
+      configurable:descriptor.configurable,
+      enumerable:descriptor.enumerable,
+      get:originalGet,
+      set:function(value){
+        if(this.id==='sell'&&window.__printProfitQuickUndoActive){
+          originalSet.call(this,'0');
+          return;
+        }
+        originalSet.call(this,value);
+      }
+    });
+  }
+
   function install(){
     if(window.__printProfitResetFixInstalled)return;
     window.__printProfitResetFixInstalled=true;
@@ -20,23 +44,18 @@
     // The legacy page still contains example pricing values (15 and 20).
     // Override those only for the initial live state; all other original defaults stay intact.
     setInitialPricing();
+    installSellSetterFix();
 
-    // A quick-price button remembers the old selling price internally. The new calculator
-    // starting point is £0, so when an active quick-price button is clicked again to undo it,
-    // restore the selling price to £0 rather than the old example value of £15.
+    // The legacy quick-price logic remembers the old example selling price internally.
+    // When an active quick-price button is clicked again, suppress that old value at the
+    // point it is written so the selling price remains £0.00.
     window.addEventListener('click',event=>{
       const button=event.target&&event.target.closest?event.target.closest('[data-m][data-target-view]'):null;
       if(!button||!button.classList.contains('active'))return;
 
-      // Let the calculator's existing handler finish first, then replace its old undo value.
+      window.__printProfitQuickUndoActive=true;
       window.setTimeout(()=>{
-        const sell=document.getElementById('sell');
-        if(!sell)return;
-        sell.value='0';
-        sell.dispatchEvent(new Event('input',{bubbles:true}));
-        sell.dispatchEvent(new Event('change',{bubbles:true}));
-        const calc=document.getElementById('calc');
-        if(calc)calc.click();
+        window.__printProfitQuickUndoActive=false;
       },0);
     },true);
 
