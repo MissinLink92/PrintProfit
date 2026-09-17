@@ -4,7 +4,18 @@ if(window.__printProfitGlobalReset)return;window.__printProfitGlobalReset=true;
 
 function install(){
   if(!document.body)return false;
-  document.getElementById('ppGlobalReset')?.remove();
+
+  // Do not replace the styled reset created by global-actions.js.
+  // If it already exists, just make sure it is wired to the real calculator reset.
+  const existing=document.getElementById('ppGlobalReset');
+  if(existing){
+    const source=document.getElementById('reset');
+    if(source&&!existing.dataset.ppResetWired){
+      existing.addEventListener('click',()=>source.click());
+      existing.dataset.ppResetWired='1';
+    }
+    return true;
+  }
 
   const button=document.createElement('button');
   button.type='button';
@@ -43,13 +54,13 @@ function install(){
   `;
   document.head.appendChild(style);
 
-  // Remove any legacy per-section reset buttons so the calculator has one clear global action.
-  document.querySelectorAll('#reset').forEach(el=>{
-    if(el!==button){
-      el.hidden=true;
-      el.setAttribute('aria-hidden','true');
-    }
-  });
+  const source=document.getElementById('reset');
+  if(source){
+    button.addEventListener('click',()=>source.click());
+    button.dataset.ppResetWired='1';
+    source.hidden=true;
+    source.setAttribute('aria-hidden','true');
+  }
   return true;
 }
 
