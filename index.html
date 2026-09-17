@@ -3,11 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="refresh" content="0; url=./legacy-index.html">
-<title>PrintProfit</title>
+<title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
+<style>
+html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto}
+</style>
 </head>
 <body>
-<script>window.location.replace('./legacy-index.html');</script>
-<noscript><a href="./legacy-index.html">Open PrintProfit</a></noscript>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260917-restore2" style="width:100%;border:0;display:block"></iframe>
+<script>
+(()=>{
+'use strict';
+const frame=document.getElementById('app');
+function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
+frame.addEventListener('load',()=>{
+ try{
+  const d=frame.contentDocument;
+  const s=d.createElement('script');
+  s.src='./site-final-polish.js?v=2';
+  s.onload=()=>{fit();setTimeout(fit,100);setTimeout(fit,500);setTimeout(fit,1500);};
+  d.body.appendChild(s);
+  if(window.ResizeObserver){const ro=new ResizeObserver(fit);ro.observe(d.documentElement);ro.observe(d.body);}
+  setInterval(fit,1000);
+ }catch(e){console.error('PrintProfit polish load failed',e);}
+});
+})();
+</script>
 </body>
 </html>
