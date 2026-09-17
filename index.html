@@ -58,7 +58,8 @@
   function loadMonoOrangeCoolTheme(){return loadScript('./mono-orange-cool-theme.js?v=1','Could not load PrintProfit monochrome orange theme.');}
   function loadBoxIcons(){return loadScript('./box-icons.js?v=1','Could not load PrintProfit premium box icons.');}
   function loadElectricityProviders(){return loadScript('./electricity-providers.js?v=2','Could not load electricity provider list.');}
-  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).then(loadContainmentFix).then(loadMonoOrangeCoolTheme).then(loadBoxIcons).then(loadElectricityProviders).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadHeroTickerPosition(){return loadScript('./hero-ticker-position.js?v=1','Could not load PrintProfit hero ticker positioning.');}
+  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).then(loadContainmentFix).then(loadMonoOrangeCoolTheme).then(loadBoxIcons).then(loadElectricityProviders).then(loadHeroTickerPosition).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
