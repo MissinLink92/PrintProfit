@@ -21,14 +21,14 @@
     const style=document.createElement('style');
     style.id='ppTabbedLayoutRuntimeStyles';
     style.textContent=`
-/* PrintProfit progress workspace V6 */
+/* PrintProfit 3-stage flow workspace V7 */
 .layout{display:block!important;width:100%!important}
 .layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}
 .pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important}
 .pp-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;width:100%;margin:0;padding:0;background:linear-gradient(180deg,rgba(11,28,38,.96),rgba(6,18,26,.96));border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #0004}
-.pp-step{position:relative;min-height:62px;border:0;background:transparent;color:var(--muted);padding:9px 14px;display:flex;align-items:center;justify-content:center;gap:10px;font:700 13px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;transition:background .18s ease,color .18s ease}
-.pp-step:not(:last-child)::before{content:"";position:absolute;right:0;top:50%;width:1px;height:34px;transform:translateY(-50%);background:var(--line)}
+.pp-step{position:relative;min-height:62px;border:0;background:transparent;color:var(--muted);padding:9px 38px 9px 14px;display:flex;align-items:center;justify-content:center;gap:10px;font:700 13px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;transition:background .18s ease,color .18s ease}
+.pp-step:not(:last-child)::before{content:"→";position:absolute;right:-1px;top:50%;width:30px;height:30px;transform:translateY(-50%);display:grid;place-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:50%;color:var(--accent);font-size:16px;font-weight:900;line-height:1;z-index:3;box-shadow:0 0 0 5px rgba(7,16,24,.98)}
 .pp-step:hover{background:#ff78000b;color:var(--text)}
 .pp-step.active{color:var(--text);background:linear-gradient(180deg,#ff780018,#ff780008)}
 .pp-step.active::after{content:"";position:absolute;left:12px;right:12px;bottom:0;height:3px;background:var(--accent);border-radius:3px 3px 0 0;box-shadow:0 0 10px #ff780044}
@@ -48,7 +48,7 @@
 .pp-cost-block>.panel{margin:0!important;width:100%!important}
 @media(max-width:950px){
   .pp-progress{grid-template-columns:1fr}
-  .pp-step{justify-content:flex-start;border-bottom:1px solid var(--line);min-height:50px}
+  .pp-step{justify-content:flex-start;padding:9px 14px;min-height:50px;border-bottom:1px solid var(--line)}
   .pp-step:last-child{border-bottom:0}
   .pp-step:not(:last-child)::before{display:none}
   .pp-step.active::after{left:0;right:auto;top:8px;bottom:8px;width:3px;height:auto}
@@ -73,9 +73,9 @@
     progress.setAttribute('role','tablist');
     progress.setAttribute('aria-label','Calculator progress');
     progress.innerHTML=`
-<button type="button" class="pp-step active" data-tab="details" role="tab" aria-selected="true" aria-label="Step 1: Print Details"><span class="pp-step-number">1</span><span class="pp-step-copy"><strong>Print Details</strong><span>Print setup &amp; quantity</span></span></button>
-<button type="button" class="pp-step" data-tab="machine" role="tab" aria-selected="false" aria-label="Step 2: Printer and Filament"><span class="pp-step-number">2</span><span class="pp-step-copy"><strong>Printer &amp; Filament</strong><span>Machine &amp; material</span></span></button>
-<button type="button" class="pp-step" data-tab="costs" role="tab" aria-selected="false" aria-label="Step 3: Costs and Fees"><span class="pp-step-number">3</span><span class="pp-step-copy"><strong>Costs &amp; Fees</strong><span>Running &amp; selling costs</span></span></button>`;
+<button type="button" class="pp-step active" data-tab="details" role="tab" aria-selected="true" aria-label="Step 1: Print Details"><span class="pp-step-number">1</span><span class="pp-step-copy"><strong>Print Details</strong><span>Tell us about your print</span></span></button>
+<button type="button" class="pp-step" data-tab="machine" role="tab" aria-selected="false" aria-label="Step 2: Printer and Filament"><span class="pp-step-number">2</span><span class="pp-step-copy"><strong>Printer &amp; Filament</strong><span>Choose your machine &amp; material</span></span></button>
+<button type="button" class="pp-step" data-tab="costs" role="tab" aria-selected="false" aria-label="Step 3: Costs and Fees"><span class="pp-step-number">3</span><span class="pp-step-copy"><strong>Costs &amp; Fees</strong><span>Add running &amp; selling costs</span></span></button>`;
 
     const workspace=document.createElement('div');
     workspace.id='ppTabbedLayout';
@@ -117,7 +117,6 @@
     layout.appendChild(workspace);
     layout.appendChild(result);
 
-    /* Put the progress bar outside the transformed calculator layout. */
     progressHost.appendChild(progress);
     layout.parentNode.insertBefore(progressHost,layout);
 
