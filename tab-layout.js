@@ -16,15 +16,14 @@
 
     const directPanels=Array.from(source.children).filter(el=>el.matches&&el.matches('section.panel'));
     const box1=directPanels.find(panel=>panelTitle(panel).startsWith('1.'));
-    const two=Array.from(source.children).find(el=>el.classList&&el.classList.contains('two'));
+    const two=Array.from(source.children).find(el=>el.classList&&el.classList.contains('two')&&!el.id);
     const box2=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('2.'));
     const box3=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('3.'));
     const guides=Array.from(source.children).find(el=>el.id==='guides');
-    const box6=(directPanels.find(panel=>panelTitle(panel).startsWith('6.')))
-      || (guides&&Array.from(guides.querySelectorAll('section.panel')).find(panel=>panelTitle(panel).startsWith('6.')));
-    const mergeBlocks=guides?Array.from(guides.querySelectorAll('.merge-block')):[];
-    const box4=mergeBlocks.find(block=>panelTitle(block).startsWith('4.'));
-    const box5=mergeBlocks.find(block=>panelTitle(block).startsWith('5.'));
+    const guidePanels=guides?Array.from(guides.children).filter(el=>el.matches&&el.matches('section.panel')):[];
+    const box4=guidePanels.find(panel=>panelTitle(panel).startsWith('4.'));
+    const box5=guidePanels.find(panel=>panelTitle(panel).startsWith('5.'));
+    const box6=guidePanels.find(panel=>panelTitle(panel).startsWith('6.'));
 
     if(!box1||!box2||!box3||!box4||!box5||!box6)return null;
     return {layout,result,source,box1,box2,box3,box4,box5,box6,two,guides};
@@ -70,9 +69,7 @@
 .pp-card>.panel{margin:0!important}
 .pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
 .pp-cost-block+.pp-cost-block{margin-top:12px}
-.pp-cost-block .merge-block{border:0!important;padding:0!important;margin:0!important}
-.pp-cost-block .head{margin-bottom:8px}
-.pp-cost-block .head .icon{width:30px;height:30px}
+.pp-cost-block>.merged-group{margin:0!important}
 @media(max-width:950px){
   .layout{grid-template-columns:1fr!important}
   .layout>.result{position:static!important}
