@@ -26,11 +26,11 @@ jobs:
           import re
           p=Path('index.html')
           html=p.read_text(encoding='utf-8')
-          marker="              window.__printProfitReady=true;"
+          marker="              const drop=document.querySelector('.drop');"
           insert="""              document.addEventListener('focusout',e=>{\n                if(e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')) setTimeout(runCalc,0);\n              });\n              document.addEventListener('keydown',e=>{\n                if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')){\n                  e.preventDefault();\n                  e.target.blur();\n                  runCalc();\n                }\n              });\n"""
           if insert.strip() not in html:
               if marker not in html:
-                  raise SystemExit('calculator ready marker not found')
+                  raise SystemExit('calculator drop marker not found')
               html=html.replace(marker,insert+marker,1)
           p.write_text(html,encoding='utf-8')
           PY
@@ -53,6 +53,7 @@ jobs:
           const d=dom.window.document;
           const flush=()=>new Promise(r=>dom.window.setTimeout(r,5));
           const dispatchInput=(id,val)=>{const el=d.getElementById(id);el.value=val;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));};
+          dispatchInput('printer','120|260|3000');
           dispatchInput('materialUsed','100');
           dispatchInput('printHours','2');
           await flush();
@@ -68,7 +69,7 @@ jobs:
           el2.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
           await flush();
           const afterEnter=d.getElementById('electricityCostOut').value;
-          if(afterEnter!=='£0.10') throw new Error('Enter did not recalculate: '+afterEnter);
+          if(afterEnter!=='£0.12') throw new Error('Enter did not recalculate: '+afterEnter);
           console.log('Blur and Enter recalculation test passed:',{before,afterBlur,afterEnter});
           JS
 
