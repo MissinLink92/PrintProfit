@@ -12,33 +12,33 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Update index.html
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+            const branch = context.ref.replace('refs/heads/', '');
 
-      - name: Add Box 6 profile saving
-        shell: python
-        run: |
-          from pathlib import Path
+            const current = await github.rest.repos.getContent({ owner, repo, path: 'index.html', ref: branch });
+            if (Array.isArray(current.data)) throw new Error('index.html lookup returned a directory');
+            let text = Buffer.from(current.data.content, 'base64').toString('utf8');
 
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
-
-          css_marker = '</style>'
-          css = '''
+            if (!text.includes('PrintProfit saved profiles V1')) {
+              const css = `
 /* PrintProfit saved profiles V1 */
 .profile-save{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
 .profile-save-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:7px;align-items:end}
-.profile-save-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
 .profile-save-status{margin-top:6px;line-height:1.35}
 @media(max-width:650px){.profile-save-grid{grid-template-columns:1fr 1fr}.profile-save-grid>div:first-child{grid-column:1 / -1}}
-'''
-          if 'PrintProfit saved profiles V1' not in text:
-              if css_marker not in text:
-                  raise SystemExit('CSS marker not found')
-              text = text.replace(css_marker, css + css_marker, 1)
+`;
+              if (!text.includes('</style>')) throw new Error('CSS marker not found');
+              text = text.replace('</style>', css + '</style>');
+            }
 
-          html_marker = '<div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div>'
-          html = '''<div class="profile-save">
+            if (!text.includes('id="saveProfile"')) {
+              const htmlMarker = '<div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div>';
+              const html = `<div class="profile-save">
   <div class="small"><b style="color:var(--text)">Saved Setup Profiles</b> — save your printer, material and operating-cost settings for reuse.</div>
   <div class="profile-save-grid" style="margin-top:7px">
     <div><label for="profileName">Profile name</label><input id="profileName" type="text" placeholder="e.g. My A1 + PLA setup" maxlength="60"></div>
@@ -47,14 +47,13 @@ jobs:
     <div><button type="button" class="btn" id="deleteProfile">Delete Selected</button></div>
   </div>
   <div class="small profile-save-status" id="profileSaveStatus">Profiles are saved in this browser on this device. Nothing is uploaded.</div>
-</div>'''
-          if 'id="saveProfile"' not in text:
-              if html_marker not in text:
-                  raise SystemExit('Box 6 HTML marker not found')
-              text = text.replace(html_marker, html_marker + html, 1)
+</div>`;
+              if (!text.includes(htmlMarker)) throw new Error('Box 6 HTML marker not found');
+              text = text.replace(htmlMarker, htmlMarker + html);
+            }
 
-          js_marker = '  function bind(){'
-          js = r'''  const profileFieldIds=[
+            if (!text.includes('const profileStorageKey=')) {
+              const js = `  const profileFieldIds=[
     'printer',
     'materialType','material','materialPack','materialPackCost','materialUsed','printHours',
     'labourHours','labourRate','pack','other','electricityProvider','electricityRate'
@@ -82,12 +81,16 @@ jobs:
     }
   }
 
+  function escapeProfileText(value){
+    return String(value).replace(/[&<>\"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[ch]));
+  }
+
   function refreshSavedProfiles(selectedName){
     const select=$('savedProfileSelect');
     if(!select)return;
     const profiles=readSavedProfiles();
     const names=Object.keys(profiles).sort((a,b)=>a.localeCompare(b));
-    select.innerHTML='<option value="">Select a saved profile...</option>'+names.map(name=>'<option value="'+String(name).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')+'">'+String(name).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</option>').join('');
+    select.innerHTML='<option value="">Select a saved profile...</option>'+names.map(name=>'<option value="'+escapeProfileText(name)+'">'+escapeProfileText(name)+'</option>').join('');
     if(selectedName&&profiles[selectedName]){
       select.value=selectedName;
       setValue('profileName',selectedName);
@@ -182,33 +185,36 @@ jobs:
     });
   }
 
-'''
-          if 'profileStorageKey' not in text:
-              if js_marker not in text:
-                  raise SystemExit('JS bind marker not found')
-              text = text.replace(js_marker, js + js_marker, 1)
+`;
+              const marker = '  function bind(){';
+              if (!text.includes(marker)) throw new Error('JS bind marker not found');
+              text = text.replace(marker, js + marker);
+            }
 
-          bind_marker = "    setResultTab('single');\n    window.__printProfitReady=true;"
-          bind_add = "    bindProfileSaving();\n    setResultTab('single');\n    window.__printProfitReady=true;"
-          if '    bindProfileSaving();' not in text:
-              if bind_marker not in text:
-                  raise SystemExit('init marker not found')
-              text = text.replace(bind_marker, bind_add, 1)
+            if (!text.includes('    bindProfileSaving();')) {
+              const marker = "    setResultTab('single');\n    window.__printProfitReady=true;";
+              if (!text.includes(marker)) throw new Error('init marker not found');
+              text = text.replace(marker, "    bindProfileSaving();\n    setResultTab('single');\n    window.__printProfitReady=true;");
+            }
 
-          path.write_text(text,encoding='utf-8')
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path: 'index.html',
+              message: 'Add saved setup profiles to Box 6',
+              content: Buffer.from(text, 'utf8').toString('base64'),
+              sha: current.data.sha,
+              branch
+            });
 
-      - name: Verify HTML and JS markers
-        run: |
-          grep -q 'Saved Setup Profiles' index.html
-          grep -q 'profileStorageKey' index.html
-          grep -q 'bindProfileSaving();' index.html
-          test "$(wc -c < index.html)" -gt 70000
-
-      - name: Commit changes and remove updater
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html .github/workflows/add-profile-saving.yml
-          git rm .github/workflows/add-profile-saving.yml
-          git commit -m "Add saved setup profiles to Box 6"
-          git push
+            const workflow = await github.rest.repos.getContent({ owner, repo, path: '.github/workflows/add-profile-saving.yml', ref: branch });
+            if (!Array.isArray(workflow.data)) {
+              await github.rest.repos.deleteFile({
+                owner,
+                repo,
+                path: '.github/workflows/add-profile-saving.yml',
+                message: 'Remove one-time profile updater',
+                sha: workflow.data.sha,
+                branch
+              });
+            }
