@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
 
+# Trigger patch after workflow creation.
 jobs:
   patch:
     runs-on: ubuntu-latest
@@ -94,8 +95,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Make quick pricing reversible and add custom margin [skip ci]"
+          git commit -m "Make quick pricing reversible and add custom margin"
           git push
           git rm .github/workflows/quick-price-ux.yml
-          git commit -m "Remove temporary quick price workflow [skip ci]"
+          git commit -m "Remove temporary quick price workflow"
           git push
