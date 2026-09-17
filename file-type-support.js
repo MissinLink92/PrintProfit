@@ -2,35 +2,32 @@
 'use strict';
 if(window.__printProfitFileTypeSupport)return;window.__printProfitFileTypeSupport=true;
 const $=id=>document.getElementById(id);
-const names={
- gcode:'G-code',gco:'G-code',bgcode:'Binary G-code',nc:'NC G-code',ngc:'NGC G-code',gc:'G-code',g:'G-code',
- '3mf':'3MF slicer project',lys:'Lychee project',chitubox:'CHITUBOX project',ctb:'CTB resin slice',photon:'Photon slice',pwma:'Photon Mono slice',pwmo:'Photon Mono project',pws:'Photon Workshop slice',goo:'Goo slice',sl1:'SL1 resin slice',sl1s:'SL1S resin slice',
- stl:'STL model',obj:'OBJ model',amf:'AMF model',ply:'PLY model',step:'STEP model',stp:'STEP model'
-};
+const names={gcode:'G-code',gco:'G-code',bgcode:'Binary G-code',nc:'NC G-code',ngc:'NGC G-code',gc:'G-code',g:'G-code','3mf':'3MF slicer project',lys:'Lychee project',chitubox:'CHITUBOX project',ctb:'CTB resin slice',photon:'Photon slice',pwma:'Photon Mono slice',pwmo:'Photon Mono project',pws:'Photon Workshop slice',goo:'Goo slice',sl1:'SL1 resin slice',sl1s:'SL1S resin slice',stl:'STL model',obj:'OBJ model',amf:'AMF model',ply:'PLY model',step:'STEP model',stp:'STEP model'};
 const supported=Object.keys(names);
-function ext(name){const m=String(name||'').toLowerCase().match(/\.([a-z0-9]+)$/);return m?m[1]:'';}
+const ext=name=>(String(name||'').toLowerCase().match(/\.([a-z0-9]+)$/)||[])[1]||'';
+const setValue=(id,value)=>{const el=$(id);if(!el||value==null||value==='')return false;el.value=String(value);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));return true;};
+const clean=v=>String(v??'').replace(/^\s+|\s+$/g,'');
 function status(text){const el=$('status');if(el){el.textContent=text;el.dataset.fileType='recognised';}}
-function install(){
- const input=$('file');if(!input)return false;
- input.accept='.'+supported.join(',.');
- if(input.dataset.ppTypeBound)return true;input.dataset.ppTypeBound='1';
- input.addEventListener('change',()=>inspect(input.files?.[0]));
- const drop=input.closest('.drop')||document.querySelector('.drop');
- if(drop){
-  ['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('pp-drop-active');}));
-  ['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('pp-drop-active');}));
-  drop.addEventListener('drop',e=>{const f=e.dataTransfer?.files?.[0];if(f)inspect(f);});
- }
- return true;
-}
-function inspect(file){
- if(!file)return;const e=ext(file.name);
- if(e==='3mf')status('✓ 3MF slicer project recognised — this can be from OrcaSlicer, Bambu Studio, PrusaSlicer, SuperSlicer or other 3MF-compatible slicers. If it has not been sliced, export G-code for exact time/material usage.');
- else if(e==='bgcode')status('✓ Binary G-code recognised — sliced file detected.');
- else if(['gcode','gco','nc','ngc','gc','g'].includes(e))status('✓ '+names[e]+' recognised — reading print metadata…');
- else if(['stl','obj','amf','ply','step','stp'].includes(e))status('✓ '+names[e]+' recognised — this is a model file, not sliced output.');
- else if(names[e])status('✓ '+names[e]+' recognised — exact time/material extraction may require the slicer\'s G-code output.');
- else status('⚠ File type not recognised.');
-}
+function findSelect(keys){const selects=[...document.querySelectorAll('select')];return selects.find(s=>{const hay=(s.id+' '+s.name+' '+s.getAttribute('aria-label')+' '+(s.previousElementSibling?.textContent||'')+' '+(s.parentElement?.textContent||'')).toLowerCase();return keys.some(k=>hay.includes(k));});}
+function selectMatch(keys,desired){if(!desired)return false;const s=findSelect(keys);if(!s)return false;const target=clean(desired).toLowerCase();let best=null;for(const o of [...s.options]){const t=(o.text+' '+o.value).toLowerCase();if(t===target||t.includes(target)||target.includes(t)){best=o;break;}}if(best){s.value=best.value;s.dispatchEvent(new Event('input',{bubbles:true}));s.dispatchEvent(new Event('change',{bubbles:true}));return true;}return false;}
+function metadataPanel(data){let box=document.getElementById('ppFileMetadata');if(!box){box=document.createElement('div');box.id='ppFileMetadata';box.className='pp-file-metadata';const statusEl=$('status');statusEl?.parentElement?.appendChild(box);}const rows=[['Slicer',data.slicer],['Printer',data.printer],['Profile',data.profile],['Filament',data.filament],['Nozzle',data.nozzle],['Layer height',data.layer],['Infill',data.infill],['Supports',data.supports],['Bed',data.bed],['G-code',data.gcode]];box.innerHTML='<b>3MF project data</b>'+rows.filter(r=>r[1]!=null&&r[1]!=='').map(r=>'<div><span>'+r[0]+'</span><strong>'+String(r[1]).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</strong></div>').join('');}
+function addStyles(){if(document.getElementById('ppFileMetadataStyles'))return;const s=document.createElement('style');s.id='ppFileMetadataStyles';s.textContent='.pp-file-metadata{margin-top:9px;padding:10px;border:1px solid #0798ff55;border-radius:9px;background:#0798ff0b;text-align:left;font-size:11px}.pp-file-metadata>b{display:block;color:#0798ff;margin-bottom:6px}.pp-file-metadata div{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px solid #ffffff0b}.pp-file-metadata div:last-child{border-bottom:0}.pp-file-metadata span{color:#aebdca}.pp-file-metadata strong{text-align:right;color:#f5f8fb;font-weight:600}';document.head.appendChild(s);}
+function readU16(v,p){return v.getUint16(p,true)}function readU32(v,p){return v.getUint32(p,true)}
+async function unzip(file){const b=new Uint8Array(await file.arrayBuffer()),v=new DataView(b.buffer,b.byteOffset,b.byteLength);let eocd=-1;for(let p=b.length-22;p>=Math.max(0,b.length-65557);p--){if(readU32(v,p)===0x06054b50){eocd=p;break;}}if(eocd<0)throw Error('Not a ZIP/3MF package');const count=readU16(v,eocd+10),cdSize=readU32(v,eocd+12),cdOff=readU32(v,eocd+16);const out=new Map();let p=cdOff;for(let i=0;i<count;i++){if(readU32(v,p)!==0x02014b50)break;const method=readU16(v,p+10),cs=readU32(v,p+20),us=readU32(v,p+24),nl=readU16(v,p+28),xl=readU16(v,p+30),cl=readU16(v,p+32),off=readU32(v,p+42);const name=new TextDecoder().decode(b.slice(p+46,p+46+nl));p+=46+nl+xl+cl;const lv=new DataView(b.buffer,b.byteOffset+off);if(readU32(lv,0)!==0x04034b50)continue;const lnl=readU16(lv,26),lxl=readU16(lv,28),start=off+30+lnl+lxl;const raw=b.slice(start,start+cs);if(method===0)out.set(name,raw);else if(method===8){const ds=new DecompressionStream('deflate-raw');const ab=await new Response(new Blob([raw]).stream().pipeThrough(ds)).arrayBuffer();out.set(name,new Uint8Array(ab));}else console.warn('Unsupported ZIP compression',method,name,us);}return out;}
+function text(map,name){const b=map.get(name);return b?new TextDecoder().decode(b):'';}
+function json(map,name){try{return JSON.parse(text(map,name))}catch{return null;}}
+function detectSlicer(cfg){if(!cfg)return '3MF slicer profile';const s=JSON.stringify(cfg).toLowerCase();if(s.includes('bbl_')||s.includes('x-bbl'))return 'Bambu Studio / OrcaSlicer format';if(s.includes('slic3r'))return 'PrusaSlicer / Slic3r family';return '3MF slicer profile';}
+function cfgVal(cfg,key){const v=cfg?.[key];return Array.isArray(v)?(v[0]??''):v;}
+function parse3mf(map,file){const cfg=json(map,'Metadata/project_settings.config')||json(map,'Metadata/project_settings.json')||{};const plate=json(map,'Metadata/plate_1.json')||{};const data={slicer:detectSlicer(cfg),printer:cfgVal(cfg,'printer_model')||cfgVal(cfg,'printer_settings_id')||cfgVal(cfg,'default_print_profile'),profile:cfgVal(cfg,'default_print_profile'),filament:[cfgVal(cfg,'filament_vendor'),cfgVal(cfg,'filament_type')].filter(Boolean).join(' '),nozzle:cfgVal(cfg,'filament_diameter')?cfgVal(cfg,'nozzle_diameter')||plate.nozzle_diameter:null,layer:cfgVal(cfg,'layer_height')||plate.layer_height,infill:cfgVal(cfg,'sparse_infill_density'),supports:cfgVal(cfg,'enable_support')==='1'?'Enabled':'Disabled',bed:cfgVal(cfg,'curr_bed_type'),gcode:cfgVal(cfg,'gcode_flavor')};
+if(!data.nozzle&&plate.nozzle_diameter)data.nozzle=plate.nozzle_diameter+' mm';else if(data.nozzle&&!String(data.nozzle).includes('mm'))data.nozzle=data.nozzle+' mm';
+if(data.layer&&!String(data.layer).includes('mm'))data.layer=data.layer+' mm';
+if(data.infill&&!String(data.infill).includes('%'))data.infill=data.infill+'%';
+if(data.printer&&String(data.printer).includes('Standard @'))data.printer=String(data.printer).replace(/\s*\(.*$/,'');
+selectMatch(['printer','machine','profile'],data.printer);selectMatch(['material','filament'],cfgVal(cfg,'filament_type'));selectMatch(['nozzle'],data.nozzle);
+if(cfgVal(cfg,'filament_density'))setValue('materialDensity',cfgVal(cfg,'filament_density'));
+const embedded=[...map.keys()].find(k=>/\.(gcode|gco|nc|ngc)$/i.test(k));if(embedded){const gtext=text(map,embedded);const tm=gtext.match(/(?:TIME|PRINT_TIME|PRINTING_TIME)\s*[:=]\s*(\d+(?:\.\d+)?)/i);if(tm)setValue('printHours',Number(tm[1])/3600);}
+addStyles();metadataPanel(data);status('✓ '+file.name+' — 3MF project opened and slicer settings extracted.');const calc=$('calc');if(calc)calc.click();}
+async function inspect(file){if(!file)return;const e=ext(file.name);if(e==='3mf'){status('Opening '+file.name+' and reading slicer settings…');try{const map=await unzip(file);parse3mf(map,file);}catch(err){console.error(err);status('✓ 3MF recognised, but its internal settings could not be read in this browser.');}return;}if(names[e]){if(e==='bgcode')status('✓ Binary G-code recognised — sliced output detected.');else if(['stl','obj','amf','ply','step','stp'].includes(e))status('✓ '+names[e]+' recognised — model file detected.');else status('✓ '+names[e]+' recognised.');}else status('⚠ File type not recognised.');}
+function install(){const input=$('file');if(!input)return false;input.accept='.'+supported.join(',.');if(input.dataset.ppSmartBound)return true;input.dataset.ppSmartBound='1';input.addEventListener('change',()=>inspect(input.files?.[0]));const drop=input.closest('.drop')||document.querySelector('.drop');if(drop){drop.addEventListener('drop',e=>{const f=e.dataTransfer?.files?.[0];if(f&&ext(f.name)==='3mf')inspect(f);});}return true;}
 const start=Date.now(),timer=setInterval(()=>{if(install()||Date.now()-start>15000)clearInterval(timer)},50);
 })();
