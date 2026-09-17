@@ -1,0 +1,83 @@
+name: Add blur and Enter recalculation
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install test dependency
+        run: npm install --no-save jsdom@26
+
+      - name: Patch and test
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          html=p.read_text(encoding='utf-8')
+          marker="              window.__printProfitReady=true;"
+          insert="""              document.addEventListener('focusout',e=>{\n                if(e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')) setTimeout(runCalc,0);\n              });\n              document.addEventListener('keydown',e=>{\n                if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')){\n                  e.preventDefault();\n                  e.target.blur();\n                  runCalc();\n                }\n              });\n"""
+          if insert.strip() not in html:
+              if marker not in html:
+                  raise SystemExit('calculator ready marker not found')
+              html=html.replace(marker,insert+marker,1)
+          p.write_text(html,encoding='utf-8')
+          PY
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          html=Path('index.html').read_text(encoding='utf-8')
+          js=re.search(r'<script>([\\s\\S]*?)</script>',html).group(1)
+          Path('/tmp/app.js').write_text(js,encoding='utf-8')
+          PY
+          node --check /tmp/app.js
+          node <<'JS'
+          const fs=require('fs');
+          const {JSDOM}=require('jsdom');
+          const html=fs.readFileSync('index.html','utf8');
+          const js=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+          const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true});
+          dom.window.document.readyState='complete';
+          dom.window.eval(js);
+          const d=dom.window.document;
+          const flush=()=>new Promise(r=>dom.window.setTimeout(r,5));
+          const dispatchInput=(id,val)=>{const el=d.getElementById(id);el.value=val;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));};
+          dispatchInput('materialUsed','100');
+          dispatchInput('printHours','2');
+          await flush();
+          const before=d.getElementById('cost').textContent;
+          const el=d.getElementById('labourRate');
+          el.value='10';
+          el.dispatchEvent(new dom.window.Event('focusout',{bubbles:true}));
+          await flush();
+          const afterBlur=d.getElementById('cost').textContent;
+          if(afterBlur===before) throw new Error('blur did not recalculate');
+          const el2=d.getElementById('electricityRate');
+          el2.value='0.5';
+          el2.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
+          await flush();
+          const afterEnter=d.getElementById('electricityCostOut').value;
+          if(afterEnter!=='£0.10') throw new Error('Enter did not recalculate: '+afterEnter);
+          console.log('Blur and Enter recalculation test passed:',{before,afterBlur,afterEnter});
+          JS
+
+      - name: Commit and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Recalculate on blur and Enter"
+          git rm .github/workflows/enter-blur-recalc.yml
+          git commit -m "Remove temporary blur recalculation workflow"
+          git push origin HEAD:main
