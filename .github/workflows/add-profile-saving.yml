@@ -1,0 +1,214 @@
+name: Add PrintProfit profile saving
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-profile-saving.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add Box 6 profile saving
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          css_marker = '</style>'
+          css = '''
+/* PrintProfit saved profiles V1 */
+.profile-save{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+.profile-save-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:7px;align-items:end}
+.profile-save-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
+.profile-save-status{margin-top:6px;line-height:1.35}
+@media(max-width:650px){.profile-save-grid{grid-template-columns:1fr 1fr}.profile-save-grid>div:first-child{grid-column:1 / -1}}
+'''
+          if 'PrintProfit saved profiles V1' not in text:
+              if css_marker not in text:
+                  raise SystemExit('CSS marker not found')
+              text = text.replace(css_marker, css + css_marker, 1)
+
+          html_marker = '<div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div>'
+          html = '''<div class="profile-save">
+  <div class="small"><b style="color:var(--text)">Saved Setup Profiles</b> — save your printer, material and operating-cost settings for reuse.</div>
+  <div class="profile-save-grid" style="margin-top:7px">
+    <div><label for="profileName">Profile name</label><input id="profileName" type="text" placeholder="e.g. My A1 + PLA setup" maxlength="60"></div>
+    <div><label for="savedProfileSelect">Saved profiles</label><select id="savedProfileSelect"><option value="">Select a saved profile...</option></select></div>
+    <div><button type="button" class="btn" id="saveProfile">Save Profile</button></div>
+    <div><button type="button" class="btn" id="deleteProfile">Delete Selected</button></div>
+  </div>
+  <div class="small profile-save-status" id="profileSaveStatus">Profiles are saved in this browser on this device. Nothing is uploaded.</div>
+</div>'''
+          if 'id="saveProfile"' not in text:
+              if html_marker not in text:
+                  raise SystemExit('Box 6 HTML marker not found')
+              text = text.replace(html_marker, html_marker + html, 1)
+
+          js_marker = '  function bind(){'
+          js = r'''  const profileFieldIds=[
+    'printer',
+    'materialType','material','materialPack','materialPackCost','materialUsed','printHours',
+    'labourHours','labourRate','pack','other','electricityProvider','electricityRate'
+  ];
+  const profileStorageKey='printProfitProfilesV1';
+
+  function readSavedProfiles(){
+    try{
+      const parsed=JSON.parse(localStorage.getItem(profileStorageKey)||'{}');
+      return parsed&&typeof parsed==='object'&&!Array.isArray(parsed)?parsed:{};
+    }catch(err){
+      console.warn('PrintProfit profile read error:',err);
+      return {};
+    }
+  }
+
+  function writeSavedProfiles(profiles){
+    try{
+      localStorage.setItem(profileStorageKey,JSON.stringify(profiles));
+      return true;
+    }catch(err){
+      console.error('PrintProfit profile save error:',err);
+      setText('profileSaveStatus','Could not save the profile in this browser.');
+      return false;
+    }
+  }
+
+  function refreshSavedProfiles(selectedName){
+    const select=$('savedProfileSelect');
+    if(!select)return;
+    const profiles=readSavedProfiles();
+    const names=Object.keys(profiles).sort((a,b)=>a.localeCompare(b));
+    select.innerHTML='<option value="">Select a saved profile...</option>'+names.map(name=>'<option value="'+String(name).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')+'">'+String(name).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</option>').join('');
+    if(selectedName&&profiles[selectedName]){
+      select.value=selectedName;
+      setValue('profileName',selectedName);
+    }
+  }
+
+  function collectProfile(){
+    const values={};
+    profileFieldIds.forEach(id=>{
+      const el=$(id);
+      if(el)values[id]=el.value;
+    });
+    return {version:1,savedAt:new Date().toISOString(),values};
+  }
+
+  function loadProfile(name){
+    if(!name)return;
+    const profiles=readSavedProfiles(),profile=profiles[name];
+    if(!profile||!profile.values)return;
+    const type=profile.values.materialType;
+    if(type&&$('materialType')){
+      setValue('materialType',type);
+      updateMaterialUI();
+    }
+    Object.entries(profile.values).forEach(([id,value])=>{
+      if(id==='materialType')return;
+      const el=$(id);
+      if(el)el.value=value;
+    });
+    state.manualSell=n('sell');
+    state.quickTarget.single=null;
+    state.quickTarget.batch=null;
+    document.querySelectorAll('[data-m][data-target-view]').forEach(b=>b.classList.remove('active'));
+    const a=$('singleCustomMargin'),b=$('batchCustomMargin');
+    if(a)a.value='';
+    if(b)b.value='';
+    runCalcSafe();
+    setText('profileSaveStatus','Loaded “'+name+'”.');
+  }
+
+  function runCalcSafe(){
+    const b=$('calc');
+    if(b)b.click();
+  }
+
+  function bindProfileSaving(){
+    const save=$('saveProfile'),deleteButton=$('deleteProfile'),select=$('savedProfileSelect'),nameInput=$('profileName');
+    if(!save||!deleteButton||!select||!nameInput)return;
+    refreshSavedProfiles();
+
+    save.addEventListener('click',()=>{
+      const name=nameInput.value.trim();
+      if(!name){
+        setText('profileSaveStatus','Enter a profile name first.');
+        nameInput.focus();
+        return;
+      }
+      const profiles=readSavedProfiles();
+      const replacing=!!profiles[name];
+      profiles[name]=collectProfile();
+      if(writeSavedProfiles(profiles)){
+        refreshSavedProfiles(name);
+        setText('profileSaveStatus',(replacing?'Updated “':'Saved “')+name+'”.');
+      }
+    });
+
+    select.addEventListener('change',()=>{
+      if(!select.value){setText('profileSaveStatus','Select a saved profile to load it or delete it.');return;}
+      nameInput.value=select.value;
+      loadProfile(select.value);
+    });
+
+    deleteButton.addEventListener('click',()=>{
+      const name=select.value||nameInput.value.trim();
+      if(!name){
+        setText('profileSaveStatus','Select a saved profile to delete.');
+        return;
+      }
+      const profiles=readSavedProfiles();
+      if(!profiles[name]){
+        setText('profileSaveStatus','That profile does not exist.');
+        refreshSavedProfiles();
+        return;
+      }
+      delete profiles[name];
+      if(writeSavedProfiles(profiles)){
+        select.value='';
+        nameInput.value='';
+        refreshSavedProfiles();
+        setText('profileSaveStatus','Deleted “'+name+'”.');
+      }
+    });
+  }
+
+'''
+          if 'profileStorageKey' not in text:
+              if js_marker not in text:
+                  raise SystemExit('JS bind marker not found')
+              text = text.replace(js_marker, js + js_marker, 1)
+
+          bind_marker = "    setResultTab('single');\n    window.__printProfitReady=true;"
+          bind_add = "    bindProfileSaving();\n    setResultTab('single');\n    window.__printProfitReady=true;"
+          if '    bindProfileSaving();' not in text:
+              if bind_marker not in text:
+                  raise SystemExit('init marker not found')
+              text = text.replace(bind_marker, bind_add, 1)
+
+          path.write_text(text,encoding='utf-8')
+
+      - name: Verify HTML and JS markers
+        run: |
+          grep -q 'Saved Setup Profiles' index.html
+          grep -q 'profileStorageKey' index.html
+          grep -q 'bindProfileSaving();' index.html
+          test "$(wc -c < index.html)" -gt 70000
+
+      - name: Commit changes and remove updater
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .github/workflows/add-profile-saving.yml
+          git rm .github/workflows/add-profile-saving.yml
+          git commit -m "Add saved setup profiles to Box 6"
+          git push
