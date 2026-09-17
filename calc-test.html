@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit</title>
 <style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}.loader{display:grid;place-items:center;min-height:100vh;color:#aebdca}.loader b{display:block;color:#ff7800;font-size:24px;margin-bottom:8px}</style>
-<script src="./quick-price-guard.js?v=1"></script>
+<script src="./quick-price-guard.js?v=3"></script>
 </head>
 <body><div class="loader"><div><b>PrintProfit</b><span>Loading calculator…</span></div></div>
 <script>
@@ -14,7 +14,7 @@
   function copyNode(node,parent){if(node.nodeType!==1&&node.nodeType!==3&&node.nodeType!==8)return;parent.appendChild(document.importNode(node,true));}
   function runScript(node,parent){const script=document.createElement('script');for(const attr of node.attributes)script.setAttribute(attr.name,attr.value);script.textContent=node.textContent||'';parent.appendChild(script);}
   async function load(){
-    const response=await fetch('./legacy-index.html?build=20260917-guard',{cache:'no-store'});
+    const response=await fetch('./legacy-index.html?build=20260917-final',{cache:'no-store'});
     if(!response.ok)throw new Error('Could not load calculator page ('+response.status+').');
     const html=await response.text();
     const parsed=new DOMParser().parseFromString(html,'text/html');
@@ -23,10 +23,19 @@
     for(const node of parsed.head.childNodes){if(node.nodeType===1&&node.tagName.toLowerCase()==='script')runScript(node,document.head);else copyNode(node,document.head);}
     document.body.innerHTML='';
     const scripts=[];
-    for(const node of parsed.body.childNodes){if(node.nodeType===1&&node.tagName.toLowerCase()==='script')scripts.push(node);else copyNode(node,document.body);}
+    for(const node of parsed.body.childNodes){
+      if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
+        const src=node.getAttribute('src')||'';
+        if(/tab-layout\.js/i.test(src))continue;
+        scripts.push(node);
+      }else copyNode(node,document.body);
+    }
     for(const node of scripts)runScript(node,document.body);
     if(!window.__printProfitReady)document.dispatchEvent(new Event('DOMContentLoaded',{bubbles:true}));
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    const tab=document.createElement('script');
+    tab.src='./tab-layout.js?v=6';
+    document.body.appendChild(tab);
     document.title=parsed.title||document.title;
   }
   load().catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><div><b>PrintProfit</b><span>'+error.message+'</span></div></div>';});
