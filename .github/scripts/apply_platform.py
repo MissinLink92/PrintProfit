@@ -41,6 +41,8 @@ if old_bind not in s:
     raise SystemExit('Could not locate platform binding')
 s = s.replace(old_bind, new_bind, 1)
 
+s = s.replace("['materialPack','materialPackCost','materialUsed','printHours','labourRate','pack','other','electricityRate','electricityProvider','delivery','deliveryCharge','qty','discount','pay','fixedFee']", "['materialPack','materialPackCost','materialUsed','printHours','labourRate','pack','other','electricityRate','electricityProvider','platform','pay','fixedFee','delivery','deliveryCharge','qty','discount']", 1)
+
 if 'applyPlatformProfile();' not in s:
     s = s.replace('updateMaterialUI();\ncalc();', 'updateMaterialUI();\napplyPlatformProfile();', 1)
 
