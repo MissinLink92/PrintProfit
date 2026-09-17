@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">PrintProfit clean icon</title>
+  <desc id="desc">A clean orange 3D printing cost and pricing mark combining a central monogram with balanced scales.</desc>
+  <g fill="none" stroke="#ff7800" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="205" y="40" width="102" height="74" rx="12" fill="#ff7800" stroke="none"/>
+    <path d="M142 76H58q-12 0-12 12t12 12h84"/>
+    <path d="M370 76h84q12 0 12 12t-12 12h-84"/>
+    <path d="M244 114v46"/>
+    <path d="M268 114v46"/>
+    <path d="M256 160v244"/>
+    <path d="M218 404h76q12 0 12 12t-12 12h-76q-12 0-12-12t12-12Z" fill="#ff7800" stroke="none"/>
+    <path d="M92 172h82q14 0 22 12l60 0"/>
+    <path d="M420 172h-82q-14 0-22 12l-60 0"/>
+    <path d="M174 184 120 292"/>
+    <path d="M338 184 392 292"/>
+    <path d="M120 292H54"/>
+    <path d="M392 292h66"/>
+    <path d="M56 292c5 38 32 62 64 62s59-24 64-62Z" fill="#ff7800" stroke="none"/>
+    <path d="M328 292c5 38 32 62 64 62s59-24 64-62Z" fill="#ff7800" stroke="none"/>
+    <path d="M170 205v120c0 12 10 22 22 22h44"/>
+    <path d="M342 205v120c0 12-10 22-22 22h-44"/>
+  </g>
+  <path fill="#ff7800" d="M219 196h74v34h-40v28h32v32h-32v59h-34Z"/>
+  <path fill="#ff7800" d="M293 196h38c31 0 52 16 52 43s-21 44-52 44h-4v66h-34Zm34 31v26h6c10 0 16-5 16-13s-6-13-16-13Z"/>
+</svg>
