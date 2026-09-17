@@ -199,6 +199,9 @@ input,select{padding:7px 8px;border-radius:7px;font-size:13px}
   .merged-group{padding:9px}
   .drop{padding:13px 9px}
 }
+
+/* PrintProfit delivery rates V1 */
+.delivery-tools{margin-bottom:10px}.delivery-note{margin-top:7px;line-height:1.35}.delivery-rate-row{margin-top:7px}.delivery-rate-row .small{align-self:end;padding-bottom:7px}.delivery-rate-row select{font-size:12.5px}#deliveryRateOut{font-weight:700;color:var(--accent)}@media(max-width:650px){.delivery-rate-row .small{padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -225,7 +228,7 @@ input,select{padding:7px 8px;border-radius:7px;font-size:13px}
 <optgroup label="Artillery"><option value="200|350|3500">Sidewinder X3 Plus</option><option value="250|500|4000">Sidewinder X4 Pro</option></optgroup>
 <option value="custom">Custom printer</option>
 </select></section><section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3. Filament / Resin Profile</h2><p>Choose your material, package size and cost. Usage can be detected automatically from your print file.</p></div></div><div class="two"><div><label>Material type</label><select id="materialType"><option value="filament">Filament (FDM)</option><option value="resin">Resin (SLA / MSLA / DLP)</option></select></div><div><label>Material</label><select id="material"><optgroup label="Filament"><option>PLA</option><option>PLA+</option><option>Silk PLA</option><option>PETG</option><option>PETG-CF</option><option>ABS</option><option>ASA</option><option>TPU 95A</option><option>Nylon</option><option>Polycarbonate (PC)</option><option>PVA</option><option>HIPS</option><option>Other / Custom Filament</option></optgroup><optgroup label="Resin"><option>Standard Resin</option><option>ABS-Like Resin</option><option>Tough Resin</option><option>Flexible Resin</option><option>Water-Washable Resin</option><option>High-Temp Resin</option><option>Castable Resin</option><option>Dental Resin</option><option>Model Resin</option><option>Other / Custom Resin</option></optgroup></select></div></div><div class="two" style="margin-top:9px"><div><label id="packAmountLabel">Spool weight (g)</label><input id="materialPack" type="number" value="1000" min="0" step="1"></div><div><label>Spool / bottle cost (£)</label><input id="materialPackCost" type="number" value="20" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label id="usageLabel">Used per print (g)</label><input id="materialUsed" type="number" value="0" min="0" step=".01"></div><div><label>Calculated material cost (£)</label><input id="materialCostOut" type="text" value="£0.00" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Print time (hours)</label><input id="printHours" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="materialStatus">Waiting for a print file, or enter usage manually.</div></div></section></div>
-<div class="two" id="guides"><section class="panel merged-group"><div class="head"><div class="icon">£</div><div><h2>4. Operating Costs</h2><p>Labour, materials, packaging and electricity used to make each print.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">£</div><div><h2>Additional Costs</h2><p>Optional costs per print, excluding electricity.</p></div></div><div class="two"><div><label>Labour (£/hour)</label><input id="labourRate" type="number" value="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" step=".01"></div></div></div><div class="merge-block"><div class="head"><div class="icon">⚡</div><div><h2>Electricity</h2><p>Uses Box 2 printer power and Box 3 print time from your file.</p></div></div><div class="two"><div><label>Electricity provider / tariff</label><input id="electricityProvider" type="text" placeholder="e.g. Octopus Energy - Flexible"></div><div><label>Unit rate (£/kWh)</label><input id="electricityRate" type="number" value=".30" min="0" step=".001"></div></div><div class="two" style="margin-top:9px"><div><label>Estimated printer power</label><input id="printerPowerOut" type="text" value="—" readonly></div><div><label>Estimated power used (kWh)</label><input id="powerUsedOut" type="text" value="0.000 kWh" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Estimated electricity cost</label><input id="electricityCostOut" type="text" value="£0.00" readonly></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="electricityStatus">Select a printer and load a print file to estimate electricity usage.</div></div></div></div></section><section class="panel merged-group"><div class="head"><div class="icon">⇩</div><div><h2>5. Selling &amp; Fulfilment</h2><p>Marketplace fees, payment costs and delivery charges.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">%</div><div><h2>Platform Fees</h2><p>Choose where you sell and preload the current UK fee structure.</p></div></div><label>Platform</label><select id="platformSelect"><option value="own">Own website / direct sale</option><option value="etsy">Etsy UK</option><option value="ebay">eBay UK Business</option><option value="amazon">Amazon Handmade UK</option><option value="depop">Depop UK</option><option value="vinted">Vinted UK</option><option value="tiktok">TikTok Shop UK</option><option value="facebook">Facebook Marketplace</option><option value="gumtree">Gumtree</option><option value="folksy">Folksy</option><option value="shopify">Shopify Payments (Basic)</option><option value="custom">Other / custom</option></select><div class="two" style="margin-top:9px"><div><label>Platform fee (%)</label><input id="platform" type="number" value="0" min="0" step=".01"></div><div><label>Payment fee (%)</label><input id="pay" type="number" value="0" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label>Fixed fee (£)</label><input id="fixedFee" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="platformStatus">Select a platform to load its default fee assumptions.</div></div></div><div class="merge-block"><div class="head"><div class="icon">⇩</div><div><h2>Delivery</h2><p>Keep delivery cost and charge separate.</p></div></div><div class="two"><div><label>Cost to you (£)</label><input id="delivery" type="number" value="0" step=".01"></div><div><label>Charged to customer (£)</label><input id="deliveryCharge" type="number" value="0" step=".01"></div></div></div></div></section></div>
+<div class="two" id="guides"><section class="panel merged-group"><div class="head"><div class="icon">£</div><div><h2>4. Operating Costs</h2><p>Labour, materials, packaging and electricity used to make each print.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">£</div><div><h2>Additional Costs</h2><p>Optional costs per print, excluding electricity.</p></div></div><div class="two"><div><label>Labour (£/hour)</label><input id="labourRate" type="number" value="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" step=".01"></div></div></div><div class="merge-block"><div class="head"><div class="icon">⚡</div><div><h2>Electricity</h2><p>Uses Box 2 printer power and Box 3 print time from your file.</p></div></div><div class="two"><div><label>Electricity provider / tariff</label><input id="electricityProvider" type="text" placeholder="e.g. Octopus Energy - Flexible"></div><div><label>Unit rate (£/kWh)</label><input id="electricityRate" type="number" value=".30" min="0" step=".001"></div></div><div class="two" style="margin-top:9px"><div><label>Estimated printer power</label><input id="printerPowerOut" type="text" value="—" readonly></div><div><label>Estimated power used (kWh)</label><input id="powerUsedOut" type="text" value="0.000 kWh" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Estimated electricity cost</label><input id="electricityCostOut" type="text" value="£0.00" readonly></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="electricityStatus">Select a printer and load a print file to estimate electricity usage.</div></div></div></div></section><section class="panel merged-group"><div class="head"><div class="icon">⇩</div><div><h2>5. Selling &amp; Fulfilment</h2><p>Marketplace fees, payment costs and delivery charges.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">%</div><div><h2>Platform Fees</h2><p>Choose where you sell and preload the current UK fee structure.</p></div></div><label>Platform</label><select id="platformSelect"><option value="own">Own website / direct sale</option><option value="etsy">Etsy UK</option><option value="ebay">eBay UK Business</option><option value="amazon">Amazon Handmade UK</option><option value="depop">Depop UK</option><option value="vinted">Vinted UK</option><option value="tiktok">TikTok Shop UK</option><option value="facebook">Facebook Marketplace</option><option value="gumtree">Gumtree</option><option value="folksy">Folksy</option><option value="shopify">Shopify Payments (Basic)</option><option value="custom">Other / custom</option></select><div class="two" style="margin-top:9px"><div><label>Platform fee (%)</label><input id="platform" type="number" value="0" min="0" step=".01"></div><div><label>Payment fee (%)</label><input id="pay" type="number" value="0" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label>Fixed fee (£)</label><input id="fixedFee" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="platformStatus">Select a platform to load its default fee assumptions.</div></div></div><div class="merge-block"><div class="head"><div class="icon">⇩</div><div><h2>Delivery</h2><p>Choose a courier and service rate, then override the cost when needed.</p></div></div><div class="delivery-tools"><div class="two"><div><label>Courier / delivery firm</label><select id="deliveryCourier"><option value="">Select a courier...</option><option value="royalmail">Royal Mail</option><option value="evri">Evri</option><option value="inpost">InPost</option><option value="dpd">DPD Online</option><option value="dhl">DHL eCommerce UK</option><option value="parcelforce">Parcelforce</option><option value="ups">UPS</option><option value="fedex">FedEx</option><option value="custom">Custom / Other</option></select></div><div><label>Service / rate</label><select id="deliveryRate"><option value="">Choose a courier first...</option></select></div></div><div class="two delivery-rate-row"><div><label>Automatic rate</label><input id="deliveryRateOut" type="text" value="£0.00" readonly></div><div class="small" id="deliveryRateNote">Choose a courier and service. The cost below can still be edited manually.</div></div><div class="small delivery-note">Published UK reference rates. Final quotes can vary by parcel size, dimensions, destination, account type, surcharges and promotions. Check the courier before dispatch.</div></div><div class="two"><div><label>Cost to you (£)</label><input id="delivery" type="number" value="0" step=".01"></div><div><label>Charged to customer (£)</label><input id="deliveryCharge" type="number" value="0" step=".01"></div></div></div>
 <section class="panel"><div class="head"><div class="icon">▦</div><div><h2>6. Quantity / Batch Pricing</h2><p>Set quantity and discount for bulk pricing.</p></div></div><div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div><div class="actions"><button class="btn accent" id="calc">Calculate Costs & Price</button><button class="btn" id="reset">↺ Reset</button></div></section>
 </div>
 <aside class="panel result" id="about">
@@ -300,6 +303,102 @@ input,select{padding:7px 8px;border-radius:7px;font-size:13px}
     shopify:{platform:0,pay:2,fixed:0.25,note:'Shopify Payments Basic: 2% + £0.25 standard online card rate. Monthly plan cost is not allocated per sale.'},
     custom:{platform:0,pay:0,fixed:0,note:'Enter your own platform and payment fees.'}
   };
+
+
+
+  const deliveryProfiles={
+    royalmail:{source:'Royal Mail online prices (current 2026)',rates:[
+      {label:'Tracked 48 — Large Letter — up to 1kg — £2.85',price:2.85,note:'Online price; max 35.3 × 25 × 2.5cm.'},
+      {label:'Tracked 48 — Small Parcel — up to 2kg — £3.65',price:3.65,note:'Online price; max 45 × 35 × 16cm.'},
+      {label:'Tracked 48 — Medium Parcel — up to 2kg — £5.55',price:5.55,note:'Online price; max 61 × 46 × 46cm.'},
+      {label:'Tracked 48 — Medium Parcel — up to 10kg — £7.35',price:7.35,note:'Online price.'},
+      {label:'Tracked 48 — Medium Parcel — up to 20kg — £11.85',price:11.85,note:'Online price.'},
+      {label:'Tracked 24 — Large Letter — up to 1kg — £3.80',price:3.80,note:'Online starting price.'},
+      {label:'Tracked 24 — Small Parcel — up to 2kg — £4.65',price:4.65,note:'Online price.'},
+      {label:'Tracked 24 — Medium Parcel — up to 20kg — £6.55',price:6.55,note:'Online starting price.'},
+      {label:'express48 — from £11.95',price:11.95,note:'Parcelforce service; up to 30kg.'},
+      {label:'express24 — from £12.50',price:12.50,note:'Parcelforce service; up to 30kg.'}
+    ]},
+    evri:{source:'Evri online prices (September 2026)',rates:[
+      {label:'Standard — Postable under 1kg — £2.70',price:2.70,note:'Drop-off; max 23 × 35 × 3cm.'},
+      {label:'Standard — Small 0–1kg — £3.04',price:3.04,note:'Drop-off; small parcel.'},
+      {label:'Standard — Standard 0–1kg — £3.29',price:3.29,note:'Drop-off.'},
+      {label:'Standard — Small 1–2kg — £3.52',price:3.52,note:'Drop-off.'},
+      {label:'Standard — 1–2kg — £4.79',price:4.79,note:'Drop-off.'},
+      {label:'Standard — 2–5kg — £6.59',price:6.59,note:'Drop-off.'},
+      {label:'Standard — 5–10kg — £6.68',price:6.68,note:'Drop-off.'},
+      {label:'Standard — 10–15kg — £10.28',price:10.28,note:'Drop-off.'},
+      {label:'Next Day — Postable under 1kg — £3.49',price:3.49,note:'Drop-off; availability varies.'},
+      {label:'Next Day — Small 0–1kg — £3.90',price:3.90,note:'Drop-off; availability varies.'},
+      {label:'Next Day — Standard 0–1kg — £4.12',price:4.12,note:'Drop-off; availability varies.'},
+      {label:'Next Day — Small 1–2kg — £4.60',price:4.60,note:'Drop-off; availability varies.'},
+      {label:'Next Day — Standard 1–2kg — £5.48',price:5.48,note:'Drop-off; availability varies.'},
+      {label:'Next Day — 2–5kg — £7.55',price:7.55,note:'Drop-off; availability varies.'},
+      {label:'Next Day — 5–10kg — £7.72',price:7.72,note:'Drop-off; availability varies.'},
+      {label:'Next Day — 10–15kg — £12.35',price:12.35,note:'Drop-off; availability varies.'},
+      {label:'ParcelShop — up to 5kg — £2.62',price:2.62,note:'Prebooked ParcelShop delivery.'},
+      {label:'ParcelShop Next Day — up to 5kg — £3.20',price:3.20,note:'Prebooked ParcelShop delivery.'},
+      {label:'Standard collection — 0–1kg Small — £4.04',price:4.04,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 0–1kg Standard — £4.30',price:4.30,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 1–2kg Small — £4.52',price:4.52,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 1–2kg Standard — £5.78',price:5.78,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 2–5kg — £7.58',price:7.58,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 5–10kg — £7.68',price:7.68,note:'Collection price; location charges may apply.'},
+      {label:'Standard collection — 10–15kg — £11.29',price:11.29,note:'Collection price; location charges may apply.'}
+    ]},
+    inpost:{source:'InPost parcel price list (current)',rates:[
+      {label:'Locker / Shop — Small — £1.99',price:1.99,note:'Up to 15kg; 8 × 38 × 64cm.'},
+      {label:'Locker / Shop — Medium — £2.59',price:2.59,note:'Up to 15kg; 19 × 38 × 64cm.'},
+      {label:'Locker / Shop — Large — £3.99',price:3.99,note:'Up to 15kg; 41 × 38 × 64cm.'},
+      {label:'Home address — Small — £2.89',price:2.89,note:'Up to 15kg; 8 × 38 × 64cm.'},
+      {label:'Home address — Medium — £3.99',price:3.99,note:'Up to 15kg; 19 × 38 × 64cm.'},
+      {label:'Home address — Large — £5.99',price:5.99,note:'Up to 15kg; 41 × 38 × 64cm.'}
+    ]},
+    dpd:{source:'DPD Online published UK starting prices',rates:[
+      {label:'UK drop-off — from £2.99',price:2.99,note:'Starting price; exact quote depends on parcel details.'},
+      {label:'UK collection — from £5.81',price:5.81,note:'Starting price; exact quote depends on parcel details.'}
+    ]},
+    dhl:{source:'DHL eCommerce UK published price',rates:[
+      {label:'UK delivery — from £2.79',price:2.79,note:'Includes VAT; mainland depot drop-off/collection basis.'}
+    ]},
+    parcelforce:{source:'Parcelforce UK retail prices from 7 April 2026',rates:[
+      {label:'express48 — from £11.95',price:11.95,note:'Up to 30kg; tracked.'},
+      {label:'express24 — from £12.50',price:12.50,note:'Up to 30kg; tracked.'},
+      {label:'expressAM — from £16.50',price:16.50,note:'Up to 30kg; next working day by noon.'},
+      {label:'express10 — from £28.10',price:28.10,note:'Up to 30kg; next working day by 10am.'},
+      {label:'express48large — from £51.65',price:51.65,note:'Large parcel service.'}
+    ]},
+    ups:{source:'UPS UK public rate guidance',rates:[
+      {label:'Domestic UK — quote required',price:0,note:'Enter your quoted UPS rate in Cost to you.'}
+    ]},
+    fedex:{source:'FedEx UK rates effective 5 January 2026',rates:[
+      {label:'Domestic UK — quote required',price:0,note:'Enter your quoted FedEx rate in Cost to you.'}
+    ]},
+    custom:{source:'Manual entry',rates:[
+      {label:'Manual rate — enter below',price:0,note:'Use your own business, account or negotiated shipping rate.'}
+    ]}
+  };
+
+  function updateDeliveryRates(){
+    const courier=$('deliveryCourier'),rate=$('deliveryRate');
+    if(!courier||!rate)return;
+    const key=courier.value;
+    if(!key){rate.innerHTML='<option value="">Choose a courier first...</option>';setValue('deliveryRateOut',money(0));setText('deliveryRateNote','Choose a courier and service. The cost below can still be edited manually.');calc();return;}
+    const profile=deliveryProfiles[key]||deliveryProfiles.custom;
+    rate.innerHTML=profile.rates.map((r,i)=>'<option value="'+i+'">'+r.label+'</option>').join('');
+    updateDeliveryRate(true);
+  }
+
+  function updateDeliveryRate(autoApply=true){
+    const courier=$('deliveryCourier'),rate=$('deliveryRate');
+    if(!courier||!rate||!courier.value)return;
+    const profile=deliveryProfiles[courier.value]||deliveryProfiles.custom;
+    const item=profile.rates[Number(rate.value)]||profile.rates[0];
+    setValue('deliveryRateOut',money(item.price));
+    setText('deliveryRateNote',profile.source+' • '+item.note);
+    if(autoApply&&item.price>0)setValue('delivery',item.price);
+    calc();
+  }
 
   function setText(id,text){const el=$(id);if(el)el.textContent=text;}
   function setValue(id,value){const el=$(id);if(el)el.value=value;}
@@ -534,6 +633,11 @@ input,select{padding:7px 8px;border-radius:7px;font-size:13px}
     if(printer) printer.addEventListener('change',runCalc);
     const file=$('file');
     if(file) file.addEventListener('change',e=>processFile(e.target.files[0]));
+    const deliveryCourier=$('deliveryCourier');
+    if(deliveryCourier)deliveryCourier.addEventListener('change',updateDeliveryRates);
+    const deliveryRate=$('deliveryRate');
+    if(deliveryRate)deliveryRate.addEventListener('change',()=>updateDeliveryRate(true));
+
     const clear=$('clear');
     if(clear) clear.addEventListener('click',()=>{
       setValue('file','');state.hours=0;state.used=0;state.file='';
@@ -560,6 +664,7 @@ input,select{padding:7px 8px;border-radius:7px;font-size:13px}
     }
 
     try{applyPlatformProfile();}catch(err){console.error('Platform profile error:',err);runCalc();}
+    try{updateDeliveryRates();}catch(err){console.error('Delivery rate error:',err);runCalc();}
     try{updateMaterialUI();}catch(err){console.error('Material init error:',err);runCalc();}
     setResultTab('single');
     window.__printProfitReady=true;
