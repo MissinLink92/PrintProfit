@@ -135,7 +135,7 @@ function calc(){
 $('sell').oninput=calc;
 $('materialType').onchange=updateMaterialUI;
 $('material').onchange=calc;
-['materialPack','materialPackCost','materialUsed','printHours','labourRate','pack','other','electricityRate','electricityProvider','delivery','deliveryCharge','qty','discount','pay','fixedFee'].forEach(id=>$(id).oninput=calc);
+['materialPack','materialPackCost','materialUsed','printHours','labourRate','pack','other','electricityRate','electricityProvider','platform','pay','fixedFee','delivery','deliveryCharge','qty','discount'].forEach(id=>$(id).oninput=calc);
 $('printer').onchange=()=>{calc()};
 const platformProfiles={
   own:{platform:0,pay:0,fixed:0,note:'Direct sale / own website: no marketplace fee preloaded.'},
