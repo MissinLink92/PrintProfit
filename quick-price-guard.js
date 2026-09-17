@@ -10,7 +10,6 @@
   const num=id=>{const value=Number.parseFloat(get(id)?.value||'0');return Number.isFinite(value)?value:0;};
   const set=(id,value)=>{const el=get(id);if(el)el.value=value;};
   const recalc=()=>get('calc')?.click();
-  const normalizeTarget=value=>value>1?value/100:value;
 
   function baseCost(){
     const printer=get('printer')?.value||'';
@@ -32,24 +31,27 @@
     return material+electricity+depreciation+labour+num('pack')+num('other')+num('delivery');
   }
 
-  function targetPrice(target,mode){
-    const margin=normalizeTarget(target);
+  // Quick prices are markup targets: profit after fees should equal
+  // the chosen percentage of production cost.
+  function markupPrice(markup,mode){
     const feeRate=(num('platform')+num('pay'))/100;
     const fixedFee=num('fixedFee');
     const deliveryCharge=num('deliveryCharge');
     const base=baseCost();
-    const denominator=1-feeRate-margin;
-    if(!(denominator>0)||base<=0)return null;
+    const factor=1-feeRate;
+    if(!(factor>0)||base<=0)return null;
 
     if(mode==='batch'){
       const qty=Math.max(1,Math.floor(num('qty')));
       const discount=Math.min(100,num('discount'))/100;
-      const factor=qty*(1-discount);
-      if(!(factor>0))return null;
-      return Math.max(0,(base*qty+fixedFee-deliveryCharge)/denominator)/factor;
+      const sellFactor=qty*(1-discount);
+      if(!(sellFactor>0))return null;
+      const requiredRevenue=base*qty*(1+markup)+fixedFee-deliveryCharge;
+      return Math.max(0,requiredRevenue)/(factor*sellFactor);
     }
 
-    return(base+fixedFee)/denominator;
+    const requiredRevenue=base*(1+markup)+fixedFee-deliveryCharge;
+    return Math.max(0,requiredRevenue)/factor;
   }
 
   function buttonsFor(mode){
@@ -77,7 +79,6 @@
     const mode=button.dataset.targetView==='batch'?'batch':'single';
     const rawTarget=Number.parseFloat(button.dataset.m);
     if(!Number.isFinite(rawTarget))return;
-    const target=normalizeTarget(rawTarget);
 
     if(button.classList.contains('active')&&quickMode===mode){
       set('sell',manualSellingPrice.toFixed(2));
@@ -90,10 +91,9 @@
     if(!quickMode)rememberManualPrice();
     else if(quickMode!==mode)clearQuick(quickMode);
 
-    const price=targetPrice(target,mode);
+    const price=markupPrice(rawTarget,mode);
     if(price===null){
-      // There is no production cost yet, so don't manufacture a £0 selling price.
-      // Keep the user's manual selling price and leave the button visibly selected.
+      // There is no production cost yet, so don't manufacture a selling price.
       buttonsFor(mode).forEach(item=>item.classList.toggle('active',item===button));
       quickMode=mode;
       recalc();
