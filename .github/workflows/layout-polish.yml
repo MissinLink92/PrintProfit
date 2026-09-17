@@ -1,0 +1,177 @@
+name: PrintProfit layout polish
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  layout-polish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Refine layout and sizing
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          required_ids = [
+              'file','printer','materialType','material','materialPack','materialPackCost',
+              'materialUsed','materialCostOut','printHours','labourRate','pack','other',
+              'electricityProvider','electricityRate','printerPowerOut','powerUsedOut',
+              'electricityCostOut','platformSelect','platform','pay','fixedFee','delivery',
+              'deliveryCharge','qty','discount','sell','calc','reset','singleResultView',
+              'batchResultView','singleCost','singleSellOut','singleProfit','singleBreakdown',
+              'batchCost','batchSales','batchProfit','batchDiscount','batchUnit',
+              'batchDelivery','batchBreakdown'
+          ]
+          missing = [i for i in required_ids if f'id="{i}"' not in text]
+          if missing:
+              raise SystemExit(f'Missing required IDs before layout patch: {missing}')
+
+          marker = '/* PrintProfit layout polish V1 */'
+          if marker in text:
+              raise SystemExit('Layout polish marker already exists; refusing to patch twice.')
+
+          css = '''
+          
+          /* PrintProfit layout polish V1 */
+          .panel{padding:12px}
+          .head{gap:9px;margin-bottom:8px}
+          .icon{width:32px;height:32px;border-radius:8px}
+          .head h2{font-size:16px}
+          .head p{font-size:11px}
+          .two,.three{gap:8px}
+          label{font-size:11px;margin-bottom:4px}
+          input,select{padding:8px 9px;border-radius:7px}
+          .btn{padding:8px 10px;border-radius:7px}
+          .actions{gap:7px;margin-top:8px}
+          .drop{padding:16px}
+          .drop b{margin-bottom:6px}
+          .drop small{margin-top:6px}
+          .result{top:88px}
+          .tabs{margin:10px 0}
+          .card{padding:9px}
+          .value{font-size:20px;margin-top:4px}
+          .quick{margin-top:10px}
+          .quick .grid{gap:7px;margin-top:5px}
+          .break{margin-top:10px;padding:9px}
+          .line{padding:6px 0;font-size:11px}
+          .total{font-size:13px}
+          .merged-group{padding:12px}
+          .merged-group>.head{margin-bottom:10px}
+          .merged-grid{gap:12px}
+          .merge-block+.merge-block{padding-left:12px}
+          .merge-block .head{gap:8px;margin-bottom:8px}
+          .merge-block .head .icon{width:28px;height:28px;font-size:12px}
+          
+          @media(min-width:1101px){
+            .layout{
+              grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(350px,.86fr);
+              gap:12px;
+              align-items:start;
+            }
+            .layout>div:first-child{display:contents}
+            .layout>div:first-child>.two,
+            .layout>div:first-child>#guides{display:contents}
+            .layout>div:first-child>section.panel:first-child{
+              grid-column:1 / span 2;
+              grid-row:1;
+            }
+            .layout>div:first-child>.two>section.panel:first-child{
+              grid-column:1;
+              grid-row:2;
+            }
+            .layout>div:first-child>.two>section.panel:nth-child(2){
+              grid-column:2;
+              grid-row:2;
+            }
+            #guides>.merged-group:first-child{
+              grid-column:1 / span 2;
+              grid-row:3;
+            }
+            #guides>.merged-group:last-child{
+              grid-column:1 / span 2;
+              grid-row:4;
+            }
+            .layout>div:first-child>section.panel:last-child{
+              grid-column:1 / span 2;
+              grid-row:5;
+            }
+            .layout>.result{
+              grid-column:3;
+              grid-row:1 / span 5;
+            }
+          }
+
+          @media(min-width:951px) and (max-width:1100px){
+            .layout{gap:10px}
+            .panel{padding:11px}
+            .merged-group{padding:11px}
+            .drop{padding:14px}
+          }
+          
+          @media(max-width:650px){
+            .panel{padding:10px}
+            .merged-group{padding:10px}
+            .drop{padding:14px 10px}
+          }
+          '''
+
+          insert_at = text.find('</style>')
+          if insert_at == -1:
+              raise SystemExit('Could not find closing style tag.')
+          text = text[:insert_at] + css + text[insert_at:]
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify JavaScript and required controls
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path('index.html').read_text(encoding='utf-8')
+          scripts = re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', text, flags=re.S|re.I)
+          if not scripts:
+              raise SystemExit('No JavaScript blocks found.')
+          for idx, script in enumerate(scripts, 1):
+              Path(f'/tmp/printprofit-script-{idx}.js').write_text(script, encoding='utf-8')
+          print(f'Found {len(scripts)} JavaScript blocks.')
+          PY
+          for f in /tmp/printprofit-script-*.js; do
+            node --check "$f"
+          done
+          grep -q 'id="printer"' index.html
+          grep -q 'id="materialUsed"' index.html
+          grep -q 'id="electricityRate"' index.html
+          grep -q 'id="platformSelect"' index.html
+          grep -q 'id="deliveryCharge"' index.html
+          grep -q 'id="qty"' index.html
+          grep -q 'id="singleResultView"' index.html
+          grep -q 'id="batchResultView"' index.html
+
+      - name: Commit layout update
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No layout changes detected."
+            exit 0
+          fi
+          git commit -m "Refine calculator layout and sizing [skip ci]"
+          git push
