@@ -135,7 +135,7 @@
     },true);
 
     window.addEventListener('click',event=>{
-      const reset=event.target&&event.target.closest?event.target.closest('#reset'):null;
+      const reset=event.target&&event.target.closest?event.target.closest('#reset,#ppGlobalReset'):null;
       if(!reset)return;
       event.preventDefault();event.stopImmediatePropagation();resetAllFields();
     },true);
