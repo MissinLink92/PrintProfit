@@ -1,50 +1,22 @@
 (()=>{
   'use strict';
 
-  const panelTitle=panel=>{
-    const h=panel&&panel.querySelector('h2');
+  function titleOf(section){
+    const h=section?.querySelector('h2');
     return h?h.textContent.trim():'';
-  };
+  }
 
-  function getStructure(){
+  function findBox(number){
+    return [...document.querySelectorAll('section.panel')].find(section=>titleOf(section).startsWith(number+'.'))||null;
+  }
+
+  function install(){
+    if(document.getElementById('ppTabbedLayout'))return;
+
     const layout=document.querySelector('.layout');
-    if(!layout)return null;
-
-    const result=Array.from(layout.children).find(el=>el.classList.contains('result')) || layout.querySelector('.result');
-    const source=Array.from(layout.children).find(el=>el!==result);
-    if(!source||!result)return null;
-
-    const directPanels=Array.from(source.children).filter(el=>el.matches&&el.matches('section.panel'));
-    const box1=directPanels.find(panel=>panelTitle(panel).startsWith('1.'));
-    const two=Array.from(source.children).find(el=>el.classList&&el.classList.contains('two')&&!el.id);
-    const box2=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('2.'));
-    const box3=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('3.'));
-    const guides=Array.from(source.children).find(el=>el.id==='guides');
-    const guidePanels=guides?Array.from(guides.children).filter(el=>el.matches&&el.matches('section.panel')):[];
-    const box4=guidePanels.find(panel=>panelTitle(panel).startsWith('4.'));
-    const box5=guidePanels.find(panel=>panelTitle(panel).startsWith('5.'));
-    const box6=guidePanels.find(panel=>panelTitle(panel).startsWith('6.'));
-
-    if(!box1||!box2||!box3||!box4||!box5||!box6)return null;
-    return {layout,result,source,box1,box2,box3,box4,box5,box6,two,guides};
-  }
-
-  function waitForStructure(timeout=15000){
-    return new Promise(resolve=>{
-      const started=Date.now();
-      const timer=setInterval(()=>{
-        const structure=getStructure();
-        if(structure||(Date.now()-started)>=timeout){
-          clearInterval(timer);
-          resolve(structure);
-        }
-      },50);
-    });
-  }
-
-  function install(structure){
-    if(!structure||document.getElementById('ppTabbedLayout'))return;
-    const {layout,result,source,box1,box2,box3,box4,box5,box6,two,guides}=structure;
+    const result=layout?.querySelector('.result');
+    const box1=findBox('1'),box2=findBox('2'),box3=findBox('3'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
+    if(!layout||!result||!box1||!box2||!box3||!box4||!box5||!box6)return false;
 
     const style=document.createElement('style');
     style.id='ppTabbedLayoutRuntimeStyles';
@@ -69,7 +41,7 @@
 .pp-card>.panel{margin:0!important}
 .pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
 .pp-cost-block+.pp-cost-block{margin-top:12px}
-.pp-cost-block>.merged-group{margin:0!important}
+.pp-cost-block>.panel{margin:0!important}
 @media(max-width:950px){
   .layout{grid-template-columns:1fr!important}
   .layout>.result{position:static!important}
@@ -97,67 +69,64 @@
 <button type="button" class="pp-tab" data-tab="machine" role="tab" aria-selected="false"><span class="pp-tab-icon">▦</span><span class="pp-tab-copy"><strong>Printer & Filament</strong><span>Machine & material</span></span></button>
 <button type="button" class="pp-tab" data-tab="costs" role="tab" aria-selected="false"><span class="pp-tab-icon">£</span><span class="pp-tab-copy"><strong>Costs & Fees</strong><span>Running & selling costs</span></span></button>`;
 
-    const details=document.createElement('div');
-    details.className='pp-tab-panel active';
-    details.dataset.panel='details';
+    const panels={};
+    for(const id of ['details','machine','costs']){
+      const panel=document.createElement('div');
+      panel.className='pp-tab-panel'+(id==='details'?' active':'');
+      panel.dataset.panel=id;
+      panels[id]=panel;
+    }
 
-    const machine=document.createElement('div');
-    machine.className='pp-tab-panel';
-    machine.dataset.panel='machine';
-
-    const costs=document.createElement('div');
-    costs.className='pp-tab-panel';
-    costs.dataset.panel='costs';
-
-    const moveIntoCard=(node,parent)=>{
-      const card=document.createElement('div');
-      card.className='pp-card';
-      card.appendChild(node);
-      parent.appendChild(card);
+    const card=(node,parent)=>{
+      const wrap=document.createElement('div');
+      wrap.className='pp-card';
+      wrap.appendChild(node);
+      parent.appendChild(wrap);
     };
 
-    moveIntoCard(box1,details);
-    moveIntoCard(box6,details);
-    moveIntoCard(box2,machine);
-    moveIntoCard(box3,machine);
+    card(box1,panels.details);
+    card(box6,panels.details);
+    card(box2,panels.machine);
+    card(box3,panels.machine);
 
-    const costBlock4=document.createElement('div');
-    costBlock4.className='pp-cost-block';
-    costBlock4.appendChild(box4);
-    costs.appendChild(costBlock4);
+    const costs4=document.createElement('div');
+    costs4.className='pp-cost-block';
+    costs4.appendChild(box4);
+    panels.costs.appendChild(costs4);
 
-    const costBlock5=document.createElement('div');
-    costBlock5.className='pp-cost-block';
-    costBlock5.appendChild(box5);
-    costs.appendChild(costBlock5);
+    const costs5=document.createElement('div');
+    costs5.className='pp-cost-block';
+    costs5.appendChild(box5);
+    panels.costs.appendChild(costs5);
 
     workspace.appendChild(tabs);
-    workspace.appendChild(details);
-    workspace.appendChild(machine);
-    workspace.appendChild(costs);
-    source.appendChild(workspace);
-
-    if(two)two.remove();
-    if(guides)guides.remove();
+    Object.values(panels).forEach(panel=>workspace.appendChild(panel));
 
     layout.innerHTML='';
     layout.appendChild(workspace);
     layout.appendChild(result);
 
-    tabs.querySelectorAll('.pp-tab').forEach(tab=>{
-      tab.addEventListener('click',()=>{
-        const id=tab.dataset.tab;
-        tabs.querySelectorAll('.pp-tab').forEach(item=>{
-          const active=item===tab;
-          item.classList.toggle('active',active);
-          item.setAttribute('aria-selected',String(active));
-        });
-        workspace.querySelectorAll('.pp-tab-panel').forEach(panel=>{
-          panel.classList.toggle('active',panel.dataset.panel===id);
-        });
+    tabs.querySelectorAll('.pp-tab').forEach(tab=>tab.addEventListener('click',()=>{
+      const id=tab.dataset.tab;
+      tabs.querySelectorAll('.pp-tab').forEach(item=>{
+        const active=item===tab;
+        item.classList.toggle('active',active);
+        item.setAttribute('aria-selected',String(active));
       });
-    });
+      Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));
+    }));
+
+    return true;
   }
 
-  waitForStructure().then(install);
+  function wait(){
+    if(install())return;
+    const started=Date.now();
+    const timer=setInterval(()=>{
+      if(install()||(Date.now()-started)>=15000)clearInterval(timer);
+    },50);
+  }
+
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});
+  else wait();
 })();
