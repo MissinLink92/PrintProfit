@@ -12,13 +12,12 @@
 'use strict';
 const scripts=[
 'quick-price-guard.js?v=6',
-'reset-fix.js?v=9','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=3','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2',
-'tab-layout.js?v=8'
+'reset-fix.js?v=9','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','tab-layout.js?v=8'
 ];
 function load(src){return new Promise(resolve=>{const s=document.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit optional script failed:',src);resolve();};document.body.appendChild(s);});}
 async function boot(){
  try{
-  const r=await fetch('./legacy-index.html?build=20260917-safe7',{cache:'no-store'});
+  const r=await fetch('./legacy-index.html?build=20260917-safe8',{cache:'no-store'});
   if(!r.ok)throw new Error('Could not load calculator page ('+r.status+').');
   const html=await r.text();
   const parsed=new DOMParser().parseFromString(html,'text/html');
@@ -28,7 +27,7 @@ async function boot(){
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
     const src=node.getAttribute('src')||'';
     if(!/tab-layout\.js/i.test(src)){
-      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.value);s.textContent=node.textContent||'';document.head.appendChild(s);
+      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.name);s.textContent=node.textContent||'';document.head.appendChild(s);
     }
    }else document.head.appendChild(document.importNode(node,true));
   }
@@ -36,7 +35,7 @@ async function boot(){
   for(const node of parsed.body.childNodes){
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'&&/tab-layout\.js/i.test(node.getAttribute('src')||''))continue;
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
-    const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.value);s.textContent=node.textContent||'';document.body.appendChild(s);
+    const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.name);s.textContent=node.textContent||'';document.body.appendChild(s);
    }else document.body.appendChild(document.importNode(node,true));
   }
   document.dispatchEvent(new Event('DOMContentLoaded',{bubbles:true}));
