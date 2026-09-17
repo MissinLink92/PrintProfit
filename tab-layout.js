@@ -21,9 +21,10 @@
     const style=document.createElement('style');
     style.id='ppTabbedLayoutRuntimeStyles';
     style.textContent=`
-.layout{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(350px,390px)!important;gap:14px!important;align-items:start!important}
-.layout>.result{grid-column:auto!important;grid-row:auto!important;position:sticky!important;top:88px!important;min-width:0!important}
-.pp-workspace{min-width:0}
+/* PrintProfit full-width tab workspace V4 */
+.layout{display:block!important;width:100%!important}
+.layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0!important}
+.pp-workspace{display:block!important;width:100%!important;min-width:0}
 .pp-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;background:rgba(14,32,43,.78);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 12px;box-shadow:0 8px 24px #0004}
 .pp-tab{position:relative;border:0;border-right:1px solid var(--line);background:transparent;color:var(--muted);min-height:58px;padding:9px 12px;display:flex;align-items:center;justify-content:center;gap:9px;font:700 13px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;transition:background .16s ease,color .16s ease}
 .pp-tab:last-child{border-right:0}
@@ -35,24 +36,25 @@
 .pp-tab-copy strong{display:block;font-size:13px;color:inherit}
 .pp-tab-copy span{display:block;margin-top:3px;font-size:10px;font-weight:500;color:var(--muted)}
 .pp-tab-panel{display:none}
-.pp-tab-panel.active{display:block}
-.pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
-.pp-card+.pp-card{margin-top:12px}
-.pp-card>.panel{margin:0!important}
-.pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
-.pp-cost-block+.pp-cost-block{margin-top:12px}
-.pp-cost-block>.panel{margin:0!important}
+.pp-tab-panel.active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
+.pp-card+.pp-card{margin-top:0}
+.pp-card>.panel{margin:0!important;width:100%!important}
+.pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}
+.pp-cost-block+.pp-cost-block{margin-top:0}
+.pp-cost-block>.panel{margin:0!important;width:100%!important}
+
 @media(max-width:950px){
-  .layout{grid-template-columns:1fr!important}
-  .layout>.result{position:static!important}
   .pp-tabs{grid-template-columns:1fr}
   .pp-tab{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--line);min-height:50px}
   .pp-tab:last-child{border-bottom:0}
   .pp-tab.active::after{left:0;right:auto;top:8px;bottom:8px;width:3px;height:auto}
+  .pp-tab-panel.active{grid-template-columns:1fr}
 }
 @media(max-width:650px){
   .pp-tab-copy span{display:none}
   .pp-card,.pp-cost-block{padding:10px}
+  .layout>.result{margin-top:10px!important}
 }
 `;
     document.head.appendChild(style);
