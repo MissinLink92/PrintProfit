@@ -47,7 +47,7 @@ jobs:
                 const provider=$('electricityProvider').value.trim();
                 $('electricityStatus').textContent=!p.watts?'Select a printer in Box 2 to estimate power draw.':!hours?'Load a print file or enter print time in Box 3.':!n('electricityRate')?'Enter your electricity unit rate to calculate cost.':(provider?provider+' • ':'')+'Estimated from '+Math.round(p.watts)+' W for '+hours.toFixed(2)+' h.';
                 $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
-                $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>`<div class="line"><span>\${k}</span><b>\${money(v)}</b></div>`).join('')+`<div class="line total"><span>Quantity \${qty} • batch total after \${disc*100}% discount</span><b>\${money((base+fees)*qty*(1-disc))}</b></div>`;
+                $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>'<div class="line"><span>'+k+'</span><b>'+money(v)+'</b></div>').join('')+'<div class="line total"><span>Quantity '+qty+' • batch total after '+(disc*100)+'% discount</span><b>'+money((base+fees)*qty*(1-disc))+'</b></div>';
               }
 
               $('calc').onclick=calc;`;
