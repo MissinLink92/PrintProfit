@@ -77,13 +77,10 @@ body{display:grid;place-items:center;min-height:100vh}
     });
   }
 
-  loadLegacyPage()
-    .then(loadEnhancements)
-    .then(loadTabLayout)
-    .catch(error=>{
-      console.error(error);
-      document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';
-    });
+  loadLegacyPage().then(loadEnhancements).then(loadTabLayout).catch(error=>{
+    console.error(error);
+    document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';
+  });
 })();
 </script>
 </body>
