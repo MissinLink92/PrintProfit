@@ -54,45 +54,48 @@ jobs:
           p.write_text(html,encoding='utf-8')
           PY
           node <<'JS'
-          const fs=require('fs');
-          const {JSDOM}=require('jsdom');
-          const html=fs.readFileSync('index.html','utf8');
-          const scripts=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]);
-          if(scripts.length<2) throw new Error('expected original script plus recalc shortcut script');
-          for(const js of scripts) new Function(js);
-          const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true});
-          for(const js of scripts) dom.window.eval(js);
-          dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
-          const d=dom.window.document;
-          const flush=()=>new Promise(r=>dom.window.setTimeout(r,10));
-          const dispatchInput=(id,val)=>{const el=d.getElementById(id);el.value=val;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));};
-          dispatchInput('printer','120|260|3000');
-          dispatchInput('materialUsed','100');
-          dispatchInput('printHours','2');
-          await flush();
-          const before=d.getElementById('cost').textContent;
-          const labour=d.getElementById('labourRate');
-          labour.value='10';
-          labour.dispatchEvent(new dom.window.Event('focusout',{bubbles:true}));
-          await flush();
-          const afterBlur=d.getElementById('cost').textContent;
-          if(afterBlur===before) throw new Error('blur did not recalculate');
-          const power=d.getElementById('electricityRate');
-          power.value='0.5';
-          power.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
-          await flush();
-          const afterEnter=d.getElementById('electricityCostOut').value;
-          if(afterEnter!=='£0.12') throw new Error('Enter did not recalculate: '+afterEnter);
-          console.log('Blur and Enter recalculation test passed:',{before,afterBlur,afterEnter});
+          (async()=>{
+            const fs=require('fs');
+            const {JSDOM}=require('jsdom');
+            const html=fs.readFileSync('index.html','utf8');
+            const scripts=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]);
+            if(scripts.length<2) throw new Error('expected original script plus recalc shortcut script');
+            for(const js of scripts) new Function(js);
+            const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true});
+            for(const js of scripts) dom.window.eval(js);
+            dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
+            const d=dom.window.document;
+            const flush=()=>new Promise(r=>dom.window.setTimeout(r,10));
+            const dispatchInput=(id,val)=>{const el=d.getElementById(id);el.value=val;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));};
+            dispatchInput('printer','120|260|3000');
+            dispatchInput('materialUsed','100');
+            dispatchInput('printHours','2');
+            await flush();
+            const before=d.getElementById('cost').textContent;
+            const labour=d.getElementById('labourRate');
+            labour.value='10';
+            labour.dispatchEvent(new dom.window.Event('focusout',{bubbles:true}));
+            await flush();
+            const afterBlur=d.getElementById('cost').textContent;
+            if(afterBlur===before) throw new Error('blur did not recalculate');
+            const power=d.getElementById('electricityRate');
+            power.value='0.5';
+            power.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
+            await flush();
+            const afterEnter=d.getElementById('electricityCostOut').value;
+            if(afterEnter!=='£0.12') throw new Error('Enter did not recalculate: '+afterEnter);
+            console.log('Blur and Enter recalculation test passed:',{before,afterBlur,afterEnter});
+          })().catch(err=>{console.error(err);process.exit(1);});
           JS
-          node --check <(python - <<'PY'
+          python - <<'PY'
           from pathlib import Path
           import re
           html=Path('index.html').read_text(encoding='utf-8')
           scripts=[m.group(1) for m in re.finditer(r'<script[^>]*>([\s\S]*?)</script>',html,re.I)]
-          print('\n'.join(scripts))
+          for i,js in enumerate(scripts): Path(f'/tmp/app{i}.js').write_text(js,encoding='utf-8')
+          print('script blocks:',len(scripts))
           PY
-          )
+          for f in /tmp/app*.js; do node --check "$f"; done
 
       - name: Commit and remove temporary workflow
         run: |
