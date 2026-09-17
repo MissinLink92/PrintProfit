@@ -34,7 +34,7 @@ function install(){
     button.addEventListener('click',()=>{
       const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
       if(tab)tab.click();
-      document.getElementById('ppCalculator')?.scrollIntoView({behavior:'smooth',block:'start'});
+      // Keep the user's current scroll position. Clicking a stage should only switch the workspace.
     });
   });
 
