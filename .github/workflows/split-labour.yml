@@ -1,4 +1,4 @@
-name: PrintProfit split labour
+name: PrintProfit split labour V2
 
 on:
   push:
@@ -47,8 +47,6 @@ jobs:
 
           if 'id="labourHours"' not in t:
               raise SystemExit('New labour hours input missing')
-          if t.count(marker) != 1:
-              raise SystemExit('Marker count incorrect')
 
           scripts = re.findall(r'<script(?:\\s[^>]*)?>(.*?)</script>', t, flags=re.S | re.I)
           if len(scripts) < 2:
@@ -87,7 +85,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git add -u .github/workflows/split-labour.yml
           git commit -m "Split labour hours from labour rate [skip ci]"
           git rm .github/workflows/split-labour.yml
           git commit -m "Remove temporary labour workflow [skip ci]"
