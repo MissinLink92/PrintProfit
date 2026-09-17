@@ -11,8 +11,33 @@ function install(){
  const style=document.createElement('style');
  style.id='ppHeroCompactFixStyles';
  style.textContent=`
-/* Keep the mobile hero composition compact and fully inside the hero box. */
+/* Keep the hero composition compact: branding stays above the ticker and nothing overlaps. */
 .pp-chosen-hero,.pp-signature-hero{overflow:hidden!important;}
+@media(min-width:1051px){
+ .hero.pp-chosen-hero,.hero.pp-signature-hero,.hero{height:390px!important;min-height:390px!important;overflow:hidden!important;}
+ .pp-chosen-stage{position:absolute!important;inset:0!important;display:grid!important;grid-template-columns:minmax(0,1fr) 420px!important;align-items:center!important;gap:32px!important;padding:26px clamp(28px,6.8vw,108px) 76px!important;box-sizing:border-box!important;overflow:hidden!important;}
+ .pp-hero-copy2{max-width:700px!important;align-self:center!important;}
+ .pp-hero-copy2 h1{font-size:clamp(42px,4.55vw,68px)!important;line-height:.94!important;margin-top:13px!important;}
+ .pp-hero-copy2 p{max-width:610px!important;margin-top:17px!important;font-size:15px!important;line-height:1.48!important;}
+ .pp-hero-buttons{margin-top:21px!important;}
+ .pp-hero-brand-card.pp-contained-brand-card{justify-self:end!important;align-self:center!important;width:420px!important;height:270px!important;aspect-ratio:auto!important;max-width:none!important;overflow:hidden!important;border-radius:20px!important;transform:perspective(1000px) rotateY(-3deg) rotateX(1deg)!important;}
+ .pp-hero-brand-card.pp-contained-brand-card:hover{transform:perspective(1000px) rotateY(-1deg) rotateX(0deg) translateY(-3px)!important;}
+ .pp-hero-brand-card img{width:74%!important;max-width:320px!important;height:auto!important;object-fit:contain!important;}
+ .pp-card-caption{bottom:12px!important;font-size:7px!important;gap:9px!important;}
+ .pp-chosen-ticker{left:clamp(28px,6.8vw,108px)!important;right:clamp(28px,6.8vw,108px)!important;bottom:13px!important;top:auto!important;padding-top:9px!important;min-height:34px!important;box-sizing:border-box!important;}
+ .pp-chosen-ticker span{font-size:8px!important;line-height:1.1!important;white-space:nowrap!important;}
+}
+@media(min-width:821px) and (max-width:1050px){
+ .hero.pp-chosen-hero,.hero.pp-signature-hero,.hero{height:430px!important;min-height:430px!important;overflow:hidden!important;}
+ .pp-chosen-stage{position:absolute!important;inset:0!important;display:grid!important;grid-template-columns:minmax(0,1fr) 330px!important;align-items:center!important;gap:22px!important;padding:24px 34px 72px!important;box-sizing:border-box!important;overflow:hidden!important;}
+ .pp-hero-copy2 h1{font-size:48px!important;line-height:.94!important;}
+ .pp-hero-copy2 p{font-size:14px!important;max-width:520px!important;}
+ .pp-hero-brand-card.pp-contained-brand-card{width:330px!important;height:230px!important;aspect-ratio:auto!important;max-width:none!important;overflow:hidden!important;}
+ .pp-hero-brand-card img{width:72%!important;max-width:245px!important;}
+ .pp-card-caption{bottom:10px!important;font-size:6.5px!important;gap:8px!important;}
+ .pp-chosen-ticker{left:34px!important;right:34px!important;bottom:11px!important;padding-top:8px!important;min-height:31px!important;}
+ .pp-chosen-ticker span{font-size:7px!important;white-space:nowrap!important;}
+}
 @media(max-width:820px){
  .hero.pp-chosen-hero,.hero.pp-signature-hero,.hero{height:430px!important;min-height:430px!important;overflow:hidden!important;}
  .pp-chosen-stage{position:absolute!important;inset:0!important;display:block!important;padding:0!important;overflow:hidden!important;}
