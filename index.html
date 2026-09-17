@@ -44,7 +44,8 @@
   function loadPricingUX(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./pricing-ux.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit pricing UX.'));document.body.appendChild(script);});}
   function loadGlobalActions(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./global-actions.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit global actions.'));document.body.appendChild(script);});}
   function loadPrettyUI(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./pretty-ui.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit visual theme.'));document.body.appendChild(script);});}
-  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadAlignmentPolish(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./alignment-polish.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit alignment polish.'));document.body.appendChild(script);});}
+  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
