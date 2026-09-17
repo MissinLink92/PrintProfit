@@ -6,38 +6,45 @@
     return h?h.textContent.trim():'';
   };
 
-  const waitForLayout=()=>new Promise(resolve=>{
-    const ready=()=>document.querySelector('.layout')?resolve():false;
-    if(ready())return;
-    const observer=new MutationObserver(()=>{
-      if(ready())observer.disconnect();
-    });
-    observer.observe(document.documentElement,{childList:true,subtree:true});
-    setTimeout(()=>{observer.disconnect();ready();},5000);
-  });
-
-  function install(){
-    if(document.getElementById('ppTabbedLayout'))return;
+  function getStructure(){
     const layout=document.querySelector('.layout');
-    if(!layout)return;
+    if(!layout)return null;
 
-    const result=layout.querySelector(':scope > .result')||layout.querySelector('.result');
-    const source=[...layout.children].find(child=>child!==result);
-    if(!source||!result)return;
+    const result=Array.from(layout.children).find(el=>el.classList.contains('result')) || layout.querySelector('.result');
+    const source=Array.from(layout.children).find(el=>el!==result);
+    if(!source||!result)return null;
 
-    const box1=[...source.querySelectorAll(':scope > section.panel')].find(panel=>panelTitle(panel).startsWith('1.'));
-    const box6=[...source.querySelectorAll(':scope > section.panel')].find(panel=>panelTitle(panel).startsWith('6.'));
-    const two=source.querySelector(':scope > .two');
-    const box2=two&&[...two.children].find(panel=>panelTitle(panel).startsWith('2.'));
-    const box3=two&&[...two.children].find(panel=>panelTitle(panel).startsWith('3.'));
-    const guides=source.querySelector(':scope > #guides');
-
-    if(!box1||!box2||!box3||!box6||!guides)return;
-
-    const mergeBlocks=[...guides.querySelectorAll('.merge-block')];
+    const directPanels=Array.from(source.children).filter(el=>el.matches&&el.matches('section.panel'));
+    const box1=directPanels.find(panel=>panelTitle(panel).startsWith('1.'));
+    const box6=directPanels.find(panel=>panelTitle(panel).startsWith('6.'));
+    const two=Array.from(source.children).find(el=>el.classList&&el.classList.contains('two'));
+    const box2=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('2.'));
+    const box3=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('3.'));
+    const guides=Array.from(source.children).find(el=>el.id==='guides');
+    const mergeBlocks=guides?Array.from(guides.querySelectorAll('.merge-block')):[];
     const box4=mergeBlocks.find(block=>panelTitle(block).startsWith('4.'));
     const box5=mergeBlocks.find(block=>panelTitle(block).startsWith('5.'));
-    if(!box4||!box5)return;
+
+    if(!box1||!box2||!box3||!box4||!box5||!box6)return null;
+    return {layout,result,source,box1,box2,box3,box4,box5,box6,two,guides};
+  }
+
+  function waitForStructure(timeout=15000){
+    return new Promise(resolve=>{
+      const started=Date.now();
+      const timer=setInterval(()=>{
+        const structure=getStructure();
+        if(structure||(Date.now()-started)>=timeout){
+          clearInterval(timer);
+          resolve(structure);
+        }
+      },50);
+    });
+  }
+
+  function install(structure){
+    if(!structure||document.getElementById('ppTabbedLayout'))return;
+    const {layout,result,source,box1,box2,box3,box4,box5,box6,two,guides}=structure;
 
     const style=document.createElement('style');
     style.id='ppTabbedLayoutRuntimeStyles';
@@ -59,13 +66,12 @@
 .pp-tab-panel.active{display:block}
 .pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
 .pp-card+.pp-card{margin-top:12px}
-.pp-card>.panel,.pp-card>.merge-block{margin:0!important}
+.pp-card>.panel{margin:0!important}
 .pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px}
 .pp-cost-block+.pp-cost-block{margin-top:12px}
 .pp-cost-block .merge-block{border:0!important;padding:0!important;margin:0!important}
 .pp-cost-block .head{margin-bottom:8px}
 .pp-cost-block .head .icon{width:30px;height:30px}
-.pp-empty{display:none}
 @media(max-width:950px){
   .layout{grid-template-columns:1fr!important}
   .layout>.result{position:static!important}
@@ -127,17 +133,14 @@
     costBlock5.appendChild(box5);
     costs.appendChild(costBlock5);
 
-    source.appendChild(workspace);
     workspace.appendChild(tabs);
     workspace.appendChild(details);
     workspace.appendChild(machine);
     workspace.appendChild(costs);
+    source.appendChild(workspace);
 
-    const oldTwo=two;
-    const oldGuides=guides;
-    if(oldTwo)oldTwo.remove();
-    if(oldGuides)oldGuides.remove();
-    if(source.children.length===1&&source.firstElementChild===workspace)source.remove();
+    if(two)two.remove();
+    if(guides)guides.remove();
 
     layout.innerHTML='';
     layout.appendChild(workspace);
@@ -151,12 +154,12 @@
           item.classList.toggle('active',active);
           item.setAttribute('aria-selected',String(active));
         });
-        workspace.querySelectorAll('.pp-tab-panel').forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));
+        workspace.querySelectorAll('.pp-tab-panel').forEach(panel=>{
+          panel.classList.toggle('active',panel.dataset.panel===id);
+        });
       });
     });
   }
 
-  waitForLayout().then(()=>{
-    requestAnimationFrame(()=>requestAnimationFrame(install));
-  });
+  waitForStructure().then(install);
 })();
