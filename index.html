@@ -12,12 +12,12 @@
 'use strict';
 const scripts=[
 'quick-price-guard.js?v=6',
-'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','global-reset.js?v=1','tab-layout.js?v=8','master-polish.js?v=1','master-cleanup.js?v=1','natural-flow.js?v=1'
+'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','global-reset.js?v=1','tab-layout.js?v=8','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3'
 ];
 function load(src){return new Promise(resolve=>{const s=document.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit optional script failed:',src);resolve();};document.body.appendChild(s);});}
 async function boot(){
  try{
-  const r=await fetch('./legacy-index.html?build=20260917-safe10',{cache:'no-store'});
+  const r=await fetch('./legacy-index.html?build=20260917-safe11',{cache:'no-store'});
   if(!r.ok)throw new Error('Could not load calculator page ('+r.status+').');
   const html=await r.text();
   const parsed=new DOMParser().parseFromString(html,'text/html');
