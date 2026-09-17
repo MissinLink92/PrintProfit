@@ -21,7 +21,7 @@
     const style=document.createElement('style');
     style.id='ppTabbedLayoutRuntimeStyles';
     style.textContent=`
-/* PrintProfit 3-stage flow workspace V7 */
+/* PrintProfit 3-stage flow workspace V8 */
 .layout{display:block!important;width:100%!important}
 .layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}
@@ -135,7 +135,7 @@
         if(number)number.textContent=complete?'✓':String(index+1);
       });
       Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));
-      progressHost.scrollIntoView({behavior:'smooth',block:'nearest'});
+      // Do not scroll. Switching stages should keep the user's current page position.
     }
 
     steps.forEach(step=>step.addEventListener('click',()=>setStep(step.dataset.tab)));
