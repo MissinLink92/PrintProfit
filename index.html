@@ -56,7 +56,8 @@
   function loadInteractionFix(){return loadScript('./interaction-fix.js?v=2','Could not load PrintProfit interaction fixes.');}
   function loadContainmentFix(){return loadScript('./containment-fix.js?v=1','Could not load PrintProfit contained hero layout.');}
   function loadMonoOrangeCoolTheme(){return loadScript('./mono-orange-cool-theme.js?v=1','Could not load PrintProfit monochrome orange theme.');}
-  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).then(loadContainmentFix).then(loadMonoOrangeCoolTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadBoxIcons(){return loadScript('./box-icons.js?v=1','Could not load PrintProfit premium box icons.');}
+  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).then(loadContainmentFix).then(loadMonoOrangeCoolTheme).then(loadBoxIcons).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
