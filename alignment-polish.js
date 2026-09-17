@@ -7,7 +7,8 @@
   style.id='ppAlignmentPolishStyles';
   style.textContent=`
     @media(min-width:951px){
-      /* Keep paired calculator cards perfectly aligned within each tab. */
+      /* Every two-column calculator row uses natural grid stretching so the
+         cards in the same row always share the height of the tallest card. */
       .pp-tab-panel[data-panel="details"],
       .pp-tab-panel[data-panel="machine"],
       .pp-tab-panel[data-panel="costs"]{
@@ -17,15 +18,21 @@
       .pp-tab-panel[data-panel="details"]>.pp-card,
       .pp-tab-panel[data-panel="machine"]>.pp-card,
       .pp-tab-panel[data-panel="costs"]>.pp-cost-block{
-        height:100%;
+        align-self:stretch!important;
+        min-height:0;
+        height:auto!important;
         display:flex;
+        flex-direction:column;
       }
 
       .pp-tab-panel[data-panel="details"]>.pp-card>.panel,
       .pp-tab-panel[data-panel="machine"]>.pp-card>.panel,
       .pp-tab-panel[data-panel="costs"]>.pp-cost-block>.panel{
-        height:100%;
+        flex:1 1 auto;
+        min-height:0;
+        height:auto!important;
         width:100%;
+        box-sizing:border-box;
       }
     }
   `;
