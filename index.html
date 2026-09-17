@@ -157,14 +157,11 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
       return h&&h.textContent.includes('6. Quantity / Batch Pricing');
     });
     if(!box6)return;
-
-    const existing=document.getElementById('profileSave');
-    if(existing)return;
+    if(document.getElementById('profileSave'))return;
 
     const style=document.createElement('style');
     style.id='savedProfilesStyle';
     style.textContent=`
-/* PrintProfit saved profiles V1 */
 .profile-save{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
 .profile-save-grid{display:grid;grid-template-columns:1.25fr 1.25fr auto auto;gap:7px;align-items:end}
 .profile-save-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
@@ -268,30 +265,30 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
     const style=document.createElement('style');
     style.id='printProfitNavigationStyle';
     style.textContent=`
-      .pp-modal{position:fixed;inset:0;z-index:100;background:#0009;display:none;align-items:center;justify-content:center;padding:18px}
-      .pp-modal.open{display:flex}
-      .pp-modal-card{width:min(700px,100%);max-height:min(78vh,760px);overflow:auto;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 60px #000a;padding:20px;position:relative}
-      .pp-modal-card h2{margin:0 42px 6px 0;font-size:22px}
-      .pp-modal-card p{line-height:1.55}
-      .pp-modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);font-size:20px;cursor:pointer}
-      .pp-modal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
-      .pp-modal-box{border:1px solid var(--line);border-radius:10px;padding:12px}
-      .pp-modal-box b{display:block;margin-bottom:4px;color:var(--accent)}
-      .pp-modal-link{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none;font-weight:700}
-      .pp-modal-link:hover{text-decoration:underline}
-      @media(max-width:650px){.pp-modal{padding:9px}.pp-modal-card{padding:15px}.pp-modal-grid{grid-template-columns:1fr}}
-    `;
+.pp-modal{position:fixed;inset:0;z-index:100;background:#0009;display:none;align-items:center;justify-content:center;padding:18px}
+.pp-modal.open{display:flex}
+.pp-modal-card{width:min(700px,100%);max-height:min(78vh,760px);overflow:auto;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 60px #000a;padding:20px;position:relative}
+.pp-modal-card h2{margin:0 42px 6px 0;font-size:22px}
+.pp-modal-card p{line-height:1.55}
+.pp-modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);font-size:20px;cursor:pointer}
+.pp-modal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.pp-modal-box{border:1px solid var(--line);border-radius:10px;padding:12px}
+.pp-modal-box b{display:block;margin-bottom:4px;color:var(--accent)}
+.pp-modal-link{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none;font-weight:700}
+.pp-modal-link:hover{text-decoration:underline}
+@media(max-width:650px){.pp-modal{padding:9px}.pp-modal-card{padding:15px}.pp-modal-grid{grid-template-columns:1fr}}
+`;
     document.head.appendChild(style);
 
     const modal=document.createElement('div');
     modal.className='pp-modal';
     modal.id='ppInfoModal';
     modal.innerHTML=`
-      <div class="pp-modal-card" role="dialog" aria-modal="true" aria-labelledby="ppModalTitle">
-        <button class="pp-modal-close" type="button" aria-label="Close">×</button>
-        <h2 id="ppModalTitle"></h2>
-        <div id="ppModalBody"></div>
-      </div>`;
+<div class="pp-modal-card" role="dialog" aria-modal="true" aria-labelledby="ppModalTitle">
+  <button class="pp-modal-close" type="button" aria-label="Close">×</button>
+  <h2 id="ppModalTitle"></h2>
+  <div id="ppModalBody"></div>
+</div>`;
     document.body.appendChild(modal);
 
     const title=document.getElementById('ppModalTitle');
@@ -302,28 +299,28 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
       '#guides':{
         title:'PrintProfit Guides',
         body:`
-          <p>Use PrintProfit to work out what a print actually costs, then price it for a sale with your chosen fees and delivery costs.</p>
-          <div class="pp-modal-grid">
-            <div class="pp-modal-box"><b>1. Add your print</b>Upload a G-code or supported file so PrintProfit can use the print time and material usage when those values are available.</div>
-            <div class="pp-modal-box"><b>2. Choose your setup</b>Select your printer and material profile, then check the spool or bottle size and cost.</div>
-            <div class="pp-modal-box"><b>3. Add operating costs</b>Enter labour, packaging, other costs and your electricity tariff to build a more realistic per-print cost.</div>
-            <div class="pp-modal-box"><b>4. Price the sale</b>Choose your selling platform, delivery rate, quantity and discount, then compare single-print and batch pricing.</div>
-          </div>
-          <p>Saved Setup Profiles let you save Boxes 2–4 on this device so the same printer, material and operating costs can be reused later.</p>`
+<p>Use PrintProfit to work out what a print actually costs, then price it for a sale with your chosen fees and delivery costs.</p>
+<div class="pp-modal-grid">
+  <div class="pp-modal-box"><b>1. Add your print</b>Upload a G-code or supported file so PrintProfit can use the print time and material usage when those values are available.</div>
+  <div class="pp-modal-box"><b>2. Choose your setup</b>Select your printer and material profile, then check the spool or bottle size and cost.</div>
+  <div class="pp-modal-box"><b>3. Add operating costs</b>Enter labour, packaging, other costs and your electricity tariff to build a more realistic per-print cost.</div>
+  <div class="pp-modal-box"><b>4. Price the sale</b>Choose your selling platform, delivery rate, quantity and discount, then compare single-print and batch pricing.</div>
+</div>
+<p>Saved Setup Profiles let you save Boxes 2–4 on this device so the same printer, material and operating costs can be reused later.</p>`
       },
       '#about':{
         title:'About PrintProfit',
         body:`
-          <p>PrintProfit is a 3D-printing cost and pricing calculator designed to bring material, machine time, electricity, labour, packaging, marketplace fees and delivery into one place.</p>
-          <div class="pp-modal-box"><b>What it is for</b>Estimate the cost of making an item and explore selling prices and margins without having to work the figures out by hand.</div>
-          <p class="small">Prices, platform fees and delivery rates are reference figures and can vary. Check the current rate with the relevant provider before relying on a quote.</p>`
+<p>PrintProfit is a 3D-printing cost and pricing calculator designed to bring material, machine time, electricity, labour, packaging, marketplace fees and delivery into one place.</p>
+<div class="pp-modal-box"><b>What it is for</b>Estimate the cost of making an item and explore selling prices and margins without having to work the figures out by hand.</div>
+<p class="small">Prices, platform fees and delivery rates are reference figures and can vary. Check the current rate with the relevant provider before relying on a quote.</p>`
       },
       '#support':{
         title:'PrintProfit Support',
         body:`
-          <p>Found a bug, have an idea, or something on the calculator not behaving as expected?</p>
-          <div class="pp-modal-box"><b>GitHub support</b>Open an issue in the PrintProfit repository and include what you clicked, what you expected to happen, and what happened instead.</div>
-          <a class="pp-modal-link" href="https://github.com/MissinLink92/PrintProfit/issues" target="_blank" rel="noopener">Open PrintProfit issues ↗</a>`
+<p>Found a bug, have an idea, or something on the calculator not behaving as expected?</p>
+<div class="pp-modal-box"><b>GitHub support</b>Open an issue in the PrintProfit repository and include what you clicked, what you expected to happen, and what happened instead.</div>
+<a class="pp-modal-link" href="https://github.com/MissinLink92/PrintProfit/issues" target="_blank" rel="noopener">Open PrintProfit issues ↗</a>`
       }
     };
 
@@ -360,7 +357,84 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
     });
   }
 
+  function installLayoutV3(){
+    const style=document.createElement('style');
+    style.id='printProfitLayoutV3';
+    style.textContent=`
+/* PrintProfit visual layout V3 — CSS-only so calculator logic and event wiring stay untouched. */
+.shell{max-width:1640px;margin:14px auto 22px;border-radius:14px;box-shadow:0 14px 40px #0006}
+.header{min-height:72px;padding:10px 20px;gap:18px}
+.nav{gap:6px}
+.nav a{transition:background .18s ease,color .18s ease,transform .18s ease}
+.nav a:hover{transform:translateY(-1px)}
+.main{padding:14px}
+.layout{gap:14px;align-items:start}
+.layout .panel+.panel{margin-top:0}
+.panel,.merged-group{box-shadow:0 7px 22px #0003;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.panel:hover,.merged-group:hover{border-color:#31576b;box-shadow:0 10px 28px #0004}
+.panel .head,.merged-group>.head{margin-bottom:10px}
+.two,.three{gap:10px}
+.merged-grid{gap:12px}
+.merge-block{background:#0a1720cc;border:1px solid #24404e66;border-radius:10px;padding:10px}
+.merge-block+.merge-block{padding-left:10px;border-left:0}
+.merge-block .head{margin-bottom:8px}
+.result{top:86px}
+.result.panel{border-color:#2c5164}
+.tabs{padding:4px;gap:4px}
+.card{background:#091720aa}
+.quick{padding-top:2px}
+.profile-save{background:#09172088;border-radius:10px;padding:10px;margin-top:10px;border-top:0}
+.actions{margin-top:9px}
+
+@media(min-width:1101px){
+  .layout{grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+  .layout>div:first-child{display:contents}
+  .layout>div:first-child>.two,
+  .layout>div:first-child>#guides{display:contents}
+
+  .layout>div:first-child>section.panel:first-child{grid-column:1 / span 9;grid-row:1}
+  .layout>div:first-child>.two>section.panel:first-child{grid-column:1 / span 4;grid-row:2}
+  .layout>div:first-child>.two>section.panel:nth-child(2){grid-column:5 / span 5;grid-row:2}
+  #guides>.merged-group:first-child{grid-column:1 / span 5;grid-row:3}
+  #guides>.merged-group:last-child{grid-column:6 / span 4;grid-row:3}
+  .layout>div:first-child>section.panel:last-child{grid-column:1 / span 9;grid-row:4}
+  .layout>.result{grid-column:10 / span 3;grid-row:1 / span 4}
+
+  .layout>div:first-child>section.panel:first-child .drop{min-height:150px;display:grid;place-items:center;align-content:center}
+  .layout>div:first-child>.two>section.panel:first-child,
+  .layout>div:first-child>.two>section.panel:nth-child(2){height:100%}
+  #guides>.merged-group{height:100%}
+  #guides .merged-grid{grid-template-columns:1fr;gap:10px}
+  .layout>div:first-child>section.panel:last-child .three{grid-template-columns:1fr 1fr 1.15fr}
+}
+
+@media(min-width:951px) and (max-width:1100px){
+  .layout{gap:12px}
+  .panel,.merged-group{box-shadow:0 6px 18px #0003}
+}
+
+@media(max-width:950px){
+  .main{padding:10px}
+  .layout{gap:12px}
+  .panel,.merged-group{box-shadow:0 5px 16px #0003}
+  .merge-block{padding:10px}
+  .merge-block+.merge-block{padding-left:0}
+}
+
+@media(max-width:650px){
+  .shell{margin:0 auto 14px;border-radius:0}
+  .header{padding:9px 12px}
+  .main{padding:8px}
+  .layout{gap:10px}
+  .panel,.merged-group{box-shadow:none}
+  .profile-save{padding:9px}
+}
+`;
+    document.head.appendChild(style);
+  }
+
   loadLegacyPage().then(()=>{
+    installLayoutV3();
     installProfiles();
     installResetOverride();
     installNavigation();
