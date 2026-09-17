@@ -14,6 +14,10 @@ function install(){
  const card=hero.querySelector('.pp-hero-brand-card img');
  if(card){card.src=master;card.alt='PrintProfit — 3D Printing Cost & Pricing Calculator';}
  hero.querySelectorAll(':scope > img').forEach(img=>img.style.display='none');
+ hero.querySelectorAll('.pp-hero-art').forEach(art=>{
+  art.style.display='none';
+  art.setAttribute('aria-hidden','true');
+ });
  const style=document.getElementById('ppSiteFinalPolishStyles')||document.createElement('style');
  style.id='ppSiteFinalPolishStyles';
  style.textContent=`
@@ -27,6 +31,7 @@ function install(){
 .header .mode input:checked{background:linear-gradient(90deg,#ff7800,#ff9b42)!important;border-color:#ff7800!important;box-shadow:0 0 16px #ff780033!important}
 .hero.pp-chosen-hero,.hero{height:390px!important;min-height:390px!important;background:radial-gradient(560px 300px at 76% 45%,#ff78000d 0,transparent 63%),radial-gradient(620px 260px at 14% 48%,#ff780008 0,transparent 65%),linear-gradient(135deg,#06111a 0%,#0a1b26 49%,#02080d 100%)!important}
 .hero.pp-chosen-hero:after,.hero:after{background:linear-gradient(90deg,transparent,#ff7800,#ff9b42,#ff7800,transparent)!important;box-shadow:0 0 22px #ff780055!important}
+.hero .pp-hero-art{display:none!important}
 .pp-chosen-stage{grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr)!important;gap:34px!important;padding:30px clamp(28px,7vw,110px) 76px!important}
 .pp-hero-copy2{max-width:760px!important}
 .pp-hero-copy2 h1{font-size:clamp(45px,4.7vw,72px)!important}
