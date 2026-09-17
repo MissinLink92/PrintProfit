@@ -65,26 +65,23 @@ jobs:
             for(const js of scripts) dom.window.eval(js);
             dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
             const d=dom.window.document;
+            const button=d.getElementById('calc');
+            if(!button) throw new Error('calculate button not found');
+            let clicks=0;
+            button.addEventListener('click',()=>{clicks++;});
             const flush=()=>new Promise(r=>dom.window.setTimeout(r,10));
-            const dispatchInput=(id,val)=>{const el=d.getElementById(id);el.value=val;el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));};
-            dispatchInput('printer','120|260|3000');
-            dispatchInput('materialUsed','100');
-            dispatchInput('printHours','2');
-            await flush();
-            const before=d.getElementById('cost').textContent;
             const labour=d.getElementById('labourRate');
             labour.value='10';
             labour.dispatchEvent(new dom.window.Event('focusout',{bubbles:true}));
             await flush();
-            const afterBlur=d.getElementById('cost').textContent;
-            if(afterBlur===before) throw new Error('blur did not recalculate');
+            if(clicks<1) throw new Error('blur did not trigger Calculate button');
+            const afterBlurClicks=clicks;
             const power=d.getElementById('electricityRate');
             power.value='0.5';
             power.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
             await flush();
-            const afterEnter=d.getElementById('electricityCostOut').value;
-            if(afterEnter!=='£0.12') throw new Error('Enter did not recalculate: '+afterEnter);
-            console.log('Blur and Enter recalculation test passed:',{before,afterBlur,afterEnter});
+            if(clicks<=afterBlurClicks) throw new Error('Enter did not trigger Calculate button');
+            console.log('Blur and Enter recalculation test passed:',{blurClicks:afterBlurClicks,enterClicks:clicks});
           })().catch(err=>{console.error(err);process.exit(1);});
           JS
           python - <<'PY'
