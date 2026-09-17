@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — Loading…</title>
-<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}body{display:grid;place-items:center;min-height:100vh}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#0798ff;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</style>
+<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}body{display:grid;place-items:center;min-height:100vh}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#0798ff;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</span></div>
 <script src="./quick-price-guard.js?v=5"></script>
 </head>
 <body><div class="loader"><b>PrintProfit</b><span>Loading calculator…</span></div>
@@ -56,7 +56,7 @@
   function loadInteractionFix(){return loadScript('./interaction-fix.js?v=2','Could not load PrintProfit interaction fixes.');}
   function loadContainmentFix(){return loadScript('./containment-fix.js?v=1','Could not load PrintProfit contained hero layout.');}
   function loadMonoOrangeCoolTheme(){return loadScript('./mono-orange-cool-theme.js?v=1','Could not load PrintProfit monochrome orange theme.');}
-  function loadBoxIcons(){return loadScript('./box-icons.js?v=1','Could not load PrintProfit premium box icons.');}
+  function loadBoxIcons(){return loadScript('./box-icons.js?v=2','Could not load PrintProfit premium box icons.');}
   function loadElectricityProviders(){return loadScript('./electricity-providers.js?v=2','Could not load electricity provider list.');}
   function loadHeroTickerPosition(){return loadScript('./hero-ticker-position.js?v=1','Could not load PrintProfit hero ticker positioning.');}
   loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).then(loadContainmentFix).then(loadMonoOrangeCoolTheme).then(loadBoxIcons).then(loadElectricityProviders).then(loadHeroTickerPosition).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
