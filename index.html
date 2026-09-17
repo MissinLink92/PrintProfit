@@ -6,16 +6,20 @@
 <title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
 <style>
 html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto}
-#ppFloatingReset{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:1px solid #ff7800;background:linear-gradient(145deg,#ff8a1a,#ff7800);color:#fff;display:grid;place-items:center;font:900 22px/1 Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;z-index:9999;box-shadow:0 8px 24px #0009,0 0 20px #ff780033;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
-#ppFloatingReset:hover{transform:translateY(-3px) rotate(-18deg);box-shadow:0 12px 28px #000b,0 0 28px #ff780055;filter:brightness(1.08)}
-#ppFloatingReset:active{transform:scale(.94) rotate(-18deg)}
+#ppFloatingReset{position:fixed;right:22px;bottom:22px;min-width:154px;height:50px;padding:0 18px;border-radius:14px;border:1px solid #ff7800;background:linear-gradient(145deg,#ff8f24,#ff7800);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font:900 13px/1 Inter,Segoe UI,system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;z-index:9999;box-shadow:0 10px 28px #000b,0 0 24px #ff780033;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+#ppFloatingReset .pp-reset-icon{width:25px;height:25px;border:2px solid rgba(255,255,255,.9);border-radius:50%;display:grid;place-items:center;font-size:17px;line-height:1;letter-spacing:0}
+#ppFloatingReset .pp-reset-text{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+#ppFloatingReset .pp-reset-main{font-size:13px;line-height:1}
+#ppFloatingReset .pp-reset-sub{font-size:7px;line-height:1;letter-spacing:.16em;opacity:.78}
+#ppFloatingReset:hover{transform:translateY(-3px);box-shadow:0 14px 32px #000b,0 0 32px #ff780066;filter:brightness(1.08)}
+#ppFloatingReset:active{transform:scale(.96)}
 #ppFloatingReset:focus-visible{outline:2px solid #fff;outline-offset:3px}
-@media(max-width:650px){#ppFloatingReset{right:14px;bottom:14px;width:44px;height:44px;font-size:20px}}
+@media(max-width:650px){#ppFloatingReset{right:14px;bottom:14px;min-width:132px;height:44px;padding:0 13px;border-radius:12px;gap:8px}#ppFloatingReset .pp-reset-icon{width:22px;height:22px;font-size:15px}#ppFloatingReset .pp-reset-main{font-size:11px}#ppFloatingReset .pp-reset-sub{font-size:6px}}
 </style>
 </head>
 <body>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260917-fullstack8" style="width:100%;border:0;display:block"></iframe>
-<button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator">↻</button>
+<button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
 'use strict';
