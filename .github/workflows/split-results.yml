@@ -1,0 +1,453 @@
+name: Add PrintProfit single and batch results
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  split-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install test dependency
+        run: npm install --no-save jsdom@26
+
+      - name: Patch and test calculator
+        shell: bash
+        run: |
+          cat > /tmp/patch.py <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+
+          results = r'''<aside class="panel result" id="about">
+            <div class="head"><div class="icon">£</div><div><h2>Results</h2><p>View one-print economics or price a full batch.</p></div></div>
+            <div class="tabs" id="resultTabs">
+              <button type="button" class="tab active" data-result-tab="single">🖨 Single Print</button>
+              <button type="button" class="tab" data-result-tab="batch">▦ Batch Pricing</button>
+            </div>
+
+            <div id="singleResultView" class="resultView">
+              <div class="cards">
+                <div class="card"><div class="small">Total Cost to Make</div><div class="value" id="singleCost">£0.00</div></div>
+                <div class="card"><div class="small">Selling Price</div><div class="value" id="singleSellOut">£15.00</div></div>
+                <div class="card"><div class="small">Profit</div><div class="value good" id="singleProfit">£0.00</div></div>
+              </div>
+              <div class="small" style="margin-top:8px" id="singleMargin">Margin: 0.0%</div>
+              <div class="quick">
+                <div class="small">Quick Price Buttons (target margin)</div>
+                <div class="grid">
+                  <button type="button" class="btn" data-m=".3" data-target-view="single">+ 30%</button>
+                  <button type="button" class="btn" data-m=".5" data-target-view="single">+ 50%</button>
+                  <button type="button" class="btn" data-m=".6" data-target-view="single">+ 60%</button>
+                </div>
+              </div>
+              <div class="break"><b>Breakdown (per print)</b><div id="singleBreakdown"></div></div>
+            </div>
+
+            <div id="batchResultView" class="resultView" hidden>
+              <div class="cards">
+                <div class="card"><div class="small">Batch Cost to Make</div><div class="value" id="batchCost">£0.00</div></div>
+                <div class="card"><div class="small">Batch Sales</div><div class="value" id="batchSales">£0.00</div></div>
+                <div class="card"><div class="small">Batch Profit</div><div class="value good" id="batchProfit">£0.00</div></div>
+              </div>
+              <div class="cards" style="margin-top:8px">
+                <div class="card"><div class="small">Discount Saved</div><div class="value" id="batchDiscount">£0.00</div></div>
+                <div class="card"><div class="small">Effective Price / Item</div><div class="value" id="batchUnit">£0.00</div></div>
+                <div class="card"><div class="small">Delivery Charged</div><div class="value" id="batchDelivery">£0.00</div></div>
+              </div>
+              <div class="small" style="margin-top:8px" id="batchSummary">Quantity 1 • 0.0% discount</div>
+              <div class="small" style="margin-top:3px" id="batchMargin">Margin: 0.0%</div>
+              <div class="quick">
+                <div class="small">Quick Batch Price (target margin)</div>
+                <div class="grid">
+                  <button type="button" class="btn" data-m=".3" data-target-view="batch">+ 30%</button>
+                  <button type="button" class="btn" data-m=".5" data-target-view="batch">+ 50%</button>
+                  <button type="button" class="btn" data-m=".6" data-target-view="batch">+ 60%</button>
+                </div>
+              </div>
+              <div class="break"><b>Batch Breakdown</b><div id="batchBreakdown"></div></div>
+            </div>
+          </aside>'''
+
+          html, count = re.subn(r'<aside class="panel result" id="about">[\s\S]*?</aside>', results, html, count=1)
+          if count != 1:
+              raise SystemExit('Could not find Results panel')
+
+          html = html.replace('<label>Selling price (£)</label><input id="sell"', '<label>Selling price per item (£)</label><input id="sell"', 1)
+
+          script = r'''<script>
+          (()=>{
+            'use strict';
+
+            const $=id=>document.getElementById(id);
+            const n=id=>{const el=$(id);return el?Math.max(0,parseFloat(el.value)||0):0;};
+            const money=x=>'£'+(Number.isFinite(Number(x))?Number(x):0).toFixed(2);
+            const state={hours:0,used:0,unit:'g',file:'',resultMode:'single'};
+
+            const platformProfiles={
+              own:{platform:0,pay:0,fixed:0,note:'Direct sale / own website: no marketplace fee preloaded.'},
+              etsy:{platform:6.98,pay:4,fixed:0.20,note:'Etsy UK: 6.5% transaction + 0.48% UK regulatory fee; Etsy Payments 4% + £0.20.'},
+              ebay:{platform:12.25,pay:0,fixed:0.40,note:'eBay UK Business default: 11.9% Home/Furniture & DIY + 0.35% regulatory fee; £0.40 per order over £10.'},
+              amazon:{platform:12.24,pay:0,fixed:0,note:'Amazon Handmade UK: 12.24% referral fee. Monthly selling-plan cost is not allocated per sale here.'},
+              depop:{platform:0,pay:2.9,fixed:0.30,note:'Depop UK: no selling fee; Depop Payments 2.9% + £0.30. Boosted Listings are not included.'},
+              vinted:{platform:0,pay:0,fixed:0,note:'Vinted UK: standard seller transaction fee is £0; buyer protection is charged to the buyer.'},
+              tiktok:{platform:9,pay:0,fixed:0,note:'TikTok Shop UK: standard commission 9%; category/programme reductions or extra fees may apply.'},
+              facebook:{platform:0,pay:0,fixed:0,note:'Facebook Marketplace: £0 transaction fee assumed for direct/local selling; checkout or promotional charges may vary.'},
+              gumtree:{platform:0,pay:0,fixed:0,note:'Gumtree: no per-sale fee preloaded; paid listing or promotion options may apply.'},
+              folksy:{platform:7.2,pay:1.5,fixed:0.20,note:'Folksy Basic: 6% commission + VAT = 7.2%; Stripe standard UK card rate shown as 1.5% + £0.20.'},
+              shopify:{platform:0,pay:2,fixed:0.25,note:'Shopify Payments Basic: 2% + £0.25 standard online card rate. Monthly plan cost is not allocated per sale.'},
+              custom:{platform:0,pay:0,fixed:0,note:'Enter your own platform and payment fees.'}
+            };
+
+            function setText(id,text){const el=$(id);if(el)el.textContent=text;}
+            function setValue(id,value){const el=$(id);if(el)el.value=value;}
+
+            function printerData(){
+              const el=$('printer'),v=el?el.value:'';
+              if(!v||v==='custom') return {watts:0,price:0,lifetime:0};
+              const p=v.split(/[|,]/);
+              return {watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0};
+            }
+
+            function updateMaterialUI(){
+              const type=$('materialType'),material=$('material');
+              if(!type||!material) return;
+              const resin=type.value==='resin';
+              setText('packAmountLabel',resin?'Bottle amount (ml)':'Spool weight (g)');
+              setText('usageLabel',resin?'Used per print (ml)':'Used per print (g)');
+              material.querySelectorAll('optgroup').forEach(g=>{
+                g.style.display=((resin&&g.label==='Resin')||(!resin&&g.label==='Filament'))?'':'none';
+              });
+              const desired=resin?'Standard Resin':'PLA';
+              if([...material.options].some(o=>o.value===desired)) material.value=desired;
+              state.unit=resin?'ml':'g';
+              calc();
+            }
+
+            function parseDuration(text){
+              const s=String(text||'');
+              let m=s.match(/(?:^|[;#])\s*(?:TIME|PRINT_TIME|PRINTING_TIME)\s*[:=]\s*(\d+(?:\.\d+)?)/im);
+              if(m){const sec=Number(m[1])||0;if(sec>0)return sec/3600;}
+              m=s.match(/(?:estimated printing time|print time|printing time)\s*[:=]\s*(?:(\d+)h\s*)?(?:(\d+)m\s*)?(?:(\d+)s)?/i);
+              if(m&&(m[1]||m[2]||m[3])) return (((Number(m[1])||0)*3600+(Number(m[2])||0)*60+(Number(m[3])||0))/3600);
+              return 0;
+            }
+
+            function parseUsage(text){
+              const s=String(text||'');
+              const gPatterns=[
+                /filament\s*(?:used|usage|weight)\s*\[?g\]?\s*[=:]\s*([0-9]+(?:\.[0-9]+)?)/i,
+                /filament\s*(?:used|usage|weight)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i,
+                /total\s*filament[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i,
+                /material\s*(?:used|usage|weight)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i
+              ];
+              for(const re of gPatterns){const m=s.match(re);if(m)return{value:Number(m[1]),unit:'g'};}
+              const mlPatterns=[
+                /resin\s*(?:used|usage|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i,
+                /material\s*(?:used|usage|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i,
+                /(?:resin_volume|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i
+              ];
+              for(const re of mlPatterns){const m=s.match(re);if(m)return{value:Number(m[1]),unit:'ml'};}
+              return null;
+            }
+
+            function setProfitClass(id,profit){
+              const el=$(id);
+              if(el) el.className='value '+(profit>=0?'good':'bad');
+            }
+
+            function renderSingle(base,sell,fees,profit,margin,qty,disc){
+              setText('singleCost',money(base));
+              setText('singleSellOut',money(sell));
+              setText('singleProfit',money(profit));
+              setProfitClass('singleProfit',profit);
+              setText('singleMargin','Margin: '+(margin*100).toFixed(1)+'%');
+              const breakdown=$('singleBreakdown');
+              if(breakdown){
+                breakdown.innerHTML=[
+                  ['Material',current.materialCost],
+                  ['Electricity',current.elec],
+                  ['Printer depreciation',current.depreciation],
+                  ['Labour',current.labour],
+                  ['Packaging + other',n('pack')+n('other')],
+                  ['Delivery',n('delivery')],
+                  ['Platform/payment fees',fees]
+                ].map(([k,v])=>'<div class="line"><span>'+k+'</span><b>'+money(v)+'</b></div>').join('')+
+                '<div class="line total"><span>One print cost</span><b>'+money(base)+'</b></div>';
+              }
+              setText('singleSummary','Quantity '+qty+' selected • batch discount '+(disc*100).toFixed(1)+'%');
+            }
+
+            let current={materialCost:0,elec:0,depreciation:0,labour:0,base:0,fees:0};
+
+            function renderBatch(base,sell,fees,qty,disc){
+              const feeRate=(n('platform')+n('pay'))/100;
+              const listSales=sell*qty;
+              const discountSaved=listSales*disc;
+              const itemSales=listSales-discountSaved;
+              const batchCost=base*qty;
+              const batchDelivery=n('deliveryCharge');
+              const batchFees=itemSales*feeRate+n('fixedFee');
+              const batchProfit=itemSales+batchDelivery-batchCost-batchFees;
+              const batchMargin=itemSales?batchProfit/itemSales:0;
+              const effectiveUnit=qty?itemSales/qty:0;
+
+              setText('batchCost',money(batchCost));
+              setText('batchSales',money(itemSales));
+              setText('batchProfit',money(batchProfit));
+              setProfitClass('batchProfit',batchProfit);
+              setText('batchDiscount',money(discountSaved));
+              setText('batchUnit',money(effectiveUnit));
+              setText('batchDelivery',money(batchDelivery));
+              setText('batchSummary','Quantity '+qty+' • '+(disc*100).toFixed(1)+'% discount • '+money(effectiveUnit)+' effective price per item');
+              setText('batchMargin','Margin: '+(batchMargin*100).toFixed(1)+'%');
+
+              const breakdown=$('batchBreakdown');
+              if(breakdown){
+                breakdown.innerHTML=[
+                  ['Per-print cost',base],
+                  ['Quantity',qty],
+                  ['Batch production cost',batchCost],
+                  ['List sales',listSales],
+                  ['Batch discount',-discountSaved],
+                  ['Sales after discount',itemSales],
+                  ['Platform/payment fees',batchFees],
+                  ['Delivery charged',batchDelivery]
+                ].map(([k,v])=>'<div class="line"><span>'+k+'</span><b>'+((v<0?'-':'')+money(Math.abs(v)))+'</b></div>').join('')+
+                '<div class="line total"><span>Batch profit</span><b>'+money(batchProfit)+'</b></div>';
+              }
+
+              return {listSales,discountSaved,itemSales,batchCost,batchDelivery,batchFees,batchProfit,batchMargin,effectiveUnit};
+            }
+
+            function calc(){
+              const p=printerData();
+              const qty=Math.max(1,Math.floor(n('qty')));
+              const disc=Math.min(100,n('discount'))/100;
+              const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
+              state.hours=hours;
+
+              const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+              const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+              const elec=powerUsed*n('electricityRate');
+              const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+              const labour=n('labourRate')*hours;
+              const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
+              const sell=n('sell');
+              const feeRate=(n('platform')+n('pay'))/100;
+              const fees=sell*feeRate+n('fixedFee');
+              const profit=sell+n('deliveryCharge')-base-fees;
+              const margin=sell?profit/sell:0;
+
+              current={materialCost,elec,depreciation,labour,base,fees};
+
+              setValue('printerPowerOut',p.watts>0?Math.round(p.watts)+' W':'—');
+              setValue('powerUsedOut',powerUsed.toFixed(3)+' kWh');
+              setValue('electricityCostOut',money(elec));
+              const provider=$('electricityProvider');
+              const providerText=provider?provider.value.trim():'';
+              setText('electricityStatus',!p.watts?'Select a printer in Box 2 to estimate power draw.':!hours?'Load a print file or enter print time in Box 3.':!n('electricityRate')?'Enter your electricity unit rate to calculate cost.':(providerText?providerText+' • ':'')+'Estimated from '+Math.round(p.watts)+' W for '+hours.toFixed(2)+' h.');
+              setValue('materialCostOut',money(materialCost));
+
+              renderSingle(base,sell,fees,profit,margin,qty,disc);
+              renderBatch(base,sell,fees,qty,disc);
+            }
+
+            function processFile(f){
+              if(!f) return;
+              state.file=f.name;
+              setText('status',f.name+' • reading print metadata...');
+              const resinFile=/\.(ctb|photon|pwma|pwmo|pws|goo|sl1|sl1s)$/i.test(f.name);
+              if(resinFile){setValue('materialType','resin');updateMaterialUI();}
+              const r=new FileReader();
+              r.onload=()=>{
+                const t=String(r.result||'');
+                const hours=parseDuration(t),usage=parseUsage(t);
+                if(hours){state.hours=hours;setValue('printHours',hours.toFixed(2));}
+                else state.hours=n('printHours');
+                if(usage){
+                  state.used=usage.value;state.unit=usage.unit;
+                  setValue('materialType',usage.unit==='ml'?'resin':'filament');
+                  updateMaterialUI();
+                  setValue('materialUsed',usage.value.toFixed(2));
+                  setText('status',f.name+' • '+(hours?hours.toFixed(2)+' h detected':'print time not detected')+' • '+usage.value.toFixed(2)+' '+usage.unit+' detected');
+                  setText('materialStatus','Usage detected automatically. You can override it below.');
+                }else{
+                  setText('status',f.name+' • file loaded, but material usage was not detected');
+                  setText('materialStatus','No readable material usage found. Enter the used amount manually.');
+                }
+                calc();
+              };
+              r.onerror=()=>{setText('status',f.name+' • could not read file metadata');setText('materialStatus','Enter usage and print time manually.');calc();};
+              r.readAsText(f);
+            }
+
+            function applyPlatformProfile(){
+              const select=$('platformSelect');
+              if(!select) return;
+              const profile=platformProfiles[select.value]||platformProfiles.custom;
+              setValue('platform',profile.platform);
+              setValue('pay',profile.pay);
+              setValue('fixedFee',profile.fixed);
+              setText('platformStatus',profile.note);
+              calc();
+            }
+
+            function setResultTab(mode){
+              state.resultMode=mode==='batch'?'batch':'single';
+              document.querySelectorAll('#resultTabs .tab').forEach(button=>button.classList.toggle('active',button.dataset.resultTab===state.resultMode));
+              const single=$('singleResultView'),batch=$('batchResultView');
+              if(single) single.hidden=state.resultMode!=='single';
+              if(batch) batch.hidden=state.resultMode!=='batch';
+            }
+
+            function targetPrice(target,mode){
+              const feeRate=(n('platform')+n('pay'))/100;
+              const qty=Math.max(1,Math.floor(n('qty')));
+              const disc=Math.min(100,n('discount'))/100;
+              const base=current.base;
+              if(mode==='batch'){
+                const den=1-feeRate-target;
+                const discountedSales=Math.max(0,(base*qty+n('fixedFee')-n('deliveryCharge'))/den);
+                const factor=qty*(1-disc);
+                if(den>0&&factor>0) return discountedSales/factor;
+                return null;
+              }
+              const den=1-feeRate-target;
+              if(den>0) return (base+n('fixedFee'))/den;
+              return null;
+            }
+
+            function bind(){
+              const runCalc=()=>{try{calc();}catch(err){console.error('PrintProfit calculation error:',err);}};
+              const calcButton=$('calc');
+              if(calcButton) calcButton.addEventListener('click',runCalc);
+              const reset=$('reset');
+              if(reset) reset.addEventListener('click',()=>location.reload());
+              const materialType=$('materialType');
+              if(materialType) materialType.addEventListener('change',()=>{try{updateMaterialUI();}catch(err){console.error('Material UI error:',err);runCalc();}});
+              const platformSelect=$('platformSelect');
+              if(platformSelect) platformSelect.addEventListener('change',applyPlatformProfile);
+              const printer=$('printer');
+              if(printer) printer.addEventListener('change',runCalc);
+              const file=$('file');
+              if(file) file.addEventListener('change',e=>processFile(e.target.files[0]));
+              const clear=$('clear');
+              if(clear) clear.addEventListener('click',()=>{
+                setValue('file','');state.hours=0;state.used=0;state.file='';
+                setValue('printHours',0);setValue('materialUsed',0);
+                setText('status','No G-code selected');
+                setText('materialStatus','Waiting for a print file, or enter usage manually.');
+                runCalc();
+              });
+
+              document.addEventListener('input',e=>{if(e.target&&e.target.matches('input,select,textarea'))runCalc();});
+              document.addEventListener('change',e=>{if(e.target&&e.target.matches('input,select,textarea')&&e.target!==materialType&&e.target!==platformSelect&&e.target!==printer)runCalc();});
+
+              document.querySelectorAll('#resultTabs .tab').forEach(button=>button.addEventListener('click',()=>setResultTab(button.dataset.resultTab)));
+              document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.addEventListener('click',()=>{
+                const price=targetPrice(parseFloat(button.dataset.m),button.dataset.targetView);
+                if(price!==null){setValue('sell',price.toFixed(2));runCalc();setResultTab(button.dataset.targetView);}
+              }));
+
+              const drop=document.querySelector('.drop');
+              if(drop){
+                ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.background='#ff780012';}));
+                ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.background='';}));
+                drop.addEventListener('drop',e=>{const f=e.dataTransfer&&e.dataTransfer.files?e.dataTransfer.files[0]:null;if(f)processFile(f);});
+              }
+
+              try{applyPlatformProfile();}catch(err){console.error('Platform profile error:',err);runCalc();}
+              try{updateMaterialUI();}catch(err){console.error('Material init error:',err);runCalc();}
+              setResultTab('single');
+              window.__printProfitReady=true;
+            }
+
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind,{once:true});
+            else bind();
+          })();
+          </script>'''
+
+          script_match = re.search(r'<script>[\s\S]*?</script>', html)
+          if not script_match:
+              raise SystemExit('Could not find calculator script')
+          html = html[:script_match.start()] + script + html[script_match.end():]
+          path.write_text(html,encoding='utf-8')
+          PY
+
+          python /tmp/patch.py
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          html=Path('index.html').read_text(encoding='utf-8')
+          matches=re.findall(r'<script>([\s\S]*?)</script>',html)
+          if len(matches)!=1:
+              raise SystemExit(f'Expected one script block, found {len(matches)}')
+          Path('/tmp/app.js').write_text(matches[0],encoding='utf-8')
+          PY
+
+          node --check /tmp/app.js
+
+          node <<'JS'
+          const fs=require('fs');
+          const {JSDOM}=require('jsdom');
+          const html=fs.readFileSync('index.html','utf8');
+          const js=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+          const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true});
+          dom.window.console.error=(...args)=>{throw new Error(args.join(' '));};
+          dom.window.eval(js);
+          dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
+          if(!dom.window.__printProfitReady) throw new Error('calculator did not initialize');
+          const d=dom.window.document;
+          const fire=(id,val,event='input')=>{const el=d.getElementById(id);if(!el)throw new Error('missing '+id);el.value=val;el.dispatchEvent(new dom.window.Event(event,{bubbles:true}));};
+          const click=id=>{const el=d.getElementById(id);if(!el)throw new Error('missing button '+id);el.click();};
+          fire('printer','120|260|3000','change');
+          fire('materialUsed','100');
+          fire('printHours','2');
+          fire('labourRate','5');
+          fire('electricityRate','0.3');
+          fire('sell','20');
+          fire('qty','5');
+          fire('discount','10');
+          const singleCost=d.getElementById('singleCost').textContent;
+          const batchCost=d.getElementById('batchCost').textContent;
+          const batchSales=d.getElementById('batchSales').textContent;
+          const batchProfit=d.getElementById('batchProfit').textContent;
+          const batchUnit=d.getElementById('batchUnit').textContent;
+          if(singleCost!=='£12.25') throw new Error('unexpected single cost '+singleCost);
+          if(batchCost!=='£61.23') throw new Error('unexpected batch cost '+batchCost);
+          if(batchSales!=='£90.00') throw new Error('unexpected batch sales '+batchSales);
+          if(batchProfit!=='£28.77') throw new Error('unexpected batch profit '+batchProfit);
+          if(batchUnit!=='£18.00') throw new Error('unexpected unit price '+batchUnit);
+          click('resultTabs');
+          const tabs=d.querySelectorAll('#resultTabs .tab');
+          tabs[1].click();
+          if(!d.getElementById('batchResultView').hidden){}else throw new Error('batch view did not open');
+          if(!d.getElementById('singleResultView').hidden) throw new Error('single view still visible');
+          fire('qty','10');
+          if(d.getElementById('batchCost').textContent!=='£122.45') throw new Error('batch did not update after quantity change');
+          fire('discount','20');
+          if(d.getElementById('batchSales').textContent!=='£160.00') throw new Error('batch did not update after discount change');
+          console.log('Single/Batch Results test passed:',{singleCost,batchCost,batchSales,batchProfit,batchUnit,afterQty:d.getElementById('batchCost').textContent,afterDiscount:d.getElementById('batchSales').textContent});
+          JS
+
+      - name: Commit repair and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Implement Single and Batch Results views"
+          git rm .github/workflows/split-results.yml
+          git commit -m "Remove temporary results split workflow"
+          git push origin main
