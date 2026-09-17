@@ -1,0 +1,94 @@
+name: PrintProfit split labour
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Patch labour inputs
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          t = p.read_text(encoding='utf-8')
+          marker = '/* PrintProfit split labour V1 */'
+          if marker in t:
+              raise SystemExit('Patch already present')
+
+          old_html = '''<div class="two"><div><label>Labour (£/hour)</label><input id="labourRate" type="number" value="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" step=".01"></div></div>'''
+          new_html = '''<div class="two"><div><label>Labour hours (per print)</label><input id="labourHours" type="number" value="0" min="0" step=".01"></div><div><label>Labour cost (£/hour)</label><input id="labourRate" type="number" value="0" min="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" min="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" min="0" step=".01"></div></div>'''
+          if old_html not in t:
+              raise SystemExit('Expected Additional Costs block not found')
+          t = t.replace(old_html, new_html, 1)
+
+          css = '''\n/* PrintProfit split labour V1 */\n@media(min-width:1101px){#guides .merge-block:first-child .two{grid-template-columns:1fr 1fr}}\n'''
+          pos = t.find('</style>')
+          if pos < 0:
+              raise SystemExit('Closing style tag not found')
+          t = t[:pos] + css + t[pos:]
+
+          old_js = "const labour=n('labourRate')*hours;"
+          new_js = "const labour=n('labourRate')*n('labourHours');"
+          if old_js not in t:
+              raise SystemExit('Expected labour calculation not found')
+          t = t.replace(old_js, new_js, 1)
+
+          if 'id="labourHours"' not in t:
+              raise SystemExit('New labour hours input missing')
+          if t.count(marker) != 1:
+              raise SystemExit('Marker count incorrect')
+
+          scripts = re.findall(r'<script(?:\\s[^>]*)?>(.*?)</script>', t, flags=re.S | re.I)
+          if len(scripts) < 2:
+              raise SystemExit('Expected calculator JavaScript blocks')
+          for i, s in enumerate(scripts, 1):
+              Path(f'/tmp/printprofit-labour-{i}.js').write_text(s, encoding='utf-8')
+
+          p.write_text(t, encoding='utf-8')
+          print('Labour hours/rate split inserted')
+          PY
+
+          for f in /tmp/printprofit-labour-*.js; do node --check "$f"; done
+
+      - name: Verify controls and calculation
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          t = Path('index.html').read_text(encoding='utf-8')
+          required = ['labourHours','labourRate','pack','other','calc','reset','delivery','deliveryCharge']
+          for item in required:
+              if f'id="{item}"' not in t:
+                  raise SystemExit('Missing control: ' + item)
+          if "const labour=n('labourRate')*n('labourHours');" not in t:
+              raise SystemExit('Labour calculation did not update correctly')
+          scripts = re.findall(r'<script(?:\\s[^>]*)?>(.*?)</script>', t, flags=re.S | re.I)
+          for i, s in enumerate(scripts, 1):
+              Path(f'/tmp/check-{i}.js').write_text(s, encoding='utf-8')
+          PY
+          for f in /tmp/check-*.js; do node --check "$f"; done
+
+      - name: Commit update and remove workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git add -u .github/workflows/split-labour.yml
+          git commit -m "Split labour hours from labour rate [skip ci]"
+          git rm .github/workflows/split-labour.yml
+          git commit -m "Remove temporary labour workflow [skip ci]"
+          git push
