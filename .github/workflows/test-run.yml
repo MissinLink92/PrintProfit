@@ -1,11 +1,40 @@
-name: PrintProfit test
+name: PrintProfit delivery rates
+
 on:
   push:
     branches: [main]
+
 permissions:
-  contents: read
+  contents: write
+
 jobs:
-  test:
+  add-delivery-rates:
     runs-on: ubuntu-latest
     steps:
-      - run: echo test
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Patch index.html
+        env:
+          PATCH_B64: REPLACE_PATCH_B64
+        shell: bash
+        run: |
+          echo "$PATCH_B64" | base64 -d > /tmp/patch_delivery.py
+          python3 /tmp/patch_delivery.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          t=Path('index.html').read_text(encoding='utf-8')
+          required=['deliveryCourier','deliveryRate','deliveryRateOut','deliveryRateNote','delivery','deliveryCharge','calc','reset']
+          missing=[x for x in required if f'id="{x}"' not in t]
+          if missing: raise SystemExit('Missing controls: '+','.join(missing))
+          scripts=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,flags=re.S|re.I)
+          if len(scripts)<2: raise SystemExit('Expected calculator scripts')
+          for i,s in enumerate(scripts,1): Path(f'/tmp/printprofit-delivery-{i}.js').write_text(s,encoding='utf-8')
+          PY
+          for f in /tmp/printprofit-delivery-*.js; do node --check "$f"; done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f .github/workflows/delivery-rates.yml .github/workflows/delivery-rates-v2.yml .github/workflows/test-run.yml
+          git add index.html
+          git commit -m "Add courier delivery rate selector [skip ci]"
+          git push
