@@ -7,7 +7,9 @@
 
   function install(){
     const workspace=$('ppTabbedLayout');
-    const progress=$('ppSetupProgress');
+    // The current progress UI is created by tab-layout.js as .pp-progress.
+    // Older versions used #ppSetupProgress, so support both.
+    const progress=$('ppSetupProgress')||document.querySelector('.pp-progress');
     const calc=$('calc');
     const reset=$('reset');
     if(!workspace||!progress||!calc||!reset||$('ppGlobalActions'))return false;
