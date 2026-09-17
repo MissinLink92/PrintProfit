@@ -21,7 +21,7 @@ jobs:
 
           box3 = '''<section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3. Filament / Resin Profile</h2><p>Choose your material, package size and cost. Usage can be detected automatically from your print file.</p></div></div><div class="two"><div><label>Material type</label><select id="materialType"><option value="filament">Filament (FDM)</option><option value="resin">Resin (SLA / MSLA / DLP)</option></select></div><div><label>Material</label><select id="material"><optgroup label="Filament"><option>PLA</option><option>PLA+</option><option>Silk PLA</option><option>PETG</option><option>PETG-CF</option><option>ABS</option><option>ASA</option><option>TPU 95A</option><option>Nylon</option><option>Polycarbonate (PC)</option><option>PVA</option><option>HIPS</option><option>Other / Custom Filament</option></optgroup><optgroup label="Resin"><option>Standard Resin</option><option>ABS-Like Resin</option><option>Tough Resin</option><option>Flexible Resin</option><option>Water-Washable Resin</option><option>High-Temp Resin</option><option>Castable Resin</option><option>Dental Resin</option><option>Model Resin</option><option>Other / Custom Resin</option></optgroup></select></div></div><div class="two" style="margin-top:9px"><div><label id="packAmountLabel">Spool weight (g)</label><input id="materialPack" type="number" value="1000" min="0" step="1"></div><div><label>Spool / bottle cost (£)</label><input id="materialPackCost" type="number" value="20" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label id="usageLabel">Used per print (g)</label><input id="materialUsed" type="number" value="0" min="0" step=".01"></div><div><label>Calculated material cost (£)</label><input id="materialCostOut" type="text" value="£0.00" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Print time (hours)</label><input id="printHours" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="materialStatus">Waiting for a print file, or enter usage manually.</div></div></section>'''
 
-          s, count = re.subn(r'<section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3\\. Filament Profile</h2>.*?</section>', box3, s, count=1, flags=re.S)
+          s, count = re.subn(r'<section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3[.] Filament Profile</h2>.*?</section>', box3, s, count=1, flags=re.S)
           if count != 1:
               raise SystemExit('Box 3 section not found')
 
@@ -50,25 +50,25 @@ jobs:
           }
 
           function parseDuration(text){
-            let m=text.match(/(?:^|[;#])\\s*(?:TIME|PRINT_TIME|PRINTING_TIME)\\s*[:=]\\s*(\\d+(?:\\.\\d+)?)/im);
+            let m=text.match(/(?:^|[;#])\s*(?:TIME|PRINT_TIME|PRINTING_TIME)\s*[:=]\s*(\d+(?:\.\d+)?)/im);
             if(m){const sec=Number(m[1])||0;if(sec>0)return sec/3600;}
-            m=text.match(/(?:estimated printing time|print time|printing time)\\s*[:=]\\s*(?:(\\d+)h\\s*)?(?:(\\d+)m\\s*)?(?:(\\d+)s)?/i);
+            m=text.match(/(?:estimated printing time|print time|printing time)\s*[:=]\s*(?:(\d+)h\s*)?(?:(\d+)m\s*)?(?:(\d+)s)?/i);
             if(m&&(m[1]||m[2]||m[3]))return(((Number(m[1])||0)*3600+(Number(m[2])||0)*60+(Number(m[3])||0))/3600);
             return 0;
           }
 
           function parseUsage(text){
             const gPatterns=[
-              /filament\\s*(?:used|usage|weight)\\s*\\[?g\\]?\\s*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)/i,
-              /filament\\s*(?:used|usage|weight)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i,
-              /total\\s*filament[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i,
-              /material\\s*(?:used|usage|weight)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i
+              /filament\s*(?:used|usage|weight)\s*\[?g\]?\s*[=:]\s*([0-9]+(?:\.[0-9]+)?)/i,
+              /filament\s*(?:used|usage|weight)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i,
+              /total\s*filament[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i,
+              /material\s*(?:used|usage|weight)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*g/i
             ];
             for(const re of gPatterns){const m=text.match(re);if(m)return{value:Number(m[1]),unit:'g'};}
             const mlPatterns=[
-              /resin\\s*(?:used|usage|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i,
-              /material\\s*(?:used|usage|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i,
-              /(?:resin_volume|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i
+              /resin\s*(?:used|usage|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i,
+              /material\s*(?:used|usage|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i,
+              /(?:resin_volume|volume)[^\n=]*[=:]\s*([0-9]+(?:\.[0-9]+)?)\s*ml/i
             ];
             for(const re of mlPatterns){const m=text.match(re);if(m)return{value:Number(m[1]),unit:'ml'};}
             return null;
@@ -78,7 +78,7 @@ jobs:
             if(!f)return;
             state.file=f.name;
             $('status').textContent=f.name+' • reading print metadata...';
-            const resinFile=/\\.(ctb|photon|pwma|pwmo|pws|goo|sl1|sl1s)$/i.test(f.name);
+            const resinFile=/\.(ctb|photon|pwma|pwmo|pws|goo|sl1|sl1s)$/i.test(f.name);
             if(resinFile){$('materialType').value='resin';updateMaterialUI();}
             const r=new FileReader();
             r.onload=()=>{
