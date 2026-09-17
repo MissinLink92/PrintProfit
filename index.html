@@ -14,7 +14,7 @@
   function copyNode(node,parent){if(node.nodeType!==1&&node.nodeType!==3&&node.nodeType!==8)return;parent.appendChild(document.importNode(node,true));}
   function runScript(node,parent){const script=document.createElement('script');for(const attr of node.attributes)script.setAttribute(attr.name,attr.value);script.textContent=node.textContent||'';parent.appendChild(script);}
   async function loadLegacyPage(){
-    const response=await fetch('./legacy-index.html?build=20260917-final6',{cache:'no-store'});
+    const response=await fetch('./legacy-index.html?build=20260917-final7',{cache:'no-store'});
     if(!response.ok)throw new Error('Could not load calculator page ('+response.status+').');
     const html=await response.text();
     const parsed=new DOMParser().parseFromString(html,'text/html');
@@ -52,7 +52,9 @@
   function loadReferenceTheme(){return loadScript('./reference-theme.js?v=2','Could not load PrintProfit reference header and hero.');}
   function loadGcodeReader(){return loadScript('./gcode-reader.js?v=2','Could not load PrintProfit reliable G-code reader.');}
   function loadChosenTheme(){return loadScript('./chosen-theme.js?v=1','Could not load PrintProfit chosen brand theme.');}
-  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadSignatureTheme(){return loadScript('./signature-theme.js?v=1','Could not load PrintProfit signature motion theme.');}
+  function loadInteractionFix(){return loadScript('./interaction-fix.js?v=1','Could not load PrintProfit interaction fixes.');}
+  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadFileTypeSupport).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).then(loadReferenceTheme).then(loadGcodeReader).then(loadChosenTheme).then(loadSignatureTheme).then(loadInteractionFix).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
