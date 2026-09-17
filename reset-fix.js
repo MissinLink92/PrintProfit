@@ -46,6 +46,17 @@
     if(batch)batch.hidden=normalized!=='batch';
   }
 
+  function forceSingleResultMode(){
+    const apply=()=>setResultMode('single');
+    apply();
+    setTimeout(apply,0);
+    setTimeout(apply,50);
+    setTimeout(apply,150);
+    if(window.requestAnimationFrame){
+      window.requestAnimationFrame(()=>window.requestAnimationFrame(apply));
+    }
+  }
+
   function clearQuickState(mode){
     document.querySelectorAll('[data-target-view="'+mode+'"][data-m]').forEach(button=>button.classList.remove('active'));
     if(quickMode===mode)quickMode=null;
@@ -64,7 +75,6 @@
   }
 
   function resetAllFields(){
-    // Full reset: clear every user-entered control, including courier/delivery.
     document.querySelectorAll('input,select,textarea').forEach(el=>{
       const type=(el.type||'').toLowerCase();
       if(type==='file')el.value='';
@@ -78,15 +88,14 @@
       }else el.value='';
     });
 
-    // New calculator always starts with these at zero, regardless of HTML defaults.
     setValue('sell','0');
     setValue('materialPackCost','0');
     manualSellingPrice=0;
     quickMode=null;
     document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.classList.remove('active'));
-    setResultMode('single');
     document.querySelectorAll('input,select,textarea').forEach(dispatchFieldChange);
     recalculate();
+    forceSingleResultMode();
   }
 
   function install(){
