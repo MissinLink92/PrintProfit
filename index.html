@@ -250,7 +250,24 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
     });
   }
 
-  loadLegacyPage().then(installProfiles).catch(err=>{
+  function installResetOverride(){
+    document.addEventListener('click',event=>{
+      const reset=event.target&&event.target.closest?event.target.closest('#reset'):null;
+      if(!reset)return;
+      event.preventDefault();
+      event.stopPropagation();
+      setValue('materialPackCost','0');
+      setValue('sell','0');
+      const calc=document.getElementById('calc');
+      if(calc)calc.click();
+      setProfileStatus('Reset: spool / bottle cost and selling price returned to £0.');
+    },true);
+  }
+
+  loadLegacyPage().then(()=>{
+    installProfiles();
+    installResetOverride();
+  }).catch(err=>{
     console.error('PrintProfit load error:',err);
     document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>Sorry — the calculator could not be loaded. Please refresh the page.</span></div>';
   });
