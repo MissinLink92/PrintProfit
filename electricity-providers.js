@@ -2,6 +2,9 @@
 'use strict';
 if(window.__printProfitElectricityProviders)return;window.__printProfitElectricityProviders=true;
 
+// Supplier brands/legal supply companies listed by Ofgem in its electricity
+// licensee data. We keep supplier names user-friendly and collapse duplicate
+// legal entities where they operate under the same consumer-facing brand.
 const providers=[
   ['British Gas','British Gas Trading Ltd'],
   ['E.ON Next','E.ON Next Energy Ltd'],
@@ -9,7 +12,6 @@ const providers=[
   ['Octopus Energy','Octopus Energy Ltd'],
   ['OVO Energy','OVO Energy Ltd'],
   ['ScottishPower','Scottish Power Energy Retail Ltd'],
-  ['SSE','SSE / Scottish & Southern Energy'],
   ['Utilita Energy','Utilita Energy Ltd'],
   ['Ecotricity','Ecotricity Ltd'],
   ['Good Energy','Good Energy Ltd'],
@@ -33,7 +35,6 @@ const providers=[
   ['Highland Electricity','Highland Electricity Ltd'],
   ['Jellyfish Energy','Jellyfish Energy Ltd'],
   ['Planet 9 Energy','Planet 9 Energy Ltd'],
-  ['Pozitive Energy','Pozitive Energy Ltd'],
   ['Shell Energy','Shell Energy UK Ltd'],
   ['SINQ Power','SINQ Power Ltd'],
   ['Toucan Energy','Toucan Energy Ltd'],
@@ -58,6 +59,48 @@ const providers=[
   ['United Gas & Power','United Gas & Power Trading Ltd'],
   ['Constellation Generation','Constellation Generation Ltd'],
   ['Alfred Electricity & Gas','Alfred Electricity & Gas Ltd'],
+
+  // Electricity suppliers in Ofgem's non-domestic supply category.
+  ['Barbican Power','Barbican Power Ltd'],
+  ['BGI','BGI Trading Ltd'],
+  ['BP Gas & Power','BP Gas Marketing Ltd'],
+  ['Capture Energy','Capture Energy Ltd'],
+  ['Conrad Energy','Conrad Energy (Trading) Ltd'],
+  ['Coulomb Energy','Coulomb Energy Supply Ltd'],
+  ['Crown Gas & Power','Crown Gas and Power 2 Ltd'],
+  ['Dyce Energy','Dyce Energy Ltd'],
+  ['E E Solutions','E E Solutions Ltd'],
+  ['Edgware Energy','Edgware Energy Ltd'],
+  ['Engelhart CTP Energy UK','Engelhart CTP Energy UK Ltd'],
+  ['EPG Energy','EPG Energy Ltd'],
+  ['Equinicity','Equinicity Ltd'],
+  ['F & S Energy','F & S Energy Ltd'],
+  ['Farringdon Energy','Farringdon Energy Ltd'],
+  ['Flexitricity','Flexitricity Ltd'],
+  ['Habitat Energy','Habitat Energy Ltd'],
+  ['Holborn Energy','Holborn Energy Ltd'],
+  ['Limejump Energy','Limejump Energy Ltd'],
+  ['Nadara Energy Trading','Nadara Energy Trading Srl, UK Branch'],
+  ['npower Business Solutions','Npower Commercial Gas Ltd'],
+  ['Pozitive Energy','Pozitive Energy Ltd'],
+  ['PX Supply','PX Supply Ltd'],
+  ['Radius Energy','Radius Energy Ltd'],
+  ['Regent Power','Regent Power Ltd'],
+  ['Ruby Energy','Ruby Electricity Ltd'],
+  ['SEFE Energy','Sefe Energy Ltd'],
+  ['Smart Pay Energy','Smart Pay Energy Ltd'],
+  ['SmartestEnergy','SmartestEnergy Ltd'],
+  ['SSE','SSE Energy Supply Ltd'],
+  ['Statkraft','Statkraft Markets GmbH'],
+  ['TotalEnergies Gas & Power','TotalEnergies Gas & Power Ltd'],
+  ['Tradelink Solutions','Tradelink Solutions Ltd'],
+  ['UC Energy','UC Energy Ltd'],
+  ['UK Power Reserve','UK Power Reserve Ltd'],
+  ['United Gas & Power','United Gas & Power Ltd'],
+  ['Vattenfall','Vattenfall Energy Trading GmbH'],
+  ['Verastar','Verastar Ltd'],
+  ['Versa Energy','Versa Energy Ltd'],
+  ['Wilton Energy','Wilton Energy Ltd'],
   ['Custom / Other','']
 ];
 
@@ -78,16 +121,18 @@ function install(){
  select.id=input.id;
  select.name=input.name||'';
  select.className=input.className||'';
- select.setAttribute('aria-label',input.getAttribute('aria-label')||'Electricity provider');
+ select.setAttribute('aria-label','Electricity provider');
  const first=document.createElement('option');
  first.value='';first.textContent='Select your electricity provider...';
  select.appendChild(first);
- const common=['British Gas','E.ON Next','EDF Energy','Octopus Energy','OVO Energy','ScottishPower','SSE','Utilita Energy','Ecotricity','Good Energy','So Energy','Utility Warehouse','E (Gas & Electricity)','Fuse Energy','Foxglove Energy','Green Energy UK'];
+ const common=['British Gas','E.ON Next','EDF Energy','Octopus Energy','OVO Energy','ScottishPower','Utilita Energy','Ecotricity','Good Energy','So Energy','Utility Warehouse','E (Gas & Electricity)','Fuse Energy','Foxglove Energy','Green Energy UK','Drax'];
  const commonSet=new Set(common);
  const commonGroup=document.createElement('optgroup');commonGroup.label='Popular UK suppliers';
  const otherGroup=document.createElement('optgroup');otherGroup.label='Other licensed suppliers';
+ const seen=new Set();
  providers.forEach(([name])=>{
-   if(name==='Custom / Other')return;
+   if(seen.has(name)||name==='Custom / Other')return;
+   seen.add(name);
    const o=document.createElement('option');o.value=name;o.textContent=name;
    (commonSet.has(name)?commonGroup:otherGroup).appendChild(o);
  });
@@ -96,12 +141,11 @@ function install(){
  select.appendChild(commonGroup);select.appendChild(otherGroup);
  input.replaceWith(select);
  addStyle();
+ // Provider selection is informational only; the unit rate remains editable
+ // because tariffs vary by plan, meter and customer.
  select.addEventListener('change',()=>{
-   const ev=new Event('input',{bubbles:true});select.dispatchEvent(ev);
-   const ch=new Event('change',{bubbles:true});select.dispatchEvent(ch);
+   select.dispatchEvent(new Event('input',{bubbles:true}));
  });
- // Re-run the calculator so provider changes update the status line immediately.
- select.dispatchEvent(new Event('change',{bubbles:true}));
  return true;
 }
 function wait(){
