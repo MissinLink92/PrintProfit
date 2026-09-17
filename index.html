@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — Loading…</title>
-<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}body{display:grid;place-items:center;min-height:100vh}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#ff7800;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</style>
+<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}body{display:grid;place-items:center;min-height:100vh}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#0798ff;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</style>
 <script src="./quick-price-guard.js?v=5"></script>
 </head>
 <body><div class="loader"><b>PrintProfit</b><span>Loading calculator…</span></div>
@@ -20,9 +20,7 @@
     const parsed=new DOMParser().parseFromString(html,'text/html');
     document.documentElement.lang=parsed.documentElement.lang||'en';
     document.head.innerHTML='';
-    for(const node of parsed.head.childNodes){
-      if(node.nodeType===1&&node.tagName.toLowerCase()==='script')runScript(node,document.head);else copyNode(node,document.head);
-    }
+    for(const node of parsed.head.childNodes){if(node.nodeType===1&&node.tagName.toLowerCase()==='script')runScript(node,document.head);else copyNode(node,document.head);}
     document.body.innerHTML='';
     const bodyScripts=[];
     for(const node of parsed.body.childNodes){
@@ -37,17 +35,19 @@
     await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
     document.title=parsed.title||document.title;
   }
-  function loadResetFix(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./reset-fix.js?v=7';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit reset fixes.'));document.body.appendChild(script);});}
-  function loadEnhancements(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./app-enhancements.js?v=5';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit interface enhancements.'));document.body.appendChild(script);});}
-  function loadTabLayout(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./tab-layout.js?v=7';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit tabbed workspace.'));document.body.appendChild(script);});}
-  function loadUIEnhancements(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./ui-enhancements.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit UI enhancements.'));document.body.appendChild(script);});}
-  function loadPricingUX(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./pricing-ux.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit pricing UX.'));document.body.appendChild(script);});}
-  function loadGlobalActions(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./global-actions.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit global actions.'));document.body.appendChild(script);});}
-  function loadPrettyUI(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./pretty-ui.js?v=2';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit visual theme.'));document.body.appendChild(script);});}
-  function loadAlignmentPolish(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./alignment-polish.js?v=2';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit alignment polish.'));document.body.appendChild(script);});}
-  function loadHeroComposition(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./hero-composition.js?v=2';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit hero composition.'));document.body.appendChild(script);});}
-  function loadHeaderHeroFix(){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./header-hero-fix.js?v=1';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load PrintProfit header and hero layout.'));document.body.appendChild(script);});}
-  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  function loadScript(src,message){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error(message));document.body.appendChild(script);});}
+  function loadResetFix(){return loadScript('./reset-fix.js?v=8','Could not load PrintProfit reset fixes.');}
+  function loadEnhancements(){return loadScript('./app-enhancements.js?v=5','Could not load PrintProfit interface enhancements.');}
+  function loadTabLayout(){return loadScript('./tab-layout.js?v=7','Could not load PrintProfit tabbed workspace.');}
+  function loadUIEnhancements(){return loadScript('./ui-enhancements.js?v=1','Could not load PrintProfit UI enhancements.');}
+  function loadPricingUX(){return loadScript('./pricing-ux.js?v=1','Could not load PrintProfit pricing UX.');}
+  function loadGlobalActions(){return loadScript('./global-actions.js?v=1','Could not load PrintProfit global actions.');}
+  function loadPrettyUI(){return loadScript('./pretty-ui.js?v=3','Could not load PrintProfit visual theme.');}
+  function loadAlignmentPolish(){return loadScript('./alignment-polish.js?v=2','Could not load PrintProfit alignment polish.');}
+  function loadHeroComposition(){return loadScript('./hero-composition.js?v=2','Could not load PrintProfit hero composition.');}
+  function loadHeaderHeroFix(){return loadScript('./header-hero-fix.js?v=1','Could not load PrintProfit header and hero layout.');}
+  function loadFinalTheme(){return loadScript('./final-theme.js?v=1','Could not load PrintProfit master theme.');}
+  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
