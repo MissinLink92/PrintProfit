@@ -264,9 +264,106 @@ html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px In
     },true);
   }
 
+  function installNavigation(){
+    const style=document.createElement('style');
+    style.id='printProfitNavigationStyle';
+    style.textContent=`
+      .pp-modal{position:fixed;inset:0;z-index:100;background:#0009;display:none;align-items:center;justify-content:center;padding:18px}
+      .pp-modal.open{display:flex}
+      .pp-modal-card{width:min(700px,100%);max-height:min(78vh,760px);overflow:auto;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 60px #000a;padding:20px;position:relative}
+      .pp-modal-card h2{margin:0 42px 6px 0;font-size:22px}
+      .pp-modal-card p{line-height:1.55}
+      .pp-modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);font-size:20px;cursor:pointer}
+      .pp-modal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+      .pp-modal-box{border:1px solid var(--line);border-radius:10px;padding:12px}
+      .pp-modal-box b{display:block;margin-bottom:4px;color:var(--accent)}
+      .pp-modal-link{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none;font-weight:700}
+      .pp-modal-link:hover{text-decoration:underline}
+      @media(max-width:650px){.pp-modal{padding:9px}.pp-modal-card{padding:15px}.pp-modal-grid{grid-template-columns:1fr}}
+    `;
+    document.head.appendChild(style);
+
+    const modal=document.createElement('div');
+    modal.className='pp-modal';
+    modal.id='ppInfoModal';
+    modal.innerHTML=`
+      <div class="pp-modal-card" role="dialog" aria-modal="true" aria-labelledby="ppModalTitle">
+        <button class="pp-modal-close" type="button" aria-label="Close">×</button>
+        <h2 id="ppModalTitle"></h2>
+        <div id="ppModalBody"></div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const title=document.getElementById('ppModalTitle');
+    const body=document.getElementById('ppModalBody');
+    const close=()=>modal.classList.remove('open');
+
+    const pages={
+      '#guides':{
+        title:'PrintProfit Guides',
+        body:`
+          <p>Use PrintProfit to work out what a print actually costs, then price it for a sale with your chosen fees and delivery costs.</p>
+          <div class="pp-modal-grid">
+            <div class="pp-modal-box"><b>1. Add your print</b>Upload a G-code or supported file so PrintProfit can use the print time and material usage when those values are available.</div>
+            <div class="pp-modal-box"><b>2. Choose your setup</b>Select your printer and material profile, then check the spool or bottle size and cost.</div>
+            <div class="pp-modal-box"><b>3. Add operating costs</b>Enter labour, packaging, other costs and your electricity tariff to build a more realistic per-print cost.</div>
+            <div class="pp-modal-box"><b>4. Price the sale</b>Choose your selling platform, delivery rate, quantity and discount, then compare single-print and batch pricing.</div>
+          </div>
+          <p>Saved Setup Profiles let you save Boxes 2–4 on this device so the same printer, material and operating costs can be reused later.</p>`
+      },
+      '#about':{
+        title:'About PrintProfit',
+        body:`
+          <p>PrintProfit is a 3D-printing cost and pricing calculator designed to bring material, machine time, electricity, labour, packaging, marketplace fees and delivery into one place.</p>
+          <div class="pp-modal-box"><b>What it is for</b>Estimate the cost of making an item and explore selling prices and margins without having to work the figures out by hand.</div>
+          <p class="small">Prices, platform fees and delivery rates are reference figures and can vary. Check the current rate with the relevant provider before relying on a quote.</p>`
+      },
+      '#support':{
+        title:'PrintProfit Support',
+        body:`
+          <p>Found a bug, have an idea, or something on the calculator not behaving as expected?</p>
+          <div class="pp-modal-box"><b>GitHub support</b>Open an issue in the PrintProfit repository and include what you clicked, what you expected to happen, and what happened instead.</div>
+          <a class="pp-modal-link" href="https://github.com/MissinLink92/PrintProfit/issues" target="_blank" rel="noopener">Open PrintProfit issues ↗</a>`
+      }
+    };
+
+    function openPage(hash){
+      const page=pages[hash];
+      if(!page)return;
+      title.textContent=page.title;
+      body.innerHTML=page.body;
+      modal.classList.add('open');
+    }
+
+    const navLinks=[...document.querySelectorAll('.nav a')];
+    navLinks.forEach(link=>{
+      link.addEventListener('click',event=>{
+        const hash=new URL(link.href,location.href).hash||'#home';
+        event.preventDefault();
+        navLinks.forEach(item=>item.classList.remove('active'));
+        link.classList.add('active');
+        if(hash==='#home'){
+          close();
+          window.scrollTo({top:0,behavior:'smooth'});
+        }else{
+          openPage(hash);
+        }
+      });
+    });
+
+    modal.addEventListener('click',event=>{
+      if(event.target===modal)close();
+      if(event.target.closest('.pp-modal-close'))close();
+    });
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape')close();
+    });
+  }
+
   loadLegacyPage().then(()=>{
     installProfiles();
     installResetOverride();
+    installNavigation();
   }).catch(err=>{
     console.error('PrintProfit load error:',err);
     document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>Sorry — the calculator could not be loaded. Please refresh the page.</span></div>';
