@@ -54,7 +54,7 @@
     const fixedFee=number('fixedFee');
     const deliveryCharge=number('deliveryCharge');
     const den=1-feeRate-target;
-    if(!(den>0))return null;
+    if(!(den>0)||base<=0)return null;
 
     if(mode==='batch'){
       const qty=Math.max(1,Math.floor(number('qty')));
@@ -98,7 +98,6 @@
     if(window.__printProfitResetFixInstalled)return;
     window.__printProfitResetFixInstalled=true;
 
-    // Replace the legacy example starting prices.
     setInitialPricing();
 
     const sell=document.getElementById('sell');
@@ -107,17 +106,13 @@
         if(suppressManualTracking)return;
         manualSellingPrice=numericSellingPrice();
         if(quickMode){
-          const mode=quickMode;
-          clearQuickState(mode);
+          clearQuickState(quickMode);
         }
       };
       sell.addEventListener('input',rememberManualPrice);
       sell.addEventListener('change',rememberManualPrice);
     }
 
-    // Own the quick-price buttons completely so the legacy handler cannot overwrite
-    // the manual selling price state. First click applies the target-margin price;
-    // clicking the same active button again restores the manual price.
     window.addEventListener('click',event=>{
       const button=event.target&&event.target.closest?event.target.closest('[data-m][data-target-view]'):null;
       if(!button)return;
@@ -146,6 +141,14 @@
         clearQuickState(quickMode);
       }
 
+      // With no actual production cost there is no meaningful target-margin
+      // price to calculate. Keep the user's manually entered selling price.
+      const base=currentBaseCost();
+      if(base<=0){
+        setResultMode(mode);
+        return;
+      }
+
       const price=targetPrice(target,mode);
       if(price===null)return;
 
@@ -158,7 +161,6 @@
       setResultMode(mode);
     },true);
 
-    // Capture Reset before the legacy/app-enhancements reset handlers.
     window.addEventListener('click',event=>{
       const reset=event.target&&event.target.closest?event.target.closest('#reset'):null;
       if(!reset)return;
