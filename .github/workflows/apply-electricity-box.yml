@@ -31,26 +31,26 @@ jobs:
 
               const calcRe = /function calc\(\)\{[\s\S]*?\n\}\n\n\$\('calc'\)\.onclick=calc;/;
               const calc = `function calc(){
-  const p=printerData(),qty=Math.max(1,Math.floor(n('qty'))),disc=Math.min(100,n('discount'))/100;
-  const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
-  state.hours=hours;const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
-  const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
-  const elec=powerUsed*n('electricityRate');
-  const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
-  const labour=n('labourRate')*hours;
-  const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
-  const sell=n('sell'),fees=sell*(n('platform')+n('pay'))/100+n('fixedFee');
-  const profit=sell+n('deliveryCharge')-base-fees,margin=sell?profit/sell:0;
-  $('printerPowerOut').value=p.watts>0?Math.round(p.watts)+' W':'—';
-  $('powerUsedOut').value=powerUsed.toFixed(3)+' kWh';
-  $('electricityCostOut').value=money(elec);
-  const provider=$('electricityProvider').value.trim();
-  $('electricityStatus').textContent=!p.watts?'Select a printer in Box 2 to estimate power draw.':!hours?'Load a print file or enter print time in Box 3.':!n('electricityRate')?'Enter your electricity unit rate to calculate cost.':(provider?provider+' • ':'')+'Estimated from '+Math.round(p.watts)+' W for '+hours.toFixed(2)+' h.';
-  $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
-  $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>\`<div class="line"><span>\${k}</span><b>\${money(v)}</b></div>\`).join('')+\`<div class="line total"><span>Quantity \${qty} • batch total after \${disc*100}% discount</span><b>\${money((base+fees)*qty*(1-disc))}</b></div>\`;
-}
+                const p=printerData(),qty=Math.max(1,Math.floor(n('qty'))),disc=Math.min(100,n('discount'))/100;
+                const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
+                state.hours=hours;const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+                const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+                const elec=powerUsed*n('electricityRate');
+                const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+                const labour=n('labourRate')*hours;
+                const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
+                const sell=n('sell'),fees=sell*(n('platform')+n('pay'))/100+n('fixedFee');
+                const profit=sell+n('deliveryCharge')-base-fees,margin=sell?profit/sell:0;
+                $('printerPowerOut').value=p.watts>0?Math.round(p.watts)+' W':'—';
+                $('powerUsedOut').value=powerUsed.toFixed(3)+' kWh';
+                $('electricityCostOut').value=money(elec);
+                const provider=$('electricityProvider').value.trim();
+                $('electricityStatus').textContent=!p.watts?'Select a printer in Box 2 to estimate power draw.':!hours?'Load a print file or enter print time in Box 3.':!n('electricityRate')?'Enter your electricity unit rate to calculate cost.':(provider?provider+' • ':'')+'Estimated from '+Math.round(p.watts)+' W for '+hours.toFixed(2)+' h.';
+                $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
+                $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>`<div class="line"><span>\${k}</span><b>\${money(v)}</b></div>`).join('')+`<div class="line total"><span>Quantity \${qty} • batch total after \${disc*100}% discount</span><b>\${money((base+fees)*qty*(1-disc))}</b></div>`;
+              }
 
-$('calc').onclick=calc;`;
+              $('calc').onclick=calc;`;
               if (!calcRe.test(updated)) core.setFailed('Could not locate calc function');
               else {
                 updated = updated.replace(calcRe, calc);
