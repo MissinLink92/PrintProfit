@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — Loading…</title>
-<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}body{min-height:100vh}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#0798ff;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</style>
+<style>html,body{margin:0;min-height:100%;background:#071018;color:#f5f8fb;font:15px Inter,Segoe UI,system-ui,sans-serif}.loader{text-align:center;color:#aebdca}.loader b{display:block;color:#0798ff;font-size:24px;margin-bottom:8px}.loader span{font-size:12px}</style>
 </head>
 <body><div class="loader"><b>PrintProfit</b><span>Loading calculator…</span></div>
 <script>
@@ -12,7 +12,7 @@
 'use strict';
 const scripts=[
 'quick-price-guard.js?v=6',
-'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','global-reset.js?v=1','tab-layout.js?v=8','master-polish.js?v=1'
+'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','global-reset.js?v=1','tab-layout.js?v=8','master-polish.js?v=1','master-cleanup.js?v=1'
 ];
 function load(src){return new Promise(resolve=>{const s=document.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit optional script failed:',src);resolve();};document.body.appendChild(s);});}
 async function boot(){
@@ -27,7 +27,7 @@ async function boot(){
    if(node.nodeType===1&&node.tagName.toLowerCase()==='script'){
     const src=node.getAttribute('src')||'';
     if(!/tab-layout\.js/i.test(src)){
-      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.name==='src'?a.value:a.value);s.textContent=node.textContent||'';document.head.appendChild(s);
+      const s=document.createElement('script');for(const a of node.attributes)s.setAttribute(a.name,a.value);s.textContent=node.textContent||'';document.head.appendChild(s);
     }
    }else document.head.appendChild(document.importNode(node,true));
   }
