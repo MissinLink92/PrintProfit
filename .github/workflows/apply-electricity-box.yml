@@ -1,0 +1,94 @@
+name: Apply electricity calculator patch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-electricity-box.yml'
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch index.html
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          s = path.read_text(encoding='utf-8')
+
+          old_guides = re.search(r'<div class="three" id="guides">.*?(?=<section class="panel"><div class="head"><div class="icon">▦</div><div><h2>7\. Quantity / Batch Pricing)', s, flags=re.S)
+          if not old_guides:
+              raise SystemExit('Could not locate guides block')
+
+          new_guides = '''<div class="three" id="guides"><section class="panel"><div class="head"><div class="icon">£</div><div><h2>4. Additional Costs</h2><p>Optional costs per print, excluding electricity.</p></div></div><div class="two"><div><label>Labour (£/hour)</label><input id="labourRate" type="number" value="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" step=".01"></div></div></section><section class="panel"><div class="head"><div class="icon">⚡</div><div><h2>5. Electricity</h2><p>Uses the printer selected in Box 2 and print time detected from your file.</p></div></div><div class="two"><div><label>Electricity provider / tariff</label><input id="electricityProvider" type="text" placeholder="e.g. Octopus Energy - Flexible"></div><div><label>Unit rate (£/kWh)</label><input id="electricityRate" type="number" value=".30" min="0" step=".001"></div></div><div class="two" style="margin-top:9px"><div><label>Estimated printer power</label><input id="printerPowerOut" type="text" value="—" readonly></div><div><label>Estimated power used (kWh)</label><input id="powerUsedOut" type="text" value="0.000 kWh" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Estimated electricity cost</label><input id="electricityCostOut" type="text" value="£0.00" readonly></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="electricityStatus">Select a printer and load a print file to estimate electricity usage.</div></div></section><section class="panel"><div class="head"><div class="icon">%</div><div><h2>6. Platform Fees</h2><p>Marketplace and payment fees.</p></div></div><label>Platform</label><select id="platform"><option value="0">Own website</option><option value="6.5">Etsy</option><option value="12">eBay</option><option value="0">Other / custom</option></select><div class="two" style="margin-top:9px"><div><label>Payment fee (%)</label><input id="pay" type="number" value="0" step=".01"></div><div><label>Fixed fee (£)</label><input id="fixedFee" type="number" value="0" step=".01"></div></div></section><section class="panel"><div class="head"><div class="icon">⇩</div><div><h2>7. Delivery</h2><p>Keep delivery cost and charge separate.</p></div></div><div class="two"><div><label>Cost to you (£)</label><input id="delivery" type="number" value="0" step=".01"></div><div><label>Charged to customer (£)</label><input id="deliveryCharge" type="number" value="0" step=".01"></div></div></section></div>\n'''
+
+          s = s[:old_guides.start()] + new_guides + s[old_guides.end():]
+          s = s.replace('<h2>7. Quantity / Batch Pricing</h2>', '<h2>8. Quantity / Batch Pricing</h2>', 1)
+
+          old_calc = '''function calc(){
+  const p=printerData(),qty=Math.max(1,Math.floor(n('qty'))),disc=Math.min(100,n('discount'))/100;
+  const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
+  state.hours=hours;const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+  const elec=p.watts/1000*hours*n('kwh');
+  const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+  const labour=n('labourRate')*hours;
+  const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
+  const sell=n('sell'),fees=sell*(n('platform')+n('pay'))/100+n('fixedFee');
+  const profit=sell+n('deliveryCharge')-base-fees,margin=sell?profit/sell:0;
+  $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
+  $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>`<div class="line"><span>${k}</span><b>${money(v)}</b></div>`).join('')+`<div class="line total"><span>Quantity ${qty} • batch total after ${disc*100}% discount</span><b>${money((base+fees)*qty*(1-disc))}</b></div>`;
+}'''
+
+          new_calc = '''function calc(){
+  const p=printerData(),qty=Math.max(1,Math.floor(n('qty'))),disc=Math.min(100,n('discount'))/100;
+  const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
+  state.hours=hours;const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+  const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+  const elec=powerUsed*n('electricityRate');
+  const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+  const labour=n('labourRate')*hours;
+  const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
+  const sell=n('sell'),fees=sell*(n('platform')+n('pay'))/100+n('fixedFee');
+  const profit=sell+n('deliveryCharge')-base-fees,margin=sell?profit/sell:0;
+  $('printerPowerOut').value=p.watts>0?Math.round(p.watts)+' W':'—';
+  $('powerUsedOut').value=powerUsed.toFixed(3)+' kWh';
+  $('electricityCostOut').value=money(elec);
+  const provider=$('electricityProvider').value.trim();
+  $('electricityStatus').textContent=!p.watts?'Select a printer in Box 2 to estimate power draw.':!hours?'Load a print file or enter print time in Box 3.':!n('electricityRate')?'Enter your electricity unit rate to calculate cost.':(provider?provider+' • ':'')+'Estimated from '+Math.round(p.watts)+' W for '+hours.toFixed(2)+' h.';
+  $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
+  $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>`<div class="line"><span>${k}</span><b>${money(v)}</b></div>`).join('')+`<div class="line total"><span>Quantity ${qty} • batch total after ${disc*100}% discount</span><b>${money((base+fees)*qty*(1-disc))}</b></div>`;
+}'''
+
+          if old_calc not in s:
+              raise SystemExit('Could not locate calc function')
+          s = s.replace(old_calc, new_calc, 1)
+          s = s.replace("['materialPack','materialPackCost','materialUsed','printHours','labourRate','kwh','pack','other','delivery','deliveryCharge','qty','discount','pay','fixedFee']", "['materialPack','materialPackCost','materialUsed','printHours','labourRate','pack','other','electricityRate','electricityProvider','delivery','deliveryCharge','qty','discount','pay','fixedFee']")
+
+          path.write_text(s, encoding='utf-8')
+          print('Patched index.html')
+          PY
+      - name: Verify and commit
+        shell: bash
+        run: |
+          grep -q '5. Electricity' index.html
+          grep -q 'electricityRate' index.html
+          grep -q 'powerUsed' index.html
+          grep -q '8. Quantity / Batch Pricing' index.html
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Split electricity into dedicated calculator' || true
+          git push
+      - name: Remove patch workflow
+        shell: bash
+        run: |
+          git rm .github/workflows/apply-electricity-box.yml
+          git commit -m 'Remove temporary electricity patch workflow'
+          git push
