@@ -14,7 +14,7 @@
   function copyNode(node,parent){if(node.nodeType!==1&&node.nodeType!==3&&node.nodeType!==8)return;parent.appendChild(document.importNode(node,true));}
   function runScript(node,parent){const script=document.createElement('script');for(const attr of node.attributes)script.setAttribute(attr.name,attr.value);script.textContent=node.textContent||'';parent.appendChild(script);}
   async function loadLegacyPage(){
-    const response=await fetch('./legacy-index.html?build=20260917-final2',{cache:'no-store'});
+    const response=await fetch('./legacy-index.html?build=20260917-final3',{cache:'no-store'});
     if(!response.ok)throw new Error('Could not load calculator page ('+response.status+').');
     const html=await response.text();
     const parsed=new DOMParser().parseFromString(html,'text/html');
@@ -37,6 +37,7 @@
   }
   function loadScript(src,message){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=()=>reject(new Error(message));document.body.appendChild(script);});}
   function loadResetFix(){return loadScript('./reset-fix.js?v=8','Could not load PrintProfit reset fixes.');}
+  function loadDragGcodeFix(){return loadScript('./drag-gcode-fix.js?v=1','Could not load PrintProfit G-code drag-and-drop fix.');}
   function loadEnhancements(){return loadScript('./app-enhancements.js?v=5','Could not load PrintProfit interface enhancements.');}
   function loadTabLayout(){return loadScript('./tab-layout.js?v=7','Could not load PrintProfit tabbed workspace.');}
   function loadUIEnhancements(){return loadScript('./ui-enhancements.js?v=1','Could not load PrintProfit UI enhancements.');}
@@ -47,7 +48,7 @@
   function loadHeroComposition(){return loadScript('./hero-composition.js?v=2','Could not load PrintProfit hero composition.');}
   function loadHeaderHeroFix(){return loadScript('./header-hero-fix.js?v=2','Could not load PrintProfit header and hero layout.');}
   function loadFinalTheme(){return loadScript('./final-theme.js?v=2','Could not load PrintProfit master theme.');}
-  loadLegacyPage().then(loadResetFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
+  loadLegacyPage().then(loadResetFix).then(loadDragGcodeFix).then(loadEnhancements).then(loadTabLayout).then(loadUIEnhancements).then(loadPricingUX).then(loadGlobalActions).then(loadPrettyUI).then(loadAlignmentPolish).then(loadHeroComposition).then(loadHeaderHeroFix).then(loadFinalTheme).catch(error=>{console.error(error);document.body.innerHTML='<div class="loader"><b>PrintProfit</b><span>'+error.message+'</span></div>';});
 })();
 </script>
 </body></html>
