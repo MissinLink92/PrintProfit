@@ -6,34 +6,20 @@
 <title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
 <style>
 html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto}
-
-/* Fixed reset control belongs to the parent page, not the full-height calculator iframe. */
-#ppFixedReset{position:fixed;top:88px;right:24px;z-index:100000;display:flex;align-items:center;gap:10px;min-width:168px;padding:10px 13px;border:1px solid rgba(255,120,0,.48);border-radius:13px;background:linear-gradient(145deg,#17252df2,#0b151cf5);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 24px rgba(255,120,0,.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);cursor:pointer;text-align:left;font:inherit;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
-#ppFixedReset:hover{transform:translateY(-2px);border-color:rgba(255,120,0,.78);box-shadow:0 16px 34px rgba(0,0,0,.52),0 0 28px rgba(255,120,0,.18)}
-#ppFixedReset:active{transform:translateY(0)}
-#ppFixedReset .pp-reset-icon{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:10px;background:linear-gradient(145deg,#ff9a3d,#ff7800);color:#fff;font-size:21px;font-weight:800;line-height:1;box-shadow:0 6px 14px rgba(255,120,0,.25)}
-#ppFixedReset span:last-child{display:flex;flex-direction:column;line-height:1.1}
-#ppFixedReset b{font-size:12px;font-weight:850}
-#ppFixedReset small{margin-top:3px;color:#aebdc5;font-size:9px}
-@media(max-width:650px){#ppFixedReset{top:68px;right:12px;min-width:0;padding:9px 11px}.pp-reset-icon{flex-basis:30px!important;width:30px!important;height:30px!important}#ppFixedReset small{display:none}}
-@media(prefers-reduced-motion:reduce){#ppFixedReset{transition:none}}
 </style>
 </head>
 <body>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260917-fullstack5" style="width:100%;border:0;display:block"></iframe>
-<button id="ppFixedReset" type="button" title="Reset the entire calculator" aria-label="Reset the entire calculator"><span class="pp-reset-icon">↻</span><span><b>Reset Calculator</b><small>Clear all settings</small></span></button>
 <script>
 (()=>{
 'use strict';
 const frame=document.getElementById('app');
-const resetButton=document.getElementById('ppFixedReset');
 const scripts=[
 'quick-price-guard.js?v=6',
-'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','tab-layout.js?v=10','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=1'
+'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=4','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','tab-layout.js?v=11','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=1'
 ];
 function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
-resetButton.addEventListener('click',()=>{try{const reset=frame.contentDocument&&frame.contentDocument.getElementById('reset');if(reset){reset.click();return;}setTimeout(()=>{const r=frame.contentDocument&&frame.contentDocument.getElementById('reset');if(r)r.click()},100)}catch(e){console.warn('PrintProfit reset unavailable',e)}});
 frame.addEventListener('load',async()=>{
  try{
   for(const src of scripts)await load(src);
