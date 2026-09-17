@@ -26,12 +26,13 @@ jobs:
           import re
           p=Path('index.html')
           html=p.read_text(encoding='utf-8')
-          marker="              const drop=document.querySelector('.drop');"
-          insert="""              document.addEventListener('focusout',e=>{\n                if(e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')) setTimeout(runCalc,0);\n              });\n              document.addEventListener('keydown',e=>{\n                if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')){\n                  e.preventDefault();\n                  e.target.blur();\n                  runCalc();\n                }\n              });\n"""
+          marker="function bind(){"
+          insert="""function bind(){\n              document.addEventListener('focusout',e=>{\n                if(e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')) setTimeout(runCalc,0);\n              });\n              document.addEventListener('keydown',e=>{\n                if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type=\"file\"]),select,textarea')){\n                  e.preventDefault();\n                  e.target.blur();\n                  runCalc();\n                }\n              });"""
           if insert.strip() not in html:
-              if marker not in html:
-                  raise SystemExit('calculator drop marker not found')
-              html=html.replace(marker,insert+marker,1)
+              pos=html.find(marker)
+              if pos<0:
+                  raise SystemExit('bind marker not found')
+              html=html[:pos]+insert+html[pos+len(marker):]
           p.write_text(html,encoding='utf-8')
           PY
           python - <<'PY'
