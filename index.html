@@ -89,6 +89,116 @@ input,select{padding:8px 9px;border-radius:7px}
   .merged-group{padding:10px}
   .drop{padding:14px 10px}
 }
+
+
+/* PrintProfit layout polish V2 */
+.shell{max-width:1600px}
+.main{padding:10px}
+.panel{padding:11px}
+.head{gap:8px;margin-bottom:7px}
+.icon{width:30px;height:30px;border-radius:8px;font-size:13px}
+.head h2{font-size:15px}
+.head p{font-size:10.5px}
+label{font-size:10.5px;margin-bottom:4px}
+input,select{padding:7px 8px;border-radius:7px;font-size:13px}
+.two,.three{gap:7px}
+.btn{padding:7px 9px;border-radius:7px;font-size:13px}
+.actions{gap:6px;margin-top:7px}
+.drop{padding:14px}
+.drop b{margin-bottom:5px}
+.drop small{margin-top:5px}
+.small{font-size:10.5px}
+.merged-group{padding:11px}
+.merged-group>.head{margin-bottom:8px}
+.merged-grid{gap:11px}
+.merge-block+.merge-block{padding-left:11px}
+.merge-block .head{gap:7px;margin-bottom:7px}
+.merge-block .head .icon{width:27px;height:27px;font-size:12px}
+.cards{gap:7px}
+.card{padding:8px}
+.value{font-size:19px;margin-top:3px}
+.quick{margin-top:8px}
+.quick .grid{gap:6px;margin-top:4px}
+.break{margin-top:8px;padding:8px}
+.line{padding:5px 0;font-size:10.5px}
+.total{font-size:12.5px}
+
+@media(min-width:1101px){
+  .layout{
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    gap:10px;
+    align-items:start;
+  }
+  .layout>div:first-child{display:contents}
+  .layout>div:first-child>.two,
+  .layout>div:first-child>#guides{display:contents}
+
+  .layout>div:first-child>section.panel:first-child{
+    grid-column:1 / span 5;
+    grid-row:1;
+  }
+  .layout>div:first-child>.two>section.panel:first-child{
+    grid-column:6 / span 4;
+    grid-row:1;
+  }
+  .layout>div:first-child>.two>section.panel:nth-child(2){
+    grid-column:1 / span 9;
+    grid-row:2;
+  }
+  #guides>.merged-group:first-child{
+    grid-column:1 / span 9;
+    grid-row:3;
+  }
+  #guides>.merged-group:last-child{
+    grid-column:1 / span 9;
+    grid-row:4;
+  }
+  .layout>div:first-child>section.panel:last-child{
+    grid-column:1 / span 9;
+    grid-row:5;
+  }
+  .layout>.result{
+    grid-column:10 / span 3;
+    grid-row:1 / span 5;
+  }
+
+  .layout>div:first-child>section.panel:first-child .two{
+    grid-template-columns:minmax(0,1.2fr) minmax(180px,.8fr);
+  }
+  .layout>div:first-child>.two>section.panel:first-child select{
+    margin-top:1px;
+  }
+  .layout>div:first-child>.two>section.panel:nth-child(2) .two{
+    gap:7px;
+  }
+  #guides .merged-grid{
+    grid-template-columns:1.1fr .9fr;
+  }
+  #guides .merge-block{
+    min-width:0;
+  }
+  .layout>div:first-child>section.panel:last-child .three{
+    grid-template-columns:1fr 1fr 1.15fr;
+    align-items:end;
+  }
+  .layout>div:first-child>section.panel:last-child .actions{
+    margin-top:7px;
+  }
+}
+
+@media(min-width:951px) and (max-width:1100px){
+  .panel{padding:10px}
+  .merged-group{padding:10px}
+  .drop{padding:13px}
+}
+
+@media(max-width:650px){
+  .shell{margin:0 auto 12px}
+  .main{padding:8px}
+  .panel{padding:9px}
+  .merged-group{padding:9px}
+  .drop{padding:13px 9px}
+}
 </style>
 </head>
 <body>
