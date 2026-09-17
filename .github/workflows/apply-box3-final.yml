@@ -1,0 +1,150 @@
+name: Apply Box 3 material profiles
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Patch Box 3 and calculator
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          box3 = '''<section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3. Filament / Resin Profile</h2><p>Choose your material, package size and cost. Usage can be detected automatically from your print file.</p></div></div><div class="two"><div><label>Material type</label><select id="materialType"><option value="filament">Filament (FDM)</option><option value="resin">Resin (SLA / MSLA / DLP)</option></select></div><div><label>Material</label><select id="material"><optgroup label="Filament"><option>PLA</option><option>PLA+</option><option>Silk PLA</option><option>PETG</option><option>PETG-CF</option><option>ABS</option><option>ASA</option><option>TPU 95A</option><option>Nylon</option><option>Polycarbonate (PC)</option><option>PVA</option><option>HIPS</option><option>Other / Custom Filament</option></optgroup><optgroup label="Resin"><option>Standard Resin</option><option>ABS-Like Resin</option><option>Tough Resin</option><option>Flexible Resin</option><option>Water-Washable Resin</option><option>High-Temp Resin</option><option>Castable Resin</option><option>Dental Resin</option><option>Model Resin</option><option>Other / Custom Resin</option></optgroup></select></div></div><div class="two" style="margin-top:9px"><div><label id="packAmountLabel">Spool weight (g)</label><input id="materialPack" type="number" value="1000" min="0" step="1"></div><div><label>Spool / bottle cost (£)</label><input id="materialPackCost" type="number" value="20" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label id="usageLabel">Used per print (g)</label><input id="materialUsed" type="number" value="0" min="0" step=".01"></div><div><label>Calculated material cost (£)</label><input id="materialCostOut" type="text" value="£0.00" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Print time (hours)</label><input id="printHours" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="materialStatus">Waiting for a print file, or enter usage manually.</div></div></section>'''
+
+          s, count = re.subn(r'<section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3\\. Filament Profile</h2>.*?</section>', box3, s, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit('Box 3 section not found')
+
+          s = s.replace('accept=".gcode,.gco,.bgcode"', 'accept=".gcode,.gco,.bgcode,.ctb,.photon,.pwma,.pwmo,.pws,.goo,.sl1,.sl1s"', 1)
+
+          script = r'''<script>
+          const $=id=>document.getElementById(id),n=id=>Math.max(0,parseFloat($(id).value)||0),money=x=>'£'+(Number.isFinite(x)?x:0).toFixed(2);
+          const state={hours:0,used:0,unit:'g',file:''};
+
+          function printerData(){
+            const v=$('printer').value||'';
+            if(!v||v==='custom') return {watts:0,price:0,lifetime:0};
+            const p=v.split(/[|,]/);
+            return {watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0};
+          }
+
+          function updateMaterialUI(){
+            const resin=$('materialType').value==='resin';
+            $('packAmountLabel').textContent=resin?'Bottle amount (ml)':'Spool weight (g)';
+            $('usageLabel').textContent=resin?'Used per print (ml)':'Used per print (g)';
+            const groups=[...$('material').querySelectorAll('optgroup')];
+            groups.forEach(g=>g.style.display=((resin&&g.label==='Resin')||(!resin&&g.label==='Filament'))?'':'none');
+            $('material').value=resin?'Standard Resin':'PLA';
+            state.unit=resin?'ml':'g';
+            calc();
+          }
+
+          function parseDuration(text){
+            let m=text.match(/(?:^|[;#])\\s*(?:TIME|PRINT_TIME|PRINTING_TIME)\\s*[:=]\\s*(\\d+(?:\\.\\d+)?)/im);
+            if(m){const sec=Number(m[1])||0;if(sec>0)return sec/3600;}
+            m=text.match(/(?:estimated printing time|print time|printing time)\\s*[:=]\\s*(?:(\\d+)h\\s*)?(?:(\\d+)m\\s*)?(?:(\\d+)s)?/i);
+            if(m&&(m[1]||m[2]||m[3]))return(((Number(m[1])||0)*3600+(Number(m[2])||0)*60+(Number(m[3])||0))/3600);
+            return 0;
+          }
+
+          function parseUsage(text){
+            const gPatterns=[
+              /filament\\s*(?:used|usage|weight)\\s*\\[?g\\]?\\s*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)/i,
+              /filament\\s*(?:used|usage|weight)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i,
+              /total\\s*filament[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i,
+              /material\\s*(?:used|usage|weight)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*g/i
+            ];
+            for(const re of gPatterns){const m=text.match(re);if(m)return{value:Number(m[1]),unit:'g'};}
+            const mlPatterns=[
+              /resin\\s*(?:used|usage|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i,
+              /material\\s*(?:used|usage|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i,
+              /(?:resin_volume|volume)[^\\n=]*[=:]\\s*([0-9]+(?:\\.[0-9]+)?)\\s*ml/i
+            ];
+            for(const re of mlPatterns){const m=text.match(re);if(m)return{value:Number(m[1]),unit:'ml'};}
+            return null;
+          }
+
+          function processFile(f){
+            if(!f)return;
+            state.file=f.name;
+            $('status').textContent=f.name+' • reading print metadata...';
+            const resinFile=/\\.(ctb|photon|pwma|pwmo|pws|goo|sl1|sl1s)$/i.test(f.name);
+            if(resinFile){$('materialType').value='resin';updateMaterialUI();}
+            const r=new FileReader();
+            r.onload=()=>{
+              const t=String(r.result||'');
+              const hours=parseDuration(t),usage=parseUsage(t);
+              if(hours){state.hours=hours;$('printHours').value=hours.toFixed(2);}else{state.hours=n('printHours');}
+              if(usage){
+                state.used=usage.value;state.unit=usage.unit;
+                $('materialType').value=usage.unit==='ml'?'resin':'filament';
+                updateMaterialUI();
+                $('materialUsed').value=usage.value.toFixed(2);
+                $('status').textContent=f.name+' • '+(hours?hours.toFixed(2)+' h detected':'print time not detected')+' • '+usage.value.toFixed(2)+' '+usage.unit+' detected';
+                $('materialStatus').textContent='Usage detected automatically. You can override it below.';
+              }else{
+                $('status').textContent=f.name+' • file loaded, but material usage was not detected';
+                $('materialStatus').textContent='No readable material usage found. Enter the used amount manually.';
+              }
+              calc();
+            };
+            r.onerror=()=>{$('status').textContent=f.name+' • could not read file metadata';$('materialStatus').textContent='Enter usage and print time manually.';calc();};
+            r.readAsText(f);
+          }
+
+          function calc(){
+            const p=printerData(),qty=Math.max(1,Math.floor(n('qty'))),disc=Math.min(100,n('discount'))/100;
+            const hours=n('printHours'),pack=n('materialPack'),packPrice=n('materialPackCost'),used=n('materialUsed');
+            state.hours=hours;const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+            const elec=p.watts/1000*hours*n('kwh');
+            const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+            const labour=n('labourRate')*hours;
+            const base=materialCost+elec+depreciation+labour+n('pack')+n('other')+n('delivery');
+            const sell=n('sell'),fees=sell*(n('platform')+n('pay'))/100+n('fixedFee');
+            const profit=sell+n('deliveryCharge')-base-fees,margin=sell?profit/sell:0;
+            $('cost').textContent=money(base);$('sellOut').textContent=money(sell);$('profit').textContent=money(profit);$('profit').className='value '+(profit>=0?'good':'bad');$('margin').textContent='Margin: '+(margin*100).toFixed(1)+'%';$('materialCostOut').value=money(materialCost);
+            $('breakdown').innerHTML=[['Material',materialCost],['Electricity',elec],['Printer depreciation',depreciation],['Labour',labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>`<div class="line"><span>${k}</span><b>${money(v)}</b></div>`).join('')+`<div class="line total"><span>Quantity ${qty} • batch total after ${disc*100}% discount</span><b>${money((base+fees)*qty*(1-disc))}</b></div>`;
+          }
+
+          $('calc').onclick=calc;
+          $('sell').oninput=calc;
+          $('materialType').onchange=updateMaterialUI;
+          $('material').onchange=calc;
+          ['materialPack','materialPackCost','materialUsed','printHours','labourRate','kwh','pack','other','delivery','deliveryCharge','qty','discount','pay','fixedFee'].forEach(id=>$(id).oninput=calc);
+          $('printer').onchange=()=>{calc()};
+          $('platform').onchange=()=>{calc()};
+          $('reset').onclick=()=>location.reload();
+          $('file').onchange=e=>processFile(e.target.files[0]);
+          $('clear').onclick=()=>{$('file').value='';state.hours=0;state.used=0;state.file='';$('printHours').value=0;$('materialUsed').value=0;$('status').textContent='No G-code selected';$('materialStatus').textContent='Waiting for a print file, or enter usage manually.';calc()};
+          const drop=document.querySelector('.drop');
+          ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.background='#ff780012'}));
+          ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.background=''}));
+          drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)processFile(f)});
+          document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{const base=parseFloat($('cost').textContent.replace('£',''))||0,fee=(n('platform')+n('pay'))/100,target=parseFloat(b.dataset.m),den=1-fee-target;if(den>0){$('sell').value=((base+n('fixedFee'))/den).toFixed(2);calc()}});
+          updateMaterialUI();
+          calc();
+          </script>'''
+
+          s, count = re.subn(r'<script>.*?</script>', script, s, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit('main calculator script not found')
+          p.write_text(s, encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          rm -f .github/workflows/update-box3.yml .github/workflows/update-box3b.yml .github/workflows/apply-box3-final.yml
+          git add -u
+          git diff --cached --quiet && exit 0
+          git commit -m "Build filament and resin material profiles"
+          git push
