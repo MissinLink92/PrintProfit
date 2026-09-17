@@ -7,9 +7,26 @@
   style.id='ppAlignmentPolishStyles';
   style.textContent=`
     @media(min-width:951px){
-      /* Keep Printer Profile and Quick Setup perfectly aligned in the machine tab. */
-      .pp-tab-panel[data-panel="machine"]{align-items:stretch!important}
-      .pp-tab-panel[data-panel="machine"]>.pp-card>.panel{height:100%}
+      /* Keep paired calculator cards perfectly aligned within each tab. */
+      .pp-tab-panel[data-panel="details"],
+      .pp-tab-panel[data-panel="machine"],
+      .pp-tab-panel[data-panel="costs"]{
+        align-items:stretch!important;
+      }
+
+      .pp-tab-panel[data-panel="details"]>.pp-card,
+      .pp-tab-panel[data-panel="machine"]>.pp-card,
+      .pp-tab-panel[data-panel="costs"]>.pp-cost-block{
+        height:100%;
+        display:flex;
+      }
+
+      .pp-tab-panel[data-panel="details"]>.pp-card>.panel,
+      .pp-tab-panel[data-panel="machine"]>.pp-card>.panel,
+      .pp-tab-panel[data-panel="costs"]>.pp-cost-block>.panel{
+        height:100%;
+        width:100%;
+      }
     }
   `;
   document.head.appendChild(style);
