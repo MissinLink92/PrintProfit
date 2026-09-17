@@ -19,13 +19,15 @@
 
     const brandImg=brand.querySelector('img');
     if(brandImg){
+      brand.querySelectorAll('.pp-brand-fallback').forEach(node=>node.remove());
       brandImg.src=asset('logo-orange.webp');
       brandImg.alt='PrintProfit';
       brandImg.removeAttribute('data-pp-fallback-shown');
       brandImg.style.display='block';
     }
 
-    const oldHeroImg=hero.querySelector('img');
+    hero.querySelectorAll('.pp-hero-fallback').forEach(node=>node.remove());
+    const oldHeroImg=hero.querySelector(':scope > img');
     if(oldHeroImg)oldHeroImg.style.display='none';
 
     let content=hero.querySelector('.pp-hero-content');
