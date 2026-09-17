@@ -1,0 +1,7 @@
+name: PrintProfit Actions test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "PrintProfit Actions test"
