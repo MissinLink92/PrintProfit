@@ -81,7 +81,7 @@ jobs:
           replacement = '<div class="two" id="guides">' + merged4 + merged5 + '</div>\n' + box8_start.replace('8. Quantity / Batch Pricing','6. Quantity / Batch Pricing')
           html = html[:start] + replacement + html[end + len(box8_start):]
 
-          # Hard safety checks: the merge must not alter JavaScript blocks or form element IDs.
+          # Hard safety checks: scripts and all form/control IDs must be byte-for-byte preserved.
           if scripts(html) != original_scripts:
               raise SystemExit('JavaScript changed during visual-only patch')
           if ids(html) != original_ids:
@@ -97,10 +97,12 @@ jobs:
               if marker not in html:
                   raise SystemExit(f'Missing required marker after patch: {marker}')
 
-          if html.count('merged-group') != 2:
-              raise SystemExit('Expected exactly two merged groups')
+          if len(re.findall(r'class="panel merged-group"', html)) != 2:
+              raise SystemExit('Expected exactly two merged panel elements')
           if html.count('id="guides"') != 1:
               raise SystemExit('Expected exactly one guides container')
+          if html.count('id="about"') != 1:
+              raise SystemExit('Results panel structure changed unexpectedly')
 
           p.write_text(html, encoding='utf-8')
           print('Visual-only merge verification passed')
