@@ -13,18 +13,14 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Apply platform patch
+      - name: Apply listener fix
         run: python .github/scripts/apply_platform.py
       - name: Verify and commit
         shell: bash
         run: |
-          grep -q 'platformSelect' index.html
-          grep -q 'Amazon Handmade UK' index.html
-          grep -q 'applyPlatformProfile' index.html
-          grep -q 'eBay UK Business' index.html
           grep -q "electricityProvider','platform','pay'" index.html
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          git commit -m 'Fix platform fee recalculation'
+          git commit -m 'Fix platform fee live recalculation'
           git push
