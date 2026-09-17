@@ -16,11 +16,12 @@
 
     const directPanels=Array.from(source.children).filter(el=>el.matches&&el.matches('section.panel'));
     const box1=directPanels.find(panel=>panelTitle(panel).startsWith('1.'));
-    const box6=directPanels.find(panel=>panelTitle(panel).startsWith('6.'));
     const two=Array.from(source.children).find(el=>el.classList&&el.classList.contains('two'));
     const box2=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('2.'));
     const box3=two&&Array.from(two.children).find(panel=>panelTitle(panel).startsWith('3.'));
     const guides=Array.from(source.children).find(el=>el.id==='guides');
+    const box6=(directPanels.find(panel=>panelTitle(panel).startsWith('6.')))
+      || (guides&&Array.from(guides.querySelectorAll('section.panel')).find(panel=>panelTitle(panel).startsWith('6.')));
     const mergeBlocks=guides?Array.from(guides.querySelectorAll('.merge-block')):[];
     const box4=mergeBlocks.find(block=>panelTitle(block).startsWith('4.'));
     const box5=mergeBlocks.find(block=>panelTitle(block).startsWith('5.'));
