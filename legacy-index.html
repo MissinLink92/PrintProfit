@@ -24,11 +24,42 @@
 /* PrintProfit quick price UX V1 */
 .custom-target{margin-top:8px}.custom-target label{margin-bottom:4px}.custom-target input{margin-top:1px}.custom-target-note{margin-top:5px;line-height:1.35}.quick .btn.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
 </style>
+
+<style id="pp-direct-hero-css">
+.pp-direct-hero{background:#071018!important;border-bottom:1px solid #263f4a!important;overflow:hidden!important}
+.pp-direct-stage{position:relative;min-height:388px;overflow:hidden;background:linear-gradient(120deg,#071018,#0a1821 62%,#071018)}
+.pp-direct-stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:42px 42px;opacity:.35}
+.pp-direct-copy{position:absolute;z-index:3;left:4%;top:31px;width:43%}
+.pp-direct-kicker{font-size:11px;font-weight:800;letter-spacing:2px;color:#ff7800;margin-bottom:14px}.pp-direct-kicker:before{content:"";display:inline-block;width:32px;height:2px;background:#ff7800;vertical-align:middle;margin-right:11px}
+.pp-direct-copy h1{margin:0;font-size:clamp(42px,4.1vw,66px);line-height:.98;letter-spacing:-2.5px;font-weight:900;color:#f7f9fa}.pp-direct-copy h1 span{color:#ff7800}
+.pp-direct-copy p{max-width:600px;margin:17px 0 20px;color:#b5c1c9;font-size:14px;line-height:1.45}
+.pp-direct-actions{display:flex;gap:9px}.pp-direct-actions a{display:inline-flex;align-items:center;text-decoration:none;border-radius:9px;padding:11px 16px;font-size:13px;font-weight:800}.pp-direct-primary{background:#ff7800;color:#fff}.pp-direct-secondary{color:#e8eef1;border:1px solid #39515d;background:#0c1a23}
+.pp-direct-art{position:absolute;z-index:2;left:38%;top:22px;width:35%;height:300px;display:flex;align-items:center;justify-content:center}.pp-direct-art img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px #0008)}
+.pp-direct-card{position:absolute;z-index:4;right:4%;top:36px;width:22%;height:265px;border:1px solid #334b56;border-radius:19px;background:linear-gradient(145deg,#14252e,#0a151d);box-shadow:0 16px 35px #0005;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px}
+.pp-direct-slogan{color:#ff7800;font-size:21px;line-height:1.08;font-weight:800;font-style:italic;margin-bottom:15px;text-shadow:0 2px 5px #000}.pp-direct-card img{width:88%;max-width:250px;height:auto;max-height:105px;object-fit:contain}.pp-direct-meta{position:absolute;bottom:13px;font-size:7px;letter-spacing:2px;color:#aebbc2;font-weight:800}
+.pp-direct-features{position:absolute;z-index:5;left:4%;right:4%;bottom:0;height:58px;border-top:1px solid #29414c;display:grid;grid-template-columns:repeat(5,1fr);align-items:center}.pp-direct-features>div{height:32px;display:flex;align-items:center;justify-content:center;gap:9px;border-right:1px solid #29414c;color:#c2cbd0;font-size:9px;font-weight:800}.pp-direct-features>div:last-child{border:0}.pp-direct-features>div:first-child{color:#c2cbd0}.pp-direct-features>div::first-letter{color:#ff7800;font-size:20px}
+@media(max-width:750px){.pp-direct-stage{min-height:720px}.pp-direct-copy{position:relative;left:auto;top:auto;width:auto;padding:35px 20px 0}.pp-direct-copy h1{font-size:43px}.pp-direct-art{left:10%;top:270px;width:80%;height:220px}.pp-direct-card{right:20px;top:475px;width:230px;height:190px}.pp-direct-features{left:15px;right:15px;height:100px;grid-template-columns:repeat(2,1fr)}.pp-direct-features>div{border:0}}
+</style>
 </head>
 <body>
 <div class="shell">
 <header class="header"><a class="brand" href="#home"><img src="./assets/printprofit-header-logo.webp?v=good-logo" alt="PrintProfit 3D printing cost and pricing"></a><nav class="nav"><a href="#home" class="active">⌂ Home</a><a href="#guides">▣ Guides</a><a href="#about">ⓘ About</a><a href="#support">◉ Support</a></nav><label class="mode">☾ Dark Mode <input id="dark" type="checkbox" role="switch" checked></label></header>
-<section class="hero"><img src="data:image/webp;base64,UklGR..." alt="PrintProfit 3D printing cost and pricing"></section>
+<section class="hero pp-direct-hero">
+<div class="pp-direct-stage">
+<div class="pp-direct-copy">
+<div class="pp-direct-kicker">3D PRINTING COST & PRICING</div>
+<h1>Know what it <span>costs.</span><br>Know what to <span>charge.</span></h1>
+<p>Upload your sliced print file and let PrintProfit turn real printer data into a clear cost, selling price and profit.</p>
+<div class="pp-direct-actions"><a href="#calculator" class="pp-direct-primary">Calculate a print&nbsp; →</a><a href="#guides" class="pp-direct-secondary">How it works</a></div>
+</div>
+<div class="pp-direct-art"><img src="./assets/hero-art-orange.webp?v=direct1" alt="3D printing models"></div>
+<div class="pp-direct-card">
+<div class="pp-direct-slogan">Print Smarter.<br>Price Better.<br>Profit More.</div>
+<img src="./assets/printprofit-header-logo.webp?v=direct1" alt="PrintProfit">
+<div class="pp-direct-meta">CALCULATE &nbsp; • &nbsp; PRICE &nbsp; • &nbsp; PROFIT</div>
+</div>
+<div class="pp-direct-features"><div>▣ <span>ACCURATE COSTS</span></div><div>◇ <span>ANY SLICER</span></div><div>▥ <span>REAL MATERIAL USAGE</span></div><div>⚙ <span>PRINTER PROFILES</span></div><div>▰ <span>DELIVERY & FEES</span></div></div>
+</div></section>
 <main class="main">
 <div class="layout"><div>
 <section class="panel"><div class="head"><div class="icon">▣</div><div><h2>1. G-code File</h2><p>Upload your sliced file to auto-fill print time and filament usage.</p></div></div><div class="two"><div class="drop"><b>↥ Drag & drop your G-code file here</b><span class="small">or</span><div class="actions" style="justify-content:center"><label class="btn accent" style="display:inline-block;color:#fff">Choose File<input id="file" type="file" accept=".gcode,.gco,.bgcode,.ctb,.photon,.pwma,.pwmo,.pws,.goo,.sl1,.sl1s" hidden></label><button class="btn" id="clear">Clear</button></div><small id="status">No G-code selected</small></div><div class="panel" style="margin:0"><div class="head"><div><h2 style="color:var(--accent)">ⓘ Not sure about a field?</h2><p>Leave it blank.</p></div></div><div class="small">Blank fields are treated as £0 for a basic estimate.<br><br><b style="color:var(--text)">Tip:</b> Upload a G-code file for the most accurate results.</div></div></div></section>
