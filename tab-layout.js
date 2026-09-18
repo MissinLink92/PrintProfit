@@ -35,22 +35,21 @@ html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs'];
     let viewportLockTimer=null;
-    function lockViewport(y,x,duration=1600){
+    function lockViewport(y,x,duration=120){
       if(viewportLockTimer)clearInterval(viewportLockTimer);
       const root=document.documentElement,body=document.body;
       root.style.overflowAnchor='none';body.style.overflowAnchor='none';
-      const parentLock=()=>{try{if(window.parent&&window.parent!==window&&typeof window.parent.__ppLockOuterScroll==='function')window.parent.__ppLockOuterScroll(y,x,duration);}catch(_){ }};
-      const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(document.scrollingElement)document.scrollingElement.scrollTop=y;parentLock();};
+      const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(document.scrollingElement)document.scrollingElement.scrollTop=y;};
       restore();
       const started=performance.now();
       viewportLockTimer=setInterval(()=>{
         restore();
         if(performance.now()-started>=duration){
-          clearInterval(viewportLockTimer);viewportLockTimer=null;restore();
+          clearInterval(viewportLockTimer);viewportLockTimer=null;
         }
       },16);
       requestAnimationFrame(restore);
-      setTimeout(restore,50);setTimeout(restore,150);setTimeout(restore,300);setTimeout(restore,600);setTimeout(restore,1000);setTimeout(restore,1500);
+      setTimeout(restore,40);setTimeout(restore,90);setTimeout(restore,130);
     }
     function setStep(id){
       const beforeY=window.scrollY,beforeX=window.scrollX,current=ids.indexOf(id);
@@ -71,9 +70,9 @@ html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow
       step.addEventListener('click',e=>{
         e.preventDefault();e.stopPropagation();
         const y=window.scrollY,x=window.scrollX;
-        lockViewport(y,x,1600);
+        try{if(window.parent&&window.parent!==window&&typeof window.parent.__ppLockOuterScroll==='function')window.parent.__ppLockOuterScroll(120);}catch(_){}
         setStep(step.dataset.tab);
-        lockViewport(y,x,1600);
+        lockViewport(y,x,120);
       });
     });return true;
   }
