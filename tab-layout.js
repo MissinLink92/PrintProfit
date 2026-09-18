@@ -8,7 +8,7 @@
     const box1=findBox('1'),box2=findBox('2'),box3=findBox('3'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
     if(!layout||!result||!box1||!box2||!box3||!box4||!box5||!box6)return false;
     const style=document.createElement('style');style.id='ppTabbedLayoutRuntimeStyles';style.textContent=`
-html{scroll-behavior:auto!important}body{overflow-anchor:none!important}
+html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow-anchor:none!important}#ppTabbedLayout,.pp-progress-host,.pp-tab-panel{overflow-anchor:none!important}
 .layout{display:block!important;width:100%!important}.layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}.pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important;overflow:visible}
 .pp-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;width:100%;margin:0;padding:0;background:linear-gradient(180deg,rgba(11,28,38,.96),rgba(6,18,26,.96));border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #0004}
@@ -34,8 +34,40 @@ html{scroll-behavior:auto!important}body{overflow-anchor:none!important}
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs'];
-    function lockScroll(y,x){let frames=0;const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(frames++<30)requestAnimationFrame(restore);};restore();setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),75);setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),150);setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),300);}function setStep(id){const beforeY=window.scrollY,beforeX=window.scrollX,current=ids.indexOf(id);document.documentElement.style.scrollBehavior='auto';steps.forEach((step,index)=>{const active=index===current,complete=index<current;step.classList.toggle('active',active);step.classList.toggle('complete',complete);step.setAttribute('aria-selected',String(active));const number=step.querySelector('.pp-step-number');if(number)number.textContent=complete?'✓':String(index+1);});Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));lockScroll(beforeY,beforeX);}
-    steps.forEach(step=>step.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const y=window.scrollY,x=window.scrollX;setStep(step.dataset.tab);try{step.focus({preventScroll:true});}catch(_){step.focus();}lockScroll(y,x);}));return true;
+    let viewportLockTimer=null;
+    function lockViewport(y,x,duration=1200){
+      if(viewportLockTimer)clearInterval(viewportLockTimer);
+      const root=document.documentElement,body=document.body;
+      root.style.overflowAnchor='none';body.style.overflowAnchor='none';
+      const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(document.scrollingElement)document.scrollingElement.scrollTop=y;};
+      restore();
+      const started=performance.now();
+      viewportLockTimer=setInterval(()=>{
+        restore();
+        if(performance.now()-started>=duration){
+          clearInterval(viewportLockTimer);viewportLockTimer=null;restore();
+        }
+      },16);
+      requestAnimationFrame(restore);
+      setTimeout(restore,50);setTimeout(restore,150);setTimeout(restore,300);setTimeout(restore,600);setTimeout(restore,1000);
+    }
+    function setStep(id){
+      const beforeY=window.scrollY,beforeX=window.scrollX,current=ids.indexOf(id);
+      document.documentElement.style.scrollBehavior='auto';
+      steps.forEach((step,index)=>{
+        const active=index===current,complete=index<current;
+        step.classList.toggle('active',active);step.classList.toggle('complete',complete);
+        step.setAttribute('aria-selected',String(active));
+        const number=step.querySelector('.pp-step-number');if(number)number.textContent=complete?'✓':String(index+1);
+      });
+      Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));
+      lockViewport(beforeY,beforeX,1200);
+    }
+    steps.forEach(step=>{
+      step.addEventListener('mousedown',e=>e.preventDefault());
+      step.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const y=window.scrollY,x=window.scrollX;setStep(step.dataset.tab);try{step.focus({preventScroll:true});}catch(_){step.blur();}lockViewport(y,x,1200);});
+      step.addEventListener('focus',()=>{try{step.blur();}catch(_){ }},true);
+    });return true;
   }
   function wait(){if(install())return;const started=Date.now();const timer=setInterval(()=>{if(install()||(Date.now()-started)>=15000)clearInterval(timer);},50);}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});else wait();
