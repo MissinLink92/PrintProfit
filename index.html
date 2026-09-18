@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
 <style>
-html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto}
+html,body{margin:0;padding:0;background:#071018;color:#f5f8fb;overflow-anchor:none;scroll-behavior:auto!important}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto;overflow-anchor:none}
 #ppFloatingReset{position:fixed;right:22px;bottom:22px;min-width:154px;height:50px;padding:0 18px;border-radius:14px;border:1px solid #ff7800;background:linear-gradient(145deg,#ff8f24,#ff7800);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font:900 13px/1 Inter,Segoe UI,system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;z-index:9999;box-shadow:0 10px 28px #000b,0 0 24px #ff780033;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
 #ppFloatingReset .pp-reset-icon{width:25px;height:25px;border:2px solid rgba(255,255,255,.9);border-radius:50%;display:grid;place-items:center;font-size:17px;line-height:1;letter-spacing:0}
 #ppFloatingReset .pp-reset-text{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
@@ -18,7 +18,7 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260917-fullstack8" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260918-stableworkfix1" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -26,10 +26,16 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 const frame=document.getElementById('app');
 const resetButton=document.getElementById('ppFloatingReset');
 const scripts=[
-'quick-price-guard.js?v=6',
-'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=5','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=2','flow-cards.js?v=1','clean-top.js?v=1','tab-layout.js?v=12'
+'quick-price-guard.js?v=7',
+'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=5','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=2','flow-cards.js?v=1','clean-top.js?v=1','tab-layout.js?v=16
 ];
-function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
+window.__ppLockOuterScroll=function(y,x,duration=1600){
+  try{const started=performance.now();const restore=()=>window.scrollTo({left:x,top:y,behavior:'auto'});restore();
+    const id=setInterval(()=>{restore();if(performance.now()-started>=duration)clearInterval(id);},16);
+    requestAnimationFrame(restore);setTimeout(restore,50);setTimeout(restore,150);setTimeout(restore,300);setTimeout(restore,600);setTimeout(restore,1000);setTimeout(restore,1500);
+  }catch(_){ }
+};
+function fit(){try{const d=frame.contentDocument;if(!d)return;const x=window.scrollX,y=window.scrollY;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0&&frame.style.height!==h+'px'){frame.style.height=h+'px';window.scrollTo({left:x,top:y,behavior:'auto'});requestAnimationFrame(()=>window.scrollTo({left:x,top:y,behavior:'auto'}));setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),0);setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),50);setTimeout(()=>window.scrollTo({left:x,top:y,behavior:'auto'}),150);}}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
 function doReset(){try{const d=frame.contentDocument;const reset=d?.getElementById('reset');if(reset){reset.click();return;}const fallback=d?.querySelector('.actions button[id*="reset" i]');if(fallback)fallback.click();}catch(e){console.warn('PrintProfit reset failed',e);}}
 resetButton.addEventListener('click',doReset);
