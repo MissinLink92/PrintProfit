@@ -18,13 +18,31 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb;overflow-anchor:no
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260918-stabletabs16" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260918-parentlock17" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
 'use strict';
 const frame=document.getElementById('app');
 const resetButton=document.getElementById('ppFloatingReset');
+
+let ppOuterLockUntil=0,ppOuterLockX=0,ppOuterLockY=0,ppOuterLockTimer=null,ppOuterScrollHandler=null;
+window.__ppLockOuterScroll=function(_y,_x,duration=1600){
+  ppOuterLockX=window.scrollX; ppOuterLockY=window.scrollY; ppOuterLockUntil=performance.now()+duration;
+  if(ppOuterScrollHandler)window.removeEventListener('scroll',ppOuterScrollHandler,true);
+  ppOuterScrollHandler=()=>{if(performance.now()<=ppOuterLockUntil){window.scrollTo({left:ppOuterLockX,top:ppOuterLockY,behavior:'auto'});}};
+  window.addEventListener('scroll',ppOuterScrollHandler,true);
+  if(ppOuterLockTimer)clearInterval(ppOuterLockTimer);
+  ppOuterLockTimer=setInterval(()=>{
+    window.scrollTo({left:ppOuterLockX,top:ppOuterLockY,behavior:'auto'});
+    if(performance.now()>ppOuterLockUntil){
+      clearInterval(ppOuterLockTimer);ppOuterLockTimer=null;
+      window.removeEventListener('scroll',ppOuterScrollHandler,true);ppOuterScrollHandler=null;
+    }
+  },16);
+  window.scrollTo({left:ppOuterLockX,top:ppOuterLockY,behavior:'auto'});
+};
+
 const scripts=[
 'quick-price-guard.js?v=6',
 'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=5','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=2','flow-cards.js?v=1','clean-top.js?v=1','tab-layout.js?v=15'
