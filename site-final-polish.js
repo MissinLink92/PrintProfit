@@ -5,7 +5,7 @@ function install(){
  const header=document.querySelector('.header');
  const hero=document.querySelector('.hero');
  if(!header||!hero)return false;
- const master='./assets/printprofit-master-orange.svg?v=3';
+ const master='./assets/printprofit-reference-header-logo.png?v=3';
  const brand=header.querySelector('.brand');
  if(brand){
   const img=brand.querySelector('img');
@@ -24,8 +24,8 @@ function install(){
 :root{--ppb:#ff7800!important;--ppb2:#ff9b42!important;--accent:#ff7800!important}
 .header,.header.pp-pretty-header{background:rgba(3,9,14,.96)!important;border-bottom-color:#27414e!important}
 .header:after,.header.pp-pretty-header:after{background:linear-gradient(90deg,transparent,#ff7800,#ff9b42,#ff7800,transparent)!important;box-shadow:0 0 18px #ff780055!important}
-.header .brand,.header.pp-pretty-header .brand{width:min(390px,32vw)!important;height:64px!important}
-.header .brand .pp-chosen-brand-logo{width:100%!important;height:100%!important;max-height:64px!important;object-fit:contain!important;object-position:left center!important;filter:drop-shadow(0 4px 14px #000c)!important}
+.header .brand,.header.pp-pretty-header .brand{width:min(410px,34vw)!important;height:64px!important;overflow:visible!important}
+.header .brand .pp-chosen-brand-logo{width:410px!important;height:82px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:left center!important;display:block!important;filter:drop-shadow(0 4px 14px #000c)!important}
 .header .nav a.active,.header .nav a:hover{background:#ff780014!important;color:#fff!important}
 .header .nav a:after{background:linear-gradient(90deg,#ff7800,#ff9b42)!important;box-shadow:0 0 12px #ff780070!important}
 .header .mode input:checked{background:linear-gradient(90deg,#ff7800,#ff9b42)!important;border-color:#ff7800!important;box-shadow:0 0 16px #ff780033!important}
