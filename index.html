@@ -18,7 +18,7 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260918-logo2" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260918-tabs15" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -27,7 +27,7 @@ const frame=document.getElementById('app');
 const resetButton=document.getElementById('ppFloatingReset');
 const scripts=[
 'quick-price-guard.js?v=6',
-'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=5','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=2','flow-cards.js?v=1','clean-top.js?v=1','tab-layout.js?v=14'
+'reset-fix.js?v=10','drag-gcode-fix.js?v=1','file-type-support.js?v=2','app-enhancements.js?v=5','ui-enhancements.js?v=1','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=5','alignment-polish.js?v=2','hero-composition.js?v=3','header-hero-fix.js?v=3','final-theme.js?v=3','reference-theme.js?v=2','gcode-reader.js?v=2','chosen-theme.js?v=1','signature-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','mono-orange-cool-theme.js?v=1','box-icons.js?v=5','hero-feature-icons.js?v=1','electricity-providers.js?v=4','hero-ticker-position.js?v=2','hero-compact-fix.js?v=2','master-polish.js?v=1','master-cleanup.js?v=2','natural-flow.js?v=3','site-final-polish.js?v=4','top-scratch.js?v=2','flow-cards.js?v=1','clean-top.js?v=1','tab-layout.js?v=15'
 ];
 function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
