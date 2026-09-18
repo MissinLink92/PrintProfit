@@ -1,5 +1,5 @@
 (()=>{
-  'use strict';
+  'use strict';try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(_){}
   function titleOf(section){const h=section?.querySelector('h2');return h?h.textContent.trim():'';}
   function findBox(number){return [...document.querySelectorAll('section.panel')].find(section=>titleOf(section).startsWith(number+'.'))||null;}
   function install(){
@@ -8,7 +8,7 @@
     const box1=findBox('1'),box2=findBox('2'),box3=findBox('3'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
     if(!layout||!result||!box1||!box2||!box3||!box4||!box5||!box6)return false;
     const style=document.createElement('style');style.id='ppTabbedLayoutRuntimeStyles';style.textContent=`
-html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow-anchor:none!important}#ppTabbedLayout,.pp-progress-host,.pp-tab-panel{overflow-anchor:none!important}
+html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow-anchor:none!important}#ppTabbedLayout,.pp-progress-host,.pp-tab-panel{overflow-anchor:none!important;contain:layout paint}
 .layout{display:block!important;width:100%!important}.layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:grid!important;grid-template-columns:minmax(0,1fr);align-items:start;width:100%!important;min-width:0}.pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important;overflow:visible}
 .pp-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;width:100%;margin:0;padding:0;background:linear-gradient(180deg,rgba(11,28,38,.96),rgba(6,18,26,.96));border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #0004}
@@ -35,11 +35,12 @@ html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs'];
     let viewportLockTimer=null;
-    function lockViewport(y,x,duration=1200){
+    function lockViewport(y,x,duration=1600){
       if(viewportLockTimer)clearInterval(viewportLockTimer);
       const root=document.documentElement,body=document.body;
       root.style.overflowAnchor='none';body.style.overflowAnchor='none';
-      const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(document.scrollingElement)document.scrollingElement.scrollTop=y;};
+      const parentLock=()=>{try{if(window.parent&&window.parent!==window&&typeof window.parent.__ppLockOuterScroll==='function')window.parent.__ppLockOuterScroll(y,x,duration);}catch(_){ }};
+      const restore=()=>{window.scrollTo({left:x,top:y,behavior:'auto'});if(document.scrollingElement)document.scrollingElement.scrollTop=y;parentLock();};
       restore();
       const started=performance.now();
       viewportLockTimer=setInterval(()=>{
@@ -49,7 +50,7 @@ html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow
         }
       },16);
       requestAnimationFrame(restore);
-      setTimeout(restore,50);setTimeout(restore,150);setTimeout(restore,300);setTimeout(restore,600);setTimeout(restore,1000);
+      setTimeout(restore,50);setTimeout(restore,150);setTimeout(restore,300);setTimeout(restore,600);setTimeout(restore,1000);setTimeout(restore,1500);
     }
     function setStep(id){
       const beforeY=window.scrollY,beforeX=window.scrollX,current=ids.indexOf(id);
@@ -64,9 +65,16 @@ html{scroll-behavior:auto!important;overflow-anchor:none!important}body{overflow
       lockViewport(beforeY,beforeX,1200);
     }
     steps.forEach(step=>{
+      step.setAttribute('tabindex','-1');
       step.addEventListener('mousedown',e=>e.preventDefault());
-      step.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const y=window.scrollY,x=window.scrollX;setStep(step.dataset.tab);try{step.focus({preventScroll:true});}catch(_){step.blur();}lockViewport(y,x,1200);});
-      step.addEventListener('focus',()=>{try{step.blur();}catch(_){ }},true);
+      step.addEventListener('pointerdown',e=>e.preventDefault());
+      step.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const y=window.scrollY,x=window.scrollX;
+        lockViewport(y,x,1600);
+        setStep(step.dataset.tab);
+        lockViewport(y,x,1600);
+      });
     });return true;
   }
   function wait(){if(install())return;const started=Date.now();const timer=setInterval(()=>{if(install()||(Date.now()-started)>=15000)clearInterval(timer);},50);}
