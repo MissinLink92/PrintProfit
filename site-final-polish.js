@@ -5,7 +5,7 @@ function install(){
  const header=document.querySelector('.header');
  const hero=document.querySelector('.hero');
  if(!header||!hero)return false;
- const master='./assets/printprofit-reference-header-logo.png?v=3';
+ const master='./assets/printprofit-reference-header-logo.png?v=4';
  const brand=header.querySelector('.brand');
  if(brand){
   const img=brand.querySelector('img');
