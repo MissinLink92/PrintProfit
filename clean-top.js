@@ -27,7 +27,6 @@ function install(){
       </nav>
     </div>
     <div class="pp-top-body">
-div>
       <div class="pp-top-copy">
         <div class="pp-eyebrow">3D PRINTING PRICING, MADE SIMPLE</div>
         <h1>Know what it costs.<br><strong>Know what to charge.</strong></h1>
