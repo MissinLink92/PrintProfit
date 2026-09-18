@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 285" role="img" aria-labelledby="title desc">
+<title id="title">PrintProfit clean logo</title>
+<desc id="desc">PrintProfit logo with orange scales and monogram, silver white wordmark and orange accents.</desc>
+<defs>
+ <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c8d0d5"/></linearGradient>
+ <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9b42"/><stop offset="1" stop-color="#ff7800"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity=".42"/></filter>
+</defs>
+<g filter="url(#shadow)">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="255" y="12" width="90" height="60" rx="9" fill="url(#orange)"/>
+    <path d="M245 34H160q-12 0-12 10t12 10h85M355 34h85q12 0 12 10t-12 10h-85" fill="none" stroke="url(#orange)" stroke-width="14"/>
+    <path d="M275 72v26M325 72v26M300 98v142" fill="none" stroke="url(#orange)" stroke-width="14"/>
+    <path d="M260 240h80q11 0 11 11t-11 11h-80q-11 0-11-11t11-11Z" fill="url(#orange)"/>
+    <path d="M175 106h80q12 0 19 10l26 0M425 106h-80q-12 0-19 10l-26 0" fill="none" stroke="url(#orange)" stroke-width="10"/>
+    <path d="M255 116l-46 76M345 116l46 76M209 192h-62M391 192h62" fill="none" stroke="url(#orange)" stroke-width="10"/>
+    <path d="M147 192c5 30 26 48 55 48s50-18 55-48ZM337 192c5 30 26 48 55 48s50-18 55-48Z" fill="url(#orange)"/>
+  </g>
+  <path d="M275 112h50v24h-26v22h21v25h-21v45h-24Z" fill="url(#silver)"/>
+  <path d="M325 112h29c25 0 42 13 42 35s-17 36-42 36h-5v45h-24Zm24 24v22h5c9 0 16-4 16-11s-7-11-16-11Z" fill="url(#silver)"/>
+</g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="900" letter-spacing="-4">
+ <text x="475" y="194" font-size="112" fill="url(#silver)">Print</text>
+ <text x="705" y="194" font-size="112" fill="url(#orange)">Profit</text>
+</g>
+<text x="478" y="242" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="5" fill="#d7dfe3">3D PRINTING COST &amp; PRICING CALCULATOR</text>
+</svg>
