@@ -18,7 +18,7 @@ function install(){
   top.innerHTML=`
     <header class="pp-scratch-header">
       <a class="pp-scratch-logo" href="#ppScratchTop" aria-label="PrintProfit home">
-        <img src="./assets/printprofit-master-orange.svg?v=scratch1" alt="PrintProfit — 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/printprofit-header-reference.webp?v=2" alt="PrintProfit — 3D Printing Cost & Pricing Calculator">
       </a>
       <nav class="pp-scratch-nav" aria-label="Main navigation">
         <a href="#ppScratchTop" class="active">Calculate a print</a>
@@ -42,7 +42,7 @@ function install(){
       <div class="pp-scratch-visual">
         <div class="pp-scratch-card">
           <div class="pp-scratch-card-glow"></div>
-          <img src="./assets/printprofit-master-orange.svg?v=scratch1" alt="PrintProfit">
+          <img src="./assets/printprofit-header-reference.webp?v=2" alt="PrintProfit">
           <div class="pp-scratch-card-foot"><span>CALCULATE</span><b>•</b><span>PRICE</span><b>•</b><span>PROFIT</span></div>
         </div>
         <div class="pp-scratch-tagline">Print Smarter. Price Better.<br>Profit More.</div>
