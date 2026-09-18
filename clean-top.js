@@ -26,6 +26,38 @@ function install(){
         <button type="button" data-target="settings"><span class="pp-nav-icon gear"></span><span>Settings</span></button>
       </nav>
     </div>
+    <div class="pp-filament-motion" aria-hidden="true">
+      <div class="pp-filament-glow"></div>
+      <svg viewBox="0 0 900 300" preserveAspectRatio="none" role="presentation">
+        <defs>
+          <filter id="ppGlow"><feGaussianBlur stdDeviation="4"/></filter>
+          <linearGradient id="ppFilamentGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ff7800" stop-opacity=".12"/>
+            <stop offset="38%" stop-color="#ff7800" stop-opacity=".55"/>
+            <stop offset="72%" stop-color="#ff9b42" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="#ff7800" stop-opacity=".18"/>
+          </linearGradient>
+        </defs>
+        <g class="pp-filament-soft" filter="url(#ppGlow)">
+          <path d="M40 196 C165 58, 280 40, 430 154 S690 266, 860 104"/>
+          <path d="M28 228 C170 90, 290 74, 428 170 S692 292, 870 132"/>
+          <path d="M42 166 C165 24, 300 24, 442 132 S685 236, 860 80"/>
+        </g>
+        <g class="pp-filament-main">
+          <path d="M40 196 C165 58, 280 40, 430 154 S690 266, 860 104"/>
+          <path d="M28 228 C170 90, 290 74, 428 170 S692 292, 870 132"/>
+          <path d="M42 166 C165 24, 300 24, 442 132 S685 236, 860 80"/>
+          <path d="M60 210 C190 102, 294 68, 452 148 S684 250, 820 112"/>
+        </g>
+      </svg>
+      <div class="pp-spool">
+        <div class="pp-spool-core"></div>
+        <div class="pp-spool-ring pp-spool-ring-a"></div>
+        <div class="pp-spool-ring pp-spool-ring-b"></div>
+        <div class="pp-spool-label">FILAMENT</div>
+      </div>
+    </div>
+
     <div class="pp-top-body">
 div>
       <div class="pp-top-copy">
@@ -80,6 +112,20 @@ div>
     #ppCleanTop .chart:before{content:"";position:absolute;inset:3px 2px 2px;border-left:2px solid currentColor;border-bottom:2px solid currentColor}
     #ppCleanTop .chart:after{content:"";position:absolute;left:7px;bottom:5px;width:3px;height:8px;background:currentColor;box-shadow:6px -5px currentColor,12px -11px currentColor}
     #ppCleanTop .gear:before{content:"⚙";position:absolute;inset:-3px 0 0;font:30px/1 Arial,sans-serif;color:currentColor}
+    #ppCleanTop .pp-filament-motion{position:absolute;inset:58px 3.3% 3px 22%;z-index:1;pointer-events:none;overflow:hidden}
+    #ppCleanTop .pp-filament-motion svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+    #ppCleanTop .pp-filament-main path{fill:none;stroke:url(#ppFilamentGrad);stroke-width:2.5;stroke-linecap:round;opacity:.74}
+    #ppCleanTop .pp-filament-soft path{fill:none;stroke:#ff7800;stroke-width:8;stroke-linecap:round;opacity:.14}
+    #ppCleanTop .pp-filament-glow{position:absolute;right:18%;top:21%;width:300px;height:190px;border-radius:50%;background:radial-gradient(circle,rgba(255,120,0,.10),transparent 68%);filter:blur(10px)}
+    #ppCleanTop .pp-spool{position:absolute;right:17%;top:17%;width:126px;height:164px;border-radius:50%/11%;background:linear-gradient(90deg,#3d2b1e 0%,#9a5a25 16%,#ff9b42 27%,#613518 52%,#ff9b42 74%,#6f3d1e 88%,#33251d 100%);box-shadow:inset 0 0 0 2px rgba(255,167,88,.18),0 12px 35px rgba(0,0,0,.42),0 0 28px rgba(255,120,0,.10);transform:rotate(4deg);opacity:.92}
+    #ppCleanTop .pp-spool:before,#ppCleanTop .pp-spool:after{content:"";position:absolute;left:0;right:0;height:31px;border-radius:50%;border:2px solid rgba(255,159,77,.38);background:linear-gradient(180deg,#7a4621,#2a1d17);box-shadow:inset 0 0 0 6px rgba(0,0,0,.18)}
+    #ppCleanTop .pp-spool:before{top:-4px}
+    #ppCleanTop .pp-spool:after{bottom:-4px}
+    #ppCleanTop .pp-spool-ring{position:absolute;left:19px;right:19px;border-radius:50%;border:2px solid rgba(255,176,94,.32);height:26px}
+    #ppCleanTop .pp-spool-ring-a{top:22px}
+    #ppCleanTop .pp-spool-ring-b{bottom:22px}
+    #ppCleanTop .pp-spool-core{position:absolute;left:43px;top:51px;width:40px;height:62px;border-radius:50%/24%;border:3px solid rgba(255,174,89,.5);background:#161318;box-shadow:inset 0 0 0 7px rgba(255,120,0,.10),0 0 18px rgba(255,120,0,.10)}
+    #ppCleanTop .pp-spool-label{position:absolute;left:16px;right:16px;top:67px;text-align:center;color:#ffd0a1;font-size:8px;font-weight:900;letter-spacing:.18em;opacity:.75}
     #ppCleanTop .pp-top-body{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 425px;gap:42px;align-items:stretch;padding:10px 3.1% 9px;box-sizing:border-box;min-height:306px}
     #ppCleanTop .pp-top-copy{padding-top:15px;min-width:0}
     #ppCleanTop .pp-eyebrow{font-size:12px;font-weight:900;letter-spacing:.19em;color:#ff7800;margin-bottom:8px}
@@ -103,7 +149,7 @@ div>
     #ppCleanTop .pp-card-tagline{position:relative;z-index:2;margin-top:-2px;color:#ff7800;text-align:right;width:305px;font-size:21px;line-height:.9;font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;transform:rotate(-2deg);text-shadow:0 2px 12px #000}
     #ppCleanTop .pp-top-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:#ff7800;box-shadow:0 0 14px #ff780055}
     @media(max-width:1050px){#ppCleanTop .pp-top-body{grid-template-columns:minmax(0,1fr) 350px;gap:22px}#ppCleanTop .pp-top-card{width:350px}#ppCleanTop .pp-top-card img{width:285px}#ppCleanTop h1{font-size:42px}}
-    @media(max-width:800px){#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:210px}#ppCleanTop .pp-top-brand img{width:210px}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
+    @media(max-width:800px){#ppCleanTop .pp-filament-motion{display:none}#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:210px}#ppCleanTop .pp-top-brand img{width:210px}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
     @media(max-width:520px){#ppCleanTop h1{font-size:32px}.pp-eyebrow{font-size:9px!important}.pp-top-copy>p{font-size:14px!important}.pp-feature-strip{gap:8px!important}.pp-feature-strip>div{min-width:0!important}.pp-feature-strip i{display:none!important}#ppCleanTop .pp-top-card{height:255px}#ppCleanTop .pp-top-card img{width:270px;height:170px}.pp-card-tagline{font-size:18px!important;width:250px!important}}
   `;
   document.head.appendChild(style);
