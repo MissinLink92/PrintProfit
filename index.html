@@ -25,42 +25,158 @@
 .custom-target{margin-top:8px}.custom-target label{margin-bottom:4px}.custom-target input{margin-top:1px}.custom-target-note{margin-top:5px;line-height:1.35}.quick .btn.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
 </style>
 
-<style id="pp-direct-hero-css">
-.pp-direct-hero{background:#071018!important;border-bottom:1px solid #263f4a!important;overflow:hidden!important}
-.pp-direct-stage{position:relative;min-height:388px;overflow:hidden;background:linear-gradient(120deg,#071018,#0a1821 62%,#071018)}
-.pp-direct-stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:42px 42px;opacity:.35}
-.pp-direct-copy{position:absolute;z-index:3;left:4%;top:31px;width:43%}
-.pp-direct-kicker{font-size:11px;font-weight:800;letter-spacing:2px;color:#ff7800;margin-bottom:14px}.pp-direct-kicker:before{content:"";display:inline-block;width:32px;height:2px;background:#ff7800;vertical-align:middle;margin-right:11px}
-.pp-direct-copy h1{margin:0;font-size:clamp(42px,4.1vw,66px);line-height:.98;letter-spacing:-2.5px;font-weight:900;color:#f7f9fa}.pp-direct-copy h1 span{color:#ff7800}
-.pp-direct-copy p{max-width:600px;margin:17px 0 20px;color:#b5c1c9;font-size:14px;line-height:1.45}
-.pp-direct-actions{display:flex;gap:9px}.pp-direct-actions a{display:inline-flex;align-items:center;text-decoration:none;border-radius:9px;padding:11px 16px;font-size:13px;font-weight:800}.pp-direct-primary{background:#ff7800;color:#fff}.pp-direct-secondary{color:#e8eef1;border:1px solid #39515d;background:#0c1a23}
-.pp-direct-art{position:absolute;z-index:2;left:38%;top:22px;width:35%;height:300px;display:flex;align-items:center;justify-content:center}.pp-direct-art img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px #0008)}
-.pp-direct-card{position:absolute;z-index:4;right:4%;top:36px;width:22%;height:265px;border:1px solid #334b56;border-radius:19px;background:linear-gradient(145deg,#14252e,#0a151d);box-shadow:0 16px 35px #0005;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px}
-.pp-direct-slogan{color:#ff7800;font-size:21px;line-height:1.08;font-weight:800;font-style:italic;margin-bottom:15px;text-shadow:0 2px 5px #000}.pp-direct-card img{width:88%;max-width:250px;height:auto;max-height:105px;object-fit:contain}.pp-direct-meta{position:absolute;bottom:13px;font-size:7px;letter-spacing:2px;color:#aebbc2;font-weight:800}
-.pp-direct-features{position:absolute;z-index:5;left:4%;right:4%;bottom:0;height:58px;border-top:1px solid #29414c;display:grid;grid-template-columns:repeat(5,1fr);align-items:center}.pp-direct-features>div{height:32px;display:flex;align-items:center;justify-content:center;gap:9px;border-right:1px solid #29414c;color:#c2cbd0;font-size:9px;font-weight:800}.pp-direct-features>div:last-child{border:0}.pp-direct-features>div:first-child{color:#c2cbd0}.pp-direct-features>div::first-letter{color:#ff7800;font-size:20px}
-@media(max-width:750px){.pp-direct-stage{min-height:720px}.pp-direct-copy{position:relative;left:auto;top:auto;width:auto;padding:35px 20px 0}.pp-direct-copy h1{font-size:43px}.pp-direct-art{left:10%;top:270px;width:80%;height:220px}.pp-direct-card{right:20px;top:475px;width:230px;height:190px}.pp-direct-features{left:15px;right:15px;height:100px;grid-template-columns:repeat(2,1fr)}.pp-direct-features>div{border:0}}
+<style id="pp-component-hero-css">
+:root{--pp-orange:#ff7800;--pp-navy:#071018;--pp-navy2:#0a1821;--pp-blue:#183241;--pp-soft:#9eb0bc}
+.pp-app-header{height:58px;display:flex;align-items:center;gap:22px;padding:0 16px;background:linear-gradient(180deg,#08131b,#061019);border-bottom:1px solid #19313d;position:relative;z-index:10}
+.pp-app-brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}.pp-app-brand img{width:132px;height:36px;object-fit:contain;display:block}
+.pp-app-nav{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-left:auto}
+.pp-app-nav a{display:flex;align-items:center;gap:6px;color:#e7edf1;text-decoration:none;font-size:11px;font-weight:800;padding:9px 10px;border-radius:7px;white-space:nowrap}
+.pp-app-nav a:hover,.pp-app-nav a.active{background:#ff780014;color:var(--pp-orange)}
+.pp-nav-ico{width:20px;height:20px;display:grid;place-items:center;color:var(--pp-orange);font-size:15px}
+.pp-hidden-mode{display:none!important}
+
+.pp-reference-hero{border-bottom:1px solid #213b48;background:#06111a;overflow:hidden}
+.pp-reference-stage{position:relative;min-height:360px;overflow:hidden;background:
+  radial-gradient(circle at 47% 48%,rgba(255,120,0,.10),transparent 21%),
+  radial-gradient(circle at 73% 34%,rgba(55,120,155,.08),transparent 22%),
+  linear-gradient(115deg,#061019 0%,#09151d 51%,#07121a 100%)}
+.pp-reference-stage:before{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+  linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:46px 46px;opacity:.34;pointer-events:none}
+.pp-reference-copy{position:absolute;left:2.4%;top:25px;width:31.5%;z-index:4}
+.pp-reference-kicker{margin-bottom:9px;color:var(--pp-orange);font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.pp-reference-kicker:before{content:"";display:inline-block;width:24px;height:2px;margin-right:8px;background:var(--pp-orange);vertical-align:middle}
+.pp-reference-title{margin:0;font-size:clamp(36px,4vw,58px);line-height:.95;letter-spacing:-2.2px;font-weight:950}
+.pp-reference-title .orange{color:var(--pp-orange)}
+.pp-reference-copy p{max-width:360px;margin:12px 0 15px;color:#aebbc4;font-size:12px;line-height:1.45}
+.pp-reference-actions{display:flex;gap:8px}.pp-reference-actions a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;border-radius:7px;padding:9px 12px;font-size:11px;font-weight:900}
+.pp-reference-primary{background:var(--pp-orange);color:#fff}.pp-reference-secondary{border:1px solid #35505e;background:#0a1821;color:#edf2f4}
+
+.pp-hero-value-grid{position:absolute;left:34%;right:28%;top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;z-index:4}
+.pp-value{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}.pp-value-icon{width:26px;height:26px;margin-bottom:4px;color:var(--pp-orange);display:grid;place-items:center;font-size:19px;filter:drop-shadow(0 2px 5px #0006)}
+.pp-value strong{font-size:9px;letter-spacing:1px;color:#f0f4f6}.pp-value span{font-size:8px;color:#8fa0ab;margin-top:2px}
+
+.pp-showcase{position:absolute;left:33%;right:28%;bottom:48px;height:200px;display:flex;align-items:flex-end;justify-content:center;gap:17px;z-index:3}
+.pp-model{position:relative;flex:0 0 20%;height:170px;display:flex;align-items:flex-end;justify-content:center}
+.pp-model svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 12px 13px rgba(0,0,0,.62))}
+.pp-vase svg{transform:translateY(4px) scale(.82)}
+.pp-boat svg{transform:translateY(8px) scale(.92)}
+.pp-gear svg{transform:translateY(7px) scale(.88)}
+.pp-skull{font-size:118px;line-height:1;align-items:center;justify-content:center;color:#b4bcc2;text-shadow:0 15px 20px #0009,-2px -2px 0 #e1e5e7;transform:translateY(15px)}
+.pp-skull:after{content:"";position:absolute;bottom:18px;width:62%;height:14px;border-radius:50%;background:#0008;filter:blur(8px)}
+
+.pp-brand-card{position:absolute;right:1.7%;top:18px;width:25%;height:286px;border:1px solid #284553;border-radius:18px;background:linear-gradient(150deg,#10232d,#08151e);box-shadow:0 14px 35px #0008;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center}
+.pp-brand-card:before{content:"";position:absolute;inset:1px;border-radius:17px;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 30%,rgba(255,120,0,.025));pointer-events:none}
+.pp-brand-card img{position:relative;width:88%;max-width:250px;height:auto;max-height:110px;object-fit:contain;margin-bottom:9px}
+.pp-brand-slogan{position:relative;color:var(--pp-orange);font:800 19px/1.02 Georgia,serif;font-style:italic;text-shadow:0 3px 8px #000;margin-top:8px}
+.pp-brand-meta{position:absolute;bottom:10px;color:#83949e;font-size:6.5px;font-weight:900;letter-spacing:2px}
+
+.pp-feature-strip{position:absolute;left:0;right:0;bottom:0;height:49px;border-top:1px solid #1b3542;background:linear-gradient(180deg,rgba(10,23,31,.92),rgba(7,16,24,.98));display:grid;grid-template-columns:repeat(5,1fr);z-index:6}
+.pp-strip-item{display:flex;align-items:center;justify-content:center;gap:7px;border-right:1px solid #1b3542;color:#d4dde2;font-size:8px;font-weight:900;letter-spacing:.3px;text-align:center}
+.pp-strip-item:last-child{border-right:0}.pp-strip-icon{color:var(--pp-orange);font-size:17px;line-height:1}
+
+@media(max-width:980px){
+  .pp-app-header{height:auto;min-height:58px;flex-wrap:wrap;padding:7px 12px}.pp-app-nav{order:2;width:100%;justify-content:flex-start;overflow:auto;margin-left:0}
+  .pp-reference-stage{min-height:620px}.pp-reference-copy{position:relative;left:auto;top:auto;width:auto;padding:26px 20px 0}.pp-reference-copy p{max-width:560px}
+  .pp-hero-value-grid{position:relative;left:auto;right:auto;top:auto;padding:20px 20px 0;grid-template-columns:repeat(4,1fr)}
+  .pp-showcase{position:relative;left:auto;right:auto;bottom:auto;height:190px;margin:12px 18px 52px;gap:8px}
+  .pp-brand-card{right:18px;top:auto;bottom:67px;width:260px;height:190px}.pp-brand-slogan{font-size:16px}.pp-brand-card img{max-height:76px}
+}
+@media(max-width:640px){
+  .pp-app-brand img{width:122px}.pp-app-nav a{font-size:10px;padding:7px 8px}
+  .pp-reference-title{font-size:40px}.pp-hero-value-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .pp-showcase{height:150px;margin-bottom:14px}.pp-model{height:135px}.pp-skull{font-size:90px}
+  .pp-brand-card{position:relative;right:auto;bottom:auto;width:calc(100% - 36px);height:175px;margin:0 18px 55px}.pp-brand-slogan{font-size:16px}
+  .pp-feature-strip{height:auto;min-height:58px;grid-template-columns:repeat(2,1fr)}.pp-strip-item{min-height:29px;border-right:0;border-bottom:1px solid #1b3542}.pp-strip-item:last-child{grid-column:1 / span 2}
+}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="header"><a class="brand" href="#home"><img src="./assets/printprofit-header-logo.webp?v=good-logo" alt="PrintProfit 3D printing cost and pricing"></a><nav class="nav"><a href="#home" class="active">⌂ Home</a><a href="#guides">▣ Guides</a><a href="#about">ⓘ About</a><a href="#support">◉ Support</a></nav><label class="mode">☾ Dark Mode <input id="dark" type="checkbox" role="switch" checked></label></header>
-<section class="hero pp-direct-hero">
-<div class="pp-direct-stage">
-<div class="pp-direct-copy">
-<div class="pp-direct-kicker">3D PRINTING COST & PRICING</div>
-<h1>Know what it <span>costs.</span><br>Know what to <span>charge.</span></h1>
-<p>Upload your sliced print file and let PrintProfit turn real printer data into a clear cost, selling price and profit.</p>
-<div class="pp-direct-actions"><a href="#calculator" class="pp-direct-primary">Calculate a print&nbsp; →</a><a href="#guides" class="pp-direct-secondary">How it works</a></div>
-</div>
-<div class="pp-direct-art"><img src="./assets/hero-art-orange.webp?v=direct1" alt="3D printing models"></div>
-<div class="pp-direct-card">
-<div class="pp-direct-slogan">Print Smarter.<br>Price Better.<br>Profit More.</div>
-<img src="./assets/printprofit-header-logo.webp?v=direct1" alt="PrintProfit">
-<div class="pp-direct-meta">CALCULATE &nbsp; • &nbsp; PRICE &nbsp; • &nbsp; PROFIT</div>
-</div>
-<div class="pp-direct-features"><div>▣ <span>ACCURATE COSTS</span></div><div>◇ <span>ANY SLICER</span></div><div>▥ <span>REAL MATERIAL USAGE</span></div><div>⚙ <span>PRINTER PROFILES</span></div><div>▰ <span>DELIVERY & FEES</span></div></div>
-</div></section>
-<main class="main">
+
+<header class="pp-app-header">
+  <a class="pp-app-brand" href="#home" aria-label="PrintProfit home">
+    <img src="./assets/printprofit-header-logo.webp?v=component-v1" alt="PrintProfit">
+  </a>
+  <nav class="pp-app-nav" aria-label="Primary">
+    <a class="active" href="#calculator"><span class="pp-nav-ico">▣</span>Calculate</a>
+    <a href="#pricing"><span class="pp-nav-ico">◇</span>Price</a>
+    <a href="#results"><span class="pp-nav-ico">▥</span>Profit</a>
+    <a href="#settings"><span class="pp-nav-ico">⚙</span>Settings</a>
+  </nav>
+  <input id="dark" class="pp-hidden-mode" type="checkbox" role="switch" checked aria-hidden="true">
+</header>
+
+<section class="hero pp-reference-hero" id="home">
+  <div class="pp-reference-stage">
+
+    <div class="pp-reference-copy">
+      <div class="pp-reference-kicker">3D PRINTING PRICING, MADE SIMPLE</div>
+      <h1 class="pp-reference-title">Know what it costs.<br><span class="orange">Know what to charge.</span></h1>
+      <p>Accurate 3D printing cost and pricing calculations to help you print with confidence and maximise your profit.</p>
+      <div class="pp-reference-actions">
+        <a href="#calculator" class="pp-reference-primary">Start Calculating&nbsp; →</a>
+        <a href="#guides" class="pp-reference-secondary">Learn More&nbsp; →</a>
+      </div>
+    </div>
+
+    <div class="pp-hero-value-grid" aria-label="PrintProfit value propositions">
+      <div class="pp-value"><div class="pp-value-icon">♧</div><strong>IDEAS</strong><span>into prints</span></div>
+      <div class="pp-value"><div class="pp-value-icon">◇</div><strong>PRINTS</strong><span>into products</span></div>
+      <div class="pp-value"><div class="pp-value-icon">◫</div><strong>COSTS</strong><span>into confidence</span></div>
+      <div class="pp-value"><div class="pp-value-icon">▥</div><strong>PROFITS</strong><span>into growth</span></div>
+    </div>
+
+    <div class="pp-showcase" aria-label="3D printed object showcase">
+      <div class="pp-model pp-vase">
+        <svg viewBox="0 0 120 170" role="img" aria-label="Printed vase">
+          <defs><linearGradient id="vaseGrad" x1="0" x2="1"><stop offset="0" stop-color="#4b3428"/><stop offset=".35" stop-color="#b96d3b"/><stop offset=".7" stop-color="#6b3c26"/><stop offset="1" stop-color="#db8742"/></linearGradient></defs>
+          <path d="M45 8h30v20c0 8 18 18 20 45l-4 70c-1 13-9 20-31 20s-30-7-31-20l-4-70c2-27 20-37 20-45V8z" fill="url(#vaseGrad)" stroke="#e7ad72" stroke-width="2"/>
+          <path d="M36 70c18 8 32-6 46 0M34 88c18 8 34-7 50 0M33 106c19 8 37-8 53 0M34 124c18 8 37-8 50 0" fill="none" stroke="#f2c18a" stroke-opacity=".55" stroke-width="2"/>
+          <path d="M45 16h30" stroke="#ffbe78" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="pp-model pp-boat">
+        <svg viewBox="0 0 150 120" role="img" aria-label="3D printing test boat">
+          <defs><linearGradient id="boatGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffac55"/><stop offset=".55" stop-color="#b65720"/><stop offset="1" stop-color="#6f341b"/></linearGradient></defs>
+          <path d="M15 74h120l-10 23c-5 10-13 15-27 15H50c-15 0-23-5-28-15z" fill="url(#boatGrad)" stroke="#e8a064" stroke-width="2"/>
+          <path d="M47 73V34h47v39M58 34v39M83 34v39" fill="none" stroke="#efa35b" stroke-width="5"/>
+          <path d="M63 23h17v11H63z" fill="#ff9b3f" stroke="#e7b17d" stroke-width="2"/>
+          <path d="M30 76h80" stroke="#ffd093" stroke-opacity=".55" stroke-width="2"/>
+          <path d="M74 47h19" stroke="#ffd093" stroke-opacity=".45" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="pp-model pp-gear">
+        <svg viewBox="0 0 150 150" role="img" aria-label="Printed gear">
+          <defs><linearGradient id="gearGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#aab0b4"/><stop offset=".5" stop-color="#535a5f"/><stop offset="1" stop-color="#c5c9cb"/></linearGradient></defs>
+          <g transform="translate(75 75)" fill="url(#gearGrad)" stroke="#343a3e" stroke-width="2">
+            <g><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(0)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(36)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(72)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(108)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(144)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(180)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(216)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(252)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(288)"/><rect x="-7" y="-68" width="14" height="18" rx="2" transform="rotate(324)"/></g>
+            <circle r="55"/><circle r="20" fill="#263036"/><circle r="8" fill="#8e969b"/>
+            <rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(0)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(45)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(90)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(135)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(180)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(225)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(270)" fill="#626a6e"/><rect x="-5" y="-43" width="10" height="24" rx="2" transform="rotate(315)" fill="#626a6e"/>
+          </g>
+        </svg>
+      </div>
+      <div class="pp-model pp-skull" role="img" aria-label="Printed skull">☠</div>
+    </div>
+
+    <aside class="pp-brand-card" aria-label="PrintProfit brand panel">
+      <img src="./assets/printprofit-header-logo.webp?v=component-card" alt="PrintProfit 3D printing cost and pricing calculator">
+      <div class="pp-brand-slogan">Print Smarter.<br>Price Better.<br>Profit More.</div>
+      <div class="pp-brand-meta">CALCULATE&nbsp;&nbsp; • &nbsp;&nbsp;PRICE&nbsp;&nbsp; • &nbsp;&nbsp;PROFIT</div>
+    </aside>
+
+    <div class="pp-feature-strip" aria-label="Core features">
+      <div class="pp-strip-item"><span class="pp-strip-icon">▣</span>Calculate Costs</div>
+      <div class="pp-strip-item"><span class="pp-strip-icon">◇</span>Price Your Prints</div>
+      <div class="pp-strip-item"><span class="pp-strip-icon">▥</span>Maximise Profit</div>
+      <div class="pp-strip-item"><span class="pp-strip-icon">⚙</span>Built For Makers</div>
+      <div class="pp-strip-item"><span class="pp-strip-icon">◫</span>Feature Icons</div>
+    </div>
+
+  </div>
+</section>
+<main class="main" id="calculator">
 <div class="layout"><div>
 <section class="panel"><div class="head"><div class="icon">▣</div><div><h2>1. G-code File</h2><p>Upload your sliced file to auto-fill print time and filament usage.</p></div></div><div class="two"><div class="drop"><b>↥ Drag & drop your G-code file here</b><span class="small">or</span><div class="actions" style="justify-content:center"><label class="btn accent" style="display:inline-block;color:#fff">Choose File<input id="file" type="file" accept=".gcode,.gco,.bgcode,.ctb,.photon,.pwma,.pwmo,.pws,.goo,.sl1,.sl1s" hidden></label><button class="btn" id="clear">Clear</button></div><small id="status">No G-code selected</small></div><div class="panel" style="margin:0"><div class="head"><div><h2 style="color:var(--accent)">ⓘ Not sure about a field?</h2><p>Leave it blank.</p></div></div><div class="small">Blank fields are treated as £0 for a basic estimate.<br><br><b style="color:var(--text)">Tip:</b> Upload a G-code file for the most accurate results.</div></div></div></section>
 <div class="two"><section class="panel"><div class="head"><div class="icon">⚙</div><div><h2>2. Printer Profile</h2><p>Select your printer or use a custom profile.</p></div></div><select id="printer">
@@ -81,10 +197,10 @@
 <optgroup label="Artillery"><option value="200|350|3500">Sidewinder X3 Plus</option><option value="250|500|4000">Sidewinder X4 Pro</option></optgroup>
 <option value="custom">Custom printer</option>
 </select></section><section class="panel"><div class="head"><div class="icon">◉</div><div><h2>3. Filament / Resin Profile</h2><p>Choose your material, package size and cost. Usage can be detected automatically from your print file.</p></div></div><div class="two"><div><label>Material type</label><select id="materialType"><option value="filament">Filament (FDM)</option><option value="resin">Resin (SLA / MSLA / DLP)</option></select></div><div><label>Material</label><select id="material"><optgroup label="Filament"><option>PLA</option><option>PLA+</option><option>Silk PLA</option><option>PETG</option><option>PETG-CF</option><option>ABS</option><option>ASA</option><option>TPU 95A</option><option>Nylon</option><option>Polycarbonate (PC)</option><option>PVA</option><option>HIPS</option><option>Other / Custom Filament</option></optgroup><optgroup label="Resin"><option>Standard Resin</option><option>ABS-Like Resin</option><option>Tough Resin</option><option>Flexible Resin</option><option>Water-Washable Resin</option><option>High-Temp Resin</option><option>Castable Resin</option><option>Dental Resin</option><option>Model Resin</option><option>Other / Custom Resin</option></optgroup></select></div></div><div class="two" style="margin-top:9px"><div><label id="packAmountLabel">Spool weight (g)</label><input id="materialPack" type="number" value="1000" min="0" step="1"></div><div><label>Spool / bottle cost (£)</label><input id="materialPackCost" type="number" value="20" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label id="usageLabel">Used per print (g)</label><input id="materialUsed" type="number" value="0" min="0" step=".01"></div><div><label>Calculated material cost (£)</label><input id="materialCostOut" type="text" value="£0.00" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Print time (hours)</label><input id="printHours" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="materialStatus">Waiting for a print file, or enter usage manually.</div></div></section></div>
-<div class="two" id="guides"><section class="panel merged-group"><div class="head"><div class="icon">£</div><div><h2>4. Operating Costs</h2><p>Labour, materials, packaging and electricity used to make each print.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">£</div><div><h2>Additional Costs</h2><p>Optional costs per print, excluding electricity.</p></div></div><div class="two"><div><label>Labour hours (per print)</label><input id="labourHours" type="number" value="0" min="0" step=".01"></div><div><label>Labour cost (£/hour)</label><input id="labourRate" type="number" value="0" min="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" min="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" min="0" step=".01"></div></div></div><div class="merge-block"><div class="head"><div class="icon">⚡</div><div><h2>Electricity</h2><p>Uses Box 2 printer power and Box 3 print time from your file.</p></div></div><div class="two"><div><label>Electricity provider / tariff</label><input id="electricityProvider" type="text" placeholder="e.g. Octopus Energy - Flexible"></div><div><label>Unit rate (£/kWh)</label><input id="electricityRate" type="number" value=".30" min="0" step=".001"></div></div><div class="two" style="margin-top:9px"><div><label>Estimated printer power</label><input id="printerPowerOut" type="text" value="—" readonly></div><div><label>Estimated power used (kWh)</label><input id="powerUsedOut" type="text" value="0.000 kWh" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Estimated electricity cost</label><input id="electricityCostOut" type="text" value="£0.00" readonly></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="electricityStatus">Select a printer in Box 2 to estimate power draw.</div></div></div></div></section><section class="panel merged-group"><div class="head"><div class="icon">⇩</div><div><h2>5. Selling &amp; Fulfilment</h2><p>Marketplace fees, payment costs and delivery charges.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">%</div><div><h2>Platform Fees</h2><p>Choose where you sell and preload the current UK fee structure.</p></div></div><label>Platform</label><select id="platformSelect"><option value="own">Own website / direct sale</option><option value="etsy">Etsy UK</option><option value="ebay">eBay UK Business</option><option value="amazon">Amazon Handmade UK</option><option value="depop">Depop UK</option><option value="vinted">Vinted UK</option><option value="tiktok">TikTok Shop UK</option><option value="facebook">Facebook Marketplace</option><option value="gumtree">Gumtree</option><option value="folksy">Folksy</option><option value="shopify">Shopify Payments (Basic)</option><option value="custom">Other / custom</option></select><div class="two" style="margin-top:9px"><div><label>Platform fee (%)</label><input id="platform" type="number" value="0" min="0" step=".01"></div><div><label>Payment fee (%)</label><input id="pay" type="number" value="0" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label>Fixed fee (£)</label><input id="fixedFee" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="platformStatus">Select a platform to load its default fee assumptions.</div></div></div><div class="merge-block"><div class="head"><div class="icon">⇩</div><div><h2>Delivery</h2><p>Choose a courier and service rate, then override the cost when needed.</p></div></div><div class="delivery-tools"><div class="two"><div><label>Courier / delivery firm</label><select id="deliveryCourier"><option value="">Select a courier...</option><option value="royalmail">Royal Mail</option><option value="evri">Evri</option><option value="inpost">InPost</option><option value="dpd">DPD Online</option><option value="dhl">DHL eCommerce UK</option><option value="parcelforce">Parcelforce</option><option value="ups">UPS</option><option value="fedex">FedEx</option><option value="custom">Custom / Other</option></select></div><div><label>Service / rate</label><select id="deliveryRate"><option value="">Choose a courier first...</option></select></div></div><div class="two delivery-rate-row"><div><label>Automatic rate</label><input id="deliveryRateOut" type="text" value="£0.00" readonly></div><div class="small" id="deliveryRateNote">Choose a courier and service. The cost below can still be edited manually.</div></div><div class="small delivery-note">Published UK reference rates. Final quotes can vary by parcel size, dimensions, destination, account type, surcharges and promotions. Check the courier before dispatch.</div></div><div class="two"><div><label>Cost to you (£)</label><input id="delivery" type="number" value="0" step=".01"></div><div><label>Charged to customer (£)</label><input id="deliveryCharge" type="number" value="0" step=".01"></div></div></div>
-<section class="panel"><div class="head"><div class="icon">▦</div><div><h2>6. Quantity / Batch Pricing</h2><p>Set quantity and discount for bulk pricing.</p></div></div><div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div><div class="actions"><button class="btn accent" id="calc">Calculate Costs &amp; Price</button><button class="btn" id="reset">↺ Reset</button></div></section>
+<div class="two" id="guides"><section class="panel merged-group"><div class="head"><div class="icon">£</div><div><h2>4. Operating Costs</h2><p>Labour, materials, packaging and electricity used to make each print.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">£</div><div><h2>Additional Costs</h2><p>Optional costs per print, excluding electricity.</p></div></div><div class="two"><div><label>Labour hours (per print)</label><input id="labourHours" type="number" value="0" min="0" step=".01"></div><div><label>Labour cost (£/hour)</label><input id="labourRate" type="number" value="0" min="0" step=".01"></div><div><label>Packaging (£)</label><input id="pack" type="number" value="0" min="0" step=".01"></div><div><label>Other (£)</label><input id="other" type="number" value="0" min="0" step=".01"></div></div></div><div class="merge-block"><div class="head"><div class="icon">⚡</div><div><h2>Electricity</h2><p>Uses Box 2 printer power and Box 3 print time from your file.</p></div></div><div class="two"><div><label>Electricity provider / tariff</label><input id="electricityProvider" type="text" placeholder="e.g. Octopus Energy - Flexible"></div><div><label>Unit rate (£/kWh)</label><input id="electricityRate" type="number" value=".30" min="0" step=".001"></div></div><div class="two" style="margin-top:9px"><div><label>Estimated printer power</label><input id="printerPowerOut" type="text" value="—" readonly></div><div><label>Estimated power used (kWh)</label><input id="powerUsedOut" type="text" value="0.000 kWh" readonly></div></div><div class="two" style="margin-top:9px"><div><label>Estimated electricity cost</label><input id="electricityCostOut" type="text" value="£0.00" readonly></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="electricityStatus">Select a printer in Box 2 to estimate power draw.</div></div></div></div></section><section class="panel merged-group" id="pricing"><div class="head"><div class="icon">⇩</div><div><h2>5. Selling &amp; Fulfilment</h2><p>Marketplace fees, payment costs and delivery charges.</p></div></div><div class="merged-grid"><div class="merge-block"><div class="head"><div class="icon">%</div><div><h2>Platform Fees</h2><p>Choose where you sell and preload the current UK fee structure.</p></div></div><label>Platform</label><select id="platformSelect"><option value="own">Own website / direct sale</option><option value="etsy">Etsy UK</option><option value="ebay">eBay UK Business</option><option value="amazon">Amazon Handmade UK</option><option value="depop">Depop UK</option><option value="vinted">Vinted UK</option><option value="tiktok">TikTok Shop UK</option><option value="facebook">Facebook Marketplace</option><option value="gumtree">Gumtree</option><option value="folksy">Folksy</option><option value="shopify">Shopify Payments (Basic)</option><option value="custom">Other / custom</option></select><div class="two" style="margin-top:9px"><div><label>Platform fee (%)</label><input id="platform" type="number" value="0" min="0" step=".01"></div><div><label>Payment fee (%)</label><input id="pay" type="number" value="0" min="0" step=".01"></div></div><div class="two" style="margin-top:9px"><div><label>Fixed fee (£)</label><input id="fixedFee" type="number" value="0" min="0" step=".01"></div><div class="small" style="display:flex;align-items:flex-end;padding-bottom:10px" id="platformStatus">Select a platform to load its default fee assumptions.</div></div></div><div class="merge-block"><div class="head"><div class="icon">⇩</div><div><h2>Delivery</h2><p>Choose a courier and service rate, then override the cost when needed.</p></div></div><div class="delivery-tools"><div class="two"><div><label>Courier / delivery firm</label><select id="deliveryCourier"><option value="">Select a courier...</option><option value="royalmail">Royal Mail</option><option value="evri">Evri</option><option value="inpost">InPost</option><option value="dpd">DPD Online</option><option value="dhl">DHL eCommerce UK</option><option value="parcelforce">Parcelforce</option><option value="ups">UPS</option><option value="fedex">FedEx</option><option value="custom">Custom / Other</option></select></div><div><label>Service / rate</label><select id="deliveryRate"><option value="">Choose a courier first...</option></select></div></div><div class="two delivery-rate-row"><div><label>Automatic rate</label><input id="deliveryRateOut" type="text" value="£0.00" readonly></div><div class="small" id="deliveryRateNote">Choose a courier and service. The cost below can still be edited manually.</div></div><div class="small delivery-note">Published UK reference rates. Final quotes can vary by parcel size, dimensions, destination, account type, surcharges and promotions. Check the courier before dispatch.</div></div><div class="two"><div><label>Cost to you (£)</label><input id="delivery" type="number" value="0" step=".01"></div><div><label>Charged to customer (£)</label><input id="deliveryCharge" type="number" value="0" step=".01"></div></div></div>
+<section class="panel" id="settings"><div class="head"><div class="icon">▦</div><div><h2>6. Quantity / Batch Pricing</h2><p>Set quantity and discount for bulk pricing.</p></div></div><div class="three"><div><label>Quantity</label><input id="qty" type="number" value="1" min="1"></div><div><label>Batch discount (%)</label><input id="discount" type="number" value="0" min="0" max="100" step=".1"></div><div><label>Selling price per item (£)</label><input id="sell" type="number" value="15" step=".01"></div></div><div class="actions"><button class="btn accent" id="calc">Calculate Costs &amp; Price</button><button class="btn" id="reset">↺ Reset</button></div></section>
 </div>
-<aside class="panel result" id="about">
+<aside class="panel result" id="results">
 <div class="head"><div class="icon">£</div><div><h2>Results</h2><p>View one-print economics or price a full batch.</p></div></div>
 <div class="tabs" id="resultTabs"><button type="button" class="tab active" data-result-tab="single">🖨 Single Print</button><button type="button" class="tab" data-result-tab="batch">▦ Batch Pricing</button></div>
 <div id="singleResultView" class="resultView"><div class="cards"><div class="card"><div class="small">Total Cost to Make</div><div class="value" id="singleCost">£0.00</div></div><div class="card"><div class="small">Selling Price</div><div class="value" id="singleSellOut">£15.00</div></div><div class="card"><div class="small">Profit</div><div class="value good" id="singleProfit">£0.00</div></div></div><div class="small" style="margin-top:8px" id="singleMargin">Margin: 0.0%</div><div class="quick"><div class="small">Quick Price Buttons (target margin)</div><div class="grid"><button type="button" class="btn" data-m=".3" data-target-view="single">+ 30%</button><button type="button" class="btn" data-m=".5" data-target-view="single">+ 50%</button><button type="button" class="btn" data-m=".6" data-target-view="single">+ 60%</button></div><div class="custom-target"><label for="singleCustomMargin">Custom target margin (%)</label><input id="singleCustomMargin" type="number" min="0" max="99.9" step=".1" placeholder="e.g. 42.5"><div class="small custom-target-note">Click an active quick button again to undo it and restore your previous selling price.</div></div></div><div class="break"><b>Breakdown (per print)</b><div id="singleBreakdown"></div></div></div>
