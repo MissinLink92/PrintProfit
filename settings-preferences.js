@@ -316,31 +316,18 @@ function bind(){
 }
 
 function boot(){
- bind();setTheme();translatePage();applyUnits();currency();
- document.addEventListener('printprofit-settings-open',()=>{
- draft=Object.assign({},pref);
- refreshDraftControls();
- bind();
- setTheme();
- translatePage();
- applyUnits();
- currency();
-});
- let translateTimer=0;
-function scheduleTranslate(){
- if(translateTimer)return;
- translateTimer=setTimeout(()=>{translateTimer=0;translatePage();},80);
+  // Settings are deliberately event-driven. Older versions used a MutationObserver
+  // plus a one-second rebinding loop, which created competing DOM/event work.
+  bind();
+  setTheme();
+  translatePage();
+  applyUnits();
+  currency();
+
+  document.addEventListener('printprofit-settings-open',()=>{
+    draft=Object.assign({},pref);
+    refreshDraftControls();
+    bind();
+  });
 }
-/* Calculator results are formatted by the core calculator using the saved
-   preference. Do not continuously rewrite them here: doing so causes a visible
-   GBP -> selected-currency flicker every time the calculator recalculates. */
-const observer=new MutationObserver(()=>{
- scheduleTranslate();
- // Settings UI can be rebuilt by the host; keep the Apply button present.
- if(document.getElementById('ppSettingsPanel')) ensureApplyButton();
-});
-observer.observe(document.body,{subtree:true,childList:true,characterData:true});
-setInterval(()=>{bind();scheduleTranslate();ensureApplyButton();},1000);
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-})();
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
