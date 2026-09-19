@@ -18,7 +18,7 @@
 
     const logo=document.createElement('img');
     logo.className='pp-header-logo';
-    logo.src='./assets/logo-orange.webp';
+    logo.src='./assets/printprofit-header-logo.webp';
     logo.alt='PrintProfit';
     logo.addEventListener('error',()=>brand.classList.add('pp-logo-missing'),{once:true});
     brand.appendChild(logo);
@@ -66,7 +66,7 @@
           max-height:48px!important;
           object-fit:contain!important;
           object-position:left center!important;
-          filter:hue-rotate(180deg) saturate(1.08) drop-shadow(0 6px 14px #0008)!important;
+          filter:drop-shadow(0 6px 14px #0008)!important;
         }
         .pp-brand-fallback{display:none!important;font-weight:900;letter-spacing:.08em;font-size:20px;color:#0798ff;text-shadow:0 2px 12px #0008}
         .pp-logo-missing .pp-header-logo{display:none!important}
