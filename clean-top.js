@@ -336,7 +336,8 @@ function install(){
     event.stopPropagation();
     if(event.stopImmediatePropagation)event.stopImmediatePropagation();
     const target=trigger.dataset.target;
-    if(target==='settings')openSettings(); else openGuide();
+    if(target==='settings'){openSettings();return;}
+    if(target==='guide'){window.top.location.href='./guide.html';return;}
   };
   document.addEventListener('click',modalTrigger,true);
   document.addEventListener('pointerup',modalTrigger,true);
