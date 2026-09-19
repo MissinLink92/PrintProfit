@@ -107,7 +107,85 @@ function install(){
   `;
   document.head.appendChild(style);
 
+  function openSettings(){
+    if(document.getElementById('ppSettingsPanel')){
+      document.getElementById('ppSettingsPanel').classList.add('open');
+      return;
+    }
+    const panel=document.createElement('div');
+    panel.id='ppSettingsPanel';
+    panel.innerHTML=`
+      <div class="pp-settings-backdrop" data-close-settings></div>
+      <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
+        <div class="pp-settings-head">
+          <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and quick actions.</p></div>
+          <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
+        </div>
+        <div class="pp-settings-body">
+          <div class="pp-settings-card">
+            <div><strong>Dark mode</strong><span>Use the dark PrintProfit interface.</span></div>
+            <label class="pp-settings-switch"><input id="ppSettingsDark" type="checkbox" role="switch"><span></span></label>
+          </div>
+          <div class="pp-settings-card">
+            <div><strong>Calculator reset</strong><span>Clear the current calculator inputs and return pricing to £0.</span></div>
+            <button type="button" class="pp-settings-action" id="ppSettingsReset">Reset Calculator</button>
+          </div>
+          <div class="pp-settings-note">Your calculator data is not changed just by opening Settings.</div>
+        </div>
+      </section>`;
+    document.body.appendChild(panel);
+    const dark=document.getElementById('dark');
+    const settingsDark=document.getElementById('ppSettingsDark');
+    if(settingsDark && dark){
+      settingsDark.checked=dark.checked;
+      settingsDark.addEventListener('change',()=>{
+        dark.checked=settingsDark.checked;
+        dark.dispatchEvent(new Event('change',{bubbles:true}));
+        dark.dispatchEvent(new Event('input',{bubbles:true}));
+      });
+    }
+    document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
+      document.getElementById('reset')?.click();
+      panel.classList.remove('open');
+    });
+    panel.querySelectorAll('[data-close-settings]').forEach(el=>el.addEventListener('click',()=>panel.classList.remove('open')));
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape')panel.classList.remove('open');
+    });
+    const style=document.createElement('style');
+    style.id='ppSettingsStyles';
+    style.textContent=`
+      #ppSettingsPanel{position:fixed;inset:0;z-index:12000;display:none}
+      #ppSettingsPanel.open{display:block}
+      .pp-settings-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(5px)}
+      .pp-settings-dialog{position:absolute;right:28px;top:78px;width:min(440px,calc(100vw - 32px));border:1px solid #315261;border-radius:16px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 80px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:hidden}
+      .pp-settings-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 20px 15px;border-bottom:1px solid #284553}
+      .pp-settings-kicker{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.2em;margin-bottom:5px}
+      .pp-settings-head h2{margin:0;font-size:22px}
+      .pp-settings-head p{margin:5px 0 0;color:#8fa6b2;font-size:11px}
+      .pp-settings-close{width:34px;height:34px;border:1px solid #355464;border-radius:9px;background:#091821;color:#dce7ec;font-size:22px;cursor:pointer}
+      .pp-settings-close:hover{border-color:#ff7800;color:#fff}
+      .pp-settings-body{padding:15px}
+      .pp-settings-card{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px;border:1px solid #284654;border-radius:12px;background:#081720;margin-bottom:10px}
+      .pp-settings-card strong{display:block;font-size:12px}
+      .pp-settings-card span{display:block;margin-top:4px;color:#8fa6b2;font-size:10px;line-height:1.35}
+      .pp-settings-switch{display:block!important;position:relative;width:48px!important;height:26px!important;flex:0 0 48px}
+      .pp-settings-switch input{position:absolute;opacity:0;width:1px!important;height:1px!important}
+      .pp-settings-switch span{position:absolute!important;inset:0!important;border:1px solid #38515f;border-radius:999px;background:#12232d!important;display:block!important}
+      .pp-settings-switch span:after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#8197a2;transition:.18s ease}
+      .pp-settings-switch input:checked+span{background:#ff780022!important;border-color:#ff7800}
+      .pp-settings-switch input:checked+span:after{left:25px;background:#ff7800}
+      .pp-settings-action{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:9px 12px;font:800 11px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+      .pp-settings-action:hover{filter:brightness(1.08)}
+      .pp-settings-note{padding:8px 4px 0;color:#718a98;font-size:9px;line-height:1.4}
+      @media(max-width:650px){.pp-settings-dialog{left:12px;right:12px;top:74px;width:auto}.pp-settings-head{padding:16px}.pp-settings-body{padding:12px}.pp-settings-card{align-items:flex-start;flex-direction:column}.pp-settings-action{width:100%}}
+    `;
+    document.head.appendChild(style);
+    panel.classList.add('open');
+  }
+
   const go=(target)=>{
+    if(target==='settings'){openSettings();return;}
     const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
     if(tab){tab.click();return;}
     const el=document.getElementById(target);
