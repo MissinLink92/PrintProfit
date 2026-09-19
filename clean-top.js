@@ -34,7 +34,6 @@ function install(){
         <p>Accurate 3D printing cost and pricing calculations to help you<br class="pp-desktop"> price with confidence and maximise your profit.</p>
         <div class="pp-top-actions">
           <button class="pp-primary" type="button" data-target="details"><span class="pp-mini-icon calculator"></span>Start Calculating <b>›</b></button>
-          <button class="pp-secondary" type="button" data-target="guide">Learn More <b>›</b></button>
         </div>
         <div class="pp-feature-strip">
           <div><span class="pp-feature-icon calculator"></span><span>Calculate<small>Costs</small></span></div>
