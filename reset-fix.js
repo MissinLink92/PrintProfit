@@ -99,6 +99,9 @@
           const blank=Array.from(el.options).findIndex(option=>String(option.value||'').trim()==='');
           el.selectedIndex=blank>=0?blank:0;
         }else if(el.options.length)el.selectedIndex=0;
+      }else if(type==='number'){
+        const keepZero=['sell','materialPackCost','singleCustomMargin','batchCustomMargin'].includes(el.id);
+        el.value=keepZero?'0':(el.defaultValue||'0');
       }else el.value='';
     });
 
