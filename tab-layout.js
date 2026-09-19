@@ -62,6 +62,7 @@
     }
     stabiliseWorkspace();
     function updateModelHub(){
+      const fileInput=document.getElementById('file');if(!fileInput?.files?.length)window.__ppFileData={};
       const extra=window.__ppFileData||{};
       const setExtra=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value!=null&&String(value)!==''?String(value):'—';};
       setExtra('ppModelSlicer',extra.slicer);setExtra('ppModelPrinter',extra.printer);setExtra('ppModelLayer',extra.layer);setExtra('ppModelInfill',extra.infill);setExtra('ppModelSupports',extra.supports);setExtra('ppModelNozzle',extra.nozzle);setExtra('ppModelBed',extra.bed);setExtra('ppModelProfile',extra.profile);
