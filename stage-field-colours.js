@@ -162,6 +162,36 @@ function install(){
  color:color-mix(in srgb,var(--pp-green) 82%,var(--text))!important;
 }
 
+/* Unify EVERY calculator section icon with its stage colour.
+   Box 1/2/4/5/6 are legacy sections, so they must be overridden explicitly. */
+.pp-tab-panel[data-panel="details"] .head>.pp-pretty-icon,
+.pp-tab-panel[data-panel="details"] .head>.icon{
+ color:var(--pp-cyan)!important;
+ border-color:var(--pp-cyan)!important;
+ background:radial-gradient(circle at 34% 28%,color-mix(in srgb,var(--pp-cyan) 8%,transparent),#08151e 72%)!important;
+ box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--pp-cyan) 16%,transparent),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px color-mix(in srgb,var(--pp-cyan) 12%,transparent)!important;
+}
+.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon,
+.pp-tab-panel[data-panel="machine"] .head>.icon{
+ color:var(--pp-purple)!important;
+ border-color:var(--pp-purple)!important;
+ background:radial-gradient(circle at 34% 28%,color-mix(in srgb,var(--pp-purple) 8%,transparent),#08151e 72%)!important;
+ box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--pp-purple) 16%,transparent),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px color-mix(in srgb,var(--pp-purple) 12%,transparent)!important;
+}
+.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon,
+.pp-tab-panel[data-panel="costs"] .head>.icon{
+ color:var(--pp-green)!important;
+ border-color:var(--pp-green)!important;
+ background:radial-gradient(circle at 34% 28%,color-mix(in srgb,var(--pp-green) 8%,transparent),#08151e 72%)!important;
+ box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--pp-green) 16%,transparent),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px color-mix(in srgb,var(--pp-green) 12%,transparent)!important;
+}
+.pp-tab-panel[data-panel="details"] .head>.pp-pretty-icon svg,
+.pp-tab-panel[data-panel="details"] .head>.icon svg{stroke:var(--pp-cyan)!important;color:var(--pp-cyan)!important;filter:drop-shadow(0 0 7px color-mix(in srgb,var(--pp-cyan) 30%,transparent))!important}
+.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon svg,
+.pp-tab-panel[data-panel="machine"] .head>.icon svg{stroke:var(--pp-purple)!important;color:var(--pp-purple)!important;filter:drop-shadow(0 0 7px color-mix(in srgb,var(--pp-purple) 30%,transparent))!important}
+.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon svg,
+.pp-tab-panel[data-panel="costs"] .head>.icon svg{stroke:var(--pp-green)!important;color:var(--pp-green)!important;filter:drop-shadow(0 0 7px color-mix(in srgb,var(--pp-green) 30%,transparent))!important}
+
 /* Keep the actual primary action buttons orange — colour belongs to the workflow, not every button. */
 .pp-tab-panel .btn.accent,
 .pp-tab-panel button.accent,
