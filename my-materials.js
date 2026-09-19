@@ -33,7 +33,7 @@ function render(){
  const materials=read().sort((a,b)=>a.name.localeCompare(b.name));
  if(!materials.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin so you can select them in the calculator.</p><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button></div>';return;}
  list.innerHTML=materials.map(m=>`<article class="pp-material-card" data-material-id="${esc(m.id)}">
- <div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>${esc(m.name)}</h3><p>${esc(m.type)} · ${esc(m.amount)} ${m.type==='Resin'?'ml':'g'} · ${moneyFromGBP(m.cost)</p><small>${esc(m.brand||'No brand')} ${m.colour?'· '+esc(m.colour):''} · ${moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))} / ${m.type==='Resin'?'ml':'g'}</small></div></div>
+ <div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>${esc(m.name)}</h3><p>${esc(m.type)} · ${esc(m.amount)} ${m.type==='Resin'?'ml':'g'} · ${moneyFromGBP(m.cost)}</p><small>${esc(m.brand||'No brand')} ${m.colour?'· '+esc(m.colour):''} · ${moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))} / ${m.type==='Resin'?'ml':'g'}</small></div></div>
  <div class="pp-material-actions"><button type="button" data-use-material="${esc(m.id)}">Use</button><button type="button" data-edit-material="${esc(m.id)}">Edit</button><button type="button" class="danger" data-delete-material="${esc(m.id)}">Delete</button></div>
  </article>`).join('');
 }
