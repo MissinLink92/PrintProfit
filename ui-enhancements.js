@@ -157,19 +157,19 @@
     const guide=document.createElement('div');
     guide.id='ppSetupGuide';
     guide.className='pp-setup-guide';
-    guide.innerHTML=`<span class="pp-guide-title">How it works</span><span>① Add your print</span><i>→</i><span>② Choose printer & material</span><i>→</i><span>③ Add costs & fees</span><b>Fields are optional — fill in what you know.</b>`;
+    guide.innerHTML=`<span class="pp-guide-title">How it works</span><span>① Your Model</span><i>→</i><span>② Print Setup</span><i>→</i><span>③ Costs &amp; Fees</span><b>Fields are optional — fill in what you know.</b>`;
     tabs.insertAdjacentElement('afterend',guide);
 
     const progress=document.createElement('div');
     progress.id='ppSetupProgress';
     progress.className='pp-setup-progress';
-    progress.innerHTML=`<div class="pp-progress-track"><span class="pp-progress-fill"></span></div><div class="pp-progress-label">Step 1 of 3 · Print Details</div>`;
+    progress.innerHTML=`<div class="pp-progress-track"><span class="pp-progress-fill"></span></div><div class="pp-progress-label">Step 1 of 3 · Your Model</div>`;
     guide.insertAdjacentElement('afterend',progress);
 
     const tabButtons=[...tabs.querySelectorAll('.pp-tab')];
     const fill=progress.querySelector('.pp-progress-fill');
     const label=progress.querySelector('.pp-progress-label');
-    const names=['Print Details','Printer & Filament','Costs & Fees'];
+    const names=['Your Model','Print Setup','Costs & Fees'];
     const sync=()=>{
       const index=Math.max(0,tabButtons.findIndex(tab=>tab.classList.contains('active')));
       if(fill)fill.style.width=((index+1)/3*100)+'%';
