@@ -141,6 +141,15 @@ function install(){
             <select id="ppSettingsLanguage" class="pp-settings-select" aria-label="Language">
               <option value="en">English</option>
               <option value="pl">Polski</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="es">Español</option>
+              <option value="it">Italiano</option>
+              <option value="nl">Nederlands</option>
+              <option value="pt">Português</option>
+              <option value="cs">Čeština</option>
+              <option value="sv">Svenska</option>
+              <option value="da">Dansk</option>
             </select>
           </div>
           <div class="pp-settings-card">
@@ -153,10 +162,25 @@ function install(){
           <div class="pp-settings-card">
             <div><strong>Currency</strong><span>Choose the currency used for costs and prices.</span></div>
             <select id="ppSettingsCurrency" class="pp-settings-select" aria-label="Currency">
-              <option value="GBP">GBP (£)</option>
-              <option value="EUR">EUR (€)</option>
-              <option value="USD">USD ($)</option>
-              <option value="PLN">PLN (zł)</option>
+              <option value="GBP">GBP (£) — British Pound</option>
+              <option value="EUR">EUR (€) — Euro</option>
+              <option value="USD">USD ($) — US Dollar</option>
+              <option value="PLN">PLN (zł) — Polish Złoty</option>
+              <option value="CAD">CAD ($) — Canadian Dollar</option>
+              <option value="AUD">AUD ($) — Australian Dollar</option>
+              <option value="CHF">CHF (Fr) — Swiss Franc</option>
+              <option value="SEK">SEK (kr) — Swedish Krona</option>
+              <option value="NOK">NOK (kr) — Norwegian Krone</option>
+              <option value="DKK">DKK (kr) — Danish Krone</option>
+              <option value="CZK">CZK (Kč) — Czech Koruna</option>
+              <option value="JPY">JPY (¥) — Japanese Yen</option>
+              <option value="CNY">CNY (¥) — Chinese Yuan</option>
+              <option value="INR">INR (₹) — Indian Rupee</option>
+              <option value="NZD">NZD ($) — New Zealand Dollar</option>
+              <option value="SGD">SGD ($) — Singapore Dollar</option>
+              <option value="BRL">BRL (R$) — Brazilian Real</option>
+              <option value="MXN">MXN ($) — Mexican Peso</option>
+              <option value="ZAR">ZAR (R) — South African Rand</option>
             </select>
           </div>
           <div class="pp-settings-card">
