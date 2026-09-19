@@ -8,7 +8,6 @@
     const box1=findBox('1'),box2=findBox('2'),box3=findBox('3'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
     if(!layout||!result||!box1||!box2||!box3||!box4||!box5||!box6)return false;
     const style=document.createElement('style');style.id='ppTabbedLayoutRuntimeStyles';style.textContent=`
-html{scroll-behavior:auto!important}body{overflow-anchor:none!important}
 .layout{display:block!important;width:100%!important}.layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}.pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important;overflow:visible}
 .pp-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;width:100%;margin:0;padding:0;background:linear-gradient(180deg,rgba(11,28,38,.96),rgba(6,18,26,.96));border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #0004}
@@ -20,6 +19,10 @@ html{scroll-behavior:auto!important}body{overflow-anchor:none!important}
 .pp-step-copy{text-align:left;line-height:1.15}.pp-step-copy strong{display:block;font-size:13px;color:inherit}.pp-step-copy span{display:block;margin-top:4px;font-size:10px;font-weight:500;color:var(--muted)}
 .pp-tab-panel{display:none}.pp-tab-panel.active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}.pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-card+.pp-card{margin-top:0}.pp-card>.panel{margin:0!important;width:100%!important}.pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-cost-block+.pp-cost-block{margin-top:0}.pp-cost-block>.panel{margin:0!important;width:100%!important}
 /* Readable section icons */.pp-card .head .icon,.pp-cost-block .head .icon{width:40px!important;height:40px!important;min-width:40px!important;flex:0 0 40px!important;border-radius:10px!important;font-size:17px!important;line-height:1!important}
+/* Stable stage height: changing stages must not reflow the page. */
+.pp-workspace{position:relative}
+.pp-tab-panel{width:100%!important}
+
 @media(max-width:950px){.pp-progress{grid-template-columns:1fr}.pp-step{justify-content:flex-start;padding:10px 14px;min-height:56px;border-bottom:1px solid var(--line)}.pp-step:last-child{border-bottom:0}.pp-step:not(:last-child)::before{display:none}.pp-step.active::after{left:0;right:auto;top:8px;bottom:8px;width:3px;height:auto}.pp-tab-panel.active{grid-template-columns:1fr}}
 @media(max-width:650px){.pp-step-copy span{display:none}.pp-step{padding:9px 10px;min-height:52px}.pp-step-number{width:36px;height:36px;min-width:36px;flex-basis:36px}.pp-card,.pp-cost-block{padding:10px}.pp-card .head .icon,.pp-cost-block .head .icon{width:38px!important;height:38px!important;min-width:38px!important;flex-basis:38px!important}.layout>.result{margin-top:10px!important}}
 `;document.head.appendChild(style);
@@ -34,8 +37,34 @@ html{scroll-behavior:auto!important}body{overflow-anchor:none!important}
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs'];
-    function setStep(id){const beforeY=window.scrollY,beforeX=window.scrollX,current=ids.indexOf(id);steps.forEach((step,index)=>{const active=index===current,complete=index<current;step.classList.toggle('active',active);step.classList.toggle('complete',complete);step.setAttribute('aria-selected',String(active));const number=step.querySelector('.pp-step-number');if(number)number.textContent=complete?'✓':String(index+1);});Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));window.scrollTo({left:beforeX,top:beforeY,behavior:'auto'});requestAnimationFrame(()=>window.scrollTo({left:beforeX,top:beforeY,behavior:'auto'}));setTimeout(()=>window.scrollTo({left:beforeX,top:beforeY,behavior:'auto'}),0);}
-    steps.forEach(step=>step.addEventListener('click',()=>setStep(step.dataset.tab)));return true;
+    /* Measure every stage once and reserve enough workspace height for the tallest one. */
+    function stabiliseWorkspace(){
+      const current=Object.values(panels).find(panel=>panel.classList.contains('active'))||panels.details;
+      const previous={};
+      Object.values(panels).forEach(panel=>previous[panel.dataset.panel]=panel.classList.contains('active'));
+      let max=0;
+      Object.values(panels).forEach(panel=>{
+        Object.values(panels).forEach(p=>p.classList.remove('active'));
+        panel.classList.add('active');
+        max=Math.max(max,panel.offsetHeight,panel.scrollHeight);
+      });
+      Object.values(panels).forEach(panel=>panel.classList.toggle('active',!!previous[panel.dataset.panel]));
+      workspace.style.minHeight=Math.ceil(max)+'px';
+    }
+    stabiliseWorkspace();
+    function setStep(id){
+      const current=ids.indexOf(id);
+      steps.forEach((step,index)=>{const active=index===current,complete=index<current;step.classList.toggle('active',active);step.classList.toggle('complete',complete);step.setAttribute('aria-selected',String(active));const number=step.querySelector('.pp-step-number');if(number)number.textContent=complete?'✓':String(index+1);});
+      Object.values(panels).forEach(panel=>panel.classList.toggle('active',panel.dataset.panel===id));
+      /* Deliberately do not read or write window.scrollX/Y. The page owns its scroll position. */
+    }
+    /* Mouse/touch clicks should not move focus and trigger browser scroll-into-view. Keyboard focus remains available. */
+    steps.forEach(step=>{
+      step.addEventListener('mousedown',event=>event.preventDefault());
+      step.addEventListener('click',()=>setStep(step.dataset.tab));
+    });
+    window.addEventListener('resize',()=>stabiliseWorkspace(),{passive:true});
+    return true;
   }
   function wait(){if(install())return;const started=Date.now();const timer=setInterval(()=>{if(install()||(Date.now()-started)>=15000)clearInterval(timer);},50);}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});else wait();
