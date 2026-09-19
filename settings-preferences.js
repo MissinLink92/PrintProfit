@@ -341,5 +341,6 @@ const observer=new MutationObserver(()=>{
 });
 observer.observe(document.body,{subtree:true,childList:true,characterData:true});
 setInterval(()=>{bind();scheduleTranslate();ensureApplyButton();},1000);
+}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
