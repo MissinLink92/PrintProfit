@@ -224,14 +224,10 @@ function ensureApplyButton(){
  if(!body)return null;
  let btn=document.getElementById('ppSettingsApply');
  if(btn){
-  if(btn.dataset.ppBound!=='1'){
-   btn.dataset.ppBound='1';
-   btn.addEventListener('click',(event)=>{
-    event.preventDefault();
-    event.stopPropagation();
-    window.__applyPrintProfitSettings?.();
-   });
-  }
+  // clean-top.js owns the actual click event. This helper only makes sure
+  // a button exists; having two click handlers here caused settings to be
+  // applied twice and made the modal behaviour unreliable.
+  btn.textContent=tr('Apply Changes');
   return btn;
  }
  const reset=document.getElementById('ppSettingsReset');
@@ -313,7 +309,7 @@ function scheduleTranslate(){
    GBP -> selected-currency flicker every time the calculator recalculates. */
 const observer=new MutationObserver(()=>{
  scheduleTranslate();
- // Settings UI can be rebuilt by the host; keep Apply Changes attached.
+ // Settings UI can be rebuilt by the host; keep the Apply button present.
  if(document.getElementById('ppSettingsPanel')) ensureApplyButton();
 });
 observer.observe(document.body,{subtree:true,childList:true,characterData:true});
