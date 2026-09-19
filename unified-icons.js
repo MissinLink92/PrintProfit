@@ -27,10 +27,10 @@ section.panel .head>.icon svg,
 section.panel .head>.pp-pretty-icon svg,
 .merge-block .head>.icon svg,
 .merge-block .head>.pp-pretty-icon svg{
-  width:29px!important;height:29px!important;
-  min-width:29px!important;min-height:29px!important;
+  width:34px!important;height:34px!important;
+  min-width:34px!important;min-height:34px!important;
   fill:none!important;
-  stroke-width:2.15!important;
+  stroke-width:2.65!important;
   stroke-linecap:round!important;
   stroke-linejoin:round!important;
 }
@@ -50,7 +50,7 @@ section.panel .head>.pp-pretty-icon svg,
 #ppCleanTop .pp-nav-icon,
 #ppCleanTop .pp-feature-icon,
 #ppCleanTop .pp-mini-icon{
-  width:28px!important;height:28px!important;min-width:28px!important;min-height:28px!important;
+  width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;
   flex:0 0 28px!important;box-sizing:border-box!important;
 }
 #ppCleanTop .pp-nav-icon:before,#ppCleanTop .pp-nav-icon:after,
