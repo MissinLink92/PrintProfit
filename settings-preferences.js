@@ -65,7 +65,7 @@ const extraTx={
  'Costs & Fees':'Koszty i opłaty','Add your business costs':'Dodaj koszty swojej działalności',
  'Your Model':'Twój model','Print Information':'Informacje o wydruku',
  'Everything PrintProfit currently knows about this model.':'Wszystko, co PrintProfit obecnie wie o tym modelu.',
- 'Drag & drop your G-code file here':'Przeciągnij i upuść tutaj plik G-code','or':'lub','Choose File':'Wybierz plik','Clear':'Wyczyść','No G-code selected':'Nie wybrano pliku G-code',
+ 'Upload your G-code file':'Prześlij plik G-code','or':'lub','Choose File':'Wybierz plik','Clear':'Wyczyść','No G-code selected':'Nie wybrano pliku G-code',
  'Not sure about a field?':'Nie wiesz, co wpisać?','Leave it blank.':'Zostaw puste.',
  'Blank fields are treated as £0 for a basic estimate.':'Puste pola są traktowane jako £0 dla podstawowego oszacowania.',
  'Tip:':'Wskazówka:','Upload a G-code file for the most accurate results.':'Wgraj plik G-code, aby uzyskać najdokładniejsze wyniki.',
