@@ -17,7 +17,7 @@ function install(){
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
       <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=1" alt="PrintProfit">
+        <img src="./assets/printprofit-header-logo.webp?v=20260919" alt="PrintProfit">
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
@@ -47,7 +47,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=1" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/printprofit-logo.webp?v=20260919" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
@@ -65,7 +65,7 @@ function install(){
     #ppCleanTop .pp-top-grid:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 48%,rgba(0,129,184,.12),transparent 32%),linear-gradient(90deg,rgba(7,20,29,.12),rgba(7,20,29,.72) 63%,rgba(7,20,29,.16))}
     #ppCleanTop .pp-top-nav{position:relative;z-index:3;height:60px;display:flex;align-items:center;padding:0 3.1%;border-bottom:1px solid #294653;background:rgba(5,15,22,.58);box-sizing:border-box}
     #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-start;width:170px;height:60px;overflow:visible;text-decoration:none}
-    #ppCleanTop .pp-top-brand img{width:102px;height:58px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
+    #ppCleanTop .pp-top-brand img{width:155px;height:58px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
     #ppCleanTop .pp-top-links{margin-left:auto;display:flex;align-items:center;gap:10px}
     #ppCleanTop .pp-top-links button{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease}
     #ppCleanTop .pp-top-links button:hover{color:#fff;background:#ff780012}
@@ -103,7 +103,7 @@ function install(){
     #ppCleanTop .pp-feature-strip i{height:32px;width:1px;background:#34505d;display:block}
     #ppCleanTop .pp-top-card{width:425px;height:285px;align-self:start;margin-top:0;border:1px solid #294957;border-radius:24px;background:linear-gradient(145deg,#0b202b,#07141d);box-shadow:inset 0 1px 0 #ffffff0c,0 18px 40px #0008;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow:hidden;position:relative}
     #ppCleanTop .pp-top-card:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,#ff780012,transparent 45%);pointer-events:none}
-    #ppCleanTop .pp-top-card img{position:relative;z-index:1;width:325px;height:190px;object-fit:contain;object-position:center;display:block;margin-top:9px}
+    #ppCleanTop .pp-top-card img{position:relative;z-index:1;width:325px;height:205px;object-fit:contain;object-position:center;display:block;margin-top:9px}
     #ppCleanTop .pp-card-tagline{position:relative;z-index:2;margin-top:-2px;color:#ff7800;text-align:right;width:305px;font-size:21px;line-height:.9;font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;transform:rotate(-2deg);text-shadow:0 2px 12px #000}
     #ppCleanTop .pp-top-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:#ff7800;box-shadow:0 0 14px #ff780055}
     @media(max-width:1050px){#ppCleanTop .pp-top-body{grid-template-columns:minmax(0,1fr) 350px;gap:22px}#ppCleanTop .pp-top-card{width:350px}#ppCleanTop .pp-top-card img{width:285px}#ppCleanTop h1{font-size:42px}}
@@ -127,7 +127,7 @@ function install(){
       <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
         <div class="pp-settings-head">
           <div class="pp-settings-brand">
-            <img src="./assets/user-selected-printprofit-logo.webp?v=2" alt="PrintProfit">
+            <img src="./assets/printprofit-header-logo.webp?v=20260919" alt="PrintProfit">
             <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
           </div>
           <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
