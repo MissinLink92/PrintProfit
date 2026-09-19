@@ -2,6 +2,11 @@
 'use strict';
 if(window.__printProfitProjects)return; window.__printProfitProjects=true;
 const KEY='printprofit.projects.v1';
+const FILE_DB='printprofit.project-files.v1';
+const fileDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(FILE_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+const putProjectFile=async(id,file)=>{if(!file)return;try{const db=await fileDb();await new Promise((res,rej)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close()}catch(e){console.warn('PrintProfit could not save project file:',e)}};
+const getProjectFile=async id=>{try{const db=await fileDb();const v=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get(id);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close();return v||null}catch(e){console.warn('PrintProfit could not restore project file:',e);return null}};
+const restoreProjectFile=async id=>{const saved=await getProjectFile(id);if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
 const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}};
 const write=v=>localStorage.setItem(KEY,JSON.stringify(v));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -89,16 +94,19 @@ function open(){
  panel.classList.add('open');document.body.style.overflow='hidden';render();
  const count=document.getElementById('ppProjectCount');if(count)count.textContent=read().length+' saved '+(read().length===1?'project':'projects');
 }
-function saveNew(){
+async function saveNew(){
  const current=projectInfo();const suggested=(val('file')||'').split('\\').pop().replace(/\.[^.]+$/,'')||'My 3D Print';
  const name=prompt('Name this project:',suggested);if(!name||!name.trim())return;
  const projects=read();const now=Date.now();
- projects.push({id:crypto.randomUUID?crypto.randomUUID():String(now)+Math.random(),name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot()});
- write(projects);open();
+ const id=crypto.randomUUID?crypto.randomUUID():String(now)+Math.random();
+ const file=document.getElementById('file')?.files?.[0]||null;
+ projects.push({id,name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot(),file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:null});
+ write(projects); if(file) await putProjectFile(id,file); open();
 }
-function loadProject(id){
+async function loadProject(id){
  const p=read().find(x=>x.id===id);if(!p)return;
  restore(p.data);
+ await restoreProjectFile(id);
  close();
  // Make the restored setup immediately visible after loading.
  setTimeout(()=>{
