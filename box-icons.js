@@ -61,8 +61,9 @@ function install(){
       background:linear-gradient(115deg,transparent 45%,rgba(255,255,255,.13) 50%,transparent 55%)!important;
       transform:translateX(-70%) rotate(12deg)!important;transition:transform .72s ease!important;pointer-events:none!important;
     }
+    /* Keep hover visually stable — no sweeping highlight or colour flash. */
     section.panel:hover>.head>.pp-pretty-icon::after,
-    section.panel:hover .merge-block .head>.pp-pretty-icon::after{transform:translateX(70%) rotate(12deg)!important}
+    section.panel:hover .merge-block .head>.pp-pretty-icon::after{transform:translateX(-70%) rotate(12deg)!important}
     section.panel:hover>.head>.pp-pretty-icon,
     section.panel:hover .merge-block .head>.pp-pretty-icon{
       border-color:rgba(255,120,0,.92)!important;
