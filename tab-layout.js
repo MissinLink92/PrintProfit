@@ -18,6 +18,8 @@
 .pp-step-number{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:0 0 38px;border:1px solid #36515f;background:#0b1b24;color:#8fa5b0;font-size:14px;font-weight:900}.pp-step.active .pp-step-number{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 18px #ff780033}
 .pp-step-copy{text-align:left;line-height:1.15}.pp-step-copy strong{display:block;font-size:13px;color:inherit}.pp-step-copy span{display:block;margin-top:4px;font-size:10px;font-weight:500;color:var(--muted)}
 .pp-tab-panel{display:none}.pp-tab-panel.active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}.pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-card+.pp-card{margin-top:0}.pp-card>.panel{margin:0!important;width:100%!important}.pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-cost-block+.pp-cost-block{margin-top:0}.pp-cost-block>.panel{margin:0!important;width:100%!important}
+
+.pp-model-hub{grid-column:1 / -1}.pp-model-hub .head{margin-bottom:8px}.pp-model-status{font-size:12px;color:var(--muted);padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#ff780008;margin-bottom:9px}.pp-model-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.pp-model-grid>div{border:1px solid var(--line);border-radius:8px;padding:9px;background:var(--panel2);min-width:0}.pp-model-grid span{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.pp-model-grid strong{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}@media(max-width:950px){.pp-model-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.pp-model-grid{grid-template-columns:1fr}}
 /* Readable section icons */.pp-card .head .icon,.pp-cost-block .head .icon{width:40px!important;height:40px!important;min-width:40px!important;flex:0 0 40px!important;border-radius:10px!important;font-size:17px!important;line-height:1!important}
 /* Stable stage height: changing stages must not reflow the page. */
 .pp-workspace{position:relative}
@@ -32,7 +34,13 @@
     const workspace=document.createElement('div');workspace.id='ppTabbedLayout';workspace.className='pp-workspace';
     const panels={};for(const id of ['details','machine','costs']){const panel=document.createElement('div');panel.className='pp-tab-panel'+(id==='details'?' active':'');panel.dataset.panel=id;panels[id]=panel;}
     const card=(node,parent)=>{const wrap=document.createElement('div');wrap.className='pp-card';wrap.appendChild(node);parent.appendChild(wrap);};
-    card(box1,panels.details);card(box6,panels.details);card(box2,panels.machine);
+    card(box1,panels.details);
+    card(box2,panels.machine);
+    card(box6,panels.costs);
+    // Turn Stage 1 into the model hub: the upload remains the source, while this live panel surfaces the print data currently known.
+    const modelHub=document.createElement('div');modelHub.className='pp-model-hub pp-card';
+    modelHub.innerHTML='<div class="head"><div class="icon">⌁</div><div><h2>Print Information</h2><p>Everything PrintProfit currently knows about this model.</p></div></div><div class="pp-model-status" id="ppModelStatus">Upload a G-code file to automatically fill in the available print information.</div><div class="pp-model-grid"><div><span>File</span><strong id="ppModelFile">—</strong></div><div><span>Print time</span><strong id="ppModelTime">—</strong></div><div><span>Material used</span><strong id="ppModelUsed">—</strong></div><div><span>Material</span><strong id="ppModelMaterial">—</strong></div></div>';
+    panels.details.appendChild(modelHub);
     const costs4=document.createElement('div');costs4.className='pp-cost-block';costs4.appendChild(box4);panels.costs.appendChild(costs4);
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
@@ -52,6 +60,23 @@
       workspace.style.minHeight=Math.ceil(max)+'px';
     }
     stabiliseWorkspace();
+    function updateModelHub(){
+      const q=id=>document.getElementById(id);
+      const file=q('file'),status=q('status'),mat=q('material'),used=q('materialUsed');
+      const h=q('ppPrintTimeHours'),m=q('ppPrintTimeMinutes'),legacy=q('printHours');
+      const fileName=file?.files?.[0]?.name||'—';
+      q('ppModelFile').textContent=fileName;
+      let time='—';const hv=parseInt(h?.value,10),mv=parseInt(m?.value,10);if(Number.isFinite(hv)||Number.isFinite(mv)){time=(Number.isFinite(hv)?hv:0)+'h '+(Number.isFinite(mv)?mv:0)+'m';}else if(legacy?.value&&Number(legacy.value)>0)time=Number(legacy.value).toFixed(2)+' h';
+      q('ppModelTime').textContent=time;
+      const uv=used?.value;q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' g':'—';
+      q('ppModelMaterial').textContent=mat?.selectedOptions?.[0]?.text||'—';
+      if(status?.textContent)q('ppModelStatus').textContent=status.textContent;
+    }
+    function watchModelData(){
+      updateModelHub();
+      ['file','status','material','materialUsed','printHours','ppPrintTimeHours','ppPrintTimeMinutes'].forEach(id=>{const el=document.getElementById(id);if(!el||el.dataset.ppModelWatch)return;el.dataset.ppModelWatch='1';el.addEventListener('input',updateModelHub);el.addEventListener('change',updateModelHub);});
+      const st=document.getElementById('status');if(st&&window.MutationObserver&&!st.dataset.ppModelObserver){st.dataset.ppModelObserver='1';new MutationObserver(updateModelHub).observe(st,{childList:true,subtree:true,characterData:true});}
+    }
     function setStep(id){
       const current=ids.indexOf(id);
       steps.forEach((step,index)=>{const active=index===current,complete=index<current;step.classList.toggle('active',active);step.classList.toggle('complete',complete);step.setAttribute('aria-selected',String(active));const number=step.querySelector('.pp-step-number');if(number)number.textContent=complete?'✓':String(index+1);});
@@ -64,6 +89,7 @@
       step.addEventListener('click',()=>setStep(step.dataset.tab));
     });
     window.addEventListener('resize',()=>stabiliseWorkspace(),{passive:true});
+    watchModelData();
     return true;
   }
   function wait(){if(install())return;const started=Date.now();const timer=setInterval(()=>{if(install()||(Date.now()-started)>=15000)clearInterval(timer);},50);}
