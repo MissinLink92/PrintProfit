@@ -197,7 +197,8 @@ function install(){
             <div><strong>Calculator reset</strong><span>Clear the current calculator inputs and return pricing to £0.</span></div>
             <button type="button" class="pp-settings-action" id="ppSettingsReset">Reset Calculator</button>
           </div>
-          <div class="pp-settings-note">Preferences are saved automatically on this device.</div>
+          <div class="pp-settings-note">Choose your settings, then press Apply Changes to update the calculator.</div>
+          <button type="button" class="pp-settings-apply" id="ppSettingsApply">Apply Changes</button>
         </div>
       </section>`;
     document.body.appendChild(panel);
@@ -243,6 +244,8 @@ function install(){
       .pp-settings-rate input{width:105px!important;background:#0d202b!important;color:#f5f8fb!important;border:1px solid #355464!important;border-radius:9px!important;padding:9px 10px!important}
       .pp-settings-action{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:9px 12px;font:800 11px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
       .pp-settings-action:hover{filter:brightness(1.08)}
+      .pp-settings-apply{display:block;width:100%;margin:10px 0 2px;padding:12px 16px;border:1px solid #ff7800;border-radius:10px;background:linear-gradient(135deg,#ff9a42,#ff7800);color:#fff;font:800 12px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 24px #ff780022}
+      .pp-settings-apply:hover{filter:brightness(1.07);box-shadow:0 10px 28px #ff780033}
       .pp-settings-note{padding:4px;color:#718a98;font-size:9px;line-height:1.4}
       @media(max-width:650px){
         .pp-settings-dialog{left:10px;right:10px;top:10px;width:auto;max-height:calc(100vh - 20px)}
