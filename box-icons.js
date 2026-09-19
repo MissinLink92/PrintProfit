@@ -72,8 +72,8 @@ function install(){
     .head>.pp-pretty-icon svg,
     .merge-block .head>.pp-pretty-icon svg{
       position:relative!important;z-index:2!important;
-      width:30px!important;height:30px!important;display:block!important;
-      fill:none!important;stroke:#ff8a24!important;stroke-width:1.8!important;
+      width:34px!important;height:34px!important;display:block!important;
+      fill:none!important;stroke:#ff8a24!important;stroke-width:2.65!important;
       stroke-linecap:round!important;stroke-linejoin:round!important;
       filter:drop-shadow(0 0 7px rgba(255,120,0,.34))!important;
     }
@@ -86,10 +86,10 @@ function install(){
     .head>.pp-pretty-icon[data-icon-number="6"] svg{transform:scale(.86)!important}
     .head>.pp-pretty-icon[data-icon-number="3"] svg,
     .head>.pp-pretty-icon[data-icon-number="6"] svg{stroke-width:1.7!important}
-    .merge-block .head>.pp-pretty-icon svg{width:30px!important;height:30px!important}
+    .merge-block .head>.pp-pretty-icon svg{width:34px!important;height:34px!important}
     @media(max-width:650px){
       .head>.pp-pretty-icon,.merge-block .head>.pp-pretty-icon{width:46px!important;height:46px!important;min-width:46px!important;flex-basis:46px!important}
-      .head>.pp-pretty-icon svg,.merge-block .head>.pp-pretty-icon svg{width:28px!important;height:28px!important}
+      .head>.pp-pretty-icon svg,.merge-block .head>.pp-pretty-icon svg{width:32px!important;height:32px!important}
     }
     @media(prefers-reduced-motion:reduce){.head>.pp-pretty-icon::after,.merge-block .head>.pp-pretty-icon::after{display:none!important}}
   `;
