@@ -20,7 +20,7 @@
     const brandImg=brand.querySelector('img');
     if(brandImg){
       brand.querySelectorAll('.pp-brand-fallback').forEach(node=>node.remove());
-      brandImg.src=asset('logo-orange.webp');
+      brandImg.src=asset('printprofit-header-logo.webp');
       brandImg.alt='PrintProfit';
       brandImg.removeAttribute('data-pp-fallback-shown');
       brandImg.style.display='block';
