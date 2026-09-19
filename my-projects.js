@@ -6,49 +6,7 @@ const FILE_DB='printprofit.project-files.v1';
 const fileDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(FILE_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const putProjectFile=async(id,file)=>{if(!file)return;try{const db=await fileDb();await new Promise((res,rej)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close()}catch(e){console.warn('PrintProfit could not save project file:',e)}};
 const getProjectFile=async id=>{try{const db=await fileDb();const v=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get(id);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close();return v||null}catch(e){console.warn('PrintProfit could not restore project file:',e);return null}};
-const restoreProjectFile=async id=>{const saved=await getProjectFile(id);if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
-const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}};
-const write=v=>localStorage.setItem(KEY,JSON.stringify(v));
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const val=id=>{const e=document.getElementById(id);return e?.value??''};
-const snapshot=()=>{
- const data={};
- document.querySelectorAll('input[id],select[id],textarea[id]').forEach(el=>{
-   if(el.type==='file')return;
-   data[el.id]={type:el.type,value:el.type==='checkbox'||el.type==='radio'?el.checked:el.value};
- });
- return data;
-};
-const restore=data=>{
- const entries=Object.entries(data||{});
- const setValue=(id,x)=>{
-   const el=document.getElementById(id);if(!el)return;
-   if(x.type==='checkbox'||x.type==='radio')el.checked=!!x.value; else el.value=x.value??'';
- };
- const fire=id=>{
-   const el=document.getElementById(id);if(!el)return;
-   el.dispatchEvent(new Event('input',{bubbles:true}));
-   el.dispatchEvent(new Event('change',{bubbles:true}));
- };
- const saved=new Map(entries);
- // Restore the printer first because its selection controls whether the calculator is in FDM or resin mode.
- const printer=saved.get('printer');
- if(printer){setValue('printer',printer);fire('printer');}
- // Printer changes can rebuild the material controls, so restore material-dependent values afterwards.
- setTimeout(()=>{
-   ['materialType','material','materialPack','materialPackCost','materialUsed'].forEach(id=>{const x=saved.get(id);if(x)setValue(id,x);});
-   ['materialType','material','materialPack','materialPackCost','materialUsed'].forEach(fire);
-   // Restore everything else after the dependent controls exist.
-   setTimeout(()=>{
-     entries.forEach(([id,x])=>{
-       if(['printer','materialType','material','materialPack','materialPackCost','materialUsed'].includes(id))return;
-       setValue(id,x);
-     });
-     ['printHours','qty','discount','sell','labourHours','labourRate','pack','other','electricityProvider','electricityRate','platform','pay','fixedFee','delivery','deliveryCharge'].forEach(fire);
-     setTimeout(()=>document.getElementById('calc')?.click(),80);
-   },60);
- },60);
-};
+const restoreProjectFile=async id=>{let saved=await getProjectFile(id);if(!saved){try{const db=await fileDb();saved=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get('latest');q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close()}catch(e){}}if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
 const projectInfo=()=>{
  const material=val('material')||val('materialType')||'Material';
  const hours=val('printHours')||'0';
