@@ -108,14 +108,8 @@ function open(){
  }
  panel.classList.add('open');document.body.style.overflow='hidden';render();const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }
-function ensureButton(){
- const section=document.getElementById('material');if(!section)return;
- const parent=section.closest('.panel');if(!parent||parent.querySelector('[data-material-tools]'))return;
- const row=document.createElement('div');row.setAttribute('data-material-tools','1');row.style.cssText='display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px';
- row.innerHTML='<button type="button" class="pp-material-open" data-material-open>◉ My Materials</button><button type="button" class="pp-material-save-current" data-material-save-current>＋ Save Current Material</button>';
- section.parentElement.appendChild(row);
- const buttons=row.querySelectorAll('button');buttons.forEach((b,i)=>b.style.cssText='border:1px solid '+(i?'#ff7800':'#355363')+';background:'+(i?'#ff7800':'#091923')+';color:#fff;border-radius:8px;padding:7px 10px;cursor:pointer;font-weight:700;width:100%;font-size:12px');
-}
+function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
+
 document.addEventListener('click',e=>{
  const t=e.target.closest('[data-material-open],[data-material-save-current],[data-material-close],[data-material-new],[data-material-save],[data-material-form-close],[data-use-material],[data-edit-material],[data-delete-material]');
  if(!t)return;
@@ -131,5 +125,5 @@ document.addEventListener('click',e=>{
 },true);
 document.addEventListener('change',e=>{if(e.target?.id==='ppMatType'){const l=document.getElementById('ppMatAmountLabel');if(l)l.textContent=e.target.value==='Resin'?'Bottle amount (ml)':'Spool weight (g)';const current=document.getElementById('ppMatBrand')?.value==='__other__'?document.getElementById('ppMatBrandCustom')?.value||'':document.getElementById('ppMatBrand')?.value||'';syncBrandOptions(current)}if(e.target?.id==='ppMatBrand'){const custom=document.getElementById('ppMatBrandCustom');if(custom)custom.style.display=e.target.value==='__other__'?'block':'none';if(e.target.value==='__other__')custom?.focus()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=''}});
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ensureButton,{once:true});else ensureButton();
+// Box 3 remains clean; the Material Library can be surfaced elsewhere.
 })();
