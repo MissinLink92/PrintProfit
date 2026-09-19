@@ -95,7 +95,7 @@
     refreshProfiles(name);
     const calc=document.getElementById('calc');
     if(calc)calc.click();
-    setProfileStatus('Loaded “'+name+'”. Box 1 and Box 5/6 pricing were not changed.');
+    setProfileStatus('Loaded “'+name+'”. Your Model and pricing/results were not changed.');
   }
 
   function installProfiles(){
@@ -124,7 +124,7 @@
     wrap.id='profileSave';
     wrap.className='profile-save';
     wrap.innerHTML=`
-<div class="small"><b style="color:var(--text)">Saved Setup Profiles</b> — save your Box 2, 3 and 4 settings so you can reuse the same printer, material and operating costs.</div>
+<div class="small"><b style="color:var(--text)">Saved Setup Profiles</b> — save your Print Setup and Costs &amp; Fees settings so you can reuse the same printer, material and operating costs.</div>
 <div class="profile-save-grid" style="margin-top:7px">
   <div><label for="profileName">Profile name</label><input id="profileName" type="text" maxlength="60" placeholder="e.g. A1 + PLA + my costs"></div>
   <div class="wide-select"><label for="savedProfileSelect">Saved profiles</label><select id="savedProfileSelect"><option value="">Select a saved profile…</option></select></div>
