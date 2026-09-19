@@ -566,6 +566,49 @@ body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .pp
 body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] #materialCostOut{
  color:#7446dc!important;
 }
+/* Light Mode compatibility for model file intelligence / metadata. */
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-extra{
+ background:#ffffff!important;
+ border-color:#d0dde2!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-extra-title{
+ color:#d85f00!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-extra-grid>div{
+ background:#f8fafb!important;
+ border-color:#c2d0d6!important;
+ color:#17232b!important;
+ box-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-extra-grid span{
+ color:#5a707b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-extra-grid strong{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-hint{
+ color:#647983!important;
+}
+body[data-pp-theme="light"] .pp-file-metadata{
+ background:#f8fafb!important;
+ border-color:#c2d0d6!important;
+ color:#17232b!important;
+ box-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-file-metadata>b{
+ color:#d85f00!important;
+}
+body[data-pp-theme="light"] .pp-file-metadata div{
+ border-bottom-color:#dce5e9!important;
+}
+body[data-pp-theme="light"] .pp-file-metadata span{
+ color:#5a707b!important;
+}
+body[data-pp-theme="light"] .pp-file-metadata strong{
+ color:#17232b!important;
+}
 /* Light Mode compatibility layer for generated/newer calculator components. */
 body[data-pp-theme="light"] .pp-tab-panel .pp-card,
 body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block,
