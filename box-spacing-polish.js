@@ -11,6 +11,31 @@ function install(){
  style.id='ppBoxPolishStyles';
  style.textContent=`
 /* PrintProfit box & spacing polish */
+/* Stage width: give the calculator content room to breathe instead of leaving a large empty column. */
+.pp-tab-panel[data-panel="machine"]{
+  grid-template-columns:1fr!important;
+}
+.pp-tab-panel[data-panel="machine"]>.pp-card{
+  width:100%!important;
+}
+.pp-tab-panel[data-panel="machine"]>.pp-card>.panel{
+  width:100%!important;
+}
+.pp-tab-panel[data-panel="machine"]>.pp-card>.panel .two{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:14px!important;
+}
+.pp-tab-panel[data-panel="details"]{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+.pp-tab-panel[data-panel="details"]>.pp-card,
+.pp-tab-panel[data-panel="details"]>.pp-model-hub{
+  width:100%!important;
+}
+.pp-tab-panel[data-panel="costs"]{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+
 #ppTabbedLayout{width:100%!important}
 .pp-tab-panel.active{gap:14px!important;align-items:stretch!important}
 .pp-card,.pp-cost-block{
