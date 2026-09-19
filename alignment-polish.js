@@ -28,10 +28,6 @@
         width:100%;
       }
 
-      /* Quick Setup must retain its own compact vertical layout inside the stretched card. */
-      .pp-tab-panel[data-panel="machine"]>.pp-card.pp-quick-setup-card{
-        display:block!important;
-      }
     }
   `;
   document.head.appendChild(style);
