@@ -27,7 +27,7 @@
 /* PrintProfit merged Print Setup V1 */
 .print-setup-panel{grid-column:1 / span 9;grid-row:1}.print-setup-grid{grid-template-columns:1fr 1fr;gap:14px}.print-setup-grid .merge-block+.merge-block{border-left:1px solid var(--line);padding-left:14px}.print-setup-grid .head{margin-bottom:9px}.print-setup-grid .head .icon{width:28px;height:28px;font-size:13px}.print-setup-grid .two{grid-template-columns:1fr 1fr}
 @media(max-width:950px){.print-setup-grid{grid-template-columns:1fr}.print-setup-grid .merge-block+.merge-block{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:14px;margin-top:14px}}
-</style>
+ .footer .pp-disclaimer{max-width:780px;text-align:right;line-height:1.45;color:#7f96a3;font-size:10px}.footer .pp-disclaimer::first-letter{color:#ff9b3d}@media(max-width:700px){.footer{flex-direction:column;gap:6px}.footer .pp-disclaimer{max-width:none;text-align:left;font-size:9px}}</style>
 </head>
 <body>
 <div class="shell">
@@ -63,7 +63,7 @@
 <div id="batchResultView" class="resultView" hidden><div class="cards"><div class="card"><div class="small">Batch Cost to Make</div><div class="value" id="batchCost">£0.00</div></div><div class="card"><div class="small">Batch Sales</div><div class="value" id="batchSales">£0.00</div></div><div class="card"><div class="small">Batch Profit</div><div class="value good" id="batchProfit">£0.00</div></div></div><div class="small" style="margin-top:8px" id="batchMargin">Margin: 0.0%</div><div class="quick"><div class="small">Quick Price Buttons (target margin)</div><div class="grid"><button type="button" class="btn" data-m=".3" data-target-view="batch">+ 30%</button><button type="button" class="btn" data-m=".5" data-target-view="batch">+ 50%</button><button type="button" class="btn" data-m=".6" data-target-view="batch">+ 60%</button></div><div class="custom-target"><label for="batchCustomMargin">Custom target margin (%)</label><input id="batchCustomMargin" type="number" value="0" min="0" max="99.9" step=".1" placeholder="e.g. 42.5"><div class="small custom-target-note">Uses the current quantity, discount, fees and delivery charge.</div></div></div><div class="break"><b>Breakdown (batch)</b><div id="batchBreakdown"></div></div></div>
 </aside></div>
 </main>
-<footer class="footer"><span>PrintProfit — 3D printing cost &amp; pricing calculator</span><span>Check provider rates before relying on a quote.</span></footer>
+<footer class="footer"><span>PrintProfit — 3D printing cost &amp; pricing calculator</span><span class="pp-disclaimer" title="Provider prices and market values may change.">⚠ Provider prices and market values may not reflect current rates. All figures are estimates and should be verified against current prices before making purchasing or pricing decisions.</span></footer>
 </div>
 <script>
 (()=>{
