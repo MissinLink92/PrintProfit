@@ -19,7 +19,7 @@
 .pp-step-copy{text-align:left;line-height:1.15}.pp-step-copy strong{display:block;font-size:13px;color:inherit}.pp-step-copy span{display:block;margin-top:4px;font-size:10px;font-weight:500;color:var(--muted)}
 .pp-tab-panel{display:none}.pp-tab-panel.active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}.pp-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-card+.pp-card{margin-top:0}.pp-card>.panel{margin:0!important;width:100%!important}.pp-cost-block{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0}.pp-cost-block+.pp-cost-block{margin-top:0}.pp-cost-block>.panel{margin:0!important;width:100%!important}
 
-.pp-model-hub{grid-column:auto;align-self:start}.pp-model-hub .head{margin-bottom:8px}.pp-model-status{font-size:12px;color:var(--muted);padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#ff780008;margin-bottom:9px}.pp-model-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.pp-model-grid>div{border:1px solid var(--line);border-radius:8px;padding:9px;background:var(--panel2);min-width:0}.pp-model-grid span{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.pp-model-grid strong{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}@media(max-width:950px){.pp-model-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.pp-model-grid{grid-template-columns:1fr}}
+.pp-model-hub{grid-column:auto;align-self:start}.pp-model-hub .head{margin-bottom:8px}.pp-model-status{font-size:12px;color:var(--muted);padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#ff780008;margin-bottom:9px}.pp-model-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.pp-model-grid>div,.pp-model-extra-grid>div{border:1px solid var(--line);border-radius:8px;padding:9px;background:var(--panel2);min-width:0}.pp-model-grid span,.pp-model-extra-grid span{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.pp-model-grid strong,.pp-model-extra-grid strong{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pp-model-extra{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}.pp-model-extra-title{font-size:9px;font-weight:900;letter-spacing:.18em;color:var(--accent);margin-bottom:7px}.pp-model-extra-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.pp-model-extra-grid>div{padding:8px}.pp-model-extra-grid strong{font-size:11px}.pp-model-hint{margin-top:8px;font-size:10px;line-height:1.4;color:var(--muted)}@media(max-width:950px){.pp-model-grid{grid-template-columns:1fr 1fr}.pp-model-extra-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.pp-model-grid,.pp-model-extra-grid{grid-template-columns:1fr}}
 /* Readable section icons */.pp-card .head .icon,.pp-cost-block .head .icon{width:40px!important;height:40px!important;min-width:40px!important;flex:0 0 40px!important;border-radius:10px!important;font-size:17px!important;line-height:1!important}
 /* Stable stage height: changing stages must not reflow the page. */
 .pp-workspace{position:relative}
@@ -40,7 +40,7 @@
     card(box6,panels.costs);
     // Turn Stage 1 into the model hub: the upload remains the source, while this live panel surfaces the print data currently known.
     const modelHub=document.createElement('div');modelHub.className='pp-model-hub pp-card';
-    modelHub.innerHTML='<div class="head"><div class="icon">⌁</div><div><h2>Print Information</h2><p>Everything PrintProfit currently knows about this model.</p></div></div><div class="pp-model-status" id="ppModelStatus">Upload a G-code file to automatically fill in the available print information.</div><div class="pp-model-grid"><div><span>File</span><strong id="ppModelFile">—</strong></div><div><span>Print time</span><strong id="ppModelTime">—</strong></div><div><span>Material used</span><strong id="ppModelUsed">—</strong></div><div><span>Material</span><strong id="ppModelMaterial">—</strong></div></div>';
+    modelHub.innerHTML='<div class="head"><div class="icon">⌁</div><div><h2>Print Information</h2><p>Everything PrintProfit currently knows about this model.</p></div></div><div class="pp-model-status" id="ppModelStatus">Drop a print file in to analyse its available data.</div><div class="pp-model-grid"><div><span>File</span><strong id="ppModelFile">—</strong></div><div><span>Print time</span><strong id="ppModelTime">—</strong></div><div><span>Material used</span><strong id="ppModelUsed">—</strong></div><div><span>Material</span><strong id="ppModelMaterial">—</strong></div></div><div class="pp-model-extra"><div class="pp-model-extra-title">FILE INTELLIGENCE</div><div class="pp-model-extra-grid"><div><span>Slicer</span><strong id="ppModelSlicer">—</strong></div><div><span>Printer</span><strong id="ppModelPrinter">—</strong></div><div><span>Layer height</span><strong id="ppModelLayer">—</strong></div><div><span>Infill</span><strong id="ppModelInfill">—</strong></div><div><span>Supports</span><strong id="ppModelSupports">—</strong></div><div><span>Nozzle</span><strong id="ppModelNozzle">—</strong></div><div><span>Bed</span><strong id="ppModelBed">—</strong></div><div><span>Profile</span><strong id="ppModelProfile">—</strong></div></div><div class="pp-model-hint" id="ppModelHint">The more metadata your slicer stores, the more PrintProfit can automatically fill in for you.</div></div>';
     panels.details.appendChild(modelHub);
     const costs4=document.createElement('div');costs4.className='pp-cost-block';costs4.appendChild(box4);panels.costs.appendChild(costs4);
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
@@ -62,6 +62,16 @@
     }
     stabiliseWorkspace();
     function updateModelHub(){
+      const extra=window.__ppFileData||{};
+      const setExtra=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value!=null&&String(value)!==''?String(value):'—';};
+      setExtra('ppModelSlicer',extra.slicer);
+      setExtra('ppModelPrinter',extra.printer);
+      setExtra('ppModelLayer',extra.layer);
+      setExtra('ppModelInfill',extra.infill);
+      setExtra('ppModelSupports',extra.supports);
+      setExtra('ppModelNozzle',extra.nozzle);
+      setExtra('ppModelBed',extra.bed);
+      setExtra('ppModelProfile',extra.profile);
       const q=id=>document.getElementById(id);
       const file=q('file'),status=q('status'),mat=q('material'),used=q('materialUsed');
       const h=q('ppPrintTimeHours'),m=q('ppPrintTimeMinutes'),legacy=q('printHours');
