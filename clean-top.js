@@ -23,6 +23,7 @@ function install(){
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
         <button type="button" data-target="machine"><span class="pp-nav-icon cube"></span><span>Price</span></button>
         <button type="button" data-target="costs"><span class="pp-nav-icon chart"></span><span>Profit</span></button>
+        <button type="button" data-target="guide"><span class="pp-nav-icon book"></span><span>Guide &amp; Help</span></button>
         <button type="button" data-target="settings"><span class="pp-nav-icon gear"></span><span>Settings</span></button>
       </nav>
     </div>
@@ -79,6 +80,7 @@ function install(){
     #ppCleanTop .chart:before{content:"";position:absolute;inset:3px 2px 2px;border-left:2px solid currentColor;border-bottom:2px solid currentColor}
     #ppCleanTop .chart:after{content:"";position:absolute;left:7px;bottom:5px;width:3px;height:8px;background:currentColor;box-shadow:6px -5px currentColor,12px -11px currentColor}
     #ppCleanTop .gear:before{content:"⚙";position:absolute;inset:-3px 0 0;font:30px/1 Arial,sans-serif;color:currentColor}
+    #ppCleanTop .book:before{content:"▤";position:absolute;inset:-1px 0 0;font:26px/1 Arial,sans-serif;color:currentColor}
     #ppCleanTop .pp-top-body{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 425px;gap:42px;align-items:stretch;padding:10px 3.1% 9px;box-sizing:border-box;min-height:306px}
     #ppCleanTop .pp-top-copy{padding-top:15px;min-width:0}
     #ppCleanTop .pp-eyebrow{font-size:12px;font-weight:900;letter-spacing:.19em;color:#ff7800;margin-bottom:8px}
@@ -176,7 +178,7 @@ function install(){
     });
     panel.querySelectorAll('[data-close-settings]').forEach(el=>el.addEventListener('click',()=>panel.classList.remove('open')));
     document.addEventListener('keydown',event=>{
-      if(event.key==='Escape')panel.classList.remove('open');
+      if(event.key==='Escape'){closePanel('ppSettingsPanel');closePanel('ppGuidePanel');}
     });
     const style=document.createElement('style');
     style.id='ppSettingsStyles';
@@ -221,26 +223,117 @@ function install(){
     `;
     document.head.appendChild(style);
     panel.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  window.__openPrintProfitSettings=openSettings;
+
+  function closePanel(id){
+    const panel=document.getElementById(id);
+    if(!panel)return;
+    panel.classList.remove('open');
+    if(!document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open'))document.body.style.overflow='';
+  }
+
+  function openGuide(){
+    let panel=document.getElementById('ppGuidePanel');
+    if(!panel){
+      panel=document.createElement('div');
+      panel.id='ppGuidePanel';
+      panel.innerHTML=`
+        <div class="pp-guide-backdrop" data-close-guide></div>
+        <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
+          <div class="pp-guide-head">
+            <div class="pp-guide-brand">
+              <img src="./assets/user-selected-printprofit-logo.webp?v=3" alt="PrintProfit">
+              <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the calculator.</p></div>
+            </div>
+            <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
+          </div>
+          <div class="pp-guide-body">
+            <div class="pp-guide-intro">
+              <strong>PrintProfit turns your real printing costs into a practical selling price.</strong>
+              <span>Use the boxes from top to bottom. You can leave optional fields at zero when they do not apply.</span>
+            </div>
+            <div class="pp-guide-grid">
+              <article><div class="pp-guide-num">1</div><div><h3>G-code File</h3><p>Upload your sliced G-code file. When the file contains readable metadata, PrintProfit can fill in print time and material usage automatically.</p></div></article>
+              <article><div class="pp-guide-num">2</div><div><h3>Printer Profile</h3><p>Select your printer so the calculator can use its estimated purchase price, lifetime and power draw for depreciation and electricity calculations.</p></div></article>
+              <article><div class="pp-guide-num">3</div><div><h3>Filament / Resin</h3><p>Choose your material, package size and package cost. Enter the amount used for one print when it is not detected from the file.</p></div></article>
+              <article><div class="pp-guide-num">4</div><div><h3>Operating Costs</h3><p>Add labour, packaging, other costs and electricity. These are combined with material and printer costs to produce the cost to make the print.</p></div></article>
+              <article><div class="pp-guide-num">5</div><div><h3>Selling &amp; Fulfilment</h3><p>Choose a selling platform, account for platform/payment fees and add delivery where applicable. Your selling price is then compared with total costs.</p></div></article>
+              <article><div class="pp-guide-num">6</div><div><h3>Quantity / Batch Pricing</h3><p>Set the quantity and any batch discount to see production cost, sales, profit and the effective price per item.</p></div></article>
+            </div>
+            <div class="pp-guide-section">
+              <div class="pp-guide-section-title">Understanding the result</div>
+              <p><strong>Total Cost to Make</strong> is the estimated cost of producing the print. <strong>Selling Price</strong> is the amount you enter or calculate from a target margin. <strong>Profit</strong> is the difference after the included costs and fees. Margins are based on the selling price.</p>
+            </div>
+            <div class="pp-guide-section">
+              <div class="pp-guide-section-title">Settings</div>
+              <p>Use Settings to switch dark mode, change language, choose metric or imperial units, select a currency and adjust the exchange rate used for non-GBP display.</p>
+            </div>
+            <div class="pp-guide-section">
+              <div class="pp-guide-section-title">Information &amp; help</div>
+              <p>Calculator outputs are estimates and depend on the figures you enter. Printer power, lifetime, material prices, platform fees and delivery charges can vary, so replace the pre-filled values with your own actual costs whenever possible.</p>
+            </div>
+            <div class="pp-guide-note">Tip: for the most accurate calculation, use your actual spool/resin cost, actual material used, your printer's measured or published power draw, your real electricity tariff and the fees charged by the platform you sell through.</div>
+          </div>
+        </section>`;
+      document.body.appendChild(panel);
+      panel.querySelectorAll('[data-close-guide]').forEach(el=>el.addEventListener('click',()=>closePanel('ppGuidePanel')));
+      panel.querySelector('.pp-guide-close')?.addEventListener('click',()=>closePanel('ppGuidePanel'));
+      const style=document.createElement('style');
+      style.id='ppGuideStyles';
+      style.textContent=`
+        #ppGuidePanel{position:fixed;inset:0;z-index:12100;display:none}
+        #ppGuidePanel.open{display:block}
+        .pp-guide-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+        .pp-guide-dialog{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(900px,calc(100vw - 32px));max-height:calc(100vh - 40px);border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 90px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:auto}
+        .pp-guide-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border-bottom:1px solid #284553;position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}
+        .pp-guide-brand{display:flex;align-items:center;gap:13px;min-width:0}
+        .pp-guide-brand img{width:82px;height:56px;object-fit:contain;flex:0 0 82px;border-radius:9px}
+        .pp-guide-kicker{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.2em;margin-bottom:4px}
+        .pp-guide-head h2{margin:0;font-size:22px}.pp-guide-head p{margin:4px 0 0;color:#8fa6b2;font-size:10px}
+        .pp-guide-close{width:36px;height:36px;flex:0 0 36px;border:1px solid #355464;border-radius:9px;background:#091821;color:#dce7ec;font-size:22px;cursor:pointer}
+        .pp-guide-close:hover{border-color:#ff7800;color:#fff}
+        .pp-guide-body{padding:18px}
+        .pp-guide-intro{border:1px solid #365765;border-radius:12px;padding:13px;background:#091a24;margin-bottom:15px}
+        .pp-guide-intro strong{display:block;font-size:13px}.pp-guide-intro span{display:block;margin-top:5px;color:#8fa6b2;font-size:10px;line-height:1.45}
+        .pp-guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        .pp-guide-grid article{display:flex;gap:11px;border:1px solid #284654;border-radius:12px;padding:12px;background:#081720}
+        .pp-guide-num{width:28px;height:28px;flex:0 0 28px;border-radius:8px;background:#ff7800;color:#fff;display:grid;place-items:center;font-weight:900;font-size:12px}
+        .pp-guide-grid h3{margin:1px 0 4px;font-size:12px}.pp-guide-grid p,.pp-guide-section p{margin:0;color:#9db0ba;font-size:10px;line-height:1.5}
+        .pp-guide-section{border:1px solid #284654;border-radius:12px;padding:13px;background:#081720;margin-top:10px}
+        .pp-guide-section-title{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px}
+        .pp-guide-note{margin-top:12px;padding:11px 12px;border-left:3px solid #ff7800;background:#0a1d27;color:#9db0ba;font-size:9.5px;line-height:1.5}
+        @media(max-width:700px){.pp-guide-dialog{width:calc(100vw - 18px);max-height:calc(100vh - 18px)}.pp-guide-grid{grid-template-columns:1fr}.pp-guide-head{padding:12px}.pp-guide-brand img{width:68px;height:50px;flex-basis:68px}.pp-guide-body{padding:12px}}
+      `;
+      document.head.appendChild(style);
+    }
+    panel.classList.add('open');
+    document.body.style.overflow='hidden';
   }
 
   const go=(target)=>{
     if(target==='settings'){openSettings();return;}
+    if(target==='guide'){openGuide();return;}
     const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
     if(tab){tab.click();return;}
     const el=document.getElementById(target);
     if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
   };
-  // Settings must behave as a true modal trigger. Stop any legacy tab/anchor handlers
-  // from treating it like a section link and moving the calculator viewport.
-  top.querySelectorAll('[data-target="settings"]').forEach(el=>{
-    el.addEventListener('click',(event)=>{
-      event.preventDefault();
-      event.stopPropagation();
-      if(event.stopImmediatePropagation)event.stopImmediatePropagation();
-      openSettings();
-    },true);
-  });
-  top.querySelectorAll('[data-target]:not([data-target="settings"])').forEach(el=>el.addEventListener('click',()=>go(el.dataset.target)));
+  // Intercept Settings and Guide & Help at document capture level so no legacy
+  // navigation handler can treat either control as a section jump.
+  const modalTrigger=(event)=>{
+    const trigger=event.target&&event.target.closest?event.target.closest('#ppCleanTop [data-target="settings"],#ppCleanTop [data-target="guide"]'):null;
+    if(!trigger)return;
+    event.preventDefault();
+    event.stopPropagation();
+    if(event.stopImmediatePropagation)event.stopImmediatePropagation();
+    const target=trigger.dataset.target;
+    if(target==='settings')openSettings(); else openGuide();
+  };
+  document.addEventListener('click',modalTrigger,true);
+  document.addEventListener('pointerup',modalTrigger,true);
+  top.querySelectorAll('[data-target]:not([data-target="settings"]):not([data-target="guide"])').forEach(el=>el.addEventListener('click',()=>go(el.dataset.target)));
   return true;
 }
 
