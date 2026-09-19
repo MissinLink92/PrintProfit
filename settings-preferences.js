@@ -57,7 +57,7 @@ function baseFromCurrency(value){const n=Number(value)||0;return n/(Number(prefs
 
 const weightIds={materialPack:'Spool weight',materialUsed:'Used per print'};
 const moneyIds=['materialPackCost','labourRate','pack','other','electricityRate','fixedFee','delivery','deliveryCharge','sell'];
-const moneyOutputIds=['materialCostOut','electricityCostOut','deliveryRateOut','singleCost','singleSell','singleProfit','batchCost','batchSales','batchProfit','singleUnitCost','singleUnitSell','singleUnitProfit'];
+const moneyOutputIds=['materialCostOut','electricityCostOut','deliveryRateOut','singleCost','singleSellOut','singleProfit','batchCost','batchSales','batchProfit'];
 
 function baseUnit(type){
   return type==='resin'?'ml':'g';
@@ -216,30 +216,24 @@ const phrases={
 };
 
 function translateNode(node,lang){
+  const source=phrases.pl||[];
+  const list=lang==='pl'?source:source.map(([a,b])=>[b,a]);
   if(node.nodeType===3){
     const v=node.nodeValue.trim();if(!v)return;
-    const list=phrases[lang]||[];
-    for(const [a,b] of list){
-      if(v===a){node.nodeValue=node.nodeValue.replace(v,b);break;}
-    }
+    for(const [a,b] of list){if(v===a){node.nodeValue=node.nodeValue.replace(v,b);break;}}
   }else if(node.nodeType===1){
     for(const attr of ['placeholder','title','aria-label']){
       const v=node.getAttribute(attr);if(!v)continue;
-      const list=phrases[lang]||[];
       for(const [a,b] of list){if(v===a){node.setAttribute(attr,b);break;}}
     }
   }
 }
 function applyLanguage(){
   document.documentElement.lang=prefs.language==='pl'?'pl':'en';
-  if(prefs.language==='pl'){
-    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT);
-    const nodes=[];let n;while(n=walker.nextNode())nodes.push(n);
-    nodes.forEach(node=>translateNode(node,prefs.language==='pl'?'pl':'en'));
-  }else{
-    // Reloading the original page is the safest way to restore the English source strings.
-    // Current page content is only reloaded when the user switches back to English.
-  }
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT|NodeFilter.SHOW_ELEMENT);
+  const nodes=[];let n;while(n=walker.nextNode())nodes.push(n);
+  nodes.forEach(node=>translateNode(node,prefs.language));
+  document.title=prefs.language==='pl'?'PrintProfit — kalkulator kosztów i cen druku 3D':'PrintProfit — 3D Printing Cost & Pricing Calculator';
 }
 
 function injectSettings(){
@@ -293,25 +287,22 @@ function injectSettings(){
 function updateLabelsCurrency(){
   const symbol=(currencyMeta[prefs.currency]||currencyMeta.GBP).symbol;
   document.querySelectorAll('label').forEach(label=>{
-    if(label.dataset.ppCurrencyBase==='1')return;
-    if(/[£$€]|zł/.test(label.textContent)){
-      label.dataset.ppCurrencyBase='1';
-      label.textContent=label.textContent.replace(/\s*\(£[^)]*\)/g,'').replace(/£/g,symbol);
-      label.textContent=label.textContent.replace(/£/g,symbol);
-    }
+    if(/[£$€]|zł/.test(label.textContent) && !label.dataset.ppCurrencyTemplate)label.dataset.ppCurrencyTemplate=label.textContent;
+    if(label.dataset.ppCurrencyTemplate)label.textContent=label.dataset.ppCurrencyTemplate.replace(/£/g,symbol);
   });
 }
 
 function observe(){
   const observer=new MutationObserver(mutations=>{
     if(document.getElementById('ppSettingsPanel'))injectSettings();
-    let needs=false;
     for(const m of mutations){
-      if(m.type==='childList'||m.type==='characterData'){
-        if(String(m.target?.textContent||'').includes('£'))needs=true;
+      if(prefs.language==='pl' && m.type==='childList'){
+        m.addedNodes.forEach(node=>{
+          if(node.nodeType===1||node.nodeType===3)translateNode(node,prefs.language);
+        });
       }
     }
-    if(needs){formatInputCurrencies();syncMoneyOutputs();}
+    formatInputCurrencies();syncMoneyOutputs();updateLabelsCurrency();
   });
   observer.observe(document.body,{subtree:true,childList:true,characterData:true});
 }
@@ -320,7 +311,9 @@ function boot(){
   setupProxies();
   formatInputCurrencies();
   updateLabelsCurrency();
+  applyLanguage();
   observe();
+  setInterval(()=>{syncWeightProxies();formatInputCurrencies();syncMoneyOutputs();},500);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
