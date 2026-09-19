@@ -79,12 +79,23 @@ function currency(){
 }
 function bind(){
  const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
- if(dark){dark.checked=pref.dark;dark.addEventListener('change',()=>{pref.dark=dark.checked;save();setTheme();});}
- if(lang){lang.value=pref.language;lang.addEventListener('change',()=>{pref.language=lang.value;save();translatePage();applyUnits();currency();});}
- if(units){units.value=pref.units;units.addEventListener('change',()=>{pref.units=units.value;save();applyUnits();});}
- if(cur){cur.value=pref.currency;cur.addEventListener('change',()=>{pref.currency=cur.value;pref.rate=currencies[pref.currency].rate;rate.value=String(pref.rate);save();currency();});}
- if(rate){rate.value=String(pref.rate);rate.addEventListener('input',()=>{const v=Number(rate.value);if(v>0){pref.rate=v;save();currency();}});}
+ if(dark){dark.checked=pref.dark;if(dark.dataset.ppBound!=='1'){dark.dataset.ppBound='1';dark.addEventListener('change',()=>{pref.dark=dark.checked;save();setTheme();});}}
+ if(lang){lang.value=pref.language;if(lang.dataset.ppBound!=='1'){lang.dataset.ppBound='1';lang.addEventListener('change',()=>{pref.language=lang.value;save();translatePage();applyUnits();currency();});}}
+ if(units){units.value=pref.units;if(units.dataset.ppBound!=='1'){units.dataset.ppBound='1';units.addEventListener('change',()=>{pref.units=units.value;save();applyUnits();});}}
+ if(cur){cur.value=pref.currency;if(cur.dataset.ppBound!=='1'){cur.dataset.ppBound='1';cur.addEventListener('change',()=>{pref.currency=cur.value;pref.rate=currencies[pref.currency].rate;if(rate)rate.value=String(pref.rate);save();currency();});}}
+ if(rate){rate.value=String(pref.rate);if(rate.dataset.ppBound!=='1'){rate.dataset.ppBound='1';rate.addEventListener('input',()=>{const v=Number(rate.value);if(v>0){pref.rate=v;save();currency();}});}}
 }
-function boot(){bind();setTheme();translatePage();applyUnits();currency();setInterval(()=>{applyUnits();currency();},1200);}
+function boot(){
+ bind();
+ setTheme();
+ translatePage();
+ applyUnits();
+ currency();
+ document.addEventListener('click',event=>{
+   const trigger=event.target&&event.target.closest?event.target.closest('#ppCleanTop [data-target="settings"]'):null;
+   if(trigger)setTimeout(()=>{bind();translatePage();setTheme();},0);
+ });
+ setInterval(()=>{bind();applyUnits();currency();},1200);
+}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
