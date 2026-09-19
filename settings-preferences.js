@@ -281,9 +281,29 @@ function scheduleTranslate(){
  if(translateTimer)return;
  translateTimer=setTimeout(()=>{translateTimer=0;translatePage();},80);
 }
-const observer=new MutationObserver(()=>scheduleTranslate());
+let currencyTimer=0;
+let currencyBusy=false;
+function scheduleCurrency(){
+ if(currencyTimer||currencyBusy)return;
+ currencyTimer=setTimeout(()=>{
+  currencyTimer=0;
+  currencyBusy=true;
+  try{currency();}finally{setTimeout(()=>{currencyBusy=false;},0);}
+ },80);
+}
+const observer=new MutationObserver((mutations)=>{
+ scheduleTranslate();
+ // The calculator's own calculation code always renders money as GBP.
+ // Re-apply the selected display currency whenever those result nodes are rewritten.
+ const moneyChanged=mutations.some(m=>{
+  if(m.type==='characterData')return !!m.target.parentElement?.closest('#singleResultView,#batchResultView,.result,#guides');
+  if(m.type==='childList')return !!m.target.closest?.('#singleResultView,#batchResultView,.result,#guides');
+  return false;
+ });
+ if(moneyChanged)scheduleCurrency();
+});
 observer.observe(document.body,{subtree:true,childList:true,characterData:true});
-setInterval(()=>{bind();scheduleTranslate();},1000);
+setInterval(()=>{bind();scheduleTranslate();scheduleCurrency();},1000);
 }
 
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
