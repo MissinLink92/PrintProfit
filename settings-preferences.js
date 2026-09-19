@@ -225,7 +225,7 @@ function ensureApplyButton(){
  if(btn){
   if(btn.dataset.ppBound!=='1'){
    btn.dataset.ppBound='1';
-   btn.addEventListener('click',applyDraft);
+   btn.onclick=()=>window.__applyPrintProfitSettings?.();
   }
   return btn;
  }
@@ -235,7 +235,7 @@ function ensureApplyButton(){
  btn.textContent=tr('Apply Changes');
  btn.style.cssText='display:block;width:100%;margin:8px 0 4px;padding:12px 16px;border:1px solid #ff7800;border-radius:10px;background:#ff7800;color:#fff;font:800 12px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 24px #ff780022;';
  if(reset&&reset.parentElement)reset.parentElement.insertAdjacentElement('afterend',btn);else body.appendChild(btn);
- btn.addEventListener('click',applyDraft);
+ btn.onclick=()=>window.__applyPrintProfitSettings?.();
  return btn;
 }
 
@@ -265,6 +265,7 @@ function applyDraft(){
  const b=document.getElementById('ppSettingsApply');
  if(b){b.textContent=tr('Apply Changes');b.style.transform='scale(.98)';setTimeout(()=>b.style.transform='',120);}
 }
+window.__applyPrintProfitSettings=applyDraft;
 
 function bind(){
  const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
