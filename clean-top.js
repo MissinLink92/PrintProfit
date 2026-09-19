@@ -303,37 +303,39 @@ function install(){
         <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
           <div class="pp-guide-head">
             <div class="pp-guide-brand">
-              <img src="./assets/user-selected-printprofit-logo.webp?v=3" alt="PrintProfit">
-              <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the calculator.</p></div>
+              <img src="./assets/user-selected-printprofit-logo.webp?v=5" alt="PrintProfit">
+              <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
             </div>
             <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
           </div>
           <div class="pp-guide-body">
             <div class="pp-guide-intro">
               <strong>PrintProfit turns your real printing costs into a practical selling price.</strong>
-              <span>Use the boxes from top to bottom. You can leave optional fields at zero when they do not apply.</span>
+              <span>Work through Your Model, Print Setup and Costs &amp; Fees from top to bottom. Optional fields can remain at zero when they do not apply.</span>
             </div>
             <div class="pp-guide-grid">
-              <article><div class="pp-guide-num">1</div><div><h3>G-code File</h3><p>Upload your sliced G-code file. When the file contains readable metadata, PrintProfit can fill in print time and material usage automatically.</p></div></article>
-              <article><div class="pp-guide-num">2</div><div><h3>Printer Profile</h3><p>Select your printer so the calculator can use its estimated purchase price, lifetime and power draw for depreciation and electricity calculations.</p></div></article>
-              <article><div class="pp-guide-num">3</div><div><h3>Filament / Resin</h3><p>Choose your material, package size and package cost. Enter the amount used for one print when it is not detected from the file.</p></div></article>
-              <article><div class="pp-guide-num">4</div><div><h3>Operating Costs</h3><p>Add labour, packaging, other costs and electricity. These are combined with material and printer costs to produce the cost to make the print.</p></div></article>
-              <article><div class="pp-guide-num">5</div><div><h3>Selling &amp; Fulfilment</h3><p>Choose a selling platform, account for platform/payment fees and add delivery where applicable. Your selling price is then compared with total costs.</p></div></article>
-              <article><div class="pp-guide-num">6</div><div><h3>Quantity / Batch Pricing</h3><p>Set the quantity and any batch discount to see production cost, sales, profit and the effective price per item.</p></div></article>
+              <article><div class="pp-guide-num">1</div><div><h3>Your Model</h3><p>Upload your sliced G-code file. Available metadata can fill in print time and material usage, while the live Print Information area shows the model details detected by PrintProfit.</p></div></article>
+              <article><div class="pp-guide-num">2</div><div><h3>Print Setup</h3><p>Choose your printer and material together. Supported resin printers automatically switch the calculator to resin mode; custom printers keep the material-type choice available.</p></div></article>
+              <article><div class="pp-guide-num">3</div><div><h3>Costs &amp; Fees</h3><p>Add operating costs, selling and fulfilment details, quantity and any batch discount. Quantity above one automatically switches the results view to Batch Pricing.</p></div></article>
+              <article><div class="pp-guide-num">4</div><div><h3>Results</h3><p>Review cost to make, selling price, fees, profit and margin. Target-pricing options can calculate a selling price from the margin you want to achieve.</p></div></article>
+            </div>
+            <div class="pp-guide-section">
+              <div class="pp-guide-section-title">My Projects &amp; My Materials</div>
+              <p><strong>My Projects</strong> saves complete calculator setups so they can be loaded, duplicated or deleted. <strong>My Materials</strong> stores reusable filament and resin profiles and can populate the calculator when a saved material is used.</p>
             </div>
             <div class="pp-guide-section">
               <div class="pp-guide-section-title">Understanding the result</div>
-              <p><strong>Total Cost to Make</strong> is the estimated cost of producing the print. <strong>Selling Price</strong> is the amount you enter or calculate from a target margin. <strong>Profit</strong> is the difference after the included costs and fees. Margins are based on the selling price.</p>
+              <p><strong>Total Cost to Make</strong> is the estimated production cost. <strong>Selling Price</strong> is the amount entered or generated from a target margin. <strong>Profit</strong> is what remains after included costs and fees. <strong>Margin</strong> expresses profit as a percentage of selling price.</p>
             </div>
             <div class="pp-guide-section">
               <div class="pp-guide-section-title">Settings</div>
-              <p>Use Settings to switch dark mode, change language, choose metric or imperial units, select a currency and adjust the exchange rate used for non-GBP display.</p>
+              <p>Settings controls dark mode, the available languages, metric or imperial units, currency, exchange rate and calculator reset.</p>
             </div>
             <div class="pp-guide-section">
               <div class="pp-guide-section-title">Information &amp; help</div>
-              <p>Calculator outputs are estimates and depend on the figures you enter. Printer power, lifetime, material prices, platform fees and delivery charges can vary, so replace the pre-filled values with your own actual costs whenever possible.</p>
+              <p>Outputs are estimates and depend on the figures entered. Printer power, lifetime, material prices, platform fees and delivery charges can vary, so replace pre-filled assumptions with your own actual costs whenever possible.</p>
             </div>
-            <div class="pp-guide-note">Tip: for the most accurate calculation, use your actual spool/resin cost, actual material used, your printer's measured or published power draw, your real electricity tariff and the fees charged by the platform you sell through.</div>
+            <div class="pp-guide-note">Tip: use your actual material cost, actual material usage, real electricity tariff, measured or published printer power where available, real labour time and the fees charged by the platform you sell through.</div>
           </div>
         </section>`;
       document.body.appendChild(panel);
