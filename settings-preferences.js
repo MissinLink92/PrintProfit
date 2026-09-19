@@ -93,6 +93,18 @@ const extraTx={
  'Print Smarter.':'Drukuj mądrzej.','Price Better.':'Ustalaj lepsze ceny.','Profit More.':'Zarabiaj więcej.'
 };
 Object.assign(tx,extraTx);
+Object.assign(tx,{
+ 'Printer & Filament':'Drukarka i filament','Choose your machine & material':'Wybierz drukarkę i materiał','Costs & Fees':'Koszty i opłaty','Add running & selling costs':'Dodaj koszty eksploatacji i sprzedaży','Upload your print & view its data':'Prześlij wydruk i zobacz jego dane',
+ 'Platform Fees':'Opłaty platformy','Choose where you sell and preload the current UK fee structure.':'Wybierz miejsce sprzedaży i załaduj aktualną strukturę opłat w Wielkiej Brytanii.','Courier / delivery firm':'Przewoźnik / firma kurierska','Service / rate':'Usługa / stawka','Automatic rate':'Stawka automatyczna','Cost to you (£)':'Koszt dla Ciebie (£)','Charged to customer (£)':'Opłata dla klienta (£)',
+ 'Marketplace fees, payment costs and delivery charges.':'Opłaty marketplace, płatności i dostawy.','Labour, materials, packaging and electricity used to make each print.':'Robocizna, materiały, opakowanie i prąd potrzebne do wykonania każdego wydruku.','Optional costs per print, excluding electricity.':'Opcjonalne koszty na wydruk, bez prądu.','Uses your selected printer power and print time from the model.':'Wykorzystuje moc wybranej drukarki i czas druku z modelu.',
+ 'Labour hours (per print)':'Godziny pracy (na wydruk)','Labour cost (£/hour)':'Koszt pracy (£/godz.)','Packaging (£)':'Opakowanie (£)','Other (£)':'Inne (£)','Unit rate (£/kWh)':'Stawka jednostkowa (£/kWh)','Estimated power used (kWh)':'Szacowane zużycie energii (kWh)',
+ 'Print time (hours)':'Czas druku (godziny)','Single Print':'Pojedynczy wydruk','Batch Pricing':'Wycena zbiorcza','Total Cost to Make':'Łączny koszt wykonania','Selling Price':'Cena sprzedaży','Quick Price Buttons (target margin)':'Szybkie przyciski ceny (docelowa marża)','Custom target margin (%)':'Własna docelowa marża (%)','Batch Cost to Make':'Koszt wykonania partii','Batch Sales':'Sprzedaż partii','Batch Profit':'Zysk z partii','Calculate Costs & Price':'Oblicz koszty i cenę',
+ 'Waiting for a print file, or enter usage manually.':'Oczekiwanie na plik wydruku lub wpisz zużycie ręcznie.','Select a printer in Print Setup to estimate power draw.':'Wybierz drukarkę w ustawieniach druku, aby oszacować pobór mocy.','Select a platform to load its default fee assumptions.':'Wybierz platformę, aby załadować jej domyślne opłaty.','Select a courier...':'Wybierz przewoźnika...','Choose a courier first...':'Najpierw wybierz przewoźnika...',
+ 'My Projects':'Moje projekty','Save and return to your calculations whenever you need them.':'Zapisuj obliczenia i wracaj do nich, kiedy tylko potrzebujesz.','No saved projects yet':'Brak zapisanych projektów','Save a calculator setup here and it will stay available on this device.':'Zapisz tutaj ustawienia kalkulatora, aby były dostępne na tym urządzeniu.','New Project':'Nowy projekt','Load':'Wczytaj','Duplicate':'Duplikuj','Delete':'Usuń','Close':'Zamknij',
+ 'My Materials':'Moje materiały','Keep your regular filament and resin in one place.':'Przechowuj swoje filamenty i żywice w jednym miejscu.','No materials saved yet':'Brak zapisanych materiałów','Add your regular filament and resin so you can select them in the calculator.':'Dodaj używane filamenty i żywice, aby móc wybierać je w kalkulatorze.','Add Material':'Dodaj materiał','Use':'Użyj','Edit':'Edytuj','Material name':'Nazwa materiału','Type':'Typ','Brand':'Marka','Colour':'Kolor','Select a brand...':'Wybierz markę...','Other / Custom':'Inna / własna','Enter brand name':'Wpisz nazwę marki','Optional':'Opcjonalne','Package cost (£)':'Koszt opakowania (£)','Cancel':'Anuluj','Save Material':'Zapisz materiał','Save Current Material':'Zapisz bieżący materiał','Edit Material':'Edytuj materiał','Bottle amount (ml)':'Objętość butelki (ml)',
+ '3D PRINTING PRICING, MADE SIMPLE':'WYCENA DRUKU 3D, PROSTA I PRZEJRZYSTA','Start Calculating':'Rozpocznij kalkulację','Guide & Help':'Przewodnik i pomoc','Your Prints':'Twoje wydruki','Maximise':'Maksymalizuj','For Makers':'Dla twórców','Print Smarter.':'Drukuj mądrzej.','Price Better.':'Ustalaj lepsze ceny.','Profit More.':'Zarabiaj więcej.','Filament':'Filament','Resin':'Żywica','Standard Resin':'Żywica standardowa','ABS-Like Resin':'Żywica ABS-Like','Tough Resin':'Żywica Tough','Flexible Resin':'Żywica elastyczna','Water-Washable Resin':'Żywica zmywalna wodą','High-Temp Resin':'Żywica wysokotemperaturowa','Castable Resin':'Żywica odlewnicza','Dental Resin':'Żywica dentystyczna','Model Resin':'Żywica modelarska',
+ 'Results':'Wyniki','View one-print economics or price a full batch.':'Zobacz koszty pojedynczego wydruku lub wyceń całą partię.','Margin:':'Marża:','Calculate':'Kalkuluj','Price':'Cena','Profit':'Zysk','Costs':'Koszty','Built':'Stworzone','Settings':'Ustawienia','Apply Changes':'Zastosuj zmiany','Reset Calculator':'Resetuj kalkulator'
+});
 const reverse={};
 Object.keys(tx).forEach(k=>reverse[tx[k]]=k);
 
@@ -104,7 +116,7 @@ let pref=load();
 let draft=Object.assign({},pref);
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(pref));}catch(e){}}
-function tr(v){return pref.language==='pl'?(tx[v]||v):(reverse[v]||v);}
+function tr(v){return pref.language==='pl'?(tx[v]||v):v;}
 
 const originalText=new WeakMap();
 const baseMoneyText=new WeakMap();
