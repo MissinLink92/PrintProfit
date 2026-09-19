@@ -233,6 +233,7 @@ function install(){
     document.dispatchEvent(new CustomEvent('printprofit-settings-open'));
   }
   window.__openPrintProfitSettings=openSettings;
+  window.__openPrintProfitGuide=openGuide;
 
   function closePanel(id){
     const panel=document.getElementById(id);
