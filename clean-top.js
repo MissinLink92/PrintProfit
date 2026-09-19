@@ -207,23 +207,20 @@ function install(){
       applyBtn.addEventListener('click',(event)=>{
         event.preventDefault();
         event.stopPropagation();
-        applyBtn.disabled=true;
-        applyBtn.textContent='Applying…';
         try{
-          if(typeof window.__applyPrintProfitSettings==='function') window.__applyPrintProfitSettings();
-          else document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
-          applyBtn.textContent='Applied ✓';
-          setTimeout(()=>document.getElementById('ppSettingsPanel')?.classList.remove('open'),350);
+          const apply=window.__applyPrintProfitSettings;
+          if(typeof apply!=='function') throw new Error('Settings engine is not loaded');
+          const ok=apply();
+          if(ok!==false){
+            applyBtn.textContent='Applied ✓';
+            setTimeout(()=>document.getElementById('ppSettingsPanel')?.classList.remove('open'),250);
+          }else{
+            applyBtn.textContent='Apply Changes';
+          }
         }catch(error){
           console.error('PrintProfit: settings apply failed',error);
           applyBtn.textContent='Apply Changes';
         }
-        setTimeout(()=>{
-          applyBtn.disabled=false;
-          if(document.getElementById('ppSettingsPanel')?.classList.contains('open')) {
-            applyBtn.textContent='Apply Changes';
-          }
-        },700);
       });
     }
     document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
