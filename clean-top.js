@@ -204,28 +204,26 @@ function install(){
     document.body.appendChild(panel);
     const applyBtn=document.getElementById('ppSettingsApply');
     if(applyBtn){
-      applyBtn.onclick=(event)=>{
+      applyBtn.addEventListener('click',(event)=>{
         event.preventDefault();
         event.stopPropagation();
         applyBtn.disabled=true;
         applyBtn.textContent='Applying…';
         try{
-          if(typeof window.__applyPrintProfitSettings==='function'){
-            window.__applyPrintProfitSettings();
-            applyBtn.textContent='Applied ✓';
-          }else{
-            console.error('PrintProfit: settings apply function is not loaded');
-            applyBtn.textContent='Apply Changes';
-          }
+          document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
+          applyBtn.textContent='Applied ✓';
+          setTimeout(()=>document.getElementById('ppSettingsPanel')?.classList.remove('open'),350);
         }catch(error){
           console.error('PrintProfit: settings apply failed',error);
           applyBtn.textContent='Apply Changes';
         }
         setTimeout(()=>{
           applyBtn.disabled=false;
-          applyBtn.textContent='Apply Changes';
+          if(document.getElementById('ppSettingsPanel')?.classList.contains('open')) {
+            applyBtn.textContent='Apply Changes';
+          }
         },700);
-      };
+      });
     }
     document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
       document.getElementById('reset')?.click();
