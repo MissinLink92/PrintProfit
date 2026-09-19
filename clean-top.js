@@ -34,6 +34,7 @@ function install(){
         <p>Accurate 3D printing cost and pricing calculations to help you<br class="pp-desktop"> price with confidence and maximise your profit.</p>
         <div class="pp-top-actions">
           <button class="pp-primary" type="button" data-target="details"><span class="pp-mini-icon calculator"></span>Start Calculating <b>›</b></button>
+          <button class="pp-projects-button" type="button" data-target="projects"><span class="pp-mini-icon folder"></span>My Projects</button>
         </div>
         <div class="pp-feature-strip">
           <div><span class="pp-feature-icon calculator"></span><span>Calculate<small>Costs</small></span></div>
@@ -90,6 +91,9 @@ function install(){
     #ppCleanTop .pp-top-actions button{font:800 13px/1 Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;border-radius:7px;height:40px;padding:0 15px;display:flex;align-items:center;gap:8px;transition:.18s ease}
     #ppCleanTop .pp-primary{border:1px solid #ff7800;background:#ff7800;color:#fff;box-shadow:0 8px 20px #ff780033}
     #ppCleanTop .pp-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    #ppCleanTop .pp-projects-button{border:1px solid #355363;background:#091923;color:#e3ebef;box-shadow:0 8px 20px #0005}
+    #ppCleanTop .pp-projects-button:hover{border-color:#ff7800;color:#fff;background:#0b202b;transform:translateY(-1px)}
+    #ppCleanTop .pp-projects-button .folder:before{content:"▰";position:absolute;left:1px;top:1px;font:19px/1 Arial,sans-serif;color:currentColor}
     #ppCleanTop .pp-primary b,#ppCleanTop .pp-secondary b{font-size:20px;line-height:0;font-weight:500}
     #ppCleanTop .pp-secondary{border:1px solid #355363;background:#091923;color:#e3ebef}
     #ppCleanTop .pp-secondary:hover{border-color:#ff7800;color:#fff}
