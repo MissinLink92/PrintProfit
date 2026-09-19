@@ -3,12 +3,9 @@
 if(window.__printProfitNaturalFlow)return;window.__printProfitNaturalFlow=true;
 
 const steps=[
- ['01','Print file','Upload your sliced file'],
- ['02','Printer','Choose the machine'],
- ['03','Material','Set filament & material cost'],
- ['04','Running costs','Power, labour & overheads'],
- ['05','Selling','Fees, delivery & price'],
- ['06','Profit','See your final margin']
+ ['01','Your Model','Upload your print & view its data'],
+ ['02','Print Setup','Choose your printer & material'],
+ ['03','Costs & Fees','Add running, selling & fulfilment costs']
 ];
 
 const icons={
@@ -20,7 +17,7 @@ const icons={
  profit:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 41V7M7 41h35"/><path d="m12 33 8-9 7 5 10-15"/></svg>'
 };
 
-function sectionIcon(i){return ['file','printer','spool','costs','sell','profit'][i]||'file'}
+function sectionIcon(i){return ['file','printer','costs'][i]||'file'}
 function make(){
  const main=document.querySelector('.main');
  const workspace=document.getElementById('ppTabbedLayout');
@@ -36,7 +33,7 @@ function make(){
  main.insertBefore(flow,workspace);
  flow.querySelectorAll('.pp-flow-step').forEach(btn=>btn.addEventListener('click',()=>{
   const i=Number(btn.dataset.flowIndex);
-  const map=['details','machine','machine','costs','costs','results'];
+  const map=['details','machine','costs'];
   if(i===5){document.querySelector('.layout>.result')?.scrollIntoView({behavior:'smooth',block:'start'});return;}
   const tab=document.querySelector('.pp-tab[data-tab="'+map[i]+'"]');
   if(tab)tab.click();
