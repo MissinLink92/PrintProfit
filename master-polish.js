@@ -85,7 +85,7 @@ function moveTicker(hero){
   shell.insertBefore(ticker,hero.nextSibling);
  }
  ticker.classList.add('pp-master-subnav');
- ticker.innerHTML='<span>PRINTER PROFILES</span><span>MATERIALS &amp; FILAMENTS</span><span>DELIVERY &amp; FEES</span><span>CALCULATE <b>•</b> PRICE <b>•</b> PROFIT</span>';
+ ticker.innerHTML='<span>YOUR MODEL</span><span>PRINT SETUP</span><span>COSTS &amp; FEES</span><span>CALCULATE <b>•</b> PRICE <b>•</b> PROFIT</span>';
 }
 
 function addQuickCards(main){
