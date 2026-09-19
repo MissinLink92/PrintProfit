@@ -498,6 +498,74 @@ body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block p,
 body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block strong{
  text-shadow:none!important;
 }
+/* Light Mode — Print Setup / machine panels: remove inherited dark surfaces. */
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel>.panel,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel>.merge-block,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+ box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .head,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .head{
+ background:#ffffff!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .head h2,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .head h3,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .head strong,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .head strong{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .head p,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .head p{
+ color:#526873!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel label,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block label{
+ color:#304852!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel small,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block small,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .muted,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .muted,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] #materialStatus{
+ color:#5c707a!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel input,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel select,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel textarea,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block input,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block select,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block textarea{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#aebfc8!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel input:focus,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel select:focus,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block input:focus,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block select:focus{
+ border-color:#a77cff!important;
+ box-shadow:0 0 0 3px rgba(167,124,255,.14)!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .icon,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .icon,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .print-setup-panel .pp-pretty-icon,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .pp-pretty-icon{
+ background:#f4f0ff!important;
+ color:#7a4de8!important;
+ border-color:#a77cff!important;
+ box-shadow:0 3px 12px rgba(65,45,100,.10)!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] #materialCostOut{
+ color:#7446dc!important;
+}
 /* Results / values */
 body[data-pp-theme="light"] .result,
 body[data-pp-theme="light"] .quick,
