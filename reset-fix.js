@@ -35,7 +35,7 @@
       const discountedSales=Math.max(0,(base*qty+fixedFee-deliveryCharge)/den),factor=qty*(1-discount);
       return factor>0?discountedSales/factor:null;
     }
-    return(base+fixedFee)/den;
+    return(Math.max(0,base+fixedFee-deliveryCharge))/den;
   }
 
   function setResultMode(mode){
