@@ -74,6 +74,20 @@
     el.dispatchEvent(new Event('change',{bubbles:true}));
   }
 
+  function resetModelDisplay(){
+    const status=document.getElementById('status');
+    if(status)status.textContent='Upload a file to automatically fill in the available print information.';
+    ['ppModelFile','ppModelTime','ppModelUsed','ppModelMaterial'].forEach(id=>{
+      const el=document.getElementById(id);if(el)el.textContent='—';
+    });
+    const modelStatus=document.getElementById('ppModelStatus');
+    if(modelStatus)modelStatus.textContent='Upload a G-code file to automatically fill in the available print information.';
+    const metadata=document.getElementById('ppFileMetadata');
+    if(metadata)metadata.remove();
+    const file=document.getElementById('file');
+    if(file)file.value='';
+  }
+
   function resetAllFields(){
     document.querySelectorAll('input,select,textarea').forEach(el=>{
       const type=(el.type||'').toLowerCase();
@@ -94,6 +108,7 @@
     quickMode=null;
     document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.classList.remove('active'));
     document.querySelectorAll('input,select,textarea').forEach(dispatchFieldChange);
+    resetModelDisplay();
     recalculate();
     forceSingleResultMode();
   }
