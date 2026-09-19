@@ -137,6 +137,17 @@ function translatePage(){
  }
 }
 
+let translationObserver=null;
+let translationTimer=null;
+function watchTranslations(){
+ if(translationObserver||!window.MutationObserver)return;
+ translationObserver=new MutationObserver(()=>{
+  clearTimeout(translationTimer);
+  translationTimer=setTimeout(()=>translatePage(),40);
+ });
+ translationObserver.observe(document.body,{childList:true,subtree:true});
+}
+
 function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
  let s=document.getElementById('ppPreferenceTheme');
@@ -333,6 +344,7 @@ function boot(){
   bind();
   setTheme();
   translatePage();
+  watchTranslations();
   applyUnits();
   currency();
 
