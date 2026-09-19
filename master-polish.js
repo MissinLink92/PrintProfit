@@ -94,8 +94,8 @@ function addQuickCards(main){
  wrap.id='pp-master-quickcards';
  wrap.className='pp-master-quickcards';
  wrap.innerHTML=''
-  +'<button type="button" data-master-open="machine"><span class="pp-master-card-icon">'+featureIcons.price+'</span><span><b>Printer Profile</b><small>Select your printer to get started</small></span></button>'
-  +'<button type="button" data-master-open="machine"><span class="pp-master-card-icon spool">'+featureIcons.costs+'</span><span><b>Filament &amp; Material</b><small>Set your material costs</small></span></button>'
+  +'<button type="button" data-master-open="model"><span class="pp-master-card-icon">'+featureIcons.price+'</span><span><b>Your Model</b><small>Upload your print &amp; view its data</small></span></button>'
+  +'<button type="button" data-master-open="machine"><span class="pp-master-card-icon spool">'+featureIcons.costs+'</span><span><b>Print Setup</b><small>Choose your printer &amp; material</small></span></button>'
   +'<button type="button" data-master-open="costs"><span class="pp-master-card-icon">'+featureIcons.profit+'</span><span><b>Costs &amp; Fees</b><small>Add your business costs</small></span></button>';
  main.insertBefore(wrap,main.querySelector('.layout'));
  wrap.querySelectorAll('[data-master-open]').forEach(btn=>btn.addEventListener('click',()=>{
