@@ -34,7 +34,7 @@ function install(){
   source.setAttribute('aria-hidden','true');
 
   if(status && status.parentElement===row)status.remove();
-  if(sourceWrap)sourceWrap.remove();
+  if(sourceWrap)sourceWrap.style.display='none';
 
   row.classList.add('pp-print-time-row');
   row.innerHTML='';
