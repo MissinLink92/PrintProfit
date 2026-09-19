@@ -10,6 +10,32 @@ function install(){
 .pp-tab-panel[data-panel="machine"]{--stage:#a77cff;--stage-soft:#c5a9ff;--stage-rgb:167,124,255}
 .pp-tab-panel[data-panel="costs"]{--stage:#35d07f;--stage-soft:#78e6a8;--stage-rgb:53,208,127}
 
+/* Make the three journey tabs and their section icons use the exact same identity colour. */
+#pp-master-quickcards button:nth-child(1){--journey:var(--pp-cyan)}
+#pp-master-quickcards button:nth-child(2){--journey:var(--pp-purple)}
+#pp-master-quickcards button:nth-child(3){--journey:var(--pp-green)}
+#pp-master-quickcards button .pp-master-card-icon{
+ border-color:color-mix(in srgb,var(--journey) 70%,#294957)!important;
+ color:var(--journey)!important;
+ background:radial-gradient(circle,color-mix(in srgb,var(--journey) 9%,transparent),#08151e)!important;
+ box-shadow:0 0 20px color-mix(in srgb,var(--journey) 10%,transparent)!important;
+}
+#pp-master-quickcards button .pp-master-card-icon svg{
+ stroke:currentColor!important;
+}
+#pp-master-quickcards button .pp-flow-number{
+ background:var(--journey)!important;
+ box-shadow:0 0 14px color-mix(in srgb,var(--journey) 25%,transparent)!important;
+}
+#pp-master-quickcards button:not(:last-child):after{
+ color:#7f96a3!important;
+ border-color:#355361!important;
+ box-shadow:0 0 0 5px #071018,0 0 12px #0004!important;
+}
+
+/* The small feature icons in the hero remain orange as brand/feature indicators,
+   rather than pretending to belong to one of the three calculator stages. */
+
 /* Stage headings and section icons */
 .pp-tab-panel .head .icon{
  color:var(--stage)!important;
