@@ -247,7 +247,6 @@
   function boot(){
     installStyles();
     installGuidanceAndProgress();
-    installQuickSetup();
     installResultsPolish();
     installBrokenImageFallbacks();
   }
