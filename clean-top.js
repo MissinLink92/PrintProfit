@@ -210,7 +210,8 @@ function install(){
         applyBtn.disabled=true;
         applyBtn.textContent='Applying…';
         try{
-          document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
+          if(typeof window.__applyPrintProfitSettings==='function') window.__applyPrintProfitSettings();
+          else document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
           applyBtn.textContent='Applied ✓';
           setTimeout(()=>document.getElementById('ppSettingsPanel')?.classList.remove('open'),350);
         }catch(error){
