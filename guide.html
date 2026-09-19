@@ -6,102 +6,80 @@
 <title>PrintProfit — Guide & Help</title>
 <style>
 :root{--bg:#071018;--panel:#0b1821;--panel2:#0e202b;--text:#f5f8fb;--muted:#9fb2bd;--line:#284654;--accent:#ff7800}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:15px Inter,Segoe UI,system-ui,sans-serif}
-body{background:
-radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent 24%),
-linear-gradient(180deg,#071018 0,#08131b 100%)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:15px Inter,Segoe UI,system-ui,sans-serif}
+body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent 24%),linear-gradient(180deg,#071018 0,#08131b 100%)}
 .wrap{width:min(1180px,calc(100% - 28px));margin:0 auto;padding-bottom:40px}
 .header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:70px;padding:8px 0;border-bottom:1px solid var(--line);background:rgba(7,16,24,.94);backdrop-filter:blur(8px)}
-.brand img{width:112px;height:58px;object-fit:contain;display:block}
-.nav{display:flex;align-items:center;gap:6px}
-.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px}
-.nav a:hover,.nav a.active{background:#ff780014;color:#ff7800}
-.hero{padding:46px 0 30px}
-.kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--accent)}
-h1{font-size:clamp(38px,6vw,62px);line-height:.95;letter-spacing:-.04em;margin:9px 0 13px}
-h1 strong{color:var(--accent)}
-.lead{max-width:760px;color:#b8c7d0;font-size:16px;line-height:1.55;margin:0}
-.actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 15px;border-radius:9px;text-decoration:none;font-weight:800;font-size:12px}
-.primary{background:var(--accent);border:1px solid var(--accent);color:#fff}
-.secondary{background:#0a1b25;border:1px solid #355363;color:#e5edf1}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--panel2));padding:16px}
-.card h2{font-size:16px;margin:0 0 7px}
-.card h3{font-size:12px;margin:0 0 5px;color:#f5f8fb}
-.card p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}
-.num{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-weight:900;font-size:12px;margin-bottom:10px}
-.section{margin-top:14px}
-.section-title{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:8px 2px}
-.faq{border:1px solid var(--line);border-radius:12px;background:#081720;padding:13px;margin-top:8px}
-.faq strong{display:block;font-size:12px;margin-bottom:4px}
-.note{margin-top:14px;padding:13px 14px;border-left:3px solid var(--accent);background:#0a1d27;color:var(--muted);font-size:10px;line-height:1.55}
-.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:#6f8794;font-size:9px}
+.brand img{width:112px;height:58px;object-fit:contain;display:block}.nav{display:flex;align-items:center;gap:6px}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px}.nav a:hover,.nav a.active{background:#ff780014;color:#ff7800}
+.hero{padding:46px 0 30px}.kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--accent)}h1{font-size:clamp(38px,6vw,62px);line-height:.95;letter-spacing:-.04em;margin:9px 0 13px}h1 strong{color:var(--accent)}
+.lead{max-width:760px;color:#b8c7d0;font-size:16px;line-height:1.55;margin:0}.actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 15px;border-radius:9px;text-decoration:none;font-weight:800;font-size:12px}.primary{background:var(--accent);border:1px solid var(--accent);color:#fff}.secondary{background:#0a1b25;border:1px solid #355363;color:#e5edf1}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--panel2));padding:16px}.card h2{font-size:16px;margin:0 0 7px}.card h3{font-size:12px;margin:0 0 5px;color:#f5f8fb}.card p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.num{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-weight:900;font-size:12px;margin-bottom:10px}
+.section{margin-top:14px}.section-title{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:8px 2px}.faq{border:1px solid var(--line);border-radius:12px;background:#081720;padding:13px;margin-top:8px}.faq strong{display:block;font-size:12px;margin-bottom:4px}.faq p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.note{margin-top:14px;padding:13px 14px;border-left:3px solid var(--accent);background:#0a1d27;color:var(--muted);font-size:10px;line-height:1.55}.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:#6f8794;font-size:9px}
 @media(max-width:760px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto}.nav a{white-space:nowrap}.grid{grid-template-columns:1fr}.wrap{width:min(100% - 20px,1180px)}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="header">
-  <a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator">
-    <img src="./assets/user-selected-printprofit-logo.webp?v=4" alt="PrintProfit">
-  </a>
-  <nav class="nav" aria-label="Guide navigation">
-    <a href="./index.html">Calculator</a>
-    <a href="./guide.html" class="active">Guide &amp; Help</a>
-  </nav>
+<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/user-selected-printprofit-logo.webp?v=5" alt="PrintProfit"></a>
+<nav class="nav" aria-label="Guide navigation"><a href="./index.html">Calculator</a><a href="./guide.html" class="active">Guide &amp; Help</a></nav>
 </header>
 
 <section class="hero">
-  <div class="kicker">PRINTPROFIT • INFORMATION CENTRE</div>
-  <h1>Guide &amp; <strong>Help.</strong></h1>
-  <p class="lead">A simple walkthrough of every part of the PrintProfit calculator, what the numbers mean and how to get the most useful result.</p>
-  <div class="actions">
-    <a class="btn primary" href="./index.html">Back to Calculator ›</a>
-    <a class="btn secondary" href="#settings">Settings explained ↓</a>
-  </div>
+<div class="kicker">PRINTPROFIT • INFORMATION CENTRE</div>
+<h1>Guide &amp; <strong>Help.</strong></h1>
+<p class="lead">A simple walkthrough of the current PrintProfit workflow, what the numbers mean, and how to get the most useful result.</p>
+<div class="actions"><a class="btn primary" href="./index.html">Back to Calculator ›</a><a class="btn secondary" href="#settings">Settings explained ↓</a></div>
 </section>
 
 <div class="section">
-  <div class="section-title">Using the calculator</div>
-  <div class="grid">
-    <article class="card"><div class="num">1</div><h2>G-code File</h2><p>Upload your sliced G-code file. When readable metadata is present, PrintProfit can automatically fill in print time and material usage. You can still enter the values manually.</p></article>
-    <article class="card"><div class="num">2</div><h2>Printer Profile</h2><p>Choose your printer or use a custom profile. The selected profile supplies estimated power draw, purchase price and lifetime figures used for electricity and depreciation.</p></article>
-    <article class="card"><div class="num">3</div><h2>Filament / Resin</h2><p>Select the material, package size and package cost. For resin printers, the calculator switches the material measurements to millilitres. Usage can come from the file or be entered manually.</p></article>
-    <article class="card"><div class="num">4</div><h2>Operating Costs</h2><p>Add labour, packaging, other costs and electricity. These are combined with material cost and printer depreciation to estimate the cost of making one print.</p></article>
-    <article class="card"><div class="num">5</div><h2>Selling &amp; Fulfilment</h2><p>Choose a selling platform and account for platform/payment fees. Add your delivery cost and, where relevant, the amount you charge the customer for delivery.</p></article>
-    <article class="card"><div class="num">6</div><h2>Quantity / Batch Pricing</h2><p>Set the quantity and an optional batch discount. The results show the production cost, sales, discount, delivery, fees, profit and effective price per item.</p></article>
-  </div>
+<div class="section-title">Using the calculator</div>
+<div class="grid">
+<article class="card"><div class="num">1</div><h2>Your Model</h2><p>Upload your sliced G-code file. When readable metadata is available, PrintProfit can fill in print time and material usage. The live Print Information area shows the file, print time, material used and material detected. Values can still be entered or adjusted manually.</p></article>
+<article class="card"><div class="num">2</div><h2>Print Setup</h2><p>Choose your printer and material in one place. Printer profiles provide the figures used for power and depreciation. Resin printer profiles automatically switch the calculator to resin measurements; custom printers let you choose the material type yourself.</p></article>
+<article class="card"><div class="num">3</div><h2>Costs &amp; Fees</h2><p>Enter operating costs, selling and fulfilment details, then set quantity and any batch discount. When quantity is greater than one, PrintProfit automatically switches the results view to Batch Pricing.</p></article>
+<article class="card"><div class="num">4</div><h2>Results</h2><p>Review the estimated cost to make, selling price, fees, profit and margin. Target-pricing options can calculate a selling price from the margin you want to achieve.</p></article>
+</div>
 </div>
 
 <div class="section">
-  <div class="section-title">Understanding the numbers</div>
-  <div class="grid">
-    <article class="card"><h3>Total Cost to Make</h3><p>The estimated cost of producing the print from the values entered, including the calculator's included material, electricity, depreciation, labour, packaging, other and delivery costs.</p></article>
-    <article class="card"><h3>Selling Price</h3><p>The price you enter, or a price generated from one of the target-margin buttons. It is separate from the cost to make.</p></article>
-    <article class="card"><h3>Profit</h3><p>The calculator subtracts the included costs and applicable platform/payment fees from the selling amount, with delivery charged handled separately where entered.</p></article>
-    <article class="card"><h3>Margin</h3><p>The displayed margin is the profit expressed as a percentage of selling price for the selected result.</p></article>
-  </div>
+<div class="section-title">Your PrintProfit libraries</div>
+<div class="grid">
+<article class="card"><h3>My Projects</h3><p>Save a complete calculator setup, including your entered values. Saved projects can be loaded, duplicated or deleted from the My Projects area.</p></article>
+<article class="card"><h3>My Materials</h3><p>Keep reusable filament and resin profiles with brand, colour, package size and cost. Using a saved material can populate the calculator for you, and displayed costs follow your selected currency.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Understanding the numbers</div>
+<div class="grid">
+<article class="card"><h3>Total Cost to Make</h3><p>The estimated cost of producing the print from the values entered, including the calculator's material, electricity, depreciation, labour, packaging, other and applicable delivery costs.</p></article>
+<article class="card"><h3>Selling Price</h3><p>The price you enter, or a price generated from a target-margin option. It is separate from the cost to make.</p></article>
+<article class="card"><h3>Profit</h3><p>The calculator subtracts the included production costs and applicable platform/payment fees from the selling amount. Delivery charged to the customer is handled separately where entered.</p></article>
+<article class="card"><h3>Margin</h3><p>The displayed margin expresses profit as a percentage of selling price for the selected result.</p></article>
+</div>
 </div>
 
 <div class="section" id="settings">
-  <div class="section-title">Settings explained</div>
-  <div class="grid">
-    <article class="card"><h3>Dark mode</h3><p>Switch between the standard dark PrintProfit interface and a lighter display.</p></article>
-    <article class="card"><h3>Language</h3><p>Choose English or Polski. Your choice is saved on the device and applied to the calculator interface where translations are available.</p></article>
-    <article class="card"><h3>Units</h3><p>Metric uses grams and millilitres. Imperial switches material entry to ounces and fluid ounces as appropriate.</p></article>
-    <article class="card"><h3>Currency</h3><p>Choose GBP, EUR, USD or PLN. The exchange-rate field controls the conversion used for non-GBP display, so it can be updated with your own rate.</p></article>
-  </div>
+<div class="section-title">Settings explained</div>
+<div class="grid">
+<article class="card"><h3>Dark mode</h3><p>Switch between the standard dark PrintProfit interface and the lighter display.</p></article>
+<article class="card"><h3>Language</h3><p>Choose from English, Polski, Deutsch, Français, Español, Italiano, Nederlands, Português, Čeština, Svenska or Dansk. The selected language is saved on the device and applied to the interface where translated text is available.</p></article>
+<article class="card"><h3>Units</h3><p>Metric uses grams and millilitres where applicable. Imperial switches material measurements to ounces and fluid ounces as appropriate.</p></article>
+<article class="card"><h3>Currency</h3><p>Choose from the currencies provided in Settings. The exchange-rate field controls the conversion used for non-GBP display and can be adjusted with your own rate.</p></article>
+<article class="card"><h3>Reset Calculator</h3><p>Reset clears the calculator's current inputs and returns pricing fields to their starting values.</p></article>
+</div>
 </div>
 
 <div class="section">
-  <div class="section-title">Information &amp; help</div>
-  <div class="faq"><strong>Why does my result look wrong?</strong><p>Check print time, material used, package cost, electricity rate, printer profile and platform fees first. Pre-filled values are estimates and may not match your actual setup.</p></div>
-  <div class="faq"><strong>Should I use the automatic G-code values?</strong><p>Use them when the file contains the metadata PrintProfit can read, then review the numbers against your slicer's estimates before relying on the final price.</p></div>
-  <div class="faq"><strong>What should I put in the electricity rate?</strong><p>Enter your electricity tariff in £/kWh when using GBP, or the equivalent base-currency rate used by the calculator. Your actual tariff is more useful than a generic estimate.</p></div>
-  <div class="faq"><strong>Why can fees change?</strong><p>Marketplace, payment and delivery charges depend on the platform, account, product category, programme and service used. Replace the pre-filled assumptions with your real charges whenever possible.</p></div>
-  <div class="note">For the most accurate result, use your own material cost, actual material usage, real electricity tariff, actual printer power draw where available, real labour time and the fees you actually pay.</div>
+<div class="section-title">Information &amp; help</div>
+<div class="faq"><strong>Why does my result look wrong?</strong><p>Check print time, material used, package cost, electricity rate, printer profile, labour, delivery and platform fees. Pre-filled values are estimates and may not match your actual setup.</p></div>
+<div class="faq"><strong>What happens when I upload a G-code file?</strong><p>If readable metadata is present, PrintProfit can extract available print information. Always compare the detected values with your slicer's figures before relying on the final price.</p></div>
+<div class="faq"><strong>Why did the calculator switch to Batch Pricing?</strong><p>Quantity greater than one automatically switches the results view to Batch Pricing. Returning the quantity to one switches the view back to the single-print result.</p></div>
+<div class="faq"><strong>Why did my material change to resin?</strong><p>Supported resin printer profiles automatically select resin mode. This changes the material workflow and measurements to suit resin. Custom printer profiles keep the material-type choice available.</p></div>
+<div class="faq"><strong>What should I put in the electricity rate?</strong><p>Enter your actual electricity tariff in the currency shown by the calculator. Your real tariff is more useful than a generic estimate. Printer power and print time also affect the calculated electricity cost.</p></div>
+<div class="faq"><strong>Why can fees and delivery change the result?</strong><p>Marketplace, payment and delivery charges depend on the platform, account, product and service used. Replace assumptions with your actual charges whenever possible.</p></div>
+<div class="note">For the most accurate result, use your actual material cost, actual material usage, real electricity tariff, measured or published printer power where available, real labour time and the fees you actually pay.</div>
 </div>
 
 <div class="footer">PrintProfit — 3D Printing Cost &amp; Pricing Calculator • Guide &amp; Help</div>
