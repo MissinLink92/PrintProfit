@@ -69,7 +69,7 @@
       q('ppModelFile').textContent=fileName;
       let time='—';const hv=parseInt(h?.value,10),mv=parseInt(m?.value,10);if(Number.isFinite(hv)||Number.isFinite(mv)){time=(Number.isFinite(hv)?hv:0)+'h '+(Number.isFinite(mv)?mv:0)+'m';}else if(legacy?.value&&Number(legacy.value)>0)time=Number(legacy.value).toFixed(2)+' h';
       q('ppModelTime').textContent=time;
-      const uv=used?.value;q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' g':'—';
+      const uv=used?.value,unit=mat?.closest('.merge-block')?.querySelector('#materialType')?.value==='resin'?'ml':'g';q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' '+unit:'—';
       q('ppModelMaterial').textContent=mat?.selectedOptions?.[0]?.text||'—';
       if(status?.textContent)q('ppModelStatus').textContent=status.textContent;
     }
