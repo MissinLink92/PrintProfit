@@ -202,6 +202,11 @@ function install(){
         </div>
       </section>`;
     document.body.appendChild(panel);
+    document.getElementById('ppSettingsApply')?.addEventListener('click',(event)=>{
+      event.preventDefault();
+      event.stopPropagation();
+      document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
+    });
     document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
       document.getElementById('reset')?.click();
       panel.classList.remove('open');
