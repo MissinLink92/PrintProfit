@@ -52,6 +52,46 @@ const tx={
  'Preferences are saved automatically on this device.':'Preferencje są zapisywane automatycznie na tym urządzeniu.',
  'English':'English','Polski':'Polski','Metric (g / ml)':'Metryczne (g / ml)','Imperial (oz / fl oz)':'Imperialne (oz / fl oz)'
 };
+const extraTx={
+ 'Home':'Strona główna','Guides':'Przewodnik','About':'O nas','Support':'Wsparcie',
+ 'Dark Mode':'Tryb ciemny','Start Calculating':'Rozpocznij kalkulację','My Projects':'Moje projekty',
+ 'Calculate':'Kalkuluj','Costs':'Koszty','Price':'Cena','Prints':'Wydruki','Profit':'Zysk','Built':'Stworzone',
+ 'For Makers':'Dla twórców','Printer Profiles':'Profile drukarek','Materials & Filaments':'Materiały i filamenty',
+ 'Delivery & Fees':'Dostawa i opłaty','Calculate • Price • Profit':'Kalkuluj • Cena • Zysk',
+ 'Your Printing Cost Journey':'Twoja droga do kosztu wydruku',
+ 'Printer Profile':'Profil drukarki','Select your printer to get started':'Wybierz drukarkę, aby rozpocząć',
+ 'Filament & Material':'Filament i materiał','Set your material costs':'Ustaw koszty materiału',
+ 'Costs & Fees':'Koszty i opłaty','Add your business costs':'Dodaj koszty swojej działalności',
+ 'Your Model':'Twój model','Print Information':'Informacje o wydruku',
+ 'Everything PrintProfit currently knows about this model.':'Wszystko, co PrintProfit obecnie wie o tym modelu.',
+ 'Drag & drop your G-code file here':'Przeciągnij i upuść tutaj plik G-code','or':'lub','Choose File':'Wybierz plik','Clear':'Wyczyść','No G-code selected':'Nie wybrano pliku G-code',
+ 'Not sure about a field?':'Nie wiesz, co wpisać?','Leave it blank.':'Zostaw puste.',
+ 'Blank fields are treated as £0 for a basic estimate.':'Puste pola są traktowane jako £0 dla podstawowego oszacowania.',
+ 'Tip:':'Wskazówka:','Upload a G-code file for the most accurate results.':'Wgraj plik G-code, aby uzyskać najdokładniejsze wyniki.',
+ 'File':'Plik','Print time':'Czas druku','Material used':'Zużyty materiał',
+ 'Material':'Materiał','2. Print Setup':'2. Ustawienia druku',
+ 'Choose the printer and material used for this print.':'Wybierz drukarkę i materiał użyty do tego wydruku.',
+ 'Printer':'Drukarka','Select your printer or use a custom profile.':'Wybierz drukarkę lub użyj własnego profilu.',
+ 'Select a printer...':'Wybierz drukarkę...','Custom printer':'Własna drukarka',
+ 'Material type':'Rodzaj materiału','Filament (FDM)':'Filament (FDM)','Resin (SLA / MSLA / DLP)':'Żywica (SLA / MSLA / DLP)',
+ 'Choose your filament or resin, package size and cost.':'Wybierz filament lub żywicę, rozmiar opakowania i koszt.',
+ 'Spool weight (g)':'Waga szpuli (g)','Spool / bottle cost (£)':'Koszt szpuli / butelki (£)',
+ 'Used per print (g)':'Zużycie na wydruk (g)','Calculated material cost (£)':'Obliczony koszt materiału (£)',
+ '4. Operating Costs':'4. Koszty operacyjne','Additional Costs':'Dodatkowe koszty','Electricity':'Prąd',
+ 'Electricity provider / tariff':'Dostawca prądu / taryfa','Estimated printer power':'Szacowana moc drukarki',
+ 'Estimated electricity cost':'Szacowany koszt prądu','5. Selling & Fulfilment':'5. Sprzedaż i realizacja',
+ 'Platform':'Platforma','Delivery':'Dostawa','6. Quantity / Batch Pricing':'6. Ilość / wycena zbiorcza',
+ 'Quantity':'Ilość','Batch discount (%)':'Rabat ilościowy (%)','Selling price per item (£)':'Cena sprzedaży za sztukę (£)',
+ 'Calculate Costs & Price':'Oblicz koszty i cenę','Results':'Wyniki','Single Print':'Pojedynczy wydruk','Batch Pricing':'Wycena zbiorcza',
+ 'Total Cost to Make':'Łączny koszt wykonania','Selling Price':'Cena sprzedaży',
+ 'Quick Price Buttons (target margin)':'Szybkie przyciski ceny (docelowa marża)',
+ 'Custom target margin (%)':'Własna docelowa marża (%)','Batch Cost to Make':'Koszt wykonania partii',
+ 'Batch Sales':'Sprzedaż partii','Batch Profit':'Zysk z partii',
+ 'Know what it costs.':'Wiesz, ile to kosztuje.','Know what to charge.':'Wiesz, ile naliczyć.',
+ 'Accurate 3D printing cost and pricing calculations to help you price with confidence and maximise your profit.':'Dokładne kalkulacje kosztów i cen druku 3D, które pomagają ustalać ceny i zwiększać zysk.',
+ 'Print Smarter.':'Drukuj mądrzej.','Price Better.':'Ustalaj lepsze ceny.','Profit More.':'Zarabiaj więcej.'
+};
+Object.assign(tx,extraTx);
 const reverse={};
 Object.keys(tx).forEach(k=>reverse[tx[k]]=k);
 
@@ -236,7 +276,14 @@ function bind(){
 function boot(){
  bind();setTheme();translatePage();applyUnits();currency();
  document.addEventListener('printprofit-settings-open',()=>{draft=Object.assign({},pref);bind();setTheme();translatePage();applyUnits();currency();});
- setInterval(()=>{bind();},1000);
+ let translateTimer=0;
+function scheduleTranslate(){
+ if(translateTimer)return;
+ translateTimer=setTimeout(()=>{translateTimer=0;translatePage();},80);
+}
+const observer=new MutationObserver(()=>scheduleTranslate());
+observer.observe(document.body,{subtree:true,childList:true,characterData:true});
+setInterval(()=>{bind();scheduleTranslate();},1000);
 }
 
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
