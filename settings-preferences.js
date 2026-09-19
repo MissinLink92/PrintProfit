@@ -425,6 +425,79 @@ body[data-pp-theme="light"] .pp-tab-panel .head>.icon svg{
  stroke-width:2.7!important;
 }
 
+/* Light Mode — remove remaining dark stage surfaces and dark inherited text. */
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block>.panel,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .panel,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .head,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block>.panel .head,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .head{
+ background:#ffffff!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .head strong,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .head strong{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .head p,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .head p{
+ color:#526873!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block label,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block label{
+ color:#304852!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block input,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block select,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block input,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block select{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#aebfc8!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block small,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block small,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .muted,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .muted{
+ color:#5c707a!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block .icon,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block .icon{
+ background:#f4f8fa!important;
+ color:#35a96d!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block [class*="result"],
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block [class*="result"]{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .pp-cost-block [class*="result"] strong,
+body[data-pp-theme="light"] .pp-tab-panel[data-panel="costs"] .merge-block [class*="result"] strong{
+ color:#148552!important;
+}
+
+/* Light Mode also needs the legacy selling/fulfilment block to lose its dark surface. */
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block>.panel,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .panel{
+ background:#ffffff!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block h2,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block h3,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block p,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block strong{
+ text-shadow:none!important;
+}
 /* Results / values */
 body[data-pp-theme="light"] .result,
 body[data-pp-theme="light"] .quick,
