@@ -15,13 +15,20 @@ const snapshot=()=>{
  return data;
 };
 const restore=data=>{
- Object.entries(data||{}).forEach(([id,x])=>{
+ const entries=Object.entries(data||{});
+ // Restore every value first, then notify the calculator once all dependencies are in place.
+ // This prevents printer/material change handlers from overwriting a later saved value.
+ entries.forEach(([id,x])=>{
    const el=document.getElementById(id); if(!el)return;
    if(x.type==='checkbox'||x.type==='radio')el.checked=!!x.value; else el.value=x.value??'';
+ });
+ const notifyIds=['printer','materialType','material','materialPack','materialPackCost','materialUsed','printHours','qty','discount','sell','labourHours','labourRate','pack','other','electricityProvider','electricityRate','platform','pay','fixedFee','delivery','deliveryCharge'];
+ notifyIds.forEach(id=>{
+   const el=document.getElementById(id);if(!el)return;
    el.dispatchEvent(new Event('input',{bubbles:true}));
    el.dispatchEvent(new Event('change',{bubbles:true}));
  });
- setTimeout(()=>document.getElementById('calc')?.click(),60);
+ setTimeout(()=>document.getElementById('calc')?.click(),80);
 };
 const projectInfo=()=>{
  const material=val('material')||val('materialType')||'Material';
@@ -75,7 +82,16 @@ function saveNew(){
  projects.push({id:crypto.randomUUID?crypto.randomUUID():String(now)+Math.random(),name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot()});
  write(projects);open();
 }
-function loadProject(id){const p=read().find(x=>x.id===id);if(!p)return;restore(p.data);close();}
+function loadProject(id){
+ const p=read().find(x=>x.id===id);if(!p)return;
+ restore(p.data);
+ close();
+ // Make the restored setup immediately visible after loading.
+ setTimeout(()=>{
+   const machineTab=document.querySelector('.pp-step[data-tab="machine"]');
+   if(machineTab)machineTab.click();
+ },120);
+}
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
 function deleteProject(id){const p=read().find(x=>x.id===id);if(!p)return;if(!confirm('Delete “'+p.name+'”?'))return;write(read().filter(x=>x.id!==id));render();const c=document.getElementById('ppProjectCount');if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');}
 document.addEventListener('click',e=>{
