@@ -91,6 +91,7 @@ function boot(){
  translatePage();
  applyUnits();
  currency();
+ document.addEventListener('printprofit-settings-open',()=>{bind();translatePage();setTheme();applyUnits();currency();});
  document.addEventListener('click',event=>{
    const trigger=event.target&&event.target.closest?event.target.closest('#ppCleanTop [data-target="settings"]'):null;
    if(trigger)setTimeout(()=>{bind();translatePage();setTheme();},0);
