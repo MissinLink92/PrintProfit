@@ -11,9 +11,14 @@ const providers=[
 ];
 
 const benchmarks={
-  'ofgem-jul-sep-2026':{label:'Ofgem benchmark — 1 Jul to 30 Sep 2026',rate:'0.2611',standing:'0.5719'},
+  'ofgem-jul-sep-2026':{label:'Current Ofgem benchmark — 1 Jul to 30 Sep 2026',rate:'0.2611',standing:'0.5719'},
   'ofgem-oct-dec-2026':{label:'Ofgem benchmark — 1 Oct to 31 Dec 2026',rate:'0.2632',standing:'0.5483'}
 };
+function currentBenchmark(){
+ const d=new Date(),y=d.getFullYear(),m=d.getMonth()+1;
+ if(y===2026&&m<=9)return benchmarks['ofgem-jul-sep-2026'];
+ return benchmarks['ofgem-oct-dec-2026'];
+}
 
 function fieldLabel(text){const el=document.createElement('div');el.className='pp-electricity-label';el.textContent=text;return el;}
 function addStyle(){
@@ -47,7 +52,6 @@ function addRateSource(input){
  [['manual','My actual tariff — enter below'],['ofgem-jul-sep-2026',benchmarks['ofgem-jul-sep-2026'].label],['ofgem-oct-dec-2026',benchmarks['ofgem-oct-dec-2026'].label]].forEach(([value,label])=>{const o=document.createElement('option');o.value=value;o.textContent=label;source.appendChild(o);});
  sourceBlock.appendChild(source);
  const note=document.createElement('div');note.className='pp-electricity-note';note.id='ppElectricityRateNote';
- note.innerHTML='<strong>Provider selected:</strong> supplier choice does not set a universal tariff. Use your actual bill/tariff rate, or choose an Ofgem benchmark.';
  wrap.append(providerBlock,sourceBlock,note);
  const parent=input.parentElement;
  if(parent){
@@ -56,18 +60,32 @@ function addRateSource(input){
    wrap.querySelector('.pp-electricity-block').appendChild(input);
    parent.insertBefore(wrap,parent.firstChild);
  }
+ const applyBenchmark=()=>{
+   const b=currentBenchmark();
+   const key=Object.keys(benchmarks).find(k=>benchmarks[k]===b)||'ofgem-oct-dec-2026';
+   source.value=key;
+   setRate(b.rate);
+   note.innerHTML='<strong>Current benchmark:</strong> '+(Number(b.rate)*100).toFixed(2)+'p/kWh. Ofgem reference rate; your exact supplier tariff may differ by tariff, region, meter and payment method.';
+ };
+ const clearToManual=()=>{
+   source.value='manual';
+   note.innerHTML='<strong>Manual tariff:</strong> enter the unit rate from your bill. This is the most accurate figure for your own electricity costs.';
+ };
  source.addEventListener('change',()=>{
    const selected=benchmarks[source.value];
    if(selected){
      setRate(selected.rate);
-     note.innerHTML='<strong>Ofgem benchmark:</strong> '+selected.rate*100+'p/kWh. Standing charge reference: '+selected.standing*100+'p/day. Your supplier tariff may differ by plan, region, meter and payment method.';
-   }else{
-     note.innerHTML='<strong>Manual tariff:</strong> enter the unit rate shown on your electricity bill. The provider name is not used to guess a tariff.';
-   }
+     note.innerHTML='<strong>Ofgem benchmark:</strong> '+(Number(selected.rate)*100).toFixed(2)+'p/kWh. Standing charge reference: '+(Number(selected.standing)*100).toFixed(2)+'p/day. Your actual tariff may differ.';
+   }else clearToManual();
  });
- // If a default example rate is already present, make manual mode explicit so
- // choosing a supplier never silently changes the user's tariff.
- if(input.value && input.value!=='0')source.value='manual';
+ applyBenchmark();
+ input.dataset.ppRateAutoBound='1';
+ input.addEventListener('change',()=>{
+   // Selecting a supplier automatically restores the current benchmark.
+   // The benchmark is intentionally not presented as the customer's exact tariff.
+   applyBenchmark();
+   input.dispatchEvent(new Event('input',{bubbles:true}));
+ });
 }
 function buildProviderSelect(input){
  const select=document.createElement('select');
