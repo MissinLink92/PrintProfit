@@ -230,7 +230,17 @@ function install(){
     const el=document.getElementById(target);
     if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
   };
-  top.querySelectorAll('[data-target]').forEach(el=>el.addEventListener('click',()=>go(el.dataset.target)));
+  // Settings must behave as a true modal trigger. Stop any legacy tab/anchor handlers
+  // from treating it like a section link and moving the calculator viewport.
+  top.querySelectorAll('[data-target="settings"]').forEach(el=>{
+    el.addEventListener('click',(event)=>{
+      event.preventDefault();
+      event.stopPropagation();
+      if(event.stopImmediatePropagation)event.stopImmediatePropagation();
+      openSettings();
+    },true);
+  });
+  top.querySelectorAll('[data-target]:not([data-target="settings"])').forEach(el=>el.addEventListener('click',()=>go(el.dataset.target)));
   return true;
 }
 
