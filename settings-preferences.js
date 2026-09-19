@@ -124,7 +124,7 @@ let pref=load();
 let draft=Object.assign({},pref);
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(pref));}catch(e){}}
-function tr(v){return pref.language==='pl'?(tx[v]||v):v;}
+function tr(v){if(pref.language==='en')return v;const map=langMaps[pref.language]||{};return map[v]||v;}
 
 const originalText=new WeakMap();
 const baseMoneyText=new WeakMap();
