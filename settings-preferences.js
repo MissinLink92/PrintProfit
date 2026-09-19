@@ -711,6 +711,51 @@ body[data-pp-theme="light"] .layout>.result .tab:not(.active){
  color:#405660!important;
  border-color:#b8c8d0!important;
 }
+/* Light Mode — final legacy upload + result tile overrides. */
+body[data-pp-theme="light"] .drop{
+ background:#f8fafb!important;
+ color:#304852!important;
+ border-color:#8ea8b3!important;
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)!important;
+}
+body[data-pp-theme="light"] .drop b{
+ color:#304852!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .drop .small,
+body[data-pp-theme="light"] .drop small{
+ color:#647983!important;
+}
+body[data-pp-theme="light"] .drop .btn:not(.accent){
+ background:#f3f7f8!important;
+ color:#304852!important;
+ border-color:#a9bcc5!important;
+}
+body[data-pp-theme="light"] .drop .btn.accent{
+ color:#ffffff!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards{
+ background:transparent!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards>.card{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#b9cbd3!important;
+ box-shadow:0 4px 14px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards>.card .small{
+ color:#526873!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards>.card .value{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards>.card .value.good{
+ color:#148552!important;
+}
+body[data-pp-theme="light"] .layout>.result .cards>.card .value.bad{
+ color:#c43b3b!important;
+}
 /* Results / values */
 body[data-pp-theme="light"] .result,
 body[data-pp-theme="light"] .quick,
