@@ -269,7 +269,7 @@ function injectSettings(){
   if(!(Number(prefs.rate)>0))prefs.rate=(currencyMeta[prefs.currency]||currencyMeta.GBP).rate;
   document.getElementById('ppSettingsRate').value=Number(prefs.rate).toFixed(4);
 
-  lang.addEventListener('change',()=>{prefs.language=lang.value;save();applyLanguage();});
+  lang.addEventListener('change',()=>{prefs.language=lang.value;save();document.querySelectorAll('label').forEach(el=>{delete el.dataset.ppCurrencyTemplate;});applyLanguage();updateLabelsCurrency();});
   units.addEventListener('change',()=>{prefs.units=units.value;save();syncWeightProxies();});
   currency.addEventListener('change',()=>{prefs.currency=currency.value;prefs.rate=currencyMeta[prefs.currency].rate;document.getElementById('ppSettingsRate').value=Number(prefs.rate).toFixed(4);save();formatInputCurrencies();syncMoneyOutputs();updateLabelsCurrency();});
   document.getElementById('ppSettingsRate').addEventListener('input',e=>{const r=Number(e.target.value);if(r>0){prefs.rate=r;save();formatInputCurrencies();syncMoneyOutputs();}});
