@@ -5,8 +5,8 @@
   function install(){
     if(document.getElementById('ppTabbedLayout'))return;
     const layout=document.querySelector('.layout'),result=layout?.querySelector('.result');
-    const box1=findBox('1'),box2=findBox('2'),box3=findBox('3'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
-    if(!layout||!result||!box1||!box2||!box3||!box4||!box5||!box6)return false;
+    const box1=findBox('1'),box2=findBox('2'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
+    if(!layout||!result||!box1||!box2||!box4||!box5||!box6)return false;
     const style=document.createElement('style');style.id='ppTabbedLayoutRuntimeStyles';style.textContent=`
 .layout{display:block!important;width:100%!important}.layout>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin-top:14px!important;min-width:0}
 .pp-workspace{display:block!important;width:100%!important;min-width:0}.pp-progress-host{display:block!important;width:100%!important;margin:0 0 12px!important;overflow:visible}
@@ -32,7 +32,7 @@
     const workspace=document.createElement('div');workspace.id='ppTabbedLayout';workspace.className='pp-workspace';
     const panels={};for(const id of ['details','machine','costs']){const panel=document.createElement('div');panel.className='pp-tab-panel'+(id==='details'?' active':'');panel.dataset.panel=id;panels[id]=panel;}
     const card=(node,parent)=>{const wrap=document.createElement('div');wrap.className='pp-card';wrap.appendChild(node);parent.appendChild(wrap);};
-    card(box1,panels.details);card(box6,panels.details);card(box2,panels.machine);card(box3,panels.machine);
+    card(box1,panels.details);card(box6,panels.details);card(box2,panels.machine);
     const costs4=document.createElement('div');costs4.className='pp-cost-block';costs4.appendChild(box4);panels.costs.appendChild(costs4);
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(result);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
