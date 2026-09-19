@@ -9,7 +9,7 @@ function install(){
  const printerBlock=printer.closest('.merge-block');
  if(printerBlock&&!document.getElementById('ppPrinterProfile')){
   const card=document.createElement('div');card.id='ppPrinterProfile';card.className='pp-profile-card';
-  card.innerHTML='<div class="pp-profile-head"><span class="pp-profile-icon">⚙</span><div><strong>Printer Profile</strong><span>Values used by PrintProfit for this machine.</span></div></div><div class="pp-profile-grid"><div><span>Purchase price</span><b id="ppPrinterPrice">—</b></div><div><span>Power draw</span><b id="ppPrinterPower">—</b></div><div><span>Expected life</span><b id="ppPrinterLife">—</b></div><div><span>Depreciation</span><b id="ppPrinterDep">—</b></div></div>';
+  card.innerHTML='<div class="pp-profile-head"><span class="pp-profile-icon">⚙</span><div><strong>Printer Details</strong><span>Values used by PrintProfit for this printer.</span></div></div><div class="pp-profile-grid"><div><span>Purchase price</span><b id="ppPrinterPrice">—</b></div><div><span>Power draw</span><b id="ppPrinterPower">—</b></div><div><span>Expected life</span><b id="ppPrinterLife">—</b></div><div><span>Depreciation</span><b id="ppPrinterDep">—</b></div></div>';
   printer.closest('section.panel')?.insertAdjacentElement('afterend',card);
  }
  const materialBlock=material.closest('.merge-block');
