@@ -271,6 +271,9 @@ function applyDraft(){
  translatePage();
  applyUnits();
  currency();
+ // Re-run the core calculator immediately so result cards use the newly
+ // selected currency/units instead of waiting for another user input.
+ document.getElementById('calc')?.click();
  const b=document.getElementById('ppSettingsApply');
  if(b){b.textContent=tr('Apply Changes');b.style.transform='scale(.98)';setTimeout(()=>b.style.transform='',120);}
 }
