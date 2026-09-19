@@ -266,6 +266,7 @@ function applyDraft(){
  if(b){b.textContent=tr('Apply Changes');b.style.transform='scale(.98)';setTimeout(()=>b.style.transform='',120);}
 }
 window.__applyPrintProfitSettings=applyDraft;
+document.addEventListener('printprofit-settings-apply',applyDraft);
 
 function bind(){
  const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
