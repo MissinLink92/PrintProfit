@@ -2,6 +2,28 @@
 'use strict';
 if(window.__printProfitMaterials)return; window.__printProfitMaterials=true;
 const KEY='printprofit.materials.v1';
+const CURRENCY_RATES={GBP:1,EUR:1.1663,USD:1.3370,PLN:5.0892,CAD:1.84,AUD:2.00,CHF:0.96,SEK:14.75,NOK:14.70,DKK:8.69,CZK:28.30,JPY:179.00,CNY:9.65,INR:123.50,NZD:2.16,SGD:1.71,BRL:7.18,MXN:23.0696,ZAR:21.8000};
+function prefs(){
+ try{return Object.assign({currency:'GBP',rate:1},JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}'))}
+ catch(e){return {currency:'GBP',rate:1}}
+}
+function currencyMeta(){
+ const p=prefs(),code=CURRENCY_RATES[p.currency]?p.currency:'GBP',rate=Number(p.rate)>0?Number(p.rate):(CURRENCY_RATES[code]||1);
+ return {code,rate};
+}
+function moneyFromGBP(value){
+ const meta=currencyMeta();
+ try{return new Intl.NumberFormat(undefined,{style:'currency',currency:meta.code,minimumFractionDigits:2,maximumFractionDigits:2}).format((Number(value)||0)*meta.rate)}
+ catch(e){return '£'+(Number(value)||0).toFixed(2)}
+}
+function currentMoneyValue(value){
+ const meta=currencyMeta();
+ return (Number(value)||0)*meta.rate;
+}
+function toGBP(value){
+ const meta=currencyMeta();
+ return meta.rate>0?(Number(value)||0)/meta.rate:(Number(value)||0);
+}
 const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}};
 const write=v=>localStorage.setItem(KEY,JSON.stringify(v));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -11,7 +33,7 @@ function render(){
  const materials=read().sort((a,b)=>a.name.localeCompare(b.name));
  if(!materials.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin so you can select them in the calculator.</p><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button></div>';return;}
  list.innerHTML=materials.map(m=>`<article class="pp-material-card" data-material-id="${esc(m.id)}">
- <div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>${esc(m.name)}</h3><p>${esc(m.type)} · ${esc(m.amount)} ${m.type==='Resin'?'ml':'g'} · ${esc(m.currency)}${Number(m.cost).toFixed(2)}</p><small>${esc(m.brand||'No brand')} ${m.colour?'· '+esc(m.colour):''} · ${esc(m.unitCost)}</small></div></div>
+ <div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>${esc(m.name)}</h3><p>${esc(m.type)} · ${esc(m.amount)} ${m.type==='Resin'?'ml':'g'} · ${moneyFromGBP(m.cost)</p><small>${esc(m.brand||'No brand')} ${m.colour?'· '+esc(m.colour):''} · ${esc(m.unitCost)}</small></div></div>
  <div class="pp-material-actions"><button type="button" data-use-material="${esc(m.id)}">Use</button><button type="button" data-edit-material="${esc(m.id)}">Edit</button><button type="button" class="danger" data-delete-material="${esc(m.id)}">Delete</button></div>
  </article>`).join('');
 }
@@ -47,7 +69,7 @@ function openFormFromCalculator(){
  syncBrandOptions('');
  document.getElementById('ppMatColour').value='';
  document.getElementById('ppMatAmount').value=pack||1000;
- document.getElementById('ppMatCost').value=cost||0;
+ document.getElementById('ppMatCost').value=currentMoneyValue(cost||0).toFixed(2);
  document.getElementById('ppMaterialFormTitle').textContent='Save Current Material';
  document.getElementById('ppMaterialFormPanel').classList.add('open');
 }
@@ -59,7 +81,7 @@ function openForm(existing){
  syncBrandOptions(existing?.brand||'');
  document.getElementById('ppMatColour').value=existing?.colour||'';
  document.getElementById('ppMatAmount').value=existing?.amount??1000;
- document.getElementById('ppMatCost').value=existing?.cost??20;
+ document.getElementById('ppMatCost').value=currentMoneyValue(existing?.cost??20).toFixed(2);
  document.getElementById('ppMaterialFormTitle').textContent=existing?'Edit Material':'Add Material';
  document.getElementById('ppMaterialFormPanel').classList.add('open');
 }
@@ -69,10 +91,10 @@ function saveForm(){
  const amount=Number(document.getElementById('ppMatAmount').value)||0,cost=Number(document.getElementById('ppMatCost').value)||0;
  if(!name){alert('Please enter a material name.');return} if(amount<=0){alert('Please enter a package amount greater than 0.');return}
  const brandSelect=document.getElementById('ppMatBrand'),brandCustom=document.getElementById('ppMatBrandCustom');const brand=(brandSelect?.value==='__other__'?(brandCustom?.value||''):brandSelect?.value||'').trim(),colour=document.getElementById('ppMatColour').value.trim();
- const currency=(localStorage.getItem('printprofit.preferences.v2')||'').includes('"currency":"EUR"')?'€':'£';
- const unitCost=currency+(cost/amount).toFixed(4)+' / '+(type==='Resin'?'ml':'g');
+ const costGBP=toGBP(cost);
+ const unitCost=moneyFromGBP(costGBP/amount)+' / '+(type==='Resin'?'ml':'g');
  const items=read(),id=document.getElementById('ppMaterialForm').dataset.editId;
- const obj={id:id||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,type,brand,colour,amount,cost,currency,unitCost,updated:Date.now()};
+ const obj={id:id||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,type,brand,colour,amount,cost:costGBP,unitCost,updated:Date.now()};
  write(id?items.map(x=>x.id===id?obj:x):[...items,obj]);closeForm();render();
 }
 function useMaterial(id){
@@ -87,6 +109,21 @@ function useMaterial(id){
  document.getElementById('calc')?.click();
 }
 function deleteMaterial(id){const m=read().find(x=>x.id===id);if(!m)return;if(!confirm('Delete “'+m.name+'”?'))return;write(read().filter(x=>x.id!==id));render()}
+function refreshCurrencyUI(){
+ const label=document.getElementById('ppMatCostLabel');
+ if(label){
+   const meta=currencyMeta();
+   try{
+   const parts=new Intl.NumberFormat(undefined,{style:'currency',currency:meta.code,minimumFractionDigits:0,maximumFractionDigits:2}).formatToParts(0);
+   const symbol=parts.find(p=>p.type==='currency')?.value||meta.code;
+   label.textContent='Package cost ('+symbol+')';
+ }catch(e){label.textContent='Package cost ('+meta.code+')';}
+ }
+}
+document.addEventListener('printprofit-settings-changed',()=>{
+ refreshCurrencyUI();
+ if(document.getElementById('ppMaterialsPanel')?.classList.contains('open'))render();
+});
 function open(){
  let panel=document.getElementById('ppMaterialsPanel');
  if(!panel){
@@ -95,7 +132,7 @@ function open(){
   <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Materials</h2><p>Keep your regular filament and resin in one place.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
   <div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></section>
   <div id="ppMaterialFormPanel"><div class="pp-material-form-backdrop" data-material-form-close></div><form id="ppMaterialForm" class="pp-material-form" onsubmit="return false"><div class="pp-material-form-head"><div><div class="pp-materials-kicker">MATERIAL LIBRARY</div><h2 id="ppMaterialFormTitle">Add Material</h2></div><button type="button" class="pp-materials-close" data-material-form-close>×</button></div>
-  <div class="pp-material-form-grid"><label>Material name<input id="ppMatName" placeholder="e.g. eSUN PLA+ Black"></label><label>Type<select id="ppMatType"><option>Filament</option><option>Resin</option></select></label><label>Brand<select id="ppMatBrand"><option value="">Select a brand...</option><option value="__other__">Other / Custom</option></select><input id="ppMatBrandCustom" class="pp-brand-custom" placeholder="Enter brand name" style="display:none" aria-label="Custom brand name"></label><label>Colour<input id="ppMatColour" placeholder="Optional"></label><label><span id="ppMatAmountLabel">Spool weight (g)</span><input id="ppMatAmount" type="number" min="0" step=".01" value="1000"></label><label>Package cost (£)<input id="ppMatCost" type="number" min="0" step=".01" value="20"></label></div>
+  <div class="pp-material-form-grid"><label>Material name<input id="ppMatName" placeholder="e.g. eSUN PLA+ Black"></label><label>Type<select id="ppMatType"><option>Filament</option><option>Resin</option></select></label><label>Brand<select id="ppMatBrand"><option value="">Select a brand...</option><option value="__other__">Other / Custom</option></select><input id="ppMatBrandCustom" class="pp-brand-custom" placeholder="Enter brand name" style="display:none" aria-label="Custom brand name"></label><label>Colour<input id="ppMatColour" placeholder="Optional"></label><label><span id="ppMatAmountLabel">Spool weight (g)</span><input id="ppMatAmount" type="number" min="0" step=".01" value="1000"></label><label><span id="ppMatCostLabel">Package cost (£)</span><input id="ppMatCost" type="number" min="0" step=".01" value="20"></label></div>
   <div class="pp-material-form-actions"><button type="button" class="pp-material-cancel" data-material-form-close>Cancel</button><button type="button" class="pp-material-save" data-material-save>Save Material</button></div></form></div>`;
   document.body.appendChild(panel);
   const style=document.createElement('style');style.textContent=`
@@ -106,7 +143,7 @@ function open(){
 #ppMaterialFormPanel{display:none;position:fixed;inset:0;z-index:100002}#ppMaterialFormPanel.open{display:block}.pp-material-form-backdrop{position:absolute;inset:0;background:#000b;backdrop-filter:blur(4px)}.pp-material-form{position:relative;width:min(680px,calc(100% - 28px));margin:60px auto;background:#081720;border:1px solid #294957;border-radius:18px;box-shadow:0 25px 80px #000d;color:#edf3f6;overflow:hidden;font-family:Inter,Segoe UI,system-ui,sans-serif}.pp-material-form-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #294957}.pp-material-form-head h2{margin:4px 0 0}.pp-material-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:22px}.pp-material-form-grid label{color:#aebdca;font-size:12px}.pp-material-form-grid input,.pp-material-form-grid select{display:block;margin-top:6px;width:100%;background:#0e202b;color:#f5f8fb;border:1px solid #24404e;border-radius:8px;padding:10px;box-sizing:border-box}.pp-material-form-grid .pp-brand-custom{margin-top:6px}.pp-material-form-actions{display:flex;justify-content:flex-end;gap:8px;padding:0 22px 22px}.pp-material-save{padding:10px 18px}.pp-material-form-actions button{font-size:13px}@media(max-width:650px){.pp-materials-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-materials-head,.pp-materials-toolbar,.pp-materials-dialog>#ppMaterialsList{padding-left:20px;padding-right:20px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid{grid-template-columns:1fr;padding:18px}}
 `;document.head.appendChild(style);
  }
- panel.classList.add('open');document.body.style.overflow='hidden';render();const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
+ refreshCurrencyUI();panel.classList.add('open');document.body.style.overflow='hidden';render();const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }
 function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
 
