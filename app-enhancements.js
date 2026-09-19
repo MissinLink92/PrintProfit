@@ -252,7 +252,7 @@
   <div class="pp-modal-box"><b>3. Add operating costs</b>Enter labour, packaging, other costs and your electricity tariff to build a more realistic per-print cost.</div>
   <div class="pp-modal-box"><b>4. Price the sale</b>Choose your selling platform, delivery rate, quantity and discount, then compare single-print and batch pricing.</div>
 </div>
-<p>Saved Setup Profiles let you save Boxes 2–4 on this device so the same printer, material and operating costs can be reused later.</p>`
+<p>Use My Projects to save complete calculations, and My Materials to keep your regular filament and resin in one place.</p>`
       },
       '#about':{
         title:'About PrintProfit',
@@ -304,7 +304,6 @@
   }
 
   function boot(){
-    installProfiles();
     installResetOverride();
     installNavigation();
   }
