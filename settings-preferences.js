@@ -38,6 +38,7 @@ const tx={
  'Dark mode':'Tryb ciemny',
  'Use the dark PrintProfit interface.':'Użyj ciemnego interfejsu PrintProfit.',
  'Language':'Język',
+ 'Language & region':'Język i region',
  'Choose the language used across the page.':'Wybierz język używany na całej stronie.',
  'Units':'Jednostki',
  'Choose metric or imperial measurements.':'Wybierz jednostki metryczne lub imperialne.',
@@ -115,7 +116,7 @@ function translatePage(){
  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
  let n;
  while(n=w.nextNode()){
-  if(!n.parentElement||n.parentElement.closest('script,style,#ppSettingsPanel'))continue;
+  if(!n.parentElement||n.parentElement.closest('script,style'))continue;
   const raw=n.nodeValue.trim();
   if(!raw)continue;
   if(!originalText.has(n))originalText.set(n,raw);
