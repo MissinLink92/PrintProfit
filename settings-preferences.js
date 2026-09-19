@@ -566,6 +566,151 @@ body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] .merge-block .pp
 body[data-pp-theme="light"] .pp-tab-panel[data-panel="machine"] #materialCostOut{
  color:#7446dc!important;
 }
+/* Light Mode compatibility layer for generated/newer calculator components. */
+body[data-pp-theme="light"] .pp-tab-panel .pp-card,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block,
+body[data-pp-theme="light"] .pp-tab-panel .pp-card>.panel,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block>.panel,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block,
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-card,
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-hub{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+ box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-status{
+ background:#f7fafb!important;
+ color:#425963!important;
+ border-color:#b8c8d0!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-grid>div,
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-grid>div{
+ background:#f8fafb!important;
+ color:#17232b!important;
+ border-color:#c2d0d6!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-grid span,
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-grid span,
+body[data-pp-theme="light"] .pp-tab-panel .pp-material-rate span{
+ color:#5a707b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-model-grid strong,
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-grid b{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-material-rate{
+ background:#fbfcfd!important;
+ border-color:#c2d0d6!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-material-rate strong{
+ color:#7446dc!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-head strong{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-head>div>span{
+ color:#5a707b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-profile-icon{
+ background:#f4f8fa!important;
+ border-color:#b8c8d0!important;
+ color:#657b85!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head{
+ background:#ffffff!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head h3,
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head p,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head p,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head p{
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head h3,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head h3,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head h2,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head h3{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .pp-card .head p,
+body[data-pp-theme="light"] .pp-tab-panel .pp-cost-block .head p,
+body[data-pp-theme="light"] .pp-tab-panel .merge-block .head p{
+ color:#526873!important;
+}
+
+/* Results area: every economic result tile is white in Light Mode. */
+body[data-pp-theme="light"] .layout>.result{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+ box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] .layout>.result .result,
+body[data-pp-theme="light"] .layout>.result .quick,
+body[data-pp-theme="light"] .layout>.result .break,
+body[data-pp-theme="light"] .layout>.result .result-card,
+body[data-pp-theme="light"] .layout>.result .result-box,
+body[data-pp-theme="light"] .layout>.result [class*="result-tile"]{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+ box-shadow:0 3px 12px rgba(23,50,63,.06)!important;
+}
+body[data-pp-theme="light"] .layout>.result h2,
+body[data-pp-theme="light"] .layout>.result h3,
+body[data-pp-theme="light"] .layout>.result strong,
+body[data-pp-theme="light"] .layout>.result label{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .layout>.result p,
+body[data-pp-theme="light"] .layout>.result small,
+body[data-pp-theme="light"] .layout>.result .muted{
+ color:#526873!important;
+}
+body[data-pp-theme="light"] .layout>.result .value,
+body[data-pp-theme="light"] .layout>.result .money,
+body[data-pp-theme="light"] .layout>.result output{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] .layout>.result input{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#aebfc8!important;
+}
+body[data-pp-theme="light"] .layout>.result .quick button,
+body[data-pp-theme="light"] .layout>.result button{
+ color:#17232b!important;
+ border-color:#aebfc8!important;
+}
+body[data-pp-theme="light"] .layout>.result .quick button:not(.active),
+body[data-pp-theme="light"] .layout>.result button:not(.accent):not(.active){
+ background:#f6f9fa!important;
+}
+body[data-pp-theme="light"] .layout>.result .quick button.active,
+body[data-pp-theme="light"] .layout>.result button.accent,
+body[data-pp-theme="light"] .layout>.result .tab.active{
+ background:linear-gradient(135deg,#ff9a42,#e96800)!important;
+ color:#ffffff!important;
+ border-color:#e96800!important;
+}
+body[data-pp-theme="light"] .layout>.result .tab:not(.active){
+ background:#ffffff!important;
+ color:#405660!important;
+ border-color:#b8c8d0!important;
+}
 /* Results / values */
 body[data-pp-theme="light"] .result,
 body[data-pp-theme="light"] .quick,
