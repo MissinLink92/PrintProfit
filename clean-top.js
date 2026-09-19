@@ -202,11 +202,31 @@ function install(){
         </div>
       </section>`;
     document.body.appendChild(panel);
-    document.getElementById('ppSettingsApply')?.addEventListener('click',(event)=>{
-      event.preventDefault();
-      event.stopPropagation();
-      document.dispatchEvent(new CustomEvent('printprofit-settings-apply'));
-    });
+    const applyBtn=document.getElementById('ppSettingsApply');
+    if(applyBtn){
+      applyBtn.onclick=(event)=>{
+        event.preventDefault();
+        event.stopPropagation();
+        applyBtn.disabled=true;
+        applyBtn.textContent='Applying…';
+        try{
+          if(typeof window.__applyPrintProfitSettings==='function'){
+            window.__applyPrintProfitSettings();
+            applyBtn.textContent='Applied ✓';
+          }else{
+            console.error('PrintProfit: settings apply function is not loaded');
+            applyBtn.textContent='Apply Changes';
+          }
+        }catch(error){
+          console.error('PrintProfit: settings apply failed',error);
+          applyBtn.textContent='Apply Changes';
+        }
+        setTimeout(()=>{
+          applyBtn.disabled=false;
+          applyBtn.textContent='Apply Changes';
+        },700);
+      };
+    }
     document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
       document.getElementById('reset')?.click();
       panel.classList.remove('open');
