@@ -254,22 +254,49 @@ function refreshDraftControls(){
 }
 
 function applyDraft(){
- const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
- draft.dark=!!dark?.checked;
- draft.language=lang?.value||'en';
- draft.units=units?.value||'metric';
- draft.currency=cur?.value||'GBP';
+ const dark=document.getElementById('ppSettingsDark');
+ const lang=document.getElementById('ppSettingsLanguage');
+ const units=document.getElementById('ppSettingsUnits');
+ const cur=document.getElementById('ppSettingsCurrency');
+ const rate=document.getElementById('ppSettingsRate');
+
+ // Read ALL controls at the moment Apply is pressed. Nothing is committed
+ // while the user is merely changing a dropdown/switch.
+ draft={
+  dark:!!dark?.checked,
+  language:lang?.value||'en',
+  units:units?.value||'metric',
+  currency:cur?.value||'GBP',
+  rate:1
+ };
  const entered=Number(rate?.value);
  draft.rate=entered>0?entered:(currencies[draft.currency]?.rate||1);
- pref=Object.assign({},draft);
+
+ // Commit the complete settings object first so every other calculator
+ // script sees the same preferences.
+ pref=Object.assign({},defaults,draft);
  save();
+
+ // Apply the four visible behaviours immediately.
  setTheme();
  translatePage();
  applyUnits();
  currency();
- // Re-run the core calculator immediately so result cards use the newly
- // selected currency/units instead of waiting for another user input.
- document.getElementById('calc')?.click();
+
+ // The calculator is the source of truth for result values. Trigger its
+ // normal Calculate action after localStorage has been updated so currency,
+ // exchange rate and all dependent totals are recalculated together.
+ const calcButton=document.getElementById('calc');
+ if(calcButton) calcButton.click();
+
+ // Re-apply presentation settings after Calculate because the core
+ // calculator writes English labels/£-formatted output.
+ setTheme();
+ translatePage();
+ applyUnits();
+ currency();
+ document.dispatchEvent(new CustomEvent('printprofit-settings-changed'));
+
  const b=document.getElementById('ppSettingsApply');
  if(b){b.textContent=tr('Apply Changes');b.style.transform='scale(.98)';setTimeout(()=>b.style.transform='',120);}
 }
