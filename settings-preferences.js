@@ -185,13 +185,304 @@ function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
  let s=document.getElementById('ppPreferenceTheme');
  if(!s){s=document.createElement('style');s.id='ppPreferenceTheme';document.head.appendChild(s);}
- s.textContent=
- 'body[data-pp-theme="light"]{background:#eef3f5!important;color:#17242c!important}'+
- 'body[data-pp-theme="light"] #ppCleanTop{background:#e9f0f3!important;color:#17242c!important}'+
- 'body[data-pp-theme="light"] #ppCleanTop .pp-top-nav{background:#f4f7f8!important;border-color:#c5d3da!important}'+
- 'body[data-pp-theme="light"] #ppCleanTop .pp-top-links button{color:#23333c!important}'+
- 'body[data-pp-theme="light"] .panel,body[data-pp-theme="light"] .pp-master-quickcards button{background:linear-gradient(180deg,#fff,#edf3f5)!important;color:#17242c!important}'+
- 'body[data-pp-theme="light"] input,body[data-pp-theme="light"] select,body[data-pp-theme="light"] textarea{background:#fff!important;color:#17242c!important;border-color:#c5d3da!important}';
+ s.textContent=`
+/* PrintProfit Light Mode — deliberately scoped so Dark Mode is untouched. */
+body[data-pp-theme="light"]{
+ background:#eef2f5!important;
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] #ppCleanTop{
+ background:#eef3f6!important;
+ color:#17232b!important;
+ border-bottom-color:#b8c8d0!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-grid{
+ opacity:.28!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-nav{
+ background:#ffffff!important;
+ border-color:#c8d4da!important;
+ box-shadow:0 2px 14px rgba(20,45,58,.08)!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-links button{
+ color:#172b35!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-links button:hover{
+ background:#ff780012!important;
+ color:#0d1d25!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-eyebrow,
+body[data-pp-theme="light"] #ppCleanTop h1 strong{
+ color:#e76500!important;
+}
+body[data-pp-theme="light"] #ppCleanTop h1{
+ color:#17232b!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-copy>p{
+ color:#4d616c!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-card{
+ background:linear-gradient(145deg,#ffffff,#e7eef2)!important;
+ border-color:#b8c9d1!important;
+ box-shadow:0 12px 30px rgba(23,48,61,.14)!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-card img{
+ filter:drop-shadow(0 5px 12px rgba(0,0,0,.16))!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-card-tagline{
+ color:#d85f00!important;
+ text-shadow:none!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-feature-strip>div{
+ color:#263943!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-feature-strip small{
+ color:#637781!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-feature-strip i{
+ background:#b8c9d1!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-nav-icon,
+body[data-pp-theme="light"] #ppCleanTop .pp-feature-icon,
+body[data-pp-theme="light"] #ppCleanTop .pp-mini-icon{
+ color:#e76500!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-primary{
+ background:#e96800!important;
+ border-color:#d95f00!important;
+ color:#fff!important;
+ box-shadow:0 6px 16px rgba(220,96,0,.18)!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-projects-button{
+ background:#ffffff!important;
+ border-color:#aebfc8!important;
+ color:#243943!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-projects-button:hover{
+ border-color:#e96800!important;
+}
+body[data-pp-theme="light"] #ppCleanTop .pp-top-line{
+ background:#e96800!important;
+ box-shadow:none!important;
+}
+
+/* Journey / tabs */
+body[data-pp-theme="light"] .pp-setup-guide,
+body[data-pp-theme="light"] .pp-setup-progress,
+body[data-pp-theme="light"] .pp-global-actions,
+body[data-pp-theme="light"] .pp-results-enhanced{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c4d1d7!important;
+ box-shadow:0 5px 18px rgba(25,52,65,.08)!important;
+}
+body[data-pp-theme="light"] .pp-setup-guide .pp-guide-title,
+body[data-pp-theme="light"] .pp-setup-guide span,
+body[data-pp-theme="light"] .pp-global-actions-copy span,
+body[data-pp-theme="light"] .pp-results-intro strong{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .pp-setup-guide i{
+ color:#d96300!important;
+}
+body[data-pp-theme="light"] .pp-setup-guide b,
+body[data-pp-theme="light"] .pp-progress-label,
+body[data-pp-theme="light"] .pp-global-actions-copy small,
+body[data-pp-theme="light"] .pp-results-intro>div>span:last-child{
+ color:#5c707a!important;
+}
+body[data-pp-theme="light"] .pp-progress-track{
+ background:#e4ebee!important;
+ border-color:#c5d2d8!important;
+}
+body[data-pp-theme="light"] .pp-progress-fill{
+ background:linear-gradient(90deg,#e96800,#ff9b3d)!important;
+}
+body[data-pp-theme="light"] .pp-global-actions-buttons .btn:not(.accent){
+ background:#f4f7f8!important;
+ color:#243943!important;
+ border-color:#aebfc8!important;
+}
+body[data-pp-theme="light"] .pp-tabs{
+ background:#ffffff!important;
+ border-color:#c4d1d7!important;
+}
+body[data-pp-theme="light"] .pp-tabs .pp-tab{
+ color:#405660!important;
+}
+body[data-pp-theme="light"] .pp-tabs .pp-tab.active{
+ color:#fff!important;
+ background:linear-gradient(135deg,#e96800,#d85f00)!important;
+ border-color:#d85f00!important;
+}
+body[data-pp-theme="light"] #pp-master-quickcards button{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#b9c9d1!important;
+ box-shadow:0 5px 16px rgba(20,47,60,.08)!important;
+}
+body[data-pp-theme="light"] #pp-master-quickcards button:hover{
+ background:#f7fafb!important;
+}
+body[data-pp-theme="light"] #pp-master-quickcards button .pp-master-card-title{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] #pp-master-quickcards button .pp-master-card-text,
+body[data-pp-theme="light"] #pp-master-quickcards button .pp-master-card-subtitle{
+ color:#536973!important;
+}
+
+/* Calculator panels */
+body[data-pp-theme="light"] .panel,
+body[data-pp-theme="light"] .pp-card,
+body[data-pp-theme="light"] .pp-cost-block,
+body[data-pp-theme="light"] .merge-block{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+ box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] .panel:hover,
+body[data-pp-theme="light"] .pp-card:hover,
+body[data-pp-theme="light"] .pp-cost-block:hover,
+body[data-pp-theme="light"] .merge-block:hover{
+ border-color:#9fb3bd!important;
+}
+body[data-pp-theme="light"] .panel .head h2,
+body[data-pp-theme="light"] .pp-card .head h2,
+body[data-pp-theme="light"] .pp-cost-block .head h2,
+body[data-pp-theme="light"] .merge-block .head h2{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .panel .head p,
+body[data-pp-theme="light"] .pp-card .head p,
+body[data-pp-theme="light"] .pp-cost-block .head p,
+body[data-pp-theme="light"] .merge-block .head p{
+ color:#526873!important;
+}
+body[data-pp-theme="light"] label{
+ color:#304852!important;
+}
+body[data-pp-theme="light"] .small,
+body[data-pp-theme="light"] .muted{
+ color:#5a707b!important;
+}
+
+/* Inputs — white fields with strong text and visible borders */
+body[data-pp-theme="light"] input,
+body[data-pp-theme="light"] select,
+body[data-pp-theme="light"] textarea{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#aebfc8!important;
+ box-shadow:inset 0 1px 2px rgba(20,45,58,.05)!important;
+}
+body[data-pp-theme="light"] input::placeholder,
+body[data-pp-theme="light"] textarea::placeholder{
+ color:#7a8d96!important;
+ opacity:1!important;
+}
+body[data-pp-theme="light"] input:hover,
+body[data-pp-theme="light"] select:hover,
+body[data-pp-theme="light"] textarea:hover{
+ border-color:#829aa5!important;
+}
+body[data-pp-theme="light"] input:focus,
+body[data-pp-theme="light"] select:focus,
+body[data-pp-theme="light"] textarea:focus{
+ border-color:#e96800!important;
+ box-shadow:0 0 0 3px rgba(233,104,0,.14)!important;
+ outline:none!important;
+}
+
+/* Upload / helper areas */
+body[data-pp-theme="light"] .drop{
+ background:#f8fafb!important;
+ border-color:#9fb4be!important;
+ color:#253c46!important;
+}
+body[data-pp-theme="light"] .drop:hover{
+ background:#fff8f2!important;
+ border-color:#e96800!important;
+}
+body[data-pp-theme="light"] .drop *{
+ color:inherit;
+}
+
+/* Section icons: keep the existing cyan / purple / green identity, but make
+   the artwork and circles readable on white. */
+body[data-pp-theme="light"] .pp-tab-panel .head>.pp-pretty-icon,
+body[data-pp-theme="light"] .pp-tab-panel .head>.icon,
+body[data-pp-theme="light"] .merge-block .head>.pp-pretty-icon,
+body[data-pp-theme="light"] .merge-block .head>.icon{
+ background:#f4f8fa!important;
+ box-shadow:0 3px 12px rgba(20,45,58,.10)!important;
+}
+body[data-pp-theme="light"] .pp-tab-panel .head>.pp-pretty-icon svg,
+body[data-pp-theme="light"] .pp-tab-panel .head>.icon svg{
+ filter:none!important;
+ stroke-width:2.7!important;
+}
+
+/* Results / values */
+body[data-pp-theme="light"] .result,
+body[data-pp-theme="light"] .quick,
+body[data-pp-theme="light"] .break{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-color:#c0cfd6!important;
+}
+body[data-pp-theme="light"] .result .value,
+body[data-pp-theme="light"] .result .money{
+ color:#17232b!important;
+}
+body[data-pp-theme="light"] .result .small,
+body[data-pp-theme="light"] .result label{
+ color:#526873!important;
+}
+
+/* Footer / disclaimer */
+body[data-pp-theme="light"] .footer{
+ background:#ffffff!important;
+ color:#536973!important;
+ border-top-color:#c0cfd6!important;
+}
+body[data-pp-theme="light"] .footer>span:first-child{
+ color:#314953!important;
+}
+body[data-pp-theme="light"] .footer .pp-disclaimer{
+ color:#4d626d!important;
+}
+
+/* Floating reset remains a deliberately strong action in both themes. */
+body[data-pp-theme="light"] #ppFloatingReset{
+ filter:none!important;
+ box-shadow:0 8px 22px rgba(40,50,55,.22)!important;
+}
+
+/* Existing older header/hero selectors are also covered, without touching
+   them when the theme is dark. */
+body[data-pp-theme="light"] .header{
+ background:#ffffff!important;
+ color:#17232b!important;
+ border-bottom-color:#c3d0d6!important;
+ box-shadow:0 4px 18px rgba(20,45,58,.08)!important;
+}
+body[data-pp-theme="light"] .header .nav a{
+ color:#29404b!important;
+}
+body[data-pp-theme="light"] .header .nav a:hover,
+body[data-pp-theme="light"] .header .nav a.active{
+ color:#17232b!important;
+ background:#eaf1f4!important;
+}
+body[data-pp-theme="light"] .hero{
+ background:#edf3f5!important;
+ color:#17232b!important;
+ border-bottom-color:#c3d0d6!important;
+}
+`;
 }
 
 function labelFor(id){
