@@ -19,7 +19,7 @@ function install(){
   document.getElementById('materialCostOut')?.closest('.two')?.insertAdjacentElement('afterend',rate);
  }
  function update(){
-  const parts=(printer.value||'').split('|'),price=Number(parts[0]),power=Number(parts[1]),life=Number(parts[2]);
+  const parts=(printer.value||'').split('|'),power=Number(parts[0]),price=Number(parts[1]),life=Number(parts[2]);
   const set=(id,val)=>{const e=document.getElementById(id);if(e)e.textContent=val;};
   if(price>0){set('ppPrinterPrice',money(price));set('ppPrinterPower',power>0?power+' W':'—');set('ppPrinterLife',life>0?life.toLocaleString()+' h':'—');set('ppPrinterDep',life>0?money(price/life)+'/h':'—');}
   else{set('ppPrinterPrice','Custom');set('ppPrinterPower','Custom');set('ppPrinterLife','Custom');set('ppPrinterDep','From custom profile');}
