@@ -32,7 +32,7 @@
     if(!(den>0)||base<=0)return null;
     if(mode==='batch'){
       const qty=Math.max(1,Math.floor(number('qty'))),discount=Math.min(100,number('discount'))/100;
-      const discountedSales=Math.max(0,(base*qty+fixedFee-deliveryCharge)/den),factor=qty*(1-discount);
+      const batchProductionBase=Math.max(0,base-number('delivery'));const discountedSales=Math.max(0,(batchProductionBase*qty+number('delivery')+fixedFee-deliveryCharge)/den),factor=qty*(1-discount);
       return factor>0?discountedSales/factor:null;
     }
     return(Math.max(0,base+fixedFee-deliveryCharge))/den;
