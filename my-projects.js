@@ -16,19 +16,33 @@ const snapshot=()=>{
 };
 const restore=data=>{
  const entries=Object.entries(data||{});
- // Restore every value first, then notify the calculator once all dependencies are in place.
- // This prevents printer/material change handlers from overwriting a later saved value.
- entries.forEach(([id,x])=>{
-   const el=document.getElementById(id); if(!el)return;
+ const setValue=(id,x)=>{
+   const el=document.getElementById(id);if(!el)return;
    if(x.type==='checkbox'||x.type==='radio')el.checked=!!x.value; else el.value=x.value??'';
- });
- const notifyIds=['printer','materialType','material','materialPack','materialPackCost','materialUsed','printHours','qty','discount','sell','labourHours','labourRate','pack','other','electricityProvider','electricityRate','platform','pay','fixedFee','delivery','deliveryCharge'];
- notifyIds.forEach(id=>{
+ };
+ const fire=id=>{
    const el=document.getElementById(id);if(!el)return;
    el.dispatchEvent(new Event('input',{bubbles:true}));
    el.dispatchEvent(new Event('change',{bubbles:true}));
- });
- setTimeout(()=>document.getElementById('calc')?.click(),80);
+ };
+ const saved=new Map(entries);
+ // Restore the printer first because its selection controls whether the calculator is in FDM or resin mode.
+ const printer=saved.get('printer');
+ if(printer){setValue('printer',printer);fire('printer');}
+ // Printer changes can rebuild the material controls, so restore material-dependent values afterwards.
+ setTimeout(()=>{
+   ['materialType','material','materialPack','materialPackCost','materialUsed'].forEach(id=>{const x=saved.get(id);if(x)setValue(id,x);});
+   ['materialType','material','materialPack','materialPackCost','materialUsed'].forEach(fire);
+   // Restore everything else after the dependent controls exist.
+   setTimeout(()=>{
+     entries.forEach(([id,x])=>{
+       if(['printer','materialType','material','materialPack','materialPackCost','materialUsed'].includes(id))return;
+       setValue(id,x);
+     });
+     ['printHours','qty','discount','sell','labourHours','labourRate','pack','other','electricityProvider','electricityRate','platform','pay','fixedFee','delivery','deliveryCharge'].forEach(fire);
+     setTimeout(()=>document.getElementById('calc')?.click(),80);
+   },60);
+ },60);
 };
 const projectInfo=()=>{
  const material=val('material')||val('materialType')||'Material';
