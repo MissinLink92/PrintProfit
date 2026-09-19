@@ -102,7 +102,7 @@ function addQuickCards(main){
   const target=btn.dataset.masterOpen;
   const tab=document.querySelector('.pp-tab[data-tab="'+target+'"]');
   if(tab)tab.click();
-  document.getElementById('ppTabbedLayout')?.scrollIntoView({behavior:'smooth',block:'start'});
+  /* Deliberately do not scroll. Journey cards only switch the calculator stage. */
  }));
 }
 
