@@ -222,7 +222,13 @@ function ensureApplyButton(){
  const body=document.querySelector('#ppSettingsPanel .pp-settings-body');
  if(!body)return null;
  let btn=document.getElementById('ppSettingsApply');
- if(btn)return btn;
+ if(btn){
+  if(btn.dataset.ppBound!=='1'){
+   btn.dataset.ppBound='1';
+   btn.addEventListener('click',applyDraft);
+  }
+  return btn;
+ }
  const reset=document.getElementById('ppSettingsReset');
  btn=document.createElement('button');
  btn.type='button';btn.id='ppSettingsApply';btn.className='pp-settings-apply';
@@ -263,7 +269,6 @@ function applyDraft(){
 function bind(){
  const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
  if(!dark||!lang||!units||!cur||!rate)return;
- refreshDraftControls();
  ensureApplyButton();
 
  if(dark.dataset.ppBound!=='1'){dark.dataset.ppBound='1';dark.addEventListener('change',()=>{draft.dark=dark.checked;});}
@@ -275,7 +280,15 @@ function bind(){
 
 function boot(){
  bind();setTheme();translatePage();applyUnits();currency();
- document.addEventListener('printprofit-settings-open',()=>{draft=Object.assign({},pref);bind();setTheme();translatePage();applyUnits();currency();});
+ document.addEventListener('printprofit-settings-open',()=>{
+ draft=Object.assign({},pref);
+ refreshDraftControls();
+ bind();
+ setTheme();
+ translatePage();
+ applyUnits();
+ currency();
+});
  let translateTimer=0;
 function scheduleTranslate(){
  if(translateTimer)return;
