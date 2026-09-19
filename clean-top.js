@@ -113,6 +113,8 @@ function install(){
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
       document.getElementById('ppSettingsPanel').classList.add('open');
+      document.body.style.overflow='hidden';
+      document.dispatchEvent(new CustomEvent('printprofit-settings-open'));
       return;
     }
     const panel=document.createElement('div');
@@ -185,13 +187,7 @@ function install(){
     style.textContent=`
       #ppSettingsPanel{position:fixed;inset:0;z-index:12000;display:none}
       #ppSettingsPanel.open{display:block}
-      .pp-settings-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(5px)}
-      .pp-settings-dialog{position:absolute;right:28px;top:78px;width:min(440px,calc(100vw     const style=document.createElement('style');
-    style.id='ppSettingsStyles';
-    style.textContent=`
-      #ppSettingsPanel{position:fixed;inset:0;z-index:12000;display:none}
-      #ppSettingsPanel.open{display:block}
-      .pp-settings-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.70);backdrop-filter:blur(6px)}
+      .pp-settings-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
       .pp-settings-dialog{position:absolute;right:28px;top:74px;width:min(500px,calc(100vw - 32px));max-height:calc(100vh - 96px);border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 80px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:auto}
       .pp-settings-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid #284553;position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}
       .pp-settings-brand{display:flex;align-items:center;gap:12px;min-width:0}
@@ -215,15 +211,26 @@ function install(){
       .pp-settings-switch span:after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#8197a2;transition:.18s ease}
       .pp-settings-switch input:checked+span{background:#ff780022!important;border-color:#ff7800}
       .pp-settings-switch input:checked+span:after{left:25px;background:#ff7800}
-      .pp-settings-rate{display:flex;align-items:center;gap:7px}.pp-settings-rate span{color:#8fa6b2!important;font-size:10px!important;white-space:nowrap}.pp-settings-rate input{width:105px!important;background:#0d202b!important;color:#f5f8fb!important;border:1px solid #355464!important;border-radius:9px!important;padding:9px 10px!important}
+      .pp-settings-rate{display:flex;align-items:center;gap:7px}
+      .pp-settings-rate span{color:#8fa6b2!important;font-size:10px!important;white-space:nowrap}
+      .pp-settings-rate input{width:105px!important;background:#0d202b!important;color:#f5f8fb!important;border:1px solid #355464!important;border-radius:9px!important;padding:9px 10px!important}
       .pp-settings-action{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:9px 12px;font:800 11px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
       .pp-settings-action:hover{filter:brightness(1.08)}
       .pp-settings-note{padding:4px;color:#718a98;font-size:9px;line-height:1.4}
-      @media(max-width:650px){.pp-settings-dialog{left:10px;right:10px;top:10px;width:auto;max-height:calc(100vh - 20px)}.pp-settings-head{padding:12px}.pp-settings-brand img{width:68px;height:50px;flex-basis:68px}.pp-settings-card{align-items:flex-start;flex-direction:column}.pp-settings-select,.pp-settings-action{width:100%!important}.pp-settings-rate{width:100%}.pp-settings-rate input{flex:1;width:auto!important}}
+      @media(max-width:650px){
+        .pp-settings-dialog{left:10px;right:10px;top:10px;width:auto;max-height:calc(100vh - 20px)}
+        .pp-settings-head{padding:12px}
+        .pp-settings-brand img{width:68px;height:50px;flex-basis:68px}
+        .pp-settings-card{align-items:flex-start;flex-direction:column}
+        .pp-settings-select,.pp-settings-action{width:100%!important}
+        .pp-settings-rate{width:100%}
+        .pp-settings-rate input{flex:1;width:auto!important}
+      }
     `;
     document.head.appendChild(style);
     panel.classList.add('open');
     document.body.style.overflow='hidden';
+    document.dispatchEvent(new CustomEvent('printprofit-settings-open'));
   }
   window.__openPrintProfitSettings=openSettings;
 
