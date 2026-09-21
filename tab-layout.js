@@ -75,6 +75,9 @@
       const uv=used?.value,unit=mat?.closest('.merge-block')?.querySelector('#materialType')?.value==='resin'?'ml':'g';q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' '+unit:'—';q('ppModelMaterial').textContent=mat?.selectedOptions?.[0]?.text||'—';if(status?.textContent)q('ppModelStatus').textContent=status.textContent;
       const hint=q('ppModelHint');if(hint){if(extra.grams==null&&extra.seconds==null&&detected<2)hint.textContent='Limited metadata found. Upload sliced G-code where possible for a more accurate estimate.';else if(extra.grams==null)hint.textContent='Material usage was not found in this file. Upload sliced G-code for a more accurate estimate.';else if(extra.seconds==null)hint.textContent='Print time was not found in this file. You can enter it manually in Your Model.';else hint.textContent='Detected information can be applied to your Print Setup without guessing missing values.';}
     }
+    // Expose a small refresh hook so state restoration can repaint the model hub
+    // after an upload has been recreated from browser storage.
+    window.__ppRefreshModelHub=updateModelHub;
     function watchModelData(){
       updateModelHub();
       ['file','status','material','materialUsed','printHours','ppPrintTimeHours','ppPrintTimeMinutes'].forEach(id=>{const el=document.getElementById(id);if(!el||el.dataset.ppModelWatch)return;el.dataset.ppModelWatch='1';el.addEventListener('input',updateModelHub);el.addEventListener('change',updateModelHub);});
