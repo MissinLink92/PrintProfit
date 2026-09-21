@@ -60,6 +60,12 @@ function install(){
   const style=document.createElement('style');
   style.id='ppCleanTopStyles';
   style.textContent=`
+    /* Regression cleanup: remove the duplicate feature/navigation strips.
+       Keep the actual calculator stages and page content untouched. */
+    #ppCleanTop .pp-top-links,
+    #ppCleanTop .pp-feature-strip,
+    .pp-master-feature-strip,
+    .pp-master-subnav{display:none!important}
     #ppCleanTop{position:relative;width:100%;min-height:367px;overflow:hidden;background:#07141d;color:#f5f8fb;border-bottom:1px solid #294653;font-family:Inter,Segoe UI,system-ui,sans-serif}
     #ppCleanTop .pp-top-grid{position:absolute;inset:0;opacity:.45;background-image:linear-gradient(rgba(62,105,122,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(62,105,122,.16) 1px,transparent 1px);background-size:62px 62px;background-position:28px 0;pointer-events:none}
     #ppCleanTop .pp-top-grid:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 48%,rgba(0,129,184,.12),transparent 32%),linear-gradient(90deg,rgba(7,20,29,.12),rgba(7,20,29,.72) 63%,rgba(7,20,29,.16))}
