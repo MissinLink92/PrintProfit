@@ -21,8 +21,8 @@ function install(){
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
-        <button type="button" data-target="machine"><span class="pp-nav-icon cube"></span><span>Price</span></button>
-        <button type="button" data-target="costs"><span class="pp-nav-icon chart"></span><span>Profit</span></button>
+        <button type="button" data-target="priceFinder"><span class="pp-nav-icon cube"></span><span>Price Finder</span></button>
+        <button type="button" data-target="profitAdvisor"><span class="pp-nav-icon chart"></span><span>Profit Advisor</span></button>
         <button type="button" data-target="guide"><span class="pp-nav-icon book"></span><span>Guide &amp; Help</span></button>
         <button type="button" data-target="settings"><span class="pp-nav-icon gear"></span><span>Settings</span></button>
       </nav>
@@ -60,10 +60,8 @@ function install(){
   const style=document.createElement('style');
   style.id='ppCleanTopStyles';
   style.textContent=`
-    /* Regression cleanup: remove the duplicate feature/navigation strips.
-       Keep the actual calculator stages and page content untouched. */
-    /* Remove only the duplicate calculator links. Keep Guide & Help and Settings. */
-    #ppCleanTop .pp-top-links button:nth-child(-n+3){display:none!important}
+    /* Regression cleanup: remove only duplicate feature strips.
+       Keep the main navigation visible because it contains the Price Finder and Profit Advisor entry points. */
     #ppCleanTop .pp-top-links{display:flex!important}
     #ppCleanTop .pp-feature-strip,
     .pp-master-feature-strip,
@@ -395,6 +393,14 @@ function install(){
   const go=(target)=>{
     if(target==='settings'){openSettings();return;}
     if(target==='guide'){openGuide();return;}
+    if(target==='priceFinder'){window.top.location.href='./price-finder.html';return;}
+    if(target==='profitAdvisor'){
+      const advisor=document.getElementById('ppProfitAdvisor');
+      if(advisor){advisor.scrollIntoView({behavior:'smooth',block:'start'});return;}
+      const result=document.querySelector('.result');
+      if(result){result.scrollIntoView({behavior:'smooth',block:'start'});return;}
+      return;
+    }
     const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
     if(tab){tab.click();return;}
     const el=document.getElementById(target);
