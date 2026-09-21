@@ -97,7 +97,19 @@ function addStyles(){
     '#ppResultStatus.good{border-color:rgba(54,229,139,.45);color:var(--good,#36e58b)}',
     '#ppResultStatus.bad{border-color:rgba(255,107,107,.45);color:var(--bad,#ff6b6b)}',
     '#ppResultStatus.neutral{color:var(--muted,#aebdca)}',
-    '#ppProfitTools{margin-top:12px;border:1px solid var(--line,#24404e);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#0e202b),var(--panel,#0b1821));overflow:hidden}',
+    '#ppProfitToolkitLauncher{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:12px;padding:10px 12px;border:1px solid var(--line,#24404e);border-radius:11px;background:linear-gradient(180deg,var(--panel2,#0e202b),var(--panel,#0b1821));color:var(--text,#f5f8fb);cursor:pointer;text-align:left;font:700 11px Inter,Segoe UI,system-ui,sans-serif}',
+    '#ppProfitToolkitLauncher:hover{border-color:var(--accent,#ff7800);transform:translateY(-1px)}',
+    '#ppProfitToolkitLauncher .pp-launch-main{display:flex;align-items:center;gap:9px;min-width:0}',
+    '#ppProfitToolkitLauncher .pp-launch-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:var(--accent,#ff7800);color:#fff;font-size:14px;flex:0 0 28px}',
+    '#ppProfitToolkitLauncher .pp-launch-copy strong{display:block;font-size:11px}',
+    '#ppProfitToolkitLauncher .pp-launch-copy span{display:block;margin-top:2px;color:var(--muted,#aebdca);font-size:8.5px;font-weight:600}',
+    '#ppProfitToolkitLauncher .pp-launch-arrow{color:var(--accent,#ff7800);font-size:18px;line-height:1}',
+    '#ppProfitTools{position:fixed;inset:0;z-index:12050;display:none;background:rgba(0,0,0,.70);backdrop-filter:blur(6px);padding:16px;overflow:auto}',
+    '#ppProfitTools.pp-open{display:flex;align-items:center;justify-content:center}',
+    '#ppProfitTools .pp-tools-shell{width:min(920px,100%);max-height:min(860px,calc(100vh - 32px));border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,var(--panel2,#0e202b),var(--panel,#0b1821));box-shadow:0 28px 90px #000b;overflow:auto}',
+    '#ppProfitTools .pp-tools-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line,#24404e);position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}',
+    '#ppProfitTools .pp-tools-close{width:34px;height:34px;flex:0 0 34px;border:1px solid var(--line,#24404e);border-radius:9px;background:var(--panel,#0b1821);color:var(--text,#f5f8fb);font-size:22px;line-height:1;cursor:pointer}',
+    '#ppProfitTools .pp-tools-close:hover{border-color:var(--accent,#ff7800);color:var(--accent,#ff7800)}',
     '#ppProfitTools .pp-tools-head{padding:10px 12px;border-bottom:1px solid var(--line,#24404e)}',
     '#ppProfitTools .pp-tools-head h3{margin:0;font-size:13px}',
     '#ppProfitTools .pp-tools-head p{margin:3px 0 0;color:var(--muted,#aebdca);font-size:9.5px;line-height:1.4}',
@@ -158,9 +170,12 @@ function buildTools(){
 
   const box=document.createElement('section');
   box.id='ppProfitTools';
-  box.innerHTML=[
-    '<div class="pp-tools-head"><h3>Profit Toolkit</h3><p>See where your money goes, test changes safely and price your print with the current fee assumptions.</p></div>',
-    '<details open><summary>What If? — test changes before you make them</summary><div class="pp-tool-body">',
+  const contentWrap=document.createElement('div');
+  contentWrap.className='pp-tools-shell';
+  box.appendChild(contentWrap);
+  contentWrap.innerHTML=[
+    '<div class="pp-tools-head"><div><h3>Profit Toolkit</h3><p>See where your money goes, test changes safely and price your print with the current fee assumptions.</p></div><button type="button" class="pp-tools-close" aria-label="Close Profit Toolkit">×</button></div>',
+    '<details><summary>What If? — test changes before you make them</summary><div class="pp-tool-body">',
       '<div class="pp-tool-grid">',
         '<div class="pp-tool-field"><label>Material usage reduction (%) — e.g. lower infill</label><input id="ppWhatIfMaterial" type="number" min="0" max="80" step="1" value="0"></div>',
         '<div class="pp-tool-field"><label>Print-time reduction (%) — e.g. faster settings</label><input id="ppWhatIfTime" type="number" min="0" max="80" step="1" value="0"></div>',
@@ -172,7 +187,7 @@ function buildTools(){
       '<div class="pp-whatif-result"><div class="pp-whatif-stat"><span>Current profit</span><strong id="ppWIBaseProfit">—</strong></div><div class="pp-whatif-stat"><span>What-if profit</span><strong id="ppWIProfit">—</strong></div><div class="pp-whatif-stat"><span>Potential profit change</span><strong class="pp-whatif-delta" id="ppWIDelta">—</strong></div><div class="pp-whatif-stat"><span>Adjusted cost to make</span><strong id="ppWICost">—</strong></div></div>',
       '<div class="pp-tool-note" id="ppWINote">Scenario values are estimates. Material and time reductions are treated proportionally; real savings depend on the model and settings.</div>',
     '</div></details>',
-    '<details open><summary>Cost Breakdown — see what is eating the margin</summary><div class="pp-tool-body"><div class="pp-bars" id="ppCostBars"></div><div class="pp-tool-note">Bars show each current cost as a share of the total cost to make this print.</div></div></details>',
+    '<details><summary>Cost Breakdown — see what is eating the margin</summary><div class="pp-tool-body"><div class="pp-bars" id="ppCostBars"></div><div class="pp-tool-note">Bars show each current cost as a share of the total cost to make this print.</div></div></details>',
     '<details><summary>Price Ladder — see the price needed for different margins</summary><div class="pp-tool-body"><div class="pp-tool-note">Per-print pricing using the current selling channel, fixed fee and delivery charge.</div><div class="pp-ladder" id="ppPriceLadder"></div></div></details>',
     '<details><summary>Bulk Buy — check savings on material and packaging</summary><div class="pp-tool-body">',
       '<div class="pp-bulk-card"><h4>Material</h4><div class="pp-tool-grid"><div class="pp-tool-field"><label>Bulk cost per pack</label><input id="ppBulkMaterialCost" type="number" min="0" step=".01" placeholder="e.g. 17.50"></div><div class="pp-tool-field"><label>Number of packs</label><input id="ppBulkMaterialPacks" type="number" min="1" step="1" value="5"></div></div><div class="pp-bulk-output"><div><span>Saving per pack</span><b id="ppBulkMaterialPer">—</b></div><div><span>Total buy saving</span><b id="ppBulkMaterialTotal">—</b></div><div><span>Saving per print</span><b id="ppBulkMaterialPrint">—</b></div><div><span>Current pack cost</span><b id="ppBulkMaterialCurrent">—</b></div></div></div>',
