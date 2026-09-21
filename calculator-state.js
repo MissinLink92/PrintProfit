@@ -45,6 +45,7 @@ function snapshot(){
     if(!isPersistedField(el))return;
     data.fields[el.id]={
       value:el.value,
+      selectedText:el.tagName==='SELECT' ? (el.selectedOptions?.[0]?.textContent||'').trim() : undefined,
       checked:(el.type==='checkbox'||el.type==='radio')?!!el.checked:undefined
     };
   });
@@ -81,8 +82,32 @@ function restore(){
   ids.forEach(id=>{
     const el=document.getElementById(id),state=data.fields[id];
     if(!el||!isPersistedField(el))return;
-    if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean')el.checked=state.checked;
-    else el.value=state?.value??'';
+    if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean'){
+      el.checked=state.checked;
+    }else if(el.tagName==='SELECT'){
+      const wanted=String(state?.value??'');
+      if([...el.options].some(o=>o.value===wanted)){
+        el.value=wanted;
+      }else{
+        const label=String(state?.selectedText||'').trim();
+        const byLabel=[...el.options].find(o=>o.textContent.trim()===label);
+        if(byLabel){
+          el.value=byLabel.value;
+        }else if(el.id==='printer'){
+          const parts=wanted.split(/[|,]/);
+          const power=Number(parts[0]),life=Number(parts[2]);
+          if(Number.isFinite(power)&&Number.isFinite(life)){
+            const legacy=[...el.options].find(o=>{
+              const p=String(o.value||'').split(/[|,]/);
+              return Number(p[0])===power&&Number(p[2])===life;
+            });
+            if(legacy)el.value=legacy.value;
+          }
+        }
+      }
+    }else{
+      el.value=state?.value??'';
+    }
   });
 
   const fireChange=id=>{
@@ -98,8 +123,32 @@ function restore(){
   ids.forEach(id=>{
     const el=document.getElementById(id),state=data.fields[id];
     if(!el||!isPersistedField(el))return;
-    if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean')el.checked=state.checked;
-    else el.value=state?.value??'';
+    if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean'){
+      el.checked=state.checked;
+    }else if(el.tagName==='SELECT'){
+      const wanted=String(state?.value??'');
+      if([...el.options].some(o=>o.value===wanted)){
+        el.value=wanted;
+      }else{
+        const label=String(state?.selectedText||'').trim();
+        const byLabel=[...el.options].find(o=>o.textContent.trim()===label);
+        if(byLabel){
+          el.value=byLabel.value;
+        }else if(el.id==='printer'){
+          const parts=wanted.split(/[|,]/);
+          const power=Number(parts[0]),life=Number(parts[2]);
+          if(Number.isFinite(power)&&Number.isFinite(life)){
+            const legacy=[...el.options].find(o=>{
+              const p=String(o.value||'').split(/[|,]/);
+              return Number(p[0])===power&&Number(p[2])===life;
+            });
+            if(legacy)el.value=legacy.value;
+          }
+        }
+      }
+    }else{
+      el.value=state?.value??'';
+    }
   });
 
   ids.forEach(id=>{
