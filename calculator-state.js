@@ -40,7 +40,7 @@ function isPersistedField(el){
 }
 
 function snapshot(){
-  const data={fields:{},fileName:''};
+  const data={fields:{},fileName:'',fileStatus:'',fileData:{}};
   document.querySelectorAll('input,select,textarea').forEach(el=>{
     if(!isPersistedField(el))return;
     data.fields[el.id]={
@@ -51,6 +51,12 @@ function snapshot(){
   });
   const file=document.getElementById('file');
   if(file?.files?.[0])data.fileName=file.files[0].name;
+  const status=document.getElementById('status');
+  if(status)data.fileStatus=status.textContent||'';
+  try{
+    const fd=window.__ppFileData||{};
+    data.fileData=JSON.parse(JSON.stringify(fd));
+  }catch(e){data.fileData={}}
   // Result mode is derived from quantity, so do not persist the active result tab.
   // Otherwise an old Batch tab can return even when quantity is back at 1.
   const stage=document.querySelector('.pp-step.active')?.dataset.tab;
@@ -77,6 +83,12 @@ function read(){
 function restore(){
   const data=read();
   if(!data?.fields)return false;
+
+  try{window.__ppFileData=(data.fileData&&typeof data.fileData==='object')?data.fileData:{};}catch(e){window.__ppFileData={};}
+  if(data.fileStatus){
+    const status=document.getElementById('status');
+    if(status)status.textContent=data.fileStatus;
+  }
 
   const ids=Object.keys(data.fields);
   ids.forEach(id=>{
@@ -171,7 +183,14 @@ function restore(){
   },80);
 
   // Recreate the last uploaded file where the existing file-storage helper has it.
-  setTimeout(restoreLastUploadedFile,140);
+  setTimeout(async()=>{
+    await restoreLastUploadedFile();
+    window.__ppRefreshModelHub?.();
+  },140);
+  // Even if the browser refuses programmatic file assignment, restore the saved
+  // metadata/field state into the model panel so navigation never blanks Your Model.
+  setTimeout(()=>window.__ppRefreshModelHub?.(),260);
+  setTimeout(()=>window.__ppRefreshModelHub?.(),520);
   return true;
 }
 
