@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrintProfit — Price Finder</title>
+<style>
+:root{--bg:#071018;--panel:#0b1821;--panel2:#0e202b;--text:#f5f8fb;--muted:#9fb2bd;--line:#284654;--accent:#ff7800;--good:#36e58b}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:14px Inter,Segoe UI,system-ui,sans-serif}
+body{background:radial-gradient(circle at 82% 7%,rgba(0,129,184,.12),transparent 25%),linear-gradient(180deg,#071018 0,#08131b 100%)}
+.wrap{width:min(1240px,calc(100% - 28px));margin:0 auto;padding-bottom:42px}
+.header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:70px;padding:8px 0;border-bottom:1px solid var(--line);background:rgba(7,16,24,.94);backdrop-filter:blur(8px)}
+.brand img{width:112px;height:58px;object-fit:contain;display:block}
+.nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px}.nav a:hover,.nav a.active{background:#ff780014;color:var(--accent)}
+.hero{padding:36px 0 20px}.kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--accent)}h1{font-size:clamp(38px,6vw,60px);line-height:.95;letter-spacing:-.04em;margin:9px 0 12px}h1 strong{color:var(--accent)}.lead{max-width:830px;color:#b8c7d0;font-size:15px;line-height:1.55;margin:0}
+.tools{display:grid;grid-template-columns:1.5fr .8fr .8fr .9fr;gap:9px;margin:18px 0 12px}.tool{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px}.tool label{display:block;color:var(--muted);font-size:9px;font-weight:800;margin-bottom:5px}.tool input,.tool select{width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:8px;font:600 11px Inter,Segoe UI,system-ui,sans-serif;outline:0}.tool input:focus,.tool select:focus{border-color:var(--accent)}
+.meta{display:flex;justify-content:space-between;gap:10px;color:#6f8794;font-size:9px;margin:9px 2px 12px;flex-wrap:wrap}
+.table-wrap{border:1px solid var(--line);border-radius:14px;overflow:auto;background:linear-gradient(180deg,var(--panel),var(--panel2))}
+table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11px;text-align:left;border-bottom:1px solid rgba(127,160,175,.12);font-size:10px}th{color:#8ea8b4;font-size:8px;letter-spacing:.12em;text-transform:uppercase;background:#091821;position:sticky;top:0}td strong{font-size:11px}tr:last-child td{border-bottom:0}tr:hover td{background:#ff780008}
+.kind{display:inline-flex;padding:4px 7px;border-radius:999px;border:1px solid #355363;color:#c7d5dc;font-size:8px;font-weight:800}.kind.filament{color:#ffd5b0;border-color:#ff780055;background:#ff780012}.kind.printer{color:#b8def2;border-color:#4c819c55;background:#0798ff0c}
+.price{font-size:13px;font-weight:900}.unit{color:#ffac67;font-weight:800}.muted{color:var(--muted)}.checked{color:#768b96}.link{display:inline-flex;align-items:center;justify-content:center;padding:6px 8px;border:1px solid var(--line);border-radius:7px;color:var(--text);text-decoration:none;font-weight:800;font-size:9px;white-space:nowrap}.link:hover{border-color:var(--accent);color:var(--accent)}
+.section{margin-top:20px}.section h2{font-size:15px;margin:0 0 8px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel),var(--panel2));padding:13px}.card h3{margin:0 0 5px;font-size:11px}.card p{margin:0;color:var(--muted);font-size:9.5px;line-height:1.5}
+.empty{text-align:center;padding:44px 15px;color:var(--muted)}.empty strong{display:block;color:var(--text);margin-bottom:5px}.footer{margin-top:28px;padding-top:15px;border-top:1px solid var(--line);color:#6f8794;font-size:9px;line-height:1.5}
+@media(max-width:900px){.tools{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto;flex-wrap:nowrap}.nav a{white-space:nowrap}.wrap{width:min(100% - 20px,1240px)}.hero{padding-top:26px}.tools{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="header">
+<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/user-selected-printprofit-logo.webp?v=5" alt="PrintProfit"></a>
+<nav class="nav" aria-label="PrintProfit navigation">
+<a href="./index.html">Calculator</a>
+<a href="./price-finder.html" class="active">Price Finder</a>
+<a href="./guide.html">Guide &amp; Help</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="kicker">PRINTPROFIT • PRICE FINDER</div>
+<h1>Find it <strong>cheaper.</strong></h1>
+<p class="lead">Compare current tracked UK listings for 3D printers and filament. Sort by total price or unit cost, filter by type, and open the retailer listing to check the live price before you buy.</p>
+</section>
+
+<div class="tools">
+<div class="tool"><label>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
+<div class="tool"><label>Category</label><select id="category"><option value="all">All products</option><option value="filament">Filament</option><option value="printer">3D printers</option></select></div>
+<div class="tool"><label>Material / type</label><select id="type"><option value="all">All types</option><option value="PLA">PLA</option><option value="PLA+">PLA+</option><option value="PETG">PETG</option><option value="FDM">FDM printer</option><option value="Resin">Resin printer</option></select></div>
+<div class="tool"><label>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option></select></div>
+</div>
+
+<div class="meta">
+<span id="count">0 listings</span>
+<span>Seed listings checked 21 September 2026 • Prices can change</span>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Type</th><th>Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Updated</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+<div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
+</div>
+
+<section class="section">
+<h2>How PrintProfit compares prices</h2>
+<div class="cards">
+<article class="card"><h3>Filament: £ / kg</h3><p>Filament listings are normalised to a per-kilogram figure where the pack weight is known. That makes a 500g spool, 1kg spool and larger bundle easier to compare.</p></article>
+<article class="card"><h3>Printers: headline price</h3><p>Printer listings use the advertised machine price. Build volume and printer type are shown where known so a low price is not mistaken for an identical machine.</p></article>
+<article class="card"><h3>Live-check before buying</h3><p>The comparison is a snapshot. Delivery, coupons, bundles, account pricing, VAT treatment and stock can alter the final checkout price, so use the retailer link before purchasing.</p></article>
+</div>
+</section>
+
+<section class="section">
+<h2>Tracked sources</h2>
+<div class="cards">
+<article class="card"><h3>3DJake UK</h3><p>Large catalogue for filament and 3D printing hardware. Product pages expose pack weights and current listed prices.</p></article>
+<article class="card"><h3>Bambu Lab UK</h3><p>Official Bambu printer listings, including the A1 series.</p></article>
+<article class="card"><h3>ELEGOO UK</h3><p>Official ELEGOO printer listings, including the Neptune range.</p></article>
+<article class="card"><h3>Creality UK</h3><p>Official Creality printer and filament listings, including Ender and K-series machines.</p></article>
+<article class="card"><h3>Amazon UK</h3><p>Useful for broad marketplace coverage, but seller, delivery and stock can change quickly.</p></article>
+<article class="card"><h3>More stores</h3><p>This page is designed so more retailers and price feeds can be added without changing the comparison interface.</p></article>
+</div>
+</section>
+
+<div class="footer">PrintProfit — Price Finder • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
+</div>
+
+<script>
+(()=>{
+'use strict';
+const DATA=[
+ {category:'filament',type:'PLA',name:'The Filament PLA Refill Lite Grey',retailer:'3DJake UK',pack:'1 kg',price:11.05,unit:11.05,updated:'21 Sep 2026',url:'https://www.3djake.uk/the-filament/the-filament-pla-filament'},
+ {category:'filament',type:'PLA',name:'eSUN PLA Basic Black',retailer:'3DJake UK',pack:'1 kg',price:11.50,unit:11.50,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/black-pla-filaments'},
+ {category:'filament',type:'PLA',name:'Elegoo PLA Black',retailer:'3DJake UK',pack:'1 kg',price:11.95,unit:11.95,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/black-pla-filaments'},
+ {category:'filament',type:'PLA+',name:'Elegoo PLA+ Black',retailer:'3DJake UK',pack:'1 kg',price:12.85,unit:12.85,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/black-pla-filaments'},
+ {category:'filament',type:'PLA',name:'Polymaker PolyTerra PLA Cotton White',retailer:'3DJake UK',pack:'1 kg',price:13.79,unit:13.79,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/pla-filament-product-range'},
+ {category:'filament',type:'PLA',name:'SUNLU PLA+ 2.0 White',retailer:'Subliblanks',pack:'1 kg',price:12.50,unit:12.50,updated:'21 Sep 2026',url:'https://www.subliblanks.com/'},
+ {category:'filament',type:'PLA+',name:'SUNLU PLA+ Blue',retailer:'NSE Imports',pack:'1 kg',price:17.95,unit:17.95,updated:'21 Sep 2026',url:'https://nseimports.co.uk/'},
+ {category:'filament',type:'PLA',name:'Bambu Lab PLA Basic Black',retailer:'3DJake UK',pack:'1 kg',price:24.00,unit:24.00,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/black-pla-filaments'},
+ {category:'filament',type:'PLA',name:'Creality Hyper PLA',retailer:'Creality UK',pack:'1 kg',price:18.99,unit:18.99,updated:'21 Sep 2026',url:'https://store.creality.com/uk/collections/active'},
+ {category:'filament',type:'PETG',name:'eSUN PETG Black',retailer:'3DJake UK',pack:'1 kg',price:14.70,unit:14.70,updated:'21 Sep 2026',url:'https://www.3djake.uk/3d-printer-filaments/bestselling-filaments'},
+ {category:'printer',type:'FDM',name:'Bambu Lab A1 mini',retailer:'Bambu Lab UK',pack:'180 × 180 × 180 mm',price:169.00,unit:169.00,updated:'21 Sep 2026',url:'https://bambu-lab-uk.myshopify.com/collections/a1-series'},
+ {category:'printer',type:'FDM',name:'Bambu Lab A1',retailer:'Bambu Lab UK',pack:'256 × 256 × 256 mm',price:259.00,unit:259.00,updated:'21 Sep 2026',url:'https://bambu-lab-uk.myshopify.com/products/a1'},
+ {category:'printer',type:'FDM',name:'Bambu Lab P1S',retailer:'Bambu Lab UK',pack:'256 × 256 × 256 mm',price:429.00,unit:429.00,updated:'21 Sep 2026',url:'https://uk.store.bambulab.com/collections/3d-printer'},
+ {category:'printer',type:'FDM',name:'ELEGOO Neptune 4',retailer:'ELEGOO UK',pack:'225 × 225 × 265 mm',price:159.00,unit:159.00,updated:'21 Sep 2026',url:'https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer'},
+ {category:'printer',type:'FDM',name:'Creality Ender-3 V3 SE',retailer:'Creality UK',pack:'220 × 220 × 250 mm',price:149.00,unit:149.00,updated:'21 Sep 2026',url:'https://store.creality.com/uk/products/ender-3-v3-se-3d-printer'},
+ {category:'printer',type:'FDM',name:'Creality Ender-3 V3 KE',retailer:'Creality UK',pack:'220 × 220 × 240 mm',price:219.00,unit:219.00,updated:'21 Sep 2026',url:'https://store.creality.com/uk/products/ender-3-v3-ke-3d-printer'},
+ {category:'printer',type:'FDM',name:'Creality K1C 2025',retailer:'Creality UK',pack:'220 × 220 × 250 mm',price:379.00,unit:379.00,updated:'21 Sep 2026',url:'https://store.creality.com/uk/products/k1c-3d-printer-2025'},
+ {category:'printer',type:'FDM',name:'Flashforge Adventurer 5M',retailer:'Amazon UK',pack:'220 × 220 × 220 mm',price:209.00,unit:209.00,updated:'21 Sep 2026',url:'https://www.amazon.co.uk/s?k=Flashforge+Adventurer+5M'},
+ {category:'printer',type:'FDM',name:'Creality Ender-3 V3 SE (marketplace listing)',retailer:'Creality Official UK',pack:'220 × 220 × 250 mm',price:149.00,unit:149.00,updated:'21 Sep 2026',url:'https://www.crealityofficial.co.uk/products/creality-official-store-ender-3-v3-se-3d-printer-for-sale'}
+];
+const $=id=>document.getElementById(id);
+const money=v=>'£'+Number(v).toFixed(2);
+function render(){
+ const q=$('search').value.trim().toLowerCase(),cat=$('category').value,type=$('type').value,sort=$('sort').value;
+ let rows=DATA.filter(x=>
+   (!q||(x.name+' '+x.retailer+' '+x.pack+' '+x.type).toLowerCase().includes(q)) &&
+   (cat==='all'||x.category===cat) &&
+   (type==='all'||x.type===type)
+ );
+ rows.sort((a,b)=>{
+  if(sort==='unit')return a.unit-b.unit;
+  if(sort==='name')return a.name.localeCompare(b.name);
+  if(sort==='retailer')return a.retailer.localeCompare(b.retailer)||a.name.localeCompare(b.name);
+  return a.price-b.price;
+ });
+ $('rows').innerHTML=rows.map(x=>'<tr><td><span class="kind '+x.category+'">'+(x.category==='filament'?'Filament':'3D Printer')+'</span></td><td><strong>'+esc(x.name)+'</strong></td><td>'+esc(x.retailer)+'</td><td>'+esc(x.pack)+'</td><td class="price">'+money(x.price)+'</td><td class="unit">'+(x.category==='filament'?money(x.unit)+'/kg':'—')+'</td><td class="checked">'+esc(x.updated)+'</td><td><a class="link" href="'+x.url+'" target="_blank" rel="noopener">Check live ↗</a></td></tr>').join('');
+ $('empty').hidden=rows.length>0;
+ $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+['search','category','type','sort'].forEach(id=>$(id).addEventListener('input',render));
+render();
+})();
+</script>
+</body>
+</html>
