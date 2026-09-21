@@ -35,13 +35,17 @@ function snapshot(){
 
 function save(){
   const raw=JSON.stringify(snapshot());
-  try{localStorage.setItem(KEY,raw);}catch(e){console.warn('PrintProfit local draft save failed:',e);}
-  try{sessionStorage.setItem(KEY,raw);}catch(e){/* session storage can be unavailable in some privacy modes */}
+  // Keep the draft only for this browser tab/session. This preserves data while
+  // moving between PrintProfit pages and across refreshes, but starts clean when
+  // the browser session ends.
+  try{sessionStorage.setItem(KEY,raw);}catch(e){console.warn('PrintProfit session draft save failed:',e);}
+  // Remove any pre-session-storage drafts created by older versions.
+  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
 }
 
 function read(){
   try{
-    const raw=sessionStorage.getItem(KEY)||localStorage.getItem(KEY)||localStorage.getItem(LEGACY_KEY)||sessionStorage.getItem(LEGACY_KEY)||'null';
+    const raw=sessionStorage.getItem(KEY)||'null';
     const data=JSON.parse(raw);
     return data&&typeof data==='object'?data:null;
   }catch(e){return null;}
