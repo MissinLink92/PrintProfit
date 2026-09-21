@@ -10,12 +10,12 @@ const num=id=>{
   return Number.parseFloat(el?.value||'0')||0;
 };
 
-const LANG=(()=>{
+const getLang=()=>{
   try{
     const p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');
     return p.language||'en';
   }catch(e){return 'en';}
-})();
+};
 
 const M={
   en:{
@@ -355,14 +355,14 @@ const M={
     machineBody:'Printerafskrivning er {amount} pr. print. Kortere printtid eller flere dele pr. kørsel kan fordele maskinomkostningen bedre.',
     review:'Se',
     healthy:'God margen. Forslagene nedenfor kan forbedre den yderligere.',
-    noData:'Tilføj omkostninger eller upload en printf il for mere specifikke råd.',
+    noData:'Tilføj omkostninger eller upload en printfil for mere specifikke råd.',
     batchNote:'Baseret på det aktuelle batchresultat.',
     singleNote:'Baseret på det aktuelle resultat for ét print.'
   }
 };
 
 function t(key,vars={}){
-  const pack=M[LANG]||M.en;
+  const pack=M[getLang()]||M.en;
   let s=pack[key]||M.en[key]||key;
   Object.entries(vars).forEach(([k,v])=>{s=s.replaceAll('{'+k+'}',String(v));});
   return s;
@@ -460,8 +460,8 @@ function addStyles(){
     .pp-profit-note{margin-top:8px;padding-top:8px;border-top:1px solid rgba(127,160,175,.12);color:var(--muted,#aebdca);font-size:9px;line-height:1.4;}
     @media(max-width:650px){.pp-profit-stats{grid-template-columns:1fr}.pp-profit-advisor{padding:10px;}}
     body[data-pp-theme="light"] .pp-profit-advisor{background:linear-gradient(180deg,#fff,#edf3f6)!important;border-color:#b8c9d1!important;color:#17232b!important;}
-    body[data-pp-theme="light"] .pp-profit-stat,.pp-profit-item-icon{border-color:#c5d2d8!important;background:#f6f9fa!important;}
-    body[data-pp-theme="light"] .pp-profit-head p,body[data-pp-theme="light"] .pp-profit-item-main p,body[data-pp-theme="light"] .pp-profit-note,.body[data-pp-theme="light"] .pp-profit-stat span{color:#5d707b!important;}
+    body[data-pp-theme="light"] .pp-profit-stat,body[data-pp-theme="light"] .pp-profit-item-icon{border-color:#c5d2d8!important;background:#f6f9fa!important;}
+    body[data-pp-theme="light"] .pp-profit-head p,body[data-pp-theme="light"] .pp-profit-item-main p,body[data-pp-theme="light"] .pp-profit-note,body[data-pp-theme="light"] .pp-profit-stat span{color:#5d707b!important;}
     body[data-pp-theme="light"] .pp-profit-review{background:#fff!important;color:#17232b!important;border-color:#c5d2d8!important;}
   `;
   document.head.appendChild(s);
@@ -530,8 +530,10 @@ function render(){
   if(s.sell>0 || shownProfit<0)items.push({score:shownProfit<0?Math.max(1,Math.abs(shownProfit)):0,key:'price',icon:'💷',body:t('priceBody',{amount:money(s.sell),breakEven:s.breakEven===null?'—':money(s.breakEven)}),target:'sell'});
   items.push({score:-1,key:'printSettings',icon:'🧱',body:t('printSettingsBody'),target:null});
 
-  items.sort((a,b)=>b.score-a.score);
-  items.slice(0,5).forEach(item=>{
+  const printTip=items.find(i=>i.key==='printSettings');
+  const topItems=items.filter(i=>i.key!=='printSettings').sort((a,b)=>b.score-a.score).slice(0,4);
+  if(printTip)topItems.push(printTip);
+  topItems.forEach(item=>{
     const el=buildItem(item.icon,t(item.key),item.body,item.target);
     box.appendChild(el);
   });
