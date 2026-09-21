@@ -60,15 +60,23 @@ function restore(){
     if(el)el.dispatchEvent(new Event('change',{bubbles:true}));
   };
 
-  // Restore dependency-driving fields first, then recalculate the rest.
+  // Let the existing calculator rebuild dependent controls first.
   ['printer','materialType','platformSelect','deliveryCourier','deliveryRate'].forEach(fireChange);
+
+  // Re-apply the exact saved values afterwards so custom fees, manual delivery
+  // overrides and other user-entered fields are not replaced by profile defaults.
   ids.forEach(id=>{
-    if(['printer','materialType','platformSelect','deliveryCourier','deliveryRate'].includes(id))return;
+    const el=document.getElementById(id),state=data.fields[id];
+    if(!el||!isPersistedField(el))return;
+    if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean')el.checked=state.checked;
+    else el.value=state?.value??'';
+  });
+
+  ids.forEach(id=>{
     const el=document.getElementById(id);
     if(el)el.dispatchEvent(new Event('input',{bubbles:true}));
   });
   ids.forEach(id=>{
-    if(['printer','materialType','platformSelect','deliveryCourier','deliveryRate'].includes(id))return;
     const el=document.getElementById(id);
     if(el)el.dispatchEvent(new Event('change',{bubbles:true}));
   });
