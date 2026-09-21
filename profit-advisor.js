@@ -437,9 +437,22 @@ function snapshot(){
 
 function focusField(id){
   const el=$(id);
-  if(!el)return;
-  el.scrollIntoView({behavior:'smooth',block:'center'});
-  setTimeout(()=>{try{el.focus({preventScroll:true});}catch(e){try{el.focus();}catch(_){} }},250);
+  if(!el)return false;
+  try{
+    const top=el.getBoundingClientRect().top+window.scrollY-110;
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+  }catch(e){
+    try{el.scrollIntoView({behavior:'smooth',block:'center'});}catch(_){}
+  }
+  setTimeout(()=>{
+    try{
+      el.focus({preventScroll:true});
+      el.style.outline='2px solid var(--accent,#ff7800)';
+      el.style.outlineOffset='2px';
+      setTimeout(()=>{el.style.outline='';el.style.outlineOffset='';},1400);
+    }catch(e){try{el.focus();}catch(_){}}
+  },350);
+  return true;
 }
 
 function addStyles(){
@@ -478,8 +491,7 @@ function addStyles(){
 function buildItem(icon,titleKey,body,actionId){
   const item=document.createElement('div');
   item.className='pp-profit-item';
-  item.innerHTML='<div class="pp-profit-item-icon">'+icon+'</div><div class="pp-profit-item-main"><strong>'+titleKey+'</strong><p>'+body+'</p>'+(actionId?'<button type="button" class="pp-profit-review">'+t('review')+'</button>':'')+'</div>';
-  if(actionId)item.querySelector('button').addEventListener('click',()=>focusField(actionId));
+  item.innerHTML='<div class="pp-profit-item-icon">'+icon+'</div><div class="pp-profit-item-main"><strong>'+titleKey+'</strong><p>'+body+'</p>'+(actionId?'<button type="button" class="pp-profit-review" data-pp-review-target="'+actionId+'">'+t('review')+'</button>':'')+'</div>';
   return item;
 }
 
@@ -563,6 +575,13 @@ function boot(){
   if(document.readyState!=='loading')render(); else document.addEventListener('DOMContentLoaded',render,{once:true});
 }
 
+document.addEventListener('click',e=>{
+  const button=e.target&&e.target.closest?e.target.closest('.pp-profit-review[data-pp-review-target]'):null;
+  if(!button)return;
+  e.preventDefault();
+  e.stopPropagation();
+  focusField(button.getAttribute('data-pp-review-target'));
+});
 document.addEventListener('input',e=>{
   if(e.target&&e.target.matches('input,select,textarea'))setTimeout(render,20);
 });
