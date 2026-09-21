@@ -47,7 +47,9 @@ const M={
     healthy:'Healthy margin. You can still use the suggestions below to improve it further.',
     noData:'Add some costs or upload a print file and the advisor will become more specific.',
     batchNote:'Based on the current batch result.',
-    singleNote:'Based on the current single-print result.'
+    singleNote:'Based on the current single-print result.',
+    lowestDelivery:'Lowest listed reference rate: {option} — {price}. This may not fit every parcel size or service requirement.',
+    lowestFee:'Lowest configured selling fee: {platform} — {fee} on this sale. Check the platform terms and any optional fees before choosing where to sell.'
   },
   pl:{
     title:'Doradca zysku',
@@ -78,7 +80,9 @@ const M={
     healthy:'Dobra marża. Poniższe sugestie mogą pomóc poprawić ją jeszcze bardziej.',
     noData:'Dodaj koszty lub prześlij plik druku, aby doradca mógł podać więcej szczegółów.',
     batchNote:'Na podstawie bieżącego wyniku partii.',
-    singleNote:'Na podstawie bieżącego wyniku pojedynczego wydruku.'
+    singleNote:'Na podstawie bieżącego wyniku pojedynczego wydruku.',
+    lowestDelivery:'Najniższa podana stawka referencyjna: {option} — {price}. Może nie pasować do każdego rozmiaru paczki lub usługi.',
+    lowestFee:'Najniższa skonfigurowana opłata sprzedażowa: {platform} — {fee} przy tej sprzedaży. Sprawdź warunki platformy i ewentualne opłaty dodatkowe.'
   },
   de:{
     title:'Gewinnberater',
@@ -140,7 +144,9 @@ const M={
     healthy:'Marge saine. Les suggestions ci-dessous peuvent encore l’améliorer.',
     noData:'Ajoutez des coûts ou téléversez un fichier d’impression pour obtenir des conseils plus précis.',
     batchNote:'Basé sur le résultat actuel du lot.',
-    singleNote:'Basé sur le résultat actuel d’une impression.'
+    singleNote:'Basé sur le résultat actuel d’une impression.',
+    lowestDelivery:'Tarif de référence le plus bas listé : {option} — {price}. Il peut ne pas convenir à tous les colis ou services.',
+    lowestFee:'Frais de vente configurés les plus bas : {platform} — {fee} sur cette vente. Vérifiez les conditions et les frais optionnels.'
   },
   es:{
     title:'Asesor de beneficios',
@@ -171,7 +177,9 @@ const M={
     healthy:'Margen saludable. Las sugerencias de abajo pueden mejorarlo aún más.',
     noData:'Añade costes o sube un archivo de impresión para obtener sugerencias más específicas.',
     batchNote:'Basado en el resultado actual del lote.',
-    singleNote:'Basado en el resultado actual de una impresión.'
+    singleNote:'Basado en el resultado actual de una impresión.',
+    lowestDelivery:'Tarifa de referencia más baja indicada: {option} — {price}. Puede no ser adecuada para todos los tamaños de paquete o servicios.',
+    lowestFee:'Comisión de venta configurada más baja: {platform} — {fee} en esta venta. Comprueba las condiciones y posibles cargos opcionales.'
   },
   it:{
     title:'Consulente del profitto',
@@ -202,7 +210,9 @@ const M={
     healthy:'Margine buono. I suggerimenti qui sotto possono migliorarlo ancora.',
     noData:'Aggiungi alcuni costi o carica un file di stampa per ricevere consigli più specifici.',
     batchNote:'Basato sul risultato attuale del lotto.',
-    singleNote:'Basato sul risultato attuale di una singola stampa.'
+    singleNote:'Basato sul risultato attuale di una singola stampa.',
+    lowestDelivery:'Tariffa di riferimento più bassa indicata: {option} — {price}. Potrebbe non essere adatta a ogni dimensione di pacco o servizio.',
+    lowestFee:'Commissione di vendita configurata più bassa: {platform} — {fee} su questa vendita. Controlla condizioni ed eventuali costi opzionali.'
   },
   nl:{
     title:'Winstadviseur',
@@ -233,7 +243,9 @@ const M={
     healthy:'Gezonde marge. Met de suggesties hieronder kun je die verder verbeteren.',
     noData:'Voeg kosten toe of upload een printbestand voor specifiekere adviezen.',
     batchNote:'Gebaseerd op het huidige batchresultaat.',
-    singleNote:'Gebaseerd op het huidige resultaat van één print.'
+    singleNote:'Gebaseerd op het huidige resultaat van één print.',
+    lowestDelivery:'Laagste vermelde referentietarief: {option} — {price}. Dit past mogelijk niet bij elk pakketformaat of elke dienst.',
+    lowestFee:'Laagste geconfigureerde verkoopkosten: {platform} — {fee} bij deze verkoop. Controleer voorwaarden en eventuele extra kosten.'
   },
   pt:{
     title:'Consultor de lucro',
@@ -264,7 +276,9 @@ const M={
     healthy:'Margem saudável. As sugestões abaixo podem melhorá-la ainda mais.',
     noData:'Adicione custos ou carregue um ficheiro de impressão para obter sugestões mais específicas.',
     batchNote:'Com base no resultado atual do lote.',
-    singleNote:'Com base no resultado atual de uma impressão.'
+    singleNote:'Com base no resultado atual de uma impressão.',
+    lowestDelivery:'Tarifa de referência mais baixa indicada: {option} — {price}. Pode não ser adequada a todos os tamanhos de encomenda ou serviços.',
+    lowestFee:'Taxa de venda configurada mais baixa: {platform} — {fee} nesta venda. Verifique os termos e eventuais taxas opcionais.'
   },
   cs:{
     title:'Poradce zisku',
@@ -295,7 +309,9 @@ const M={
     healthy:'Zdravá marže. Níže uvedené tipy ji mohou dále zlepšit.',
     noData:'Přidejte náklady nebo nahrajte soubor tisku, aby byl poradce konkrétnější.',
     batchNote:'Na základě aktuálního výsledku dávky.',
-    singleNote:'Na základě aktuálního výsledku jednoho tisku.'
+    singleNote:'Na základě aktuálního výsledku jednoho tisku.',
+    lowestDelivery:'Nejnižší uvedená referenční sazba: {option} — {price}. Nemusí vyhovovat každé velikosti zásilky nebo službě.',
+    lowestFee:'Nejnižší nakonfigurovaný prodejní poplatek: {platform} — {fee} při tomto prodeji. Ověřte podmínky platformy a volitelné poplatky.'
   },
   sv:{
     title:'Vinstguide',
@@ -326,7 +342,9 @@ const M={
     healthy:'Bra marginal. Förslagen nedan kan förbättra den ytterligare.',
     noData:'Lägg till kostnader eller ladda upp en utskriftsfil för mer specifika råd.',
     batchNote:'Baserat på det aktuella batchresultatet.',
-    singleNote:'Baserat på det aktuella resultatet för en utskrift.'
+    singleNote:'Baserat på det aktuella resultatet för en utskrift.',
+    lowestDelivery:'Lägsta angivna referenspris: {option} — {price}. Det kanske inte passar alla paketstorlekar eller tjänster.',
+    lowestFee:'Lägsta konfigurerade försäljningsavgift: {platform} — {fee} på denna försäljning. Kontrollera villkoren och eventuella tillvalskostnader.'
   },
   da:{
     title:'Fortjenesteassistent',
@@ -357,7 +375,9 @@ const M={
     healthy:'God margen. Forslagene nedenfor kan forbedre den yderligere.',
     noData:'Tilføj omkostninger eller upload en printfil for mere specifikke råd.',
     batchNote:'Baseret på det aktuelle batchresultat.',
-    singleNote:'Baseret på det aktuelle resultat for ét print.'
+    singleNote:'Baseret på det aktuelle resultat for ét print.',
+    lowestDelivery:'Laveste angivne referencesats: {option} — {price}. Den passer muligvis ikke til alle pakkestørrelser eller tjenester.',
+    lowestFee:'Laveste konfigurerede salgsgebyr: {platform} — {fee} på dette salg. Tjek vilkår og eventuelle ekstra gebyrer.'
   }
 };
 
@@ -433,6 +453,45 @@ function snapshot(){
     :null;
 
   return {qty,disc,hours,materialCost,elec,depreciation,labour,packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
+}
+
+function profileName(selectId,key){
+  const el=$(selectId);
+  const opt=el?.querySelector('option[value="'+String(key).replace(/"/g,'&quot;')+'"]');
+  return opt?.textContent?.trim()||key;
+}
+
+function cheapestDelivery(){
+  try{
+    const data=window.__ppProfitAdvisorData?.();
+    const profiles=data?.deliveryProfiles;
+    if(!profiles)return null;
+    let best=null;
+    Object.entries(profiles).forEach(([key,p])=>{
+      (p?.rates||[]).forEach(r=>{
+        const price=Number(r?.price);
+        if(!(price>0))return;
+        if(!best||price<best.price)best={courier:key,label:r.label,price};
+      });
+    });
+    return best;
+  }catch(e){return null;}
+}
+
+function lowestSellingFee(sell){
+  try{
+    const data=window.__ppProfitAdvisorData?.();
+    const profiles=data?.platformProfiles;
+    if(!profiles)return null;
+    let best=null;
+    Object.entries(profiles).forEach(([key,p])=>{
+      const pct=(Number(p?.platform)||0)+(Number(p?.pay)||0);
+      const fixed=Number(p?.fixed)||0;
+      const fee=Math.max(0,sell||0)*pct/100+fixed;
+      if(!best||fee<best.fee)best={platform:key,fee,pct,fixed};
+    });
+    return best;
+  }catch(e){return null;}
 }
 
 function focusField(id){
@@ -545,8 +604,16 @@ function render(){
     items.push({score:s.labour,key:'labour',icon:'👷',body:t('labourBody',{amount:money(s.labour),saving:money(fiveMin)}),target:'labourRate'});
   }
   if(s.packagingOther>0)items.push({score:s.packagingOther,key:'packaging',icon:'📦',body:t('packagingBody',{amount:money(s.packagingOther)}),target:'pack'});
-  if(s.delivery>0)items.push({score:s.delivery,key:'delivery',icon:'🚚',body:t('deliveryBody',{amount:money(s.delivery)}),target:'deliveryCourier'});
-  if(s.fees>0)items.push({score:s.fees,key:'fees',icon:'🛒',body:t('feesBody',{amount:money(s.fees)}),target:'platformSelect'});
+  if(s.delivery>0){
+    const cd=cheapestDelivery();
+    const deliveryExtra=cd?t('lowestDelivery',{option:profileName('deliveryCourier',cd.courier)+' • '+cd.label,price:money(cd.price)}):'';
+    items.push({score:s.delivery,key:'delivery',icon:'🚚',body:t('deliveryBody',{amount:money(s.delivery)})+' '+deliveryExtra,target:'deliveryCourier'});
+  }
+  if(s.fees>0){
+    const lf=lowestSellingFee(s.sell);
+    const feeExtra=lf?t('lowestFee',{platform:profileName('platformSelect',lf.platform),fee:money(lf.fee)}):'';
+    items.push({score:s.fees,key:'fees',icon:'🛒',body:t('feesBody',{amount:money(s.fees)})+' '+feeExtra,target:'platformSelect'});
+  }
   if(s.elec>0)items.push({score:s.elec,key:'electricity',icon:'⚡',body:t('electricityBody',{amount:money(s.elec)}),target:'electricityRate'});
   if(s.depreciation>0)items.push({score:s.depreciation,key:'machine',icon:'🖨',body:t('machineBody',{amount:money(s.depreciation)}),target:'printer'});
   if(s.sell>0 || shownProfit<0)items.push({score:shownProfit<0?Math.max(1,Math.abs(shownProfit)):0,key:'price',icon:'💷',body:t('priceBody',{amount:money(s.sell),breakEven:be===null?'—':money(be)}),target:'sell'});
