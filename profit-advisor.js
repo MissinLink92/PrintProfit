@@ -49,7 +49,8 @@ const M={
     batchNote:'Based on the current batch result.',
     singleNote:'Based on the current single-print result.',
     lowestDelivery:'Lowest listed reference rate: {option} — {price}. This may not fit every parcel size or service requirement.',
-    lowestFee:'Lowest configured selling fee: {platform} — {fee} on this sale. Check the platform terms and any optional fees before choosing where to sell.'
+    lowestFee:'Lowest configured selling fee: {platform} — {fee} on this sale. Check the platform terms and any optional fees before choosing where to sell.',
+    saveAmount:'That is {amount} less than your current cost.'
   },
   pl:{
     title:'Doradca zysku',
@@ -82,7 +83,8 @@ const M={
     batchNote:'Na podstawie bieżącego wyniku partii.',
     singleNote:'Na podstawie bieżącego wyniku pojedynczego wydruku.',
     lowestDelivery:'Najniższa podana stawka referencyjna: {option} — {price}. Może nie pasować do każdego rozmiaru paczki lub usługi.',
-    lowestFee:'Najniższa skonfigurowana opłata sprzedażowa: {platform} — {fee} przy tej sprzedaży. Sprawdź warunki platformy i ewentualne opłaty dodatkowe.'
+    lowestFee:'Najniższa skonfigurowana opłata sprzedażowa: {platform} — {fee} przy tej sprzedaży. Sprawdź warunki platformy i ewentualne opłaty dodatkowe.',
+    saveAmount:'To {amount} mniej niż obecny koszt.'
   },
   de:{
     title:'Gewinnberater',
@@ -146,7 +148,8 @@ const M={
     batchNote:'Basé sur le résultat actuel du lot.',
     singleNote:'Basé sur le résultat actuel d’une impression.',
     lowestDelivery:'Tarif de référence le plus bas listé : {option} — {price}. Il peut ne pas convenir à tous les colis ou services.',
-    lowestFee:'Frais de vente configurés les plus bas : {platform} — {fee} sur cette vente. Vérifiez les conditions et les frais optionnels.'
+    lowestFee:'Frais de vente configurés les plus bas : {platform} — {fee} sur cette vente. Vérifiez les conditions et les frais optionnels.',
+    saveAmount:'Soit {amount} de moins que votre coût actuel.'
   },
   es:{
     title:'Asesor de beneficios',
@@ -179,7 +182,8 @@ const M={
     batchNote:'Basado en el resultado actual del lote.',
     singleNote:'Basado en el resultado actual de una impresión.',
     lowestDelivery:'Tarifa de referencia más baja indicada: {option} — {price}. Puede no ser adecuada para todos los tamaños de paquete o servicios.',
-    lowestFee:'Comisión de venta configurada más baja: {platform} — {fee} en esta venta. Comprueba las condiciones y posibles cargos opcionales.'
+    lowestFee:'Comisión de venta configurada más baja: {platform} — {fee} en esta venta. Comprueba las condiciones y posibles cargos opcionales.',
+    saveAmount:'Son {amount} menos que tu coste actual.'
   },
   it:{
     title:'Consulente del profitto',
@@ -212,7 +216,8 @@ const M={
     batchNote:'Basato sul risultato attuale del lotto.',
     singleNote:'Basato sul risultato attuale di una singola stampa.',
     lowestDelivery:'Tariffa di riferimento più bassa indicata: {option} — {price}. Potrebbe non essere adatta a ogni dimensione di pacco o servizio.',
-    lowestFee:'Commissione di vendita configurata più bassa: {platform} — {fee} su questa vendita. Controlla condizioni ed eventuali costi opzionali.'
+    lowestFee:'Commissione di vendita configurata più bassa: {platform} — {fee} su questa vendita. Controlla condizioni ed eventuali costi opzionali.',
+    saveAmount:'Sono {amount} in meno rispetto al costo attuale.'
   },
   nl:{
     title:'Winstadviseur',
@@ -245,7 +250,8 @@ const M={
     batchNote:'Gebaseerd op het huidige batchresultaat.',
     singleNote:'Gebaseerd op het huidige resultaat van één print.',
     lowestDelivery:'Laagste vermelde referentietarief: {option} — {price}. Dit past mogelijk niet bij elk pakketformaat of elke dienst.',
-    lowestFee:'Laagste geconfigureerde verkoopkosten: {platform} — {fee} bij deze verkoop. Controleer voorwaarden en eventuele extra kosten.'
+    lowestFee:'Laagste geconfigureerde verkoopkosten: {platform} — {fee} bij deze verkoop. Controleer voorwaarden en eventuele extra kosten.',
+    saveAmount:'Dat is {amount} minder dan je huidige kosten.'
   },
   pt:{
     title:'Consultor de lucro',
@@ -278,7 +284,8 @@ const M={
     batchNote:'Com base no resultado atual do lote.',
     singleNote:'Com base no resultado atual de uma impressão.',
     lowestDelivery:'Tarifa de referência mais baixa indicada: {option} — {price}. Pode não ser adequada a todos os tamanhos de encomenda ou serviços.',
-    lowestFee:'Taxa de venda configurada mais baixa: {platform} — {fee} nesta venda. Verifique os termos e eventuais taxas opcionais.'
+    lowestFee:'Taxa de venda configurada mais baixa: {platform} — {fee} nesta venda. Verifique os termos e eventuais taxas opcionais.',
+    saveAmount:'São {amount} menos do que o seu custo atual.'
   },
   cs:{
     title:'Poradce zisku',
@@ -311,7 +318,8 @@ const M={
     batchNote:'Na základě aktuálního výsledku dávky.',
     singleNote:'Na základě aktuálního výsledku jednoho tisku.',
     lowestDelivery:'Nejnižší uvedená referenční sazba: {option} — {price}. Nemusí vyhovovat každé velikosti zásilky nebo službě.',
-    lowestFee:'Nejnižší nakonfigurovaný prodejní poplatek: {platform} — {fee} při tomto prodeji. Ověřte podmínky platformy a volitelné poplatky.'
+    lowestFee:'Nejnižší nakonfigurovaný prodejní poplatek: {platform} — {fee} při tomto prodeji. Ověřte podmínky platformy a volitelné poplatky.',
+    saveAmount:'To je o {amount} méně než váš současný náklad.'
   },
   sv:{
     title:'Vinstguide',
@@ -344,7 +352,8 @@ const M={
     batchNote:'Baserat på det aktuella batchresultatet.',
     singleNote:'Baserat på det aktuella resultatet för en utskrift.',
     lowestDelivery:'Lägsta angivna referenspris: {option} — {price}. Det kanske inte passar alla paketstorlekar eller tjänster.',
-    lowestFee:'Lägsta konfigurerade försäljningsavgift: {platform} — {fee} på denna försäljning. Kontrollera villkoren och eventuella tillvalskostnader.'
+    lowestFee:'Lägsta konfigurerade försäljningsavgift: {platform} — {fee} på denna försäljning. Kontrollera villkoren och eventuella tillvalskostnader.',
+    saveAmount:'Det är {amount} mindre än din nuvarande kostnad.'
   },
   da:{
     title:'Fortjenesteassistent',
@@ -377,7 +386,8 @@ const M={
     batchNote:'Baseret på det aktuelle batchresultat.',
     singleNote:'Baseret på det aktuelle resultat for ét print.',
     lowestDelivery:'Laveste angivne referencesats: {option} — {price}. Den passer muligvis ikke til alle pakkestørrelser eller tjenester.',
-    lowestFee:'Laveste konfigurerede salgsgebyr: {platform} — {fee} på dette salg. Tjek vilkår og eventuelle ekstra gebyrer.'
+    lowestFee:'Laveste konfigurerede salgsgebyr: {platform} — {fee} på dette salg. Tjek vilkår og eventuelle ekstra gebyrer.',
+    saveAmount:'Det er {amount} mindre end din nuværende omkostning.'
   }
 };
 
@@ -485,6 +495,7 @@ function lowestSellingFee(sell){
     if(!profiles)return null;
     let best=null;
     Object.entries(profiles).forEach(([key,p])=>{
+      if(key==='custom')return;
       const pct=(Number(p?.platform)||0)+(Number(p?.pay)||0);
       const fixed=Number(p?.fixed)||0;
       const fee=Math.max(0,sell||0)*pct/100+fixed;
@@ -606,12 +617,14 @@ function render(){
   if(s.packagingOther>0)items.push({score:s.packagingOther,key:'packaging',icon:'📦',body:t('packagingBody',{amount:money(s.packagingOther)}),target:'pack'});
   if(s.delivery>0){
     const cd=cheapestDelivery();
-    const deliveryExtra=cd?t('lowestDelivery',{option:profileName('deliveryCourier',cd.courier)+' • '+cd.label,price:money(cd.price)}):'';
+    const deliverySaving=cd&&s.delivery>cd.price?money(s.delivery-cd.price):null;
+    const deliveryExtra=cd?t('lowestDelivery',{option:profileName('deliveryCourier',cd.courier)+' • '+cd.label,price:money(cd.price)})+(deliverySaving?' '+t('saveAmount',{amount:deliverySaving}):''):'';
     items.push({score:s.delivery,key:'delivery',icon:'🚚',body:t('deliveryBody',{amount:money(s.delivery)})+' '+deliveryExtra,target:'deliveryCourier'});
   }
   if(s.fees>0){
     const lf=lowestSellingFee(s.sell);
-    const feeExtra=lf?t('lowestFee',{platform:profileName('platformSelect',lf.platform),fee:money(lf.fee)}):'';
+    const feeSaving=lf&&s.fees>lf.fee?money(s.fees-lf.fee):null;
+    const feeExtra=lf?t('lowestFee',{platform:profileName('platformSelect',lf.platform),fee:money(lf.fee)})+(feeSaving?' '+t('saveAmount',{amount:feeSaving}):''):'';
     items.push({score:s.fees,key:'fees',icon:'🛒',body:t('feesBody',{amount:money(s.fees)})+' '+feeExtra,target:'platformSelect'});
   }
   if(s.elec>0)items.push({score:s.elec,key:'electricity',icon:'⚡',body:t('electricityBody',{amount:money(s.elec)}),target:'electricityRate'});
