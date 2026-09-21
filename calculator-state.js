@@ -15,7 +15,7 @@ function isPersistedField(el){
 }
 
 function snapshot(){
-  const data={fields:{}};
+  const data={fields:{},fileName:''};
   document.querySelectorAll('input,select,textarea').forEach(el=>{
     if(!isPersistedField(el))return;
     data.fields[el.id]={
@@ -23,6 +23,8 @@ function snapshot(){
       checked:(el.type==='checkbox'||el.type==='radio')?!!el.checked:undefined
     };
   });
+  const file=document.getElementById('file');
+  if(file?.files?.[0])data.fileName=file.files[0].name;
   const resultTab=document.querySelector('#resultTabs .tab.active')?.dataset.resultTab;
   const stage=document.querySelector('.pp-step.active')?.dataset.tab;
   if(resultTab)data.resultTab=resultTab;
@@ -106,8 +108,9 @@ async function restoreLastUploadedFile(){
     });
     db.close();
     if(!saved?.blob)return;
-    const currentName=String(read()?.fields?.fileName?.value||'');
-    if(currentName && currentName!==saved.name)return;
+    const draft=read();
+    const currentName=String(draft?.fileName||'');
+    if(!currentName || currentName!==saved.name)return;
     const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});
     const dt=new DataTransfer();
     dt.items.add(file);
@@ -124,6 +127,11 @@ window.__printProfitClearDraft=()=>{
 };
 
 function boot(){
+  document.addEventListener('click',e=>{
+    const target=e.target?.closest?.('#reset,#clear');
+    if(target?.id==='reset'){window.__printProfitClearDraft();return;}
+    if(target?.id==='clear')setTimeout(save,30);
+  },true);
   document.addEventListener('input',e=>{
     if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))save();
   });
