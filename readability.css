@@ -1,0 +1,153 @@
+/* PrintProfit Readability Pass V1
+   Larger type, stronger contrast, clearer spacing and more legible controls.
+   Loaded after the existing page styles so small legacy sizes cannot override it. */
+
+:root{--muted:#b8c5cd!important;--line:#2f4f5e!important}
+html,body{font-size:16px!important;line-height:1.5!important}
+body{letter-spacing:.005em!important}
+p,li{line-height:1.55!important}
+
+/* Global navigation / page chrome */
+.header .nav a,.nav a{font-size:14px!important;line-height:1.2!important;padding:11px 14px!important}
+.header .mode{font-size:14px!important}
+.kicker,.section-title,.pp-master-feature small,.pp-chosen-ticker.pp-master-subnav span{font-size:11px!important;line-height:1.35!important}
+
+/* Page headings and body copy */
+h1{line-height:1!important}
+.lead{font-size:17px!important;line-height:1.6!important}
+.hero{font-size:16px!important}
+.btn,.link{font-size:13.5px!important;line-height:1.2!important;min-height:42px!important}
+
+/* Standalone Guide / Price Finder */
+.card h2{font-size:18px!important;line-height:1.2!important}
+.card h3{font-size:14px!important;line-height:1.25!important}
+.card p,.faq p{font-size:12.5px!important;line-height:1.6!important}
+.num{width:38px!important;height:38px!important;font-size:15px!important;margin-bottom:11px!important;border-radius:10px!important}
+.faq{padding:15px!important}
+.faq strong{font-size:14px!important;line-height:1.35!important}
+.note{font-size:12px!important;line-height:1.6!important}
+.footer{font-size:11px!important;line-height:1.5!important}
+
+/* Price Finder */
+.tool label{font-size:11.5px!important;margin-bottom:6px!important}
+.tool input,.tool select{font-size:14px!important;line-height:1.35!important;padding:10px 11px!important;min-height:42px!important}
+.meta{font-size:11px!important;line-height:1.45!important}
+th{font-size:10px!important;padding:11px 12px!important}
+td{font-size:12.5px!important;padding:12px!important;line-height:1.45!important}
+td strong{font-size:13px!important}
+.kind{font-size:10px!important;padding:5px 8px!important}
+.price{font-size:15px!important}
+.unit{font-size:12px!important}
+.checked{font-size:11px!important}
+.link{font-size:11px!important;min-height:36px!important}
+.empty{font-size:12px!important}
+.empty strong{font-size:15px!important}
+
+/* Calculator fields, boxes and result cards */
+.head h2{font-size:18px!important;line-height:1.25!important}
+.head p{font-size:12.5px!important;line-height:1.5!important}
+label{font-size:12.5px!important;line-height:1.35!important;margin-bottom:6px!important}
+input,select,textarea{font-size:14px!important;line-height:1.35!important;min-height:40px!important;padding:9px 10px!important}
+input::placeholder,textarea::placeholder{font-size:13px!important}
+.btn{padding:9px 12px!important}
+.small{font-size:12px!important;line-height:1.5!important}
+.value{font-size:22px!important;line-height:1.1!important}
+.line{font-size:12px!important;line-height:1.45!important;padding:7px 0!important}
+.total{font-size:13.5px!important}
+.drop b{font-size:13.5px!important}
+.drop small{font-size:11.5px!important}
+
+/* Calculator stage controls */
+.pp-step{font-size:14px!important;min-height:76px!important;gap:13px!important}
+.pp-step-number{width:42px!important;height:42px!important;min-width:42px!important;flex-basis:42px!important;font-size:16px!important}
+.pp-step-copy strong{font-size:14px!important;line-height:1.2!important}
+.pp-step-copy span{font-size:11.5px!important;line-height:1.35!important}
+.pp-card,.pp-cost-block,.panel{padding:13px!important}
+.pp-card .head .icon,.pp-cost-block .head .icon{width:42px!important;height:42px!important;min-width:42px!important;flex-basis:42px!important;font-size:19px!important;border-radius:11px!important}
+.pp-model-status{font-size:12.5px!important;line-height:1.5!important}
+.pp-file-health,.pp-file-health b{font-size:11px!important;line-height:1.35!important}
+.pp-model-grid span,.pp-model-extra-grid span{font-size:11.5px!important}
+.pp-model-grid strong{font-size:14px!important}
+.pp-model-extra-grid strong{font-size:12.5px!important}
+.pp-model-hint{font-size:11.5px!important;line-height:1.5!important}
+
+/* Header feature cards */
+.pp-master-feature b{font-size:14px!important;line-height:1.2!important}
+.pp-master-feature small{font-size:10.5px!important}
+.pp-master-quickcards button b{font-size:17px!important}
+.pp-master-quickcards button small{font-size:12px!important;line-height:1.45!important}
+.pp-master-card-icon{width:64px!important;height:64px!important;min-width:64px!important}
+.pp-master-card-icon svg{width:34px!important;height:34px!important}
+.pp-master-icon{width:28px!important;height:28px!important}
+
+/* Profit Advisor */
+.pp-profit-advisor{padding:16px!important}
+.pp-advisor-heading h3{font-size:18px!important}
+.pp-advisor-heading p{font-size:12px!important;line-height:1.55!important}
+.pp-profit-icon{width:40px!important;height:40px!important;flex-basis:40px!important;font-size:19px!important}
+.pp-advisor-alert{padding:11px 12px!important}
+.pp-advisor-alert strong{font-size:12.5px!important}
+.pp-advisor-alert span{font-size:10.5px!important;line-height:1.45!important}
+.pp-advisor-stat{padding:10px!important}
+.pp-advisor-stat span{font-size:10px!important}
+.pp-advisor-stat strong{font-size:18px!important}
+.pp-advisor-suggestion{padding:10px!important}
+.pp-advisor-suggestion-icon{width:32px!important;height:32px!important;flex-basis:32px!important;font-size:15px!important}
+.pp-advisor-suggestion-title strong{font-size:12px!important}
+.pp-advisor-suggestion-title small{font-size:10px!important;line-height:1.45!important}
+.pp-advisor-pill{font-size:8.5px!important;padding:4px 7px!important}
+.pp-advisor-control{gap:8px!important}
+.pp-advisor-control .mini{padding:8px!important}
+.pp-advisor-control .mini span{font-size:8.5px!important}
+.pp-advisor-control .mini strong{font-size:11.5px!important}
+.pp-advisor-range{height:8px!important}
+.pp-advisor-change{font-size:10.5px!important}
+.pp-advisor-live-top h4{font-size:13px!important}
+.pp-advisor-live-icon{font-size:18px!important}
+.pp-advisor-live-profit{padding:12px!important}
+.pp-advisor-live-profit span{font-size:9.5px!important}
+.pp-advisor-live-profit strong{font-size:31px!important}
+.pp-advisor-live-profit p{font-size:10.5px!important;line-height:1.45!important}
+.pp-advisor-live-box{padding:10px!important}
+.pp-advisor-live-box strong{font-size:11.5px!important}
+.pp-advisor-live-box span{font-size:9.5px!important;line-height:1.45!important}
+.pp-advisor-summary-row{font-size:10px!important;padding:6px 0!important}
+.pp-advisor-summary-row strong{font-size:10.5px!important}
+.pp-advisor-apply{font-size:11px!important;padding:11px!important;min-height:44px!important}
+.pp-advisor-copy{font-size:10.5px!important;padding:10px!important;min-height:42px!important}
+.pp-advisor-help{font-size:9.5px!important;line-height:1.5!important}
+.pp-advisor-tip{font-size:10px!important;line-height:1.55!important}
+
+/* Profit Toolkit / What If */
+#ppProfitTools .pp-tools-head h3{font-size:15px!important}
+#ppProfitTools .pp-tools-head p{font-size:10.5px!important;line-height:1.5!important}
+#ppProfitTools summary{font-size:12px!important;padding:11px 12px!important}
+#ppProfitTools .pp-tool-field label{font-size:10.5px!important}
+#ppProfitTools .pp-tool-field input,#ppProfitTools .pp-tool-field select{font-size:13px!important;min-height:40px!important}
+#ppProfitTools .pp-tool-note{font-size:10px!important;line-height:1.55!important}
+#ppProfitTools .pp-whatif-stat span,#ppProfitTools .pp-tool-result-card span{font-size:9.5px!important}
+#ppProfitTools .pp-whatif-stat strong,#ppProfitTools .pp-tool-result-card strong{font-size:15px!important}
+
+/* Sharper icon rendering */
+.icon,.pp-profit-icon,.pp-advisor-suggestion-icon,.pp-master-card-icon,.pp-master-icon{line-height:1!important}
+.icon svg,.pp-profit-icon svg,.pp-advisor-suggestion-icon svg,.pp-master-card-icon svg,.pp-master-icon svg{shape-rendering:geometricPrecision!important}
+
+/* Light mode */
+body[data-pp-theme="light"]{--muted:#51636e!important;--line:#c2d0d7!important}
+body[data-pp-theme="light"] .lead,body[data-pp-theme="light"] p,body[data-pp-theme="light"] .card p,body[data-pp-theme="light"] .faq p,body[data-pp-theme="light"] .small{color:#4a5d67!important}
+
+/* Small-screen readability */
+@media(max-width:650px){
+  html,body{font-size:16px!important}
+  .nav a{font-size:13.5px!important}
+  .lead{font-size:16px!important}
+  .card p,.faq p{font-size:12.5px!important}
+  label{font-size:12.5px!important}
+  input,select,textarea{font-size:16px!important;min-height:42px!important}
+  .btn{font-size:13.5px!important;min-height:44px!important}
+  .pp-step-copy strong{font-size:14px!important}
+  .pp-step-copy span{font-size:11.5px!important}
+  .pp-advisor-heading h3{font-size:17px!important}
+  .pp-advisor-suggestion-title strong{font-size:12px!important}
+  .pp-advisor-suggestion-title small{font-size:10px!important}
+}
