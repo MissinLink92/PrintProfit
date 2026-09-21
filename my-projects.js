@@ -23,6 +23,7 @@ const snapshot=()=>{
   if(!el.id||el.type==='file')return;
   data[el.id]={
    value:el.value,
+   selectedText:el.tagName==='SELECT' ? (el.selectedOptions?.[0]?.textContent||'').trim() : undefined,
    checked:el.type==='checkbox'||el.type==='radio'?!!el.checked:undefined
   };
  });
@@ -30,15 +31,38 @@ const snapshot=()=>{
 };
 const restore=data=>{
  if(!data||typeof data!=='object')return;
+ const pending=[];
+ const setSelectValue=(el,state)=>{
+  const wanted=String(state?.value??'');
+  if([...el.options].some(o=>o.value===wanted)){el.value=wanted;return;}
+  const label=String(state?.selectedText||'').trim();
+  const byLabel=[...el.options].find(o=>o.textContent.trim()===label);
+  if(byLabel){el.value=byLabel.value;return;}
+  if(el.id==='printer'){
+   const parts=wanted.split(/[|,]/);
+   const power=Number(parts[0]),life=Number(parts[2]);
+   if(Number.isFinite(power)&&Number.isFinite(life)){
+    const legacy=[...el.options].find(o=>{
+     const p=String(o.value||'').split(/[|,]/);
+     return Number(p[0])===power&&Number(p[2])===life;
+    });
+    if(legacy)el.value=legacy.value;
+   }
+  }
+ };
+ // Set every field first, then fire events so dependent controls see the
+ // complete restored state rather than rebuilding over values still to come.
  Object.entries(data).forEach(([id,state])=>{
   const el=document.getElementById(id);if(!el)return;
   if((el.type==='checkbox'||el.type==='radio')&&typeof state?.checked==='boolean')el.checked=state.checked;
+  else if(el.tagName==='SELECT')setSelectValue(el,state);
   else el.value=state?.value??'';
-  el.dispatchEvent(new Event('input',{bubbles:true}));
-  el.dispatchEvent(new Event('change',{bubbles:true}));
+  pending.push(el);
  });
+ pending.forEach(el=>el.dispatchEvent(new Event('input',{bubbles:true})));
+ pending.forEach(el=>el.dispatchEvent(new Event('change',{bubbles:true})));
  const calc=document.getElementById('calc');
- if(calc)setTimeout(()=>calc.click(),30);
+ if(calc)setTimeout(()=>calc.click(),60);
 };
 const projectInfo=()=>{
  const material=val('material')||val('materialType')||'Material';
