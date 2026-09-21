@@ -120,7 +120,9 @@ async function saveNew(){
  const projects=read();const now=Date.now();
  const id=crypto.randomUUID?crypto.randomUUID():String(now)+Math.random();
  const file=document.getElementById('file')?.files?.[0]||null;
- projects.push({id,name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot(),file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:null});
+ let fileData={};try{fileData=JSON.parse(JSON.stringify(window.__ppFileData||{}));}catch(e){}
+ const fileStatus=document.getElementById('status')?.textContent||'';
+ projects.push({id,name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot(),file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:null,fileData,fileStatus});
  if(!write(projects))return;
  await persistProjects(projects);
  if(file) await putProjectFile(id,file);
@@ -128,8 +130,12 @@ async function saveNew(){
 }
 async function loadProject(id){
  const p=read().find(x=>x.id===id);if(!p)return;
+ try{window.__ppFileData=(p.fileData&&typeof p.fileData==='object')?p.fileData:(p.data?.fileData&&typeof p.data.fileData==='object'?p.data.fileData:{});}catch(e){window.__ppFileData={};}
+ if(p.fileStatus){const status=document.getElementById('status');if(status)status.textContent=p.fileStatus;}
  restore(p.data);
  await restoreProjectFile(id);
+ window.__ppRefreshModelHub?.();
+ setTimeout(()=>window.__ppRefreshModelHub?.(),180);
  close();
  // Make the restored setup immediately visible after loading.
  setTimeout(()=>{
