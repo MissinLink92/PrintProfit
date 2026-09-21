@@ -60,12 +60,9 @@ function addFeatureStrip(hero){
 function moveTicker(hero){
  const ticker=hero.querySelector('.pp-chosen-ticker');
  if(!ticker)return;
- if(ticker.parentElement!==hero.parentElement || !ticker.classList.contains('pp-master-subnav')){
-  const shell=hero.parentElement;
-  shell.insertBefore(ticker,hero.nextSibling);
- }
- ticker.classList.add('pp-master-subnav');
- ticker.innerHTML='<span>YOUR MODEL</span><span>PRINT SETUP</span><span>COSTS &amp; FEES</span><span class="pp-site-pages"><a href="./index.html" target="_top">CALCULATOR</a><b>•</b><a href="./price-finder.html" target="_top">PRICE FINDER</a><b>•</b><a href="./guide.html" target="_top">GUIDE &amp; HELP</a></span>';
+ // The calculator already has its own stage tabs. This legacy ticker is a
+ // duplicate navigation strip, so remove it rather than hiding it with CSS.
+ ticker.remove();
 }
 
 function addQuickCards(main){
