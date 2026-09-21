@@ -111,6 +111,18 @@ async function loadProject(id){
  setTimeout(()=>{
    const machineTab=document.querySelector('.pp-step[data-tab="machine"]');
    if(machineTab)machineTab.click();
+   // Result view is derived from quantity when a project is loaded.
+   // A saved project with quantity 1 must never reopen on Batch Pricing.
+   const qty=Math.max(1,Math.floor(Number(document.getElementById('qty')?.value)||1));
+   const mode=qty>1?'batch':'single';
+   const tab=document.querySelector('#resultTabs .tab[data-result-tab="'+mode+'"]');
+   if(tab)tab.click();
+   // Re-apply once more after the calculator/state restoration settles.
+   setTimeout(()=>{
+     const q=Math.max(1,Math.floor(Number(document.getElementById('qty')?.value)||1));
+     const m=q>1?'batch':'single';
+     document.querySelector('#resultTabs .tab[data-result-tab="'+m+'"]')?.click();
+   },180);
  },120);
 }
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
