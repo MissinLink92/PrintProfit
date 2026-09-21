@@ -155,6 +155,16 @@ const baseMoneyText=new WeakMap();
 const baseMoneyInput=new WeakMap();
 const baseLabel=new WeakMap();
 
+function translateElementText(el){
+ if(!el)return;
+ const key='data-pp-i18n-text';
+ if(!el.hasAttribute(key))el.setAttribute(key,el.textContent||'');
+ const original=el.getAttribute(key)||'';
+ if(original){
+  const translated=tr(original);
+  if(el.textContent!==translated)el.textContent=translated;
+ }
+}
 function translatePage(){
  document.documentElement.lang=pref.language;
  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
@@ -168,8 +178,9 @@ function translatePage(){
   const target=tr(original);
   if(n.nodeValue!==target)n.nodeValue=n.nodeValue.replace(raw,target);
  }
- // Translate placeholders, aria labels and option-group labels as well as text nodes.
- document.querySelectorAll('input[placeholder],textarea[placeholder],select[aria-label],input[aria-label],button[aria-label],label[aria-label],optgroup[label]').forEach(el=>{
+ // Translate placeholders, aria labels, option text and option-group labels as well as text nodes.
+ document.querySelectorAll('option,optgroup').forEach(translateElementText);
+ document.querySelectorAll('input[placeholder],textarea[placeholder],select[aria-label],input[aria-label],button[aria-label],label[aria-label],optgroup[label],option').forEach(el=>{
   ['placeholder','aria-label','label'].forEach(attr=>{
    if(!el.hasAttribute(attr))return;
    const key='data-pp-i18n-'+attr;
