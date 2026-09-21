@@ -169,6 +169,16 @@ function boot(){
     if(target?.id==='reset'){window.__printProfitClearDraft();return;}
     if(target?.id==='clear')setTimeout(save,30);
 
+    // The live calculator top navigation uses buttons rather than anchors.
+    // Treat Price Finder / Profit Advisor buttons exactly like preserved links:
+    // save the current draft before leaving the calculator.
+    const navButton=e.target?.closest?.('#ppCleanTop [data-target="priceFinder"],#ppCleanTop [data-target="profitAdvisor"]');
+    if(navButton){
+      save();
+      markNavigationHandoff();
+      return;
+    }
+
     const anchor=e.target?.closest?.('a[href]');
     if(anchor && isPreservedDestination(anchor)){
       save();
