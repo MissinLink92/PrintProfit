@@ -5,6 +5,29 @@ window.__printProfitCalculatorState=true;
 
 const KEY='printprofit.calculator-draft.v2';
 const LEGACY_KEY='printprofit.calculator-draft.v1';
+const HANDOFF_KEY='printprofit.calculator-navigation-handoff.v1';
+
+function markNavigationHandoff(){
+  try{sessionStorage.setItem(HANDOFF_KEY,'1');}catch(e){}
+}
+
+function hasNavigationHandoff(){
+  try{return sessionStorage.getItem(HANDOFF_KEY)==='1';}catch(e){return false;}
+}
+
+function clearNavigationHandoff(){
+  try{sessionStorage.removeItem(HANDOFF_KEY);}catch(e){}
+}
+
+function isPreservedDestination(anchor){
+  if(!anchor)return false;
+  const href=String(anchor.href||'').toLowerCase();
+  const label=String(anchor.textContent||'').trim().toLowerCase();
+  return href.includes('price-finder.html') ||
+         href.includes('profit-advisor') ||
+         label.includes('price finder') ||
+         label.includes('profit advisor');
+}
 
 function isPersistedField(el){
   if(!el || !el.id) return false;
@@ -35,11 +58,9 @@ function snapshot(){
 
 function save(){
   const raw=JSON.stringify(snapshot());
-  // Keep the draft only for this browser tab/session. This preserves data while
-  // moving between PrintProfit pages and across refreshes, but starts clean when
-  // the browser session ends.
+  // The draft lives in sessionStorage, but is only allowed to survive a page
+  // unload when the user explicitly navigates to Price Finder or Profit Advisor.
   try{sessionStorage.setItem(KEY,raw);}catch(e){console.warn('PrintProfit session draft save failed:',e);}
-  // Remove any pre-session-storage drafts created by older versions.
   try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
 }
 
@@ -96,6 +117,7 @@ function restore(){
       if(step)step.click();
     }
     save();
+    clearNavigationHandoff();
   },80);
 
   // Recreate the last uploaded file where the existing file-storage helper has it.
@@ -137,6 +159,7 @@ window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
   try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
   try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);}catch(e){}
+  clearNavigationHandoff();
 };
 
 function boot(){
@@ -144,6 +167,12 @@ function boot(){
     const target=e.target?.closest?.('#reset,#clear');
     if(target?.id==='reset'){window.__printProfitClearDraft();return;}
     if(target?.id==='clear')setTimeout(save,30);
+
+    const anchor=e.target?.closest?.('a[href]');
+    if(anchor && isPreservedDestination(anchor)){
+      save();
+      markNavigationHandoff();
+    }
   },true);
   document.addEventListener('input',e=>{
     if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))save();
@@ -151,8 +180,18 @@ function boot(){
   document.addEventListener('change',e=>{
     if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))save();
   });
-  window.addEventListener('pagehide',save);
-  window.addEventListener('beforeunload',save);
+  const handleUnload=()=>{
+    if(hasNavigationHandoff()){
+      // Keep the draft for the destination page, then consume the handoff there.
+      save();
+      return;
+    }
+    // A normal refresh, tab close, browser close, or navigation elsewhere should
+    // always leave the next calculator visit clean.
+    window.__printProfitClearDraft();
+  };
+  window.addEventListener('pagehide',handleUnload);
+  window.addEventListener('beforeunload',handleUnload);
   window.addEventListener('pageshow',()=>setTimeout(restore,0));
 
   const wait=()=>{
