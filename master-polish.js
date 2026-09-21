@@ -26,32 +26,12 @@ function iconWrap(svg,small=false){
 function makeNav(header){
  const nav=header?.querySelector('.nav');
  if(!nav)return;
+ // The calculator already has its own stage tabs and the outer PrintProfit shell
+ // provides navigation to Price Finder, Profit Advisor and Guide & Help.
+ // Remove the duplicate calculator header navigation to keep the interface clean.
  nav.innerHTML='';
- const items=[
-  ['calculate','Calculate a print','details'],
-  ['price','Price your prints','machine'],
-  ['profit','Profit','results'],
-  ['settings','Settings','costs']
- ];
- items.forEach(([key,label,target],idx)=>{
-  const a=document.createElement('a');
-  a.href='#ppTabbedLayout';
-  a.className=idx===0?'active':'';
-  a.dataset.masterNav=target;
-  a.innerHTML=iconWrap(navIcons[key])+'<span>'+label+'</span>';
-  a.addEventListener('click',e=>{
-   e.preventDefault();
-   const workspace=document.getElementById('ppTabbedLayout');
-   if(target==='results'){
-    document.querySelector('.layout>.result')?.scrollIntoView({behavior:'smooth',block:'start'});
-    return;
-   }
-   const tab=document.querySelector('.pp-tab[data-tab="'+target+'"]');
-   if(tab)tab.click();
-   workspace?.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-  nav.appendChild(a);
- });
+ nav.setAttribute('aria-hidden','true');
+ nav.style.display='none';
 }
 
 function heroCard(){
