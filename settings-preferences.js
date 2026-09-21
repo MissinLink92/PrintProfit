@@ -139,7 +139,16 @@ let pref=load();
 let draft=Object.assign({},pref);
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(pref));}catch(e){}}
-function tr(v){if(pref.language==='en')return v;const map=langMaps[pref.language]||{};return map[v]||v;}
+function tr(v){
+ if(pref.language==='en')return v;
+ const map=Object.assign({},window.__ppExtraI18n?.[pref.language]||{},langMaps[pref.language]||{});
+ if(map[v])return map[v];
+ if(window.__ppTranslateText){
+   const translated=window.__ppTranslateText(v,pref.language);
+   if(translated!==v)return translated;
+ }
+ return v;
+}
 
 const originalText=new WeakMap();
 const baseMoneyText=new WeakMap();
@@ -155,7 +164,8 @@ function translatePage(){
   const raw=n.nodeValue.trim();
   if(!raw)continue;
   if(!originalText.has(n))originalText.set(n,raw);
-  const target=tr(originalText.get(n));
+  const original=originalText.get(n);
+  const target=tr(original);
   if(n.nodeValue!==target)n.nodeValue=n.nodeValue.replace(raw,target);
  }
  // Translate placeholders, aria labels and option-group labels as well as text nodes.
