@@ -62,7 +62,10 @@
     }
     stabiliseWorkspace();
     function updateModelHub(){
-      const fileInput=document.getElementById('file');if(!fileInput?.files?.length)window.__ppFileData={};
+      // Keep restored metadata even when the browser cannot repopulate the
+      // file input programmatically. The model hub can render from persisted
+      // file data until the actual File object is recreated.
+      const fileInput=document.getElementById('file');
       const extra=window.__ppFileData||{};
       const setExtra=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value!=null&&String(value)!==''?String(value):'—';};
       setExtra('ppModelSlicer',extra.slicer);setExtra('ppModelPrinter',extra.printer);setExtra('ppModelLayer',extra.layer);setExtra('ppModelInfill',extra.infill);setExtra('ppModelSupports',extra.supports);setExtra('ppModelNozzle',extra.nozzle);setExtra('ppModelBed',extra.bed);setExtra('ppModelProfile',extra.profile);
