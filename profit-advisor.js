@@ -423,8 +423,16 @@ function snapshot(){
   const batchCost=productionSubtotal+delivery;
   const batchFees=itemSales*feeRate+num('fixedFee');
   const batchProfit=itemSales+deliveryCharge-batchCost-batchFees;
+  const batchBreakEvenDen=1-feeRate;
+  const batchBreakEven=batchBreakEvenDen>0&&qty*(1-disc)>0
+    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchBreakEvenDen)/(qty*(1-disc))
+    :null;
+  const batchTarget30Den=1-feeRate-.30;
+  const batchTarget30=batchTarget30Den>0&&qty*(1-disc)>0
+    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchTarget30Den)/(qty*(1-disc))
+    :null;
 
-  return {qty,disc,hours,materialCost,elec,depreciation,labour,packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit};
+  return {qty,disc,hours,materialCost,elec,depreciation,labour,packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
 }
 
 function focusField(id){
@@ -508,7 +516,9 @@ function render(){
 
   const stats=document.createElement('div');
   stats.className='pp-profit-stats';
-  stats.innerHTML='<div class="pp-profit-stat"><span>'+t('breakEven')+'</span><strong>'+ (s.breakEven===null?'—':money(s.breakEven)) +'</strong></div><div class="pp-profit-stat"><span>'+t('target')+'</span><strong>'+ (s.target30===null?'—':money(s.target30)) +'</strong></div>';
+  const be=batchView?s.batchBreakEven:s.breakEven;
+  const t30=batchView?s.batchTarget30:s.target30;
+  stats.innerHTML='<div class="pp-profit-stat"><span>'+t('breakEven')+'</span><strong>'+ (be===null?'—':money(be)) +'</strong></div><div class="pp-profit-stat"><span>'+t('target')+'</span><strong>'+ (t30===null?'—':money(t30)) +'</strong></div>';
   box.appendChild(stats);
 
   const title=document.createElement('div');
@@ -527,7 +537,7 @@ function render(){
   if(s.fees>0)items.push({score:s.fees,key:'fees',icon:'🛒',body:t('feesBody',{amount:money(s.fees)}),target:'platformSelect'});
   if(s.elec>0)items.push({score:s.elec,key:'electricity',icon:'⚡',body:t('electricityBody',{amount:money(s.elec)}),target:'electricityRate'});
   if(s.depreciation>0)items.push({score:s.depreciation,key:'machine',icon:'🖨',body:t('machineBody',{amount:money(s.depreciation)}),target:'printer'});
-  if(s.sell>0 || shownProfit<0)items.push({score:shownProfit<0?Math.max(1,Math.abs(shownProfit)):0,key:'price',icon:'💷',body:t('priceBody',{amount:money(s.sell),breakEven:s.breakEven===null?'—':money(s.breakEven)}),target:'sell'});
+  if(s.sell>0 || shownProfit<0)items.push({score:shownProfit<0?Math.max(1,Math.abs(shownProfit)):0,key:'price',icon:'💷',body:t('priceBody',{amount:money(s.sell),breakEven:be===null?'—':money(be)}),target:'sell'});
   items.push({score:-1,key:'printSettings',icon:'🧱',body:t('printSettingsBody'),target:null});
 
   const printTip=items.find(i=>i.key==='printSettings');
