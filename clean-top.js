@@ -23,6 +23,7 @@ function install(){
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
         <button type="button" data-target="machine"><span class="pp-nav-icon cube"></span><span>Price</span></button>
         <button type="button" data-target="costs"><span class="pp-nav-icon chart"></span><span>Profit</span></button>
+        <a class="pp-price-finder-link" href="./price-finder.html"><span class="pp-nav-icon search"></span><span>Price Finder</span></a>
         <button type="button" data-target="guide"><span class="pp-nav-icon book"></span><span>Guide &amp; Help</span></button>
         <button type="button" data-target="settings"><span class="pp-nav-icon gear"></span><span>Settings</span></button>
       </nav>
@@ -68,7 +69,9 @@ function install(){
     #ppCleanTop .pp-top-brand img{width:155px;height:58px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
     #ppCleanTop .pp-top-links{margin-left:auto;display:flex;align-items:center;gap:10px}
     #ppCleanTop .pp-top-links button{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease}
-    #ppCleanTop .pp-top-links button:hover{color:#fff;background:#ff780012}
+    #ppCleanTop .pp-top-links button:hover,#ppCleanTop .pp-price-finder-link:hover{color:#fff;background:#ff780012}
+    #ppCleanTop .pp-price-finder-link{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease;text-decoration:none}
+    #ppCleanTop .search:before{content:"⌕";position:absolute;inset:-2px 0 0;font:27px/1 Arial,sans-serif;color:currentColor}
     #ppCleanTop .pp-nav-icon,#ppCleanTop .pp-feature-icon,#ppCleanTop .pp-mini-icon{position:relative;display:inline-block;flex:0 0 auto;color:#ff7800}
     #ppCleanTop .pp-nav-icon{width:25px;height:25px}
     #ppCleanTop .pp-feature-icon{width:24px;height:24px}
