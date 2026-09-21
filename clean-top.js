@@ -328,6 +328,14 @@ function install(){
               <p><strong>Total Cost to Make</strong> is the estimated production cost. <strong>Selling Price</strong> is the amount entered or generated from a target margin. <strong>Profit</strong> is what remains after included costs and fees. <strong>Margin</strong> expresses profit as a percentage of selling price.</p>
             </div>
             <div class="pp-guide-section">
+              <div class="pp-guide-section-title">Profit Toolkit</div>
+              <p><strong>What If?</strong> lets you test lower material usage, faster print settings, saved labour time, cheaper packaging or delivery, or a different selling platform without changing the live calculation. <strong>Cost Breakdown</strong> shows where the current cost is going. <strong>Price Ladder</strong> shows break-even and target margins. <strong>Bulk Buy</strong> estimates material and packaging savings. <strong>Sell Where?</strong> compares configured platform fees at your current price. The Results heading also shows a calculated Profit, Break-even or Loss status.</p>
+            </div>
+            <div class="pp-guide-section">
+              <div class="pp-guide-section-title">Saved calculator setup</div>
+              <p>Your current calculator fields are saved automatically on this device while you work, so moving to Guide &amp; Help and returning to the calculator can restore your setup. Reset intentionally clears the saved draft.</p>
+            </div>
+            <div class="pp-guide-section">
               <div class="pp-guide-section-title">Settings</div>
               <p>Settings controls dark mode, the available languages, metric or imperial units, currency, exchange rate and calculator reset.</p>
             </div>
