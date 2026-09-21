@@ -62,7 +62,9 @@ function install(){
   style.textContent=`
     /* Regression cleanup: remove the duplicate feature/navigation strips.
        Keep the actual calculator stages and page content untouched. */
-    #ppCleanTop .pp-top-links,
+    /* Remove only the duplicate calculator links. Keep Guide & Help and Settings. */
+    #ppCleanTop .pp-top-links button:nth-child(-n+3){display:none!important}
+    #ppCleanTop .pp-top-links{display:flex!important}
     #ppCleanTop .pp-feature-strip,
     .pp-master-feature-strip,
     .pp-master-subnav{display:none!important}
