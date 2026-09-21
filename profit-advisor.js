@@ -508,37 +508,27 @@ function lowestSellingFee(sell){
   }catch(e){return null;}
 }
 
-function focusField(id){
-  const el=$(id);
-  if(!el)return false;
-  try{
-    const frame=window.frameElement;
-    const parentWindow=window.parent&&window.parent!==window?window.parent:window;
-    if(frame&&parentWindow&&typeof parentWindow.scrollTo==='function'){
-      const elRect=el.getBoundingClientRect();
-      const frameRect=frame.getBoundingClientRect();
-      const pageTop=(parentWindow.scrollY||0)+frameRect.top+elRect.top-120;
-      parentWindow.scrollTo({top:Math.max(0,pageTop),behavior:'smooth'});
-    }else{
-      el.scrollIntoView({behavior:'smooth',block:'center'});
-    }
-  }catch(e){
-    try{el.scrollIntoView({behavior:'smooth',block:'center'});}catch(_){}
+function goToStage(stage){
+  const step=document.querySelector('.pp-step[data-tab="'+stage+'"]');
+  if(step){
+    step.click();
+    setTimeout(()=>{
+      try{
+        const frame=window.frameElement;
+        const parentWindow=window.parent&&window.parent!==window?window.parent:window;
+        if(frame&&parentWindow&&typeof parentWindow.scrollTo==='function'){
+          const frameTop=frame.getBoundingClientRect().top;
+          parentWindow.scrollTo({top:Math.max(0,(parentWindow.scrollY||0)+frameTop-20),behavior:'smooth'});
+        }else{
+          step.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      }catch(e){
+        try{step.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){}
+      }
+    },80);
+    return true;
   }
-  setTimeout(()=>{
-    try{
-      el.focus({preventScroll:true});
-      el.style.outline='2px solid var(--accent,#ff7800)';
-      el.style.outlineOffset='2px';
-      el.style.boxShadow='0 0 0 4px color-mix(in srgb,var(--accent,#ff7800) 18%,transparent)';
-      setTimeout(()=>{
-        el.style.outline='';
-        el.style.outlineOffset='';
-        el.style.boxShadow='';
-      },1600);
-    }catch(e){try{el.focus();}catch(_){}}
-  },400);
-  return true;
+  return false;
 }
 
 function addStyles(){
@@ -676,7 +666,15 @@ document.addEventListener('click',e=>{
   if(!button)return;
   e.preventDefault();
   e.stopPropagation();
-  focusField(button.getAttribute('data-pp-review-target'));
+  const target=button.getAttribute('data-pp-review-target');
+  const stageMap={
+    printer:'machine',materialPackCost:'machine',materialUsed:'machine',
+    labourRate:'costs',labourHours:'costs',pack:'costs',other:'costs',
+    delivery:'costs',deliveryCourier:'costs',deliveryRate:'costs',
+    platformSelect:'costs',platform:'costs',pay:'costs',fixedFee:'costs',
+    sell:'costs',electricityRate:'costs',printer:'machine'
+  };
+  goToStage(stageMap[target]||'costs');
 });
 document.addEventListener('input',e=>{
   if(e.target&&e.target.matches('input,select,textarea'))setTimeout(render,20);
