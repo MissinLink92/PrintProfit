@@ -158,7 +158,7 @@ async function restoreLastUploadedFile(){
 
 window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
-  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
+  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);localStorage.removeItem(OLD_KEY);}catch(e){}
   try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);sessionStorage.removeItem(OLD_KEY);}catch(e){}
   clearNavigationHandoff();
 };
