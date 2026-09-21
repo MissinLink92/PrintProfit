@@ -3,7 +3,8 @@
 if(window.__printProfitCalculatorState)return;
 window.__printProfitCalculatorState=true;
 
-const KEY='printprofit.calculator-draft.v1';
+const KEY='printprofit.calculator-draft.v2';
+const LEGACY_KEY='printprofit.calculator-draft.v1';
 
 function isPersistedField(el){
   if(!el || !el.id) return false;
@@ -33,12 +34,15 @@ function snapshot(){
 }
 
 function save(){
-  try{localStorage.setItem(KEY,JSON.stringify(snapshot()));}catch(e){console.warn('PrintProfit draft save failed:',e);}
+  const raw=JSON.stringify(snapshot());
+  try{localStorage.setItem(KEY,raw);}catch(e){console.warn('PrintProfit local draft save failed:',e);}
+  try{sessionStorage.setItem(KEY,raw);}catch(e){/* session storage can be unavailable in some privacy modes */}
 }
 
 function read(){
   try{
-    const data=JSON.parse(localStorage.getItem(KEY)||'null');
+    const raw=sessionStorage.getItem(KEY)||localStorage.getItem(KEY)||localStorage.getItem(LEGACY_KEY)||sessionStorage.getItem(LEGACY_KEY)||'null';
+    const data=JSON.parse(raw);
     return data&&typeof data==='object'?data:null;
   }catch(e){return null;}
 }
@@ -131,7 +135,8 @@ async function restoreLastUploadedFile(){
 
 window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
-  try{localStorage.removeItem(KEY);}catch(e){}
+  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
+  try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);}catch(e){}
 };
 
 function boot(){
@@ -148,6 +153,7 @@ function boot(){
   });
   window.addEventListener('pagehide',save);
   window.addEventListener('beforeunload',save);
+  window.addEventListener('pageshow',()=>setTimeout(restore,0));
 
   const wait=()=>{
     if(window.__printProfitReady){
