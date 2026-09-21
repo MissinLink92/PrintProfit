@@ -86,6 +86,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <div class="footer">PrintProfit — Price Finder • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
+<script src="./printer-price-data.js?v=1"></script>
 <script>
 (()=>{
 'use strict';
@@ -109,8 +110,7 @@ const DATA=[
  {category:'printer',type:'FDM',name:'Creality K1C 2025',retailer:'Creality UK',pack:'220 × 220 × 250 mm',price:379.00,unit:379.00,updated:'21 Sep 2026',url:'https://store.creality.com/uk/products/k1c-3d-printer-2025'},
  {category:'printer',type:'FDM',name:'Flashforge Adventurer 5M',retailer:'Amazon UK',pack:'220 × 220 × 220 mm',price:209.00,unit:209.00,updated:'21 Sep 2026',url:'https://www.amazon.co.uk/s?k=Flashforge+Adventurer+5M'},
  {category:'printer',type:'FDM',name:'Creality Ender-3 V3 SE (marketplace listing)',retailer:'Creality Official UK',pack:'220 × 220 × 250 mm',price:149.00,unit:149.00,updated:'21 Sep 2026',url:'https://www.crealityofficial.co.uk/products/creality-official-store-ender-3-v3-se-3d-printer-for-sale'}
-];
-const $=id=>document.getElementById(id);
+];\nconst sharedPrinterPrices=window.PRINTPROFIT_PRINTER_PRICES||{};\nDATA.forEach(item=>{if(item.category==='printer'&&Number.isFinite(sharedPrinterPrices[item.name])){item.price=sharedPrinterPrices[item.name];item.unit=sharedPrinterPrices[item.name];}});\nconst $=id=>document.getElementById(id);
 const money=v=>'£'+Number(v).toFixed(2);
 function render(){
  const q=$('search').value.trim().toLowerCase(),cat=$('category').value,type=$('type').value,sort=$('sort').value;
