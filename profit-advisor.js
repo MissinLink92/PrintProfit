@@ -508,27 +508,49 @@ function lowestSellingFee(sell){
   }catch(e){return null;}
 }
 
-function goToStage(stage){
+function goToReviewTarget(target){
+  const stageMap={
+    printer:'machine',materialPackCost:'machine',materialUsed:'machine',
+    labourRate:'costs',labourHours:'costs',pack:'costs',other:'costs',
+    delivery:'costs',deliveryCourier:'costs',deliveryRate:'costs',
+    platformSelect:'costs',platform:'costs',pay:'costs',fixedFee:'costs',
+    sell:'costs',electricityRate:'costs',electricityProvider:'costs'
+  };
+  const stage=stageMap[target]||'costs';
   const step=document.querySelector('.pp-step[data-tab="'+stage+'"]');
+
+  const locate=()=>{
+    const field=$(target);
+    if(!field)return;
+    const box=field.closest('.merge-block,.panel')||field;
+    try{
+      const frame=window.frameElement;
+      const parentWindow=window.parent&&window.parent!==window?window.parent:window;
+      if(frame&&parentWindow&&typeof parentWindow.scrollTo==='function'){
+        const frameRect=frame.getBoundingClientRect();
+        const boxRect=box.getBoundingClientRect();
+        const pageTop=(parentWindow.scrollY||0)+frameRect.top+boxRect.top-85;
+        parentWindow.scrollTo({top:Math.max(0,pageTop),behavior:'smooth'});
+      }else{
+        box.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      box.style.outline='2px solid var(--accent,#ff7800)';
+      box.style.outlineOffset='2px';
+      setTimeout(()=>{box.style.outline='';box.style.outlineOffset='';},1600);
+    }catch(e){
+      try{box.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){}
+    }
+  };
+
   if(step){
     step.click();
-    setTimeout(()=>{
-      try{
-        const frame=window.frameElement;
-        const parentWindow=window.parent&&window.parent!==window?window.parent:window;
-        if(frame&&parentWindow&&typeof parentWindow.scrollTo==='function'){
-          const frameTop=frame.getBoundingClientRect().top;
-          parentWindow.scrollTo({top:Math.max(0,(parentWindow.scrollY||0)+frameTop-20),behavior:'smooth'});
-        }else{
-          step.scrollIntoView({behavior:'smooth',block:'start'});
-        }
-      }catch(e){
-        try{step.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){}
-      }
-    },80);
-    return true;
+    setTimeout(locate,140);
+    setTimeout(locate,420);
+    setTimeout(locate,800);
+  }else{
+    locate();
   }
-  return false;
+  return true;
 }
 
 function addStyles(){
@@ -666,15 +688,7 @@ document.addEventListener('click',e=>{
   if(!button)return;
   e.preventDefault();
   e.stopPropagation();
-  const target=button.getAttribute('data-pp-review-target');
-  const stageMap={
-    printer:'machine',materialPackCost:'machine',materialUsed:'machine',
-    labourRate:'costs',labourHours:'costs',pack:'costs',other:'costs',
-    delivery:'costs',deliveryCourier:'costs',deliveryRate:'costs',
-    platformSelect:'costs',platform:'costs',pay:'costs',fixedFee:'costs',
-    sell:'costs',electricityRate:'costs',printer:'machine'
-  };
-  goToStage(stageMap[target]||'costs');
+  goToReviewTarget(button.getAttribute('data-pp-review-target'));
 });
 document.addEventListener('input',e=>{
   if(e.target&&e.target.matches('input,select,textarea'))setTimeout(render,20);
