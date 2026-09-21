@@ -558,30 +558,94 @@ function addStyles(){
   const s=document.createElement('style');
   s.id='ppProfitAdvisorStyles';
   s.textContent=`
-    .pp-profit-advisor{margin-top:12px;border:1px solid var(--line,#24404e);border-radius:12px;padding:12px;background:linear-gradient(180deg,var(--panel2,#0e202b),var(--panel,#0b1821));}
-    .pp-profit-head{display:flex;align-items:flex-start;gap:9px;}
-    .pp-profit-icon{width:32px;height:32px;flex:0 0 32px;border-radius:9px;background:var(--accent,#ff7800);display:grid;place-items:center;color:#fff;font-weight:900;font-size:16px;}
-    .pp-profit-head h3{margin:0;font-size:14px;}
-    .pp-profit-head p{margin:3px 0 0;color:var(--muted,#aebdca);font-size:10.5px;line-height:1.4;}
-    .pp-profit-stats{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 8px;}
-    .pp-profit-stat{border:1px solid var(--line,#24404e);border-radius:9px;padding:8px;background:rgba(255,255,255,.02);}
-    .pp-profit-stat span{display:block;color:var(--muted,#aebdca);font-size:9px;}
-    .pp-profit-stat strong{display:block;margin-top:3px;font-size:14px;}
-    .pp-profit-section-title{margin:10px 0 6px;color:var(--accent,#ff7800);font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;}
-    .pp-profit-item{display:flex;gap:8px;padding:8px 0;border-top:1px solid rgba(127,160,175,.12);}
-    .pp-profit-item:first-of-type{border-top:0;}
-    .pp-profit-item-icon{width:25px;height:25px;flex:0 0 25px;border-radius:7px;border:1px solid var(--line,#24404e);display:grid;place-items:center;font-size:12px;}
-    .pp-profit-item-main{min-width:0;flex:1;}
-    .pp-profit-item-main strong{display:block;font-size:10.5px;}
-    .pp-profit-item-main p{margin:3px 0 0;color:var(--muted,#aebdca);font-size:9.5px;line-height:1.42;}
-    .pp-profit-review{margin-top:6px;border:1px solid var(--line,#24404e);background:var(--panel2,#0e202b);color:var(--text,#f5f8fb);border-radius:7px;padding:5px 7px;font:800 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;}
-    .pp-profit-review:hover{border-color:var(--accent,#ff7800);color:var(--accent,#ff7800);}
-    .pp-profit-note{margin-top:8px;padding-top:8px;border-top:1px solid rgba(127,160,175,.12);color:var(--muted,#aebdca);font-size:9px;line-height:1.4;}
-    @media(max-width:650px){.pp-profit-stats{grid-template-columns:1fr}.pp-profit-advisor{padding:10px;}}
+    .pp-profit-advisor{margin-top:14px;border:1px solid #315261;border-radius:16px;padding:14px;background:linear-gradient(180deg,#091a24,#07131b);box-shadow:0 14px 34px #0005;}
+    .pp-advisor-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;}
+    .pp-advisor-heading{display:flex;gap:10px;min-width:0;}
+    .pp-profit-icon{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(145deg,#ff9a3d,#ff7800);display:grid;place-items:center;color:#fff;font-weight:900;font-size:16px;box-shadow:0 8px 20px #ff780022;}
+    .pp-advisor-heading h3{margin:0;font-size:16px;line-height:1.05;}
+    .pp-advisor-heading p{margin:4px 0 0;color:#aebdca;font-size:10px;line-height:1.45;}
+    .pp-advisor-alert{min-width:240px;max-width:330px;border:1px solid rgba(255,107,107,.55);border-radius:10px;padding:9px 11px;background:rgba(255,107,107,.08);}
+    .pp-advisor-alert.good{border-color:rgba(54,229,139,.45);background:rgba(54,229,139,.07);}
+    .pp-advisor-alert strong{display:block;font-size:11px;color:#ff8d8d;}
+    .pp-advisor-alert.good strong{color:#64efaa;}
+    .pp-advisor-alert span{display:block;margin-top:2px;color:#d6e0e5;font-size:9px;line-height:1.35;}
+    .pp-advisor-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:11px 0;}
+    .pp-advisor-stat{border:1px solid #294957;border-radius:9px;padding:8px;background:linear-gradient(180deg,#0b1e29,#091821);}
+    .pp-advisor-stat span{display:block;color:#90a6b2;font-size:8.5px;}
+    .pp-advisor-stat strong{display:block;margin-top:3px;font-size:15px;line-height:1.05;}
+    .pp-advisor-stat strong.loss{color:#ff6b6b;}
+    .pp-advisor-stat strong.profit{color:#36e58b;}
+    .pp-advisor-stat strong.neutral{color:#f5f8fb;}
+    .pp-advisor-main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.8fr);gap:9px;align-items:start;}
+    .pp-advisor-panel{border:1px solid #294957;border-radius:11px;background:linear-gradient(180deg,#0b1d28,#081620);padding:10px;}
+    .pp-advisor-panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px;}
+    .pp-advisor-panel-head h4{margin:0;font-size:12px;}
+    .pp-advisor-reset{border:1px solid #3a5562;background:#0a1820;color:#d8e2e7;border-radius:7px;padding:5px 7px;font:800 8px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;}
+    .pp-advisor-reset:hover{border-color:#ff7800;color:#ff9a42;}
+    .pp-advisor-suggestion{border:1px solid #294957;border-radius:9px;padding:8px;margin-top:7px;background:rgba(255,255,255,.018);}
+    .pp-advisor-suggestion:first-of-type{margin-top:0;}
+    .pp-advisor-suggestion-head{display:flex;gap:8px;align-items:flex-start;}
+    .pp-advisor-suggestion-icon{width:26px;height:26px;flex:0 0 26px;border:1px solid #3a5562;border-radius:7px;display:grid;place-items:center;font-size:12px;}
+    .pp-advisor-suggestion-title{min-width:0;flex:1;}
+    .pp-advisor-suggestion-title strong{display:block;font-size:10px;}
+    .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
+    .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
+    .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
+    .pp-advisor-control{display:grid;grid-template-columns:85px minmax(0,1fr) 85px 90px 70px;gap:6px;align-items:center;margin-top:8px;}
+    .pp-advisor-control .mini{border:1px solid #294957;border-radius:7px;padding:6px 7px;background:#091821;}
+    .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:7px;}
+    .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:10px;}
+    .pp-advisor-control output{font-size:10px;font-weight:900;text-align:right;}
+    .pp-advisor-range{width:100%;accent-color:#ff7800;}
+    .pp-advisor-change{font-size:9px;font-weight:900;text-align:right;}
+    .pp-advisor-change.up{color:#36e58b;}
+    .pp-advisor-change.down{color:#ff6b6b;}
+    .pp-advisor-live{display:flex;flex-direction:column;min-height:100%;gap:7px;}
+    .pp-advisor-live-top{display:flex;align-items:center;gap:8px;margin-bottom:1px;}
+    .pp-advisor-live-top h4{margin:0;font-size:12px;}
+    .pp-advisor-live-icon{color:#45d6ff;font-size:15px;}
+    .pp-advisor-live-profit{border:1px solid #294957;border-radius:9px;padding:10px;background:linear-gradient(180deg,#0a1c26,#08161e);}
+    .pp-advisor-live-profit span{display:block;color:#90a6b2;font-size:8px;}
+    .pp-advisor-live-profit strong{display:block;margin-top:4px;font-size:27px;line-height:1;}
+    .pp-advisor-live-profit strong.loss{color:#ff6b6b;}
+    .pp-advisor-live-profit strong.profit{color:#36e58b;}
+    .pp-advisor-live-profit strong.neutral{color:#f5f8fb;}
+    .pp-advisor-live-profit p{margin:5px 0 0;color:#aebdca;font-size:9px;line-height:1.35;}
+    .pp-advisor-live-box{border:1px solid rgba(54,229,139,.45);border-radius:9px;padding:9px;background:rgba(54,229,139,.06);}
+    .pp-advisor-live-box.loss{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.05);}
+    .pp-advisor-live-box strong{display:block;font-size:10px;color:#45e99a;}
+    .pp-advisor-live-box.loss strong{color:#ff8d8d;}
+    .pp-advisor-summary{border-top:1px solid rgba(127,160,175,.12);padding-top:7px;margin-top:2px;}
+    .pp-advisor-summary-row{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid rgba(127,160,175,.08);font-size:8.5px;}
+    .pp-advisor-summary-row:last-child{border-bottom:0;}
+    .pp-advisor-summary-row span:first-child{color:#91a6b1;}
+    .pp-advisor-summary-row strong{font-size:8.8px;}
+    .pp-advisor-apply{width:100%;border:1px solid #ff7800;border-radius:9px;padding:9px 10px;background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;font:900 10px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 22px #ff780022;margin-top:auto;}
+    .pp-advisor-apply:hover{filter:brightness(1.06);}
+    .pp-advisor-copy{width:100%;border:1px solid #294957;border-radius:9px;padding:8px 10px;background:#0a1820;color:#dce6eb;font:800 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;}
+    .pp-advisor-copy:hover{border-color:#ff7800;color:#ff9a42;}
+    .pp-advisor-help{border:1px solid #294957;border-radius:9px;padding:8px 9px;color:#91a6b1;font-size:8px;line-height:1.4;}
+    .pp-advisor-help a{color:#dce6eb;text-decoration:none;font-weight:800;}
+    .pp-advisor-tip{margin-top:8px;border:1px solid #3b2b68;border-radius:9px;padding:8px 10px;background:rgba(106,76,180,.07);color:#b8afd4;font-size:8.5px;line-height:1.4;}
+    .pp-advisor-tip b{color:#d7c9ff;}
+    @media(max-width:980px){
+      .pp-advisor-header{flex-direction:column;}
+      .pp-advisor-alert{width:100%;max-width:none;}
+      .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
+      .pp-advisor-main{grid-template-columns:1fr;}
+      .pp-advisor-control{grid-template-columns:72px minmax(0,1fr) 72px 78px 62px;}
+    }
+    @media(max-width:650px){
+      .pp-profit-advisor{padding:10px;}
+      .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
+      .pp-advisor-control{grid-template-columns:1fr 1fr;gap:6px;}
+      .pp-advisor-control .pp-advisor-range-wrap{grid-column:1 / -1;}
+      .pp-advisor-control output,.pp-advisor-change{text-align:left;}
+    }
     body[data-pp-theme="light"] .pp-profit-advisor{background:linear-gradient(180deg,#fff,#edf3f6)!important;border-color:#b8c9d1!important;color:#17232b!important;}
-    body[data-pp-theme="light"] .pp-profit-stat,body[data-pp-theme="light"] .pp-profit-item-icon{border-color:#c5d2d8!important;background:#f6f9fa!important;}
-    body[data-pp-theme="light"] .pp-profit-head p,body[data-pp-theme="light"] .pp-profit-item-main p,body[data-pp-theme="light"] .pp-profit-note,body[data-pp-theme="light"] .pp-profit-stat span{color:#5d707b!important;}
-    body[data-pp-theme="light"] .pp-profit-review{background:#fff!important;color:#17232b!important;border-color:#c5d2d8!important;}
+    body[data-pp-theme="light"] .pp-advisor-alert{background:rgba(220,65,65,.06);border-color:#e0a4a4!important;}
+    body[data-pp-theme="light"] .pp-advisor-stat,body[data-pp-theme="light"] .pp-advisor-panel,body[data-pp-theme="light"] .pp-advisor-suggestion,body[data-pp-theme="light"] .pp-advisor-stat .mini,body[data-pp-theme="light"] .pp-advisor-live-profit,body[data-pp-theme="light"] .pp-advisor-help,body[data-pp-theme="light"] .pp-advisor-copy{background:#f6f9fa!important;border-color:#c5d2d8!important;}
+    body[data-pp-theme="light"] .pp-advisor-heading p,body[data-pp-theme="light"] .pp-advisor-alert span,body[data-pp-theme="light"] .pp-advisor-stat span,body[data-pp-theme="light"] .pp-advisor-suggestion-title small,body[data-pp-theme="light"] .pp-advisor-control .mini span,body[data-pp-theme="light"] .pp-advisor-live-profit span,body[data-pp-theme="light"] .pp-advisor-live-profit p,body[data-pp-theme="light"] .pp-advisor-summary-row span:first-child,body[data-pp-theme="light"] .pp-advisor-help{color:#5d707b!important;}
   `;
   document.head.appendChild(s);
 }
@@ -593,10 +657,166 @@ function buildItem(icon,titleKey,body,actionId){
   return item;
 }
 
+let advisorScenario=null;
+
+function advisorProfitState(v){
+  return v>0?'profit':v<0?'loss':'neutral';
+}
+
+function advisorDefaults(s,batchView){
+  const cheapest=cheapestDelivery();
+  const deliveryTarget=(s.delivery>0&&cheapest&&cheapest.price<s.delivery)?cheapest.price:s.delivery;
+  const sell=s.sell;
+  const target=s.target30??sell;
+  const suggestedSell=sell>0
+    ?Math.max(sell,Math.min(target>sell?target:sell*1.25,sell*1.25))
+    :Math.max(0,target||0);
+  return {
+    materialUsage: s.materialCost>0?15:0,
+    labourMinutes: s.labour>0?Math.min(5,Math.max(0,num('labourHours')*60)):0,
+    deliveryCost: deliveryTarget,
+    sellingPrice: suggestedSell,
+    materialCost: s.materialCost>0?s.materialCost*0.85:0
+  };
+}
+
+function advisorScenarioValues(s){
+  if(!advisorScenario)advisorScenario=advisorDefaults(s);
+  const maxLabour=Math.max(0,num('labourHours')*60);
+  advisorScenario.materialUsage=Math.min(80,Math.max(0,Number(advisorScenario.materialUsage)||0));
+  advisorScenario.labourMinutes=Math.min(maxLabour,Math.max(0,Number(advisorScenario.labourMinutes)||0));
+  advisorScenario.deliveryCost=Math.min(s.delivery,Math.max(0,Number.isFinite(Number(advisorScenario.deliveryCost))?Number(advisorScenario.deliveryCost):s.delivery));
+  const maxSell=Math.max(s.sell*2,s.target30||0,1);
+  advisorScenario.sellingPrice=Math.min(maxSell,Math.max(0,Number(advisorScenario.sellingPrice)||0));
+  advisorScenario.materialCost=Math.min(s.materialCost,Math.max(0,Number.isFinite(Number(advisorScenario.materialCost))?Number(advisorScenario.materialCost):s.materialCost));
+  return advisorScenario;
+}
+
+function calculateAdvisorScenario(s,sc,batchView){
+  const materialUsageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+  const baseMaterial=s.materialCost*materialUsageFactor;
+  const cheaperFactor=s.materialCost>0?sc.materialCost/s.materialCost:1;
+  const material=baseMaterial*cheaperFactor;
+  const labourRate=num('labourRate');
+  const labour=Math.max(0,s.labour-labourRate*(sc.labourMinutes/60));
+  const delivery=Math.max(0,Math.min(s.delivery,sc.deliveryCost));
+  const base=s.elec+s.depreciation+labour+s.packagingOther+delivery+material;
+  const feeRate=s.feeRate;
+  const fixed=num('fixedFee');
+  const sell=Math.max(0,sc.sellingPrice);
+  const feesSingle=sell*feeRate+fixed;
+  const singleProfit=sell+s.deliveryCharge-base-feesSingle;
+  const qty=s.qty;
+  const itemSales=sell*qty*(1-s.disc);
+  const batchCost=(base-delivery)*qty+delivery;
+  const batchFees=itemSales*feeRate+fixed;
+  const batchProfit=itemSales+s.deliveryCharge-batchCost-batchFees;
+  const profit=batchView?batchProfit:singleProfit;
+  const currentProfit=batchView?s.batchProfit:s.profit;
+  return {material,labour,delivery,base,sell,feesSingle,singleProfit,batchProfit,profit,currentProfit,delta:profit-currentProfit,batchView};
+}
+
+function formatChange(v){
+  const sign=v>0?'+ ':v<0?'- ':'';
+  return sign+money(Math.abs(v));
+}
+
+function applyAdvisorScenario(s,sc){
+  const usage=$('materialUsed');
+  const packCost=$('materialPackCost');
+  const labourHours=$('labourHours');
+  const delivery=$('delivery');
+  const sell=$('sell');
+  const changed=[];
+  if(usage&&s.materialUsed>0&&s.materialPack>0){
+    const factor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    usage.value=(s.materialUsed*factor).toFixed(2);
+    changed.push(usage);
+  }
+  if(packCost&&s.materialCost>0&&s.materialPackCost>0){
+    const usageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    const effectiveFactor=(sc.materialCost/s.materialCost);
+    const totalFactor=Math.max(0,Math.min(1,usageFactor*effectiveFactor));
+    packCost.value=(s.materialPackCost*totalFactor).toFixed(2);
+    changed.push(packCost);
+  }
+  if(labourHours){
+    const hours=Math.max(0,num('labourHours')-Math.min(num('labourHours'),Math.max(0,sc.labourMinutes)/60));
+    labourHours.value=hours.toFixed(2);
+    changed.push(labourHours);
+  }
+  if(delivery){
+    delivery.value=Math.max(0,Math.min(s.delivery,sc.deliveryCost)).toFixed(2);
+    changed.push(delivery);
+  }
+  if(sell){
+    sell.value=Math.max(0,sc.sellingPrice).toFixed(2);
+    changed.push(sell);
+  }
+  changed.forEach(el=>{
+    el.dispatchEvent(new Event('input',{bubbles:true}));
+    el.dispatchEvent(new Event('change',{bubbles:true}));
+  });
+  setTimeout(()=>{try{$('calc')?.click();}catch(e){}},20);
+}
+
+function copyAdvisorSummary(s,sc,scenario){
+  const textLines=[
+    'PrintProfit Profit Advisor',
+    'Current profit: '+money(scenario.currentProfit),
+    'Projected profit: '+money(scenario.profit),
+    'Profit change: '+formatChange(scenario.delta),
+    'Material usage reduction: '+sc.materialUsage.toFixed(0)+'%',
+    'Labour minutes saved: '+sc.labourMinutes.toFixed(0)+' min',
+    'Delivery cost: '+money(scenario.delivery)+'',
+    'Selling price: '+money(scenario.sell),
+    'Material cost: '+money(scenario.material)
+  ];
+  const value=textLines.join('\\n');
+  const done=()=>{
+    const btn=$('ppAdvisorCopy');
+    if(btn){const old=btn.textContent;btn.textContent='Copied ✓';setTimeout(()=>btn.textContent=old,1100);}
+  };
+  try{
+    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(value).then(done).catch(()=>fallback());return;}
+  }catch(e){}
+  fallback();
+  function fallback(){
+    const ta=document.createElement('textarea');ta.value=value;document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');}catch(e){}
+    ta.remove();done();
+  }
+}
+
+function suggestionRow(cfg,s,sc,scenario){
+  const row=document.createElement('article');
+  row.className='pp-advisor-suggestion';
+  const value=cfg.get();
+  const max=cfg.max();
+  const badgeClass=cfg.impact==='med'?'pp-advisor-pill med':'pp-advisor-pill';
+  const projected=scenario.profit;
+  const change=projected-scenario.currentProfit;
+  row.innerHTML=
+    '<div class="pp-advisor-suggestion-head">'+
+      '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
+      '<div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.description+'</small></div>'+
+      '<span class="'+badgeClass+'">'+cfg.impactLabel+'</span>'+
+    '</div>'+
+    '<div class="pp-advisor-control">'+
+      '<div class="mini"><span>Current</span><strong>'+cfg.currentText(s)+'</strong></div>'+
+      '<div class="pp-advisor-range-wrap"><input class="pp-advisor-range" id="'+cfg.id+'" type="range" min="'+cfg.min()+'" max="'+max+'" step="'+cfg.step+'" value="'+value+'"></div>'+
+      '<div class="mini"><span>Suggested</span><strong id="'+cfg.suggestedId+'">'+cfg.suggestedText(value,s)+'</strong></div>'+
+      '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'" id="'+cfg.profitId+'">'+money(projected)+'</strong></div>'+
+      '<div class="pp-advisor-change '+(change>=0?'up':'down')+'" id="'+cfg.changeId+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
+    '</div>';
+  return row;
+}
+
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
   addStyles();
+
   let box=$('ppProfitAdvisor');
   if(!box){
     box=document.createElement('section');
@@ -609,6 +829,8 @@ function render(){
   const batchView=$('batchResultView')&&!$('batchResultView').hidden;
   const shownProfit=batchView?s.batchProfit:s.profit;
   const hasData=(s.base>0||s.sell>0||s.deliveryCharge>0);
+  const sc=advisorScenarioValues(s);
+  const scenario=calculateAdvisorScenario(s,sc,batchView);
 
   const lead=shownProfit<0
     ? t('negativeLead',{amount:money(Math.abs(shownProfit))})
@@ -617,61 +839,103 @@ function render(){
       : t('noData');
 
   box.innerHTML='';
-  const head=document.createElement('div');
-  head.className='pp-profit-head';
-  head.innerHTML='<div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+lead+'</p></div>';
-  box.appendChild(head);
+  const header=document.createElement('div');
+  header.className='pp-advisor-header';
+  const alertClass=shownProfit>0?'good':'';
+  const alertTitle=shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'Add your print costs';
+  const alertText=shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'.':'Use the sliders below to test changes in real time before applying them.';
+  header.innerHTML=
+    '<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+lead+'</p></div></div>'+
+    '<div class="pp-advisor-alert '+alertClass+'"><strong>'+alertTitle+'</strong><span>'+alertText+'</span></div>';
+  box.appendChild(header);
 
   if(!hasData)return true;
 
-  const stats=document.createElement('div');
-  stats.className='pp-profit-stats';
   const be=batchView?s.batchBreakEven:s.breakEven;
   const t30=batchView?s.batchTarget30:s.target30;
-  stats.innerHTML='<div class="pp-profit-stat"><span>'+t('breakEven')+'</span><strong>'+ (be===null?'—':money(be)) +'</strong></div><div class="pp-profit-stat"><span>'+t('target')+'</span><strong>'+ (t30===null?'—':money(t30)) +'</strong></div>';
-  box.appendChild(stats);
+  const statGrid=document.createElement('div');
+  statGrid.className='pp-advisor-stat-grid';
+  statGrid.innerHTML=
+    '<div class="pp-advisor-stat"><span>Current profit</span><strong class="'+advisorProfitState(shownProfit)+'">'+money(shownProfit)+'</strong><span style="margin-top:3px">Per '+(batchView?'batch':'print')+'</span></div>'+
+    '<div class="pp-advisor-stat"><span>'+t('breakEven')+'</span><strong class="neutral">'+(be===null?'—':money(be))+'</strong><span style="margin-top:3px">Minimum price to not lose money</span></div>'+
+    '<div class="pp-advisor-stat"><span>'+t('target')+'</span><strong class="neutral">'+(t30===null?'—':money(t30))+'</strong><span style="margin-top:3px">Using current fee assumptions</span></div>'+
+    '<div class="pp-advisor-stat"><span>Sales price</span><strong class="neutral">'+money(s.sell)+'</strong><span style="margin-top:3px">Change below to test it</span></div>';
+  box.appendChild(statGrid);
 
-  const title=document.createElement('div');
-  title.className='pp-profit-section-title';
-  title.textContent=t('opportunities');
-  box.appendChild(title);
+  const main=document.createElement('div');
+  main.className='pp-advisor-main';
 
-  const items=[];
-  if(s.materialCost>0)items.push({score:s.materialCost,key:'material',icon:'🧵',body:t('materialBody',{amount:money(s.materialCost)}),target:'materialPackCost'});
-  if(s.labour>0){
-    const fiveMin=Math.max(0,num('labourRate')*5/60);
-    items.push({score:s.labour,key:'labour',icon:'👷',body:t('labourBody',{amount:money(s.labour),saving:money(fiveMin)}),target:'labourRate'});
-  }
-  if(s.packagingOther>0)items.push({score:s.packagingOther,key:'packaging',icon:'📦',body:t('packagingBody',{amount:money(s.packagingOther)}),target:'pack'});
-  if(s.delivery>0){
-    const cd=cheapestDelivery();
-    const deliverySaving=cd&&s.delivery>cd.price?money(s.delivery-cd.price):null;
-    const deliveryExtra=cd?t('lowestDelivery',{option:profileName('deliveryCourier',cd.courier)+' • '+cd.label,price:money(cd.price)})+(deliverySaving?' '+t('saveAmount',{amount:deliverySaving}):''):'';
-    items.push({score:s.delivery,key:'delivery',icon:'🚚',body:t('deliveryBody',{amount:money(s.delivery)})+' '+deliveryExtra,target:'deliveryCourier'});
-  }
-  if(s.fees>0){
-    const lf=lowestSellingFee(s.sell);
-    const feeSaving=lf&&s.fees>lf.fee?money(s.fees-lf.fee):null;
-    const feeExtra=lf?t('lowestFee',{platform:profileName('platformSelect',lf.platform),fee:money(lf.fee)})+(feeSaving?' '+t('saveAmount',{amount:feeSaving}):''):'';
-    items.push({score:s.fees,key:'fees',icon:'🛒',body:t('feesBody',{amount:money(s.fees)})+' '+feeExtra,target:'platformSelect'});
-  }
-  if(s.elec>0)items.push({score:s.elec,key:'electricity',icon:'⚡',body:t('electricityBody',{amount:money(s.elec)}),target:'electricityRate'});
-  if(s.depreciation>0)items.push({score:s.depreciation,key:'machine',icon:'🖨',body:t('machineBody',{amount:money(s.depreciation)}),target:'printer'});
-  if(s.sell>0 || shownProfit<0)items.push({score:shownProfit<0?Math.max(1,Math.abs(shownProfit)):0,key:'price',icon:'💷',body:t('priceBody',{amount:money(s.sell),breakEven:be===null?'—':money(be)}),target:'sell'});
-  items.push({score:-1,key:'printSettings',icon:'🧱',body:t('printSettingsBody'),target:null});
+  const left=document.createElement('div');
+  left.className='pp-advisor-panel';
+  const leftHead=document.createElement('div');
+  leftHead.className='pp-advisor-panel-head';
+  leftHead.innerHTML='<h4>Suggested Improvements</h4><button type="button" class="pp-advisor-reset" id="ppAdvisorReset">↻ Reset all suggestions</button>';
+  left.appendChild(leftHead);
 
-  const printTip=items.find(i=>i.key==='printSettings');
-  const topItems=items.filter(i=>i.key!=='printSettings').sort((a,b)=>b.score-a.score).slice(0,4);
-  if(printTip)topItems.push(printTip);
-  topItems.forEach(item=>{
-    const el=buildItem(item.icon,t(item.key),item.body,item.target);
-    box.appendChild(el);
+  const maxLabour=Math.max(0,num('labourHours')*60);
+  const maxSell=Math.max(s.sell*2,s.target30||0,1);
+  const cheapest=cheapestDelivery();
+  const deliverySuggested=cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery;
+  const configs=[
+    {id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange',icon:'⬡',title:'Reduce material usage',description:'Lowering infill, wall count or supports can reduce material usage. Test the effect here first.',impact:'high',impactLabel:'High impact',min:()=>0,max:()=>50,step:1,get:()=>sc.materialUsage,currentText:()=>s.materialCost>0?money(s.materialCost):'—',suggestedText:v=>v.toFixed(0)+'%',materialUsage:true},
+    {id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange',icon:'◷',title:'Reduce labour time',description:'Test removing setup, cleanup or other hands-on time from each print.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,maxLabour),step:1,get:()=>sc.labourMinutes,currentText:()=>maxLabour.toFixed(0)+' min',suggestedText:v=>v.toFixed(0)+' min'},
+    {id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange',icon:'▱',title:'Lower delivery cost',description:deliverySuggested<s.delivery?'Compare the lower reference rate below with what you currently pay.':'Your current delivery is already at or below the lowest tracked reference.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,s.delivery),step:.01,get:()=>sc.deliveryCost,currentText:()=>money(s.delivery),suggestedText:v=>money(v)},
+    {id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange',icon:'◇',title:'Adjust selling price',description:'A small price change can make a big difference once fees are included.',impact:'high',impactLabel:'High impact',min:()=>Math.max(0,s.sell),max:()=>maxSell,step:.01,get:()=>sc.sellingPrice,currentText:()=>money(s.sell),suggestedText:v=>money(v)},
+    {id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
+  ];
+
+  configs.forEach(cfg=>{
+    const row=suggestionRow(cfg,s,sc,scenario);
+    left.appendChild(row);
   });
 
-  const note=document.createElement('div');
-  note.className='pp-profit-note';
-  note.textContent=batchView?t('batchNote'):t('singleNote');
-  box.appendChild(note);
+  const right=document.createElement('div');
+  right.className='pp-advisor-panel pp-advisor-live';
+  right.innerHTML=
+    '<div class="pp-advisor-live-top"><span class="pp-advisor-live-icon">▥</span><h4>Live Result</h4></div>'+
+    '<div class="pp-advisor-live-profit"><span>Estimated '+(batchView?'batch':'profit')+'</span><strong class="'+advisorProfitState(scenario.profit)+'" id="ppAdvisorLiveProfit">'+money(scenario.profit)+'</strong><p id="ppAdvisorLiveText">'+(scenario.delta>=0?money(scenario.delta)+' improvement':'Change of '+money(Math.abs(scenario.delta))+' from current')+' from your current setup.</p></div>'+
+    '<div class="pp-advisor-live-box '+(scenario.profit<0?'loss':'')+'"><strong id="ppAdvisorLiveStatus">'+(scenario.profit>0?'✓ Profitable!':scenario.profit<0?'⚠ Still losing money':'• Break-even')+'</strong><span id="ppAdvisorLiveDetail" style="display:block;margin-top:3px;color:#b8c8cf;font-size:8px">'+(scenario.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.')+'</span></div>'+
+    '<div class="pp-advisor-summary"><div class="pp-advisor-summary-row"><span>Material usage</span><strong>'+(sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change')+'</strong></div><div class="pp-advisor-summary-row"><span>Labour saved</span><strong>'+sc.labourMinutes.toFixed(0)+' min</strong></div><div class="pp-advisor-summary-row"><span>Delivery</span><strong>'+money(scenario.delivery)+'</strong></div><div class="pp-advisor-summary-row"><span>Selling price</span><strong>'+money(scenario.sell)+'</strong></div><div class="pp-advisor-summary-row"><span>Material cost</span><strong>'+money(scenario.material)+'</strong></div></div>'+
+    '<button type="button" class="pp-advisor-apply" id="ppAdvisorApply">✓ Apply these changes to calculator</button>'+
+    '<button type="button" class="pp-advisor-copy" id="ppAdvisorCopy">▣ Copy summary</button>'+
+    '<div class="pp-advisor-help">Still not profitable? <a href="./guide.html" target="_top">See the full 3D Printing Profit Guide ↗</a></div>';
+  main.appendChild(left);
+  main.appendChild(right);
+  box.appendChild(main);
+
+  const tip=document.createElement('div');
+  tip.className='pp-advisor-tip';
+  tip.innerHTML='<b>Tip:</b> These suggestions are estimates based on your current settings. Adjust any value and the result updates in real time. The best balance depends on the quality and strength your model needs.';
+  box.appendChild(tip);
+
+  const bindScenarioInput=(id,key)=>{
+    const el=$(id);
+    if(!el)return;
+    el.addEventListener('input',()=>{
+      advisorScenario[key]=Number(el.value)||0;
+      render();
+    });
+    el.addEventListener('change',()=>{
+      advisorScenario[key]=Number(el.value)||0;
+      render();
+    });
+  };
+  bindScenarioInput('ppAdvisorMaterialUsage','materialUsage');
+  bindScenarioInput('ppAdvisorLabour','labourMinutes');
+  bindScenarioInput('ppAdvisorDelivery','deliveryCost');
+  bindScenarioInput('ppAdvisorSell','sellingPrice');
+  bindScenarioInput('ppAdvisorMaterialCost','materialCost');
+
+  $('ppAdvisorReset')?.addEventListener('click',()=>{
+    advisorScenario=advisorDefaults(s,batchView);
+    render();
+  });
+  $('ppAdvisorApply')?.addEventListener('click',()=>{
+    applyAdvisorScenario(s,advisorScenario);
+  });
+  $('ppAdvisorCopy')?.addEventListener('click',()=>{
+    copyAdvisorSummary(s,advisorScenario,calculateAdvisorScenario(s,advisorScenario,batchView));
+  });
   return true;
 }
 
@@ -691,10 +955,12 @@ document.addEventListener('click',e=>{
   goToReviewTarget(button.getAttribute('data-pp-review-target'));
 });
 document.addEventListener('input',e=>{
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(render,20);
+  if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
+  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
 });
 document.addEventListener('change',e=>{
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(render,20);
+  if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
+  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
 });
 document.querySelectorAll('#resultTabs .tab').forEach(b=>b.addEventListener('click',()=>setTimeout(render,20)));
 window.addEventListener('storage',()=>setTimeout(render,20));
