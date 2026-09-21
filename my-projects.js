@@ -3,13 +3,19 @@
 if(window.__printProfitProjects)return; window.__printProfitProjects=true;
 const KEY='printprofit.projects.v1';
 const FILE_DB='printprofit.project-files.v1';
+const PROJECT_DB='printprofit.project-records.v1';
+const projectDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(PROJECT_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('projects',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+const persistProjects=async projects=>{try{const db=await projectDb();await new Promise((res,rej)=>{const tx=db.transaction('projects','readwrite'),store=tx.objectStore('projects');store.clear();projects.forEach(p=>store.put(p));tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close();return true}catch(e){console.warn('PrintProfit project backup save failed:',e);return false}};
+const readProjectsBackup=async()=>{try{const db=await projectDb();const values=await new Promise((res,rej)=>{const tx=db.transaction('projects','readonly'),q=tx.objectStore('projects').getAll();q.onsuccess=()=>res(q.result||[]);q.onerror=()=>rej(q.error)});db.close();return values}catch(e){console.warn('PrintProfit project backup read failed:',e);return[]}};
+const hydrateProjects=async()=>{const current=read();if(current.length){persistProjects(current);return current;}const backup=await readProjectsBackup();if(backup.length){try{localStorage.setItem(KEY,JSON.stringify(backup));}catch(e){console.warn('PrintProfit project local restore failed:',e)}return backup;}return current};
+
 const fileDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(FILE_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const putProjectFile=async(id,file)=>{if(!file)return;try{const db=await fileDb();await new Promise((res,rej)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close()}catch(e){console.warn('PrintProfit could not save project file:',e)}};
 const getProjectFile=async id=>{try{const db=await fileDb();const v=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get(id);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close();return v||null}catch(e){console.warn('PrintProfit could not restore project file:',e);return null}};
 const restoreProjectFile=async id=>{let saved=await getProjectFile(id);if(!saved){try{const db=await fileDb();saved=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get('latest');q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close()}catch(e){}}if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
 const val=id=>document.getElementById(id)?.value??'';
 const read=()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){console.warn('PrintProfit project read error:',e);return[]}};
-const write=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));return true}catch(e){console.warn('PrintProfit project save error:',e);return false}};
+const write=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));persistProjects(v);return true}catch(e){console.warn('PrintProfit project save error:',e);persistProjects(v);return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const snapshot=()=>{
  const data={};
@@ -78,6 +84,11 @@ function open(){
  }
  panel.classList.add('open');document.body.style.overflow='hidden';render();
  const count=document.getElementById('ppProjectCount');if(count)count.textContent=read().length+' saved '+(read().length===1?'project':'projects');
+ hydrateProjects().then(projects=>{
+   render();
+   const c=document.getElementById('ppProjectCount');
+   if(c)c.textContent=projects.length+' saved '+(projects.length===1?'project':'projects');
+ });
 }
 async function saveNew(){
  const current=projectInfo();const suggested=(val('file')||'').split('\\').pop().replace(/\.[^.]+$/,'')||'My 3D Print';
@@ -86,7 +97,10 @@ async function saveNew(){
  const id=crypto.randomUUID?crypto.randomUUID():String(now)+Math.random();
  const file=document.getElementById('file')?.files?.[0]||null;
  projects.push({id,name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot(),file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:null});
- write(projects); if(file) await putProjectFile(id,file); open();
+ if(!write(projects))return;
+ await persistProjects(projects);
+ if(file) await putProjectFile(id,file);
+ open();
 }
 async function loadProject(id){
  const p=read().find(x=>x.id===id);if(!p)return;
