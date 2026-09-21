@@ -85,7 +85,7 @@ function moveTicker(hero){
   shell.insertBefore(ticker,hero.nextSibling);
  }
  ticker.classList.add('pp-master-subnav');
- ticker.innerHTML='<span>YOUR MODEL</span><span>PRINT SETUP</span><span>COSTS &amp; FEES</span><span class="pp-site-pages"><a href="./index.html">CALCULATE</a><b>•</b><a href="./price-finder.html">PRICE FINDER</a><b>•</b><a href="./guide.html">GUIDE &amp; HELP</a><b>•</b><a href="./index.html#projects">MY PROJECTS</a><b>•</b><a href="./index.html#materials">MY MATERIALS</a></span>';
+ ticker.innerHTML='<span>YOUR MODEL</span><span>PRINT SETUP</span><span>COSTS &amp; FEES</span><span class="pp-site-pages"><a href="./index.html" target="_top">CALCULATOR</a><b>•</b><a href="./price-finder.html" target="_top">PRICE FINDER</a><b>•</b><a href="./guide.html" target="_top">GUIDE &amp; HELP</a></span>';
 }
 
 function addQuickCards(main){
