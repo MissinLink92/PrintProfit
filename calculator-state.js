@@ -26,9 +26,9 @@ function snapshot(){
   });
   const file=document.getElementById('file');
   if(file?.files?.[0])data.fileName=file.files[0].name;
-  const resultTab=document.querySelector('#resultTabs .tab.active')?.dataset.resultTab;
+  // Result mode is derived from quantity, so do not persist the active result tab.
+  // Otherwise an old Batch tab can return even when quantity is back at 1.
   const stage=document.querySelector('.pp-step.active')?.dataset.tab;
-  if(resultTab)data.resultTab=resultTab;
   if(stage)data.stage=stage;
   return data;
 }
@@ -87,10 +87,6 @@ function restore(){
 
   setTimeout(()=>{
     try{document.getElementById('calc')?.click();}catch(e){}
-    if(data.resultTab){
-      const tab=document.querySelector('#resultTabs .tab[data-result-tab="'+data.resultTab+'"]');
-      if(tab)tab.click();
-    }
     if(data.stage){
       const step=document.querySelector('.pp-step[data-tab="'+data.stage+'"]');
       if(step)step.click();
