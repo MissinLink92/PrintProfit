@@ -50,6 +50,6 @@ async function ppStoreUploadedFile(file){
     db.close();
   }catch(e){console.warn('PrintProfit could not store uploaded file:',e);}
 }
-function install(){const input=$('file');if(!input)return false;input.accept='.'+supported.join(',.');if(input.dataset.ppSmartBound)return true;input.dataset.ppSmartBound='1';input.addEventListener('change',()=>{const file=input.files?.[0];if(file)ppStoreUploadedFile(file);inspect(file);});const drop=input.closest('.drop')||document.querySelector('.drop');if(drop){drop.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer?.files?.[0];if(f)inspect(f);});}return true;}
+function install(){const input=$('file');if(!input)return false;input.accept='.'+supported.join(',.');if(input.dataset.ppSmartBound)return true;input.dataset.ppSmartBound='1';input.addEventListener('change',()=>{const file=input.files?.[0];if(!file)return;ppStoreUploadedFile(file);inspect(file).finally(()=>{try{window.__printProfitPersistDraft?.();}catch(e){}});});const drop=input.closest('.drop')||document.querySelector('.drop');if(drop){drop.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer?.files?.[0];if(f)inspect(f);});}return true;}
 const start=Date.now(),timer=setInterval(()=>{if(install()||Date.now()-start>15000)clearInterval(timer)},50);
 })();
