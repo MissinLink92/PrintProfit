@@ -465,7 +465,7 @@ function snapshot(){
     ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchTarget30Den)/(qty*(1-disc))
     :null;
 
-  return {qty,disc,hours,materialCost,elec,depreciation,labour,packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
+  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
 }
 
 function profileName(selectId,key){
@@ -788,14 +788,35 @@ function copyAdvisorSummary(s,sc,scenario){
   }
 }
 
-function suggestionRow(cfg,s,sc,scenario){
+function neutralAdvisorScenario(s){
+  return {
+    materialUsage:0,
+    labourMinutes:0,
+    deliveryCost:s.delivery,
+    sellingPrice:s.sell,
+    materialCost:s.materialCost
+  };
+}
+
+function rowScenarioFor(s,sc,key){
+  const base=neutralAdvisorScenario(s);
+  base[key]=sc[key];
+  return base;
+}
+
+const ADVISOR_KEYS=[
+  'materialUsage','labourMinutes','deliveryCost','sellingPrice','materialCost'
+];
+
+function suggestionRow(cfg,s,sc,batchView){
   const row=document.createElement('article');
   row.className='pp-advisor-suggestion';
+  row.dataset.advisorKey=cfg.key;
   const value=cfg.get();
   const max=cfg.max();
+  const projected=calculateAdvisorScenario(s,rowScenarioFor(s,sc,cfg.key),batchView).profit;
+  const change=projected-(batchView?s.batchProfit:s.profit);
   const badgeClass=cfg.impact==='med'?'pp-advisor-pill med':'pp-advisor-pill';
-  const projected=scenario.profit;
-  const change=projected-scenario.currentProfit;
   row.innerHTML=
     '<div class="pp-advisor-suggestion-head">'+
       '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
@@ -810,6 +831,67 @@ function suggestionRow(cfg,s,sc,scenario){
       '<div class="pp-advisor-change '+(change>=0?'up':'down')+'" id="'+cfg.changeId+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
     '</div>';
   return row;
+}
+
+function refreshAdvisorScenario(s,batchView){
+  const sc=advisorScenarioValues(s);
+  const live=calculateAdvisorScenario(s,sc,batchView);
+  const shownProfit=batchView?s.batchProfit:s.profit;
+  const set=(id,text)=>{const el=$(id);if(el)el.textContent=text;};
+  const setProfit=(id,value)=>{
+    const el=$(id);if(!el)return;
+    el.className=advisorProfitState(value);
+    el.textContent=money(value);
+  };
+  setProfit('ppAdvisorLiveProfit',live.profit);
+  set('ppAdvisorLiveText',(live.delta>=0?money(live.delta)+' improvement':'Change of '+money(Math.abs(live.delta))+' from current')+' from your current setup.');
+  const status=$('ppAdvisorLiveStatus');
+  if(status)status.textContent=live.profit>0?'✓ Profitable!':live.profit<0?'⚠ Still losing money':'• Break-even';
+  const detail=$('ppAdvisorLiveDetail');
+  if(detail)detail.textContent=live.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.';
+  const liveBox=document.querySelector('#ppProfitAdvisor .pp-advisor-live-box');
+  if(liveBox)liveBox.classList.toggle('loss',live.profit<0);
+
+  const summary={
+    materialUsage:'No change',
+    labourMinutes:sc.labourMinutes.toFixed(0)+' min',
+    deliveryCost:money(live.delivery),
+    sellingPrice:money(live.sell),
+    materialCost:money(live.material)
+  };
+  document.querySelectorAll('#ppProfitAdvisor .pp-advisor-summary-row').forEach(row=>{
+    const key=row.dataset.summaryKey;
+    const valueEl=row.querySelector('strong');
+    if(valueEl&&summary[key]!==undefined)valueEl.textContent=summary[key];
+  });
+  const usageSummary=document.querySelector('#ppProfitAdvisor .pp-advisor-summary-row[data-summary-key="materialUsage"] strong');
+  if(usageSummary)usageSummary.textContent=sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change';
+
+  const configs={
+    materialUsage:{key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange'},
+    labourMinutes:{key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange'},
+    deliveryCost:{key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange'},
+    sellingPrice:{key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange'},
+    materialCost:{key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange'}
+  };
+  Object.entries(configs).forEach(([key,ids])=>{
+    const input=$(ids.id); if(!input)return;
+    const v=Number(input.value)||0;
+    const projected=calculateAdvisorScenario(s,{...neutralAdvisorScenario(s),[key]:v},batchView).profit;
+    const change=projected-shownProfit;
+    set(ids.suggestedId,
+      key==='materialUsage'?v.toFixed(0)+'%':
+      key==='labourMinutes'?v.toFixed(0)+' min':
+      key==='deliveryCost'||key==='sellingPrice'||key==='materialCost'?money(v):String(v)
+    );
+    setProfit(ids.profitId,projected);
+    const ch=$(ids.changeId);
+    if(ch){
+      ch.className='pp-advisor-change '+(change>=0?'up':'down');
+      ch.textContent=(change>=0?'↑ ':'↓ ')+money(Math.abs(change));
+    }
+  });
+  return live;
 }
 
 function render(){
@@ -885,7 +967,7 @@ function render(){
   ];
 
   configs.forEach(cfg=>{
-    const row=suggestionRow(cfg,s,sc,scenario);
+    const row=suggestionRow(cfg,s,sc,batchView);
     left.appendChild(row);
   });
 
@@ -895,7 +977,7 @@ function render(){
     '<div class="pp-advisor-live-top"><span class="pp-advisor-live-icon">▥</span><h4>Live Result</h4></div>'+
     '<div class="pp-advisor-live-profit"><span>Estimated '+(batchView?'batch':'profit')+'</span><strong class="'+advisorProfitState(scenario.profit)+'" id="ppAdvisorLiveProfit">'+money(scenario.profit)+'</strong><p id="ppAdvisorLiveText">'+(scenario.delta>=0?money(scenario.delta)+' improvement':'Change of '+money(Math.abs(scenario.delta))+' from current')+' from your current setup.</p></div>'+
     '<div class="pp-advisor-live-box '+(scenario.profit<0?'loss':'')+'"><strong id="ppAdvisorLiveStatus">'+(scenario.profit>0?'✓ Profitable!':scenario.profit<0?'⚠ Still losing money':'• Break-even')+'</strong><span id="ppAdvisorLiveDetail" style="display:block;margin-top:3px;color:#b8c8cf;font-size:8px">'+(scenario.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.')+'</span></div>'+
-    '<div class="pp-advisor-summary"><div class="pp-advisor-summary-row"><span>Material usage</span><strong>'+(sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change')+'</strong></div><div class="pp-advisor-summary-row"><span>Labour saved</span><strong>'+sc.labourMinutes.toFixed(0)+' min</strong></div><div class="pp-advisor-summary-row"><span>Delivery</span><strong>'+money(scenario.delivery)+'</strong></div><div class="pp-advisor-summary-row"><span>Selling price</span><strong>'+money(scenario.sell)+'</strong></div><div class="pp-advisor-summary-row"><span>Material cost</span><strong>'+money(scenario.material)+'</strong></div></div>'+
+    '<div class="pp-advisor-summary"><div class="pp-advisor-summary-row" data-summary-key="materialUsage"><span>Material usage</span><strong>'+(sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change')+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="labourMinutes"><span>Labour saved</span><strong>'+sc.labourMinutes.toFixed(0)+' min</strong></div><div class="pp-advisor-summary-row" data-summary-key="deliveryCost"><span>Delivery</span><strong>'+money(scenario.delivery)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="sellingPrice"><span>Selling price</span><strong>'+money(scenario.sell)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="materialCost"><span>Material cost</span><strong>'+money(scenario.material)+'</strong></div></div>'+
     '<button type="button" class="pp-advisor-apply" id="ppAdvisorApply">✓ Apply these changes to calculator</button>'+
     '<button type="button" class="pp-advisor-copy" id="ppAdvisorCopy">▣ Copy summary</button>'+
     '<div class="pp-advisor-help">Still not profitable? <a href="./guide.html" target="_top">See the full 3D Printing Profit Guide ↗</a></div>';
@@ -911,14 +993,12 @@ function render(){
   const bindScenarioInput=(id,key)=>{
     const el=$(id);
     if(!el)return;
-    el.addEventListener('input',()=>{
+    const refresh=()=>{
       advisorScenario[key]=Number(el.value)||0;
-      render();
-    });
-    el.addEventListener('change',()=>{
-      advisorScenario[key]=Number(el.value)||0;
-      render();
-    });
+      refreshAdvisorScenario(snapshot(),batchView);
+    };
+    el.addEventListener('input',refresh);
+    el.addEventListener('change',refresh);
   };
   bindScenarioInput('ppAdvisorMaterialUsage','materialUsage');
   bindScenarioInput('ppAdvisorLabour','labourMinutes');
@@ -928,7 +1008,8 @@ function render(){
 
   $('ppAdvisorReset')?.addEventListener('click',()=>{
     advisorScenario=advisorDefaults(s,batchView);
-    render();
+    ['ppAdvisorMaterialUsage','ppAdvisorLabour','ppAdvisorDelivery','ppAdvisorSell','ppAdvisorMaterialCost'].forEach(id=>{const el=$(id);if(el)el.value=advisorScenario[{ppAdvisorMaterialUsage:'materialUsage',ppAdvisorLabour:'labourMinutes',ppAdvisorDelivery:'deliveryCost',ppAdvisorSell:'sellingPrice',ppAdvisorMaterialCost:'materialCost'}[id]]??0;});
+    refreshAdvisorScenario(s,batchView);
   });
   $('ppAdvisorApply')?.addEventListener('click',()=>{
     applyAdvisorScenario(s,advisorScenario);
