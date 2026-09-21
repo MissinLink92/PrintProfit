@@ -115,7 +115,10 @@ const M={
     healthy:'Gute Marge. Die folgenden Vorschläge können sie noch weiter verbessern.',
     noData:'Füge Kosten hinzu oder lade eine Druckdatei hoch, damit der Berater genauer werden kann.',
     batchNote:'Basierend auf dem aktuellen Batch-Ergebnis.',
-    singleNote:'Basierend auf dem aktuellen Einzel-Druck-Ergebnis.'
+    singleNote:'Basierend auf dem aktuellen Einzel-Druck-Ergebnis.',
+    lowestDelivery:'Niedrigster gelisteter Referenztarif: {option} — {price}. Er ist möglicherweise nicht für jedes Paket oder jede Versandart geeignet.',
+    lowestFee:'Niedrigste konfigurierte Verkaufsgebühr: {platform} — {fee} für diesen Verkauf. Prüfe die Plattformbedingungen und optionale Gebühren.',
+    saveAmount:'Das sind {amount} weniger als deine aktuellen Kosten.'
   },
   fr:{
     title:'Conseiller de rentabilité',
