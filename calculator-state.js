@@ -3,8 +3,9 @@
 if(window.__printProfitCalculatorState)return;
 window.__printProfitCalculatorState=true;
 
-const KEY='printprofit.calculator-draft.v2';
+const KEY='printprofit.calculator-draft.v3';
 const LEGACY_KEY='printprofit.calculator-draft.v1';
+const OLD_KEY='printprofit.calculator-draft.v2';
 const HANDOFF_KEY='printprofit.calculator-navigation-handoff.v1';
 
 function markNavigationHandoff(){
@@ -61,7 +62,7 @@ function save(){
   // The draft lives in sessionStorage, but is only allowed to survive a page
   // unload when the user explicitly navigates to Price Finder or Profit Advisor.
   try{sessionStorage.setItem(KEY,raw);}catch(e){console.warn('PrintProfit session draft save failed:',e);}
-  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
+  try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);localStorage.removeItem(OLD_KEY);}catch(e){}
 }
 
 function read(){
@@ -158,7 +159,7 @@ async function restoreLastUploadedFile(){
 window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
   try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);}catch(e){}
-  try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);}catch(e){}
+  try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);sessionStorage.removeItem(OLD_KEY);}catch(e){}
   clearNavigationHandoff();
 };
 
