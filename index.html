@@ -5,70 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
 <style>
-html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block;width:100%;min-height:100vh;border:0}body{overflow:auto}
-#ppFloatingReset{position:fixed;right:22px;bottom:22px;min-width:154px;height:50px;padding:0 18px;border-radius:14px;border:1px solid #ff7800;background:linear-gradient(145deg,#ff8f24,#ff7800);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font:900 13px/1 Inter,Segoe UI,system-ui,sans-serif;letter-spacing:.08em;cursor:pointer;z-index:9999;box-shadow:0 10px 28px #000b,0 0 24px #ff780033;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
-#ppFloatingReset .pp-reset-icon{width:25px;height:25px;border:2px solid rgba(255,255,255,.9);border-radius:50%;display:grid;place-items:center;font-size:17px;line-height:1;letter-spacing:0}
-#ppFloatingReset .pp-reset-text{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
-#ppFloatingReset .pp-reset-main{font-size:13px;line-height:1}
-#ppFloatingReset .pp-reset-sub{font-size:7px;line-height:1;letter-spacing:.16em;opacity:.78}
-#ppFloatingReset:hover{transform:translateY(-3px);box-shadow:0 14px 32px #000b,0 0 32px #ff780066;filter:brightness(1.08)}
-#ppFloatingReset:active{transform:scale(.96)}
-#ppFloatingReset:focus-visible{outline:2px solid #fff;outline-offset:3px}
-@media(max-width:650px){#ppFloatingReset{right:14px;bottom:14px;min-width:132px;height:44px;padding:0 13px;border-radius:12px;gap:8px}#ppFloatingReset .pp-reset-icon{width:22px;height:22px;font-size:15px}#ppFloatingReset .pp-reset-main{font-size:11px}#ppFloatingReset .pp-reset-sub{font-size:6px}}
+html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}
+#app{display:block;width:100%;min-height:100vh;border:0}
+body{overflow:auto}
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260921-profitcolour1" style="width:100%;border:0;display:block"></iframe>
-<button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
-<script>
-(()=>{
-'use strict';
-const frame=document.getElementById('app');
-const resetButton=document.getElementById('ppFloatingReset');
-const scripts=[
-'quick-price-guard.js?v=7',
-'reset-fix.js?v=13','drag-gcode-fix.js?v=1','file-type-support.js?v=6','app-enhancements.js?v=6','ui-enhancements.js?v=2','pricing-ux.js?v=1','global-actions.js?v=1','pretty-ui.js?v=6','alignment-polish.js?v=3','header-hero-fix.js?v=4','gcode-reader.js?v=2','print-time-input.js?v=1','chosen-theme.js?v=1','interaction-fix.js?v=2','containment-fix.js?v=1','box-icons.js?v=7','hero-feature-icons.js?v=1','electricity-providers.js?v=5','hero-ticker-position.js?v=2','tab-layout.js?v=21','master-polish.js?v=20260921-remove-ticker','master-cleanup.js?v=2','natural-flow.js?v=3','flow-cards.js?v=20260919-colour-fix','clean-top.js?v=20260921-final-nav','unified-icons.js?v=2','i18n-extra.js?v=5','settings-preferences.js?v=20260920-lightmode6','my-projects.js?v=7','my-materials.js?v=7','quantity-auto-batch.js?v=2','printer-material-polish.js?v=2','material-brands.js?v=1','box-spacing-polish.js?v=2','colour-palette.js?v=20260919-palette-fix','stage-field-colours.js?v=20260919-unified-icons','brand-assets.js?v=20260919-brand-fix','approved-hero-orange.js?v=1','profit-advisor.js?v=9','results-layout-polish.js?v=1','profit-tools.js?v=2','printer-price-data.js?v=1','printer-price-sync.js?v=1','calculator-state.js?v=8'
-];
-function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
-function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
-function doReset(){
- try{
-  const d=frame.contentDocument;
-  const reset=d?.getElementById('reset');
-  if(reset){reset.click();return;}
-  const fallback=d?.querySelector('.actions button[id*="reset" i]');
-  if(fallback)fallback.click();
- }catch(e){console.warn('PrintProfit reset failed',e);}
-}
-function wireTopModals(){
- try{
-  const d=frame.contentDocument;
-  if(!d)return;
-  const guide=d.querySelector('#ppCleanTop [data-target="guide"]');
-  if(guide&&guide.dataset.ppParentBound!=='1'){
-    guide.dataset.ppParentBound='1';
-    guide.addEventListener('click',e=>{
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      frame.contentWindow.__openPrintProfitGuide?.();
-    },true);
-  }
- }catch(e){console.warn('PrintProfit navigation wiring failed',e);}
-}
-resetButton.addEventListener('click',doReset);
-frame.addEventListener('load',async()=>{
- try{
-  for(const src of scripts)await load(src);
-  fit();
-  wireTopModals();
-  setTimeout(()=>{fit();wireTopModals();},100);
-  setTimeout(()=>{fit();wireTopModals();},500);
-  setTimeout(()=>{fit();wireTopModals();},1500);
-  if(window.ResizeObserver){const ro=new ResizeObserver(fit);ro.observe(frame.contentDocument.documentElement);ro.observe(frame.contentDocument.body);}
-  setInterval(fit,1000);
- }catch(e){console.error('PrintProfit enhancement load failed',e);}
-});
-})();
-</script>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=diagnostic20260923" style="width:100%;min-height:100vh;border:0;display:block"></iframe>
 </body>
 </html>
