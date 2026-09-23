@@ -591,19 +591,15 @@ function addStyles(){
     .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
     .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
     .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
-    .pp-advisor-control{display:grid;grid-template-columns:90px minmax(0,1fr) 105px 88px 78px;gap:6px;align-items:center;margin-top:8px;}
+    .pp-advisor-control{display:grid;grid-template-columns:85px minmax(0,1fr) 85px 90px 70px;gap:6px;align-items:center;margin-top:8px;}
     .pp-advisor-control .mini{border:1px solid #294957;border-radius:7px;padding:6px 7px;background:#091821;}
     .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:7px;}
     .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:10px;}
-    .pp-advisor-apply{width:100%;border:1px solid rgba(54,229,139,.45);border-radius:7px;padding:7px 6px;background:rgba(54,229,139,.07);color:#64efaa;font:900 8px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;white-space:nowrap;transition:.15s ease;}
-    .pp-advisor-apply:hover{border-color:#36e58b;background:rgba(54,229,139,.14);transform:translateY(-1px);}
-    .pp-advisor-apply.applied{border-color:#0798ff66;background:#0798ff12;color:#75c9ff;}
-    .pp-advisor-apply:disabled{opacity:.45;cursor:not-allowed;transform:none;}
     .pp-advisor-control output{font-size:10px;font-weight:900;text-align:right;}
+    .pp-advisor-range{width:100%;accent-color:#ff7800;}
     .pp-advisor-change{font-size:9px;font-weight:900;text-align:right;}
     .pp-advisor-change.up{color:#36e58b;}
     .pp-advisor-change.down{color:#ff6b6b;}
-    @media(max-width:900px){.pp-advisor-control{grid-template-columns:1fr 1fr 1fr;}.pp-advisor-control .pp-advisor-apply{grid-column:1 / -1;}.pp-advisor-change{text-align:left;}}
     .pp-advisor-live{display:flex;flex-direction:column;min-height:100%;gap:7px;}
     .pp-advisor-live-top{display:flex;align-items:center;gap:8px;margin-bottom:1px;}
     .pp-advisor-live-top h4{margin:0;font-size:12px;}
@@ -725,55 +721,43 @@ function formatChange(v){
   return sign+money(Math.abs(v));
 }
 
-function dispatchAdvisorField(el){
-  if(!el)return;
-  el.dispatchEvent(new Event('input',{bubbles:true}));
-  el.dispatchEvent(new Event('change',{bubbles:true}));
-}
-
-function applyAdvisorSuggestion(s,key){
-  const changed=[];
-  if(key==='materialUsage'){
-    const usage=$('materialUsed');
-    if(usage&&s.materialUsed>0&&s.materialPack>0){
-      const factor=1-Math.min(80,Math.max(0,advisorScenarioValues(s).materialUsage))/100;
-      usage.value=(s.materialUsed*factor).toFixed(2);
-      changed.push(usage);
-    }
-  }else if(key==='labourMinutes'){
-    const labourHours=$('labourHours');
-    if(labourHours){
-      const minutes=Math.min(num('labourHours')*60,Math.max(0,advisorScenarioValues(s).labourMinutes));
-      labourHours.value=Math.max(0,num('labourHours')-minutes/60).toFixed(2);
-      changed.push(labourHours);
-    }
-  }else if(key==='deliveryCost'){
-    const delivery=$('delivery');
-    if(delivery) {
-      delivery.value=Math.max(0,Math.min(s.delivery,advisorScenarioValues(s).deliveryCost)).toFixed(2);
-      changed.push(delivery);
-    }
-  }else if(key==='sellingPrice'){
-    const sell=$('sell');
-    if(sell){
-      sell.value=Math.max(0,advisorScenarioValues(s).sellingPrice).toFixed(2);
-      changed.push(sell);
-    }
-  }else if(key==='materialCost'){
-    const packCost=$('materialPackCost');
-    if(packCost&&s.materialCost>0&&s.materialPackCost>0){
-      const target=Math.max(0,Math.min(s.materialCost,advisorScenarioValues(s).materialCost));
-      packCost.value=(s.materialPackCost*(target/s.materialCost)).toFixed(2);
-      changed.push(packCost);
-    }
-  }
-  changed.forEach(dispatchAdvisorField);
-  if(changed.length)setTimeout(()=>{try{$('calc')?.click();}catch(e){}},20);
-  return changed.length>0;
-}
-
 function applyAdvisorScenario(s,sc){
-  ['materialUsage','labourMinutes','deliveryCost','sellingPrice','materialCost'].forEach(key=>applyAdvisorSuggestion(s,key));
+  const usage=$('materialUsed');
+  const packCost=$('materialPackCost');
+  const labourHours=$('labourHours');
+  const delivery=$('delivery');
+  const sell=$('sell');
+  const changed=[];
+  if(usage&&s.materialUsed>0&&s.materialPack>0){
+    const factor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    usage.value=(s.materialUsed*factor).toFixed(2);
+    changed.push(usage);
+  }
+  if(packCost&&s.materialCost>0&&s.materialPackCost>0){
+    const usageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    const effectiveFactor=(sc.materialCost/s.materialCost);
+    const totalFactor=Math.max(0,Math.min(1,usageFactor*effectiveFactor));
+    packCost.value=(s.materialPackCost*totalFactor).toFixed(2);
+    changed.push(packCost);
+  }
+  if(labourHours){
+    const hours=Math.max(0,num('labourHours')-Math.min(num('labourHours'),Math.max(0,sc.labourMinutes)/60));
+    labourHours.value=hours.toFixed(2);
+    changed.push(labourHours);
+  }
+  if(delivery){
+    delivery.value=Math.max(0,Math.min(s.delivery,sc.deliveryCost)).toFixed(2);
+    changed.push(delivery);
+  }
+  if(sell){
+    sell.value=Math.max(0,sc.sellingPrice).toFixed(2);
+    changed.push(sell);
+  }
+  changed.forEach(el=>{
+    el.dispatchEvent(new Event('input',{bubbles:true}));
+    el.dispatchEvent(new Event('change',{bubbles:true}));
+  });
+  setTimeout(()=>{try{$('calc')?.click();}catch(e){}},20);
 }
 
 function copyAdvisorSummary(s,sc,scenario){
@@ -829,19 +813,10 @@ function suggestionRow(cfg,s,sc,batchView){
   row.className='pp-advisor-suggestion';
   row.dataset.advisorKey=cfg.key;
   const value=cfg.get();
+  const max=cfg.max();
   const projected=calculateAdvisorScenario(s,rowScenarioFor(s,sc,cfg.key),batchView).profit;
   const change=projected-(batchView?s.batchProfit:s.profit);
-  const canApply=cfg.key==='materialUsage'
-    ?s.materialUsed>0&&s.materialPack>0
-    :cfg.key==='labourMinutes'
-      ?num('labourHours')>0
-      :cfg.key==='deliveryCost'
-        ?s.delivery>0
-        :cfg.key==='sellingPrice'
-          ?s.sell>=0
-          :s.materialCost>0&&s.materialPackCost>0;
   const badgeClass=cfg.impact==='med'?'pp-advisor-pill med':'pp-advisor-pill';
-  const suggestedText=cfg.suggestedText(value,s);
   row.innerHTML=
     '<div class="pp-advisor-suggestion-head">'+
       '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
@@ -850,8 +825,8 @@ function suggestionRow(cfg,s,sc,batchView){
     '</div>'+
     '<div class="pp-advisor-control">'+
       '<div class="mini"><span>Current</span><strong>'+cfg.currentText(s)+'</strong></div>'+
-      '<div class="mini"><span>Suggested</span><strong id="'+cfg.suggestedId+'">'+suggestedText+'</strong></div>'+
-      '<button type="button" class="pp-advisor-apply" data-advisor-apply="'+cfg.key+'" '+(canApply?'':'disabled')+'>Apply suggestion →</button>'+
+      '<div class="pp-advisor-range-wrap"><input class="pp-advisor-range" id="'+cfg.id+'" type="range" min="'+cfg.min()+'" max="'+max+'" step="'+cfg.step+'" value="'+value+'"></div>'+
+      '<div class="mini"><span>Suggested</span><strong id="'+cfg.suggestedId+'">'+cfg.suggestedText(value,s)+'</strong></div>'+
       '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'" id="'+cfg.profitId+'">'+money(projected)+'</strong></div>'+
       '<div class="pp-advisor-change '+(change>=0?'up':'down')+'" id="'+cfg.changeId+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
     '</div>';
@@ -1035,18 +1010,6 @@ function render(){
     advisorScenario=advisorDefaults(s,batchView);
     ['ppAdvisorMaterialUsage','ppAdvisorLabour','ppAdvisorDelivery','ppAdvisorSell','ppAdvisorMaterialCost'].forEach(id=>{const el=$(id);if(el)el.value=advisorScenario[{ppAdvisorMaterialUsage:'materialUsage',ppAdvisorLabour:'labourMinutes',ppAdvisorDelivery:'deliveryCost',ppAdvisorSell:'sellingPrice',ppAdvisorMaterialCost:'materialCost'}[id]]??0;});
     refreshAdvisorScenario(s,batchView);
-  });
-  box.querySelectorAll('[data-advisor-apply]').forEach(button=>{
-    button.addEventListener('click',()=>{
-      const key=button.getAttribute('data-advisor-apply');
-      const current=snapshot();
-      if(applyAdvisorSuggestion(current,key)){
-        button.textContent='✓ Applied';
-        button.classList.add('applied');
-        button.disabled=true;
-        setTimeout(()=>render(),120);
-      }
-    });
   });
   $('ppAdvisorApply')?.addEventListener('click',()=>{
     applyAdvisorScenario(s,advisorScenario);
