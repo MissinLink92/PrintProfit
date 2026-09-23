@@ -49,6 +49,10 @@ button{font:inherit}
 .stat span{display:block;color:#91a8b3;font-size:8px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
 .stat strong{display:block;font-size:22px;margin-top:6px}
 .stat.profit strong,.stat.margin strong{color:var(--good)}
+.stat strong.bad{color:var(--bad)!important}
+.stat strong.neutral{color:var(--text)!important}
+.impact.bad{border-color:#7b3030;background:#ff6b6b0b}
+.impact.bad strong{color:var(--bad)}
 .main{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:16px}
 .panel{border:1px solid var(--line2);border-radius:15px;background:linear-gradient(180deg,#0b202b,#081821);padding:16px}
 .panel-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:13px}
@@ -132,6 +136,11 @@ button{font:inherit}
 'use strict';
 const DRAFT_KEY='printprofit.calculator-draft.v3';
 const HANDOFF_KEY='printprofit.calculator-navigation-handoff.v1';
+try{history.scrollRestoration='manual'}catch(e){}
+function scrollAdvisorTop(){window.scrollTo(0,0)}
+window.addEventListener('pageshow',scrollAdvisorTop,{once:true});
+window.addEventListener('load',scrollAdvisorTop,{once:true});
+scrollAdvisorTop();
 const money=v=>{const n=Number(v)||0;try{const p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');const code=p.currency||'GBP';if(code!=='GBP'){const rates={EUR:1.1663,USD:1.337,PLN:5.0892,CAD:1.84,AUD:2,CHF:.96,SEK:14.75,NOK:14.7,DKK:8.69,CZK:28.3,JPY:179,CNY:9.65,INR:123.5,NZD:2.16,SGD:1.71,BRL:7.18,MXN:23.0696,ZAR:21.8};const rate=Number(p.rate)>0?Number(p.rate):(rates[code]||1);return new Intl.NumberFormat('en-GB',{style:'currency',currency:code,minimumFractionDigits:2,maximumFractionDigits:2}).format(n*rate)} }catch(e){}return '£'+n.toFixed(2)};
 const num=(f,id)=>Number.parseFloat(f?.[id]?.value??0)||0;
 const fieldState=draft=>draft?.fields||{};
@@ -154,7 +163,7 @@ function loadDraft(){
   const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
   const elec=powerUsed*num(f,'electricityRate');
   const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
-  const labour=num(f,'labourRate')*num(f,'labourHours');
+  const labourHours=num(f,'labourHours'),labour=num(f,'labourRate')*labourHours;
   const packaging=num(f,'pack'),other=num(f,'other'),packagingOther=packaging+other;
   const delivery=num(f,'delivery'),deliveryCharge=num(f,'deliveryCharge');
   const base=materialCost+elec+depreciation+labour+packagingOther+delivery;
@@ -163,7 +172,7 @@ function loadDraft(){
   const batchSales=sell*qty*(1-disc),batchCost=Math.max(0,base-delivery)*qty+delivery,batchFees=batchSales*feeRate+fixedFee;
   const batchProfit=batchSales+deliveryCharge-batchCost-batchFees;
   const file=draft.fileData||{};
-  return {f,p,qty,disc,hours,pack,packPrice,used,materialCost,elec,depreciation,labour,packaging,other,packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee,fees,profit,margin,batchProfit,fileName:draft.fileName||'',file};
+  return {f,p,qty,disc,hours,pack,packPrice,used,materialCost,elec,depreciation,labourHours,labour,packaging,other,packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee,fees,profit,margin,batchProfit,fileName:draft.fileName||'',file};
 }
 function setDraftField(id,v){
   if(!draft?.fields?.[id])draft.fields[id]={value:String(v)};
@@ -195,22 +204,44 @@ function apply(key){
   saveDraft();
   window.location.href='./index.html';
 }
+function calculateProjection(overrides={}){
+  const s=state;if(!s)return {materialCost:0,elec:0,depreciation:0,labour:0,base:0,fees:0,profit:0,margin:0,sell:0,used:0,hours:0,packPrice:0,labourHours:0,delivery:0};
+  const used=Math.max(0,Number.isFinite(Number(overrides.used))?Number(overrides.used):s.used);
+  const hours=Math.max(0,Number.isFinite(Number(overrides.hours))?Number(overrides.hours):s.hours);
+  const packPrice=Math.max(0,Number.isFinite(Number(overrides.packPrice))?Number(overrides.packPrice):s.packPrice);
+  const labourHours=Math.max(0,Number.isFinite(Number(overrides.labourHours))?Number(overrides.labourHours):s.labourHours);
+  const delivery=Math.max(0,Number.isFinite(Number(overrides.delivery))?Number(overrides.delivery):s.delivery);
+  const sell=Math.max(0,Number.isFinite(Number(overrides.sell))?Number(overrides.sell):s.sell);
+  const materialCost=s.pack>0&&used>0?packPrice*(used/s.pack):0;
+  const elec=s.p.watts>0&&hours>0?s.p.watts/1000*hours*num(s.f,'electricityRate'):0;
+  const depreciation=s.p.lifetime&&hours?s.p.price/s.p.lifetime*hours:0;
+  const labour=num(s.f,'labourRate')*labourHours;
+  const base=materialCost+elec+depreciation+labour+s.packagingOther+delivery;
+  const fees=sell*s.feeRate+s.fixedFee;
+  const profit=sell+s.deliveryCharge-base-fees;
+  const margin=sell?profit/sell:0;
+  return {materialCost,elec,depreciation,labour,base,fees,profit,margin,sell,used,hours,packPrice,labourHours,delivery};
+}
+function projectionFor(keys=[]){
+  const s=state;if(!s)return calculateProjection();
+  const values={used:s.used,hours:s.hours,packPrice:s.packPrice,labourHours:s.labourHours,delivery:s.delivery,sell:s.sell};
+  keys.forEach(key=>{
+    if(key==='materialUsage')values.used=s.used*.85;
+    if(key==='printTime')values.hours=s.hours*.90;
+    if(key==='materialCost')values.packPrice=s.packPrice*.85;
+    if(key==='deliveryCost')values.delivery=Math.max(0,s.delivery-.95);
+    if(key==='labourMinutes')values.labourHours=Math.max(0,s.labourHours-5/60);
+    if(key==='sellingPrice')values.sell=Math.max(values.sell*1.15,values.sell+2.5);
+  });
+  return calculateProjection(values);
+}
 function projected(key){
-  const s=state;if(!s)return 0;
-  const clone={...s,used:s.used,labour:s.labour,delivery:s.delivery,sell:s.sell,materialCost:s.materialCost,hours:s.hours,packPrice:s.packPrice};
-  if(key==='materialUsage')clone.used=s.used*.85;
-  if(key==='labourMinutes')clone.labour=Math.max(0,s.labour-num(s.f,'labourRate')*Math.min(s.labourHours*60,5)/60);
-  if(key==='deliveryCost')clone.delivery=Math.max(0,s.delivery-.95);
-  if(key==='sellingPrice')clone.sell=Math.max(s.sell*1.15,s.sell+2.5);
-  if(key==='materialCost')clone.materialCost=s.materialCost*.85;
-  if(key==='printTime'){clone.hours=s.hours*.9;clone.elec=s.p.watts>0?clone.hours*s.p.watts/1000*num(s.f,'electricityRate'):0;clone.depreciation=s.p.lifetime?clone.hours*s.p.price/s.p.lifetime:0}
-  const base=clone.materialCost+clone.elec+clone.depreciation+clone.labour+clone.packagingOther+clone.delivery;
-  return clone.sell+s.deliveryCharge-base-(clone.sell*s.feeRate+s.fixedFee);
+  return projectionFor([key]).profit;
 }
 function card(key,icon,title,desc,current,suggested,impact){
   const can=state&&((key==='materialUsage'&&state.used>0)||(key==='labourMinutes'&&state.labourHours>0)||(key==='deliveryCost'&&state.delivery>0)||(key==='sellingPrice'&&state.sell>0)||(key==='materialCost'&&state.materialCost>0)||(key==='printTime'&&state.hours>0));
-  const p=projected(key),delta=p-state.profit;
-  return '<article class="card" data-key="'+key+'"><div class="card-head"><div class="card-icon">'+icon+'</div><div><h3>'+title+'</h3><p>'+desc+'</p></div></div><div class="values"><div><span>Current</span><strong>'+current+'</strong></div><div class="arrow">→</div><div class="suggested"><span>Suggested</span><strong>'+suggested+'</strong></div></div><div class="impact"><span>Potential improvement</span><strong>'+(delta>=0?'+':'')+money(delta)+' profit</strong></div><button class="apply" '+(can?'':'disabled')+' data-apply="'+key+'">Apply suggestion →</button></article>';
+  const p=projected(key),delta=p-state.profit,impactClass=delta<0?' bad':'';
+  return '<article class="card" data-key="'+key+'"><div class="card-head"><div class="card-icon">'+icon+'</div><div><h3>'+title+'</h3><p>'+desc+'</p></div></div><div class="values"><div><span>Current</span><strong>'+current+'</strong></div><div class="arrow">→</div><div class="suggested"><span>Suggested</span><strong>'+suggested+'</strong></div></div><div class="impact'+impactClass+'"><span>Potential improvement</span><strong>'+(delta>=0?'+':'')+money(delta)+' profit</strong></div><button class="apply" '+(can?'':'disabled')+' data-apply="'+key+'">Apply suggestion →</button></article>';
 }
 function render(){
   state=loadDraft();
@@ -220,6 +251,8 @@ function render(){
     return;
   }
   const f=state.f, material=value(f,'materialType')||'PLA', printer=value(f,'printer').split(/[|,]/).slice(3).join(' ')||'Selected printer';
+  const profitClass=state.profit>0?'good':state.profit<0?'bad':'neutral';
+  const marginClass=state.margin>0?'good':state.margin<0?'bad':'neutral';
   const fileLabel=state.fileName||'Current print';
   const meta=state.file||{};
   const slicer=meta.slicer||meta.slicerName||'—';
@@ -232,8 +265,8 @@ function render(){
     card('sellingPrice','◇','Adjust selling price','Test a higher selling price while keeping your costs unchanged.',money(state.sell),money(Math.max(state.sell*1.15,state.sell+2.5)))
   ];
   root.innerHTML=
-    '<section class="summary"><div class="summary-top"><div class="model"><div class="model-thumb">▦</div><div><strong>'+escapeHtml(fileLabel)+'</strong><small>Printer: '+escapeHtml(printer||'—')+'<br>Material: '+escapeHtml(material)+'<br>Print time: '+(state.hours?formatHours(state.hours):'—')+'<br>Material usage: '+(state.used?state.used.toFixed(1)+' g':'—')+(slicer!=='—'?'<br>Slicer: '+escapeHtml(slicer):'')+'</small></div></div><div class="stats"><div class="stat"><span>Total Cost</span><strong>'+money(state.base)+'</strong></div><div class="stat"><span>Selling Price</span><strong>'+money(state.sell)+'</strong></div><div class="stat profit"><span>Profit</span><strong>'+money(state.profit)+'</strong></div><div class="stat margin"><span>Profit Margin</span><strong>'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div></div></section>'+
-    '<div class="main"><section class="panel"><div class="panel-head"><div><h2>🎯 Suggested Improvements</h2><p>Apply one recommendation at a time, or select several and preview the combined result.</p></div></div><div class="cards">'+cards.join('')+'</div><div class="projected"><div><h3>Projected Results</h3><span>Based on selected suggestions</span></div><div><span>New Total Cost</span><strong id="projCost">'+money(state.base)+'</strong></div><div><span>New Selling Price</span><strong id="projSell">'+money(state.sell)+'</strong></div><div><span>New Profit</span><strong class="good" id="projProfit">'+money(state.profit)+'</strong></div><div><span>New Margin</span><strong class="good" id="projMargin">'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div><button class="apply-all" id="applyAll">✓ Apply All Selected Suggestions to Calculator</button><div class="disclaimer">All provider or market values may not be current and are estimates. Always check real-world costs before committing to a price.</div></section>'+
+    '<section class="summary"><div class="summary-top"><div class="model"><div class="model-thumb">▦</div><div><strong>'+escapeHtml(fileLabel)+'</strong><small>Printer: '+escapeHtml(printer||'—')+'<br>Material: '+escapeHtml(material)+'<br>Print time: '+(state.hours?formatHours(state.hours):'—')+'<br>Material usage: '+(state.used?state.used.toFixed(1)+' g':'—')+(slicer!=='—'?'<br>Slicer: '+escapeHtml(slicer):'')+'</small></div></div><div class="stats"><div class="stat"><span>Total Cost</span><strong>'+money(state.base)+'</strong></div><div class="stat"><span>Selling Price</span><strong>'+money(state.sell)+'</strong></div><div class="stat profit"><span>Profit</span><strong class="'+profitClass+'">'+money(state.profit)+'</strong></div><div class="stat margin"><span>Profit Margin</span><strong class="'+marginClass+'">'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div></div></section>'+
+    '<div class="main"><section class="panel"><div class="panel-head"><div><h2>🎯 Suggested Improvements</h2><p>Apply one recommendation at a time, or select several and preview the combined result.</p></div></div><div class="cards">'+cards.join('')+'</div><div class="projected"><div><h3>Projected Results</h3><span>Based on selected suggestions</span></div><div><span>New Total Cost</span><strong id="projCost">'+money(state.base)+'</strong></div><div><span>New Selling Price</span><strong id="projSell">'+money(state.sell)+'</strong></div><div><span>New Profit</span><strong class="${profitClass}" id="projProfit">'+money(state.profit)+'</strong></div><div><span>New Margin</span><strong class="${marginClass}" id="projMargin">'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div><button class="apply-all" id="applyAll">✓ Apply All Selected Suggestions to Calculator</button><div class="disclaimer">All provider or market values may not be current and are estimates. Always check real-world costs before committing to a price.</div></section>'+
     '<aside class="side"><section class="panel"><h3>⚗️ What If Scenarios</h3><p>Test a quick change without applying it to your calculator.</p><select class="select" id="whatIf"><option value="materialUsage">Reduce material usage to 15% less</option><option value="printTime">Reduce print time by 10%</option><option value="deliveryCost">Reduce delivery by £0.95</option><option value="sellingPrice">Increase selling price</option><option value="labourMinutes">Save 5 labour minutes</option></select><button class="run" id="runScenario">Run scenario</button><div class="result-box"><span>Estimated new profit</span><strong id="scenarioProfit">'+money(state.profit)+'</strong><small id="scenarioMargin">Margin '+((state.margin||0)*100).toFixed(1)+'%</small></div></section>'+
     '<section class="panel"><h3>🧩 Combination Ideas</h3><p>Select several changes to see the combined result before applying them.</p><div class="checks">'+['materialUsage','printTime','materialCost','deliveryCost','labourMinutes','sellingPrice'].map((k,i)=>'<label class="check"><input type="checkbox" data-select="'+k+'" '+(i<3?'checked':'')+'> '+({materialUsage:'Reduce material usage',printTime:'Reduce print time',materialCost:'Use cheaper material',deliveryCost:'Reduce delivery cost',labourMinutes:'Reduce labour time',sellingPrice:'Increase selling price'}[k])+'</label>').join('')+'</div><button class="preview" id="previewCombined">Preview combined result</button></section>'+
     '<section class="tip"><strong>Tip:</strong> These are estimates based on your current calculator settings. The best balance depends on the strength, quality and delivery requirements of each model.</section></aside></div>';
@@ -241,22 +274,14 @@ function render(){
 }
 function combined(){
   const keys=[...document.querySelectorAll('[data-select]:checked')].map(x=>x.dataset.select);
-  let profit=state.profit, cost=state.base,sell=state.sell;
-  keys.forEach(k=>{const p=projected(k);profit+=p-state.profit;
-    if(k==='materialUsage')cost-=state.materialCost*.15;
-    if(k==='materialCost')cost-=state.materialCost*.15;
-    if(k==='deliveryCost')cost-=Math.min(.95,state.delivery);
-    if(k==='labourMinutes')cost-=Math.min(5,state.labourHours*60)*num(state.f,'labourRate')/60;
-    if(k==='printTime'){const h=state.hours*.1;cost-=state.p.watts>0?h*state.p.watts/1000*num(state.f,'electricityRate'):0;cost-=state.p.lifetime?h*state.p.price/state.p.lifetime:0}
-    if(k==='sellingPrice')sell=Math.max(sell*1.15,sell+2.5);
-  });
-  return {keys,profit,cost,sell,margin:sell?profit/sell:0};
+  const projection=projectionFor(keys);
+  return {keys,profit:projection.profit,cost:projection.base,sell:projection.sell,margin:projection.margin};
 }
 function bind(){
   document.querySelectorAll('[data-apply]').forEach(b=>b.addEventListener('click',()=>{apply(b.dataset.apply)}));
   document.getElementById('applyAll')?.addEventListener('click',()=>{const c=combined();if(!c.keys.length)return; c.keys.forEach(applyDraftKey);saveDraft();window.location.href='./index.html'});
   document.getElementById('previewCombined')?.addEventListener('click',()=>{const c=combined();document.getElementById('projCost').textContent=money(c.cost);document.getElementById('projSell').textContent=money(c.sell);document.getElementById('projProfit').textContent=money(c.profit);document.getElementById('projMargin').textContent=(c.margin*100).toFixed(1)+'%';});
-  document.getElementById('runScenario')?.addEventListener('click',()=>{const k=document.getElementById('whatIf').value;const p=projected(k);document.getElementById('scenarioProfit').textContent=money(p);document.getElementById('scenarioMargin').textContent='Margin '+(state.sell?(p/state.sell*100):0).toFixed(1)+'%'});
+  document.getElementById('runScenario')?.addEventListener('click',()=>{const k=document.getElementById('whatIf').value;const projection=projectionFor([k]);const profitEl=document.getElementById('scenarioProfit');profitEl.textContent=money(projection.profit);profitEl.classList.remove('good','bad','neutral');profitEl.classList.add(projection.profit>0?'good':projection.profit<0?'bad':'neutral');document.getElementById('scenarioMargin').textContent='Margin '+(projection.margin*100).toFixed(1)+'%'});
 }
 function applyDraftKey(k){
   if(k==='materialUsage'&&state.used>0)setDraftField('materialUsed',(state.used*.85).toFixed(2));
