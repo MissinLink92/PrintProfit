@@ -47,7 +47,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/printprofit-logo.webp?v=20260919" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/user-selected-printprofit-logo.webp?v=20260923" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
