@@ -85,6 +85,7 @@ function restore(){
   if(!data?.fields)return false;
 
   try{window.__ppFileData=(data.fileData&&typeof data.fileData==='object')?data.fileData:{};}catch(e){window.__ppFileData={};}
+  try{window.__ppRestoredFileName=String(data.fileName||'');}catch(e){window.__ppRestoredFileName='';}
   if(data.fileStatus){
     const status=document.getElementById('status');
     if(status)status.textContent=data.fileStatus;
@@ -228,6 +229,7 @@ window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
   try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);localStorage.removeItem(OLD_KEY);}catch(e){}
   try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);sessionStorage.removeItem(OLD_KEY);}catch(e){}
+  try{window.__ppRestoredFileName='';}catch(e){}
   clearNavigationHandoff();
 };
 
