@@ -395,10 +395,11 @@ function install(){
     if(target==='guide'){openGuide();return;}
     if(target==='priceFinder'){window.top.location.href='./price-finder.html';return;}
     if(target==='profitAdvisor'){
-      const advisor=document.getElementById('ppProfitAdvisor');
-      if(advisor){advisor.scrollIntoView({behavior:'smooth',block:'start'});return;}
-      const result=document.querySelector('.result');
-      if(result){result.scrollIntoView({behavior:'smooth',block:'start'});return;}
+      // Profit Advisor is now a dedicated page. Preserve the calculator draft
+      // through the existing calculator-state handoff before leaving.
+      try{window.__printProfitPersistDraft?.();}catch(e){}
+      try{sessionStorage.setItem('printprofit.calculator-navigation-handoff.v1','1');}catch(e){}
+      window.top.location.href='./profit-advisor.html';
       return;
     }
     const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
