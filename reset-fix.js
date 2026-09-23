@@ -75,17 +75,33 @@
   }
 
   function resetModelDisplay(){
+    // Reset the live model state as well as the visible calculator fields.
+    // This prevents stale 3MF/G-code intelligence from surviving a reset.
+    try{window.__ppFileData={};}catch(e){}
+    try{window.__ppRestoredFileName='';}catch(e){}
     const status=document.getElementById('status');
     if(status)status.textContent='Upload a file to automatically fill in the available print information.';
-    ['ppModelFile','ppModelTime','ppModelUsed','ppModelMaterial'].forEach(id=>{
+    ['ppModelFile','ppModelTime','ppModelUsed','ppModelMaterial','ppModelSlicer','ppModelPrinter','ppModelLayer','ppModelInfill','ppModelSupports','ppModelNozzle','ppModelBed','ppModelProfile'].forEach(id=>{
       const el=document.getElementById(id);if(el)el.textContent='—';
     });
     const modelStatus=document.getElementById('ppModelStatus');
-    if(modelStatus)modelStatus.textContent='Upload a G-code file to automatically fill in the available print information.';
+    if(modelStatus)modelStatus.textContent='Upload a print file to analyse its available data.';
+    const hint=document.getElementById('ppModelHint');
+    if(hint)hint.textContent='The more metadata your slicer stores, the more PrintProfit can automatically fill in for you.';
+    const health=document.getElementById('ppFileHealth');
+    if(health)health.className='pp-file-health limited';
+    const healthText=document.getElementById('ppFileHealthText');
+    if(healthText)healthText.textContent='FILE ANALYSIS: WAITING';
+    const apply=document.getElementById('ppApplyDetected');
+    if(apply)apply.disabled=true;
     const metadata=document.getElementById('ppFileMetadata');
     if(metadata)metadata.remove();
     const file=document.getElementById('file');
     if(file)file.value='';
+    // reset-fix captures the reset click before calculator-state.js does;
+    // clear the navigation draft explicitly so a reset can never resurrect it.
+    window.__printProfitClearDraft?.();
+    window.__ppRefreshModelHub?.();
   }
 
   function resetAllFields(){
