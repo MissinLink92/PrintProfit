@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrintProfit — Profit Advisor</title>
+<style>
+:root{
+  --bg:#06131c;--panel:#0a1b25;--panel2:#0d222e;--line:#294957;--line2:#315666;
+  --text:#f4f8fb;--muted:#9db0ba;--accent:#ff7800;--blue:#0798ff;--good:#36e58b;--bad:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,system-ui,sans-serif}
+body{background:
+ radial-gradient(circle at 80% 18%,rgba(0,152,255,.08),transparent 28%),
+ linear-gradient(180deg,#071721 0%,#06131c 100%)}
+button{font:inherit}
+.pp-nav{height:68px;display:flex;align-items:center;padding:0 3.1%;border-bottom:1px solid var(--line);background:rgba(5,15,22,.9);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}
+.pp-brand{width:190px;display:flex;align-items:center}
+.pp-brand img{width:165px;height:58px;object-fit:contain}
+.pp-links{margin-left:auto;display:flex;gap:7px;align-items:center}
+.pp-links button{border:1px solid transparent;background:transparent;color:#dce5eb;border-radius:9px;padding:10px 12px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;font-weight:700}
+.pp-links button:hover{background:#ff780012;color:#fff}
+.pp-links .active{border-color:#0798ff88;background:#0798ff10;color:#fff}
+.pp-icon{width:20px;height:20px;position:relative;color:var(--accent);display:inline-block}
+.pp-icon.calc:before{content:"";position:absolute;inset:1px 3px;border:2px solid currentColor;border-radius:3px}
+.pp-icon.calc:after{content:"";position:absolute;width:3px;height:3px;left:7px;top:6px;background:currentColor;box-shadow:6px 0 currentColor,0 6px currentColor,6px 6px currentColor,0 12px currentColor,6px 12px currentColor}
+.pp-icon.cube:before{content:"◇";position:absolute;inset:-3px 0 0;font:25px/1 Arial;color:currentColor}
+.pp-icon.chart:before{content:"▂▅█";position:absolute;inset:1px 0 0;font:16px/1 Arial;color:currentColor;letter-spacing:-2px}
+.pp-icon.book:before{content:"▤";position:absolute;inset:-1px 0;font:23px/1 Arial;color:currentColor}
+.pp-icon.gear:before{content:"⚙";position:absolute;inset:-2px 0;font:22px/1 Arial;color:currentColor}
+.wrap{width:min(1320px,94%);margin:0 auto;padding:30px 0 45px}
+.hero{display:flex;justify-content:space-between;gap:28px;align-items:flex-start;margin-bottom:24px}
+.hero h1{font-size:38px;line-height:1;margin:0 0 8px;font-weight:900;letter-spacing:-.03em}
+.hero h1 .green{color:var(--good)}
+.hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+.hero-note{border:1px solid var(--line2);background:linear-gradient(145deg,#0c2430,#081821);border-radius:15px;padding:15px 18px;width:300px;box-shadow:0 12px 30px #0005}
+.hero-note strong{display:block;color:#ffd36b;font-size:12px;margin-bottom:4px}
+.hero-note span{display:block;color:#9eb2bd;font-size:10px;line-height:1.45}
+.summary{border:1px solid var(--line2);border-radius:15px;background:linear-gradient(145deg,#0b202b,#081821);padding:14px;margin-bottom:24px}
+.summary-top{display:grid;grid-template-columns:240px 1fr;gap:15px;align-items:center}
+.model{display:flex;gap:12px;align-items:center}
+.model-thumb{width:82px;height:82px;border:1px solid #365463;border-radius:11px;background:#081720;display:grid;place-items:center;color:#5f8191;font-size:28px;overflow:hidden}
+.model-thumb img{width:100%;height:100%;object-fit:cover}
+.model strong{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+.model small{display:block;color:var(--muted);font-size:9px;line-height:1.5;margin-top:4px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.stat{border:1px solid #274756;border-radius:10px;background:#071721;padding:12px}
+.stat span{display:block;color:#91a8b3;font-size:8px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.stat strong{display:block;font-size:22px;margin-top:6px}
+.stat.profit strong,.stat.margin strong{color:var(--good)}
+.main{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:16px}
+.panel{border:1px solid var(--line2);border-radius:15px;background:linear-gradient(180deg,#0b202b,#081821);padding:16px}
+.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:13px}
+.panel-head h2{margin:0;font-size:19px}
+.panel-head p{margin:4px 0 0;color:var(--muted);font-size:9px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.card{border:1px solid #2c5263;border-radius:12px;background:#071721;padding:13px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);opacity:.8}
+.card-head{display:flex;gap:10px;align-items:flex-start}
+.card-icon{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:#0798ff12;border:1px solid #0798ff45;display:grid;place-items:center;color:#64c7ff;font-size:18px}
+.card h3{margin:0;font-size:12px}
+.card p{margin:4px 0 0;color:#91a8b3;font-size:8.5px;line-height:1.4}
+.values{display:grid;grid-template-columns:1fr 20px 1fr;gap:7px;align-items:center;margin:13px 0 9px}
+.values div{border:1px solid #294957;border-radius:8px;padding:7px 8px}
+.values span{display:block;color:#78919e;font-size:7px}
+.values strong{display:block;font-size:14px;margin-top:3px}
+.values .suggested strong{color:var(--good)}
+.arrow{text-align:center;color:#55bfff;font-size:16px}
+.impact{border:1px solid #176e58;border-radius:8px;background:#36e58b0b;padding:7px 8px;margin-bottom:9px}
+.impact span{display:block;color:#7ec5a6;font-size:7px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.impact strong{display:block;color:var(--good);font-size:12px;margin-top:2px}
+.apply{width:100%;height:35px;border:1px solid #0798ff;border-radius:8px;background:linear-gradient(135deg,#078ce8,#0798ff);color:#fff;font-weight:900;font-size:9px;cursor:pointer;box-shadow:0 6px 16px #0798ff20}
+.apply:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.apply.applied{background:#36e58b12;border-color:#36e58b66;color:#64efaa}
+.apply:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.side{display:flex;flex-direction:column;gap:12px}
+.side .panel{padding:14px}
+.side h3{margin:0;font-size:13px}
+.side p{margin:4px 0 10px;color:var(--muted);font-size:8.5px;line-height:1.4}
+.select{width:100%;height:34px;border:1px solid #315666;border-radius:8px;background:#071721;color:#f5f8fb;padding:0 9px;font-weight:700;font-size:9px}
+.run{width:100%;height:35px;margin-top:7px;border:1px solid var(--blue);border-radius:8px;background:#0798ff;color:#fff;font-weight:900;font-size:9px;cursor:pointer}
+.result-box{margin-top:9px;border:1px solid #315666;border-radius:9px;padding:10px;background:#071721}
+.result-box span{display:block;color:#849da9;font-size:8px}
+.result-box strong{display:block;color:var(--good);font-size:18px;margin-top:4px}
+.result-box small{display:block;color:#a7bac3;font-size:8px;margin-top:2px}
+.checks{display:flex;flex-direction:column;gap:7px;margin-top:10px}
+.check{display:flex;gap:7px;align-items:center;font-size:9px;color:#dbe5e9}
+.check input{accent-color:var(--blue)}
+.preview{width:100%;height:33px;margin-top:10px;border:1px solid #0798ff;border-radius:8px;background:transparent;color:#67c8ff;font-size:9px;font-weight:900;cursor:pointer}
+.tip{border-left:3px solid var(--accent);background:#0a1d27;padding:10px 11px;color:#9fb3bc;font-size:8.5px;line-height:1.5}
+.tip strong{color:#ffd18c}
+.projected{margin-top:14px;border:1px solid #315666;border-radius:12px;background:#071721;padding:12px;display:grid;grid-template-columns:1fr repeat(4,1fr);gap:9px;align-items:center}
+.projected h3{margin:0;font-size:11px}
+.projected span{display:block;color:#829aa6;font-size:7px}
+.projected strong{display:block;font-size:14px;margin-top:3px}
+.projected .good{color:var(--good)}
+.apply-all{display:block;width:min(560px,100%);margin:15px auto 0;height:42px;border:1px solid #36e58b;border-radius:10px;background:linear-gradient(135deg,#19c875,#36e58b);color:#062016;font-weight:900;font-size:11px;cursor:pointer;box-shadow:0 8px 24px #36e58b18}
+.disclaimer{margin-top:12px;text-align:center;color:#6e8996;font-size:7.5px}
+.empty{border:1px dashed #365463;border-radius:14px;padding:35px;text-align:center;background:#071721}
+.empty h2{margin:0 0 8px;font-size:18px}
+.empty p{margin:0 auto 15px;max-width:470px;color:var(--muted);font-size:10px;line-height:1.5}
+.back{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:8px;padding:10px 15px;font-size:10px;font-weight:900;cursor:pointer}
+@media(max-width:1000px){.main{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.hero-note{width:260px}.summary-top{grid-template-columns:1fr}.model{display:none}}
+@media(max-width:720px){.pp-nav{height:auto;min-height:62px;flex-wrap:wrap;padding:6px 12px}.pp-brand{width:140px}.pp-brand img{width:125px}.pp-links{width:100%;overflow:auto;justify-content:space-between}.pp-links button{padding:7px 8px;font-size:10px}.pp-icon{display:none}.wrap{width:calc(100% - 20px);padding-top:20px}.hero{display:block}.hero h1{font-size:30px}.hero-note{width:auto;margin-top:15px}.stats{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.side{display:flex}.projected{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="pp-nav">
+  <a class="pp-brand" href="./index.html" aria-label="PrintProfit"><img src="./assets/printprofit-header-logo.webp?v=20260919" alt="PrintProfit"></a>
+  <nav class="pp-links">
+    <button type="button" onclick="go('./index.html')"><span class="pp-icon calc"></span>Calculator</button>
+    <button type="button" onclick="go('./price-finder.html')"><span class="pp-icon cube"></span>Price Finder</button>
+    <button type="button" class="active"><span class="pp-icon chart"></span>Profit Advisor</button>
+    <button type="button" onclick="go('./guide.html')"><span class="pp-icon book"></span>Guide &amp; Help</button>
+    <button type="button" onclick="go('./index.html')"><span class="pp-icon gear"></span>Settings</button>
+  </nav>
+</header>
+
+<main class="wrap" id="app">
+  <section class="hero">
+    <div>
+      <h1>Profit <span class="green">Advisor</span></h1>
+      <p>Analyse your current print and find ways to improve your profit.<br>Apply individual suggestions or test combinations before changing your calculator.</p>
+    </div>
+    <div class="hero-note"><strong>💡 Small changes. Big results.</strong><span>PrintProfit uses your current calculator values to show practical ways to improve the margin. You stay in control of every change.</span></div>
+  </section>
+  <div id="content"></div>
+</main>
+
+<script>
+'use strict';
+const DRAFT_KEY='printprofit.calculator-draft.v3';
+const HANDOFF_KEY='printprofit.calculator-navigation-handoff.v1';
+const money=v=>{const n=Number(v)||0;try{const p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');const code=p.currency||'GBP';if(code!=='GBP'){const rates={EUR:1.1663,USD:1.337,PLN:5.0892,CAD:1.84,AUD:2,CHF:.96,SEK:14.75,NOK:14.7,DKK:8.69,CZK:28.3,JPY:179,CNY:9.65,INR:123.5,NZD:2.16,SGD:1.71,BRL:7.18,MXN:23.0696,ZAR:21.8};const rate=Number(p.rate)>0?Number(p.rate):(rates[code]||1);return new Intl.NumberFormat('en-GB',{style:'currency',currency:code,minimumFractionDigits:2,maximumFractionDigits:2}).format(n*rate)} }catch(e){}return '£'+n.toFixed(2)};
+const num=(f,id)=>Number.parseFloat(f?.[id]?.value??0)||0;
+const fieldState=draft=>draft?.fields||{};
+const value=(f,id)=>String(f?.[id]?.value??'');
+const parsePrinter=v=>{const p=String(v||'').split(/[|,]/);return{watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0}};
+let draft=null,state=null,selected={};
+
+function loadDraft(){
+  try{draft=JSON.parse(sessionStorage.getItem(DRAFT_KEY)||'null')}catch(e){draft=null}
+  if(!draft?.fields)return null;
+  const f=fieldState(draft);
+  const p=parsePrinter(value(f,'printer'));
+  const qty=Math.max(1,Math.floor(num(f,'qty')));
+  const disc=Math.min(100,num(f,'discount'))/100;
+  const h=f.ppPrintTimeHours?num(f,'ppPrintTimeHours'):num(f,'printHours');
+  const mins=f.ppPrintTimeMinutes?Math.max(0,Math.min(59,Math.floor(num(f,'ppPrintTimeMinutes')))):0;
+  const hours=f.ppPrintTimeHours?Math.max(0,Math.floor(h)+mins/60):Math.max(0,h);
+  const pack=num(f,'materialPack'),packPrice=num(f,'materialPackCost'),used=num(f,'materialUsed');
+  const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
+  const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+  const elec=powerUsed*num(f,'electricityRate');
+  const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+  const labour=num(f,'labourRate')*num(f,'labourHours');
+  const packaging=num(f,'pack'),other=num(f,'other'),packagingOther=packaging+other;
+  const delivery=num(f,'delivery'),deliveryCharge=num(f,'deliveryCharge');
+  const base=materialCost+elec+depreciation+labour+packagingOther+delivery;
+  const sell=num(f,'sell'),feeRate=(num(f,'platform')+num(f,'pay'))/100,fixedFee=num(f,'fixedFee');
+  const fees=sell*feeRate+fixedFee,profit=sell+deliveryCharge-base-fees,margin=sell?profit/sell:0;
+  const batchSales=sell*qty*(1-disc),batchCost=Math.max(0,base-delivery)*qty+delivery,batchFees=batchSales*feeRate+fixedFee;
+  const batchProfit=batchSales+deliveryCharge-batchCost-batchFees;
+  const file=draft.fileData||{};
+  return {f,p,qty,disc,hours,pack,packPrice,used,materialCost,elec,depreciation,labour,packaging,other,packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee,fees,profit,margin,batchProfit,fileName:draft.fileName||'',file};
+}
+function setDraftField(id,v){
+  if(!draft?.fields?.[id])draft.fields[id]={value:String(v)};
+  else draft.fields[id].value=String(v);
+}
+function saveDraft(){
+  sessionStorage.setItem(DRAFT_KEY,JSON.stringify(draft));
+  sessionStorage.setItem(HANDOFF_KEY,'1');
+}
+function apply(key){
+  if(!state)return;
+  const s=state;
+  if(key==='materialUsage'){
+    if(s.used>0){setDraftField('materialUsed',(s.used*.85).toFixed(2));}
+  }else if(key==='labourMinutes'){
+    const mins=Math.min(s.labourHours*60,5);
+    setDraftField('labourHours',Math.max(0,num(s.f,'labourHours')-mins/60).toFixed(2));
+  }else if(key==='deliveryCost'){
+    setDraftField('delivery',Math.max(0,s.delivery-0.95).toFixed(2));
+  }else if(key==='sellingPrice'){
+    setDraftField('sell',Math.max(s.sell*1.15,s.sell+2.5).toFixed(2));
+  }else if(key==='materialCost'){
+    if(s.packPrice>0)setDraftField('materialPackCost',(s.packPrice*.85).toFixed(2));
+  }else if(key==='printTime'){
+    if(s.hours>0){
+      const h=s.hours*.90;setDraftField('ppPrintTimeHours',Math.floor(h));setDraftField('ppPrintTimeMinutes',Math.round((h-Math.floor(h))*60));
+    }
+  }
+  saveDraft();
+  window.location.href='./index.html';
+}
+function projected(key){
+  const s=state;if(!s)return 0;
+  const clone={...s,used:s.used,labour:s.labour,delivery:s.delivery,sell:s.sell,materialCost:s.materialCost,hours:s.hours,packPrice:s.packPrice};
+  if(key==='materialUsage')clone.used=s.used*.85;
+  if(key==='labourMinutes')clone.labour=Math.max(0,s.labour-num(s.f,'labourRate')*Math.min(s.labourHours*60,5)/60);
+  if(key==='deliveryCost')clone.delivery=Math.max(0,s.delivery-.95);
+  if(key==='sellingPrice')clone.sell=Math.max(s.sell*1.15,s.sell+2.5);
+  if(key==='materialCost')clone.materialCost=s.materialCost*.85;
+  if(key==='printTime'){clone.hours=s.hours*.9;clone.elec=s.p.watts>0?clone.hours*s.p.watts/1000*num(s.f,'electricityRate'):0;clone.depreciation=s.p.lifetime?clone.hours*s.p.price/s.p.lifetime:0}
+  const base=clone.materialCost+clone.elec+clone.depreciation+clone.labour+clone.packagingOther+clone.delivery;
+  return clone.sell+s.deliveryCharge-base-(clone.sell*s.feeRate+s.fixedFee);
+}
+function card(key,icon,title,desc,current,suggested,impact){
+  const can=state&&((key==='materialUsage'&&state.used>0)||(key==='labourMinutes'&&state.labourHours>0)||(key==='deliveryCost'&&state.delivery>0)||(key==='sellingPrice'&&state.sell>0)||(key==='materialCost'&&state.materialCost>0)||(key==='printTime'&&state.hours>0));
+  const p=projected(key),delta=p-state.profit;
+  return '<article class="card" data-key="'+key+'"><div class="card-head"><div class="card-icon">'+icon+'</div><div><h3>'+title+'</h3><p>'+desc+'</p></div></div><div class="values"><div><span>Current</span><strong>'+current+'</strong></div><div class="arrow">→</div><div class="suggested"><span>Suggested</span><strong>'+suggested+'</strong></div></div><div class="impact"><span>Potential improvement</span><strong>'+(delta>=0?'+':'')+money(delta)+' profit</strong></div><button class="apply" '+(can?'':'disabled')+' data-apply="'+key+'">Apply suggestion →</button></article>';
+}
+function render(){
+  state=loadDraft();
+  const root=document.getElementById('content');
+  if(!state){
+    root.innerHTML='<section class="empty"><h2>No calculator result to advise on yet</h2><p>Run a print through the calculator first, then open Profit Advisor. Your current calculator values will appear here automatically.</p><button class="back" onclick="go(\'./index.html\')">Back to Calculator</button></section>';
+    return;
+  }
+  const f=state.f, material=value(f,'materialType')||'PLA', printer=value(f,'printer').split(/[|,]/).slice(3).join(' ')||'Selected printer';
+  const fileLabel=state.fileName||'Current print';
+  const meta=state.file||{};
+  const slicer=meta.slicer||meta.slicerName||'—';
+  const cards=[
+    card('materialUsage','⬡','Reduce material usage','Lower material use where the model allows without compromising the required strength or quality.',state.used?state.used.toFixed(0)+' g':'—',state.used?(state.used*.85).toFixed(0)+' g':'—',money(projected('materialUsage')-state.profit)),
+    card('printTime','◷','Reduce print time','Shorter print time can lower electricity and printer depreciation on long jobs.',state.hours?formatHours(state.hours):'—',state.hours?formatHours(state.hours*.9):'—'),
+    card('materialCost','◈','Use cheaper material','Test a lower suitable material cost without changing the print itself.',state.materialCost?money(state.materialCost):'—',state.materialCost?money(state.materialCost*.85):'—'),
+    card('deliveryCost','▱','Reduce delivery cost','Compare courier rates, business rates or whether delivery should be charged separately.',money(state.delivery),money(Math.max(0,state.delivery-.95))),
+    card('labourMinutes','◷','Reduce labour time','Streamline setup, cleanup and other hands-on work where practical.',formatMinutes(state.labourHours*60),formatMinutes(Math.max(0,state.labourHours*60-5))),
+    card('sellingPrice','◇','Adjust selling price','Test a higher selling price while keeping your costs unchanged.',money(state.sell),money(Math.max(state.sell*1.15,state.sell+2.5)))
+  ];
+  root.innerHTML=
+    '<section class="summary"><div class="summary-top"><div class="model"><div class="model-thumb">▦</div><div><strong>'+escapeHtml(fileLabel)+'</strong><small>Printer: '+escapeHtml(printer||'—')+'<br>Material: '+escapeHtml(material)+'<br>Print time: '+(state.hours?formatHours(state.hours):'—')+'<br>Material usage: '+(state.used?state.used.toFixed(1)+' g':'—')+(slicer!=='—'?'<br>Slicer: '+escapeHtml(slicer):'')+'</small></div></div><div class="stats"><div class="stat"><span>Total Cost</span><strong>'+money(state.base)+'</strong></div><div class="stat"><span>Selling Price</span><strong>'+money(state.sell)+'</strong></div><div class="stat profit"><span>Profit</span><strong>'+money(state.profit)+'</strong></div><div class="stat margin"><span>Profit Margin</span><strong>'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div></div></section>'+
+    '<div class="main"><section class="panel"><div class="panel-head"><div><h2>🎯 Suggested Improvements</h2><p>Apply one recommendation at a time, or select several and preview the combined result.</p></div></div><div class="cards">'+cards.join('')+'</div><div class="projected"><div><h3>Projected Results</h3><span>Based on selected suggestions</span></div><div><span>New Total Cost</span><strong id="projCost">'+money(state.base)+'</strong></div><div><span>New Selling Price</span><strong id="projSell">'+money(state.sell)+'</strong></div><div><span>New Profit</span><strong class="good" id="projProfit">'+money(state.profit)+'</strong></div><div><span>New Margin</span><strong class="good" id="projMargin">'+((state.margin||0)*100).toFixed(1)+'%</strong></div></div><button class="apply-all" id="applyAll">✓ Apply All Selected Suggestions to Calculator</button><div class="disclaimer">All provider or market values may not be current and are estimates. Always check real-world costs before committing to a price.</div></section>'+
+    '<aside class="side"><section class="panel"><h3>⚗️ What If Scenarios</h3><p>Test a quick change without applying it to your calculator.</p><select class="select" id="whatIf"><option value="materialUsage">Reduce material usage to 15% less</option><option value="printTime">Reduce print time by 10%</option><option value="deliveryCost">Reduce delivery by £0.95</option><option value="sellingPrice">Increase selling price</option><option value="labourMinutes">Save 5 labour minutes</option></select><button class="run" id="runScenario">Run scenario</button><div class="result-box"><span>Estimated new profit</span><strong id="scenarioProfit">'+money(state.profit)+'</strong><small id="scenarioMargin">Margin '+((state.margin||0)*100).toFixed(1)+'%</small></div></section>'+
+    '<section class="panel"><h3>🧩 Combination Ideas</h3><p>Select several changes to see the combined result before applying them.</p><div class="checks">'+['materialUsage','printTime','materialCost','deliveryCost','labourMinutes','sellingPrice'].map((k,i)=>'<label class="check"><input type="checkbox" data-select="'+k+'" '+(i<3?'checked':'')+'> '+({materialUsage:'Reduce material usage',printTime:'Reduce print time',materialCost:'Use cheaper material',deliveryCost:'Reduce delivery cost',labourMinutes:'Reduce labour time',sellingPrice:'Increase selling price'}[k])+'</label>').join('')+'</div><button class="preview" id="previewCombined">Preview combined result</button></section>'+
+    '<section class="tip"><strong>Tip:</strong> These are estimates based on your current calculator settings. The best balance depends on the strength, quality and delivery requirements of each model.</section></aside></div>';
+  bind();
+}
+function combined(){
+  const keys=[...document.querySelectorAll('[data-select]:checked')].map(x=>x.dataset.select);
+  let profit=state.profit, cost=state.base,sell=state.sell;
+  keys.forEach(k=>{const p=projected(k);profit+=p-state.profit;
+    if(k==='materialUsage')cost-=state.materialCost*.15;
+    if(k==='materialCost')cost-=state.materialCost*.15;
+    if(k==='deliveryCost')cost-=Math.min(.95,state.delivery);
+    if(k==='labourMinutes')cost-=Math.min(5,state.labourHours*60)*num(state.f,'labourRate')/60;
+    if(k==='printTime'){const h=state.hours*.1;cost-=state.p.watts>0?h*state.p.watts/1000*num(state.f,'electricityRate'):0;cost-=state.p.lifetime?h*state.p.price/state.p.lifetime:0}
+    if(k==='sellingPrice')sell=Math.max(sell*1.15,sell+2.5);
+  });
+  return {keys,profit,cost,sell,margin:sell?profit/sell:0};
+}
+function bind(){
+  document.querySelectorAll('[data-apply]').forEach(b=>b.addEventListener('click',()=>{apply(b.dataset.apply)}));
+  document.getElementById('applyAll')?.addEventListener('click',()=>{const c=combined();if(!c.keys.length)return; c.keys.forEach(applyDraftKey);saveDraft();window.location.href='./index.html'});
+  document.getElementById('previewCombined')?.addEventListener('click',()=>{const c=combined();document.getElementById('projCost').textContent=money(c.cost);document.getElementById('projSell').textContent=money(c.sell);document.getElementById('projProfit').textContent=money(c.profit);document.getElementById('projMargin').textContent=(c.margin*100).toFixed(1)+'%';});
+  document.getElementById('runScenario')?.addEventListener('click',()=>{const k=document.getElementById('whatIf').value;const p=projected(k);document.getElementById('scenarioProfit').textContent=money(p);document.getElementById('scenarioMargin').textContent='Margin '+(state.sell?(p/state.sell*100):0).toFixed(1)+'%'});
+}
+function applyDraftKey(k){
+  if(k==='materialUsage'&&state.used>0)setDraftField('materialUsed',(state.used*.85).toFixed(2));
+  if(k==='printTime'&&state.hours>0){const h=state.hours*.9;setDraftField('ppPrintTimeHours',Math.floor(h));setDraftField('ppPrintTimeMinutes',Math.round((h-Math.floor(h))*60))}
+  if(k==='materialCost'&&state.packPrice>0)setDraftField('materialPackCost',(state.packPrice*.85).toFixed(2));
+  if(k==='deliveryCost')setDraftField('delivery',Math.max(0,state.delivery-.95).toFixed(2));
+  if(k==='labourMinutes')setDraftField('labourHours',Math.max(0,state.labourHours-5/60).toFixed(2));
+  if(k==='sellingPrice')setDraftField('sell',Math.max(state.sell*1.15,state.sell+2.5).toFixed(2));
+}
+function formatHours(h){const whole=Math.floor(h),m=Math.round((h-whole)*60);return whole+'h '+String(m).padStart(2,'0')+'m'}
+function formatMinutes(m){return Math.round(m)+' min'}
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function go(url){window.location.href=url}
+render();
+</script>
+</body>
+</html>
