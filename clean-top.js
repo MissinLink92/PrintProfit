@@ -390,150 +390,15 @@ function install(){
     document.body.style.overflow='hidden';
   }
 
-
-  // Dedicated Profit Advisor launcher for the calculator page.
-  // Keep the full Advisor engine loaded and calculating, but replace its
-  // long in-page presentation with a compact launch card that opens the
-  // dedicated Profit Advisor page.
-  function installAdvisorLauncher(){
-    const existingStyle=document.getElementById('ppAdvisorLauncherStyles');
-    if(!existingStyle){
-      const style=document.createElement('style');
-      style.id='ppAdvisorLauncherStyles';
-      style.textContent=`
-        #ppProfitAdvisor.pp-advisor-hidden{display:none!important}
-        #ppAdvisorLauncher{margin-top:10px;border:1px solid #315463;border-radius:12px;background:linear-gradient(145deg,#0b202b,#07151d);padding:14px;box-shadow:inset 0 1px 0 #ffffff0a,0 10px 24px #0005}
-        #ppAdvisorLauncher .pp-launch-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
-        #ppAdvisorLauncher .pp-launch-title{display:flex;align-items:center;gap:9px;min-width:0}
-        #ppAdvisorLauncher .pp-launch-icon{width:34px;height:34px;border-radius:9px;background:#ff7800;color:#fff;display:grid;place-items:center;font-size:17px;box-shadow:0 6px 16px #ff780033}
-        #ppAdvisorLauncher h3{margin:0;font:800 15px/1 Inter,Segoe UI,system-ui,sans-serif;color:#f5f8fb}
-        #ppAdvisorLauncher p{margin:3px 0 0;color:#9db0ba;font:500 10px/1.4 Inter,Segoe UI,system-ui,sans-serif}
-        #ppAdvisorLauncher .pp-launch-status{border:1px solid #2d5f50;border-radius:9px;background:#08221c;color:#36e58b;padding:7px 9px;font:800 9px/1 Inter,Segoe UI,system-ui,sans-serif;white-space:nowrap}
-        #ppAdvisorLauncher .pp-launch-status.loss{border-color:#713f47;background:#24171c;color:#ff6b6b}
-        #ppAdvisorLauncher .pp-launch-status.neutral{border-color:#405560;background:#10212a;color:#b8c8cf}
-        #ppAdvisorLauncher .pp-launch-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px}
-        #ppAdvisorLauncher .pp-launch-stat{border:1px solid #294b5a;border-radius:9px;padding:8px;background:#091a23}
-        #ppAdvisorLauncher .pp-launch-stat span{display:block;color:#8fa6b2;font-size:9px}
-        #ppAdvisorLauncher .pp-launch-stat strong{display:block;margin-top:3px;color:#f5f8fb;font:800 15px/1.1 Inter,Segoe UI,system-ui,sans-serif}
-        #ppAdvisorLauncher .pp-launch-stat strong.good{color:#36e58b}
-        #ppAdvisorLauncher .pp-launch-stat strong.bad{color:#ff6b6b}
-        #ppAdvisorLauncher .pp-launch-actions{display:flex;justify-content:flex-end;margin-top:11px}
-        #ppAdvisorLauncher .pp-open-advisor{border:1px solid #ff7800;border-radius:9px;background:linear-gradient(135deg,#ff9a42,#ff7800);color:#fff;padding:10px 15px;font:800 11px/1 Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 18px #ff780033}
-        #ppAdvisorLauncher .pp-open-advisor:hover{filter:brightness(1.07);transform:translateY(-1px)}
-        #ppAdvisorLauncher .pp-open-advisor:active{transform:translateY(0)}
-        @media(max-width:650px){
-          #ppAdvisorLauncher .pp-launch-head{align-items:flex-start;flex-direction:column}
-          #ppAdvisorLauncher .pp-launch-status{align-self:flex-start}
-          #ppAdvisorLauncher .pp-launch-stats{grid-template-columns:1fr}
-          #ppAdvisorLauncher .pp-launch-actions{justify-content:stretch}
-          #ppAdvisorLauncher .pp-open-advisor{width:100%}
-        }
-      `;
-      document.head.appendChild(style);
-    }
-
-    const parseMoney=(value)=>{
-      const n=parseFloat(String(value||'').replace(/[^0-9.-]/g,''));
-      return Number.isFinite(n)?n:null;
-    };
-    const advisorText=(advisor)=>{
-      const stats=advisor.querySelectorAll('.pp-advisor-stat');
-      return {
-        profit:stats[0]?.querySelector('strong')?.textContent?.trim()||'—',
-        breakEven:stats[1]?.querySelector('strong')?.textContent?.trim()||'—',
-        sell:stats[3]?.querySelector('strong')?.textContent?.trim()||'—'
-      };
-    };
-    const openAdvisor=()=>{
-      try{window.__printProfitPersistDraft?.();}catch(e){}
-      try{sessionStorage.setItem('printprofit.calculator-navigation-handoff.v1','1');}catch(e){}
-      window.top.location.href='./profit-advisor.html';
-    };
-
-    const mount=()=>{
-      const advisor=document.getElementById('ppProfitAdvisor');
-      const result=advisor?.closest('.result');
-      if(!advisor||!result)return false;
-
-      advisor.classList.add('pp-advisor-hidden');
-
-      let launcher=document.getElementById('ppAdvisorLauncher');
-      if(!launcher){
-        launcher=document.createElement('section');
-        launcher.id='ppAdvisorLauncher';
-        launcher.setAttribute('aria-label','Profit Advisor shortcut');
-        launcher.innerHTML=`
-          <div class="pp-launch-head">
-            <div class="pp-launch-title">
-              <div class="pp-launch-icon">💡</div>
-              <div><h3>Profit Advisor</h3><p>Test pricing and cost changes in the dedicated Profit Advisor.</p></div>
-            </div>
-            <div class="pp-launch-status neutral" id="ppAdvisorLauncherStatus">Ready to review</div>
-          </div>
-          <div class="pp-launch-stats">
-            <div class="pp-launch-stat"><span>Current profit</span><strong id="ppAdvisorLauncherProfit">—</strong></div>
-            <div class="pp-launch-stat"><span>Break-even price</span><strong id="ppAdvisorLauncherBreakEven">—</strong></div>
-            <div class="pp-launch-stat"><span>Selling price</span><strong id="ppAdvisorLauncherSell">—</strong></div>
-          </div>
-          <div class="pp-launch-actions"><button type="button" class="pp-open-advisor" id="ppOpenAdvisorButton">Open Profit Advisor →</button></div>
-        `;
-        advisor.insertAdjacentElement('afterend',launcher);
-        launcher.querySelector('#ppOpenAdvisorButton')?.addEventListener('click',(event)=>{
-          event.preventDefault();
-          event.stopPropagation();
-          openAdvisor();
-        });
-      }
-
-      const data=advisorText(advisor);
-      const profitNum=parseMoney(data.profit);
-      const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
-      const profitEl=document.getElementById('ppAdvisorLauncherProfit');
-      if(profitEl){
-        profitEl.textContent=data.profit;
-        profitEl.className=profitNum===null?'':profitNum>0?'good':profitNum<0?'bad':'';
-      }
-      set('ppAdvisorLauncherBreakEven',data.breakEven);
-      set('ppAdvisorLauncherSell',data.sell);
-
-      const status=document.getElementById('ppAdvisorLauncherStatus');
-      if(status){
-        status.className='pp-launch-status '+(profitNum!==null&&profitNum<0?'loss':profitNum!==null&&profitNum>0?'':'neutral');
-        status.textContent=profitNum===null?'Ready to review':profitNum<0?'Currently at a loss':profitNum>0?'Currently profitable':'At break-even';
-      }
-
-      return true;
-    };
-
-    const tryMount=()=>{
-      if(mount())return true;
-      return false;
-    };
-
-    const started=Date.now();
-    const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
-    tryMount();
-
-    if(!window.__ppAdvisorLauncherObserver){
-      window.__ppAdvisorLauncherObserver=new MutationObserver(()=>mount());
-      window.__ppAdvisorLauncherObserver.observe(document.body,{childList:true,subtree:true});
-    }
-    document.addEventListener('input',()=>setTimeout(mount,30));
-    document.addEventListener('change',()=>setTimeout(mount,30));
-  }
-
-  installAdvisorLauncher();
-
   const go=(target)=>{
     if(target==='settings'){openSettings();return;}
     if(target==='guide'){openGuide();return;}
     if(target==='priceFinder'){window.top.location.href='./price-finder.html';return;}
     if(target==='profitAdvisor'){
-      // Profit Advisor is now a dedicated page. Preserve the calculator draft
-      // through the existing calculator-state handoff before leaving.
-      try{window.__printProfitPersistDraft?.();}catch(e){}
-      try{sessionStorage.setItem('printprofit.calculator-navigation-handoff.v1','1');}catch(e){}
-      window.top.location.href='./profit-advisor.html';
+      const advisor=document.getElementById('ppProfitAdvisor');
+      if(advisor){advisor.scrollIntoView({behavior:'smooth',block:'start'});return;}
+      const result=document.querySelector('.result');
+      if(result){result.scrollIntoView({behavior:'smooth',block:'start'});return;}
       return;
     }
     const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
