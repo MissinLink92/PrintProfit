@@ -163,7 +163,7 @@ function renderMesh(ctx,w,h,mesh,yaw,pitch,zoom){
     triangles.push({pts:[{x:ox+a.x*scale,y:oy-a.y*scale},{x:ox+b.x*scale,y:oy-b.y*scale},{x:ox+c.x*scale,y:oy-c.y*scale}],z:(a.z+b.z+c.z)/3,light:(ny/len*.35+nz/len*.8+.35)});
   }
   triangles.sort((a,b)=>a.z-b.z);
-  const maxTriangles=90000,step=Math.max(1,Math.ceil(triangles.length/maxTriangles));
+  const maxTriangles=30000,step=Math.max(1,Math.ceil(triangles.length/maxTriangles));
   for(let i=0;i<triangles.length;i+=step){
     const t=triangles[i],shade=Math.max(.12,Math.min(1,t.light));
     ctx.beginPath();ctx.moveTo(t.pts[0].x,t.pts[0].y);ctx.lineTo(t.pts[1].x,t.pts[1].y);ctx.lineTo(t.pts[2].x,t.pts[2].y);ctx.closePath();
@@ -179,7 +179,7 @@ function renderGcode(ctx,w,h,paths){
   for(const p of paths){minX=Math.min(minX,p.x1,p.x2);maxX=Math.max(maxX,p.x1,p.x2);minY=Math.min(minY,p.y1,p.y2);maxY=Math.max(maxY,p.y1,p.y2);}
   const span=Math.max(maxX-minX,maxY-minY,1e-6),scale=Math.min(w,h)*0.70/span,ox=w/2-(minX+maxX)/2*scale,oy=h/2+(minY+maxY)/2*scale;
   ctx.lineCap='round';
-  const maxPaths=70000,step=Math.max(1,Math.ceil(paths.length/maxPaths));
+  const maxPaths=30000,step=Math.max(1,Math.ceil(paths.length/maxPaths));
   for(let i=0;i<paths.length;i+=step){
     const p=paths[i];
     ctx.beginPath();ctx.moveTo(ox+p.x1*scale,oy-p.y1*scale);ctx.lineTo(ox+p.x2*scale,oy-p.y2*scale);
@@ -195,8 +195,10 @@ function parseObj(text){
     const s=line.trim();if(!s||s[0]==='#')continue;
     const parts=s.split(/\s+/);
     if(parts[0]==='v'&&parts.length>=4){
+      if(vertices.length>=60000)continue;
       const x=Number(parts[1]),y=Number(parts[2]),z=Number(parts[3]);if([x,y,z].every(Number.isFinite))vertices.push({x,y,z});
     }else if(parts[0]==='f'&&parts.length>=4){
+      if(triangles.length>=30000)continue;
       const face=parts.slice(1).map(v=>parseInt(v.split('/')[0],10)).filter(Number.isFinite).map(v=>v<0?vertices.length+v:v-1);
       for(let i=1;i<face.length-1;i++)triangles.push([face[0],face[i],face[i+1]]);
     }
@@ -211,7 +213,8 @@ function parseStl(buffer){
     const count=dv.getUint32(80,true),vertices=[],triangles=[],map=new Map(),key=(x,y,z)=>x.toFixed(5)+','+y.toFixed(5)+','+z.toFixed(5);
     const add=(x,y,z)=>{const k=key(x,y,z);if(map.has(k))return map.get(k);const i=vertices.length;vertices.push({x,y,z});map.set(k,i);return i;};
     let p=84;
-    for(let i=0;i<count;i++){
+    const limit=Math.min(count,30000);
+    for(let i=0;i<limit;i++){
       p+=12;const ids=[];
       for(let j=0;j<3;j++){const x=dv.getFloat32(p,true),y=dv.getFloat32(p+4,true),z=dv.getFloat32(p+8,true);ids.push(add(x,y,z));p+=12;}
       triangles.push(ids);p+=2;
@@ -265,24 +268,33 @@ function parseGcodePaths(text){
   return paths;
 }
 
-async function readZip(file){
-  const b=new Uint8Array(await file.arrayBuffer()),v=new DataView(b.buffer,b.byteOffset,b.byteLength),u16=p=>v.getUint16(p,true),u32=p=>v.getUint32(p,true);
-  let eocd=-1;for(let p=b.length-22;p>=Math.max(0,b.length-65557);p--){if(u32(p)===0x06054b50){eocd=p;break;}}
+async function readZipEntries(file, matcher){
+  const b=new Uint8Array(await file.arrayBuffer()),v=new DataView(b.buffer,b.byteOffset,b.byteLength);
+  const u16=p=>v.getUint16(p,true),u32=p=>v.getUint32(p,true);
+  let eocd=-1;
+  for(let p=b.length-22;p>=Math.max(0,b.length-65557);p--){if(u32(p)===0x06054b50){eocd=p;break;}}
   if(eocd<0)throw Error('Not a ZIP package');
-  const count=u16(eocd+10),cdOff=u32(eocd+16),out=new Map();let p=cdOff;
+  const count=u16(eocd+10),cdOff=u32(eocd+16),out=new Map();
+  let p=cdOff;
   for(let i=0;i<count;i++){
     if(u32(p)!==0x02014b50)break;
-    const method=u16(p+10),cs=u32(p+20),nl=u16(p+28),xl=u16(p+30),cl=u16(p+32),off=u32(p+42),name=new TextDecoder().decode(b.slice(p+46,p+46+nl));
+    const method=u16(p+10),cs=u32(p+20),nl=u16(p+28),xl=u16(p+30),cl=u16(p+32),off=u32(p+42);
+    const name=new TextDecoder().decode(b.slice(p+46,p+46+nl));
     p+=46+nl+xl+cl;
-    const lv=new DataView(b.buffer,b.byteOffset+off),lnl=lv.getUint16(26,true),lxl=lv.getUint16(28,true),start=off+30+lnl+lxl,raw=b.slice(start,start+cs);
+    if(!matcher(name))continue;
+    const lv=new DataView(b.buffer,b.byteOffset+off),lnl=lv.getUint16(26,true),lxl=lv.getUint16(28,true),start=off+30+lnl+lxl;
+    const raw=b.slice(start,start+cs);
     if(method===0)out.set(name,raw);
     else if(method===8&&typeof DecompressionStream==='function'){
-      const ds=new DecompressionStream('deflate-raw'),ab=await new Response(new Blob([raw]).stream().pipeThrough(ds)).arrayBuffer();out.set(name,new Uint8Array(ab));
+      const ds=new DecompressionStream('deflate-raw');
+      const ab=await new Response(new Blob([raw]).stream().pipeThrough(ds)).arrayBuffer();
+      // Safety guard: thumbnails should remain small.
+      if(ab.byteLength<=8*1024*1024)out.set(name,new Uint8Array(ab));
     }
+    if(out.size>=4)break;
   }
   return out;
 }
-
 function zipText(map,name){const b=map.get(name);return b?new TextDecoder().decode(b):'';}
 
 function getThumbnailFromGcode(text){
@@ -312,28 +324,28 @@ async function processFile(file){
   setMessage('Preparing preview',file.name,'Loading');
   try{
     if(gcodeExts.has(e)){
-      const text=await file.text();if(token!==activeToken)return;
-      const thumb=getThumbnailFromGcode(text);
+      const head=await file.slice(0,8*1024*1024).text();if(token!==activeToken)return;
+      const thumb=getThumbnailFromGcode(head);
       if(thumb){setImage(thumb,'Slicer thumbnail',file.name);return;}
-      const paths=parseGcodePaths(text);
+      const paths=parseGcodePaths(head);
       if(paths.length>10){setCanvasPreview('G-code',paths,file.name);return;}
       setMessage('No visual preview found','This G-code file does not contain an embedded thumbnail or enough toolpath data to render one.','G-code');
       return;
     }
     if(e==='3mf'){
-      const map=await readZip(file);if(token!==activeToken)return;
+      const map=await readZipEntries(file,k=>/thumbnail|preview/i.test(k)&&/\.(png|jpe?g|webp)$/i.test(k));
+      if(token!==activeToken)return;
       const thumb=findZipThumbnail(map);
       if(thumb){setImage(thumb,'Embedded 3MF preview',file.name);return;}
-      const modelName=[...map.keys()].find(k=>/^(3dmodel\/)?[^/]+\.model$/i.test(k))||[...map.keys()].find(k=>/\.model$/i.test(k));
-      const mesh=modelName?parse3mfModel(zipText(map,modelName)):null;
-      if(mesh){setCanvasPreview('3MF mesh',mesh,file.name);return;}
-      setMessage('3MF recognised','No embedded preview or renderable mesh was found in this project.','3MF');
+      setMessage('3MF recognised','No embedded preview image was found. The file is still available to the calculator.','3MF');
       return;
     }
     if(e==='obj'){
+      if(file.size>18*1024*1024){setMessage('Model file detected','This OBJ is large, so visual rendering is skipped to keep the calculator responsive.','OBJ');return;}
       const mesh=parseObj(await file.text());if(token!==activeToken)return;
       if(mesh.vertices.length&&mesh.triangles.length){setCanvasPreview('OBJ mesh',mesh,file.name);return;}
     }else if(e==='stl'){
+      if(file.size>35*1024*1024){setMessage('Model file detected','This STL is large, so visual rendering is skipped to keep the calculator responsive.','STL');return;}
       const mesh=parseStl(await file.arrayBuffer());if(token!==activeToken)return;
       if(mesh.vertices.length&&mesh.triangles.length){setCanvasPreview('STL mesh',mesh,file.name);return;}
     }else{
