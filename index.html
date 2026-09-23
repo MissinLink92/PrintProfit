@@ -59,13 +59,15 @@ resetButton.addEventListener('click',doReset);
 frame.addEventListener('load',async()=>{
  try{
   for(const src of scripts)await load(src);
-  fit();
-  wireTopModals();
-  setTimeout(()=>{fit();wireTopModals();},100);
-  setTimeout(()=>{fit();wireTopModals();},500);
-  setTimeout(()=>{fit();wireTopModals();},1500);
-  if(window.ResizeObserver){const ro=new ResizeObserver(fit);ro.observe(frame.contentDocument.documentElement);ro.observe(frame.contentDocument.body);}
-  setInterval(fit,1000);
+  // Keep iframe sizing deterministic. A continuously running ResizeObserver +
+  // interval can fight with scripts that expand/collapse the calculator and make the
+  // browser report "page isn't responding". A few settling passes are enough.
+  const settle=()=>{fit();wireTopModals();};
+  settle();
+  setTimeout(settle,100);
+  setTimeout(settle,500);
+  setTimeout(settle,1500);
+  setTimeout(settle,3000);
  }catch(e){console.error('PrintProfit enhancement load failed',e);}
 });
 })();
