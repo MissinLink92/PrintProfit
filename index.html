@@ -18,7 +18,7 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260921-profitcolour1" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260924-stability1" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -59,13 +59,15 @@ resetButton.addEventListener('click',doReset);
 frame.addEventListener('load',async()=>{
  try{
   for(const src of scripts)await load(src);
-  fit();
-  wireTopModals();
-  setTimeout(()=>{fit();wireTopModals();},100);
-  setTimeout(()=>{fit();wireTopModals();},500);
-  setTimeout(()=>{fit();wireTopModals();},1500);
-  if(window.ResizeObserver){const ro=new ResizeObserver(fit);ro.observe(frame.contentDocument.documentElement);ro.observe(frame.contentDocument.body);}
-  setInterval(fit,1000);
+  // Size the iframe only during initial settling. Do not continuously observe
+  // the child document: the calculator changes its own layout during startup,
+  // and a parent resize observer can create a parent/child resize feedback loop.
+  const settle=()=>{fit();wireTopModals();};
+  settle();
+  setTimeout(settle,100);
+  setTimeout(settle,500);
+  setTimeout(settle,1500);
+  setTimeout(settle,3000);
  }catch(e){console.error('PrintProfit enhancement load failed',e);}
 });
 })();
