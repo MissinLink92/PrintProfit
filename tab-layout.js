@@ -107,6 +107,16 @@
       step.addEventListener('mousedown',event=>event.preventDefault());
       step.addEventListener('click',()=>setStep(step.dataset.tab));
     });
+
+    // The main Calculate button should calculate first, then take the user to
+    // the Results stage. This changes only the navigation behaviour; the
+    // existing calculator calculation handler remains the same.
+    const calculateButton=document.getElementById('calc');
+    if(calculateButton&&!calculateButton.dataset.ppResultsNavigationBound){
+      calculateButton.dataset.ppResultsNavigationBound='1';
+      calculateButton.addEventListener('click',()=>setStep('results'));
+    }
+
     window.addEventListener('resize',()=>stabiliseWorkspace(),{passive:true});
     const applyButton=document.getElementById('ppApplyDetected');if(applyButton&&!applyButton.dataset.ppBound){applyButton.dataset.ppBound='1';applyButton.addEventListener('click',()=>{if(typeof window.__ppApplyFileData==='function'){window.__ppApplyFileData();updateModelHub();}});}watchModelData();
     return true;
