@@ -71,19 +71,6 @@ const projectInfo=()=>{
  const currency=(document.getElementById('singleSellOut')?.textContent||'').trim();
  return {material,hours,used,currency};
 };
-function installSaveButton(){
- const calc=document.getElementById('calc');
- if(!calc||document.getElementById('saveProject'))return false;
- const button=document.createElement('button');
- button.type='button';
- button.id='saveProject';
- button.className='btn';
- button.textContent='💾 Save Project';
- button.title='Save the current calculator setup to My Projects';
- button.addEventListener('click',()=>saveNew());
- calc.insertAdjacentElement('afterend',button);
- return true;
-}
 function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow='';}
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
@@ -171,16 +158,15 @@ async function loadProject(id){
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
 function deleteProject(id){const p=read().find(x=>x.id===id);if(!p)return;if(!confirm('Delete “'+p.name+'”?'))return;write(read().filter(x=>x.id!==id));render();const c=document.getElementById('ppProjectCount');if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');}
 document.addEventListener('click',e=>{
- const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-load-project],[data-duplicate-project],[data-delete-project]');
+ const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-duplicate-project],[data-delete-project]');
  if(!target)return;
  if(target.matches('[data-target="projects"]')){e.preventDefault();e.stopPropagation();open();}
  else if(target.hasAttribute('data-project-close'))close();
  else if(target.hasAttribute('data-project-new'))saveNew();
+  else if(target.hasAttribute('data-save-project'))saveNew();
  else if(target.hasAttribute('data-load-project'))loadProject(target.dataset.loadProject);
  else if(target.hasAttribute('data-duplicate-project'))duplicateProject(target.dataset.duplicateProject);
  else if(target.hasAttribute('data-delete-project'))deleteProject(target.dataset.deleteProject);
 },true);
-installSaveButton();
- document.addEventListener('DOMContentLoaded',installSaveButton,{once:true});
- document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 })();
