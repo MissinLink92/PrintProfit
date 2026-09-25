@@ -168,7 +168,41 @@ function restore(){
     const el=document.getElementById(id);
     if(el)el.dispatchEvent(new Event('input',{bubbles:true}));
   });
+
+  // Delivery service is a dependent select: changing the courier rebuilds its
+  // options and selects the first service. Restore the courier first, then put
+  // the saved service back, fire its change handler, and finally restore any
+  // saved manual delivery override. Do not fire the courier change again after
+  // restoring the saved delivery service, or it will jump back to the first rate.
+  const deliveryCourier=document.getElementById('deliveryCourier');
+  const savedCourier=data.fields.deliveryCourier;
+  const savedRate=data.fields.deliveryRate;
+  const savedDelivery=data.fields.delivery;
+
+  if(deliveryCourier && savedCourier){
+    deliveryCourier.value=String(savedCourier.value??'');
+    deliveryCourier.dispatchEvent(new Event('change',{bubbles:true}));
+
+    const deliveryRate=document.getElementById('deliveryRate');
+    if(deliveryRate && savedRate){
+      const wantedRate=String(savedRate.value??'');
+      if([...deliveryRate.options].some(o=>o.value===wantedRate)){
+        deliveryRate.value=wantedRate;
+      }
+      deliveryRate.dispatchEvent(new Event('change',{bubbles:true}));
+    }
+
+    // Preserve a saved manual delivery override after the automatic rate handler.
+    if(savedDelivery){
+      const delivery=document.getElementById('delivery');
+      if(delivery && Object.prototype.hasOwnProperty.call(savedDelivery,'value')){
+        delivery.value=savedDelivery.value??'';
+      }
+    }
+  }
+
   ids.forEach(id=>{
+    if(id==='deliveryCourier'||id==='deliveryRate')return;
     const el=document.getElementById(id);
     if(el)el.dispatchEvent(new Event('change',{bubbles:true}));
   });
