@@ -114,7 +114,12 @@
     const calculateButton=document.getElementById('calc');
     if(calculateButton&&!calculateButton.dataset.ppResultsNavigationBound){
       calculateButton.dataset.ppResultsNavigationBound='1';
-      calculateButton.addEventListener('click',()=>setStep('results'));
+      calculateButton.addEventListener('click',event=>{
+        // Only a real user click on the main Calculate button opens Results.
+        // Other scripts use calc.click() internally to recalculate; those must
+        // never hijack the user's current stage.
+        if(event.isTrusted)setStep('results');
+      });
     }
 
     window.addEventListener('resize',()=>stabiliseWorkspace(),{passive:true});
