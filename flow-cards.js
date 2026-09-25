@@ -18,7 +18,8 @@ function install(){
   const stages=[
     ['1','details'],
     ['2','machine'],
-    ['3','costs']
+    ['3','costs'],
+    ['4','results']
   ];
 
   buttons.forEach((button,index)=>{
@@ -49,6 +50,7 @@ function install(){
     #pp-master-quickcards .pp-flow-number{position:absolute!important;top:-10px!important;left:-10px!important;width:28px!important;height:28px!important;border-radius:50%!important;display:grid!important;place-items:center!important;background:#ff7800!important;border:2px solid #071018!important;color:#fff!important;font-size:11px!important;font-weight:900!important;box-shadow:0 0 16px #ff780044!important;z-index:6!important}
     #pp-master-quickcards .pp-master-card-icon{width:64px!important;height:64px!important;min-width:64px!important;border:1px solid #ff7800!important;border-radius:50%!important;background:#07141c!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 20px #ff78000d,0 0 18px #ff78000d!important}
     #pp-master-quickcards .pp-master-card-icon svg{width:34px!important;height:34px!important;fill:none!important;stroke:#ff7800!important;stroke-width:2!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+    #pp-master-quickcards button:nth-child(4) .pp-master-card-icon:before{content:'04';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
     #pp-master-quickcards button:hover .pp-master-card-icon{box-shadow:0 0 22px #ff780022!important}
     #pp-master-quickcards button:nth-child(1) .pp-master-card-icon:before{content:'01';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
     #pp-master-quickcards button:nth-child(2) .pp-master-card-icon:before{content:'02';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
