@@ -208,11 +208,14 @@ function restore(){
   });
 
   setTimeout(()=>{
+    const fromNavigationHandoff=hasNavigationHandoff();
     try{document.getElementById('calc')?.click();}catch(e){}
-    if(data.stage){
-      const step=document.querySelector('.pp-step[data-tab="'+data.stage+'"]');
-      if(step)step.click();
-    }
+    // A normal calculator refresh always starts at Step 1 (Your Model).
+    // Only a deliberate return from Price Finder / Profit Advisor restores
+    // the stage the user was working on.
+    const targetStage=fromNavigationHandoff&&data.stage?data.stage:'details';
+    const step=document.querySelector('.pp-step[data-tab="'+targetStage+'"]');
+    if(step)step.click();
     save();
     clearNavigationHandoff();
   },80);
