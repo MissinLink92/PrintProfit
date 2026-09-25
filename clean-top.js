@@ -528,9 +528,13 @@ function install(){
       return false;
     };
 
-    const started=Date.now();
-    const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
     tryMount();
+    // Poll only as a fallback for browsers without MutationObserver; normally
+    // the startup observer below detects the calculator result when it appears.
+    if(!window.MutationObserver){
+      const started=Date.now();
+      const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
+    }
 
     // Only observe the page until the launcher has mounted once. The
     // launcher itself updates DOM nodes, so a permanent body-wide observer
