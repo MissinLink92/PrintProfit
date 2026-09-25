@@ -88,7 +88,7 @@ function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.class
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
  const projects=read().sort((a,b)=>b.updated-a.updated);
- if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon">＋</div><h3>No saved projects yet</h3><p>Save a calculator setup here and it will stay available on this device.</p></div>';return;}
+ if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon">▣</div><h3>No saved projects yet</h3><p>Use <strong>Save Project</strong> on the calculator to store a setup here.</p></div>';return;}
  list.innerHTML=projects.map(p=>`<article class="pp-project-card" data-project-id="${esc(p.id)}">
    <div class="pp-project-card-main">
     <div class="pp-project-icon">▣</div>
