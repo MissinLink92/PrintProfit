@@ -12,7 +12,7 @@
     const progress=$('ppSetupProgress')||document.querySelector('.pp-progress');
     const calc=$('calc');
     const reset=$('reset');
-    if(!workspace||!progress||!calc||!reset||$('ppGlobalActions'))return false;
+    if($('ppGlobalActions'))return true;if(!workspace||!progress||!calc||!reset)return false;
 
     const bar=document.createElement('div');
     bar.id='ppGlobalActions';
