@@ -203,7 +203,6 @@ function translatePage(){
  translateSubtree(document.body);
 }
 let translationObserver=null;
-let translationTimer=null;
 function watchTranslations(){
  if(translationObserver||!window.MutationObserver)return;
  // The calculator lives in <main>. Watch inserted UI there only, and translate
