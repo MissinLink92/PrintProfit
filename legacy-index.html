@@ -186,7 +186,7 @@
 <script>
 (()=>{const bindRecalcShortcuts=()=>{const runCalcButton=()=>{const b=document.getElementById('calc');if(b)b.click();};document.addEventListener('focusout',e=>{if(e.target&&e.target.matches('input:not([type="file"]),select,textarea'))setTimeout(runCalcButton,0);});document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type="file"]),select,textarea')){e.preventDefault();e.target.blur();runCalcButton();}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindRecalcShortcuts,{once:true});else bindRecalcShortcuts();})();
 </script>
-<script src="./tab-layout.js?v=6"></script>
+<script src="./tab-layout.js?v=7"></script>
 
 <link rel="stylesheet" href="./readability.css?v=1">
 </body></html>
