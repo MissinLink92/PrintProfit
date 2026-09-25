@@ -71,11 +71,24 @@ const projectInfo=()=>{
  const currency=(document.getElementById('singleSellOut')?.textContent||'').trim();
  return {material,hours,used,currency};
 };
+function installSaveButton(){
+ const calc=document.getElementById('calc');
+ if(!calc||document.getElementById('saveProject'))return false;
+ const button=document.createElement('button');
+ button.type='button';
+ button.id='saveProject';
+ button.className='btn';
+ button.textContent='💾 Save Project';
+ button.title='Save the current calculator setup to My Projects';
+ button.addEventListener('click',()=>saveNew());
+ calc.insertAdjacentElement('afterend',button);
+ return true;
+}
 function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow='';}
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
  const projects=read().sort((a,b)=>b.updated-a.updated);
- if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon">＋</div><h3>No saved projects yet</h3><p>Save a calculator setup here and it will stay available on this device.</p><button type="button" class="pp-project-new" data-project-new>＋ New Project</button></div>';return;}
+ if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon">▣</div><h3>No saved projects yet</h3><p>Use <strong>Save Project</strong> on the calculator to store a setup here.</p></div>';return;}
  list.innerHTML=projects.map(p=>`<article class="pp-project-card" data-project-id="${esc(p.id)}">
    <div class="pp-project-card-main">
     <div class="pp-project-icon">▣</div>
@@ -90,8 +103,8 @@ function open(){
   panel=document.createElement('div');panel.id='ppProjectsPanel';
   panel.innerHTML=`<div class="pp-projects-backdrop" data-project-close></div>
   <section class="pp-projects-dialog" role="dialog" aria-modal="true" aria-labelledby="ppProjectsTitle">
-   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Projects</h2><p>Save and return to your calculations whenever you need them.</p></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
-   <div class="pp-projects-toolbar"><button type="button" class="pp-project-new" data-project-new>＋ New Project</button><span class="pp-project-count" id="ppProjectCount"></span></div>
+   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Projects</h2><p>Load, duplicate or delete your saved calculator setups.</p></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
+   <div class="pp-projects-toolbar"><span class="pp-project-count" id="ppProjectCount"></span></div>
    <div id="ppProjectsList"></div>
   </section>`;
   document.body.appendChild(panel);
@@ -167,5 +180,7 @@ document.addEventListener('click',e=>{
  else if(target.hasAttribute('data-duplicate-project'))duplicateProject(target.dataset.duplicateProject);
  else if(target.hasAttribute('data-delete-project'))deleteProject(target.dataset.deleteProject);
 },true);
-document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+installSaveButton();
+ document.addEventListener('DOMContentLoaded',installSaveButton,{once:true});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 })();
