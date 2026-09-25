@@ -16,6 +16,7 @@ const featureIcons={
  costs:'<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="5" width="26" height="38" rx="4"/><path d="M16 12h16v7H16zM16 25h5m6 0h5M16 32h5m6 0h5M16 39h5m6 0h5"/></svg>',
  price:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 16 10-16 10L8 16 24 6Z"/><path d="M8 16v16l16 10 16-10V16"/><path d="M24 26v16"/></svg>',
  profit:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 41V7"/><path d="M7 41h35"/><path d="m12 33 8-9 6 5 10-14"/><path d="M31 15h6v6"/></svg>',
+ result:'<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="3"/><path d="M15 15h18M15 22h18M15 29h6m5 0h7M15 36h6"/></svg>',
  makers:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 3 4 5 1 3 4 5-1v7l4 3-4 3v7l-5-1-3 4-5 1-3 4-3-4-5-1-3-4-5 1v-7l-4-3 4-3v-7l5 1 3-4 5-1Z"/><circle cx="24" cy="24" r="6"/></svg>'
 };
 
@@ -73,10 +74,15 @@ function addQuickCards(main){
  wrap.innerHTML=''
   +'<button type="button" data-master-open="model"><span class="pp-master-card-icon">'+featureIcons.price+'</span><span><b>Your Model</b><small>Upload your print &amp; view its data</small></span></button>'
   +'<button type="button" data-master-open="machine"><span class="pp-master-card-icon spool">'+featureIcons.costs+'</span><span><b>Print Setup</b><small>Choose your printer &amp; material</small></span></button>'
-  +'<button type="button" data-master-open="costs"><span class="pp-master-card-icon">'+featureIcons.profit+'</span><span><b>Costs &amp; Fees</b><small>Add your business costs</small></span></button>';
+  +'<button type="button" data-master-open="costs"><span class="pp-master-card-icon">'+featureIcons.profit+'</span><span><b>Costs &amp; Fees</b><small>Add your business costs</small></span></button>'
+  +'<button type="button" data-master-open="results"><span class="pp-master-card-icon">'+featureIcons.result+'</span><span><b>Results</b><small>Review cost, price &amp; profit</small></span></button>';
  main.insertBefore(wrap,main.querySelector('.layout'));
  wrap.querySelectorAll('[data-master-open]').forEach(btn=>btn.addEventListener('click',()=>{
   const target=btn.dataset.masterOpen;
+  if(target==='results'){
+   document.querySelector('.result')?.scrollIntoView({behavior:'smooth',block:'start'});
+   return;
+  }
   const tab=document.querySelector('.pp-tab[data-tab="'+target+'"]');
   if(tab)tab.click();
   /* Deliberately do not scroll. Journey cards only switch the calculator stage. */
@@ -127,7 +133,7 @@ function install(){
 .pp-master-feature-strip{position:absolute!important;left:clamp(30px,7vw,90px)!important;right:clamp(30px,7vw,90px)!important;bottom:12px!important;height:66px!important;z-index:25!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:26px!important;border-top:1px solid #38515d!important;padding-top:9px!important}
 .pp-master-feature{display:flex!important;align-items:center!important;gap:10px!important;min-width:170px!important}.pp-master-feature>span:last-child{display:flex!important;flex-direction:column!important;line-height:1.1!important}.pp-master-feature b{font-size:13px!important;color:#f3f7f9!important}.pp-master-feature small{margin-top:4px!important;font-size:9px!important;color:#8fa5b2!important;letter-spacing:.02em!important}.pp-master-divider{width:1px!important;height:46px!important;background:#284451!important;display:block!important}
 .pp-master-icon.small{width:36px!important;height:36px!important;border-radius:10px!important}.pp-master-icon.small svg{width:28px!important;height:28px!important;stroke-width:2!important}
-.pp-master-quickcards{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important;margin:20px auto 14px!important;max-width:1480px!important;padding:0 clamp(10px,2vw,28px)!important}
+.pp-master-quickcards{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;margin:20px auto 14px!important;max-width:1480px!important;padding:0 clamp(10px,2vw,28px)!important}
 .pp-master-quickcards button{display:flex!important;align-items:center!important;gap:14px!important;text-align:left!important;padding:17px 18px!important;background:linear-gradient(180deg,#0b1c27,#081720)!important;border:1px solid #284654!important;border-radius:14px!important;color:#fff!important;cursor:pointer!important;box-shadow:inset 0 1px 0 #fff06,0 10px 28px #0006!important;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important}
 .pp-master-quickcards button:hover{transform:translateY(-3px)!important;border-color:#ff780077!important;box-shadow:inset 0 1px 0 #fff08,0 16px 32px #0008,0 0 22px #ff780012!important}
 .pp-master-card-icon{width:60px!important;height:60px!important;min-width:60px!important;border-radius:50%!important;border:2px solid #ff780088!important;display:grid!important;place-items:center!important;color:var(--master-orange)!important;background:radial-gradient(circle,#ff780012,#08151e)!important;box-shadow:0 0 24px #ff78000f!important}.pp-master-card-icon svg{width:31px!important;height:31px!important;fill:none!important;stroke:currentColor!important;stroke-width:2!important;stroke-linecap:round!important;stroke-linejoin:round!important}.pp-master-quickcards button b{display:block!important;font-size:16px!important}.pp-master-quickcards button small{display:block!important;margin-top:5px!important;color:#92a8b4!important;font-size:11px!important}
