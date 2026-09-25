@@ -449,6 +449,19 @@ function install(){
       try{sessionStorage.setItem('printprofit.calculator-navigation-handoff.v1','1');}catch(e){}
       window.top.location.href='./profit-advisor.html';
     };
+    let advisorUpdateTimer=null;
+    const observeAdvisor=(advisor)=>{
+      if(window.__ppAdvisorUpdateObserver||!window.MutationObserver)return;
+      const observer=new MutationObserver(()=>{
+        if(advisorUpdateTimer)return;
+        advisorUpdateTimer=setTimeout(()=>{
+          advisorUpdateTimer=null;
+          mount();
+        },80);
+      });
+      window.__ppAdvisorUpdateObserver=observer;
+      observer.observe(advisor,{childList:true,subtree:true,characterData:true});
+    };
 
     const mount=()=>{
       const advisor=document.getElementById('ppProfitAdvisor');
@@ -506,6 +519,7 @@ function install(){
         status.textContent=profitNum===null?'Ready to review':profitNum<0?'Currently at a loss':profitNum>0?'Currently profitable':'At break-even';
       }
 
+      observeAdvisor(advisor);
       return true;
     };
 
@@ -535,8 +549,7 @@ function install(){
         window.__ppAdvisorLauncherObserver=null;
       }
     }
-    document.addEventListener('input',()=>setTimeout(mount,30));
-    document.addEventListener('change',()=>setTimeout(mount,30));
+
   }
 
   installAdvisorLauncher();
