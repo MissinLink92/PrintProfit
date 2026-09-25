@@ -7,7 +7,7 @@ function install(){
   const cards=document.getElementById('pp-master-quickcards');
   if(!cards)return false;
 
-  // The large cards are now the visual 3-stage journey. Hide the duplicate thin progress bar.
+  // The journey cards provide the four calculator steps. Hide duplicate progress UI.
   const progress=document.getElementById('ppProgressHost');
   if(progress)progress.style.display='none';
 
@@ -18,7 +18,8 @@ function install(){
   const stages=[
     ['1','details'],
     ['2','machine'],
-    ['3','costs']
+    ['3','costs'],
+    ['4','results']
   ];
 
   buttons.forEach((button,index)=>{
@@ -32,6 +33,7 @@ function install(){
     button.insertBefore(badge,button.firstChild);
 
     button.addEventListener('click',()=>{
+      if(target==='results')return; // master-polish scrolls to the results panel.
       const tab=document.querySelector('.pp-step[data-tab="'+target+'"]');
       if(tab)tab.click();
       // Keep the user's current scroll position. Clicking a stage should only switch the workspace.
@@ -42,7 +44,7 @@ function install(){
   style.id='ppFlowCardsStyles';
   style.textContent=`
     #ppProgressHost{display:none!important}
-    #pp-master-quickcards{position:relative!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:42px!important;margin:20px auto 18px!important;padding:0 clamp(10px,2vw,28px)!important}
+    #pp-master-quickcards{position:relative!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:24px!important;margin:20px auto 18px!important;padding:0 clamp(10px,2vw,28px)!important}
     #pp-master-quickcards:before{content:'YOUR PRINTING COST JOURNEY';position:absolute;left:clamp(10px,2vw,28px);top:-17px;color:#8297a3;font-size:8px;font-weight:900;letter-spacing:.2em}
     #pp-master-quickcards button{position:relative!important;min-height:105px!important;padding:17px 20px!important;border-radius:16px!important;overflow:visible!important}
     #pp-master-quickcards button:not(:last-child):after{content:'→';position:absolute;right:-34px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:1px solid #355361;border-radius:50%;background:#07131b;color:#ff7800;font-size:17px;font-weight:900;box-shadow:0 0 0 5px #071018,0 0 14px #ff780018;z-index:5}
@@ -53,6 +55,7 @@ function install(){
     #pp-master-quickcards button:nth-child(1) .pp-master-card-icon:before{content:'01';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
     #pp-master-quickcards button:nth-child(2) .pp-master-card-icon:before{content:'02';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
     #pp-master-quickcards button:nth-child(3) .pp-master-card-icon:before{content:'03';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
+    #pp-master-quickcards button:nth-child(4) .pp-master-card-icon:before{content:'04';position:absolute;bottom:9px;font-size:7px;font-weight:900;letter-spacing:.12em;color:#8197a2}
     #pp-master-quickcards button b{font-size:15px!important}
     #pp-master-quickcards button small{font-size:10px!important;margin-top:4px!important}
     @media(max-width:900px){

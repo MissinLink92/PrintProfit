@@ -449,6 +449,19 @@ function install(){
       try{sessionStorage.setItem('printprofit.calculator-navigation-handoff.v1','1');}catch(e){}
       window.top.location.href='./profit-advisor.html';
     };
+    let advisorUpdateTimer=null;
+    const observeAdvisor=(advisor)=>{
+      if(window.__ppAdvisorUpdateObserver||!window.MutationObserver)return;
+      const observer=new MutationObserver(()=>{
+        if(advisorUpdateTimer)return;
+        advisorUpdateTimer=setTimeout(()=>{
+          advisorUpdateTimer=null;
+          mount();
+        },80);
+      });
+      window.__ppAdvisorUpdateObserver=observer;
+      observer.observe(advisor,{childList:true,subtree:true,characterData:true});
+    };
 
     const mount=()=>{
       const advisor=document.getElementById('ppProfitAdvisor');
@@ -506,6 +519,7 @@ function install(){
         status.textContent=profitNum===null?'Ready to review':profitNum<0?'Currently at a loss':profitNum>0?'Currently profitable':'At break-even';
       }
 
+      observeAdvisor(advisor);
       return true;
     };
 
@@ -514,9 +528,13 @@ function install(){
       return false;
     };
 
-    const started=Date.now();
-    const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
     tryMount();
+    // Poll only as a fallback for browsers without MutationObserver; normally
+    // the startup observer below detects the calculator result when it appears.
+    if(!window.MutationObserver){
+      const started=Date.now();
+      const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
+    }
 
     // Only observe the page until the launcher has mounted once. The
     // launcher itself updates DOM nodes, so a permanent body-wide observer
@@ -535,8 +553,7 @@ function install(){
         window.__ppAdvisorLauncherObserver=null;
       }
     }
-    document.addEventListener('input',()=>setTimeout(mount,30));
-    document.addEventListener('change',()=>setTimeout(mount,30));
+
   }
 
   installAdvisorLauncher();

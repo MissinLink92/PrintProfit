@@ -165,41 +165,54 @@ function translateElementText(el){
   if(el.textContent!==translated)el.textContent=translated;
  }
 }
-function translatePage(){
- document.documentElement.lang=pref.language;
- const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
- let n;
- while(n=w.nextNode()){
-  if(!n.parentElement||n.parentElement.closest('script,style'))continue;
+function translateSubtree(root){
+ if(!root)return;
+ const translateTextNode=n=>{
+  if(!n||n.nodeType!==Node.TEXT_NODE||!n.parentElement||n.parentElement.closest('script,style'))return;
   const raw=n.nodeValue.trim();
-  if(!raw)continue;
+  if(!raw)return;
   if(!originalText.has(n))originalText.set(n,raw);
   const original=originalText.get(n);
   const target=tr(original);
   if(n.nodeValue!==target)n.nodeValue=n.nodeValue.replace(raw,target);
- }
- // Translate placeholders, aria labels, option text and option-group labels as well as text nodes.
- document.querySelectorAll('option,optgroup').forEach(translateElementText);
- document.querySelectorAll('input[placeholder],textarea[placeholder],select[aria-label],input[aria-label],button[aria-label],label[aria-label],optgroup[label],option').forEach(el=>{
-  ['placeholder','aria-label','label'].forEach(attr=>{
-   if(!el.hasAttribute(attr))return;
-   const key='data-pp-i18n-'+attr;
-   if(!el.hasAttribute(key))el.setAttribute(key,el.getAttribute(attr)||'');
-   const original=el.getAttribute(key)||'';
-   if(original)el.setAttribute(attr,tr(original));
+ };
+ if(root.nodeType===Node.TEXT_NODE){translateTextNode(root);return;}
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+ let node;
+ while(node=walker.nextNode())translateTextNode(node);
+ if(root.nodeType===Node.ELEMENT_NODE){
+  if(root.matches('option,optgroup'))translateElementText(root);
+  root.querySelectorAll('option,optgroup').forEach(translateElementText);
+  const attrs='input[placeholder],textarea[placeholder],select[aria-label],input[aria-label],button[aria-label],label[aria-label],optgroup[label],option';
+  const elements=[];
+  if(root.matches(attrs))elements.push(root);
+  root.querySelectorAll(attrs).forEach(el=>elements.push(el));
+  elements.forEach(el=>{
+   ['placeholder','aria-label','label'].forEach(attr=>{
+    if(!el.hasAttribute(attr))return;
+    const key='data-pp-i18n-'+attr;
+    if(!el.hasAttribute(key))el.setAttribute(key,el.getAttribute(attr)||'');
+    const original=el.getAttribute(key)||'';
+    if(original)el.setAttribute(attr,tr(original));
+   });
   });
- });
+ }
 }
-
+function translatePage(){
+ document.documentElement.lang=pref.language;
+ translateSubtree(document.body);
+}
 let translationObserver=null;
-let translationTimer=null;
 function watchTranslations(){
  if(translationObserver||!window.MutationObserver)return;
- translationObserver=new MutationObserver(()=>{
-  clearTimeout(translationTimer);
-  translationTimer=setTimeout(()=>translatePage(),40);
+ // The calculator lives in <main>. Watch inserted UI there only, and translate
+ // just the newly-added subtree; routine attribute/value updates do not trigger it.
+ const root=document.querySelector('main')||document.querySelector('#app');
+ if(!root)return;
+ translationObserver=new MutationObserver(records=>{
+  for(const record of records)record.addedNodes.forEach(translateSubtree);
  });
- translationObserver.observe(document.body,{childList:true,subtree:true});
+ translationObserver.observe(root,{childList:true,subtree:true});
 }
 
 function setTheme(){

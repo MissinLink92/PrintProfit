@@ -64,7 +64,13 @@ function snapshot(){
   return data;
 }
 
+let saveTimer=null;
+function scheduleSave(){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>{saveTimer=null;save();},250);
+}
 function save(){
+  if(saveTimer){clearTimeout(saveTimer);saveTimer=null;}
   const raw=JSON.stringify(snapshot());
   // The draft lives in sessionStorage, but is only allowed to survive a page
   // unload when the user explicitly navigates to Price Finder or Profit Advisor.
@@ -261,6 +267,7 @@ async function restoreLastUploadedFile(){
 
 window.__printProfitPersistDraft=save;
 window.__printProfitClearDraft=()=>{
+  if(saveTimer){clearTimeout(saveTimer);saveTimer=null;}
   try{localStorage.removeItem(KEY);localStorage.removeItem(LEGACY_KEY);localStorage.removeItem(OLD_KEY);}catch(e){}
   try{sessionStorage.removeItem(KEY);sessionStorage.removeItem(LEGACY_KEY);sessionStorage.removeItem(OLD_KEY);}catch(e){}
   try{window.__ppRestoredFileName='';}catch(e){}
@@ -290,10 +297,10 @@ function boot(){
     }
   },true);
   document.addEventListener('input',e=>{
-    if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))save();
+    if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))scheduleSave();
   });
   document.addEventListener('change',e=>{
-    if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))save();
+    if(e.target?.matches?.('input,select,textarea') && isPersistedField(e.target))scheduleSave();
   });
   const handleUnload=()=>{
     if(hasNavigationHandoff()){
