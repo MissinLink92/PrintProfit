@@ -5,7 +5,8 @@ if(window.__printProfitNaturalFlow)return;window.__printProfitNaturalFlow=true;
 const steps=[
  ['01','Your Model','Upload your print & view its data'],
  ['02','Print Setup','Choose your printer & material'],
- ['03','Costs & Fees','Add running, selling & fulfilment costs']
+ ['03','Costs & Fees','Add running, selling & fulfilment costs'],
+ ['04','Results','Review cost, price & profit']
 ];
 
 const icons={
@@ -33,9 +34,8 @@ function make(){
  main.insertBefore(flow,workspace);
  flow.querySelectorAll('.pp-flow-step').forEach(btn=>btn.addEventListener('click',()=>{
   const i=Number(btn.dataset.flowIndex);
-  const map=['details','machine','costs'];
-  if(i===5){document.querySelector('.layout>.result')?.scrollIntoView({behavior:'smooth',block:'start'});return;}
-  const tab=document.querySelector('.pp-tab[data-tab="'+map[i]+'"]');
+  const map=['details','machine','costs','results'];
+  const tab=document.querySelector('.pp-step[data-tab="'+map[i]+'"]')||document.querySelector('.pp-tab[data-tab="'+map[i]+'"]');
   if(tab)tab.click();
   workspace.scrollIntoView({behavior:'smooth',block:'start'});
  }));
@@ -50,7 +50,7 @@ function make(){
 .pp-flow-node{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;border:1px solid #ff780066;background:#ff780012;color:#ff7800;box-shadow:0 0 18px #ff780014,inset 0 1px 0 #fff08}
 .pp-flow-node svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .pp-flow-copy{min-width:0;display:flex;flex-direction:column;line-height:1.05}.pp-flow-copy b{font-size:11px;white-space:nowrap}.pp-flow-copy b em{font-style:normal;color:#ff7800;margin-right:5px;font-size:8px;letter-spacing:.06em}.pp-flow-copy small{margin-top:5px;font-size:8.5px;color:#8ea5b1;line-height:1.2}.pp-flow-arrow{position:absolute;right:-7px;top:50%;transform:translateY(-50%);color:#ff7800;font-size:15px;z-index:2}
-@media(max-width:1050px){.pp-flow-track{grid-template-columns:repeat(3,minmax(0,1fr))}.pp-flow-step:nth-child(3) .pp-flow-arrow,.pp-flow-step:nth-child(6) .pp-flow-arrow{display:none}}
+@media(max-width:1050px){.pp-flow-track{grid-template-columns:repeat(2,minmax(0,1fr))}.pp-flow-step:nth-child(2) .pp-flow-arrow,.pp-flow-step:nth-child(4) .pp-flow-arrow{display:none}}
 @media(max-width:650px){.pp-natural-flow{padding:0 8px}.pp-flow-heading h2{font-size:19px}.pp-flow-track{grid-template-columns:1fr 1fr;gap:6px;padding:7px}.pp-flow-step{padding:9px 8px}.pp-flow-arrow{display:none!important}.pp-flow-copy small{display:none}.pp-flow-node{flex-basis:30px;width:30px;height:30px}.pp-flow-node svg{width:17px;height:17px}}
 @media(prefers-reduced-motion:reduce){.pp-flow-step{transition:none!important}}
 `;
