@@ -26,7 +26,7 @@ function install(){
   gap:14px!important;
 }
 .pp-tab-panel[data-panel="details"]{
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-columns:1fr!important;
 }
 .pp-tab-panel[data-panel="details"]>.pp-card,
 .pp-tab-panel[data-panel="details"]>.pp-model-hub{
