@@ -487,14 +487,18 @@ function install(){
 
       const data=advisorText(advisor);
       const profitNum=parseMoney(data.profit);
-      const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
+      const setText=(id,value)=>{
+        const el=document.getElementById(id);
+        if(el && el.textContent!==String(value))el.textContent=String(value);
+      };
       const profitEl=document.getElementById('ppAdvisorLauncherProfit');
       if(profitEl){
-        profitEl.textContent=data.profit;
-        profitEl.className=profitNum===null?'':profitNum>0?'good':profitNum<0?'bad':'';
+        setText('ppAdvisorLauncherProfit',data.profit);
+        const nextClass=profitNum===null?'':profitNum>0?'good':profitNum<0?'bad':'';
+        if(profitEl.className!==nextClass)profitEl.className=nextClass;
       }
-      set('ppAdvisorLauncherBreakEven',data.breakEven);
-      set('ppAdvisorLauncherSell',data.sell);
+      setText('ppAdvisorLauncherBreakEven',data.breakEven);
+      setText('ppAdvisorLauncherSell',data.sell);
 
       const status=document.getElementById('ppAdvisorLauncherStatus');
       if(status){
@@ -514,9 +518,22 @@ function install(){
     const timer=setInterval(()=>{if(tryMount()||Date.now()-started>15000)clearInterval(timer);},120);
     tryMount();
 
+    // Only observe the page until the launcher has mounted once. The
+    // launcher itself updates DOM nodes, so a permanent body-wide observer
+    // can otherwise create a mutation -> callback -> mutation feedback loop.
     if(!window.__ppAdvisorLauncherObserver){
-      window.__ppAdvisorLauncherObserver=new MutationObserver(()=>mount());
-      window.__ppAdvisorLauncherObserver.observe(document.body,{childList:true,subtree:true});
+      const observer=new MutationObserver(()=>{
+        if(mount()){
+          observer.disconnect();
+          window.__ppAdvisorLauncherObserver=null;
+        }
+      });
+      window.__ppAdvisorLauncherObserver=observer;
+      observer.observe(document.body,{childList:true,subtree:true});
+      if(mount()){
+        observer.disconnect();
+        window.__ppAdvisorLauncherObserver=null;
+      }
     }
     document.addEventListener('input',()=>setTimeout(mount,30));
     document.addEventListener('change',()=>setTimeout(mount,30));
