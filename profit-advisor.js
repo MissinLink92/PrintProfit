@@ -1035,17 +1035,24 @@ document.addEventListener('click',e=>{
   e.stopPropagation();
   goToReviewTarget(button.getAttribute('data-pp-review-target'));
 });
-document.addEventListener('input',e=>{
+let renderTimer=null;
+function scheduleRender(delay=120,resetScenario=false){
+  clearTimeout(renderTimer);
+  renderTimer=setTimeout(()=>{
+    renderTimer=null;
+    if(resetScenario)advisorScenario=null;
+    render();
+  },delay);
+}
+const handleCalculatorEdit=e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
-});
-document.addEventListener('change',e=>{
-  if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
-});
-document.querySelectorAll('#resultTabs .tab').forEach(b=>b.addEventListener('click',()=>setTimeout(render,20)));
-window.addEventListener('storage',()=>setTimeout(render,20));
-document.addEventListener('printprofit-settings-changed',()=>{setTimeout(render,30);});
+  if(e.target&&e.target.matches('input,select,textarea'))scheduleRender(120,true);
+};
+document.addEventListener('input',handleCalculatorEdit);
+document.addEventListener('change',handleCalculatorEdit);
+document.querySelectorAll('#resultTabs .tab').forEach(b=>b.addEventListener('click',()=>scheduleRender(20)));
+window.addEventListener('storage',()=>scheduleRender(20));
+document.addEventListener('printprofit-settings-changed',()=>scheduleRender(30));
 boot();
 
 })();
