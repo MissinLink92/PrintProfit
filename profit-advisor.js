@@ -659,6 +659,80 @@ function addStyles(){
     body[data-pp-theme="light"] .pp-advisor-heading p,body[data-pp-theme="light"] .pp-advisor-alert span,body[data-pp-theme="light"] .pp-advisor-stat span,body[data-pp-theme="light"] .pp-advisor-suggestion-title small,body[data-pp-theme="light"] .pp-advisor-control .mini span,body[data-pp-theme="light"] .pp-advisor-live-profit span,body[data-pp-theme="light"] .pp-advisor-live-profit p,body[data-pp-theme="light"] .pp-advisor-summary-row span:first-child,body[data-pp-theme="light"] .pp-advisor-help{color:#5d707b!important;}
   `;
   s.textContent += `
+    /* Full-width Step 4 experiment: complete Results above complete Profit Advisor. */
+    .pp-results-advisor-layout{
+      display:flex!important;
+      flex-direction:column!important;
+      gap:14px!important;
+      width:100%!important;
+      min-width:0!important;
+    }
+    .pp-results-advisor-layout>.result{
+      order:1!important;
+      width:100%!important;
+      min-width:0!important;
+      position:static!important;
+      margin:0!important;
+    }
+    .pp-results-advisor-layout>#ppProfitAdvisor{
+      order:2!important;
+      width:100%!important;
+      min-width:0!important;
+      margin:0!important;
+    }
+    .pp-results-advisor-layout>.result>.head,
+    .pp-results-advisor-layout>.result>.tabs,
+    .pp-results-advisor-layout>.result>.resultView{
+      width:100%!important;
+      min-width:0!important;
+    }
+    .pp-profit-advisor{
+      width:100%!important;
+      box-sizing:border-box!important;
+      margin:0!important;
+    }
+    .pp-advisor-main{
+      display:block!important;
+      width:100%!important;
+    }
+    .pp-advisor-panel{
+      width:100%!important;
+      box-sizing:border-box!important;
+    }
+    .pp-advisor-suggestions-grid{
+      display:grid!important;
+      grid-template-columns:repeat(3,minmax(0,1fr))!important;
+      gap:8px!important;
+      width:100%!important;
+    }
+    .pp-advisor-suggestion{
+      margin-top:0!important;
+      height:100%!important;
+      box-sizing:border-box!important;
+    }
+    .pp-advisor-live{
+      margin-top:10px!important;
+      width:100%!important;
+      box-sizing:border-box!important;
+    }
+    .pp-advisor-live-profit-row{
+      grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    }
+    @media(max-width:1050px){
+      .pp-advisor-suggestions-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr))!important;
+      }
+    }
+    @media(max-width:650px){
+      .pp-advisor-suggestions-grid{
+        grid-template-columns:1fr!important;
+      }
+      .pp-advisor-live-profit-row{
+        grid-template-columns:1fr 1fr!important;
+      }
+    }
+
+  s.textContent += `
     .result#about.pp-advisor-results-split{
       display:grid!important;
       grid-template-columns:minmax(0,1fr) minmax(430px,1fr)!important;
@@ -1072,10 +1146,13 @@ function render(){
     {key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
   ];
 
+  const suggestionsGrid=document.createElement('div');
+  suggestionsGrid.className='pp-advisor-suggestions-grid';
   configs.forEach(cfg=>{
     const row=suggestionRow(cfg,s,sc,batchView);
-    left.appendChild(row);
+    suggestionsGrid.appendChild(row);
   });
+  left.appendChild(suggestionsGrid);
 
   const right=document.createElement('div');
   right.className='pp-advisor-panel pp-advisor-live';
