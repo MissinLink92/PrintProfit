@@ -47,14 +47,13 @@
     const costs4=document.createElement('div');costs4.className='pp-cost-block';costs4.appendChild(box4);panels.costs.appendChild(costs4);
     const costs5=document.createElement('div');costs5.className='pp-cost-block';costs5.appendChild(box5);panels.costs.appendChild(costs5);
     panels.results.appendChild(result);
+    // Keep the original action controls in their source panel for the existing
+    // handlers, but do not render them in the stage layout. Save and Reset are
+    // presented as fixed actions by the parent calculator page.
     const sourceActions=box6.querySelector('.actions');
-    const actionBar=document.createElement('section');actionBar.id='ppGlobalActions';actionBar.className='pp-global-actions';actionBar.setAttribute('role','toolbar');actionBar.setAttribute('aria-label','Calculator actions');
-    actionBar.innerHTML='<div class="pp-global-actions-buttons"></div>';
-    const actionButtons=actionBar.querySelector('.pp-global-actions-buttons');
-    if(sourceActions){sourceActions.classList.add('pp-source-actions-placeholder');sourceActions.querySelectorAll('button').forEach(button=>actionButtons.appendChild(button));}
-    const resetButton=actionBar.querySelector('#reset');if(resetButton)resetButton.textContent='↺ Reset All';
+    if(sourceActions)sourceActions.classList.add('pp-source-actions-placeholder');
     Object.values(panels).forEach(panel=>workspace.appendChild(panel));
-    layout.innerHTML='';layout.appendChild(workspace);layout.appendChild(actionBar);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
+    layout.innerHTML='';layout.appendChild(workspace);progressHost.appendChild(progress);layout.parentNode.insertBefore(progressHost,layout);
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs','results'];
     /* Measure every stage once and reserve enough workspace height for the tallest one. */
     function stabiliseWorkspace(){
