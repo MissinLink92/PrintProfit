@@ -690,6 +690,41 @@ function addStyles(){
         grid-column:1!important;grid-row:auto!important
       }
     }
+    /* Explicit Step 4 structure: complete Results left, complete Advisor right. */
+    .pp-results-advisor-layout{
+      display:grid!important;
+      grid-template-columns:minmax(0,1fr) minmax(430px,1fr)!important;
+      gap:12px!important;
+      align-items:start!important;
+      width:100%!important;
+      min-width:0!important;
+    }
+    .pp-results-advisor-layout>.result{
+      grid-column:1!important;
+      grid-row:1!important;
+      width:100%!important;
+      min-width:0!important;
+      margin:0!important;
+      position:static!important;
+      top:auto!important;
+      display:block!important;
+    }
+    .pp-results-advisor-layout>#ppProfitAdvisor{
+      grid-column:2!important;
+      grid-row:1!important;
+      width:100%!important;
+      min-width:0!important;
+      margin:0!important;
+    }
+    .pp-results-advisor-layout>.result>.head{margin-bottom:8px!important}
+    .pp-results-advisor-layout>.result>.tabs{margin:10px 0!important}
+    .pp-results-advisor-layout>.result>.resultView{width:100%!important;min-width:0!important}
+    @media(max-width:1100px){
+      .pp-results-advisor-layout{grid-template-columns:1fr!important}
+      .pp-results-advisor-layout>.result,
+      .pp-results-advisor-layout>#ppProfitAdvisor{grid-column:1!important;grid-row:auto!important}
+    }
+
   `;
   document.head.appendChild(s);
 }
@@ -948,32 +983,25 @@ function refreshAdvisorScenario(s,batchView){
 }
 
 function ensureResultColumns(result,box){
-  let left=document.getElementById('ppResultsLeftColumn');
-  let right=document.getElementById('ppAdvisorRightColumn');
-  if(left&&right){
-    if(box.parentElement!==right)right.appendChild(box);
-    return {left,right};
+  const panel=result.parentElement;
+  if(!panel)return false;
+  let wrap=document.getElementById('ppResultsAdvisorLayout');
+  if(!wrap){
+    wrap=document.createElement('div');
+    wrap.id='ppResultsAdvisorLayout';
+    wrap.className='pp-results-advisor-layout';
+    panel.insertBefore(wrap,result);
   }
-  left=document.createElement('div');
-  left.id='ppResultsLeftColumn';
-  left.className='pp-results-left-column';
-  right=document.createElement('div');
-  right.id='ppAdvisorRightColumn';
-  right.className='pp-advisor-right-column';
-  const direct=[...result.children];
-  const keepLeft=direct.filter(el=>el!==box && (el.classList.contains('head')||el.classList.contains('tabs')||el.classList.contains('resultView')));
-  keepLeft.forEach(el=>left.appendChild(el));
-  if(box.parentElement===result)right.appendChild(box);else right.appendChild(box);
-  result.appendChild(left);
-  result.appendChild(right);
-  return {left,right};
+  if(box.parentElement===result)box.remove();
+  if(result.parentElement!==wrap)wrap.appendChild(result);
+  if(box.parentElement!==wrap)wrap.appendChild(box);
+  return true;
 }
 
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
   result.id='about';
-  result.classList.add('pp-advisor-results-split');
   addStyles();
 
   let box=$('ppProfitAdvisor');
@@ -981,7 +1009,6 @@ function render(){
     box=document.createElement('section');
     box.id='ppProfitAdvisor';
     box.className='pp-profit-advisor';
-    result.appendChild(box);
   }
 
   ensureResultColumns(result,box);
