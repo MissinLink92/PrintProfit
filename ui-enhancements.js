@@ -11,9 +11,12 @@
   ];
 
   const $=id=>document.getElementById(id);
-  const findBox=number=>[...document.querySelectorAll('section.panel')].find(section=>{
+  const findBox=name=>[...document.querySelectorAll('section.panel')].find(section=>{
     const h=section.querySelector('h2');
-    return h&&h.textContent.trim().startsWith(number+'.');
+    if(!h)return false;
+    const title=h.textContent.trim().toLowerCase();
+    const wanted=String(name||'').trim().toLowerCase();
+    return title===wanted||title.startsWith(wanted);
   });
 
   function getProfiles(){
@@ -93,7 +96,7 @@
 
   function installQuickSetup(){
     if($('ppQuickSetup'))return;
-    const box2=findBox('2');
+    const box2=findBox('Print Setup');
     if(!box2)return false;
     const card=box2.closest('.pp-card');
     if(!card||!card.parentElement)return false;
