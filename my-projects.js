@@ -3,6 +3,23 @@
 if(window.__printProfitProjects)return; window.__printProfitProjects=true;
 const KEY='printprofit.projects.v1';
 const FILE_DB='printprofit.project-files.v1';
+let activeProjectId=null;
+const setSaveMode=(loaded)=>{
+ try{
+  const parent=window.parent&&window.parent!==window?window.parent:window;
+  const button=parent.document.getElementById('ppFloatingSave')||document.querySelector('#saveProject');
+  if(button){
+   const main=button.querySelector('.pp-save-main');
+   const sub=button.querySelector('.pp-save-sub');
+   if(main)main.textContent=loaded?'UPDATE':'SAVE';
+   if(sub)sub.textContent='PROJECT';
+   button.title=loaded?'Update loaded project':'Save project';
+   button.setAttribute('aria-label',loaded?'Update loaded project':'Save project');
+  }
+  const inline=document.getElementById('saveProject');
+  if(inline)inline.textContent=loaded?'💾 Update Project':'💾 Save Project';
+ }catch(e){}
+};
 const PROJECT_DB='printprofit.project-records.v1';
 const projectDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(PROJECT_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('projects',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const persistProjects=async projects=>{try{const db=await projectDb();await new Promise((res,rej)=>{const tx=db.transaction('projects','readwrite'),store=tx.objectStore('projects');store.clear();projects.forEach(p=>store.put(p));tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close();return true}catch(e){console.warn('PrintProfit project backup save failed:',e);return false}};
@@ -115,21 +132,54 @@ function open(){
  });
 }
 async function saveNew(){
- const current=projectInfo();const suggested=(val('file')||'').split('\\').pop().replace(/\.[^.]+$/,'')||'My 3D Print';
- const name=prompt('Name this project:',suggested);if(!name||!name.trim())return;
- const projects=read();const now=Date.now();
- const id=crypto.randomUUID?crypto.randomUUID():String(now)+Math.random();
+ const current=projectInfo();
  const file=document.getElementById('file')?.files?.[0]||null;
  let fileData={};try{fileData=JSON.parse(JSON.stringify(window.__ppFileData||{}));}catch(e){}
  const fileStatus=document.getElementById('status')?.textContent||'';
+
+ if(activeProjectId){
+   const projects=read();
+   const index=projects.findIndex(x=>x.id===activeProjectId);
+   if(index>=0){
+     const existing=projects[index];
+     projects[index]={
+       ...existing,
+       updated:Date.now(),
+       material:current.material,
+       hours:current.hours,
+       used:current.used,
+       data:snapshot(),
+       file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:(existing.file||null),
+       fileData,
+       fileStatus
+     };
+     if(!write(projects))return;
+     await persistProjects(projects);
+     if(file)await putProjectFile(activeProjectId,file);
+     render();
+     const count=document.getElementById('ppProjectCount');
+     if(count)count.textContent=projects.length+' saved '+(projects.length===1?'project':'projects');
+     setSaveMode(true);
+     return;
+   }
+   activeProjectId=null;
+   setSaveMode(false);
+ }
+
+ const suggested=(val('file')||'').split('\\').pop().replace(/\.[^.]+$/,'')||'My 3D Print';
+ const name=prompt('Name this project:',suggested);
+ if(!name||!name.trim())return;
+ const projects=read();const now=Date.now();
+ const id=crypto.randomUUID?crypto.randomUUID():String(now)+Math.random();
  projects.push({id,name:name.trim(),updated:now,material:current.material,hours:current.hours,used:current.used,data:snapshot(),file:file?{name:file.name,type:file.type,lastModified:file.lastModified}:null,fileData,fileStatus});
  if(!write(projects))return;
  await persistProjects(projects);
- if(file) await putProjectFile(id,file);
+ if(file)await putProjectFile(id,file);
  open();
-}
-async function loadProject(id){
+}async function loadProject(id){
  const p=read().find(x=>x.id===id);if(!p)return;
+ activeProjectId=id;
+ setSaveMode(true);
  try{window.__ppFileData=(p.fileData&&typeof p.fileData==='object')?p.fileData:(p.data?.fileData&&typeof p.data.fileData==='object'?p.data.fileData:{});}catch(e){window.__ppFileData={};}
  if(p.fileStatus){const status=document.getElementById('status');if(status)status.textContent=p.fileStatus;}
  restore(p.data);
@@ -162,6 +212,7 @@ async function renameProject(id){
 }
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
 function deleteProject(id){const p=read().find(x=>x.id===id);if(!p)return;if(!confirm('Delete “'+p.name+'”?'))return;write(read().filter(x=>x.id!==id));render();const c=document.getElementById('ppProjectCount');if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');}
+document.getElementById('reset')?.addEventListener('click',()=>{activeProjectId=null;setSaveMode(false);});
 document.addEventListener('click',e=>{
  const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-rename-project],[data-duplicate-project],[data-delete-project]');
  if(!target)return;
@@ -175,4 +226,5 @@ document.addEventListener('click',e=>{
  else if(target.hasAttribute('data-delete-project'))deleteProject(target.dataset.deleteProject);
 },true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+setSaveMode(false);
 })();
