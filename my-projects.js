@@ -20,6 +20,24 @@ const setSaveMode=(loaded)=>{
   if(inline)inline.textContent=loaded?'💾 Update Project':'💾 Save Project';
  }catch(e){}
 };
+const flashUpdateConfirmation=()=>{
+ try{
+  const parent=window.parent&&window.parent!==window?window.parent:window;
+  const button=parent.document.getElementById('ppFloatingSave')||document.getElementById('saveProject');
+  if(button){
+   const main=button.querySelector('.pp-save-main');
+   const sub=button.querySelector('.pp-save-sub');
+   button.classList.add('pp-save-updated');
+   if(main)main.textContent='UPDATED!';
+   if(sub)sub.textContent='SAVED';
+   setTimeout(()=>{
+    button.classList.remove('pp-save-updated');
+    if(main)main.textContent=activeProjectId?'UPDATE':'SAVE';
+    if(sub)sub.textContent='PROJECT';
+   },1500);
+  }
+ }catch(e){}
+};
 const PROJECT_DB='printprofit.project-records.v1';
 const projectDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(PROJECT_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('projects',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const persistProjects=async projects=>{try{const db=await projectDb();await new Promise((res,rej)=>{const tx=db.transaction('projects','readwrite'),store=tx.objectStore('projects');store.clear();projects.forEach(p=>store.put(p));tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close();return true}catch(e){console.warn('PrintProfit project backup save failed:',e);return false}};
@@ -121,6 +139,8 @@ function open(){
 .pp-projects-toolbar{display:flex;align-items:center;justify-content:space-between;padding:18px 28px 8px}.pp-project-new{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:10px 15px;font-weight:800;cursor:pointer}.pp-project-count{color:#9fb0b9;font-size:12px}
 #ppProjectsList{padding:10px 28px 28px}.pp-project-card{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:17px;margin-top:10px;border:1px solid #294957;border-radius:14px;background:#0b202b}.pp-project-card-main{display:flex;gap:14px;align-items:center;min-width:0}.pp-project-icon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:#ff780015;border:1px solid #ff780055;color:#ff7800;font-size:20px}.pp-project-card h3{margin:0 0 4px;font-size:16px}.pp-project-card p{margin:0;color:#c5d1d7;font-size:12px}.pp-project-card small{display:block;color:#758a95;margin-top:5px}.pp-project-actions{display:flex;gap:7px;flex-wrap:wrap}.pp-project-actions button{border:1px solid #355363;background:#091923;color:#e6eef2;border-radius:8px;padding:8px 10px;cursor:pointer;font-weight:700}.pp-project-actions button:hover{border-color:#ff7800}.pp-project-actions .danger:hover{border-color:#d9534f;color:#ff9a96}.pp-projects-empty{text-align:center;padding:55px 20px;color:#9fb0b9}.pp-projects-empty-icon{font-size:38px;color:#ff7800}.pp-projects-empty h3{color:#edf3f6;margin:10px 0 5px}.pp-projects-empty p{margin:0 0 20px}
 @media(max-width:650px){.pp-projects-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-projects-head{padding:20px}.pp-projects-toolbar,#ppProjectsList{padding-left:20px;padding-right:20px}.pp-project-card{align-items:flex-start;flex-direction:column}.pp-project-actions{width:100%}.pp-project-actions button{flex:1}.pp-projects-head h2{font-size:25px}}
+.pp-project-card.pp-project-updated{border-color:#36e58b;box-shadow:0 0 0 1px #36e58b55,0 0 24px #36e58b18;animation:ppProjectUpdated .65s ease}
+@keyframes ppProjectUpdated{0%{transform:scale(1)}45%{transform:scale(1.012)}100%{transform:scale(1)}}
 `;document.head.appendChild(style);
  }
  panel.classList.add('open');document.body.style.overflow='hidden';render();
@@ -156,7 +176,10 @@ async function saveNew(){
      if(!write(projects))return;
      await persistProjects(projects);
      if(file)await putProjectFile(activeProjectId,file);
+     window.__ppJustUpdatedProject=activeProjectId;
      render();
+     flashUpdateConfirmation();
+     setTimeout(()=>{window.__ppJustUpdatedProject=null;render();},1550);
      const count=document.getElementById('ppProjectCount');
      if(count)count.textContent=projects.length+' saved '+(projects.length===1?'project':'projects');
      setSaveMode(true);
