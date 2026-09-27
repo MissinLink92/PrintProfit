@@ -810,7 +810,13 @@ function calculateAdvisorScenario(s,sc,batchView){
   const labourRate=num('labourRate');
   const labour=Math.max(0,s.labour-labourRate*(sc.labourMinutes/60));
   const delivery=Math.max(0,Math.min(s.delivery,sc.deliveryCost));
-  const base=s.elec+s.depreciation+labour+s.packagingOther+delivery+material;
+  const printReduction=Math.min(80,Math.max(0,Number(sc.printTime)||0))/100;
+  const projectedHours=Math.max(0,s.hours*(1-printReduction));
+  const hourlyElectricity=s.hours>0?s.elec/s.hours:0;
+  const hourlyDepreciation=s.hours>0?s.depreciation/s.hours:0;
+  const elec=hourlyElectricity*projectedHours;
+  const depreciation=hourlyDepreciation*projectedHours;
+  const base=elec+depreciation+labour+s.packagingOther+delivery+material;
   const feeRate=s.feeRate;
   const fixed=num('fixedFee');
   const sell=Math.max(0,sc.sellingPrice);
@@ -1101,11 +1107,11 @@ document.addEventListener('click',e=>{
 
 document.addEventListener('input',e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
+  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;selectedAdvisorSuggestions.clear();render();},20);
 });
 document.addEventListener('change',e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
+  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;selectedAdvisorSuggestions.clear();render();},20);
 });
 document.querySelectorAll('#resultTabs .tab').forEach(b=>b.addEventListener('click',()=>setTimeout(render,20)));
 window.addEventListener('storage',()=>setTimeout(render,20));
