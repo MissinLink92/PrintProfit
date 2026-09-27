@@ -473,12 +473,6 @@ function snapshot(){
   return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:sell?syncedProfit/sell:0,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
 }
 
-function profileName(selectId,key){
-  const el=$(selectId);
-  const opt=el?.querySelector('option[value="'+String(key).replace(/"/g,'&quot;')+'"]');
-  return opt?.textContent?.trim()||key;
-}
-
 function cheapestDelivery(){
   try{
     const data=window.__ppProfitAdvisorData?.();
@@ -1027,94 +1021,6 @@ function formatChange(v){
   const sign=v>0?'+ ':v<0?'- ':'';
   return sign+money(Math.abs(v));
 }
-
-function applyAdvisorScenario(s,sc){
-  const usage=$('materialUsed');
-  const packCost=$('materialPackCost');
-  const labourHours=$('labourHours');
-  const delivery=$('delivery');
-  const sell=$('sell');
-  const changed=[];
-  if(usage&&s.materialUsed>0&&s.materialPack>0){
-    const factor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
-    usage.value=(s.materialUsed*factor).toFixed(2);
-    changed.push(usage);
-  }
-  if(packCost&&s.materialCost>0&&s.materialPackCost>0){
-    const usageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
-    const effectiveFactor=(sc.materialCost/s.materialCost);
-    const totalFactor=Math.max(0,Math.min(1,usageFactor*effectiveFactor));
-    packCost.value=(s.materialPackCost*totalFactor).toFixed(2);
-    changed.push(packCost);
-  }
-  if(labourHours){
-    const hours=Math.max(0,num('labourHours')-Math.min(num('labourHours'),Math.max(0,sc.labourMinutes)/60));
-    labourHours.value=hours.toFixed(2);
-    changed.push(labourHours);
-  }
-  if(delivery){
-    delivery.value=Math.max(0,Math.min(s.delivery,sc.deliveryCost)).toFixed(2);
-    changed.push(delivery);
-  }
-  if(sell){
-    sell.value=Math.max(0,sc.sellingPrice).toFixed(2);
-    changed.push(sell);
-  }
-  changed.forEach(el=>{
-    el.dispatchEvent(new Event('input',{bubbles:true}));
-    el.dispatchEvent(new Event('change',{bubbles:true}));
-  });
-  setTimeout(()=>{try{$('calc')?.click();}catch(e){}},20);
-}
-
-function copyAdvisorSummary(s,sc,scenario){
-  const textLines=[
-    'PrintProfit Profit Advisor',
-    'Current profit: '+money(scenario.currentProfit),
-    'Projected profit: '+money(scenario.profit),
-    'Profit change: '+formatChange(scenario.delta),
-    'Material usage reduction: '+sc.materialUsage.toFixed(0)+'%',
-    'Labour minutes saved: '+sc.labourMinutes.toFixed(0)+' min',
-    'Delivery cost: '+money(scenario.delivery)+'',
-    'Selling price: '+money(scenario.sell),
-    'Material cost: '+money(scenario.material)
-  ];
-  const value=textLines.join('\\n');
-  const done=()=>{
-    const btn=$('ppAdvisorCopy');
-    if(btn){const old=btn.textContent;btn.textContent='Copied ✓';setTimeout(()=>btn.textContent=old,1100);}
-  };
-  try{
-    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(value).then(done).catch(()=>fallback());return;}
-  }catch(e){}
-  fallback();
-  function fallback(){
-    const ta=document.createElement('textarea');ta.value=value;document.body.appendChild(ta);ta.select();
-    try{document.execCommand('copy');}catch(e){}
-    ta.remove();done();
-  }
-}
-
-function neutralAdvisorScenario(s){
-  return {
-    materialUsage:0,
-    labourMinutes:0,
-    deliveryCost:s.delivery,
-    sellingPrice:s.sell,
-    materialCost:s.materialCost
-  };
-}
-
-function rowScenarioFor(s,sc,key){
-  const base=neutralAdvisorScenario(s);
-  base[key]=sc[key];
-  return base;
-}
-
-const ADVISOR_KEYS=[
-  'materialUsage','labourMinutes','deliveryCost','sellingPrice','materialCost'
-];
-
 
 let advisorAppliedSnapshots={};
 let advisorLastAppliedKey=null;
