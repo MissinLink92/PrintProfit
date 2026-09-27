@@ -558,6 +558,12 @@ function addStyles(){
   const s=document.createElement('style');
   s.id='ppProfitAdvisorStyles';
   s.textContent=`
+    /* Step 4 layout: keep the normal Results and Profit Advisor together. */
+    .result#about.pp-advisor-results-split{display:grid!important;grid-template-columns:minmax(300px,.92fr) minmax(420px,1.08fr)!important;gap:12px!important;align-items:start!important;}
+    .result#about.pp-advisor-results-split>.head,.result#about.pp-advisor-results-split>.tabs{grid-column:1 / -1!important;}
+    .result#about.pp-advisor-results-split>.resultView{grid-column:1!important;min-width:0!important;}
+    .result#about.pp-advisor-results-split>#ppProfitAdvisor{grid-column:2!important;grid-row:3 / span 2!important;margin-top:0!important;min-width:0!important;}
+    .result#about.pp-advisor-results-split>#ppProfitAdvisor .pp-advisor-main{grid-template-columns:1fr!important;}
     .pp-profit-advisor{margin-top:14px;border:1px solid #315261;border-radius:16px;padding:14px;background:linear-gradient(180deg,#091a24,#07131b);box-shadow:0 14px 34px #0005;}
     .pp-advisor-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;}
     .pp-advisor-heading{display:flex;gap:10px;min-width:0;}
@@ -628,6 +634,11 @@ function addStyles(){
     .pp-advisor-help a{color:#dce6eb;text-decoration:none;font-weight:800;}
     .pp-advisor-tip{margin-top:8px;border:1px solid #3b2b68;border-radius:9px;padding:8px 10px;background:rgba(106,76,180,.07);color:#b8afd4;font-size:8.5px;line-height:1.4;}
     .pp-advisor-tip b{color:#d7c9ff;}
+    @media(max-width:1100px){
+      .result#about.pp-advisor-results-split{grid-template-columns:1fr!important;}
+      .result#about.pp-advisor-results-split>.resultView{grid-column:1!important;}
+      .result#about.pp-advisor-results-split>#ppProfitAdvisor{grid-column:1!important;grid-row:auto!important;}
+    }
     @media(max-width:980px){
       .pp-advisor-header{flex-direction:column;}
       .pp-advisor-alert{width:100%;max-width:none;}
@@ -897,6 +908,8 @@ function refreshAdvisorScenario(s,batchView){
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
+  result.id='about';
+  result.classList.add('pp-advisor-results-split');
   addStyles();
 
   let box=$('ppProfitAdvisor');
