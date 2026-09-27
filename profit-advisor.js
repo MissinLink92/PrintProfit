@@ -903,6 +903,12 @@ function addStyles(){
     @media(max-width:1050px){.pp-advisor-suggestions-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
     @media(max-width:650px){.pp-advisor-suggestions-grid{grid-template-columns:1fr!important}.pp-advisor-value-row{grid-template-columns:1fr}.pp-advisor-arrow{display:none!important}.pp-advisor-impact-row{grid-template-columns:1fr}}
 
+    .pp-advisor-why-box{margin-top:10px;padding:9px;border:1px solid rgba(255,120,0,.18);border-left:3px solid #ff7800;border-radius:8px;background:rgba(255,120,0,.035)}
+    .pp-advisor-why-box p{margin:4px 0 0;color:#b8c7cf;font-size:8.5px;line-height:1.45}
+    .pp-advisor-applied-note{margin-top:9px;padding:9px;border:1px solid rgba(54,229,139,.34);border-radius:8px;background:rgba(54,229,139,.055)}
+    .pp-advisor-applied-note b{display:block;color:#55eaa0;font-size:9px}.pp-advisor-applied-note span{display:block;margin-top:3px;color:#9eb2bc;font-size:8px;line-height:1.4}
+    .pp-advisor-applied-badge{display:inline-flex;align-items:center;padding:4px 6px;border-radius:99px;border:1px solid rgba(54,229,139,.45);background:rgba(54,229,139,.08);color:#4be79a;font-size:7px;font-weight:900;white-space:nowrap}
+
 
   `;
   document.head.appendChild(s);
@@ -1112,21 +1118,57 @@ function advisorConfigs(s){
 
 function currentProfitFor(s,batchView){return batchView?s.batchProfit:s.profit;}
 
+
+function currentProfitFor(s,batchView){return batchView?s.batchProfit:s.profit;}
+
 function suggestionRow(cfg,s,batchView){
   const row=document.createElement('article');
   row.className='pp-advisor-suggestion';
   row.dataset.advisorKey=cfg.key;
-  const projected=calculateAdvisorScenario(s,cfg.scenario(),batchView).profit;
-  const change=projected-currentProfitFor(s,batchView);
+  const currentProfit=currentProfitFor(s,batchView);
   const applied=advisorAppliedSnapshots[cfg.key];
 
+  let projected;
+  let change;
+  let currentLabel=cfg.currentText();
+  let suggestedLabel=cfg.suggestedText(cfg.suggested);
+  let why=cfg.why(s);
+
+  if(applied){
+    projected=Number.isFinite(applied.afterProfit)?applied.afterProfit:currentProfit;
+    change=Number.isFinite(applied.beforeProfit)?projected-applied.beforeProfit:0;
+    const beforeValue=applied.before?.[cfg.targetKey];
+    const afterValue=applied.after?.[cfg.targetKey];
+    if(beforeValue!==undefined){
+      currentLabel=cfg.targetKey==='materialPackCost'||cfg.targetKey==='sell'||cfg.targetKey==='delivery'
+        ?money(Number(beforeValue)||0)
+        :cfg.targetKey==='materialUsed'
+          ?(Number(beforeValue)||0).toFixed(2)+' g'
+          :(Number(beforeValue)||0).toFixed(2)+' h';
+    }
+    if(afterValue!==undefined){
+      suggestedLabel=cfg.targetKey==='materialPackCost'||cfg.targetKey==='sell'||cfg.targetKey==='delivery'
+        ?money(Number(afterValue)||0)+(cfg.targetKey==='materialPackCost'?' / pack':'')
+        :cfg.targetKey==='materialUsed'
+          ?(Number(afterValue)||0).toFixed(2)+' g'
+          :(Number(afterValue)||0).toFixed(2)+' h';
+    }
+    why=applied.reason||why;
+  }else{
+    projected=calculateAdvisorScenario(s,cfg.scenario(),batchView).profit;
+    change=projected-currentProfit;
+  }
+
   row.innerHTML=
-    '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div>'+(applied?'<span class="pp-advisor-applied-badge">✓ Applied</span>':'')+'</div>'+
+    '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div>'+
+      (applied?'<span class="pp-advisor-applied-badge">✓ Applied</span>':'')+
+    '</div>'+
+    '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">'+(applied?'WHY WE SUGGESTED IT':'WHY WE SUGGESTED THIS')+'</span><p>'+why+'</p></div>'+
     (applied
-      ?'<div class="pp-advisor-applied-note"><b>Applied successfully</b><span>This change is currently being used by the calculator. Use Undo to restore the value from before you applied it.</span></div>'
-      :'<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED THIS</span><p>'+cfg.why(s)+'</p></div>')+
-    '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">WHAT WOULD CHANGE</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>Current</small><b>'+cfg.currentText()+'</b></div><div class="pp-advisor-arrow">→</div><div><small>Suggested</small><b>'+cfg.suggestedText(cfg.suggested)+'</b></div></div></div>'+
-    '<div class="pp-advisor-impact-row"><div><span>PROJECTED PROFIT</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>ESTIMATED CHANGE</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
+      ?'<div class="pp-advisor-applied-note"><b>Applied successfully</b><span>The calculator is now using this change. Undo restores the value from immediately before you applied it.</span></div>'
+      :'')+
+    '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">WHAT WOULD CHANGE</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>'+(applied?'Before':'Current')+'</small><b>'+currentLabel+'</b></div><div class="pp-advisor-arrow">→</div><div><small>'+(applied?'Applied':'Suggested')+'</small><b>'+suggestedLabel+'</b></div></div></div>'+
+    '<div class="pp-advisor-impact-row"><div><span>'+ (applied?'RESULT AFTER APPLYING':'PROJECTED PROFIT') +'</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>'+ (applied?'ACTUAL CHANGE':'ESTIMATED CHANGE') +'</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
     '<button type="button" class="pp-advisor-suggestion-apply '+(applied?'undo':'')+'" data-advisor-apply="'+cfg.key+'" '+((cfg.canApply||applied)?'':'disabled')+'>'+ (applied?'Undo suggestion ↩':(cfg.canApply?'Apply suggestion →':'Add a value first')) +'</button>';
   return row;
 }
@@ -1236,9 +1278,11 @@ function showAdvisorApplyToast(message,kind='good'){
   window.__ppAdvisorApplyToastTimer=setTimeout(()=>{toast.classList.remove('show');setTimeout(()=>toast.remove(),220);},3200);
 }
 
+
 function applySingleAdvisorSuggestion(key){
   const s=snapshot();
   if(!s)return;
+  const batchView=!!document.getElementById('batchResultView')&&!document.getElementById('batchResultView').hidden;
   const cfg=advisorConfigs(s).find(x=>x.key===key);
   if(!cfg)return;
 
@@ -1277,15 +1321,22 @@ function applySingleAdvisorSuggestion(key){
 
     const after={};
     ids.forEach(id=>{const el=$(id);if(el)after[id]=el.value;});
-    advisorAppliedSnapshots[key]={before,after};
+    advisorAppliedSnapshots[key]={
+      before,
+      after,
+      beforeProfit:currentProfitFor(s,batchView),
+      reason:cfg.why(s)
+    };
 
     setTimeout(()=>{
       $('calc')?.click();
       setTimeout(()=>{
         const result=snapshot();
-        const delta=currentProfitFor(result,false)-currentProfitFor(s,false);
-        const outcome=result.profit>0?' — Now profitable!':result.profit===0?' — At break-even.':' — Still showing a loss.';
-        showAdvisorApplyToast('✓ '+cfg.title+' applied successfully. Profit: '+money(result.profit)+(Math.abs(delta)>0.004?' ('+(delta>=0?'↑ ':'↓ ')+money(Math.abs(delta))+')':'')+outcome,delta>=0?'good':'neutral');
+        const afterProfit=currentProfitFor(result,batchView);
+        advisorAppliedSnapshots[key].afterProfit=afterProfit;
+        const delta=afterProfit-currentProfitFor(s,batchView);
+        const outcome=afterProfit>0?' — Now profitable!':afterProfit===0?' — At break-even.':' — Still showing a loss.';
+        showAdvisorApplyToast('✓ '+cfg.title+' applied successfully. Profit: '+money(afterProfit)+(Math.abs(delta)>0.004?' ('+(delta>=0?'↑ ':'↓ ')+money(Math.abs(delta))+')':'')+outcome,delta>=0?'good':'neutral');
         render();
       },120);
     },40);
