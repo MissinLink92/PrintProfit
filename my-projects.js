@@ -4,6 +4,10 @@ if(window.__printProfitProjects)return; window.__printProfitProjects=true;
 const KEY='printprofit.projects.v1';
 const FILE_DB='printprofit.project-files.v1';
 let activeProjectId=null;
+window.__ppClearActiveProject=()=>{
+  activeProjectId=null;
+  setSaveMode(false);
+};
 const setSaveMode=(loaded)=>{
  try{
   const parent=window.parent&&window.parent!==window?window.parent:window;
@@ -179,7 +183,6 @@ async function saveNew(){
      window.__ppJustUpdatedProject=activeProjectId;
      setSaveMode(true);
      flashUpdateConfirmation();
-     window.__ppJustUpdatedProject=activeProjectId;
      render();
      setTimeout(()=>{window.__ppJustUpdatedProject=null;render();},1550);
      const count=document.getElementById('ppProjectCount');
@@ -235,8 +238,16 @@ async function renameProject(id){
  if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');
 }
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
-function deleteProject(id){const p=read().find(x=>x.id===id);if(!p)return;if(!confirm('Delete “'+p.name+'”?'))return;write(read().filter(x=>x.id!==id));render();const c=document.getElementById('ppProjectCount');if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');}
-document.getElementById('reset')?.addEventListener('click',()=>{activeProjectId=null;setSaveMode(false);});
+function deleteProject(id){
+ const p=read().find(x=>x.id===id);if(!p)return;
+ if(!confirm('Delete “'+p.name+'”?'))return;
+ write(read().filter(x=>x.id!==id));
+ if(activeProjectId===id)window.__ppClearActiveProject?.();
+ render();
+ const c=document.getElementById('ppProjectCount');
+ if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');
+}
+document.getElementById('reset')?.addEventListener('click',()=>window.__ppClearActiveProject?.());
 document.addEventListener('click',e=>{
  const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-rename-project],[data-duplicate-project],[data-delete-project]');
  if(!target)return;
