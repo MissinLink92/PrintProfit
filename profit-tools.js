@@ -25,7 +25,14 @@ function money(v){
 
 function printerData(){
   const el=$('printer'),v=el?.value||'';
-  if(!v||v==='custom')return{watts:0,price:0,lifetime:0};
+  if(v==='custom'){
+    return{
+      watts:n('customPrinterPower'),
+      price:n('customPrinterPrice'),
+      lifetime:n('customPrinterLife')
+    };
+  }
+  if(!v)return{watts:0,price:0,lifetime:0};
   const p=v.split(/[|,]/);
   return{watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0};
 }
@@ -268,7 +275,6 @@ function updateWhatIf(state){
   const material=state.materialCost*(1-materialReduction);
   const elec=state.elec*(1-timeReduction);
   const depreciation=state.depreciation*(1-timeReduction);
-  const labour=Math.max(0,state.labour-state.labourRateForScenario*0);
   const labourRate=n('labourRate');
   const labourAdjusted=Math.max(0,state.labour-labourRate*(labourMinutes/60));
   const packagingOther=Math.max(0,state.packagingOther-packSaving);
@@ -351,7 +357,7 @@ function updateBulk(state){
 
   const packCost=Math.max(0,n('ppBulkPackCost'));
   const packQty=Math.max(1,Math.floor(n('ppBulkPackQty')));
-  const packSaving=state.pack>0&&packCost>0?state.pack-packCost:0;
+  const packSaving=state.packaging>0&&packCost>0?state.packaging-packCost:0;
   const packTotal=packSaving>0?packSaving*packQty:0;
   set('ppBulkPackPer',packSaving>0?money(packSaving):'—');
   set('ppBulkPackTotal',packTotal>0?money(packTotal):'—');
