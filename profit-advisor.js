@@ -597,12 +597,14 @@ function addStyles(){
     .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
     .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
     .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
-    .pp-advisor-control{display:grid;grid-template-columns:85px minmax(0,1fr) 85px 90px 70px;gap:6px;align-items:center;margin-top:8px;}
+    .pp-advisor-control{display:grid;grid-template-columns:minmax(85px,1fr) minmax(85px,1fr) minmax(90px,1fr) minmax(70px,.7fr);gap:6px;align-items:center;margin-top:8px;}
     .pp-advisor-control .mini{border:1px solid #294957;border-radius:7px;padding:6px 7px;background:#091821;}
     .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:7px;}
     .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:10px;}
     .pp-advisor-control output{font-size:10px;font-weight:900;text-align:right;}
-    .pp-advisor-range{width:100%;accent-color:#ff7800;}
+    .pp-advisor-suggestion-apply{grid-column:1 / -1;width:100%;margin-top:6px;border:1px solid #ff7800;border-radius:8px;padding:8px 10px;background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;font:900 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 6px 16px #ff780018;}
+    .pp-advisor-suggestion-apply:hover{filter:brightness(1.06);transform:translateY(-1px);}
+    .pp-advisor-suggestion-apply:active{transform:translateY(0);}
     .pp-advisor-change{font-size:9px;font-weight:900;text-align:right;}
     .pp-advisor-change.up{color:#36e58b;}
     .pp-advisor-change.down{color:#ff6b6b;}
@@ -836,10 +838,10 @@ function suggestionRow(cfg,s,sc,batchView){
     '</div>'+
     '<div class="pp-advisor-control">'+
       '<div class="mini"><span>Current</span><strong>'+cfg.currentText(s)+'</strong></div>'+
-      '<div class="pp-advisor-range-wrap"><input class="pp-advisor-range" id="'+cfg.id+'" type="range" min="'+cfg.min()+'" max="'+max+'" step="'+cfg.step+'" value="'+value+'"></div>'+
       '<div class="mini"><span>Suggested</span><strong id="'+cfg.suggestedId+'">'+cfg.suggestedText(value,s)+'</strong></div>'+
       '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'" id="'+cfg.profitId+'">'+money(projected)+'</strong></div>'+
       '<div class="pp-advisor-change '+(change>=0?'up':'down')+'" id="'+cfg.changeId+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
+      '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'">Apply suggestion →</button>'+
     '</div>';
   return row;
 }
@@ -938,7 +940,7 @@ function render(){
   header.className='pp-advisor-header';
   const alertClass=shownProfit>0?'good':'';
   const alertTitle=shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'Add your print costs';
-  const alertText=shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'.':'Use the sliders below to test changes in real time before applying them.';
+  const alertText=shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'.':'Use the suggestions below to see practical ways to improve the result.';
   header.innerHTML=
     '<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+lead+'</p></div></div>'+
     '<div class="pp-advisor-alert '+alertClass+'"><strong>'+alertTitle+'</strong><span>'+alertText+'</span></div>';
@@ -1042,6 +1044,16 @@ function boot(){
 }
 
 document.addEventListener('click',e=>{
+  const apply=e.target&&e.target.closest?e.target.closest('#ppProfitAdvisor [data-advisor-apply]'):null;
+  if(apply){
+    e.preventDefault();
+    e.stopPropagation();
+    const key=apply.getAttribute('data-advisor-apply');
+    const current=snapshot();
+    const sc=advisorScenarioValues(current);
+    applyAdvisorScenario(current,rowScenarioFor(current,sc,key));
+    return;
+  }
   const button=e.target&&e.target.closest?e.target.closest('.pp-profit-review[data-pp-review-target]'):null;
   if(!button)return;
   e.preventDefault();
