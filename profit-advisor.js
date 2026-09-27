@@ -819,39 +819,34 @@ function addStyles(){
         grid-column:1!important;grid-row:auto!important
       }
     }
-    /* Explicit Step 4 structure: complete Results left, complete Advisor right. */
+    /* Explicit Step 4 structure: complete Results above complete Advisor. */
     .pp-results-advisor-layout{
-      display:grid!important;
-      grid-template-columns:minmax(0,1fr) minmax(430px,1fr)!important;
-      gap:12px!important;
-      align-items:start!important;
+      display:flex!important;
+      flex-direction:column!important;
+      gap:14px!important;
+      align-items:stretch!important;
       width:100%!important;
       min-width:0!important;
     }
-    .pp-results-advisor-layout>.result{
-      grid-column:1!important;
-      grid-row:1!important;
+    .pp-results-advisor-layout>.result,
+    .pp-results-advisor-layout>#ppProfitAdvisor{
+      display:block!important;
       width:100%!important;
       min-width:0!important;
       margin:0!important;
       position:static!important;
       top:auto!important;
-      display:block!important;
+      grid-column:auto!important;
+      grid-row:auto!important;
+      float:none!important;
+      box-sizing:border-box!important;
     }
-    .pp-results-advisor-layout>#ppProfitAdvisor{
-      grid-column:2!important;
-      grid-row:1!important;
+    .pp-results-advisor-layout>.result>.head,
+    .pp-results-advisor-layout>.result>.tabs,
+    .pp-results-advisor-layout>.result>.resultView{
       width:100%!important;
       min-width:0!important;
-      margin:0!important;
-    }
-    .pp-results-advisor-layout>.result>.head{margin-bottom:8px!important}
-    .pp-results-advisor-layout>.result>.tabs{margin:10px 0!important}
-    .pp-results-advisor-layout>.result>.resultView{width:100%!important;min-width:0!important}
-    @media(max-width:1100px){
-      .pp-results-advisor-layout{grid-template-columns:1fr!important}
-      .pp-results-advisor-layout>.result,
-      .pp-results-advisor-layout>#ppProfitAdvisor{grid-column:1!important;grid-row:auto!important}
+      box-sizing:border-box!important;
     }
 
   `;
