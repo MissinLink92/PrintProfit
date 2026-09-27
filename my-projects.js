@@ -177,12 +177,13 @@ async function saveNew(){
      await persistProjects(projects);
      if(file)await putProjectFile(activeProjectId,file);
      window.__ppJustUpdatedProject=activeProjectId;
-     render();
+     setSaveMode(true);
      flashUpdateConfirmation();
+     window.__ppJustUpdatedProject=activeProjectId;
+     render();
      setTimeout(()=>{window.__ppJustUpdatedProject=null;render();},1550);
      const count=document.getElementById('ppProjectCount');
      if(count)count.textContent=projects.length+' saved '+(projects.length===1?'project':'projects');
-     setSaveMode(true);
      return;
    }
    activeProjectId=null;
