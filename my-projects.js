@@ -81,7 +81,7 @@ function render(){
     <div class="pp-project-icon">▣</div>
     <div><h3>${esc(p.name)}</h3><p>${esc(p.material)} · ${esc(p.hours)} h · ${esc(p.used)} used</p><small>Saved ${new Date(p.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}</small></div>
    </div>
-   <div class="pp-project-actions"><button type="button" data-load-project="${esc(p.id)}">Load</button><button type="button" data-duplicate-project="${esc(p.id)}">Duplicate</button><button type="button" class="danger" data-delete-project="${esc(p.id)}">Delete</button></div>
+   <div class="pp-project-actions"><button type="button" data-load-project="${esc(p.id)}">Load</button><button type="button" data-rename-project="${esc(p.id)}">Rename</button><button type="button" data-duplicate-project="${esc(p.id)}">Duplicate</button><button type="button" class="danger" data-delete-project="${esc(p.id)}">Delete</button></div>
  </article>`).join('');
 }
 function open(){
@@ -147,16 +147,30 @@ async function loadProject(id){
    setTimeout(()=>window.__ppRefreshModelHub?.(),180);
  },120);
 }
+async function renameProject(id){
+ const p=read().find(x=>x.id===id);if(!p)return;
+ const name=prompt('Rename project:',p.name);
+ if(name===null||!name.trim()||name.trim()===p.name)return;
+ p.name=name.trim();
+ p.updated=Date.now();
+ const projects=read().map(x=>x.id===p.id?p:x);
+ if(!write(projects))return;
+ await persistProjects(projects);
+ render();
+ const c=document.getElementById('ppProjectCount');
+ if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');
+}
 function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
 function deleteProject(id){const p=read().find(x=>x.id===id);if(!p)return;if(!confirm('Delete “'+p.name+'”?'))return;write(read().filter(x=>x.id!==id));render();const c=document.getElementById('ppProjectCount');if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');}
 document.addEventListener('click',e=>{
- const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-duplicate-project],[data-delete-project]');
+ const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-rename-project],[data-duplicate-project],[data-delete-project]');
  if(!target)return;
  if(target.matches('[data-target="projects"]')){e.preventDefault();e.stopPropagation();open();}
  else if(target.hasAttribute('data-project-close'))close();
  else if(target.hasAttribute('data-project-new'))saveNew();
   else if(target.hasAttribute('data-save-project'))saveNew();
  else if(target.hasAttribute('data-load-project'))loadProject(target.dataset.loadProject);
+ else if(target.hasAttribute('data-rename-project'))renameProject(target.dataset.renameProject);
  else if(target.hasAttribute('data-duplicate-project'))duplicateProject(target.dataset.duplicateProject);
  else if(target.hasAttribute('data-delete-project'))deleteProject(target.dataset.deleteProject);
 },true);
