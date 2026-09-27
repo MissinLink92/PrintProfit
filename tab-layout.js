@@ -1,10 +1,13 @@
 (()=>{
   'use strict';
   function titleOf(section){const h=section?.querySelector('h2');return h?h.textContent.trim():'';}
+  function cleanTitle(value){
+    return String(value||'').toLowerCase().trim().replace(/^\d+\.\s*/,'');
+  }
   function findBox(name){
-    const wanted=String(name||'').toLowerCase().trim();
+    const wanted=cleanTitle(name);
     return [...document.querySelectorAll('section.panel')].find(section=>{
-      const title=titleOf(section).toLowerCase().trim();
+      const title=cleanTitle(titleOf(section));
       return title===wanted||title.startsWith(wanted);
     })||null;
   }
