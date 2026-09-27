@@ -195,7 +195,7 @@ function render(){
 function commit(s,keys){
   if(!keys.length)return;
   const map=new Set(keys);
-  const apply=(id,v)=>{const el=$(id);if(el){el.value=String(v);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true));}};
+  const apply=(id,v)=>{const el=$(id);if(el){el.value=String(v);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}};
   if(map.has('materialUsage')&&s.used>0)apply('materialUsed',(s.used*.85).toFixed(2));
   if(map.has('printTime')&&s.hours>0){const h=s.hours*.9,whole=Math.floor(h),m=Math.round((h-whole)*60);apply('ppPrintTimeHours',whole);apply('ppPrintTimeMinutes',m);}
   if(map.has('materialCost')&&s.packPrice>0)apply('materialPackCost',(s.packPrice*.85).toFixed(2));
