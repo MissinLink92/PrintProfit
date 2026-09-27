@@ -897,6 +897,10 @@ function addStyles(){
     .pp-advisor-suggestion-apply:disabled{opacity:.5!important;cursor:not-allowed!important}
     .pp-advisor-suggestion-apply:hover:not(:disabled){filter:brightness(1.06)}
     .pp-advisor-footer-note{margin-top:10px;padding:9px;border-top:1px solid rgba(127,160,175,.12);color:#7f95a1;font-size:8px;line-height:1.45}
+    .pp-advisor-tips-box{margin-top:9px;padding:9px;border:1px solid rgba(70,170,220,.18);border-radius:8px;background:rgba(70,170,220,.035)}
+    .pp-advisor-tips-box ul{margin:5px 0 0 16px;padding:0;color:#b8c7cf;font-size:8px;line-height:1.5}
+    .pp-advisor-tips-box li{margin:2px 0}
+
     #ppAdvisorApplyToast{position:fixed;right:22px;bottom:84px;z-index:99999;max-width:min(460px,calc(100vw - 44px));padding:11px 13px;border:1px solid rgba(54,229,139,.55);border-radius:11px;background:linear-gradient(180deg,#0d241b,#091820);color:#ecfff5;box-shadow:0 16px 34px #0009;opacity:0;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease;font:800 10px/1.4 Inter,Segoe UI,system-ui,sans-serif}
     #ppAdvisorApplyToast.show{opacity:1;transform:translateY(0)}
     #ppAdvisorApplyToast.neutral{border-color:#ff780066;color:#fff2e5;background:linear-gradient(180deg,#271b10,#101820)}
@@ -1082,7 +1086,7 @@ let advisorInternalChange=false;
 function advisorConfigs(s){
   const candidates=[];
   const add=(cfg)=>{
-    if(cfg&&cfg.relevant&&cfg.score>0)candidates.push(cfg);
+    if(cfg&&cfg.relevant!==false&&cfg.score>0)candidates.push(cfg);
   };
   const cheapest=cheapestDelivery();
   const lowestFee=lowestSellingFee(s.sell);
@@ -1128,6 +1132,12 @@ function advisorConfigs(s){
       scenario:()=>({materialUsage:15,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
       why:()=> 'Material is '+money(s.materialCost)+' of the production cost and is currently the largest cost driver. A 15% usage reduction would save about '+money(s.materialCost*.15)+' per print before other effects.',
       changeText:()=> 'Try around 15% less material through infill, walls or supports where the model allows it.',
+      tips:[
+        'Lower infill by around 5 percentage points and check the result.',
+        'Try one fewer wall/perimeter if the part still has enough strength.',
+        'Reduce or re-orient supports where the model allows it.',
+        'Check the slicer preview so you can see what material is actually being saved.'
+      ],
       targetKey:'materialUsed'
     });
   }else if(s.materialCost>0&&s.materialPackCost>0){
@@ -1138,6 +1148,11 @@ function advisorConfigs(s){
       scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost*.85}),
       why:()=> 'Material costs '+money(s.materialCost)+' per print. A suitable spool or bottle that costs less would reduce a recurring production cost without changing the print itself.',
       changeText:()=> 'Test a material pack price about 15% lower.',
+      tips:[
+        'Compare the price per kg/ml rather than the pack price alone.',
+        'Look for bulk or multi-pack discounts from your usual supplier.',
+        'Keep the material type and required strength/temperature suitable for the model.'
+      ],
       targetKey:'materialPackCost'
     });
   }
@@ -1177,6 +1192,11 @@ function advisorConfigs(s){
         scenario:()=>({materialUsage:0,labourMinutes:Math.min(5,s.labourHours*60),deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
         why:()=> 'Labour is costing '+money(s.labour)+' per print. At your current rate, five minutes less hands-on time would save about '+money(s.labourRate*(5/60))+'.',
         changeText:()=> 'Look for roughly five minutes of setup, cleanup or other hands-on work that can be removed.',
+        tips:[
+          'Reduce setup and removal time where possible.',
+          'Group similar jobs together so the printer is disturbed less often.',
+          'Use repeatable support-removal and finishing steps.'
+        ],
         targetKey:'labourHours'
       });
     }
@@ -1207,6 +1227,11 @@ function advisorConfigs(s){
       relevant:true,currentText:()=>money(s.elec)+' per print',
       why:()=> 'This print is using '+money(s.elec)+' of electricity. That is '+((s.elec/costTotal)*100).toFixed(0)+'% of the current production cost.',
       changeText:()=> 'Review print time and machine power settings. A 20% electricity reduction would save roughly '+money(saving)+' per print.',
+      tips:[
+        'Try a slightly larger layer height where surface finish allows it.',
+        'Reduce infill or unnecessary supports to shorten print time.',
+        'Check whether a different orientation can reduce supports and print duration.'
+      ],
       metricLabel:'Example saving',metricText:()=>'+ '+money(saving)+' per print',
       reviewTarget:'printHours'
     });
@@ -1303,6 +1328,7 @@ function suggestionRow(cfg,s,batchView){
     row.innerHTML=
       '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div></div>'+
       '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED THIS</span><p>'+cfg.why(s)+'</p></div>'+
+      (cfg.tips&&cfg.tips.length?'<div class="pp-advisor-tips-box"><span class="pp-advisor-section-label">THINGS TO TRY IN YOUR SLICER</span><ul>'+cfg.tips.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>':'')+
       '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">TRY THIS</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>Current</small><b>'+cfg.currentText()+'</b></div><div class="pp-advisor-arrow">→</div><div><small>Suggested</small><b>'+cfg.suggestedText(cfg.suggested)+'</b></div></div></div>'+
       '<div class="pp-advisor-impact-row"><div><span>PROJECTED PROFIT</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>ESTIMATED CHANGE</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
       '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'" '+(cfg.canApply?'':'disabled')+'>'+buttonLabel+'</button>';
