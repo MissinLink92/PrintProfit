@@ -860,6 +860,49 @@ function addStyles(){
       min-width:0!important;
       box-sizing:border-box!important;
     }
+    /* Clearer and reversible Advisor UI */
+    .pp-advisor-how{display:flex;flex-direction:column;gap:4px;margin:10px 0 12px;padding:10px 12px;border:1px solid #35515f;border-radius:10px;background:linear-gradient(180deg,#0b1d27,#091720);color:#cdd9de;font-size:9px;line-height:1.45}
+    .pp-advisor-how strong{font-size:10px;color:#fff}
+    .pp-advisor-section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:8px}
+    .pp-advisor-section-heading h4{margin:2px 0 0;font-size:15px}
+    .pp-advisor-section-label{display:block;font-size:8px;font-weight:900;letter-spacing:.18em;color:#ff9a42}
+    .pp-advisor-suggestions-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%!important}
+    .pp-advisor-suggestion{display:flex!important;flex-direction:column!important;height:100%!important;margin:0!important;padding:12px!important;border:1px solid #294957!important;border-radius:12px!important;background:linear-gradient(180deg,#0b1e29,#08161f)!important;box-sizing:border-box!important}
+    .pp-advisor-suggestion-head{display:flex!important;align-items:center!important;gap:8px!important;min-height:30px!important}
+    .pp-advisor-suggestion-title{flex:1!important;min-width:0!important}
+    .pp-advisor-suggestion-title strong{font-size:11px!important}
+    .pp-advisor-suggestion-title small{display:block!important;margin-top:3px!important;color:#8ea4af!important;font-size:7px!important;text-transform:uppercase!important;letter-spacing:.08em!important}
+    .pp-advisor-why-box{margin-top:10px;padding:9px;border:1px solid rgba(255,120,0,.18);border-left:3px solid #ff7800;border-radius:8px;background:rgba(255,120,0,.035)}
+    .pp-advisor-why-box p{margin:4px 0 0;color:#b8c7cf;font-size:8.5px;line-height:1.45}
+    .pp-advisor-applied-badge{display:inline-flex;align-items:center;padding:4px 6px;border-radius:99px;border:1px solid rgba(54,229,139,.45);background:rgba(54,229,139,.08);color:#4be79a;font-size:7px;font-weight:900}
+    .pp-advisor-applied-note{margin-top:10px;padding:9px;border:1px solid rgba(54,229,139,.34);border-radius:8px;background:rgba(54,229,139,.055)}
+    .pp-advisor-applied-note b{display:block;color:#55eaa0;font-size:9px}
+    .pp-advisor-applied-note span{display:block;margin-top:3px;color:#9eb2bc;font-size:8px;line-height:1.4}
+    .pp-advisor-change-box{margin-top:9px;padding:9px;border:1px solid #294957;border-radius:8px;background:#091821}
+    .pp-advisor-change-box>strong{display:block;margin-top:4px;color:#e7eef2;font-size:8.5px;line-height:1.35}
+    .pp-advisor-value-row{display:grid;grid-template-columns:1fr 18px 1fr;gap:6px;align-items:center;margin-top:8px}
+    .pp-advisor-value-row>div{min-width:0;padding:6px;border:1px solid #294957;border-radius:6px;background:#08151d}
+    .pp-advisor-value-row small{display:block;color:#7f95a1;font-size:7px}
+    .pp-advisor-value-row b{display:block;margin-top:3px;color:#fff;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .pp-advisor-arrow{text-align:center!important;color:#ff9a42!important;font-size:13px!important;padding:0!important;border:0!important;background:none!important}
+    .pp-advisor-impact-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
+    .pp-advisor-impact-row>div{padding:7px 8px;border:1px solid #294957;border-radius:7px;background:#091821}
+    .pp-advisor-impact-row span{display:block;color:#7f95a1;font-size:7px;font-weight:900;letter-spacing:.06em}
+    .pp-advisor-impact-row strong{display:block;margin-top:3px;font-size:14px}
+    .pp-advisor-impact{text-align:right}
+    .pp-advisor-impact.up strong{color:#36e58b}
+    .pp-advisor-impact.down strong{color:#ff6b6b}
+    .pp-advisor-suggestion-apply{margin-top:auto!important;width:100%!important;padding:8px 10px!important;border:1px solid #ff7800!important;border-radius:8px!important;background:linear-gradient(135deg,#ff9a3d,#ff7800)!important;color:#fff!important;font:900 9px Inter,Segoe UI,system-ui,sans-serif!important;cursor:pointer!important}
+    .pp-advisor-suggestion-apply.undo{border-color:#5a7380!important;background:#12232c!important;color:#e0ebef!important}
+    .pp-advisor-suggestion-apply:disabled{opacity:.5!important;cursor:not-allowed!important}
+    .pp-advisor-suggestion-apply:hover:not(:disabled){filter:brightness(1.06)}
+    .pp-advisor-footer-note{margin-top:10px;padding:9px;border-top:1px solid rgba(127,160,175,.12);color:#7f95a1;font-size:8px;line-height:1.45}
+    #ppAdvisorApplyToast{position:fixed;right:22px;bottom:84px;z-index:99999;max-width:min(460px,calc(100vw - 44px));padding:11px 13px;border:1px solid rgba(54,229,139,.55);border-radius:11px;background:linear-gradient(180deg,#0d241b,#091820);color:#ecfff5;box-shadow:0 16px 34px #0009;opacity:0;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease;font:800 10px/1.4 Inter,Segoe UI,system-ui,sans-serif}
+    #ppAdvisorApplyToast.show{opacity:1;transform:translateY(0)}
+    #ppAdvisorApplyToast.neutral{border-color:#ff780066;color:#fff2e5;background:linear-gradient(180deg,#271b10,#101820)}
+    @media(max-width:1050px){.pp-advisor-suggestions-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+    @media(max-width:650px){.pp-advisor-suggestions-grid{grid-template-columns:1fr!important}.pp-advisor-value-row{grid-template-columns:1fr}.pp-advisor-arrow{display:none!important}.pp-advisor-impact-row{grid-template-columns:1fr}}
+
 
   `;
   document.head.appendChild(s);
@@ -1023,99 +1066,69 @@ const ADVISOR_KEYS=[
   'materialUsage','labourMinutes','deliveryCost','sellingPrice','materialCost'
 ];
 
-function suggestionRow(cfg,s,sc,batchView){
+
+let advisorAppliedSnapshots={};
+let advisorInternalChange=false;
+
+function advisorConfigs(s){
+  const cheapest=cheapestDelivery();
+  const suggestedSell=s.sell>0
+    ?Math.max(s.sell,Math.min(s.target30&&s.target30>s.sell?s.target30:s.sell*1.25,s.sell*1.25))
+    :Math.max(0,s.target30||0);
+
+  return [
+    {key:'materialUsage',icon:'⬡',title:'Reduce material usage',impactLabel:'High impact',
+      canApply:s.materialUsed>0&&s.materialCost>0,suggested:s.materialUsed*.85,
+      suggestedText:v=>v.toFixed(2)+' g',currentText:()=>s.materialUsed>0?s.materialUsed.toFixed(2)+' g':'Add material usage',
+      scenario:()=>({materialUsage:15,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
+      why:s=>s.materialCost>0?'Material currently costs '+money(s.materialCost)+' per print. A 15% usage reduction would save about '+money(s.materialCost*.15)+' before other costs.':'PrintProfit needs material usage and material cost before it can estimate this change.',
+      changeText:()=> 'Reduce the material used per print by about 15%.',targetKey:'materialUsed'},
+    {key:'labourMinutes',icon:'◷',title:'Reduce labour time',impactLabel:'Medium impact',
+      canApply:s.labourHours>0,suggested:s.labourHours>0?Math.max(0,s.labourHours-5/60):0,
+      suggestedText:v=>v.toFixed(2)+' h',currentText:()=>s.labourHours>0?s.labourHours.toFixed(2)+' h':'Add labour time',
+      scenario:()=>({materialUsage:0,labourMinutes:s.labourHours>0?Math.min(5,s.labourHours*60):0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
+      why:s=>s.labour>0?'You are spending '+money(s.labour)+' of labour per print. Saving 5 minutes would save about '+money(s.labourRate*(5/60))+' at your current rate.':'PrintProfit needs labour time before it can estimate this change.',
+      changeText:()=> 'Remove around 5 minutes of hands-on time from each print.',targetKey:'labourHours'},
+    {key:'deliveryCost',icon:'▱',title:'Lower delivery cost',impactLabel:'Medium impact',
+      canApply:!!(cheapest&&s.delivery>0&&cheapest.price<s.delivery),suggested:cheapest&&s.delivery>0&&cheapest.price<s.delivery?cheapest.price:s.delivery,
+      suggestedText:v=>money(v),currentText:()=>s.delivery>0?money(s.delivery):'Add delivery cost',
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
+      why:s=>cheapest&&s.delivery>0&&cheapest.price<s.delivery?'Your current delivery is '+money(s.delivery)+'. The lowest tracked reference is '+money(cheapest.price)+' ('+cheapest.label+').':'There is no lower tracked reference than the current delivery cost, so no delivery change is recommended.',
+      changeText:()=>cheapest&&s.delivery>0&&cheapest.price<s.delivery?'Test the lower tracked reference rate instead of your current delivery cost.':'No delivery reduction is currently recommended.',targetKey:'delivery'},
+    {key:'sellingPrice',icon:'◇',title:'Adjust selling price',impactLabel:'High impact',
+      canApply:s.sell>0,suggested:suggestedSell,
+      suggestedText:v=>money(v),currentText:()=>s.sell>0?money(s.sell):'Add selling price',
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:suggestedSell,materialCost:s.materialCost}),
+      why:s=>s.sell>0&&s.breakEven!==null&&s.sell<s.breakEven?'Your selling price is '+money(s.sell)+' while break-even is '+money(s.breakEven)+'. The current price does not yet cover the calculated costs and fees.':'Price is included because it can change revenue without changing the print. The suggestion keeps the current fee assumptions.',
+      changeText:()=> 'Increase the selling price to give the current costs more room.',targetKey:'sell'},
+    {key:'materialCost',icon:'◈',title:'Use cheaper material',impactLabel:'Lower impact',
+      canApply:s.materialCost>0&&s.materialPackCost>0,suggested:s.materialPackCost>0?s.materialPackCost*.85:0,
+      suggestedText:v=>money(v)+' / pack',currentText:()=>s.materialPackCost>0?money(s.materialPackCost)+' / pack':'Add material pack cost',
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost*.85}),
+      why:s=>s.materialCost>0?'Your material costs '+money(s.materialCost)+' per print. A cheaper suitable spool or bottle could reduce that recurring production cost.':'Enter a material pack cost first so PrintProfit can estimate this saving.',
+      changeText:()=> 'Test a material pack cost about 15% lower with the same print settings.',targetKey:'materialPackCost'}
+  ];
+}
+
+function currentProfitFor(s,batchView){return batchView?s.batchProfit:s.profit;}
+
+function suggestionRow(cfg,s,batchView){
   const row=document.createElement('article');
   row.className='pp-advisor-suggestion';
   row.dataset.advisorKey=cfg.key;
-  const projected=calculateAdvisorScenario(s,rowScenarioFor(s,sc,cfg.key),batchView).profit;
-  const change=projected-(batchView?s.batchProfit:s.profit);
-  const badgeClass=cfg.impact==='med'?'pp-advisor-pill med':'pp-advisor-pill';
-  const canApply=(()=>{
-    if(cfg.key==='materialUsage')return s.used>0;
-    if(cfg.key==='printTime')return s.hours>0;
-    if(cfg.key==='materialCost')return s.materialCost>0;
-    if(cfg.key==='deliveryCost')return s.delivery>0;
-    if(cfg.key==='labourMinutes')return s.labourHours>0;
-    if(cfg.key==='sellingPrice')return s.sell>0;
-    return false;
-  })();
+  const projected=calculateAdvisorScenario(s,cfg.scenario(),batchView).profit;
+  const change=projected-currentProfitFor(s,batchView);
+  const applied=advisorAppliedSnapshots[cfg.key];
+
   row.innerHTML=
-    '<div class="pp-advisor-suggestion-head">'+
-      '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
-      '<div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.description+'</small><span class="pp-advisor-why"><b>Why:</b> '+(cfg.why?cfg.why(s):'This change targets a cost or price that is affecting the current result.')+'</span></div>'+
-      '<span class="'+badgeClass+'">'+cfg.impactLabel+'</span>'+
-    '</div>'+
-    '<div class="pp-advisor-control">'+
-      '<div class="mini"><span>Current</span><strong>'+cfg.currentText(s)+'</strong></div>'+
-      '<div class="mini"><span>Suggested</span><strong>'+cfg.suggestedText(cfg.get(),s)+'</strong></div>'+
-      '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div>'+
-      '<div class="pp-advisor-change '+(change>=0?'up':'down')+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
-      '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'" '+(canApply?'':'disabled')+'>'+
-        (canApply?'Apply suggestion →':'Add a value first')+
-      '</button>'+
-    '</div>';
+    '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div>'+(applied?'<span class="pp-advisor-applied-badge">✓ Applied</span>':'')+'</div>'+
+    (applied
+      ?'<div class="pp-advisor-applied-note"><b>Applied successfully</b><span>This change is currently being used by the calculator. Use Undo to restore the value from before you applied it.</span></div>'
+      :'<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED THIS</span><p>'+cfg.why(s)+'</p></div>')+
+    '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">WHAT WOULD CHANGE</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>Current</small><b>'+cfg.currentText()+'</b></div><div class="pp-advisor-arrow">→</div><div><small>Suggested</small><b>'+cfg.suggestedText(cfg.suggested)+'</b></div></div></div>'+
+    '<div class="pp-advisor-impact-row"><div><span>PROJECTED PROFIT</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>ESTIMATED CHANGE</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
+    '<button type="button" class="pp-advisor-suggestion-apply '+(applied?'undo':'')+'" data-advisor-apply="'+cfg.key+'" '+((cfg.canApply||applied)?'':'disabled')+'>'+ (applied?'Undo suggestion ↩':(cfg.canApply?'Apply suggestion →':'Add a value first')) +'</button>';
   return row;
-}
-
-function refreshAdvisorScenario(s,batchView){
-  const sc=advisorScenarioValues(s);
-  const live=calculateAdvisorScenario(s,sc,batchView);
-  const shownProfit=batchView?s.batchProfit:s.profit;
-  const set=(id,text)=>{const el=$(id);if(el)el.textContent=text;};
-  const setProfit=(id,value)=>{
-    const el=$(id);if(!el)return;
-    el.className=advisorProfitState(value);
-    el.textContent=money(value);
-  };
-  setProfit('ppAdvisorLiveProfit',live.profit);
-  set('ppAdvisorLiveText',(live.delta>=0?money(live.delta)+' improvement':'Change of '+money(Math.abs(live.delta))+' from current')+' from your current setup.');
-  const status=$('ppAdvisorLiveStatus');
-  if(status)status.textContent=live.profit>0?'✓ Profitable!':live.profit<0?'⚠ Still losing money':'• Break-even';
-  const detail=$('ppAdvisorLiveDetail');
-  if(detail)detail.textContent=live.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.';
-  const liveBox=document.querySelector('#ppProfitAdvisor .pp-advisor-live-box');
-  if(liveBox)liveBox.classList.toggle('loss',live.profit<0);
-
-  const summary={
-    materialUsage:'No change',
-    labourMinutes:sc.labourMinutes.toFixed(0)+' min',
-    deliveryCost:money(live.delivery),
-    sellingPrice:money(live.sell),
-    materialCost:money(live.material)
-  };
-  document.querySelectorAll('#ppProfitAdvisor .pp-advisor-summary-row').forEach(row=>{
-    const key=row.dataset.summaryKey;
-    const valueEl=row.querySelector('strong');
-    if(valueEl&&summary[key]!==undefined)valueEl.textContent=summary[key];
-  });
-  const usageSummary=document.querySelector('#ppProfitAdvisor .pp-advisor-summary-row[data-summary-key="materialUsage"] strong');
-  if(usageSummary)usageSummary.textContent=sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change';
-
-  const configs={
-    materialUsage:{key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange'},
-    labourMinutes:{key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange'},
-    deliveryCost:{key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange'},
-    sellingPrice:{key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange'},
-    materialCost:{key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange'}
-  };
-  Object.entries(configs).forEach(([key,ids])=>{
-    const input=$(ids.id); if(!input)return;
-    const v=Number(input.value)||0;
-    const projected=calculateAdvisorScenario(s,{...neutralAdvisorScenario(s),[key]:v},batchView).profit;
-    const change=projected-shownProfit;
-    set(ids.suggestedId,
-      key==='materialUsage'?v.toFixed(0)+'%':
-      key==='labourMinutes'?v.toFixed(0)+' min':
-      key==='deliveryCost'||key==='sellingPrice'||key==='materialCost'?money(v):String(v)
-    );
-    setProfit(ids.profitId,projected);
-    const ch=$(ids.changeId);
-    if(ch){
-      ch.className='pp-advisor-change '+(change>=0?'up':'down');
-      ch.textContent=(change>=0?'↑ ':'↓ ')+money(Math.abs(change));
-    }
-  });
-  return live;
 }
 
 function ensureResultColumns(result,box){
@@ -1146,122 +1159,53 @@ function render(){
     box.id='ppProfitAdvisor';
     box.className='pp-profit-advisor';
   }
-
   ensureResultColumns(result,box);
 
   const s=snapshot();
   const batchView=$('batchResultView')&&!$('batchResultView').hidden;
-  const shownProfit=batchView?s.batchProfit:s.profit;
+  const shownProfit=currentProfitFor(s,batchView);
   const hasData=(s.base>0||s.sell>0||s.deliveryCharge>0);
-  const sc=advisorScenarioValues(s);
-  const scenario={profit:shownProfit,delta:0,delivery:s.delivery,sell:s.sell,material:s.materialCost};
-
-  const lead=shownProfit<0
-    ? t('negativeLead',{amount:money(Math.abs(shownProfit))})
-    : shownProfit>0
-      ? t('positiveLead')
-      : t('noData');
-
   box.innerHTML='';
+
+  const title=shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'At break-even';
+  const text=shownProfit<0
+    ?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'. The suggestions below target the costs or price affecting that result.'
+    :shownProfit>0
+      ?'You\'re making '+money(shownProfit)+' per '+(batchView?'batch item':'print')+'. The suggestions below show ways to improve it further.'
+      :'Your current calculation is at break-even. The suggestions below show areas that can move it into profit.';
+
   const header=document.createElement('div');
   header.className='pp-advisor-header';
-  const alertClass=shownProfit>0?'good':'';
-  const alertTitle=shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'Add your print costs';
-  const alertText=shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'.':'Use the suggestions below to see practical ways to improve the result.';
-  header.innerHTML=
-    '<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+lead+'</p></div></div>'+
-    '<div class="pp-advisor-alert '+alertClass+'"><strong>'+alertTitle+'</strong><span>'+alertText+'</span></div>';
+  header.innerHTML='<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+text+'</p></div></div><div class="pp-advisor-alert '+(shownProfit>0?'good':'')+'"><strong>'+title+'</strong><span>Current profit: '+money(shownProfit)+' per '+(batchView?'batch item':'print')+'.</span></div>';
   box.appendChild(header);
 
   if(!hasData)return true;
 
   const be=batchView?s.batchBreakEven:s.breakEven;
   const t30=batchView?s.batchTarget30:s.target30;
-  const statGrid=document.createElement('div');
-  statGrid.className='pp-advisor-stat-grid';
-  statGrid.innerHTML=
-    '<div class="pp-advisor-stat"><span>Current profit</span><strong class="'+advisorProfitState(shownProfit)+'">'+money(shownProfit)+'</strong><span style="margin-top:3px">Per '+(batchView?'batch':'print')+'</span></div>'+
-    '<div class="pp-advisor-stat"><span>'+t('breakEven')+'</span><strong class="neutral">'+(be===null?'—':money(be))+'</strong><span style="margin-top:3px">Minimum price to not lose money</span></div>'+
-    '<div class="pp-advisor-stat"><span>'+t('target')+'</span><strong class="neutral">'+(t30===null?'—':money(t30))+'</strong><span style="margin-top:3px">Using current fee assumptions</span></div>'+
-    '<div class="pp-advisor-stat"><span>Sales price</span><strong class="neutral">'+money(s.sell)+'</strong><span style="margin-top:3px">Change below to test it</span></div>';
-  box.appendChild(statGrid);
+  const stats=document.createElement('div');
+  stats.className='pp-advisor-stat-grid';
+  stats.innerHTML='<div class="pp-advisor-stat"><span>Current profit</span><strong class="'+advisorProfitState(shownProfit)+'">'+money(shownProfit)+'</strong><span style="margin-top:3px">Actual calculator result</span></div><div class="pp-advisor-stat"><span>'+t('breakEven')+'</span><strong class="neutral">'+(be===null?'—':money(be))+'</strong><span style="margin-top:3px">Minimum price to cover costs</span></div><div class="pp-advisor-stat"><span>'+t('target')+'</span><strong class="neutral">'+(t30===null?'—':money(t30))+'</strong><span style="margin-top:3px">Using current fee assumptions</span></div><div class="pp-advisor-stat"><span>Sales price</span><strong class="neutral">'+money(s.sell)+'</strong><span style="margin-top:3px">Current calculator price</span></div>';
+  box.appendChild(stats);
 
-  const main=document.createElement('div');
-  main.className='pp-advisor-main';
+  const how=document.createElement('div');
+  how.className='pp-advisor-how';
+  how.innerHTML='<strong>How the suggestions work</strong><span>Read why it was suggested → see what would change → apply it → check the new profit. Every applied suggestion has an Undo button.</span>';
+  box.appendChild(how);
 
-  const left=document.createElement('div');
-  left.className='pp-advisor-panel';
-  const leftHead=document.createElement('div');
-  leftHead.className='pp-advisor-panel-head';
-  leftHead.innerHTML='<h4>Suggested Improvements</h4><button type="button" class="pp-advisor-reset" id="ppAdvisorReset">↻ Reset all suggestions</button>';
-  left.appendChild(leftHead);
+  const section=document.createElement('div');
+  section.className='pp-advisor-suggestions-section';
+  section.innerHTML='<div class="pp-advisor-section-heading"><div><span class="pp-advisor-section-label">SUGGESTED IMPROVEMENTS</span><h4>What could improve this result?</h4></div></div>';
+  const grid=document.createElement('div');
+  grid.className='pp-advisor-suggestions-grid';
+  advisorConfigs(s).forEach(cfg=>grid.appendChild(suggestionRow(cfg,s,batchView)));
+  section.appendChild(grid);
+  box.appendChild(section);
 
-  const maxLabour=Math.max(0,num('labourHours')*60);
-  const maxSell=Math.max(s.sell*2,s.target30||0,1);
-  const cheapest=cheapestDelivery();
-  const deliverySuggested=cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery;
-  const configs=[
-    {key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange',icon:'⬡',title:'Reduce material usage',description:'Lowering infill, wall count or supports can reduce material usage. Test the effect here first.',why:s=>s.materialCost>0?'Material is '+money(s.materialCost)+' of this print\'s production cost, so reducing usage targets a real variable cost.':'There is no material cost entered yet.',impact:'high',impactLabel:'High impact',min:()=>0,max:()=>50,step:1,get:()=>sc.materialUsage,currentText:()=>s.materialCost>0?money(s.materialCost):'—',suggestedText:v=>v.toFixed(0)+'%',materialUsage:true},
-    {key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange',icon:'◷',title:'Reduce labour time',description:'Test removing setup, cleanup or other hands-on time from each print.',why:s=>s.labour>0?'Labour is costing '+money(s.labour)+' per print, so saving a few minutes directly reduces that cost.':'No labour cost is currently entered.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,maxLabour),step:1,get:()=>sc.labourMinutes,currentText:()=>maxLabour.toFixed(0)+' min',suggestedText:v=>v.toFixed(0)+' min'},
-    {key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange',icon:'▱',title:'Lower delivery cost',description:deliverySuggested<s.delivery?'Compare the lower reference rate below with what you currently pay.':'Your current delivery is already at or below the lowest tracked reference.',why:s=>{const b=cheapestDelivery();return b&&b.price<s.delivery?'Your delivery is '+money(s.delivery)+' and a tracked reference option is '+money(b.price)+'.':'Delivery is one of your current per-print costs, so cheaper fulfilment is tested here.'},impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,s.delivery),step:.01,get:()=>sc.deliveryCost,currentText:()=>money(s.delivery),suggestedText:v=>money(v)},
-    {key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange',icon:'◇',title:'Adjust selling price',description:'A small price change can make a big difference once fees are included.',why:s=>s.sell>0&&s.breakEven!==null&&s.sell<s.breakEven?'Your selling price of '+money(s.sell)+' is below the break-even price of '+money(s.breakEven)+', so price is a direct route to closing the loss.':'Price is tested because it changes revenue while the current fee assumptions are kept.',impact:'high',impactLabel:'High impact',min:()=>Math.max(0,s.sell),max:()=>maxSell,step:.01,get:()=>sc.sellingPrice,currentText:()=>money(s.sell),suggestedText:v=>money(v)},
-    {key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',why:s=>s.materialCost>0?'Material costs '+money(s.materialCost)+' per print, so a cheaper suitable material can reduce production cost without changing the print settings.':'This recommendation becomes useful once a material cost is entered.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
-  ];
-
-  const suggestionsGrid=document.createElement('div');
-  suggestionsGrid.className='pp-advisor-suggestions-grid';
-  configs.forEach(cfg=>{
-    const row=suggestionRow(cfg,s,sc,batchView);
-    suggestionsGrid.appendChild(row);
-  });
-  left.appendChild(suggestionsGrid);
-
-  const right=document.createElement('div');
-  right.className='pp-advisor-panel pp-advisor-live';
-  right.innerHTML=
-    '<div class="pp-advisor-live-top"><span class="pp-advisor-live-icon">▥</span><h4>Live Result</h4></div>'+
-    '<div class="pp-advisor-live-profit"><span>Estimated '+(batchView?'batch':'profit')+'</span><strong class="'+advisorProfitState(scenario.profit)+'" id="ppAdvisorLiveProfit">'+money(scenario.profit)+'</strong><p id="ppAdvisorLiveText">'+(scenario.delta>=0?money(scenario.delta)+' improvement':'Change of '+money(Math.abs(scenario.delta))+' from current')+' from your current setup.</p></div>'+
-    '<div class="pp-advisor-live-box '+(scenario.profit<0?'loss':'')+'"><strong id="ppAdvisorLiveStatus">'+(scenario.profit>0?'✓ Profitable!':scenario.profit<0?'⚠ Still losing money':'• Break-even')+'</strong><span id="ppAdvisorLiveDetail" style="display:block;margin-top:3px;color:#b8c8cf;font-size:8px">'+(scenario.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.')+'</span></div>'+
-    '<div class="pp-advisor-summary"><div class="pp-advisor-summary-row" data-summary-key="materialUsage"><span>Material usage</span><strong>'+(sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change')+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="labourMinutes"><span>Labour saved</span><strong>'+sc.labourMinutes.toFixed(0)+' min</strong></div><div class="pp-advisor-summary-row" data-summary-key="deliveryCost"><span>Delivery</span><strong>'+money(scenario.delivery)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="sellingPrice"><span>Selling price</span><strong>'+money(scenario.sell)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="materialCost"><span>Material cost</span><strong>'+money(scenario.material)+'</strong></div></div>'+
-    '<button type="button" class="pp-advisor-apply" id="ppAdvisorApply">✓ Apply these changes to calculator</button>'+
-    '<button type="button" class="pp-advisor-copy" id="ppAdvisorCopy">▣ Copy summary</button>'+
-    '<div class="pp-advisor-help">Still not profitable? <a href="./guide.html" target="_top">See the full 3D Printing Profit Guide ↗</a></div>';
-  main.appendChild(left);
-  main.appendChild(right);
-  box.appendChild(main);
-
-  const tip=document.createElement('div');
-  tip.className='pp-advisor-tip';
-  tip.innerHTML='<b>Tip:</b> These suggestions are estimates based on your current settings. Adjust any value and the result updates in real time. The best balance depends on the quality and strength your model needs.';
-  box.appendChild(tip);
-
-  const bindScenarioInput=(id,key)=>{
-    const el=$(id);
-    if(!el)return;
-    const refresh=()=>{
-      advisorScenario[key]=Number(el.value)||0;
-      refreshAdvisorScenario(snapshot(),batchView);
-    };
-    el.addEventListener('input',refresh);
-    el.addEventListener('change',refresh);
-  };
-  bindScenarioInput('ppAdvisorMaterialUsage','materialUsage');
-  bindScenarioInput('ppAdvisorLabour','labourMinutes');
-  bindScenarioInput('ppAdvisorDelivery','deliveryCost');
-  bindScenarioInput('ppAdvisorSell','sellingPrice');
-  bindScenarioInput('ppAdvisorMaterialCost','materialCost');
-
-  $('ppAdvisorReset')?.addEventListener('click',()=>{
-    advisorScenario=advisorDefaults(s,batchView);
-    ['ppAdvisorMaterialUsage','ppAdvisorLabour','ppAdvisorDelivery','ppAdvisorSell','ppAdvisorMaterialCost'].forEach(id=>{const el=$(id);if(el)el.value=advisorScenario[{ppAdvisorMaterialUsage:'materialUsage',ppAdvisorLabour:'labourMinutes',ppAdvisorDelivery:'deliveryCost',ppAdvisorSell:'sellingPrice',ppAdvisorMaterialCost:'materialCost'}[id]]??0;});
-    refreshAdvisorScenario(s,batchView);
-  });
-  $('ppAdvisorApply')?.addEventListener('click',()=>{
-    applyAdvisorScenario(s,advisorScenario);
-  });
-  $('ppAdvisorCopy')?.addEventListener('click',()=>{
-    copyAdvisorSummary(s,advisorScenario,calculateAdvisorScenario(s,advisorScenario,batchView));
-  });
+  const note=document.createElement('div');
+  note.className='pp-advisor-footer-note';
+  note.textContent='Suggestions are estimates based on your current figures. Applying a suggestion changes the calculator; Undo restores the value from before that suggestion was applied.';
+  box.appendChild(note);
   return true;
 }
 
@@ -1282,59 +1226,88 @@ function showAdvisorApplyToast(message,kind='good'){
   },3200);
 }
 
+function showAdvisorApplyToast(message,kind='good'){
+  let toast=document.getElementById('ppAdvisorApplyToast');
+  if(!toast){toast=document.createElement('div');toast.id='ppAdvisorApplyToast';document.body.appendChild(toast);}
+  toast.className='pp-advisor-apply-toast '+kind;
+  toast.textContent=message;
+  requestAnimationFrame(()=>toast.classList.add('show'));
+  clearTimeout(window.__ppAdvisorApplyToastTimer);
+  window.__ppAdvisorApplyToastTimer=setTimeout(()=>{toast.classList.remove('show');setTimeout(()=>toast.remove(),220);},3200);
+}
+
 function applySingleAdvisorSuggestion(key){
   const s=snapshot();
   if(!s)return;
-  const sc=advisorScenarioValues(s);
-  const apply=(id,v)=>{
-    const el=$(id);
-    if(!el)return false;
-    el.value=String(v);
-    el.dispatchEvent(new Event('input',{bubbles:true}));
-    el.dispatchEvent(new Event('change',{bubbles:true}));
-    return true;
-  };
-  const labels={
-    materialUsage:'Reduce material usage',
-    materialCost:'Use cheaper material',
-    deliveryCost:'Lower delivery cost',
-    labourMinutes:'Reduce labour time',
-    sellingPrice:'Adjust selling price'
-  };
-  let applied=false;
-  if(key==='materialUsage'&&s.materialUsed>0&&s.materialPack>0){
-    const factor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
-    applied=apply('materialUsed',(s.materialUsed*factor).toFixed(2));
-  }else if(key==='materialCost'&&s.materialPackCost>0){
-    const usageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
-    const targetCost=Math.max(0,Math.min(s.materialCost,Number(sc.materialCost)||0));
-    const targetPackCost=Math.max(0,Math.min(s.materialPackCost,s.materialPack>0?targetCost/(s.materialUsed/s.materialPack||1):s.materialPackCost));
-    applied=apply('materialPackCost',targetPackCost.toFixed(2));
-  }else if(key==='deliveryCost'&&s.delivery>0){
-    applied=apply('delivery',Math.max(0,Math.min(s.delivery,sc.deliveryCost)).toFixed(2));
-  }else if(key==='labourMinutes'&&s.labourHours>0){
-    applied=apply('labourHours',Math.max(0,s.labourHours-Math.min(s.labourHours,Math.max(0,sc.labourMinutes)/60)).toFixed(2));
-  }else if(key==='sellingPrice'&&s.sell>0){
-    applied=apply('sell',Math.max(0,sc.sellingPrice).toFixed(2));
-  }else if(key==='printTime'&&s.hours>0){
-    const h=s.hours*.9,whole=Math.floor(h),m=Math.round((h-whole)*60);
-    applied=!!($('ppPrintTimeHours')&&$('ppPrintTimeMinutes'))
-      ? (apply('ppPrintTimeHours',whole),apply('ppPrintTimeMinutes',m),true)
-      : apply('printHours',h.toFixed(2));
-  }
-  if(!applied)return;
+  const cfg=advisorConfigs(s).find(x=>x.key===key);
+  if(!cfg)return;
 
-  const before=s.profit;
+  const idsByKey={
+    materialUsage:['materialUsed'],
+    labourMinutes:['labourHours'],
+    deliveryCost:['delivery'],
+    sellingPrice:['sell'],
+    materialCost:['materialPackCost']
+  };
+  const ids=idsByKey[key]||[];
+
+  if(!advisorAppliedSnapshots[key]){
+    if(!cfg.canApply)return;
+    const before={};
+    ids.forEach(id=>{const el=$(id);if(el)before[id]=el.value;});
+    const setValue=(id,value)=>{
+      const el=$(id);if(!el)return;
+      el.value=String(value);
+      el.dispatchEvent(new Event('input',{bubbles:true}));
+      el.dispatchEvent(new Event('change',{bubbles:true}));
+    };
+
+    advisorInternalChange=true;
+    try{
+      if(key==='materialUsage')setValue('materialUsed',(s.materialUsed*.85).toFixed(2));
+      else if(key==='labourMinutes')setValue('labourHours',Math.max(0,s.labourHours-5/60).toFixed(2));
+      else if(key==='deliveryCost')setValue('delivery',cfg.suggested.toFixed(2));
+      else if(key==='sellingPrice')setValue('sell',cfg.suggested.toFixed(2));
+      else if(key==='materialCost'){
+        const targetPerPrint=s.materialCost*.85;
+        const ratio=s.materialCost>0?targetPerPrint/s.materialCost:1;
+        setValue('materialPackCost',(s.materialPackCost*ratio).toFixed(2));
+      }
+    }finally{advisorInternalChange=false;}
+
+    const after={};
+    ids.forEach(id=>{const el=$(id);if(el)after[id]=el.value;});
+    advisorAppliedSnapshots[key]={before,after};
+
+    setTimeout(()=>{
+      $('calc')?.click();
+      setTimeout(()=>{
+        const result=snapshot();
+        const delta=currentProfitFor(result,false)-currentProfitFor(s,false);
+        const outcome=result.profit>0?' — Now profitable!':result.profit===0?' — At break-even.':' — Still showing a loss.';
+        showAdvisorApplyToast('✓ '+cfg.title+' applied successfully. Profit: '+money(result.profit)+(Math.abs(delta)>0.004?' ('+(delta>=0?'↑ ':'↓ ')+money(Math.abs(delta))+')':'')+outcome,delta>=0?'good':'neutral');
+        render();
+      },120);
+    },40);
+    return;
+  }
+
+  const saved=advisorAppliedSnapshots[key];
+  advisorInternalChange=true;
+  try{
+    Object.entries(saved.before).forEach(([id,value])=>{
+      const el=$(id);if(!el)return;
+      el.value=value;
+      el.dispatchEvent(new Event('input',{bubbles:true}));
+      el.dispatchEvent(new Event('change',{bubbles:true}));
+    });
+  }finally{advisorInternalChange=false;}
+  delete advisorAppliedSnapshots[key];
+
   setTimeout(()=>{
     $('calc')?.click();
     setTimeout(()=>{
-      const afterState=snapshot();
-      const after=afterState.profit;
-      const delta=after-before;
-      const outcome=after>0?' — Now profitable!':after===0?' — At break-even.':' — Still showing a loss.';
-      showAdvisorApplyToast('✓ '+(labels[key]||'Suggestion')+' applied successfully. Profit: '+money(after)+
-        (Math.abs(delta)>0.004?' ('+(delta>0?'↑ ':'↓ ')+money(Math.abs(delta))+')':'')+outcome,
-        after>before?'good':'neutral');
+      showAdvisorApplyToast('↩ '+cfg.title+' undone. The previous calculator value has been restored.','neutral');
       render();
     },120);
   },40);
@@ -1365,11 +1338,21 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('input',e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
+  if(e.target&&e.target.matches('input,select,textarea')){
+    if(advisorInternalChange)return;
+    advisorAppliedSnapshots={};
+    advisorScenario=null;
+    setTimeout(()=>render(),20);
+  }
 });
 document.addEventListener('change',e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
-  if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
+  if(e.target&&e.target.matches('input,select,textarea')){
+    if(advisorInternalChange)return;
+    advisorAppliedSnapshots={};
+    advisorScenario=null;
+    setTimeout(()=>render(),20);
+  }
 });
 document.querySelectorAll('#resultTabs .tab').forEach(b=>b.addEventListener('click',()=>setTimeout(render,20)));
 window.addEventListener('storage',()=>setTimeout(render,20));
