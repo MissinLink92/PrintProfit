@@ -658,6 +658,39 @@ function addStyles(){
     body[data-pp-theme="light"] .pp-advisor-stat,body[data-pp-theme="light"] .pp-advisor-panel,body[data-pp-theme="light"] .pp-advisor-suggestion,body[data-pp-theme="light"] .pp-advisor-stat .mini,body[data-pp-theme="light"] .pp-advisor-live-profit,body[data-pp-theme="light"] .pp-advisor-help,body[data-pp-theme="light"] .pp-advisor-copy{background:#f6f9fa!important;border-color:#c5d2d8!important;}
     body[data-pp-theme="light"] .pp-advisor-heading p,body[data-pp-theme="light"] .pp-advisor-alert span,body[data-pp-theme="light"] .pp-advisor-stat span,body[data-pp-theme="light"] .pp-advisor-suggestion-title small,body[data-pp-theme="light"] .pp-advisor-control .mini span,body[data-pp-theme="light"] .pp-advisor-live-profit span,body[data-pp-theme="light"] .pp-advisor-live-profit p,body[data-pp-theme="light"] .pp-advisor-summary-row span:first-child,body[data-pp-theme="light"] .pp-advisor-help{color:#5d707b!important;}
   `;
+  s.textContent += `
+    .result#about.pp-advisor-results-split{
+      display:grid!important;
+      grid-template-columns:minmax(0,1fr) minmax(430px,1fr)!important;
+      gap:12px!important;
+      align-items:start!important;
+      width:100%!important;
+      position:static!important;
+      top:auto!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-results-left-column,
+    .result#about.pp-advisor-results-split>.pp-advisor-right-column{
+      min-width:0!important;width:100%!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-results-left-column{
+      grid-column:1!important;grid-row:1!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-advisor-right-column{
+      grid-column:2!important;grid-row:1!important;
+    }
+    .pp-results-left-column>.head{margin-bottom:8px!important}
+    .pp-results-left-column>.tabs{margin:10px 0!important}
+    .pp-results-left-column>.resultView{margin:0!important;width:100%!important}
+    .pp-advisor-right-column>#ppProfitAdvisor{margin:0!important;width:100%!important}
+    .pp-advisor-right-column .pp-profit-advisor{margin:0!important}
+    @media(max-width:1100px){
+      .result#about.pp-advisor-results-split{grid-template-columns:1fr!important}
+      .result#about.pp-advisor-results-split>.pp-results-left-column,
+      .result#about.pp-advisor-results-split>.pp-advisor-right-column{
+        grid-column:1!important;grid-row:auto!important
+      }
+    }
+  `;
   document.head.appendChild(s);
 }
 
@@ -914,6 +947,28 @@ function refreshAdvisorScenario(s,batchView){
   return live;
 }
 
+function ensureResultColumns(result,box){
+  let left=document.getElementById('ppResultsLeftColumn');
+  let right=document.getElementById('ppAdvisorRightColumn');
+  if(left&&right){
+    if(box.parentElement!==right)right.appendChild(box);
+    return {left,right};
+  }
+  left=document.createElement('div');
+  left.id='ppResultsLeftColumn';
+  left.className='pp-results-left-column';
+  right=document.createElement('div');
+  right.id='ppAdvisorRightColumn';
+  right.className='pp-advisor-right-column';
+  const direct=[...result.children];
+  const keepLeft=direct.filter(el=>el!==box && (el.classList.contains('head')||el.classList.contains('tabs')||el.classList.contains('resultView')));
+  keepLeft.forEach(el=>left.appendChild(el));
+  if(box.parentElement===result)right.appendChild(box);else right.appendChild(box);
+  result.appendChild(left);
+  result.appendChild(right);
+  return {left,right};
+}
+
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
@@ -928,6 +983,8 @@ function render(){
     box.className='pp-profit-advisor';
     result.appendChild(box);
   }
+
+  ensureResultColumns(result,box);
 
   const s=snapshot();
   const batchView=$('batchResultView')&&!$('batchResultView').hidden;
