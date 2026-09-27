@@ -190,7 +190,7 @@ function renderResultsBridge(){
 #ppAdvisorResultsBridge .pp-arb-stat.good strong{color:#36e58b}
 #ppAdvisorResultsBridge .pp-arb-stat.bad strong{color:#ff6b6b}
 #ppAdvisorResultsBridge .pp-arb-changes{margin-top:8px;border-top:1px solid #294957;padding-top:7px}
-#ppAdvisorResultsBridge .pp-arb-change{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:7px;padding:5px 0;border-bottom:1px solid #29495744;align-items:center;font-size:9px}
+#ppAdvisorResultsBridge .pp-arb-change{display:grid;grid-template-columns:minmax(0,1fr) auto 18px auto;gap:7px;padding:5px 0;border-bottom:1px solid #29495744;align-items:center;font-size:9px}
 #ppAdvisorResultsBridge .pp-arb-change:last-child{border-bottom:0}
 #ppAdvisorResultsBridge .pp-arb-change span:first-child{color:#9db0bb}
 #ppAdvisorResultsBridge .pp-arb-change .before{color:#aab9c0}
