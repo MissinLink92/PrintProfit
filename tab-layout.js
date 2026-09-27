@@ -46,8 +46,9 @@
     const panels={};for(const id of ['details','machine','costs','results']){const panel=document.createElement('div');panel.className='pp-tab-panel'+(id==='details'?' active':'');panel.dataset.panel=id;panels[id]=panel;}
     const card=(node,parent)=>{const wrap=document.createElement('div');wrap.className='pp-card';wrap.appendChild(node);parent.appendChild(wrap);};
     card(box1,panels.details);
-    const box1Title=box1.querySelector('h2'),box1Desc=box1.querySelector('.head p');if(box1Title)box1Title.textContent='1. Your Model';if(box1Desc)box1Desc.textContent='Upload your sliced file and see all available print information in one place.';
+    const box1Title=box1.querySelector('h2'),box1Desc=box1.querySelector('.head p');if(box1Title)box1Title.textContent='Your Model';if(box1Desc)box1Desc.textContent='Upload your sliced file and see all available print information in one place.';
     card(box2,panels.machine);
+    const box2Title=box2.querySelector('h2');if(box2Title)box2Title.textContent='Print Setup';
     card(box6,panels.costs);
     // Turn Stage 1 into the model hub: the upload remains the source, while this live panel surfaces the print data currently known.
     const modelHub=document.createElement('div');modelHub.className='pp-model-hub pp-card';
