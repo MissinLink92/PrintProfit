@@ -448,6 +448,11 @@ function snapshot(){
   const target30Den=1-feeRate-.30;
   const target30=target30Den>0?Math.max(0,base+num('fixedFee')-deliveryCharge)/target30Den:null;
 
+  const batchViewForSnapshot=!!document.getElementById('batchResultView')&&!document.getElementById('batchResultView').hidden;
+  const resultNode=document.getElementById(batchViewForSnapshot?'batchProfit':'singleProfit');
+  const rawResult=Number(resultNode?.dataset?.rawValue);
+  const syncedProfit=Number.isFinite(rawResult)?rawResult:profit;
+
   const listSales=sell*qty;
   const discountSaved=listSales*disc;
   const itemSales=listSales-discountSaved;
@@ -465,7 +470,7 @@ function snapshot(){
     ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchTarget30Den)/(qty*(1-disc))
     :null;
 
-  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,fees,profit,margin,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
+  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:sell?syncedProfit/sell:0,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
 }
 
 function profileName(selectId,key){
@@ -595,6 +600,13 @@ function addStyles(){
     .pp-advisor-suggestion-title{min-width:0;flex:1;}
     .pp-advisor-suggestion-title strong{display:block;font-size:10px;}
     .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
+    .pp-advisor-why{display:block;margin-top:5px;color:#b5c3cb;font-size:7.8px;line-height:1.35;padding-top:4px;border-top:1px solid rgba(127,160,175,.10);}
+    .pp-advisor-why b{color:#ff9a42;font-weight:900;}
+    #ppAdvisorApplyToast{position:fixed;right:22px;bottom:84px;z-index:99999;max-width:min(440px,calc(100vw - 44px));padding:11px 13px;border:1px solid rgba(54,229,139,.55);border-radius:11px;background:linear-gradient(180deg,#0d241b,#091820);color:#ecfff5;box-shadow:0 16px 34px #0009;opacity:0;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease;font:800 10px/1.4 Inter,Segoe UI,system-ui,sans-serif;}
+    #ppAdvisorApplyToast.show{opacity:1;transform:translateY(0);}
+    #ppAdvisorApplyToast.neutral{border-color:#ff780066;color:#fff2e5;background:linear-gradient(180deg,#271b10,#101820);}
+    @media(max-width:650px){#ppAdvisorApplyToast{left:12px;right:12px;bottom:70px;max-width:none;}}
+
     .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
     .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
     .pp-advisor-control{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(54px,.68fr);gap:5px;align-items:stretch;margin-top:7px;}
@@ -1030,7 +1042,7 @@ function suggestionRow(cfg,s,sc,batchView){
   row.innerHTML=
     '<div class="pp-advisor-suggestion-head">'+
       '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
-      '<div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.description+'</small></div>'+
+      '<div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.description+'</small><span class="pp-advisor-why"><b>Why:</b> '+(cfg.why?cfg.why(s):'This change targets a cost or price that is affecting the current result.')+'</span></div>'+
       '<span class="'+badgeClass+'">'+cfg.impactLabel+'</span>'+
     '</div>'+
     '<div class="pp-advisor-control">'+
@@ -1189,11 +1201,11 @@ function render(){
   const cheapest=cheapestDelivery();
   const deliverySuggested=cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery;
   const configs=[
-    {key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange',icon:'⬡',title:'Reduce material usage',description:'Lowering infill, wall count or supports can reduce material usage. Test the effect here first.',impact:'high',impactLabel:'High impact',min:()=>0,max:()=>50,step:1,get:()=>sc.materialUsage,currentText:()=>s.materialCost>0?money(s.materialCost):'—',suggestedText:v=>v.toFixed(0)+'%',materialUsage:true},
-    {key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange',icon:'◷',title:'Reduce labour time',description:'Test removing setup, cleanup or other hands-on time from each print.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,maxLabour),step:1,get:()=>sc.labourMinutes,currentText:()=>maxLabour.toFixed(0)+' min',suggestedText:v=>v.toFixed(0)+' min'},
-    {key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange',icon:'▱',title:'Lower delivery cost',description:deliverySuggested<s.delivery?'Compare the lower reference rate below with what you currently pay.':'Your current delivery is already at or below the lowest tracked reference.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,s.delivery),step:.01,get:()=>sc.deliveryCost,currentText:()=>money(s.delivery),suggestedText:v=>money(v)},
-    {key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange',icon:'◇',title:'Adjust selling price',description:'A small price change can make a big difference once fees are included.',impact:'high',impactLabel:'High impact',min:()=>Math.max(0,s.sell),max:()=>maxSell,step:.01,get:()=>sc.sellingPrice,currentText:()=>money(s.sell),suggestedText:v=>money(v)},
-    {key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
+    {key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange',icon:'⬡',title:'Reduce material usage',description:'Lowering infill, wall count or supports can reduce material usage. Test the effect here first.',why:s=>s.materialCost>0?'Material is '+money(s.materialCost)+' of this print\'s production cost, so reducing usage targets a real variable cost.':'There is no material cost entered yet.',impact:'high',impactLabel:'High impact',min:()=>0,max:()=>50,step:1,get:()=>sc.materialUsage,currentText:()=>s.materialCost>0?money(s.materialCost):'—',suggestedText:v=>v.toFixed(0)+'%',materialUsage:true},
+    {key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange',icon:'◷',title:'Reduce labour time',description:'Test removing setup, cleanup or other hands-on time from each print.',why:s=>s.labour>0?'Labour is costing '+money(s.labour)+' per print, so saving a few minutes directly reduces that cost.':'No labour cost is currently entered.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,maxLabour),step:1,get:()=>sc.labourMinutes,currentText:()=>maxLabour.toFixed(0)+' min',suggestedText:v=>v.toFixed(0)+' min'},
+    {key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange',icon:'▱',title:'Lower delivery cost',description:deliverySuggested<s.delivery?'Compare the lower reference rate below with what you currently pay.':'Your current delivery is already at or below the lowest tracked reference.',why:s=>{const b=cheapestDelivery();return b&&b.price<s.delivery?'Your delivery is '+money(s.delivery)+' and a tracked reference option is '+money(b.price)+'.':'Delivery is one of your current per-print costs, so cheaper fulfilment is tested here.'},impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,s.delivery),step:.01,get:()=>sc.deliveryCost,currentText:()=>money(s.delivery),suggestedText:v=>money(v)},
+    {key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange',icon:'◇',title:'Adjust selling price',description:'A small price change can make a big difference once fees are included.',why:s=>s.sell>0&&s.breakEven!==null&&s.sell<s.breakEven?'Your selling price of '+money(s.sell)+' is below the break-even price of '+money(s.breakEven)+', so price is a direct route to closing the loss.':'Price is tested because it changes revenue while the current fee assumptions are kept.',impact:'high',impactLabel:'High impact',min:()=>Math.max(0,s.sell),max:()=>maxSell,step:.01,get:()=>sc.sellingPrice,currentText:()=>money(s.sell),suggestedText:v=>money(v)},
+    {key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',why:s=>s.materialCost>0?'Material costs '+money(s.materialCost)+' per print, so a cheaper suitable material can reduce production cost without changing the print settings.':'This recommendation becomes useful once a material cost is entered.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
   ];
 
   const suggestionsGrid=document.createElement('div');
@@ -1253,26 +1265,79 @@ function render(){
   return true;
 }
 
+function showAdvisorApplyToast(message,kind='good'){
+  let toast=$('ppAdvisorApplyToast');
+  if(!toast){
+    toast=document.createElement('div');
+    toast.id='ppAdvisorApplyToast';
+    document.body.appendChild(toast);
+  }
+  toast.className='pp-advisor-apply-toast '+kind;
+  toast.textContent=message;
+  requestAnimationFrame(()=>toast.classList.add('show'));
+  clearTimeout(window.__ppAdvisorApplyToastTimer);
+  window.__ppAdvisorApplyToastTimer=setTimeout(()=>{
+    toast.classList.remove('show');
+    setTimeout(()=>toast.remove(),220);
+  },3200);
+}
+
 function applySingleAdvisorSuggestion(key){
   const s=snapshot();
   if(!s)return;
+  const sc=advisorScenarioValues(s);
   const apply=(id,v)=>{
     const el=$(id);
-    if(!el)return;
+    if(!el)return false;
     el.value=String(v);
     el.dispatchEvent(new Event('input',{bubbles:true}));
     el.dispatchEvent(new Event('change',{bubbles:true}));
+    return true;
   };
-  if(key==='materialUsage'&&s.used>0)apply('materialUsed',(s.used*.85).toFixed(2));
-  else if(key==='printTime'&&s.hours>0){
+  const labels={
+    materialUsage:'Reduce material usage',
+    materialCost:'Use cheaper material',
+    deliveryCost:'Lower delivery cost',
+    labourMinutes:'Reduce labour time',
+    sellingPrice:'Adjust selling price'
+  };
+  let applied=false;
+  if(key==='materialUsage'&&s.materialUsed>0&&s.materialPack>0){
+    const factor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    applied=apply('materialUsed',(s.materialUsed*factor).toFixed(2));
+  }else if(key==='materialCost'&&s.materialPackCost>0){
+    const usageFactor=1-Math.min(80,Math.max(0,sc.materialUsage))/100;
+    const targetCost=Math.max(0,Math.min(s.materialCost,Number(sc.materialCost)||0));
+    const targetPackCost=Math.max(0,Math.min(s.materialPackCost,s.materialPack>0?targetCost/(s.materialUsed/s.materialPack||1):s.materialPackCost));
+    applied=apply('materialPackCost',targetPackCost.toFixed(2));
+  }else if(key==='deliveryCost'&&s.delivery>0){
+    applied=apply('delivery',Math.max(0,Math.min(s.delivery,sc.deliveryCost)).toFixed(2));
+  }else if(key==='labourMinutes'&&s.labourHours>0){
+    applied=apply('labourHours',Math.max(0,s.labourHours-Math.min(s.labourHours,Math.max(0,sc.labourMinutes)/60)).toFixed(2));
+  }else if(key==='sellingPrice'&&s.sell>0){
+    applied=apply('sell',Math.max(0,sc.sellingPrice).toFixed(2));
+  }else if(key==='printTime'&&s.hours>0){
     const h=s.hours*.9,whole=Math.floor(h),m=Math.round((h-whole)*60);
-    if($('ppPrintTimeHours')&&$('ppPrintTimeMinutes')){apply('ppPrintTimeHours',whole);apply('ppPrintTimeMinutes',m);}
-    else apply('printHours',h.toFixed(2));
-  } else if(key==='materialCost'&&s.packPrice>0)apply('materialPackCost',(s.packPrice*.85).toFixed(2));
-  else if(key==='deliveryCost'&&s.delivery>0)apply('delivery',Math.max(0,s.delivery-.95).toFixed(2));
-  else if(key==='labourMinutes'&&s.labourHours>0)apply('labourHours',Math.max(0,s.labourHours-5/60).toFixed(2));
-  else if(key==='sellingPrice'&&s.sell>0)apply('sell',Math.max(s.sell*1.15,s.sell+2.5).toFixed(2));
-  setTimeout(()=>{$('calc')?.click();},30);
+    applied=!!($('ppPrintTimeHours')&&$('ppPrintTimeMinutes'))
+      ? (apply('ppPrintTimeHours',whole),apply('ppPrintTimeMinutes',m),true)
+      : apply('printHours',h.toFixed(2));
+  }
+  if(!applied)return;
+
+  const before=s.profit;
+  setTimeout(()=>{
+    $('calc')?.click();
+    setTimeout(()=>{
+      const afterState=snapshot();
+      const after=afterState.profit;
+      const delta=after-before;
+      const outcome=after>0?' — Now profitable!':after===0?' — At break-even.':' — Still showing a loss.';
+      showAdvisorApplyToast('✓ '+(labels[key]||'Suggestion')+' applied successfully. Profit: '+money(after)+
+        (Math.abs(delta)>0.004?' ('+(delta>0?'↑ ':'↓ ')+money(Math.abs(delta))+')':'')+outcome,
+        after>before?'good':'neutral');
+      render();
+    },120);
+  },40);
 }
 
 function boot(){
