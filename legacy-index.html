@@ -133,7 +133,7 @@
     el.style.setProperty('color',colour,'important');
     el.style.setProperty('transition','color .15s ease');
   }
-  function renderSingle(base,sell,fees,profit,margin,qty,disc){setText('singleCost',money(base));setText('singleSellOut',money(sell));setText('singleProfit',money(profit));setProfitClass('singleProfit',profit);setText('singleMargin','Margin: '+(margin*100).toFixed(1)+'%');const breakdown=$('singleBreakdown');if(breakdown){breakdown.innerHTML=[['Material',current.materialCost],['Electricity',current.elec],['Printer depreciation',current.depreciation],['Labour',current.labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>'<div class="line"><span>'+k+'</span><b>'+money(v)+'</b></div>').join('')+'<div class="line total"><span>One print cost</span><b>'+money(base)+'</b></div>';}setText('singleSummary','Quantity '+qty+' selected • batch discount '+(disc*100).toFixed(1)+'%');}
+  function renderSingle(base,sell,fees,profit,margin,qty,disc){setText('singleCost',money(base));setText('singleSellOut',money(sell));setText('singleProfit',money(profit));const singleProfitNode=$('singleProfit');if(singleProfitNode)singleProfitNode.dataset.rawValue=String(profit);setProfitClass('singleProfit',profit);setText('singleMargin','Margin: '+(margin*100).toFixed(1)+'%');const breakdown=$('singleBreakdown');if(breakdown){breakdown.innerHTML=[['Material',current.materialCost],['Electricity',current.elec],['Printer depreciation',current.depreciation],['Labour',current.labour],['Packaging + other',n('pack')+n('other')],['Delivery',n('delivery')],['Platform/payment fees',fees]].map(([k,v])=>'<div class="line"><span>'+k+'</span><b>'+money(v)+'</b></div>').join('')+'<div class="line total"><span>One print cost</span><b>'+money(base)+'</b></div>';}setText('singleSummary','Quantity '+qty+' selected • batch discount '+(disc*100).toFixed(1)+'%');}
   let current={materialCost:0,elec:0,depreciation:0,labour:0,base:0,fees:0};
   function renderBatch(base,sell,fees,qty,disc){
     const feeRate=(n('platform')+n('pay'))/100;
@@ -150,7 +150,7 @@
     const effectiveUnit=qty?itemSales/qty:0;
     setText('batchCost',money(batchCost));
     setText('batchSales',money(itemSales));
-    setText('batchProfit',money(batchProfit));
+    setText('batchProfit',money(batchProfit));const batchProfitNode=$('batchProfit');if(batchProfitNode)batchProfitNode.dataset.rawValue=String(batchProfit);
     setProfitClass('batchProfit',batchProfit);
     setText('batchDiscount',money(discountSaved));
     setText('batchUnit',money(effectiveUnit));
