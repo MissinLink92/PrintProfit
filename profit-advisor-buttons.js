@@ -127,7 +127,7 @@ function render(){
   result.style.gridTemplateColumns='minmax(0,1fr) minmax(400px,.98fr)';
   const batch=$('batchResultView')&&!$('batchResultView').hidden;
   const currentProfit=batch?s.batchProfit:s.profit;
-  const sig=JSON.stringify({qty:s.qty,used:s.used,hours:s.hours,packPrice:s.packPrice,labour:s.labourHours,delivery:s.delivery,sell:s.sell,material:s.materialCost,profit:currentProfit,batch});
+  const sig=JSON.stringify({qty:s.qty,used:s.used,hours:s.hours,packPrice:s.packPrice,labour:s.labourHours,delivery:s.delivery,sell:s.sell,material:s.materialCost,profit:currentProfit,batch,selected:[...selected].sort()});
   if(lastSignature===sig&&host.dataset.ui===UI_KEY)return true;
   lastSignature=sig;
 
@@ -172,18 +172,22 @@ function render(){
     <div class="pp-ba-note">Suggested changes are estimates. The calculator is only updated when you press <b>Apply selected changes to calculator</b>.</div>
   `;
 
-  host.addEventListener('click',event=>{
-    const btn=event.target?.closest?.('[data-ba-apply]');
-    if(btn){
-      event.preventDefault();
-      const key=btn.getAttribute('data-ba-apply');
-      if(selected.has(key))selected.delete(key);else selected.add(key);
-      render();
-      return;
-    }
-    if(event.target?.closest?.('#ppBaReset')){selected.clear();render();return;}
-    if(event.target?.closest?.('#ppBaCommit')){commit(s,[...selected]);return;}
-  },{once:true});
+  if(host.dataset.baBound!=='1'){
+    host.dataset.baBound='1';
+    host.addEventListener('click',event=>{
+      const btn=event.target?.closest?.('[data-ba-apply]');
+      if(btn){
+        event.preventDefault();
+        const key=btn.getAttribute('data-ba-apply');
+        if(selected.has(key))selected.delete(key);else selected.add(key);
+        lastSignature='';
+        render();
+        return;
+      }
+      if(event.target?.closest?.('#ppBaReset')){selected.clear();lastSignature='';render();return;}
+      if(event.target?.closest?.('#ppBaCommit')){commit(s,[...selected]);return;}
+    });
+  }
 
   return true;
 }
