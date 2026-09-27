@@ -558,106 +558,204 @@ function addStyles(){
   const s=document.createElement('style');
   s.id='ppProfitAdvisorStyles';
   s.textContent=`
-    /* Step 4 layout: keep the normal Results and Profit Advisor together. */
-    .result#about.pp-advisor-results-split{display:grid!important;grid-template-columns:minmax(300px,.92fr) minmax(420px,1.08fr)!important;gap:12px!important;align-items:start!important;}
-    .result#about.pp-advisor-results-split>.head,.result#about.pp-advisor-results-split>.tabs{grid-column:1 / -1!important;}
-    .result#about.pp-advisor-results-split>.resultView{grid-column:1!important;min-width:0!important;}
-    .result#about.pp-advisor-results-split>#ppProfitAdvisor{grid-column:2!important;grid-row:3 / span 2!important;margin-top:0!important;min-width:0!important;}
-    .result#about.pp-advisor-results-split>#ppProfitAdvisor .pp-advisor-main{grid-template-columns:1fr!important;}
-    .pp-profit-advisor{margin-top:14px;border:1px solid #315261;border-radius:16px;padding:14px;background:linear-gradient(180deg,#091a24,#07131b);box-shadow:0 14px 34px #0005;}
-    .pp-advisor-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;}
-    .pp-advisor-heading{display:flex;gap:10px;min-width:0;}
-    .pp-profit-icon{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(145deg,#ff9a3d,#ff7800);display:grid;place-items:center;color:#fff;font-weight:900;font-size:16px;box-shadow:0 8px 20px #ff780022;}
-    .pp-advisor-heading h3{margin:0;font-size:16px;line-height:1.05;}
-    .pp-advisor-heading p{margin:4px 0 0;color:#aebdca;font-size:10px;line-height:1.45;}
-    .pp-advisor-alert{min-width:240px;max-width:330px;border:1px solid rgba(255,107,107,.55);border-radius:10px;padding:9px 11px;background:rgba(255,107,107,.08);}
-    .pp-advisor-alert.good{border-color:rgba(54,229,139,.45);background:rgba(54,229,139,.07);}
-    .pp-advisor-alert strong{display:block;font-size:11px;color:#ff8d8d;}
-    .pp-advisor-alert.good strong{color:#64efaa;}
-    .pp-advisor-alert span{display:block;margin-top:2px;color:#d6e0e5;font-size:9px;line-height:1.35;}
-    .pp-advisor-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:11px 0;}
-    .pp-advisor-stat{border:1px solid #294957;border-radius:9px;padding:8px;background:linear-gradient(180deg,#0b1e29,#091821);}
-    .pp-advisor-stat span{display:block;color:#90a6b2;font-size:8.5px;}
-    .pp-advisor-stat strong{display:block;margin-top:3px;font-size:15px;line-height:1.05;}
-    .pp-advisor-stat strong.loss{color:#ff6b6b;}
-    .pp-advisor-stat strong.profit{color:#36e58b;}
-    .pp-advisor-stat strong.neutral{color:#f5f8fb;}
-    .pp-advisor-main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.8fr);gap:9px;align-items:start;}
-    .pp-advisor-panel{border:1px solid #294957;border-radius:11px;background:linear-gradient(180deg,#0b1d28,#081620);padding:10px;}
-    .pp-advisor-panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px;}
-    .pp-advisor-panel-head h4{margin:0;font-size:12px;}
-    .pp-advisor-reset{border:1px solid #3a5562;background:#0a1820;color:#d8e2e7;border-radius:7px;padding:5px 7px;font:800 8px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;}
-    .pp-advisor-reset:hover{border-color:#ff7800;color:#ff9a42;}
-    .pp-advisor-suggestion{border:1px solid #294957;border-radius:9px;padding:8px;margin-top:7px;background:rgba(255,255,255,.018);}
-    .pp-advisor-suggestion:first-of-type{margin-top:0;}
-    .pp-advisor-suggestion-head{display:flex;gap:8px;align-items:flex-start;}
-    .pp-advisor-suggestion-icon{width:26px;height:26px;flex:0 0 26px;border:1px solid #3a5562;border-radius:7px;display:grid;place-items:center;font-size:12px;}
-    .pp-advisor-suggestion-title{min-width:0;flex:1;}
-    .pp-advisor-suggestion-title strong{display:block;font-size:10px;}
-    .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
-    .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
-    .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
-    .pp-advisor-control{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;align-items:stretch;margin-top:8px;}
-    .pp-advisor-control .mini{border:1px solid #294957;border-radius:7px;padding:6px 7px;background:#091821;}
-    .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:7px;}
-    .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:10px;}
-    .pp-advisor-control output{font-size:10px;font-weight:900;text-align:right;}
-    .pp-advisor-suggestion-apply{grid-column:1 / -1;width:100%;margin-top:6px;border:1px solid #ff7800;border-radius:8px;padding:8px 10px;background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;font:900 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 6px 16px #ff780018;}
-    .pp-advisor-suggestion-apply:hover{filter:brightness(1.06);transform:translateY(-1px);}
-    .pp-advisor-suggestion-apply:active{transform:translateY(0);}
-    .pp-advisor-change{font-size:9px;font-weight:900;text-align:right;}
-    .pp-advisor-change.up{color:#36e58b;}
-    .pp-advisor-change.down{color:#ff6b6b;}
-    .pp-advisor-live{display:flex;flex-direction:column;min-height:100%;gap:7px;}
-    .pp-advisor-live-top{display:flex;align-items:center;gap:8px;margin-bottom:1px;}
-    .pp-advisor-live-top h4{margin:0;font-size:12px;}
-    .pp-advisor-live-icon{color:#45d6ff;font-size:15px;}
-    .pp-advisor-live-profit{border:1px solid #294957;border-radius:9px;padding:10px;background:linear-gradient(180deg,#0a1c26,#08161e);}
-    .pp-advisor-live-profit span{display:block;color:#90a6b2;font-size:8px;}
-    .pp-advisor-live-profit strong{display:block;margin-top:4px;font-size:27px;line-height:1;}
-    .pp-advisor-live-profit strong.loss{color:#ff6b6b;}
-    .pp-advisor-live-profit strong.profit{color:#36e58b;}
-    .pp-advisor-live-profit strong.neutral{color:#f5f8fb;}
-    .pp-advisor-live-profit p{margin:5px 0 0;color:#aebdca;font-size:9px;line-height:1.35;}
-    .pp-advisor-live-box{border:1px solid rgba(54,229,139,.45);border-radius:9px;padding:9px;background:rgba(54,229,139,.06);}
-    .pp-advisor-live-box.loss{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.05);}
-    .pp-advisor-live-box strong{display:block;font-size:10px;color:#45e99a;}
-    .pp-advisor-live-box.loss strong{color:#ff8d8d;}
-    .pp-advisor-summary{border-top:1px solid rgba(127,160,175,.12);padding-top:7px;margin-top:2px;}
-    .pp-advisor-summary-row{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid rgba(127,160,175,.08);font-size:8.5px;}
-    .pp-advisor-summary-row:last-child{border-bottom:0;}
-    .pp-advisor-summary-row span:first-child{color:#91a6b1;}
-    .pp-advisor-summary-row strong{font-size:8.8px;}
-    .pp-advisor-apply{width:100%;border:1px solid #ff7800;border-radius:9px;padding:9px 10px;background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;font:900 10px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 22px #ff780022;margin-top:auto;}
-    .pp-advisor-apply:hover{filter:brightness(1.06);}
-    .pp-advisor-copy{width:100%;border:1px solid #294957;border-radius:9px;padding:8px 10px;background:#0a1820;color:#dce6eb;font:800 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;}
-    .pp-advisor-copy:hover{border-color:#ff7800;color:#ff9a42;}
-    .pp-advisor-help{border:1px solid #294957;border-radius:9px;padding:8px 9px;color:#91a6b1;font-size:8px;line-height:1.4;}
-    .pp-advisor-help a{color:#dce6eb;text-decoration:none;font-weight:800;}
-    .pp-advisor-tip{margin-top:8px;border:1px solid #3b2b68;border-radius:9px;padding:8px 10px;background:rgba(106,76,180,.07);color:#b8afd4;font-size:8.5px;line-height:1.4;}
-    .pp-advisor-tip b{color:#d7c9ff;}
-    @media(max-width:1100px){
-      .result#about.pp-advisor-results-split{grid-template-columns:1fr!important;}
-      .result#about.pp-advisor-results-split>.resultView{grid-column:1!important;}
-      .result#about.pp-advisor-results-split>#ppProfitAdvisor{grid-column:1!important;grid-row:auto!important;}
+    /* Step 4: normal Results and the full Profit Advisor live side-by-side. */
+    .result#about.pp-advisor-results-split{
+      width:100%!important;
+      display:grid!important;
+      grid-template-columns:minmax(0,1fr) minmax(470px,1fr)!important;
+      gap:12px!important;
+      align-items:start!important;
     }
-    @media(max-width:980px){
-      .pp-advisor-header{flex-direction:column;}
-      .pp-advisor-alert{width:100%;max-width:none;}
-      .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
-      .pp-advisor-main{grid-template-columns:1fr;}
-      .pp-advisor-control{grid-template-columns:1fr 1fr;}
+    .result#about.pp-advisor-results-split>.head,
+    .result#about.pp-advisor-results-split>.tabs{
+      grid-column:1 / -1!important;
+    }
+    .result#about.pp-advisor-results-split>.resultView{
+      grid-column:1!important;
+      grid-row:3!important;
+      min-width:0!important;
+      margin:0!important;
+    }
+    .result#about.pp-advisor-results-split>#ppProfitAdvisor{
+      grid-column:2!important;
+      grid-row:3!important;
+      min-width:0!important;
+      margin:0!important;
+    }
+    .pp-profit-advisor{
+      border:1px solid #315261;
+      border-radius:14px;
+      padding:12px;
+      background:linear-gradient(180deg,#091a24,#07131b);
+      box-shadow:0 12px 28px #0005;
+    }
+    .pp-advisor-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+      margin-bottom:9px;
+    }
+    .pp-advisor-heading{
+      display:flex;
+      gap:8px;
+      align-items:flex-start;
+      min-width:0;
+    }
+    .pp-profit-icon{
+      width:34px;height:34px;flex:0 0 34px;border-radius:9px;
+      background:linear-gradient(145deg,#ff9a3d,#ff7800);
+      display:grid;place-items:center;color:#fff;font-weight:900;font-size:16px;
+    }
+    .pp-advisor-heading h3{margin:0;font-size:16px;line-height:1.05}
+    .pp-advisor-heading p{margin:4px 0 0;color:#aebdca;font-size:9px;line-height:1.4}
+    .pp-advisor-alert{
+      min-width:170px;max-width:230px;
+      border:1px solid rgba(255,107,107,.55);
+      border-radius:9px;padding:7px 9px;
+      background:rgba(255,107,107,.07);
+    }
+    .pp-advisor-alert.good{border-color:rgba(54,229,139,.45);background:rgba(54,229,139,.06)}
+    .pp-advisor-alert strong{display:block;font-size:9px;color:#ff8d8d}
+    .pp-advisor-alert.good strong{color:#64efaa}
+    .pp-advisor-alert span{display:block;margin-top:2px;color:#d6e0e5;font-size:7.5px;line-height:1.35}
+    .pp-advisor-stat-grid{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:9px 0
+    }
+    .pp-advisor-stat{
+      border:1px solid #294957;border-radius:8px;padding:7px;background:#091821;min-width:0
+    }
+    .pp-advisor-stat span{display:block;color:#90a6b2;font-size:7px}
+    .pp-advisor-stat strong{display:block;margin-top:3px;font-size:13px;line-height:1.05}
+    .pp-advisor-stat strong.loss{color:#ff6b6b}
+    .pp-advisor-stat strong.profit{color:#36e58b}
+    .pp-advisor-stat strong.neutral{color:#f5f8fb}
+    .pp-advisor-stat span:last-child{font-size:6.5px!important}
+    .pp-advisor-main{display:block}
+    .pp-advisor-panel{
+      border:1px solid #294957;border-radius:10px;
+      background:linear-gradient(180deg,#0b1d28,#081620);padding:9px
+    }
+    .pp-advisor-panel-head{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:8px;margin-bottom:7px
+    }
+    .pp-advisor-panel-head h4{margin:0;font-size:11px}
+    .pp-advisor-reset{
+      border:1px solid #3a5562;background:#0a1820;color:#d8e2e7;
+      border-radius:7px;padding:5px 7px;font:800 7px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer
+    }
+    .pp-advisor-reset:hover{border-color:#ff7800;color:#ff9a42}
+    .pp-advisor-suggestions-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:7px
+    }
+    .pp-advisor-suggestion{
+      border:1px solid #294957;border-radius:9px;padding:8px;background:rgba(255,255,255,.018);
+      display:flex;flex-direction:column;min-width:0
+    }
+    .pp-advisor-suggestion-head{display:flex;gap:7px;align-items:flex-start}
+    .pp-advisor-suggestion-icon{
+      width:26px;height:26px;flex:0 0 26px;border:1px solid #3a5562;border-radius:7px;
+      display:grid;place-items:center;font-size:12px
+    }
+    .pp-advisor-suggestion-title{min-width:0;flex:1}
+    .pp-advisor-suggestion-title strong{display:block;font-size:9px}
+    .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:7px;line-height:1.35}
+    .pp-advisor-pill{
+      display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;
+      border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.05);
+      font-size:6.5px;font-weight:900;white-space:nowrap
+    }
+    .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.05)}
+    .pp-advisor-control{
+      display:grid;grid-template-columns:1fr 1fr;gap:5px;align-items:stretch;margin-top:7px
+    }
+    .pp-advisor-control .mini{
+      border:1px solid #294957;border-radius:7px;padding:5px 6px;background:#091821
+    }
+    .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:6.5px}
+    .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:8.5px}
+    .pp-advisor-change{font-size:7.5px;font-weight:900;text-align:right;align-self:center}
+    .pp-advisor-change.up{color:#36e58b}
+    .pp-advisor-change.down{color:#ff6b6b}
+    .pp-advisor-suggestion-apply{
+      grid-column:1 / -1;width:100%;margin-top:5px;
+      border:1px solid #ff7800;border-radius:8px;padding:7px 8px;
+      background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;
+      font:900 7.5px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer
+    }
+    .pp-advisor-suggestion-apply:hover{filter:brightness(1.06);transform:translateY(-1px)}
+    .pp-advisor-suggestion-apply:disabled{opacity:.45;cursor:not-allowed;transform:none}
+    .pp-advisor-live{
+      margin-top:8px;
+      border:1px solid #294957;border-radius:10px;
+      background:linear-gradient(180deg,#0b1d28,#081620);padding:9px
+    }
+    .pp-advisor-live-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .pp-advisor-live-top h4{margin:0;font-size:10px}
+    .pp-advisor-live-top span{color:#45d6ff;font-size:12px}
+    .pp-advisor-live-profit-row{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:7px
+    }
+    .pp-advisor-live-stat{
+      border:1px solid #294957;border-radius:7px;padding:6px;background:#091821;min-width:0
+    }
+    .pp-advisor-live-stat span{display:block;color:#7f95a1;font-size:6.5px}
+    .pp-advisor-live-stat strong{display:block;margin-top:2px;font-size:10px}
+    .pp-advisor-live-stat .loss{color:#ff6b6b}.pp-advisor-live-stat .profit{color:#36e58b}
+    .pp-advisor-project{
+      margin-top:7px;border:1px solid rgba(54,229,139,.42);
+      border-radius:8px;padding:7px;background:rgba(54,229,139,.05)
+    }
+    .pp-advisor-project.loss{border-color:rgba(255,107,107,.42);background:rgba(255,107,107,.05)}
+    .pp-advisor-project strong{font-size:8.5px;color:#64efaa}
+    .pp-advisor-project.loss strong{color:#ff8d8d}
+    .pp-advisor-project small{display:block;margin-top:2px;color:#aebdc5;font-size:6.8px}
+    .pp-advisor-selected{
+      margin-top:7px;border-top:1px solid #294957;padding-top:7px
+    }
+    .pp-advisor-selected-title{font-size:6.5px;color:#718c99;font-weight:900;letter-spacing:.14em;margin-bottom:4px}
+    .pp-advisor-selected-row{
+      display:grid;grid-template-columns:minmax(0,1fr) auto 12px auto;
+      gap:4px;align-items:center;padding:4px 0;border-bottom:1px solid #29495733;font-size:7px
+    }
+    .pp-advisor-selected-row:last-child{border-bottom:0}
+    .pp-advisor-selected-row span{color:#91a6b1}
+    .pp-advisor-selected-row b{font-size:7.5px}
+    .pp-advisor-selected-row i{font-style:normal;color:#55bfff}
+    .pp-advisor-selected-row .after{color:#64efaa}
+    .pp-advisor-empty{color:#748b96;font-size:7px;line-height:1.4}
+    .pp-advisor-apply{
+      width:100%;border:1px solid #36e58b;border-radius:8px;padding:8px 9px;
+      background:linear-gradient(135deg,#23ce7a,#36e58b);color:#062016;
+      font:900 8px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;margin-top:7px
+    }
+    .pp-advisor-apply:disabled{opacity:.45;cursor:not-allowed}
+    .pp-advisor-tip{
+      margin-top:7px;border:1px solid #3b2b68;border-radius:8px;padding:7px 8px;
+      background:rgba(106,76,180,.06);color:#b8afd4;font-size:7px;line-height:1.4
+    }
+    .pp-advisor-tip b{color:#d7c9ff}
+    .pp-advisor-suggestion.selected{border-color:#36e58b66;background:#36e58b08}
+    @media(max-width:1100px){
+      .result#about.pp-advisor-results-split{grid-template-columns:1fr!important}
+      .result#about.pp-advisor-results-split>.resultView,
+      .result#about.pp-advisor-results-split>#ppProfitAdvisor{grid-column:1!important;grid-row:auto!important}
     }
     @media(max-width:650px){
-      .pp-profit-advisor{padding:10px;}
-      .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
-      .pp-advisor-control{grid-template-columns:1fr 1fr;gap:6px;}
-      .pp-advisor-control output,.pp-advisor-change{text-align:left;}
+      .pp-advisor-stat-grid{grid-template-columns:1fr 1fr}
+      .pp-advisor-suggestions-grid{grid-template-columns:1fr}
+      .pp-advisor-live-profit-row{grid-template-columns:1fr 1fr}
+      .pp-advisor-header{flex-direction:column}
+      .pp-advisor-alert{width:100%;max-width:none}
     }
-    body[data-pp-theme="light"] .pp-profit-advisor{background:linear-gradient(180deg,#fff,#edf3f6)!important;border-color:#b8c9d1!important;color:#17232b!important;}
-    body[data-pp-theme="light"] .pp-advisor-alert{background:rgba(220,65,65,.06);border-color:#e0a4a4!important;}
-    body[data-pp-theme="light"] .pp-advisor-stat,body[data-pp-theme="light"] .pp-advisor-panel,body[data-pp-theme="light"] .pp-advisor-suggestion,body[data-pp-theme="light"] .pp-advisor-stat .mini,body[data-pp-theme="light"] .pp-advisor-live-profit,body[data-pp-theme="light"] .pp-advisor-help,body[data-pp-theme="light"] .pp-advisor-copy{background:#f6f9fa!important;border-color:#c5d2d8!important;}
-    body[data-pp-theme="light"] .pp-advisor-heading p,body[data-pp-theme="light"] .pp-advisor-alert span,body[data-pp-theme="light"] .pp-advisor-stat span,body[data-pp-theme="light"] .pp-advisor-suggestion-title small,body[data-pp-theme="light"] .pp-advisor-control .mini span,body[data-pp-theme="light"] .pp-advisor-live-profit span,body[data-pp-theme="light"] .pp-advisor-live-profit p,body[data-pp-theme="light"] .pp-advisor-summary-row span:first-child,body[data-pp-theme="light"] .pp-advisor-help{color:#5d707b!important;}
+    body[data-pp-theme="light"] .pp-profit-advisor{background:linear-gradient(180deg,#fff,#edf3f6)!important;border-color:#b8c9d1!important}
+    body[data-pp-theme="light"] .pp-advisor-panel,
+    body[data-pp-theme="light"] .pp-advisor-live,
+    body[data-pp-theme="light"] .pp-advisor-stat,
+    body[data-pp-theme="light"] .pp-advisor-live-stat,
+    body[data-pp-theme="light"] .pp-advisor-suggestion,
+    body[data-pp-theme="light"] .pp-advisor-control .mini{background:#f6f9fa!important;border-color:#c5d2d8!important}
   `;
   document.head.appendChild(s);
 }
@@ -915,6 +1013,61 @@ function refreshAdvisorScenario(s,batchView){
   return live;
 }
 
+let selectedAdvisorSuggestions=new Set();
+
+function advisorScenarioForKeys(s,keys){
+  const sc={materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost};
+  const set=new Set(keys);
+  if(set.has('materialUsage'))sc.materialUsage=15;
+  if(set.has('printTime'))sc.printTime=10;
+  if(set.has('materialCost'))sc.materialCost=s.materialCost*.85;
+  if(set.has('deliveryCost'))sc.deliveryCost=Math.max(0,s.delivery-.95);
+  if(set.has('labourMinutes'))sc.labourMinutes=Math.max(0,s.labourHours*60-5);
+  if(set.has('sellingPrice'))sc.sellingPrice=Math.max(s.sell*1.15,s.sell+2.5);
+  return sc;
+}
+
+function advisorSuggestionDefinitions(s,batchView){
+  const defs=[
+    {key:'materialUsage',icon:'⬡',title:'Reduce material usage',desc:'Use less material where the model allows without compromising the strength or quality you need.',impact:'High impact',impactClass:'',can:s.used>0,current:()=>s.used.toFixed(0)+' g',suggested:()=>s.used>0?(s.used*.85).toFixed(0)+' g':'—'},
+    {key:'printTime',icon:'◷',title:'Reduce print time',desc:'A shorter print can lower electricity and printer depreciation on longer jobs.',impact:'Medium impact',impactClass:'med',can:s.hours>0,current:()=>formatHours(s.hours),suggested:()=>formatHours(s.hours*.9)},
+    {key:'materialCost',icon:'◈',title:'Use cheaper material',desc:'Test a lower suitable material cost while keeping the same print settings.',impact:'Lower impact',impactClass:'med',can:s.materialCost>0,current:()=>money(s.materialCost),suggested:()=>money(s.materialCost*.85)},
+    {key:'deliveryCost',icon:'▱',title:'Lower delivery cost',desc:'Compare courier rates or reduce the delivery cost you absorb on the order.',impact:'Medium impact',impactClass:'med',can:s.delivery>0,current:()=>money(s.delivery),suggested:()=>money(Math.max(0,s.delivery-.95))},
+    {key:'labourMinutes',icon:'◴',title:'Reduce labour time',desc:'Streamline setup, cleanup and other hands-on work where practical.',impact:'Medium impact',impactClass:'med',can:s.labourHours>0,current:()=>formatMinutes(s.labourHours*60),suggested:()=>formatMinutes(Math.max(0,s.labourHours*60-5))},
+    {key:'sellingPrice',icon:'◇',title:'Adjust selling price',desc:'Test a higher selling price to see how much it changes profit after fees.',impact:'High impact',impactClass:'',can:s.sell>0,current:()=>money(s.sell),suggested:()=>money(Math.max(s.sell*1.15,s.sell+2.5))}
+  ];
+  return defs.map(d=>{
+    const proposed=advisorScenarioForKeys(s,[d.key]);
+    const result=calculateAdvisorScenario(s,proposed,batchView);
+    const currentProfit=batchView?s.batchProfit:s.profit;
+    return {...d,newProfit:result.profit,delta:result.profit-currentProfit};
+  });
+}
+
+function commitAdvisorSuggestions(s,keys){
+  if(!keys.length)return;
+  const set=new Set(keys);
+  const apply=(id,v)=>{
+    const el=$(id);
+    if(!el)return;
+    el.value=String(v);
+    el.dispatchEvent(new Event('input',{bubbles:true}));
+    el.dispatchEvent(new Event('change',{bubbles:true}));
+  };
+  if(set.has('materialUsage')&&s.used>0)apply('materialUsed',(s.used*.85).toFixed(2));
+  if(set.has('printTime')&&s.hours>0){
+    const h=s.hours*.9,whole=Math.floor(h),mins=Math.round((h-whole)*60);
+    if($('ppPrintTimeHours')&&$('ppPrintTimeMinutes')){apply('ppPrintTimeHours',whole);apply('ppPrintTimeMinutes',mins);}
+    else apply('printHours',h.toFixed(2));
+  }
+  if(set.has('materialCost')&&s.materialCost>0&&s.packPrice>0)apply('materialPackCost',(s.packPrice*.85).toFixed(2));
+  if(set.has('deliveryCost')&&s.delivery>0)apply('delivery',Math.max(0,s.delivery-.95).toFixed(2));
+  if(set.has('labourMinutes')&&s.labourHours>0)apply('labourHours',Math.max(0,s.labourHours-5/60).toFixed(2));
+  if(set.has('sellingPrice')&&s.sell>0)apply('sell',Math.max(s.sell*1.15,s.sell+2.5).toFixed(2));
+  selectedAdvisorSuggestions.clear();
+  setTimeout(()=>{$('calc')?.click();},30);
+}
+
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
@@ -934,112 +1087,100 @@ function render(){
   const batchView=$('batchResultView')&&!$('batchResultView').hidden;
   const shownProfit=batchView?s.batchProfit:s.profit;
   const hasData=(s.base>0||s.sell>0||s.deliveryCharge>0);
-  const sc=advisorScenarioValues(s);
-  const scenario={profit:shownProfit,delta:0,delivery:s.delivery,sell:s.sell,material:s.materialCost};
+  if(!hasData){
+    selectedAdvisorSuggestions.clear();
+    box.innerHTML='<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>Profit Advisor</h3><p>Add your print costs first and the Advisor will suggest practical ways to improve your result.</p></div></div>';
+    return true;
+  }
 
-  const lead=shownProfit<0
-    ? t('negativeLead',{amount:money(Math.abs(shownProfit))})
-    : shownProfit>0
-      ? t('positiveLead')
-      : t('noData');
+  const defs=advisorSuggestionDefinitions(s,batchView);
+  selectedAdvisorSuggestions=new Set([...selectedAdvisorSuggestions].filter(k=>defs.some(d=>d.key===k&&d.can)));
 
-  box.innerHTML='';
-  const header=document.createElement('div');
-  header.className='pp-advisor-header';
-  const alertClass=shownProfit>0?'good':'';
-  const alertTitle=shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'Add your print costs';
-  const alertText=shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch item':'print')+'.':'Use the suggestions below to see practical ways to improve the result.';
-  header.innerHTML=
-    '<div class="pp-advisor-heading"><div class="pp-profit-icon">💡</div><div><h3>'+t('title')+'</h3><p>'+lead+'</p></div></div>'+
-    '<div class="pp-advisor-alert '+alertClass+'"><strong>'+alertTitle+'</strong><span>'+alertText+'</span></div>';
-  box.appendChild(header);
+  const keys=[...selectedAdvisorSuggestions];
+  const sc=advisorScenarioForKeys(s,keys);
+  const projected=calculateAdvisorScenario(s,sc,batchView);
+  const delta=projected.profit-shownProfit;
+  const currentMargin=batchView?s.batchMargin:s.margin;
+  const projectedMargin=projected.profit && projected.sell ? projected.profit/projected.sell : 0;
 
-  if(!hasData)return true;
+  box.className='pp-profit-advisor';
+  box.innerHTML=`
+    <div class="pp-advisor-header">
+      <div class="pp-advisor-heading">
+        <div class="pp-profit-icon">💡</div>
+        <div>
+          <h3>Profit Advisor</h3>
+          <p>Practical suggestions based on your current print, costs and selling price.</p>
+        </div>
+      </div>
+      <div class="pp-advisor-alert ${shownProfit>0?'good':''}">
+        <strong>${shownProfit<0?'Currently at a loss':shownProfit>0?'Currently profitable':'At break-even'}</strong>
+        <span>${shownProfit<0?'You\'re losing '+money(Math.abs(shownProfit))+' per '+(batchView?'batch':'print')+'.':shownProfit>0?'Your current settings are profitable. Look for further improvements below.':'You\'re currently at break-even.'}</span>
+      </div>
+    </div>
 
-  const be=batchView?s.batchBreakEven:s.breakEven;
-  const t30=batchView?s.batchTarget30:s.target30;
-  const statGrid=document.createElement('div');
-  statGrid.className='pp-advisor-stat-grid';
-  statGrid.innerHTML=
-    '<div class="pp-advisor-stat"><span>Current profit</span><strong class="'+advisorProfitState(shownProfit)+'">'+money(shownProfit)+'</strong><span style="margin-top:3px">Per '+(batchView?'batch':'print')+'</span></div>'+
-    '<div class="pp-advisor-stat"><span>'+t('breakEven')+'</span><strong class="neutral">'+(be===null?'—':money(be))+'</strong><span style="margin-top:3px">Minimum price to not lose money</span></div>'+
-    '<div class="pp-advisor-stat"><span>'+t('target')+'</span><strong class="neutral">'+(t30===null?'—':money(t30))+'</strong><span style="margin-top:3px">Using current fee assumptions</span></div>'+
-    '<div class="pp-advisor-stat"><span>Sales price</span><strong class="neutral">'+money(s.sell)+'</strong><span style="margin-top:3px">Change below to test it</span></div>';
-  box.appendChild(statGrid);
+    <div class="pp-advisor-stat-grid">
+      <div class="pp-advisor-stat"><span>Current profit</span><strong class="${advisorProfitState(shownProfit)}">${money(shownProfit)}</strong><span style="margin-top:3px">Per ${batchView?'batch':'print'}</span></div>
+      <div class="pp-advisor-stat"><span>Break-even price</span><strong class="neutral">${(batchView?s.batchBreakEven:s.breakEven)===null?'—':money(batchView?s.batchBreakEven:s.breakEven)}</strong><span style="margin-top:3px">Minimum selling price</span></div>
+      <div class="pp-advisor-stat"><span>Target price · 30% margin</span><strong class="neutral">${(batchView?s.batchTarget30:s.target30)===null?'—':money(batchView?s.batchTarget30:s.target30)}</strong><span style="margin-top:3px">Current fee assumptions</span></div>
+      <div class="pp-advisor-stat"><span>Selling price</span><strong class="neutral">${money(s.sell)}</strong><span style="margin-top:3px">Current price</span></div>
+    </div>
 
-  const main=document.createElement('div');
-  main.className='pp-advisor-main';
+    <div class="pp-advisor-main">
+      <div class="pp-advisor-panel">
+        <div class="pp-advisor-panel-head">
+          <h4>Suggested Improvements</h4>
+          <button type="button" class="pp-advisor-reset" id="ppAdvisorReset" ${keys.length?'':'disabled'}>↻ Reset all suggestions</button>
+        </div>
+        <div class="pp-advisor-suggestions-grid">
+          ${defs.map(d=>`
+            <article class="pp-advisor-suggestion ${selectedAdvisorSuggestions.has(d.key)?'selected':''}">
+              <div class="pp-advisor-suggestion-head">
+                <div class="pp-advisor-suggestion-icon">${d.icon}</div>
+                <div class="pp-advisor-suggestion-title">
+                  <strong>${d.title}</strong>
+                  <small>${d.desc}</small>
+                </div>
+                <span class="pp-advisor-pill ${d.impactClass}">${d.impact}</span>
+              </div>
+              <div class="pp-advisor-control">
+                <div class="mini"><span>Current</span><strong>${d.current()}</strong></div>
+                <div class="mini"><span>Suggested</span><strong>${d.suggested()}</strong></div>
+                <div class="mini"><span>Potential profit</span><strong class="${advisorProfitState(d.newProfit)}">${money(d.newProfit)}</strong></div>
+                <div class="pp-advisor-change ${d.delta>=0?'up':'down'}">${d.delta>=0?'↑':'↓'} ${money(Math.abs(d.delta))}</div>
+                <button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="${d.key}" ${d.can?'':'disabled'}>${d.can?(selectedAdvisorSuggestions.has(d.key)?'✓ Selected for preview':'Apply suggestion →'):'Add a value first'}</button>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      </div>
 
-  const left=document.createElement('div');
-  left.className='pp-advisor-panel';
-  const leftHead=document.createElement('div');
-  leftHead.className='pp-advisor-panel-head';
-  leftHead.innerHTML='<h4>Suggested Improvements</h4><button type="button" class="pp-advisor-reset" id="ppAdvisorReset">↻ Reset all suggestions</button>';
-  left.appendChild(leftHead);
+      <div class="pp-advisor-live">
+        <div class="pp-advisor-live-top"><h4>Projected Results</h4><span>▥</span></div>
+        <div class="pp-advisor-live-profit-row">
+          <div class="pp-advisor-live-stat"><span>Current profit</span><strong class="${advisorProfitState(shownProfit)}">${money(shownProfit)}</strong></div>
+          <div class="pp-advisor-live-stat"><span>New profit</span><strong class="${advisorProfitState(projected.profit)}">${money(projected.profit)}</strong></div>
+          <div class="pp-advisor-live-stat"><span>New margin</span><strong class="${projectedMargin>0?'profit':projectedMargin<0?'loss':''}">${(projectedMargin*100).toFixed(1)}%</strong></div>
+          <div class="pp-advisor-live-stat"><span>Cost to make</span><strong>${money(projected.base)}</strong></div>
+        </div>
+        <div class="pp-advisor-project ${projected.profit<0?'loss':''}">
+          <strong>${delta>0?'+'+money(delta)+' potential improvement':delta<0?'Change of '+money(Math.abs(delta)):'No change'}${keys.length?' with '+keys.length+' suggestion'+(keys.length===1?'':'s')+' selected.':''}</strong>
+          <small>Your calculator values stay unchanged until you apply the selected suggestions.</small>
+        </div>
+        <div class="pp-advisor-selected">
+          <div class="pp-advisor-selected-title">CHANGES BEING TESTED</div>
+          ${keys.length?keys.map(key=>{
+            const d=defs.find(x=>x.key===key);
+            return `<div class="pp-advisor-selected-row"><span>${d.title}</span><b>${d.current()}</b><i>→</i><b class="after">${d.suggested()}</b></div>`;
+          }).join(''):'<div class="pp-advisor-empty">Select one or more suggestions above to see exactly what would change and the combined profit effect.</div>'}
+        </div>
+        <button type="button" class="pp-advisor-apply" id="ppAdvisorApplySelected" ${keys.length?'':'disabled'}>✓ Apply All Selected Suggestions to Calculator</button>
+      </div>
+    </div>
 
-  const maxLabour=Math.max(0,num('labourHours')*60);
-  const maxSell=Math.max(s.sell*2,s.target30||0,1);
-  const cheapest=cheapestDelivery();
-  const deliverySuggested=cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery;
-  const configs=[
-    {key:'materialUsage',id:'ppAdvisorMaterialUsage',suggestedId:'ppAdvisorMaterialUsageSuggested',profitId:'ppAdvisorMaterialUsageProfit',changeId:'ppAdvisorMaterialUsageChange',icon:'⬡',title:'Reduce material usage',description:'Lowering infill, wall count or supports can reduce material usage. Test the effect here first.',impact:'high',impactLabel:'High impact',min:()=>0,max:()=>50,step:1,get:()=>sc.materialUsage,currentText:()=>s.materialCost>0?money(s.materialCost):'—',suggestedText:v=>v.toFixed(0)+'%',materialUsage:true},
-    {key:'labourMinutes',id:'ppAdvisorLabour',suggestedId:'ppAdvisorLabourSuggested',profitId:'ppAdvisorLabourProfit',changeId:'ppAdvisorLabourChange',icon:'◷',title:'Reduce labour time',description:'Test removing setup, cleanup or other hands-on time from each print.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,maxLabour),step:1,get:()=>sc.labourMinutes,currentText:()=>maxLabour.toFixed(0)+' min',suggestedText:v=>v.toFixed(0)+' min'},
-    {key:'deliveryCost',id:'ppAdvisorDelivery',suggestedId:'ppAdvisorDeliverySuggested',profitId:'ppAdvisorDeliveryProfit',changeId:'ppAdvisorDeliveryChange',icon:'▱',title:'Lower delivery cost',description:deliverySuggested<s.delivery?'Compare the lower reference rate below with what you currently pay.':'Your current delivery is already at or below the lowest tracked reference.',impact:'med',impactLabel:'Medium impact',min:()=>0,max:()=>Math.max(0,s.delivery),step:.01,get:()=>sc.deliveryCost,currentText:()=>money(s.delivery),suggestedText:v=>money(v)},
-    {key:'sellingPrice',id:'ppAdvisorSell',suggestedId:'ppAdvisorSellSuggested',profitId:'ppAdvisorSellProfit',changeId:'ppAdvisorSellChange',icon:'◇',title:'Adjust selling price',description:'A small price change can make a big difference once fees are included.',impact:'high',impactLabel:'High impact',min:()=>Math.max(0,s.sell),max:()=>maxSell,step:.01,get:()=>sc.sellingPrice,currentText:()=>money(s.sell),suggestedText:v=>money(v)},
-    {key:'materialCost',id:'ppAdvisorMaterialCost',suggestedId:'ppAdvisorMaterialCostSuggested',profitId:'ppAdvisorMaterialCostProfit',changeId:'ppAdvisorMaterialCostChange',icon:'◈',title:'Use cheaper material',description:s.materialCost>0?'Test a lower material cost per print while keeping the same print settings.':'Add a material cost first and this option will become active.',impact:'med',impactLabel:'Lower impact',min:()=>0,max:()=>Math.max(0,s.materialCost),step:.01,get:()=>sc.materialCost,currentText:()=>money(s.materialCost),suggestedText:v=>money(v)}
-  ];
+    <div class="pp-advisor-tip"><b>Tip:</b> These are estimates based on your current settings. Test a practical change, compare the projected result, then apply the changes you are happy with.</div>
+  `;
 
-  configs.forEach(cfg=>{
-    const row=suggestionRow(cfg,s,sc,batchView);
-    left.appendChild(row);
-  });
-
-  const right=document.createElement('div');
-  right.className='pp-advisor-panel pp-advisor-live';
-  right.innerHTML=
-    '<div class="pp-advisor-live-top"><span class="pp-advisor-live-icon">▥</span><h4>Live Result</h4></div>'+
-    '<div class="pp-advisor-live-profit"><span>Estimated '+(batchView?'batch':'profit')+'</span><strong class="'+advisorProfitState(scenario.profit)+'" id="ppAdvisorLiveProfit">'+money(scenario.profit)+'</strong><p id="ppAdvisorLiveText">'+(scenario.delta>=0?money(scenario.delta)+' improvement':'Change of '+money(Math.abs(scenario.delta))+' from current')+' from your current setup.</p></div>'+
-    '<div class="pp-advisor-live-box '+(scenario.profit<0?'loss':'')+'"><strong id="ppAdvisorLiveStatus">'+(scenario.profit>0?'✓ Profitable!':scenario.profit<0?'⚠ Still losing money':'• Break-even')+'</strong><span id="ppAdvisorLiveDetail" style="display:block;margin-top:3px;color:#b8c8cf;font-size:8px">'+(scenario.profit>0?'With these changes the estimate moves into profit.':'Keep adjusting the suggestions to see where the loss closes.')+'</span></div>'+
-    '<div class="pp-advisor-summary"><div class="pp-advisor-summary-row" data-summary-key="materialUsage"><span>Material usage</span><strong>'+(sc.materialUsage>0?'-'+sc.materialUsage.toFixed(0)+'%':'No change')+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="labourMinutes"><span>Labour saved</span><strong>'+sc.labourMinutes.toFixed(0)+' min</strong></div><div class="pp-advisor-summary-row" data-summary-key="deliveryCost"><span>Delivery</span><strong>'+money(scenario.delivery)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="sellingPrice"><span>Selling price</span><strong>'+money(scenario.sell)+'</strong></div><div class="pp-advisor-summary-row" data-summary-key="materialCost"><span>Material cost</span><strong>'+money(scenario.material)+'</strong></div></div>'+
-    '<button type="button" class="pp-advisor-apply" id="ppAdvisorApply">✓ Apply these changes to calculator</button>'+
-    '<button type="button" class="pp-advisor-copy" id="ppAdvisorCopy">▣ Copy summary</button>'+
-    '<div class="pp-advisor-help">Still not profitable? <a href="./guide.html" target="_top">See the full 3D Printing Profit Guide ↗</a></div>';
-  main.appendChild(left);
-  main.appendChild(right);
-  box.appendChild(main);
-
-  const tip=document.createElement('div');
-  tip.className='pp-advisor-tip';
-  tip.innerHTML='<b>Tip:</b> These suggestions are estimates based on your current settings. Adjust any value and the result updates in real time. The best balance depends on the quality and strength your model needs.';
-  box.appendChild(tip);
-
-  const bindScenarioInput=(id,key)=>{
-    const el=$(id);
-    if(!el)return;
-    const refresh=()=>{
-      advisorScenario[key]=Number(el.value)||0;
-      refreshAdvisorScenario(snapshot(),batchView);
-    };
-    el.addEventListener('input',refresh);
-    el.addEventListener('change',refresh);
-  };
-  bindScenarioInput('ppAdvisorMaterialUsage','materialUsage');
-  bindScenarioInput('ppAdvisorLabour','labourMinutes');
-  bindScenarioInput('ppAdvisorDelivery','deliveryCost');
-  bindScenarioInput('ppAdvisorSell','sellingPrice');
-  bindScenarioInput('ppAdvisorMaterialCost','materialCost');
-
-  $('ppAdvisorReset')?.addEventListener('click',()=>{
-    advisorScenario=advisorDefaults(s,batchView);
-    ['ppAdvisorMaterialUsage','ppAdvisorLabour','ppAdvisorDelivery','ppAdvisorSell','ppAdvisorMaterialCost'].forEach(id=>{const el=$(id);if(el)el.value=advisorScenario[{ppAdvisorMaterialUsage:'materialUsage',ppAdvisorLabour:'labourMinutes',ppAdvisorDelivery:'deliveryCost',ppAdvisorSell:'sellingPrice',ppAdvisorMaterialCost:'materialCost'}[id]]??0;});
-    refreshAdvisorScenario(s,batchView);
-  });
-  $('ppAdvisorApply')?.addEventListener('click',()=>{
-    applyAdvisorScenario(s,advisorScenario);
-  });
-  $('ppAdvisorCopy')?.addEventListener('click',()=>{
-    copyAdvisorSummary(s,advisorScenario,calculateAdvisorScenario(s,advisorScenario,batchView));
-  });
   return true;
 }
 
@@ -1079,7 +1220,26 @@ document.addEventListener('click',e=>{
     e.preventDefault();
     e.stopPropagation();
     const key=apply.getAttribute('data-advisor-apply');
-    applySingleAdvisorSuggestion(key);
+    if(selectedAdvisorSuggestions.has(key))selectedAdvisorSuggestions.delete(key);
+    else selectedAdvisorSuggestions.add(key);
+    render();
+    return;
+  }
+  const reset=e.target&&e.target.closest?e.target.closest('#ppAdvisorReset'):null;
+  if(reset){
+    e.preventDefault();
+    e.stopPropagation();
+    selectedAdvisorSuggestions.clear();
+    render();
+    return;
+  }
+  const commit=e.target&&e.target.closest?e.target.closest('#ppAdvisorApplySelected'):null;
+  if(commit){
+    e.preventDefault();
+    e.stopPropagation();
+    const s=snapshot();
+    commitAdvisorSuggestions(s,[...selectedAdvisorSuggestions]);
+    setTimeout(render,80);
     return;
   }
   const button=e.target&&e.target.closest?e.target.closest('.pp-profit-review[data-pp-review-target]'):null;
@@ -1088,6 +1248,7 @@ document.addEventListener('click',e=>{
   e.stopPropagation();
   goToReviewTarget(button.getAttribute('data-pp-review-target'));
 });
+
 document.addEventListener('input',e=>{
   if(e.target&&e.target.closest?.('#ppProfitAdvisor'))return;
   if(e.target&&e.target.matches('input,select,textarea'))setTimeout(()=>{advisorScenario=null;render();},20);
