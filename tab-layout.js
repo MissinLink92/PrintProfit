@@ -1,11 +1,17 @@
 (()=>{
   'use strict';
   function titleOf(section){const h=section?.querySelector('h2');return h?h.textContent.trim():'';}
-  function findBox(number){return [...document.querySelectorAll('section.panel')].find(section=>titleOf(section).startsWith(number+'.'))||null;}
+  function findBox(name){
+    const wanted=String(name||'').toLowerCase().trim();
+    return [...document.querySelectorAll('section.panel')].find(section=>{
+      const title=titleOf(section).toLowerCase().trim();
+      return title===wanted||title.startsWith(wanted);
+    })||null;
+  }
   function install(){
     if(document.getElementById('ppTabbedLayout'))return;
     const layout=document.querySelector('.layout'),result=layout?.querySelector('.result');
-    const box1=findBox('1'),box2=findBox('2'),box4=findBox('4'),box5=findBox('5'),box6=findBox('6');
+    const box1=findBox('G-code File'),box2=findBox('Print Setup'),box4=findBox('Operating Costs'),box5=findBox('Selling & Fulfilment'),box6=findBox('Quantity / Batch Pricing');
     if(!layout||!result||!box1||!box2||!box4||!box5||!box6)return false;
     const style=document.createElement('style');style.id='ppTabbedLayoutRuntimeStyles';style.textContent=`
 .layout{display:block!important;width:100%!important}.layout>.result{display:none!important}.pp-workspace>.result{display:none!important}.pp-tab-panel[data-panel="results"]>.result{display:block!important;width:100%!important;grid-column:auto!important;grid-row:auto!important;position:static!important;top:auto!important;margin:0!important;min-width:0}
