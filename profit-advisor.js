@@ -1017,11 +1017,6 @@ function calculateAdvisorScenario(s,sc,batchView){
   return {material,labour,delivery,base,sell,feesSingle,singleProfit,batchProfit,profit,currentProfit,delta:profit-currentProfit,batchView};
 }
 
-function formatChange(v){
-  const sign=v>0?'+ ':v<0?'- ':'';
-  return sign+money(Math.abs(v));
-}
-
 let advisorAppliedSnapshots={};
 let advisorLastAppliedKey=null;
 let advisorInternalChange=false;
