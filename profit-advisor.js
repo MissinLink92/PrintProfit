@@ -733,6 +733,61 @@ function addStyles(){
     }
   `;
   s.textContent += `
+    /* Final Step 4 override: force Results and Profit Advisor into a vertical full-width stack. */
+    .result#about.pp-advisor-results-split{
+      display:block!important;
+      width:100%!important;
+      min-width:0!important;
+      position:static!important;
+      top:auto!important;
+      margin:0!important;
+    }
+    .result#about.pp-advisor-results-split>.head,
+    .result#about.pp-advisor-results-split>.tabs,
+    .result#about.pp-advisor-results-split>.resultView{
+      width:100%!important;
+      min-width:0!important;
+      box-sizing:border-box!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-results-left-column,
+    .result#about.pp-advisor-results-split>.pp-advisor-right-column{
+      display:block!important;
+      width:100%!important;
+      min-width:0!important;
+      box-sizing:border-box!important;
+      float:none!important;
+      grid-column:auto!important;
+      grid-row:auto!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-results-left-column{
+      margin:0 0 14px!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-advisor-right-column{
+      margin:0!important;
+    }
+    .result#about.pp-advisor-results-split>.pp-advisor-right-column>#ppProfitAdvisor{
+      width:100%!important;
+      min-width:0!important;
+      margin:0!important;
+    }
+    .pp-results-advisor-layout{
+      display:flex!important;
+      flex-direction:column!important;
+      width:100%!important;
+      min-width:0!important;
+      gap:14px!important;
+    }
+    .pp-results-advisor-layout>.result,
+    .pp-results-advisor-layout>#ppProfitAdvisor{
+      width:100%!important;
+      min-width:0!important;
+      margin:0!important;
+      position:static!important;
+      grid-column:auto!important;
+      grid-row:auto!important;
+    }
+  `;
+  s.textContent += `
     .result#about.pp-advisor-results-split{
       display:grid!important;
       grid-template-columns:minmax(0,1fr) minmax(430px,1fr)!important;
