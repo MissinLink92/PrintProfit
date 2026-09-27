@@ -936,6 +936,11 @@ function addStyles(){
     .pp-advisor-applied-note b{display:block;color:#55eaa0;font-size:9px}.pp-advisor-applied-note span{display:block;margin-top:3px;color:#9eb2bc;font-size:8px;line-height:1.4}
     .pp-advisor-applied-badge{display:inline-flex;align-items:center;padding:4px 6px;border-radius:99px;border:1px solid rgba(54,229,139,.45);background:rgba(54,229,139,.08);color:#4be79a;font-size:7px;font-weight:900;white-space:nowrap}
 
+    .pp-advisor-undo-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0;padding:9px 11px;border:1px solid #294957;border-radius:9px;background:#08161e;color:#8ea4af;font-size:8px;line-height:1.4}
+    .pp-advisor-undo-bar b{color:#e7eff2}
+    .pp-advisor-undo-last{padding:7px 10px;border:1px solid #58717d;border-radius:8px;background:#12232c;color:#e7eff3;font:800 8px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+    .pp-advisor-undo-last:hover:not(:disabled){border-color:#ff7800;color:#fff}
+    .pp-advisor-undo-last:disabled{opacity:.45;cursor:not-allowed}
     .pp-advisor-suggestion-apply[data-advisor-review],.pp-advisor-suggestion-apply[data-advisor-batch]{background:#12242d!important;border-color:#3a5967!important;color:#e7eff3!important}
     .pp-advisor-suggestion-apply[data-advisor-review]:hover,.pp-advisor-suggestion-apply[data-advisor-batch]:hover{border-color:#ff7800!important;color:#fff!important}
 
@@ -1104,6 +1109,7 @@ const ADVISOR_KEYS=[
 
 
 let advisorAppliedSnapshots={};
+let advisorLastAppliedKey=null;
 let advisorInternalChange=false;
 
 function advisorConfigs(s){
@@ -1453,6 +1459,11 @@ function render(){
   stats.innerHTML='<div class="pp-advisor-stat"><span>Current profit</span><strong class="'+advisorProfitState(shownProfit)+'">'+money(shownProfit)+'</strong><span style="margin-top:3px">Actual calculator result</span></div><div class="pp-advisor-stat"><span>'+t('breakEven')+'</span><strong class="neutral">'+(be===null?'—':money(be))+'</strong><span style="margin-top:3px">Minimum price to cover costs</span></div><div class="pp-advisor-stat"><span>'+t('target')+'</span><strong class="neutral">'+(t30===null?'—':money(t30))+'</strong><span style="margin-top:3px">Using current fee assumptions</span></div><div class="pp-advisor-stat"><span>Sales price</span><strong class="neutral">'+money(s.sell)+'</strong><span style="margin-top:3px">Current calculator price</span></div>';
   box.appendChild(stats);
 
+  const undoBar=document.createElement('div');
+  undoBar.className='pp-advisor-undo-bar';
+  undoBar.innerHTML='<span>'+ (advisorLastAppliedKey&&advisorAppliedSnapshots[advisorLastAppliedKey] ? 'Last change: <b>'+advisorLastAppliedKey.replace(/([A-Z])/g,' $1').replace(/^./,m=>m.toUpperCase())+'</b>' : 'You can safely undo any applied suggestion.') +'</span><button type="button" class="pp-advisor-undo-last" data-advisor-undo-last '+(advisorLastAppliedKey&&advisorAppliedSnapshots[advisorLastAppliedKey]?'':'disabled')+'>↩ Undo last change</button>';
+  box.appendChild(undoBar);
+
   const how=document.createElement('div');
   how.className='pp-advisor-how';
   how.innerHTML='<strong>How the suggestions work</strong><span>Read why it was suggested → see what would change → apply it → check the new profit. Every applied suggestion has an Undo button.</span>';
@@ -1553,6 +1564,7 @@ function applySingleAdvisorSuggestion(key){
       beforeProfit:currentProfitFor(s,batchView),
       reason:cfg.why(s)
     };
+    advisorLastAppliedKey=key;
 
     setTimeout(()=>{
       $('calc')?.click();
@@ -1580,6 +1592,7 @@ function applySingleAdvisorSuggestion(key){
     });
   }finally{advisorInternalChange=false;}
   delete advisorAppliedSnapshots[key];
+  if(advisorLastAppliedKey===key)advisorLastAppliedKey=null;
 
   setTimeout(()=>{
     $('calc')?.click();
@@ -1599,6 +1612,13 @@ function boot(){
 }
 
 document.addEventListener('click',e=>{
+  const undoLast=e.target&&e.target.closest?e.target.closest('#ppProfitAdvisor [data-advisor-undo-last]'):null;
+  if(undoLast){
+    e.preventDefault();
+    e.stopPropagation();
+    if(advisorLastAppliedKey&&advisorAppliedSnapshots[advisorLastAppliedKey])applySingleAdvisorSuggestion(advisorLastAppliedKey);
+    return;
+  }
   const apply=e.target&&e.target.closest?e.target.closest('#ppProfitAdvisor [data-advisor-apply]'):null;
   if(apply){
     e.preventDefault();
