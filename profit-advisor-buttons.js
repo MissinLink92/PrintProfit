@@ -192,8 +192,6 @@ function render(){
   return true;
 }
 
-function esc(v){return String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-
 function commit(s,keys){
   if(!keys.length)return;
   const map=new Set(keys);
