@@ -150,7 +150,7 @@ function render(){
       <div class="pp-ba-beforeafter">
         <div class="pp-ba-ba-row"><span>Total cost</span><b>${money(s.base)}</b><i>→</i><b class="after">${money(p.base)}</b></div>
         <div class="pp-ba-ba-row"><span>Selling price</span><b>${money(s.sell)}</b><i>→</i><b class="after">${money(p.sell)}</b></div>
-        <div class="pp-ba-ba-row"><span>Margin</span><b>${(batch?s.batchMargin:s.margin)*100 .toFixed(1)}%</b><i>→</i><b class="after">${(p.shownMargin*100).toFixed(1)}%</b></div>
+        <div class="pp-ba-ba-row"><span>Margin</span><b>${((batch?s.batchMargin:s.margin)*100).toFixed(1)}%</b><i>→</i><b class="after">${(p.shownMargin*100).toFixed(1)}%</b></div>
       </div>
       <div class="pp-ba-section-title">CHANGES BEING TESTED</div>
       ${active.length?active.map(k=>{
