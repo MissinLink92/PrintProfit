@@ -518,8 +518,8 @@ function goToReviewTarget(target){
     printer:'machine',materialPackCost:'machine',materialUsed:'machine',
     labourRate:'costs',labourHours:'costs',pack:'costs',other:'costs',
     delivery:'costs',deliveryCourier:'costs',deliveryRate:'costs',
-    platformSelect:'costs',platform:'costs',pay:'costs',fixedFee:'costs',
-    sell:'costs',electricityRate:'costs',electricityProvider:'costs'
+    platformSelect:'costs',platform:'costs',pay:'costs',fixedFee:'costs',deliveryCharge:'costs',pack:'costs',
+    sell:'costs',electricityRate:'costs',electricityProvider:'costs',printHours:'details'
   };
   const stage=stageMap[target]||'costs';
   const step=document.querySelector('.pp-step[data-tab="'+stage+'"]');
@@ -909,6 +909,9 @@ function addStyles(){
     .pp-advisor-applied-note b{display:block;color:#55eaa0;font-size:9px}.pp-advisor-applied-note span{display:block;margin-top:3px;color:#9eb2bc;font-size:8px;line-height:1.4}
     .pp-advisor-applied-badge{display:inline-flex;align-items:center;padding:4px 6px;border-radius:99px;border:1px solid rgba(54,229,139,.45);background:rgba(54,229,139,.08);color:#4be79a;font-size:7px;font-weight:900;white-space:nowrap}
 
+    .pp-advisor-suggestion-apply[data-advisor-review],.pp-advisor-suggestion-apply[data-advisor-batch]{background:#12242d!important;border-color:#3a5967!important;color:#e7eff3!important}
+    .pp-advisor-suggestion-apply[data-advisor-review]:hover,.pp-advisor-suggestion-apply[data-advisor-batch]:hover{border-color:#ff7800!important;color:#fff!important}
+
 
   `;
   document.head.appendChild(s);
@@ -1077,43 +1080,187 @@ let advisorAppliedSnapshots={};
 let advisorInternalChange=false;
 
 function advisorConfigs(s){
+  const candidates=[];
+  const add=(cfg)=>{
+    if(cfg&&cfg.relevant&&cfg.score>0)candidates.push(cfg);
+  };
   const cheapest=cheapestDelivery();
-  const suggestedSell=s.sell>0
-    ?Math.max(s.sell,Math.min(s.target30&&s.target30>s.sell?s.target30:s.sell*1.25,s.sell*1.25))
-    :Math.max(0,s.target30||0);
+  const lowestFee=lowestSellingFee(s.sell);
+  const productionCost=Math.max(0,s.base-s.delivery);
+  const costTotal=Math.max(0,s.base);
+  const margin=s.margin;
+  const feeShare=s.sell>0?s.fees/s.sell:0;
+  const packaging=s.packagingOther;
+  const deliveryAbsorbed=Math.max(0,s.delivery-s.deliveryCharge);
 
-  return [
-    {key:'materialUsage',icon:'⬡',title:'Reduce material usage',impactLabel:'High impact',
-      canApply:s.materialUsed>0&&s.materialCost>0,suggested:s.materialUsed*.85,
-      suggestedText:v=>v.toFixed(2)+' g',currentText:()=>s.materialUsed>0?s.materialUsed.toFixed(2)+' g':'Add material usage',
+  /* Pricing — show when price itself is a clear problem. */
+  if(s.sell>0&&s.breakEven!==null&&s.sell<s.breakEven){
+    const suggested=Math.max(s.breakEven*1.05,s.target30||s.breakEven*1.05);
+    add({
+      key:'sellingPrice',group:'price',kind:'apply',score:100+(s.breakEven-s.sell),
+      icon:'◇',title:'Raise the selling price',impactLabel:'Highest priority',
+      canApply:true,suggested,currentText:()=>money(s.sell),suggestedText:v=>money(v),
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:suggested,materialCost:s.materialCost}),
+      why:()=> 'Your price is '+money(s.sell)+' but break-even is '+money(s.breakEven)+'. You are '+money(s.breakEven-s.sell)+' below the point where the calculated costs and fees are covered.',
+      changeText:()=> 'Move the selling price above break-even so each sale covers the current costs and fees.',
+      targetKey:'sell'
+    });
+  }else if(s.sell>0&&margin<.30){
+    const suggested=Math.max(s.sell*1.15,s.target30||s.sell*1.15);
+    add({
+      key:'sellingPrice',group:'price',kind:'apply',score:75,
+      icon:'◇',title:'Improve the selling price',impactLabel:'High impact',
+      canApply:true,suggested,currentText:()=>money(s.sell),suggestedText:v=>money(v),
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:suggested,materialCost:s.materialCost}),
+      why:()=> 'Your current margin is '+(margin*100).toFixed(1)+'%. PrintProfit suggests testing a higher price because price is one of the few changes that can improve profit without changing the print.',
+      changeText:()=> 'Test a price increase while keeping the current fee assumptions.',
+      targetKey:'sell'
+    });
+  }
+
+  /* Material — only show the stronger of the two material suggestions. */
+  const materialShare=productionCost>0?s.materialCost/productionCost:0;
+  if(s.materialUsed>0&&s.materialCost>0&&materialShare>=.25){
+    add({
+      key:'materialUsage',group:'material',kind:'apply',score:78+materialShare*10,
+      icon:'⬡',title:'Use less material',impactLabel:'High impact',
+      canApply:true,suggested:s.materialUsed*.85,suggestedText:v=>v.toFixed(2)+' g',currentText:()=>s.materialUsed.toFixed(2)+' g',
       scenario:()=>({materialUsage:15,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
-      why:s=>s.materialCost>0?'Material currently costs '+money(s.materialCost)+' per print. A 15% usage reduction would save about '+money(s.materialCost*.15)+' before other costs.':'PrintProfit needs material usage and material cost before it can estimate this change.',
-      changeText:()=> 'Reduce the material used per print by about 15%.',targetKey:'materialUsed'},
-    {key:'labourMinutes',icon:'◷',title:'Reduce labour time',impactLabel:'Medium impact',
-      canApply:s.labourHours>0,suggested:s.labourHours>0?Math.max(0,s.labourHours-5/60):0,
-      suggestedText:v=>v.toFixed(2)+' h',currentText:()=>s.labourHours>0?s.labourHours.toFixed(2)+' h':'Add labour time',
-      scenario:()=>({materialUsage:0,labourMinutes:s.labourHours>0?Math.min(5,s.labourHours*60):0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
-      why:s=>s.labour>0?'You are spending '+money(s.labour)+' of labour per print. Saving 5 minutes would save about '+money(s.labourRate*(5/60))+' at your current rate.':'PrintProfit needs labour time before it can estimate this change.',
-      changeText:()=> 'Remove around 5 minutes of hands-on time from each print.',targetKey:'labourHours'},
-    {key:'deliveryCost',icon:'▱',title:'Lower delivery cost',impactLabel:'Medium impact',
-      canApply:!!(cheapest&&s.delivery>0&&cheapest.price<s.delivery),suggested:cheapest&&s.delivery>0&&cheapest.price<s.delivery?cheapest.price:s.delivery,
-      suggestedText:v=>money(v),currentText:()=>s.delivery>0?money(s.delivery):'Add delivery cost',
-      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:cheapest&&cheapest.price<s.delivery?cheapest.price:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
-      why:s=>cheapest&&s.delivery>0&&cheapest.price<s.delivery?'Your current delivery is '+money(s.delivery)+'. The lowest tracked reference is '+money(cheapest.price)+' ('+cheapest.label+').':'There is no lower tracked reference than the current delivery cost, so no delivery change is recommended.',
-      changeText:()=>cheapest&&s.delivery>0&&cheapest.price<s.delivery?'Test the lower tracked reference rate instead of your current delivery cost.':'No delivery reduction is currently recommended.',targetKey:'delivery'},
-    {key:'sellingPrice',icon:'◇',title:'Adjust selling price',impactLabel:'High impact',
-      canApply:s.sell>0,suggested:suggestedSell,
-      suggestedText:v=>money(v),currentText:()=>s.sell>0?money(s.sell):'Add selling price',
-      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:suggestedSell,materialCost:s.materialCost}),
-      why:s=>s.sell>0&&s.breakEven!==null&&s.sell<s.breakEven?'Your selling price is '+money(s.sell)+' while break-even is '+money(s.breakEven)+'. The current price does not yet cover the calculated costs and fees.':'Price is included because it can change revenue without changing the print. The suggestion keeps the current fee assumptions.',
-      changeText:()=> 'Increase the selling price to give the current costs more room.',targetKey:'sell'},
-    {key:'materialCost',icon:'◈',title:'Use cheaper material',impactLabel:'Lower impact',
-      canApply:s.materialCost>0&&s.materialPackCost>0,suggested:s.materialPackCost>0?s.materialPackCost*.85:0,
-      suggestedText:v=>money(v)+' / pack',currentText:()=>s.materialPackCost>0?money(s.materialPackCost)+' / pack':'Add material pack cost',
+      why:()=> 'Material is '+money(s.materialCost)+' of the production cost and is currently the largest cost driver. A 15% usage reduction would save about '+money(s.materialCost*.15)+' per print before other effects.',
+      changeText:()=> 'Try around 15% less material through infill, walls or supports where the model allows it.',
+      targetKey:'materialUsed'
+    });
+  }else if(s.materialCost>0&&s.materialPackCost>0){
+    add({
+      key:'materialCost',group:'material',kind:'apply',score:58,
+      icon:'◈',title:'Use cheaper material',impactLabel:'Medium impact',
+      canApply:true,suggested:s.materialPackCost*.85,suggestedText:v=>money(v)+' / pack',currentText:()=>money(s.materialPackCost)+' / pack',
       scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost*.85}),
-      why:s=>s.materialCost>0?'Your material costs '+money(s.materialCost)+' per print. A cheaper suitable spool or bottle could reduce that recurring production cost.':'Enter a material pack cost first so PrintProfit can estimate this saving.',
-      changeText:()=> 'Test a material pack cost about 15% lower with the same print settings.',targetKey:'materialPackCost'}
-  ];
+      why:()=> 'Material costs '+money(s.materialCost)+' per print. A suitable spool or bottle that costs less would reduce a recurring production cost without changing the print itself.',
+      changeText:()=> 'Test a material pack price about 15% lower.',
+      targetKey:'materialPackCost'
+    });
+  }
+
+  /* Delivery — choose either cheaper postage OR recovering undercharged delivery. */
+  if(deliveryAbsorbed>.05){
+    add({
+      key:'deliveryCharge',group:'delivery',kind:'review',score:82+deliveryAbsorbed*5,
+      icon:'⇩',title:'You are absorbing part of the delivery cost',impactLabel:'Worth fixing',
+      relevant:true,currentText:()=>money(deliveryAbsorbed)+' absorbed',
+      why:()=> 'Delivery costs you '+money(s.delivery)+' but you are only charging the customer '+money(s.deliveryCharge)+'. That leaves you absorbing '+money(deliveryAbsorbed)+' on every sale.',
+      changeText:()=> 'Review the customer delivery charge so you are not automatically paying the difference.',
+      metricLabel:'Potential improvement',metricText:()=>'+ '+money(deliveryAbsorbed)+' per sale',
+      reviewTarget:'deliveryCharge'
+    });
+  }else if(cheapest&&s.delivery>0&&cheapest.price<s.delivery){
+    const save=s.delivery-cheapest.price;
+    add({
+      key:'deliveryCost',group:'delivery',kind:'apply',score:65+save*6,
+      icon:'▱',title:'Lower the delivery cost',impactLabel:'Medium impact',
+      canApply:true,suggested:cheapest.price,suggestedText:v=>money(v),currentText:()=>money(s.delivery),
+      scenario:()=>({materialUsage:0,labourMinutes:0,deliveryCost:cheapest.price,sellingPrice:s.sell,materialCost:s.materialCost}),
+      why:()=> 'You currently pay '+money(s.delivery)+' for delivery. The lowest tracked reference is '+money(cheapest.price)+' ('+cheapest.label+'), so there may be '+money(save)+' to save per print.',
+      changeText:()=> 'Test the lower tracked delivery rate.',
+      targetKey:'delivery'
+    });
+  }
+
+  /* Labour — only when it actually matters. */
+  if(s.labour>0&&s.labourHours>0){
+    const labourShare=productionCost>0?s.labour/productionCost:0;
+    if(s.labour>=.25||labourShare>=.10){
+      add({
+        key:'labourMinutes',group:'labour',kind:'apply',score:55+labourShare*50,
+        icon:'◷',title:'Reduce labour time',impactLabel:'Medium impact',
+        canApply:true,suggested:Math.max(0,s.labourHours-5/60),suggestedText:v=>v.toFixed(2)+' h',currentText:()=>s.labourHours.toFixed(2)+' h',
+        scenario:()=>({materialUsage:0,labourMinutes:Math.min(5,s.labourHours*60),deliveryCost:s.delivery,sellingPrice:s.sell,materialCost:s.materialCost}),
+        why:()=> 'Labour is costing '+money(s.labour)+' per print. At your current rate, five minutes less hands-on time would save about '+money(s.labourRate*(5/60))+'.',
+        changeText:()=> 'Look for roughly five minutes of setup, cleanup or other hands-on work that can be removed.',
+        targetKey:'labourHours'
+      });
+    }
+  }
+
+  /* Selling fees — useful when they are taking a meaningful slice of the sale. */
+  if(s.fees>0&&s.sell>0&&(feeShare>=.08||s.fees>=.75)){
+    const potential=lowestFee&&lowestFee.fee<s.fees?s.fees-lowestFee.fee:0;
+    add({
+      key:'platformFees',group:'fees',kind:'review',score:60+feeShare*70,
+      icon:'%',title:'Check your selling fees',impactLabel:'Worth checking',
+      relevant:true,currentText:()=>money(s.fees)+' per sale',
+      why:()=> potential>0
+        ?'Your current platform/payment fees are '+money(s.fees)+'. A tracked lower-fee setup is '+money(lowestFee.fee)+', although the cheapest option may not offer the same features or terms.'
+        :'Selling fees are '+money(s.fees)+' on the current sale, which is a meaningful part of the price.',
+      changeText:()=> 'Compare your current platform and payment fees with the alternatives available in PrintProfit.',
+      metricLabel:'Possible saving',metricText:()=>potential>0?'+ '+money(potential)+' per sale':'Compare fees',
+      reviewTarget:'platformSelect'
+    });
+  }
+
+  /* Electricity — recommend a review only when it is a meaningful cost. */
+  if(s.elec>0&&costTotal>0&&(s.elec>=.25||s.elec/costTotal>=.08)){
+    const saving=s.elec*.20;
+    add({
+      key:'electricity',group:'electricity',kind:'review',score:52+(s.elec/costTotal)*60,
+      icon:'⚡',title:'Reduce electricity cost',impactLabel:'Worth checking',
+      relevant:true,currentText:()=>money(s.elec)+' per print',
+      why:()=> 'This print is using '+money(s.elec)+' of electricity. That is '+((s.elec/costTotal)*100).toFixed(0)+'% of the current production cost.',
+      changeText:()=> 'Review print time and machine power settings. A 20% electricity reduction would save roughly '+money(saving)+' per print.',
+      metricLabel:'Example saving',metricText:()=>'+ '+money(saving)+' per print',
+      reviewTarget:'printHours'
+    });
+  }
+
+  /* Printer depreciation — only when machine cost is genuinely significant. */
+  if(s.depreciation>0&&costTotal>0&&(s.depreciation>=.25||s.depreciation/costTotal>=.10)){
+    add({
+      key:'depreciation',group:'machine',kind:'review',score:48+(s.depreciation/costTotal)*50,
+      icon:'🖨',title:'Review printer cost',impactLabel:'Worth checking',
+      relevant:true,currentText:()=>money(s.depreciation)+' per print',
+      why:()=> 'Printer depreciation is '+money(s.depreciation)+' per print, which is '+((s.depreciation/costTotal)*100).toFixed(0)+'% of your production cost.',
+      changeText:()=> 'Check that the printer purchase price and expected life are realistic. Better machine utilisation can also spread the cost across more prints.',
+      metricLabel:'Current cost',metricText:()=>money(s.depreciation)+' per print',
+      reviewTarget:'printer'
+    });
+  }
+
+  /* Packaging / other — only when it is worth noticing. */
+  if(packaging>=.25|| (productionCost>0&&packaging/productionCost>=.10)){
+    add({
+      key:'packaging',group:'packaging',kind:'review',score:45+(packaging/Math.max(0.01,productionCost))*35,
+      icon:'□',title:'Reduce packaging & other costs',impactLabel:'Worth checking',
+      relevant:true,currentText:()=>money(packaging)+' per print',
+      why:()=> 'Packaging and other costs add up to '+money(packaging)+' per print. That is a recurring cost on every item you make.',
+      changeText:()=> 'Check whether bulk-buying packaging or using a simpler package would lower this cost.',
+      metricLabel:'Current cost',metricText:()=>money(packaging)+' per print',
+      reviewTarget:'pack'
+    });
+  }
+
+  /* Batch — useful only when there is something to spread across a run. */
+  if(s.qty===1&&(s.delivery>0||s.fixedFee>0)){
+    const spread=s.delivery+s.fixedFee;
+    add({
+      key:'batch',group:'batch',kind:'batch',score:40+Math.min(25,spread*6),
+      icon:'▦',title:'Try batch pricing',impactLabel:'Could help',
+      relevant:true,currentText:()=> '1 item',
+      why:()=> 'You have '+money(s.delivery)+' delivery cost'+(s.fixedFee>0?' and '+money(s.fixedFee)+' of fixed selling fees':'')+' that can be spread across a larger order.',
+      changeText:()=> 'Try the Batch Pricing view before quoting multiple items at once.',
+      metricLabel:'What to do',metricText:()=> 'Test a larger quantity',
+      reviewTarget:null
+    });
+  }
+
+  /* Prevent duplicate groups when multiple rules are eligible. */
+  const chosen=[];
+  const groups=new Set();
+  candidates.sort((x,y)=>y.score-x.score).forEach(cfg=>{
+    if(cfg.group&&groups.has(cfg.group))return;
+    chosen.push(cfg);
+    if(cfg.group)groups.add(cfg.group);
+  });
+  return chosen.slice(0,4);
 }
 
 function currentProfitFor(s,batchView){return batchView?s.batchProfit:s.profit;}
@@ -1125,51 +1272,50 @@ function suggestionRow(cfg,s,batchView){
   const row=document.createElement('article');
   row.className='pp-advisor-suggestion';
   row.dataset.advisorKey=cfg.key;
+
   const currentProfit=currentProfitFor(s,batchView);
-  const applied=advisorAppliedSnapshots[cfg.key];
-
-  let projected;
-  let change;
-  let currentLabel=cfg.currentText();
-  let suggestedLabel=cfg.suggestedText(cfg.suggested);
-  let why=cfg.why(s);
-
-  if(applied){
-    projected=Number.isFinite(applied.afterProfit)?applied.afterProfit:currentProfit;
-    change=Number.isFinite(applied.beforeProfit)?projected-applied.beforeProfit:0;
-    const beforeValue=applied.before?.[cfg.targetKey];
-    const afterValue=applied.after?.[cfg.targetKey];
-    if(beforeValue!==undefined){
-      currentLabel=cfg.targetKey==='materialPackCost'||cfg.targetKey==='sell'||cfg.targetKey==='delivery'
-        ?money(Number(beforeValue)||0)
-        :cfg.targetKey==='materialUsed'
-          ?(Number(beforeValue)||0).toFixed(2)+' g'
-          :(Number(beforeValue)||0).toFixed(2)+' h';
-    }
-    if(afterValue!==undefined){
-      suggestedLabel=cfg.targetKey==='materialPackCost'||cfg.targetKey==='sell'||cfg.targetKey==='delivery'
-        ?money(Number(afterValue)||0)+(cfg.targetKey==='materialPackCost'?' / pack':'')
-        :cfg.targetKey==='materialUsed'
-          ?(Number(afterValue)||0).toFixed(2)+' g'
-          :(Number(afterValue)||0).toFixed(2)+' h';
-    }
-    why=applied.reason||why;
-  }else{
+  const applied=cfg.kind==='apply'&&advisorAppliedSnapshots[cfg.key];
+  let projected=currentProfit;
+  let change=0;
+  if(cfg.kind==='apply'&&!applied){
     projected=calculateAdvisorScenario(s,cfg.scenario(),batchView).profit;
     change=projected-currentProfit;
+  }else if(applied){
+    projected=Number.isFinite(applied.afterProfit)?applied.afterProfit:currentProfit;
+    change=Number.isFinite(applied.beforeProfit)?projected-applied.beforeProfit:0;
+  }else if(typeof cfg.metricValue==='number'){
+    change=cfg.metricValue;
+    projected=currentProfit+change;
   }
 
+  if(applied){
+    row.innerHTML=
+      '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div><span class="pp-advisor-applied-badge">✓ Applied</span></div>'+
+      '<div class="pp-advisor-applied-note"><b>Applied successfully</b><span>The calculator is using this change now. Undo restores the value from immediately before you applied it.</span></div>'+
+      '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED IT</span><p>'+cfg.why(s)+'</p></div>'+
+      '<div class="pp-advisor-impact-row"><div><span>RESULT AFTER APPLYING</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>ACTUAL CHANGE</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
+      '<button type="button" class="pp-advisor-suggestion-apply undo" data-advisor-apply="'+cfg.key+'">Undo suggestion ↩</button>';
+    return row;
+  }
+
+  if(cfg.kind==='apply'){
+    const buttonLabel=cfg.canApply?'Apply suggestion →':'Add a value first';
+    row.innerHTML=
+      '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div></div>'+
+      '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED THIS</span><p>'+cfg.why(s)+'</p></div>'+
+      '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">TRY THIS</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>Current</small><b>'+cfg.currentText()+'</b></div><div class="pp-advisor-arrow">→</div><div><small>Suggested</small><b>'+cfg.suggestedText(cfg.suggested)+'</b></div></div></div>'+
+      '<div class="pp-advisor-impact-row"><div><span>PROJECTED PROFIT</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>ESTIMATED CHANGE</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
+      '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'" '+(cfg.canApply?'':'disabled')+'>'+buttonLabel+'</button>';
+    return row;
+  }
+
+  const actionAttr=cfg.kind==='review'?'data-advisor-review="'+(cfg.reviewTarget||'')+'"':'data-advisor-batch="1"';
   row.innerHTML=
-    '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div>'+
-      (applied?'<span class="pp-advisor-applied-badge">✓ Applied</span>':'')+
-    '</div>'+
-    '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">'+(applied?'WHY WE SUGGESTED IT':'WHY WE SUGGESTED THIS')+'</span><p>'+why+'</p></div>'+
-    (applied
-      ?'<div class="pp-advisor-applied-note"><b>Applied successfully</b><span>The calculator is now using this change. Undo restores the value from immediately before you applied it.</span></div>'
-      :'')+
-    '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">WHAT WOULD CHANGE</span><strong>'+cfg.changeText(s)+'</strong><div class="pp-advisor-value-row"><div><small>'+(applied?'Before':'Current')+'</small><b>'+currentLabel+'</b></div><div class="pp-advisor-arrow">→</div><div><small>'+(applied?'Applied':'Suggested')+'</small><b>'+suggestedLabel+'</b></div></div></div>'+
-    '<div class="pp-advisor-impact-row"><div><span>'+ (applied?'RESULT AFTER APPLYING':'PROJECTED PROFIT') +'</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div><div class="pp-advisor-impact '+(change>=0?'up':'down')+'"><span>'+ (applied?'ACTUAL CHANGE':'ESTIMATED CHANGE') +'</span><strong>'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</strong></div></div>'+
-    '<button type="button" class="pp-advisor-suggestion-apply '+(applied?'undo':'')+'" data-advisor-apply="'+cfg.key+'" '+((cfg.canApply||applied)?'':'disabled')+'>'+ (applied?'Undo suggestion ↩':(cfg.canApply?'Apply suggestion →':'Add a value first')) +'</button>';
+    '<div class="pp-advisor-suggestion-head"><div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div><div class="pp-advisor-suggestion-title"><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div></div>'+
+    '<div class="pp-advisor-why-box"><span class="pp-advisor-section-label">WHY WE SUGGESTED THIS</span><p>'+cfg.why(s)+'</p></div>'+
+    '<div class="pp-advisor-change-box"><span class="pp-advisor-section-label">WHAT TO DO</span><strong>'+cfg.changeText(s)+'</strong></div>'+
+    '<div class="pp-advisor-impact-row"><div><span>'+cfg.metricLabel+'</span><strong>'+cfg.metricText()+'</strong></div><div class="pp-advisor-impact up"><span>THE NEXT STEP</span><strong>Review</strong></div></div>'+
+    '<button type="button" class="pp-advisor-suggestion-apply" '+actionAttr+'>'+(cfg.kind==='batch'?'Try batch pricing →':'Review setting →')+'</button>';
   return row;
 }
 
@@ -1237,10 +1383,11 @@ function render(){
 
   const section=document.createElement('div');
   section.className='pp-advisor-suggestions-section';
-  section.innerHTML='<div class="pp-advisor-section-heading"><div><span class="pp-advisor-section-label">SUGGESTED IMPROVEMENTS</span><h4>What could improve this result?</h4></div></div>';
+  const picked=advisorConfigs(s);
+  section.innerHTML='<div class="pp-advisor-section-heading"><div><span class="pp-advisor-section-label">SUGGESTED IMPROVEMENTS</span><h4>What matters most for this print</h4></div></div>';
   const grid=document.createElement('div');
   grid.className='pp-advisor-suggestions-grid';
-  advisorConfigs(s).forEach(cfg=>grid.appendChild(suggestionRow(cfg,s,batchView)));
+  picked.forEach(cfg=>grid.appendChild(suggestionRow(cfg,s,batchView)));
   section.appendChild(grid);
   box.appendChild(section);
 
@@ -1379,6 +1526,20 @@ document.addEventListener('click',e=>{
     e.stopPropagation();
     const key=apply.getAttribute('data-advisor-apply');
     applySingleAdvisorSuggestion(key);
+    return;
+  }
+  const review=e.target&&e.target.closest?e.target.closest('#ppProfitAdvisor [data-advisor-review]'):null;
+  if(review){
+    e.preventDefault();
+    e.stopPropagation();
+    goToReviewTarget(review.getAttribute('data-advisor-review'));
+    return;
+  }
+  const batch=e.target&&e.target.closest?e.target.closest('#ppProfitAdvisor [data-advisor-batch]'):null;
+  if(batch){
+    e.preventDefault();
+    e.stopPropagation();
+    document.querySelector('#resultTabs .tab[data-result-tab="batch"]')?.click();
     return;
   }
   const button=e.target&&e.target.closest?e.target.closest('.pp-profit-review[data-pp-review-target]'):null;
