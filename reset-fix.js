@@ -126,6 +126,7 @@
     setValue('materialPackCost','0');
     manualSellingPrice=0;
     quickMode=null;
+    window.__ppClearActiveProject?.();
     document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.classList.remove('active'));
     document.querySelectorAll('input,select,textarea').forEach(dispatchFieldChange);
     resetModelDisplay();
