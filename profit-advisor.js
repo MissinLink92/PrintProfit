@@ -897,6 +897,29 @@ function addStyles(){
     .pp-advisor-suggestion-apply:disabled{opacity:.5!important;cursor:not-allowed!important}
     .pp-advisor-suggestion-apply:hover:not(:disabled){filter:brightness(1.06)}
     .pp-advisor-footer-note{margin-top:10px;padding:9px;border-top:1px solid rgba(127,160,175,.12);color:#7f95a1;font-size:8px;line-height:1.45}
+    .pp-advisor-profit-plan{grid-column:2 / -1!important;min-height:304px;display:flex!important;flex-direction:column!important;padding:14px!important;border:1px solid #35606f!important;border-radius:13px!important;background:linear-gradient(145deg,#0b222d,#07161f)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.02)!important;box-sizing:border-box!important}
+    .pp-advisor-profit-plan-full{grid-column:1 / -1!important}
+    .pp-advisor-plan-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+    .pp-advisor-plan-head h4{margin:3px 0 0;font-size:16px}
+    .pp-advisor-plan-profit{text-align:right;padding:7px 9px;border:1px solid #294957;border-radius:8px;background:#091821}
+    .pp-advisor-plan-profit span{display:block;color:#7f95a1;font-size:7px;font-weight:900;text-transform:uppercase}
+    .pp-advisor-plan-profit strong{display:block;margin-top:3px;font-size:16px}
+    .pp-advisor-plan-start{display:flex;gap:10px;margin-top:12px;padding:11px;border:1px solid rgba(255,120,0,.30);border-left:3px solid #ff7800;border-radius:9px;background:rgba(255,120,0,.055)}
+    .pp-advisor-plan-number{width:25px;height:25px;flex:0 0 25px;display:grid;place-items:center;border-radius:50%;background:#ff7800;color:#fff;font-size:10px;font-weight:900}
+    .pp-advisor-plan-start-copy h5{margin:3px 0 4px;font-size:13px}
+    .pp-advisor-plan-start-copy p{margin:0;color:#b8c7cf;font-size:8.5px;line-height:1.45}
+    .pp-advisor-plan-next{margin-top:12px}
+    .pp-advisor-plan-step{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid rgba(127,160,175,.11)}
+    .pp-advisor-plan-step>span{width:20px;height:20px;display:grid;place-items:center;border:1px solid #35515f;border-radius:50%;color:#ff9a42;font-size:8px;font-weight:900}
+    .pp-advisor-plan-step strong{display:block;font-size:9px}
+    .pp-advisor-plan-step small{display:block;margin-top:2px;color:#7f95a1;font-size:7px;text-transform:uppercase}
+    .pp-advisor-plan-note{margin-top:auto;padding:9px;border:1px solid #294957;border-radius:8px;background:#08161e;color:#8ea4af;font-size:8px;line-height:1.4}
+    .pp-advisor-plan-note b{color:#c7d5db}
+    .pp-advisor-plan-action{width:100%;margin-top:9px;padding:9px 10px;border:1px solid #ff7800;border-radius:8px;background:linear-gradient(135deg,#ff9a3d,#ff7800);color:#fff;font:900 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}
+    .pp-advisor-plan-action:hover{filter:brightness(1.06)}
+    @media(max-width:1050px){.pp-advisor-profit-plan,.pp-advisor-profit-plan-full{grid-column:1 / -1!important;min-height:0}}
+    @media(max-width:650px){.pp-advisor-plan-head{flex-direction:column}.pp-advisor-plan-profit{text-align:left;width:100%;box-sizing:border-box}}
+
     .pp-advisor-tips-box{margin-top:9px;padding:9px;border:1px solid rgba(70,170,220,.18);border-radius:8px;background:rgba(70,170,220,.035)}
     .pp-advisor-tips-box ul{margin:5px 0 0 16px;padding:0;color:#b8c7cf;font-size:8px;line-height:1.5}
     .pp-advisor-tips-box li{margin:2px 0}
@@ -1361,6 +1384,34 @@ function ensureResultColumns(result,box){
   return true;
 }
 
+function buildProfitPlan(picked,s,batchView){
+  if(!picked.length)return null;
+  const top=picked[0];
+  const plan=document.createElement('article');
+  plan.className='pp-advisor-profit-plan '+(picked.length<4?'pp-advisor-profit-plan-full':'');
+  
+  const current=currentProfitFor(s,batchView);
+  let headline=top.kind==='apply'?'Start with '+top.title:top.title;
+  let intro=top.why(s);
+  let actionText=top.kind==='apply'?'Start with this →':top.kind==='batch'?'Try batch pricing →':'Review this →';
+  let actionAttr=top.kind==='apply'
+    ?'data-advisor-apply="'+top.key+'"'
+    :top.kind==='batch'
+      ?'data-advisor-batch="1"'
+      :'data-advisor-review="'+(top.reviewTarget||'')+'"';
+
+  const later=picked.slice(1,4);
+  plan.innerHTML=
+    '<div class="pp-advisor-plan-head"><div><span class="pp-advisor-section-label">YOUR PROFIT PLAN</span><h4>What should you do next?</h4></div><div class="pp-advisor-plan-profit"><span>Current profit</span><strong class="'+advisorProfitState(current)+'">'+money(current)+'</strong></div></div>'+
+    '<div class="pp-advisor-plan-start"><div class="pp-advisor-plan-number">1</div><div class="pp-advisor-plan-start-copy"><span class="pp-advisor-section-label">START HERE</span><h5>'+headline+'</h5><p>'+intro+'</p></div></div>'+
+    (later.length?'<div class="pp-advisor-plan-next"><span class="pp-advisor-section-label">THEN CONSIDER</span>'+later.map((cfg,i)=>
+      '<div class="pp-advisor-plan-step"><span>'+(i+2)+'</span><div><strong>'+cfg.title+'</strong><small>'+cfg.impactLabel+'</small></div></div>'
+    ).join('')+'</div>':'')+
+    '<div class="pp-advisor-plan-note"><b>Keep it simple.</b> Make one change, recalculate, then decide whether to keep it. You can undo applied suggestions.</div>'+
+    '<button type="button" class="pp-advisor-plan-action" '+actionAttr+'>'+actionText+'</button>';
+  return plan;
+}
+
 function render(){
   const result=document.querySelector('.result');
   if(!result)return false;
@@ -1414,6 +1465,8 @@ function render(){
   const grid=document.createElement('div');
   grid.className='pp-advisor-suggestions-grid';
   picked.forEach(cfg=>grid.appendChild(suggestionRow(cfg,s,batchView)));
+  const profitPlan=buildProfitPlan(picked,s,batchView);
+  if(profitPlan)grid.appendChild(profitPlan);
   section.appendChild(grid);
   box.appendChild(section);
 
