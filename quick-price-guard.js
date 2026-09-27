@@ -15,11 +15,11 @@
   function baseCost(){
     const printer=get('printer')?.value||'';
     let watts=0,price=0,lifetime=0;
-    if(printer&&printer!=='custom'){
+    if(printer==='custom'){
+      watts=num('customPrinterPower');price=num('customPrinterPrice');lifetime=num('customPrinterLife');
+    }else if(printer){
       const parts=printer.split(/[|,]/);
-      watts=Number(parts[0])||0;
-      price=Number(parts[1])||0;
-      lifetime=Number(parts[2])||0;
+      watts=Number(parts[0])||0;price=Number(parts[1])||0;lifetime=Number(parts[2])||0;
     }
     const hours=num('printHours');
     const pack=num('materialPack');
@@ -46,10 +46,11 @@
       const discount=Math.min(100,num('discount'))/100;
       const factor=qty*(1-discount);
       if(!(factor>0))return null;
-      return Math.max(0,(base*qty+fixedFee-deliveryCharge)/denominator)/factor;
+      const batchBase=Math.max(0,base-num('delivery'))*qty+num('delivery');
+      return Math.max(0,(batchBase+fixedFee-deliveryCharge)/denominator)/factor;
     }
 
-    return(base+fixedFee)/denominator;
+    return Math.max(0,base+fixedFee-deliveryCharge)/denominator;
   }
 
   function buttonsFor(mode){
