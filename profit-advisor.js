@@ -731,7 +731,7 @@ function addStyles(){
         grid-template-columns:1fr 1fr!important;
       }
     }
-
+  `;
   s.textContent += `
     .result#about.pp-advisor-results-split{
       display:grid!important;
