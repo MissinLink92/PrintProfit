@@ -403,7 +403,9 @@ function t(key,vars={}){
 
 function printerData(){
   const el=$('printer');
-  if(!el||!el.value||el.value==='custom')return{watts:0,price:0,lifetime:0};
+  if(!el)return{watts:0,price:0,lifetime:0};
+  if(el.value==='custom')return{watts:num('customPrinterPower'),price:num('customPrinterPrice'),lifetime:num('customPrinterLife')};
+  if(!el.value)return{watts:0,price:0,lifetime:0};
   const p=el.value.split(/[|,]/);
   return{watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0};
 }
@@ -461,6 +463,7 @@ function snapshot(){
   const batchCost=productionSubtotal+delivery;
   const batchFees=itemSales*feeRate+num('fixedFee');
   const batchProfit=itemSales+deliveryCharge-batchCost-batchFees;
+  const batchMargin=batchSales?batchProfit/batchSales:0;
   const batchBreakEvenDen=1-feeRate;
   const batchBreakEven=batchBreakEvenDen>0&&qty*(1-disc)>0
     ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchBreakEvenDen)/(qty*(1-disc))
@@ -470,7 +473,8 @@ function snapshot(){
     ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchTarget30Den)/(qty*(1-disc))
     :null;
 
-  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:sell?syncedProfit/sell:0,breakEven,target30,batchProfit,batchBreakEven,batchTarget30};
+  const activeMargin=batchViewForSnapshot?batchMargin:(sell?syncedProfit/sell:0);
+  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:activeMargin,batchProfit,batchMargin,batchBreakEven,batchTarget30};
 }
 
 function cheapestDelivery(){
