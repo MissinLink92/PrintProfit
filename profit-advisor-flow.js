@@ -211,6 +211,9 @@ function renderResultsBridge(){
   }
 
   const change=readChange();
+  const renderSignature=JSON.stringify(change);
+  if(host.dataset.renderSignature===renderSignature)return true;
+  host.dataset.renderSignature=renderSignature;
   if(!change){
     host.innerHTML=`
       <div class="pp-arb-empty">
