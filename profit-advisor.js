@@ -995,46 +995,8 @@ function addStyles(){
   document.head.appendChild(s);
 }
 
-function buildItem(icon,titleKey,body,actionId){
-  const item=document.createElement('div');
-  item.className='pp-profit-item';
-  item.innerHTML='<div class="pp-profit-item-icon">'+icon+'</div><div class="pp-profit-item-main"><strong>'+titleKey+'</strong><p>'+body+'</p>'+(actionId?'<button type="button" class="pp-profit-review" data-pp-review-target="'+actionId+'">'+t('review')+'</button>':'')+'</div>';
-  return item;
-}
-
-let advisorScenario=null;
-
 function advisorProfitState(v){
   return v>0?'profit':v<0?'loss':'neutral';
-}
-
-function advisorDefaults(s,batchView){
-  const cheapest=cheapestDelivery();
-  const deliveryTarget=(s.delivery>0&&cheapest&&cheapest.price<s.delivery)?cheapest.price:s.delivery;
-  const sell=s.sell;
-  const target=s.target30??sell;
-  const suggestedSell=sell>0
-    ?Math.max(sell,Math.min(target>sell?target:sell*1.25,sell*1.25))
-    :Math.max(0,target||0);
-  return {
-    materialUsage: s.materialCost>0?15:0,
-    labourMinutes: s.labour>0?Math.min(5,Math.max(0,num('labourHours')*60)):0,
-    deliveryCost: deliveryTarget,
-    sellingPrice: suggestedSell,
-    materialCost: s.materialCost>0?s.materialCost*0.85:0
-  };
-}
-
-function advisorScenarioValues(s){
-  if(!advisorScenario)advisorScenario=advisorDefaults(s);
-  const maxLabour=Math.max(0,num('labourHours')*60);
-  advisorScenario.materialUsage=Math.min(80,Math.max(0,Number(advisorScenario.materialUsage)||0));
-  advisorScenario.labourMinutes=Math.min(maxLabour,Math.max(0,Number(advisorScenario.labourMinutes)||0));
-  advisorScenario.deliveryCost=Math.min(s.delivery,Math.max(0,Number.isFinite(Number(advisorScenario.deliveryCost))?Number(advisorScenario.deliveryCost):s.delivery));
-  const maxSell=Math.max(s.sell*2,s.target30||0,1);
-  advisorScenario.sellingPrice=Math.min(maxSell,Math.max(0,Number(advisorScenario.sellingPrice)||0));
-  advisorScenario.materialCost=Math.min(s.materialCost,Math.max(0,Number.isFinite(Number(advisorScenario.materialCost))?Number(advisorScenario.materialCost):s.materialCost));
-  return advisorScenario;
 }
 
 function calculateAdvisorScenario(s,sc,batchView){
@@ -1698,7 +1660,6 @@ document.addEventListener('input',e=>{
   if(e.target&&e.target.matches('input,select,textarea')){
     if(advisorInternalChange)return;
     advisorAppliedSnapshots={};
-    advisorScenario=null;
     setTimeout(()=>render(),20);
   }
 });
@@ -1707,7 +1668,6 @@ document.addEventListener('change',e=>{
   if(e.target&&e.target.matches('input,select,textarea')){
     if(advisorInternalChange)return;
     advisorAppliedSnapshots={};
-    advisorScenario=null;
     setTimeout(()=>render(),20);
   }
 });
