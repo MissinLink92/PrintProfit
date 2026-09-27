@@ -68,25 +68,11 @@ function install(){
   document.head.appendChild(style);
   return true;
 }
-function loadNaturalFlow(){
-  if(document.querySelector('script[data-pp-natural-flow-loader]'))return;
-  const s=document.createElement('script');
-  s.src='./natural-flow.js?v=2';
-  s.setAttribute('data-pp-natural-flow-loader','1');
-  s.onerror=()=>console.warn('PrintProfit natural-flow script failed to load');
-  document.body.appendChild(s);
-}
 function wait(){
-  if(install()){
-    loadNaturalFlow();
-    return;
-  }
+  if(install())return;
   const started=Date.now();
   const timer=setInterval(()=>{
-    if(install()||Date.now()-started>15000){
-      clearInterval(timer);
-      loadNaturalFlow();
-    }
+    if(install()||Date.now()-started>15000)clearInterval(timer);
   },50);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});else wait();
