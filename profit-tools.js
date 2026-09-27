@@ -283,7 +283,6 @@ function updateWhatIf(state){
   const feeRate=(sp.platform+sp.pay)/100;
   const fees=state.sell*feeRate+sp.fixed;
   const profit=state.sell+state.deliveryCharge-adjustedBase-fees;
-  const delta=profit-state.profit;
 
   const batchSales=state.sell*state.qty*(1-state.disc);
   const batchProductionBase=Math.max(0,adjustedBase-delivery);
@@ -291,8 +290,13 @@ function updateWhatIf(state){
   const batchFees=batchSales*feeRate+sp.fixed;
   const batchProfit=batchSales+state.deliveryCharge-batchCost-batchFees;
 
+  const batchView=$('batchResultView')&&!$('batchResultView').hidden;
+  const currentProfit=batchView?state.batchProfit:state.profit;
+  const whatIfProfit=batchView?batchProfit:profit;
+  const delta=whatIfProfit-currentProfit;
+
   const current=$('ppWIBaseProfit'),out=$('ppWIProfit'),deltaOut=$('ppWIDelta'),costOut=$('ppWICost');
-  if(current)current.textContent=money(state.profit);
+  if(current)current.textContent=money(currentProfit);
   if(out)out.textContent=money(profit);
   if(deltaOut){
     deltaOut.textContent=(delta>=0?'+':'')+money(delta);
