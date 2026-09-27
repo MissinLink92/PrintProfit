@@ -944,6 +944,52 @@ function addStyles(){
     .pp-advisor-suggestion-apply[data-advisor-review],.pp-advisor-suggestion-apply[data-advisor-batch]{background:#12242d!important;border-color:#3a5967!important;color:#e7eff3!important}
     .pp-advisor-suggestion-apply[data-advisor-review]:hover,.pp-advisor-suggestion-apply[data-advisor-batch]:hover{border-color:#ff7800!important;color:#fff!important}
 
+    /* Final readability pass */
+    .pp-profit-advisor{font-size:12px!important;line-height:1.45!important}
+    .pp-profit-advisor h3{font-size:20px!important;line-height:1.2!important}
+    .pp-profit-advisor h4{font-size:16px!important;line-height:1.25!important}
+    .pp-profit-advisor p{font-size:12px!important;line-height:1.45!important}
+    .pp-advisor-heading p{font-size:12.5px!important;line-height:1.4!important}
+    .pp-advisor-alert strong{font-size:12px!important}
+    .pp-advisor-alert span{font-size:11px!important;line-height:1.4!important}
+    .pp-advisor-stat span{font-size:10.5px!important;line-height:1.35!important}
+    .pp-advisor-stat strong{font-size:18px!important;line-height:1.15!important}
+    .pp-advisor-stat span[style*="margin-top"]{font-size:10.5px!important;line-height:1.35!important}
+    .pp-advisor-how{font-size:11px!important;line-height:1.5!important}
+    .pp-advisor-how strong{font-size:12px!important}
+    .pp-advisor-section-label{font-size:9px!important;line-height:1.25!important;letter-spacing:.12em!important}
+    .pp-advisor-section-heading h4{font-size:17px!important}
+    .pp-advisor-suggestion-title strong{font-size:13px!important;line-height:1.25!important}
+    .pp-advisor-suggestion-title small{font-size:9px!important;line-height:1.25!important}
+    .pp-advisor-why-box p{font-size:11px!important;line-height:1.5!important}
+    .pp-advisor-tips-box ul{font-size:10.5px!important;line-height:1.5!important}
+    .pp-advisor-change-box>strong{font-size:11px!important;line-height:1.45!important}
+    .pp-advisor-value-row small{font-size:9px!important}
+    .pp-advisor-value-row b{font-size:11px!important;line-height:1.25!important}
+    .pp-advisor-impact-row span{font-size:9px!important;line-height:1.25!important}
+    .pp-advisor-impact-row strong{font-size:16px!important;line-height:1.15!important}
+    .pp-advisor-suggestion-apply{font-size:11px!important;line-height:1.3!important}
+    .pp-advisor-applied-badge{font-size:9px!important}
+    .pp-advisor-applied-note b{font-size:11px!important}
+    .pp-advisor-applied-note span{font-size:10.5px!important;line-height:1.45!important}
+    .pp-advisor-undo-bar{font-size:10.5px!important;line-height:1.4!important}
+    .pp-advisor-undo-last{font-size:10px!important}
+    .pp-advisor-footer-note{font-size:10.5px!important;line-height:1.5!important}
+    .pp-advisor-plan-head h4{font-size:17px!important}
+    .pp-advisor-plan-profit span{font-size:9px!important}
+    .pp-advisor-plan-profit strong{font-size:17px!important}
+    .pp-advisor-plan-start-copy h5{font-size:14px!important}
+    .pp-advisor-plan-start-copy p{font-size:11px!important}
+    .pp-advisor-plan-step strong{font-size:11px!important}
+    .pp-advisor-plan-step small{font-size:9px!important}
+    .pp-advisor-plan-note{font-size:10.5px!important;line-height:1.5!important}
+    .pp-advisor-plan-action{font-size:11px!important}
+    @media(max-width:650px){
+      .pp-profit-advisor h3{font-size:18px!important}
+      .pp-advisor-stat strong{font-size:17px!important}
+      .pp-advisor-why-box p{font-size:10.5px!important}
+    }
+
 
   `;
   document.head.appendChild(s);
