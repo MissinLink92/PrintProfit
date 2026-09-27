@@ -463,7 +463,7 @@ function snapshot(){
   const batchCost=productionSubtotal+delivery;
   const batchFees=itemSales*feeRate+num('fixedFee');
   const batchProfit=itemSales+deliveryCharge-batchCost-batchFees;
-  const batchMargin=batchSales?batchProfit/batchSales:0;
+  const batchMargin=itemSales?batchProfit/itemSales:0;
   const batchBreakEvenDen=1-feeRate;
   const batchBreakEven=batchBreakEvenDen>0&&qty*(1-disc)>0
     ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchBreakEvenDen)/(qty*(1-disc))
