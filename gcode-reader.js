@@ -141,8 +141,8 @@ function install(){
   if(!input||!drop)return false;
   if(input.dataset.ppUnifiedGcode)return true;
   input.dataset.ppUnifiedGcode='1';
-  input.addEventListener('change',e=>{const f=input.files?.[0];if(f&&GCODE_EXT.has(ext(f.name))){e.stopImmediatePropagation();importGcode(f);}},true);
-  drop.addEventListener('drop',e=>{const f=e.dataTransfer?.files?.[0];if(f)preventLegacy(e,f);},true);
+  input.addEventListener('change',e=>{const f=input.files?.[0];if(f&&GCODE_EXT.has(ext(f.name))){e.stopImmediatePropagation();try{window.__ppPersistUploadedFile?.(f);}catch(_){}importGcode(f);}},true);
+  drop.addEventListener('drop',e=>{const f=e.dataTransfer?.files?.[0];if(f){try{window.__ppPersistUploadedFile?.(f);}catch(_){}preventLegacy(e,f);}},true);
   ['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('pp-drop-active');},true));
   ['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('pp-drop-active');},true));
   return true;
