@@ -597,7 +597,7 @@ function addStyles(){
     .pp-advisor-suggestion-title small{display:block;margin-top:2px;color:#8ea4af;font-size:8px;line-height:1.35;}
     .pp-advisor-pill{display:inline-flex;align-items:center;padding:3px 5px;border-radius:99px;border:1px solid rgba(54,229,139,.45);color:#4be79a;background:rgba(54,229,139,.06);font-size:7px;font-weight:900;white-space:nowrap;}
     .pp-advisor-pill.med{border-color:rgba(255,193,7,.45);color:#ffd15d;background:rgba(255,193,7,.06);}
-    .pp-advisor-control{display:grid;grid-template-columns:minmax(85px,1fr) minmax(85px,1fr) minmax(90px,1fr) minmax(70px,.7fr);gap:6px;align-items:center;margin-top:8px;}
+    .pp-advisor-control{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;align-items:stretch;margin-top:8px;}
     .pp-advisor-control .mini{border:1px solid #294957;border-radius:7px;padding:6px 7px;background:#091821;}
     .pp-advisor-control .mini span{display:block;color:#7f95a1;font-size:7px;}
     .pp-advisor-control .mini strong{display:block;margin-top:2px;font-size:10px;}
@@ -646,13 +646,12 @@ function addStyles(){
       .pp-advisor-alert{width:100%;max-width:none;}
       .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
       .pp-advisor-main{grid-template-columns:1fr;}
-      .pp-advisor-control{grid-template-columns:72px minmax(0,1fr) 72px 78px 62px;}
+      .pp-advisor-control{grid-template-columns:1fr 1fr;}
     }
     @media(max-width:650px){
       .pp-profit-advisor{padding:10px;}
       .pp-advisor-stat-grid{grid-template-columns:1fr 1fr;}
       .pp-advisor-control{grid-template-columns:1fr 1fr;gap:6px;}
-      .pp-advisor-control .pp-advisor-range-wrap{grid-column:1 / -1;}
       .pp-advisor-control output,.pp-advisor-change{text-align:left;}
     }
     body[data-pp-theme="light"] .pp-profit-advisor{background:linear-gradient(180deg,#fff,#edf3f6)!important;border-color:#b8c9d1!important;color:#17232b!important;}
@@ -825,11 +824,18 @@ function suggestionRow(cfg,s,sc,batchView){
   const row=document.createElement('article');
   row.className='pp-advisor-suggestion';
   row.dataset.advisorKey=cfg.key;
-  const value=cfg.get();
-  const max=cfg.max();
   const projected=calculateAdvisorScenario(s,rowScenarioFor(s,sc,cfg.key),batchView).profit;
   const change=projected-(batchView?s.batchProfit:s.profit);
   const badgeClass=cfg.impact==='med'?'pp-advisor-pill med':'pp-advisor-pill';
+  const canApply=(()=>{
+    if(cfg.key==='materialUsage')return s.used>0;
+    if(cfg.key==='printTime')return s.hours>0;
+    if(cfg.key==='materialCost')return s.materialCost>0;
+    if(cfg.key==='deliveryCost')return s.delivery>0;
+    if(cfg.key==='labourMinutes')return s.labourHours>0;
+    if(cfg.key==='sellingPrice')return s.sell>0;
+    return false;
+  })();
   row.innerHTML=
     '<div class="pp-advisor-suggestion-head">'+
       '<div class="pp-advisor-suggestion-icon">'+cfg.icon+'</div>'+
@@ -838,10 +844,12 @@ function suggestionRow(cfg,s,sc,batchView){
     '</div>'+
     '<div class="pp-advisor-control">'+
       '<div class="mini"><span>Current</span><strong>'+cfg.currentText(s)+'</strong></div>'+
-      '<div class="mini"><span>Suggested</span><strong id="'+cfg.suggestedId+'">'+cfg.suggestedText(value,s)+'</strong></div>'+
-      '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'" id="'+cfg.profitId+'">'+money(projected)+'</strong></div>'+
-      '<div class="pp-advisor-change '+(change>=0?'up':'down')+'" id="'+cfg.changeId+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
-      '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'">Apply suggestion →</button>'+
+      '<div class="mini"><span>Suggested</span><strong>'+cfg.suggestedText(cfg.get(),s)+'</strong></div>'+
+      '<div class="mini"><span>New profit</span><strong class="'+advisorProfitState(projected)+'">'+money(projected)+'</strong></div>'+
+      '<div class="pp-advisor-change '+(change>=0?'up':'down')+'">'+(change>=0?'↑ ':'↓ ')+money(Math.abs(change))+'</div>'+
+      '<button type="button" class="pp-advisor-suggestion-apply" data-advisor-apply="'+cfg.key+'" '+(canApply?'':'disabled')+'>'+
+        (canApply?'Apply suggestion →':'Add a value first')+
+      '</button>'+
     '</div>';
   return row;
 }
@@ -927,7 +935,7 @@ function render(){
   const shownProfit=batchView?s.batchProfit:s.profit;
   const hasData=(s.base>0||s.sell>0||s.deliveryCharge>0);
   const sc=advisorScenarioValues(s);
-  const scenario=calculateAdvisorScenario(s,sc,batchView);
+  const scenario={profit:shownProfit,delta:0,delivery:s.delivery,sell:s.sell,material:s.materialCost};
 
   const lead=shownProfit<0
     ? t('negativeLead',{amount:money(Math.abs(shownProfit))})
@@ -1035,6 +1043,28 @@ function render(){
   return true;
 }
 
+function applySingleAdvisorSuggestion(key){
+  const s=snapshot();
+  if(!s)return;
+  const apply=(id,v)=>{
+    const el=$(id);
+    if(!el)return;
+    el.value=String(v);
+    el.dispatchEvent(new Event('input',{bubbles:true}));
+    el.dispatchEvent(new Event('change',{bubbles:true}));
+  };
+  if(key==='materialUsage'&&s.used>0)apply('materialUsed',(s.used*.85).toFixed(2));
+  else if(key==='printTime'&&s.hours>0){
+    const h=s.hours*.9,whole=Math.floor(h),m=Math.round((h-whole)*60);
+    if($('ppPrintTimeHours')&&$('ppPrintTimeMinutes')){apply('ppPrintTimeHours',whole);apply('ppPrintTimeMinutes',m);}
+    else apply('printHours',h.toFixed(2));
+  } else if(key==='materialCost'&&s.packPrice>0)apply('materialPackCost',(s.packPrice*.85).toFixed(2));
+  else if(key==='deliveryCost'&&s.delivery>0)apply('delivery',Math.max(0,s.delivery-.95).toFixed(2));
+  else if(key==='labourMinutes'&&s.labourHours>0)apply('labourHours',Math.max(0,s.labourHours-5/60).toFixed(2));
+  else if(key==='sellingPrice'&&s.sell>0)apply('sell',Math.max(s.sell*1.15,s.sell+2.5).toFixed(2));
+  setTimeout(()=>{$('calc')?.click();},30);
+}
+
 function boot(){
   const start=Date.now();
   const timer=setInterval(()=>{
@@ -1049,9 +1079,7 @@ document.addEventListener('click',e=>{
     e.preventDefault();
     e.stopPropagation();
     const key=apply.getAttribute('data-advisor-apply');
-    const current=snapshot();
-    const sc=advisorScenarioValues(current);
-    applyAdvisorScenario(current,rowScenarioFor(current,sc,key));
+    applySingleAdvisorSuggestion(key);
     return;
   }
   const button=e.target&&e.target.closest?e.target.closest('.pp-profit-review[data-pp-review-target]'):null;
