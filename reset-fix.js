@@ -12,7 +12,8 @@
 
   function printer(){
     const value=getValue('printer');
-    if(!value||value==='custom')return{watts:0,price:0,lifetime:0};
+    if(value==='custom')return{watts:number('customPrinterPower'),price:number('customPrinterPrice'),lifetime:number('customPrinterLife')};
+    if(!value)return{watts:0,price:0,lifetime:0};
     const parts=value.split(/[|,]/);
     return{watts:Number(parts[0])||0,price:Number(parts[1])||0,lifetime:Number(parts[2])||0};
   }
