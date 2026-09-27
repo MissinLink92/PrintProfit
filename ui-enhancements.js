@@ -11,11 +11,12 @@
   ];
 
   const $=id=>document.getElementById(id);
+  const cleanTitle=value=>String(value||'').trim().toLowerCase().replace(/^\d+\.\s*/,'');
   const findBox=name=>[...document.querySelectorAll('section.panel')].find(section=>{
     const h=section.querySelector('h2');
     if(!h)return false;
-    const title=h.textContent.trim().toLowerCase();
-    const wanted=String(name||'').trim().toLowerCase();
+    const title=cleanTitle(h.textContent);
+    const wanted=cleanTitle(name);
     return title===wanted||title.startsWith(wanted);
   });
 
