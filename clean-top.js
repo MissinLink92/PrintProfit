@@ -17,7 +17,7 @@ function install(){
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
       <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=20260928-logo-final" alt="PrintProfit">
+        <img src="./assets/printprofit-approved-horizontal.webp?v=20260928-approved2" alt="PrintProfit">
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
@@ -45,7 +45,7 @@ function install(){
           <div><span class="pp-feature-icon gear"></span><span>Built<small>For Makers</small></span></div>
         </div>
       </div>
-      <div class="pp-top-card"><img class="pp-hero-art" src="./assets/hero-workshop.webp?v=20260928-hero4" alt="3D printer workshop" onerror="this.onerror=null;this.src='./assets/hero-art-orange.webp?v=20260928-hero-fallback2'"><div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
+      <div class="pp-top-card"><img class="pp-hero-art" src="./assets/printprofit-approved-horizontal.webp?v=20260928-approved2" alt="3D printer workshop" onerror="this.onerror=null;this.src='./assets/hero-art-orange.webp?v=20260928-hero-fallback2'"><div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
     <div class="pp-top-line"></div>
@@ -139,7 +139,7 @@ function install(){
       <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
         <div class="pp-settings-head">
           <div class="pp-settings-brand">
-            <img src="./assets/user-selected-printprofit-logo.webp?v=20260928-logo-final" alt="PrintProfit">
+            <img src="./assets/printprofit-approved-horizontal.webp?v=20260928-approved2" alt="PrintProfit">
             <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
           </div>
           <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
@@ -315,7 +315,7 @@ function install(){
         <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
           <div class="pp-guide-head">
             <div class="pp-guide-brand">
-              <img src="./assets/user-selected-printprofit-logo.webp?v=20260928-logo-final" alt="PrintProfit">
+              <img src="./assets/printprofit-approved-horizontal.webp?v=20260928-approved2" alt="PrintProfit">
               <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
             </div>
             <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
@@ -421,6 +421,38 @@ function install(){
   return true;
 }
 
+  // FUNCTIONAL NAV LOCK: preserve all four application controls.
+  function ensureTopNavigation(){
+    const nav=top.querySelector('.pp-top-links');
+    if(!nav)return;
+    nav.style.display='flex';nav.style.visibility='visible';nav.style.opacity='1';nav.style.pointerEvents='auto';
+    const defs=[['details','Calculate','calculator'],['priceFinder','Compare Products','cube'],['guide','Guide & Help','book'],['settings','Settings','gear']];
+    defs.forEach(([target,label,iconName])=>{
+      let btn=nav.querySelector('[data-target="'+target+'"]');
+      if(!btn){
+        btn=document.createElement('button');btn.type='button';btn.dataset.target=target;
+        const icon=document.createElement('span');icon.className='pp-nav-icon '+iconName;
+        const textNode=document.createElement('span');textNode.textContent=label;
+        btn.append(icon,textNode);nav.appendChild(btn);
+      }
+      btn.style.display='inline-flex';btn.style.visibility='visible';btn.style.opacity='1';btn.style.pointerEvents='auto';
+      if(btn.dataset.ppNavRestoreBound!=='1'){
+        btn.dataset.ppNavRestoreBound='1';
+        btn.addEventListener('click',event=>{
+          event.preventDefault();event.stopPropagation();
+          if(target==='settings'){openSettings();return;}
+          if(target==='guide'){window.top.location.href='./guide.html';return;}
+          if(target==='priceFinder'){window.top.location.href='./price-finder.html';return;}
+          const el=top.querySelector('[data-tab="details"]')||top.querySelector('#details');
+          if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
+        },true);
+      }
+    });
+  }
+  ensureTopNavigation();
+  setTimeout(ensureTopNavigation,50);
+  setTimeout(ensureTopNavigation,250);
+  setTimeout(ensureTopNavigation,1000);
 function boot(){
   if(install())return;
   const started=Date.now();
