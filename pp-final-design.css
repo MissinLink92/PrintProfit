@@ -795,3 +795,69 @@ body.pp-light .wrap .brand img{
   content:url("./assets/printprofit-master-orange.svg?v=2")!important;
   filter:none!important;
 }
+
+
+/* ===== Final polish / brand lock ===== */
+#ppCleanTop .pp-top-card img{display:none!important}
+#ppCleanTop .pp-top-card{
+  background:
+    linear-gradient(180deg,rgba(4,15,22,.02),rgba(4,15,22,.34) 55%,rgba(4,15,22,.78) 100%),
+    url("./assets/hero-workshop.webp?v=20260928-hero") center/cover no-repeat!important;
+}
+#ppCleanTop .pp-top-card::before{
+  background:
+    radial-gradient(circle at 68% 32%,rgba(50,214,229,.12),transparent 28%),
+    linear-gradient(90deg,rgba(5,17,24,.05),rgba(5,17,24,.10) 42%,rgba(5,17,24,.42) 100%),
+    linear-gradient(180deg,rgba(5,17,24,.00),rgba(5,17,24,.08) 45%,rgba(5,17,24,.74) 100%)!important;
+}
+#ppCleanTop .pp-card-tagline{
+  right:18px!important;
+  bottom:18px!important;
+  padding:9px 13px!important;
+  background:rgba(3,12,18,.72)!important;
+  border:1px solid rgba(255,138,36,.26)!important;
+  color:#fff!important;
+  font-family:Inter,Segoe UI,system-ui,sans-serif!important;
+  font-size:12px!important;
+  font-style:normal!important;
+  font-weight:900!important;
+  line-height:1.15!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+#ppCleanTop .pp-card-tagline::first-line{color:var(--pp-orange)!important}
+
+/* Brand mark is always the approved supplied asset; never recolour it. */
+#ppCleanTop .pp-top-brand img,
+.wrap .brand img{
+  opacity:1!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+}
+
+/* Make the working surface feel deliberately designed rather than merely themed. */
+.panel,.merge-block section.panel,.tool,.card,.insight-card,.product-card{
+  overflow:hidden!important;
+}
+.panel::after,.tool::after,.card::after,.insight-card::after,.product-card::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:linear-gradient(115deg,rgba(255,255,255,.035),transparent 30%,transparent 70%,rgba(50,214,229,.018))!important;
+}
+.head>.icon{
+  position:relative!important;
+  z-index:1!important;
+}
+#pp-master-quickcards button{
+  isolation:isolate!important;
+}
+#pp-master-quickcards button::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  background:linear-gradient(120deg,rgba(255,255,255,.04),transparent 32%)!important;
+}
