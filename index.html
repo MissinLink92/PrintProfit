@@ -18,7 +18,7 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 </style>
 </head>
 <body>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260928-final11" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20260928-final12" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon">💾</span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon">↻</span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -27,7 +27,7 @@ const frame=document.getElementById('app');
 const resetButton=document.getElementById('ppFloatingReset');
 const scripts=[
 'quick-price-guard.js?v=9',
-'reset-fix.js?v=15','file-type-support.js?v=7','tab-layout.js?v=20','ui-enhancements.js?v=4','pretty-ui.js?v=6','alignment-polish.js?v=3','gcode-reader.js?v=3','print-time-input.js?v=1','chosen-theme.js?v=1','box-icons.js?v=7','electricity-providers.js?v=5','master-polish.js?v=20260925-step4','master-cleanup.js?v=3','flow-cards.js?v=20260925-step4b','clean-top.js?v=20260928-final9','unified-icons.js?v=2','i18n-extra.js?v=5','settings-preferences.js?v=20260920-lightmode6','my-projects.js?v=13','my-materials.js?v=7','quantity-auto-batch.js?v=2','printer-material-polish.js?v=3','material-brands.js?v=1','box-spacing-polish.js?v=3','colour-palette.js?v=20260919-palette-fix','stage-field-colours.js?v=20260919-unified-icons','profit-advisor.js?v=29','profit-tools.js?v=4','printer-price-data.js?v=1','printer-price-sync.js?v=1','calculator-state.js?v=9','visual-polish.js?v=1','pp-visual-enforcer.js?v=20260928-final6',
+'reset-fix.js?v=15','file-type-support.js?v=7','tab-layout.js?v=20','ui-enhancements.js?v=4','pretty-ui.js?v=6','alignment-polish.js?v=3','gcode-reader.js?v=3','print-time-input.js?v=1','chosen-theme.js?v=1','box-icons.js?v=7','electricity-providers.js?v=5','master-polish.js?v=20260925-step4','master-cleanup.js?v=3','flow-cards.js?v=20260925-step4b','clean-top.js?v=20260928-final10','unified-icons.js?v=2','i18n-extra.js?v=5','settings-preferences.js?v=20260920-lightmode6','my-projects.js?v=13','my-materials.js?v=7','quantity-auto-batch.js?v=2','printer-material-polish.js?v=3','material-brands.js?v=1','box-spacing-polish.js?v=3','colour-palette.js?v=20260919-palette-fix','stage-field-colours.js?v=20260919-unified-icons','profit-advisor.js?v=29','profit-tools.js?v=4','printer-price-data.js?v=1','printer-price-sync.js?v=1','calculator-state.js?v=9','visual-polish.js?v=1','pp-visual-enforcer.js?v=20260928-final7',
 ];
 function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
