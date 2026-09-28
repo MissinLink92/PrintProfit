@@ -24,7 +24,7 @@ body.pp-light .compare-chip{background:#f0f4f6!important;color:#31434d!important
 body.pp-light .compare-dialog,body.pp-light .details-dialog{background:linear-gradient(180deg,#fff,#f3f6f7)!important;color:#19252d!important}
 body.pp-light .compare-head,body.pp-light .details-head{background:rgba(255,255,255,.98)!important}
 body.pp-light .compare-table th{background:#edf2f4!important;color:#304651!important}
-body.pp-light .compare-table th:first-child,body.pp-light .compare-table td:first-child{background:#f7f9fa!important;color:#5e707a!important}
+body.pp-light .compare-table th:first-child,body.pp-light .compare-table td:first-child{color:#5e707a!important}
 body.pp-light .details-body .detail-item,body.pp-light .history-wrap{background:#f5f8f9!important}
 body.pp-light .details-image,body.pp-light .product-thumb{background:#edf2f4!important}
 body.pp-light .footer{color:#667985!important;border-top-color:#c6d2d8!important}
@@ -35,7 +35,7 @@ body.pp-light .link:hover{color:var(--accent)!important;border-color:var(--accen
 body{background:radial-gradient(circle at 82% 5%,rgba(65,154,194,.16),transparent 27%),radial-gradient(circle at 15% 70%,rgba(255,120,0,.045),transparent 24%),linear-gradient(180deg,#101c24 0,#0f1a21 100%)}
 .wrap{width:min(1240px,calc(100% - 28px));margin:0 auto;padding-bottom:42px}
 .header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:70px;padding:8px 0;border-bottom:1px solid rgba(59,88,102,.8);background:rgba(16,28,36,.94);backdrop-filter:blur(10px)}
-.brand{display:flex;align-items:center;width:245px;height:60px;box-sizing:border-box;flex:0 0 245px}.brand img{width:100%;height:60px;object-fit:contain;display:block}
+.brand{display:flex;align-items:center;width:245px;height:60px;box-sizing:border-box;flex:0 0 245px}.brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}.brand img{content:url("./assets/printprofit-logo-dark-canonical.webp?v=1")}body.pp-light .brand img{content:url("./assets/user-selected-printprofit-logo.webp?v=8")}
 .nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px;transition:background .18s,color .18s}.nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}
 .pp-theme-toggle{display:inline-flex;align-items:center;gap:8px;margin-left:4px;color:#c9d5db;font-size:10px;font-weight:800;white-space:nowrap;cursor:pointer;user-select:none}.pp-theme-toggle input{position:absolute;opacity:0;pointer-events:none}.pp-toggle-track{width:42px;height:22px;border:1px solid #4b6977;border-radius:999px;background:#1c313c;display:inline-flex;align-items:center;padding:2px;transition:.18s}.pp-toggle-track span{width:16px;height:16px;border-radius:50%;background:#f8fafb;box-shadow:0 2px 6px rgba(0,0,0,.3);transform:translateX(0);transition:.18s}.pp-theme-toggle input:checked + .pp-toggle-track{background:linear-gradient(90deg,#078ff4,#0aa2ff);border-color:#0aa2ff}.pp-theme-toggle input:checked + .pp-toggle-track span{transform:translateX(20px)}.pp-theme-toggle:focus-within .pp-toggle-track{outline:2px solid rgba(255,120,0,.35);outline-offset:2px}
 @media(max-width:760px){.pp-theme-toggle{order:3;margin-left:auto}.header{flex-wrap:wrap}}.nav a:hover,.nav a.active{background:#ff780014;color:var(--accent)}
@@ -137,7 +137,7 @@ svg{shape-rendering:geometricPrecision}
 <body data-pp-standalone-i18n="1">
 <div class="wrap">
 <header class="header">
-<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-approved-horizontal.svg?v=1" alt="PrintProfit"></a>
+<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit"></a>
 <nav class="nav" aria-label="PrintProfit navigation">
 <a href="./index.html">Calculator</a>
 <a href="./price-finder.html" class="active">Compare Products</a>
