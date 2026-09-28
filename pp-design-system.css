@@ -792,3 +792,19 @@ section.panel.result>.head>.pp-master-circular{border-color:#ff8a24!important;co
  section.panel .head>.icon,section.panel .head>.pp-pretty-icon,section.panel .head>.pp-master-circular,
  .merge-block .head>.icon,.merge-block .head>.pp-pretty-icon,.merge-block .head>.pp-master-circular{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;flex-basis:44px!important}
 }
+
+
+/* Journey content spacing: keep connector arrows clear of icon + text. */
+#pp-master-quickcards button{
+  padding-left:46px!important;
+  padding-right:18px!important;
+}
+#pp-master-quickcards button .pp-master-card-icon{
+  flex:0 0 60px!important;
+}
+#pp-master-quickcards button > span:last-child{
+  min-width:0!important;
+}
+@media(max-width:900px){
+  #pp-master-quickcards button{padding-left:28px!important}
+}
