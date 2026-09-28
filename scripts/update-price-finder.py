@@ -92,6 +92,26 @@ def find_match(products, target_name):
             fuzzy.append(p)
     return (exact or fuzzy or [None])[0]
 
+def append_price_history(item, previous_price, previous_date, new_price, date_str, max_points=90):
+    history = item.get("priceHistory")
+    if not isinstance(history, list):
+        history = []
+    cleaned = []
+    for point in history:
+        if not isinstance(point, dict):
+            continue
+        price = parse_price(point.get("price"))
+        date = str(point.get("date", "")).strip()
+        if price is not None and date:
+            cleaned.append({"date": date, "price": round(price, 2)})
+    if previous_price is not None:
+        previous_date = str(previous_date or date_str)
+        if not cleaned or cleaned[-1]["date"] != previous_date or abs(cleaned[-1]["price"] - previous_price) >= 0.005:
+            cleaned.append({"date": previous_date, "price": round(previous_price, 2)})
+    if not cleaned or cleaned[-1]["date"] != date_str or abs(cleaned[-1]["price"] - new_price) >= 0.005:
+        cleaned.append({"date": date_str, "price": round(new_price, 2)})
+    item["priceHistory"] = cleaned[-max_points:]
+
 def update():
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     now = datetime.now(timezone.utc).astimezone()
@@ -100,10 +120,12 @@ def update():
     warnings = []
 
     for item in data.get("products", []):
-        if not item.get("autoRefresh"):
-            continue
         url = item.get("url")
         if not url:
+            continue
+        price_refresh = bool(item.get("autoRefresh"))
+        image_refresh = item.get("imageAutoRefresh", True) and not item.get("image")
+        if not (price_refresh or image_refresh):
             continue
         try:
             html = fetch(url)
@@ -112,6 +134,13 @@ def update():
             image = product_image(match, url) if match else None
             if image:
                 item["image"] = image
+                item["imageStatus"] = "available"
+                item["imageChecked"] = date_str
+            elif image_refresh:
+                item["imageStatus"] = "fallback"
+                item["imageChecked"] = date_str
+            if not price_refresh:
+                continue
             price = product_price(match) if match else None
             if price is None:
                 warnings.append(f"No safe product price found: {item.get('name')} ({url})")
@@ -119,16 +148,20 @@ def update():
                     item["lastCheckStatus"] = "image-ok-price-missing"
                 continue
             old = parse_price(item.get("price"))
+            previous_date = item.get("updated") or date_str
             if old and (price < old * 0.5 or price > old * 2.0):
                 warnings.append(f"Large price change skipped: {item.get('name')} {old:.2f} -> {price:.2f}")
+                item["lastCheckStatus"] = "price-change-review"
                 continue
             if old is None or abs(old - price) >= 0.005:
                 item["price"] = round(price, 2)
                 if item.get("weightGrams"):
                     item["unit"] = round(price * 1000 / float(item["weightGrams"]), 2)
                 changes += 1
+            append_price_history(item, old if old is not None else price, previous_date, price, date_str)
             item["updated"] = date_str
             item["lastCheckStatus"] = "ok"
+            item["imageStatus"] = "available" if item.get("image") else "fallback"
         except Exception as exc:
             item["lastCheckStatus"] = "error"
             warnings.append(f"Fetch failed: {item.get('name')} — {exc}")
