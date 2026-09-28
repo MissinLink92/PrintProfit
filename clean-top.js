@@ -17,7 +17,7 @@ function install(){
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
       <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/printprofit-logo-dark-canonical.webp?v=10260919" alt="PrintProfit">
+        <img src="./assets/printprofit-header-logo.svg?v=3" alt="PrintProfit">
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
@@ -46,7 +46,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img class="pp-hero-art" src="./assets/hero-workshop.webp?v=3" alt="3D printing workshop">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
