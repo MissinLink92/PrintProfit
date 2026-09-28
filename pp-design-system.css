@@ -640,3 +640,98 @@ body.pp-light .compare-bar{
   .results-heading strong{font-size:18px!important}
   .product-name-wrap{min-width:240px!important}
 }
+
+
+/* ===== PrintProfit premium art direction v3 ===== */
+#ppCleanTop .pp-top-card{
+  background-image:linear-gradient(90deg,rgba(5,17,25,.10),rgba(5,17,25,.04)),url('./assets/hero-art-orange.webp?v=2')!important;
+  background-size:cover!important;
+  background-position:58% center!important;
+}
+#ppCleanTop .pp-top-card .pp-hero-art{display:none!important}
+#ppCleanTop .pp-top-card:after{
+  background:linear-gradient(180deg,rgba(3,14,21,.02) 0%,rgba(3,14,21,.10) 58%,rgba(3,14,21,.68) 100%)!important;
+}
+#ppCleanTop .pp-card-tagline{
+  background:linear-gradient(90deg,transparent,rgba(4,16,24,.55),rgba(4,16,24,.72))!important;
+  padding:8px 10px 8px 18px!important;
+  border-radius:10px 0 0 10px!important;
+}
+
+/* A richer shared navigation bar */
+#ppCleanTop .pp-top-nav,.header{box-shadow:0 1px 0 rgba(255,255,255,.025),0 10px 30px rgba(0,0,0,.12)!important}
+#ppCleanTop .pp-top-links button:hover,#ppCleanTop .pp-top-links button:focus-visible,.nav a:hover,.nav a.active{transform:translateY(-1px)!important}
+
+/* Shared premium card depth */
+.panel,.tool,.insight-card,.card,.product-card,#pp-master-quickcards button{
+  position:relative!important;overflow:hidden!important;
+}
+.panel:after,.tool:after,.insight-card:after,.card:after,.product-card:after,#pp-master-quickcards button:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(255,255,255,.035),transparent 32%,transparent 72%,rgba(53,214,229,.018));
+}
+
+/* Calculator journey becomes a visual roadmap */
+#pp-master-quickcards{position:relative!important}
+#pp-master-quickcards:before{content:"";position:absolute;left:3%;right:3%;top:50%;height:1px;background:linear-gradient(90deg,transparent,#2e6577 10%,#2e6577 90%,transparent);opacity:.75;z-index:0}
+#pp-master-quickcards button{z-index:1!important}
+
+/* Compare Products: let the workshop imagery carry the hero */
+.wrap .hero{
+  position:relative!important;
+  isolation:isolate!important;
+  min-height:285px!important;
+  max-width:none!important;
+  margin:0 -17px!important;
+  padding:54px max(4.2%,48px) 38px!important;
+  border-bottom:1px solid #2b5566!important;
+  overflow:hidden!important;
+  background:
+    linear-gradient(90deg,rgba(6,19,28,.98) 0%,rgba(6,19,28,.92) 45%,rgba(6,19,28,.45) 78%,rgba(6,19,28,.20) 100%),
+    url('./assets/hero-art-orange.webp?v=2')!important;
+  background-size:cover!important;
+  background-position:center right!important;
+}
+.wrap .hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:2px;
+  background:linear-gradient(90deg,var(--pp-orange),rgba(255,138,36,.55),transparent 78%);z-index:1;
+}
+.wrap .hero>*{position:relative!important;z-index:2!important}
+.wrap .hero .lead{max-width:720px!important}
+
+/* Compare search gets the 'app' treatment */
+.tools .tool:first-child{
+  grid-column:span 2!important;
+}
+.tools .tool:first-child input{
+  font-size:15px!important;height:48px!important;padding-left:15px!important;
+  box-shadow:inset 0 0 0 1px rgba(53,214,229,.045),0 8px 22px rgba(0,0,0,.10)!important;
+}
+
+/* Make the three headline stats feel like product metrics */
+.insight-card:nth-child(1) strong{font-size:21px!important}
+.insight-card:nth-child(2) strong,.insight-card:nth-child(3) strong{font-size:21px!important}
+.insight-card:nth-child(2) .eyebrow{color:#bca8ff!important}
+.insight-card:nth-child(3) .eyebrow{color:#6cf2ad!important}
+
+/* Cleaner, more editorial product rows */
+.table-wrap table th:nth-child(1){width:80px!important}
+.table-wrap table th:nth-child(2){width:38%!important}
+.table-wrap table th:nth-child(3){width:13%!important}
+.table-wrap table th:nth-child(4){width:10%!important}
+.table-wrap table th:nth-child(5){width:10%!important}
+.table-wrap table th:nth-child(6){width:10%!important}
+.table-wrap table th:nth-child(7){width:10%!important}
+.product-name-wrap>div:last-child strong{display:block!important;max-width:390px!important}
+
+/* Hero artwork disappears cleanly on small displays */
+@media(max-width:800px){
+  .wrap .hero{margin:0 -5px!important;padding:38px 20px 28px!important;background-position:68% center!important;}
+  .wrap .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,19,28,.92),rgba(6,19,28,.82))!important;z-index:1}
+  .tools .tool:first-child{grid-column:auto!important}
+  #pp-master-quickcards:before{display:none!important}
+}
+@media(max-width:650px){
+  #ppCleanTop .pp-top-card{background-position:62% center!important}
+  .wrap .hero{min-height:250px!important;background-position:70% center!important}
+}
