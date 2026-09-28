@@ -16,9 +16,6 @@ function install(){
   top.innerHTML=`
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
-      <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/printprofit-header-logo.svg?v=3" alt="PrintProfit">
-      </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
         <button type="button" data-target="priceFinder"><span class="pp-nav-icon cube"></span><span>Compare Products</span></button>
@@ -128,11 +125,6 @@ function install(){
 
 
 
-/* Temporary: hide the header logo until final branding pass. */
-const ppLogoHideStyle=document.createElement('style');
-ppLogoHideStyle.id='ppLogoHideStyle';
-ppLogoHideStyle.textContent='#ppCleanTop .pp-top-brand{display:none!important}';
-document.head.appendChild(ppLogoHideStyle);
 
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
