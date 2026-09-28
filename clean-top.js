@@ -46,7 +46,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=20260923" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/printprofit-header-logo.webp?v=20260928" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
@@ -311,7 +311,7 @@ function install(){
         <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
           <div class="pp-guide-head">
             <div class="pp-guide-brand">
-              <img src="./assets/user-selected-printprofit-logo.webp?v=5" alt="PrintProfit">
+              <img src="./assets/printprofit-header-logo.webp?v=20260928" alt="PrintProfit">
               <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
             </div>
             <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
