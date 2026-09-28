@@ -1019,3 +1019,79 @@ html,body,#ppCleanTop,.wrap{
   letter-spacing:.005em!important;
 }
 #pp-master-quickcards button b{letter-spacing:.005em!important}
+
+
+/* ===== Final edge fixes: brand + checkbox controls ===== */
+#ppCleanTop .pp-top-brand .pp-inline-logo,
+.wrap .brand .pp-inline-logo{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:240px!important;
+  height:62px!important;
+  flex:0 0 240px!important;
+  overflow:visible!important;
+}
+#ppCleanTop .pp-top-brand .pp-inline-logo svg,
+.wrap .brand .pp-inline-logo svg{
+  display:block!important;
+  width:240px!important;
+  height:62px!important;
+  max-width:none!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+#ppCleanTop .pp-top-brand .pp-inline-logo svg *,
+.wrap .brand .pp-inline-logo svg *{
+  vector-effect:non-scaling-stroke;
+}
+.pp-settings-brand .pp-inline-logo,
+.pp-guide-brand .pp-inline-logo{
+  display:flex!important;
+  align-items:center!important;
+  width:132px!important;height:56px!important;flex:0 0 132px!important;
+}
+.pp-settings-brand .pp-inline-logo svg,
+.pp-guide-brand .pp-inline-logo svg{
+  display:block!important;width:132px!important;height:56px!important;
+}
+
+/* The generic input rule must never turn comparison checkboxes into full-width fields. */
+input[type="checkbox"].compare-check,
+.compare-check{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  width:18px!important;
+  min-width:18px!important;
+  max-width:18px!important;
+  height:18px!important;
+  min-height:18px!important;
+  max-height:18px!important;
+  padding:0!important;
+  margin:0!important;
+  border:1.5px solid #55717e!important;
+  border-radius:5px!important;
+  background:#0b202c!important;
+  box-shadow:none!important;
+  display:inline-grid!important;
+  place-items:center!important;
+  vertical-align:middle!important;
+  flex:0 0 18px!important;
+  cursor:pointer!important;
+}
+input[type="checkbox"].compare-check:checked,
+.compare-check:checked{
+  background:var(--pp-orange)!important;
+  border-color:var(--pp-orange)!important;
+}
+input[type="checkbox"].compare-check:checked::after,
+.compare-check:checked::after{
+  content:"✓"!important;
+  color:#17100a!important;
+  font:900 12px/1 Inter,Segoe UI,system-ui,sans-serif!important;
+}
+input[type="checkbox"].compare-check:focus-visible,
+.compare-check:focus-visible{
+  outline:2px solid rgba(255,138,36,.35)!important;
+  outline-offset:2px!important;
+}
