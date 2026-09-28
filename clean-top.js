@@ -127,6 +127,13 @@ function install(){
   `;document.head.appendChild(heroStyle);
 
 
+
+/* Temporary: hide the header logo until final branding pass. */
+const ppLogoHideStyle=document.createElement('style');
+ppLogoHideStyle.id='ppLogoHideStyle';
+ppLogoHideStyle.textContent='#ppCleanTop .pp-top-brand{display:none!important}';
+document.head.appendChild(ppLogoHideStyle);
+
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
       document.getElementById('ppSettingsPanel').classList.add('open');
