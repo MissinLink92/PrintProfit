@@ -120,10 +120,12 @@ def update():
     warnings = []
 
     for item in data.get("products", []):
-        if not item.get("autoRefresh"):
-            continue
         url = item.get("url")
         if not url:
+            continue
+        price_refresh = bool(item.get("autoRefresh"))
+        image_refresh = item.get("imageAutoRefresh", True) and not item.get("image")
+        if not (price_refresh or image_refresh):
             continue
         try:
             html = fetch(url)
@@ -132,6 +134,13 @@ def update():
             image = product_image(match, url) if match else None
             if image:
                 item["image"] = image
+                item["imageStatus"] = "available"
+                item["imageChecked"] = date_str
+            elif image_refresh:
+                item["imageStatus"] = "fallback"
+                item["imageChecked"] = date_str
+            if not price_refresh:
+                continue
             price = product_price(match) if match else None
             if price is None:
                 warnings.append(f"No safe product price found: {item.get('name')} ({url})")
