@@ -28,47 +28,120 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 <section class="hero">
 <div class="kicker">PRINTPROFIT • INFORMATION CENTRE</div>
 <h1>Guide &amp; <strong>Help.</strong></h1>
-<p class="lead">A practical walkthrough of the current PrintProfit workflow, saving behaviour, pricing tools, and what the numbers mean.</p>
-<div class="actions"><a class="btn primary" href="./index.html">Back to Calculator ›</a><a class="btn secondary" href="#settings">Settings explained ↓</a></div>
+<p class="lead">A practical guide to the current PrintProfit workflow, pricing calculations, saving, file analysis, materials, delivery, selling fees, Profit Toolkit and Price Finder.</p>
+<div class="actions"><a class="btn primary" href="./index.html">Back to Calculator ›</a><a class="btn secondary" href="#workflow">Start here ↓</a></div>
 </section>
 
-<div class="section">
-<div class="section-title">Using the calculator</div>
+<div class="section" id="workflow">
+<div class="section-title">Start here</div>
 <div class="grid">
-<article class="card"><div class="num">1</div><h2>Your Model</h2><p>Upload your sliced G-code file. When readable metadata is available, PrintProfit can fill in print time and material usage. The live Print Information area shows the file, print time, material used and material detected. Values can still be entered or adjusted manually.</p></article>
-<article class="card"><div class="num">2</div><h2>Print Setup</h2><p>Choose your printer and material in one place. Printer profiles provide the figures used for power and depreciation. Resin printer profiles automatically switch the calculator to resin measurements; custom printers let you choose the material type yourself.</p></article>
-<article class="card"><div class="num">3</div><h2>Costs &amp; Fees</h2><p>Enter operating costs, selling and fulfilment details, then set quantity and any batch discount. When quantity is greater than one, PrintProfit automatically switches the results view to Batch Pricing.</p></article>
-<article class="card"><div class="num">4</div><h2>Results</h2><p>Review the estimated cost to make, selling price, fees, profit and margin. Target-pricing options can calculate a selling price from the margin you want to achieve.</p></article>
+<article class="card"><div class="num">1</div><h2>Your Model</h2><p>Upload a supported model or print file. Where useful information is available, PrintProfit analyses it and shows what it found. You can also enter print time and material usage yourself.</p></article>
+<article class="card"><div class="num">2</div><h2>Print Setup</h2><p>Select the printer and material used for the print. Printer profiles provide the figures needed for power and depreciation; resin profiles switch the material workflow to resin.</p></article>
+<article class="card"><div class="num">3</div><h2>Costs &amp; Fees</h2><p>Enter the costs involved in making and selling the print: labour, packaging, other costs, electricity, marketplace fees, payment fees, fixed fees and delivery.</p></article>
+<article class="card"><div class="num">4</div><h2>Calculate &amp; Results</h2><p>Set your selling price and quantity, then use Calculate Costs &amp; Price. The Results area shows single-print or batch economics, profit, margin and pricing options.</p></article>
+</div>
+<div class="note">You do not need to fill every field. Blank cost fields are treated as zero for a basic estimate, but your result is only as useful as the figures you provide.</div>
+</div>
+
+<div class="section">
+<div class="section-title">Your Model &amp; file intelligence</div>
+<div class="grid">
+<article class="card"><h3>G-code and supported files</h3><p>PrintProfit recognises G-code and several common 3D-printing formats, including G-code variants, 3MF, Lychee, CHITUBOX, resin slice formats and common model formats such as STL, OBJ, AMF, PLY and STEP/STP. What PrintProfit can calculate automatically depends on what information the file contains.</p></article>
+<article class="card"><h3>Automatic print data</h3><p>Readable sliced data can provide print time and material usage. G-code metadata may supply time, filament grams, filament length or volume. 3MF projects can also expose slicer, printer, profile, nozzle, layer height, infill, supports and bed information where stored.</p></article>
+<article class="card"><h3>File analysis status</h3><p>The Print Information area tells you whether the file analysis is detailed, basic, limited or still waiting. Missing data is not guessed; enter it manually when necessary.</p></article>
+<article class="card"><h3>Apply detected settings</h3><p>When file metadata includes useful printer or material information, use Apply detected settings to transfer the detected values into the calculator. Check the values against your slicer before relying on the final result.</p></article>
 </div>
 </div>
 
 <div class="section">
-<div class="section-title">Your PrintProfit libraries</div>
+<div class="section-title">Print Setup</div>
 <div class="grid">
-<article class="card"><h3>My Projects</h3><p>Save a complete calculator setup as a named project. You can load, update, rename, duplicate or delete saved projects from My Projects. Saved projects are stored on the current device only; they are not automatically available on another computer.</p></article>
-<article class="card"><h3>My Materials</h3><p>Keep reusable filament and resin profiles with brand, colour, package size and cost. Using a saved material can populate the calculator for you, and displayed costs follow your selected currency.</p></article>
+<article class="card"><h3>Printer</h3><p>Select a supported printer profile or choose Custom. A printer profile supplies estimated power and a printer price/lifetime figure used for electricity and depreciation calculations. Printer prices are reference values and can change.</p></article>
+<article class="card"><h3>Material type</h3><p>Choose Filament (FDM) or Resin (SLA / MSLA / DLP). Resin printer profiles can automatically move the calculator into resin mode.</p></article>
+<article class="card"><h3>Material cost</h3><p>Enter package size and package cost, then enter how much material is used per print. PrintProfit calculates the material cost from the amount used rather than charging the whole spool or bottle to one print.</p></article>
+<article class="card"><h3>Print time</h3><p>Use the detected print time where available, or enter it manually. Print time affects electricity and printer depreciation and therefore changes the total cost to make.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Operating Costs</div>
+<div class="grid">
+<article class="card"><h3>Labour</h3><p>Enter labour hours per print and your labour rate per hour. This represents your time preparing, finishing, packing or otherwise working on each print.</p></article>
+<article class="card"><h3>Packaging &amp; other</h3><p>Packaging is a per-print cost. Other is for additional costs that do not fit the main fields, such as consumables or small operating expenses.</p></article>
+<article class="card"><h3>Electricity</h3><p>Enter your unit electricity rate (£/kWh), or use an available reference benchmark as a starting point. The calculator combines the printer's estimated power draw with print time to estimate electricity usage and cost.</p></article>
+<article class="card"><h3>Actual tariff matters</h3><p>Supplier names and benchmark rates are reference information only. Your real tariff can differ because of supplier, plan, region, meter type and payment method, so use the rate from your bill whenever possible.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Selling &amp; Fulfilment</div>
+<div class="grid">
+<article class="card"><h3>Platform fees</h3><p>Select your selling platform to preload its configured platform fee, payment fee and fixed fee assumptions. You can edit those fields when your own account charges differ.</p></article>
+<article class="card"><h3>Delivery</h3><p>Select a courier and service to load a reference rate. The automatic rate can still be overridden in the Cost to you field when your actual shipping cost is different.</p></article>
+<article class="card"><h3>Customer delivery charge</h3><p>Cost to you is the amount you pay the courier. Charged to customer is the amount you collect from the customer. The calculator keeps these values separate when calculating profit.</p></article>
+<article class="card"><h3>Reference rates</h3><p>Courier and platform figures are estimates/reference data. Parcel size, dimensions, destination, account type, surcharges, promotions and fee changes can alter the final amount.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Quantity &amp; Batch Pricing</div>
+<div class="grid">
+<article class="card"><h3>Quantity</h3><p>Set how many identical items you are pricing. Quantity of one represents a single print; a quantity greater than one automatically switches the results view to Batch Pricing.</p></article>
+<article class="card"><h3>Batch discount</h3><p>Enter the percentage discount applied to the selling price per item for the batch. This changes batch sales and therefore batch profit and margin.</p></article>
+<article class="card"><h3>Selling price per item</h3><p>Enter the price you intend to charge for one item. The calculator then uses the quantity, discount, fees and delivery inputs to calculate the batch outcome.</p></article>
+<article class="card"><h3>Single vs Batch result</h3><p>Single Print shows per-print cost, selling price, profit and margin. Batch Pricing shows the cost, sales and profit for the full quantity using the current batch discount and fee assumptions.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Results &amp; target pricing</div>
+<div class="grid">
+<article class="card"><h3>Total Cost to Make</h3><p>This combines the applicable material, electricity, printer depreciation, labour, packaging, other costs and delivery cost for the selected result.</p></article>
+<article class="card"><h3>Selling Price, Profit &amp; Margin</h3><p>Selling Price is what you charge. Profit is the amount left after the included costs and applicable selling fees. Margin is profit expressed as a percentage of selling price.</p></article>
+<article class="card"><h3>Quick price buttons</h3><p>The 30%, 50% and 60% buttons set a target margin using the current costs and fees. Clicking an active quick button again can undo it and restore the previous selling price.</p></article>
+<article class="card"><h3>Custom target margin</h3><p>Enter your own target margin, such as 42.5%, to calculate a price from the current cost and fee assumptions. Batch target pricing also uses the current quantity, discount and delivery charge.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Profit Toolkit</div>
 <div class="grid">
-<article class="card"><h3>What If?</h3><p>Test possible changes without altering your live calculation. Try reducing material usage or print time, saving labour minutes, lowering packaging or delivery costs, or comparing a different selling platform. The tool shows the adjusted profit and cost as an estimate.</p></article>
-<article class="card"><h3>Cost Breakdown</h3><p>Visual bars show how much of the current cost to make comes from material, electricity, printer depreciation, labour, packaging and other costs, delivery, and platform/payment fees.</p></article>
-<article class="card"><h3>Price Ladder</h3><p>See the selling price needed for break-even and for 10%, 20%, 30%, 40% and 50% margins using the current selling channel, fees and delivery charge.</p></article>
-<article class="card"><h3>Bulk Buy</h3><p>Enter a bulk material or packaging price to estimate saving per pack, total buying saving and saving per print. Use your real supplier prices rather than assumptions.</p></article>
-<article class="card"><h3>Sell Where?</h3><p>Compare the fee impact of the available selling channels at your current selling price. The figures use the fee assumptions configured in PrintProfit; monthly plans, promotions and optional charges may not be included.</p></article>
-<article class="card"><h3>Profit status</h3><p>The Results heading shows a quick calculated status for Profit, Break-even or Loss together with the current margin, so you can understand the result at a glance.</p></article>
+<article class="card"><h3>What If?</h3><p>Test changes without permanently changing the main calculation. Explore lower material usage, less print time, labour savings, packaging or delivery savings, or a different selling platform.</p></article>
+<article class="card"><h3>Cost Breakdown</h3><p>See how the current cost to make is divided between material, electricity, printer depreciation, labour, packaging/other costs and delivery. This helps identify which inputs are contributing most to cost.</p></article>
+<article class="card"><h3>Price Ladder</h3><p>See the selling price needed for break-even and a range of target margins using the current selling channel, fixed fee and delivery charge.</p></article>
+<article class="card"><h3>Bulk Buy</h3><p>Compare a bulk material or packaging purchase against your current price and estimate saving per pack, total saving and saving per print.</p></article>
+<article class="card"><h3>Sell Where?</h3><p>Compare fee impact across available selling channels at your current selling price. Platform assumptions may not include every monthly, promotional or optional charge.</p></article>
+<article class="card"><h3>Profit status</h3><p>The Results area gives a quick status such as Profit, Break-even or Loss together with the current margin so you can read the outcome quickly.</p></article>
 </div>
 </div>
 
 <div class="section">
-<div class="section-title">Understanding the numbers</div>
+<div class="section-title">My Materials</div>
 <div class="grid">
-<article class="card"><h3>Total Cost to Make</h3><p>The estimated cost of producing the print from the values entered, including the calculator's material, electricity, depreciation, labour, packaging, other and applicable delivery costs.</p></article>
-<article class="card"><h3>Selling Price</h3><p>The price you enter, or a price generated from a target-margin option. It is separate from the cost to make.</p></article>
-<article class="card"><h3>Profit</h3><p>The calculator subtracts the included production costs and applicable platform/payment fees from the selling amount. Delivery charged to the customer is handled separately where entered.</p></article>
-<article class="card"><h3>Margin</h3><p>The displayed margin expresses profit as a percentage of selling price for the selected result.</p></article>
+<article class="card"><h3>Save regular materials</h3><p>My Materials lets you keep reusable filament and resin profiles with a name, type, brand, colour, package amount and cost.</p></article>
+<article class="card"><h3>Use a saved material</h3><p>Select Use on a saved material to apply its details to the calculator instead of entering the same package information repeatedly.</p></article>
+<article class="card"><h3>Edit or delete</h3><p>Saved material profiles can be edited or deleted. They are separate from My Projects.</p></article>
+<article class="card"><h3>Currency</h3><p>Material library values are stored for reuse and displayed using your selected calculator currency and conversion settings.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">My Projects &amp; saving</div>
+<div class="grid">
+<article class="card"><h3>Temporary working draft</h3><p>PrintProfit keeps a temporary working draft on the current device while you work and when you deliberately move between calculator areas such as Price Finder or Profit Advisor. This prevents ordinary section changes from losing your inputs.</p></article>
+<article class="card"><h3>Save Project</h3><p>Save Project creates a named project containing the current calculator setup. After loading a project, Save becomes Update so changes can be saved back to that same project.</p></article>
+<article class="card"><h3>Manage saved projects</h3><p>My Projects lets you Load, Update, Rename, Duplicate and Delete saved projects. Reset clears the current working state but does not delete separately saved projects.</p></article>
+<article class="card"><h3>Where saved projects live</h3><p><strong>Projects are saved on this device only and are not automatically available on another computer.</strong> They are not cloud-synchronised. Keep an exported/backup copy or the original print files separately if you need to move work between devices.</p></article>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Price Finder</div>
+<div class="grid">
+<article class="card"><h3>Search &amp; filter</h3><p>Search product names, retailers, pack/build details or type. Filter by all products, filament or 3D printers, then narrow the material/type where available.</p></article>
+<article class="card"><h3>Sort</h3><p>Sort by total price, unit cost, product name or retailer. Filament unit cost is normalised to £/kg where pack weight is known.</p></article>
+<article class="card"><h3>Tracked listings</h3><p>The page currently contains tracked reference listings from selected UK sources. The calculator's printer price data is kept in sync with the printer prices used by the Price Finder.</p></article>
+<article class="card"><h3>Check live before buying</h3><p>Price Finder is a snapshot, not a guarantee of checkout price. Retail stock, delivery, VAT treatment, coupons, bundles, account pricing and seller changes can affect the final cost. Use Check live before purchasing.</p></article>
 </div>
 </div>
 
@@ -76,26 +149,24 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 <div class="section-title">Settings explained</div>
 <div class="grid">
 <article class="card"><h3>Dark mode</h3><p>Switch between the standard dark PrintProfit interface and the lighter display.</p></article>
-<article class="card"><h3>Language</h3><p>Choose from English, Polski, Deutsch, Français, Español, Italiano, Nederlands, Português, Čeština, Svenska or Dansk. The selected language is saved on the device and applied to the interface where translated text is available.</p></article>
-<article class="card"><h3>Units</h3><p>Metric uses grams and millilitres where applicable. Imperial switches material measurements to ounces and fluid ounces as appropriate.</p></article>
-<article class="card"><h3>Currency</h3><p>Choose from the currencies provided in Settings. The exchange-rate field controls the conversion used for non-GBP display and can be adjusted with your own rate.</p></article>
-<article class="card"><h3>Reset Calculator</h3><p>Reset clears the current calculator setup and intentionally clears the temporary draft used to restore your work. Your separately saved My Projects are not deleted by Reset.</p></article>
+<article class="card"><h3>Language</h3><p>Choose from English, Polski, Deutsch, Français, Español, Italiano, Nederlands, Português, Čeština, Svenska or Dansk. The selected language is saved on this device where translated text is available.</p></article>
+<article class="card"><h3>Units</h3><p>Choose metric or imperial measurements. Material measurements change to suit the selected unit system.</p></article>
+<article class="card"><h3>Currency</h3><p>Choose the currency used to display costs and prices. The exchange-rate field controls non-GBP conversion and can be adjusted when you have a more appropriate rate.</p></article>
+<article class="card"><h3>Apply Changes</h3><p>Use Apply Changes after changing settings so the calculator refreshes its display and calculations using the selected preferences.</p></article>
+<article class="card"><h3>Reset Calculator</h3><p>Reset clears the current calculator inputs and temporary working state. It does not delete the separately saved projects or saved materials.</p></article>
 </div>
 </div>
 
 <div class="section">
-<div class="section-title">Information &amp; help</div>
-<div class="faq"><strong>Why does my result look wrong?</strong><p>Check print time, material used, package cost, electricity rate, printer profile, labour, delivery and platform fees. Pre-filled values are estimates and may not match your actual setup.</p></div>
-<div class="faq"><strong>What happens when I upload a G-code file?</strong><p>If readable metadata is present, PrintProfit can extract available print information. Always compare the detected values with your slicer's figures before relying on the final price.</p></div>
-<div class="faq"><strong>Why did the calculator switch to Batch Pricing?</strong><p>Quantity greater than one automatically switches the results view to Batch Pricing. Returning the quantity to one switches the view back to the single-print result.</p></div>
-<div class="faq"><strong>What is the difference between the current draft and My Projects?</strong><p>PrintProfit keeps a temporary working draft on the current device so your fields can be restored when you move between calculator sections such as Price Finder or Profit Advisor. My Projects are named, deliberate saves that you can load again later. The temporary draft is not the same thing as a saved project.</p></div>
-<div class="faq"><strong>Where are my saved projects stored?</strong><p>My Projects are stored locally on the device and browser where you saved them. They are not cloud-synchronised, so a project saved on one computer will not automatically appear on another computer.</p></div>
-<div class="faq"><strong>What happens when I click Save Project?</strong><p>The first save asks you to give the project a name and stores the current calculator values as a named project. When you load a saved project, the Save button changes to Update so you can save changes back to that same project.</p></div>
-<div class="faq"><strong>Will my uploaded G-code be saved with a project?</strong><p>PrintProfit stores available project file information and, where the browser allows it, the uploaded file itself for that saved project on the current device. Browser security restrictions can prevent a file input from being restored automatically, so always keep the original G-code file available.</p></div>
-<div class="faq"><strong>Why did my material change to resin?</strong><p>Supported resin printer profiles automatically select resin mode. This changes the material workflow and measurements to suit resin. Custom printer profiles keep the material-type choice available.</p></div>
-<div class="faq"><strong>What should I put in the electricity rate?</strong><p>Enter your actual electricity tariff in the currency shown by the calculator. Your real tariff is more useful than a generic estimate. Printer power and print time also affect the calculated electricity cost.</p></div>
-<div class="faq"><strong>Why can fees and delivery change the result?</strong><p>Marketplace, payment and delivery charges depend on the platform, account, product and service used. Replace assumptions with your actual charges whenever possible.</p></div>
-<div class="note"><strong>Important:</strong> PrintProfit is an estimating tool. Provider prices, marketplace fees, delivery charges, electricity rates and other market values may not be current and should be checked against your actual costs. For the most accurate result, use your actual material cost, material usage, electricity tariff, printer power where available, labour time and the fees you actually pay.</div>
+<div class="section-title">Common questions</div>
+<div class="faq"><strong>Why does my result look wrong?</strong><p>Check the printer profile, print time, material amount and cost, labour, electricity rate, delivery, selling platform and all applicable fees. Replace reference values with your actual costs wherever possible.</p></div>
+<div class="faq"><strong>Why did nothing auto-fill from my file?</strong><p>The file may not contain readable metadata. PrintProfit does not guess missing values. Enter print time and material usage manually, or use a sliced file that includes the metadata needed for analysis.</p></div>
+<div class="faq"><strong>Why does the file show detailed analysis but the calculator value is different?</strong><p>File intelligence can report information separately from the live calculator inputs. Review detected values and use Apply detected settings when appropriate, then confirm the final printer, material and usage values.</p></div>
+<div class="faq"><strong>Why did the result switch to Batch Pricing?</strong><p>Quantity greater than one automatically selects the Batch Pricing result view. Returning quantity to one selects the single-print result.</p></div>
+<div class="faq"><strong>Does saving a project save it in the cloud?</strong><p>No. My Projects are currently local to the device and browser where they were saved. A different computer will not automatically have access to them.</p></div>
+<div class="faq"><strong>Can I rely on the listed electricity, courier, platform or product prices?</strong><p>Use them as reference starting points only. Provider tariffs, delivery rates, marketplace fees, product prices, promotions and stock can change. Check the live or actual source whenever accuracy matters.</p></div>
+<div class="faq"><strong>What is the safest way to price a real order?</strong><p>Use the actual material cost and usage, real print time, a realistic labour rate, your actual electricity tariff, the real delivery cost, the actual customer delivery charge and the selling platform fees you pay.</p></div>
+<div class="note"><strong>Important:</strong> PrintProfit is an estimating tool. Provider prices, marketplace fees, delivery charges, electricity rates and other market values may not be current. Estimates should be checked against your actual costs before you use them for a real sale.</div>
 </div>
 
 <div class="footer">PrintProfit — 3D Printing Cost &amp; Pricing Calculator • Guide &amp; Help</div>
