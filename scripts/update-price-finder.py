@@ -125,8 +125,7 @@ def update():
 
     # Generate a static browser bundle so Compare Products does not depend on runtime JSON fetches.
     browser_data_path = ROOT / "data" / "price-finder.js"
-    browser_data = "( ()=>{"
-    browser_data = "(()=>{\n' use strict';\n// Generated from data/price-finder.json by the PrintProfit Price Finder updater.\nwindow.PRINTPROFIT_PRICE_DATA="
+    browser_data = "(()=>{\n'use strict';\n// Generated from data/price-finder.json by the PrintProfit Price Finder updater.\nwindow.PRINTPROFIT_PRICE_DATA="
     browser_data += json.dumps(data, indent=2, ensure_ascii=False)
     browser_data += ";\n})();\n"
     browser_data_path.write_text(browser_data, encoding="utf-8")
