@@ -326,6 +326,18 @@ function renderInsights(){
  $('insightUnit').textContent=units.length?money(units[0].unit)+'/kg':'—';
  $('insightUnitSub').textContent=units.length?(units[0].brand+' • '+units[0].name):'Unit cost not available';
 }
+function colourChip(x){
+ if(!x||!x.colour)return '';
+ const bg=x.colourHex||'#687985';
+ return '<span style="display:inline-flex;align-items:center;gap:5px;margin-top:3px;color:var(--muted);font-size:9px"><i style="width:10px;height:10px;border-radius:50%;background:'+esc(bg)+';border:1px solid rgba(255,255,255,.25);display:inline-block"></i>'+esc(x.colour)+'</span>';
+}
+function rowPriceTrend(x){
+ const h=(Array.isArray(x.priceHistory)?x.priceHistory:[]).filter(p=>p&&Number.isFinite(Number(p.price)));
+ if(h.length<2)return '';
+ const d=Number(h[h.length-1].price)-Number(h[h.length-2].price);
+ if(Math.abs(d)<0.005)return '<div class="price-change price-flat">unchanged</div>';
+ return d<0?'<div class="price-change price-down">↓ £'+Math.abs(d).toFixed(2)+'</div>':'<div class="price-change price-up">↑ £'+d.toFixed(2)+'</div>';
+}
 function populateSelect(id,values,label){
  const el=$(id);if(!el)return;
  const current=el.value;
@@ -387,10 +399,10 @@ function render(){
  const rows=filtered();
  $('rows').innerHTML=rows.map(x=>'<tr>'+
   '<td><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span></td>'+
-  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+(x.colour?'<div class="muted">'+esc(x.colour)+'</div>':'')+'</div></div></div></td>'+
+  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
-  '<td class="price">'+money(x.price)+'</td>'+
+  '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
   '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
   '<td class="checked">'+esc(x.updated||'—')+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Live checked':'● Reference')+'</div></td>'+
