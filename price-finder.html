@@ -194,7 +194,8 @@ function refreshFilters(){
  const cat=$('category').value;
  const visible=db.products.filter(x=>cat==='all'||x.category===cat);
  populateSelect('brand',[...new Set(visible.map(x=>x.brand).filter(Boolean))],'All brands');
- populateSelect('retailer',[...new Set(visible.map(x=>x.retailer).filter(Boolean))],'All retailers');
+ const retailers=(db.sources||[]).map(x=>x.name).filter(Boolean);
+ populateSelect('retailer',retailers,'All retailers');
  const types=[...new Set(visible.map(x=>x.type).filter(Boolean))];
  populateSelect('type',types,'All types');
 }
