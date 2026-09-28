@@ -24,6 +24,7 @@ function install(){
       </nav>
     </div>
     <div class="pp-top-body">
+      <img class="pp-hero-background" src="./assets/hero-prints.svg?v=1" alt="" aria-hidden="true">
       <div class="pp-top-copy">
         <div class="pp-eyebrow">3D PRINTING PRICING, MADE SIMPLE</div>
         <h1>Know what it costs.<br><strong>Know what to charge.</strong></h1>
@@ -43,7 +44,6 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img class="pp-hero-art" src="./assets/hero-prints.svg?v=1" alt="3D printing workshop">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
@@ -125,6 +125,22 @@ function install(){
 
 
 
+
+
+/* Hero artwork now sits behind the hero content as a full background layer. */
+const ppHeroLayoutStyle=document.createElement('style');
+ppHeroLayoutStyle.id='ppHeroLayoutStyle';
+ppHeroLayoutStyle.textContent=`
+  #ppCleanTop .pp-top-body{position:relative!important;isolation:isolate!important;overflow:hidden!important}
+  #ppCleanTop .pp-hero-background{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;z-index:0!important;opacity:.78!important;display:block!important;pointer-events:none!important}
+  #ppCleanTop .pp-top-body:after{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:linear-gradient(90deg,rgba(5,13,19,.98) 0%,rgba(5,13,19,.88) 33%,rgba(5,13,19,.34) 68%,rgba(5,13,19,.18) 100%),linear-gradient(180deg,rgba(5,13,19,.18),rgba(5,13,19,.44))!important;pointer-events:none!important}
+  #ppCleanTop .pp-top-copy,#ppCleanTop .pp-top-card{position:relative!important;z-index:2!important}
+  #ppCleanTop .pp-top-card{width:min(360px,38vw)!important;height:250px!important;background:rgba(7,20,29,.58)!important;backdrop-filter:blur(7px)!important}
+  #ppCleanTop .pp-top-card:before{display:none!important}
+  #ppCleanTop .pp-card-tagline{position:absolute!important;inset:0!important;display:grid!important;place-items:center!important;width:auto!important;margin:0!important;font-size:24px!important;line-height:1.02!important;text-align:center!important;color:#ff8c24!important;text-shadow:0 3px 18px rgba(0,0,0,.86)!important}
+  @media(max-width:800px){#ppCleanTop .pp-top-card{width:min(425px,100%)!important;height:230px!important}}
+`;
+document.head.appendChild(ppHeroLayoutStyle);
 
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
