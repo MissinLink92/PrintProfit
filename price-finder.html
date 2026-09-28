@@ -25,6 +25,8 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 .compare-summary{min-width:0}.compare-summary strong{font-size:11px}.compare-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px;max-width:760px}.compare-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border:1px solid var(--line);background:var(--panel2);border-radius:999px;color:#dce5eb;font-size:8px;font-weight:800;max-width:220px}.compare-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.compare-chip button{border:0;background:transparent;color:#94a8b3;cursor:pointer;padding:0;font-size:11px;line-height:1}.compare-chip button:hover{color:var(--accent)}
 .compare-actions{display:flex;align-items:center;gap:7px;flex-shrink:0}.compare-btn{border:1px solid var(--accent);background:var(--accent);color:#0a1218;border-radius:8px;padding:8px 11px;font:900 10px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}.compare-btn.secondary{background:transparent;color:#dce5eb;border-color:var(--line)}.compare-btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
 .compare-check{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;vertical-align:middle}
+.product-name-wrap{display:flex;align-items:center;gap:9px;min-width:250px}.product-thumb{width:58px;height:58px;flex:0 0 58px;object-fit:contain;border:1px solid var(--line);border-radius:9px;background:#091821;padding:4px}.product-thumb-wrap{position:relative;width:58px;height:58px;flex:0 0 58px}.product-thumb-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:9px;background:linear-gradient(135deg,#0e202b,#08131b);color:var(--accent);font-size:20px;font-weight:900}.product-thumb-wrap.failed .product-thumb{display:none}.product-thumb-wrap.failed .product-thumb-fallback{display:flex}
+
 .compare-modal{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.7)}.compare-modal.open{display:flex}.compare-dialog{width:min(1180px,100%);max-height:min(86vh,820px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0b1821,#0e202b);box-shadow:0 22px 70px rgba(0,0,0,.55)}.compare-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(11,24,33,.98);backdrop-filter:blur(8px)}.compare-head h2{margin:0;font-size:16px}.compare-close{border:1px solid var(--line);background:transparent;color:#dce5eb;border-radius:8px;padding:6px 9px;cursor:pointer;font:800 10px Inter,Segoe UI,system-ui,sans-serif}.compare-close:hover{border-color:var(--accent);color:var(--accent)}
 .compare-table-wrap{overflow:auto}.compare-table{width:max-content;min-width:100%;border-collapse:collapse}.compare-table th,.compare-table td{padding:10px 12px;border-bottom:1px solid rgba(127,160,175,.12);border-right:1px solid rgba(127,160,175,.08);font-size:10px;text-align:left;vertical-align:top}.compare-table th{position:sticky;top:0;background:#091821;color:#fff;font-size:10px;min-width:190px}.compare-table th:first-child,.compare-table td:first-child{position:sticky;left:0;z-index:1;background:#0a171f;color:#8ea8b4;font-weight:800;min-width:115px}.compare-table td:first-child{font-size:9px;text-transform:uppercase;letter-spacing:.08em}.compare-product-title{color:#fff;font-size:11px;font-weight:900;line-height:1.3}.compare-remove{margin-top:7px;border:1px solid var(--line);background:transparent;color:#9fb2bd;border-radius:7px;padding:5px 7px;font-size:8px;font-weight:800;cursor:pointer}.compare-remove:hover{border-color:#ff6b6b55;color:#ff9b9b}
 @media(max-width:650px){.compare-bar{bottom:8px;width:calc(100% - 16px);align-items:flex-start}.compare-actions{flex-direction:column}.compare-btn{width:100%}.compare-chip{max-width:150px}.compare-dialog{max-height:90vh}.compare-table th{min-width:175px}}
@@ -184,6 +186,19 @@ function closeCompareModal(){
 
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function imageFallback(x){
+ const isPrinter=x.category==='printer';
+ const fill=x.category==='printer'?'#607888':(x.colourHex||'#6b7c88');
+ const svg=isPrinter
+  ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect x="17" y="42" width="86" height="52" rx="8" fill="#172b36" stroke="#ff7800" stroke-width="3"/><rect x="30" y="51" width="60" height="24" rx="3" fill="#071018" stroke="#607888"/><rect x="39" y="80" width="42" height="6" rx="3" fill="#607888"/><path d="M41 42V25h38v17" fill="none" stroke="#ff7800" stroke-width="4"/><path d="M51 25v-9h18v9" fill="'+fill+'" stroke="#ff7800" stroke-width="3"/></svg>'
+  : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="43" fill="#172b36" stroke="#ff7800" stroke-width="3"/><circle cx="60" cy="60" r="15" fill="#071018" stroke="'+fill+'" stroke-width="8"/><path d="M24 44c20-22 52-25 73-8M25 76c21 18 50 20 70 7" fill="none" stroke="'+fill+'" stroke-width="7" stroke-linecap="round"/><path d="M39 25c12-6 29-8 42-4" fill="none" stroke="#ff7800" stroke-width="3" stroke-linecap="round"/></svg>';
+ return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+}
+function productImage(x){
+ const fallback=imageFallback(x);
+ const src=x.image||fallback;
+ return '<div class="product-thumb-wrap"><img class="product-thumb" src="'+esc(src)+'" alt="" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+(x.category==='printer'?'▣':'◉')+'</span></div>';
+}
 function populateSelect(id,values,label){
  const el=$(id);if(!el)return;
  const current=el.value;
@@ -227,7 +242,7 @@ function render(){
  const rows=filtered();
  $('rows').innerHTML=rows.map(x=>'<tr>'+
   '<td><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span></td>'+
-  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div><strong>'+esc(x.name)+'</strong>'+(x.colour?'<div class="muted">'+esc(x.colour)+'</div>':'')+'</div></div></td>'+
+  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+(x.colour?'<div class="muted">'+esc(x.colour)+'</div>':'')+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
   '<td class="price">'+money(x.price)+'</td>'+

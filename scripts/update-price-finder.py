@@ -6,6 +6,7 @@ import urllib.request
 from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
+from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "price-finder.json"
@@ -44,6 +45,18 @@ def ld_products(html: str):
             types = typ if isinstance(typ, list) else [typ]
             if any(str(t).lower() == "product" for t in types):
                 yield obj
+
+def product_image(product, page_url: str = ""):
+    if not isinstance(product, dict):
+        return None
+    image = product.get("image")
+    if isinstance(image, list):
+        image = image[0] if image else None
+    if isinstance(image, dict):
+        image = image.get("url")
+    if isinstance(image, str) and image.strip():
+        return urljoin(page_url, image.strip())
+    return None
 
 def parse_price(value):
     try:
@@ -96,9 +109,14 @@ def update():
             html = fetch(url)
             products = list(ld_products(html))
             match = find_match(products, item.get("name", ""))
+            image = product_image(match, url) if match else None
+            if image:
+                item["image"] = image
             price = product_price(match) if match else None
             if price is None:
                 warnings.append(f"No safe product price found: {item.get('name')} ({url})")
+                if image:
+                    item["lastCheckStatus"] = "image-ok-price-missing"
                 continue
             old = parse_price(item.get("price"))
             if old and (price < old * 0.5 or price > old * 2.0):
