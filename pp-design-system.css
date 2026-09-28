@@ -735,3 +735,60 @@ body.pp-light .compare-bar{
   #ppCleanTop .pp-top-card{background-position:62% center!important}
   .wrap .hero{min-height:250px!important;background-position:70% center!important}
 }
+
+
+/* ===== Icon + journey correction ===== */
+/* The preferred PrintProfit icon language: rounded square, thin coloured outline, simple line art. */
+section.panel .head>.icon,
+section.panel .head>.pp-pretty-icon,
+section.panel .head>.pp-master-circular,
+.merge-block .head>.icon,
+.merge-block .head>.pp-pretty-icon,
+.merge-block .head>.pp-master-circular{
+  width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;
+  flex:0 0 48px!important;border-radius:14px!important;
+  background:#091d28!important;border:1.5px solid #35d6e5!important;
+  color:#35d6e5!important;box-shadow:0 0 0 1px rgba(53,214,229,.06),0 8px 20px rgba(0,0,0,.22)!important;
+}
+section.panel .head>.pp-master-circular::before,
+section.panel .head>.pp-master-circular::after,
+.merge-block .head>.pp-master-circular::before,
+.merge-block .head>.pp-master-circular::after{display:none!important}
+section.panel .head>.icon svg,
+section.panel .head>.pp-pretty-icon svg,
+section.panel .head>.pp-master-circular svg,
+.merge-block .head>.icon svg,
+.merge-block .head>.pp-pretty-icon svg,
+.merge-block .head>.pp-master-circular svg{
+  width:30px!important;height:30px!important;fill:none!important;stroke:currentColor!important;
+  stroke-width:2!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:none!important;
+}
+/* Stage identity colours */
+.pp-tab-panel[data-panel="machine"] .head>.icon,
+.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon,
+.pp-tab-panel[data-panel="machine"] .head>.pp-master-circular,
+.merge-block[data-panel="machine"] .head>.icon{border-color:#a97aff!important;color:#a97aff!important}
+.pp-tab-panel[data-panel="costs"] .head>.icon,
+.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon,
+.pp-tab-panel[data-panel="costs"] .head>.pp-master-circular,
+.merge-block[data-panel="costs"] .head>.icon{border-color:#32df8b!important;color:#32df8b!important}
+/* Results is the final orange action stage. */
+#singleResultView~* .head>.icon{}
+section.panel.result>.head>.icon,
+section.panel.result>.head>.pp-pretty-icon,
+section.panel.result>.head>.pp-master-circular{border-color:#ff8a24!important;color:#ff8a24!important}
+
+/* Keep the journey badges outside their cards so 01/02/03/04 can never be clipped. */
+#pp-master-quickcards{overflow:visible!important;padding-top:12px!important;margin-top:20px!important}
+#pp-master-quickcards button{overflow:visible!important}
+#pp-master-quickcards .pp-flow-number{z-index:20!important;top:-12px!important;left:-12px!important}
+#pp-master-quickcards button:not(:last-child):after{z-index:21!important}
+
+/* Keep the field-icon treatment crisp and square rather than filled. */
+.pp-tab-panel .head .icon,
+.pp-tab-panel .head>.pp-pretty-icon{box-shadow:0 0 0 1px rgba(255,255,255,.02),0 8px 18px rgba(0,0,0,.2)!important}
+
+@media(max-width:650px){
+ section.panel .head>.icon,section.panel .head>.pp-pretty-icon,section.panel .head>.pp-master-circular,
+ .merge-block .head>.icon,.merge-block .head>.pp-pretty-icon,.merge-block .head>.pp-master-circular{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;flex-basis:44px!important}
+}
