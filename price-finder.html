@@ -46,7 +46,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <section class="hero">
 <div class="kicker">PRINTPROFIT • COMPARE PRODUCTS</div>
 <h1>Find it <strong>cheaper.</strong></h1>
-<p class="lead">Compare tracked UK listings for 3D printers and printing materials across multiple retailers. Search by product or brand, filter by material and retailer, compare normalised material cost, and check the retailer before you buy.</p>
+<p class="lead">Compare tracked UK listings for 3D printers and printing materials across multiple retailers. Search by product or brand, filter by material and retailer, tick the products you want, then switch brands without losing your selections.</p>
 </section>
 
 <div class="tools">
@@ -65,7 +65,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Select</th><th>Type</th><th>Brand / Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Status</th><th>Checked</th><th></th></tr></thead>
+<thead><tr><th>Type</th><th>Brand / Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Status</th><th>Checked</th><th></th></tr></thead>
 <tbody id="rows"></tbody>
 </table>
 <div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
@@ -224,9 +224,8 @@ function filtered(){
 function render(){
  const rows=filtered();
  $('rows').innerHTML=rows.map(x=>'<tr>'+
-  '<td><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></td>'+
   '<td><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span></td>'+
-  '<td><strong>'+esc(x.name)+'</strong>'+(x.colour?'<div class="muted">'+esc(x.colour)+'</div>')+'</td>'+
+  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div><strong>'+esc(x.name)+'</strong>'+(x.colour?'<div class="muted">'+esc(x.colour)+'</div>':'')+'</div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
   '<td class="price">'+money(x.price)+'</td>'+
