@@ -5107,9 +5107,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-28T22:05:12.504884+00:00",
+    "checkedAt": "2026-09-28T23:04:39.685852+00:00",
     "changedProducts": 0,
-    "warnings": 43
+    "warnings": 44
   }
 };
 })();
