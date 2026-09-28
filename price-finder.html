@@ -256,6 +256,12 @@ function openCompareModal(){
  $('compareModal').classList.add('open');
  document.body.style.overflow='hidden';
 }
+
+function closeCompareModal(){
+ $('compareModal').classList.remove('open');
+ document.body.style.overflow='';
+}
+
 function readPrintProfitTheme(){
  try{
   const raw=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');
@@ -266,7 +272,7 @@ function writePrintProfitTheme(dark){
  try{
   const key='printprofit.preferences.v3';
   const raw=JSON.parse(localStorage.getItem(key)||'{}');
-  localStorage.setItem(key,JSON.stringify(Object.assign({dark:true,language:'en',units:'metric',currency:'GBP',rate:1},raw,{dark}));
+  localStorage.setItem(key,JSON.stringify(Object.assign({dark:true,language:'en',units:'metric',currency:'GBP',rate:1},raw,{dark})));
  }catch(e){}
 }
 function applyTheme(dark){
@@ -285,11 +291,6 @@ function initThemeSwitch(){
   applyTheme(next);
  });
 }
-function closeCompareModal(){
- $('compareModal').classList.remove('open');
- document.body.style.overflow='';
-}
-
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function imageFallback(x){
