@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PrintProfit — Price Finder</title>
+<title>PrintProfit — Compare Products</title>
 <style>
 :root{--bg:#071018;--panel:#0b1821;--panel2:#0e202b;--text:#f5f8fb;--muted:#9fb2bd;--line:#284654;--accent:#ff7800;--good:#36e58b}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:14px Inter,Segoe UI,system-ui,sans-serif}
@@ -31,13 +31,13 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/user-selected-printprofit-logo.webp?v=5" alt="PrintProfit"></a>
 <nav class="nav" aria-label="PrintProfit navigation">
 <a href="./index.html">Calculator</a>
-<a href="./price-finder.html" class="active">Price Finder</a>
+<a href="./price-finder.html" class="active">Compare Products</a>
 <a href="./guide.html">Guide &amp; Help</a>
 </nav>
 </header>
 
 <section class="hero">
-<div class="kicker">PRINTPROFIT • PRICE FINDER</div>
+<div class="kicker">PRINTPROFIT • COMPARE PRODUCTS</div>
 <h1>Find it <strong>cheaper.</strong></h1>
 <p class="lead">Compare tracked UK listings for 3D printers and printing materials across multiple retailers. Search by product or brand, filter by material and retailer, compare normalised material cost, and check the retailer before you buy.</p>
 </section>
@@ -53,7 +53,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 
 <div class="meta">
 <span id="count">0 listings</span>
-<span id="coverage">Loading Price Finder data…</span>
+<span id="coverage">Loading comparison data…</span>
 </div>
 
 <div class="table-wrap">
@@ -76,7 +76,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <section class="section">
 <h2>Coverage</h2>
 <div class="cards">
-<article class="card"><h3 id="sourceCount">10 sources</h3><p>Retailers and manufacturers are tracked in the central Price Finder database. Additional specialist sources can be added without redesigning the page.</p></article>
+<article class="card"><h3 id="sourceCount">10 sources</h3><p>Retailers and manufacturers are tracked in the central comparison database. Additional specialist sources can be added without redesigning the page.</p></article>
 <article class="card"><h3 id="brandCount">32 brands</h3><p>Brand coverage spans major printer and material manufacturers, with more brands ready to be added as product feeds are mapped.</p></article>
 <article class="card"><h3 id="listingCount">50 listings</h3><p>The dataset is deliberately structured so prices, stock status and timestamps can be refreshed independently from the user interface.</p></article>
 </div>
@@ -92,7 +92,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <div class="brand-cloud" id="brandCloud"></div>
 </section>
 
-<div class="footer">PrintProfit — Price Finder • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
+<div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
 <script>
