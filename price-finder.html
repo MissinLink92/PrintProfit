@@ -173,7 +173,7 @@ function openCompareModal(){
  const items=[...selectedIds].map(productById).filter(Boolean);
  if(!items.length)return;
  const labels=['Type','Brand','Product','Retailer','Pack / Build','Price','Unit cost','Availability','Checked','Live listing'];
- $('compareTableWrap').innerHTML='<table class="compare-table"><thead><tr><th>Compare</th>'+items.map(x=>'<th><div class="compare-product-title">'+esc(x.name)+'</div><button class="compare-remove" type="button" data-remove-compare="'+esc(x.id)+'">Remove</button></th>').join('')+'</tr></thead><tbody>'+labels.map(label=>'<tr><td>'+esc(label)+'</td>'+items.map(x=>'<td>'+compareValue(x,label)+'</td>').join('')+'</tr>').join('')}</tbody></table>';
+ $('compareTableWrap').innerHTML='<table class="compare-table"><thead><tr><th>Compare</th>'+items.map(x=>'<th><div class="compare-product-title">'+esc(x.name)+'</div><button class="compare-remove" type="button" data-remove-compare="'+esc(x.id)+'">Remove</button></th>').join('')+'</tr></thead><tbody>'+labels.map(label=>'<tr><td>'+esc(label)+'</td>'+items.map(x=>'<td>'+compareValue(x,label)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
  $('compareModal').classList.add('open');
  document.body.style.overflow='hidden';
 }
