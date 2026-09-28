@@ -71,6 +71,67 @@ body.pp-light .view-switch,body.pp-light .product-card,body.pp-light .selected-t
 @media(max-width:650px){.compare-bar{bottom:8px;width:calc(100% - 16px);align-items:flex-start}.compare-actions{flex-direction:column}.compare-btn{width:100%}.compare-chip{max-width:150px}.compare-dialog{max-height:90vh}.compare-table th{min-width:175px}}
 @media(max-width:1100px){.tools{grid-template-columns:1.5fr 1fr 1fr 1fr}.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto;flex-wrap:nowrap}.nav a{white-space:nowrap}.wrap{width:min(100% - 20px,1240px)}.hero{padding-top:26px}.tools{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
+
+/* PrintProfit Premium Compare styling */
+:root{
+ --ppc-bg:#07121b;--ppc-panel:#0d2230;--ppc-panel2:#102a39;
+ --ppc-line:#315767;--ppc-text:#f5f9fb;--ppc-muted:#a8bbc5;
+ --ppc-cyan:#35d6e5;--ppc-blue:#5da9ff;--ppc-green:#45df91;--ppc-orange:#ff8a24;
+}
+body{font-size:15px!important;color:var(--ppc-text)!important}
+.header{min-height:76px!important;border-bottom-color:var(--ppc-line)!important}
+.nav a{font-size:13px!important;padding:10px 13px!important}
+.hero{padding:42px 0 24px!important}
+.kicker{font-size:11px!important;letter-spacing:.16em!important}
+h1{font-size:clamp(42px,6vw,64px)!important}
+.lead{font-size:16px!important;line-height:1.65!important;color:#c6d5dc!important}
+.tool{padding:13px!important;border-radius:13px!important;background:linear-gradient(180deg,var(--ppc-panel2),var(--ppc-panel))!important;border-color:var(--ppc-line)!important}
+.tool label{font-size:11px!important;color:#d7e4e9!important;margin-bottom:7px!important}
+.tool input,.tool select{font-size:13px!important;min-height:42px!important;padding:10px!important}
+.meta{font-size:10.5px!important;color:var(--ppc-muted)!important}
+.table-wrap{border-color:var(--ppc-line)!important;border-radius:16px!important}
+th{font-size:10px!important;padding:14px!important;color:#c0d0d7!important}
+td{font-size:12px!important;padding:14px!important;color:#dce7eb!important}
+td strong{font-size:13px!important}
+.price{font-size:16px!important}
+.unit{font-size:12px!important;color:#ffb86f!important}
+.kind,.stock{font-size:10px!important;padding:5px 8px!important}
+.link{font-size:11px!important;padding:8px 11px!important}
+.section h2{font-size:20px!important}
+.card{padding:16px!important;border-radius:15px!important}
+.card h3{font-size:13px!important}
+.card p{font-size:11px!important;line-height:1.6!important}
+.quick-btn{font-size:11px!important;padding:8px 11px!important}
+.insight-card{padding:14px!important}
+.insight-card .eyebrow{font-size:9px!important}
+.insight-card strong{font-size:14px!important}
+.insight-card span{font-size:10.5px!important;line-height:1.45!important}
+.brand-pill{font-size:11px!important;padding:8px 11px!important}
+.view-btn,.selected-toggle{font-size:11px!important}
+.compare-chip{font-size:11px!important}
+.compare-dialog,.details-dialog{border-radius:18px!important}
+.compare-table th{font-size:10px!important}
+.compare-table td{font-size:12px!important}
+.footer{font-size:10px!important;line-height:1.6!important}
+
+/* Clear icon language */
+.pp-compare-icon,.compare-icon,.product-icon,.tool-icon,.section-icon{
+ width:42px!important;height:42px!important;min-width:42px!important;
+ border-radius:12px!important;display:inline-grid!important;place-items:center!important;
+ background:#0b202c!important;border:1px solid #3b6474!important;
+ color:var(--ppc-cyan)!important;
+}
+svg{shape-rendering:geometricPrecision}
+@media(max-width:760px){
+ body{font-size:16px!important}
+ .lead{font-size:16px!important}
+ th{font-size:10px!important}
+ td{font-size:12.5px!important}
+ .tool label{font-size:12px!important}
+ .tool input,.tool select{font-size:16px!important}
+ .card p{font-size:12px!important}
+}
+
 </style>
 </head>
 <body data-pp-standalone-i18n="1">
