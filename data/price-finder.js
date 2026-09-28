@@ -1222,7 +1222,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 169
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -5105,9 +5105,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-28T11:05:46.126659+00:00",
+    "checkedAt": "2026-09-28T12:06:24.858616+00:00",
     "changedProducts": 0,
-    "warnings": 44
+    "warnings": 45
   }
 };
 })();
