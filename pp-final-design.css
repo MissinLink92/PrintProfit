@@ -967,3 +967,55 @@ body:has(.wrap){
 #ppCleanTop .pp-top-body,
 #ppCleanTop .pp-top-copy,
 #ppCleanTop .pp-top-card{position:relative!important;z-index:2!important}
+
+
+/* ===== Visual correction V3: real hero artwork + crystal-clear type ===== */
+html,body,#ppCleanTop,.wrap{
+  -webkit-font-smoothing:antialiased!important;
+  -moz-osx-font-smoothing:grayscale!important;
+  text-rendering:optimizeLegibility!important;
+}
+#ppCleanTop .pp-top-card{
+  background:#07151e!important;
+}
+#ppCleanTop .pp-top-card > .pp-hero-art{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  opacity:.92!important;
+  z-index:0!important;
+  filter:saturate(1.05) contrast(1.04)!important;
+}
+#ppCleanTop .pp-top-card > .pp-card-tagline{
+  z-index:5!important;
+}
+#ppCleanTop .pp-top-card::before{
+  z-index:2!important;
+  background:
+    radial-gradient(circle at 72% 30%,rgba(50,214,229,.13),transparent 30%),
+    linear-gradient(90deg,rgba(5,17,24,.08),rgba(5,17,24,.18) 42%,rgba(5,17,24,.45) 100%),
+    linear-gradient(180deg,rgba(5,17,24,.06),rgba(5,17,24,.12) 44%,rgba(5,17,24,.76) 100%)!important;
+}
+#ppCleanTop .pp-top-card::after{
+  z-index:4!important;
+}
+#ppCleanTop .pp-top-brand img{
+  width:235px!important;
+  height:60px!important;
+  image-rendering:auto!important;
+}
+#ppCleanTop .pp-top-links button,
+.wrap .nav a{
+  font-size:13px!important;
+  letter-spacing:.01em!important;
+}
+#ppCleanTop .pp-top-copy>p,.wrap .hero .lead{
+  font-weight:600!important;
+  letter-spacing:.005em!important;
+}
+#pp-master-quickcards button b{letter-spacing:.005em!important}
