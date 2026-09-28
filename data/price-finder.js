@@ -150,7 +150,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 11.05,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/the-filament/the-filament-pla-filament",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "esun-pla-basic-black",
@@ -165,7 +166,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 11.5,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/black-pla-filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "elegoo-pla-black",
@@ -180,7 +182,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 11.95,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/black-pla-filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "elegoo-pla-black",
@@ -195,7 +198,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 12.85,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/black-pla-filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "polymaker-polyterra-pla-cotton-white",
@@ -210,7 +214,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 13.79,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/pla-filament-product-range",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "sunlu-pla-2-0-white",
@@ -225,7 +230,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 12.5,
       "updated": "2026-09-21",
       "url": "https://www.subliblanks.com/",
-      "autoRefresh": false
+      "autoRefresh": false,
+      "retailer": "Subliblanks"
     },
     {
       "id": "sunlu-pla-blue",
@@ -240,7 +246,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 17.95,
       "updated": "2026-09-21",
       "url": "https://nseimports.co.uk/",
-      "autoRefresh": false
+      "autoRefresh": false,
+      "retailer": "NSE Imports"
     },
     {
       "id": "bambu-lab-pla-basic-black",
@@ -255,7 +262,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 24,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/black-pla-filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "creality-hyper-pla",
@@ -270,7 +278,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 18.99,
       "updated": "2026-09-21",
       "url": "https://store.creality.com/uk/collections/active",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Creality UK"
     },
     {
       "id": "esun-petg-black",
@@ -285,7 +294,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": 14.7,
       "updated": "2026-09-21",
       "url": "https://www.3djake.uk/3d-printer-filaments/bestselling-filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "3DJake UK"
     },
     {
       "id": "123-3d-pla-black",
@@ -795,7 +805,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://bambu-lab-uk.myshopify.com/collections/a1-series",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Bambu Lab UK"
     },
     {
       "id": "bambu-lab-a1",
@@ -810,7 +821,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://bambu-lab-uk.myshopify.com/products/a1",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Bambu Lab UK"
     },
     {
       "id": "bambu-lab-p1s",
@@ -825,7 +837,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://uk.store.bambulab.com/collections/3d-printer",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Bambu Lab UK"
     },
     {
       "id": "elegoo-neptune-4",
@@ -840,7 +853,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "ELEGOO UK"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -855,7 +869,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Creality UK"
     },
     {
       "id": "creality-ender-3-v3-ke",
@@ -870,7 +885,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://store.creality.com/uk/products/ender-3-v3-ke-3d-printer",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Creality UK"
     },
     {
       "id": "creality-k1c-2025",
@@ -885,7 +901,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "retailer": "Creality UK"
     },
     {
       "id": "flashforge-adventurer-5m",
@@ -900,7 +917,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://www.amazon.co.uk/s?k=Flashforge+Adventurer+5M",
-      "autoRefresh": false
+      "autoRefresh": false,
+      "retailer": "Amazon UK"
     },
     {
       "category": "filament",
