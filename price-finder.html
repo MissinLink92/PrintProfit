@@ -6,12 +6,39 @@
 <title>PrintProfit — Compare Products</title>
 <style>
 :root{--bg:#101c24;--panel:#182a34;--panel2:#1e333e;--text:#f6f3ed;--muted:#b7c6cd;--line:#3b5866;--accent:#ff7800;--good:#3bdc8a;--soft:#8fa7b2}
+body.pp-light{--bg:#f1f4f6;--panel:#ffffff;--panel2:#eef2f4;--text:#19252d;--muted:#5e707a;--line:#c6d2d8;--soft:#6b7e88;background:#f1f4f6!important;color:var(--text)!important}
+body.pp-light .header{background:rgba(255,255,255,.94)!important;border-bottom-color:#c6d2d8!important}
+body.pp-light .nav a{color:#31434d!important}
+body.pp-light .hero{background:radial-gradient(560px 300px at 73% 44%,rgba(10,162,255,.08) 0,transparent 63%),linear-gradient(135deg,#f7f9fa 0,#eef3f5 100%)!important}
+body.pp-light .hero .lead{color:#536771!important}
+body.pp-light .tool{background:linear-gradient(180deg,#fff,#f3f6f7)!important;box-shadow:0 4px 14px rgba(30,55,68,.08)}
+body.pp-light .tool input,body.pp-light .tool select{background:#f6f8f9!important;color:#1b2a33!important;border-color:#b8c8cf!important}
+body.pp-light .table-wrap{background:linear-gradient(180deg,#fff,#f3f6f7)!important;box-shadow:0 10px 28px rgba(30,55,68,.10)}
+body.pp-light th{background:#e9eff2!important;color:#47606b!important}
+body.pp-light tbody tr:nth-child(even) td{background:rgba(30,55,68,.025)!important}
+body.pp-light td,body.pp-light .card,body.pp-light .insight-card{color:var(--text)}
+body.pp-light .card{background:linear-gradient(180deg,#fff,#f2f5f6)!important;box-shadow:0 5px 18px rgba(30,55,68,.08)}
+body.pp-light .brand-pill,body.pp-light .quick-btn{background:#f4f7f8!important;color:#30454f!important}
+body.pp-light .compare-bar{background:rgba(255,255,255,.97)!important;border-color:#d7a06b!important;box-shadow:0 12px 42px rgba(30,55,68,.18)}
+body.pp-light .compare-chip{background:#f0f4f6!important;color:#31434d!important}
+body.pp-light .compare-dialog,body.pp-light .details-dialog{background:linear-gradient(180deg,#fff,#f3f6f7)!important;color:#19252d!important}
+body.pp-light .compare-head,body.pp-light .details-head{background:rgba(255,255,255,.98)!important}
+body.pp-light .compare-table th{background:#edf2f4!important;color:#304651!important}
+body.pp-light .compare-table th:first-child,body.pp-light .compare-table td:first-child{background:#f7f9fa!important;color:#5e707a!important}
+body.pp-light .details-body .detail-item,body.pp-light .history-wrap{background:#f5f8f9!important}
+body.pp-light .details-image,body.pp-light .product-thumb{background:#edf2f4!important}
+body.pp-light .footer{color:#667985!important;border-top-color:#c6d2d8!important}
+body.pp-light .link{color:#253942!important;border-color:#9db3be!important}
+body.pp-light .link:hover{color:var(--accent)!important;border-color:var(--accent)!important}
+
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:14px Inter,Segoe UI,system-ui,sans-serif}
 body{background:radial-gradient(circle at 82% 5%,rgba(65,154,194,.16),transparent 27%),radial-gradient(circle at 15% 70%,rgba(255,120,0,.045),transparent 24%),linear-gradient(180deg,#101c24 0,#0f1a21 100%)}
 .wrap{width:min(1240px,calc(100% - 28px));margin:0 auto;padding-bottom:42px}
 .header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:70px;padding:8px 0;border-bottom:1px solid rgba(59,88,102,.8);background:rgba(16,28,36,.94);backdrop-filter:blur(10px)}
 .brand img{width:112px;height:58px;object-fit:contain;display:block}
-.nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px;transition:background .18s,color .18s}.nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}.nav a:hover,.nav a.active{background:#ff780014;color:var(--accent)}
+.nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px;transition:background .18s,color .18s}.nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}
+.pp-theme-toggle{display:inline-flex;align-items:center;gap:8px;margin-left:4px;color:#c9d5db;font-size:10px;font-weight:800;white-space:nowrap;cursor:pointer;user-select:none}.pp-theme-toggle input{position:absolute;opacity:0;pointer-events:none}.pp-toggle-track{width:42px;height:22px;border:1px solid #4b6977;border-radius:999px;background:#1c313c;display:inline-flex;align-items:center;padding:2px;transition:.18s}.pp-toggle-track span{width:16px;height:16px;border-radius:50%;background:#f8fafb;box-shadow:0 2px 6px rgba(0,0,0,.3);transform:translateX(0);transition:.18s}.pp-theme-toggle input:checked + .pp-toggle-track{background:linear-gradient(90deg,#078ff4,#0aa2ff);border-color:#0aa2ff}.pp-theme-toggle input:checked + .pp-toggle-track span{transform:translateX(20px)}.pp-theme-toggle:focus-within .pp-toggle-track{outline:2px solid rgba(255,120,0,.35);outline-offset:2px}
+@media(max-width:760px){.pp-theme-toggle{order:3;margin-left:auto}.header{flex-wrap:wrap}}.nav a:hover,.nav a.active{background:#ff780014;color:var(--accent)}
 .hero{padding:36px 0 20px}.kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--accent)}h1{font-size:clamp(38px,6vw,60px);line-height:.95;letter-spacing:-.04em;margin:9px 0 12px}h1 strong{color:var(--accent)}.lead{max-width:830px;color:#c7d3d9;font-size:15px;line-height:1.6;margin:0}
 .tools{display:grid;grid-template-columns:1.6fr .85fr .95fr .95fr 1fr 1fr;gap:9px;margin:18px 0 12px}.tool{border:1px solid var(--line);background:linear-gradient(180deg,#1a2d38,#172832);border-radius:11px;padding:10px;box-shadow:0 4px 14px rgba(0,0,0,.08)}.tool label{display:block;color:#c3d0d6;font-size:9px;font-weight:800;margin-bottom:5px}.tool input,.tool select{width:100%;background:#213742;color:var(--text);border:1px solid #486775;border-radius:8px;padding:9px;font:600 11px Inter,Segoe UI,system-ui,sans-serif;outline:0}.tool input::placeholder{color:#92a9b4}.tool input:focus,.tool select:focus{border-color:var(--accent)}
 .meta{display:flex;justify-content:space-between;gap:10px;color:#9cb0ba;font-size:9px;margin:9px 2px 12px;flex-wrap:wrap}
@@ -50,6 +77,11 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:12px 11p
 <a href="./price-finder.html" class="active">Compare Products</a>
 <a href="./guide.html">Guide &amp; Help</a>
 </nav>
+<label class="pp-theme-toggle" title="Toggle dark mode">
+  <span id="themeLabel">Dark mode</span>
+  <input id="darkModeToggle" type="checkbox" role="switch" aria-label="Dark mode">
+  <span class="pp-toggle-track" aria-hidden="true"><span></span></span>
+</label>
 </header>
 
 <section class="hero">
@@ -224,11 +256,41 @@ function openCompareModal(){
  $('compareModal').classList.add('open');
  document.body.style.overflow='hidden';
 }
+
 function closeCompareModal(){
  $('compareModal').classList.remove('open');
  document.body.style.overflow='';
 }
 
+function readPrintProfitTheme(){
+ try{
+  const raw=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');
+  return raw.dark!==false;
+ }catch(e){return true;}
+}
+function writePrintProfitTheme(dark){
+ try{
+  const key='printprofit.preferences.v3';
+  const raw=JSON.parse(localStorage.getItem(key)||'{}');
+  localStorage.setItem(key,JSON.stringify(Object.assign({dark:true,language:'en',units:'metric',currency:'GBP',rate:1},raw,{dark})));
+ }catch(e){}
+}
+function applyTheme(dark){
+ document.body.classList.toggle('pp-light',!dark);
+ const toggle=$('darkModeToggle'),label=$('themeLabel');
+ if(toggle)toggle.checked=dark;
+ if(label)label.textContent=dark?'Dark mode':'Light mode';
+}
+function initThemeSwitch(){
+ const toggle=$('darkModeToggle');if(!toggle)return;
+ const dark=readPrintProfitTheme();
+ applyTheme(dark);
+ toggle.addEventListener('change',()=>{
+  const next=!!toggle.checked;
+  writePrintProfitTheme(next);
+  applyTheme(next);
+ });
+}
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function imageFallback(x){
@@ -507,6 +569,7 @@ document.addEventListener('keydown',e=>{
 });
 loadCompareSelection();
 loadData();
+initThemeSwitch();
 renderSavedComparisons();
 updateCompareBar();
 })();
