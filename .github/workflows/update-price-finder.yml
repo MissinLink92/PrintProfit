@@ -1,0 +1,44 @@
+name: Update Price Finder
+
+on:
+  schedule:
+    # Run hourly so the job can detect midnight in Europe/London year-round.
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PrintProfit
+        uses: actions/checkout@v4
+
+      - name: Refresh only at UK midnight
+        shell: bash
+        run: |
+          export TZ=Europe/London
+          HOUR="$(date +%H)"
+          if [ "$HOUR" != "00" ]; then
+            echo "Not UK midnight yet ($(date '+%Y-%m-%d %H:%M %Z')). Exiting."
+            exit 0
+          fi
+
+      - name: Update Price Finder data
+        shell: bash
+        run: python3 scripts/update-price-finder.py
+
+      - name: Commit refreshed data
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No Price Finder changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/price-finder.json printer-price-data.js
+          git commit -m "chore: refresh Price Finder data"
+          git push

@@ -21,7 +21,7 @@ function install(){
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
-        <button type="button" data-target="priceFinder"><span class="pp-nav-icon cube"></span><span>Price Finder</span></button>
+        <button type="button" data-target="priceFinder"><span class="pp-nav-icon cube"></span><span>Compare Products</span></button>
         <button type="button" data-target="guide"><span class="pp-nav-icon book"></span><span>Guide &amp; Help</span></button>
         <button type="button" data-target="settings"><span class="pp-nav-icon gear"></span><span>Settings</span></button>
       </nav>
