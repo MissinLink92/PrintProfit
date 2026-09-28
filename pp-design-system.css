@@ -644,7 +644,7 @@ body.pp-light .compare-bar{
 
 /* ===== PrintProfit premium art direction v3 ===== */
 #ppCleanTop .pp-top-card{
-  background-image:linear-gradient(90deg,rgba(5,17,25,.10),rgba(5,17,25,.04)),url('./assets/hero-art-orange.webp?v=2')!important;
+  background-image:linear-gradient(90deg,rgba(5,17,25,.10),rgba(5,17,25,.04)),url('./assets/hero-workshop.webp?v=1')!important;
   background-size:cover!important;
   background-position:58% center!important;
 }
@@ -688,7 +688,7 @@ body.pp-light .compare-bar{
   overflow:hidden!important;
   background:
     linear-gradient(90deg,rgba(6,19,28,.98) 0%,rgba(6,19,28,.92) 45%,rgba(6,19,28,.45) 78%,rgba(6,19,28,.20) 100%),
-    url('./assets/hero-art-orange.webp?v=2')!important;
+    url('./assets/hero-workshop.webp?v=1')!important;
   background-size:cover!important;
   background-position:center right!important;
 }
