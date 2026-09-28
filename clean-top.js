@@ -17,7 +17,7 @@ function install(){
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
       <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=20260919" alt="PrintProfit">
+        <img src="./assets/user-selected-printprofit-logo.webp?v=70260919" alt="PrintProfit">
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
@@ -46,7 +46,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/user-selected-printprofit-logo.webp?v=6" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/user-selected-printprofit-logo.webp?v=7" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
@@ -69,8 +69,8 @@ function install(){
     #ppCleanTop .pp-top-grid{position:absolute;inset:0;opacity:.45;background-image:linear-gradient(rgba(62,105,122,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(62,105,122,.16) 1px,transparent 1px);background-size:62px 62px;background-position:28px 0;pointer-events:none}
     #ppCleanTop .pp-top-grid:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 48%,rgba(0,129,184,.12),transparent 32%),linear-gradient(90deg,rgba(7,20,29,.12),rgba(7,20,29,.72) 63%,rgba(7,20,29,.16))}
     #ppCleanTop .pp-top-nav{position:relative;z-index:3;height:60px;display:flex;align-items:center;padding:0 3.1%;border-bottom:1px solid #294653;background:rgba(5,15,22,.58);box-sizing:border-box}
-    #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-start;width:170px;height:60px;overflow:visible;text-decoration:none}
-    #ppCleanTop .pp-top-brand img{width:155px;height:58px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
+    #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-start;width:245px;height:60px;overflow:visible;text-decoration:none;background:#f7f9fa;border-radius:11px;padding:4px 11px;box-sizing:border-box}
+    #ppCleanTop .pp-top-brand img{width:100%;height:50px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
     #ppCleanTop .pp-top-links{margin-left:auto;display:flex;align-items:center;gap:10px}
     #ppCleanTop .pp-top-links button{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease}
     #ppCleanTop .pp-top-links button:hover,#ppCleanTop .pp-price-finder-link:hover{color:#fff;background:#ff780012}
@@ -115,7 +115,7 @@ function install(){
     #ppCleanTop .pp-card-tagline{position:relative;z-index:2;margin-top:-2px;color:#ff7800;text-align:right;width:305px;font-size:21px;line-height:.9;font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;transform:rotate(-2deg);text-shadow:0 2px 12px #000}
     #ppCleanTop .pp-top-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:#ff7800;box-shadow:0 0 14px #ff780055}
     @media(max-width:1050px){#ppCleanTop .pp-top-body{grid-template-columns:minmax(0,1fr) 350px;gap:22px}#ppCleanTop .pp-top-card{width:350px}#ppCleanTop .pp-top-card img{width:285px}#ppCleanTop h1{font-size:42px}}
-    @media(max-width:800px){#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:150px}#ppCleanTop .pp-top-brand img{width:92px}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
+    @media(max-width:800px){#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:220px}#ppCleanTop .pp-top-brand img{width:92px}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
     @media(max-width:520px){#ppCleanTop h1{font-size:32px}.pp-eyebrow{font-size:9px!important}.pp-top-copy>p{font-size:14px!important}.pp-feature-strip{gap:8px!important}.pp-feature-strip>div{min-width:0!important}.pp-feature-strip i{display:none!important}#ppCleanTop .pp-top-card{height:255px}#ppCleanTop .pp-top-card img{width:270px;height:170px}.pp-card-tagline{font-size:18px!important;width:250px!important}
 #ppCleanTop .pp-top-brand img{width:84px;height:54px}}
   `;
@@ -135,7 +135,7 @@ function install(){
       <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
         <div class="pp-settings-head">
           <div class="pp-settings-brand">
-            <img src="./assets/user-selected-printprofit-logo.webp?v=20260919" alt="PrintProfit">
+            <img src="./assets/user-selected-printprofit-logo.webp?v=70260919" alt="PrintProfit">
             <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
           </div>
           <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
@@ -248,7 +248,7 @@ function install(){
       .pp-settings-dialog{position:absolute;right:28px;top:74px;width:min(500px,calc(100vw - 32px));max-height:calc(100vh - 96px);border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 80px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:auto}
       .pp-settings-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid #284553;position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}
       .pp-settings-brand{display:flex;align-items:center;gap:12px;min-width:0}
-      .pp-settings-brand img{width:78px;height:56px;object-fit:contain;object-position:center;flex:0 0 78px;border-radius:9px}
+      .pp-settings-brand img{width:118px;height:56px;object-fit:contain;object-position:center;flex:0 0 118px;border-radius:9px;background:#f7f9fa;padding:3px 6px;box-sizing:border-box}
       .pp-settings-kicker{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.2em;margin-bottom:4px}
       .pp-settings-head h2{margin:0;font-size:21px}
       .pp-settings-head p{margin:4px 0 0;color:#8fa6b2;font-size:10px}
@@ -311,7 +311,7 @@ function install(){
         <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
           <div class="pp-guide-head">
             <div class="pp-guide-brand">
-              <img src="./assets/user-selected-printprofit-logo.webp?v=6" alt="PrintProfit">
+              <img src="./assets/user-selected-printprofit-logo.webp?v=7" alt="PrintProfit">
               <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
             </div>
             <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
@@ -366,7 +366,7 @@ function install(){
         .pp-guide-dialog{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(900px,calc(100vw - 32px));max-height:calc(100vh - 40px);border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 90px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:auto}
         .pp-guide-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border-bottom:1px solid #284553;position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}
         .pp-guide-brand{display:flex;align-items:center;gap:13px;min-width:0}
-        .pp-guide-brand img{width:82px;height:56px;object-fit:contain;flex:0 0 82px;border-radius:9px}
+        .pp-guide-brand img{width:132px;height:56px;object-fit:contain;flex:0 0 132px;border-radius:9px;background:#f7f9fa;padding:3px 6px;box-sizing:border-box}
         .pp-guide-kicker{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.2em;margin-bottom:4px}
         .pp-guide-head h2{margin:0;font-size:22px}.pp-guide-head p{margin:4px 0 0;color:#8fa6b2;font-size:10px}
         .pp-guide-close{width:36px;height:36px;flex:0 0 36px;border:1px solid #355464;border-radius:9px;background:#091821;color:#dce7ec;font-size:22px;cursor:pointer}
