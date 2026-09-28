@@ -77,27 +77,45 @@
       "url": "https://www.prusa3d.com/",
       "kind": "manufacturer",
       "autoRefresh": false
+    },
+    {
+      "id": "subliblanks",
+      "name": "Subliblanks",
+      "url": "https://www.subliblanks.com/",
+      "kind": "retailer",
+      "autoRefresh": false
+    },
+    {
+      "id": "nse-imports",
+      "name": "NSE Imports",
+      "url": "https://nseimports.co.uk/",
+      "kind": "retailer",
+      "autoRefresh": false
     }
   ],
   "brandDirectory": [
     "3DJAKE",
     "123-3D",
+    "3D-Fuel",
+    "3DXTech",
     "Anycubic",
-    "Amolen",
     "Bambu Lab",
+    "BCN3D",
     "ColorFabb",
-    "Creality",
     "Copymaster3D",
-    "eSUN",
+    "Creality",
     "Elegoo",
+    "eSun",
     "Fiberlogy",
-    "Fillamentum",
-    "Filamentive",
+    "Fillamentive",
+    "Flashforge",
+    "Forward AM",
     "FormFutura",
     "GEEETECH",
     "Kingroon",
+    "Monocure3D",
     "NinjaTek",
-    "Nylon",
+    "NinjaFlex",
     "Overture",
     "Phrozen",
     "Polymaker",
@@ -111,7 +129,9 @@
     "Sovol",
     "Spectrum",
     "Tiertime",
-    "UltiMaker"
+    "UltiMaker",
+    "XYZ Printing",
+    "Sinterit"
   ],
   "products": [
     {
@@ -910,6 +930,68 @@
       "url": "https://www.3dprima.co.uk/brand/copymaster3d",
       "autoRefresh": true,
       "id": "copymaster3d-pla-matte-grey-1-75mm-1kg"
+    }
+  ],
+  "sourceCoverage": [
+    {
+      "name": "3DJake UK",
+      "url": "https://www.3djake.uk/",
+      "autoRefresh": true
+    },
+    {
+      "name": "3D Prima UK",
+      "url": "https://www.3dprima.co.uk/",
+      "autoRefresh": true
+    },
+    {
+      "name": "123-3D UK",
+      "url": "https://www.123-3d.co.uk/",
+      "autoRefresh": true
+    },
+    {
+      "name": "iDig3Dprinting",
+      "url": "https://www.idig3dprinting.co.uk/",
+      "autoRefresh": false
+    },
+    {
+      "name": "3DGBIRE",
+      "url": "https://3dgbire.com/",
+      "autoRefresh": false
+    },
+    {
+      "name": "Bambu Lab UK",
+      "url": "https://uk.store.bambulab.com/",
+      "autoRefresh": true
+    },
+    {
+      "name": "Creality UK",
+      "url": "https://store.creality.com/uk/",
+      "autoRefresh": true
+    },
+    {
+      "name": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/",
+      "autoRefresh": true
+    },
+    {
+      "name": "Amazon UK",
+      "url": "https://www.amazon.co.uk/",
+      "autoRefresh": false
+    },
+    {
+      "name": "Prusa Research",
+      "url": "https://www.prusa3d.com/",
+      "autoRefresh": false
+    },
+    {
+      "name": "Subliblanks",
+      "url": "https://www.subliblanks.com/",
+      "autoRefresh": false
+    },
+    {
+      "name": "NSE Imports",
+      "url": "https://nseimports.co.uk/",
+      "autoRefresh": false
     }
   ]
 }
