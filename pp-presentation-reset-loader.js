@@ -2,8 +2,8 @@
 'use strict';
 /* Load the presentation reset after the calculator's dynamically injected style layers,
    then load the final visual layer so the new design always wins the cascade. */
-const resetHref='./pp-presentation-reset.css?v=20260928-clean2';
-const designHref='./pp-final-design.css?v=20260928-final1';
+const resetHref='./pp-presentation-reset.css?v=20260928-clean3';
+const designHref='./pp-final-design.css?v=20260928-final3';
 function addStylesheet(href,marker){
   if(document.querySelector('link[data-'+marker+']'))return;
   const link=document.createElement('link');
