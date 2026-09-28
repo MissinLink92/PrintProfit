@@ -726,3 +726,72 @@ body.pp-light #pp-master-quickcards button{background:linear-gradient(145deg,#ff
   *{scroll-behavior:auto!important}
   button,.btn,.link,.product-card,#pp-master-quickcards button{transition:none!important}
 }
+
+
+/* ===== Cascade correction: final design must beat the clean-canvas neutraliser ===== */
+.wrap{
+  background:transparent!important;
+  color:var(--pp-white)!important;
+}
+.wrap .hero{
+  background:
+    radial-gradient(900px 420px at 78% 35%,rgba(50,214,229,.07),transparent 60%),
+    linear-gradient(180deg,rgba(7,22,32,.20),rgba(7,22,32,.04))!important;
+  color:var(--pp-white)!important;
+}
+.wrap .hero h1{color:#f7fafb!important}
+.wrap .hero .lead{color:#b8cad2!important}
+.wrap .hero .kicker{color:var(--pp-orange)!important}
+.wrap .tools .tool,
+.wrap .extra-tools .tool{
+  background:linear-gradient(145deg,#0d2431,#091b26)!important;
+  border-color:#2b5566!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.14)!important;
+}
+.wrap .tool label{color:#a8bec8!important}
+.wrap .tool input,.wrap .tool select{
+  background:#081b26!important;
+  color:#f5f8fa!important;
+  border-color:#31596a!important;
+}
+.wrap .quick-btn{
+  background:#0b202c!important;
+  color:#bcd0d8!important;
+  border-color:#31596a!important;
+}
+.wrap .table-wrap{
+  background:linear-gradient(180deg,#0d2634,#091c26)!important;
+  border-color:#2b5566!important;
+  box-shadow:0 16px 34px rgba(0,0,0,.17)!important;
+}
+.wrap th{background:#081923!important;color:#91aab5!important}
+.wrap td{color:#deeaee!important}
+.wrap .insight-card{
+  background:linear-gradient(145deg,#0e2735,#0a1e29)!important;
+  border-color:#2c5667!important;
+}
+.wrap .card{
+  background:linear-gradient(145deg,#0e2735,#0a1f2b)!important;
+  border-color:#2d5768!important;
+}
+.wrap .view-switch,
+.wrap .selected-toggle,
+.wrap .saved-select{
+  background:#0a1c27!important;
+  color:#c7d8df!important;
+  border-color:#2d5566!important;
+}
+.wrap .compare-bar{
+  background:rgba(6,17,24,.96)!important;
+  border-color:rgba(255,138,36,.48)!important;
+}
+
+/* Use the verified master logo asset for the standalone comparison header. */
+.wrap .brand img{
+  content:url("./assets/printprofit-master-orange.svg?v=2")!important;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.32))!important;
+}
+body.pp-light .wrap .brand img{
+  content:url("./assets/printprofit-master-orange.svg?v=2")!important;
+  filter:none!important;
+}
