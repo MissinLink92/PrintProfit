@@ -220,4 +220,24 @@ input,select{font-size:14px!important;line-height:1.3!important}
 (()=>{const bindRecalcShortcuts=()=>{const runCalcButton=()=>{const b=document.getElementById('calc');if(b)b.click();};document.addEventListener('focusout',e=>{if(e.target&&e.target.matches('input:not([type="file"]),select,textarea'))setTimeout(runCalcButton,0);});document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type="file"]),select,textarea')){e.preventDefault();e.target.blur();runCalcButton();}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindRecalcShortcuts,{once:true});else bindRecalcShortcuts();})();
 </script>
 <link rel="stylesheet" href="./readability.css?v=1">
+<style id="ppFinalVisualOverride">
+/* FINAL VISUAL OVERRIDE: deliberately last so readability.css cannot override it. */
+body{background:linear-gradient(180deg,#07121b,#0a1b25)!important;color:#f5f9fb!important}
+section.panel,.panel,.merge-block,.pp-card,.pp-cost-block{background:linear-gradient(180deg,#0d2230,#102a39)!important;border-color:#315767!important;border-radius:16px!important;box-shadow:0 12px 30px rgba(0,0,0,.2)!important}
+section.panel>.head,.panel>.head,.merge-block>.head{min-height:58px!important;gap:14px!important}
+section.panel>.head h2,.panel>.head h2,.merge-block>.head h2{font-size:17px!important;line-height:1.2!important;color:#f5f9fb!important}
+section.panel>.head p,.panel>.head p,.merge-block>.head p{font-size:11.5px!important;line-height:1.45!important;color:#a8bbc5!important}
+label,.label{font-size:12px!important;font-weight:800!important;color:#d7e4e9!important}
+input,select,textarea{font-size:14px!important;min-height:42px!important;background:#091b26!important;color:#f5f9fb!important;border:1px solid #3b6474!important;border-radius:10px!important}
+input:focus,select:focus,textarea:focus{border-color:#35d6e5!important;box-shadow:0 0 0 2px rgba(53,214,229,.14)!important}
+section.panel .head>.icon,section.panel .head>.pp-pretty-icon,.merge-block .head>.icon,.merge-block .head>.pp-pretty-icon{width:52px!important;height:52px!important;min-width:52px!important;flex:0 0 52px!important;border-radius:14px!important;background:linear-gradient(145deg,#132f3d,#0b202c)!important;border:1px solid #3c6676!important;box-shadow:0 8px 20px rgba(0,0,0,.28)!important;display:grid!important;place-items:center!important}
+section.panel .head>.icon svg,section.panel .head>.pp-pretty-icon svg,.merge-block .head>.icon svg,.merge-block .head>.pp-pretty-icon svg{width:31px!important;height:31px!important;stroke:#35d6e5!important;stroke-width:2.2!important;filter:none!important}
+button,.btn{font-size:13px!important;font-weight:850!important;min-height:42px!important;border-radius:10px!important}
+.btn:not(.accent){background:#102733!important;color:#e8f2f5!important;border-color:#3a6170!important}
+.btn.accent,.pp-main-cta,.pp-settings-apply{background:linear-gradient(135deg,#ff9b48,#ff8a24)!important;color:#17100a!important}
+#pp-master-quickcards button{min-height:92px!important;border-radius:15px!important;background:linear-gradient(145deg,#102a38,#0b202c)!important;border-color:#315767!important}
+#pp-master-quickcards .pp-master-card-icon{width:58px!important;height:58px!important;min-width:58px!important;border-radius:15px!important;background:#0a1d28!important;border:1px solid #3c6676!important}
+#pp-master-quickcards .pp-master-card-icon svg{width:32px!important;height:32px!important}
+@media(max-width:650px){section.panel .head>.icon,section.panel .head>.pp-pretty-icon,.merge-block .head>.icon,.merge-block .head>.pp-pretty-icon{width:48px!important;height:48px!important;min-width:48px!important;flex-basis:48px!important}label,.label{font-size:12.5px!important}input,select,textarea{font-size:16px!important}}
+</style>
 </body></html>
