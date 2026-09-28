@@ -265,7 +265,6 @@ function loadData(){
   $('count').textContent='0 listings';
 }
 }
-}
 $('category').addEventListener('change',()=>{refreshFilters();render();});
 ['search','brand','type','retailer','sort'].forEach(id=>$(id).addEventListener('input',render));
 $('rows').addEventListener('change',e=>{
