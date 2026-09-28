@@ -17,7 +17,7 @@ function install(){
     <div class="pp-top-grid"></div>
     <div class="pp-top-nav">
       <a class="pp-top-brand" href="#home" aria-label="PrintProfit home">
-        <img src="./assets/printprofit-approved-horizontal.svg?v=10260919" alt="PrintProfit">
+        <img src="./assets/printprofit-logo-dark-canonical.webp?v=10260919" alt="PrintProfit">
       </a>
       <nav class="pp-top-links" aria-label="Main navigation">
         <button type="button" data-target="details"><span class="pp-nav-icon calculator"></span><span>Calculate</span></button>
@@ -46,7 +46,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img src="./assets/printprofit-approved-horizontal.svg?v=1" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
+        <img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit 3D Printing Cost & Pricing Calculator">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
@@ -70,7 +70,7 @@ function install(){
     #ppCleanTop .pp-top-grid:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 48%,rgba(0,129,184,.12),transparent 32%),linear-gradient(90deg,rgba(7,20,29,.12),rgba(7,20,29,.72) 63%,rgba(7,20,29,.16))}
     #ppCleanTop .pp-top-nav{position:relative;z-index:3;height:60px;display:flex;align-items:center;padding:0 3.1%;border-bottom:1px solid #294653;background:rgba(5,15,22,.58);box-sizing:border-box}
     #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-start;width:245px;height:60px;overflow:visible;text-decoration:none;box-sizing:border-box}
-    #ppCleanTop .pp-top-brand img{width:100%;height:50px;object-fit:contain;object-position:center;display:block;transform:none;border-radius:7px}
+    #ppCleanTop .pp-top-brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}.pp-light #ppCleanTop .pp-top-brand img,body[data-pp-theme="light"] #ppCleanTop .pp-top-brand img{content:url("./assets/user-selected-printprofit-logo.webp?v=8")}
     #ppCleanTop .pp-top-links{margin-left:auto;display:flex;align-items:center;gap:10px}
     #ppCleanTop .pp-top-links button{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease}
     #ppCleanTop .pp-top-links button:hover,#ppCleanTop .pp-price-finder-link:hover{color:#fff;background:#ff780012}
@@ -115,9 +115,9 @@ function install(){
     #ppCleanTop .pp-card-tagline{position:relative;z-index:2;margin-top:-2px;color:#ff7800;text-align:right;width:305px;font-size:21px;line-height:.9;font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;transform:rotate(-2deg);text-shadow:0 2px 12px #000}
     #ppCleanTop .pp-top-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:#ff7800;box-shadow:0 0 14px #ff780055}
     @media(max-width:1050px){#ppCleanTop .pp-top-body{grid-template-columns:minmax(0,1fr) 350px;gap:22px}#ppCleanTop .pp-top-card{width:350px}#ppCleanTop .pp-top-card img{width:285px}#ppCleanTop h1{font-size:42px}}
-    @media(max-width:800px){#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:220px}#ppCleanTop .pp-top-brand img{width:92px}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
+    @media(max-width:800px){#ppCleanTop{min-height:0}#ppCleanTop .pp-top-nav{height:auto;min-height:62px;padding:5px 14px;flex-wrap:wrap}#ppCleanTop .pp-top-brand{width:220px}#ppCleanTop .pp-top-brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}#ppCleanTop .pp-top-links{width:100%;margin:0;justify-content:space-between;overflow:auto}#ppCleanTop .pp-top-links button{padding:6px 8px;font-size:11px}#ppCleanTop .pp-top-body{grid-template-columns:1fr;padding:16px 18px 20px}#ppCleanTop .pp-top-card{width:100%;max-width:425px;justify-self:center}#ppCleanTop h1{font-size:38px}.pp-desktop{display:none}}
     @media(max-width:520px){#ppCleanTop h1{font-size:32px}.pp-eyebrow{font-size:9px!important}.pp-top-copy>p{font-size:14px!important}.pp-feature-strip{gap:8px!important}.pp-feature-strip>div{min-width:0!important}.pp-feature-strip i{display:none!important}#ppCleanTop .pp-top-card{height:255px}#ppCleanTop .pp-top-card img{width:270px;height:170px}.pp-card-tagline{font-size:18px!important;width:250px!important}
-#ppCleanTop .pp-top-brand img{width:84px;height:54px}}
+#ppCleanTop .pp-top-brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}}
   `;
   document.head.appendChild(style);
 
@@ -135,7 +135,7 @@ function install(){
       <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
         <div class="pp-settings-head">
           <div class="pp-settings-brand">
-            <img src="./assets/printprofit-approved-horizontal.svg?v=10260919" alt="PrintProfit">
+            <img src="./assets/printprofit-logo-dark-canonical.webp?v=10260919" alt="PrintProfit">
             <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
           </div>
           <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
@@ -311,7 +311,7 @@ function install(){
         <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
           <div class="pp-guide-head">
             <div class="pp-guide-brand">
-              <img src="./assets/printprofit-approved-horizontal.svg?v=1" alt="PrintProfit">
+              <img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit">
               <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
             </div>
             <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
