@@ -58,15 +58,6 @@ def product_image(product, page_url: str = ""):
         return urljoin(page_url, image.strip())
     return None
 
-def page_image(html: str, page_url: str):
-    matches = re.findall(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, flags=re.I)
-    if matches:
-        return urljoin(page_url, unescape(matches[0]).strip())
-    matches = re.findall(r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']', html, flags=re.I)
-    if matches:
-        return urljoin(page_url, unescape(matches[0]).strip())
-    return None
-
 def parse_price(value):
     try:
         price = float(str(value).replace(",", "").strip())
@@ -119,8 +110,6 @@ def update():
             products = list(ld_products(html))
             match = find_match(products, item.get("name", ""))
             image = product_image(match, url) if match else None
-            if not image:
-                image = page_image(html, url)
             if image:
                 item["image"] = image
             price = product_price(match) if match else None
