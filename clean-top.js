@@ -43,7 +43,7 @@ function install(){
         </div>
       </div>
       <div class="pp-top-card">
-        <img class="pp-hero-art" src="./assets/hero-workshop.webp?v=3" alt="3D printing workshop">
+        <img class="pp-hero-art" src="./assets/hero-prints.svg?v=1" alt="3D printing workshop">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
       </div>
     </div>
