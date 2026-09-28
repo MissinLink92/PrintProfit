@@ -1249,7 +1249,9 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback"
+      "imageStatus": "available",
+      "image": "https://bambu-lab-uk.myshopify.com/cdn/shop/files/A1_1024x.jpg?v=1714959955",
+      "imageChecked": "2026-09-28"
     },
     {
       "id": "bambu-lab-p1s",
@@ -1404,7 +1406,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 259
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -5105,7 +5107,7 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-28T13:06:47.591061+00:00",
+    "checkedAt": "2026-09-28T14:07:57.993765+00:00",
     "changedProducts": 0,
     "warnings": 45
   }
