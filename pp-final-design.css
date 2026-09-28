@@ -1095,3 +1095,24 @@ input[type="checkbox"].compare-check:focus-visible,
   outline:2px solid rgba(255,138,36,.35)!important;
   outline-offset:2px!important;
 }
+
+
+/* ===== Brand identity lock: exact user-approved logo only ===== */
+#ppCleanTop .pp-top-brand img,.wrap .brand img{
+  content:normal!important;
+  width:240px!important;
+  height:62px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  display:block!important;
+}
+@media(max-width:650px){
+  #ppCleanTop .pp-top-brand img,.wrap .brand img{width:210px!important;height:58px!important}
+}
+/* Never let generic control rules inflate product selection checkboxes. */
+input[type="checkbox"].compare-check{
+  width:18px!important;height:18px!important;
+  min-width:18px!important;max-width:18px!important;
+  min-height:18px!important;max-height:18px!important;
+  padding:0!important;margin:0!important;
+}
