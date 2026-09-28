@@ -1130,3 +1130,11 @@ input[type="checkbox"].compare-check{
   #ppCleanTop .pp-top-brand .pp-approved-horizontal-logo,
   .wrap .brand .pp-approved-horizontal-logo{width:220px!important;height:58px!important}
 }
+
+/* FINAL FUNCTION + BRAND LOCK */
+#ppCleanTop .pp-top-links{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+#ppCleanTop .pp-top-links>button{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+#ppCleanTop .pp-top-brand img,.wrap .brand img{content:normal!important;width:250px!important;height:62px!important;object-fit:contain!important;object-position:left center!important;display:block!important;visibility:visible!important;opacity:1!important}
+.wrap .nav{display:flex!important;visibility:visible!important;opacity:1!important}
+.wrap .nav a{display:inline-flex!important;visibility:visible!important;opacity:1!important}
+input[type="checkbox"].compare-check,.compare-check{width:18px!important;height:18px!important;min-width:18px!important;max-width:18px!important;min-height:18px!important;max-height:18px!important;padding:0!important;margin:0!important}
