@@ -123,6 +123,7 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 11p
 <div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
+<script src="./data/price-finder.js?v=2"></script>
 <script>
 (()=>{
 'use strict';
@@ -246,41 +247,24 @@ function renderCoverage(){
  $('sourceCards').innerHTML=s.map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.autoRefresh?'Daily refresh enabled where product mapping allows.':'Catalogue/source mapped; automated product mapping still being expanded.')+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
  $('brandCloud').innerHTML=b.map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
 }
-async function fetchJson(url,timeoutMs=8000){
- const controller=new AbortController();
- const timer=setTimeout(()=>controller.abort(),timeoutMs);
+function loadData(){
  try{
-  const res=await fetch(url,{cache:'no-store',signal:controller.signal});
-  if(!res.ok)throw new Error('HTTP '+res.status);
-  return await res.json();
- }finally{clearTimeout(timer);}
+  const payload=window.PRINTPROFIT_PRICE_DATA;
+  if(!payload||!Array.isArray(payload.products))throw new Error('Static comparison dataset missing');
+  db=payload;
+  refreshFilters();renderCoverage();render();
+ }catch(err){
+  console.error('PrintProfit Compare Products data load failed:',err);
+  db={products:[],sources:[],brandDirectory:[],updatedAt:''};
+  refreshFilters();
+  renderCoverage();
+  $('coverage').textContent='Comparison data could not be loaded. Please refresh the page.';
+  $('rows').innerHTML='';
+  $('empty').hidden=false;
+  $('empty').innerHTML='<strong>Comparison data unavailable</strong>The product database could not be loaded. Please refresh and try again.';
+  $('count').textContent='0 listings';
 }
-async function loadData(){
- const urls=[
-  './data/price-finder.json?v='+Date.now(),
-  'https://raw.githubusercontent.com/MissinLink92/PrintProfit/main/data/price-finder.json?v='+Date.now()
- ];
- let lastErr=null;
- for(const url of urls){
-  try{
-   db=await fetchJson(url);
-   if(!Array.isArray(db.products))throw new Error('Invalid comparison dataset');
-   refreshFilters();renderCoverage();render();
-   return;
-  }catch(err){
-   lastErr=err;
-   console.warn('PrintProfit Compare Products data source failed:',url,err);
-  }
- }
- console.error('PrintProfit Compare Products data load failed:',lastErr);
- db={products:[],sources:[],brandDirectory:[],updatedAt:''};
- refreshFilters();
- renderCoverage();
- $('coverage').textContent='Comparison data could not be loaded. Please refresh the page.';
- $('rows').innerHTML='';
- $('empty').hidden=false;
- $('empty').innerHTML='<strong>Comparison data unavailable</strong>The product database could not be loaded. Please refresh and try again.';
- $('count').textContent='0 listings';
+}
 }
 $('category').addEventListener('change',()=>{refreshFilters();render();});
 ['search','brand','type','retailer','sort'].forEach(id=>$(id).addEventListener('input',render));
