@@ -260,3 +260,275 @@ body.pp-light label,body.pp-light p,body.pp-light .small,body.pp-light .muted{co
 body.pp-light input,body.pp-light select,body.pp-light textarea{background:#fff!important;color:#111!important;border-color:#bfbfbf!important}
 body.pp-light #ppCleanTop{background:#fff!important;color:#111!important}
 body.pp-light #ppCleanTop .pp-top-nav{background:#17232b!important}
+
+
+/* ==========================================================
+   PRINTPROFIT — FINAL VISUAL POLISH LAYER
+   Presentation only. No DOM, calculations, navigation or
+   functional handlers are modified by this layer.
+   ========================================================== */
+
+body:not(.pp-light){
+  --pf-bg:#061018;
+  --pf-panel:#0a1b25;
+  --pf-panel-deep:#071721;
+  --pf-border:#2b5364;
+  --pf-border-soft:#214353;
+  --pf-text:#f4f8fb;
+  --pf-muted:#9fb4bf;
+  --pf-orange:#ff7800;
+  --pf-cyan:#25d5e6;
+  --pf-purple:#a77bff;
+  --pf-green:#32dc8a;
+}
+
+/* Main content sits like a deliberate application workspace. */
+body:not(.pp-light) .main{
+  background:transparent!important;
+}
+body:not(.pp-light) .layout{
+  gap:18px!important;
+}
+body:not(.pp-light) .main>.layout{
+  padding-top:18px!important;
+}
+
+/* Hero — closer to the approved mockup. */
+body:not(.pp-light) #ppCleanTop{
+  min-height:430px!important;
+  background:
+    radial-gradient(circle at 78% 34%,rgba(22,112,143,.20),transparent 27%),
+    linear-gradient(180deg,#07151e 0%,#07131b 100%)!important;
+  border-bottom:1px solid rgba(44,88,105,.75)!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-grid{opacity:.28!important}
+body:not(.pp-light) #ppCleanTop .pp-top-nav{
+  height:68px!important;
+  padding:0 3.2%!important;
+  background:rgba(4,13,19,.90)!important;
+  border-bottom:1px solid #203b48!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-links{
+  gap:8px!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-links button{
+  min-height:42px!important;
+  padding:8px 14px!important;
+  border:1px solid transparent!important;
+  border-radius:12px!important;
+  font-size:13px!important;
+  transition:all .18s ease!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-links button[data-target="details"]{
+  border-color:#ff7800!important;
+  background:rgba(255,120,0,.07)!important;
+  box-shadow:inset 0 -2px 0 #ff7800!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-body{
+  min-height:360px!important;
+  padding:38px 3.2% 30px!important;
+  box-sizing:border-box!important;
+  align-items:center!important;
+}
+body:not(.pp-light) #ppCleanTop h1{
+  font-size:52px!important;
+  line-height:1.00!important;
+  letter-spacing:-.035em!important;
+  margin:8px 0 14px!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-copy>p{
+  max-width:620px!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-actions{
+  margin-top:22px!important;
+  gap:12px!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-primary,
+body:not(.pp-light) #ppCleanTop .pp-projects-button{
+  min-height:56px!important;
+  border-radius:14px!important;
+  padding:0 22px!important;
+  font-size:14px!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-primary{
+  box-shadow:0 12px 28px rgba(255,120,0,.20)!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-card{
+  width:min(440px,100%)!important;
+  height:292px!important;
+  border-radius:20px!important;
+  overflow:hidden!important;
+  position:relative!important;
+  border:1px solid #355b69!important;
+  background:#071822!important;
+  box-shadow:0 24px 60px rgba(0,0,0,.34),0 0 36px rgba(35,196,226,.08)!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-card .pp-hero-art{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  opacity:.96!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-card:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  background:
+    linear-gradient(90deg,rgba(4,13,19,.04),rgba(4,13,19,.10) 52%,rgba(4,13,19,.34)),
+    linear-gradient(180deg,rgba(4,13,19,.02),rgba(4,13,19,.38))!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-card-tagline{
+  right:22px!important;
+  bottom:18px!important;
+  font-size:22px!important;
+  line-height:1.02!important;
+  text-align:center!important;
+  z-index:3!important;
+  color:#ff8c24!important;
+  text-shadow:0 3px 15px rgba(0,0,0,.8)!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-line{
+  height:2px!important;
+  background:#ff7800!important;
+  box-shadow:0 0 18px rgba(255,120,0,.42)!important;
+}
+
+/* Four-step journey: dark, elevated, colourful and readable. */
+body:not(.pp-light) #pp-master-quickcards{
+  margin-top:0!important;
+  padding:12px 0 4px!important;
+}
+body:not(.pp-light) #pp-master-quickcards button{
+  min-height:112px!important;
+  border-radius:18px!important;
+  border:1px solid #2a4e5d!important;
+  background:linear-gradient(145deg,#102733,#0a1b25)!important;
+}
+body:not(.pp-light) #pp-master-quickcards button:hover{
+  transform:translateY(-2px)!important;
+  border-color:#3b6878!important;
+  box-shadow:0 14px 28px rgba(0,0,0,.26)!important;
+}
+body:not(.pp-light) #pp-master-quickcards button:nth-child(1){box-shadow:inset 0 2px 0 rgba(37,213,230,.65),0 10px 25px rgba(0,0,0,.18)!important}
+body:not(.pp-light) #pp-master-quickcards button:nth-child(2){box-shadow:inset 0 2px 0 rgba(167,123,255,.65),0 10px 25px rgba(0,0,0,.18)!important}
+body:not(.pp-light) #pp-master-quickcards button:nth-child(3){box-shadow:inset 0 2px 0 rgba(50,220,138,.65),0 10px 25px rgba(0,0,0,.18)!important}
+body:not(.pp-light) #pp-master-quickcards button:nth-child(4){box-shadow:inset 0 2px 0 rgba(255,120,0,.65),0 10px 25px rgba(0,0,0,.18)!important}
+
+/* Calculator panels: stronger hierarchy without changing the layout. */
+body:not(.pp-light) section.panel,
+body:not(.pp-light) .merge-block{
+  border-radius:18px!important;
+  border-color:#2a5262!important;
+  background:linear-gradient(180deg,#0b202b 0%,#081923 100%)!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22)!important;
+}
+body:not(.pp-light) section.panel .head h2,
+body:not(.pp-light) .merge-block .head h2{
+  color:#f4f8fb!important;
+  letter-spacing:-.01em!important;
+}
+body:not(.pp-light) section.panel .head p,
+body:not(.pp-light) .merge-block .head p{
+  color:#9fb6c1!important;
+}
+body:not(.pp-light) section.panel .head>.icon,
+body:not(.pp-light) .merge-block .head>.icon{
+  border-radius:12px!important;
+  background:#071821!important;
+  box-shadow:0 0 18px rgba(35,200,220,.08)!important;
+}
+
+/* First workflow section = cyan identity. */
+body:not(.pp-light) .layout>div>section.panel:nth-of-type(1){
+  box-shadow:inset 0 2px 0 rgba(37,213,230,.45),0 12px 28px rgba(0,0,0,.22)!important;
+}
+body:not(.pp-light) .layout>div>section.panel:nth-of-type(1) .head>.icon{
+  color:#25d5e6!important;
+  border-color:#25d5e6!important;
+}
+
+/* Inputs and drop areas. */
+body:not(.pp-light) .drop{
+  border-width:1px!important;
+  border-color:#2b8290!important;
+  border-radius:16px!important;
+  background:linear-gradient(180deg,#071923,#081c27)!important;
+}
+body:not(.pp-light) .drop:hover{
+  border-color:#25d5e6!important;
+  box-shadow:inset 0 0 0 1px rgba(37,213,230,.15),0 0 22px rgba(37,213,230,.06)!important;
+}
+body:not(.pp-light) input,
+body:not(.pp-light) select,
+body:not(.pp-light) textarea{
+  border-radius:11px!important;
+  min-height:42px!important;
+}
+body:not(.pp-light) .btn{
+  border-radius:11px!important;
+}
+body:not(.pp-light) .btn.accent{
+  background:linear-gradient(135deg,#ff9c48,#ff7800)!important;
+  border-color:#ff7800!important;
+  color:#fff!important;
+  box-shadow:0 8px 20px rgba(255,120,0,.18)!important;
+}
+
+/* Results / values get a deliberate premium-card feel. */
+body:not(.pp-light) .cards .card{
+  border-radius:15px!important;
+  border-color:#2b5261!important;
+  background:linear-gradient(145deg,#102835,#0a1b24)!important;
+}
+body:not(.pp-light) .cards .card .value{
+  font-weight:900!important;
+}
+body:not(.pp-light) .result{
+  box-shadow:inset 0 2px 0 rgba(255,120,0,.35),0 14px 30px rgba(0,0,0,.22)!important;
+}
+
+/* Compare / table surfaces. */
+body:not(.pp-light) .product-card,
+body:not(.pp-light) .table-wrap,
+body:not(.pp-light) .compare-dialog,
+body:not(.pp-light) .details-dialog{
+  border-radius:16px!important;
+  border-color:#2b5261!important;
+  background:linear-gradient(180deg,#0c202b,#081923)!important;
+}
+body:not(.pp-light) .product-card:hover{
+  border-color:#3c6c7b!important;
+  transform:translateY(-2px)!important;
+}
+
+/* Typography cleanup. */
+body:not(.pp-light) .small,
+body:not(.pp-light) .muted,
+body:not(.pp-light) .meta{
+  color:#9fb4bf!important;
+}
+body:not(.pp-light) strong{
+  color:#f7fbfd!important;
+}
+
+/* Mobile keeps the design compact rather than shrinking into illegibility. */
+@media(max-width:800px){
+  body:not(.pp-light) #ppCleanTop{min-height:0!important}
+  body:not(.pp-light) #ppCleanTop .pp-top-body{
+    min-height:0!important;
+    padding:28px 18px 24px!important;
+  }
+  body:not(.pp-light) #ppCleanTop h1{font-size:38px!important}
+  body:not(.pp-light) #ppCleanTop .pp-top-card{height:255px!important}
+}
+@media(max-width:520px){
+  body:not(.pp-light) #ppCleanTop h1{font-size:32px!important}
+  body:not(.pp-light) #ppCleanTop .pp-top-card{height:225px!important}
+}
