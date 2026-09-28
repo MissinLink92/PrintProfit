@@ -1,0 +1,301 @@
+/* PrintProfit TARGET VISUAL v1
+   Final visual layer built against the approved concept render.
+   Visual-only: no calculator/data/compare behaviour. */
+
+*{box-sizing:border-box}
+html,body{background:#06131c!important;color:#f4f8fa!important}
+body{font-family:Inter,Segoe UI,system-ui,sans-serif!important}
+
+/* ---------- CALCULATOR ---------- */
+#ppCleanTop{
+  min-height:318px!important;
+  background:
+    linear-gradient(90deg,rgba(4,16,24,.98) 0%,rgba(4,16,24,.94) 48%,rgba(4,16,24,.46) 82%,rgba(4,16,24,.18) 100%),
+    radial-gradient(circle at 76% 42%,rgba(53,214,229,.10),transparent 34%),
+    #071722!important;
+  border-bottom:1px solid #274b5b!important;
+}
+#ppCleanTop .pp-top-nav{
+  height:54px!important;
+  padding:0 3%!important;
+  background:rgba(4,13,20,.92)!important;
+  border-bottom:1px solid #264958!important;
+}
+#ppCleanTop .pp-top-brand{width:150px!important;height:54px!important}
+#ppCleanTop .pp-top-brand img{width:145px!important;height:46px!important}
+#ppCleanTop .pp-top-links{gap:4px!important}
+#ppCleanTop .pp-top-links button{
+  min-height:38px!important;
+  padding:7px 11px!important;
+  border-radius:9px!important;
+  font-size:12px!important;
+  gap:8px!important;
+}
+#ppCleanTop .pp-top-body{
+  min-height:264px!important;
+  grid-template-columns:minmax(0,1fr) 430px!important;
+  gap:40px!important;
+  padding:18px 3% 16px!important;
+}
+#ppCleanTop .pp-top-copy{padding-top:8px!important}
+#ppCleanTop .pp-eyebrow{
+  font-size:10px!important;
+  letter-spacing:.18em!important;
+  margin-bottom:8px!important;
+  color:#ff8a24!important;
+}
+#ppCleanTop h1{
+  font-size:clamp(42px,4.15vw,60px)!important;
+  line-height:.93!important;
+  letter-spacing:-.045em!important;
+  margin:0 0 13px!important;
+}
+#ppCleanTop h1 strong{color:#ff8a24!important}
+#ppCleanTop .pp-top-copy>p{
+  max-width:620px!important;
+  font-size:15px!important;
+  line-height:1.48!important;
+  color:#c3d3da!important;
+}
+#ppCleanTop .pp-top-actions{margin-top:18px!important;gap:10px!important}
+#ppCleanTop .pp-top-actions button{
+  height:42px!important;
+  border-radius:10px!important;
+  font-size:12px!important;
+  padding:0 15px!important;
+}
+#ppCleanTop .pp-primary{
+  background:linear-gradient(135deg,#ff9d4b,#ff861e)!important;
+  border-color:#ff8a24!important;
+  color:#17100a!important;
+  box-shadow:0 8px 20px rgba(255,138,36,.20)!important;
+}
+#ppCleanTop .pp-projects-button{
+  background:#091d29!important;
+  border-color:#335969!important;
+  color:#e6eef2!important;
+}
+#ppCleanTop .pp-top-card{
+  width:430px!important;
+  height:260px!important;
+  margin-top:0!important;
+  border-radius:20px!important;
+  border:1px solid #2e5a6c!important;
+  background:
+    linear-gradient(90deg,rgba(5,17,25,.08),rgba(5,17,25,.02)),
+    url('./assets/hero-workshop.webp?v=1') center right/cover no-repeat!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 16px 36px rgba(0,0,0,.34)!important;
+}
+#ppCleanTop .pp-top-card:before{
+  background:linear-gradient(90deg,rgba(6,18,27,.04),rgba(6,18,27,.02) 55%,rgba(6,18,27,.42))!important;
+}
+#ppCleanTop .pp-card-tagline{
+  right:14px!important;
+  bottom:12px!important;
+  font-size:17px!important;
+  padding:7px 9px 7px 14px!important;
+}
+
+/* journey cards */
+#pp-master-quickcards{
+  width:min(1130px,94%)!important;
+  margin:18px auto 18px!important;
+  padding:10px 0 0!important;
+  gap:18px!important;
+  overflow:visible!important;
+}
+#pp-master-quickcards:before{
+  left:4%!important;right:4%!important;top:58px!important;
+  background:linear-gradient(90deg,transparent,#2d5868 10%,#2d5868 90%,transparent)!important;
+}
+#pp-master-quickcards:after{
+  content:'YOUR PRINTING COST JOURNEY'!important;
+  position:absolute!important;left:0!important;top:-3px!important;
+  color:#7893a0!important;font-size:8px!important;font-weight:900!important;letter-spacing:.2em!important;
+}
+#pp-master-quickcards button{
+  min-height:94px!important;
+  padding:12px 18px 12px 48px!important;
+  border-radius:15px!important;
+  background:linear-gradient(145deg,#0d2634,#091c27)!important;
+  border:1px solid #2d5869!important;
+  box-shadow:0 9px 22px rgba(0,0,0,.16)!important;
+  overflow:visible!important;
+}
+#pp-master-quickcards button:hover{
+  border-color:#416d7c!important;
+  transform:translateY(-1px)!important;
+}
+#pp-master-quickcards .pp-master-card-icon{
+  width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;
+  flex:0 0 52px!important;
+  border-radius:13px!important;
+  background:#071b27!important;
+  border:1px solid #35d6e5!important;
+  color:#35d6e5!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+#pp-master-quickcards .pp-master-card-icon svg{
+  width:29px!important;height:29px!important;
+  stroke:currentColor!important;fill:none!important;
+}
+#pp-master-quickcards button:nth-child(2) .pp-master-card-icon{
+  border-color:#a97aff!important;color:#a97aff!important;
+}
+#pp-master-quickcards button:nth-child(3) .pp-master-card-icon{
+  border-color:#32df8b!important;color:#32df8b!important;
+}
+#pp-master-quickcards button:nth-child(4) .pp-master-card-icon{
+  border-color:#ff8a24!important;color:#ff8a24!important;
+}
+#pp-master-quickcards button>b,#pp-master-quickcards button>span>b{
+  color:#f5f9fb!important;
+  font-size:15px!important;
+  font-weight:850!important;
+}
+#pp-master-quickcards button small{
+  color:#a7bdc6!important;
+  font-size:10px!important;
+  line-height:1.3!important;
+}
+#pp-master-quickcards .pp-flow-number{
+  width:24px!important;height:24px!important;
+  top:-11px!important;left:-11px!important;
+  border:2px solid #06131c!important;
+  font-size:10px!important;
+}
+#pp-master-quickcards button:not(:last-child):after{
+  right:-27px!important;
+  width:27px!important;height:27px!important;
+  background:#07141d!important;
+  border-color:#315565!important;
+  color:#8ca6b2!important;
+}
+
+/* calculator work area */
+.main{
+  max-width:1180px!important;
+  padding:0 0 90px!important;
+}
+.layout{gap:16px!important}
+.panel{
+  border-radius:16px!important;
+  border-color:#2c596b!important;
+  background:linear-gradient(180deg,#0e2837,#0a1e2a)!important;
+  box-shadow:0 10px 26px rgba(0,0,0,.15)!important;
+}
+.panel+.panel{margin-top:14px!important}
+.head{gap:12px!important;margin-bottom:13px!important}
+.head .icon,
+.head .pp-pretty-icon,
+.head .pp-master-circular{
+  width:44px!important;height:44px!important;min-width:44px!important;
+  border-radius:13px!important;
+  background:#081d29!important;
+  border:1.5px solid #35d6e5!important;
+  color:#35d6e5!important;
+}
+.head .icon svg,.head .pp-pretty-icon svg,.head .pp-master-circular svg{
+  width:28px!important;height:28px!important;
+  stroke:currentColor!important;fill:none!important;
+}
+.head h2{font-size:17px!important;font-weight:850!important}
+.head p{font-size:11px!important;color:#9eb7c2!important;line-height:1.4!important}
+label{font-size:11px!important;font-weight:800!important;color:#c8dbe2!important}
+input,select,textarea{
+  min-height:40px!important;
+  padding:9px 11px!important;
+  border-radius:9px!important;
+  background:#081b26!important;
+  border:1px solid #31586a!important;
+  color:#f5f9fb!important;
+  font-size:13px!important;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#35d6e5!important;
+  box-shadow:0 0 0 2px rgba(53,214,229,.10)!important;
+}
+.drop{
+  min-height:145px!important;
+  padding:18px!important;
+  border-color:#315e70!important;
+  border-radius:13px!important;
+  background:#071a25!important;
+}
+.actions{gap:8px!important}
+.btn{min-height:40px!important;border-radius:10px!important;font-size:12px!important}
+.btn.accent{
+  background:linear-gradient(135deg,#ff9d4b,#ff861e)!important;
+  border-color:#ff8a24!important;color:#17100a!important;
+}
+.result .cards{gap:8px!important}
+.result .card{min-height:88px!important;padding:12px!important}
+.result .value{font-size:23px!important}
+.tabs{border-radius:11px!important}
+.tab.active{background:linear-gradient(135deg,#ff9d4b,#ff861e)!important;color:#17100a!important}
+
+/* stage identities */
+.print-setup-panel .head .icon,.print-setup-panel .head .pp-pretty-icon{border-color:#a97aff!important;color:#a97aff!important}
+.panel.result>.head .icon,.panel.result>.head .pp-pretty-icon{border-color:#ff8a24!important;color:#ff8a24!important}
+
+/* ---------- COMPARE ---------- */
+.wrap{width:min(1240px,calc(100% - 28px))!important}
+.wrap .hero{
+  min-height:245px!important;
+  margin:0 -14px!important;
+  padding:40px 3.5% 28px!important;
+  background:
+    linear-gradient(90deg,rgba(5,17,25,.98) 0%,rgba(5,17,25,.91) 48%,rgba(5,17,25,.44) 82%,rgba(5,17,25,.18) 100%),
+    url('./assets/hero-workshop.webp?v=1') center right/cover no-repeat!important;
+}
+.wrap .hero h1{
+  font-size:clamp(40px,4.6vw,62px)!important;
+  line-height:.96!important;
+}
+.wrap .hero .lead{font-size:15px!important;max-width:700px!important}
+.tools{gap:10px!important;margin-top:16px!important}
+.extra-tools{gap:10px!important}
+.tool{min-height:84px!important;padding:11px!important;border-radius:12px!important}
+.tool label{font-size:10px!important}
+.tool input,.tool select{min-height:40px!important;font-size:13px!important}
+.tools .tool:first-child{grid-column:span 2!important}
+.tools .tool:first-child input{height:44px!important;font-size:14px!important}
+.quick-tools{margin:10px 0 12px!important}
+.quick-btn{padding:7px 10px!important;font-size:10px!important}
+.insight{gap:10px!important;margin:10px 0 14px!important}
+.insight-card{min-height:86px!important;padding:12px 14px!important;border-radius:13px!important}
+.insight-card strong{font-size:18px!important}
+.results-heading strong{font-size:18px!important}
+.table-wrap{border-radius:14px!important}
+th{padding:13px 11px!important;font-size:9px!important}
+td{padding:13px 11px!important;font-size:11px!important}
+td strong{font-size:12px!important}
+.product-name-wrap{min-width:300px!important}
+.product-thumb-wrap,.product-thumb{width:60px!important;height:60px!important;min-width:60px!important}
+.link{min-height:34px!important;padding:7px 9px!important;font-size:9px!important}
+.compare-bar{padding:11px 13px!important;border-radius:14px!important}
+.compare-btn{min-height:37px!important}
+.card-grid{gap:12px!important}
+.product-card{padding:13px!important;border-radius:14px!important}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:900px){
+  #ppCleanTop .pp-top-body{grid-template-columns:1fr!important}
+  #ppCleanTop .pp-top-card{display:none!important}
+  #pp-master-quickcards{grid-template-columns:1fr 1fr!important}
+  #pp-master-quickcards button:not(:last-child):after{display:none!important}
+}
+@media(max-width:650px){
+  #ppCleanTop{min-height:0!important}
+  #ppCleanTop .pp-top-nav{height:auto!important;min-height:58px!important}
+  #ppCleanTop .pp-top-links{overflow:auto!important}
+  #ppCleanTop h1{font-size:35px!important}
+  #ppCleanTop .pp-top-copy>p{font-size:14px!important}
+  #pp-master-quickcards{grid-template-columns:1fr!important;gap:12px!important}
+  #pp-master-quickcards button{padding-left:42px!important}
+  .main{padding:0 10px 88px!important}
+  .two,.three{grid-template-columns:1fr!important}
+  .wrap{width:calc(100% - 14px)!important}
+  .wrap .hero{margin:0 -7px!important}
+  .tools .tool:first-child{grid-column:auto!important}
+}
