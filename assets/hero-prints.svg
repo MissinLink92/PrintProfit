@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">3D printing workshop with small printed models</title>
+  <desc id="desc">A dark 3D printing workspace showing a printer and several small printed objects including a boat, cat, octopus and castle.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07141d"/>
+      <stop offset=".55" stop-color="#0c2430"/>
+      <stop offset="1" stop-color="#050e15"/>
+    </linearGradient>
+    <linearGradient id="bench" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#193744"/>
+      <stop offset="1" stop-color="#09151c"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9f45"/>
+      <stop offset="1" stop-color="#ff6800"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#57e7f2"/>
+      <stop offset="1" stop-color="#1398ad"/>
+    </linearGradient>
+    <filter id="glowOrange"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowCyan"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#2b5968" stroke-opacity=".18" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+
+  <!-- soft workshop lights -->
+  <circle cx="930" cy="145" r="130" fill="#25d5e6" opacity=".06" filter="url(#glowCyan)"/>
+  <circle cx="320" cy="210" r="145" fill="#ff7800" opacity=".045" filter="url(#glowOrange)"/>
+
+  <!-- printer frame in background -->
+  <g opacity=".92">
+    <path d="M650 80H1090L1132 475H608Z" fill="#08141c" stroke="#315867" stroke-width="6"/>
+    <path d="M675 105H1064L1096 445H644Z" fill="#0a1d27" stroke="#203f4d" stroke-width="3"/>
+    <path d="M688 118H1050" stroke="#56dce8" stroke-opacity=".45" stroke-width="5"/>
+    <path d="M730 150H1010" stroke="#617e89" stroke-opacity=".45" stroke-width="8"/>
+    <path d="M865 150V278" stroke="#8ca1a9" stroke-opacity=".45" stroke-width="5"/>
+    <path d="M838 272h54l-10 19h-34z" fill="#ff7800" opacity=".85"/>
+    <rect x="698" y="310" width="340" height="26" rx="9" fill="#193543" stroke="#315867"/>
+    <path d="M760 120v188M990 120v188" stroke="#355965" stroke-width="4" opacity=".5"/>
+  </g>
+
+  <!-- filament spools -->
+  <g opacity=".75">
+    <circle cx="135" cy="135" r="65" fill="#122935" stroke="#355a68" stroke-width="4"/>
+    <circle cx="135" cy="135" r="25" fill="#07141d" stroke="#6a8a95" stroke-width="4"/>
+    <path d="M95 112c18-21 62-21 80 0" fill="none" stroke="#ff7800" stroke-width="13" stroke-linecap="round"/>
+    <path d="M86 160c27 23 71 23 98 0" fill="none" stroke="#ff7800" stroke-width="13" stroke-linecap="round"/>
+  </g>
+
+  <!-- bench -->
+  <path d="M0 470C225 434 440 455 620 474C820 496 1010 482 1200 445V760H0Z" fill="url(#bench)"/>
+  <path d="M0 474C250 438 430 461 620 482C815 503 1020 489 1200 453" fill="none" stroke="#355c69" stroke-width="4"/>
+  <path d="M0 542H1200" stroke="#0b1218" stroke-width="28" opacity=".42"/>
+
+  <!-- small benchy / boat -->
+  <g transform="translate(145 400)">
+    <path d="M0 114h185l-16 44H25z" fill="url(#orange)"/>
+    <path d="M28 84h126v35H28z" fill="#ff7f12"/>
+    <path d="M52 58h74v28H52z" fill="#ff8b25"/>
+    <path d="M68 24h40v35H68z" fill="#ff9232"/>
+    <path d="M76 0h24v26H76z" fill="#ffa149"/>
+    <path d="M154 35l21 11v68l-21-10z" fill="#d65b05"/>
+    <circle cx="88" cy="70" r="7" fill="#6c2600"/>
+    <path d="M24 155h134" stroke="#552000" stroke-width="4" opacity=".45"/>
+  </g>
+
+  <!-- cat print -->
+  <g transform="translate(390 365)">
+    <path d="M53 35 30 4 34 69C9 93 18 151 65 163C94 171 125 164 137 141C151 114 137 86 116 68L120 4 97 36C83 31 68 31 53 35Z" fill="url(#cyan)" stroke="#5be8f2" stroke-width="2"/>
+    <path d="M51 69c10-18 27-25 46-10" fill="none" stroke="#0d5060" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="57" cy="88" r="6" fill="#06141d"/><circle cx="101" cy="88" r="6" fill="#06141d"/>
+    <path d="M69 108q11 10 22 0" fill="none" stroke="#06141d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M22 128c-28 9-31 37-6 45" fill="none" stroke="#3ebac8" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <!-- octopus -->
+  <g transform="translate(610 430)">
+    <path d="M30 60C30 13 112 4 145 43C169 72 159 111 139 123C124 132 112 121 98 132C85 143 75 141 65 129C55 117 43 128 31 122C9 111 0 83 12 64C17 56 23 52 30 60Z" fill="#a77bff" stroke="#c2a5ff" stroke-width="3"/>
+    <circle cx="74" cy="65" r="7" fill="#241a49"/><circle cx="110" cy="65" r="7" fill="#241a49"/>
+    <path d="M28 117c-17 23-16 42 3 51M55 123c-8 28-3 41 16 47M89 125c3 28 12 40 31 43M121 119c14 23 25 31 43 27" fill="none" stroke="#8e61ec" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <!-- castle -->
+  <g transform="translate(880 390)">
+    <rect x="35" y="65" width="175" height="112" fill="url(#orange)" stroke="#ffb264" stroke-width="2"/>
+    <rect x="0" y="40" width="55" height="138" fill="#f27b0a"/>
+    <rect x="190" y="40" width="55" height="138" fill="#f27b0a"/>
+    <path d="M0 40V13h16v27h17V13h16v27M190 40V13h16v27h17V13h16v27" fill="#ff962d"/>
+    <path d="M82 177v-53h52v53" fill="#5d2a06"/>
+    <rect x="86" y="88" width="19" height="25" rx="3" fill="#8d4306"/>
+    <rect x="140" y="88" width="19" height="25" rx="3" fill="#8d4306"/>
+    <path d="M53 65h137" stroke="#d95f00" stroke-width="4" opacity=".55"/>
+  </g>
+
+  <!-- foreground small cube/gear print -->
+  <g transform="translate(300 560)">
+    <rect x="0" y="0" width="95" height="95" rx="16" fill="#24bfce" stroke="#6eeef5" stroke-width="3"/>
+    <circle cx="47.5" cy="47.5" r="26" fill="none" stroke="#09232c" stroke-width="9"/>
+    <circle cx="47.5" cy="47.5" r="8" fill="#09232c"/>
+  </g>
+
+  <!-- orange rim light / tabletop glow -->
+  <path d="M40 706C310 650 470 672 690 694C865 711 1024 690 1160 660" fill="none" stroke="#ff7800" stroke-opacity=".35" stroke-width="5" filter="url(#glowOrange)"/>
+  <path d="M40 706C310 650 470 672 690 694C865 711 1024 690 1160 660" fill="none" stroke="#ff7800" stroke-opacity=".65" stroke-width="2"/>
+
+  <!-- floating dust / depth -->
+  <g fill="#d6f5f7" opacity=".28">
+    <circle cx="242" cy="275" r="2"/><circle cx="560" cy="168" r="2"/><circle cx="1130" cy="265" r="2"/><circle cx="760" cy="220" r="2"/>
+    <circle cx="515" cy="310" r="1.5"/><circle cx="1030" cy="200" r="1.5"/><circle cx="180" cy="320" r="1.5"/>
+  </g>
+</svg>
