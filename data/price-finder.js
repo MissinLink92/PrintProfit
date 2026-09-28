@@ -224,7 +224,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3DJake UK"
     },
     {
-      "id": "elegoo-pla-black",
+      "id": "elegoo-pla-plus-black",
       "category": "filament",
       "type": "PLA+",
       "name": "Elegoo PLA+ Black",
