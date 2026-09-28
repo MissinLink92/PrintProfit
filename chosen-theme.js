@@ -9,7 +9,7 @@ function install(){
  if(brand){
   brand.innerHTML='';
   const img=document.createElement('img');
-  img.src='./assets/printprofit-header-logo.webp?v=2';
+  img.src='./assets/user-selected-printprofit-logo.webp?v=2';
   img.alt='PrintProfit — 3D Printing Cost & Pricing Calculator';
   img.className='pp-chosen-brand-logo';
   brand.appendChild(img);
@@ -31,7 +31,7 @@ function install(){
    </div>
    <div class="pp-hero-brand-card">
     <div class="pp-card-glow"></div>
-    <img src="./assets/printprofit-header-logo.webp?v=2" alt="PrintProfit">
+    <img src="./assets/user-selected-printprofit-logo.webp?v=2" alt="PrintProfit">
     <div class="pp-card-caption"><span>CALCULATE</span><i></i><span>PRICE</span><i></i><span>PROFIT</span></div>
    </div>`;
   hero.appendChild(stage);
