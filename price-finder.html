@@ -53,7 +53,12 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:12px 11p
 .price-change{font-size:9px;font-weight:800}.price-down{color:#7ef0b2}.price-up{color:#ff9b9b}.price-flat{color:#aebdca}.fresh{display:inline-flex;align-items:center;gap:4px;margin-top:3px;font-size:8px;font-weight:800}.fresh.live{color:#80efb4}.fresh.reference{color:#aebdca}.fresh.review{color:#ffd28a}
 .product-thumb-wrap{cursor:zoom-in}
 .details-modal{position:fixed;inset:0;z-index:45;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.72)}.details-modal.open{display:flex}.details-dialog{width:min(900px,100%);max-height:min(88vh,840px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0b1821,#0e202b);box-shadow:0 22px 70px rgba(0,0,0,.55)}.details-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(11,24,33,.98)}.details-head h2{margin:0;font-size:15px}.details-body{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:18px}.details-image{width:220px;height:220px;object-fit:contain;border:1px solid var(--line);border-radius:14px;background:#091821;padding:10px}.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.detail-item{border:1px solid rgba(127,160,175,.12);border-radius:9px;padding:9px;background:#091821}.detail-item small{display:block;color:#708994;font-size:8px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.detail-item strong{display:block;margin-top:3px;font-size:10px}.history-title{margin:18px 0 8px;font-size:11px}.history-wrap{border:1px solid rgba(127,160,175,.12);border-radius:10px;background:#091821;padding:10px}.sparkline{width:100%;height:100px;display:block}.history-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.history-point{padding:4px 6px;border:1px solid var(--line);border-radius:999px;color:#9fb2bd;font-size:8px}.detail-actions{display:flex;gap:7px;margin-top:12px}
-.saved-area{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:8px}.saved-select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 8px;font:600 10px Inter,Segoe UI,system-ui,sans-serif;max-width:280px}.detail-link{display:inline-flex;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:7px;color:var(--text);text-decoration:none;font-size:9px;font-weight:800}.detail-link:hover{border-color:var(--accent);color:var(--accent)}
+.saved-area{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.results-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px;flex-wrap:wrap}.results-heading{display:flex;align-items:baseline;gap:8px}.results-heading strong{font-size:15px}.results-heading span{color:#9cb0ba;font-size:9px}.view-switch{display:flex;gap:4px;padding:3px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.view-btn{border:0;background:transparent;color:#aebfc7;border-radius:7px;padding:7px 10px;font:800 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}.view-btn.active{background:var(--accent);color:#101820}.view-btn:hover:not(.active){color:#fff}.selected-toggle{border:1px solid var(--line);background:var(--panel);color:#cbd7de;border-radius:999px;padding:7px 10px;font:800 9px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}.selected-toggle.active{border-color:var(--accent);color:var(--accent);background:rgba(255,120,0,.07)}
+.card-grid{display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:12px}.card-grid.active{display:grid}.product-card{position:relative;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#1a2d38,#172832);padding:12px;min-width:0;box-shadow:0 7px 20px rgba(0,0,0,.09)}.product-card:hover{border-color:#526e7b;transform:translateY(-1px)}.product-card-top{display:flex;align-items:flex-start;gap:10px}.product-card .product-thumb-wrap{width:78px;height:78px;flex:0 0 78px}.product-card .product-thumb{width:78px;height:78px}.product-card h3{margin:0;font-size:12px;line-height:1.35}.product-card .card-brand{margin-top:3px;color:#9db1ba;font-size:9px}.product-card .card-colour{margin-top:5px}.product-card .card-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:11px}.product-card .mini{border:1px solid rgba(127,160,175,.16);border-radius:8px;padding:7px;background:rgba(0,0,0,.05)}.product-card .mini small{display:block;color:#7f97a3;font-size:7px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.product-card .mini strong{display:block;margin-top:2px;font-size:10px}.product-card .card-price{display:flex;justify-content:space-between;align-items:end;gap:8px;margin-top:11px}.product-card .card-price strong{font-size:17px}.product-card .card-unit{color:#ffb16e;font-weight:800;font-size:9px}.product-card .card-actions{display:flex;gap:6px;margin-top:10px}.product-card .card-actions .link{flex:1}.product-card .card-select{position:absolute;top:12px;right:12px}
+body.pp-light .view-switch,body.pp-light .product-card,body.pp-light .selected-toggle{background:#fff!important}body.pp-light .product-card .mini{background:rgba(30,55,68,.025)}body.pp-light .view-btn{color:#526a75}
+@media(max-width:1000px){.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.card-grid{grid-template-columns:1fr}.results-toolbar{align-items:flex-start}.view-switch{width:100%}.view-btn{flex:1}}
+.saved-select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 8px;font:600 10px Inter,Segoe UI,system-ui,sans-serif;max-width:280px}.detail-link{display:inline-flex;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:7px;color:var(--text);text-decoration:none;font-size:9px;font-weight:800}.detail-link:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:900px){.extra-tools{grid-template-columns:1fr 1fr}.insight{grid-template-columns:1fr 1fr}.details-body{grid-template-columns:170px 1fr}.details-image{width:170px;height:170px}}
 .compare-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:30;width:min(1180px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 13px;border:1px solid rgba(255,120,0,.38);border-radius:14px;background:rgba(26,44,53,.97);box-shadow:0 12px 42px rgba(0,0,0,.32);backdrop-filter:blur(12px)}
 .compare-summary{min-width:0}.compare-summary strong{font-size:11px}.compare-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px;max-width:760px}.compare-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border:1px solid var(--line);background:var(--panel2);border-radius:999px;color:#dce5eb;font-size:8px;font-weight:800;max-width:220px}.compare-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.compare-chip button{border:0;background:transparent;color:#94a8b3;cursor:pointer;padding:0;font-size:11px;line-height:1}.compare-chip button:hover{color:var(--accent)}
@@ -125,13 +130,24 @@ table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:12px 11p
 <div class="insight-card"><div class="eyebrow">Lowest unit cost</div><strong id="insightUnit">—</strong><span id="insightUnitSub">—</span></div>
 </div>
 
-<div class="table-wrap">
+<div class="results-toolbar">
+  <div class="results-heading"><strong>Your results</strong><span id="resultSummary">—</span></div>
+  <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+    <div class="view-switch" role="group" aria-label="Result view">
+      <button class="view-btn active" id="tableView" type="button">Table</button>
+      <button class="view-btn" id="cardView" type="button">Cards</button>
+    </div>
+    <button class="selected-toggle" id="selectedOnly" type="button" aria-pressed="false">Selected only</button>
+  </div>
+</div>
+<div class="table-wrap" id="tableViewWrap">
 <table>
 <thead><tr><th>Type</th><th>Brand / Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Status</th><th>Checked</th><th></th></tr></thead>
 <tbody id="rows"></tbody>
 </table>
 <div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 </div>
+<div class="card-grid" id="cardGrid"></div>
 
 <div class="compare-bar" id="compareBar" hidden>
   <div class="compare-summary">
@@ -447,15 +463,31 @@ function filtered(){
   Number(x.price||0)>=min && Number(x.price||0)<=max &&
   (availability==='all'||(availability==='in'?isInStock(x):String(x.availability||'').toLowerCase().includes('out')))
  );
+ if(window.__compareSelectedOnly)rows=rows.filter(x=>selectedIds.has(String(x.id)));
  const mode=view==='all'?sort:view;
  rows.sort((a,b)=>{
   if(mode==='unit')return (a.unit??Infinity)-(b.unit??Infinity);
   if(mode==='name')return a.name.localeCompare(b.name);
   if(mode==='retailer')return (a.retailer||'').localeCompare(b.retailer||'')||a.name.localeCompare(b.name);
   if(mode==='fresh')return String(b.updated||'').localeCompare(String(a.updated||''));
-  return Number(a.price||Infinity)-Number(b.price||Infinity);
+  return Number(a.price??Infinity)-Number(b.price??Infinity);
  });
  return rows;
+}
+function renderCards(rows){
+ const grid=$('cardGrid');if(!grid)return;
+ grid.innerHTML=rows.map(x=>'<article class="product-card">'+
+  '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
+  '<div class="product-card-top">'+productImage(x)+'<div><h3>'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
+  '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(x.updated||'—')+'</strong></div></div>'+
+  '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
+  '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div>'+
+ '</article>').join('');
+}
+function setResultView(mode){
+ const table=$('tableViewWrap'),grid=$('cardGrid'),tb=$('tableView'),cb=$('cardView');
+ const cards=mode==='cards';table.style.display=cards?'none':'';grid.classList.toggle('active',cards);tb.classList.toggle('active',!cards);cb.classList.toggle('active',cards);
+ try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
 }
 function render(){
  const rows=filtered();
@@ -472,6 +504,8 @@ function render(){
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
+ $('resultSummary').textContent=rows.length+' '+(rows.length===1?'matching listing':'matching listings')+(window.__compareSelectedOnly?' • selected only':'');
+ renderCards(rows);
  renderInsights();
 }
 function renderCoverage(){
@@ -501,9 +535,12 @@ function loadData(){
   $('count').textContent='0 listings';
 }
 }
-$('rows').addEventListener('click',e=>{
+document.addEventListener('click',e=>{
  const btn=e.target.closest('[data-details-id]');
- if(btn)openDetailsModal(btn.dataset.detailsId);
+ if(btn && (btn.closest('#rows')||btn.closest('#cardGrid')))openDetailsModal(btn.dataset.detailsId);
+});
+$('cardGrid').addEventListener('change',e=>{
+ const input=e.target.closest('.compare-check');if(input)toggleCompare(input.dataset.compareId,input.checked);
 });
 $('detailsModal').addEventListener('click',e=>{
  if(e.target===$('detailsModal')){closeDetailsModal();return;}
@@ -567,8 +604,26 @@ document.addEventListener('keydown',e=>{
  if($('detailsModal').classList.contains('open')){closeDetailsModal();return;}
  if($('compareModal').classList.contains('open'))closeCompareModal();
 });
+try{window.__compareSelectedOnly=localStorage.getItem('printprofit_compare_selected_only')==='1';}catch(e){window.__compareSelectedOnly=false;}
+const savedView=(()=>{try{return localStorage.getItem('printprofit_compare_view')||'table';}catch(e){return 'table';}})();
+setResultView(savedView);
+$('tableView').addEventListener('click',()=>setResultView('table'));
+$('cardView').addEventListener('click',()=>setResultView('cards'));
+$('selectedOnly').addEventListener('click',()=>{
+ window.__compareSelectedOnly=!window.__compareSelectedOnly;
+ try{localStorage.setItem('printprofit_compare_selected_only',window.__compareSelectedOnly?'1':'0');}catch(e){}
+ $('selectedOnly').classList.toggle('active',window.__compareSelectedOnly);
+ $('selectedOnly').setAttribute('aria-pressed',String(window.__compareSelectedOnly));
+ render();
+});
+$('cardGrid').addEventListener('click',e=>{
+ const btn=e.target.closest('[data-details-id]');
+ if(btn)return;
+});
 loadCompareSelection();
 loadData();
+$('selectedOnly').classList.toggle('active',!!window.__compareSelectedOnly);
+$('selectedOnly').setAttribute('aria-pressed',String(!!window.__compareSelectedOnly));
 initThemeSwitch();
 renderSavedComparisons();
 updateCompareBar();
