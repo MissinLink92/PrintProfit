@@ -63,7 +63,7 @@ body.pp-light .view-switch,body.pp-light .product-card,body.pp-light .selected-t
 .compare-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:30;width:min(1180px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 13px;border:1px solid rgba(255,120,0,.38);border-radius:14px;background:rgba(26,44,53,.97);box-shadow:0 12px 42px rgba(0,0,0,.32);backdrop-filter:blur(12px)}
 .compare-summary{min-width:0}.compare-summary strong{font-size:11px}.compare-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px;max-width:760px}.compare-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border:1px solid var(--line);background:var(--panel2);border-radius:999px;color:#dce5eb;font-size:8px;font-weight:800;max-width:220px}.compare-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.compare-chip button{border:0;background:transparent;color:#94a8b3;cursor:pointer;padding:0;font-size:11px;line-height:1}.compare-chip button:hover{color:var(--accent)}
 .compare-actions{display:flex;align-items:center;gap:7px;flex-shrink:0}.saved-area{padding:0 12px 8px;justify-content:flex-end}.compare-btn{border:1px solid var(--accent);background:var(--accent);color:#0a1218;border-radius:8px;padding:8px 11px;font:900 10px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}.compare-btn.secondary{background:transparent;color:#dce5eb;border-color:var(--line)}.compare-btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
-.compare-check{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;vertical-align:middle}
+.compare-check{appearance:none;-webkit-appearance:none;width:17px;height:17px;border:1.5px solid #55717e;border-radius:5px;background:#213742;cursor:pointer;vertical-align:middle;position:relative;display:inline-grid;place-items:center;transition:.15s}.compare-check:hover{border-color:var(--accent)}.compare-check:checked{background:var(--accent);border-color:var(--accent)}.compare-check:checked:after{content:"✓";color:#101820;font-size:12px;font-weight:950;line-height:1}.compare-check:focus-visible{outline:2px solid rgba(255,120,0,.38);outline-offset:2px}body.pp-light .compare-check{background:#f4f7f8;border-color:#8ca3ae}body.pp-light .compare-check:checked{background:var(--accent);border-color:var(--accent)}
 .product-name-wrap{display:flex;align-items:center;gap:10px;min-width:270px}.product-thumb{width:64px;height:64px;flex:0 0 64px;object-fit:contain;border:1px solid #486775;border-radius:10px;background:#172932;padding:5px}.product-thumb-wrap{position:relative;width:64px;height:64px;flex:0 0 64px}.product-thumb-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:9px;background:linear-gradient(135deg,#0e202b,#08131b);color:var(--accent);font-size:20px;font-weight:900}.product-thumb-wrap.failed .product-thumb{display:none}.product-thumb-wrap.failed .product-thumb-fallback{display:flex}
 
 .compare-modal{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.7)}.compare-modal.open{display:flex}.compare-dialog{width:min(1180px,100%);max-height:min(86vh,820px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0b1821,#0e202b);box-shadow:0 22px 70px rgba(0,0,0,.55)}.compare-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(11,24,33,.98);backdrop-filter:blur(8px)}.compare-head h2{margin:0;font-size:16px}.compare-close{border:1px solid var(--line);background:transparent;color:#dce5eb;border-radius:8px;padding:6px 9px;cursor:pointer;font:800 10px Inter,Segoe UI,system-ui,sans-serif}.compare-close:hover{border-color:var(--accent);color:var(--accent)}
@@ -540,7 +540,9 @@ document.addEventListener('click',e=>{
  if(btn && (btn.closest('#rows')||btn.closest('#cardGrid')))openDetailsModal(btn.dataset.detailsId);
 });
 $('cardGrid').addEventListener('change',e=>{
- const input=e.target.closest('.compare-check');if(input)toggleCompare(input.dataset.compareId,input.checked);
+ const input=e.target.closest('.compare-check');if(!input)return;
+ toggleCompare(input.dataset.compareId,input.checked);
+ if(window.__compareSelectedOnly)render();
 });
 $('detailsModal').addEventListener('click',e=>{
  if(e.target===$('detailsModal')){closeDetailsModal();return;}
@@ -579,6 +581,7 @@ $('rows').addEventListener('change',e=>{
  const input=e.target.closest('.compare-check');
  if(!input)return;
  toggleCompare(input.dataset.compareId,input.checked);
+ if(window.__compareSelectedOnly)render();
 });
 $('compareChips').addEventListener('click',e=>{
  const btn=e.target.closest('[data-remove-compare]');
