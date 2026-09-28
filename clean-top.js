@@ -445,3 +445,18 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 }
 .pp-settings-brand img,.pp-guide-brand img{width:132px!important;height:56px!important}
 </style>
+<style id="pp-approved-horizontal-logo-fix">
+#ppCleanTop .pp-top-brand .pp-approved-horizontal-logo,
+#ppCleanTop .pp-settings-brand .pp-approved-horizontal-logo,
+#ppCleanTop .pp-guide-brand .pp-approved-horizontal-logo{
+  display:block!important;
+  object-fit:contain!important;
+  background:#fff!important;
+  border-radius:10px!important;
+  padding:4px 8px!important;
+  box-sizing:border-box!important;
+}
+#ppCleanTop .pp-top-brand .pp-approved-horizontal-logo{width:250px!important;height:62px!important}
+#ppCleanTop .pp-settings-brand .pp-approved-horizontal-logo,
+#ppCleanTop .pp-guide-brand .pp-approved-horizontal-logo{width:132px!important;height:56px!important}
+</style>
