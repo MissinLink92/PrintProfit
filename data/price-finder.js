@@ -556,7 +556,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "bambu-lab-pla-basic-1-75mm-1kg-jade-white",
@@ -572,7 +573,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "creality-hyper-rfid-pla-black-1-75mm-1kg",
@@ -588,7 +590,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "creality-hyper-rfid-pla-white-1-75mm-1kg",
@@ -604,7 +607,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "creality-hyper-rfid-pla-blue-1-75mm-1kg",
@@ -620,7 +624,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "primavalue-pla-black-1-75mm-1kg",
@@ -636,7 +641,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "primavalue-pla-red-1-75mm-1kg",
@@ -652,7 +658,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments?p=3",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "primavalue-pla-orange-1-75mm-1kg",
@@ -668,7 +675,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments?p=3",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "polymaker-polylite-abs-black-1-75mm-1kg",
@@ -684,7 +692,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments?p=6",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "copymaster3d-pla-glitter-blue-1-75mm-1kg",
@@ -780,7 +789,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "retailer": "3D Prima UK",
       "updated": "2026-09-28",
       "url": "https://www.3dprima.co.uk/filament-resin/filaments",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "bambu-lab-a1-mini",
@@ -795,7 +805,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://bambu-lab-uk.myshopify.com/collections/a1-series",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "bambu-lab-a1",
@@ -810,7 +821,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "unit": null,
       "updated": "2026-09-21",
       "url": "https://bambu-lab-uk.myshopify.com/products/a1",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "error"
     },
     {
       "id": "bambu-lab-p1s",
@@ -838,9 +850,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "225 × 225 × 265 mm",
       "price": 159,
       "unit": null,
-      "updated": "2026-09-21",
+      "updated": "2026-09-28",
       "url": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
-      "autoRefresh": true
+      "autoRefresh": true,
+      "lastCheckStatus": "ok"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -996,6 +1009,11 @@ window.PRINTPROFIT_PRICE_DATA={
       "url": "https://nseimports.co.uk/",
       "autoRefresh": false
     }
-  ]
+  ],
+  "lastRefreshSummary": {
+    "checkedAt": "2026-09-28T10:06:49.774573+00:00",
+    "changedProducts": 0,
+    "warnings": 45
+  }
 };
 })();
