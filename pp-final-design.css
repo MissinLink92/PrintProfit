@@ -1116,3 +1116,17 @@ input[type="checkbox"].compare-check{
   min-height:18px!important;max-height:18px!important;
   padding:0!important;margin:0!important;
 }
+
+/* Exact approved website/banner logo — same asset on calculator + Compare Products. */
+#ppCleanTop .pp-top-brand .pp-approved-horizontal-logo,
+.wrap .brand .pp-approved-horizontal-logo{
+  content:normal!important;
+  width:250px!important;height:62px!important;
+  display:block!important;object-fit:contain!important;
+  background:#fff!important;border-radius:10px!important;
+  padding:4px 8px!important;box-sizing:border-box!important;
+}
+@media(max-width:650px){
+  #ppCleanTop .pp-top-brand .pp-approved-horizontal-logo,
+  .wrap .brand .pp-approved-horizontal-logo{width:220px!important;height:58px!important}
+}
