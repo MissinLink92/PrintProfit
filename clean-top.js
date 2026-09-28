@@ -120,6 +120,12 @@ function install(){
 #ppCleanTop .pp-top-brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}}
   `;
   document.head.appendChild(style);
+  const heroStyle=document.createElement('style');heroStyle.id='ppHeroAssetStyle';heroStyle.textContent=`
+    #ppCleanTop .pp-hero-art{position:relative!important;z-index:1!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:58% center!important;margin:0!important;opacity:.94!important}
+    #ppCleanTop .pp-top-card:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,20,29,.03) 0%,rgba(7,20,29,.02) 38%,rgba(7,20,29,.28) 100%),linear-gradient(180deg,rgba(7,20,29,.08),rgba(7,20,29,.22));pointer-events:none}
+    #ppCleanTop .pp-card-tagline{position:absolute!important;right:18px!important;bottom:16px!important;z-index:3!important;margin:0!important;width:auto!important;font-size:18px!important;text-shadow:0 2px 12px #000!important}
+  `;document.head.appendChild(heroStyle);
+
 
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
@@ -424,3 +430,5 @@ function boot(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
+
+/* Final hero asset styling */
