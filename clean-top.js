@@ -144,9 +144,9 @@ document.head.appendChild(ppHeroLayoutStyle);
 
 
 /* Use the approved photographic hero asset without relying on a missing/broken binary reference. */
-if(window.PRINTPROFIT_HERO_DATA){
+{
   const heroImg=document.querySelector('#ppCleanTop .pp-hero-background');
-  if(heroImg)heroImg.src=window.PRINTPROFIT_HERO_DATA;
+  if(heroImg)heroImg.src='./assets/hero-approved.webp?v=1';
 }
 
   function openSettings(){
