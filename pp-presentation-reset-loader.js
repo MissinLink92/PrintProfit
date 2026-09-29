@@ -1,7 +1,7 @@
 (()=>{
 'use strict';
 /* Load the presentation reset after the calculator's dynamically injected style layers. */
-const href='./pp-presentation-reset.css?v=4';
+const href='./pp-presentation-reset.css?v=5';
 function load(){
   if(document.querySelector('link[data-pp-presentation-reset]'))return;
   const link=document.createElement('link');
