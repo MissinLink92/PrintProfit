@@ -555,17 +555,17 @@ body:not(.pp-light) #ppCleanTop .pp-top-card{
    Loaded by the presentation reset layer so these rules win over earlier visual layers.
    Presentation-only: no calculator/functionality selectors are changed. */
 body:not(.pp-light) #ppCleanTop .pp-top-body{
-  min-height:360px!important;
-  padding:12px 3.1% 10px!important;
+  min-height:410px!important;
+  padding:14px 3.1% 10px!important;
 }
 body:not(.pp-light) #ppCleanTop .pp-hero-background{
-  inset:-1% 0 0 -4%!important;
-  width:108%!important;
-  height:103%!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
   object-fit:cover!important;
-  object-position:center center!important;
+  object-position:center 38%!important;
   opacity:1!important;
-  transform:scale(.97)!important;
+  transform:none!important;
   transform-origin:center center!important;
   filter:contrast(1.08) saturate(1.08) brightness(1.04)!important;
   image-rendering:auto!important;
@@ -577,7 +577,7 @@ body:not(.pp-light) #ppCleanTop .pp-top-body:after{
 }
 body:not(.pp-light) #ppCleanTop .pp-top-card{
   width:min(330px,31vw)!important;
-  height:248px!important;
+  height:252px!important;
   margin-top:2px!important;
   border-radius:22px!important;
   background:rgba(5,18,27,.68)!important;
@@ -634,7 +634,7 @@ body:not(.pp-light) #ppCleanTop .pp-top-card .pp-feature-icon{
   color:#ff7800!important;
 }
 @media(max-width:900px){
-  body:not(.pp-light) #ppCleanTop .pp-top-body{min-height:340px!important}
+  body:not(.pp-light) #ppCleanTop .pp-top-body{min-height:370px!important}
   body:not(.pp-light) #ppCleanTop .pp-top-card{width:min(350px,42vw)!important}
 }
 @media(max-width:520px){
