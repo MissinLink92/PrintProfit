@@ -24,7 +24,7 @@ function install(){
       </nav>
     </div>
     <div class="pp-top-body">
-      <img class="pp-hero-background" src="./assets/hero-workshop.webp?v=7" alt="" aria-hidden="true">
+      <img class="pp-hero-background" src="" alt="" aria-hidden="true">
       <div class="pp-top-copy">
         <div class="pp-eyebrow">3D PRINTING PRICING, MADE SIMPLE</div>
         <h1>Know what it costs.<br><strong>Know what to charge.</strong></h1>
@@ -141,6 +141,13 @@ ppHeroLayoutStyle.textContent=`
   @media(max-width:800px){#ppCleanTop .pp-top-card{width:min(425px,100%)!important;height:230px!important}}
 `;
 document.head.appendChild(ppHeroLayoutStyle);
+
+
+/* Use the approved photographic hero asset without relying on a missing/broken binary reference. */
+if(window.PRINTPROFIT_HERO_DATA){
+  const heroImg=document.querySelector('#ppCleanTop .pp-hero-background');
+  if(heroImg)heroImg.src=window.PRINTPROFIT_HERO_DATA;
+}
 
   function openSettings(){
     if(document.getElementById('ppSettingsPanel')){
