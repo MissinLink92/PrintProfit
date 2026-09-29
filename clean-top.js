@@ -132,13 +132,13 @@ const ppHeroLayoutStyle=document.createElement('style');
 ppHeroLayoutStyle.id='ppHeroLayoutStyle';
 ppHeroLayoutStyle.textContent=`
   #ppCleanTop .pp-top-body{position:relative!important;isolation:isolate!important;overflow:hidden!important}
-  #ppCleanTop .pp-hero-background{position:absolute!important;inset:-10% 0 0 -6%!important;width:112%!important;height:118%!important;object-fit:cover!important;object-position:center 43%!important;z-index:0!important;opacity:.94!important;display:block!important;pointer-events:none!important}
+  #ppCleanTop .pp-hero-background{position:absolute!important;inset:-12% 0 0 -5%!important;width:110%!important;height:120%!important;object-fit:cover!important;object-position:center 57%!important;z-index:0!important;opacity:.94!important;display:block!important;pointer-events:none!important}
   #ppCleanTop .pp-top-body:after{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:linear-gradient(90deg,rgba(5,13,19,.98) 0%,rgba(5,13,19,.88) 33%,rgba(5,13,19,.34) 68%,rgba(5,13,19,.18) 100%),linear-gradient(180deg,rgba(5,13,19,.18),rgba(5,13,19,.44))!important;pointer-events:none!important}
   #ppCleanTop .pp-top-copy,#ppCleanTop .pp-top-card{position:relative!important;z-index:2!important}
-  #ppCleanTop .pp-top-card{width:min(360px,38vw)!important;height:250px!important;background:rgba(7,20,29,.58)!important;backdrop-filter:blur(7px)!important}
+  #ppCleanTop .pp-top-card{width:min(320px,34vw)!important;height:248px!important;background:rgba(7,20,29,.58)!important;backdrop-filter:blur(7px)!important}
   #ppCleanTop .pp-top-card:before{display:none!important}
   #ppCleanTop .pp-card-tagline{position:absolute!important;inset:0!important;display:grid!important;place-items:center!important;width:auto!important;margin:0!important;font-size:24px!important;line-height:1.02!important;text-align:center!important;color:#ff8c24!important;text-shadow:0 3px 18px rgba(0,0,0,.86)!important}
-  @media(max-width:800px){#ppCleanTop .pp-top-card{width:min(425px,100%)!important;height:230px!important}}
+  @media(max-width:800px){#ppCleanTop .pp-top-card{width:min(380px,100%)!important;height:225px!important}}
 `;
 document.head.appendChild(ppHeroLayoutStyle);
 
