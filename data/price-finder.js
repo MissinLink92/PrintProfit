@@ -4293,7 +4293,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-saturn-3-ultra",
@@ -4319,7 +4319,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-saturn-3",
@@ -4345,7 +4345,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-mars-5-ultra",
@@ -4371,7 +4371,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-jupiter-2",
@@ -4715,7 +4715,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "flashforge-creator-5",
@@ -4741,7 +4741,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "flashforge-creator-5-pro",
@@ -4767,7 +4767,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "sovol-m1d",
@@ -4793,7 +4793,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "sovol-sv08-max",
@@ -4846,7 +4846,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "sovol-sv06-ace",
@@ -4872,7 +4872,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "snapmaker-u1",
@@ -5111,9 +5111,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-29T00:07:26.110057+00:00",
+    "checkedAt": "2026-09-29T01:06:53.431960+00:00",
     "changedProducts": 0,
-    "warnings": 54
+    "warnings": 44
   }
 };
 })();
