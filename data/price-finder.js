@@ -1288,7 +1288,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "225 × 225 × 265 mm",
-      "price": 159,
+      "price": 169.0,
       "unit": null,
       "updated": "2026-09-29",
       "url": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
@@ -1306,6 +1306,10 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-29",
           "price": 159.0
+        },
+        {
+          "date": "2026-09-29",
+          "price": 169.0
         }
       ],
       "lastCheckStatus": "ok",
@@ -4265,7 +4269,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 279
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-29"
     },
@@ -5111,9 +5115,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-29T06:07:10.825212+00:00",
-    "changedProducts": 0,
-    "warnings": 44
+    "checkedAt": "2026-09-29T07:07:35.008775+00:00",
+    "changedProducts": 1,
+    "warnings": 54
   }
 };
 })();

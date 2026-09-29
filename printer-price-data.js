@@ -36,7 +36,7 @@ window.PRINTPROFIT_PRINTER_PRICES=Object.freeze({
   "K2 Pro":469.00,
   "K2 SE":359.00,
   "Mars 5 Ultra":199.00,
-  "Neptune 4":159.00,
+  "Neptune 4":169.00,
   "P1S":429.00,
   "QIDI Plus5":639.00,
   "QIDI Q2":429.00,
