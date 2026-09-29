@@ -45,6 +45,13 @@ function install(){
       </div>
       <div class="pp-top-card">
         <div class="pp-card-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div>
+        <div class="pp-feature-strip">
+          <div><span class="pp-feature-icon">▦</span><span>Accurate<br><small>Costs</small></span></div>
+          <i></i>
+          <div><span class="pp-feature-icon">↗</span><span>Better<br><small>Pricing</small></span></div>
+          <i></i>
+          <div><span class="pp-feature-icon">◉</span><span>Higher<br><small>Profits</small></span></div>
+        </div>
       </div>
     </div>
     <div class="pp-top-line"></div>
@@ -59,14 +66,17 @@ function install(){
     /* Regression cleanup: keep only the two navigation controls requested for the live calculator.
        Guide & Help and Settings stay visible; the calculator/price/profit shortcuts stay hidden. */
     #ppCleanTop .pp-top-links{display:flex!important}
-    #ppCleanTop .pp-feature-strip,
     .pp-master-feature-strip,
     .pp-master-subnav{display:none!important}
+    #ppCleanTop .pp-feature-strip{display:flex!important;align-items:center;justify-content:center;gap:13px;margin-top:20px;min-height:58px!important}
+    #ppCleanTop .pp-feature-strip>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#eef3f5;font-size:11px;font-weight:800;line-height:1.02;min-width:76px;text-align:center}
+    #ppCleanTop .pp-feature-strip small{display:block;color:#d4dde2;font-size:11px;font-weight:500;margin-top:2px}
+    #ppCleanTop .pp-feature-strip i{height:42px;width:1px;background:#315563;display:block}
     #ppCleanTop{position:relative;width:100%;min-height:367px;overflow:hidden;background:#07141d;color:#f5f8fb;border-bottom:1px solid #294653;font-family:Inter,Segoe UI,system-ui,sans-serif}
     #ppCleanTop .pp-top-grid{position:absolute;inset:0;opacity:.45;background-image:linear-gradient(rgba(62,105,122,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(62,105,122,.16) 1px,transparent 1px);background-size:62px 62px;background-position:28px 0;pointer-events:none}
     #ppCleanTop .pp-top-grid:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 48%,rgba(0,129,184,.12),transparent 32%),linear-gradient(90deg,rgba(7,20,29,.12),rgba(7,20,29,.72) 63%,rgba(7,20,29,.16))}
     #ppCleanTop .pp-top-nav{position:relative;z-index:3;height:60px;display:flex;align-items:center;padding:0 3.1%;border-bottom:1px solid #294653;background:rgba(5,15,22,.58);box-sizing:border-box}
-    #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-start;width:245px;height:60px;overflow:visible;text-decoration:none;box-sizing:border-box}
+    #ppCleanTop .pp-top-brand{display:flex;align-items:center;justify-content:flex-startt;width:245px;height:60px;overflow:visible;text-decoration:none;box-sizing:border-box}
     #ppCleanTop .pp-top-brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block}.pp-light #ppCleanTop .pp-top-brand img,body[data-pp-theme="light"] #ppCleanTop .pp-top-brand img{content:url("./assets/user-selected-printprofit-logo.webp?v=8")}
     #ppCleanTop .pp-top-links{margin-left:auto;display:flex;align-items:center;gap:10px}
     #ppCleanTop .pp-top-links button{border:0;background:transparent;color:#dce5eb;font:600 13px/1 Inter,Segoe UI,system-ui,sans-serif;padding:7px 10px;display:flex;align-items:center;gap:9px;cursor:pointer;border-radius:9px;transition:.18s ease}
