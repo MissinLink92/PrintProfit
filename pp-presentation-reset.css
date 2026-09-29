@@ -182,7 +182,7 @@ body:not(.pp-light) #ppCleanTop .pp-top-brand img{
 }
 body:not(.pp-light) #ppCleanTop .pp-top-card .pp-hero-art{
   display:block!important;
-  content:url("./assets/hero-workshop.webp?v=7")!important;
+  content:url("./assets/hero-approved.webp?v=1")!important;
   width:100%!important;
   height:100%!important;
   object-fit:cover!important;
