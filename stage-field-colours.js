@@ -14,6 +14,7 @@ function install(){
 #pp-master-quickcards button:nth-child(1){--journey:var(--pp-cyan)}
 #pp-master-quickcards button:nth-child(2){--journey:var(--pp-purple)}
 #pp-master-quickcards button:nth-child(3){--journey:var(--pp-green)}
+#pp-master-quickcards button:nth-child(4){--journey:var(--pp-orange)}
 #pp-master-quickcards button .pp-master-card-icon{
  border-color:color-mix(in srgb,var(--journey) 70%,#294957)!important;
  color:var(--journey)!important;
