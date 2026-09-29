@@ -132,7 +132,7 @@ const ppHeroLayoutStyle=document.createElement('style');
 ppHeroLayoutStyle.id='ppHeroLayoutStyle';
 ppHeroLayoutStyle.textContent=`
   #ppCleanTop .pp-top-body{position:relative!important;isolation:isolate!important;overflow:hidden!important}
-  #ppCleanTop .pp-hero-background{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;z-index:0!important;opacity:.78!important;display:block!important;pointer-events:none!important}
+  #ppCleanTop .pp-hero-background{position:absolute!important;inset:-10% 0 0 -6%!important;width:112%!important;height:118%!important;object-fit:cover!important;object-position:center 43%!important;z-index:0!important;opacity:.94!important;display:block!important;pointer-events:none!important}
   #ppCleanTop .pp-top-body:after{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:linear-gradient(90deg,rgba(5,13,19,.98) 0%,rgba(5,13,19,.88) 33%,rgba(5,13,19,.34) 68%,rgba(5,13,19,.18) 100%),linear-gradient(180deg,rgba(5,13,19,.18),rgba(5,13,19,.44))!important;pointer-events:none!important}
   #ppCleanTop .pp-top-copy,#ppCleanTop .pp-top-card{position:relative!important;z-index:2!important}
   #ppCleanTop .pp-top-card{width:min(360px,38vw)!important;height:250px!important;background:rgba(7,20,29,.58)!important;backdrop-filter:blur(7px)!important}
