@@ -565,7 +565,7 @@ body:not(.pp-light) #ppCleanTop .pp-hero-background{
   object-fit:cover!important;
   object-position:center center!important;
   opacity:1!important;
-  transform:translate(-3%,4%) scale(1.03)!important;
+  transform:translate(-7.5%,1%) scale(1.03)!important;
   transform-origin:center center!important;
   filter:contrast(1.08) saturate(1.08) brightness(1.04)!important;
   image-rendering:auto!important;
