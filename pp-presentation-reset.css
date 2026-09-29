@@ -559,13 +559,13 @@ body:not(.pp-light) #ppCleanTop .pp-top-body{
   padding:12px 3.1% 10px!important;
 }
 body:not(.pp-light) #ppCleanTop .pp-hero-background{
-  inset:0!important;
-  width:100%!important;
-  height:100%!important;
+  inset:-1% 0 0 -4%!important;
+  width:108%!important;
+  height:103%!important;
   object-fit:cover!important;
   object-position:center center!important;
   opacity:1!important;
-  transform:translate(-7.5%,1%) scale(1.03)!important;
+  transform:scale(.97)!important;
   transform-origin:center center!important;
   filter:contrast(1.08) saturate(1.08) brightness(1.04)!important;
   image-rendering:auto!important;
