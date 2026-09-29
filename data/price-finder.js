@@ -4,7 +4,7 @@
 window.PRINTPROFIT_PRICE_DATA={
   "version": 2,
   "currency": "GBP",
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-09-29",
   "refreshPolicy": {
     "frequency": "daily",
     "timezone": "Europe/London",
@@ -218,7 +218,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "esun-pla-basic-black",
@@ -243,7 +243,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-pla-black",
@@ -268,7 +268,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-pla-plus-black",
@@ -293,7 +293,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "polymaker-polyterra-pla-cotton-white",
@@ -318,7 +318,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "sunlu-pla-2-0-white",
@@ -343,7 +343,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "sunlu-pla-blue",
@@ -368,7 +368,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "bambu-lab-pla-basic-black",
@@ -393,7 +393,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-hyper-pla",
@@ -418,7 +418,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "esun-petg-black",
@@ -443,7 +443,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-black",
@@ -469,7 +469,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-white",
@@ -495,7 +495,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-grey",
@@ -521,7 +521,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-red",
@@ -547,7 +547,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-dark-blue",
@@ -573,7 +573,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-yellow",
@@ -599,7 +599,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-green",
@@ -625,7 +625,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-orange",
@@ -651,7 +651,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-neutral",
@@ -677,7 +677,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-brown",
@@ -703,7 +703,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-sky-blue",
@@ -729,7 +729,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-silver",
@@ -755,7 +755,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-matte-black",
@@ -781,7 +781,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-light-grey",
@@ -807,7 +807,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "123-3d-pla-bright-pink",
@@ -833,7 +833,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "bambu-lab-pla-basic-1-75mm-1kg-black",
@@ -1074,7 +1074,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "copymaster3d-pla-rainbow-magic-silk-1-75mm-1kg",
@@ -1099,7 +1099,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "copymaster3d-pet-g-grey-1-75mm-1kg",
@@ -1124,7 +1124,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "copymaster3d-pla-silk-pink-1-75mm-1kg",
@@ -1149,7 +1149,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "copymaster3d-abs-1-75mm-800-g-white",
@@ -1174,7 +1174,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "bambu-lab-petg-hf-refill-1-75mm-1kg-black",
@@ -1277,7 +1277,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-neptune-4",
@@ -1290,7 +1290,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "225 × 225 × 265 mm",
       "price": 159,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-09-29",
       "url": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
       "autoRefresh": true,
       "retailer": "ELEGOO UK",
@@ -1302,12 +1302,16 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 159.0
+        },
+        {
+          "date": "2026-09-29",
+          "price": 159.0
         }
       ],
       "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -1332,7 +1336,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-ender-3-v3-ke",
@@ -1357,7 +1361,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-k1c-2025",
@@ -1382,7 +1386,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "flashforge-adventurer-5m",
@@ -1408,7 +1412,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "category": "filament",
@@ -1433,7 +1437,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "category": "filament",
@@ -1458,7 +1462,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-basic-black-1kg",
@@ -1765,7 +1769,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-white-1kg",
@@ -1792,7 +1796,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-red-1kg",
@@ -1819,7 +1823,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-yellow-1kg",
@@ -1846,7 +1850,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-orange-1kg",
@@ -1873,7 +1877,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-blue-1kg",
@@ -1900,7 +1904,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-green-1kg",
@@ -1927,7 +1931,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-silver-1kg",
@@ -1954,7 +1958,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-gray-1kg",
@@ -1981,7 +1985,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-pink-1kg",
@@ -2008,7 +2012,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-rapido-purple-1kg",
@@ -2035,7 +2039,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-red-1kg",
@@ -2062,7 +2066,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-brown-1kg",
@@ -2089,7 +2093,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-gray-1kg",
@@ -2116,7 +2120,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-blue-1kg",
@@ -2143,7 +2147,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-green-1kg",
@@ -2170,7 +2174,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-black-1kg",
@@ -2197,7 +2201,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-white-1kg",
@@ -2224,7 +2228,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-asa-yellow-1kg",
@@ -2251,7 +2255,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-cf-dark-red-1kg",
@@ -2278,7 +2282,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-cf-lavender-purple-1kg",
@@ -2305,7 +2309,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-cf-midnight-blue-1kg",
@@ -2332,7 +2336,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-cf-black-1kg",
@@ -2359,7 +2363,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-pla-cf-olive-green-1kg",
@@ -2386,7 +2390,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-texture-grey-1kg",
@@ -2413,7 +2417,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-white-1kg",
@@ -2440,7 +2444,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-beige-1kg",
@@ -2467,7 +2471,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-black-1kg",
@@ -2494,7 +2498,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-peach-pink-1kg",
@@ -2521,7 +2525,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-tropical-turquoise-1kg",
@@ -2548,7 +2552,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-spring-leaf-1kg",
@@ -2575,7 +2579,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-red-1kg",
@@ -2602,7 +2606,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-bright-red-1kg",
@@ -2629,7 +2633,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-brown-1kg",
@@ -2656,7 +2660,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-green-flash-1kg",
@@ -2683,7 +2687,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-green-1kg",
@@ -2710,7 +2714,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-purple-1kg",
@@ -2737,7 +2741,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-pink-1kg",
@@ -2764,7 +2768,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-orange-1kg",
@@ -2791,7 +2795,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-plus-grey-1kg",
@@ -2818,7 +2822,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-pearl-black-1kg",
@@ -2845,7 +2849,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-bright-white-1kg",
@@ -2872,7 +2876,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-texture-grey-1kg",
@@ -2899,7 +2903,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-bright-red-1kg",
@@ -2926,7 +2930,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-vibrant-orange-1kg",
@@ -2953,7 +2957,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-purple-opulence-1kg",
@@ -2980,7 +2984,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-strawberry-pink-1kg",
@@ -3007,7 +3011,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-dazzling-blue-1kg",
@@ -3034,7 +3038,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-high-speed-pla-vibrant-yellow-1kg",
@@ -3061,7 +3065,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-yellow-1kg",
@@ -3088,7 +3092,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-white-1kg",
@@ -3115,7 +3119,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-red-1kg",
@@ -3142,7 +3146,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-blue-1kg",
@@ -3169,7 +3173,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-green-1kg",
@@ -3196,7 +3200,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-orange-1kg",
@@ -3223,7 +3227,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-purple-1kg",
@@ -3250,7 +3254,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-pink-1kg",
@@ -3277,7 +3281,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-black-1kg",
@@ -3304,7 +3308,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-basic-refill-texture-grey-1kg",
@@ -3331,7 +3335,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-vintage-red-1kg",
@@ -3358,7 +3362,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-lava-grey-1kg",
@@ -3385,7 +3389,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-cowboy-blue-1kg",
@@ -3412,7 +3416,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-black-1kg",
@@ -3439,7 +3443,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-fish-scale-white-1kg",
@@ -3466,7 +3470,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-pla-cf-jade-green-1kg",
@@ -3493,7 +3497,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-mandarin-orange-1kg",
@@ -3520,7 +3524,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-marine-blue-1kg",
@@ -3547,7 +3551,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-ice-blue-1kg",
@@ -3574,7 +3578,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-ash-grey-1kg",
@@ -3601,7 +3605,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-grass-green-1kg",
@@ -3628,7 +3632,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-charcoal-1kg",
@@ -3655,7 +3659,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-latte-brown-1kg",
@@ -3682,7 +3686,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-sakura-pink-1kg",
@@ -3709,7 +3713,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-lilac-purple-1kg",
@@ -3736,7 +3740,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-bambu-pla-matte-scarlet-red-1kg",
@@ -3763,7 +3767,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-formfutura-petg-black-1kg",
@@ -3790,7 +3794,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-formfutura-petg-red-1kg",
@@ -3817,7 +3821,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "additivex-formfutura-petg-white-1kg",
@@ -3844,7 +3848,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-kobra-3-max-v2-combo",
@@ -3870,7 +3874,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-kobra-s1-ace-2-pro-combo",
@@ -3896,7 +3900,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-kobra-4-combo",
@@ -3922,7 +3926,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-kobra-x",
@@ -3948,7 +3952,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-kobra-s1-combo",
@@ -3974,7 +3978,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-p1",
@@ -4000,7 +4004,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-p1-max",
@@ -4026,7 +4030,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-mono-m7-pro",
@@ -4052,7 +4056,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-mono-m7-max",
@@ -4078,7 +4082,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-mono-m7",
@@ -4104,7 +4108,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "anycubic-photon-mono-4",
@@ -4130,7 +4134,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-centauri-2",
@@ -4237,7 +4241,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-saturn-4-ultra",
@@ -4263,7 +4267,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "elegoo-saturn-4",
@@ -4287,7 +4291,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 229
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4313,7 +4317,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 239
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4339,7 +4343,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 214
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4365,7 +4369,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 199
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4420,7 +4424,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-k2-plus",
@@ -4500,7 +4504,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-ender-5-max",
@@ -4526,7 +4530,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-halot-r6",
@@ -4552,7 +4556,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-halot-mage-s",
@@ -4578,7 +4582,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "creality-halot-x1",
@@ -4604,7 +4608,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "qidi-q2",
@@ -4709,7 +4713,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 359
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4735,7 +4739,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 719
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4761,7 +4765,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 849
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4787,7 +4791,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 1100
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4840,7 +4844,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 389
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4866,7 +4870,7 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 230
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-09-28"
     },
@@ -4919,7 +4923,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "xyz-da-vinci-1-pro-3-in-1",
@@ -4945,7 +4949,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "xyz-da-vinci-junior",
@@ -4971,7 +4975,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     },
     {
       "id": "xyz-da-vinci-color",
@@ -4997,7 +5001,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-28"
+      "imageChecked": "2026-09-29"
     }
   ],
   "sourceCoverage": [
@@ -5107,9 +5111,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-28T23:04:39.685852+00:00",
+    "checkedAt": "2026-09-29T00:07:26.110057+00:00",
     "changedProducts": 0,
-    "warnings": 44
+    "warnings": 54
   }
 };
 })();
