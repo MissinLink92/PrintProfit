@@ -24,7 +24,7 @@ function install(){
       </nav>
     </div>
     <div class="pp-top-body">
-      <img class="pp-hero-background" src="./assets/hero-prints.svg?v=1" alt="" aria-hidden="true">
+      <img class="pp-hero-background" src="./assets/hero-workshop.webp?v=6" alt="" aria-hidden="true">
       <div class="pp-top-copy">
         <div class="pp-eyebrow">3D PRINTING PRICING, MADE SIMPLE</div>
         <h1>Know what it costs.<br><strong>Know what to charge.</strong></h1>
