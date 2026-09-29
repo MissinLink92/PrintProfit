@@ -13,6 +13,7 @@ const navIcons={
 };
 
 const featureIcons={
+results:'<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="7" width="32" height="34" rx="4"/><path d="M16 15h16M16 22h16M16 29h8"/><path d="m28 32 3 3 6-7"/></svg>',
  costs:'<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="5" width="26" height="38" rx="4"/><path d="M16 12h16v7H16zM16 25h5m6 0h5M16 32h5m6 0h5M16 39h5m6 0h5"/></svg>',
  price:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 16 10-16 10L8 16 24 6Z"/><path d="M8 16v16l16 10 16-10V16"/><path d="M24 26v16"/></svg>',
  profit:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 41V7"/><path d="M7 41h35"/><path d="m12 33 8-9 6 5 10-14"/><path d="M31 15h6v6"/></svg>',
@@ -74,7 +75,7 @@ function addQuickCards(main){
   +'<button type="button" data-master-open="model"><span class="pp-master-card-icon">'+featureIcons.price+'</span><span><b>Your Model</b><small>Upload your print &amp; view its data</small></span></button>'
   +'<button type="button" data-master-open="machine"><span class="pp-master-card-icon spool">'+featureIcons.costs+'</span><span><b>Print Setup</b><small>Choose your printer &amp; material</small></span></button>'
   +'<button type="button" data-master-open="costs"><span class="pp-master-card-icon">'+featureIcons.profit+'</span><span><b>Costs &amp; Fees</b><small>Add your business costs</small></span></button>'
-  +'<button type="button" data-master-open="results"><span class="pp-master-card-icon">'+featureIcons.profit+'</span><span><b>Results</b><small>Review cost, price &amp; profit</small></span></button>';
+  +'<button type="button" data-master-open="results"><span class="pp-master-card-icon">'+featureIcons.results+'</span><span><b>Results</b><small>Review cost, price &amp; profit</small></span></button>';
  main.insertBefore(wrap,main.querySelector('.layout'));
  wrap.querySelectorAll('[data-master-open]').forEach(btn=>btn.addEventListener('click',()=>{
   const target=btn.dataset.masterOpen;
