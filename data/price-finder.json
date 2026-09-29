@@ -1305,7 +1305,7 @@
           "price": 159.0
         }
       ],
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "error",
       "imageStatus": "available",
       "image": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
       "imageChecked": "2026-09-29"
@@ -5108,8 +5108,8 @@
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-29T01:06:53.431960+00:00",
+    "checkedAt": "2026-09-29T02:04:54.316465+00:00",
     "changedProducts": 0,
-    "warnings": 44
+    "warnings": 45
   }
 }
