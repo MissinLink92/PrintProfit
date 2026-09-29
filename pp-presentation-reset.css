@@ -182,7 +182,7 @@ body:not(.pp-light) #ppCleanTop .pp-top-brand img{
 }
 body:not(.pp-light) #ppCleanTop .pp-top-card .pp-hero-art{
   display:block!important;
-  content:url("./assets/hero-prints.svg?v=1")!important;
+  content:url("./assets/hero-workshop.webp?v=6")!important;
   width:100%!important;
   height:100%!important;
   object-fit:cover!important;
@@ -531,4 +531,21 @@ body:not(.pp-light) strong{
 @media(max-width:520px){
   body:not(.pp-light) #ppCleanTop h1{font-size:32px!important}
   body:not(.pp-light) #ppCleanTop .pp-top-card{height:225px!important}
+}
+
+/* Final hero composition: photographic workshop across the hero background. */
+body:not(.pp-light) #ppCleanTop .pp-hero-background{
+  opacity:.94!important;
+  object-position:center center!important;
+  filter:saturate(1.08) contrast(1.03)!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-body:after{
+  background:
+    linear-gradient(90deg,rgba(4,12,18,.96) 0%,rgba(4,12,18,.82) 28%,rgba(4,12,18,.32) 57%,rgba(4,12,18,.16) 100%),
+    linear-gradient(180deg,rgba(4,12,18,.12),rgba(4,12,18,.34))!important;
+}
+body:not(.pp-light) #ppCleanTop .pp-top-card{
+  background:rgba(6,18,26,.63)!important;
+  border-color:rgba(61,111,128,.88)!important;
+  backdrop-filter:blur(8px)!important;
 }
