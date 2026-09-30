@@ -264,7 +264,10 @@ def update():
 
             image = product_image(match, url) if match else None
             image_method = "json-ld" if image else None
-            if not image:
+            # Only trust page-level og:image when the page matched the requested product.
+            # Category/collection pages often expose a generic banner, which must not
+            # become the product thumbnail.
+            if not image and match:
                 image = meta_image(html, url)
                 image_method = "og-image" if image else None
 
