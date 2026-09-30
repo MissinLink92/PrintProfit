@@ -12,7 +12,7 @@ from urllib.parse import parse_qs, quote_plus, unquote, urljoin, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "price-finder.json"
 
-USER_AGENT = "PrintProfit-PriceFinder/1.1 (+https://github.com/MissinLink92/PrintProfit)"
+USER_AGENT = "PrintProfit-PriceFinder/1.2 (+https://github.com/MissinLink92/PrintProfit)"
 TIMEOUT = 20
 SEARCH_TIMEOUT = 15
 IMAGE_SEARCH_LIMIT = 3
