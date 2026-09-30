@@ -17,7 +17,7 @@ save:'<svg viewBox="0 0 96 96" aria-hidden="true"><path d="M18 12h52l14 14v58H12
 undo:'<svg viewBox="0 0 96 96" aria-hidden="true"><path d="M34 27H18l13-13" fill="none" stroke="#19d8ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 28c7-11 23-17 37-12 13 5 21 18 20 31-1 17-14 29-31 31" fill="none" stroke="#19d8ff" stroke-width="6" stroke-linecap="round"/></svg>'
 };
 function text(el){return (el.querySelector('h2')?.textContent||el.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();}
-function set(el,k){if(!el||!M[k])return;el.innerHTML=M[k];el.classList.add('pp-direct-master-icon');}
+function set(el,k){if(!el||!M[k]||el.dataset.ppDirectMasterIcon===k)return;el.innerHTML=M[k];el.classList.add('pp-direct-master-icon');el.dataset.ppDirectMasterIcon=k;}
 function apply(){
  document.querySelectorAll('section.panel>.head,.merge-block>.head').forEach(h=>{
   const t=text(h);let k=null;
@@ -44,6 +44,6 @@ function style(){
  s.textContent='.pp-direct-master-icon{width:64px!important;height:64px!important;min-width:64px!important;flex:0 0 64px!important;border-radius:15px!important;background:linear-gradient(145deg,#132f3d,#0b202c)!important;border:1px solid #3c6676!important;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)!important;display:grid!important;place-items:center!important;overflow:visible!important}.pp-direct-master-icon svg{width:48px!important;height:48px!important;display:block!important;max-width:none!important;filter:drop-shadow(0 5px 9px rgba(0,0,0,.35))!important}.pp-direct-btn{width:25px!important;height:25px!important;min-width:25px!important;display:grid!important;place-items:center!important}.pp-direct-btn svg{width:25px!important;height:25px!important;display:block!important}@media(max-width:650px){.pp-direct-master-icon{width:56px!important;height:56px!important;min-width:56px!important;flex-basis:56px!important}.pp-direct-master-icon svg{width:40px!important;height:40px!important}}';
  document.head.appendChild(s);
 }
-function boot(){style();apply();const mo=new MutationObserver(apply);mo.observe(document.body,{childList:true,subtree:true});setTimeout(()=>mo.disconnect(),15000);}
+function boot(){style();apply();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
