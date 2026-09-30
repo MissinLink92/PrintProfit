@@ -773,3 +773,57 @@ function normalize(){
 function boot(){if(normalize())return;const t=setInterval(()=>{if(normalize())clearInterval(t)},80);setTimeout(()=>clearInterval(t),15000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
+
+/* ===== Section icon refresh: visual-only ===== */
+(()=>{
+'use strict';
+if(window.__ppSectionIconRefresh)return;
+window.__ppSectionIconRefresh=true;
+
+const icons={
+ model:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 16 9v18l-16 9-16-9V15l16-9Z"/><path d="m8 15 16 9 16-9M24 24v18"/></svg>',
+ info:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M11 6h19l7 7v29H11V6Z"/><path d="M30 6v8h8M17 20h14M17 27h14M17 34h10"/></svg>',
+ printer:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 18V8h22v10"/><path d="M10 18h28a5 5 0 0 1 5 5v9H5v-9a5 5 0 0 1 5-5Z"/><path d="M13 32h22v9H13z"/><path d="M17 37h14"/><circle cx="36" cy="23" r="2"/></svg>',
+ printerDetail:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18V8h24v10"/><path d="M9 18h30a4 4 0 0 1 4 4v9H5v-9a4 4 0 0 1 4-4Z"/><path d="M13 31h22v10H13z"/><circle cx="35" cy="25" r="2"/><path d="m31 14 1.5-2.8 2.8 1.5 2.5-1.2 1.6 2.4 2.9.5v3l-2.4 1.6-.4 2.9h-3l-1.7-2.4-2.7.4-1.4-2.6-2.7-1.2.9-2.1Z" transform="translate(-1 0) scale(.8)"/></svg>',
+ material:'<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="13" rx="14" ry="6"/><path d="M10 13v20c0 3 6 7 14 7s14-4 14-7V13"/><ellipse cx="24" cy="13" rx="5" ry="2.2"/><path d="M19 13v20c0 1 2 2 5 2s5-1 5-2V13"/></svg>',
+ costs:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8M8 40h34"/><path d="m13 32 8-8 6 5 12-15"/><path d="M32 14h7v7"/></svg>',
+ results:'<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="m18 24 4 4 9-10"/><path d="M24 7v4M24 37v4M7 24h4M37 24h4"/></svg>'
+};
+
+function typeFor(head){
+ const txt=(head.querySelector('h2')?.textContent || head.textContent || '').replace(/\s+/g,' ').trim().toLowerCase();
+ if(txt.includes('print information')) return 'info';
+ if(txt === 'your model' || txt.startsWith('your model ')) return 'model';
+ if(txt.includes('printer details')) return 'printerDetail';
+ if(txt.includes('printer')) return 'printer';
+ if(txt.includes('material')) return 'material';
+ if(txt.includes('costs') || txt.includes('fees')) return 'costs';
+ if(txt.includes('results')) return 'results';
+ return null;
+}
+
+function apply(){
+ const heads=document.querySelectorAll('section.panel>.head,.merge-block>.head,.pp-card .head,.pp-cost-block>.head');
+ let changed=false;
+ heads.forEach(head=>{
+   const type=typeFor(head);
+   if(!type || !icons[type]) return;
+   const el=head.querySelector('.icon,.pp-pretty-icon');
+   if(!el) return;
+   if(el.dataset.ppSectionIconType===type) return;
+   el.innerHTML=icons[type];
+   el.dataset.ppSectionIconType=type;
+   el.classList.add('pp-refreshed-icon');
+   changed=true;
+ });
+ if(!document.getElementById('ppSectionIconRefreshStyles')){
+   const s=document.createElement('style');
+   s.id='ppSectionIconRefreshStyles';
+   s.textContent='.pp-refreshed-icon svg{width:39px!important;height:39px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.35!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px color-mix(in srgb,currentColor 24%,transparent))!important}.pp-refreshed-icon{overflow:visible!important}';
+   document.head.appendChild(s);
+ }
+ return changed || heads.length>0;
+}
+function boot(){if(apply())return;const t=setInterval(()=>{if(apply())clearInterval(t)},100);setTimeout(()=>clearInterval(t),15000)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();
