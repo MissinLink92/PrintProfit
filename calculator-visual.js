@@ -79,8 +79,8 @@ section.panel .head>.icon,
 section.panel .head>.pp-pretty-icon,
 .merge-block .head>.icon,
 .merge-block .head>.pp-pretty-icon{
-  width:52px!important;height:52px!important;min-width:52px!important;
-  flex:0 0 52px!important;border-radius:14px!important;
+  width:60px!important;height:60px!important;min-width:60px!important;
+  flex:0 0 60px!important;border-radius:15px!important;
   background:linear-gradient(145deg,#132f3d,#0b202c)!important;
   border:1px solid #3c6676!important;
   box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)!important;
@@ -90,7 +90,7 @@ section.panel .head>.icon svg,
 section.panel .head>.pp-pretty-icon svg,
 .merge-block .head>.icon svg,
 .merge-block .head>.pp-pretty-icon svg{
-  width:31px!important;height:31px!important;
+  width:35px!important;height:35px!important;
   stroke:var(--ppv-cyan)!important;
   stroke-width:2.2!important;
   filter:none!important;
@@ -767,7 +767,7 @@ function normalize(){
  el.dataset.ppVisualNormalized='1';
  let s=document.getElementById('ppProfitAdvisorIconVisual');
  if(!s){s=document.createElement('style');s.id='ppProfitAdvisorIconVisual';document.head.appendChild(s)}
- s.textContent='#ppProfitAdvisor .pp-profit-icon{width:50px!important;height:50px!important;min-width:50px!important;flex:0 0 50px!important;border-radius:50%!important;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.06),rgba(255,120,0,.035) 42%,rgba(255,120,0,.012) 72%)!important;border:2px solid rgba(255,120,0,.82)!important;color:#ff8a24!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 0 1px rgba(255,120,0,.10),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px rgba(255,120,0,.10)!important;overflow:hidden!important}#ppProfitAdvisor .pp-profit-icon svg{width:30px!important;height:30px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.45!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px rgba(255,120,0,.28))!important}';
+ s.textContent='#ppProfitAdvisor .pp-profit-icon{width:60px!important;height:60px!important;min-width:60px!important;flex:0 0 60px!important;border-radius:50%!important;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.06),rgba(255,120,0,.035) 42%,rgba(255,120,0,.012) 72%)!important;border:2px solid rgba(255,120,0,.82)!important;color:#ff8a24!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 0 1px rgba(255,120,0,.10),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px rgba(255,120,0,.10)!important;overflow:hidden!important}#ppProfitAdvisor .pp-profit-icon svg{width:35px!important;height:35px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.45!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px rgba(255,120,0,.28))!important}';
  return true;
 }
 function boot(){if(normalize())return;const t=setInterval(()=>{if(normalize())clearInterval(t)},80);setTimeout(()=>clearInterval(t),15000)}
