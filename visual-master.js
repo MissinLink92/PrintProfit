@@ -77,12 +77,14 @@ da:'<svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#c8102e"/><path 
 };
 const lang=top.querySelector('#pvmLanguage');
 const flagEl=top.querySelector('.pvm-flag');
-const setFlag=()=>{if(flagEl)flagEl.innerHTML=flags[lang?.value||'en']||flags.en;};
+const setFlag=()=>{if(!flagEl)return;const code=String(lang?.value||'en').toLowerCase();flagEl.innerHTML=flags[code]||flags.en;flagEl.dataset.language=code;};
 
 let prefs={};try{prefs=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}
 const dark=top.querySelector('#pvmDarkMode');if(dark)dark.checked=prefs.dark!==false;if(lang)lang.value=prefs.language||'en';setFlag();
 dark?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.dark=dark.checked;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));location.reload()});
-lang?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=lang.value;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));setFlag();setTimeout(()=>location.reload(),80)});
+lang?.addEventListener('input',setFlag);
+lang?.addEventListener('change',()=>{setFlag();let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=String(lang.value||'en');localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));setTimeout(()=>location.reload(),120)});
+window.addEventListener('pageshow',()=>{setFlag();setTimeout(setFlag,50);setTimeout(setFlag,250);});
 
 top.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
 const a=b.getAttribute('data-a');
