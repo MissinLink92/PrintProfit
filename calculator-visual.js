@@ -754,3 +754,22 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   `;
   document.head.appendChild(style);
 })();
+
+
+/* ===== Profit Advisor icon visual normalization ===== */
+(()=>{'use strict';
+const icon='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 32h12"/><path d="M19 36h10"/><path d="M24 8a12 12 0 0 0-7 21c1 1 2 2 2 3h10c0-1 1-2 2-3a12 12 0 0 0-7-21Z"/><path d="M24 3v2m12 3-1.5 1.5M44 20h-2M36 35l-1.5-1.5M12 35l1.5-1.5M12 8.5 13.5 10"/></svg>';
+function normalize(){
+ const el=document.querySelector('#ppProfitAdvisor .pp-profit-icon');
+ if(!el)return false;
+ if(el.dataset.ppVisualNormalized==='1')return true;
+ el.innerHTML=icon;
+ el.dataset.ppVisualNormalized='1';
+ let s=document.getElementById('ppProfitAdvisorIconVisual');
+ if(!s){s=document.createElement('style');s.id='ppProfitAdvisorIconVisual';document.head.appendChild(s)}
+ s.textContent='#ppProfitAdvisor .pp-profit-icon{width:50px!important;height:50px!important;min-width:50px!important;flex:0 0 50px!important;border-radius:50%!important;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.06),rgba(255,120,0,.035) 42%,rgba(255,120,0,.012) 72%)!important;border:2px solid rgba(255,120,0,.82)!important;color:#ff8a24!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 0 1px rgba(255,120,0,.10),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px rgba(255,120,0,.10)!important;overflow:hidden!important}#ppProfitAdvisor .pp-profit-icon svg{width:30px!important;height:30px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.45!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px rgba(255,120,0,.28))!important}';
+ return true;
+}
+function boot(){if(normalize())return;const t=setInterval(()=>{if(normalize())clearInterval(t)},80);setTimeout(()=>clearInterval(t),15000)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();
