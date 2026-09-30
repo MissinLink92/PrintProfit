@@ -220,6 +220,11 @@ td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;
 .tools .tool:first-child,.extra-tools .tool:first-child{border-radius:13px 0 0 13px!important}
 .tools .tool:last-child,.extra-tools .tool:last-child{border-radius:0 13px 13px 0!important}
 .tools .tool + .tool,.extra-tools .tool + .tool{border-left:0!important}
+<style id="ppCompareTableCheckVisual">
+.type-cell{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:7px!important;min-height:70px!important}
+.table-compare-check.compare-check{width:14px!important;height:14px!important;min-width:14px!important;margin:0 0 0 2px!important;border-radius:4px!important}
+.table-compare-check.compare-check:checked:after{font-size:10px!important}
+</style>
 </style>\n</head>
 <body data-pp-standalone-i18n="1">
 <div class="wrap">
@@ -640,8 +645,8 @@ function setResultView(mode){
 function render(){
  const rows=filtered();
  $('rows').innerHTML=rows.map(x=>'<tr>'+
-  '<td><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span></td>'+
-  '<td><div class="compare-name"><input class="compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
+  '<td><div class="type-cell"><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
+  '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
