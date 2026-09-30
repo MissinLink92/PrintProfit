@@ -213,6 +213,13 @@ td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;
 @media(max-width:900px){.wrap{width:min(100% - 22px,1320px)!important}.header{height:auto!important;min-height:64px!important;flex-wrap:wrap!important;padding:6px 0!important}.nav{width:100%!important;overflow:auto!important;flex-wrap:nowrap!important}.tools,.extra-tools{grid-template-columns:repeat(2,minmax(0,1fr))!important}.insight{grid-template-columns:1fr 1fr!important}}
 @media(max-width:650px){.tools,.extra-tools{grid-template-columns:1fr!important}.insight{grid-template-columns:1fr!important}h1{font-size:42px!important}.lead{font-size:14px!important}th{top:0!important}.compare-bar{width:calc(100% - 16px)!important;left:8px!important;transform:none!important}}
 </style>
+
+/* Compare filter groups: make adjacent filter boxes touch cleanly. */
+.tools,.extra-tools{gap:0!important}
+.tools .tool,.extra-tools .tool{border-radius:0!important}
+.tools .tool:first-child,.extra-tools .tool:first-child{border-radius:13px 0 0 13px!important}
+.tools .tool:last-child,.extra-tools .tool:last-child{border-radius:0 13px 13px 0!important}
+.tools .tool + .tool,.extra-tools .tool + .tool{border-left:0!important}
 </style>\n</head>
 <body data-pp-standalone-i18n="1">
 <div class="wrap">
