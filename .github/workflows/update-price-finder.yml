@@ -1,6 +1,9 @@
 name: Update Price Finder
 
 on:
+  push:
+    paths:
+      - scripts/update-price-finder.py
   schedule:
     # Refresh market data every 12 hours.
     - cron: "0 */12 * * *"
