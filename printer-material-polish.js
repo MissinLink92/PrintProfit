@@ -17,7 +17,7 @@ function install(){
   card.className='pp-profile-card';
   card.innerHTML=
    '<div class="pp-profile-head">'+
-     '<span class="pp-profile-icon">⚙</span>'+
+     '<span class="pp-profile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M18 10h12l2 5 5 2-2 5 4 4-4 4 2 5-5 2-2 5H18l-2-5-5-2 2-5-4-4 4-4-2-5 5-2 2-5Z"/><circle cx="24" cy="24" r="6"/></svg></span>'+
      '<div><strong>Printer Details</strong><span id="ppPrinterDetailsHint">Values used by PrintProfit for this printer.</span></div>'+
    '</div>'+
    '<div class="pp-profile-grid">'+
@@ -100,7 +100,8 @@ function install(){
   style.textContent=
    '.pp-profile-card{margin-top:9px;border:1px solid var(--line);border-radius:9px;background:rgba(7,16,24,.55);padding:9px 10px}'+
    '.pp-profile-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}'+
-   '.pp-profile-icon{width:27px;height:27px;border-radius:8px;background:#ff780012;border:1px solid #ff780044;color:var(--accent);display:grid;place-items:center;font-size:12px}'+
+   '.pp-profile-icon{width:50px;height:50px;min-width:50px;flex:0 0 50px;border-radius:13px;background:linear-gradient(145deg,#132f3d,#0b202c);border:1px solid #3c6676;color:var(--accent);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}'+
+   '.pp-profile-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}'+
    '.pp-profile-head strong{display:block;font-size:11px}.pp-profile-head span{display:block;color:var(--muted);font-size:9px;margin-top:2px}'+
    '.pp-profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.pp-profile-grid>div{border:1px solid var(--line);border-radius:7px;padding:7px 8px;background:var(--panel2)}'+
    '.pp-profile-grid span{display:block;color:var(--muted);font-size:9px;margin-bottom:3px}.pp-profile-grid b{display:block;font-size:11px}'+
