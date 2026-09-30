@@ -5119,7 +5119,7 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-30T05:06:19.084220+00:00",
+    "checkedAt": "2026-09-30T06:06:47.365727+00:00",
     "changedProducts": 0,
     "warnings": 44
   }
