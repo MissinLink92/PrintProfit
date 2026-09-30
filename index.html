@@ -51,7 +51,7 @@ const scripts=[
 'market-price-sync.js?v=1',
 'calculator-state.js?v=9',
 'calculator-visual.js?v=5',
-'visual-master.js?v=6'
+'visual-master.js?v=7'
  ];
 function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
