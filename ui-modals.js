@@ -264,8 +264,17 @@ function openGuide(){
     `;
     document.head.appendChild(style);
   }
+  // Always open the Guide at the top of the guide content and at the top of the page.
+  // This prevents a previously-scrolled modal/page position being restored at the bottom.
+  const guideDialog=panel.querySelector('.pp-guide-dialog');
+  if(guideDialog)guideDialog.scrollTop=0;
+  window.scrollTo({top:0,left:0,behavior:'instant'});
   panel.classList.add('open');
   document.body.style.overflow='hidden';
+  requestAnimationFrame(()=>{
+    if(guideDialog)guideDialog.scrollTop=0;
+    window.scrollTo(0,0);
+  });
 }
 
 
