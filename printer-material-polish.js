@@ -100,8 +100,8 @@ function install(){
   style.textContent=
    '.pp-profile-card{margin-top:9px;border:1px solid var(--line);border-radius:9px;background:rgba(7,16,24,.55);padding:9px 10px}'+
    '.pp-profile-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}'+
-   '.pp-profile-icon{width:50px;height:50px;min-width:50px;flex:0 0 50px;border-radius:13px;background:linear-gradient(145deg,#132f3d,#0b202c);border:1px solid #3c6676;color:var(--accent);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}'+
-   '.pp-profile-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}'+
+   '.pp-profile-icon{width:64px;height:64px;min-width:64px;flex:0 0 64px;border-radius:15px;background:linear-gradient(145deg,#132f3d,#0b202c);border:1px solid #a77cff;color:#a77cff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}'+
+   '.pp-profile-icon svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}'+
    '.pp-profile-head strong{display:block;font-size:11px}.pp-profile-head span{display:block;color:var(--muted);font-size:9px;margin-top:2px}'+
    '.pp-profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.pp-profile-grid>div{border:1px solid var(--line);border-radius:7px;padding:7px 8px;background:var(--panel2)}'+
    '.pp-profile-grid span{display:block;color:var(--muted);font-size:9px;margin-bottom:3px}.pp-profile-grid b{display:block;font-size:11px}'+
@@ -111,7 +111,7 @@ function install(){
    '.pp-custom-printer-fields input:focus{outline:2px solid var(--accent);outline-offset:1px}.pp-custom-printer-note{grid-column:1 / -1;color:var(--muted);font-size:8px;line-height:1.4}'+
    '.pp-material-rate{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:rgba(255,120,0,.025)}'+
    '.pp-material-rate span{font-size:9px;color:var(--muted)}.pp-material-rate strong{font-size:11px;color:var(--accent)}'+
-   '@media(max-width:650px){.pp-custom-printer-fields{grid-template-columns:1fr}}';
+   '@media(max-width:650px){.pp-profile-icon{width:54px;min-width:54px;height:54px;flex-basis:54px}.pp-profile-icon svg{width:33px;height:33px}.pp-custom-printer-fields{grid-template-columns:1fr}}';
   document.head.appendChild(style);
  }
  return true;
