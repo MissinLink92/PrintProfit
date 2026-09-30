@@ -8,6 +8,26 @@ const $=id=>document.getElementById(id);
 
 function install(){
  const printer=$('printer'), material=$('material');
+
+ // Replace the small text/emoji Print Setup icons with clear, scalable artwork.
+ const detailedIcons={
+  setup:'<svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="ppgSetup" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9a7ff"/><stop offset="1" stop-color="#8f45ff"/></linearGradient></defs><path fill="url(#ppgSetup)" d="M32 8l4.2 5.6 7.1-1.2 2.3 6.9 6.9 2.3-1.2 7.1L57 32l-5.7 4.2 1.2 7.1-6.9 2.3-2.3 6.9-7.1-1.2L32 57l-4.2-5.7-7.1 1.2-2.3-6.9-6.9-2.3 1.2-7.1L7 32l5.7-4.2-1.2-7.1 6.9-2.3 2.3-6.9 7.1 1.2L32 8z"/><circle cx="32" cy="32" r="10" fill="#101a25" stroke="#fff" stroke-width="3"/><circle cx="32" cy="32" r="3" fill="#d9a7ff"/></svg>',
+  printer:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="18" width="36" height="34" rx="3" fill="#17232e" stroke="#c8d4df" stroke-width="3"/><rect x="20" y="9" width="24" height="18" rx="2" fill="#263745" stroke="#c8d4df" stroke-width="3"/><path d="M25 39h14v9H25z" fill="#ff8618" stroke="#fff" stroke-width="2"/><path d="M27 16h10v6H27z" fill="#ff8618"/><circle cx="47" cy="31" r="3" fill="#19c8ff"/></svg>',
+  details:'<svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-35 25 31)"><rect x="19" y="10" width="10" height="38" rx="4" fill="#dfe6ed"/><path d="M16 10h16l3 7H13z" fill="#b9c5cf"/><circle cx="24" cy="48" r="7" fill="#dfe6ed"/></g><path fill="#ff8618" d="M44 30l3.2 4.2 5.2-.8 1.6 5-4.5 2.8.9 5.2-5 1.6-2.8-4.5-5.2.9-1.6-5 4.5-2.8-.9-5.2 5-1.6z"/><circle cx="44" cy="40" r="4" fill="#15222d"/></svg>',
+  material:'<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="16" rx="18" ry="8" fill="#2c3740" stroke="#d9e0e6" stroke-width="2"/><path d="M14 16v29c0 8 36 8 36 0V16" fill="#151d24" stroke="#d9e0e6" stroke-width="2"/><ellipse cx="32" cy="16" rx="10" ry="4" fill="#0c1218" stroke="#ff8618" stroke-width="3"/><path d="M44 18v23c0 4-4 6-8 7 8-1 14-4 14-9V18z" fill="#ff8618"/><path d="M27 25c8 3 9 12 3 18" fill="none" stroke="#ff9f3d" stroke-width="3" stroke-linecap="round"/></svg>'
+ };
+ const replaceSetupIcons=()=>{
+  const panel=document.querySelector('.print-setup-panel');
+  if(!panel)return;
+  panel.querySelectorAll('.merge-block > .head').forEach(head=>{
+   const title=head.querySelector('h2')?.textContent?.trim();
+   const key=title==='Printer'?'printer':title==='Material'?'material':title==='Print Setup'?'setup':title==='Printer Details'?'details':null;
+   if(!key)return;
+   const icon=head.querySelector('.icon');
+   if(icon){icon.innerHTML=detailedIcons[key];icon.classList.add('pp-detailed-setup-icon');icon.setAttribute('aria-hidden','true');}
+  });
+ };
+ replaceSetupIcons();
  if(!printer||!material)return false;
 
  const printerBlock=printer.closest('.merge-block');
@@ -94,7 +114,11 @@ function install(){
  ['materialPack','materialPackCost','materialType','customPrinterPrice','customPrinterPower','customPrinterLife'].forEach(wire);
  update();
 
- if(!$('ppPrinterMaterialPolishStyles')){
+ if(!$('ppDetailedSetupIconStyles')){
+ const s=document.createElement('style');s.id='ppDetailedSetupIconStyles';
+ s.textContent='.print-setup-panel .head .pp-detailed-setup-icon{width:68px!important;height:68px!important;min-width:68px!important;flex:0 0 68px!important;border-radius:16px!important;display:grid!important;place-items:center!important;background:linear-gradient(145deg,#132f3d,#0b202c)!important;border:2px solid #a77cff!important;box-shadow:0 8px 22px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.06)!important;overflow:hidden!important}.print-setup-panel .head .pp-detailed-setup-icon svg{width:52px!important;height:52px!important;display:block!important}.print-setup-panel .merge-block:nth-child(1) .pp-detailed-setup-icon{border-color:#a77cff!important}.print-setup-panel .merge-block:nth-child(2) .pp-detailed-setup-icon{border-color:#19c8ff!important}.print-setup-panel .pp-profile-head .pp-profile-icon{width:68px!important;height:68px!important;min-width:68px!important;flex-basis:68px!important}.print-setup-panel .pp-profile-head .pp-profile-icon svg{width:48px!important;height:48px!important}@media(max-width:650px){.print-setup-panel .head .pp-detailed-setup-icon{width:58px!important;height:58px!important;min-width:58px!important;flex-basis:58px!important}.print-setup-panel .head .pp-detailed-setup-icon svg{width:45px!important;height:45px!important}}';
+ document.head.appendChild(s);
+}if(!$('ppPrinterMaterialPolishStyles')){
   const style=document.createElement('style');
   style.id='ppPrinterMaterialPolishStyles';
   style.textContent=
