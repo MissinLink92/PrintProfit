@@ -787,12 +787,14 @@ const icons={
  printerDetail:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18V8h24v10"/><path d="M9 18h30a4 4 0 0 1 4 4v9H5v-9a4 4 0 0 1 4-4Z"/><path d="M13 31h22v10H13z"/><circle cx="35" cy="25" r="2"/><path d="m31 14 1.5-2.8 2.8 1.5 2.5-1.2 1.6 2.4 2.9.5v3l-2.4 1.6-.4 2.9h-3l-1.7-2.4-2.7.4-1.4-2.6-2.7-1.2.9-2.1Z" transform="translate(-1 0) scale(.8)"/></svg>',
  material:'<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="13" rx="14" ry="6"/><path d="M10 13v20c0 3 6 7 14 7s14-4 14-7V13"/><ellipse cx="24" cy="13" rx="5" ry="2.2"/><path d="M19 13v20c0 1 2 2 5 2s5-1 5-2V13"/></svg>',
  costs:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8M8 40h34"/><path d="m13 32 8-8 6 5 12-15"/><path d="M32 14h7v7"/></svg>',
- results:'<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="m18 24 4 4 9-10"/><path d="M24 7v4M24 37v4M7 24h4M37 24h4"/></svg>'
+ results:'<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="m18 24 4 4 9-10"/><path d="M24 7v4M24 37v4M7 24h4M37 24h4"/></svg>',
+ operatingCosts:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 8v32M8 40h32"/><path d="m13 15 8 8 6 6 10 10"/><path d="m31 39h6v-6"/></svg>'
 };
 
 function typeFor(head){
  const txt=(head.querySelector('h2')?.textContent || head.textContent || '').replace(/\s+/g,' ').trim().toLowerCase();
  if(txt.includes('print information')) return 'info';
+ if(txt.includes('operating costs')) return 'operatingCosts';
  if(txt === 'your model' || txt.startsWith('your model ')) return 'model';
  if(txt.includes('printer details')) return 'printerDetail';
  if(txt.includes('printer')) return 'printer';
