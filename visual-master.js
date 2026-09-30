@@ -62,13 +62,28 @@ document.head.appendChild(style);
 
 const img=top.querySelector('.pvm-brand img');if(img)img.addEventListener('error',()=>{img.style.display='none';top.querySelector('.pvm-brand-fallback').style.display='block'});
 
-const flag='<svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#123b78"/><path d="M0 0 24 16M24 0 0 16" stroke="#fff" stroke-width="5"/><path d="M0 0 24 16M24 0 0 16" stroke="#c8102e" stroke-width="2"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="6"/><path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="3"/></svg>';
-const lang=top.querySelector('#pvmLanguage');if(lang)top.querySelector('.pvm-flag').innerHTML=flag;
+const flags={
+en:'<svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#123b78"/><path d="M0 0 24 16M24 0 0 16" stroke="#fff" stroke-width="5"/><path d="M0 0 24 16M24 0 0 16" stroke="#c8102e" stroke-width="2"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="6"/><path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="3"/></svg>',
+pl:'<svg viewBox="0 0 24 16"><path fill="#fff" d="M0 0h24v8H0z"/><path fill="#dc143c" d="M0 8h24v8H0z"/></svg>',
+de:'<svg viewBox="0 0 24 16"><path fill="#111" d="M0 0h24v5.33H0z"/><path fill="#d00" d="M0 5.33h24v5.34H0z"/><path fill="#ffce00" d="M0 10.67h24V16H0z"/></svg>',
+fr:'<svg viewBox="0 0 24 16"><path fill="#0055a4" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ef4135" d="M16 0h8v16h-8z"/></svg>',
+es:'<svg viewBox="0 0 24 16"><path fill="#aa151b" d="M0 0h24v4H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/><path fill="#aa151b" d="M0 12h24v4H0z"/></svg>',
+it:'<svg viewBox="0 0 24 16"><path fill="#009246" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ce2b37" d="M16 0h8v16h-8z"/></svg>',
+nl:'<svg viewBox="0 0 24 16"><path fill="#ae1c28" d="M0 0h24v5.33H0z"/><path fill="#fff" d="M0 5.33h24v5.34H0z"/><path fill="#21468b" d="M0 10.67h24V16H0z"/></svg>',
+pt:'<svg viewBox="0 0 24 16"><path fill="#046a38" d="M0 0h10v16H0z"/><path fill="#da291c" d="M10 0h14v16H10z"/><circle cx="10" cy="8" r="3" fill="#f9e300"/></svg>',
+cs:'<svg viewBox="0 0 24 16"><path fill="#fff" d="M0 0h24v8H0z"/><path fill="#d7141a" d="M0 8h24v8H0z"/><path fill="#11457e" d="M0 0l11 8L0 16z"/></svg>',
+sv:'<svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#006aa7"/><path stroke="#fecc00" stroke-width="3" d="M8 0v16M0 8h24"/></svg>',
+da:'<svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#c8102e"/><path stroke="#fff" stroke-width="3" d="M8 0v16M0 8h24"/></svg>'
+};
+const lang=top.querySelector('#pvmLanguage');
+const flagEl=top.querySelector('.pvm-flag');
+const setFlag=()=>{if(flagEl)flagEl.innerHTML=flags[lang?.value||'en']||flags.en;};
+setFlag();
 
 let prefs={};try{prefs=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}
 const dark=top.querySelector('#pvmDarkMode');if(dark)dark.checked=prefs.dark!==false;if(lang)lang.value=prefs.language||'en';
 dark?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.dark=dark.checked;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));location.reload()});
-lang?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=lang.value;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));location.reload()});
+lang?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=lang.value;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));setFlag();setTimeout(()=>location.reload(),80)});
 
 top.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
 const a=b.getAttribute('data-a');
