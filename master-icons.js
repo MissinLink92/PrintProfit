@@ -33,7 +33,7 @@ function apply(){
   else if(/^delivery\b/.test(t)||t.includes('selling & fulfilment'))k='delivery';
   else if(t.includes('quantity')||t.includes('batch pricing'))k='batch';
   else if(t.includes('results'))k='results';
-  if(k)set(h,h.querySelector('.icon,.pp-pretty-icon'),k);
+  if(k)set(h.querySelector('.icon,.pp-pretty-icon'),k);
  });
  const save=document.getElementById('saveProject');if(save&&!save.dataset.ppDirect){save.dataset.ppDirect='1';save.innerHTML='<span class="pp-direct-btn">'+M.save+'</span><span>Save Project</span>';}
  const reset=document.getElementById('reset');if(reset&&!reset.dataset.ppDirect){reset.dataset.ppDirect='1';reset.innerHTML='<span class="pp-direct-btn">'+M.undo+'</span><span>Reset</span>';}
