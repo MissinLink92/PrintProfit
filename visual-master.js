@@ -69,6 +69,15 @@ style.textContent += '#ppVisualMaster~.shell .panel>.head>.icon,#ppVisualMaster~
 '#ppVisualMaster~.shell .pp-profile-card .pp-profile-icon{width:60px!important;height:60px!important;min-width:60px!important;flex:0 0 60px!important;border-radius:15px!important;display:grid!important;place-items:center!important;background:linear-gradient(145deg,#132f3d,#0b202c)!important;border:1px solid #3c6676!important;color:#b9c6cd!important;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)!important;font-size:0!important}'+
 '#ppVisualMaster~.shell .pp-profile-card .pp-profile-icon svg{width:35px!important;height:35px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.35!important;stroke-linecap:round!important;stroke-linejoin:round!important}';
 style.textContent += '#ppVisualMaster .pvm-hero-tagline{position:relative;z-index:2;margin:20px 0 0 -20px;color:#19D8FF;font-family:"Segoe UI",Arial,sans-serif;font-size:34px;font-weight:800;line-height:1.06;font-style:italic;letter-spacing:.01em;text-shadow:0 3px 16px #000c;text-align:left;max-width:620px;transform:none!important}';
+style.textContent += '#ppVisualMaster .pvm-journey{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr)!important;gap:8px!important;padding-top:18px!important}'+
+'#ppVisualMaster .pvm-journey button{min-height:122px!important;padding:12px 14px!important;gap:10px!important}'+
+'#ppVisualMaster .pvm-journey .jicon{width:94px!important;height:88px!important;min-width:94px!important;border:0!important;border-radius:10px!important;background:transparent!important;overflow:visible!important;display:grid!important;place-items:center!important;flex:0 0 94px!important;filter:drop-shadow(0 9px 14px rgba(0,0,0,.42))!important}'+
+'#ppVisualMaster .pvm-journey .jicon svg{width:94px!important;height:94px!important;max-width:none!important;display:block!important;filter:none!important;overflow:visible!important}'+
+'#ppVisualMaster .pvm-journey .jicon + span strong{font-size:15px!important;line-height:1.1!important}'+
+'#ppVisualMaster .pvm-journey .jicon + span small{font-size:10.5px!important;line-height:1.25!important}'+
+'#ppVisualMaster .pvm-journey em{width:31px!important;height:31px!important;font-size:17px!important;color:#ff7800!important}'+
+'@media(max-width:1180px){#ppVisualMaster .pvm-journey .jicon{width:82px!important;min-width:82px!important;height:78px!important}#ppVisualMaster .pvm-journey .jicon svg{width:82px!important;height:82px!important}}'+
+'@media(max-width:900px){#ppVisualMaster .pvm-journey{grid-template-columns:1fr!important}.pvm-journey .jicon{width:96px!important;min-width:96px!important;height:90px!important}.pvm-journey .jicon svg{width:96px!important;height:96px!important}}';
 document.head.appendChild(style);
 const img=top.querySelector('.pvm-brand img');if(img)img.addEventListener('error',()=>{img.style.display='none';top.querySelector('.pvm-brand-fallback').style.display='block'});
 
