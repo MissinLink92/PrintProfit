@@ -829,3 +829,46 @@ function apply(){
 function boot(){if(apply())return;const t=setInterval(()=>{if(apply())clearInterval(t)},100);setTimeout(()=>clearInterval(t),15000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
+
+/* ===== Final section icon sizing + stage colours ===== */
+(()=>{
+'use strict';
+if(window.__ppFinalSectionIcons)return;window.__ppFinalSectionIcons=true;
+const s=document.createElement('style');s.id='ppFinalSectionIconStyles';
+s.textContent=`
+/* One consistent icon system: stage colour tells the user where they are. */
+.pp-tab-panel[data-panel="details"] .head>.icon,
+.pp-tab-panel[data-panel="details"] .head>.pp-pretty-icon{color:#27c7d9!important;border-color:#27c7d9!important}
+.pp-tab-panel[data-panel="machine"] .head>.icon,
+.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon{color:#a77cff!important;border-color:#a77cff!important}
+.pp-tab-panel[data-panel="costs"] .head>.icon,
+.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon{color:#35d07f!important;border-color:#35d07f!important}
+#about.result .head>.icon{color:#ff7800!important;border-color:#ff7800!important}
+
+.pp-tab-panel .head>.icon,
+.pp-tab-panel .head>.pp-pretty-icon,
+#about.result .head>.icon{
+ width:64px!important;height:64px!important;min-width:64px!important;flex:0 0 64px!important;
+ border-radius:15px!important;display:grid!important;place-items:center!important;box-sizing:border-box!important;
+}
+.pp-tab-panel .head>.icon svg,
+.pp-tab-panel .head>.pp-pretty-icon svg,
+#about.result .head>.icon svg{
+ width:40px!important;height:40px!important;display:block!important;
+ fill:none!important;stroke:currentColor!important;stroke-width:2.35!important;
+ stroke-linecap:round!important;stroke-linejoin:round!important;filter:none!important;
+}
+.pp-tab-panel .head,.merge-block .head{gap:14px!important}
+@media(max-width:650px){
+ .pp-tab-panel .head>.icon,
+ .pp-tab-panel .head>.pp-pretty-icon,
+ #about.result .head>.icon{
+  width:54px!important;height:54px!important;min-width:54px!important;flex-basis:54px!important;
+ }
+ .pp-tab-panel .head>.icon svg,
+ .pp-tab-panel .head>.pp-pretty-icon svg,
+ #about.result .head>.icon svg{width:33px!important;height:33px!important}
+}
+`;
+document.head.appendChild(s);
+})();
