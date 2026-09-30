@@ -1,5 +1,4 @@
-(()=>{'use strict';
-/* PrintProfit calculator visual layer — consolidated from the approved visual-only scripts. */
+/* PrintProfit consolidated calculator visual layer */
 /* ===== visual-polish.js ===== */
 (()=>{
 'use strict';
@@ -710,22 +709,6 @@ function boot(){if(install())return;const t=setInterval(()=>{if(install())clearI
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
 
-/* ===== icon-upgrade.js ===== */
-(()=>{'use strict';if(window.__printProfitIconUpgrade)return;window.__printProfitIconUpgrade=true;
-const icons={cube:'<svg viewBox="0 0 48 48"><path d="m24 5 17 9.5v19L24 43 7 33.5v-19L24 5Z"/><path d="m7 14.5 17 10 17-10M24 24.5V43"/></svg>',calculator:'<svg viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="4"/><rect x="16" y="10" width="16" height="8" rx="1"/><path d="M17 24h3m4 0h3m4 0h0M17 30h3m4 0h3m4 0h0M17 36h3m4 0h7"/></svg>',chart:'<svg viewBox="0 0 48 48"><path d="M8 40V8M8 40h33"/><path d="m13 32 8-9 6 5 11-15"/><path d="M32 13h6v6"/></svg>',gear:'<svg viewBox="0 0 48 48"><path d="m24 6 3 4.3 5.1-.2 1.7 4.8 4.7 2.1-1.3 4.9 3 4.1-3 4.1 1.3 4.9-4.7 2.1-1.7 4.8-5.1-.2-3 4.3-3-4.3-5.1.2-1.7-4.8-4.7-2.1 1.3-4.9-3-4.1 3-4.1-1.3-4.9 4.7-2.1 1.7-4.8 5.1.2L24 6Z"/><circle cx="24" cy="24" r="6"/></svg>',folder:'<svg viewBox="0 0 48 48"><path d="M6 13a4 4 0 0 1 4-4h10l4 5h14a4 4 0 0 1 4 4v17a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V13Z"/></svg>',book:'<svg viewBox="0 0 48 48"><path d="M8 8h12c5 0 7 2 7 6v27c-2-2-5-3-9-3H8V8Zm32 0H28c-5 0-7 2-7 6v27c2-2 5-3 9-3h10V8Z"/></svg>',info:'<svg viewBox="0 0 48 48"><path d="M10 7h22l6 6v28H10V7Z"/><path d="M32 7v8h6"/><circle cx="22" cy="25" r="7"/><path d="M22 23v5m0-9h.01"/></svg>',results:'<svg viewBox="0 0 48 48"><rect x="10" y="7" width="28" height="34" rx="4"/><path d="M17 15h14M17 22h14M17 29h5m6 0 3-3M17 35h5"/></svg>',save:'<svg viewBox="0 0 48 48"><path d="M8 7h27l5 5v29H8V7Z"/><path d="M14 7v12h20V7M14 41V27h20v14"/></svg>',reset:'<svg viewBox="0 0 48 48"><path d="M10 20a15 15 0 1 1 4 14"/><path d="M10 9v11h11"/></svg>'};
-const svg=n=>icons[n]||icons.cube;
-const replace=(sel,map)=>document.querySelectorAll(sel).forEach(el=>{const k=map(el);if(k){el.innerHTML=svg(k);el.classList.add('pp-svg-icon')}});
-function install(){if(!document.body)return false;
-replace('#ppCleanTop .pp-nav-icon',e=>e.classList.contains('calculator')?'calculator':e.classList.contains('cube')?'cube':e.classList.contains('book')?'book':e.classList.contains('gear')?'gear':null);
-replace('#ppCleanTop .pp-mini-icon',e=>e.classList.contains('calculator')?'calculator':e.classList.contains('folder')?'folder':null);
-replace('#ppCleanTop .pp-feature-icon',e=>e.classList.contains('calculator')?'calculator':e.classList.contains('cube')?'cube':e.classList.contains('chart')?'chart':e.classList.contains('gear')?'gear':null);\nconst navColorStyle=document.getElementById('ppNavIconColours')||document.createElement('style');navColorStyle.id='ppNavIconColours';navColorStyle.textContent='#ppCleanTop .pp-top-links button:nth-child(1) .pp-nav-icon{color:#ff7800!important}#ppCleanTop .pp-top-links button:nth-child(2) .pp-nav-icon{color:#19c8ff!important}#ppCleanTop .pp-top-links button:nth-child(3) .pp-nav-icon{color:#b36cff!important}#ppCleanTop .pp-top-links button:nth-child(4) .pp-nav-icon{color:#28e58b!important}';if(!navColorStyle.parentNode)document.head.appendChild(navColorStyle);
-document.querySelectorAll('.pp-model-hub .head,.result .head').forEach(h=>{const t=(h.querySelector('h2')?.textContent||'').toLowerCase(),x=h.querySelector('.icon,.pp-pretty-icon');if(!x)return;const k=t.includes('print information')?'info':t==='results'?'results':null;if(k){x.innerHTML=svg(k);x.classList.add('pp-svg-icon')}});
-document.querySelectorAll('section.panel .head').forEach(h=>{const t=(h.querySelector('h2')?.textContent||'').toLowerCase(),x=h.querySelector('.icon,.pp-pretty-icon');if(!x)return;const k=t.includes('your model')?'cube':t.includes('print setup')?'calculator':t.includes('costs')||t.includes('result')?'chart':null;if(k){x.innerHTML=svg(k);x.classList.add('pp-svg-icon')}});
-const s=document.querySelector('#ppFloatingSave .pp-save-icon');if(s){s.innerHTML=svg('save');s.classList.add('pp-svg-icon')}const r=document.querySelector('#ppFloatingReset .pp-reset-icon');if(r){r.innerHTML=svg('reset');r.classList.add('pp-svg-icon')}
-let st=document.getElementById('ppIconUpgradeStyles');if(!st){st=document.createElement('style');st.id='ppIconUpgradeStyles';document.head.appendChild(st)}
-st.textContent='.pp-svg-icon{display:grid!important;place-items:center!important}.pp-svg-icon:before,.pp-svg-icon:after{content:none!important;display:none!important}.pp-svg-icon svg{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}#ppCleanTop .pp-nav-icon svg{width:25px;height:25px}#ppCleanTop .pp-feature-icon svg{width:27px;height:27px}#ppCleanTop .pp-mini-icon svg{width:20px;height:20px}#ppCleanTop .pp-feature-strip>div:nth-of-type(1) .pp-feature-icon{color:#ff7800!important}#ppCleanTop .pp-feature-strip>div:nth-of-type(2) .pp-feature-icon{color:#19c8ff!important}#ppCleanTop .pp-feature-strip>div:nth-of-type(3) .pp-feature-icon{color:#28e58b!important}#ppCleanTop .pp-feature-strip>div:nth-of-type(4) .pp-feature-icon{color:#b36cff!important}#ppFloatingSave .pp-save-icon,#ppFloatingReset .pp-reset-icon{border:0!important;border-radius:0!important}#ppFloatingSave .pp-save-icon svg,#ppFloatingReset .pp-reset-icon svg{width:25px;height:25px;stroke:currentColor;stroke-width:2.5}section.panel .head>.pp-svg-icon svg{width:34px!important;height:34px!important}';return true}
-function boot(){if(install())return;const t=setInterval(()=>{if(install())clearInterval(t)},100);setTimeout(()=>clearInterval(t),15000)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
-
 /* ===== results-icon-fix.js ===== */
 (()=>{'use strict';if(window.__ppResultsIconFix)return;window.__ppResultsIconFix=true;
 const icon='<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="7" width="28" height="34" rx="4"/><path d="M17 15h14M17 22h14M17 29h5m6 0 3-3M17 35h5"/></svg>';
@@ -770,5 +753,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     }
   `;
   document.head.appendChild(style);
-})();
 })();
