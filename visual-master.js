@@ -74,7 +74,7 @@ else if(a==='guide'&&typeof window.__openPrintProfitGuide==='function')window.__
 else if(a==='settings'&&typeof window.__openPrintProfitSettings==='function')window.__openPrintProfitSettings();
 else if(a==='projects'){b.setAttribute('data-target','projects');b.dispatchEvent(new Event('project-launch',{bubbles:true}))}
 }));
-top.querySelector('[data-a="projects"]')?.addEventListener('project-launch',()=>document.dispatchEvent(new Event('click',{bubbles:true})));
+top.querySelector('[data-a="projects"]')?.addEventListener('project-launch',()=>{const proxy=document.createElement('button');proxy.type='button';proxy.dataset.target='projects';proxy.hidden=true;document.body.appendChild(proxy);proxy.click();proxy.remove();});
 top.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();goStage(b.getAttribute('data-stage'))}));
 return true;
 }
