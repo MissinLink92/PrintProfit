@@ -15,6 +15,8 @@ function build(){
 document.getElementById('ppCleanTop')?.remove();
 document.getElementById('pp-master-quickcards')?.remove();
 document.querySelectorAll('#ppProgressHost,#ppSetupProgress,.pp-progress,.pp-progress-host').forEach(e=>e.style.setProperty('display','none','important'));
+document.querySelector('.shell > .header')?.style.setProperty('display','none','important');
+document.querySelector('.shell > .hero')?.style.setProperty('display','none','important');
 document.getElementById('ppVisualMaster')?.remove();
 
 const top=document.createElement('section');
