@@ -82,7 +82,12 @@ function bind(){
     cost.dataset.ppManualBound='1';
     cost.addEventListener('input',()=>{if(cost.dataset.ppLiveWriting!=='1')cost.dataset.ppManual='1';});
   }
-  if(cost.dataset.ppManual!=='1')applyLivePrice();
+  if(cost.dataset.ppMarketInitialised!=='1'){
+    cost.dataset.ppMarketInitialised='1';
+    if(Number(cost.value)||String(cost.value).trim()) cost.dataset.ppManual='1';
+    else applyLivePrice();
+  }
+
   return true;
 }
 function boot(){
