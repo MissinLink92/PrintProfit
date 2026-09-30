@@ -1224,7 +1224,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-09-29"
+      "imageChecked": "2026-09-30"
     },
     {
       "id": "bambu-lab-a1",
@@ -5119,9 +5119,9 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-09-30T01:07:20.495637+00:00",
+    "checkedAt": "2026-09-30T02:05:36.897833+00:00",
     "changedProducts": 0,
-    "warnings": 44
+    "warnings": 43
   }
 };
 })();
