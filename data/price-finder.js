@@ -1295,7 +1295,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-01",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Bambu Lab A1 mini Bambu Lab UK"
     },
     {
@@ -2247,7 +2247,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-01",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI ASA - Gray QIDI UK Store"
     },
     {
@@ -5450,12 +5450,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-01T00:12:27.141395+00:00",
+    "checkedAt": "2026-10-01T12:12:30.712428+00:00",
     "changedProducts": 0,
-    "changedImages": 16,
-    "imagesFound": 17,
-    "imageSearches": 133,
-    "warnings": 43
+    "changedImages": 0,
+    "imagesFound": 1,
+    "imageSearches": 132,
+    "warnings": 44
   }
 };
 })();
