@@ -351,10 +351,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 12.5
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "SUNLU PLA+ 2.0 White Subliblanks"
     },
     {
@@ -378,10 +378,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.95
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "SUNLU PLA+ Blue NSE Imports"
     },
     {
@@ -1398,12 +1398,13 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 169.0
         }
       ],
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "error",
       "imageStatus": "available",
       "image": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
       "imageChecked": "2026-10-02",
       "imageMethod": "json-ld",
-      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer"
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
+      "imageSearchStatus": "fetch-error"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -1511,7 +1512,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Flashforge Adventurer 5M Flashforge UK"
     },
     {
@@ -1535,10 +1536,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 22.5
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "3DGBIRE PET 3DGBIRE"
     },
     {
@@ -1871,10 +1872,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Black QIDI UK Store"
     },
     {
@@ -1900,10 +1901,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - White QIDI UK Store"
     },
     {
@@ -1929,10 +1930,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Red QIDI UK Store"
     },
     {
@@ -1958,10 +1959,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Yellow QIDI UK Store"
     },
     {
@@ -1987,10 +1988,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Orange QIDI UK Store"
     },
     {
@@ -2016,10 +2017,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Blue QIDI UK Store"
     },
     {
@@ -2045,10 +2046,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Green QIDI UK Store"
     },
     {
@@ -2074,10 +2075,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Silver QIDI UK Store"
     },
     {
@@ -2103,10 +2104,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Gray QIDI UK Store"
     },
     {
@@ -2132,10 +2133,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Pink QIDI UK Store"
     },
     {
@@ -2161,10 +2162,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA Rapido - Purple QIDI UK Store"
     },
     {
@@ -2219,10 +2220,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Brown QIDI UK Store"
     },
     {
@@ -2248,10 +2249,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Gray QIDI UK Store"
     },
     {
@@ -2277,10 +2278,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Blue QIDI UK Store"
     },
     {
@@ -2306,10 +2307,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Green QIDI UK Store"
     },
     {
@@ -2335,10 +2336,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Black QIDI UK Store"
     },
     {
@@ -2364,10 +2365,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - White QIDI UK Store"
     },
     {
@@ -2396,7 +2397,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI ASA - Yellow QIDI UK Store"
     },
     {
@@ -2422,10 +2423,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Dark Red QIDI UK Store"
     },
     {
@@ -2451,10 +2452,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Lavender Purple QIDI UK Store"
     },
     {
@@ -2480,10 +2481,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Midnight Blue QIDI UK Store"
     },
     {
@@ -2509,10 +2510,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Black QIDI UK Store"
     },
     {
@@ -2538,10 +2539,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Olive Green QIDI UK Store"
     },
     {
@@ -3047,10 +3048,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Pearl Black Anycubic UK"
     },
     {
@@ -3076,10 +3077,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Bright White Anycubic UK"
     },
     {
@@ -3105,10 +3106,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Texture Grey Anycubic UK"
     },
     {
@@ -3134,10 +3135,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Bright Red Anycubic UK"
     },
     {
@@ -3163,10 +3164,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Orange Anycubic UK"
     },
     {
@@ -3192,10 +3193,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Purple Opulence Anycubic UK"
     },
     {
@@ -3221,10 +3222,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Strawberry Pink Anycubic UK"
     },
     {
@@ -3253,7 +3254,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Anycubic High-Speed PLA - Dazzling Blue Anycubic UK"
     },
     {
@@ -3279,10 +3280,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Yellow Anycubic UK"
     },
     {
@@ -3308,10 +3309,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Yellow Anycubic UK"
     },
     {
@@ -3337,10 +3338,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - White Anycubic UK"
     },
     {
@@ -3366,10 +3367,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Red Anycubic UK"
     },
     {
@@ -3395,10 +3396,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Blue Anycubic UK"
     },
     {
@@ -3424,10 +3425,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Green Anycubic UK"
     },
     {
@@ -3456,7 +3457,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Orange Anycubic UK"
     },
     {
@@ -3482,10 +3483,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Purple Anycubic UK"
     },
     {
@@ -3511,10 +3512,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Pink Anycubic UK"
     },
     {
@@ -3540,10 +3541,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Black Anycubic UK"
     },
     {
@@ -3569,10 +3570,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Texture Grey Anycubic UK"
     },
     {
@@ -3598,10 +3599,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Vintage Red Anycubic UK"
     },
     {
@@ -3627,10 +3628,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Lava Grey Anycubic UK"
     },
     {
@@ -3656,10 +3657,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Cowboy Blue Anycubic UK"
     },
     {
@@ -3685,10 +3686,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Black Anycubic UK"
     },
     {
@@ -3714,10 +3715,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Fish Scale White Anycubic UK"
     },
     {
@@ -3743,10 +3744,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 21
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Jade Green Anycubic UK"
     },
     {
@@ -3775,7 +3776,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Mandarin Orange Additive-X"
     },
     {
@@ -3804,7 +3805,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Marine Blue Additive-X"
     },
     {
@@ -3833,7 +3834,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ice Blue Additive-X"
     },
     {
@@ -3862,7 +3863,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ash Grey Additive-X"
     },
     {
@@ -3891,7 +3892,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Grass Green Additive-X"
     },
     {
@@ -3920,7 +3921,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Charcoal Additive-X"
     },
     {
@@ -3949,7 +3950,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Latte Brown Additive-X"
     },
     {
@@ -3978,7 +3979,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Sakura Pink Additive-X"
     },
     {
@@ -4007,7 +4008,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Lilac Purple Additive-X"
     },
     {
@@ -4036,7 +4037,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Scarlet Red Additive-X"
     },
     {
@@ -4065,7 +4066,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - Black Additive-X"
     },
     {
@@ -4094,7 +4095,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - Red Additive-X"
     },
     {
@@ -4123,7 +4124,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - White Additive-X"
     },
     {
@@ -4148,10 +4149,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 519
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Kobra 3 Max V2 Combo Anycubic UK"
     },
     {
@@ -4176,10 +4177,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 399
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Kobra S1 ACE 2 Pro Combo Anycubic UK"
     },
     {
@@ -4204,10 +4205,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 289
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Kobra 4 Combo Anycubic UK"
     },
     {
@@ -4232,10 +4233,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 249
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Kobra X Anycubic UK"
     },
     {
@@ -4263,7 +4264,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Anycubic Kobra S1 Combo Anycubic UK"
     },
     {
@@ -4288,10 +4289,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 449
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon P1 Anycubic UK"
     },
     {
@@ -4319,7 +4320,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon P1 Max Anycubic UK"
     },
     {
@@ -4344,10 +4345,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 429
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon Mono M7 Pro Anycubic UK"
     },
     {
@@ -4372,10 +4373,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 599
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon Mono M7 Max Anycubic UK"
     },
     {
@@ -4400,10 +4401,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 359
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon Mono M7 Anycubic UK"
     },
     {
@@ -4537,10 +4538,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 375
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Saturn 4 Ultra 16K ELEGOO UK"
     },
     {
@@ -4568,7 +4569,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Saturn 4 Ultra ELEGOO UK"
     },
     {
@@ -4596,7 +4597,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Saturn 4 ELEGOO UK"
     },
     {
@@ -4624,7 +4625,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Saturn 3 Ultra ELEGOO UK"
     },
     {
@@ -4652,7 +4653,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Saturn 3 ELEGOO UK"
     },
     {
@@ -4680,7 +4681,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "ELEGOO Mars 5 Ultra ELEGOO UK"
     },
     {
@@ -5038,7 +5039,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Flashforge AD5X Flashforge UK"
     },
     {
@@ -5066,7 +5067,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Flashforge Creator 5 Flashforge UK"
     },
     {
@@ -5094,7 +5095,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Flashforge Creator 5 Pro Flashforge UK"
     },
     {
@@ -5122,7 +5123,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Sovol M1D Sovol UK"
     },
     {
@@ -5177,7 +5178,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Sovol SV08 Sovol UK"
     },
     {
@@ -5205,7 +5206,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Sovol SV06 ACE Sovol UK"
     },
     {
@@ -5454,12 +5455,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-02T00:11:32.198620+00:00",
+    "checkedAt": "2026-10-02T12:10:27.711063+00:00",
     "changedProducts": 0,
     "changedImages": 0,
-    "imagesFound": 1,
-    "imageSearches": 132,
-    "warnings": 44
+    "imagesFound": 0,
+    "imageSearches": 62,
+    "warnings": 115
   }
 };
 })();
