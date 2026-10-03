@@ -7,6 +7,8 @@ const iconMarkup=id=>'<svg class="pp-missed-icon pp-missed-icon-'+id+'" viewBox=
 
 function setIcon(holder,id){
   if(!holder)return false;
+  holder.classList.remove('pp-reference-calc-icon');
+  ['background','background-image','background-size','background-repeat','background-position'].forEach(name=>holder.style.removeProperty(name));
   const current=holder.querySelector(':scope > svg.pp-missed-icon use');
   if(current?.getAttribute('href')===asset+'#pp-missed-'+id){
     holder.dataset.ppMissedIcon=id;

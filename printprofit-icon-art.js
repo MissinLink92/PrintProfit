@@ -42,6 +42,8 @@ const calcIndexes=[null,1,0,2,10,6,3,11,9,7,12,13];
 document.querySelectorAll('.shell .head>.icon').forEach((el,i)=>{
 const n=calcIndexes[i];
 if(typeof n!=='number')return;
+if(el.querySelector(':scope > svg.pp-missed-icon'))return;
+el.replaceChildren();
 el.classList.add('pp-reference-calc-icon');
 el.style.setProperty('background','none','important');
 el.style.setProperty('background-image','url("./assets/printprofit-calculator-icons.webp?v=1")','important');
