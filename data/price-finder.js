@@ -4,7 +4,7 @@
 window.PRINTPROFIT_PRICE_DATA={
   "version": 2,
   "currency": "GBP",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-03",
   "refreshPolicy": {
     "frequency": "every 12 hours",
     "timezone": "Europe/London",
@@ -218,7 +218,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "The Filament PLA Refill Lite Grey 3DJake UK"
     },
@@ -245,7 +245,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "eSUN PLA Basic Black 3DJake UK"
     },
@@ -272,7 +272,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Elegoo PLA Black 3DJake UK"
     },
@@ -299,7 +299,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Elegoo PLA+ Black 3DJake UK"
     },
@@ -326,7 +326,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Polymaker PolyTerra PLA Cotton White 3DJake UK"
     },
@@ -407,7 +407,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Basic Black 3DJake UK"
     },
@@ -434,7 +434,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality Hyper PLA Creality UK"
     },
@@ -461,7 +461,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "eSUN PETG Black 3DJake UK"
     },
@@ -489,7 +489,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Black 1.75mm 1kg 123-3D UK"
     },
@@ -517,7 +517,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA White 1.75mm 1kg 123-3D UK"
     },
@@ -545,7 +545,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Grey 1.75mm 1kg 123-3D UK"
     },
@@ -573,7 +573,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Red 1.75mm 1kg 123-3D UK"
     },
@@ -601,7 +601,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Dark Blue 1.75mm 1kg 123-3D UK"
     },
@@ -629,7 +629,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Yellow 1.75mm 1kg 123-3D UK"
     },
@@ -657,7 +657,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Green 1.75mm 1kg 123-3D UK"
     },
@@ -685,7 +685,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Orange 1.75mm 1kg 123-3D UK"
     },
@@ -713,7 +713,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Neutral 1.75mm 1kg 123-3D UK"
     },
@@ -741,7 +741,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Brown 1.75mm 1kg 123-3D UK"
     },
@@ -769,7 +769,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Sky Blue 1.75mm 1kg 123-3D UK"
     },
@@ -797,7 +797,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Silver 1.75mm 1kg 123-3D UK"
     },
@@ -825,7 +825,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Matte Black 1.75mm 1kg 123-3D UK"
     },
@@ -853,7 +853,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Light Grey 1.75mm 1kg 123-3D UK"
     },
@@ -881,7 +881,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "123-3D Filament PLA Bright Pink 1.75mm 1kg 123-3D UK"
     },
@@ -1133,7 +1133,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D - PLA Glitter - Blue - 1.75mm - 1kg 3D Prima UK"
     },
@@ -1160,7 +1160,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D - PLA Rainbow - Magic Silk - 1.75mm - 1kg 3D Prima UK"
     },
@@ -1187,7 +1187,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D - PET-G - Grey - 1.75mm - 1kg 3D Prima UK"
     },
@@ -1214,7 +1214,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D - PLA Silk - Pink - 1.75mm - 1kg 3D Prima UK"
     },
@@ -1241,7 +1241,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D ABS - 1.75mm - 800 g - White 3D Prima UK"
     },
@@ -1349,7 +1349,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab P1S Bambu Lab UK"
     },
@@ -1429,7 +1429,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality Ender-3 V3 SE Creality UK"
     },
@@ -1456,7 +1456,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality Ender-3 V3 KE Creality UK"
     },
@@ -1483,7 +1483,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality K1C 2025 Creality UK"
     },
@@ -1565,7 +1565,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Copymaster3D PLA Matte - Grey - 1.75mm - 1kg 3D Prima UK"
     },
@@ -2191,10 +2191,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Red QIDI UK Store"
     },
     {
@@ -2394,10 +2394,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 16.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI ASA - Yellow QIDI UK Store"
     },
     {
@@ -2425,8 +2425,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI PLA-CF - Dark Red QIDI UK Store"
     },
     {
@@ -3251,10 +3251,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 17.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic High-Speed PLA - Dazzling Blue Anycubic UK"
     },
     {
@@ -3454,10 +3454,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 15.99
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA Basic Refill - Orange Anycubic UK"
     },
     {
@@ -3630,8 +3630,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Anycubic PLA-CF - Lava Grey Anycubic UK"
     },
     {
@@ -3775,7 +3775,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Mandarin Orange Additive-X"
     },
@@ -3804,7 +3804,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Marine Blue Additive-X"
     },
@@ -3833,7 +3833,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ice Blue Additive-X"
     },
@@ -3862,7 +3862,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ash Grey Additive-X"
     },
@@ -3891,7 +3891,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Grass Green Additive-X"
     },
@@ -3920,7 +3920,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Charcoal Additive-X"
     },
@@ -3949,7 +3949,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Latte Brown Additive-X"
     },
@@ -3978,7 +3978,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Sakura Pink Additive-X"
     },
@@ -4007,7 +4007,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Lilac Purple Additive-X"
     },
@@ -4036,7 +4036,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Scarlet Red Additive-X"
     },
@@ -4065,7 +4065,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - Black Additive-X"
     },
@@ -4094,7 +4094,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - Red Additive-X"
     },
@@ -4123,7 +4123,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "not-found",
       "imageSearchQuery": "FormFutura Bulk PETG Filament - White Additive-X"
     },
@@ -4261,10 +4261,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 399
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Kobra S1 Combo Anycubic UK"
     },
     {
@@ -4429,10 +4429,10 @@ window.PRINTPROFIT_PRICE_DATA={
           "price": 149
         }
       ],
-      "lastCheckStatus": "reference",
+      "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic Photon Mono 4 Anycubic UK"
     },
     {
@@ -4735,8 +4735,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality K2 Creality UK"
     },
     {
@@ -4817,8 +4817,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality K2 SE Creality UK"
     },
     {
@@ -4845,8 +4845,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "search-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Creality Ender-5 Max Creality UK"
     },
     {
@@ -4873,7 +4873,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "Creality HALOT-R6 Creality UK"
     },
@@ -4901,7 +4901,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "Creality HALOT-MAGE S 14K Creality UK"
     },
@@ -4929,7 +4929,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "Creality HALOT X1 All in One Creality UK"
     },
@@ -5259,7 +5259,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "XYZ da Vinci Mini W+ iDig3Dprinting"
     },
@@ -5287,7 +5287,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "XYZ da Vinci 1.0 Pro 3 in 1 iDig3Dprinting"
     },
@@ -5315,7 +5315,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "XYZ da Vinci Junior iDig3Dprinting"
     },
@@ -5343,7 +5343,7 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
+      "imageChecked": "2026-10-03",
       "imageSearchStatus": "search-error",
       "imageSearchQuery": "XYZ da Vinci Color iDig3Dprinting"
     }
@@ -5455,12 +5455,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-02T12:10:27.711063+00:00",
+    "checkedAt": "2026-10-03T00:11:11.691650+00:00",
     "changedProducts": 0,
     "changedImages": 0,
     "imagesFound": 0,
-    "imageSearches": 62,
-    "warnings": 115
+    "imageSearches": 58,
+    "warnings": 119
   }
 };
 })();
