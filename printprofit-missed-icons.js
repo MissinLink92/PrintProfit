@@ -2,7 +2,7 @@
 if(window.__printProfitMissedIconArt)return;
 window.__printProfitMissedIconArt=true;
 
-const asset='./assets/printprofit-missed-icons.svg?v=2';
+const asset='./assets/printprofit-missed-icons.svg?v=3';
 const iconMarkup=id=>'<svg class="pp-missed-icon pp-missed-icon-'+id+'" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="'+asset+'#pp-missed-'+id+'"></use></svg>';
 
 function setIcon(holder,id){
@@ -27,6 +27,7 @@ function installStyles(){
   style.textContent=[
     '.pp-missed-icon{display:block!important;width:35px!important;height:35px!important;min-width:35px!important;min-height:35px!important;overflow:visible!important;fill:none!important;stroke:none!important}',
     '.pp-missed-inline-icon{display:inline-block!important;vertical-align:-4px!important;width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;margin-right:6px!important}',
+    '.pp-missed-upload-inline{display:inline-block!important;vertical-align:-4px!important;width:19px!important;height:19px!important;min-width:19px!important;min-height:19px!important;margin-right:6px!important;overflow:visible!important}',
     '.pp-profit-icon{font-size:0!important;line-height:0!important}',
     '#ppProfitAdvisor .pp-profit-icon>.pp-missed-icon{width:27px!important;height:27px!important;min-width:27px!important;min-height:27px!important}',
     '#ppPrinterProfile .pp-profile-icon>.pp-missed-icon{width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important}',
