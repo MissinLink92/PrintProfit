@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — Compare Products</title>
-<link rel="icon" type="image/svg+xml" href="./assets/printprofit-favicon.svg?v=1">
-<link rel="apple-touch-icon" href="./assets/printprofit-app-icon.svg?v=1">
+<link rel="icon" type="image/svg+xml" href="./assets/printprofit-favicon-orange.svg?v=1">
+<link rel="apple-touch-icon" href="./assets/printprofit-app-icon-orange.svg?v=1">
 <style>
-:root{--bg:#101c24;--panel:#182a34;--panel2:#1e333e;--text:#f6f3ed;--muted:#b7c6cd;--line:#3b5866;--accent:#ff7800;--good:#3bdc8a;--soft:#8fa7b2}
+:root{--bg:#06131c;--panel:#0b202c;--panel2:#0f2a39;--text:#f5f9fb;--muted:#a9bdc6;--line:#285264;--accent:#ff8a24;--good:#32df8b;--soft:#9ab5c0}
 body.pp-light{--bg:#f1f4f6;--panel:#ffffff;--panel2:#eef2f4;--text:#19252d;--muted:#5e707a;--line:#c6d2d8;--soft:#6b7e88;background:#f1f4f6!important;color:var(--text)!important}
 body.pp-light .header{background:rgba(255,255,255,.94)!important;border-bottom-color:#c6d2d8!important}
 body.pp-light .nav a{color:#31434d!important}
-body.pp-light .hero{background:radial-gradient(560px 300px at 73% 44%,rgba(10,162,255,.08) 0,transparent 63%),linear-gradient(135deg,#f7f9fa 0,#eef3f5 100%)!important}
+body.pp-light .hero{background:radial-gradient(560px 300px at 73% 44%,rgba(53,214,229,.08) 0,transparent 63%),linear-gradient(135deg,#f7f9fa 0,#eef3f5 100%)!important}
 body.pp-light .hero .lead{color:#536771!important}
 body.pp-light .tool{background:linear-gradient(180deg,#fff,#f3f6f7)!important;box-shadow:0 4px 14px rgba(30,55,68,.08)}
 body.pp-light .tool input,body.pp-light .tool select{background:#f6f8f9!important;color:#1b2a33!important;border-color:#b8c8cf!important}
@@ -37,9 +37,9 @@ body.pp-light .link:hover{color:var(--accent)!important;border-color:var(--accen
 body{background:radial-gradient(circle at 82% 5%,rgba(65,154,194,.16),transparent 27%),radial-gradient(circle at 15% 70%,rgba(255,120,0,.045),transparent 24%),linear-gradient(180deg,#101c24 0,#0f1a21 100%)}
 .wrap{width:min(1240px,calc(100% - 28px));margin:0 auto;padding-bottom:42px}
 .header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:70px;padding:8px 0;border-bottom:1px solid rgba(59,88,102,.8);background:rgba(16,28,36,.94);backdrop-filter:blur(10px)}
-.brand{display:flex;align-items:center;width:245px;height:60px;box-sizing:border-box;flex:0 0 245px}.brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block;content:url("./assets/printprofit-logo-blue.svg?v=1")}body.pp-light .brand img{content:url("./assets/printprofit-logo-blue-light.svg?v=1")}
+.brand{display:flex;align-items:center;width:245px;height:60px;box-sizing:border-box;flex:0 0 245px}.brand img{width:100%;height:60px;object-fit:contain;object-position:center;display:block;content:url("./assets/printprofit-logo-orange.svg?v=5")}body.pp-light .brand img{content:url("./assets/printprofit-logo-orange.svg?v=5")}
 .nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.nav a{color:#dce5eb;text-decoration:none;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px;transition:background .18s,color .18s}.nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}
-.pp-theme-toggle{display:inline-flex;align-items:center;gap:8px;margin-left:4px;color:#c9d5db;font-size:10px;font-weight:800;white-space:nowrap;cursor:pointer;user-select:none}.pp-theme-toggle input{position:absolute;opacity:0;pointer-events:none}.pp-toggle-track{width:42px;height:22px;border:1px solid #4b6977;border-radius:999px;background:#1c313c;display:inline-flex;align-items:center;padding:2px;transition:.18s}.pp-toggle-track span{width:16px;height:16px;border-radius:50%;background:#f8fafb;box-shadow:0 2px 6px rgba(0,0,0,.3);transform:translateX(0);transition:.18s}.pp-theme-toggle input:checked + .pp-toggle-track{background:linear-gradient(90deg,#078ff4,#0aa2ff);border-color:#0aa2ff}.pp-theme-toggle input:checked + .pp-toggle-track span{transform:translateX(20px)}.pp-theme-toggle:focus-within .pp-toggle-track{outline:2px solid rgba(255,120,0,.35);outline-offset:2px}
+.pp-theme-toggle{display:inline-flex;align-items:center;gap:8px;margin-left:4px;color:#c9d5db;font-size:10px;font-weight:800;white-space:nowrap;cursor:pointer;user-select:none}.pp-theme-toggle input{position:absolute;opacity:0;pointer-events:none}.pp-toggle-track{width:42px;height:22px;border:1px solid #4b6977;border-radius:999px;background:#1c313c;display:inline-flex;align-items:center;padding:2px;transition:.18s}.pp-toggle-track span{width:16px;height:16px;border-radius:50%;background:#f8fafb;box-shadow:0 2px 6px rgba(0,0,0,.3);transform:translateX(0);transition:.18s}.pp-theme-toggle input:checked + .pp-toggle-track{background:linear-gradient(90deg,#009FEF,#35d6e5);border-color:#35d6e5}.pp-theme-toggle input:checked + .pp-toggle-track span{transform:translateX(20px)}.pp-theme-toggle:focus-within .pp-toggle-track{outline:2px solid rgba(255,120,0,.35);outline-offset:2px}
 @media(max-width:760px){.pp-theme-toggle{order:3;margin-left:auto}.header{flex-wrap:wrap}}.nav a:hover,.nav a.active{background:#ff780014;color:var(--accent)}
 .hero{padding:36px 0 20px}.kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--accent)}h1{font-size:clamp(38px,6vw,60px);line-height:.95;letter-spacing:-.04em;margin:9px 0 12px}h1 strong{color:var(--accent)}.lead{max-width:830px;color:#c7d3d9;font-size:15px;line-height:1.6;margin:0}
 .tools{display:grid;grid-template-columns:1.6fr .85fr .95fr .95fr 1fr 1fr;gap:9px;margin:18px 0 12px}.tool{border:1px solid var(--line);background:linear-gradient(180deg,#1a2d38,#172832);border-radius:11px;padding:10px;box-shadow:0 4px 14px rgba(0,0,0,.08)}.tool label{display:block;color:#c3d0d6;font-size:9px;font-weight:800;margin-bottom:5px}.tool input,.tool select{width:100%;background:#213742;color:var(--text);border:1px solid #486775;border-radius:8px;padding:9px;font:600 11px Inter,Segoe UI,system-ui,sans-serif;outline:0}.tool input::placeholder{color:#92a9b4}.tool input:focus,.tool select:focus{border-color:var(--accent)}
@@ -172,9 +172,10 @@ td strong{font-size:13px!important}
  .tool label{font-size:12px!important}.tool input,.tool select{font-size:16px!important}
  td{font-size:12.5px!important}.card p{font-size:12px!important}
 }
+</style>
 <style id="ppCompareVisualFinal">
-:root{--ppc-bg:#06121b;--ppc-panel:#0b1f2b;--ppc-panel2:#102a38;--ppc-line:#294b5b;--ppc-line2:#3a6576;--ppc-text:#f5f9fb;--ppc-muted:#a8bbc5;--ppc-cyan:#27c7d9;--ppc-orange:#ff7800}
-html,body{background:radial-gradient(circle at 82% 7%,rgba(39,199,217,.11),transparent 25%),radial-gradient(circle at 11% 42%,rgba(255,120,0,.05),transparent 24%),linear-gradient(180deg,#06121b,#07131c 48%,#06121b)!important;color:var(--ppc-text)!important}
+:root{--ppc-bg:#06131c;--ppc-panel:#0b202c;--ppc-panel2:#0f2a39;--ppc-line:#285264;--ppc-line2:#3a6576;--ppc-text:#f5f9fb;--ppc-muted:#a9bdc6;--ppc-cyan:#35d6e5;--ppc-orange:#ff8a24}
+html,body{background:radial-gradient(circle at 82% 7%,rgba(53,214,229,.11),transparent 25%),radial-gradient(circle at 11% 42%,rgba(255,120,0,.05),transparent 24%),linear-gradient(180deg,#06121b,#07131c 48%,#06121b)!important;color:var(--ppc-text)!important}
 .wrap{width:min(1320px,calc(100% - 36px))!important;padding-bottom:60px!important}
 .header{min-height:64px!important;height:64px!important;padding:5px 0!important;gap:18px!important;background:rgba(5,16,24,.94)!important;border-bottom:1px solid #2a4b5b!important;box-shadow:0 8px 28px rgba(0,0,0,.22)!important}
 .brand{width:205px!important;height:52px!important;flex-basis:205px!important}.brand img{height:52px!important}
@@ -188,7 +189,7 @@ h1{font-size:clamp(44px,6vw,68px)!important;line-height:.92!important;letter-spa
 .tools,.extra-tools{gap:10px!important;margin:15px 0 10px!important}.tool{padding:12px!important;border-radius:13px!important;border:1px solid #2d5262!important;background:linear-gradient(180deg,#102938,#0b202d)!important;box-shadow:0 8px 22px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.025)!important}
 .tool:hover{border-color:#396679!important;transform:translateY(-1px)}.tool label{font-size:10px!important;letter-spacing:.04em!important;color:#cfdee4!important}
 .tool input,.tool select{min-height:44px!important;padding:10px 11px!important;border-radius:9px!important;border:1px solid #355d6d!important;background:#081a25!important;color:#f4f8fa!important}
-.tool input:focus,.tool select:focus{border-color:var(--ppc-cyan)!important;box-shadow:0 0 0 2px #27c7d91d!important}
+.tool input:focus,.tool select:focus{border-color:var(--ppc-cyan)!important;box-shadow:0 0 0 2px #35d6e51d!important}
 .quick-tools{margin:8px 0 12px!important;gap:8px!important}.quick-btn{border:1px solid #2c5262!important;background:#091b27!important;color:#c9d8de!important;padding:8px 11px!important;font-size:10px!important;font-weight:850!important}
 .quick-btn:hover,.quick-btn.active{border-color:var(--ppc-orange)!important;color:#ffad69!important;background:#ff78000b!important}
 .meta{margin:9px 3px 12px!important;font-size:10px!important;color:#92a8b3!important}
@@ -199,7 +200,7 @@ h1{font-size:clamp(44px,6vw,68px)!important;line-height:.92!important;letter-spa
 .selected-toggle{min-height:34px!important;border-color:#2e5262!important;background:#081a25!important;color:#cbd8de!important}.selected-toggle.active{border-color:var(--ppc-orange)!important;color:#ffac68!important;background:#ff78000a!important}
 .table-wrap{border-radius:16px!important;border:1px solid #2c5262!important;background:linear-gradient(180deg,#0d2330,#091923)!important;box-shadow:0 16px 42px rgba(0,0,0,.20)!important}
 table{min-width:980px!important}th{top:64px!important;padding:14px 12px!important;background:#081b26!important;color:#bcd0d8!important;border-bottom:1px solid #315a6b!important;font-size:9px!important;letter-spacing:.13em!important}
-td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;border-bottom-color:rgba(96,135,149,.12)!important}tbody tr:hover td{background:rgba(39,199,217,.035)!important}
+td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;border-bottom-color:rgba(96,135,149,.12)!important}tbody tr:hover td{background:rgba(53,214,229,.035)!important}
 .product-thumb{width:72px!important;height:72px!important;flex-basis:72px!important;border-radius:11px!important;border-color:#315a6b!important;background:#081923!important}.product-thumb-wrap{width:72px!important;height:72px!important;flex-basis:72px!important}
 .product-name-wrap{min-width:330px!important;gap:11px!important}.product-name-wrap strong{font-size:12px!important;line-height:1.35!important}.price{font-size:17px!important}.unit{font-size:11px!important;color:#ffb36f!important}
 .link{min-height:34px!important;padding:7px 10px!important;border-radius:8px!important;border-color:#3a6170!important;background:#081a24!important;font-size:9px!important}.link:hover{border-color:var(--ppc-orange)!important;background:#ff78000a!important;color:#ffad69!important}
@@ -214,6 +215,45 @@ td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;
 .section{margin-top:30px!important}.section h2{font-size:20px!important;margin-bottom:10px!important}.card{border-radius:15px!important;padding:16px!important;background:linear-gradient(180deg,#102a38,#0b202c)!important;border-color:#315767!important}.card h3{font-size:13px!important}.card p{font-size:10.5px!important;line-height:1.6!important;color:#a8bbc5!important}.brand-pill{font-size:10px!important;padding:8px 11px!important;background:#0b202c!important;border-color:#315767!important}
 @media(max-width:900px){.wrap{width:min(100% - 22px,1320px)!important}.header{height:auto!important;min-height:64px!important;flex-wrap:wrap!important;padding:6px 0!important}.nav{width:100%!important;overflow:auto!important;flex-wrap:nowrap!important}.tools,.extra-tools{grid-template-columns:repeat(2,minmax(0,1fr))!important}.insight{grid-template-columns:1fr 1fr!important}}
 @media(max-width:650px){.tools,.extra-tools{grid-template-columns:1fr!important}.insight{grid-template-columns:1fr!important}h1{font-size:42px!important}.lead{font-size:14px!important}th{top:0!important}.compare-bar{width:calc(100% - 16px)!important;left:8px!important;transform:none!important}}
+
+/* Match the main calculator header, navigation and shared icon artwork. */
+body .header{height:58px!important;min-height:58px!important;padding:0 clamp(18px,3vw,48px)!important;gap:16px!important;background:rgba(5,14,20,.98)!important;border-bottom:1px solid #294653!important;box-shadow:0 10px 30px rgba(0,0,0,.12)!important}
+body .brand{width:218px!important;height:46px!important;flex:0 0 218px!important}
+body .brand img{width:100%!important;height:46px!important;object-fit:contain!important;object-position:left center!important;content:url("./assets/printprofit-logo-orange.svg?v=5")!important}
+body .nav{display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;flex:1 1 auto!important;min-width:0!important}
+body .nav a{height:48px!important;min-height:48px!important;padding:0 13px!important;border:1px solid transparent!important;border-radius:12px!important;display:inline-flex!important;align-items:center!important;gap:8px!important;background:transparent!important;color:#e1ebef!important;font-size:13px!important;font-weight:850!important;white-space:nowrap!important;box-shadow:none!important}
+body .nav a:hover{background:#009FEF0f!important;color:#fff!important;border-color:transparent!important}
+body .nav a.active{border-color:#ff9a42!important;background:linear-gradient(135deg,#ff9842,#ff7800)!important;color:#17100a!important;box-shadow:0 5px 18px #ff780033!important}
+body .nav a.active .nav-icon{color:#17100a!important}
+body .nav-icon{width:27px;height:27px;display:grid;place-items:center;flex:0 0 27px;color:#009FEF}
+body .nav-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round}
+body .tool label{display:flex!important;align-items:center!important;gap:7px!important}
+body .pp-tool-icon{width:17px;height:17px;flex:0 0 17px;color:#35d6e5;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+body .kind{align-items:center!important;gap:6px!important}
+body .kind.filament,body .kind.printer{color:#bcecf1!important;border-color:#35d6e566!important;background:#35d6e50d!important}
+body .kind .pp-shared-icon{width:17px;height:17px;flex:0 0 17px;color:#35d6e5;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+body .product-thumb-fallback{background:linear-gradient(145deg,#0b202c,#081923)!important;color:#35d6e5!important}
+body .product-thumb-fallback .thumb-placeholder-icon{width:40px;height:40px;color:#35d6e5}
+body .pp-theme-toggle{height:38px!important;padding:0 9px!important;border:1px solid #2b5363!important;border-radius:12px!important;background:#071b27!important;color:#dce8ee!important}
+body .pp-toggle-track{border-color:#3a6475!important;background:#132b38!important}
+body .pp-theme-toggle input:checked + .pp-toggle-track{background:linear-gradient(90deg,#19d8ff,#009FEF)!important;border-color:#19d8ff!important}
+body.pp-light .header{background:rgba(255,255,255,.94)!important;border-bottom-color:#c6d2d8!important}
+body.pp-light .nav a{color:#31434d!important}
+body.pp-light .nav a.active{background:linear-gradient(135deg,#ff9842,#ff7800)!important;border-color:#ff9a42!important;color:#17100a!important}
+body.pp-light .nav a.active .nav-icon{color:#17100a!important}
+body.pp-light .kind.filament,body.pp-light .kind.printer{color:#23434c!important;background:rgba(53,214,229,.12)!important;border-color:#4b9eaa!important}
+body.pp-light .kind .pp-shared-icon{color:#007f9b!important}
+@media(max-width:900px){
+ body .header{height:auto!important;min-height:64px!important;flex-wrap:wrap!important;padding:6px clamp(12px,3vw,22px)!important}
+ body .brand{width:176px!important;flex-basis:176px!important}
+ body .nav{order:3!important;flex:0 0 100%!important;width:100%!important;overflow-x:auto!important;justify-content:flex-start!important;flex-wrap:nowrap!important}
+ body .pp-theme-toggle{margin-left:auto!important;order:2!important}
+}
+@media(max-width:560px){
+ body .nav a{height:42px!important;min-height:42px!important;padding-inline:8px!important;font-size:11px!important}
+ body .nav-icon{width:22px;height:22px;flex-basis:22px}
+ body .nav-icon svg{width:20px;height:20px}
+}
 </style>
 
 /* Compare filter groups: make adjacent filter boxes touch cleanly. */
@@ -227,15 +267,15 @@ td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;
 .table-compare-check.compare-check{width:14px!important;height:14px!important;min-width:14px!important;margin:0 0 0 2px!important;border-radius:4px!important}
 .table-compare-check.compare-check:checked:after{font-size:10px!important}
 </style>
-</style>\n</head>
+</head>
 <body data-pp-standalone-i18n="1">
 <div class="wrap">
 <header class="header">
-<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-logo-blue.svg?v=1" alt="PrintProfit"></a>
+<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"></a>
 <nav class="nav" aria-label="PrintProfit navigation">
-<a href="./index.html">Calculator</a>
-<a href="./price-finder.html" class="active" aria-current="page">Compare Products</a>
-<a href="./guide.html">Guide &amp; Help</a>
+<a href="./index.html"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-home"></use></svg></span>Home</a>
+<a href="./price-finder.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-compare"></use></svg></span>Compare Products</a>
+<a href="./guide.html"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-book"></use></svg></span>Guide &amp; Help</a>
 </nav>
 <label class="pp-theme-toggle" title="Toggle dark mode">
   <span id="themeLabel">Dark mode</span>
@@ -251,12 +291,12 @@ td{padding:13px 12px!important;font-size:11px!important;color:#d9e5ea!important;
 </section>
 
 <div class="tools">
-<div class="tool"><label>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
-<div class="tool"><label>Category</label><select id="category"><option value="all">All products</option><option value="filament">Filament</option><option value="printer">3D printers</option></select></div>
-<div class="tool"><label>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
-<div class="tool"><label>Material / type</label><select id="type"><option value="all">All types</option></select></div>
-<div class="tool"><label>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
-<div class="tool"><label>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option><option value="filament">Filament</option><option value="printer">3D printers</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Material / type</label><select id="type"><option value="all">All types</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-package"></use></svg>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
 </div>
 <div class="extra-tools">
 <div class="tool"><label>Colour</label><select id="colour"><option value="all">All colours</option></select></div>
@@ -465,17 +505,21 @@ function initThemeSwitch(){
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function imageFallback(x){
- const isPrinter=x.category==='printer';
- const fill=x.category==='printer'?'#607888':(x.colourHex||'#6b7c88');
- const svg=isPrinter
-  ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect x="17" y="42" width="86" height="52" rx="8" fill="#172b36" stroke="#ff7800" stroke-width="3"/><rect x="30" y="51" width="60" height="24" rx="3" fill="#071018" stroke="#607888"/><rect x="39" y="80" width="42" height="6" rx="3" fill="#607888"/><path d="M41 42V25h38v17" fill="none" stroke="#ff7800" stroke-width="4"/><path d="M51 25v-9h18v9" fill="'+fill+'" stroke="#ff7800" stroke-width="3"/></svg>'
-  : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="43" fill="#172b36" stroke="#ff7800" stroke-width="3"/><circle cx="60" cy="60" r="15" fill="#071018" stroke="'+fill+'" stroke-width="8"/><path d="M24 44c20-22 52-25 73-8M25 76c21 18 50 20 70 7" fill="none" stroke="'+fill+'" stroke-width="7" stroke-linecap="round"/><path d="M39 25c12-6 29-8 42-4" fill="none" stroke="#ff7800" stroke-width="3" stroke-linecap="round"/></svg>';
+ const printer=x.category==='printer';
+ const symbol=printer
+  ? '<path d="M13 18V7h22v11M10 18h28a5 5 0 0 1 5 5v10H5V23a5 5 0 0 1 5-5Z"/><path d="M13 31h22v10H13zM17 36h14M36 23h1"/>'
+  : '<ellipse cx="24" cy="12" rx="15" ry="6"/><path d="M9 12v23c0 4 7 7 15 7s15-3 15-7V12"/><ellipse cx="24" cy="12" rx="5" ry="2"/><path d="M19 12v22c0 2 2 4 5 4s5-2 5-4V12M39 27c5 0 7 3 6 6s-4 4-7 3"/>';
+ const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#35d6e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="43" height="43" rx="10" fill="#0b202c" stroke="#285264" stroke-width="2"/>'+symbol+'</svg>';
  return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+}
+function sharedIcon(name,extraClass=''){
+ const symbol=name==='printer'?'printer':name==='filament'?'filament':name==='compare'?'compare':name==='home'?'home':name==='book'?'book':name==='search'?'search':name==='tag'?'tag':name==='package'?'package':name==='chart'?'chart':'cube';
+ return '<svg class="pp-shared-icon '+extraClass+'" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-'+symbol+'"></use></svg>';
 }
 function productImage(x){
  const fallback=imageFallback(x);
  const src=x.image||fallback;
- return '<div class="product-thumb-wrap"><img class="product-thumb" src="'+esc(src)+'" alt="" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+(x.category==='printer'?'▣':'◉')+'</span></div>';
+ return '<div class="product-thumb-wrap"><img class="product-thumb" src="'+esc(src)+'" alt="" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+sharedIcon(x.category==='printer'?'printer':'filament','thumb-placeholder-icon')+'</span></div>';
 }
 function sparkline(history){
  const h=(Array.isArray(history)?history:[]).filter(x=>x&&Number.isFinite(Number(x.price))).slice(-30);
@@ -647,7 +691,7 @@ function setResultView(mode){
 function render(){
  const rows=filtered();
  $('rows').innerHTML=rows.map(x=>'<tr>'+
-  '<td><div class="type-cell"><span class="kind '+x.category+'">'+(x.category==='filament'?'Material':'3D Printer')+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
+  '<td><div class="type-cell"><span class="kind '+x.category+'">'+sharedIcon(x.category==='filament'?'filament':'printer')+(x.category==='filament'?'Material':'3D Printer')+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
   '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
