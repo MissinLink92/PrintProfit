@@ -23,15 +23,24 @@
       <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+
+    <linearGradient id="mi-cube-top" x1="9" y1="7" x2="37" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#dffcff"/><stop offset=".28" stop-color="#35d6e5"/><stop offset="1" stop-color="#078adf"/></linearGradient>
+    <linearGradient id="mi-cube-left" x1="8" y1="16" x2="24" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#19d8ff"/><stop offset=".52" stop-color="#087dc8"/><stop offset="1" stop-color="#07376f"/></linearGradient>
+    <linearGradient id="mi-cube-right" x1="24" y1="25" x2="42" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#1169bd"/><stop offset="1" stop-color="#071d4c"/></linearGradient>
+    <linearGradient id="mi-page" x1="20" y1="7" x2="120" y2="112" gradientUnits="userSpaceOnUse"><stop stop-color="#1c8fe6"/><stop offset=".42" stop-color="#075ca7"/><stop offset="1" stop-color="#062b57"/></linearGradient>
+    <linearGradient id="mi-info-glass" x1="9" y1="7" x2="37" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#2feaff"/><stop offset=".42" stop-color="#0799ec"/><stop offset="1" stop-color="#0754ae"/></linearGradient>
+    <linearGradient id="mi-badge" x1="89" y1="66" x2="128" y2="111" gradientUnits="userSpaceOnUse"><stop stop-color="#275c7e"/><stop offset=".48" stop-color="#102d4b"/><stop offset="1" stop-color="#071827"/></linearGradient>
   </defs>
 
-  <symbol id="pp-missed-model-cube" viewBox="0 0 48 48">
-    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m24 5.5 17 9.7v17.6L24 42.5 7 32.8V15.2L24 5.5Z" fill="#0c2633" fill-opacity=".48" stroke="url(#mi-cyan)" stroke-width="2.4"/>
-      <path d="m7 15.2 17 9.9 17-9.9M24 25.1v17.4" stroke="url(#mi-cyan)" stroke-width="2.4"/>
-      <path d="m24 5.5 17 9.7-17 9.9-17-9.9 17-9.7Z" stroke="#e6fdff" stroke-opacity=".78" stroke-width="1.15"/>
-    </g>
-  </symbol>
+  <symbol id="pp-missed-model-cube" viewBox="0 0 48 48"><g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+<path d="m24 5.5 17 9.7-17 9.9L7 15.2Z" fill="url(#mi-cube-top)" stroke="#d9fbff" stroke-width="1.45"/>
+<path d="M7 15.2 24 25.1v17.4L7 32.8Z" fill="url(#mi-cube-left)" stroke="#66edff" stroke-width="1.6"/>
+<path d="m41 15.2-17 9.9v17.4l17-9.7Z" fill="url(#mi-cube-right)" stroke="#36bfff" stroke-width="1.6"/>
+<path d="m10.1 17 13.9 8.1L38 17" fill="none" stroke="#f1ffff" stroke-opacity=".86" stroke-width="1.35"/>
+<path d="M24 25.1v16.2" fill="none" stroke="#c7faff" stroke-width="1.45"/>
+<path d="m10 30.6 10.8 6.3m6.4-9.9 10.4-6.1" fill="none" stroke="#85f2ff" stroke-opacity=".62" stroke-width="1.1"/>
+<path d="m18.1 9 5.9-3.5" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.35"/>
+</g></symbol>
 
   <symbol id="pp-missed-profit-bulb" viewBox="0 0 48 48">
     <g filter="url(#mi-warm-glow)" stroke-linecap="round" stroke-linejoin="round">
@@ -42,15 +51,15 @@
     </g>
   </symbol>
 
-  <symbol id="pp-missed-results-document" viewBox="0 0 48 48">
-    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 5.5h16l9 9v27H12V5.5Z" fill="#0c2633" fill-opacity=".52" stroke="url(#mi-cyan)" stroke-width="2.3"/>
-      <path d="M28 5.5v9h9" stroke="#e5fbff" stroke-width="1.8"/>
-      <path d="M17.5 21h14M17.5 27.5h14" stroke="url(#mi-cyan)" stroke-width="2"/>
-      <path d="m18 34 2.8 2.8 5.1-5.5" stroke="#dffcff" stroke-width="2.2"/>
-      <path d="M29.5 35.5h2" stroke="#35d6e5" stroke-width="2"/>
-    </g>
-  </symbol>
+  <symbol id="pp-missed-results-document" viewBox="0 0 48 48"><g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+<path d="M11 5.5h17l10 10v26H11Z" fill="url(#mi-page)" stroke="#45ddff" stroke-width="2.1"/>
+<path d="M27.5 6v10h10" fill="#1b9ee8" stroke="#dffcff" stroke-width="1.8"/>
+<path d="M15 9.3v29.5" fill="none" stroke="#a8f5ff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M17 22h15.5M17 27.5h13" fill="none" stroke="#e7fbff" stroke-width="1.9"/>
+<path d="m17.5 34.2 3.3 3 5.3-6" fill="none" stroke="#44efa0" stroke-width="2.4"/>
+<path d="M29.5 35.5h3.3" fill="none" stroke="#58e5ff" stroke-width="2"/>
+<path d="m29 7 6.7 6.8" fill="none" stroke="#fff" stroke-opacity=".42" stroke-width="1.2"/>
+</g></symbol>
 
   <symbol id="pp-missed-printer-gear" viewBox="0 0 48 48">
     <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
@@ -60,23 +69,32 @@
     </g>
   </symbol>
 
-  <symbol id="pp-missed-info" viewBox="0 0 48 48">
-    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="24" cy="24" r="17" fill="#0c2633" fill-opacity=".58" stroke="url(#mi-cyan)" stroke-width="2.4"/>
-      <circle cx="24" cy="15.5" r="1.7" fill="#e6fdff" stroke="#dffcff" stroke-width="1"/>
-      <path d="M24 22v11" stroke="url(#mi-cyan)" stroke-width="3"/>
-    </g>
-  </symbol>
+  <symbol id="pp-missed-info" viewBox="0 0 48 48"><g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="24" cy="24" r="18.2" fill="url(#mi-info-glass)" stroke="#bff9ff" stroke-width="1.7"/>
+<circle cx="24" cy="24" r="15.1" fill="none" stroke="#34ddff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M13.5 13.2c3-3.1 6.6-4.5 10.7-4.5" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.8"/>
+<circle cx="24" cy="16.6" r="2.1" fill="#fff" stroke="#e9ffff" stroke-width=".75"/>
+<path d="M24 22.2v12" fill="none" stroke="#f2ffff" stroke-width="3.4"/>
+<path d="M22.8 22.5h2.4" fill="none" stroke="#fff" stroke-width="2.2"/>
+</g></symbol>
 
-  <symbol id="pp-missed-gcode-upload" viewBox="0 0 140 120">
-    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 8h70l34 34v70H18Z" fill="#0c2633" fill-opacity=".52" stroke="url(#mi-cyan)" stroke-width="3"/>
-      <path d="M88 8v34h34" stroke="#e6fdff" stroke-opacity=".82" stroke-width="2.2"/>
-      <rect x="28" y="61" width="56" height="25" rx="3" fill="#082330" stroke="url(#mi-cyan)" stroke-width="2.4"/>
-      <text x="56" y="78" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="900" letter-spacing=".5" fill="#dffcff">GCODE</text>
-      <circle cx="109" cy="88" r="22" fill="#0b1b27" stroke="url(#mi-silver)" stroke-width="2.4"/>
-      <path d="M109 99V77m-8 8 8-8 8 8" fill="none" stroke="url(#mi-cyan)" stroke-width="3.2"/>
-      <path d="M101 103h16" stroke="#7deeff" stroke-width="1.5" stroke-opacity=".78"/>
-    </g>
-  </symbol>
+  <symbol id="pp-missed-gcode-upload" viewBox="0 0 140 120"><g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+<path d="M17 8h72l33 33v71H17Z" fill="url(#mi-page)" stroke="#26d9ff" stroke-width="3"/>
+<path d="M88.5 8.5v34H122" fill="#1387da" stroke="#dffcff" stroke-width="2.1"/>
+<path d="M28 53h47M28 59h34" fill="none" stroke="#9deeff" stroke-opacity=".64" stroke-width="2"/>
+<rect x="27" y="66" width="61" height="24" rx="5" fill="#062b50" stroke="#50e8ff" stroke-width="2.6"/>
+<rect x="30.5" y="69.5" width="54" height="17" rx="3" fill="#0a4770" stroke="#9af5ff" stroke-opacity=".58" stroke-width="1"/>
+<text x="57.5" y="81.5" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11.5" font-weight="900" letter-spacing=".55" fill="#efffff">GCODE</text>
+<circle cx="108" cy="91" r="23" fill="url(#mi-badge)" stroke="#cdeeff" stroke-width="2.5"/>
+<circle cx="108" cy="91" r="18.5" fill="none" stroke="#25d9ff" stroke-opacity=".82" stroke-width="1.4"/>
+<path d="M108 102V79m-8.5 8 8.5-8 8.5 8" fill="none" stroke="#f3ffff" stroke-width="3.7"/>
+<path d="M99 106h18" fill="none" stroke="#35d6e5" stroke-width="2.4"/>
+<path d="M96.5 76c3-3.1 7-4.8 11.5-4.8" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
+</g></symbol>
+<symbol id="pp-missed-upload-arrow" viewBox="0 0 48 48"><g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 31V10m-8.5 8.5L24 10l8.5 8.5" fill="none" stroke="#eaffff" stroke-width="4"/>
+<path d="M24 31V13m-8.5 5.5L24 10l8.5 8.5" fill="none" stroke="url(#mi-cyan)" stroke-width="2.5"/>
+<path d="M9 29v10a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V29" fill="url(#mi-page)" stroke="#68eaff" stroke-width="2"/>
+<path d="M13 37h22" fill="none" stroke="#d8fcff" stroke-opacity=".82" stroke-width="1.7"/>
+</g></symbol>
 </svg>
