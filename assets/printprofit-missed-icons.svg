@@ -59,4 +59,24 @@
       <circle cx="24" cy="25.8" r="2.3" fill="#bdeeff" stroke="#eefcff" stroke-width="1"/>
     </g>
   </symbol>
+
+  <symbol id="pp-missed-info" viewBox="0 0 48 48">
+    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="24" cy="24" r="17" fill="#0c2633" fill-opacity=".58" stroke="url(#mi-cyan)" stroke-width="2.4"/>
+      <circle cx="24" cy="15.5" r="1.7" fill="#e6fdff" stroke="#dffcff" stroke-width="1"/>
+      <path d="M24 22v11" stroke="url(#mi-cyan)" stroke-width="3"/>
+    </g>
+  </symbol>
+
+  <symbol id="pp-missed-gcode-upload" viewBox="0 0 140 120">
+    <g filter="url(#mi-cyan-glow)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8h70l34 34v70H18Z" fill="#0c2633" fill-opacity=".52" stroke="url(#mi-cyan)" stroke-width="3"/>
+      <path d="M88 8v34h34" stroke="#e6fdff" stroke-opacity=".82" stroke-width="2.2"/>
+      <rect x="28" y="61" width="56" height="25" rx="3" fill="#082330" stroke="url(#mi-cyan)" stroke-width="2.4"/>
+      <text x="56" y="78" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="900" letter-spacing=".5" fill="#dffcff">GCODE</text>
+      <circle cx="109" cy="88" r="22" fill="#0b1b27" stroke="url(#mi-silver)" stroke-width="2.4"/>
+      <path d="M109 99V77m-8 8 8-8 8 8" fill="none" stroke="url(#mi-cyan)" stroke-width="3.2"/>
+      <path d="M101 103h16" stroke="#7deeff" stroke-width="1.5" stroke-opacity=".78"/>
+    </g>
+  </symbol>
 </svg>
