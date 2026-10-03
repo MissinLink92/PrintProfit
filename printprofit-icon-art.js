@@ -112,6 +112,7 @@ if(!slot){slot=document.createElement('span');slot.className='pp-reference-actio
 setSprite(slot,'printprofit-action-icons.webp',6,rule[1]);
 });
 applySpecialIcons();
+watchSpecialIcons();
 return true;
 }
 if(!apply()){
@@ -119,6 +120,5 @@ const observer=new MutationObserver(()=>{if(apply())observer.disconnect()});
 observer.observe(document.body,{childList:true,subtree:true});
 setTimeout(()=>observer.disconnect(),10000);
 }
-watchSpecialIcons();
-setTimeout(()=>{apply();watchSpecialIcons()},350);
+setTimeout(apply,350);
 })();
