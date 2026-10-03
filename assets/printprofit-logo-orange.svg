@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 110" role="img" aria-labelledby="title desc">
 <title id="title">PrintProfit</title>
-<desc id="desc">PrintProfit orange balance and printer monogram with the PrintProfit wordmark and pricing calculator descriptor.</desc>
+<desc id="desc">PrintProfit orange balance and printer monogram with a compact wordmark and matching calculator descriptor.</desc>
 <defs>
   <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffad59"/><stop offset=".55" stop-color="#ff8720"/><stop offset="1" stop-color="#ed6500"/></linearGradient>
   <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd3d8"/></linearGradient>
   <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity=".28"/></filter>
 </defs>
-<g transform="translate(-56.1 -11.2) scale(.46 .40)" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+<g transform="translate(-62 -11.2) scale(.50 .40)" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
   <rect x="255" y="28" width="90" height="60" rx="9" fill="url(#orange)"/>
   <path d="M245 50H160q-12 0-12 10t12 10h85M355 50h85q12 0 12 10t-12 10h-85" fill="none" stroke="url(#orange)" stroke-width="14"/>
   <path d="M275 88v26M325 88v26M300 112v142" fill="none" stroke="url(#orange)" stroke-width="14"/>
@@ -19,8 +19,8 @@
   <path fill="url(#silver)" fill-rule="evenodd" d="M327 126h35c27 0 46 15 46 39s-19 39-46 39h-11v41h-24Zm24 24v30h11c12 0 19-5 19-15s-7-15-19-15Z"/>
 </g>
 <g font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="900" letter-spacing="-2.2">
-  <text x="168" y="64" font-size="64" fill="url(#silver)">Print</text>
-  <text x="313" y="64" font-size="64" fill="url(#orange)">Profit</text>
+  <text x="183" y="64" font-size="64" textLength="128" lengthAdjust="spacingAndGlyphs" fill="url(#silver)">Print</text>
+  <text x="319" y="64" font-size="64" textLength="145" lengthAdjust="spacingAndGlyphs" fill="url(#orange)">Profit</text>
 </g>
-<text x="169" y="92" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#d7dfe3">3D PRINTING COST &amp; PRICING CALCULATOR</text>
+<text x="183" y="92" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="800" letter-spacing="1.3" fill="#d7dfe3">3D PRINTING COST &amp; PRICING CALCULATOR</text>
 </svg>
