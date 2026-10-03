@@ -1961,8 +1961,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI PLA Rapido - Yellow QIDI UK Store"
     },
     {
@@ -2367,8 +2367,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI ASA - White QIDI UK Store"
     },
     {
@@ -2426,7 +2426,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "QIDI PLA-CF - Dark Red QIDI UK Store"
     },
     {
@@ -2454,8 +2454,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "QIDI PLA-CF - Lavender Purple QIDI UK Store"
     },
     {
@@ -3195,8 +3195,8 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "not-found",
       "imageSearchQuery": "Anycubic High-Speed PLA - Purple Opulence Anycubic UK"
     },
     {
@@ -3631,7 +3631,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "fetch-error",
       "imageSearchQuery": "Anycubic PLA-CF - Lava Grey Anycubic UK"
     },
     {
@@ -4818,7 +4818,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "search-error",
       "imageSearchQuery": "Creality K2 SE Creality UK"
     },
     {
@@ -4846,7 +4846,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "reference",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "not-found",
+      "imageSearchStatus": "search-error",
       "imageSearchQuery": "Creality Ender-5 Max Creality UK"
     },
     {
@@ -5455,12 +5455,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-03T00:11:11.691650+00:00",
+    "checkedAt": "2026-10-03T14:54:59.226624+00:00",
     "changedProducts": 0,
     "changedImages": 0,
     "imagesFound": 0,
-    "imageSearches": 58,
-    "warnings": 119
+    "imageSearches": 60,
+    "warnings": 117
   }
 };
 })();
