@@ -39,6 +39,9 @@ function apply(){
   const modelHeading=[...document.querySelectorAll('.shell .head h2,.shell .head h3')]
     .find(el=>el.textContent.trim().replace(/\s+/g,' ').toLowerCase()==='your model');
   setIcon(modelHeading?.closest('.head')?.querySelector(':scope > .icon'),'model-cube');
+  const infoHeading=[...document.querySelectorAll('.shell .head h2,.shell .head h3')]
+    .find(el=>el.textContent.trim().toLowerCase()==='print information');
+  setIcon(infoHeading?.closest('.head')?.querySelector(':scope > .icon'),'results-document');
   setIcon(document.querySelector('#ppProfitAdvisor .pp-profit-icon'),'profit-bulb');
   setIcon(document.querySelector('#about > .head > .icon'),'results-document');
   setIcon(document.querySelector('#ppPrinterProfile .pp-profile-icon'),'printer-gear');

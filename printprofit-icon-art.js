@@ -38,9 +38,11 @@ setSprite(el,'printprofit-step-icons.webp',4,Math.min(i,3));
 root.querySelectorAll('.pvm-nav .pvm-icon').forEach((el,i)=>{
 setSprite(el,'printprofit-nav-icons.webp',5,Math.min(i,4));
 });
-const calcIndexes=[null,1,0,2,10,6,3,11,9,7,12,13];
-document.querySelectorAll('.shell .head>.icon').forEach((el,i)=>{
-const n=calcIndexes[i];
+const calcIconByHeading={"print setup":1,"printer":0,"material":2,"quantity / batch pricing":12,"operating costs":10,"additional costs":6,"electricity":3,"selling & fulfilment":11,"platform fees":9,"delivery":7};
+document.querySelectorAll('.shell .head>.icon').forEach(el=>{
+const heading=el.parentElement?.querySelector('h2,h3')?.textContent||'';
+const title=heading.replace(/^\s*\d+\s*\.\s*/,'').replace(/\s+/g,' ').trim().toLowerCase();
+const n=calcIconByHeading[title];
 if(typeof n!=='number')return;
 if(el.querySelector(':scope > svg.pp-missed-icon'))return;
 el.replaceChildren();
