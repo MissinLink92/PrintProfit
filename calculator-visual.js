@@ -212,9 +212,9 @@ function install(){
  --pp-orange-soft:#ff9a42;
  --pp-cyan:#27c7d9;
  --pp-cyan-soft:#74e4ee;
- --pp-purple:#a77cff;
+ --pp-purple:#7C4DFF;
  --pp-purple-soft:#c5a9ff;
- --pp-green:#35d07f;
+ --pp-green:#10B981;
  --pp-green-soft:#78e6a8;
  --pp-bg:#06121b;
  --pp-bg2:#0a1b25;
@@ -296,7 +296,7 @@ input:focus,select:focus,textarea:focus{
 .pp-step.active{background:linear-gradient(180deg,#27c7d90b,#27c7d904)!important}
 .pp-step.active::after{background:var(--pp-cyan)!important;box-shadow:0 0 10px #27c7d944!important}
 .pp-step.active .pp-step-number{background:var(--pp-cyan)!important;border-color:var(--pp-cyan)!important;box-shadow:0 0 16px #27c7d933!important}
-.pp-step.complete .pp-step-number{color:var(--pp-green)!important;border-color:#35d07f66!important;background:#35d07f0d!important}
+.pp-step.complete .pp-step-number{color:var(--pp-green)!important;border-color:#10B98166!important;background:#10B9810d!important}
 
 /* Model information = cyan. */
 .pp-model-status{border-color:#275361!important;background:#081c25!important}
@@ -309,7 +309,7 @@ input:focus,select:focus,textarea:focus{
  border-color:#3a3554!important;
 }
 #materialType:focus,#material:focus,#materialPack:focus,#materialPackCost:focus,#materialUsed:focus{
- border-color:var(--pp-purple)!important;box-shadow:0 0 0 2px #a77cff18!important;
+ border-color:var(--pp-purple)!important;box-shadow:0 0 0 2px #7C4DFF18!important;
 }
 
 /* Money/profit highlights = green. */
@@ -509,8 +509,8 @@ function install(){
  s.textContent=`
 /* Stage colour system: carry each journey colour into its working fields. */
 .pp-tab-panel{--stage:#27c7d9;--stage-soft:#74e4ee;--stage-rgb:39,199,217}
-.pp-tab-panel[data-panel="machine"]{--stage:#a77cff;--stage-soft:#c5a9ff;--stage-rgb:167,124,255}
-.pp-tab-panel[data-panel="costs"]{--stage:#35d07f;--stage-soft:#78e6a8;--stage-rgb:53,208,127}
+.pp-tab-panel[data-panel="machine"]{--stage:#7C4DFF;--stage-soft:#c5a9ff;--stage-rgb:167,124,255}
+.pp-tab-panel[data-panel="costs"]{--stage:#10B981;--stage-soft:#78e6a8;--stage-rgb:53,208,127}
 
 /* Make the three journey tabs and their section icons use the exact same identity colour. */
 #pp-master-quickcards button:nth-child(1){--journey:var(--pp-cyan)}
@@ -621,7 +621,7 @@ function install(){
 }
 .pp-tab-panel[data-panel="machine"] #printer:focus{
  border-color:var(--pp-purple)!important;
- box-shadow:0 0 0 2px #a77cff22,0 0 18px #a77cff0d!important;
+ box-shadow:0 0 0 2px #7C4DFF22,0 0 18px #7C4DFF0d!important;
 }
 .pp-tab-panel[data-panel="machine"] #materialType,
 .pp-tab-panel[data-panel="machine"] #material,
@@ -629,7 +629,7 @@ function install(){
 .pp-tab-panel[data-panel="machine"] #materialPackCost,
 .pp-tab-panel[data-panel="machine"] #materialUsed,
 .pp-tab-panel[data-panel="machine"] #printHours{
- border-color:#a77cff42!important;
+ border-color:#7C4DFF42!important;
 }
 .pp-tab-panel[data-panel="machine"] #materialType:hover,
 .pp-tab-panel[data-panel="machine"] #material:hover,
@@ -637,7 +637,7 @@ function install(){
 .pp-tab-panel[data-panel="machine"] #materialPackCost:hover,
 .pp-tab-panel[data-panel="machine"] #materialUsed:hover,
 .pp-tab-panel[data-panel="machine"] #printHours:hover{
- border-color:#a77cff80!important;
+ border-color:#7C4DFF80!important;
 }
 
 /* Stage 3: running costs + selling fees = green. */
@@ -650,12 +650,12 @@ function install(){
 }
 .pp-tab-panel[data-panel="costs"] input,
 .pp-tab-panel[data-panel="costs"] select{
- border-color:#35d07f38!important;
+ border-color:#10B98138!important;
 }
 .pp-tab-panel[data-panel="costs"] input:focus,
 .pp-tab-panel[data-panel="costs"] select:focus{
  border-color:var(--pp-green)!important;
- box-shadow:0 0 0 2px #35d07f1c,0 0 18px #35d07f0b!important;
+ box-shadow:0 0 0 2px #10B9811c,0 0 18px #10B9810b!important;
 }
 .pp-tab-panel[data-panel="costs"] .head .icon{color:var(--pp-green)!important}
 .pp-tab-panel[data-panel="costs"] .result-value,
@@ -712,7 +712,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 /* ===== results-icon-fix.js ===== */
 (()=>{'use strict';if(window.__ppResultsIconFix)return;window.__ppResultsIconFix=true;
 const icon='<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="7" width="28" height="34" rx="4"/><path d="M17 15h14M17 22h14M17 29h5m6 0 3-3M17 35h5"/></svg>';
-function fix(){const el=document.querySelector('#about.result .head .icon');if(!el)return false;el.innerHTML=icon;el.classList.add('pp-svg-icon');let s=document.getElementById('ppResultsIconFixStyles');if(!s){s=document.createElement('style');s.id='ppResultsIconFixStyles';document.head.appendChild(s)}s.textContent='#about.result .head>.pp-svg-icon{display:grid!important;place-items:center!important;color:#ff7800!important;border-color:#ff7800!important}#about.result .head>.pp-svg-icon:before,#about.result .head>.pp-svg-icon:after{display:none!important;content:none!important}#about.result .head>.pp-svg-icon svg{display:block!important;width:34px!important;height:34px!important;fill:none!important;stroke:currentColor!important;stroke-width:2.35!important;stroke-linecap:round!important;stroke-linejoin:round!important}';return true}
+function fix(){const el=document.querySelector('#about.result .head .icon');if(!el)return false;el.innerHTML=icon;el.classList.add('pp-svg-icon');let s=document.getElementById('ppResultsIconFixStyles');if(!s){s=document.createElement('style');s.id='ppResultsIconFixStyles';document.head.appendChild(s)}s.textContent='#about.result .head>.pp-svg-icon{display:grid!important;place-items:center!important;color:#009FEF!important;border-color:#009FEF!important}#about.result .head>.pp-svg-icon:before,#about.result .head>.pp-svg-icon:after{display:none!important;content:none!important}#about.result .head>.pp-svg-icon svg{display:block!important;width:34px!important;height:34px!important;fill:none!important;stroke:currentColor!important;stroke-width:2.35!important;stroke-linecap:round!important;stroke-linejoin:round!important}';return true}
 function boot(){if(fix())return;const t=setInterval(()=>{if(fix())clearInterval(t)},100);setTimeout(()=>clearInterval(t),15000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
 
@@ -767,7 +767,7 @@ function normalize(){
  el.dataset.ppVisualNormalized='1';
  let s=document.getElementById('ppProfitAdvisorIconVisual');
  if(!s){s=document.createElement('style');s.id='ppProfitAdvisorIconVisual';document.head.appendChild(s)}
- s.textContent='#ppProfitAdvisor .pp-profit-icon{width:60px!important;height:60px!important;min-width:60px!important;flex:0 0 60px!important;border-radius:50%!important;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.06),rgba(255,120,0,.035) 42%,rgba(255,120,0,.012) 72%)!important;border:2px solid rgba(255,120,0,.82)!important;color:#ff8a24!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 0 1px rgba(255,120,0,.10),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px rgba(255,120,0,.10)!important;overflow:hidden!important}#ppProfitAdvisor .pp-profit-icon svg{width:35px!important;height:35px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.45!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px rgba(255,120,0,.28))!important}';
+ s.textContent='#ppProfitAdvisor .pp-profit-icon{width:60px!important;height:60px!important;min-width:60px!important;flex:0 0 60px!important;border-radius:50%!important;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.06),rgba(0,159,239,.035) 42%,rgba(0,159,239,.012) 72%)!important;border:2px solid rgba(0,159,239,.82)!important;color:#009FEF!important;display:grid!important;place-items:center!important;box-shadow:inset 0 0 0 1px rgba(0,159,239,.10),inset 0 1px 0 rgba(255,255,255,.08),0 7px 18px rgba(0,0,0,.34),0 0 20px rgba(0,159,239,.10)!important;overflow:hidden!important}#ppProfitAdvisor .pp-profit-icon svg{width:35px!important;height:35px!important;display:block!important;fill:none!important;stroke:currentColor!important;stroke-width:2.45!important;stroke-linecap:round!important;stroke-linejoin:round!important;filter:drop-shadow(0 0 6px rgba(0,159,239,.28))!important}';
  return true;
 }
 function boot(){if(normalize())return;const t=setInterval(()=>{if(normalize())clearInterval(t)},80);setTimeout(()=>clearInterval(t),15000)}
@@ -780,17 +780,17 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 if(window.__ppSectionIconRefresh)return;
 window.__ppSectionIconRefresh=true;
 
+const useMasterIcon=name=>'<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-'+name+'"></use></svg>';
 const icons={
- model:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 16 9v18l-16 9-16-9V15l16-9Z"/><path d="m8 15 16 9 16-9M24 24v18"/></svg>',
- info:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M11 6h19l7 7v29H11V6Z"/><path d="M30 6v8h8M17 20h14M17 27h14M17 34h10"/></svg>',
- printer:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 18V8h22v10"/><path d="M10 18h28a5 5 0 0 1 5 5v9H5v-9a5 5 0 0 1 5-5Z"/><path d="M13 32h22v9H13z"/><path d="M17 37h14"/><circle cx="36" cy="23" r="2"/></svg>',
- printerDetail:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18V8h24v10"/><path d="M9 18h30a4 4 0 0 1 4 4v9H5v-9a4 4 0 0 1 4-4Z"/><path d="M13 31h22v10H13z"/><circle cx="35" cy="25" r="2"/><path d="m31 14 1.5-2.8 2.8 1.5 2.5-1.2 1.6 2.4 2.9.5v3l-2.4 1.6-.4 2.9h-3l-1.7-2.4-2.7.4-1.4-2.6-2.7-1.2.9-2.1Z" transform="translate(-1 0) scale(.8)"/></svg>',
- material:'<svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="13" rx="14" ry="6"/><path d="M10 13v20c0 3 6 7 14 7s14-4 14-7V13"/><ellipse cx="24" cy="13" rx="5" ry="2.2"/><path d="M19 13v20c0 1 2 2 5 2s5-1 5-2V13"/></svg>',
- costs:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8M8 40h34"/><path d="m13 32 8-8 6 5 12-15"/><path d="M32 14h7v7"/></svg>',
- results:'<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="m18 24 4 4 9-10"/><path d="M24 7v4M24 37v4M7 24h4M37 24h4"/></svg>',
- operatingCosts:'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 8v32M8 40h32"/><path d="m13 15 8 8 6 6 10 10"/><path d="m31 39h6v-6"/></svg>'
+ model:useMasterIcon('cube'),
+ info:useMasterIcon('file'),
+ printer:useMasterIcon('printer'),
+ printerDetail:useMasterIcon('printer-settings'),
+ material:useMasterIcon('filament'),
+ costs:useMasterIcon('coins'),
+ results:useMasterIcon('profit'),
+ operatingCosts:useMasterIcon('chart')
 };
-
 function typeFor(head){
  const txt=(head.querySelector('h2')?.textContent || head.textContent || '').replace(/\s+/g,' ').trim().toLowerCase();
  if(txt.includes('print information')) return 'info';
@@ -840,10 +840,10 @@ s.textContent=`
 .pp-tab-panel[data-panel="details"] .head>.icon,
 .pp-tab-panel[data-panel="details"] .head>.pp-pretty-icon{color:#27c7d9!important;border-color:#27c7d9!important}
 .pp-tab-panel[data-panel="machine"] .head>.icon,
-.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon{color:#a77cff!important;border-color:#a77cff!important}
+.pp-tab-panel[data-panel="machine"] .head>.pp-pretty-icon{color:#7C4DFF!important;border-color:#7C4DFF!important}
 .pp-tab-panel[data-panel="costs"] .head>.icon,
-.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon{color:#35d07f!important;border-color:#35d07f!important}
-#about.result .head>.icon{color:#ff7800!important;border-color:#ff7800!important}
+.pp-tab-panel[data-panel="costs"] .head>.pp-pretty-icon{color:#10B981!important;border-color:#10B981!important}
+#about.result .head>.icon{color:#009FEF!important;border-color:#009FEF!important}
 
 .pp-tab-panel .head>.icon,
 .pp-tab-panel .head>.pp-pretty-icon,
