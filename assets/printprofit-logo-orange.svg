@@ -1,32 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 110" role="img" aria-labelledby="title desc">
 <title id="title">PrintProfit</title>
-<desc id="desc">PrintProfit logo with silver lettering and orange balance scale, for 3D printing cost and pricing.</desc>
+<desc id="desc">PrintProfit orange balance and printer monogram with the PrintProfit wordmark and pricing calculator descriptor.</desc>
 <defs>
-  <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffab57"/>
-    <stop offset=".55" stop-color="#ff8a24"/>
-    <stop offset="1" stop-color="#e95d00"/>
-  </linearGradient>
-  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffffff"/>
-    <stop offset="1" stop-color="#c8d0d5"/>
-  </linearGradient>
-  <filter id="orange-glow" x="-25%" y="-25%" width="150%" height="150%">
-    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#ff7800" flood-opacity=".22"/>
-  </filter>
+  <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffad59"/><stop offset=".55" stop-color="#ff8720"/><stop offset="1" stop-color="#ed6500"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cbd3d8"/></linearGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity=".28"/></filter>
 </defs>
-<g filter="url(#orange-glow)" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M27 37h197" stroke="url(#orange)" stroke-width="13"/>
-  <rect x="110" y="14" width="52" height="47" rx="9" fill="url(#orange)"/>
-  <path d="M136 61v94" stroke="url(#orange)" stroke-width="13"/>
-  <path d="M78 81h116" stroke="url(#orange)" stroke-width="9"/>
-  <path d="M87 83 56 139M185 83l31 56" stroke="url(#orange)" stroke-width="7"/>
-  <path d="M44 141h25m108 0h50" stroke="url(#orange)" stroke-width="7"/>
-  <path d="M44 141c4 17 15 26 29 26s25-9 29-26M185 141c4 17 15 26 29 26s25-9 29-26" fill="url(#orange)" stroke="url(#orange)" stroke-width="3"/>
-  <path d="M103 166h66v11a6 6 0 0 1-6 6h-54a6 6 0 0 1-6-6Z" fill="url(#orange)"/>
-  <path d="M136 155v11" stroke="url(#orange)" stroke-width="10"/>
+<g transform="translate(-46.8 -11.2) scale(.40)" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+  <rect x="255" y="28" width="90" height="60" rx="9" fill="url(#orange)"/>
+  <path d="M245 50H160q-12 0-12 10t12 10h85M355 50h85q12 0 12 10t-12 10h-85" fill="none" stroke="url(#orange)" stroke-width="14"/>
+  <path d="M275 88v26M325 88v26M300 112v142" fill="none" stroke="url(#orange)" stroke-width="14"/>
+  <path d="M260 254h80q11 0 11 11t-11 11h-80q-11 0-11-11t11-11Z" fill="url(#orange)"/>
+  <path d="M175 120h80q12 0 19 10l26 0M425 120h-80q-12 0-19 10l-26 0" fill="none" stroke="url(#orange)" stroke-width="10"/>
+  <path d="M255 130l-46 76M345 130l46 76" fill="none" stroke="url(#orange)" stroke-width="10"/>
+  <path d="M209 206h-62M391 206h62" fill="none" stroke="url(#orange)" stroke-width="10"/>
+  <path d="M147 206c5 30 26 48 55 48s50-18 55-48ZM337 206c5 30 26 48 55 48s50-18 55-48Z" fill="url(#orange)"/>
+  <path fill="url(#silver)" fill-rule="evenodd" d="M313 126h-52c-29 0-49 16-49 39s20 39 49 39h25v41h27Zm-27 24v30h-25c-12 0-20-5-20-15s8-15 20-15Z"/>
+  <path fill="url(#silver)" fill-rule="evenodd" d="M327 126h35c27 0 46 15 46 39s-19 39-46 39h-11v41h-24Zm24 24v30h11c12 0 19-5 19-15s-7-15-19-15Z"/>
 </g>
-<text x="272" y="119" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="83" font-weight="900" letter-spacing="-4" fill="url(#silver)">Print</text>
-<text x="500" y="119" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="83" font-weight="900" letter-spacing="-4" fill="url(#orange)">Profit</text>
-<text x="277" y="166" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" letter-spacing="2.5" fill="#f5f7fa" opacity=".9">3D PRINTING COST &amp; PRICING CALCULATOR</text>
+<g font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="900" letter-spacing="-2.2">
+  <text x="145" y="64" font-size="68" fill="url(#silver)">Print</text>
+  <text x="299" y="64" font-size="68" fill="url(#orange)">Profit</text>
+</g>
+<text x="148" y="91" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" letter-spacing="1.15" fill="#d7dfe3">3D PRINTING COST &amp; PRICING CALCULATOR</text>
 </svg>
