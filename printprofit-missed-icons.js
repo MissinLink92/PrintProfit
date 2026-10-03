@@ -42,7 +42,7 @@ function applyHelpInfoIcon(){
   const heading=[...head.querySelectorAll('h2,h3,h4,strong,b')].find(el=>/not sure about a field/i.test(el.textContent||''))||head;
   const walker=document.createTreeWalker(heading,NodeFilter.SHOW_TEXT);
   let textNode;
-  while((textNode=walker.nextNode()))textNode.textContent=textNode.textContent.replace(/ⓘ\\s*/,'');
+  while((textNode=walker.nextNode()))textNode.textContent=textNode.textContent.replace(/[ⓘℹ]\s*/,'');
   if(heading.querySelector(':scope > .pp-missed-inline-icon'))return;
   const ns='http://www.w3.org/2000/svg';
   const icon=document.createElementNS(ns,'svg');
