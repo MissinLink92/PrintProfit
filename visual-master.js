@@ -27,13 +27,35 @@ top.id='ppVisualMaster';
 top.setAttribute('aria-label','PrintProfit introduction');
 
 top.innerHTML='<header class="pvm-header"><a class="pvm-brand" href="#home"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"><span class="pvm-brand-fallback">PrintProfit</span></a>'+
-'<nav class="pvm-nav"><button type="button" data-a="home"><span class="pvm-icon">'+svg('home')+'</span>Home</button><button type="button" data-a="projects"><span class="pvm-icon">'+svg('folder')+'</span>My Projects</button><button type="button" data-a="compare"><span class="pvm-icon">'+svg('compare')+'</span>Compare Products</button><button type="button" data-a="guide"><span class="pvm-icon">'+svg('book')+'</span>Guide &amp; Help</button><button type="button" data-a="settings"><span class="pvm-icon">'+svg('gear')+'</span>Settings</button></nav>'+
+'<nav class="pvm-nav" aria-label="PrintProfit navigation"><button type="button" data-a="home"><span class="pvm-icon">'+svg('home')+'</span>Home</button><button type="button" data-a="projects"><span class="pvm-icon">'+svg('folder')+'</span>My Projects</button><button type="button" data-a="compare"><span class="pvm-icon">'+svg('compare')+'</span>Compare Products</button><button type="button" data-a="guide"><span class="pvm-icon">'+svg('book')+'</span>Guide &amp; Help</button><button type="button" data-a="settings"><span class="pvm-icon">'+svg('gear')+'</span>Settings</button></nav>'+
 '<div class="pvm-prefs"><label class="pvm-dark"><span>◐</span><b>Dark Mode</b><input id="pvmDarkMode" type="checkbox"><i></i></label><label class="pvm-language"><span class="pvm-flag"></span><select id="pvmLanguage"><option value="en">EN</option><option value="pl">PL</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="nl">NL</option><option value="pt">PT</option><option value="cs">CS</option><option value="sv">SV</option><option value="da">DA</option></select><em>⌄</em></label></div></header>'+
 '<div class="pvm-hero"><img class="pvm-bg" src="./assets/hero-hd.webp?v=1" alt="" aria-hidden="true"><div class="pvm-overlay"></div><div class="pvm-copy"><div class="pvm-kicker">3D PRINTING PRICING, MADE SIMPLE</div><h1>Know what it costs.<br><strong>Know what to charge.</strong></h1><p>Accurate 3D printing cost and pricing calculations to help you<br class="pvm-desktop"> price with confidence and maximise your profit.</p><div class="pvm-actions"><button type="button" class="pvm-primary" data-a="calculate"><span>'+svg('calculator')+'</span>Start Calculating <b>›</b></button><button type="button" class="pvm-projects" data-a="projects"><span>'+svg('folder')+'</span>My Projects</button></div></div>'+
 '<div class="pvm-tagline pvm-hero-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div></div>'+
 '<div class="pvm-journey"><button type="button" data-stage="details"><span class="n one">1</span><span class="jicon">'+svg('model')+'</span><span><strong>Your Model</strong><small>Upload your print &amp; view its data</small></span></button><em>→</em><button type="button" data-stage="machine"><span class="n two">2</span><span class="jicon">'+svg('printsetup')+'</span><span><strong>Print Setup</strong><small>Choose your printer &amp; material</small></span></button><em>→</em><button type="button" data-stage="costs"><span class="n three">3</span><span class="jicon">'+svg('costs')+'</span><span><strong>Costs &amp; Fees</strong><small>Add your business costs</small></span></button><em>→</em><button type="button" data-stage="results"><span class="n four">4</span><span class="jicon">'+svg('results')+'</span><span><strong>Results</strong><small>Review cost, price &amp; profit</small></span></button></div>';
 
-document.body.insertBefore(top,document.body.querySelector('.shell')||document.body.firstChild);const ppSharpenSvg=document.createElement('svg');ppSharpenSvg.setAttribute('aria-hidden','true');ppSharpenSvg.style.cssText='position:absolute;width:0;height:0;overflow:hidden;pointer-events:none';ppSharpenSvg.innerHTML='<defs><filter id="ppSharpen" x="-8%" y="-8%" width="116%" height="116%"><feConvolveMatrix order="3" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0" edgeMode="duplicate"/></filter></defs>';top.appendChild(ppSharpenSvg);
+document.body.insertBefore(top,document.body.querySelector('.shell')||document.body.firstChild);
+const navButtons=[...top.querySelectorAll('.pvm-nav button[data-a]')];
+let currentNav=null;
+function setCurrentNav(key){
+  const activeKey=navButtons.some(button=>button.dataset.a===key)?key:'home';
+  if(currentNav===activeKey)return;
+  currentNav=activeKey;
+  navButtons.forEach(button=>{
+    const active=button.dataset.a===activeKey;
+    button.classList.toggle('is-active',active);
+    if(active)button.setAttribute('aria-current','page');
+    else button.removeAttribute('aria-current');
+  });
+}
+function syncNavToOpenSection(){
+  const activeKey=document.querySelector('#ppSettingsPanel.open')?'settings':
+    document.querySelector('#ppProjectsPanel.open')?'projects':
+    document.querySelector('#ppGuidePanel.open')?'guide':'home';
+  setCurrentNav(activeKey);
+}
+const navStateObserver=new MutationObserver(syncNavToOpenSection);
+navStateObserver.observe(document.body,{attributes:true,attributeFilter:['class'],childList:true,subtree:true});
+setCurrentNav('home');const ppSharpenSvg=document.createElement('svg');ppSharpenSvg.setAttribute('aria-hidden','true');ppSharpenSvg.style.cssText='position:absolute;width:0;height:0;overflow:hidden;pointer-events:none';ppSharpenSvg.innerHTML='<defs><filter id="ppSharpen" x="-8%" y="-8%" width="116%" height="116%"><feConvolveMatrix order="3" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0" edgeMode="duplicate"/></filter></defs>';top.appendChild(ppSharpenSvg);
 
 const style=document.createElement('style');
 style.id='ppVisualMasterStyles';
@@ -42,7 +64,7 @@ style.textContent=
 '#ppVisualMaster *{box-sizing:border-box}#ppVisualMaster button,#ppVisualMaster select{font:inherit}'+
 '#ppVisualMaster .pvm-header{height:58px;display:flex;align-items:center;gap:16px;padding:0 clamp(18px,3vw,48px);background:rgba(5,14,20,.98);border-bottom:1px solid #294653;position:relative;z-index:10}'+
 '#ppVisualMaster .pvm-brand{width:218px;height:46px;display:flex;align-items:center;flex:0 0 218px;position:relative;text-decoration:none}.pvm-brand img{width:100%;height:46px;object-fit:contain;object-position:left center}.pvm-brand-fallback{display:none;position:absolute;left:0;color:#f5f8fb;font-size:20px;font-weight:900}'+
-'#ppVisualMaster .pvm-nav{display:flex;align-items:center;justify-content:center;gap:5px;flex:1;min-width:0}.pvm-nav button{height:48px;padding:0 13px;border:1px solid transparent;border-radius:12px;background:transparent;color:#e1ebef;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;font-weight:850;white-space:nowrap}.pvm-nav button:hover{background:#009FEF0f;color:#fff}.pvm-nav button:first-child{border-color:#009FEF;background:#0c1820}'+
+'#ppVisualMaster .pvm-nav{display:flex;align-items:center;justify-content:center;gap:5px;flex:1;min-width:0}.pvm-nav button{height:48px;padding:0 13px;border:1px solid transparent;border-radius:12px;background:transparent;color:#e1ebef;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;font-weight:850;white-space:nowrap}.pvm-nav button:hover{background:#009FEF0f;color:#fff}.pvm-nav button[aria-current="page"]{border-color:#ff9a42;background:linear-gradient(135deg,#ff9842,#ff7800);color:#17100a;box-shadow:0 5px 18px #ff780033}.pvm-nav button[aria-current="page"] .pvm-icon{color:#17100a}'+
 '#ppVisualMaster .pvm-icon{width:27px;height:27px;display:grid;place-items:center;color:#009FEF}.pvm-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round}'+
 '#ppVisualMaster .pvm-prefs{display:flex;align-items:center;gap:9px;flex:0 0 auto}.pvm-dark,.pvm-language{height:38px;display:flex;align-items:center;gap:7px;border:1px solid #24485a;border-radius:12px;background:#071b27;color:#dce8ee;cursor:pointer}.pvm-dark{padding:0 9px;font-size:11px}.pvm-dark input{position:absolute;opacity:0;pointer-events:none}.pvm-dark i{width:36px;height:20px;border-radius:999px;background:#385361;padding:2px;display:flex;align-items:center}.pvm-dark i:after{content:"";width:16px;height:16px;border-radius:50%;background:#f1f7fa;transform:translateX(0);transition:.18s}.pvm-dark input:checked+i{background:#18bde8}.pvm-dark input:checked+i:after{transform:translateX(16px)}'+
 '#ppVisualMaster .pvm-language{padding:0 9px}.pvm-language select{appearance:none;background:transparent;border:0;outline:0;color:#e8f1f4;font-size:12px;font-weight:850;width:40px}.pvm-language em{font-style:normal;color:#849daa}'+
@@ -107,6 +129,8 @@ window.addEventListener('pageshow',()=>{setFlag();setTimeout(setFlag,50);setTime
 
 top.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
 const a=b.getAttribute('data-a');
+if(['home','projects','compare','guide','settings'].includes(a))setCurrentNav(a);
+else if(a==='calculate')setCurrentNav('home');
 if(a==='home')window.scrollTo({top:0,behavior:'smooth'});
 else if(a==='calculate')goStage('details');
 else if(a==='compare')window.top.location.href='./price-finder.html';
