@@ -60,7 +60,8 @@ function install(){
 
   const hours=makeField('ppPrintTimeHours','Hours','Print time hours');
   const minutes=makeField('ppPrintTimeMinutes','Minutes','Print time minutes');
-  row.append(hours.wrap,minutes.wrap);
+  // Keep the calculator's original field connected for imports and saved projects.
+  row.append(source,hours.wrap,minutes.wrap);
 
   const statusWrap=document.createElement('div');
   statusWrap.className='pp-print-time-status';
@@ -84,7 +85,8 @@ function install(){
   function syncDisplayFromSource(){
     const value=parseHours(source.value);
     const parts=splitDecimalHours(value);
-    const nextH=String(parts.hours),nextM=String(parts.minutes);
+    const empty=source.value.trim()==='';
+    const nextH=empty?'':String(parts.hours),nextM=empty?'':String(parts.minutes);
     if(document.activeElement!==hours.input)hours.input.value=nextH;
     if(document.activeElement!==minutes.input)minutes.input.value=nextM;
   }
@@ -106,9 +108,12 @@ function install(){
     });
   });
 
+  // Synchronise before the bubbling event reaches the calculation handlers.
+  source.addEventListener('input',syncDisplayFromSource);
+  source.addEventListener('change',syncDisplayFromSource);
   syncDisplayFromSource();
 
-  let lastSource='';
+  let lastSource=source.value;
   setInterval(()=>{
     if(!source.isConnected)return;
     const current=source.value;
@@ -117,9 +122,9 @@ function install(){
       syncDisplayFromSource();
     }
     if((source.value===''||source.value==null) && document.activeElement!==hours.input && document.activeElement!==minutes.input){
-      if(hours.input.value!=='0'||minutes.input.value!=='0'){
-        hours.input.value='0';
-        minutes.input.value='0';
+      if(hours.input.value!==''||minutes.input.value!==''){
+        hours.input.value='';
+        minutes.input.value='';
       }
     }
   },200);

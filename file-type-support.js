@@ -18,6 +18,17 @@
     const match=exact||options.find(o=>normal(o.textContent).includes(wanted)&&wanted.length>=3);
     if(!match) return false;return setValue(id,match.value);
   }
+  function importNotice(data,restored=false){
+    const el=$('materialStatus');if(!el)return;
+    if(restored){el.textContent='Saved calculator values retained. File estimates are shown on Your Model.';return;}
+    const isResin=$('materialType')?.value==='resin',density=Number.parseFloat(data.density);
+    const hasUsage=isResin?(Number.isFinite(data.resinVolume)||(Number.isFinite(data.grams)&&density>0)):Number.isFinite(data.grams);
+    const imported=[],missing=[];
+    (Number.isFinite(data.seconds)?imported:missing).push('print time');
+    (hasUsage?imported:missing).push('material usage');
+    el.textContent=(imported.length?'Automatically filled '+imported.join(' and ')+' from your file. You can edit these values. ':'')+
+      (missing.length?'No '+missing.join(' or ')+' stored in this file; enter '+(missing.length>1?'them':'it')+' below.':'');
+  }
   function apply(data,usageOnly=false){
     if(!data) return false;
     if(!usageOnly){
@@ -36,6 +47,8 @@
     const usage=isResin?(Number.isFinite(data.resinVolume)?data.resinVolume:Number.isFinite(data.grams)&&density>0?data.grams/density:null):data.grams;
     setValue('materialUsed',Number.isFinite(usage)?usage.toFixed(2):'');
     setValue('printHours',Number.isFinite(data.seconds)?data.seconds/3600:'');
+    importNotice(data);
+    window.__ppRefreshModelHub?.();
     $('calc')?.click();return true;
   }
   function release(list){for(const i of list||[]) if(i.url?.startsWith('blob:')) URL.revokeObjectURL(i.url);}
@@ -52,6 +65,7 @@
     window.__ppFileData={};window.__ppRestoredFileName='';
     if(clearInput&&$('file')) $('file').value='';
     storeFile(null);$('ppFileMetadata')?.remove();
+    if($('materialStatus'))$('materialStatus').textContent='Upload a sliced file to fill print time and material usage, or enter them manually.';
     window.__ppRefreshModelHub?.();renderDetails(window.__ppFileData);
   }
   window.__ppClearSlicerFile=clearFile;
@@ -62,6 +76,7 @@
       packageObjectCount:result.packageObjectCount};
     window.__ppFileData=data;window.__ppRestoredFileName=result.fileName;
     if(importValues) apply(data);
+    else importNotice(data,true);
     status('✓ '+result.fileName+' — '+(result.plates.length>1?plate.name+' selected. ':'')+'Available slicer information imported.');
     window.__ppRefreshModelHub?.();renderDetails(data);
     window.__printProfitPersistDraft?.();
@@ -73,6 +88,7 @@
     clearFile(false);const ticket=generation;
     if(!restoring){setValue('materialUsed','');setValue('printHours','');}
     status('Reading '+file.name+' — collecting print information and preview images…');
+    if($('materialStatus'))$('materialStatus').textContent='Reading your file’s print time and material usage…';
     storeFile(file);
     try {
       if(!window.PrintProfitSlicerFile) throw Error('The file reader has not loaded. Refresh the page and try again.');
@@ -84,6 +100,7 @@
     }catch(error){
       if(ticket!==generation) return;
       status('Could not read '+file.name+'. '+(error.message||'Try exporting a sliced 3MF or standard G-code.'));
+      if($('materialStatus'))$('materialStatus').textContent='File information could not be read. Enter print time and material usage manually.';
       window.__ppFileData={fileName:file.name,fileSize:file.size,readError:true,warnings:[error.message||'File could not be read.']};
       window.__ppRefreshModelHub?.();renderDetails(window.__ppFileData);
       window.__printProfitPersistDraft?.();
