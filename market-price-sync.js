@@ -37,6 +37,7 @@ function status(text){
   const el=document.getElementById('materialStatus');
   if(el)el.textContent=text;
 }
+function formatDateDMY(value){if(!value)return '';const raw=String(value),iso=raw.match(/^(\d{4})-(\d{2})-(\d{2})/);if(iso)return iso[3]+'/'+iso[2]+'/'+iso[1];const d=new Date(raw);return Number.isFinite(d.getTime())?String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear():raw;}
 function applyLivePrice(){
   const cost=document.getElementById('materialPackCost');
   const pack=document.getElementById('materialPack');
@@ -56,7 +57,7 @@ function applyLivePrice(){
   cost.dispatchEvent(new Event('change',{bubbles:true}));
   delete cost.dataset.ppLiveWriting;
   if(pack && weight>0 && materialTypeIsFilament()) pack.value=String(weight);
-  status('Live market reference: '+price.toFixed(2)+' — '+(best.retailer||'retailer')+(best.updated?' • checked '+best.updated:'')+'. Enter your actual cost to override.');
+  status('Live market reference: '+price.toFixed(2)+' — '+(best.retailer||'retailer')+(best.updated?' • checked '+formatDateDMY(best.updated):'')+'. Enter your actual cost to override.');
   return true;
 }
 function materialTypeIsFilament(){return document.getElementById('materialType')?.value!=='resin';}
