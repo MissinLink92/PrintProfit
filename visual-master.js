@@ -143,4 +143,7 @@ top.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',e=>{e
 return true;
 }
 function boot(){if(build())return;const t=setInterval(()=>{if(build())clearInterval(t)},50);setTimeout(()=>clearInterval(t),12000)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+function syncStoredPreferences(){try{const p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');const l=document.getElementById('pvmLanguage'),d=document.getElementById('pvmDarkMode');if(l)l.value=String(p.language||'en').toUpperCase();if(d)d.checked=p.dark!==false;}catch(e){}}
+window.addEventListener('storage',e=>{if(e.key==='printprofit.preferences.v3')syncStoredPreferences();});document.addEventListener('printprofit-settings-changed',syncStoredPreferences);
+})();
