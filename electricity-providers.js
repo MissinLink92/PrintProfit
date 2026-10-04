@@ -10,14 +10,19 @@ const providers=[
   ['Barbican Power','Barbican Power Ltd'],['BGI','BGI Trading Ltd'],['BP Gas & Power','BP Gas Marketing Ltd'],['Capture Energy','Capture Energy Ltd'],['Conrad Energy','Conrad Energy (Trading) Ltd'],['Coulomb Energy','Coulomb Energy Supply Ltd'],['Crown Gas & Power','Crown Gas and Power 2 Ltd'],['Dyce Energy','Dyce Energy Ltd'],['E E Solutions','E E Solutions Ltd'],['Edgware Energy','Edgware Energy Ltd'],['Engelhart CTP Energy UK','Engelhart CTP Energy UK Ltd'],['EPG Energy','EPG Energy Ltd'],['Equinicity','Equinicity Ltd'],['F & S Energy','F & S Energy Ltd'],['Farringdon Energy','Farringdon Energy Ltd'],['Flexitricity','Flexitricity Ltd'],['Habitat Energy','Habitat Energy Ltd'],['Holborn Energy','Holborn Energy Ltd'],['Limejump Energy','Limejump Energy Ltd'],['Nadara Energy Trading','Nadara Energy Trading Srl, UK Branch'],['npower Business Solutions','Npower Commercial Gas Ltd'],['Pozitive Energy','Pozitive Energy Ltd'],['PX Supply','PX Supply Ltd'],['Radius Energy','Radius Energy Ltd'],['Regent Power','Regent Power Ltd'],['Ruby Energy','Ruby Electricity Ltd'],['SEFE Energy','Sefe Energy Ltd'],['Smart Pay Energy','Smart Pay Energy Ltd'],['SmartestEnergy','SmartestEnergy Ltd'],['SSE','SSE Energy Supply Ltd'],['Statkraft','Statkraft Markets GmbH'],['TotalEnergies Gas & Power','TotalEnergies Gas & Power Ltd'],['Tradelink Solutions','Tradelink Solutions Ltd'],['UC Energy','UC Energy Ltd'],['UK Power Reserve','UK Power Reserve Ltd'],['United Gas & Power','United Gas & Power Ltd'],['Vattenfall','Vattenfall Energy Trading GmbH'],['Verastar','Verastar Ltd'],['Versa Energy','Versa Energy Ltd'],['Wilton Energy','Wilton Energy Ltd'],['Custom / Other','']
 ];
 
-const benchmarks={
-  'ofgem-jul-sep-2026':{label:'Current Ofgem benchmark — 1 Jul to 30 Sep 2026',rate:'0.2611',standing:'0.5719'},
+const fallbackBenchmarks={
+  'ofgem-jul-sep-2026':{label:'Ofgem reference — 1 Jul to 30 Sep 2026',rate:'0.2611',standing:'0.5719'},
   'ofgem-oct-dec-2026':{label:'Ofgem benchmark — 1 Oct to 31 Dec 2026',rate:'0.2632',standing:'0.5483'}
 };
+const reference=window.PRINTPROFIT_REFERENCE_DATA;
+const benchmarks=Object.fromEntries((reference?.electricity?.benchmarks||[
+ {...fallbackBenchmarks['ofgem-jul-sep-2026'],id:'ofgem-jul-sep-2026',validFrom:'2026-07-01',validTo:'2026-09-30'},
+ {...fallbackBenchmarks['ofgem-oct-dec-2026'],id:'ofgem-oct-dec-2026',validFrom:'2026-10-01',validTo:'2026-12-31'}
+]).map(b=>[b.id,b]));
 function currentBenchmark(){
- const d=new Date(),y=d.getFullYear(),m=d.getMonth()+1;
- if(y===2026&&m<=9)return benchmarks['ofgem-jul-sep-2026'];
- return benchmarks['ofgem-oct-dec-2026'];
+ const parts=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(p=>[p.type,p.value]));
+ const today=parts.year+'-'+parts.month+'-'+parts.day;
+ return Object.values(benchmarks).find(b=>b.validFrom<=today&&today<=b.validTo)||null;
 }
 
 function fieldLabel(text){const el=document.createElement('div');el.className='pp-electricity-label';el.textContent=text;return el;}
@@ -49,7 +54,7 @@ function addRateSource(input){
  const sourceBlock=document.createElement('div');sourceBlock.className='pp-electricity-block';
  sourceBlock.appendChild(fieldLabel('Rate source'));
  const source=document.createElement('select');source.id='ppElectricityRateSource';source.setAttribute('aria-label','Electricity rate source');
- [['manual','My actual tariff — enter below'],['ofgem-jul-sep-2026',benchmarks['ofgem-jul-sep-2026'].label],['ofgem-oct-dec-2026',benchmarks['ofgem-oct-dec-2026'].label]].forEach(([value,label])=>{const o=document.createElement('option');o.value=value;o.textContent=label;source.appendChild(o);});
+ [['manual','My actual tariff — enter below'],...Object.entries(benchmarks).reverse().map(([key,b])=>[key,b.label])].forEach(([value,label])=>{const o=document.createElement('option');o.value=value;o.textContent=label;source.appendChild(o);});
  sourceBlock.appendChild(source);
  const note=document.createElement('div');note.className='pp-electricity-note';note.id='ppElectricityRateNote';
  wrap.append(providerBlock,sourceBlock,note);
@@ -62,28 +67,34 @@ function addRateSource(input){
  }
  const applyBenchmark=()=>{
    const b=currentBenchmark();
-   const key=Object.keys(benchmarks).find(k=>benchmarks[k]===b)||'ofgem-oct-dec-2026';
+   if(!b){clearToManual();note.textContent='No current Ofgem reference has been verified. Enter the unit rate from your bill.';return;}
+   const key=Object.keys(benchmarks).find(k=>benchmarks[k]===b);
    source.value=key;
+   applying=true;
    setRate(b.rate);
-   note.innerHTML='<strong>Current benchmark:</strong> '+(Number(b.rate)*100).toFixed(2)+'p/kWh. Ofgem reference rate; your exact supplier tariff may differ by tariff, region, meter and payment method.';
+   applying=false;
+   note.textContent='Ofgem reference: '+(Number(b.rate)*100).toFixed(2)+'p/kWh. Great Britain average direct debit, including VAT; your supplier tariff may differ. Northern Ireland is outside the price cap.';
  };
  const clearToManual=()=>{
    source.value='manual';
    note.innerHTML='<strong>Manual tariff:</strong> enter the unit rate from your bill. This is the most accurate figure for your own electricity costs.';
  };
+ let applying=false;
  source.addEventListener('change',()=>{
    const selected=benchmarks[source.value];
    if(selected){
+     applying=true;
      setRate(selected.rate);
-     note.innerHTML='<strong>Ofgem benchmark:</strong> '+(Number(selected.rate)*100).toFixed(2)+'p/kWh. Standing charge reference: '+(Number(selected.standing)*100).toFixed(2)+'p/day. Your actual tariff may differ.';
+     applying=false;
+     note.textContent='Ofgem reference ('+selected.validFrom+' to '+selected.validTo+'): '+(Number(selected.rate)*100).toFixed(2)+'p/kWh. Standing charge: '+(Number(selected.standing)*100).toFixed(2)+'p/day. Great Britain average direct debit; your tariff may differ.';
    }else clearToManual();
  });
- applyBenchmark();
+ const rateInput=document.getElementById('electricityRate');
+ if(rateInput&&Number(rateInput.value)>0)clearToManual();else applyBenchmark();
+ if(rateInput)rateInput.addEventListener('input',()=>{if(!applying)clearToManual();});
  input.dataset.ppRateAutoBound='1';
  input.addEventListener('change',()=>{
-   // Selecting a supplier automatically restores the current benchmark.
-   // The benchmark is intentionally not presented as the customer's exact tariff.
-   applyBenchmark();
+   // Supplier selection is informational and preserves the user's tariff.
    input.dispatchEvent(new Event('input',{bubbles:true}));
  });
 }
@@ -93,12 +104,12 @@ function buildProviderSelect(input){
  const first=document.createElement('option');first.value='';first.textContent='Select your electricity provider...';select.appendChild(first);
  const common=['British Gas','E.ON Next','EDF Energy','Octopus Energy','OVO Energy','ScottishPower','Utilita Energy','Ecotricity','Good Energy','So Energy','Utility Warehouse','E (Gas & Electricity)','Fuse Energy','Foxglove Energy','Green Energy UK','Drax'];
  const commonSet=new Set(common);const commonGroup=document.createElement('optgroup');commonGroup.label='Popular UK suppliers';const otherGroup=document.createElement('optgroup');otherGroup.label='Other licensed suppliers';const seen=new Set();
- providers.forEach(([name])=>{if(seen.has(name)||name==='Custom / Other')return;seen.add(name);const o=document.createElement('option');o.value=name;o.textContent=name;(commonSet.has(name)?commonGroup:otherGroup).appendChild(o);});
+ (reference?.electricity?.providers||providers).forEach(([name])=>{if(seen.has(name)||name==='Custom / Other')return;seen.add(name);const o=document.createElement('option');o.value=name;o.textContent=name;(commonSet.has(name)?commonGroup:otherGroup).appendChild(o);});
  const custom=document.createElement('option');custom.value='Custom / Other';custom.textContent='Custom / Other';otherGroup.appendChild(custom);select.append(commonGroup,otherGroup);
- input.replaceWith(select);return select;
+ select.value=input.value;input.replaceWith(select);return select;
 }
 function install(){
- const input=document.getElementById('electricityProvider');if(!input)return false;
+ let input=document.getElementById('electricityProvider');if(!input)return false;
  if(input.tagName!=='SELECT')input=buildProviderSelect(input);
  addStyle();addRateSource(input);
  input.addEventListener('change',()=>input.dispatchEvent(new Event('input',{bubbles:true})));
