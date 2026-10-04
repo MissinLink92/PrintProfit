@@ -1,56 +1,194 @@
-(()=>{
-'use strict';
-if(window.__printProfitFileTypeSupport)return;window.__printProfitFileTypeSupport=true;
-const $=id=>document.getElementById(id);
-const names={gcode:'G-code',gco:'G-code',bgcode:'Binary G-code',nc:'NC G-code',ngc:'NGC G-code',gc:'G-code',g:'G-code','3mf':'3MF slicer project',lys:'Lychee project',chitubox:'CHITUBOX project',ctb:'CTB resin slice',photon:'Photon slice',pwma:'Photon Mono slice',pwmo:'Photon Mono project',pws:'Photon Workshop slice',goo:'Goo slice',sl1:'SL1 resin slice',sl1s:'SL1S resin slice',stl:'STL model',obj:'OBJ model',amf:'AMF model',ply:'PLY model',step:'STEP model',stp:'STEP model'};
-const supported=Object.keys(names),gcodeExt=['gcode','gco','nc','ngc','gc','g'];
-const ext=name=>(String(name||'').toLowerCase().match(/\.([a-z0-9]+)$/)||[])[1]||'';
-const clean=v=>String(v??'').trim();
-const setValue=(id,value)=>{const el=$(id);if(!el||value==null||value==='')return false;el.value=String(value);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));return true;};
-function status(text){const el=$('status');if(el){el.textContent=text;el.dataset.fileType='recognised';}}
-function hay(el){let s=(el.id+' '+el.name+' '+el.getAttribute('aria-label')+' '+el.getAttribute('placeholder')).toLowerCase();const lab=el.id&&document.querySelector('label[for="'+CSS.escape(el.id)+'"]');if(lab)s+=' '+lab.textContent.toLowerCase();const wrap=el.closest('label');if(wrap)s+=' '+wrap.textContent.toLowerCase();s+=' '+(el.previousElementSibling?.textContent||'');return s;}
-function findInput(preferred,exclude=[]){const all=[...document.querySelectorAll('input:not([type="file"]):not([type="checkbox"]):not([type="radio"]),textarea')];let best=null,score=-1e9;for(const el of all){const h=hay(el);if(exclude.some(k=>h.includes(k)))continue;let sc=0;preferred.forEach((k,i)=>{if(h.includes(k))sc+=100-i*5;});if(sc>score){score=sc;best=el;}}return score>0?best:null;}
-function setSemantic(preferred,value,exclude=[]){const el=findInput(preferred,exclude);if(!el)return false;el.value=String(value);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));return true;}
-function findSelect(keys){const selects=[...document.querySelectorAll('select')];return selects.find(s=>{const h=(s.id+' '+s.name+' '+s.getAttribute('aria-label')+' '+(s.previousElementSibling?.textContent||'')+' '+(s.parentElement?.textContent||'')).toLowerCase();return keys.some(k=>h.includes(k));});}
-function selectMatch(keys,desired){if(!desired)return false;const s=findSelect(keys);if(!s)return false;const target=clean(desired).toLowerCase();for(const o of [...s.options]){const t=(o.text+' '+o.value).toLowerCase();if(t===target||t.includes(target)||target.includes(t)){s.value=o.value;s.dispatchEvent(new Event('input',{bubbles:true}));s.dispatchEvent(new Event('change',{bubbles:true}));return true;}}return false;}
-function parseDuration(v){const s=clean(v).toLowerCase();if(!s)return null;let m=s.match(/(\d+(?:\.\d+)?)\s*d(?:ays?)?/);let total=m?Number(m[1])*86400:0;m=s.match(/(\d+(?:\.\d+)?)\s*h/);if(m)total+=Number(m[1])*3600;m=s.match(/(\d+(?:\.\d+)?)\s*m(?:in(?:ute)?s?)?/);if(m)total+=Number(m[1])*60;m=s.match(/(\d+(?:\.\d+)?)\s*s(?:ec(?:ond)?s?)?/);if(m)total+=Number(m[1]);if(total)return total;if(/^\d+:\d+(?::\d+(?:\.\d+)?)?$/.test(s)){const a=s.split(':').map(Number);return a.length===3?a[0]*3600+a[1]*60+a[2]:a[0]*60+a[1];}const n=Number(s.replace(/[^0-9.]/g,''));return Number.isFinite(n)?n:null;}
-function number(v){const n=parseFloat(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:null;}
-function densityFrom(cfg){return number(Array.isArray(cfg?.filament_density)?cfg.filament_density[0]:cfg?.filament_density)||1.24;}
-function gramsFromMm(mm,cfg){const d=number(Array.isArray(cfg?.filament_diameter)?cfg.filament_diameter[0]:cfg?.filament_diameter)||1.75;const rho=densityFrom(cfg);return (mm/1000)*(Math.PI*Math.pow(d/2,2))*rho;}
-function extractGcode(text,cfg){if(!text)return{};const out={};let m;const timePatterns=[/(?:^|[;\s])(?:TIME|PRINT_TIME|PRINTING_TIME)\s*[:=]\s*([0-9.]+)/im,/estimated printing time(?:\s*\([^)]*\))?\s*=\s*([^;\r\n]+)/i,/total estimated printing time(?:\s*\([^)]*\))?\s*=\s*([^;\r\n]+)/i];for(const r of timePatterns){m=text.match(r);if(m){const t=parseDuration(m[1]);if(t!=null){out.seconds=t;break;}}}const gramPatterns=[/filament\s+used\s*\[g\]\s*[:=]\s*([0-9.]+)/i,/filament\s+(?:weight|used)\s*[:=]\s*([0-9.]+)\s*g\b/i,/filament\s+weight\s*=\s*([0-9.]+)\s*g\b/i];for(const r of gramPatterns){m=text.match(r);if(m){out.grams=number(m[1]);break;}}if(out.grams==null){m=text.match(/filament\s+used\s*\[mm\]\s*[:=]\s*([0-9.]+)/i);if(m)out.grams=gramsFromMm(number(m[1])||0,cfg);}if(out.grams==null){m=text.match(/filament\s+used\s*\[cm3\]\s*[:=]\s*([0-9.]+)/i);if(m)out.grams=(number(m[1])||0)*densityFrom(cfg);}if(out.grams==null){m=text.match(/filament\s+used\s*[:=]\s*([0-9.]+)\s*m\b/i);if(m)out.grams=gramsFromMm((number(m[1])||0)*1000,cfg);}return out;}
-function deepFind(obj,pred,path=''){if(!obj||typeof obj!=='object')return null;for(const [k,v] of Object.entries(obj)){const p=(path+'.'+k).toLowerCase();if(pred(k.toLowerCase(),v,p))return v;if(v&&typeof v==='object'){const r=deepFind(v,pred,p);if(r!=null)return r;}}return null;}
-function metricFromJson(obj,type,cfg){const exact=type==='time'?['print_time','printing_time','estimated_print_time','estimated_printing_time','total_print_time','total_printing_time','printTime','printTimeSeconds']:['filament_used_g','filament_used_grams','filament_weight_g','filament_weight','used_filament_g','total_filament_used_g','filamentUsedG','total_weight_g'];let v=deepFind(obj,(k,val)=>exact.some(x=>k===x.toLowerCase())&&typeof val!=='object');if(v!=null){if(type==='time'){const s=Array.isArray(v)?v[0]:v;return parseDuration(s);}return number(Array.isArray(v)?v[0]:v);}if(type==='grams'){v=deepFind(obj,(k,val)=>/(filament.*(?:used|weight)|(?:used|weight).*filament).*(?:g|gram)/i.test(k)&&typeof val!=='object');if(v!=null)return number(Array.isArray(v)?v[0]:v);}return null;}
-function metadataPanel(data){let box=document.getElementById('ppFileMetadata');if(!box){box=document.createElement('div');box.id='ppFileMetadata';box.className='pp-file-metadata';const statusEl=$('status');statusEl?.parentElement?.appendChild(box);}const rows=[['Slicer',data.slicer],['Printer',data.printer],['Profile',data.profile],['Filament',data.filament],['Nozzle',data.nozzle],['Layer height',data.layer],['Infill',data.infill],['Supports',data.supports],['Bed',data.bed],['G-code',data.gcode],['Used per print',data.grams!=null?data.grams.toFixed(2)+' g':'Not stored in this project'],['Print time',data.seconds!=null?formatTime(data.seconds):'Not stored in this project']];box.innerHTML='<b>3MF project data</b>'+rows.filter(r=>r[1]!=null&&r[1]!=='').map(r=>'<div><span>'+r[0]+'</span><strong>'+String(r[1]).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</strong></div>').join('');}
-function formatTime(sec){sec=Math.max(0,Number(sec)||0);const h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),s=Math.round(sec%60);return h+(h===1?' hour ':' hours ')+m+(m===1?' min ':' mins ')+(s+' sec');}
-function addStyles(){if(document.getElementById('ppFileMetadataStyles'))return;const s=document.createElement('style');s.id='ppFileMetadataStyles';s.textContent='.pp-file-metadata{margin-top:9px;padding:10px;border:1px solid #0798ff55;border-radius:9px;background:#0798ff0b;text-align:left;font-size:11px}.pp-file-metadata>b{display:block;color:#0798ff;margin-bottom:6px}.pp-file-metadata div{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px solid #ffffff0b}.pp-file-metadata div:last-child{border-bottom:0}.pp-file-metadata span{color:#aebdca}.pp-file-metadata strong{text-align:right;color:#f5f8fb;font-weight:600}';document.head.appendChild(s);}
-function readU16(v,p){return v.getUint16(p,true)}function readU32(v,p){return v.getUint32(p,true)}
-async function unzip(file){const b=new Uint8Array(await file.arrayBuffer()),v=new DataView(b.buffer,b.byteOffset,b.byteLength);let eocd=-1;for(let p=b.length-22;p>=Math.max(0,b.length-65557);p--){if(readU32(v,p)===0x06054b50){eocd=p;break;}}if(eocd<0)throw Error('Not a ZIP/3MF package');const count=readU16(v,eocd+10),cdOff=readU32(v,eocd+16),out=new Map();let p=cdOff;for(let i=0;i<count;i++){if(readU32(v,p)!==0x02014b50)break;const method=readU16(v,p+10),cs=readU32(v,p+20),nl=readU16(v,p+28),xl=readU16(v,p+30),cl=readU16(v,p+32),off=readU32(v,p+42),name=new TextDecoder().decode(b.slice(p+46,p+46+nl));p+=46+nl+xl+cl;const lv=new DataView(b.buffer,b.byteOffset+off),lnl=readU16(lv,26),lxl=readU16(lv,28),start=off+30+lnl+lxl,raw=b.slice(start,start+cs);if(method===0)out.set(name,raw);else if(method===8){const ds=new DecompressionStream('deflate-raw'),ab=await new Response(new Blob([raw]).stream().pipeThrough(ds)).arrayBuffer();out.set(name,new Uint8Array(ab));}}return out;}
-function text(map,name){const b=map.get(name);return b?new TextDecoder().decode(b):'';}
-function json(map,name){try{return JSON.parse(text(map,name))}catch{return null;}}
-function detectSlicer(cfg){if(!cfg)return'3MF slicer profile';const s=JSON.stringify(cfg).toLowerCase();if(s.includes('bbl_')||s.includes('x-bbl'))return'Bambu Studio / OrcaSlicer format';if(s.includes('slic3r'))return'PrusaSlicer / Slic3r family';return'3MF slicer profile';}
-function cfgVal(cfg,key){const v=cfg?.[key];return Array.isArray(v)?(v[0]??''):v;}
-function applyUsage(data,cfg){if(data.grams!=null)setSemantic(['used per print','usedperprint','filament used','material used','used filament','filament usage','usage'],data.grams.toFixed(2),['spool','cost','price']);if(data.seconds!=null){if(!setValue('printHours',data.seconds/3600))setSemantic(['print time','printing time','estimated print time','print hours'],(data.seconds/3600).toFixed(2),['cost','labour','rate']);}}
-function parse3mf(map,file){const cfg=json(map,'Metadata/project_settings.config')||json(map,'Metadata/project_settings.json')||{},plate=json(map,'Metadata/plate_1.json')||{};const data={slicer:detectSlicer(cfg),printer:cfgVal(cfg,'printer_model')||cfgVal(cfg,'printer_settings_id')||cfgVal(cfg,'default_print_profile'),profile:cfgVal(cfg,'default_print_profile'),filament:[cfgVal(cfg,'filament_vendor'),cfgVal(cfg,'filament_type')].filter(Boolean).join(' '),nozzle:cfgVal(cfg,'nozzle_diameter')||plate.nozzle_diameter,layer:cfgVal(cfg,'layer_height')||plate.layer_height,infill:cfgVal(cfg,'sparse_infill_density'),supports:cfgVal(cfg,'enable_support')==='1'?'Enabled':'Disabled',bed:cfgVal(cfg,'curr_bed_type'),gcode:cfgVal(cfg,'gcode_flavor'),grams:metricFromJson(plate,'grams',cfg)??metricFromJson(cfg,'grams',cfg),seconds:metricFromJson(plate,'time',cfg)??metricFromJson(cfg,'time',cfg)};const embedded=[...map.keys()].find(k=>/\.(gcode|gco|nc|ngc)$/i.test(k));if(embedded){const g=extractGcode(text(map,embedded),cfg);if(data.grams==null)data.grams=g.grams;if(data.seconds==null)data.seconds=g.seconds;}if(data.nozzle&&!String(data.nozzle).includes('mm'))data.nozzle=data.nozzle+' mm';window.__ppFileData=data;if(data.layer&&!String(data.layer).includes('mm'))data.layer=data.layer+' mm';if(data.infill&&!String(data.infill).includes('%'))data.infill=data.infill+'%';if(data.printer&&String(data.printer).includes('Standard @'))data.printer=String(data.printer).replace(/\s*\(.*$/,'');selectMatch(['printer','machine','profile'],data.printer);selectMatch(['material','filament'],cfgVal(cfg,'filament_type'));selectMatch(['nozzle'],data.nozzle);if(cfgVal(cfg,'filament_density'))setValue('materialDensity',cfgVal(cfg,'filament_density'));applyUsage(data,cfg);addStyles();metadataPanel(data);status(data.grams!=null&&data.seconds!=null?'✓ '+file.name+' — 3MF project opened. Filament usage and print time imported.':'✓ '+file.name+' — 3MF project opened. Stored slicer settings imported; this project does not contain sliced usage/time data.');const calc=$('calc');if(calc)calc.click();}
-window.__ppApplyFileData=function(){const data=window.__ppFileData||{};if(!Object.keys(data).length)return false;if(data.printer)selectMatch(['printer','machine','profile'],data.printer);if(data.filament)selectMatch(['material','filament'],data.filament);if(data.nozzle)selectMatch(['nozzle'],data.nozzle);if(data.layer)setSemantic(['layer height','layer'],String(data.layer).replace(/ mm$/,''),['print time']);if(data.infill)setSemantic(['infill'],String(data.infill).replace(/%$/,''));if(data.grams!=null)setSemantic(['used per print','usedperprint','filament used','material used','used filament','filament usage','usage'],Number(data.grams).toFixed(2),['spool','cost','price']);if(data.seconds!=null){if(!setValue('printHours',data.seconds/3600))setSemantic(['print time','printing time','estimated print time','print hours'],(data.seconds/3600).toFixed(2),['cost','labour','rate']);}const calc=$('calc');if(calc)calc.click();return true;};
-async function inspect(file){if(!file)return;window.__ppFileData={};const e=ext(file.name);if(e==='3mf'){status('Opening '+file.name+' and reading slicer settings…');try{const map=await unzip(file);parse3mf(map,file);}catch(err){console.error(err);status('✓ 3MF recognised, but its internal settings could not be read in this browser.');}return;}if(gcodeExt.includes(e)){status('Reading '+file.name+' for print time and filament usage…');try{const cfg={filament_density:document.querySelector('[id*="density" i]')?.value||'1.24',filament_diameter:document.querySelector('[id*="diameter" i]')?.value||'1.75'};const r=extractGcode(await file.text(),cfg);window.__ppFileData={slicer:'G-code metadata',printer:null,profile:null,filament:null,nozzle:null,layer:null,infill:null,supports:null,bed:null,grams:r.grams,seconds:r.seconds};if(r.grams!=null)setSemantic(['used per print','usedperprint','filament used','material used','used filament','filament usage','usage'],r.grams.toFixed(2),['spool','cost','price']);if(r.seconds!=null){if(!setValue('printHours',r.seconds/3600))setSemantic(['print time','printing time','estimated print time','print hours'],(r.seconds/3600).toFixed(2),['cost','labour','rate']);}status(r.grams!=null||r.seconds!=null?'✓ '+file.name+' — print time and filament usage imported.':'✓ '+file.name+' recognised, but no readable time/filament metadata was found.');}catch(err){console.error(err);status('✓ '+file.name+' recognised, but its print metadata could not be read.');}return;}if(names[e]){if(e==='bgcode')status('✓ Binary G-code recognised — sliced output detected.');else if(['stl','obj','amf','ply','step','stp'].includes(e))status('✓ '+names[e]+' recognised — model file detected.');else status('✓ '+names[e]+' recognised.');}else status('⚠ File type not recognised.');}
-const PP_FILE_STORE='printprofit.uploaded-file.v1';
-async function ppStoreUploadedFile(file){
-  if(!file)return;
-  try{
-    const db=await new Promise((resolve,reject)=>{
-      const r=indexedDB.open(PP_FILE_STORE,1);
-      r.onupgradeneeded=()=>r.result.createObjectStore('files');
-      r.onsuccess=()=>resolve(r.result); r.onerror=()=>reject(r.error);
-    });
-    await new Promise((resolve,reject)=>{
-      const tx=db.transaction('files','readwrite');
-      tx.objectStore('files').put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},'latest');
-      tx.oncomplete=resolve; tx.onerror=()=>reject(tx.error);
-    });
-    db.close();
-  }catch(e){console.warn('PrintProfit could not store uploaded file:',e);}
-}
-window.__ppPersistUploadedFile=ppStoreUploadedFile;
-function install(){const input=$('file');if(!input)return false;input.accept='.'+supported.join(',.');if(input.dataset.ppSmartBound)return true;input.dataset.ppSmartBound='1';input.addEventListener('change',()=>{const file=input.files?.[0];if(!file)return;ppStoreUploadedFile(file);inspect(file).finally(()=>{try{window.__printProfitPersistDraft?.();}catch(e){}});});const drop=input.closest('.drop')||document.querySelector('.drop');if(drop){drop.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer?.files?.[0];if(f)inspect(f);});}return true;}
-const start=Date.now(),timer=setInterval(()=>{if(install()||Date.now()-start>15000)clearInterval(timer)},50);
+/* One upload path for G-code, binary G-code and sliced projects. */
+(() => {
+  'use strict';
+  if(window.__printProfitFileTypeSupport) return;
+  window.__printProfitFileTypeSupport=true;
+  const $=id=>document.getElementById(id),STORE='printprofit.uploaded-file.v1';
+  const supported=['gcode','gco','bgcode','nc','ngc','gc','g','3mf','sl1','sl1s','lys','chitubox','ctb','photon','pwma','pwmo','pws','goo','stl','obj','amf','ply','step','stp'];
+  let generation=0,result=null,images=[],renderedData=null,renderedImages=null;
+  const text=(tag,value,className)=>{const el=document.createElement(tag);el.textContent=String(value??'');if(className) el.className=className;return el;};
+  const available=v=>v!==null&&v!==undefined&&String(v)!=='';
+  function status(value){if($('status')) $('status').textContent=value;}
+  function setValue(id,value){const el=$(id);if(!el||value===null||value===undefined) return false;el.value=String(value);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));return true;}
+  function selectMatch(id,desired){
+    const el=$(id);if(!el||!desired) return false;
+    const normal=v=>String(v).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    const wanted=normal(desired),options=[...el.options].filter(o=>o.value&&normal(o.textContent).length>1);
+    const exact=options.find(o=>normal(o.textContent)===wanted||normal(o.value)===wanted);
+    const match=exact||options.find(o=>normal(o.textContent).includes(wanted)&&wanted.length>=3);
+    if(!match) return false;return setValue(id,match.value);
+  }
+  function apply(data,usageOnly=false){
+    if(!data) return false;
+    if(!usageOnly){
+      selectMatch('printer',data.printer);
+      if(data.technology==='SLA') setValue('materialType','resin');
+      else if(data.format==='G-code'||data.format==='Binary G-code'||data.technology==='FFF'||data.technology==='FDM') setValue('materialType','filament');
+      const types=[...new Set((data.materials||[]).map(m=>m.type).filter(Boolean))];
+      if(types.length===1) selectMatch('material',types[0]);
+      // The calculator has a single material price. Different materials need a weighted price entered by the user.
+      const rho=(String(data.density||'').match(/^([\d.]+)\s*g\/cm³$/)||[])[1];
+      if(rho) setValue('materialDensity',rho);
+    }
+    // Clear missing usage/time so a newly uploaded file never inherits the previous print's estimates.
+    const isResin=$('materialType')?.value==='resin';
+    const density=Number.parseFloat(data.density);
+    const usage=isResin?(Number.isFinite(data.resinVolume)?data.resinVolume:Number.isFinite(data.grams)&&density>0?data.grams/density:null):data.grams;
+    setValue('materialUsed',Number.isFinite(usage)?usage.toFixed(2):'');
+    setValue('printHours',Number.isFinite(data.seconds)?data.seconds/3600:'');
+    $('calc')?.click();return true;
+  }
+  function release(list){for(const i of list||[]) if(i.url?.startsWith('blob:')) URL.revokeObjectURL(i.url);}
+  async function fileDb(){return new Promise((resolve,reject)=>{const r=indexedDB.open(STORE,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('files')) r.result.createObjectStore('files');};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+  // Serialise storage writes so rapid replacement/clear cannot resurrect an older file.
+  let storage=Promise.resolve();
+  function storeFile(file){
+    storage=storage.catch(()=>{}).then(async()=>{const db=await fileDb();try{await new Promise((resolve,reject)=>{const tx=db.transaction('files','readwrite'),s=tx.objectStore('files');if(file) s.put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},'latest');else s.delete('latest');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}finally{db.close();}});
+    return storage.catch(error=>console.warn('PrintProfit could not save the uploaded file:',error));
+  }
+  window.__ppPersistUploadedFile=storeFile;
+  function clearFile(clearInput=true){
+    generation++;release(images);images=[];result=null;renderedData=null;
+    window.__ppFileData={};window.__ppRestoredFileName='';
+    if(clearInput&&$('file')) $('file').value='';
+    storeFile(null);$('ppFileMetadata')?.remove();
+    window.__ppRefreshModelHub?.();renderDetails(window.__ppFileData);
+  }
+  window.__ppClearSlicerFile=clearFile;
+  function selectPlate(id,importValues=true){
+    const plate=result?.plates.find(p=>String(p.id)===String(id));if(!plate) return;
+    const data={...plate,fileName:result.fileName,fileSize:result.fileSize,format:result.format,
+      selectedPlate:plate.id,plateCount:result.plates.length,plateOptions:result.plates.map(p=>({id:p.id,name:p.name})),warnings:result.warnings,
+      packageObjectCount:result.packageObjectCount};
+    window.__ppFileData=data;window.__ppRestoredFileName=result.fileName;
+    if(importValues) apply(data);
+    status('✓ '+result.fileName+' — '+(result.plates.length>1?plate.name+' selected. ':'')+'Available slicer information imported.');
+    window.__ppRefreshModelHub?.();renderDetails(data);
+    window.__printProfitPersistDraft?.();
+  }
+  async function inspect(file){
+    if(!file) return;
+    const restoring=!!window.__ppRestoringFile,savedPlate=window.__ppRestoringPlate;
+    window.__ppRestoringFile=false;window.__ppRestoringPlate=null;
+    clearFile(false);const ticket=generation;
+    if(!restoring){setValue('materialUsed','');setValue('printHours','');}
+    status('Reading '+file.name+' — collecting print information and preview images…');
+    storeFile(file);
+    try {
+      if(!window.PrintProfitSlicerFile) throw Error('The file reader has not loaded. Refresh the page and try again.');
+      const parsed=await window.PrintProfitSlicerFile.parse(file,{density:$('materialDensity')?.value});
+      if(ticket!==generation){release(parsed.images);return;}
+      result=parsed;images=parsed.images;
+      const first=result.plates.find(p=>p.id===savedPlate)||result.plates.find(p=>p.seconds!==null&&p.seconds!==undefined)||result.plates[0];
+      selectPlate(first.id,!restoring);
+    }catch(error){
+      if(ticket!==generation) return;
+      status('Could not read '+file.name+'. '+(error.message||'Try exporting a sliced 3MF or standard G-code.'));
+      window.__ppFileData={fileName:file.name,fileSize:file.size,readError:true,warnings:[error.message||'File could not be read.']};
+      window.__ppRefreshModelHub?.();renderDetails(window.__ppFileData);
+      window.__printProfitPersistDraft?.();
+    }
+  }
+  window.__ppInspectSlicerFile=inspect;
+  window.__ppApplyFileData=()=>apply(window.__ppFileData);
+  function card(label,value){const el=document.createElement('div');el.append(text('span',label),text('strong',available(value)?value:'Not stored'));return el;}
+  function time(seconds){if(!Number.isFinite(seconds)) return null;const h=Math.floor(seconds/3600),m=Math.floor(seconds%3600/60);return (h?h+'h ':'')+m+'m '+Math.round(seconds%60)+'s';}
+  function style(){
+    if($('ppSlicerDetailsStyle')) return;
+    const el=document.createElement('style');el.id='ppSlicerDetailsStyle';el.textContent=`
+      .pp-model-extra.pp-slicer-expanded>.pp-model-extra-grid,.pp-model-extra.pp-slicer-expanded>.pp-model-extra-title{display:none}
+      .pp-slicer-details{color:var(--text);min-width:0}.pp-slicer-overview{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.8fr);gap:14px;align-items:start;margin-bottom:16px}
+      .pp-slicer-preview{margin:0;padding:14px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;text-align:center;min-width:0}
+      .pp-slicer-preview img{display:block;width:100%;height:230px;object-fit:contain;border-radius:8px;margin:0 auto 12px;background:linear-gradient(135deg,#ffffff08,#00000015)}
+      .pp-slicer-preview figcaption{font-size:12px;color:var(--muted);line-height:1.6}.pp-slicer-preview a{display:inline-block;color:var(--accent);padding:7px 0;font-size:12px;font-weight:700}
+      .pp-slicer-empty-preview{min-height:180px;display:grid;place-content:center;gap:8px;padding:12px;font-size:12px;line-height:1.6;color:var(--muted)}.pp-slicer-empty-preview b{font-size:16px;color:var(--text)}
+      .pp-slicer-summary h3,.pp-slicer-group h3{font-size:13px;color:var(--accent);margin:0 0 10px}.pp-slicer-summary p{font-size:12px;color:var(--muted);line-height:1.6;margin:10px 0}
+      .pp-slicer-summary label{display:block;font-size:12px;font-weight:700;margin:0 0 6px}.pp-slicer-summary select{width:100%;margin-bottom:12px;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px}
+      .pp-slicer-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.pp-slicer-cards>div{border:1px solid var(--line);background:var(--panel2);padding:11px;border-radius:9px;min-width:0}
+      .pp-slicer-cards span{display:block;font-size:11px;color:var(--muted);margin-bottom:6px}.pp-slicer-cards strong{display:block;font-size:13px;line-height:1.5;overflow-wrap:anywhere;white-space:normal}
+      .pp-slicer-group{margin:0 0 14px}.pp-slicer-note{font-size:12px;line-height:1.6;color:var(--muted);padding:10px;border-left:3px solid var(--accent);background:var(--panel2);border-radius:0 8px 8px 0;margin:10px 0}
+      .pp-slicer-materials{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-bottom:12px}.pp-slicer-material{padding:12px;border:1px solid var(--line);background:var(--panel2);border-radius:9px;font-size:12px;line-height:1.8}
+      .pp-slicer-material .pp-material-swatch{display:inline-block;width:14px;height:14px;vertical-align:middle;border:1px solid var(--line);border-radius:50%;margin-right:8px}
+      .pp-slicer-settings{border:1px solid var(--line);background:var(--panel2);border-radius:10px;padding:12px}.pp-slicer-settings summary{cursor:pointer;color:var(--accent);font-size:13px;font-weight:700}
+      .pp-slicer-settings dl{max-height:380px;overflow:auto;margin:12px 0 0;font-size:12px}.pp-slicer-settings dl>div{display:grid;grid-template-columns:minmax(140px,1fr) minmax(0,2fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+      .pp-slicer-settings dt{color:var(--muted);overflow-wrap:anywhere}.pp-slicer-settings dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+      @media(max-width:850px){.pp-slicer-overview{grid-template-columns:1fr}.pp-slicer-preview img{height:210px}.pp-slicer-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media(max-width:480px){.pp-slicer-cards{grid-template-columns:1fr}.pp-slicer-settings dl>div{grid-template-columns:1fr;gap:4px}}
+    `;document.head.appendChild(el);
+  }
+  function renderDetails(data={}){
+    const host=document.querySelector('.pp-model-extra');if(!host) return;
+    if(renderedData===data&&renderedImages===images&&host.querySelector('.pp-slicer-details')) return;
+    renderedData=data;renderedImages=images;style();host.classList.add('pp-slicer-expanded');
+    let root=host.querySelector('.pp-slicer-details');if(!root){root=document.createElement('div');root.className='pp-slicer-details';host.prepend(root);}root.replaceChildren();
+    if(!data.fileName){root.append(text('p','Upload a sliced file to see its preview and available print details.','pp-slicer-note'));return;}
+    const overview=document.createElement('div');overview.className='pp-slicer-overview';
+    const figure=document.createElement('figure');figure.className='pp-slicer-preview';
+    // Previews are not saved as URLs in drafts: the original file is kept locally and re-read on restoration.
+    const related=result?.fileName===data.fileName?images.filter(i=>i.plate===null||i.plate===data.selectedPlate):[];
+    const image=related.find(i=>i.plate===data.selectedPlate)||related[0];
+    if(image){
+      const img=document.createElement('img');img.src=image.url;img.alt=(image.generated?'Model preview for ':'Embedded slicer preview for ')+data.fileName;img.decoding='async';
+      img.addEventListener('error',()=>{figure.replaceChildren(text('p','This embedded preview could not be displayed.','pp-slicer-empty-preview'));},{once:true});
+      figure.append(img,text('figcaption',image.label+(image.generated?'':' · Image saved by your slicer')));
+      const link=document.createElement('a');link.href=image.url;link.download=data.fileName.replace(/\.[^.]+$/,'')+'-preview.'+(image.extension||'png');link.textContent='Save preview image';figure.append(link);
+    }else {
+      const empty=document.createElement('div');empty.className='pp-slicer-empty-preview';empty.append(text('b','No preview available'),text('span','If your slicer includes a preview image, it will appear here. A missing preview does not prevent reading the print details.'));figure.append(empty);
+    }
+    const summary=document.createElement('div');summary.className='pp-slicer-summary';summary.append(text('h3',data.format==='STL model'?'Your model':'Your print file'));
+    if(data.plateCount>1){
+      const label=text('label','Choose the plate to calculate');label.htmlFor='ppSlicerPlate';
+      const select=document.createElement('select');select.id='ppSlicerPlate';
+      for(const p of data.plateOptions||[]){const o=text('option',p.name);o.value=String(p.id);select.append(o);}select.value=String(data.selectedPlate);
+      select.disabled=!result||result.fileName!==data.fileName;
+      select.addEventListener('change',()=>selectPlate(select.value));summary.append(label,select);
+    }
+    const cards=document.createElement('div');cards.className='pp-slicer-cards';
+    cards.append(card('Estimated print time',time(data.seconds)),card('Material used',Number.isFinite(data.grams)?data.grams.toFixed(2)+' g':null),card('Slicer',data.slicer),card('Printer',data.printer),card('Layer count',data.layerCount),card('Objects on selected plate',data.objectCount),card('File type',data.format),card('File size',Number.isFinite(data.fileSize)?(data.fileSize/1024/1024).toFixed(2)+' MB':null));
+    summary.append(cards);
+    if(data.objectNames?.length) summary.append(text('p','Objects: '+data.objectNames.join(', ')));
+    if(data.massSource) summary.append(text('p','Material weight: '+data.massSource));
+    summary.append(text('p','Figures come from the selected plate’s saved slicer data. Actual print time and material usage can differ.'));
+    overview.append(figure,summary);root.append(overview);
+    if(data.materials?.length){
+      root.append(text('h3','Saved material information'));const list=document.createElement('div');list.className='pp-slicer-materials';
+      for(const m of data.materials){
+        const el=document.createElement('div');el.className='pp-slicer-material';
+        if(/^#?[a-f0-9]{6}(?:[a-f0-9]{2})?$/i.test(m.colour||'')){const swatch=document.createElement('span');swatch.className='pp-material-swatch';swatch.style.backgroundColor=(m.colour.startsWith('#')?'':'#')+m.colour;el.append(swatch);}
+        el.append(text('b',[m.label,m.vendor,m.type].filter(Boolean).join(' · ')));
+        if(m.colour) el.append(text('div','Colour: '+m.colour));
+        if(Number.isFinite(m.grams)) el.append(text('div','Usage: '+m.grams.toFixed(2)+' g'));
+        if(Number.isFinite(m.lengthMm)) el.append(text('div','Length: '+(m.lengthMm/1000).toFixed(2)+' m'));
+        list.append(el);
+      }
+      root.append(list);
+      if(data.materials.length>1) root.append(text('p','This file uses several materials. Enter a weighted average material price in Print Setup, including any purge waste recorded by your slicer.','pp-slicer-note'));
+    }
+    const groups=new Map();
+    for(const detail of data.details||[]){if(!available(detail.value)) continue;if(!groups.has(detail.group)) groups.set(detail.group,[]);groups.get(detail.group).push(detail);}
+    if(Number.isFinite(data.filamentLength)) {if(!groups.has('Material')) groups.set('Material',[]);groups.get('Material').push({label:'Filament length',value:(data.filamentLength/1000).toFixed(2)+' m'});}
+    if(Number.isFinite(data.filamentVolume)) {if(!groups.has('Material')) groups.set('Material',[]);groups.get('Material').push({label:'Filament volume',value:data.filamentVolume.toFixed(2)+' cm³'});}
+    for(const [name,details] of groups){const group=document.createElement('section');group.className='pp-slicer-group';group.append(text('h3',name));const grid=document.createElement('div');grid.className='pp-slicer-cards';for(const d of details) grid.append(card(d.label,d.value));group.append(grid);root.append(group);}
+    for(const warning of data.warnings||[]) root.append(text('p',warning,'pp-slicer-note'));
+    if(data.settings?.length){
+      const details=document.createElement('details');details.className='pp-slicer-settings';details.append(text('summary','All saved slicer settings ('+data.settings.length+')'));
+      const dl=document.createElement('dl');for(const s of data.settings){const row=document.createElement('div');row.append(text('dt',s.key.replace(/_/g,' ')),text('dd',s.value));dl.append(row);}details.append(dl);root.append(details);
+    }
+    const hint=$('ppModelHint');if(hint) hint.textContent='Only information stored in your file is shown. Electricity, purchase prices, labour, postage and selling fees use your calculator settings.';
+  }
+  window.__ppRenderFileDetails=renderDetails;
+  function install(){
+    const input=$('file');if(!input) return false;if(input.dataset.ppSmartBound) return true;input.dataset.ppSmartBound='1';input.accept='.'+supported.join(',.');
+    const drop=input.closest('.drop')||document.querySelector('.drop');
+    const label=drop?.querySelector('b');if(label) label.textContent='Upload your sliced print file';
+    input.addEventListener('change',event=>{const file=input.files?.[0];if(!file) return;event.stopImmediatePropagation();inspect(file);},true);
+    if(drop){
+      drop.addEventListener('drop',event=>{event.preventDefault();event.stopImmediatePropagation();drop.classList.remove('pp-drop-active');const file=event.dataTransfer?.files?.[0];if(!file) return;try{const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;}catch{}inspect(file);},true);
+      for(const name of ['dragenter','dragover']) drop.addEventListener(name,event=>{event.preventDefault();drop.classList.add('pp-drop-active');});
+      drop.addEventListener('dragleave',()=>drop.classList.remove('pp-drop-active'));
+    }
+    document.addEventListener('click',event=>{const button=event.target?.closest?.('#clear,#reset,#ppGlobalReset');if(!button) return;clearFile();if(button.id==='clear'){setValue('materialUsed','');setValue('printHours','');status('No sliced file selected.');$('calc')?.click();window.__printProfitPersistDraft?.();}},true);
+    return true;
+  }
+  const started=Date.now(),timer=setInterval(()=>{if(install()||Date.now()-started>15000) clearInterval(timer);},50);
 })();
