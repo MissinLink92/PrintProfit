@@ -111,6 +111,7 @@ const projectInfo=()=>{
  return {material,hours,used,currency};
 };
 function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow='';}
+function formatProjectTimestamp(value){const d=new Date(value);if(!Number.isFinite(d.getTime()))return '—';const day=String(d.getDate()).padStart(2,'0'),month=String(d.getMonth()+1).padStart(2,'0'),year=d.getFullYear(),time=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(d);return day+'/'+month+'/'+year+' '+time;}
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
  const projects=read().sort((a,b)=>b.updated-a.updated);
@@ -118,7 +119,7 @@ function render(){
  list.innerHTML=projects.map(p=>`<article class="pp-project-card" data-project-id="${esc(p.id)}">
    <div class="pp-project-card-main">
     <div class="pp-project-icon">▣</div>
-    <div><h3>${esc(p.name)}</h3><p>${esc(p.material)} · ${esc(p.hours)} h · ${esc(p.used)} used</p><small>Saved ${new Date(p.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}</small></div>
+    <div><h3>${esc(p.name)}</h3><p>${esc(p.material)} · ${esc(p.hours)} h · ${esc(p.used)} used</p><small class="pp-date-nowrap">Saved ${formatProjectTimestamp(p.updated)}</small></div>
    </div>
    <div class="pp-project-actions"><button type="button" data-load-project="${esc(p.id)}">Load</button><button type="button" data-rename-project="${esc(p.id)}">Rename</button><button type="button" data-duplicate-project="${esc(p.id)}">Duplicate</button><button type="button" class="danger" data-delete-project="${esc(p.id)}">Delete</button></div>
  </article>`).join('');
