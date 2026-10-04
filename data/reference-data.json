@@ -19,14 +19,18 @@
       "platform": 12.25,
       "pay": 0,
       "fixed": 0.4,
-      "note": "eBay UK Business default: 11.9% Home/Furniture & DIY + 0.35% regulatory fee; £0.40 per order over £10. Reference value; not yet checked by the nightly updater."
+      "note": "eBay UK business Home/Furniture & DIY, up to £500; order fee shown for orders over £10. Other categories, tiers, VAT and listing fees may differ. Platform 12.25%; payments 0% + £0.40. Checked 2026-10-05.",
+      "checkedAt": "2026-10-05",
+      "sourceUrls": [
+        "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809"
+      ]
     },
     "amazon": {
       "platform": 12.24,
       "pay": 0,
       "fixed": 0,
-      "note": "Amazon Handmade UK. Monthly plan costs are not allocated per sale. Platform 12.24%; payments 0% + £0.00. Checked 2026-10-04.",
-      "checkedAt": "2026-10-04",
+      "note": "Amazon Handmade UK. Monthly plan costs are not allocated per sale. Platform 12.24%; payments 0% + £0.00. Checked 2026-10-05.",
+      "checkedAt": "2026-10-05",
       "sourceUrls": [
         "https://sell.amazon.co.uk/programmes/handmade"
       ]
@@ -59,8 +63,8 @@
       "platform": 0,
       "pay": 0,
       "fixed": 0,
-      "note": "Gumtree UK seller payment fees; paid business listings and promotions excluded. Platform 0%; payments 0% + £0.00. Checked 2026-10-04.",
-      "checkedAt": "2026-10-04",
+      "note": "Gumtree UK seller payment fees; paid business listings and promotions excluded. Platform 0%; payments 0% + £0.00. Checked 2026-10-05.",
+      "checkedAt": "2026-10-05",
       "sourceUrls": [
         "https://www.gumtree.com/info/safety/p/payments/how-fees-and-selling-costs-are-charged/"
       ]
@@ -75,8 +79,8 @@
       "platform": 0,
       "pay": 2.0,
       "fixed": 0.25,
-      "note": "Shopify Payments Basic standard online UK cards. Monthly plan costs are not allocated per sale. Platform 0%; payments 2.0% + £0.25. Checked 2026-10-04.",
-      "checkedAt": "2026-10-04",
+      "note": "Shopify Payments Basic standard online UK cards. Monthly plan costs are not allocated per sale. Platform 0%; payments 2.0% + £0.25. Checked 2026-10-05.",
+      "checkedAt": "2026-10-05",
       "sourceUrls": [
         "https://www.shopify.com/uk/pricing"
       ]
@@ -135,7 +139,7 @@
       ]
     },
     "evri": {
-      "source": "Evri official UK reference — checked 2026-10-04",
+      "source": "Evri official UK reference — checked 2026-10-05",
       "rates": [
         {
           "label": "Home/work — Postable (Under 1kg) — Standard drop off",
@@ -333,7 +337,7 @@
           "note": "VAT included. Size rules, postcode surcharges and service availability apply."
         }
       ],
-      "checkedAt": "2026-10-04",
+      "checkedAt": "2026-10-05",
       "sourceUrls": [
         "https://www.evri.com/our-services/our-prices"
       ]
@@ -847,7 +851,7 @@
         "rate": 0.2611,
         "standing": 0.5719,
         "sourceUrl": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-10-05"
       },
       {
         "id": "ofgem-2026-10-01",
@@ -857,13 +861,13 @@
         "rate": 0.2632,
         "standing": 0.5483,
         "sourceUrl": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-10-05"
       }
     ],
     "note": "Great Britain average direct debit reference, including VAT. Supplier tariffs need a postcode, meter and payment method. Northern Ireland is outside the Ofgem price cap.",
     "supplierAudit": {
       "sourceUrl": "https://www.ofgem.gov.uk/sites/default/files/2026-06/List%20of%20all%20electricity%20licensees%20including%20suppliers.pdf",
-      "checkedAt": "2026-10-04",
+      "checkedAt": "2026-10-05",
       "legalNamesNeedingReview": [
         "Jellyfish Energy Ltd"
       ],
@@ -873,158 +877,159 @@
   "sourceStatus": {
     "ofgem": {
       "url": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "28b3a3303cd1e3fa8482b6f6e798d8d83f5885d994035ae35840534a0dd36ad2",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     },
     "ofgem-suppliers": {
       "url": "https://www.ofgem.gov.uk/data/list-all-electricity-licensees-including-suppliers",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "2c083a94460ab4310356977c107276c7e3657c516169a788ce453e0600b97653",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     },
     "inpost": {
       "url": "https://inpost.co.uk/send/parcel-prices",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Cannot read robots.txt: HTTP 403"
     },
     "evri": {
       "url": "https://www.evri.com/our-services/our-prices",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "30d3de44a289d10ee3c8008a291e38605cc3420d31371da786d414cff1ab8d97",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     },
     "royalmail-first": {
       "url": "https://www.royalmail.com/sending/uk/1st-class",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Cannot read robots.txt: HTTP 403"
     },
     "royalmail-second": {
       "url": "https://www.royalmail.com/sending/uk/2nd-class",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Cannot read robots.txt: HTTP 403"
     },
     "parcelforce": {
       "url": "https://www.parcelforce.com/sending-parcel/uk-parcel-delivery",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Cannot read robots.txt: HTTP 403"
     },
     "dpd": {
       "url": "https://send.dpd.co.uk/",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "dhl": {
       "url": "https://send.dhlparcel.co.uk/parcel-delivery",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "ups": {
       "url": "https://www.ups.com/gb/en/support/shipping-support/shipping-costs-rates",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "fedex": {
       "url": "https://www.fedex.com/en-gb/shipping/rates.html",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "etsy-transaction": {
       "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "HTTP Error 403: Forbidden"
     },
     "etsy-regulatory": {
       "url": "https://help.etsy.com/hc/en-us/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "HTTP Error 403: Forbidden"
     },
     "etsy-payments": {
       "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "HTTP Error 403: Forbidden"
     },
     "ebay": {
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
-      "lastAttempt": "2026-10-04",
-      "status": "review-required",
-      "contentHash": "8d277a0c0907a14b9e5d097dffef420f04d47c78230d5537eae68bf08c9827b7",
-      "error": "could not convert string to float: '0.40.'"
+      "lastAttempt": "2026-10-05",
+      "status": "verified",
+      "contentHash": "c2284a9ca156f31b78a555e916aecd7c1d38e72d5585db388e892fe06b398995",
+      "error": "could not convert string to float: '0.40.'",
+      "lastVerified": "2026-10-05"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "d8f9d88d308a4e73bec3052dfa0ff54ca3d26ab3b9f6f7f5c6fa3e075086a8a4",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     },
     "depop": {
       "url": "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "HTTP Error 403: Forbidden"
     },
     "vinted": {
       "url": "https://www.vinted.co.uk/pricelist",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "review-required",
       "contentHash": "02695db35c327c9f4b431e2e4d2e0840834f453963583054fda35adc116c6628",
       "error": "Zero seller fee guidance changed; keep the previous value for review"
     },
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "review-required",
       "contentHash": "2756549ce89d3b24bb791085b0120685bde63be79e1cd7d53922c6216727883f",
       "error": "Expected one unambiguous rate; found 0"
     },
     "facebook": {
       "url": "https://www.facebook.com/help/1159837417996719",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source robots.txt disallows this URL"
     },
     "gumtree": {
       "url": "https://www.gumtree.com/info/safety/p/payments/how-fees-and-selling-costs-are-charged/",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "1984c40f4af772ca3598b749e333d005d33f689678bfbfc2d088bb89f8fe4546",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     },
     "folksy": {
       "url": "https://folksy.com/selling",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "stripe": {
       "url": "https://stripe.com/gb/pricing",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "review-required",
       "contentHash": "6c36f055789d1c35339858ffa3321e684704cd7fcae5a4ff1a6cbf49369f5bbf",
       "error": "Official source could not be read: folksy"
     },
     "shopify": {
       "url": "https://www.shopify.com/uk/pricing",
-      "lastAttempt": "2026-10-04",
+      "lastAttempt": "2026-10-05",
       "status": "verified",
       "contentHash": "431f203a7f75bebaf28e4b355da2276252ba52f0367f288a4b6af55485dad7a2",
-      "lastVerified": "2026-10-04"
+      "lastVerified": "2026-10-05"
     }
   },
-  "lastAttempt": "2026-10-04T17:04:23+01:00"
+  "lastAttempt": "2026-10-05T00:05:58+01:00"
 }
