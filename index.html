@@ -25,6 +25,7 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 #ppFloatingSave .pp-save-icon{background-position:0% center!important}
 #ppFloatingReset .pp-reset-icon{background-position:60% center!important}
 #ppFloatingSave .pp-save-icon svg,#ppFloatingReset .pp-reset-icon svg{display:none!important}
+body[data-pp-modal-open="true"] #ppFloatingSave,body[data-pp-modal-open="true"] #ppFloatingReset{display:none!important}
 </style>
 </head>
 <body>
@@ -41,7 +42,7 @@ const scripts=[
 'reset-fix.js?v=20261004-theme1',
 'file-type-support.js?v=7',
 'tab-layout.js?v=20',
-'ui-modals.js?v=20261004-theme1',
+'ui-modals.js?v=20261004-theme2',
 'ui-enhancements.js?v=4',
 'gcode-reader.js?v=3',
 'print-time-input.js?v=1',

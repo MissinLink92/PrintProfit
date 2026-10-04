@@ -11,6 +11,7 @@ function showPanel(panel){
       height=host.innerHeight;
       if(parentOverflow===undefined)parentOverflow=host.document.body.style.overflow;
       host.document.body.style.overflow='hidden';
+      host.document.body.dataset.ppModalOpen='true';
     }
   }catch(e){}
   window.scrollTo({top:0,left:0,behavior:'instant'});
@@ -38,7 +39,7 @@ function openSettings(){
     <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
       <div class="pp-settings-head">
         <div class="pp-settings-brand">
-          <img src="./assets/printprofit-logo-dark-canonical.webp?v=10260919" alt="PrintProfit">
+          <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit">
           <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
         </div>
         <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
@@ -202,7 +203,7 @@ function closePanel(id){
   panel.classList.remove('open');
   if(!document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open')){
     document.body.style.overflow='';
-    try{if(window.parent!==window&&parentOverflow!==undefined){window.parent.document.body.style.overflow=parentOverflow;parentOverflow=undefined;}}catch(e){}
+    try{if(window.parent!==window&&parentOverflow!==undefined){window.parent.document.body.style.overflow=parentOverflow;delete window.parent.document.body.dataset.ppModalOpen;parentOverflow=undefined;}}catch(e){}
   }
 }
 
@@ -216,7 +217,7 @@ function openGuide(){
       <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
         <div class="pp-guide-head">
           <div class="pp-guide-brand">
-            <img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit">
+            <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit">
             <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
           </div>
           <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
@@ -271,7 +272,7 @@ function openGuide(){
       .pp-guide-dialog{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(900px,calc(100vw - 32px));max-height:calc(100vh - 40px);border:1px solid #315261;border-radius:18px;background:linear-gradient(180deg,#0c202b,#07131b);box-shadow:0 28px 90px #000b,0 0 34px #ff780014;color:#f5f8fb;overflow:auto}
       .pp-guide-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border-bottom:1px solid #284553;position:sticky;top:0;background:rgba(9,24,33,.97);z-index:2}
       .pp-guide-brand{display:flex;align-items:center;gap:13px;min-width:0}
-      .pp-guide-brand img{width:132px;height:56px;object-fit:contain;flex:0 0 132px;border-radius:9px;background:#f7f9fa;padding:3px 6px;box-sizing:border-box}
+      .pp-guide-brand img{width:132px;height:56px;object-fit:contain;flex:0 0 132px;border-radius:9px;background:transparent;padding:3px 6px;box-sizing:border-box}
       .pp-guide-kicker{color:#ff7800;font-size:8px;font-weight:900;letter-spacing:.2em;margin-bottom:4px}
       .pp-guide-head h2{margin:0;font-size:22px}.pp-guide-head p{margin:4px 0 0;color:#8fa6b2;font-size:10px}
       .pp-guide-close{width:36px;height:36px;flex:0 0 36px;border:1px solid #355464;border-radius:9px;background:#091821;color:#dce7ec;font-size:22px;cursor:pointer}
