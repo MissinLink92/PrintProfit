@@ -37,7 +37,7 @@ function status(text){
   const el=document.getElementById('materialStatus');
   if(el)el.textContent=text;
 }
-function formatDateDMY(value){if(!value)return '';const raw=String(value),iso=raw.match(/^(\d{4})-(\d{2})-(\d{2})/);if(iso)return iso[3]+'/'+iso[2]+'/'+iso[1];const d=new Date(raw);return Number.isFinite(d.getTime())?String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear():raw;}
+function formatDateDMY(value){if(!value)return '';const join='\u2060/\u2060',raw=String(value),iso=raw.match(/^(\d{4})-(\d{2})-(\d{2})/);if(iso)return iso[3]+join+iso[2]+join+iso[1];const d=new Date(raw);return Number.isFinite(d.getTime())?String(d.getDate()).padStart(2,'0')+join+String(d.getMonth()+1).padStart(2,'0')+join+d.getFullYear():raw;}
 function applyLivePrice(){
   const cost=document.getElementById('materialPackCost');
   const pack=document.getElementById('materialPack');
