@@ -254,7 +254,7 @@ def refresh(ref, config, reader, report, queue):
             raise ValueError('eBay default category row was not unique')
         percent = single_number(r'([\d.]+)%\s+for the portion.{0,80}?up to £500', ' '.join(rows[0][1:]))
         regulatory = single_number(r'charge a regulatory operating fee of\s+([\d.]+)%', pages['ebay'].text)
-        fixed = single_number(r'orders over £10\.00 the per-order fee is £([\d.]+)', pages['ebay'].text)
+        fixed = single_number(r'orders over £10\.00 the per-order fee is £(\d+(?:\.\d+)?)', pages['ebay'].text)
         platform('ebay', ['ebay'], {'platform': percent+regulatory, 'fixed': fixed})
     verified(['ebay'], ebay)
 
