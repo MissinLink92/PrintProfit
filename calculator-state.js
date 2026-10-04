@@ -32,6 +32,7 @@ function isPreservedDestination(anchor){
 
 function isPersistedField(el){
   if(!el || !el.id) return false;
+  if(el.closest('#ppSettingsPanel,#ppGuidePanel,#ppVisualMaster,#ppCleanTop,.header'))return false;
   if(el.type==='file' || el.readOnly || el.disabled) return false;
   if(el.closest('#ppProfitTools,#ppProfitAdvisor,.pp-profit-advisor')) return false;
   if(/^pp(?:WhatIf|WI|Bulk|SellWhere|ResultStatus)/i.test(el.id)) return false;

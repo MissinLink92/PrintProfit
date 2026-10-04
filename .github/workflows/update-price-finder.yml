@@ -5,17 +5,6 @@ on:
     - cron: '0 0 * * *'
       timezone: Europe/London
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/**'
-      - 'config/**'
-      - 'data/**'
-      - '*.html'
-      - '*.js'
-      - '*.css'
-      - 'assets/**'
-      - '.github/workflows/update-price-finder.yml'
 
 concurrency:
   group: printprofit-refresh-and-pages
@@ -70,7 +59,8 @@ jobs:
           git add data/price-finder.json data/price-finder.js data/reference-data.json data/reference-data.js
           git add data/review-queue.json data/nightly-report.json printer-price-data.js assets/products config/nightly-sources.json reports
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh PrintProfit UK prices and review queue"
+            git commit -m "Refresh PrintProfit UK prices and update report"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
       - name: Configure Pages

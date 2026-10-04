@@ -122,7 +122,7 @@ const setFlag=()=>{if(!flagEl)return;const code=String(lang?.value||'en').toLowe
 
 let prefs={};try{prefs=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}
 const dark=top.querySelector('#pvmDarkMode');if(dark)dark.checked=prefs.dark!==false;if(lang)lang.value=prefs.language||'en';setFlag();
-dark?.addEventListener('change',()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.dark=dark.checked;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));location.reload()});
+dark?.addEventListener('change',()=>{if(typeof window.__setPrintProfitDarkMode==='function'){window.__setPrintProfitDarkMode(dark.checked);return;}let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.dark=dark.checked;localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));location.reload()});
 lang?.addEventListener('input',setFlag);
 lang?.addEventListener('change',()=>{setFlag();let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=String(lang.value||'en');localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));setTimeout(()=>location.reload(),120)});
 window.addEventListener('pageshow',()=>{setFlag();setTimeout(setFlag,50);setTimeout(setFlag,250);});

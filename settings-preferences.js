@@ -139,6 +139,14 @@ let pref=load();
 let draft=Object.assign({},pref);
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(pref));}catch(e){}}
+function setDarkMode(enabled){
+ pref.dark=!!enabled;
+ draft.dark=pref.dark;
+ save();
+ setTheme();
+ document.dispatchEvent(new CustomEvent('printprofit-settings-changed'));
+}
+window.__setPrintProfitDarkMode=setDarkMode;
 function tr(v){
  if(pref.language==='en')return v;
  const map=Object.assign({},window.__ppExtraI18n?.[pref.language]||{},langMaps[pref.language]||{});
@@ -204,6 +212,8 @@ function watchTranslations(){
 
 function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
+ document.querySelectorAll('#ppSettingsDark,#pvmDarkMode,#dark').forEach(toggle=>{toggle.checked=pref.dark;});
+ try{if(window.parent!==window){window.parent.document.body.style.background=pref.dark?'#071018':'#eef2f5';window.parent.document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';}}catch(e){}
  let s=document.getElementById('ppPreferenceTheme');
  if(!s){s=document.createElement('style');s.id='ppPreferenceTheme';document.head.appendChild(s);}
  s.textContent=`
@@ -877,6 +887,12 @@ body[data-pp-theme="light"] .hero{
  color:#17232b!important;
  border-bottom-color:#c3d0d6!important;
 }
+body[data-pp-theme="light"] #ppVisualMaster .pvm-header{background:#fff!important;color:#17232b!important;border-color:#c3d0d6!important}
+body[data-pp-theme="light"] #ppVisualMaster .pvm-nav button:not(.active){color:#29404b!important}
+body[data-pp-theme="light"] #ppVisualMaster .pvm-dark,body[data-pp-theme="light"] #ppVisualMaster .pvm-language{background:#eef3f5!important;color:#29404b!important;border-color:#bccdd6!important}
+body[data-pp-theme="light"] #ppVisualMaster .pvm-language select{color:#29404b!important}
+body[data-pp-theme="light"] #ppVisualMaster .pvm-journey button{background:linear-gradient(180deg,#fff,#edf3f5)!important;color:#17232b!important;border-color:#bccdd6!important}
+body[data-pp-theme="light"] #ppVisualMaster .pvm-journey small{color:#536771!important}
 `;
 }
 
@@ -1050,7 +1066,7 @@ function bind(){
  if(!dark||!lang||!units||!cur||!rate)return;
  ensureApplyButton();
 
- if(dark.dataset.ppBound!=='1'){dark.dataset.ppBound='1';dark.addEventListener('change',()=>{draft.dark=dark.checked;});}
+ if(dark.dataset.ppBound!=='1'){dark.dataset.ppBound='1';dark.addEventListener('change',()=>{setDarkMode(dark.checked);});}
  if(lang.dataset.ppBound!=='1'){lang.dataset.ppBound='1';lang.addEventListener('change',()=>{draft.language=lang.value;});}
  if(units.dataset.ppBound!=='1'){units.dataset.ppBound='1';units.addEventListener('change',()=>{draft.units=units.value;});}
  if(cur.dataset.ppBound!=='1'){cur.dataset.ppBound='1';cur.addEventListener('change',()=>{draft.currency=cur.value;draft.rate=currencies[draft.currency]?.rate||1;if(rate)rate.value=String(draft.rate);});}
@@ -1072,5 +1088,6 @@ function boot(){
     refreshDraftControls();
     bind();
   });
+  window.addEventListener('storage',event=>{if(event.key===KEY){pref=load();draft.dark=pref.dark;setTheme();}});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();

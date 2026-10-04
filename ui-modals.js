@@ -1,9 +1,33 @@
 (()=>{'use strict';
 if(window.__printProfitUIModals)return;window.__printProfitUIModals=true;
+let parentOverflow;
+function showPanel(panel){
+  closePanel(panel.id==='ppGuidePanel'?'ppSettingsPanel':'ppGuidePanel');
+  let height=window.innerHeight;
+  try{
+    const host=window.parent;
+    if(host!==window){
+      host.scrollTo({top:0,left:0,behavior:'instant'});
+      height=host.innerHeight;
+      if(parentOverflow===undefined)parentOverflow=host.document.body.style.overflow;
+      host.document.body.style.overflow='hidden';
+    }
+  }catch(e){}
+  window.scrollTo({top:0,left:0,behavior:'instant'});
+  panel.style.top='0';panel.style.bottom='auto';panel.style.height=height+'px';
+  const dialog=panel.querySelector('[role="dialog"]');
+  if(dialog){
+    dialog.style.top='16px';dialog.style.maxHeight=Math.max(160,height-32)+'px';
+    if(panel.id==='ppGuidePanel')dialog.style.transform='translateX(-50%)';
+  }
+  panel.classList.add('open');
+  document.body.style.overflow='hidden';
+  if(dialog)dialog.scrollTop=0;
+  requestAnimationFrame(()=>{if(dialog)dialog.scrollTop=0;});
+}
 function openSettings(){
   if(document.getElementById('ppSettingsPanel')){
-    document.getElementById('ppSettingsPanel').classList.add('open');
-    document.body.style.overflow='hidden';
+    showPanel(document.getElementById('ppSettingsPanel'));
     document.dispatchEvent(new CustomEvent('printprofit-settings-open'));
     return;
   }
@@ -84,7 +108,7 @@ function openSettings(){
           <div><strong>Calculator reset</strong><span>Clear the current calculator inputs and return pricing to £0.</span></div>
           <button type="button" class="pp-settings-action" id="ppSettingsReset">Reset Calculator</button>
         </div>
-        <div class="pp-settings-note">Choose your settings, then press Apply Changes to update the calculator.</div>
+        <div class="pp-settings-note">Dark mode updates immediately. Press Apply Changes to save your other settings.</div>
         <button type="button" class="pp-settings-apply" id="ppSettingsApply">Apply Changes</button>
       </div>
     </section>`;
@@ -100,7 +124,7 @@ function openSettings(){
         const ok=apply();
         if(ok!==false){
           applyBtn.textContent='Applied ✓';
-          setTimeout(()=>document.getElementById('ppSettingsPanel')?.classList.remove('open'),250);
+          setTimeout(()=>closePanel('ppSettingsPanel'),250);
         }else{
           applyBtn.textContent='Apply Changes';
         }
@@ -112,9 +136,9 @@ function openSettings(){
   }
   document.getElementById('ppSettingsReset')?.addEventListener('click',()=>{
     document.getElementById('reset')?.click();
-    panel.classList.remove('open');
+    closePanel('ppSettingsPanel');
   });
-  panel.querySelectorAll('[data-close-settings]').forEach(el=>el.addEventListener('click',()=>panel.classList.remove('open')));
+  panel.querySelectorAll('[data-close-settings]').forEach(el=>el.addEventListener('click',()=>closePanel('ppSettingsPanel')));
   document.addEventListener('keydown',event=>{
     if(event.key==='Escape'){closePanel('ppSettingsPanel');closePanel('ppGuidePanel');}
   });
@@ -145,8 +169,8 @@ function openSettings(){
     .pp-settings-switch input{position:absolute;opacity:0;width:1px!important;height:1px!important}
     .pp-settings-switch span{position:absolute!important;inset:0!important;border:1px solid #38515f;border-radius:999px;background:#12232d!important;display:block!important}
     .pp-settings-switch span:after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#8197a2;transition:.18s ease}
-    .pp-settings-switch input:checked+span{background:#ff780022!important;border-color:#ff7800}
-    .pp-settings-switch input:checked+span:after{left:25px;background:#ff7800}
+    .pp-settings-switch input:checked+span{background:linear-gradient(90deg,#19d8ff,#009FEF)!important;border-color:#19d8ff}
+    .pp-settings-switch input:checked+span:after{left:25px;background:#f1f7fa}
     .pp-settings-rate{display:flex;align-items:center;gap:7px}
     .pp-settings-rate span{color:#8fa6b2!important;font-size:10px!important;white-space:nowrap}
     .pp-settings-rate input{width:105px!important;background:#0d202b!important;color:#f5f8fb!important;border:1px solid #355464!important;border-radius:9px!important;padding:9px 10px!important}
@@ -166,8 +190,7 @@ function openSettings(){
     }
   `;
   document.head.appendChild(style);
-  panel.classList.add('open');
-  document.body.style.overflow='hidden';
+  showPanel(panel);
   document.dispatchEvent(new CustomEvent('printprofit-settings-open'));
 }
 window.__openPrintProfitSettings=openSettings;
@@ -177,7 +200,10 @@ function closePanel(id){
   const panel=document.getElementById(id);
   if(!panel)return;
   panel.classList.remove('open');
-  if(!document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open'))document.body.style.overflow='';
+  if(!document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open')){
+    document.body.style.overflow='';
+    try{if(window.parent!==window&&parentOverflow!==undefined){window.parent.document.body.style.overflow=parentOverflow;parentOverflow=undefined;}}catch(e){}
+  }
 }
 
 function openGuide(){
@@ -264,17 +290,7 @@ function openGuide(){
     `;
     document.head.appendChild(style);
   }
-  // Always open the Guide at the top of the guide content and at the top of the page.
-  // This prevents a previously-scrolled modal/page position being restored at the bottom.
-  const guideDialog=panel.querySelector('.pp-guide-dialog');
-  if(guideDialog)guideDialog.scrollTop=0;
-  window.scrollTo({top:0,left:0,behavior:'instant'});
-  panel.classList.add('open');
-  document.body.style.overflow='hidden';
-  requestAnimationFrame(()=>{
-    if(guideDialog)guideDialog.scrollTop=0;
-    window.scrollTo(0,0);
-  });
+  showPanel(panel);
 }
 
 
