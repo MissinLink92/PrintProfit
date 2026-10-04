@@ -179,12 +179,14 @@ function translatePage(){
  let n;
  while(n=w.nextNode()){
   if(!n.parentElement||n.parentElement.closest('script,style'))continue;
-  const raw=n.nodeValue.trim();
-  if(!raw)continue;
-  if(!originalText.has(n))originalText.set(n,raw);
-  const original=originalText.get(n);
-  const target=tr(original);
-  if(n.nodeValue!==target)n.nodeValue=n.nodeValue.replace(raw,target);
+  const raw=n.nodeValue||'';
+  if(!raw.trim())continue;
+  let state=originalText.get(n);
+  if(!state){state={source:raw.trim(),rendered:raw.trim()};originalText.set(n,state);}
+  else if(raw.trim()!==state.rendered&&raw.trim()!==state.source)state.source=raw.trim();
+  const target=tr(state.source);
+  if(raw.trim()!==target)n.nodeValue=raw.replace(raw.trim(),target);
+  state.rendered=target;
  }
  // Translate placeholders, aria labels, option text and option-group labels as well as text nodes.
  document.querySelectorAll('option,optgroup').forEach(translateElementText);
@@ -207,11 +209,13 @@ function watchTranslations(){
   clearTimeout(translationTimer);
   translationTimer=setTimeout(()=>translatePage(),40);
  });
- translationObserver.observe(document.body,{childList:true,subtree:true});
+ translationObserver.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['placeholder','aria-label','label','title','alt']});
 }
 
 function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
+ document.documentElement.dataset.ppTheme=pref.dark?'dark':'light';
+ document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';
  document.querySelectorAll('#ppSettingsDark,#pvmDarkMode,#dark').forEach(toggle=>{toggle.checked=pref.dark;});
  try{if(window.parent!==window){window.parent.document.body.style.background=pref.dark?'#071018':'#eef2f5';window.parent.document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';}}catch(e){}
  let s=document.getElementById('ppPreferenceTheme');
@@ -1088,6 +1092,6 @@ function boot(){
     refreshDraftControls();
     bind();
   });
-  window.addEventListener('storage',event=>{if(event.key===KEY){pref=load();draft.dark=pref.dark;setTheme();}});
+  window.addEventListener('storage',event=>{if(event.key===KEY){pref=load();draft=Object.assign({},pref);setTheme();translatePage();applyUnits();currency();refreshDraftControls();}});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
