@@ -76,6 +76,7 @@
   }
 
   function resetModelDisplay(){
+    window.__ppClearSlicerFile?.();
     // Reset the live model state as well as the visible calculator fields.
     // This prevents stale 3MF/G-code intelligence from surviving a reset.
     try{window.__ppFileData={};}catch(e){}

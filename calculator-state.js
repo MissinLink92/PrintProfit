@@ -32,6 +32,7 @@ function isPreservedDestination(anchor){
 
 function isPersistedField(el){
   if(!el || !el.id) return false;
+  if(el.id==='ppSlicerPlate')return false;
   if(el.closest('#ppSettingsPanel,#ppGuidePanel,#ppVisualMaster,#ppCleanTop,.header'))return false;
   if(el.type==='file' || el.readOnly || el.disabled) return false;
   if(el.closest('#ppProfitTools,#ppProfitAdvisor,.pp-profit-advisor')) return false;
@@ -257,6 +258,8 @@ async function restoreLastUploadedFile(){
     const dt=new DataTransfer();
     dt.items.add(file);
     input.files=dt.files;
+    window.__ppRestoringPlate=window.__ppFileData?.selectedPlate;
+    window.__ppRestoringFile=true;
     input.dispatchEvent(new Event('change',{bubbles:true}));
   }catch(e){
     // Browsers can restrict programmatic file assignment; the saved values still restore.

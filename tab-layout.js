@@ -86,15 +86,16 @@
       // file data until the actual File object is recreated.
       const fileInput=document.getElementById('file');
       const extra=window.__ppFileData||{};
+      window.__ppRenderFileDetails?.(extra);
       const setExtra=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value!=null&&String(value)!==''?String(value):'—';};
       setExtra('ppModelSlicer',extra.slicer);setExtra('ppModelPrinter',extra.printer);setExtra('ppModelLayer',extra.layer);setExtra('ppModelInfill',extra.infill);setExtra('ppModelSupports',extra.supports);setExtra('ppModelNozzle',extra.nozzle);setExtra('ppModelBed',extra.bed);setExtra('ppModelProfile',extra.profile);
       const detected=['slicer','printer','layer','infill','supports','nozzle','bed','profile','filament','grams','seconds'].filter(k=>extra[k]!=null&&String(extra[k])!=='').length;
       const health=document.getElementById('ppFileHealth'),healthText=document.getElementById('ppFileHealthText'),apply=document.getElementById('ppApplyDetected');
       if(health&&healthText){const level=detected>=5?'good':detected>=2?'basic':'limited';health.className='pp-file-health '+level;healthText.textContent=detected>=5?'FILE ANALYSIS: DETAILED':detected>=2?'FILE ANALYSIS: BASIC':detected?'FILE ANALYSIS: LIMITED':'FILE ANALYSIS: WAITING';}
-      if(apply)apply.disabled=!detected||typeof window.__ppApplyFileData!=='function';
+      if(apply)apply.disabled=extra.readError||!detected||typeof window.__ppApplyFileData!=='function';
       const q=id=>document.getElementById(id);const file=q('file'),status=q('status'),mat=q('material'),used=q('materialUsed');const h=q('ppPrintTimeHours'),m=q('ppPrintTimeMinutes'),legacy=q('printHours');const restoredName=String(window.__ppRestoredFileName||extra.fileName||'').trim();const fileName=file?.files?.[0]?.name||restoredName||'—';q('ppModelFile').textContent=fileName;
       let time='—';const hv=parseInt(h?.value,10),mv=parseInt(m?.value,10);if(Number.isFinite(hv)||Number.isFinite(mv))time=(Number.isFinite(hv)?hv:0)+'h '+(Number.isFinite(mv)?mv:0)+'m';else if(legacy?.value&&Number(legacy.value)>0)time=Number(legacy.value).toFixed(2)+' h';q('ppModelTime').textContent=time;
-      const uv=used?.value,unit=mat?.closest('.merge-block')?.querySelector('#materialType')?.value==='resin'?'ml':'g';q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' '+unit:'—';q('ppModelMaterial').textContent=mat?.selectedOptions?.[0]?.text||'—';if(status?.textContent)q('ppModelStatus').textContent=status.textContent;
+      const uv=used?.value,unit=mat?.closest('.merge-block')?.querySelector('#materialType')?.value==='resin'?'ml':'g';q('ppModelUsed').textContent=uv&&Number(uv)>0?Number(uv).toFixed(2)+' '+unit:'—';q('ppModelMaterial').textContent=extra.filament||extra.materials?.map(m=>m.type).filter(Boolean).join(' / ')||'—';if(status?.textContent)q('ppModelStatus').textContent=status.textContent;
       const hint=q('ppModelHint');if(hint){if(extra.grams==null&&extra.seconds==null&&detected<2)hint.textContent='Limited metadata found. Upload sliced G-code where possible for a more accurate estimate.';else if(extra.grams==null)hint.textContent='Material usage was not found in this file. Upload sliced G-code for a more accurate estimate.';else if(extra.seconds==null)hint.textContent='Print time was not found in this file. You can enter it manually in Your Model.';else hint.textContent='Detected information can be applied to your Print Setup without guessing missing values.';}
     }
     // Expose a small refresh hook so state restoration can repaint the model hub
