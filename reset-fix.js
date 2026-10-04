@@ -106,7 +106,9 @@
   }
 
   function resetAllFields(){
-    document.querySelectorAll('input,select,textarea').forEach(el=>{
+    const fields=Array.from(document.querySelectorAll('input,select,textarea')).filter(el=>
+      !el.closest('#ppSettingsPanel,#ppGuidePanel,#ppVisualMaster,#ppCleanTop,.header'));
+    fields.forEach(el=>{
       const type=(el.type||'').toLowerCase();
       if(type==='file')el.value='';
       else if(type==='checkbox'||type==='radio')el.checked=el.defaultChecked;
@@ -128,7 +130,7 @@
     quickMode=null;
     window.__ppClearActiveProject?.();
     document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.classList.remove('active'));
-    document.querySelectorAll('input,select,textarea').forEach(dispatchFieldChange);
+    fields.forEach(dispatchFieldChange);
     resetModelDisplay();
     recalculate();
     forceSingleResultMode();
