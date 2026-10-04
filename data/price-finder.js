@@ -1,14 +1,12 @@
-(()=>{
-'use strict';
-// Generated from data/price-finder.json by the PrintProfit Price Finder updater.
 window.PRINTPROFIT_PRICE_DATA={
   "version": 2,
   "currency": "GBP",
   "updatedAt": "2026-10-04",
   "refreshPolicy": {
-    "frequency": "every 12 hours",
+    "frequency": "nightly at 00:00",
     "timezone": "Europe/London",
-    "note": "Prices and product images are reference snapshots. Check the retailer before purchase."
+    "newProducts": "automatic when verified",
+    "note": "Schedule prepared; first run pending. Verified products publish automatically; failed or ambiguous checks retain previous values."
   },
   "sources": [
     {
@@ -217,10 +215,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "The Filament PLA Refill Lite Grey 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "The Filament PLA Refill Lite Grey 3DJake UK",
+      "image": "./assets/products/the-filament-pla-refill-lite-grey.jpg",
+      "imageSourceUrl": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/the-filament-refill-pla-lite-grey-913432-en.jpg",
+      "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/the-filament-refill-pla-lite-grey-913432-en.jpg",
+      "imageSha256": "ce9c34fc697d75e2b199da738b33c59dfaeb4807f306400979bb5f77a1fa37a9"
     },
     {
       "id": "esun-pla-basic-black",
@@ -244,10 +249,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "eSUN PLA Basic Black 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "eSUN PLA Basic Black 3DJake UK",
+      "image": "./assets/products/esun-pla-basic-black.jpg",
+      "imageSourceUrl": "https://www.3djake.uk/esun/pla-basic-black-1",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-pla-basic-black-774021-en.jpg",
+      "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-pla-basic-black-774021-en.jpg",
+      "imageSha256": "a81d40017b6dd6de25aa636fdbd4628a4fcf55bf0f387f5316075a2877999acc"
     },
     {
       "id": "elegoo-pla-black",
@@ -271,10 +283,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Elegoo PLA Black 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Elegoo PLA Black 3DJake UK",
+      "image": "./assets/products/elegoo-pla-black.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-1kg",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_Black_1kg.jpg?v=1756798356",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_Black_1kg.jpg?v=1756798356&width=600",
+      "imageSha256": "2bf7e77bb070f57ea0121c44cca1e43d2dd3f0d0f633079a21beefc4284fee2f"
     },
     {
       "id": "elegoo-pla-plus-black",
@@ -298,10 +317,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Elegoo PLA+ Black 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Elegoo PLA+ Black 3DJake UK",
+      "image": "./assets/products/elegoo-pla-plus-black.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-pla-plus-3d-printer-filament-1-75mm-colored-1kg",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLAPlus.jpg?v=1756798353",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLAPlus.jpg?v=1756798353&width=600",
+      "imageSha256": "5e35a270e25190f832684ab1999cc2f9d5b9c2aa53aba547ed72359e345c61cf"
     },
     {
       "id": "polymaker-polyterra-pla-cotton-white",
@@ -325,10 +351,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Polymaker PolyTerra PLA Cotton White 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Polymaker PolyTerra PLA Cotton White 3DJake UK",
+      "image": "./assets/products/polymaker-polyterra-pla-cotton-white.jpg",
+      "imageSourceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polyterra-pla-cotton-white-175-mm-1000-g-481833-en.jpg",
+      "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polyterra-pla-cotton-white-175-mm-1000-g-481833-en.jpg",
+      "imageSha256": "14ed694c333a0dd6489000eb36dc50a909a8c110c5283113ef8e1e0bf84debf6"
     },
     {
       "id": "sunlu-pla-2-0-white",
@@ -352,10 +385,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "SUNLU PLA+ 2.0 White Subliblanks"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "SUNLU PLA+ 2.0 White Subliblanks",
+      "image": "./assets/products/sunlu-pla-2-0-white.png",
+      "imageSourceUrl": "https://subliblanks.com/products/pla-2-0-white-filament",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1428/8462/files/PLA_2.0_White_Filament_roll.png?v=1751057878",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/1428/8462/files/PLA_2.0_White_Filament_roll.png?v=1751057878&width=600",
+      "imageSha256": "50b3e0144fc5f725583ede14e87262a830fe7389eb509c33ae46aab39e48c384"
     },
     {
       "id": "sunlu-pla-blue",
@@ -379,10 +419,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "SUNLU PLA+ Blue NSE Imports"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "SUNLU PLA+ Blue NSE Imports",
+      "image": "./assets/products/sunlu-pla-blue.jpg",
+      "imageMethod": "retailer-exact-colour-variant",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-16.jpg?v=1708011460",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-16.jpg?v=1708011460&width=600",
+      "imageSha256": "59f89b46773db871facf97bcde1c5b575de8d1198897aafe0b9b8dfe2db968dd"
     },
     {
       "id": "bambu-lab-pla-basic-black",
@@ -406,10 +453,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Basic Black 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Basic Black 3DJake UK",
+      "image": "./assets/products/bambu-lab-pla-basic-black.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931&width=600",
+      "imageSha256": "9ac010602af3e11f70387c50ad9af84daa58184e6a00737282d690595ac901fb"
     },
     {
       "id": "creality-hyper-pla",
@@ -433,10 +487,18 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality Hyper PLA Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality Hyper PLA Creality UK",
+      "image": "./assets/products/creality-hyper-pla.jpg",
+      "imageSourceUrl": "https://www.3dprima.co.uk/brand/creality",
+      "imageMethod": "retailer-product-family",
+      "imageAutoRefresh": false,
+      "imageNote": "Black shown; this listing does not specify a colour.",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/2/9/29064-creality-hyper-pla-3301010343-29064_10.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/2/9/29064-creality-hyper-pla-3301010343-29064_10.jpg",
+      "imageSha256": "f8451cf29fc2c77fd54eaa38a162498e73e82791af37d68c8785dffaa09f820c"
     },
     {
       "id": "esun-petg-black",
@@ -460,10 +522,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "eSUN PETG Black 3DJake UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "eSUN PETG Black 3DJake UK",
+      "image": "./assets/products/esun-petg-black.jpg",
+      "imageSourceUrl": "https://www.3djake.uk/esun/petg-black-11",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-petg-solid-black-175-mm-1000-g-623077-en.jpg",
+      "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-petg-solid-black-175-mm-1000-g-623077-en.jpg",
+      "imageSha256": "243bac6d414ac81c4b2301470932913dcbcdb4cbd49d374c6ebe9c69aa9cfd16"
     },
     {
       "id": "123-3d-pla-black",
@@ -488,10 +557,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Black 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Black 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-black.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Black-1-75mm-1kg-DFB00230c-DFP02295c-DFP02296c-DFP14082c-DFP14110c-i11621.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Black_1.75mm_1kg_DFB00230c_DFP02295c_DFP02296c_DFP14082c_DFP14110c_DHM00001_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Black_1.75mm_1kg_DFB00230c_DFP02295c_DFP02296c_DFP14082c_DFP14110c_DHM00001_m1_medium.jpg",
+      "imageSha256": "8a18aa69c583bdd2a5b05b135136b50bad5274c2a2a74f1000c9bf5ad3a7d78c"
     },
     {
       "id": "123-3d-pla-white",
@@ -516,10 +592,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA White 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA White 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-white.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-White-1-75mm-1-kg-DFB00235c-DFE20224c-DFP02286c-DFP02287c-DFP14074c-i11622.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_White_1.75mm_1_kg_DFB00235c_DFE20224c_DFP02286c_DFP02287c_DFP14074c_DHM00002_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_White_1.75mm_1_kg_DFB00235c_DFE20224c_DFP02286c_DFP02287c_DFP14074c_DHM00002_m1_medium.jpg",
+      "imageSha256": "5f0aca8301a2c6abdedfab841dfc3d7c4f304f19bb4de4aa8553f23ab837da7b"
     },
     {
       "id": "123-3d-pla-grey",
@@ -544,10 +627,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Grey 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Grey 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-grey.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Grey-1-75mm-1kg-DFB00244c-DFP02248c-DFP02249c-DFP14064c-DFP14102c-i11623.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Grey_1.75mm_1kg_DFB00244c_DFP02248c_DFP02249c_DFP14064c_DFP14102c_DHM00003_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Grey_1.75mm_1kg_DFB00244c_DFP02248c_DFP02249c_DFP14064c_DFP14102c_DHM00003_m1_medium.jpg",
+      "imageSha256": "7fed6845cdabeae48e21ff9e64ab6a8bb1c63c94ec42866a4f38645ca8629f74"
     },
     {
       "id": "123-3d-pla-red",
@@ -572,10 +662,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Red 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Red 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-red.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Red-1-75mm-1-kg-DFB00238c-DFP02253c-DFP02254c-DFP14072c-DFP14108c-i11624.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Red_1.75mm_1_kg_DFB00238c_DFP02253c_DFP02254c_DFP14072c_DFP14108c_DHM00004_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Red_1.75mm_1_kg_DFB00238c_DFP02253c_DFP02254c_DFP14072c_DFP14108c_DHM00004_m1_medium.jpg",
+      "imageSha256": "035d9a1b17031d702b8c82a099636f4b5be85493d0df1a22eaf2025d1ec362c5"
     },
     {
       "id": "123-3d-pla-dark-blue",
@@ -600,10 +697,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Dark Blue 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Dark Blue 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-dark-blue.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Dark-Blue-1-75mm-1kg-DFP16291c-i11625.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Dark_Blue_1.75mm_1kg_DFP16291c_DHM00005_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Dark_Blue_1.75mm_1kg_DFP16291c_DHM00005_m1_medium.jpg",
+      "imageSha256": "c0f7c1a1e86a94b53473911f3b3a18b6c2ffc1e8d8948dc079cfa047e6a4449c"
     },
     {
       "id": "123-3d-pla-yellow",
@@ -628,10 +732,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Yellow 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Yellow 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-yellow.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Yellow-1-75mm-1-kg-DFB00240c-DFP02250c-DFP02251c-DFP14062c-DFP14100c-i11626.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Yellow_1.75mm_1_kg_DFB00240c_DFP02250c_DFP02251c_DFP14062c_DFP14100c_DHM00006_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Yellow_1.75mm_1_kg_DFB00240c_DFP02250c_DFP02251c_DFP14062c_DFP14100c_DHM00006_m1_medium.jpg",
+      "imageSha256": "a5cfbe0cececd0ad3dab32b66598e12f0c5753f1b67f3355a27898374312d472"
     },
     {
       "id": "123-3d-pla-green",
@@ -656,10 +767,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Green 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Green 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-green.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Green-1-75mm-1-kg-DFB00241c-DFP02258c-DFP02259c-DFP14066c-DFP14104c-i11630.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Green_1.75mm_1_kg_DFB00241c_DFP02258c_DFP02259c_DFP14066c_DFP14104c_DHM00010_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Green_1.75mm_1_kg_DFB00241c_DFP02258c_DFP02259c_DFP14066c_DFP14104c_DHM00010_m1_medium.jpg",
+      "imageSha256": "428aac22accb5be725728cbfc99718fd599ed4434d4b49014e02fb3d77eead82"
     },
     {
       "id": "123-3d-pla-orange",
@@ -684,10 +802,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Orange 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Orange 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-orange.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Orange-1-75mm-1-kg-DFP02265c-DFP02266c-DFP14070c-DFP14106c-i11628.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Orange_1.75mm_1_kg_DFP02265c_DFP02266c_DFP14070c_DFP14106c_DHM00008_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Orange_1.75mm_1_kg_DFP02265c_DFP02266c_DFP14070c_DFP14106c_DHM00008_m1_medium.jpg",
+      "imageSha256": "b4a2934435a2af018dfca36a4008f14fb3b754458d5d1524d9b10dcc27e79c1b"
     },
     {
       "id": "123-3d-pla-neutral",
@@ -712,10 +837,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Neutral 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Neutral 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-neutral.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Neutral-1-75mm-1kg-DFP02268c-DFP16288c-i11629.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Neutral_1.75mm_1kg_DFP02268c_DFP16288c_DHM00009_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Neutral_1.75mm_1kg_DFP02268c_DFP16288c_DHM00009_m1_medium.jpg",
+      "imageSha256": "967816e4ba91357233945dde36cb86c4808b603853c13cadd5adf38a699cafe2"
     },
     {
       "id": "123-3d-pla-brown",
@@ -740,10 +872,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Brown 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Brown 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-brown.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Brown-1-75mm-1-kg-DFP02257c-DFP02273c-i11640.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Brown_1.75mm_1_kg_DFP02257c_DFP02273c_DHM00020_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Brown_1.75mm_1_kg_DFP02257c_DFP02273c_DHM00020_m1_medium.jpg",
+      "imageSha256": "a6254872ba88cfc9ef11ca1a23c1553a4a0235aa803075dfba85d6105ab77ccd"
     },
     {
       "id": "123-3d-pla-sky-blue",
@@ -768,10 +907,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Sky Blue 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Sky Blue 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-sky-blue.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Sky-Blue-1-75mm-1kg-i11633.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Sky_Blue_1.75mm_1kg_DHM00013_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Sky_Blue_1.75mm_1kg_DHM00013_m1_medium.jpg",
+      "imageSha256": "2c6b97fe78eb6219ecd31e23187c8820fda838fdfd2ba3c5f6c074e7e231d491"
     },
     {
       "id": "123-3d-pla-silver",
@@ -796,10 +942,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Silver 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Silver 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-silver.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Silver-1-75mm-1kg-DFB00243c-DFP02299c-DFP02300c-i11631.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Silver_1.75mm_1kg_DFB00243c_DFP02299c_DFP02300c_DHM00011_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Silver_1.75mm_1kg_DFB00243c_DFP02299c_DFP02300c_DHM00011_m1_medium.jpg",
+      "imageSha256": "6a7c341375b810732d9776e2eb62b8aaa5cfeb769546857434e509ee08e69f0f"
     },
     {
       "id": "123-3d-pla-matte-black",
@@ -824,10 +977,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Matte Black 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Matte Black 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-matte-black.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Matte-Black-1-75mm-1kg-DFP02241c-DFP02242c-i11722.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Matte_Black_1.75mm_1kg_DFP02241c_DFP02242c_DHM00102_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Matte_Black_1.75mm_1kg_DFP02241c_DFP02242c_DHM00102_m1_medium.jpg",
+      "imageSha256": "a313d8df05007fbe93de9e3d314f703da241d5ab654c17fc4dc2ff946b271ca2"
     },
     {
       "id": "123-3d-pla-light-grey",
@@ -852,10 +1012,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Light Grey 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Light Grey 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-light-grey.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Light-Grey-1-75mm-1kg-i11637.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Light_Grey_1.75mm_1kg_DHM00017_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Light_Grey_1.75mm_1kg_DHM00017_m1_medium.jpg",
+      "imageSha256": "b87908175fc3c1511244e1bd814bb269580f5e78f659b6310d3dfecd248f3885"
     },
     {
       "id": "123-3d-pla-bright-pink",
@@ -880,10 +1047,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "123-3D Filament PLA Bright Pink 1.75mm 1kg 123-3D UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "123-3D Filament PLA Bright Pink 1.75mm 1kg 123-3D UK",
+      "image": "./assets/products/123-3d-pla-bright-pink.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Bright-Pink-1-75mm-1kg-i11639.html",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Bright_Pink_1.75mm_1kg_DHM00019_m1_medium.jpg",
+      "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Bright_Pink_1.75mm_1kg_DHM00019_m1_medium.jpg",
+      "imageSha256": "1ff21f470381eb14edc10364df395f8eeb4d3ae8d7ce0f40413cd0860aed452f"
     },
     {
       "id": "bambu-lab-pla-basic-1-75mm-1kg-black",
@@ -907,8 +1081,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/bambu-lab-pla-basic-1-75mm-1kg-black.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931&width=600",
+      "imageSha256": "9ac010602af3e11f70387c50ad9af84daa58184e6a00737282d690595ac901fb"
     },
     {
       "id": "bambu-lab-pla-basic-1-75mm-1kg-jade-white",
@@ -932,8 +1114,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/bambu-lab-pla-basic-1-75mm-1kg-jade-white.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Jade-White.png?v=1709192913",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Jade-White.png?v=1709192913&width=600",
+      "imageSha256": "5203ea6567cf466ed7c3942ae820ed348f7e9d9a10810d5ac5c3d9a391b0d55d"
     },
     {
       "id": "creality-hyper-rfid-pla-black-1-75mm-1kg",
@@ -957,8 +1147,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/creality-hyper-rfid-pla-black-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
+      "imageSha256": "4354a384f18a4dae581c04a91f8dfc6d072598a5975bf95595a6b110669a1d32"
     },
     {
       "id": "creality-hyper-rfid-pla-white-1-75mm-1kg",
@@ -982,8 +1180,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/creality-hyper-rfid-pla-white-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
+      "imageSha256": "00b06a0ae375e84d028f4ec7bbde6083cd16ea34cbc3e467ea981cd644881675"
     },
     {
       "id": "creality-hyper-rfid-pla-blue-1-75mm-1kg",
@@ -1007,8 +1213,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/creality-hyper-rfid-pla-blue-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
+      "imageSha256": "8cde0ce41b212fcb43f410be492431881268a3cbc926adcc3e2d7ab544ead802"
     },
     {
       "id": "primavalue-pla-black-1-75mm-1kg",
@@ -1032,8 +1246,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/primavalue-pla-black-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
+      "imageSha256": "a8ca59a85f93c65a2662d95241ba1511dd277ca22f4d4f80f00329f00175a430"
     },
     {
       "id": "primavalue-pla-red-1-75mm-1kg",
@@ -1057,8 +1279,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/primavalue-pla-red-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
+      "imageSha256": "83fca0ed50b33e4d1e351abd580848f845eb2f34b865745d68b4216fdcc0c568"
     },
     {
       "id": "primavalue-pla-orange-1-75mm-1kg",
@@ -1082,8 +1312,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/primavalue-pla-orange-1-75mm-1kg.png",
+      "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
+      "imageSha256": "e11066f8a563585e2c20bd32c891c6c5e38b98846b96d91b06898ee5c14d7d16"
     },
     {
       "id": "polymaker-polylite-abs-black-1-75mm-1kg",
@@ -1107,8 +1345,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/polymaker-polylite-abs-black-1-75mm-1kg.jpg",
+      "imageSourceUrl": "https://www.3djake.uk/polymaker/polylite-abs-black",
+      "imageMethod": "retailer-exact-product",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polylite-abs-black-482513-en.jpg",
+      "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polylite-abs-black-482513-en.jpg",
+      "imageSha256": "2c1465db38b1d79ab8b92aa2f1f73c08c3ce86dc0689f4a30ef82639ae9c09b1"
     },
     {
       "id": "copymaster3d-pla-glitter-blue-1-75mm-1kg",
@@ -1132,10 +1378,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D - PLA Glitter - Blue - 1.75mm - 1kg 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D - PLA Glitter - Blue - 1.75mm - 1kg 3D Prima UK",
+      "image": "./assets/products/copymaster3d-pla-glitter-blue-1-75mm-1kg.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-glitter-12444",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30101-copymaster3d-pla-glitter-cm-plgl-002-1-175-30101_30.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30101-copymaster3d-pla-glitter-cm-plgl-002-1-175-30101_30.jpg",
+      "imageSha256": "83b9141ef8a1b32e09b4dfc7f204a769fa9a0961e85d5e30bc74da052805c595"
     },
     {
       "id": "copymaster3d-pla-rainbow-magic-silk-1-75mm-1kg",
@@ -1159,10 +1412,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D - PLA Rainbow - Magic Silk - 1.75mm - 1kg 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D - PLA Rainbow - Magic Silk - 1.75mm - 1kg 3D Prima UK",
+      "image": "./assets/products/copymaster3d-pla-rainbow-magic-silk-1-75mm-1kg.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-rainbow-12442",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30100-copymaster3d-pla-rainbow-cm-rpla-001-1-175-30100_5.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30100-copymaster3d-pla-rainbow-cm-rpla-001-1-175-30100_5.jpg",
+      "imageSha256": "3c484972f2707ace0ad4fb3978fb209b0ade80772b7d0e4431397b01eec18013"
     },
     {
       "id": "copymaster3d-pet-g-grey-1-75mm-1kg",
@@ -1186,10 +1446,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D - PET-G - Grey - 1.75mm - 1kg 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D - PET-G - Grey - 1.75mm - 1kg 3D Prima UK",
+      "image": "./assets/products/copymaster3d-pet-g-grey-1-75mm-1kg.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
+      "imageSha256": "78d41b59255fea51d7921513fd0d1a7be7f726f7054ef6dd17a3ea965076fda8"
     },
     {
       "id": "copymaster3d-pla-silk-pink-1-75mm-1kg",
@@ -1213,10 +1480,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D - PLA Silk - Pink - 1.75mm - 1kg 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D - PLA Silk - Pink - 1.75mm - 1kg 3D Prima UK",
+      "image": "./assets/products/copymaster3d-pla-silk-pink-1-75mm-1kg.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
+      "imageSha256": "21f4ea8664d4adb7744b5a22d46b46b65f142bb8e11dab613d42c6719d0146ae"
     },
     {
       "id": "copymaster3d-abs-1-75mm-800-g-white",
@@ -1240,10 +1514,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D ABS - 1.75mm - 800 g - White 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D ABS - 1.75mm - 800 g - White 3D Prima UK",
+      "image": "./assets/products/copymaster3d-abs-1-75mm-800-g-white.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
+      "imageSha256": "ea1856d3a12d30330641a2281b51c6243b71fe577d1fa27444b4a31bd9db06e4"
     },
     {
       "id": "bambu-lab-petg-hf-refill-1-75mm-1kg-black",
@@ -1267,8 +1548,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/bambu-lab-petg-hf-refill-1-75mm-1kg-black.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_6.jpg?v=1721202013",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_6.jpg?v=1721202013&width=600",
+      "imageSha256": "d4067de82c80c8ee81f2f4dae9be67f3510dede5fa065204773c8c34a31e25c8"
     },
     {
       "id": "bambu-lab-a1-mini",
@@ -1293,10 +1582,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-01",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Bambu Lab A1 mini Bambu Lab UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab A1 mini Bambu Lab UK",
+      "image": "./assets/products/bambu-lab-a1-mini.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/a1-mini",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/Group48089.png?v=1700389259",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/Group48089.png?v=1700389259&width=600",
+      "imageSha256": "73fb8d672e66100e7e60fcd62ca3e514b348f06e656c4cb05347caf7fdd5082d"
     },
     {
       "id": "bambu-lab-a1",
@@ -1322,8 +1618,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "available",
-      "image": "https://bambu-lab-uk.myshopify.com/cdn/shop/files/A1_1024x.jpg?v=1714959955",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/bambu-lab-a1.png",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/a1",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/A1-2.png?v=1714959955",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/A1-2.png?v=1714959955&width=600",
+      "imageSha256": "c1ca32b3be8511ea018eed61549bbabcf3588914ba11f4c6dd6404de70a3a150",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "bambu-lab-p1s",
@@ -1348,10 +1651,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab P1S Bambu Lab UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab P1S Bambu Lab UK",
+      "image": "./assets/products/bambu-lab-p1s.jpg",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/p1s",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/2_9e0ee6e2-228d-4dd1-a31c-4c5bafd7dfec.jpg?v=1708411583",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/2_9e0ee6e2-228d-4dd1-a31c-4c5bafd7dfec.jpg?v=1708411583&width=600",
+      "imageSha256": "b6292e0929f63f3f56682727bfec48aace5460c66a2dc1f8baa77e2af38b68a5"
     },
     {
       "id": "elegoo-neptune-4",
@@ -1400,11 +1710,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "error",
       "imageStatus": "available",
-      "image": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
-      "imageChecked": "2026-10-02",
+      "image": "./assets/products/elegoo-neptune-4.jpg",
+      "imageChecked": "2026-10-03",
       "imageMethod": "json-ld",
       "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
-      "imageSearchStatus": "fetch-error"
+      "imageSearchStatus": "matched",
+      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337&width=600",
+      "imageSha256": "6a5ab8644ebac8266ada2f79a2b4e17f290fa18fb669722a5832dd455e2f36a4"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -1428,10 +1742,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality Ender-3 V3 SE Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality Ender-3 V3 SE Creality UK",
+      "image": "./assets/products/creality-ender-3-v3-se.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265&width=600",
+      "imageSha256": "28e57077a2fd9e444593a5c20e25ced444b5b5879a109b088a9d54e81b4e0b13"
     },
     {
       "id": "creality-ender-3-v3-ke",
@@ -1455,10 +1776,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality Ender-3 V3 KE Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality Ender-3 V3 KE Creality UK",
+      "image": "./assets/products/creality-ender-3-v3-ke.png",
+      "imageSourceUrl": "https://store.creality.com/eu/products/ender-3-v3-ke-3d-printer",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0593/2587/4251/files/Ender-3_V3_KE_0d70bf7b-f059-4c39-96e4-9bde5a3a68f1.png?v=1764593306",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0593/2587/4251/files/Ender-3_V3_KE_0d70bf7b-f059-4c39-96e4-9bde5a3a68f1.png?v=1764593306&width=600",
+      "imageSha256": "0b2378a4c5c337b21f150f737d1af270444fb04f982127024bccc2a237dd7700"
     },
     {
       "id": "creality-k1c-2025",
@@ -1482,10 +1810,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality K1C 2025 Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality K1C 2025 Creality UK",
+      "image": "./assets/products/creality-k1c-2025.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354&width=600",
+      "imageSha256": "f8d7f85725305ac6a7b4661c697b0409f17f91c05cf0e018990e32f8b482861c"
     },
     {
       "id": "flashforge-adventurer-5m",
@@ -1510,10 +1845,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Flashforge Adventurer 5M Flashforge UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Flashforge Adventurer 5M Flashforge UK",
+      "image": "./assets/products/flashforge-adventurer-5m.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.flashforge.com/products/adventurer-5m-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/1_5d359140-db38-4379-bc93-63d77e8f58b6.png?v=1778232441",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/1_5d359140-db38-4379-bc93-63d77e8f58b6.png?v=1778232441&width=600",
+      "imageSha256": "26f11acc6beb7ccbcb3b6b00dc2f1405f6961e08510142a52c813d62ffdec416"
     },
     {
       "category": "filament",
@@ -1539,8 +1881,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastCheckStatus": "error",
       "imageStatus": "fallback",
       "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "3DGBIRE PET 3DGBIRE"
+      "imageSearchStatus": "product-identity-required",
+      "imageSearchQuery": "3DGBIRE PET 3DGBIRE",
+      "imageNote": "Photo unavailable: this listing does not identify a specific PET product or colour."
     },
     {
       "category": "filament",
@@ -1564,10 +1907,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Copymaster3D PLA Matte - Grey - 1.75mm - 1kg 3D Prima UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Copymaster3D PLA Matte - Grey - 1.75mm - 1kg 3D Prima UK",
+      "image": "./assets/products/copymaster3d-pla-matte-grey-1-75mm-1kg.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
+      "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
+      "imageSha256": "45ddb9a9887dca177e1a90de20db3c9e8e757db2e78c94e99c3f3ab0f033325a"
     },
     {
       "id": "qidi-pla-basic-black-1kg",
@@ -1594,8 +1944,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-black-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=600",
+      "imageSha256": "56f1f002d7b0f6b670d4f11ff5214ffbbd1481a17343088f7b61fa3bd03adede",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-white-1kg",
@@ -1622,8 +1979,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-white-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_White_83735a83-19ef-418a-8a5e-66308bb2d7b2.jpg?v=1772862063",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_White_83735a83-19ef-418a-8a5e-66308bb2d7b2.jpg?v=1772862063&width=600",
+      "imageSha256": "49e2e15484ec8748e209e3eb14eef526be6ac3987f01079bd7d3774311f8fd94",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-gray-1kg",
@@ -1650,8 +2014,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-gray-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Gray_f10b44d0-2b49-4389-b9b4-7ab612cf90a3.jpg?v=1772862063",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Gray_f10b44d0-2b49-4389-b9b4-7ab612cf90a3.jpg?v=1772862063&width=600",
+      "imageSha256": "c6d25cee639b362598ef1ffa1c944ddd964bd91a9f0f83fbdf2d03750ac3bbd5",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-skin-1kg",
@@ -1678,8 +2049,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-skin-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Skin_804f99cf-98d5-45fb-ab1d-2acb623700f7.jpg?v=1772862064",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Skin_804f99cf-98d5-45fb-ab1d-2acb623700f7.jpg?v=1772862064&width=600",
+      "imageSha256": "e7749901c9ab6046d110a7720a1beea3b74e8dca7fd6e408eae82fdbfccabe25",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-sky-blue-1kg",
@@ -1706,8 +2084,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-sky-blue-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Sky_Blue_0224a7da-614d-4674-996c-eb5898e90455.jpg?v=1772862065",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Sky_Blue_0224a7da-614d-4674-996c-eb5898e90455.jpg?v=1772862065&width=600",
+      "imageSha256": "70722bbc7673bd7b05fc2a7154201007ac0d68d39d245da2d96be1c7af1ca18a",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-yellow-1kg",
@@ -1734,8 +2119,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-yellow-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Yellow_5216a83b-355c-411a-a13e-236bfc07b3cf.jpg?v=1772862066",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Yellow_5216a83b-355c-411a-a13e-236bfc07b3cf.jpg?v=1772862066&width=600",
+      "imageSha256": "c36bbb5ee60593b8f081d05805279d64455472820f3ad9f11a9f22912e761e47",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-blue-1kg",
@@ -1762,8 +2154,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-blue-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Blue_d7390775-8374-4831-b281-2d247028099d.jpg?v=1772862066",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Blue_d7390775-8374-4831-b281-2d247028099d.jpg?v=1772862066&width=600",
+      "imageSha256": "94e975e26d48834f4d04246d6ac531ce6f9b96425a98336709daf050f22330f0",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-brown-1kg",
@@ -1790,8 +2189,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-brown-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Brown_0362f985-5338-47b6-bf56-028b1b78514f.jpg?v=1772862068",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Brown_0362f985-5338-47b6-bf56-028b1b78514f.jpg?v=1772862068&width=600",
+      "imageSha256": "c5ac860c5844d3c34f5d3e1e3b918fc4f82a77dc721350d8f2ab3042aa8615e2",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-red-1kg",
@@ -1818,8 +2224,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-red-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Red_1eb1e4b8-6e84-4ddd-8dde-8a0cc4521a88.jpg?v=1772862068",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Red_1eb1e4b8-6e84-4ddd-8dde-8a0cc4521a88.jpg?v=1772862068&width=600",
+      "imageSha256": "20c9687e3f748f37a1593f4939a416f7a2cf0f71950044f4b31cb7dc9afff54b",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-basic-dark-green-1kg",
@@ -1846,8 +2259,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/PLA_Basic_Black_a5e83642-0411-44de-a299-742ea39915d9.jpg?v=1772862061&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-pla-basic-dark-green-1kg.jpg",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-basic",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Dark_Green_27d28fa7-9c65-45dc-bc52-ca852f944b11.jpg?v=1772862062",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Basic_Dark_Green_27d28fa7-9c65-45dc-bc52-ca852f944b11.jpg?v=1772862062&width=600",
+      "imageSha256": "c34bcbea1753e86261c4041a88a3fd4c556e56e23f91d3782ff779659011644d",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-pla-rapido-black-1kg",
@@ -1873,10 +2293,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Black QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Black QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-black-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_90771fed-c080-4ece-943d-13eea6eedaef.jpg?v=1772862299",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_90771fed-c080-4ece-943d-13eea6eedaef.jpg?v=1772862299&width=600",
+      "imageSha256": "2cee795e6ec4bab2ccf995ca291206ad0eeca53bf3f2d0411e72bade63acaeb7"
     },
     {
       "id": "qidi-pla-rapido-white-1kg",
@@ -1902,10 +2329,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - White QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - White QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-white-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_e97bd620-22b5-4772-a155-ea4554e8cf93.jpg?v=1772862301",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_e97bd620-22b5-4772-a155-ea4554e8cf93.jpg?v=1772862301&width=600",
+      "imageSha256": "c738f10487e15b75c038ad3226883b47d045d95ca74b8d3c2b87b42de80d17fa"
     },
     {
       "id": "qidi-pla-rapido-red-1kg",
@@ -1931,10 +2365,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Red QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Red QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-red-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_cf462277-7435-42a3-ad81-f9cd1d2e772b.jpg?v=1772862297",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_cf462277-7435-42a3-ad81-f9cd1d2e772b.jpg?v=1772862297&width=600",
+      "imageSha256": "8a6c36e94e0922a9cf4ce162cb2615be47a3bc99c162cb5e049d7cbfbf7857ef"
     },
     {
       "id": "qidi-pla-rapido-yellow-1kg",
@@ -1960,10 +2401,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Yellow QIDI UK Store"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Yellow QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-yellow-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_907d42be-3758-49b1-bf57-fafe4a1e589c.jpg?v=1772862305",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_907d42be-3758-49b1-bf57-fafe4a1e589c.jpg?v=1772862305&width=600",
+      "imageSha256": "9bc76f11f82c76ae5243e74ec1e6cff6b3bd5f49688dc4ff802298b8b6f684fb"
     },
     {
       "id": "qidi-pla-rapido-orange-1kg",
@@ -1989,10 +2437,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Orange QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Orange QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-orange-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_8dbe52bf-249f-498c-841c-b4d055220d87.jpg?v=1772862303",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_8dbe52bf-249f-498c-841c-b4d055220d87.jpg?v=1772862303&width=600",
+      "imageSha256": "e2ae03906910e8dca213bc684dd18e2ac79ecb61a6868596b8196037f276860a"
     },
     {
       "id": "qidi-pla-rapido-blue-1kg",
@@ -2018,10 +2473,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Blue QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Blue QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-blue-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_3eb0078c-6723-48e4-9215-d1ba7a7050aa.jpg?v=1772862306",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_3eb0078c-6723-48e4-9215-d1ba7a7050aa.jpg?v=1772862306&width=600",
+      "imageSha256": "8cde4dac5a2d2f690fcb75fc68afef60fc2836c15e02369245e0ea0dc357ae31"
     },
     {
       "id": "qidi-pla-rapido-green-1kg",
@@ -2047,10 +2509,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Green QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Green QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-green-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_fa156064-6bd0-4bc8-8e6a-8ae14c1676ba.jpg?v=1772862306",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_fa156064-6bd0-4bc8-8e6a-8ae14c1676ba.jpg?v=1772862306&width=600",
+      "imageSha256": "750eefb712bf4cf2e1f20b6d56426adc63b7ee4ad9a0dab3d5246d63e531633a"
     },
     {
       "id": "qidi-pla-rapido-silver-1kg",
@@ -2076,10 +2545,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Silver QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Silver QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-silver-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_00ed87b6-903b-4b6f-992b-7807a9f0bfeb.jpg?v=1772862310",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_00ed87b6-903b-4b6f-992b-7807a9f0bfeb.jpg?v=1772862310&width=600",
+      "imageSha256": "085e85a04a8a25612cbe9409eb6a863f06226a45812e20a24c40adf67c07e509"
     },
     {
       "id": "qidi-pla-rapido-gray-1kg",
@@ -2105,10 +2581,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Gray QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Gray QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-gray-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_051c9c84-2b68-4861-9607-dab4c93cf7c5.jpg?v=1772862310",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_051c9c84-2b68-4861-9607-dab4c93cf7c5.jpg?v=1772862310&width=600",
+      "imageSha256": "949cb7595ccddc836499feffd5f63cfc166f7af6fbfdfb889ab8cf4665ec62ba"
     },
     {
       "id": "qidi-pla-rapido-pink-1kg",
@@ -2134,10 +2617,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Pink QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Pink QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-pink-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-PINK_b4da4a83-3661-4a22-82a4-0137042569ed.jpg?v=1772862311",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-PINK_b4da4a83-3661-4a22-82a4-0137042569ed.jpg?v=1772862311&width=600",
+      "imageSha256": "3abec62c18fb6af0eb362dcc9a7359ae3c482b05768db2c5e53d0d2f87bc1572"
     },
     {
       "id": "qidi-pla-rapido-purple-1kg",
@@ -2163,10 +2653,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA Rapido - Purple QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA Rapido - Purple QIDI UK Store",
+      "image": "./assets/products/qidi-pla-rapido-purple-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-PURPLE_750804e0-5a18-44c1-9f79-fbc3e46458b1.jpg?v=1772862313",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-PURPLE_750804e0-5a18-44c1-9f79-fbc3e46458b1.jpg?v=1772862313&width=600",
+      "imageSha256": "887a7f5abfb1fee24ee11359542fea1d92935860e0363063663743feb127fc99"
     },
     {
       "id": "qidi-asa-red-1kg",
@@ -2192,10 +2689,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Red QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Red QIDI UK Store",
+      "image": "./assets/products/qidi-asa-red-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_d5b8b3c7-2e44-484b-bf25-7aff5c3f5ee8.jpg?v=1772862478",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_d5b8b3c7-2e44-484b-bf25-7aff5c3f5ee8.jpg?v=1772862478&width=600",
+      "imageSha256": "09afb3b11474f76582be04971919e31e4d329a35f9e4e571346310eeda78480c"
     },
     {
       "id": "qidi-asa-brown-1kg",
@@ -2221,10 +2725,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Brown QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Brown QIDI UK Store",
+      "image": "./assets/products/qidi-asa-brown-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_26fe746b-5989-47a1-8f6f-18fb49580bd1.jpg?v=1772862482",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_26fe746b-5989-47a1-8f6f-18fb49580bd1.jpg?v=1772862482&width=600",
+      "imageSha256": "249f8a565fdeb1ef4e28dd503ea4a64e4ed01c45afe02d59e4d777e48149288e"
     },
     {
       "id": "qidi-asa-gray-1kg",
@@ -2250,10 +2761,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Gray QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Gray QIDI UK Store",
+      "image": "./assets/products/qidi-asa-gray-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_f03a6626-fe08-4011-8e32-33f9a2923f84.jpg?v=1772862482",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_f03a6626-fe08-4011-8e32-33f9a2923f84.jpg?v=1772862482&width=600",
+      "imageSha256": "36f123ea184b61d7caa79772416b00a9a0aca357b9d667c51183478867fee708"
     },
     {
       "id": "qidi-asa-blue-1kg",
@@ -2279,10 +2797,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Blue QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Blue QIDI UK Store",
+      "image": "./assets/products/qidi-asa-blue-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_a33b429e-9512-4628-a4d5-609e863b1b49.jpg?v=1772862478",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_a33b429e-9512-4628-a4d5-609e863b1b49.jpg?v=1772862478&width=600",
+      "imageSha256": "3c790de57bb48d8e2a7f474eb7751c2da0df3e92a9b9bddfbea1d3759deb16b3"
     },
     {
       "id": "qidi-asa-green-1kg",
@@ -2308,10 +2833,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Green QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Green QIDI UK Store",
+      "image": "./assets/products/qidi-asa-green-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_38e6ba48-554c-467c-b36a-21b38eec3b9c.jpg?v=1772862480",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_38e6ba48-554c-467c-b36a-21b38eec3b9c.jpg?v=1772862480&width=600",
+      "imageSha256": "da7e5f473bd93b43712a3f046d733d1af362a76039096a8807e9a6b8641e4652"
     },
     {
       "id": "qidi-asa-black-1kg",
@@ -2337,10 +2869,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Black QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Black QIDI UK Store",
+      "image": "./assets/products/qidi-asa-black-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_d994bfb5-f1bb-4248-9f3c-14361ea8bf9d.jpg?v=1772862476",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_d994bfb5-f1bb-4248-9f3c-14361ea8bf9d.jpg?v=1772862476&width=600",
+      "imageSha256": "dde165edd36d12a03d8da54e0b97b4b7aee51b5f0fb1b6db0fec4adb8ae98575"
     },
     {
       "id": "qidi-asa-white-1kg",
@@ -2366,10 +2905,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - White QIDI UK Store"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - White QIDI UK Store",
+      "image": "./assets/products/qidi-asa-white-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_0ddff219-a8a2-4428-a799-910c88c35c2c.jpg?v=1772862476",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_0ddff219-a8a2-4428-a799-910c88c35c2c.jpg?v=1772862476&width=600",
+      "imageSha256": "0f33a9041e6acf741d1f03f0ac559516da1c8ec87813b3b2c2b9cd61edcd38a2"
     },
     {
       "id": "qidi-asa-yellow-1kg",
@@ -2395,10 +2941,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI ASA - Yellow QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI ASA - Yellow QIDI UK Store",
+      "image": "./assets/products/qidi-asa-yellow-1kg.jpg",
+      "imageMethod": "manufacturer-colour-photo",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_b6cabd6e-4725-46f8-96ca-6b95dcc1a365.jpg?v=1772862480",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/ASA_b6cabd6e-4725-46f8-96ca-6b95dcc1a365.jpg?v=1772862480&width=600",
+      "imageSha256": "175c529f3112e188f00e4de8051e526d663bd7c4d10c53411baf40b2b951cfa0"
     },
     {
       "id": "qidi-pla-cf-dark-red-1kg",
@@ -2424,10 +2977,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA-CF - Dark Red QIDI UK Store"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA-CF - Dark Red QIDI UK Store",
+      "image": "./assets/products/qidi-pla-cf-dark-red-1kg.jpg",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-cf",
+      "imageMethod": "manufacturer-gallery-visually-matched-colour",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_ccce360d-64d3-416b-be61-689785626096.jpg?v=1772862550",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_ccce360d-64d3-416b-be61-689785626096.jpg?v=1772862550&width=600",
+      "imageSha256": "2456c0d973e075b76885c36c698daf29e213d185db81c48e62a4d12d4e7ad215"
     },
     {
       "id": "qidi-pla-cf-lavender-purple-1kg",
@@ -2453,10 +3013,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA-CF - Lavender Purple QIDI UK Store"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA-CF - Lavender Purple QIDI UK Store",
+      "image": "./assets/products/qidi-pla-cf-lavender-purple-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-cf",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_dff907c8-027b-4c4f-9090-65ab921e3806.jpg?v=1772862552",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_dff907c8-027b-4c4f-9090-65ab921e3806.jpg?v=1772862552&width=600",
+      "imageSha256": "b78cd6838b1f7241e9b4cbfbde4488a8c887ea9fbc896dc675b678a2a0532b2b"
     },
     {
       "id": "qidi-pla-cf-midnight-blue-1kg",
@@ -2482,10 +3049,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA-CF - Midnight Blue QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA-CF - Midnight Blue QIDI UK Store",
+      "image": "./assets/products/qidi-pla-cf-midnight-blue-1kg.jpg",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-cf",
+      "imageMethod": "manufacturer-gallery-visually-matched-colour",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_882555c7-e333-40ec-87e0-dccc22f0ced9.jpg?v=1772862551",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_882555c7-e333-40ec-87e0-dccc22f0ced9.jpg?v=1772862551&width=600",
+      "imageSha256": "cb0a0e1c1ab430236866f8a8d4fe2b21cfbf7c9174beb1e079e20c1ea74c3ff5"
     },
     {
       "id": "qidi-pla-cf-black-1kg",
@@ -2511,10 +3085,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA-CF - Black QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA-CF - Black QIDI UK Store",
+      "image": "./assets/products/qidi-pla-cf-black-1kg.jpg",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-cf",
+      "imageMethod": "manufacturer-gallery-visually-matched-colour",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_7d407405-89c4-4e1e-8087-318803469bb2.jpg?v=1772862548",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_7d407405-89c4-4e1e-8087-318803469bb2.jpg?v=1772862548&width=600",
+      "imageSha256": "0322fe30f23bd7ed5cad1fcabb9622946e3c92be119696515e33160b2dee445e"
     },
     {
       "id": "qidi-pla-cf-olive-green-1kg",
@@ -2540,10 +3121,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "QIDI PLA-CF - Olive Green QIDI UK Store"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "QIDI PLA-CF - Olive Green QIDI UK Store",
+      "image": "./assets/products/qidi-pla-cf-olive-green-1kg.jpg",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/pla-cf",
+      "imageMethod": "manufacturer-gallery-visually-matched-colour",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_2d34b817-0097-417b-afd4-c000fa8931b1.jpg?v=1772862548",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-CF_2d34b817-0097-417b-afd4-c000fa8931b1.jpg?v=1772862548&width=600",
+      "imageSha256": "7d94d2b633c74e25616abc446068cd1893aaf8a103255ff54023355cfaabff20"
     },
     {
       "id": "anycubic-pla-plus-texture-grey-1kg",
@@ -2570,10 +3158,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-texture-grey-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_36b1d50e-ce93-4488-a695-0682bdada7e6.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_36b1d50e-ce93-4488-a695-0682bdada7e6.png?v=1783308818&width=600",
+      "imageSha256": "060f00ad8a168bc5ac4d6bfe5f1f008d2640aed2253affc5326a31d817eaec27",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-white-1kg",
@@ -2600,10 +3193,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-white-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/White_e3468819-b874-46ae-ad60-9cddca292a61.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/White_e3468819-b874-46ae-ad60-9cddca292a61.png?v=1783308818&width=600",
+      "imageSha256": "b7f302deb0ce113cd114ab3ea57087dfb5a704755b69c962a1b244da05ecd45e",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-beige-1kg",
@@ -2630,10 +3228,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-beige-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Beige_29d9863c-aa45-47e7-8cdf-40d72aedb0e0.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Beige_29d9863c-aa45-47e7-8cdf-40d72aedb0e0.png?v=1783308818&width=600",
+      "imageSha256": "e8ef7060bc6a9e21ff9ce553367f50f1a536d1ab5eba88f9256f3ec1859075f3",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-black-1kg",
@@ -2660,10 +3263,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-black-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Black_b246b785-38e4-4a1b-8f1a-0dd470d62618.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Black_b246b785-38e4-4a1b-8f1a-0dd470d62618.png?v=1783308818&width=600",
+      "imageSha256": "1af276b941c90f903038203b8950ef5afc75f18ccf31dac5119c68b9674b1a7e",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-peach-pink-1kg",
@@ -2690,10 +3298,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-peach-pink-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PeachPink.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PeachPink.png?v=1783308818&width=600",
+      "imageSha256": "e0c0b17a89e28f492dfe1363f74fe4de432d50746b7b941f4f9a45e919af40f5",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-tropical-turquoise-1kg",
@@ -2720,10 +3333,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-tropical-turquoise-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TropicalTurquoise.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TropicalTurquoise.png?v=1783308818&width=600",
+      "imageSha256": "e1e1b00a462cf237116a0604a80f113800a38ae56477bafd27f525ff6fcbbdc0",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-spring-leaf-1kg",
@@ -2750,10 +3368,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-spring-leaf-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/SpringLeaf.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/SpringLeaf.png?v=1783308818&width=600",
+      "imageSha256": "48db9a5cb9d79a3322e10077aa0f37525ecc8c22082deffbcf4cd0b145526ccf",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-red-1kg",
@@ -2780,10 +3403,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-red-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Red_f8472ad4-8951-43df-8795-46a3c2db3e6f.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Red_f8472ad4-8951-43df-8795-46a3c2db3e6f.png?v=1783308818&width=600",
+      "imageSha256": "752c58ea2d4a1cbfe664fc550cfd5a60f90d5b6024fb8732bfb53f3b1c388f9e",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-bright-red-1kg",
@@ -2810,10 +3438,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-bright-red-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightRed.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightRed.png?v=1783308818&width=600",
+      "imageSha256": "79cf6e2938aeca16bf0d37005b7b7471fd2b52590e582a7303c8058af4080b71",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-brown-1kg",
@@ -2840,10 +3473,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-brown-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Brown.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Brown.png?v=1783308818&width=600",
+      "imageSha256": "91bce05395568d97f6dbefe65ebe4cf34d552d8b071d53d6c433cc8ea00ffa33",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-green-flash-1kg",
@@ -2870,10 +3508,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-green-flash-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/GreenFlash.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/GreenFlash.png?v=1783308818&width=600",
+      "imageSha256": "fe67f81fa83c7efdb50498543441282619319af73cbac7616251a3b08b01103a",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-green-1kg",
@@ -2900,10 +3543,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-green-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Green_116d8e45-de2c-4a17-bac5-64731f28a06d.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Green_116d8e45-de2c-4a17-bac5-64731f28a06d.png?v=1783308818&width=600",
+      "imageSha256": "a462f3ad29595ccdc993a1c0c2f5f3f6a9c42248d27dce2141b28a6cd572d71e",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-purple-1kg",
@@ -2930,10 +3578,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-purple-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Purple_996784cc-3603-46ea-88d2-82fbae8536f0.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Purple_996784cc-3603-46ea-88d2-82fbae8536f0.png?v=1783308818&width=600",
+      "imageSha256": "8d5a0634277bffbba61e5adbf3c025a94c0cbe9869bb49894338d338b4db4939",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-pink-1kg",
@@ -2960,10 +3613,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-pink-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Pink_8a385135-402b-47cb-8187-67ccb0b04f0e.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Pink_8a385135-402b-47cb-8187-67ccb0b04f0e.png?v=1783308818&width=600",
+      "imageSha256": "94a8b1e2d266ab1adda724fde50fbaf295c9dd20a87b84433f942c4f98e6413a",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-orange-1kg",
@@ -2990,10 +3648,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-orange-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Orange_454f5281-6921-477b-b1a9-40b14f02ee4c.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Orange_454f5281-6921-477b-b1a9-40b14f02ee4c.png?v=1783308818&width=600",
+      "imageSha256": "b70f7603cdc3099aba3e03a17507752679e32d057cb96f4fb4ca2a00f30d5dfa",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-pla-plus-grey-1kg",
@@ -3020,10 +3683,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "imageChecked": "2026-10-01",
-      "image": "http://uk.anycubic.com/cdn/shop/files/SpringLeaf.png?v=1783308818",
-      "imageMethod": "og-image",
-      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament"
+      "imageChecked": "2026-10-03",
+      "image": "./assets/products/anycubic-pla-plus-grey-1kg.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-plus-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Grey_ca6c2215-4d82-4c0d-a8c2-d509b0d7f11c.png?v=1783308818",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Grey_ca6c2215-4d82-4c0d-a8c2-d509b0d7f11c.png?v=1783308818&width=600",
+      "imageSha256": "0e7ea90e05eac5ab9a649966b91536ec84374f686d190ebd3bd6b4cabe4c4800",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "anycubic-high-speed-pla-pearl-black-1kg",
@@ -3049,10 +3717,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Pearl Black Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Pearl Black Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-pearl-black-1kg.png",
+      "imageMethod": "manufacturer-labelled-image",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PearlBlack.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PearlBlack.png?v=1784886387&width=600",
+      "imageSha256": "44999778f126fcda70dcf367c4442f0b087144fb4ff811bb7045a8774de976ca"
     },
     {
       "id": "anycubic-high-speed-pla-bright-white-1kg",
@@ -3078,10 +3753,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Bright White Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Bright White Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-bright-white-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightWhite.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightWhite.png?v=1784886387&width=600",
+      "imageSha256": "d949f276983c07d01d5df7f16874fecb52bf326fbde422441965e44267b3a401"
     },
     {
       "id": "anycubic-high-speed-pla-texture-grey-1kg",
@@ -3107,10 +3789,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Texture Grey Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Texture Grey Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-texture-grey-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_5fed04b3-06a1-4aa6-a653-5fb124dc85e4.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_5fed04b3-06a1-4aa6-a653-5fb124dc85e4.png?v=1784886387&width=600",
+      "imageSha256": "55707289111d8da02671a98d4b1505d9de4bf8916ff315e9d8beeb0626563882"
     },
     {
       "id": "anycubic-high-speed-pla-bright-red-1kg",
@@ -3136,10 +3825,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Bright Red Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Bright Red Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-bright-red-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightRed_b9a3088c-acc4-42ea-92f4-926002db5b24.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/BrightRed_b9a3088c-acc4-42ea-92f4-926002db5b24.png?v=1784886387&width=600",
+      "imageSha256": "6440c60e8d3e2648e5c42545d9d929c137ac9dc03ba405b5115f60e34471671f"
     },
     {
       "id": "anycubic-high-speed-pla-vibrant-orange-1kg",
@@ -3165,10 +3861,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Orange Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Orange Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-vibrant-orange-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/VibrantOrange.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/VibrantOrange.png?v=1784886387&width=600",
+      "imageSha256": "212d4692f6ac9759ed4b29259e531e2ddfdd3d1097c4e5ac3e07c5b52dec9954"
     },
     {
       "id": "anycubic-high-speed-pla-purple-opulence-1kg",
@@ -3194,10 +3897,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Purple Opulence Anycubic UK"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Purple Opulence Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-purple-opulence-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PurpleOpulence.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/PurpleOpulence.png?v=1784886387&width=600",
+      "imageSha256": "b3586f34df1d36f90736e946a638934d6352956b87b7e1673701b6853fa00066"
     },
     {
       "id": "anycubic-high-speed-pla-strawberry-pink-1kg",
@@ -3223,10 +3933,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Strawberry Pink Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Strawberry Pink Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-strawberry-pink-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/StrawberryPink.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/StrawberryPink.png?v=1784886387&width=600",
+      "imageSha256": "4f4c1a7d9f4d96596c1b9bba6dfde7c06444a3fbf5139f1bc54852e18a9afd38"
     },
     {
       "id": "anycubic-high-speed-pla-dazzling-blue-1kg",
@@ -3252,10 +3969,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Dazzling Blue Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Dazzling Blue Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-dazzling-blue-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/DazzlingBlue.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/DazzlingBlue.png?v=1784886387&width=600",
+      "imageSha256": "e3b2d30cbd0c4594342768ec2a5e37d6b3516cec012bd8a0700364dfd77475f7"
     },
     {
       "id": "anycubic-high-speed-pla-vibrant-yellow-1kg",
@@ -3281,10 +4005,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Yellow Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic High-Speed PLA - Vibrant Yellow Anycubic UK",
+      "image": "./assets/products/anycubic-high-speed-pla-vibrant-yellow-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/high-speed-pla-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/VibrantYellow.png?v=1784886387",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/VibrantYellow.png?v=1784886387&width=600",
+      "imageSha256": "b17b1494e330d062f6bdb34e5ee147dd126bac2556dcdbe5505d22283222b0a6"
     },
     {
       "id": "anycubic-pla-basic-refill-yellow-1kg",
@@ -3310,10 +4041,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Yellow Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Yellow Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-yellow-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Yellow_aba9382a-92de-4809-b106-b239081daac5.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Yellow_aba9382a-92de-4809-b106-b239081daac5.png?v=1783324281&width=600",
+      "imageSha256": "37d525aaf8ea2fb19adc4319c14d59cfeb2dcb05058f35d00e768c5d2472e77e"
     },
     {
       "id": "anycubic-pla-basic-refill-white-1kg",
@@ -3339,10 +4077,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - White Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - White Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-white-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/White_2f16bdab-75ad-49ae-b3f6-e66e924a9238.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/White_2f16bdab-75ad-49ae-b3f6-e66e924a9238.png?v=1783324281&width=600",
+      "imageSha256": "b7f302deb0ce113cd114ab3ea57087dfb5a704755b69c962a1b244da05ecd45e"
     },
     {
       "id": "anycubic-pla-basic-refill-red-1kg",
@@ -3368,10 +4113,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Red Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Red Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-red-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Red_0df71733-2f3d-4f78-8855-dbc8ca00330e.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Red_0df71733-2f3d-4f78-8855-dbc8ca00330e.png?v=1783324281&width=600",
+      "imageSha256": "752c58ea2d4a1cbfe664fc550cfd5a60f90d5b6024fb8732bfb53f3b1c388f9e"
     },
     {
       "id": "anycubic-pla-basic-refill-blue-1kg",
@@ -3397,10 +4149,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Blue Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Blue Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-blue-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Blue_d9ca07a5-8c0a-4028-96a0-f258d93a27cd.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Blue_d9ca07a5-8c0a-4028-96a0-f258d93a27cd.png?v=1783324281&width=600",
+      "imageSha256": "aa351e310efb47490adec164bbd8bb2d3d47b7d98b570d9df1ebaca6303b08cf"
     },
     {
       "id": "anycubic-pla-basic-refill-green-1kg",
@@ -3426,10 +4185,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Green Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Green Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-green-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Green_17f67b6b-1cf1-4dc8-82f0-1da9c6442f30.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Green_17f67b6b-1cf1-4dc8-82f0-1da9c6442f30.png?v=1783324281&width=600",
+      "imageSha256": "a462f3ad29595ccdc993a1c0c2f5f3f6a9c42248d27dce2141b28a6cd572d71e"
     },
     {
       "id": "anycubic-pla-basic-refill-orange-1kg",
@@ -3455,10 +4221,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Orange Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Orange Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-orange-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Orange_ab0019ce-0469-4250-bdd1-44b28bb08b9b.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Orange_ab0019ce-0469-4250-bdd1-44b28bb08b9b.png?v=1783324281&width=600",
+      "imageSha256": "b70f7603cdc3099aba3e03a17507752679e32d057cb96f4fb4ca2a00f30d5dfa"
     },
     {
       "id": "anycubic-pla-basic-refill-purple-1kg",
@@ -3484,10 +4257,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Purple Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Purple Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-purple-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Purple_8d0946eb-6552-477b-8950-6bf2b85f37ec.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Purple_8d0946eb-6552-477b-8950-6bf2b85f37ec.png?v=1783324281&width=600",
+      "imageSha256": "8d5a0634277bffbba61e5adbf3c025a94c0cbe9869bb49894338d338b4db4939"
     },
     {
       "id": "anycubic-pla-basic-refill-pink-1kg",
@@ -3513,10 +4293,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Pink Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Pink Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-pink-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Pink_aed4b2aa-ae24-40d3-947f-65ead728b0ce.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Pink_aed4b2aa-ae24-40d3-947f-65ead728b0ce.png?v=1783324281&width=600",
+      "imageSha256": "94a8b1e2d266ab1adda724fde50fbaf295c9dd20a87b84433f942c4f98e6413a"
     },
     {
       "id": "anycubic-pla-basic-refill-black-1kg",
@@ -3542,10 +4329,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Black Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Black Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-black-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Black_b42102ca-5ebd-4b34-aa9e-b5cc7a9ee0e1.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Black_b42102ca-5ebd-4b34-aa9e-b5cc7a9ee0e1.png?v=1783324281&width=600",
+      "imageSha256": "1af276b941c90f903038203b8950ef5afc75f18ccf31dac5119c68b9674b1a7e"
     },
     {
       "id": "anycubic-pla-basic-refill-texture-grey-1kg",
@@ -3571,10 +4365,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA Basic Refill - Texture Grey Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA Basic Refill - Texture Grey Anycubic UK",
+      "image": "./assets/products/anycubic-pla-basic-refill-texture-grey-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-mix-match-deal",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_ce6003dc-bc64-498c-ac1f-df019ee23a9e.png?v=1783324281",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/TextureGrey_ce6003dc-bc64-498c-ac1f-df019ee23a9e.png?v=1783324281&width=600",
+      "imageSha256": "060f00ad8a168bc5ac4d6bfe5f1f008d2640aed2253affc5326a31d817eaec27"
     },
     {
       "id": "anycubic-pla-cf-vintage-red-1kg",
@@ -3600,10 +4401,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Vintage Red Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Vintage Red Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-vintage-red-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/f8aa309d68891c8dc286fce11666b33c.jpg?v=1773970896",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/f8aa309d68891c8dc286fce11666b33c.jpg?v=1773970896&width=600",
+      "imageSha256": "6b4bbac3dc3bf69b3bc632b93f6d86623535f1b6ac9d4504e7802bb7818c1da2"
     },
     {
       "id": "anycubic-pla-cf-lava-grey-1kg",
@@ -3629,10 +4437,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
+      "imageStatus": "available",
       "imageChecked": "2026-10-03",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Lava Grey Anycubic UK"
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Lava Grey Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-lava-grey-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/9f940d6945e65095a668ea1532fd1584.jpg?v=1773971198",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/9f940d6945e65095a668ea1532fd1584.jpg?v=1773971198&width=600",
+      "imageSha256": "fecc0c6e4e15afd731b54ffe56828f15786ee572993bbcbd6be635ad92d59c1f"
     },
     {
       "id": "anycubic-pla-cf-cowboy-blue-1kg",
@@ -3658,10 +4473,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Cowboy Blue Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Cowboy Blue Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-cowboy-blue-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/95d83f2add9fbd6a38bdeba5b64a9002.jpg?v=1773971198",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/95d83f2add9fbd6a38bdeba5b64a9002.jpg?v=1773971198&width=600",
+      "imageSha256": "64b68c152cd1dad94b0650054d986bd509131fcc2460ea1a40f302e293de2f1d"
     },
     {
       "id": "anycubic-pla-cf-black-1kg",
@@ -3687,10 +4509,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Black Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Black Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-black-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/8b9cc7c9808a81fc8db0eaf67a4d79d7_2c807ccb-adbe-4233-b4e7-ebc880c0172e.jpg?v=1773971198",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/8b9cc7c9808a81fc8db0eaf67a4d79d7_2c807ccb-adbe-4233-b4e7-ebc880c0172e.jpg?v=1773971198&width=600",
+      "imageSha256": "09e8bb870c3333c6acc1da30d70cb1d72413c8084a37080156a8c139658607ab"
     },
     {
       "id": "anycubic-pla-cf-fish-scale-white-1kg",
@@ -3716,10 +4545,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Fish Scale White Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Fish Scale White Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-fish-scale-white-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/656dc855379a33fc4c991118943b9369.jpg?v=1773971198",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/656dc855379a33fc4c991118943b9369.jpg?v=1773971198&width=600",
+      "imageSha256": "a127f5f98cbbd7234f71b59722d13639a55a999f77c8e65b2429667d81125c54"
     },
     {
       "id": "anycubic-pla-cf-jade-green-1kg",
@@ -3745,10 +4581,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic PLA-CF - Jade Green Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic PLA-CF - Jade Green Anycubic UK",
+      "image": "./assets/products/anycubic-pla-cf-jade-green-1kg.jpg",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/c273ea28272a05e4897cffcbd74ee3c9.jpg?v=1773971198",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/c273ea28272a05e4897cffcbd74ee3c9.jpg?v=1773971198&width=600",
+      "imageSha256": "83d2f3a9a2520b17bcd1198b6ffe1201e5ab4967b138545fba165cf261e12202"
     },
     {
       "id": "additivex-bambu-pla-matte-mandarin-orange-1kg",
@@ -3774,10 +4617,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Mandarin Orange Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Mandarin Orange Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-mandarin-orange-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Mandarine-Orange.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Mandarine-Orange.png?v=1717492102&width=600",
+      "imageSha256": "1cdccebb1da35c6633ab80a0e3404effced4be020af87eefacc7eac65a64918b"
     },
     {
       "id": "additivex-bambu-pla-matte-marine-blue-1kg",
@@ -3803,10 +4653,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Marine Blue Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Marine Blue Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-marine-blue-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Marine-Blue.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Marine-Blue.png?v=1717492102&width=600",
+      "imageSha256": "1edc8f467785c6d36828c7a74600b6109f22db62cf12a7399d81459a86cc0978"
     },
     {
       "id": "additivex-bambu-pla-matte-ice-blue-1kg",
@@ -3832,10 +4689,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ice Blue Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ice Blue Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-ice-blue-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ice-Blue.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ice-Blue.png?v=1717492102&width=600",
+      "imageSha256": "5932624ce0f08823d7b8563fb62d68ab77b08191d0de0279ec878b199d40a4ed"
     },
     {
       "id": "additivex-bambu-pla-matte-ash-grey-1kg",
@@ -3861,10 +4725,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ash Grey Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Ash Grey Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-ash-grey-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ash-Gray_88522363-188c-48e0-bd7d-6015918a8c6b.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ash-Gray_88522363-188c-48e0-bd7d-6015918a8c6b.png?v=1717492102&width=600",
+      "imageSha256": "9172cba25acc8f97f98318d724704b081b33b3eb1f53d5263a191fa425287855"
     },
     {
       "id": "additivex-bambu-pla-matte-grass-green-1kg",
@@ -3890,10 +4761,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Grass Green Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Grass Green Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-grass-green-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Grass-Green.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Grass-Green.png?v=1717492102&width=600",
+      "imageSha256": "4b3888683f278c19d805fe9aabc2ce38c725edb11513abb4643ab0aab6dcc1c9"
     },
     {
       "id": "additivex-bambu-pla-matte-charcoal-1kg",
@@ -3919,10 +4797,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Charcoal Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Charcoal Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-charcoal-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Charcoal.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Charcoal.png?v=1717492102&width=600",
+      "imageSha256": "a4dc035ec7ccdd4f0b737665819a75a8382bb80b3f18fbef26bc8e6af3e1b21b"
     },
     {
       "id": "additivex-bambu-pla-matte-latte-brown-1kg",
@@ -3948,10 +4833,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Latte Brown Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Latte Brown Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-latte-brown-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Latte-Brown.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Latte-Brown.png?v=1717492102&width=600",
+      "imageSha256": "3b9e801188d9dcfc6f7001c41a31e6d2c51fa9776e9b56f13d8764fee0e975b1"
     },
     {
       "id": "additivex-bambu-pla-matte-sakura-pink-1kg",
@@ -3977,10 +4869,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Sakura Pink Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Sakura Pink Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-sakura-pink-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Sakura-Pink.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Sakura-Pink.png?v=1717492102&width=600",
+      "imageSha256": "35415b1e472d8df2259476490198cc57f79d5375993163ff00bd4eef86fdc24f"
     },
     {
       "id": "additivex-bambu-pla-matte-lilac-purple-1kg",
@@ -4006,10 +4905,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Lilac Purple Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Lilac Purple Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-lilac-purple-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Lilac-Purple.png?v=1706090484",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Lilac-Purple.png?v=1706090484&width=600",
+      "imageSha256": "aac337eb920b4bed0f9a9cd3be3845e3d32798850b19d2c65aedd4ef6719dfe4"
     },
     {
       "id": "additivex-bambu-pla-matte-scarlet-red-1kg",
@@ -4035,10 +4941,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Scarlet Red Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Bambu Lab PLA Matte Filament (Refill) - Scarlet Red Additive-X",
+      "image": "./assets/products/additivex-bambu-pla-matte-scarlet-red-1kg.png",
+      "imageMethod": "manufacturer-colour-variant",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102&width=600",
+      "imageSha256": "5d9a4fd1ba924d46bbe047a938605620d8af7a2dcbe7b83ddcf3dbf52d97f5b5"
     },
     {
       "id": "additivex-formfutura-petg-black-1kg",
@@ -4064,10 +4977,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "FormFutura Bulk PETG Filament - Black Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "FormFutura Bulk PETG Filament - Black Additive-X",
+      "image": "./assets/products/additivex-formfutura-petg-black-1kg.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/formfutura-bulk-petg-filament-black-1-75mm-1kg.html",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_black_1.75mm_1kg.png",
+      "imageDownloadedFrom": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_black_1.75mm_1kg.png",
+      "imageSha256": "c1e4bee1a05a6fa979341372c85c8c94365082c4972b1bff360d0d7dd9b5036e"
     },
     {
       "id": "additivex-formfutura-petg-red-1kg",
@@ -4093,10 +5013,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "FormFutura Bulk PETG Filament - Red Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "FormFutura Bulk PETG Filament - Red Additive-X",
+      "image": "./assets/products/additivex-formfutura-petg-red-1kg.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/formfutura-bulk-petg-filament-red-1-75mm-1kg.html",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_red_1.75mm_1kg.png",
+      "imageDownloadedFrom": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_red_1.75mm_1kg.png",
+      "imageSha256": "48723a76d1d0109797bddcf7b3e2f2855cddf7e736bbf25164cfb88aca749f95"
     },
     {
       "id": "additivex-formfutura-petg-white-1kg",
@@ -4122,10 +5049,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "FormFutura Bulk PETG Filament - White Additive-X"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "FormFutura Bulk PETG Filament - White Additive-X",
+      "image": "./assets/products/additivex-formfutura-petg-white-1kg.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/formfutura-bulk-petg-filament-white-1-75mm-1kg.html",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_white_1.75mm_1kg.png",
+      "imageDownloadedFrom": "https://www.additive-x.com/shop/media/catalog/product/cache/7800bb778a954cb4c97ef3c76a1a4610/f/o/formfutura_bulk_petg_filament_-_white_1.75mm_1kg.png",
+      "imageSha256": "204a72d66bb39245080b1b981a62b9c2a6761d01b86130224cdaf6f3418806ce"
     },
     {
       "id": "anycubic-kobra-3-max-v2-combo",
@@ -4150,10 +5084,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Kobra 3 Max V2 Combo Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Kobra 3 Max V2 Combo Anycubic UK",
+      "image": "./assets/products/anycubic-kobra-3-max-v2-combo.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra3MaxV2Combo.jpg?v=1787835187",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra3MaxV2Combo.jpg?v=1787835187&width=600",
+      "imageSha256": "4a0b1ca214f117fc56793cdcc167d3bb9b743f70cb45d860b49f0c1ded8b20c9"
     },
     {
       "id": "anycubic-kobra-s1-ace-2-pro-combo",
@@ -4178,10 +5119,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Kobra S1 ACE 2 Pro Combo Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Kobra S1 ACE 2 Pro Combo Anycubic UK",
+      "image": "./assets/products/anycubic-kobra-s1-ace-2-pro-combo.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-s1-ace-2-pro-combo-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/en_30bbf587-f21b-47a1-aa8d-06b0975cf1bb.jpg?v=1783914384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/en_30bbf587-f21b-47a1-aa8d-06b0975cf1bb.jpg?v=1783914384&width=600",
+      "imageSha256": "8df7c5c3a8f3f1c8f643e4e38115070221bed06b2251f09bc403c0d92c356db4"
     },
     {
       "id": "anycubic-kobra-4-combo",
@@ -4206,10 +5154,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Kobra 4 Combo Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Kobra 4 Combo Anycubic UK",
+      "image": "./assets/products/anycubic-kobra-4-combo.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-nofilament.jpg?v=1780396883",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-nofilament.jpg?v=1780396883&width=600",
+      "imageSha256": "df5ae53aeb5511f24a85e648f7dca36534ac481aeb03cc52c140c2cf110fbb72"
     },
     {
       "id": "anycubic-kobra-x",
@@ -4234,10 +5189,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Kobra X Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Kobra X Anycubic UK",
+      "image": "./assets/products/anycubic-kobra-x.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-x",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_-_4_colors_-_without_filament.jpg?v=1774233625",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_-_4_colors_-_without_filament.jpg?v=1774233625&width=600",
+      "imageSha256": "29a21e1c4c46c69e5734ae15738f73f49e68a8c897d35b1e5545e929c58383ca"
     },
     {
       "id": "anycubic-kobra-s1-combo",
@@ -4262,10 +5224,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Kobra S1 Combo Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Kobra S1 Combo Anycubic UK",
+      "image": "./assets/products/anycubic-kobra-s1-combo.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-s1-combo",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/1500x1500-S1C.jpg?v=1769666790",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/1500x1500-S1C.jpg?v=1769666790&width=600",
+      "imageSha256": "f9bda97c65531e1622925e0aad9ffd0619ab67795a6dd814ccaf2ad8f9e2efeb"
     },
     {
       "id": "anycubic-photon-p1",
@@ -4290,10 +5259,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon P1 Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon P1 Anycubic UK",
+      "image": "./assets/products/anycubic-photon-p1.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-p1-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/74b96dbb2d19db9758ba306fc55ad040.jpg?v=1780386513",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/74b96dbb2d19db9758ba306fc55ad040.jpg?v=1780386513&width=600",
+      "imageSha256": "a098a26341040eadad95c49ee085e935b3b46c69c049fc1ad10b3de1738ac380"
     },
     {
       "id": "anycubic-photon-p1-max",
@@ -4318,10 +5294,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon P1 Max Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon P1 Max Anycubic UK",
+      "image": "./assets/products/anycubic-photon-p1-max.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-p1-max-best-large-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/AnycubicPhotonP1Max.jpg?v=1784020603",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/AnycubicPhotonP1Max.jpg?v=1784020603&width=600",
+      "imageSha256": "0e6a6065cc953e89576711d50d1a850ec384fb113f4879a3365002bfc5bd5384"
     },
     {
       "id": "anycubic-photon-mono-m7-pro",
@@ -4346,10 +5329,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon Mono M7 Pro Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon Mono M7 Pro Anycubic UK",
+      "image": "./assets/products/anycubic-photon-mono-m7-pro.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-mono-m7-pro",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_Pro_4.jpg?v=1769667042",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_Pro_4.jpg?v=1769667042&width=600",
+      "imageSha256": "25b20f3c153b0fdb44ea837c323183f9d4356a6652d8be2e54d2477e55c0e366"
     },
     {
       "id": "anycubic-photon-mono-m7-max",
@@ -4374,10 +5364,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon Mono M7 Max Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon Mono M7 Max Anycubic UK",
+      "image": "./assets/products/anycubic-photon-mono-m7-max.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-mono-m7-max",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_Max_1.jpg?v=1761205941",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_Max_1.jpg?v=1761205941&width=600",
+      "imageSha256": "9d5e6fd1c81e3cf50197b5a33385ef2d13d5b42fd573aa0439f21b5451f6abfe"
     },
     {
       "id": "anycubic-photon-mono-m7",
@@ -4402,10 +5399,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon Mono M7 Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon Mono M7 Anycubic UK",
+      "image": "./assets/products/anycubic-photon-mono-m7.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-mono-m7",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_8.jpg?v=1760611549",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Photon_Mono_M7_8.jpg?v=1760611549&width=600",
+      "imageSha256": "793b19a6e2de0f7e5de80fc43078b85d7735a61eebb1a87802bb59847ee88adb"
     },
     {
       "id": "anycubic-photon-mono-4",
@@ -4430,10 +5434,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Anycubic Photon Mono 4 Anycubic UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Anycubic Photon Mono 4 Anycubic UK",
+      "image": "./assets/products/anycubic-photon-mono-4.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.anycubic.com/products/photon-mono-4",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Mono_4_86fa66ca-286a-48c4-bf92-d8c1f0199737.jpg?v=1761205350",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Mono_4_86fa66ca-286a-48c4-bf92-d8c1f0199737.jpg?v=1761205350&width=600",
+      "imageSha256": "02471ece53871c59ab24e9d24cac1ec7c28ad9e67fbf6892419ccdfaf687234c"
     },
     {
       "id": "elegoo-centauri-2",
@@ -4459,8 +5470,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/elegoo-centauri-2.jpg",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718&width=600",
+      "imageSha256": "b2303fe1ab1c4f86c9f0aa830a86eddea6e821b7da8e4c2830078c3359936256",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "elegoo-centauri-carbon-2",
@@ -4486,8 +5502,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/elegoo-centauri-carbon-2.jpg",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989&width=600",
+      "imageSha256": "685601c331fe5488052d7270a5fa4c00ec015ca58966fc80c7c35fe8ef13f5b1",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "elegoo-centauri-carbon-2-combo",
@@ -4513,8 +5534,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/elegoo-centauri-carbon-2-combo.png",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366&width=600",
+      "imageSha256": "7e92d890fd32d78c63714b99b1b4a62a1e02f9d021007658cb7b75a761e18718",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "elegoo-saturn-4-ultra-16k",
@@ -4539,10 +5565,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Saturn 4 Ultra 16K ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Saturn 4 Ultra 16K ELEGOO UK",
+      "image": "./assets/products/elegoo-saturn-4-ultra-16k.png",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._0e2d3a01-fae1-486e-b1ee-294b2024676e.png?v=1789961504",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._0e2d3a01-fae1-486e-b1ee-294b2024676e.png?v=1789961504&width=600",
+      "imageSha256": "9c1262844888d33ad1526fe1850d37d3cc2405d5e32ec6b5c8a1428e3848494c"
     },
     {
       "id": "elegoo-saturn-4-ultra",
@@ -4567,10 +5600,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Saturn 4 Ultra ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Saturn 4 Ultra ELEGOO UK",
+      "image": "./assets/products/elegoo-saturn-4-ultra.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U_028d09f8-0071-4597-8239-312242831000.jpg?v=1756798234",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U_028d09f8-0071-4597-8239-312242831000.jpg?v=1756798234&width=600",
+      "imageSha256": "bad339d809ed751f15f78a3cb863b044cb161e7d933150f1746530cf0d94fa6a"
     },
     {
       "id": "elegoo-saturn-4",
@@ -4595,10 +5635,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Saturn 4 ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Saturn 4 ELEGOO UK",
+      "image": "./assets/products/elegoo-saturn-4.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4frontview.jpg?v=1756798232",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4frontview.jpg?v=1756798232&width=600",
+      "imageSha256": "4d87d5943e58d7332290ed79b39c4128834a25a45f931fce35d7040b9fc5b7a3"
     },
     {
       "id": "elegoo-saturn-3-ultra",
@@ -4623,10 +5670,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Saturn 3 Ultra ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Saturn 3 Ultra ELEGOO UK",
+      "image": "./assets/products/elegoo-saturn-3-ultra.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-saturn-3-ultra-resin-3d-printer-12k",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S3U.jpg?v=1756798335",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S3U.jpg?v=1756798335&width=600",
+      "imageSha256": "7b7be4ac78ada4912be014c61252c77434ba101066ffbac2196aee1688be0e21"
     },
     {
       "id": "elegoo-saturn-3",
@@ -4651,10 +5705,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Saturn 3 ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Saturn 3 ELEGOO UK",
+      "image": "./assets/products/elegoo-saturn-3.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-saturn-3-resin-3d-printer-12k",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/products/elegoo-saturn-3-3d-printer.jpg?v=1756798338",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/products/elegoo-saturn-3-3d-printer.jpg?v=1756798338&width=600",
+      "imageSha256": "54f53fb7df1bea1c18470a4aff5b8294460cada2d945fe6692386e28a26fc39e"
     },
     {
       "id": "elegoo-mars-5-ultra",
@@ -4679,10 +5740,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "ELEGOO Mars 5 Ultra ELEGOO UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "ELEGOO Mars 5 Ultra ELEGOO UK",
+      "image": "./assets/products/elegoo-mars-5-ultra.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/f91c887f39b07095c6453b328b4b84cd_5640e508-b340-4706-8f45-2c5c4285c1f2.jpg?v=1756798213",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/f91c887f39b07095c6453b328b4b84cd_5640e508-b340-4706-8f45-2c5c4285c1f2.jpg?v=1756798213&width=600",
+      "imageSha256": "6f57dddd3d6615bd0e17a1fd1c1b69871cb33ccb732f0f1ef25c9b09991aee5c"
     },
     {
       "id": "elegoo-jupiter-2",
@@ -4708,8 +5776,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/elegoo-jupiter-2.jpg",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746&width=600",
+      "imageSha256": "acafdcd6aa90c756c491e2ccb2416499650af38b99746e6a704f7c679a8a4ddb",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "creality-k2",
@@ -4734,10 +5807,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality K2 Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality K2 Creality UK",
+      "image": "./assets/products/creality-k2.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811&width=600",
+      "imageSha256": "2699b550e64d4e1895e251286a9fd5b0c0633f29592f48cd67a4d38dc18d1166"
     },
     {
       "id": "creality-k2-plus",
@@ -4763,8 +5843,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K2_plus.png?v=1769939643",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/creality-k2-plus.png",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K2_plus.png?v=1769939643",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K2_plus.png?v=1769939643&width=600",
+      "imageSha256": "47bd054fbc0cbb70fdb9849079b1313e4fc346d39da0ad8ec4ba0eebc024e421",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "creality-k2-pro",
@@ -4790,8 +5875,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Your_paragraph_text_25_1fdf08a1-cd10-48ef-b051-3eb10fcdfc82.png?v=1774084955",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/creality-k2-pro.png",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Your_paragraph_text_25_1fdf08a1-cd10-48ef-b051-3eb10fcdfc82.png?v=1774084955",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Your_paragraph_text_25_1fdf08a1-cd10-48ef-b051-3eb10fcdfc82.png?v=1774084955&width=600",
+      "imageSha256": "488892b1b651e8d2a1f472734cd600ef2ac65e5b9c20f8285978f70ab4623064",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "creality-k2-se",
@@ -4816,10 +5906,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality K2 SE Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality K2 SE Creality UK",
+      "image": "./assets/products/creality-k2-se.png",
+      "imageSourceUrl": "https://store.creality.com/uk/products/k2-se-combo-3d-printer",
+      "imageMethod": "manufacturer-exact-model",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941&width=600",
+      "imageSha256": "c7e848cb4063a479287e90f884431c132f0f80ed266e7a3a91d2467b8d58204b"
     },
     {
       "id": "creality-ender-5-max",
@@ -4844,10 +5941,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality Ender-5 Max Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality Ender-5 Max Creality UK",
+      "image": "./assets/products/creality-ender-5-max.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/ender-5-max-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811&width=600",
+      "imageSha256": "a9eb083ed63ca1e6ce11cb0304fa6eed933efe66a7a42959337ac0a3abac5fa8"
     },
     {
       "id": "creality-halot-r6",
@@ -4872,10 +5976,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality HALOT-R6 Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality HALOT-R6 Creality UK",
+      "image": "./assets/products/creality-halot-r6.png",
+      "imageSourceUrl": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer",
+      "imageMethod": "manufacturer-exact-model",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851&width=600",
+      "imageSha256": "b1948aba52ef23625c7645f351c4fcca17dba96f7451c50763c7e9eb2643ce55"
     },
     {
       "id": "creality-halot-mage-s",
@@ -4900,10 +6011,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "not-found",
-      "imageSearchQuery": "Creality HALOT-MAGE S 14K Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality HALOT-MAGE S 14K Creality UK",
+      "image": "./assets/products/creality-halot-mage-s.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169&width=600",
+      "imageSha256": "db2cc88a4af9469bc399ce7b3ac10425ec8375db966464802d08767ac67f7353"
     },
     {
       "id": "creality-halot-x1",
@@ -4928,10 +6046,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "search-error",
-      "imageSearchQuery": "Creality HALOT X1 All in One Creality UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Creality HALOT X1 All in One Creality UK",
+      "image": "./assets/products/creality-halot-x1.png",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690&width=384",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690&width=600",
+      "imageSha256": "8ffabd98f2113e6cda0218865c4ecb108ff319f11b8db26d5ce2c18eebce1ba9"
     },
     {
       "id": "qidi-q2",
@@ -4957,8 +6082,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-q2.png",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=1024",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=600",
+      "imageSha256": "20465a0cea4a0c9d10f54898377e89af4fef83bde65cc8f57a4d0663e3c1bd62",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "qidi-plus5",
@@ -4984,8 +6114,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=1024",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/qidi-plus5.png",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=1024",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=600",
+      "imageSha256": "14380bf216abfc924f5ae7015bdd24c3bfc39f0e2a13040689fabc8b54b99381",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "flashforge-adventurer-5m-pro",
@@ -5011,8 +6146,15 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://uk.flashforge.com/cdn/shop/files/11_c5c8e47d-edfe-43f4-8c9d-afbc42c60281.png?v=1778235098&width=1920",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/flashforge-adventurer-5m-pro.png",
+      "imageChecked": "2026-10-03",
+      "imageSourceUrl": "https://uk.flashforge.com/products/adventurer-5m-pro-3d-printer",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/11_c5c8e47d-edfe-43f4-8c9d-afbc42c60281.png?v=1778235098",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/11_c5c8e47d-edfe-43f4-8c9d-afbc42c60281.png?v=1778235098&width=600",
+      "imageSha256": "41579a310fb55152aad05cf0677aabafc7edd842f49e7ad3d66060057f1addaa",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "flashforge-ad5x",
@@ -5037,10 +6179,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Flashforge AD5X Flashforge UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Flashforge AD5X Flashforge UK",
+      "image": "./assets/products/flashforge-ad5x.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.flashforge.com/products/ad5x-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/img_v3_0211h_c797a948-2c67-4146-ac0f-3204cf89cfdg.png?v=1778292710",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/img_v3_0211h_c797a948-2c67-4146-ac0f-3204cf89cfdg.png?v=1778292710&width=600",
+      "imageSha256": "2ce226e709e22a94fccc373eef32fcadcacdd3ed43607f2d890a52fef425f607"
     },
     {
       "id": "flashforge-creator-5",
@@ -5065,10 +6214,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Flashforge Creator 5 Flashforge UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Flashforge Creator 5 Flashforge UK",
+      "image": "./assets/products/flashforge-creator-5.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.flashforge.com/products/flashforge-creator-5",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/C5_4.png?v=1778299797",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/C5_4.png?v=1778299797&width=600",
+      "imageSha256": "36155fa06957b7caac488b0a4a3cd52343777f08defa2258352f6580175c9711"
     },
     {
       "id": "flashforge-creator-5-pro",
@@ -5093,10 +6249,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Flashforge Creator 5 Pro Flashforge UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Flashforge Creator 5 Pro Flashforge UK",
+      "image": "./assets/products/flashforge-creator-5-pro.png",
+      "imageMethod": "manufacturer-exact-variant",
+      "imageSourceUrl": "https://uk.flashforge.com/products/flashforge-creator-5-pro",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/4_--234.png?v=1778292511",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/4_--234.png?v=1778292511&width=600",
+      "imageSha256": "31f201fa96fde232da6dcde234583e8d44a16eb7e1498d242ac7b2dcb2340c9c"
     },
     {
       "id": "sovol-m1d",
@@ -5121,10 +6284,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Sovol M1D Sovol UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Sovol M1D Sovol UK",
+      "image": "./assets/products/sovol-m1d.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-m1d-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/sovol-m1d-idex-3d-printer-front-render.jpg?v=1787799338",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/sovol-m1d-idex-3d-printer-front-render.jpg?v=1787799338&width=600",
+      "imageSha256": "585b340164a3d9bbe5f9446b30a2e4de86635d4159470bf6f61d5e3f08e3e4de"
     },
     {
       "id": "sovol-sv08-max",
@@ -5150,8 +6320,13 @@ window.PRINTPROFIT_PRICE_DATA={
       ],
       "lastCheckStatus": "reference",
       "imageStatus": "available",
-      "image": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=1920",
-      "imageChecked": "2026-09-28"
+      "image": "./assets/products/sovol-sv08-max.jpg",
+      "imageChecked": "2026-10-03",
+      "imageOriginalUrl": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=1920",
+      "imageAutoRefresh": false,
+      "imageDownloadedFrom": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=600",
+      "imageSha256": "e951f22b8bff2426dfe5ee14816dc0b750c7925fe15987ebf308a35576fa63f2",
+      "imageSearchStatus": "matched"
     },
     {
       "id": "sovol-sv08",
@@ -5176,10 +6351,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Sovol SV08 Sovol UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Sovol SV08 Sovol UK",
+      "image": "./assets/products/sovol-sv08.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-sv08-3d-printer",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV08_3D_Printer-A.jpg?v=1766996007",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV08_3D_Printer-A.jpg?v=1766996007&width=600",
+      "imageSha256": "bdf9a22b89d7211d4fb63ec9c4829000ffaa2e167654704e37cea5cad7a0f35a"
     },
     {
       "id": "sovol-sv06-ace",
@@ -5204,10 +6386,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-02",
-      "imageSearchStatus": "fetch-error",
-      "imageSearchQuery": "Sovol SV06 ACE Sovol UK"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "Sovol SV06 ACE Sovol UK",
+      "image": "./assets/products/sovol-sv06-ace.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-sv06-ace",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_3D_Printer.jpg?v=1766996075",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_3D_Printer.jpg?v=1766996075&width=600",
+      "imageSha256": "f95d58ef3dbe954368c58a585a4bede59bdcbb403584880697c15dfa5ff60955"
     },
     {
       "id": "snapmaker-u1",
@@ -5232,8 +6421,16 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "error",
-      "imageStatus": "fallback",
-      "imageSearchStatus": "fetch-error"
+      "imageStatus": "available",
+      "imageSearchStatus": "matched",
+      "image": "./assets/products/snapmaker-u1.jpg",
+      "imageMethod": "manufacturer-model-photo",
+      "imageSourceUrl": "https://shop.snapmaker.com/products/snapmaker-u1-3d-printer",
+      "imageChecked": "2026-10-03",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0063/3552/9029/files/SnapmakerU13DPrinter_1.webp?v=1784886369",
+      "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0063/3552/9029/files/SnapmakerU13DPrinter_1.webp?v=1784886369&width=600",
+      "imageSha256": "b78ce20f24750574ba3affd0a225bb16486bcea60d9ee2a45c5005b8898c979c"
     },
     {
       "id": "xyz-da-vinci-mini-w-plus",
@@ -5258,10 +6455,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "search-error",
-      "imageSearchQuery": "XYZ da Vinci Mini W+ iDig3Dprinting"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "XYZ da Vinci Mini W+ iDig3Dprinting",
+      "image": "./assets/products/xyz-da-vinci-mini-w-plus.jpg",
+      "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/brand/xyz-printing/xyz-da-vinci-mini/",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/09/Da-Vinci_mini-Black-3FM3WXEU01B-198x198.jpg",
+      "imageDownloadedFrom": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/09/Da-Vinci_mini-Black-3FM3WXEU01B-198x198.jpg",
+      "imageSha256": "32e18c9940631ae24dc26a30a8e5f6690be70e0d4692033a4436bbba3015306f"
     },
     {
       "id": "xyz-da-vinci-1-pro-3-in-1",
@@ -5286,10 +6490,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "search-error",
-      "imageSearchQuery": "XYZ da Vinci 1.0 Pro 3 in 1 iDig3Dprinting"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "XYZ da Vinci 1.0 Pro 3 in 1 iDig3Dprinting",
+      "image": "./assets/products/xyz-da-vinci-1-pro-3-in-1.jpg",
+      "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/",
+      "imageMethod": "retailer-exact-product",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side-198x198.jpg",
+      "imageDownloadedFrom": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side-198x198.jpg",
+      "imageSha256": "0eb80350bf2cf50885c105bbdfb779c7a86e1900b9fada6e32e6a5247fe569cc"
     },
     {
       "id": "xyz-da-vinci-junior",
@@ -5314,10 +6525,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "search-error",
-      "imageSearchQuery": "XYZ da Vinci Junior iDig3Dprinting"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "XYZ da Vinci Junior iDig3Dprinting",
+      "image": "./assets/products/xyz-da-vinci-junior.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/brand/xyz-printing/xyz-da-vinci-junior/",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/02/xyz-junior-198x198.jpg",
+      "imageDownloadedFrom": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/02/xyz-junior-198x198.jpg",
+      "imageSha256": "065d1f25ff4faae2433983bfd6c1dd258f3a6138216b962bd5ad3ab24e3d7bbf"
     },
     {
       "id": "xyz-da-vinci-color",
@@ -5342,10 +6560,17 @@ window.PRINTPROFIT_PRICE_DATA={
         }
       ],
       "lastCheckStatus": "reference",
-      "imageStatus": "fallback",
-      "imageChecked": "2026-10-04",
-      "imageSearchStatus": "search-error",
-      "imageSearchQuery": "XYZ da Vinci Color iDig3Dprinting"
+      "imageStatus": "available",
+      "imageChecked": "2026-10-03",
+      "imageSearchStatus": "matched",
+      "imageSearchQuery": "XYZ da Vinci Color iDig3Dprinting",
+      "image": "./assets/products/xyz-da-vinci-color.jpg",
+      "imageMethod": "retailer-exact-listing",
+      "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/brand/xyz-printing/da-vinci-color-3d-printer/",
+      "imageAutoRefresh": false,
+      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2017/10/Da-Vinci-color-main-198x198.jpg",
+      "imageDownloadedFrom": "https://www.idig3dprinting.co.uk/wp-content/uploads/2017/10/Da-Vinci-color-main-198x198.jpg",
+      "imageSha256": "becd22b63fd1ae0d879dd22f08d7160bfcec5d58cd64274b1751913ec4ecd9ef"
     }
   ],
   "sourceCoverage": [
@@ -5455,12 +6680,20 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-04T03:06:27.146516+00:00",
+    "checkedAt": "2026-10-03T14:54:59.226624+00:00",
     "changedProducts": 0,
     "changedImages": 0,
     "imagesFound": 0,
-    "imageSearches": 56,
-    "warnings": 121
-  }
+    "imageSearches": 60,
+    "warnings": 117
+  },
+  "imageCoverage": {
+    "checkedAt": "2026-10-03",
+    "downloadedPhotos": 181,
+    "listings": 182,
+    "unresolvedIds": [
+      "3dgbire-pet"
+    ]
+  },
+  "packageBaseCommit": "7e146d56c324a84fcbe1401e945e36292c614fd9"
 };
-})();

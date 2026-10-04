@@ -256,12 +256,17 @@ body.pp-light .kind .pp-shared-icon{color:#007f9b!important}
 }
 </style>
 
-/* Compare filter groups: make adjacent filter boxes touch cleanly. */
-.tools,.extra-tools{gap:0!important}
-.tools .tool,.extra-tools .tool{border-radius:0!important}
-.tools .tool:first-child,.extra-tools .tool:first-child{border-radius:13px 0 0 13px!important}
-.tools .tool:last-child,.extra-tools .tool:last-child{border-radius:0 13px 13px 0!important}
-.tools .tool + .tool,.extra-tools .tool + .tool{border-left:0!important}
+<style id="ppCompareFilterGroups">
+/* Two complete filter rows, with every field kept inside its own card. */
+body .tools{grid-template-columns:minmax(0,1.5fr) repeat(5,minmax(0,1fr))!important}
+body .extra-tools{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+body .tools,body .extra-tools{display:grid!important;gap:10px!important;margin:12px 0!important;align-items:stretch!important}
+body .tools .tool,body .extra-tools .tool{min-width:0!important;border:1px solid var(--line)!important;border-radius:13px!important;box-sizing:border-box!important}
+body .tools input,body .tools select,body .extra-tools input,body .extra-tools select{width:100%!important;min-width:0!important;box-sizing:border-box!important}
+@media(max-width:1000px){body .tools,body .extra-tools{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:650px){body .tools,body .extra-tools{grid-template-columns:repeat(2,minmax(0,1fr))!important}body .tools .tool:first-child{grid-column:1/-1}}
+@media(max-width:420px){body .tools,body .extra-tools{grid-template-columns:minmax(0,1fr)!important}}
+</style>
 <style id="ppCompareTableCheckVisual">
 .type-cell{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:7px!important;min-height:70px!important}
 .table-compare-check.compare-check{width:14px!important;height:14px!important;min-width:14px!important;margin:0 0 0 2px!important;border-radius:4px!important}
@@ -396,7 +401,7 @@ body.pp-light .kind .pp-shared-icon{color:#007f9b!important}
 <div class="cards">
 <article class="card"><h3 id="sourceCount">10 sources</h3><p>Retailers and manufacturers are tracked in the central comparison database. Additional specialist sources can be added without redesigning the page.</p></article>
 <article class="card"><h3 id="brandCount">32 brands</h3><p>Brand coverage spans major printer and material manufacturers, with more brands ready to be added as product feeds are mapped.</p></article>
-<article class="card"><h3 id="listingCount">50 listings</h3><p>The dataset is deliberately structured so prices, stock status and timestamps can be refreshed independently from the user interface.</p></article>
+<article class="card"><h3 id="listingCount">50 listings</h3><p>Prices and photos are checked nightly where the source allows. Verified new products are added automatically.</p></article>
 </div>
 </section>
 
@@ -413,7 +418,7 @@ body.pp-light .kind .pp-shared-icon{color:#007f9b!important}
 <div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
-<script src="./data/price-finder.js?v=2"></script>
+<script src="./data/price-finder.js?v=20261004-nightly1"></script>
 <script>
 (()=>{
 'use strict';
@@ -519,7 +524,7 @@ function sharedIcon(name,extraClass=''){
 function productImage(x){
  const fallback=imageFallback(x);
  const src=x.image||fallback;
- return '<div class="product-thumb-wrap"><img class="product-thumb" src="'+esc(src)+'" alt="" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+sharedIcon(x.category==='printer'?'printer':'filament','thumb-placeholder-icon')+'</span></div>';
+ return '<div class="product-thumb-wrap" title="'+esc(x.imageNote||x.name)+'"><img class="product-thumb" src="'+esc(src)+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+sharedIcon(x.category==='printer'?'printer':'filament','thumb-placeholder-icon')+'</span></div>';
 }
 function sparkline(history){
  const h=(Array.isArray(history)?history:[]).filter(x=>x&&Number.isFinite(Number(x.price))).slice(-30);
@@ -540,7 +545,7 @@ function openDetailsModal(id){
  const change=latestPriceChange(x),unit=x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'Not tracked';
  const delivery=x.shippingPrice!=null?money(Number(x.price||0)+Number(x.shippingPrice))+' delivered':'Not tracked';
  $('detailsTitle').textContent=x.name;
- $('detailsBody').innerHTML='<div><img class="details-image" src="'+esc(x.image||imageFallback(x))+'" alt="" onerror="this.src=\''+imageFallback(x)+'\'"></div>'+
+ $('detailsBody').innerHTML='<div><img class="details-image" src="'+esc(x.image||imageFallback(x))+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" onerror="this.src=\''+imageFallback(x)+'\'">'+(x.imageNote?'<p class="muted">'+esc(x.imageNote)+'</p>':'')+'</div>'+
  '<div><div class="details-grid">'+
  '<div class="detail-item"><small>Category</small><strong>'+esc(x.category==='printer'?'3D Printer':'Filament / material')+'</strong></div>'+
  '<div class="detail-item"><small>Brand</small><strong>'+esc(x.brand||'Not tracked')+'</strong></div>'+
@@ -698,8 +703,8 @@ function render(){
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
   '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
-  '<td class="checked">'+esc(x.updated||'—')+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Live checked':'● Reference')+'</div></td>'+
-  '<td><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button> <a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></td>'+
+  '<td class="checked">'+esc(x.updated||'—')+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
+  '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div></td>'+
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
@@ -709,11 +714,11 @@ function render(){
 }
 function renderCoverage(){
  const p=db.products||[],s=db.sources||[],b=db.brandDirectory||[];
- const d=$('coverage');if(d)d.textContent=(db.updatedAt?'Dataset checked '+db.updatedAt+' • ':'')+p.length+' listings • '+s.length+' sources • '+b.length+' brands';
+ const d=$('coverage');if(d)d.textContent=(db.lastRefreshSummary?.checkedAt?'Last update attempt '+db.lastRefreshSummary.checkedAt.slice(0,10)+' • '+(db.lastRefreshSummary.verifiedProducts||0)+' prices verified • ':'')+p.length+' listings • '+s.length+' sources • '+b.length+' brands';
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.autoRefresh?'Daily refresh enabled where product mapping allows.':'Catalogue/source mapped; automated product mapping still being expanded.')+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
+ $('sourceCards').innerHTML=s.map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
  $('brandCloud').innerHTML=b.map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
 }
 function loadData(){
@@ -835,6 +840,23 @@ updateCompareBar();
 <link rel="stylesheet" href="./readability.css?v=1">
 <link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
 <link rel="stylesheet" href="./pp-target-v1.css?v=1">
-<link rel="stylesheet" href="./pp-presentation-reset.css?v=1">
+
+<style id="ppCompareLayoutRepair">
+/* Keep the result headings in the table flow so they cannot cover product rows. */
+body #tableViewWrap table{min-width:1180px!important;table-layout:auto!important}
+body #tableViewWrap thead th{position:static!important;top:auto!important;z-index:auto!important}
+body #tableViewWrap th,body #tableViewWrap td{vertical-align:middle!important}
+body #tableViewWrap th:first-child,body #tableViewWrap td:first-child{min-width:112px!important}
+body #tableViewWrap .kind{white-space:nowrap!important}
+body #tableViewWrap .kind .pp-shared-icon{width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important}
+body #tableViewWrap .product-name-wrap{min-width:280px!important;gap:12px!important;align-items:center!important}
+body #tableViewWrap .product-name-wrap>div:last-child{min-width:0;max-width:280px;overflow-wrap:anywhere}
+body #tableViewWrap .product-thumb-wrap{width:64px!important;height:64px!important;min-width:64px!important;flex:0 0 64px!important;overflow:hidden!important;isolation:isolate}
+body #tableViewWrap .product-thumb{display:block!important;position:static!important;width:64px!important;height:64px!important;min-width:64px!important;max-width:100%!important;object-fit:contain!important}
+body #tableViewWrap .product-thumb-wrap.failed .product-thumb{display:none!important}
+body #tableViewWrap .table-compare-check{width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;max-width:14px!important;max-height:14px!important;padding:0!important;flex:0 0 14px!important;box-sizing:border-box!important}
+body #tableViewWrap .product-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:135px}
+body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wrap:anywhere}
+</style>
 </body>
 </html>
