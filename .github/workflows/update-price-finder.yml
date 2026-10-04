@@ -5,17 +5,6 @@ on:
     - cron: '0 0 * * *'
       timezone: Europe/London
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/**'
-      - 'config/**'
-      - 'data/**'
-      - '*.html'
-      - '*.js'
-      - '*.css'
-      - 'assets/**'
-      - '.github/workflows/update-price-finder.yml'
 
 concurrency:
   group: printprofit-refresh-and-pages
