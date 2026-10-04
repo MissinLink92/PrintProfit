@@ -26,9 +26,25 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 #ppFloatingReset .pp-reset-icon{background-position:60% center!important}
 #ppFloatingSave .pp-save-icon svg,#ppFloatingReset .pp-reset-icon svg{display:none!important}
 body[data-pp-modal-open="true"] #ppFloatingSave,body[data-pp-modal-open="true"] #ppFloatingReset{display:none!important}
+
+/* Keep the base calculator out of view until its finished design is ready. */
+body:not([data-pp-ready="true"]){overflow:hidden}
+body:not([data-pp-ready="true"]) #app{visibility:hidden;pointer-events:none}
+body:not([data-pp-ready="true"]) #ppFloatingSave,body:not([data-pp-ready="true"]) #ppFloatingReset{display:none!important}
+.pp-loading{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#071018;color:#c5d5de;font:15px/1.5 Segoe UI,system-ui,sans-serif;text-align:center;padding:24px}
+.pp-loading img{width:240px;max-width:75vw;height:auto}
+.pp-loading p{margin:0}
+.pp-loading button{border:0;border-radius:10px;padding:12px 20px;background:#ff8a24;color:#17100a;font:700 14px Segoe UI,system-ui,sans-serif;cursor:pointer}
+body[data-pp-ready="true"] .pp-loading{display:none}
 </style>
 </head>
-<body>
+<body aria-busy="true">
+<div id="ppLoading" class="pp-loading" role="status" aria-live="polite">
+<img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit" width="240">
+<p id="ppLoadingMessage">Loading your calculator…</p>
+<button id="ppLoadingRetry" type="button" hidden>Try again</button>
+</div>
+<noscript><style>.pp-loading{display:none}</style><p>Please enable JavaScript to use the PrintProfit calculator.</p></noscript>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261004-nightly1" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
@@ -36,6 +52,26 @@ body[data-pp-modal-open="true"] #ppFloatingSave,body[data-pp-modal-open="true"] 
 'use strict';
 const frame=document.getElementById('app');
 const resetButton=document.getElementById('ppFloatingReset');
+const loadingMessage=document.getElementById('ppLoadingMessage');
+const retryButton=document.getElementById('ppLoadingRetry');
+retryButton.addEventListener('click',()=>location.reload());
+let loadGeneration=0;
+function beginLoading(){
+ document.body.removeAttribute('data-pp-ready');
+ document.body.setAttribute('aria-busy','true');
+ loadingMessage.textContent='Loading your calculator…';
+ retryButton.hidden=true;
+}
+function showLoadError(){
+ document.body.removeAttribute('data-pp-ready');
+ document.body.setAttribute('aria-busy','false');
+ loadingMessage.textContent='The calculator could not finish loading. Please try again.';
+ retryButton.hidden=false;
+}
+function revealCalculator(){
+ document.body.dataset.ppReady='true';
+ document.body.setAttribute('aria-busy','false');
+}
 const scripts=[
 'hero-photo-data.js?v=1',
 'quick-price-guard.js?v=9',
@@ -69,6 +105,12 @@ const scripts=[
 'printprofit-icon-art.js?v=4',
 'hero-slogan-layout.js?v=1'
  ];
+// Download in parallel while preserving the original execution order below.
+for(const src of scripts){
+ const hint=document.createElement('link');
+ hint.rel='preload';hint.as='script';hint.href='./'+src;
+ document.head.appendChild(hint);
+}
 function fit(){try{const d=frame.contentDocument;if(!d)return;const h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight,d.documentElement.offsetHeight,d.body.offsetHeight);if(h>0)frame.style.height=h+'px';}catch(e){}}
 function load(src){return new Promise(resolve=>{const d=frame.contentDocument;if(!d){resolve();return;}const s=d.createElement('script');s.src='./'+src;s.onload=resolve;s.onerror=()=>{console.warn('PrintProfit script failed:',src);resolve();};d.body.appendChild(s);});}
 function doReset(){
@@ -99,18 +141,41 @@ resetButton.addEventListener('click',doReset);
 const saveButton=document.getElementById('ppFloatingSave');
 saveButton.addEventListener('click',()=>{try{const d=frame.contentDocument;if(d)d.getElementById('saveProject')?.click();}catch(e){console.warn('PrintProfit save failed',e);}});
 frame.addEventListener('load',async()=>{
+ const generation=++loadGeneration;
+ beginLoading();
+ const stalled=setTimeout(()=>{if(generation===loadGeneration)showLoadError();},45000);
  try{
-  for(const src of scripts)await load(src);
+  const d=frame.contentDocument;
+  // Reloads inside the calculator must also hide its initial base layout.
+  frame.contentWindow.addEventListener('pagehide',()=>{++loadGeneration;beginLoading();},{once:true});
+  for(const src of scripts){
+   await load(src);
+   if(generation!==loadGeneration)return;
+  }
+  const design=d.getElementById('ppVisualMaster');
+  if(!design||!d.getElementById('ppVisualMasterStyles'))throw new Error('Finished design is unavailable');
+  // Allow the logo, banner and font metrics to settle before the first reveal.
+  const images=[...design.querySelectorAll('img')].map(img=>img.decode?.().catch(()=>{}));
+  await Promise.race([
+   Promise.all([...images,d.fonts?.ready]),
+   new Promise(resolve=>setTimeout(resolve,2500))
+  ]);
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  if(generation!==loadGeneration)return;
   // Size the iframe only during initial settling. Do not continuously observe
   // the child document: the calculator changes its own layout during startup,
   // and a parent resize observer can create a parent/child resize feedback loop.
   const settle=()=>{fit();wireTopModals();};
   settle();
+  revealCalculator();
   setTimeout(settle,100);
   setTimeout(settle,500);
   setTimeout(settle,1500);
   setTimeout(settle,3000);
- }catch(e){console.error('PrintProfit enhancement load failed',e);}
+ }catch(e){
+  console.error('PrintProfit enhancement load failed',e);
+  if(generation===loadGeneration)showLoadError();
+ }finally{clearTimeout(stalled);}
 });
 })();
 </script>
