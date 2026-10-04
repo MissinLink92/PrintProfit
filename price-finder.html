@@ -273,6 +273,9 @@ body .tools input,body .tools select,body .extra-tools input,body .extra-tools s
 .table-compare-check.compare-check{width:14px!important;height:14px!important;min-width:14px!important;margin:0 0 0 2px!important;border-radius:4px!important}
 .table-compare-check.compare-check:checked:after{font-size:10px!important}
 </style>
+<link rel="stylesheet" href="./readability.css?v=3">
+<link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
+<link rel="stylesheet" href="./pp-target-v1.css?v=1">
 </head>
 <body data-pp-standalone-i18n="1">
 <div class="wrap">
@@ -486,7 +489,7 @@ function compareValue(x,label){
  if(label==='Price')return money(x.price);
  if(label==='Unit cost')return x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—';
  if(label==='Availability')return String(x.availability||'Check retailer');
- if(label==='Checked')return x.updated||'—';
+ if(label==='Checked')return '<span class="pp-date-nowrap">'+esc(formatDateDMY(x.updated))+'</span>';
  if(label==='Live listing')return '<a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a>';
  return '—';
 }
@@ -537,6 +540,11 @@ function initThemeSwitch(){
 }
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function formatDateDMY(value){
+ if(!value)return '—';const raw=String(value),iso=raw.match(/^(\d{4})-(\d{2})-(\d{2})/);
+ if(iso)return iso[3]+'/'+iso[2]+'/'+iso[1];const date=new Date(value);
+ return Number.isFinite(date.getTime())?String(date.getDate()).padStart(2,'0')+'/'+String(date.getMonth()+1).padStart(2,'0')+'/'+date.getFullYear():raw;
+}
 function imageFallback(x){
  const category=categoryInfo(x),printer=category.group==='printer';
  const symbol=printer
@@ -587,7 +595,7 @@ function openDetailsModal(id){
  '<div class="detail-item"><small>Delivered price</small><strong>'+delivery+'</strong></div>'+
  '<div class="detail-item"><small>Availability</small><strong>'+esc(x.availability||'Not tracked')+'</strong></div>'+
  '</div><h3 class="history-title">Price history <span class="price-change '+change.cls+'">'+esc(change.text)+'</span></h3>'+
- '<div class="history-wrap">'+sparkline(x.priceHistory)+'<div class="history-list">'+((x.priceHistory||[]).slice(-6).map(p=>'<span class="history-point">'+esc(p.date)+' • '+money(p.price)+'</span>').join('')||'<span class="muted">No recorded history yet.</span>')+'</div></div>'+
+ '<div class="history-wrap">'+sparkline(x.priceHistory)+'<div class="history-list">'+((x.priceHistory||[]).slice(-6).map(p=>'<span class="history-point">'+esc(formatDateDMY(p.date))+' • '+money(p.price)+'</span>').join('')||'<span class="muted">No recorded history yet.</span>')+'</div></div>'+
  '<div class="detail-actions"><button class="compare-btn" type="button" data-details-compare="'+esc(x.id)+'">'+(selectedIds.has(String(x.id))?'Remove from compare':'Add to compare')+'</button><a class="detail-link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Open retailer ↗</a></div></div>';
  $('detailsModal').classList.add('open');document.body.style.overflow='hidden';
 }
@@ -712,7 +720,7 @@ function renderCards(rows){
  grid.innerHTML=rows.map(x=>'<article class="product-card">'+
   '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
   '<div class="product-card-top">'+productImage(x)+'<div><h3>'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
-  '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(x.updated||'—')+'</strong></div></div>'+
+  '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong class="pp-date-nowrap">'+esc(formatDateDMY(x.updated))+'</strong></div></div>'+
   '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
   '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div>'+
  '</article>').join('');
@@ -738,7 +746,7 @@ function render(){
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
   '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
-  '<td class="checked">'+esc(x.updated||'—')+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
+  '<td class="checked"><span class="pp-date-nowrap">'+esc(formatDateDMY(x.updated))+'</span><div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
   '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div></td>'+
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
@@ -749,7 +757,7 @@ function render(){
 }
 function renderCoverage(){
  const p=db.products||[],s=db.sources||[],b=db.brandDirectory||[];
- const d=$('coverage');if(d)d.textContent=(db.lastRefreshSummary?.checkedAt?'Last update attempt '+db.lastRefreshSummary.checkedAt.slice(0,10)+' • '+(db.lastRefreshSummary.verifiedProducts||0)+' prices verified • ':'')+p.length+' listings • '+s.length+' sources • '+b.length+' brands';
+ const d=$('coverage');if(d)d.textContent=(db.lastRefreshSummary?.checkedAt?'Last update attempt '+formatDateDMY(db.lastRefreshSummary.checkedAt)+' • '+(db.lastRefreshSummary.verifiedProducts||0)+' prices verified • ':'')+p.length+' listings • '+s.length+' sources • '+b.length+' brands';
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
@@ -871,10 +879,7 @@ renderSavedComparisons();
 updateCompareBar();
 })();
 </script>
-<script src="./i18n-extra.js?v=4"></script>
-<link rel="stylesheet" href="./readability.css?v=1">
-<link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
-<link rel="stylesheet" href="./pp-target-v1.css?v=1">
+<script src="./i18n-extra.js?v=7"></script>
 
 <style id="ppCompareLayoutRepair">
 /* Keep the result headings in the table flow so they cannot cover product rows. */
