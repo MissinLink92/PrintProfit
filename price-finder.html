@@ -298,7 +298,7 @@ body .tools input,body .tools select,body .extra-tools input,body .extra-tools s
 
 <div class="tools">
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option><option value="filament">Filament</option><option value="printer">3D printers</option></select></div>
+<div class="tool"><label for="category"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Material / type</label><select id="type"><option value="all">All types</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-package"></use></svg>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
@@ -314,7 +314,9 @@ body .tools input,body .tools select,body .extra-tools input,body .extra-tools s
 
 <div class="quick-tools" id="quickTools">
 <button class="quick-btn" type="button" data-quick="filament">Filament</button>
+<button class="quick-btn" type="button" data-quick="printing-resin">Resin</button>
 <button class="quick-btn" type="button" data-quick="printer">3D printers</button>
+<button class="quick-btn" type="button" data-quick="accessory">Parts & accessories</button>
 <button class="quick-btn" type="button" data-quick="in">In stock</button>
 <button class="quick-btn" type="button" data-quick="under20">Under £20</button>
 <button class="quick-btn" type="button" data-quick="clear">Clear filters</button>
@@ -420,12 +422,35 @@ body .tools input,body .tools select,body .extra-tools input,body .extra-tools s
 </div>
 
 <script src="./data/price-finder.js?v=20261004-nightly1"></script>
+<script src="./product-categories.js?v=20261004-categories1"></script>
 <script>
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id);
 const money=v=>'£'+Number(v).toFixed(2);
 let db={products:[],sources:[],brandDirectory:[],updatedAt:''};
+const catalogue=window.PRINTPROFIT_CATEGORIES;
+const categoryCache=new WeakMap();
+function categoryInfo(product){
+ if(!categoryCache.has(product))categoryCache.set(product,catalogue.classify(product));
+ return categoryCache.get(product);
+}
+function matchesCategory(product,choice){
+ const category=categoryInfo(product);
+ return choice==='all'||category.id===choice||category.group===choice;
+}
+function categoryUnit(product){return categoryInfo(product).material?'kg':'unit';}
+function categoryClass(product){const group=categoryInfo(product).group;return group==='filament'||group==='resin-material'?'filament':group==='printer'?'printer':'accessory';}
+function populateCategories(){
+ const select=$('category'),current=select.value;
+ const counts=new Map(),totals=new Map();
+ db.products.forEach(product=>{const category=categoryInfo(product);counts.set(category.id,(counts.get(category.id)||0)+1);totals.set(category.group,(totals.get(category.group)||0)+1);});
+ select.innerHTML='<option value="all">All products ('+db.products.length+')</option>'+catalogue.groups.filter(group=>totals.has(group.id)).map(group=>{
+  const children=catalogue.categories.filter(category=>category.group===group.id&&counts.has(category.id));
+  return '<optgroup label="'+esc(group.label)+'">'+(group.allLabel?'<option value="'+esc(group.id)+'">'+esc(group.allLabel)+' ('+totals.get(group.id)+')</option>':'')+children.map(category=>'<option value="'+esc(category.id)+'">'+esc(category.label)+' ('+counts.get(category.id)+')</option>').join('')+'</optgroup>';
+ }).join('');
+ if([...select.options].some(option=>option.value===current))select.value=current;
+}
 const compareStorageKey='printprofit_compare_selection_v1';
 let selectedIds=new Set();
 
@@ -453,13 +478,13 @@ function toggleCompare(id,checked){
  updateCompareBar();
 }
 function compareValue(x,label){
- if(label==='Type')return x.category==='filament'?'Material':'3D Printer';
+ if(label==='Type')return esc(categoryInfo(x).label);
  if(label==='Brand')return x.brand||'—';
  if(label==='Product')return x.name||'—';
  if(label==='Retailer')return x.retailer||'—';
  if(label==='Pack / Build')return x.pack||'—';
  if(label==='Price')return money(x.price);
- if(label==='Unit cost')return x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'—';
+ if(label==='Unit cost')return x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—';
  if(label==='Availability')return String(x.availability||'Check retailer');
  if(label==='Checked')return x.updated||'—';
  if(label==='Live listing')return '<a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a>';
@@ -513,10 +538,11 @@ function initThemeSwitch(){
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function imageFallback(x){
- const printer=x.category==='printer';
+ const category=categoryInfo(x),printer=category.group==='printer';
  const symbol=printer
   ? '<path d="M13 18V7h22v11M10 18h28a5 5 0 0 1 5 5v10H5V23a5 5 0 0 1 5-5Z"/><path d="M13 31h22v10H13zM17 36h14M36 23h1"/>'
-  : '<ellipse cx="24" cy="12" rx="15" ry="6"/><path d="M9 12v23c0 4 7 7 15 7s15-3 15-7V12"/><ellipse cx="24" cy="12" rx="5" ry="2"/><path d="M19 12v22c0 2 2 4 5 4s5-2 5-4V12M39 27c5 0 7 3 6 6s-4 4-7 3"/>';
+  : category.material?'<ellipse cx="24" cy="12" rx="15" ry="6"/><path d="M9 12v23c0 4 7 7 15 7s15-3 15-7V12"/><ellipse cx="24" cy="12" rx="5" ry="2"/><path d="M19 12v22c0 2 2 4 5 4s5-2 5-4V12M39 27c5 0 7 3 6 6s-4 4-7 3"/>'
+  : '<path d="m7 14 17-9 17 9v21l-17 9-17-9Z"/><path d="m7 14 17 10 17-10M24 24v20M15 10l17 10v9"/>';
  const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#35d6e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="43" height="43" rx="10" fill="#0b202c" stroke="#285264" stroke-width="2"/>'+symbol+'</svg>';
  return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
 }
@@ -527,7 +553,7 @@ function sharedIcon(name,extraClass=''){
 function productImage(x){
  const fallback=imageFallback(x);
  const src=x.image||fallback;
- return '<div class="product-thumb-wrap" title="'+esc(x.imageNote||x.name)+'"><img class="product-thumb" src="'+esc(src)+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+sharedIcon(x.category==='printer'?'printer':'filament','thumb-placeholder-icon')+'</span></div>';
+ return '<div class="product-thumb-wrap" title="'+esc(x.imageNote||x.name)+'"><img class="product-thumb" src="'+esc(src)+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" loading="lazy" decoding="async" onerror="this.closest(\'.product-thumb-wrap\').classList.add(\'failed\')"><span class="product-thumb-fallback" aria-hidden="true">'+sharedIcon(categoryInfo(x).family.icon,'thumb-placeholder-icon')+'</span></div>';
 }
 function sparkline(history){
  const h=(Array.isArray(history)?history:[]).filter(x=>x&&Number.isFinite(Number(x.price))).slice(-30);
@@ -545,12 +571,12 @@ function latestPriceChange(x){
 }
 function openDetailsModal(id){
  const x=productById(id);if(!x)return;
- const change=latestPriceChange(x),unit=x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'Not tracked';
+ const change=latestPriceChange(x),unit=x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Not tracked';
  const delivery=x.shippingPrice!=null?money(Number(x.price||0)+Number(x.shippingPrice))+' delivered':'Not tracked';
  $('detailsTitle').textContent=x.name;
  $('detailsBody').innerHTML='<div><img class="details-image" src="'+esc(x.image||imageFallback(x))+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" onerror="this.src=\''+imageFallback(x)+'\'">'+(x.imageNote?'<p class="muted">'+esc(x.imageNote)+'</p>':'')+'</div>'+
  '<div><div class="details-grid">'+
- '<div class="detail-item"><small>Category</small><strong>'+esc(x.category==='printer'?'3D Printer':'Filament / material')+'</strong></div>'+
+ '<div class="detail-item"><small>Category</small><strong>'+esc(categoryInfo(x).label)+'</strong></div>'+
  '<div class="detail-item"><small>Brand</small><strong>'+esc(x.brand||'Not tracked')+'</strong></div>'+
  '<div class="detail-item"><small>Technology / material</small><strong>'+esc(x.type||'Not tracked')+'</strong></div>'+
  '<div class="detail-item"><small>Colour</small><strong>'+esc(x.colour||'Not specified')+'</strong></div>'+
@@ -631,9 +657,9 @@ function populateSelect(id,values,label){
 }
 function refreshFilters(){
  const cat=$('category').value;
- const visible=db.products.filter(x=>cat==='all'||x.category===cat);
+ const visible=db.products.filter(x=>matchesCategory(x,cat));
  populateSelect('brand',[...new Set(visible.map(x=>x.brand).filter(Boolean))],'All brands');
- const retailers=(db.sources||[]).map(x=>x.name).filter(Boolean);
+ const retailers=[...new Set(visible.map(x=>x.retailer).filter(Boolean))];
  populateSelect('retailer',retailers,'All retailers');
  const types=[...new Set(visible.map(x=>x.type).filter(Boolean))];
  populateSelect('type',types,'All types');
@@ -651,7 +677,7 @@ function searchText(x){
   'bambu':'bambu lab','bambu lab':'bambu lab','elegoo':'elegoo','pla plus':'pla+','pla plus filament':'pla+',
   'pet g':'petg','3d printer':'3d printer','resin printer':'resin','fdm':'fdm','fff':'fdm'
  };
- let s=[x.name,x.brand,x.colour,x.retailer,x.pack,x.type,x.category].filter(Boolean).join(' ').toLowerCase();
+ let s=[x.name,x.brand,x.colour,x.retailer,x.pack,x.type,categoryInfo(x).label,categoryInfo(x).family.label].filter(Boolean).join(' ').toLowerCase();
  for(const [a,b] of Object.entries(aliases)) if(s.includes(a)) s+=' '+b;
  return s;
 }
@@ -662,7 +688,7 @@ function filtered(){
  const view=$('view').value,sort=$('sort').value;
  let rows=db.products.filter(x=>
   (!q||searchText(x).includes(q)) &&
-  (cat==='all'||x.category===cat) &&
+  matchesCategory(x,cat) &&
   (brand==='all'||x.brand===brand) &&
   (type==='all'||x.type===type) &&
   (colour==='all'||x.colour===colour) &&
@@ -687,7 +713,7 @@ function renderCards(rows){
   '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
   '<div class="product-card-top">'+productImage(x)+'<div><h3>'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
   '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(x.updated||'—')+'</strong></div></div>'+
-  '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
+  '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
   '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div>'+
  '</article>').join('');
 }
@@ -698,13 +724,19 @@ function setResultView(mode){
 }
 function render(){
  const rows=filtered();
+ const current=$('category').value,leaf=catalogue.categories.find(category=>category.id===current);
+ document.querySelectorAll('[data-quick]').forEach(button=>{
+  const mode=button.dataset.quick;
+  const active=mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===mode||leaf?.group===mode;
+  button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
+ });
  $('rows').innerHTML=rows.map(x=>'<tr>'+
-  '<td><div class="type-cell"><span class="kind '+x.category+'">'+sharedIcon(x.category==='filament'?'filament':'printer')+(x.category==='filament'?'Material':'3D Printer')+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
+  '<td><div class="type-cell"><span class="kind '+categoryClass(x)+'" title="'+esc(categoryInfo(x).label)+'">'+sharedIcon(categoryInfo(x).family.icon)+esc(categoryInfo(x).family.badge)+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
   '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
-  '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+(x.category==='filament'?'kg':'unit'):'—')+'</td>'+
+  '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
   '<td class="checked">'+esc(x.updated||'—')+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
   '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div></td>'+
@@ -729,6 +761,7 @@ function loadData(){
   const payload=window.PRINTPROFIT_PRICE_DATA;
   if(!payload||!Array.isArray(payload.products))throw new Error('Static comparison dataset missing');
   db=payload;
+  populateCategories();
   refreshFilters();renderCoverage();render();
  }catch(err){
   console.error('PrintProfit Compare Products data load failed:',err);
@@ -768,7 +801,7 @@ $('savedComparisons').addEventListener('change',loadSelectedSaved);
 $('quickTools').addEventListener('click',e=>{
  const btn=e.target.closest('[data-quick]');if(!btn)return;
  const mode=btn.dataset.quick;
- if(mode==='filament'||mode==='printer'){$('category').value=mode;refreshFilters();}
+ if(['filament','printing-resin','printer','accessory'].includes(mode)){$('category').value=mode;refreshFilters();}
  else if(mode==='in')$('availability').value='in';
  else if(mode==='under20')$('maxPrice').value='20';
  else if(mode==='clear'){
@@ -776,7 +809,6 @@ $('quickTools').addEventListener('click',e=>{
   ['category','brand','type','colour','retailer','availability','view','sort'].forEach(id=>$(id).value=id==='sort'?'price':'all');
   refreshFilters();
  }
- document.querySelectorAll('.quick-btn').forEach(x=>x.classList.toggle('active',x===btn&&mode!=='clear'));
  render();
 });
 $('category').addEventListener('change',()=>{refreshFilters();render();});
@@ -851,6 +883,8 @@ body #tableViewWrap thead th{position:static!important;top:auto!important;z-inde
 body #tableViewWrap th,body #tableViewWrap td{vertical-align:middle!important}
 body #tableViewWrap th:first-child,body #tableViewWrap td:first-child{min-width:112px!important}
 body #tableViewWrap .kind{white-space:nowrap!important}
+body .kind.accessory{color:#d8c7ff!important;border-color:#a979df66!important;background:#a979df12!important}
+body.pp-light .kind.accessory{color:#553278!important;border-color:#8e64b4!important;background:#a979df18!important}
 body #tableViewWrap .kind .pp-shared-icon{width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important}
 body #tableViewWrap .product-name-wrap{min-width:280px!important;gap:12px!important;align-items:center!important}
 body #tableViewWrap .product-name-wrap>div:last-child{min-width:0;max-width:280px;overflow-wrap:anywhere}

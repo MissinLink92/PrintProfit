@@ -11,6 +11,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from zoneinfo import ZoneInfo
 from nightly_network import Reader
+from nightly_categories import ProductCategories
 import nightly_references
 import nightly_products
 
@@ -96,6 +97,7 @@ def main():
     parser.add_argument('--root', type=Path, default=ROOT, help='PrintProfit repository checkout')
     args = parser.parse_args()
     root = args.root.resolve()
+    categories = ProductCategories(root)
     config = load(root / 'config/nightly-sources.json')
     if not isinstance(config, dict):
         raise ValueError('Missing nightly source configuration')
@@ -138,7 +140,10 @@ def main():
             source['lastDiscoveryStatus'] = health['status']
     printers = {}
     for item in data['products']:
-        if item['category'] == 'printer' and item.get('price'):
+        category = categories.classify(item)
+        item['productGroup'] = category['group']
+        item['productCategory'] = category['id']
+        if category['group'] == 'printer' and item.get('price'):
             name = item['name']
             for prefix in ('Bambu Lab ', 'ELEGOO ', 'Creality ', 'Flashforge '):
                 if name.startswith(prefix):
