@@ -235,7 +235,7 @@ input,select{font-size:14px!important;line-height:1.3!important}
 <script>
 (()=>{const bindRecalcShortcuts=()=>{const runCalcButton=()=>{const b=document.getElementById('calc');if(b)b.click();};document.addEventListener('focusout',e=>{if(e.target&&e.target.matches('input:not([type="file"]),select,textarea'))setTimeout(runCalcButton,0);});document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type="file"]),select,textarea')){e.preventDefault();e.target.blur();runCalcButton();}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindRecalcShortcuts,{once:true});else bindRecalcShortcuts();})();
 </script>
-
+<link rel="stylesheet" href="./readability.css?v=3">
 <style id="ppFinalVisualOverride">
 /* FINAL VISUAL OVERRIDE: deliberately last so readability.css cannot override it. */
 body{background:linear-gradient(180deg,#07121b,#0a1b25)!important;color:#f5f9fb!important}
@@ -256,8 +256,8 @@ button,.btn{font-size:13px!important;font-weight:850!important;min-height:42px!i
 #pp-master-quickcards .pp-master-card-icon svg{width:32px!important;height:32px!important}
 @media(max-width:650px){section.panel .head>.icon,section.panel .head>.pp-pretty-icon,.merge-block .head>.icon,.merge-block .head>.pp-pretty-icon{width:48px!important;height:48px!important;min-width:48px!important;flex-basis:48px!important}label,.label{font-size:12.5px!important}input,select,textarea{font-size:16px!important}}
 </style>
-<link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
-<link rel="stylesheet" href="./pp-target-v1.css?v=1">
-<link rel="stylesheet" href="./pp-presentation-reset.css?v=1">
-<link rel="stylesheet" href="./readability.css?v=3">
+<link rel="stylesheet" href="./pp-design-system.css?v=20261005-resource-fix1">
+<link rel="stylesheet" href="./pp-target-v1.css?v=20261005-resource-fix1">
+
 </body></html>
+
