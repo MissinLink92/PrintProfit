@@ -29,7 +29,7 @@ top.setAttribute('aria-label','PrintProfit introduction');
 top.innerHTML='<header class="pvm-header"><a class="pvm-brand" href="#home"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"><span class="pvm-brand-fallback">PrintProfit</span></a>'+
 '<nav class="pvm-nav" aria-label="PrintProfit navigation"><button type="button" data-a="home"><span class="pvm-icon">'+svg('home')+'</span>Home</button><button type="button" data-a="projects"><span class="pvm-icon">'+svg('folder')+'</span>My Projects</button><button type="button" data-a="compare"><span class="pvm-icon">'+svg('compare')+'</span>Compare Products</button><button type="button" data-a="guide"><span class="pvm-icon">'+svg('book')+'</span>Guide &amp; Help</button><button type="button" data-a="settings"><span class="pvm-icon">'+svg('gear')+'</span>Settings</button></nav>'+
 '<div class="pvm-prefs"><label class="pvm-dark"><span>◐</span><b>Dark Mode</b><input id="pvmDarkMode" type="checkbox"><i></i></label><label class="pvm-language"><span class="pvm-flag"></span><select id="pvmLanguage"><option value="en">EN</option><option value="pl">PL</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="nl">NL</option><option value="pt">PT</option><option value="cs">CS</option><option value="sv">SV</option><option value="da">DA</option></select><em>⌄</em></label></div></header>'+
-'<div class="pvm-hero"><img class="pvm-bg" src="./assets/hero-hd.webp?v=1" alt="" aria-hidden="true"><div class="pvm-overlay"></div><div class="pvm-copy"><div class="pvm-kicker">3D PRINTING PRICING, MADE SIMPLE</div><h1>Know what it costs.<br><strong>Know what to charge.</strong></h1><p>Accurate 3D printing cost and pricing calculations to help you<br class="pvm-desktop"> price with confidence and maximise your profit.</p><div class="pvm-actions"><button type="button" class="pvm-primary" data-a="calculate"><span>'+svg('calculator')+'</span>Start Calculating <b>›</b></button><button type="button" class="pvm-projects" data-a="projects"><span>'+svg('folder')+'</span>My Projects</button></div></div>'+
+'<div class="pvm-hero"><img class="pvm-bg" src="'+(window.PRINTPROFIT_HERO_DATA||'')+'" alt="" aria-hidden="true"><div class="pvm-overlay"></div><div class="pvm-copy"><div class="pvm-kicker">3D PRINTING PRICING, MADE SIMPLE</div><h1>Know what it costs.<br><strong>Know what to charge.</strong></h1><p>Accurate 3D printing cost and pricing calculations to help you<br class="pvm-desktop"> price with confidence and maximise your profit.</p><div class="pvm-actions"><button type="button" class="pvm-primary" data-a="calculate"><span>'+svg('calculator')+'</span>Start Calculating <b>›</b></button><button type="button" class="pvm-projects" data-a="projects"><span>'+svg('folder')+'</span>My Projects</button></div></div>'+
 '<div class="pvm-tagline pvm-hero-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div></div>'+
 '<div class="pvm-journey"><button type="button" data-stage="details"><span class="n one">1</span><span class="jicon">'+svg('model')+'</span><span><strong>Your Model</strong><small>Upload your print &amp; view its data</small></span></button><em>→</em><button type="button" data-stage="machine"><span class="n two">2</span><span class="jicon">'+svg('printsetup')+'</span><span><strong>Print Setup</strong><small>Choose your printer &amp; material</small></span></button><em>→</em><button type="button" data-stage="costs"><span class="n three">3</span><span class="jicon">'+svg('costs')+'</span><span><strong>Costs &amp; Fees</strong><small>Add your business costs</small></span></button><em>→</em><button type="button" data-stage="results"><span class="n four">4</span><span class="jicon">'+svg('results')+'</span><span><strong>Results</strong><small>Review cost, price &amp; profit</small></span></button></div>';
 
@@ -126,6 +126,14 @@ dark?.addEventListener('change',()=>{if(typeof window.__setPrintProfitDarkMode==
 lang?.addEventListener('input',setFlag);
 lang?.addEventListener('change',()=>{setFlag();let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}p.language=String(lang.value||'en');localStorage.setItem('printprofit.preferences.v3',JSON.stringify(p));setTimeout(()=>location.reload(),120)});
 window.addEventListener('pageshow',()=>{setFlag();setTimeout(setFlag,50);setTimeout(setFlag,250);});
+const syncPreferenceControls=()=>{
+ let latest={};try{latest=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')||{}}catch(e){}
+ if(dark)dark.checked=latest.dark!==false;
+ if(lang)lang.value=latest.language||'en';
+ setFlag();
+};
+window.addEventListener('storage',event=>{if(event.key==='printprofit.preferences.v3')syncPreferenceControls();});
+document.addEventListener('printprofit-settings-changed',syncPreferenceControls);
 
 top.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
 const a=b.getAttribute('data-a');
@@ -143,7 +151,5 @@ top.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',e=>{e
 return true;
 }
 function boot(){if(build())return;const t=setInterval(()=>{if(build())clearInterval(t)},50);setTimeout(()=>clearInterval(t),12000)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-function syncStoredPreferences(){try{const p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}');const l=document.getElementById('pvmLanguage'),d=document.getElementById('pvmDarkMode');if(l)l.value=String(p.language||'en').toUpperCase();if(d)d.checked=p.dark!==false;}catch(e){}}
-window.addEventListener('storage',e=>{if(e.key==='printprofit.preferences.v3')syncStoredPreferences();});document.addEventListener('printprofit-settings-changed',syncStoredPreferences);
-})();
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
+
