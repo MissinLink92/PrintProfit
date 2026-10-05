@@ -175,6 +175,7 @@ function translateElementText(el){
 }
 function translatePage(){
  document.documentElement.lang=pref.language;
+ document.title=tr('PrintProfit — 3D Printing Cost & Pricing Calculator');
  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
  let n;
  while(n=w.nextNode()){
@@ -184,7 +185,8 @@ function translatePage(){
   let state=originalText.get(n);
   if(!state){state={source:raw.trim(),rendered:raw.trim()};originalText.set(n,state);}
   else if(raw.trim()!==state.rendered&&raw.trim()!==state.source)state.source=raw.trim();
-  const target=tr(state.source);
+  const dynamicTarget=window.__ppTranslateCalculatorDynamic?.(state.source,pref.language);
+  const target=dynamicTarget===null||dynamicTarget===undefined?tr(state.source):dynamicTarget;
   if(raw.trim()!==target)n.nodeValue=raw.replace(raw.trim(),target);
   state.rendered=target;
  }
