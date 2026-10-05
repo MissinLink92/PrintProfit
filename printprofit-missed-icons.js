@@ -82,7 +82,7 @@ if(!watchAdvisor()){
     apply();
     if(watchAdvisor())observer.disconnect();
   });
-  observer.observe(document.body,{childList:true,subtree:true});
+  observer.observe(document.body||document.documentElement,{childList:true,subtree:true});
   setTimeout(()=>observer.disconnect(),15000);
 }
 setTimeout(apply,350);
