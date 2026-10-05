@@ -30,7 +30,7 @@ style.textContent=[
 const pct=(i,count)=>((count<=1?0:(i/(count-1))*100).toFixed(3))+'% center';
 function setSprite(el,file,count,i){
 el.style.setProperty('background','none','important');
-el.style.setProperty('background-image','url("./assets/'+file+'?v=1")','important');
+el.style.setProperty('background-image','url("./assets/'+file+'?v='+(file==='printprofit-step-icons.webp'?'2':'1')+'")','important');
 el.style.setProperty('background-size',count+'00% 100%','important');
 el.style.setProperty('background-repeat','no-repeat','important');
 el.style.setProperty('background-position',pct(i,count),'important');
@@ -90,7 +90,7 @@ function watchSpecialIcons(){
 if(window.__ppReferenceIconSpriteObserver)return;
 window.__ppReferenceIconSpriteObserver=true;
 const observer=new MutationObserver(()=>applySpecialIcons());
-observer.observe(document.body,{childList:true,subtree:true});
+observer.observe(document.body||document.documentElement,{childList:true,subtree:true});
 setTimeout(()=>observer.disconnect(),15000);
 }
 const actionRules=[
@@ -117,7 +117,7 @@ return true;
 }
 if(!apply()){
 const observer=new MutationObserver(()=>{if(apply())observer.disconnect()});
-observer.observe(document.body,{childList:true,subtree:true});
+observer.observe(document.body||document.documentElement,{childList:true,subtree:true});
 setTimeout(()=>observer.disconnect(),10000);
 }
 setTimeout(apply,350);

@@ -474,7 +474,7 @@ function snapshot(){
     :null;
 
   const activeMargin=batchViewForSnapshot?batchMargin:(sell?syncedProfit/sell:0);
-  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:activeMargin,batchProfit,batchMargin,batchBreakEven,batchTarget30};
+  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:activeMargin,breakEven,target30,batchProfit,batchMargin,batchBreakEven,batchTarget30};
 }
 
 function cheapestDelivery(){

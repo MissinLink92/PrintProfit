@@ -207,7 +207,7 @@ function watchTranslations(){
   clearTimeout(translationTimer);
   translationTimer=setTimeout(()=>translatePage(),40);
  });
- translationObserver.observe(document.body,{childList:true,subtree:true});
+ translationObserver.observe(document.body||document.documentElement,{childList:true,subtree:true});
 }
 
 function setTheme(){
