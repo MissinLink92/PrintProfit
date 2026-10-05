@@ -187,5 +187,8 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "MakerBot Sketch Sprint Bundle": 2940.0,
   "BCN3D Epsilon W27 3D Printer": 5450.0,
   "UltiMaker S5 3D Printer | Reconditioned": 1999.0,
-  "UltiMaker S3 3D Printer": 3925.0
+  "UltiMaker S3 3D Printer": 3925.0,
+  "K2 Plus Combo Professional Package": 1300.0,
+  "Photocentric Liquid Crystal Opus 3D Printer Reconditioned": 4750.0,
+  "Raise3D E2 3D Printer | Reconditioned": 1500.0
 };
