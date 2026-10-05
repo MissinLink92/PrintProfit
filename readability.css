@@ -151,3 +151,13 @@ body[data-pp-theme="light"] .lead,body[data-pp-theme="light"] p,body[data-pp-the
   .pp-advisor-suggestion-title strong{font-size:12px!important}
   .pp-advisor-suggestion-title small{font-size:10px!important}
 }
+
+/* Keep dates consistent and interfaces readable in both themes. */
+.pp-date-nowrap,.checked,.history-point{white-space:nowrap!important}
+body :is(th,.checked,.fresh,.history-point,.tool label,.compare-btn,.quick-btn,.view-btn,.saved-select){font-size:max(12px,1em)!important;line-height:1.4!important}
+body.pp-light .compare-btn.secondary{background:#edf2f4!important;color:#304650!important;border-color:#b8c7ce!important}
+body.pp-light .compare-btn.secondary:hover{background:#fff!important;color:#8a3e00!important;border-color:#c46518!important}
+html.pp-light{background:#eef3f5!important;color:#19252d!important}
+body.pp-light .pp-theme-toggle{background:#f3f6f7!important;color:#304650!important;border-color:#b8c7ce!important}
+body.pp-light .pp-toggle-track{background:#dde6ea!important;border-color:#a9bbc3!important}
+body[data-pp-theme="light"] .pp-slicer-note{background:#f3f6f7!important;color:#40545e!important;border-color:#c2d0d7!important}

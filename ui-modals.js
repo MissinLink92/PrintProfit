@@ -39,7 +39,7 @@ function openSettings(){
     <section class="pp-settings-dialog" role="dialog" aria-modal="true" aria-labelledby="ppSettingsTitle">
       <div class="pp-settings-head">
         <div class="pp-settings-brand">
-          <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit">
+          <img src="./assets/printprofit-logo-orange.svg?v=20261005-logo2" alt="PrintProfit">
           <div><div class="pp-settings-kicker">PRINTPROFIT</div><h2 id="ppSettingsTitle">Settings</h2><p>Manage the calculator display and preferences.</p></div>
         </div>
         <button type="button" class="pp-settings-close" aria-label="Close settings" data-close-settings>×</button>
@@ -217,7 +217,7 @@ function openGuide(){
       <section class="pp-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="ppGuideTitle">
         <div class="pp-guide-head">
           <div class="pp-guide-brand">
-            <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit">
+            <img src="./assets/printprofit-logo-orange.svg?v=20261005-logo2" alt="PrintProfit">
             <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
           </div>
           <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>

@@ -25,6 +25,7 @@ function currentBenchmark(){
  return Object.values(benchmarks).find(b=>b.validFrom<=today&&today<=b.validTo)||null;
 }
 
+function formatDateDMY(value){const m=String(value||'').match(/^(\d{4})-(\d{2})-(\d{2})/);return m?m[3]+'/'+m[2]+'/'+m[1]:String(value||'');}
 function fieldLabel(text){const el=document.createElement('div');el.className='pp-electricity-label';el.textContent=text;return el;}
 function addStyle(){
  const old=document.getElementById('ppElectricityProviderStyles');if(old)old.remove();
@@ -36,7 +37,7 @@ function addStyle(){
  #electricityProvider,#ppElectricityRateSource{width:100%!important;background:#0d161d!important;color:var(--text)!important;border:1px solid var(--line)!important;border-radius:7px!important;padding:7px 8px!important;outline:0!important;font-size:13px!important}
  #electricityProvider:focus,#ppElectricityRateSource:focus{border-color:var(--accent)!important;box-shadow:0 0 0 2px #ff780014!important}
  .pp-electricity-note{grid-column:1 / -1;color:var(--muted);font-size:10px;line-height:1.35;margin-top:-1px}
- .pp-electricity-note strong{color:var(--accent)}
+ .pp-electricity-note strong{color:var(--accent)}\n .pp-date-nowrap{white-space:nowrap}\n body[data-pp-theme="light"] #electricityProvider,body[data-pp-theme="light"] #ppElectricityRateSource{background:#f3f6f7!important;color:#20313a!important}
  @media(max-width:650px){.pp-electricity-extra{grid-template-columns:1fr}.pp-electricity-note{grid-column:auto}}
  `;document.head.appendChild(s);
 }
@@ -86,7 +87,7 @@ function addRateSource(input){
      applying=true;
      setRate(selected.rate);
      applying=false;
-     note.textContent='Ofgem reference ('+selected.validFrom+' to '+selected.validTo+'): '+(Number(selected.rate)*100).toFixed(2)+'p/kWh. Standing charge: '+(Number(selected.standing)*100).toFixed(2)+'p/day. Great Britain average direct debit; your tariff may differ.';
+     note.innerHTML='Ofgem reference (<span class="pp-date-nowrap">'+formatDateDMY(selected.validFrom)+' to '+formatDateDMY(selected.validTo)+'</span>): '+(Number(selected.rate)*100).toFixed(2)+'p/kWh. Standing charge: '+(Number(selected.standing)*100).toFixed(2)+'p/day. Great Britain average direct debit; your tariff may differ.';
    }else clearToManual();
  });
  const rateInput=document.getElementById('electricityRate');

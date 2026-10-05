@@ -78,8 +78,8 @@ input,select{font-size:14px!important;line-height:1.3!important}
 </head>
 <body>
 <div class="shell">
-<header class="header"><a class="brand" href="#home"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit 3D printing cost and pricing"></a><nav class="nav"><a href="#home" class="active">⌂ Home</a><a href="#guides">▣ Guides</a><a href="#about">ⓘ About</a><a href="#support">◉ Support</a></nav><label class="mode">☾ Dark Mode <input id="dark" type="checkbox" role="switch" checked></label></header>
-<section class="hero"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit 3D printing cost and pricing"></section>
+<header class="header"><a class="brand" href="#home"><img src="./assets/printprofit-logo-orange.svg?v=20261005-logo2" alt="PrintProfit 3D printing cost and pricing"></a><nav class="nav"><a href="#home" class="active">⌂ Home</a><a href="#guides">▣ Guides</a><a href="#about">ⓘ About</a><a href="#support">◉ Support</a></nav><label class="mode">☾ Dark Mode <input id="dark" type="checkbox" role="switch" checked></label></header>
+<section class="hero"><img src="./assets/printprofit-logo-orange.svg?v=20261005-logo2" alt="PrintProfit 3D printing cost and pricing"></section>
 <main class="main">
 <div class="layout"><div>
 <section class="panel"><div class="head"><div class="icon pp-master-inline"><svg viewBox="0 0 140 120" aria-hidden="true" focusable="false"><use href="./assets/printprofit-missed-icons.svg?v=3#pp-missed-gcode-upload"></use></svg></div><div><h2>G-code File</h2><p>Upload your sliced file to auto-fill print time and filament usage.</p></div></div><div class="two"><div class="drop"><b><svg class="pp-missed-icon pp-missed-upload-inline" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-missed-icons.svg?v=3#pp-missed-upload-arrow"></use></svg>Upload your G-code file</b><span class="small">or</span><div class="actions" style="justify-content:center"><label class="btn accent" style="display:inline-block;color:#fff">Choose File<input id="file" type="file" accept=".gcode,.gco,.bgcode,.ctb,.photon,.pwma,.pwmo,.pws,.goo,.sl1,.sl1s" hidden></label><button class="btn" id="clear">Clear</button></div><small id="status">No G-code selected</small></div><div class="panel" style="margin:0"><div class="head"><div><h2 style="color:var(--accent)">Not sure about a field?</h2><p>Leave it blank.</p></div></div><div class="small">Blank fields are treated as £0 for a basic estimate.<br><br><b style="color:var(--text)">Tip:</b> Upload a G-code file for the most accurate results.</div></div></div></section>
@@ -235,7 +235,7 @@ input,select{font-size:14px!important;line-height:1.3!important}
 <script>
 (()=>{const bindRecalcShortcuts=()=>{const runCalcButton=()=>{const b=document.getElementById('calc');if(b)b.click();};document.addEventListener('focusout',e=>{if(e.target&&e.target.matches('input:not([type="file"]),select,textarea'))setTimeout(runCalcButton,0);});document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target&&e.target.matches('input:not([type="file"]),select,textarea')){e.preventDefault();e.target.blur();runCalcButton();}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindRecalcShortcuts,{once:true});else bindRecalcShortcuts();})();
 </script>
-<link rel="stylesheet" href="./readability.css?v=1">
+<link rel="stylesheet" href="./readability.css?v=3">
 <style id="ppFinalVisualOverride">
 /* FINAL VISUAL OVERRIDE: deliberately last so readability.css cannot override it. */
 body{background:linear-gradient(180deg,#07121b,#0a1b25)!important;color:#f5f9fb!important}
@@ -256,7 +256,8 @@ button,.btn{font-size:13px!important;font-weight:850!important;min-height:42px!i
 #pp-master-quickcards .pp-master-card-icon svg{width:32px!important;height:32px!important}
 @media(max-width:650px){section.panel .head>.icon,section.panel .head>.pp-pretty-icon,.merge-block .head>.icon,.merge-block .head>.pp-pretty-icon{width:48px!important;height:48px!important;min-width:48px!important;flex-basis:48px!important}label,.label{font-size:12.5px!important}input,select,textarea{font-size:16px!important}}
 </style>
-<link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
-<link rel="stylesheet" href="./pp-target-v1.css?v=1">
-<link rel="stylesheet" href="./pp-presentation-reset.css?v=1">
+<link rel="stylesheet" href="./pp-design-system.css?v=20261005-resource-fix1">
+<link rel="stylesheet" href="./pp-target-v1.css?v=20261005-resource-fix1">
+
 </body></html>
+

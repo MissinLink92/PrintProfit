@@ -21,10 +21,10 @@ html,body{margin:0;padding:0;background:#071018;color:#f5f8fb}#app{display:block
 
 #ppFloatingSave .pp-save-icon svg,#ppFloatingReset .pp-reset-icon svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 #ppFloatingReset .pp-reset-icon{display:grid;place-items:center;color:#F5F7FA}
-#ppFloatingSave .pp-save-icon,#ppFloatingReset .pp-reset-icon{width:32px!important;height:32px!important;border:0!important;border-radius:10px!important;font-size:0!important;background-image:url("./assets/printprofit-action-icons.webp?v=1")!important;background-size:600% 100%!important;background-repeat:no-repeat!important;box-shadow:0 0 0 1px #ffffff2a!important}
-#ppFloatingSave .pp-save-icon{background-position:0% center!important}
-#ppFloatingReset .pp-reset-icon{background-position:60% center!important}
-#ppFloatingSave .pp-save-icon svg,#ppFloatingReset .pp-reset-icon svg{display:none!important}
+#ppFloatingSave .pp-save-icon,#ppFloatingReset .pp-reset-icon{width:32px!important;height:32px!important;border:0!important;border-radius:10px!important;box-shadow:0 0 0 1px #ffffff2a!important}
+
+
+
 body[data-pp-modal-open="true"] #ppFloatingSave,body[data-pp-modal-open="true"] #ppFloatingReset{display:none!important}
 
 /* Keep the base calculator out of view until its finished design is ready. */
@@ -40,12 +40,12 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 </head>
 <body aria-busy="true">
 <div id="ppLoading" class="pp-loading" role="status" aria-live="polite">
-<img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit" width="240">
+<img src="./assets/printprofit-logo-orange.svg?v=20261005-logo2" alt="PrintProfit" width="240">
 <p id="ppLoadingMessage">Loading your calculator…</p>
 <button id="ppLoadingRetry" type="button" hidden>Try again</button>
 </div>
 <noscript><style>.pp-loading{display:none}</style><p>Please enable JavaScript to use the PrintProfit calculator.</p></noscript>
-<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261004-nightly1" style="width:100%;border:0;display:block"></iframe>
+<iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261004-readability2" style="width:100%;border:0;display:block"></iframe>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -80,29 +80,30 @@ const scripts=[
 'slicer-file-parser.js?v=20261004-file-info1',
 'file-type-support.js?v=20261004-autofill1',
 'tab-layout.js?v=20261004-autofill1',
-'ui-modals.js?v=20261004-theme2',
+'ui-modals.js?v=20261005-logo1',
 'ui-enhancements.js?v=4',
 'gcode-reader.js?v=20261004-file-info1',
 'print-time-input.js?v=20261004-autofill1',
-'electricity-providers.js?v=20261004-nightly1',
-'i18n-extra.js?v=5',
-'settings-preferences.js?v=20261004-theme1',
-'my-projects.js?v=20261004-file-info1',
+'electricity-providers.js?v=20261004-date1',
+'i18n-extra.js?v=7',
+'calculator-i18n.js?v=20261005-printer-translation1',
+'settings-preferences.js?v=20261005-printer-translation2',
+'my-projects.js?v=20261004-date1',
 'my-materials.js?v=7',
 'quantity-auto-batch.js?v=2',
-'printer-material-polish.js?v=4',
+'printer-material-polish.js?v=20261005-printer-translation1',
 'material-brands.js?v=1',
 'profit-advisor.js?v=29',
 'profit-tools.js?v=4',
 'data/price-finder.js?v=20261004-nightly1',
 'printer-price-data.js?v=20261004-nightly1',
 'printer-price-sync.js?v=1',
-'market-price-sync.js?v=1',
+'market-price-sync.js?v=20261004-date1',
 'calculator-state.js?v=20261004-file-info1',
 'calculator-visual.js?v=8',
-'visual-master.js?v=20261004-theme1',
+'visual-master.js?v=20261005-logo2',
 'printprofit-missed-icons.js?v=6',
-'printprofit-icon-art.js?v=4',
+'printprofit-icon-art.js?v=5',
 'hero-slogan-layout.js?v=1'
  ];
 // Download in parallel while preserving the original execution order below.
@@ -179,5 +180,8 @@ frame.addEventListener('load',async()=>{
 });
 })();
 </script>
+<script src="./i18n-extra.js?v=7"></script>
+<script src="./index-shell-i18n.js?v=1"></script>
 </body>
 </html>
+
