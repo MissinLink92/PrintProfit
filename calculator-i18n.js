@@ -17,7 +17,39 @@ const rows=[
 ["Material cost rate",["Koszt materiału na jednostkę","Materialkosten je Einheit","Coût du matériau par unité","Coste del material por unidad","Costo del materiale per unità","Materiaalkosten per eenheid","Custo do material por unidade","Náklady na materiál na jednotku","Materialkostnad per enhet","Materialepris pr. enhed"]],
 ["e.g. 250",["np. 250","z. B. 250","ex. 250","p. ej., 250","ad es. 250","bijv. 250","por ex. 250","např. 250","t.ex. 250","f.eks. 250"]],
 ["e.g. 150",["np. 150","z. B. 150","ex. 150","p. ej., 150","ad es. 150","bijv. 150","por ex. 150","např. 150","t.ex. 150","f.eks. 150"]],
-["e.g. 4000",["np. 4000","z. B. 4000","ex. 4000","p. ej., 4000","ad es. 4000","bijv. 4000","por ex. 4000","např. 4000","t.ex. 4000","f.eks. 4000"]],["⌂ Home",["⌂ Strona główna","⌂ Startseite","⌂ Accueil","⌂ Inicio","⌂ Home","⌂ Startpagina","⌂ Início","⌂ Domů","⌂ Hem","⌂ Hjem"]],
+["e.g. 4000",["np. 4000","z. B. 4000","ex. 4000","p. ej., 4000","ad es. 4000","bijv. 4000","por ex. 4000","např. 4000","t.ex. 4000","f.eks. 4000"]],["PrintProfit — 3D Printing Cost & Pricing Calculator",["PrintProfit — kalkulator kosztów i cen druku 3D","PrintProfit — Rechner für 3D-Druckkosten und Preise","PrintProfit — calculateur de coûts et de prix d’impression 3D","PrintProfit — calculadora de costes y precios de impresión 3D","PrintProfit — calcolatore di costi e prezzi per la stampa 3D","PrintProfit — calculator voor 3D-printkosten en prijzen","PrintProfit — calculadora de custos e preços de impressão 3D","PrintProfit — kalkulačka nákladů a cen 3D tisku","PrintProfit — kalkylator för kostnader och priser för 3D-utskrift","PrintProfit — beregner til omkostninger og priser på 3D-print"]],
+["PrintProfit — 3D printing cost & pricing calculator",["PrintProfit — kalkulator kosztów i cen druku 3D","PrintProfit — Rechner für 3D-Druckkosten und Preise","PrintProfit — calculateur de coûts et de prix d’impression 3D","PrintProfit — calculadora de costes y precios de impresión 3D","PrintProfit — calcolatore di costi e prezzi per la stampa 3D","PrintProfit — calculator voor 3D-printkosten en prijzen","PrintProfit — calculadora de custos e preços de impressão 3D","PrintProfit — kalkulačka nákladů a cen 3D tisku","PrintProfit — kalkylator för kostnader och priser för 3D-utskrift","PrintProfit — beregner til omkostninger og priser på 3D-print"]],
+["Operating Costs",["Koszty operacyjne","Betriebskosten","Coûts de fonctionnement","Costes operativos","Costi operativi","Operationele kosten","Custos operacionais","Provozní náklady","Driftskostnader","Driftsomkostninger"]],
+["Selling & Fulfilment",["Sprzedaż i realizacja","Verkauf & Abwicklung","Vente et exécution","Venta y gestión","Vendita e gestione","Verkoop en afhandeling","Vendas e processamento","Prodej a vyřízení","Försäljning och leverans","Salg og levering"]],
+["Service / rate",["Usługa / stawka","Service / Tarif","Service / tarif","Servicio / tarifa","Servizio / tariffa","Dienst / tarief","Serviço / tarifa","Služba / sazba","Tjänst / pris","Service / pris"]],
+["Automatic rate",["Stawka automatyczna","Automatischer Tarif","Tarif automatique","Tarifa automática","Tariffa automatica","Automatisch tarief","Tarifa automática","Automatická sazba","Automatiskt pris","Automatisk pris"]],
+["Cost to you (£)",["Koszt dla Ciebie (£)","Kosten für dich (£)","Coût pour vous (£)","Coste para ti (£)","Costo per te (£)","Kosten voor jou (£)","Custo para si (£)","Náklady pro vás (£)","Kostnad för dig (£)","Din omkostning (£)"]],
+["Save Project",["Zapisz projekt","Projekt speichern","Enregistrer le projet","Guardar proyecto","Salva progetto","Project opslaan","Guardar projeto","Uložit projekt","Spara projekt","Gem projekt"]],
+["Reset",["Resetuj","Zurücksetzen","Réinitialiser","Restablecer","Reimposta","Resetten","Repor","Resetovat","Återställ","Nulstil"]],
+["2. Print Setup",["2. Ustawienia druku","2. Druckeinrichtung","2. Configuration d’impression","2. Configuración de impresión","2. Configurazione di stampa","2. Printinstellingen","2. Configuração de impressão","2. Nastavení tisku","2. Utskriftsinställningar","2. Printopsætning"]],
+["Custom printer",["Własna drukarka","Eigener Drucker","Imprimante personnalisée","Impresora personalizada","Stampante personalizzata","Aangepaste printer","Impressora personalizada","Vlastní tiskárna","Anpassad skrivare","Brugerdefineret printer"]],
+["Material type",["Rodzaj materiału","Materialtyp","Type de matériau","Tipo de material","Tipo di materiale","Materiaaltype","Tipo de material","Typ materiálu","Materialtyp","Materialtype"]],
+["Filament (FDM)",["Filament (FDM)","Filament (FDM)","Filament (FDM)","Filamento (FDM)","Filamento (FDM)","Filament (FDM)","Filamento (FDM)","Filament (FDM)","Filament (FDM)","Filament (FDM)"]],
+["Platform",["Platforma","Plattform","Plateforme","Plataforma","Piattaforma","Platform","Plataforma","Platforma","Plattform","Platform"]],
+["Custom / Other",["Inne / własne","Sonstiges / Eigenes","Autre / personnalisé","Otro / personalizado","Altro / personalizzato","Overig / aangepast","Outro / personalizado","Jiné / vlastní","Annat / anpassat","Andet / brugerdefineret"]],
+["Margin:",["Marża:","Marge:","Marge :","Margen:","Margine:","Marge:","Margem:","Marže:","Marginal:","Margin:"]],
+["Margin: 0.0%",["Marża: 0,0%","Marge: 0,0%","Marge : 0,0 %","Margen: 0,0%","Margine: 0,0%","Marge: 0,0%","Margem: 0,0%","Marže: 0,0%","Marginal: 0,0%","Margin: 0,0%"]],
+["Printer depreciation",["Amortyzacja drukarki","Druckerabschreibung","Amortissement de l’imprimante","Depreciación de la impresora","Ammortamento stampante","Afschrijving printer","Depreciação da impressora","Odpisy tiskárny","Avskrivning av skrivaren","Afskrivning af printer"]],
+["Packaging + other",["Opakowanie i pozostałe","Verpackung + Sonstiges","Emballage et autres","Embalaje y otros","Imballaggio e altro","Verpakking + overig","Embalagem + outros","Balení + ostatní","Förpackning + övrigt","Emballage + øvrigt"]],
+["Platform/payment fees",["Opłaty platformy i płatności","Plattform- und Zahlungsgebühren","Frais de plateforme et de paiement","Comisiones de plataforma y pago","Commissioni di piattaforma e pagamento","Platform- en betalingskosten","Taxas da plataforma e de pagamento","Poplatky platformy a za platbu","Plattforms- och betalningsavgifter","Platform- og betalingsgebyrer"]],
+["One print cost",["Koszt jednego wydruku","Kosten pro Druck","Coût d’une impression","Coste de una impresión","Costo di una stampa","Kosten per print","Custo de uma impressão","Náklady na jeden tisk","Kostnad per utskrift","Pris pr. print"]],
+["Production cost per print",["Koszt produkcji na wydruk","Herstellungskosten pro Druck","Coût de production par impression","Coste de producción por impresión","Costo di produzione per stampa","Productiekosten per print","Custo de produção por impressão","Výrobní náklady na tisk","Produktionskostnad per utskrift","Produktionsomkostning pr. print"]],
+["Production subtotal",["Suma kosztów produkcji","Zwischensumme der Herstellungskosten","Sous-total de production","Subtotal de producción","Subtotale produzione","Subtotaal productiekosten","Subtotal de produção","Mezisoučet výroby","Delsumma för produktion","Produktionssubtotal"]],
+["Delivery cost",["Koszt dostawy","Versandkosten","Coût de livraison","Coste de envío","Costo di spedizione","Bezorgkosten","Custo de entrega","Náklady na doručení","Leveranskostnad","Leveringsomkostning"]],
+["Batch production cost",["Koszt produkcji partii","Herstellungskosten der Charge","Coût de production du lot","Coste de producción del lote","Costo di produzione del lotto","Productiekosten batch","Custo de produção do lote","Výrobní náklady dávky","Produktionskostnad för batchen","Produktionsomkostning for batchen"]],
+["List sales",["Sprzedaż przed rabatem","Listenumsatz","Ventes au tarif catalogue","Ventas a precio de lista","Vendite a prezzo di listino","Verkoop tegen lijstprijs","Vendas a preço de tabela","Prodej za katalogovou cenu","Försäljning till listpris","Salg til listepris"]],
+["Batch discount",["Rabat ilościowy","Mengenrabatt","Remise par lot","Descuento por lote","Sconto quantità","Staffelkorting","Desconto por quantidade","Množstevní sleva","Mängdrabatt","Mængderabat"]],
+["Sales after discount",["Sprzedaż po rabacie","Umsatz nach Rabatt","Ventes après remise","Ventas tras el descuento","Vendite dopo lo sconto","Verkoop na korting","Vendas após o desconto","Prodej po slevě","Försäljning efter rabatt","Salg efter rabat"]],
+["Batch profit",["Zysk z partii","Chargengewinn","Bénéfice du lot","Beneficio del lote","Profitto del lotto","Batchwinst","Lucro do lote","Zisk z dávky","Batchvinst","Batchfortjeneste"]],
+["Delivery charged",["Opłata za dostawę","Berechneter Versand","Livraison facturée","Envío cobrado","Spedizione addebitata","Doorberekende bezorging","Entrega cobrada","Účtované doručení","Debiterad leverans","Opkrævet levering"]],
+["Upload a print file or enter the print time in Your Model.",["Prześlij plik wydruku lub wpisz czas druku w sekcji Twój model.","Lade eine Druckdatei hoch oder gib die Druckzeit unter Dein Modell ein.","Importez un fichier d’impression ou saisissez le temps dans Votre modèle.","Sube un archivo de impresión o indica el tiempo en Tu modelo.","Carica un file di stampa o inserisci il tempo in Il tuo modello.","Upload een printbestand of vul de printtijd in bij Je model.","Carregue um ficheiro de impressão ou introduza o tempo em O seu modelo.","Nahrajte soubor tisku nebo zadejte dobu v části Váš model.","Ladda upp en utskriftsfil eller ange tiden under Din modell.","Upload en printf il eller indtast tiden under Din model"]],
+["Enter your electricity unit rate to calculate cost.",["Wpisz stawkę za energię elektryczną, aby obliczyć koszt.","Gib deinen Stromtarif ein, um die Kosten zu berechnen.","Saisissez votre tarif d’électricité pour calculer le coût.","Introduce tu tarifa eléctrica para calcular el coste.","Inserisci la tariffa elettrica per calcolare il costo.","Vul je elektriciteitstarief in om de kosten te berekenen.","Introduza a tarifa de eletricidade para calcular o custo.","Zadejte sazbu elektřiny pro výpočet nákladů.","Ange ditt elpris för att beräkna kostnaden.","Indtast din elpris for at beregne omkostningen."]],
+["⌂ Home",["⌂ Strona główna","⌂ Startseite","⌂ Accueil","⌂ Inicio","⌂ Home","⌂ Startpagina","⌂ Início","⌂ Domů","⌂ Hem","⌂ Hjem"]],
 ["▣ Guides",["▣ Przewodnik","▣ Anleitungen","▣ Guides","▣ Guías","▣ Guide","▣ Gidsen","▣ Guias","▣ Průvodce","▣ Guider","▣ Guider"]],
 ["ⓘ About",["ⓘ O nas","ⓘ Über uns","ⓘ À propos","ⓘ Acerca de","ⓘ Informazioni","ⓘ Over ons","ⓘ Sobre","ⓘ O aplikaci","ⓘ Om","ⓘ Om"]],
 ["◉ Support",["◉ Wsparcie","◉ Support","◉ Assistance","◉ Ayuda","◉ Supporto","◉ Ondersteuning","◉ Apoio","◉ Podpora","◉ Support","◉ Support"]],
@@ -90,5 +122,31 @@ const rows=[
 const extra=window.__ppExtraI18n;
 if(!extra)return;
 rows.forEach(([source,values])=>languages.forEach((lang,index)=>{(extra[lang]||(extra[lang]={}))[source]=values[index];}));
+const dynamicSummary={
+ pl:{single:(q,d)=>"Wybrano "+q+" szt. • rabat ilościowy "+d+"%",batch:(q,d,p)=>"Ilość: "+q+" • Rabat "+d+"% • Efektywna cena za sztukę: "+p,estimate:(w,h)=>"Szacunek: "+w+" W przez "+h+" h."},
+ de:{single:(q,d)=>"Ausgewählte Menge: "+q+" • Mengenrabatt "+d+"%",batch:(q,d,p)=>"Menge: "+q+" • Rabatt "+d+"% • Effektiver Stückpreis: "+p,estimate:(w,h)=>"Geschätzt mit "+w+" W für "+h+" h."},
+ fr:{single:(q,d)=>"Quantité sélectionnée : "+q+" • remise par lot "+d+" %",batch:(q,d,p)=>"Quantité : "+q+" • Remise "+d+" % • Prix effectif par article : "+p,estimate:(w,h)=>"Estimation : "+w+" W pendant "+h+" h."},
+ es:{single:(q,d)=>"Cantidad seleccionada: "+q+" • descuento por lote "+d+" %",batch:(q,d,p)=>"Cantidad: "+q+" • Descuento "+d+" % • Precio efectivo por unidad: "+p,estimate:(w,h)=>"Estimado: "+w+" W durante "+h+" h."},
+ it:{single:(q,d)=>"Quantità selezionata: "+q+" • sconto quantità "+d+"%",batch:(q,d,p)=>"Quantità: "+q+" • Sconto "+d+"% • Prezzo effettivo per articolo: "+p,estimate:(w,h)=>"Stima: "+w+" W per "+h+" h."},
+ nl:{single:(q,d)=>"Geselecteerd aantal: "+q+" • staffelkorting "+d+"%",batch:(q,d,p)=>"Aantal: "+q+" • Korting "+d+"% • Effectieve prijs per stuk: "+p,estimate:(w,h)=>"Geschat op basis van "+w+" W gedurende "+h+" uur."},
+ pt:{single:(q,d)=>"Quantidade selecionada: "+q+" • desconto por quantidade "+d+"%",batch:(q,d,p)=>"Quantidade: "+q+" • Desconto "+d+"% • Preço efetivo por unidade: "+p,estimate:(w,h)=>"Estimado: "+w+" W durante "+h+" h."},
+ cs:{single:(q,d)=>"Vybrané množství: "+q+" • množstevní sleva "+d+" %",batch:(q,d,p)=>"Množství: "+q+" • Sleva "+d+" % • Efektivní cena za kus: "+p,estimate:(w,h)=>"Odhad: "+w+" W po dobu "+h+" h."},
+ sv:{single:(q,d)=>"Valt antal: "+q+" • mängdrabatt "+d+" %",batch:(q,d,p)=>"Antal: "+q+" • Rabatt "+d+" % • Effektivt pris per vara: "+p,estimate:(w,h)=>"Uppskattat från "+w+" W under "+h+" h."},
+ da:{single:(q,d)=>"Valgt antal: "+q+" • mængderabat "+d+"%",batch:(q,d,p)=>"Antal: "+q+" • Rabat "+d+"% • Effektiv pris pr. stk.: "+p,estimate:(w,h)=>"Anslået ud fra "+w+" W i "+h+" h."}
+};
+window.__ppTranslateCalculatorDynamic=(value,lang)=>{
+ if(!lang||lang==="en")return null;
+ const format=value=>value.replace(/(\d)\.(\d)/g,"$1,$2");
+ const text=String(value||"");
+ const margin=text.match(/^Margin:\s*(-?\d+(?:[.,]\d+)?)%$/);
+ if(margin){const label=window.__ppTranslateText?.("Margin:",lang)||"Margin:";return label+" "+format(margin[1])+"%";}
+ const one=text.match(/^Quantity (\d+) selected • batch discount ([\d.,]+)%$/);
+ if(one&&dynamicSummary[lang])return dynamicSummary[lang].single(one[1],format(one[2]));
+ const batch=text.match(/^Quantity (\d+) • ([\d.,]+)% discount • (.+) effective price per item$/);
+ if(batch&&dynamicSummary[lang])return dynamicSummary[lang].batch(batch[1],format(batch[2]),batch[3]);
+ const estimate=text.match(/^Estimated from ([\d.,]+) W for ([\d.,]+) h\.$/);
+ if(estimate&&dynamicSummary[lang])return dynamicSummary[lang].estimate(format(estimate[1]),format(estimate[2]));
+ return null;
+};
 })();
 
