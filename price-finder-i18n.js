@@ -77,7 +77,14 @@ const rows=[
 ["Open retailer ↗",["Otwórz sklep ↗","Händler öffnen ↗","Ouvrir le vendeur ↗","Abrir tienda ↗","Apri rivenditore ↗","Verkoper openen ↗","Abrir loja ↗","Otevřít prodejce ↗","Öppna återförsäljare ↗","Åbn forhandler ↗"]],
 ["Find it",["Znajdź","Finden","Trouver","Buscar","Trova","Zoeken","Pesquisar","Najít","Hitta","Find"]],
 ["Pack / build",["Opakowanie / konstrukcja","Packung / Bauvolumen","Conditionnement / volume","Envase / volumen","Confezione / volume","Verpakking / bouwvolume","Embalagem / volume","Balení / objem","Förpackning / byggvolym","Pakke / byggevolumen"]],
-["Live listing",["Aktualna oferta","Aktuelles Angebot","Offre en ligne","Oferta actual","Offerta attuale","Actuele aanbieding","Oferta atual","Aktuální nabídka","Aktuell annons","Aktuel vare"]]
+["Live listing",["Aktualna oferta","Aktuelles Angebot","Offre en ligne","Oferta actual","Offerta attuale","Actuele aanbieding","Oferta atual","Aktuální nabídka","Aktuell annons","Aktuel vare"]],
+["Back to PrintProfit calculator",["Wróć do kalkulatora PrintProfit","Zurück zum PrintProfit-Rechner","Retour au calculateur PrintProfit","Volver a la calculadora PrintProfit","Torna al calcolatore PrintProfit","Terug naar de PrintProfit-calculator","Voltar à calculadora PrintProfit","Zpět ke kalkulačce PrintProfit","Tillbaka till PrintProfit-kalkylatorn","Tilbage til PrintProfit-beregneren"]],
+["PrintProfit navigation",["Nawigacja PrintProfit","PrintProfit-Navigation","Navigation PrintProfit","Navegación de PrintProfit","Navigazione PrintProfit","PrintProfit-navigatie","Navegação PrintProfit","Navigace PrintProfit","PrintProfit-navigering","PrintProfit-navigation"]],
+["Toggle dark mode",["Przełącz tryb ciemny","Dunkelmodus umschalten","Activer ou désactiver le mode sombre","Cambiar modo oscuro","Attiva o disattiva la modalità scura","Donkere modus omschakelen","Alternar modo escuro","Přepnout tmavý režim","Växla mörkt läge","Skift mørk tilstand"]],
+["Result view",["Widok wyników","Ergebnisansicht","Affichage des résultats","Vista de resultados","Vista dei risultati","Resultaatweergave","Vista de resultados","Zobrazení výsledků","Resultatvy","Resultatvisning"]],
+["Saved comparisons",["Zapisane porównania","Gespeicherte Vergleiche","Comparaisons enregistrées","Comparaciones guardadas","Confronti salvati","Opgeslagen vergelijkingen","Comparações guardadas","Uložená porovnání","Sparade jämförelser","Gemte sammenligninger"]],
+["e.g. PLA, Neptune 4, Bambu A1…",["np. PLA, Neptune 4, Bambu A1…","z. B. PLA, Neptune 4, Bambu A1…","ex. : PLA, Neptune 4, Bambu A1…","p. ej., PLA, Neptune 4, Bambu A1…","ad es. PLA, Neptune 4, Bambu A1…","bijv. PLA, Neptune 4, Bambu A1…","por ex., PLA, Neptune 4, Bambu A1…","např. PLA, Neptune 4, Bambu A1…","t.ex. PLA, Neptune 4, Bambu A1…","f.eks. PLA, Neptune 4, Bambu A1…"]],
+["No limit",["Bez limitu","Kein Limit","Aucune limite","Sin límite","Nessun limite","Geen limiet","Sem limite","Bez limitu","Ingen gräns","Ingen grænse"]],
 ];
 const extra=window.__ppExtraI18n;
 if(!extra)return;
