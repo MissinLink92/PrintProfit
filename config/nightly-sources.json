@@ -3329,14 +3329,16 @@
       "variantId": 42132789952565,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/3ec5edea-60d8-468e-9b34-2b0f2f0eb92f.jpg?v=1781790290",
       "expectedProductTitle": "Kimya PETG-R White | 2.85mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-r-white-2-85mm-750g"
     },
     "candidate-ac310116acdb17feced1": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-r-white-1-75mm-2-2kg",
       "variantId": 42132755906613,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/519ef46a-41dd-479f-96f2-f0d4b7e7739a.jpg?v=1677509551",
       "expectedProductTitle": "Kimya PETG-R White | 1.75mm | 2.2kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-r-white-1-75mm-2-2kg"
     },
     "candidate-1af3ae415339b1837907": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-r-translucent-1-75mm-2-2kg",
@@ -3351,7 +3353,8 @@
       "variantId": 42086954303541,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/23-ultimaker-s7-pro-bundle-front-spools.jpg?v=1674561793",
       "expectedProductTitle": "UltiMaker S7 Pro Bundle",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-s7-pro-bundle"
     },
     "candidate-0fa4baa982e8e9c3620e": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-s7-3d-printer",
@@ -3446,7 +3449,8 @@
       "variantId": 39480955240501,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/2ed2447d-2ce1-4413-9c29-71260187ed0c.jpg?v=1648472763",
       "expectedProductTitle": "Photocentric UV DLP Crystal Clear Resin 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/photocentirc-lc-dental-crystal-hard-resin-clear-1kg"
     },
     "candidate-a8a9a8770979b36b8279": {
       "priceUrl": "https://3dgbire.com/products/photocentric-magna-draft-resin-5kg",
@@ -3485,7 +3489,8 @@
       "variantId": 39668757561397,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/a4fad80c-55c8-4adc-b3ad-ee34b3fc0ea3.jpg?v=1787304997",
       "expectedProductTitle": "Raise3D Premium PLA Grey | 1.75mm | 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-premium-pla-grey-1-75mm-1kg"
     },
     "candidate-497d5ebcc9d2cec5e44e": {
       "priceUrl": "https://3dgbire.com/products/raise3d-premium-petg-blue-1-75mm-1kg",
@@ -3524,7 +3529,8 @@
       "variantId": 39622451527733,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/UPETGTransBlue750g.jpg?v=1621423475",
       "expectedProductTitle": "Ultimaker PETG Blue Translucent 2.85mm  750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-petg-blue-transparent-2-85mm-750g"
     },
     "candidate-e0b7f8f2e4572d3e6d07": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-petg-blue-2-85mm-750g",
@@ -3691,7 +3697,8 @@
       "variantId": 31869517725749,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/66e09e1e-7d55-4b52-b48e-c65384b33b5f.png?v=1775038261",
       "expectedProductTitle": "Dremel PLA Black | 1.75mm | 500g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/dremel-pla-black"
     },
     "candidate-97ab43b3915ea7affbcf": {
       "priceUrl": "https://3dgbire.com/products/photocentric-uv-lcd-hard-resin-black-1kg",
@@ -3826,7 +3833,8 @@
       "variantId": 30291149914165,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/7927e8b8-2890-4130-afa8-5ad36268e510.png?v=1786004263",
       "expectedProductTitle": "Ultimaker PLA Black Filament | 2.85mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-pla-black-filament-2-85mm-750g-default"
     },
     "candidate-ffac2b4132b22c16dea0": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-pla-blue-filament-2-85mm-750g-default",
@@ -3945,7 +3953,8 @@
       "variantId": 12958924963893,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/736ab2f6-c230-492b-a1f0-fc35a01aca15.jpg?v=1787305723",
       "expectedProductTitle": "Raise3D Premium PETG Black | 1.75mm | 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-premium-petg-black"
     },
     "candidate-1926b35913e465a0b448": {
       "priceUrl": "https://3dgbire.com/products/kodak-pla-tough-green-1-75mm-750g",
@@ -4048,7 +4057,8 @@
       "variantId": 12836772577333,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/d9807115-cf25-47e1-af63-d83285f1e842.jpg?v=1781000692",
       "expectedProductTitle": "Filamentive PLA Cosmic Silver | 2.85mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/filamentive-pla-cosmic-silver-2-85mm-750g"
     },
     "candidate-f092d2920ffc18a55bd2": {
       "priceUrl": "https://3dgbire.com/products/filamentive-pla-cosmic-grey-2-85mm-750g",
@@ -4207,7 +4217,8 @@
       "variantId": 1079364473,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/abffe6c4-9914-4c69-93f9-e9ecf16bdbe7.png?v=1786003930",
       "expectedProductTitle": "Ultimaker PLA Silver Metallic Filament | 2.85mm | 750g",
-      "expectedVariantTitle": "Default"
+      "expectedVariantTitle": "Default",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-pla-silver-metallic-filament"
     },
     "candidate-558ddf3973f9101828c0": {
       "priceUrl": "https://3dgbire.com/products/abs-fusion-natural-white-filament-2-85mm",
@@ -18278,7 +18289,8 @@
       "variantId": 43890503909429,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/Lynxter-PLA-001-grey.jpg?v=1725881781",
       "expectedProductTitle": "Lynxter PLA-001 Grey Filament| 1.75mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/lynxter-pla-001-grey-filament-1-75mm-750g"
     },
     "candidate-f40ba034aa0905e464a5": {
       "priceUrl": "https://3dgbire.com/products/filamentive-tough-pla-blue-filament-2-85mm-750g",
@@ -18293,7 +18305,8 @@
       "variantId": 41815025483829,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/PhotocentricLCOpus-resize_8a4a5b9f-dbaf-48f9-be84-c7b07b3c2c7c.jpg?v=1716889757",
       "expectedProductTitle": "Photocentric Liquid Crystal Opus 3D Printer Reconditioned",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/photocentric-liquid-crystal-opus-3d-printer-reconditioned"
     },
     "candidate-ece515f9c4f28fc5f5a4": {
       "priceUrl": "https://3dgbire.com/products/raise3d-hyper-speed-abs-v2-filament-black-1kg-1-75mm",
@@ -18316,7 +18329,8 @@
       "variantId": 41815025287221,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/a648d83c-3ddd-481b-be61-bc82eb021b6c.jpg?v=1775039344",
       "expectedProductTitle": "Raise3D E2 3D Printer | Reconditioned",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-e2-reconditioned"
     },
     "candidate-8a01d4090db2aaa8ddbf": {
       "priceUrl": "https://3dgbire.com/products/raise3d-premium-abs-grey-1-75mm-1kg",
@@ -18331,7 +18345,8 @@
       "variantId": 39622451232821,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/66f7c80b-beb0-4fad-8c73-beb8a63020bd.jpg?v=1785940898",
       "expectedProductTitle": "Ultimaker PETG Grey 2.85mm  750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-petg-grey-2-85mm-750g"
     },
     "candidate-94e3cf9189035d99ec7a": {
       "priceUrl": "https://3dgbire.com/products/bcn3d-abs-natural-2-85mm-2-5kg",
@@ -18354,7 +18369,8 @@
       "variantId": 31869517889589,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/c1fae186-52a4-4a8c-a98a-2fe5fadd78ff_7a8fb7b9-3e27-4bc8-8807-ad51dd381409.png?v=1775038267",
       "expectedProductTitle": "Dremel PLA Purple | 1.75mm | 500g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/dremel-pla-purple"
     },
     "candidate-354e810c2ebfd7cffe52": {
       "priceUrl": "https://3dgbire.com/products/innofil-pla-silver-1-75mm-8500g",
@@ -18369,7 +18385,8 @@
       "variantId": 30291186352181,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/b5474b4f-4c67-4b56-bcdb-b2d0469a3059.png?v=1786004682",
       "expectedProductTitle": "Ultimaker TPU 95A (Thermoplastic Polyurethane) Black Filament | 2.85mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-tpu-95a-thermoplastic-polyurethane-black-filament-2-85mm-750g-v7"
     },
     "candidate-b7ad2ae7204adee628f4": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-abs-green-filament-2-85mm-750g-default",
@@ -18392,7 +18409,8 @@
       "variantId": 30266082263093,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/071b09a3-decc-4acf-b373-39665fcf71ad_484845d2-2d78-408c-b0d7-c909997188af.jpg?v=1775037953",
       "expectedProductTitle": "Kodak PLA+ Black | 1.75mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/kodak-pla-black-1-75mm-750g"
     },
     "candidate-a1f806f145f12f87cec4": {
       "priceUrl": "https://3dgbire.com/products/filamentive-pla-cosmic-blue-2-85mm-750g",
@@ -18415,7 +18433,8 @@
       "variantId": 7862743662645,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/eb750908-999a-4609-93f0-0b9b1d70b86c.jpg?v=1787309056",
       "expectedProductTitle": "Raise3D Premium ABS White | 1.75mm | 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-premium-abs-white"
     },
     "candidate-b0e6d1119939b52ffd6c": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-tough-pla-white",
@@ -18446,41 +18465,89 @@
       "variantId": 57145919046014,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/BEDROCK_3D_-_PLA_PRO1_-_Black_-_750g_-_1.75mm_-_filament_spool.webp?v=1774006721",
       "expectedProductTitle": "Bedrock 3D PLA PRO1",
-      "expectedVariantTitle": "Black / 1.75mm / 8.5kg"
+      "expectedVariantTitle": "Black / 1.75mm / 8.5kg",
+      "imageSourceUrl": "https://3dgbire.com/products/bedrock-3d-pla-pro1"
     },
     "candidate-cf0dfff5a5228a3436c7": {
       "priceUrl": "https://3dgbire.com/products/dremel-eco-abs-black",
       "variantId": 31869518413877,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/9f6713a1-1ffc-4ad1-8fbe-9f72aa776328_4c916ebb-4ca4-48c8-832f-cb5bd9e0df46.png?v=1775038323",
       "expectedProductTitle": "Dremel ECO-ABS Black | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/dremel-eco-abs-black"
     },
     "candidate-452ac214c9d26bd6e934": {
       "priceUrl": "https://3dgbire.com/products/raise3d-industrial-pet-support-filament-natural",
       "variantId": 42718382653493,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/Raise3D_Shop_inside_Support-1.jpg?v=1699960596",
       "expectedProductTitle": "Raise3D Industrial PET Support Filament Natural",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-industrial-pet-support-filament-natural"
     },
     "candidate-bafcc91215ad3d90f76f": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-s-clear-red-1-75mm-750g",
       "variantId": 33426387435573,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/KimyaPETG-SClearRed_a62d9dfa-ceb0-4844-b67a-aabb4a4040c5.jpg?v=1612195257",
       "expectedProductTitle": "Kimya PETG-S Clear Red | 1.75mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-s-clear-red-1-75mm-750g"
     },
     "candidate-0a59c4d4a0ab5f80f2d8": {
       "priceUrl": "https://3dgbire.com/products/precision-castable-resin-violet-1kg",
       "variantId": 30295933255733,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/480dda9a-06fe-4b0f-a22d-f7e7dbdf7fa1.jpg?v=1775036828",
       "expectedProductTitle": "Photocentric Precision  | Castable Resin | Violet | 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/precision-castable-resin-violet-1kg"
     },
     "candidate-53165515d0d529fba0e7": {
       "priceUrl": "https://3dgbire.com/products/dremel-eco-abs-white",
       "variantId": 31869518544949,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/1bb0e717-3f7c-4e88-8e67-02526fad20af_9b418610-b3cd-4546-9914-dc4fc79f9bb5.png?v=1775038292",
       "expectedProductTitle": "Dremel ECO-ABS White | 1.75mm | 500g",
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/dremel-eco-abs-white"
+    },
+    "candidate-dea46c66d7e0472f171d": {
+      "priceUrl": "https://3dgbire.com/products/kimya-abs-s-white-2-85mm-4-5kg",
+      "variantId": 54915648160126,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/BoiteKimya_f314c616-071a-4b79-9df4-96e2a009a6b1.jpg?v=1736247047",
+      "expectedProductTitle": "Kimya ABS-S White 2.85mm 4.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-2f13b6c509df33344385": {
+      "priceUrl": "https://3dgbire.com/products/lynxter-petg-001-white-filament-1-75mm-2kg",
+      "variantId": 43890503483445,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/PETG001-3Dprintingmaterials-small.jpg?v=1724838946",
+      "expectedProductTitle": "Lynxter PETG-001 White Filament | 1.75mm | 2kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-35f055700089f4ee2cfe": {
+      "priceUrl": "https://3dgbire.com/products/raise3d-pro3-plus-3d-printer-including-hyper-kit-reconditioned",
+      "variantId": 43847313489973,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/Pro3-Plus-HS-Right_1296x_ca0a407a-ac43-4ba0-ae8c-9fa4ea64e168.jpg?v=1723460587",
+      "expectedProductTitle": "Raise3D Pro3 Plus 3D Printer Including Hyper Kit Reconditioned",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-1643ab4a74cc4d8c1b92": {
+      "priceUrl": "https://3dgbire.com/products/ultimaker-petg-green-transparent-2-85mm-750g",
+      "variantId": 39622451691573,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/c6074f84-2c24-47f1-baca-765470917b12.jpg?v=1782985649",
+      "expectedProductTitle": "Ultimaker PETG Green Translucent 2.85mm  750g",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-2698a52f707c4c452760": {
+      "priceUrl": "https://3dgbire.com/products/ultimaker-pla-green-filament-2-85mm-750g-default",
+      "variantId": 30291148668981,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/f2b6db06-93b3-4023-a3db-61882c418516.png?v=1786004206",
+      "expectedProductTitle": "Ultimaker PLA Green Filament | 2.85mm | 750g",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-c5645d58c82084eb1bcf": {
+      "priceUrl": "https://3dgbire.com/products/magna-hard-resin-black-5kg",
+      "variantId": 28767436996661,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/dc056ac4-5285-4e0c-8bab-dfb5da0b6cd2.jpg?v=1787050459",
+      "expectedProductTitle": "Photocentric Daylight Magna | Hard Resin | Black | 5kg",
       "expectedVariantTitle": "Default Title"
     }
   },
