@@ -3327,7 +3327,7 @@
     "candidate-914d4007bf87f236eaa8": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-r-white-2-85mm-750g",
       "variantId": 42132789952565,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/3ec5edea-60d8-468e-9b34-2b0f2f0eb92f.jpg?v=1781790290",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/3ec5edea-60d8-468e-9b34-2b0f2f0eb92f.jpg?v=1791446782",
       "expectedProductTitle": "Kimya PETG-R White | 2.85mm | 750g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-r-white-2-85mm-750g"
@@ -3567,7 +3567,7 @@
     "candidate-df92198d90d42337168a": {
       "priceUrl": "https://3dgbire.com/products/kimya-tpu-92a-white-1-75mm-750g",
       "variantId": 33426386419765,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/24f59477-002a-453c-8000-98768977fd76.jpg?v=1696421885",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/dde17a10-0b52-4af2-935b-a4ddf63a0e73.jpg?v=1791454100",
       "expectedProductTitle": "Kimya TPU-92A White | 1.75mm | 750g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/kimya-tpu-92a-white-1-75mm-750g"
@@ -3575,7 +3575,7 @@
     "candidate-ee16e15a1018652f49b3": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-carbon-black-1-75mm-500g",
       "variantId": 33426387828789,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/2134eb2b-0449-4aba-8fd5-63638fbfbe7a.jpg?v=1775652774",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/2134eb2b-0449-4aba-8fd5-63638fbfbe7a.jpg?v=1791451193",
       "expectedProductTitle": "Kimya PETG Carbon Black | 1.75mm | 500g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-carbon-black-1-75mm-500g"
@@ -17911,7 +17911,7 @@
     "candidate-6e29905bbc47f90ff8a0": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-r-translucent-1-75mm-750g",
       "variantId": 42132600324149,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/c8c5231e-aa11-4b5f-884a-b389cc90667f.jpg?v=1777560217",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/c8c5231e-aa11-4b5f-884a-b389cc90667f.jpg?v=1791466444",
       "expectedProductTitle": "Kimya PETG-R Translucent | 1.75mm | 750g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-r-translucent-1-75mm-750g"
@@ -18520,7 +18520,8 @@
       "variantId": 43890503483445,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/PETG001-3Dprintingmaterials-small.jpg?v=1724838946",
       "expectedProductTitle": "Lynxter PETG-001 White Filament | 1.75mm | 2kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/lynxter-petg-001-white-filament-1-75mm-2kg"
     },
     "candidate-35f055700089f4ee2cfe": {
       "priceUrl": "https://3dgbire.com/products/raise3d-pro3-plus-3d-printer-including-hyper-kit-reconditioned",
@@ -18534,7 +18535,8 @@
       "variantId": 39622451691573,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/c6074f84-2c24-47f1-baca-765470917b12.jpg?v=1782985649",
       "expectedProductTitle": "Ultimaker PETG Green Translucent 2.85mm  750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-petg-green-transparent-2-85mm-750g"
     },
     "candidate-2698a52f707c4c452760": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-pla-green-filament-2-85mm-750g-default",
@@ -18549,6 +18551,20 @@
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/dc056ac4-5285-4e0c-8bab-dfb5da0b6cd2.jpg?v=1787050459",
       "expectedProductTitle": "Photocentric Daylight Magna | Hard Resin | Black | 5kg",
       "expectedVariantTitle": "Default Title"
+    },
+    "candidate-5d2bf58b1bf22b0b1379": {
+      "priceUrl": "https://3dgbire.com/products/daylight-precision-firm-resin-1kg",
+      "variantId": 7616546570293,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/a103872d-c535-463e-8d6f-a14244dce6a4_439f9294-3496-4732-a7d7-bf871b9a69f8.jpg?v=1617553446",
+      "expectedProductTitle": "Photocentric Precision | Firm Resin | Black | 1kg",
+      "expectedVariantTitle": "Black"
+    },
+    "candidate-57db75f9f35617b2d4b9": {
+      "priceUrl": "https://uk.flashforge.com/products/flashforge-cj270",
+      "variantId": 47442215370940,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/c3cd8a3256649d5a85b5464f26d0c018.png?v=1788865869",
+      "expectedProductTitle": "Flashforge CJ270 Full-color 3D Printer",
+      "expectedVariantTitle": "CJ270"
     }
   },
   "approvedProductDetails": {}

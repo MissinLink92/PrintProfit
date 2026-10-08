@@ -191,5 +191,6 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "K2 Plus Combo Professional Package": 1300.0,
   "Photocentric Liquid Crystal Opus 3D Printer Reconditioned": 4750.0,
   "Raise3D E2 3D Printer | Reconditioned": 1500.0,
-  "Raise3D Pro3 Plus 3D Printer Including Hyper Kit Reconditioned": 2999.0
+  "Raise3D Pro3 Plus 3D Printer Including Hyper Kit Reconditioned": 2999.0,
+  "CJ270 Full-color 3D Printer — CJ270": 3499.0
 };
