@@ -3623,7 +3623,7 @@
     "candidate-ccc26d506893313e99c6": {
       "priceUrl": "https://3dgbire.com/products/kimya-petg-s-white-1-75mm-750g",
       "variantId": 32264973844533,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/e491e975-0f5b-4c8f-8c50-5848ef3123a3.jpg?v=1612174762",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/e9378b53-2828-4fcd-944f-80b89ff37afe.jpg?v=1791451301",
       "expectedProductTitle": "Kimya PETG-S White | 1.75mm | 750g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/kimya-petg-s-white-1-75mm-750g"
@@ -18550,7 +18550,8 @@
       "variantId": 28767436996661,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/dc056ac4-5285-4e0c-8bab-dfb5da0b6cd2.jpg?v=1787050459",
       "expectedProductTitle": "Photocentric Daylight Magna | Hard Resin | Black | 5kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/magna-hard-resin-black-5kg"
     },
     "candidate-5d2bf58b1bf22b0b1379": {
       "priceUrl": "https://3dgbire.com/products/daylight-precision-firm-resin-1kg",
@@ -18564,7 +18565,8 @@
       "variantId": 47442215370940,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0665/0727/6476/files/c3cd8a3256649d5a85b5464f26d0c018.png?v=1788865869",
       "expectedProductTitle": "Flashforge CJ270 Full-color 3D Printer",
-      "expectedVariantTitle": "CJ270"
+      "expectedVariantTitle": "CJ270",
+      "imageSourceUrl": "https://uk.flashforge.com/products/flashforge-cj270"
     }
   },
   "approvedProductDetails": {}
