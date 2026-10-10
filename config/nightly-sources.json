@@ -18543,7 +18543,8 @@
       "variantId": 30291148668981,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/f2b6db06-93b3-4023-a3db-61882c418516.png?v=1786004206",
       "expectedProductTitle": "Ultimaker PLA Green Filament | 2.85mm | 750g",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/ultimaker-pla-green-filament-2-85mm-750g-default"
     },
     "candidate-c5645d58c82084eb1bcf": {
       "priceUrl": "https://3dgbire.com/products/magna-hard-resin-black-5kg",
@@ -18558,7 +18559,8 @@
       "variantId": 7616546570293,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/products/a103872d-c535-463e-8d6f-a14244dce6a4_439f9294-3496-4732-a7d7-bf871b9a69f8.jpg?v=1617553446",
       "expectedProductTitle": "Photocentric Precision | Firm Resin | Black | 1kg",
-      "expectedVariantTitle": "Black"
+      "expectedVariantTitle": "Black",
+      "imageSourceUrl": "https://3dgbire.com/products/daylight-precision-firm-resin-1kg"
     },
     "candidate-57db75f9f35617b2d4b9": {
       "priceUrl": "https://uk.flashforge.com/products/flashforge-cj270",

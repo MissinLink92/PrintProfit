@@ -1,12 +1,12 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-10T00:07:11+01:00
+Checked: 2026-10-11T00:06:11+01:00
 
 - Changed existing prices: 0
 - Refreshed image files: 0
 - Verified products added: 0
 - Unresolved source notices: 5
-- Failed or incomplete checks: 6110
+- Failed or incomplete checks: 6269
 
 ## Source checks
 
@@ -18,7 +18,7 @@ Checked: 2026-10-10T00:07:11+01:00
 | iDig3Dprinting | failed | 0 |
 | 3DGBIRE | discovered | 438 |
 | Bambu Lab UK | discovered | 15 |
-| Creality UK | url-discovery-only | 245 |
+| Creality UK | url-discovery-only | 249 |
 | ELEGOO UK | discovered | 3646 |
 | Amazon UK | failed | 0 |
 | Prusa Research | url-discovery-only | 7 |
@@ -70,19 +70,25 @@ Checked: 2026-10-10T00:07:11+01:00
 - product / creality-hyper-pla: Exact model/colour/pack product offer unavailable on the recorded page
 - product / esun-petg-black: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-black: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-black: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-white: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-grey: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-grey: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-red: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-dark-blue: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-yellow: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-green: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-green: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-orange: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-neutral: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-neutral: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-brown: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-sky-blue: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-sky-blue: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-silver: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-matte-black: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 123-3d-pla-light-grey: Exact model/colour/pack product offer unavailable on the recorded page
+- image / 123-3d-pla-light-grey: HTTP Error 503: Service Unavailable
 - product / 123-3d-pla-bright-pink: Exact model/colour/pack product offer unavailable on the recorded page
 - product / bambu-lab-pla-basic-1-75mm-1kg-black: HTTP Error 403: Forbidden
 - product / bambu-lab-pla-basic-1-75mm-1kg-jade-white: HTTP Error 403: Forbidden
@@ -142,6 +148,18 @@ Checked: 2026-10-10T00:07:11+01:00
 - image / qidi-pla-cf-black-1kg: Exact Shopify variant ID required; refusing a default variant price
 - product / qidi-pla-cf-olive-green-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / anycubic-high-speed-pla-pearl-black-1kg: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
 - product / additivex-bambu-pla-matte-mandarin-orange-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-bambu-pla-matte-marine-blue-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-bambu-pla-matte-ice-blue-1kg: Exact model/colour/pack product offer unavailable on the recorded page
@@ -189,59 +207,207 @@ Checked: 2026-10-10T00:07:11+01:00
 - product / xyz-da-vinci-1-pro-3-in-1: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-junior: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-color: Exact model/colour/pack product offer unavailable on the recorded page
+- product / candidate-2922e98916c565b9c9d3: HTTP Error 429: Too Many Requests
+- product / candidate-8f6864add0c6b9c3f8c6: HTTP Error 429: Too Many Requests
 - product / candidate-ca6b16d7c9e1293d53b9: HTTP Error 429: Too Many Requests
-- product / candidate-3b2a4079a59e43ecbbf4: HTTP Error 429: Too Many Requests
 - product / candidate-4b4bd177d861e40c2b55: HTTP Error 429: Too Many Requests
 - product / candidate-e0ed36c4fc624e6ca6ff: HTTP Error 429: Too Many Requests
+- product / candidate-2a3d7b228350fa89427f: HTTP Error 429: Too Many Requests
 - product / candidate-48f8cfb7baa794bf3a90: HTTP Error 429: Too Many Requests
-- product / candidate-954e6bad0f8f975822a9: HTTP Error 429: Too Many Requests
+- product / candidate-914d4007bf87f236eaa8: HTTP Error 429: Too Many Requests
 - product / candidate-ac310116acdb17feced1: HTTP Error 429: Too Many Requests
 - product / candidate-1af3ae415339b1837907: HTTP Error 429: Too Many Requests
 - product / candidate-fc5269f902d38510d4f4: HTTP Error 429: Too Many Requests
-- product / candidate-0fa4baa982e8e9c3620e: HTTP Error 429: Too Many Requests
+- product / candidate-cb4bd4ad124026f1491a: HTTP Error 429: Too Many Requests
 - product / candidate-ca5e83100704f9ff17e4: HTTP Error 429: Too Many Requests
-- product / candidate-913dbd765da15a340fe2: HTTP Error 429: Too Many Requests
 - product / candidate-06ae7ce3a13e9114954e: HTTP Error 429: Too Many Requests
 - product / candidate-7fc7e211fbd90adad1da: HTTP Error 429: Too Many Requests
-- product / candidate-0f42a9bffc51e8244d97: HTTP Error 429: Too Many Requests
+- product / candidate-a5cc6833353bfb1cb780: HTTP Error 429: Too Many Requests
+- product / candidate-ee7c8d3a0019560e0112: HTTP Error 429: Too Many Requests
 - product / candidate-d7cdae90c3ae98c6a0fe: HTTP Error 429: Too Many Requests
 - product / candidate-99dea0de7a7b32163306: HTTP Error 429: Too Many Requests
+- product / candidate-d59c253515ced3eb6faa: HTTP Error 429: Too Many Requests
 - product / candidate-a8a9a8770979b36b8279: HTTP Error 429: Too Many Requests
+- product / candidate-536ed1054f7faba2f3ba: HTTP Error 429: Too Many Requests
 - product / candidate-7dc81b650172eead15fe: HTTP Error 429: Too Many Requests
-- product / candidate-bf9cde8beb4ba7eed4f7: HTTP Error 429: Too Many Requests
+- product / candidate-757349327d392c75cf4e: HTTP Error 429: Too Many Requests
+- product / candidate-497d5ebcc9d2cec5e44e: HTTP Error 429: Too Many Requests
+- product / candidate-bc4c9e8bfc69e0a1fc34: HTTP Error 429: Too Many Requests
+- product / candidate-408f86558ab1519dfa43: HTTP Error 429: Too Many Requests
 - product / candidate-2e92c4c3fd66d0574fc3: HTTP Error 429: Too Many Requests
+- product / candidate-e0b7f8f2e4572d3e6d07: HTTP Error 429: Too Many Requests
 - product / candidate-4766b9c1c2b79f22ef83: HTTP Error 429: Too Many Requests
+- product / candidate-08436aaf17f7f94a1fc6: HTTP Error 429: Too Many Requests
 - product / candidate-df92198d90d42337168a: HTTP Error 429: Too Many Requests
+- product / candidate-ee16e15a1018652f49b3: HTTP Error 429: Too Many Requests
 - product / candidate-6a073bf5ad4e530a96a2: HTTP Error 429: Too Many Requests
+- product / candidate-de24acf0d9210b3cf9d4: HTTP Error 429: Too Many Requests
+- product / candidate-245f3d764928a3e2dc69: HTTP Error 429: Too Many Requests
 - product / candidate-78bd1b4c2811ccc3cc6a: HTTP Error 429: Too Many Requests
 - product / candidate-232b61f33e7ce4f5e072: HTTP Error 429: Too Many Requests
 - product / candidate-4a1e2347c51e6c40386c: HTTP Error 429: Too Many Requests
-- product / candidate-da1e722b100cff3c7c84: HTTP Error 429: Too Many Requests
-- product / candidate-97ab43b3915ea7affbcf: HTTP Error 429: Too Many Requests
-- product / candidate-787c05da31fd7c0f666c: HTTP Error 429: Too Many Requests
-- product / candidate-3018e5d83d963c9cc7ed: HTTP Error 429: Too Many Requests
-- product / candidate-cf5289d65b0b26919eab: HTTP Error 429: Too Many Requests
+- product / candidate-250dd945fddad49ea640: HTTP Error 429: Too Many Requests
+- product / candidate-88803769486bfcb3ebd8: HTTP Error 429: Too Many Requests
+- product / candidate-9cd718965afbeba86278: HTTP Error 429: Too Many Requests
+- product / candidate-90dd6d985a279838f630: HTTP Error 429: Too Many Requests
+- product / candidate-11a0cc23bffe9192da9d: HTTP Error 429: Too Many Requests
+- product / candidate-0cb71df3c489fe3c73aa: HTTP Error 429: Too Many Requests
 - product / candidate-2d99f36c519e750ecdc4: HTTP Error 429: Too Many Requests
+- product / candidate-08d752932094801debe9: HTTP Error 429: Too Many Requests
 - product / candidate-ed6e2ee21b5e684c4ba6: HTTP Error 429: Too Many Requests
-- product / candidate-e2e4265c4b36d06f23f8: HTTP Error 429: Too Many Requests
+- product / candidate-446d0c19dc1436531ede: HTTP Error 429: Too Many Requests
 - product / candidate-1ea2a74aaa627b6b2444: HTTP Error 429: Too Many Requests
-- product / candidate-5a3952a57a383a547b6b: HTTP Error 429: Too Many Requests
+- product / candidate-6d256cba270105902169: HTTP Error 429: Too Many Requests
 - product / candidate-bd2f10d36a2e433002f9: HTTP Error 429: Too Many Requests
-- product / candidate-679931b1d1563d096b06: HTTP Error 429: Too Many Requests
-- product / candidate-d484bef3b055b93b8346: HTTP Error 429: Too Many Requests
-- product / candidate-6ff06dde32c44347741d: HTTP Error 429: Too Many Requests
+- product / candidate-142e30a10fc59e9b3d14: HTTP Error 429: Too Many Requests
+- product / candidate-1926b35913e465a0b448: HTTP Error 429: Too Many Requests
+- product / candidate-33027bbfb3921461e299: HTTP Error 429: Too Many Requests
 - product / candidate-20928822b8aa4eecc6a6: HTTP Error 429: Too Many Requests
-- product / candidate-1e05bde3035b4e0289a7: HTTP Error 429: Too Many Requests
+- product / candidate-a584c32f8c82d12c09d6: HTTP Error 429: Too Many Requests
 - product / candidate-5b08f6e4da3cc0556cd4: HTTP Error 429: Too Many Requests
-- product / candidate-06a0f589ee956c2e3ef1: HTTP Error 429: Too Many Requests
-- product / candidate-47ccf8dcee16aabf9c3e: HTTP Error 429: Too Many Requests
+- product / candidate-d2e71eb9bdc7cc2f1652: HTTP Error 429: Too Many Requests
+- product / candidate-02df138a70344636cbad: HTTP Error 429: Too Many Requests
+- product / candidate-8d783f7d79dfbef75aee: HTTP Error 429: Too Many Requests
 - product / candidate-40ad81cbc50351a26113: HTTP Error 429: Too Many Requests
 - product / candidate-57fcae65ad3fabefb05e: HTTP Error 429: Too Many Requests
-- product / candidate-21e42c90fcdae07dbec6: HTTP Error 429: Too Many Requests
-- product / candidate-f3ab6f82843f280a78f8: HTTP Error 429: Too Many Requests
-- product / candidate-558ddf3973f9101828c0: HTTP Error 429: Too Many Requests
+- product / candidate-7566f7db9495c793696b: HTTP Error 429: Too Many Requests
+- product / candidate-716200893eadc0ed6329: HTTP Error 429: Too Many Requests
+- product / candidate-1a58b20a6282ffe71bed: HTTP Error 429: Too Many Requests
+- product / candidate-6534e5883264ccbcf38c: HTTP Error 429: Too Many Requests
+- product / candidate-a18ca996455c597983d0: HTTP Error 429: Too Many Requests
+- product / candidate-2501ba8958c1485657a9: HTTP Error 404: Not Found
+- product / candidate-ab341df6538e4c75f395: HTTP Error 404: Not Found
+- product / candidate-3a2fcbf583d1f38eb582: HTTP Error 404: Not Found
+- product / candidate-f12e0fc72344bb998e3b: HTTP Error 404: Not Found
+- product / candidate-0c2006be675da53e2ead: HTTP Error 404: Not Found
+- product / candidate-3316c6bbeafef0c8edb0: HTTP Error 404: Not Found
+- product / candidate-d7d64be2a3f1658b3921: HTTP Error 404: Not Found
+- product / candidate-bfc903d0706692388b1f: HTTP Error 404: Not Found
+- product / candidate-f49aeb31aefb4c040580: HTTP Error 404: Not Found
+- product / candidate-60ac0f6516c0c2079e1f: HTTP Error 404: Not Found
+- product / candidate-9da346dc06607d9cc34b: HTTP Error 404: Not Found
+- product / candidate-705bd82b5b7c0b7e52ca: HTTP Error 404: Not Found
+- product / candidate-b24adb7f0a39a044a9a8: HTTP Error 404: Not Found
+- product / candidate-508dee4ecad5e3361e87: HTTP Error 404: Not Found
+- product / candidate-54b472f8527bf9b326d1: HTTP Error 404: Not Found
+- product / candidate-8aadfd83a3b42ff9ba12: HTTP Error 404: Not Found
+- product / candidate-0366af4683e52315d0ac: HTTP Error 404: Not Found
+- product / candidate-97f9f6f36536b3fbc71e: HTTP Error 404: Not Found
+- product / candidate-b3214f4944872629dccf: HTTP Error 404: Not Found
+- product / candidate-4ed73f9bfe1d5d5034bb: HTTP Error 404: Not Found
+- product / candidate-976aa25985552b3587d3: HTTP Error 404: Not Found
+- product / candidate-aad53fbf74bcaacbd076: HTTP Error 404: Not Found
+- product / candidate-d0e3fe76c748237d3917: HTTP Error 404: Not Found
+- product / candidate-736feaacd8ab75257e1d: HTTP Error 404: Not Found
+- product / candidate-cb505c1fa7cb061fc433: HTTP Error 404: Not Found
+- product / candidate-a71dc4446275f335728b: HTTP Error 404: Not Found
+- product / candidate-ff656668726a0d5793d8: HTTP Error 404: Not Found
+- product / candidate-31021c8e145f14f53873: HTTP Error 404: Not Found
+- product / candidate-2905b390d3c827db9e0d: HTTP Error 404: Not Found
+- product / candidate-5372445ea52d25490ae6: HTTP Error 404: Not Found
+- product / candidate-eb250a8303d8b1fcee20: HTTP Error 404: Not Found
+- product / candidate-a1bc4be251aa552816a2: HTTP Error 404: Not Found
+- product / candidate-f40718b24b8a2880e57f: HTTP Error 404: Not Found
+- product / candidate-4a7454e0f3701bf3b438: HTTP Error 404: Not Found
+- product / candidate-8dbd596b608b67ea1ada: HTTP Error 404: Not Found
+- product / candidate-61027055b54732a8045d: HTTP Error 404: Not Found
+- product / candidate-32bfc56045637171ed20: HTTP Error 404: Not Found
+- product / candidate-3021840de68417825e5c: HTTP Error 404: Not Found
+- product / candidate-7fbe0ec25412f0c854eb: HTTP Error 404: Not Found
+- product / candidate-721e566e6f22ad330c2f: HTTP Error 404: Not Found
+- product / candidate-685145f8efb0ba0d1d04: HTTP Error 404: Not Found
+- product / candidate-ff54c019a8f528f0f511: HTTP Error 404: Not Found
+- product / candidate-367deef5f291c73b42a2: HTTP Error 404: Not Found
+- product / candidate-04b26b53ba68bb875055: HTTP Error 404: Not Found
+- product / candidate-d23026195252891563df: HTTP Error 404: Not Found
+- product / candidate-381abe6185d864d67a00: HTTP Error 404: Not Found
+- product / candidate-4bf0dfe19d41e4850fff: HTTP Error 404: Not Found
+- product / candidate-b55e4f4d877aff7e8012: HTTP Error 404: Not Found
+- product / candidate-72720a142e78ae797489: HTTP Error 404: Not Found
+- product / candidate-edde5ba73d60fef16c2c: HTTP Error 404: Not Found
+- product / candidate-bdb777430d54fe102105: HTTP Error 404: Not Found
+- product / candidate-8a1c4803425a42a9e565: HTTP Error 404: Not Found
+- product / candidate-28f86eaf497aeada6f6d: HTTP Error 404: Not Found
+- product / candidate-d855d819370084ef7557: HTTP Error 404: Not Found
+- product / candidate-c162d9c710b3c6840d3f: HTTP Error 404: Not Found
+- product / candidate-5566d9d2ed358b1ef147: HTTP Error 404: Not Found
+- product / candidate-8a2dbe6965818c453f91: HTTP Error 404: Not Found
+- product / candidate-095ca64d4c22c3822a4f: HTTP Error 404: Not Found
+- product / candidate-e6dc19164eb3c53c727e: HTTP Error 404: Not Found
+- product / candidate-ec8c47130c382c837935: HTTP Error 404: Not Found
+- product / candidate-d9c14fbc5e325d573107: HTTP Error 404: Not Found
+- product / candidate-57902059748eaa7cc8ca: HTTP Error 404: Not Found
+- product / candidate-f07490b48ac9c810c9d1: HTTP Error 404: Not Found
+- product / candidate-dcfbaab127d32e32c800: HTTP Error 404: Not Found
+- product / candidate-279840ca28f30a0a5ea6: HTTP Error 404: Not Found
+- product / candidate-8317e8f60b044588dae2: HTTP Error 404: Not Found
+- product / candidate-c901f50f3f24a5aac11b: HTTP Error 404: Not Found
+- product / candidate-548f22fb648fb80ae2a7: HTTP Error 404: Not Found
+- product / candidate-06ac5f2b39a493edc57f: HTTP Error 404: Not Found
+- product / candidate-138bfdfb70f4946d6792: HTTP Error 404: Not Found
+- product / candidate-b20153519829d654aed8: HTTP Error 404: Not Found
+- product / candidate-c6c63cbac076660c2241: HTTP Error 404: Not Found
+- product / candidate-622cc9496fbc8ea25565: HTTP Error 404: Not Found
+- product / candidate-a8056985e95276539bee: HTTP Error 404: Not Found
+- product / candidate-145ba813fc23a98ba4f3: HTTP Error 404: Not Found
+- product / candidate-50f81fc9d79c34eb06f1: HTTP Error 404: Not Found
+- product / candidate-f4dcbc92eb97d222afc5: HTTP Error 404: Not Found
+- product / candidate-428abe03d0472aac284b: HTTP Error 404: Not Found
+- product / candidate-9c69977479dbede98a16: HTTP Error 404: Not Found
+- product / candidate-ec44c2a651ce74dd9efa: HTTP Error 404: Not Found
+- product / candidate-50503415e52793d7f566: HTTP Error 404: Not Found
+- product / candidate-7d117e991586dee31227: HTTP Error 404: Not Found
+- product / candidate-d4c18d6cba7cfb534737: HTTP Error 404: Not Found
+- product / candidate-8e5f2bb86588caa20dc2: HTTP Error 404: Not Found
+- product / candidate-210024366cc73702e641: HTTP Error 404: Not Found
+- product / candidate-c0c98437a564cc3e5051: HTTP Error 404: Not Found
+- product / candidate-d80f556c4ea2199d6205: HTTP Error 404: Not Found
+- product / candidate-07afbe478ecc276db3e4: HTTP Error 404: Not Found
+- product / candidate-8946382dcebc9885f29a: HTTP Error 404: Not Found
+- product / candidate-e2519b6f2750cece76aa: HTTP Error 404: Not Found
+- product / candidate-175fbf292bd81892f9bf: HTTP Error 404: Not Found
+- product / candidate-f85230bdefd058bc8bc0: HTTP Error 404: Not Found
+- product / candidate-09de70bd5c2de4959b06: HTTP Error 404: Not Found
+- product / candidate-d567339baee9868fe211: HTTP Error 404: Not Found
+- product / candidate-71239f4206a7ee3985df: HTTP Error 404: Not Found
+- product / candidate-d6ffebc56bbc8d759783: HTTP Error 404: Not Found
+- product / candidate-8cfe8b7abcb0168a98c3: HTTP Error 404: Not Found
+- product / candidate-f7fffc476538e32b39d9: HTTP Error 404: Not Found
+- product / candidate-b3ab28f8cbf5c21ec9a7: HTTP Error 404: Not Found
+- product / candidate-86db83339fb6207a2551: HTTP Error 404: Not Found
+- product / candidate-a1a60ac8b5e70bca079e: HTTP Error 404: Not Found
+- product / candidate-c7afb2f03ffe97943c91: HTTP Error 404: Not Found
+- product / candidate-528b3b96fd4a162dda47: HTTP Error 404: Not Found
+- product / candidate-df6a5aee110cff8eb325: HTTP Error 404: Not Found
+- product / candidate-06cede5c3bb3341ab1ef: HTTP Error 404: Not Found
+- product / candidate-56c568d2b8ea3391203c: HTTP Error 404: Not Found
+- product / candidate-ca2a71cd2ad9a872d9d5: HTTP Error 404: Not Found
+- product / candidate-0d670b7f39c178823b62: HTTP Error 404: Not Found
+- product / candidate-51619c3a5a6d4cc8f338: HTTP Error 404: Not Found
+- product / candidate-16379ce88b50b7034140: HTTP Error 404: Not Found
+- product / candidate-028c055fe5a4dad43ccb: HTTP Error 404: Not Found
+- product / candidate-4b004c05c1bc1aa9c6db: HTTP Error 404: Not Found
+- product / candidate-2605d2236ab32f1c5210: HTTP Error 404: Not Found
+- product / candidate-9263c9c82f0bdb3e12eb: HTTP Error 404: Not Found
+- product / candidate-7dcc01aaaf2c664007eb: HTTP Error 404: Not Found
+- product / candidate-9bd4ff9fbc221c1b0998: HTTP Error 404: Not Found
+- product / candidate-776d241a989b16fe3d97: HTTP Error 404: Not Found
+- product / candidate-42f9818b2d25958a3ceb: HTTP Error 404: Not Found
+- product / candidate-ba06637d8ae105a2f39b: HTTP Error 404: Not Found
+- product / candidate-7c3a1a99c55c3829f1cc: HTTP Error 404: Not Found
+- product / candidate-26c75dd0f7e10e729a8e: HTTP Error 429: Too Many Requests
+- product / candidate-92b34540b6096d0d729c: HTTP Error 429: Too Many Requests
+- product / candidate-1141c83560f7aec2f0ac: HTTP Error 429: Too Many Requests
+- product / candidate-eb98641b3a7df2d9dcd8: HTTP Error 429: Too Many Requests
+- product / candidate-f0f15eac8d1d5a1c37f2: HTTP Error 429: Too Many Requests
+- product / candidate-feb1239b4319e569c0e8: HTTP Error 429: Too Many Requests
+- product / candidate-e8b0e60cf2a9e5a4acfa: HTTP Error 429: Too Many Requests
+- product / candidate-4407b08d4b1a2d1fce49: HTTP Error 429: Too Many Requests
+- product / candidate-9831630ab55544cba4e0: HTTP Error 429: Too Many Requests
 - product / candidate-d1969ccd0c26fd5ad1af: HTTP Error 429: Too Many Requests
+- product / candidate-d417fccd8dc8d8ef8fe4: HTTP Error 429: Too Many Requests
 - product / candidate-7119df9381662b4b3ff2: HTTP Error 429: Too Many Requests
+- product / candidate-f40ba034aa0905e464a5: HTTP Error 429: Too Many Requests
 - product / candidate-f706e86b19174a1e57b0: HTTP Error 429: Too Many Requests
 - product / candidate-ece515f9c4f28fc5f5a4: HTTP Error 429: Too Many Requests
 - product / candidate-a10c4684988e571b586c: HTTP Error 429: Too Many Requests
@@ -249,31 +415,21 @@ Checked: 2026-10-10T00:07:11+01:00
 - product / candidate-8a01d4090db2aaa8ddbf: HTTP Error 429: Too Many Requests
 - product / candidate-66b26b3f9a3839fff509: HTTP Error 429: Too Many Requests
 - product / candidate-94e3cf9189035d99ec7a: HTTP Error 429: Too Many Requests
-- product / candidate-474739d06bed28ff019e: HTTP Error 429: Too Many Requests
-- product / candidate-354e810c2ebfd7cffe52: HTTP Error 429: Too Many Requests
+- product / candidate-ad92b041c37a252c784b: HTTP Error 429: Too Many Requests
 - product / candidate-b3258791d946af12d0cf: HTTP Error 429: Too Many Requests
-- product / candidate-b7ad2ae7204adee628f4: HTTP Error 429: Too Many Requests
 - product / candidate-fc0e2eb825d9e4a006ac: HTTP Error 429: Too Many Requests
-- product / candidate-a1f806f145f12f87cec4: HTTP Error 429: Too Many Requests
 - product / candidate-f9adafc018fb8f866d87: HTTP Error 429: Too Many Requests
-- product / candidate-e614ea22b2ad963383d0: HTTP Error 429: Too Many Requests
 - product / candidate-b0e6d1119939b52ffd6c: HTTP Error 429: Too Many Requests
-- product / candidate-9ce6026fcbe27b76e65f: HTTP Error 429: Too Many Requests
 - product / candidate-cf0dfff5a5228a3436c7: HTTP Error 429: Too Many Requests
-- product / candidate-452ac214c9d26bd6e934: HTTP Error 429: Too Many Requests
 - product / candidate-bafcc91215ad3d90f76f: HTTP Error 429: Too Many Requests
-- product / candidate-53165515d0d529fba0e7: HTTP Error 429: Too Many Requests
 - product / candidate-dea46c66d7e0472f171d: HTTP Error 429: Too Many Requests
-- product / candidate-2f13b6c509df33344385: HTTP Error 429: Too Many Requests
 - product / candidate-35f055700089f4ee2cfe: HTTP Error 429: Too Many Requests
-- product / candidate-1643ab4a74cc4d8c1b92: HTTP Error 429: Too Many Requests
-- product / candidate-2698a52f707c4c452760: HTTP Error 429: Too Many Requests
-- product / candidate-5d2bf58b1bf22b0b1379: HTTP Error 429: Too Many Requests
+- product / candidate-c5645d58c82084eb1bcf: HTTP Error 429: Too Many Requests
 - discovery / 3djake-uk: No product sitemap identified; source needs a discovery adapter
 - discovery / 3dprima-uk: HTTP Error 404: Not Found
-- discovery / 123-3d-uk: HTTP Error 404: Not Found
+- discovery / 123-3d-uk: HTTP Error 504: Gateway Timeout
 - discovery / idig3dprinting: XML or text declaration not at start of entity: line 4, column 0
-- discovery / amazon-uk: HTTP Error 503: Service Unavailable
+- discovery / amazon-uk: HTTP Error 404: Not Found
 - discovery / additive-x: No product sitemap identified; source needs a discovery adapter
 - discovery / 3d-filaprint: Cannot read robots.txt: HTTP 403
 - discovery / snapmaker-uk: HTTP Error 404: Not Found
@@ -466,257 +622,257 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-591b29be98c38bd6d258: No verified product image URL
 - new-product / candidate-f636821522c67fb9b86e: No verified product image URL
 - new-product / candidate-3068a64e6d6cee05ef17: Invalid GBP product price
-- new-product / candidate-22bf7c077b82eab2329d: Invalid GBP product price
-- new-product / candidate-5f13e602320898601795: Pack weight is ambiguous; listing skipped
+- new-product / candidate-22bf7c077b82eab2329d: HTTP Error 429: Too Many Requests
+- new-product / candidate-5f13e602320898601795: HTTP Error 429: Too Many Requests
 - new-product / candidate-9d31fe7206a06fad3ee1: Cannot confirm that the product is a material or printer
-- new-product / candidate-eaca298e049fd967999c: Cannot confirm that the product is a material or printer
+- new-product / candidate-eaca298e049fd967999c: HTTP Error 429: Too Many Requests
 - new-product / candidate-96c9770dab39d6fecbb9: Cannot confirm that the product is a material or printer
-- new-product / candidate-5ad3bc559cebea6dacfb: Cannot confirm that the product is a material or printer
-- new-product / candidate-0d0dae0fe21db4e7d9eb: Cannot confirm that the product is a material or printer
+- new-product / candidate-5ad3bc559cebea6dacfb: HTTP Error 429: Too Many Requests
+- new-product / candidate-0d0dae0fe21db4e7d9eb: HTTP Error 429: Too Many Requests
 - new-product / candidate-98138a0fe6340db9d7dd: Cannot confirm that the product is a material or printer
-- new-product / candidate-85cd3131248208db1f14: Cannot confirm that the product is a material or printer
+- new-product / candidate-85cd3131248208db1f14: HTTP Error 429: Too Many Requests
 - new-product / candidate-7f565d18bb35972684f0: Cannot confirm that the product is a material or printer
 - new-product / candidate-6ee867765e22a109d9de: HTTP Error 429: Too Many Requests
-- new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
-- new-product / candidate-c280ea764fec53e8e442: HTTP Error 429: Too Many Requests
-- new-product / candidate-84f3b5270612ed3ecb9e: Invalid GBP product price
+- new-product / candidate-b560720aebd4741f87a4: HTTP Error 429: Too Many Requests
+- new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
+- new-product / candidate-84f3b5270612ed3ecb9e: HTTP Error 429: Too Many Requests
 - new-product / candidate-e4bb3c09ebbd1fd2534e: HTTP Error 429: Too Many Requests
-- new-product / candidate-64c4b41910b3ebbf3621: Cannot confirm that the product is a material or printer
+- new-product / candidate-64c4b41910b3ebbf3621: HTTP Error 429: Too Many Requests
 - new-product / candidate-c37aa39617358e581097: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e02b6ae5b407d1e2ddfd: HTTP Error 429: Too Many Requests
-- new-product / candidate-e9b35c82ef3913eba0dd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e02b6ae5b407d1e2ddfd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e9b35c82ef3913eba0dd: HTTP Error 429: Too Many Requests
 - new-product / candidate-e0453d4243683ae5a0c7: HTTP Error 429: Too Many Requests
-- new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f1cadfbb4ca0dc665bbc: HTTP Error 429: Too Many Requests
 - new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
-- new-product / candidate-24332587e60afb11c8bc: HTTP Error 429: Too Many Requests
-- new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
+- new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f084d8b34541e30b9f06: HTTP Error 429: Too Many Requests
 - new-product / candidate-866261d14b351fa050be: HTTP Error 429: Too Many Requests
 - new-product / candidate-1fa70ad88f7245e3c74f: HTTP Error 429: Too Many Requests
 - new-product / candidate-a7f8b9014db7a73259ed: Invalid GBP product price
-- new-product / candidate-0ecd703342fb3fcd2ea1: HTTP Error 429: Too Many Requests
-- new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-0ecd703342fb3fcd2ea1: Cannot confirm that the product is a material or printer
+- new-product / candidate-eb9f57efc2d17c4b87b4: HTTP Error 429: Too Many Requests
 - new-product / candidate-abb54c825dc19f220070: HTTP Error 429: Too Many Requests
-- new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
+- new-product / candidate-f9a8efb3faf8e65bfdf9: HTTP Error 429: Too Many Requests
 - new-product / candidate-7cf9d57a580294338f27: Invalid GBP product price
 - new-product / candidate-a28c1cfe50e4aa37b1a4: HTTP Error 429: Too Many Requests
-- new-product / candidate-5fd441c8af01ca01e734: Cannot confirm that the product is a material or printer
-- new-product / candidate-649e63e9829c6b47cf39: HTTP Error 429: Too Many Requests
-- new-product / candidate-893cf38c48655139dcef: Invalid GBP product price
+- new-product / candidate-5fd441c8af01ca01e734: HTTP Error 429: Too Many Requests
+- new-product / candidate-649e63e9829c6b47cf39: Invalid GBP product price
+- new-product / candidate-893cf38c48655139dcef: HTTP Error 429: Too Many Requests
 - new-product / candidate-a044d1a5a0cf996e2506: Invalid GBP product price
 - new-product / candidate-20bc5c94dc33b0b85791: HTTP Error 429: Too Many Requests
 - new-product / candidate-651731aa08341d350e20: HTTP Error 429: Too Many Requests
-- new-product / candidate-33fde748e58736f15449: HTTP Error 429: Too Many Requests
-- new-product / candidate-2e171d47ddeeaedad904: Cannot confirm that the product is a material or printer
+- new-product / candidate-33fde748e58736f15449: Cannot confirm that the product is a material or printer
+- new-product / candidate-2e171d47ddeeaedad904: HTTP Error 429: Too Many Requests
 - new-product / candidate-3433aa02e4d80e9c0554: Cannot confirm that the product is a material or printer
 - new-product / candidate-4886c155d4931729e9c3: HTTP Error 429: Too Many Requests
-- new-product / candidate-c282a521454ee6e2207f: Cannot confirm that the product is a material or printer
+- new-product / candidate-c282a521454ee6e2207f: HTTP Error 429: Too Many Requests
 - new-product / candidate-9161275797bd5ab11633: Cannot confirm that the product is a material or printer
 - new-product / candidate-8582be097e871d99582c: HTTP Error 429: Too Many Requests
 - new-product / candidate-0cab138e391cc5d352de: Cannot confirm that the product is a material or printer
 - new-product / candidate-8683a4af9d63d8f0c91f: HTTP Error 429: Too Many Requests
-- new-product / candidate-16daaacd9c2388fd1101: Cannot confirm that the product is a material or printer
-- new-product / candidate-b8fec6a19d9e0dfb0c59: HTTP Error 429: Too Many Requests
-- new-product / candidate-4321c3b7a07e75f3dd09: Cannot confirm that the product is a material or printer
-- new-product / candidate-6dbcbe8bd6614435119a: Cannot confirm that the product is a material or printer
-- new-product / candidate-e9394f480cdb63b3ba73: HTTP Error 429: Too Many Requests
+- new-product / candidate-16daaacd9c2388fd1101: HTTP Error 429: Too Many Requests
+- new-product / candidate-b8fec6a19d9e0dfb0c59: Cannot confirm that the product is a material or printer
+- new-product / candidate-4321c3b7a07e75f3dd09: HTTP Error 429: Too Many Requests
+- new-product / candidate-6dbcbe8bd6614435119a: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9394f480cdb63b3ba73: Cannot confirm that the product is a material or printer
 - new-product / candidate-1647ac9f424b01a81d28: HTTP Error 429: Too Many Requests
 - new-product / candidate-85f4cbf0aaeb068687b1: Cannot confirm that the product is a material or printer
 - new-product / candidate-2caba5ff7ffd331f1a52: HTTP Error 429: Too Many Requests
-- new-product / candidate-a949da2d0341ba5b19e5: Cannot confirm that the product is a material or printer
-- new-product / candidate-955e13bd5da6acb4c571: HTTP Error 429: Too Many Requests
-- new-product / candidate-6ece0a768a869994b509: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e730927b5ad8681a76d6: HTTP Error 429: Too Many Requests
-- new-product / candidate-62b73cfb6ceb978cf093: Cannot confirm that the product is a material or printer
-- new-product / candidate-256676534225fa8c5b59: Invalid GBP product price
+- new-product / candidate-a949da2d0341ba5b19e5: HTTP Error 429: Too Many Requests
+- new-product / candidate-955e13bd5da6acb4c571: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6ece0a768a869994b509: HTTP Error 429: Too Many Requests
+- new-product / candidate-e730927b5ad8681a76d6: Cannot confirm that the product is a material or printer
+- new-product / candidate-62b73cfb6ceb978cf093: HTTP Error 429: Too Many Requests
+- new-product / candidate-256676534225fa8c5b59: HTTP Error 429: Too Many Requests
 - new-product / candidate-0f07d113cd94e7750971: Invalid GBP product price
 - new-product / candidate-b1e9fa8e37d4d46fe05e: HTTP Error 429: Too Many Requests
 - new-product / candidate-13a760e9c3a7ca58cd83: HTTP Error 429: Too Many Requests
-- new-product / candidate-db43dfbc825e9279c21c: Cannot confirm that the product is a material or printer
-- new-product / candidate-14c00ff9088761901b87: HTTP Error 429: Too Many Requests
-- new-product / candidate-ce10787011baa6e62062: HTTP Error 429: Too Many Requests
-- new-product / candidate-a427ff75a9b1aae292cd: Cannot confirm that the product is a material or printer
-- new-product / candidate-f9f269596e8dddbbb42d: HTTP Error 429: Too Many Requests
-- new-product / candidate-8a8322d7b3647478d912: Invalid GBP product price
+- new-product / candidate-db43dfbc825e9279c21c: HTTP Error 429: Too Many Requests
+- new-product / candidate-14c00ff9088761901b87: Cannot confirm that the product is a material or printer
+- new-product / candidate-ce10787011baa6e62062: Invalid GBP product price
+- new-product / candidate-a427ff75a9b1aae292cd: HTTP Error 429: Too Many Requests
+- new-product / candidate-f9f269596e8dddbbb42d: Invalid GBP product price
+- new-product / candidate-8a8322d7b3647478d912: HTTP Error 429: Too Many Requests
 - new-product / candidate-86f755593e561ae8966d: Cannot confirm that the product is a material or printer
 - new-product / candidate-2a89ea9ff1809f1396c2: Cannot confirm that the product is a material or printer
 - new-product / candidate-dca90606f1178b6d77b2: HTTP Error 429: Too Many Requests
-- new-product / candidate-f4eb740bcf8b08eab918: HTTP Error 429: Too Many Requests
-- new-product / candidate-ec0db7a3e737acf3f9f9: Cannot confirm that the product is a material or printer
+- new-product / candidate-f4eb740bcf8b08eab918: Cannot confirm that the product is a material or printer
+- new-product / candidate-ec0db7a3e737acf3f9f9: HTTP Error 429: Too Many Requests
 - new-product / candidate-1667b09e3781c2483e74: Cannot confirm that the product is a material or printer
-- new-product / candidate-13dea97ff2c9ab251a68: HTTP Error 429: Too Many Requests
-- new-product / candidate-a8b764696ffb29d90404: Cannot confirm that the product is a material or printer
-- new-product / candidate-a94845a10bc18c237152: HTTP Error 429: Too Many Requests
-- new-product / candidate-752c43a650c15d8f8ade: Cannot confirm that the product is a material or printer
-- new-product / candidate-ad8722a33c216b019996: HTTP Error 429: Too Many Requests
-- new-product / candidate-7067bfc9a296a2925d7b: HTTP Error 429: Too Many Requests
-- new-product / candidate-82805fec8c0fe6c09382: Cannot confirm that the product is a material or printer
-- new-product / candidate-5d9db45033e6a5ce9a29: HTTP Error 429: Too Many Requests
-- new-product / candidate-7790dc56f0a01a9c23d6: Cannot confirm that the product is a material or printer
+- new-product / candidate-13dea97ff2c9ab251a68: Cannot confirm that the product is a material or printer
+- new-product / candidate-a8b764696ffb29d90404: HTTP Error 429: Too Many Requests
+- new-product / candidate-a94845a10bc18c237152: Cannot confirm that the product is a material or printer
+- new-product / candidate-752c43a650c15d8f8ade: HTTP Error 429: Too Many Requests
+- new-product / candidate-ad8722a33c216b019996: Cannot confirm that the product is a material or printer
+- new-product / candidate-7067bfc9a296a2925d7b: Cannot confirm that the product is a material or printer
+- new-product / candidate-82805fec8c0fe6c09382: HTTP Error 429: Too Many Requests
+- new-product / candidate-5d9db45033e6a5ce9a29: Cannot confirm that the product is a material or printer
+- new-product / candidate-7790dc56f0a01a9c23d6: HTTP Error 429: Too Many Requests
 - new-product / candidate-ae08f2b4c6ce1c1ba7ca: Cannot confirm that the product is a material or printer
-- new-product / candidate-7665fe75d2632d94c42a: HTTP Error 429: Too Many Requests
-- new-product / candidate-09050cac2cc891de1f74: Cannot confirm that the product is a material or printer
-- new-product / candidate-1a0aa66aa1303fcc90de: HTTP Error 429: Too Many Requests
-- new-product / candidate-4b2e95885c42d92cf4a6: Cannot confirm that the product is a material or printer
+- new-product / candidate-7665fe75d2632d94c42a: Invalid GBP product price
+- new-product / candidate-09050cac2cc891de1f74: HTTP Error 429: Too Many Requests
+- new-product / candidate-1a0aa66aa1303fcc90de: Cannot confirm that the product is a material or printer
+- new-product / candidate-4b2e95885c42d92cf4a6: HTTP Error 429: Too Many Requests
 - new-product / candidate-68ce2d504267670ae2fc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0d781a54dd46a038745a: HTTP Error 429: Too Many Requests
-- new-product / candidate-39a4172c9973d006fdec: Cannot confirm that the product is a material or printer
-- new-product / candidate-23fefb69d2647271c416: HTTP Error 429: Too Many Requests
-- new-product / candidate-c13a4ef06ec333438afc: Cannot confirm that the product is a material or printer
-- new-product / candidate-cba2a1774a41aa6c33ad: HTTP Error 429: Too Many Requests
-- new-product / candidate-30894dc2275000171d3e: HTTP Error 429: Too Many Requests
-- new-product / candidate-2be7c231e1f113ba69ee: Cannot confirm that the product is a material or printer
-- new-product / candidate-4caf51517ec948c4513c: HTTP Error 429: Too Many Requests
-- new-product / candidate-39d44324ac423af10468: Cannot confirm that the product is a material or printer
+- new-product / candidate-0d781a54dd46a038745a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-39a4172c9973d006fdec: HTTP Error 429: Too Many Requests
+- new-product / candidate-23fefb69d2647271c416: Cannot confirm that the product is a material or printer
+- new-product / candidate-c13a4ef06ec333438afc: HTTP Error 429: Too Many Requests
+- new-product / candidate-cba2a1774a41aa6c33ad: Cannot confirm that the product is a material or printer
+- new-product / candidate-30894dc2275000171d3e: Cannot confirm that the product is a material or printer
+- new-product / candidate-2be7c231e1f113ba69ee: HTTP Error 429: Too Many Requests
+- new-product / candidate-4caf51517ec948c4513c: Cannot confirm that the product is a material or printer
+- new-product / candidate-39d44324ac423af10468: HTTP Error 429: Too Many Requests
 - new-product / candidate-f84ac361de1a73ccf4be: HTTP Error 404: Not Found
-- new-product / candidate-c1bde86a8ab12b064b43: HTTP Error 429: Too Many Requests
-- new-product / candidate-1df8864c7679e603bb44: Cannot confirm that the product is a material or printer
-- new-product / candidate-ae995c1124f163e21ebc: HTTP Error 429: Too Many Requests
-- new-product / candidate-647e5467e771969127b1: Cannot confirm that the product is a material or printer
+- new-product / candidate-c1bde86a8ab12b064b43: Cannot confirm that the product is a material or printer
+- new-product / candidate-1df8864c7679e603bb44: HTTP Error 429: Too Many Requests
+- new-product / candidate-ae995c1124f163e21ebc: Cannot confirm that the product is a material or printer
+- new-product / candidate-647e5467e771969127b1: HTTP Error 429: Too Many Requests
 - new-product / candidate-a71a867b91b7fa8ed60c: Cannot confirm that the product is a material or printer
 - new-product / candidate-be98f196540dbad253a0: Cannot confirm that the product is a material or printer
 - new-product / candidate-d95f1aafd7daf44818cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-bfa66ce5a947b879393e: HTTP Error 429: Too Many Requests
-- new-product / candidate-8cfb6810a6ed2243427a: Cannot confirm that the product is a material or printer
+- new-product / candidate-bfa66ce5a947b879393e: Cannot confirm that the product is a material or printer
+- new-product / candidate-8cfb6810a6ed2243427a: HTTP Error 429: Too Many Requests
 - new-product / candidate-53a67fd9a808aae8eb4e: Cannot confirm that the product is a material or printer
-- new-product / candidate-188eb4605cdd8e1c8cd2: HTTP Error 429: Too Many Requests
-- new-product / candidate-7a1834e19add25aa5891: Cannot confirm that the product is a material or printer
+- new-product / candidate-188eb4605cdd8e1c8cd2: Cannot confirm that the product is a material or printer
+- new-product / candidate-7a1834e19add25aa5891: HTTP Error 429: Too Many Requests
 - new-product / candidate-62c1e50f77638ceedbba: Cannot confirm that the product is a material or printer
 - new-product / candidate-056e6659925158b2aeab: HTTP Error 429: Too Many Requests
 - new-product / candidate-b9bd048c43af23a5dc77: Cannot confirm that the product is a material or printer
-- new-product / candidate-5f9d666ec4b78b94943a: HTTP Error 429: Too Many Requests
-- new-product / candidate-54c92b0e56ce9ba63200: Cannot confirm that the product is a material or printer
+- new-product / candidate-5f9d666ec4b78b94943a: Cannot confirm that the product is a material or printer
+- new-product / candidate-54c92b0e56ce9ba63200: HTTP Error 429: Too Many Requests
 - new-product / candidate-68d66e28993096c3f125: Cannot confirm that the product is a material or printer
 - new-product / candidate-cea84124b106efbe871a: HTTP Error 429: Too Many Requests
 - new-product / candidate-bc33b2e61f9a3e4b0e1b: Cannot confirm that the product is a material or printer
-- new-product / candidate-2fe11fbd01c6852810b4: HTTP Error 429: Too Many Requests
-- new-product / candidate-c48606cb12400492453d: Cannot confirm that the product is a material or printer
-- new-product / candidate-65557a0341dc558c322b: HTTP Error 429: Too Many Requests
-- new-product / candidate-3e5541b8f46d5c563289: Cannot confirm that the product is a material or printer
+- new-product / candidate-2fe11fbd01c6852810b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-c48606cb12400492453d: HTTP Error 429: Too Many Requests
+- new-product / candidate-65557a0341dc558c322b: Cannot confirm that the product is a material or printer
+- new-product / candidate-3e5541b8f46d5c563289: HTTP Error 429: Too Many Requests
 - new-product / candidate-dedb65a7d25eb3c6a7b2: Cannot confirm that the product is a material or printer
-- new-product / candidate-92e7a70b1ed480e86329: HTTP Error 429: Too Many Requests
-- new-product / candidate-95bf83bdac959e6c67b3: Invalid GBP product price
-- new-product / candidate-bc0e978a9cf62b49c3e3: HTTP Error 429: Too Many Requests
-- new-product / candidate-153f17ae9f3b6ba2fe16: Cannot confirm that the product is a material or printer
+- new-product / candidate-92e7a70b1ed480e86329: Invalid GBP product price
+- new-product / candidate-95bf83bdac959e6c67b3: HTTP Error 429: Too Many Requests
+- new-product / candidate-bc0e978a9cf62b49c3e3: Invalid GBP product price
+- new-product / candidate-153f17ae9f3b6ba2fe16: HTTP Error 429: Too Many Requests
 - new-product / candidate-761b40227663f174acdf: Cannot confirm that the product is a material or printer
-- new-product / candidate-33e620fa833913a469c1: HTTP Error 429: Too Many Requests
-- new-product / candidate-e368100e2badbee31a27: Cannot confirm that the product is a material or printer
-- new-product / candidate-69fa6d266e3b448b9065: HTTP Error 429: Too Many Requests
-- new-product / candidate-51be05cb55a3d03860ca: Cannot confirm that the product is a material or printer
+- new-product / candidate-33e620fa833913a469c1: Cannot confirm that the product is a material or printer
+- new-product / candidate-e368100e2badbee31a27: HTTP Error 429: Too Many Requests
+- new-product / candidate-69fa6d266e3b448b9065: Cannot confirm that the product is a material or printer
+- new-product / candidate-51be05cb55a3d03860ca: HTTP Error 429: Too Many Requests
 - new-product / candidate-9583eef8bebde509614e: Cannot confirm that the product is a material or printer
 - new-product / candidate-8e3686af8ce89426ea9a: Cannot confirm that the product is a material or printer
-- new-product / candidate-c343ca8e1f6a2be339f4: Cannot confirm that the product is a material or printer
-- new-product / candidate-545bc62594e1844762ea: HTTP Error 429: Too Many Requests
+- new-product / candidate-c343ca8e1f6a2be339f4: HTTP Error 429: Too Many Requests
+- new-product / candidate-545bc62594e1844762ea: Cannot confirm that the product is a material or printer
 - new-product / candidate-edfee6b955291acd8574: HTTP Error 429: Too Many Requests
 - new-product / candidate-fe988ba024a5a9242a96: Cannot confirm that the product is a material or printer
-- new-product / candidate-cad8f56f01c2b60db941: HTTP Error 429: Too Many Requests
-- new-product / candidate-9b13421d7b73ddf95732: Cannot confirm that the product is a material or printer
-- new-product / candidate-770a34d4afde4e56129c: HTTP Error 429: Too Many Requests
-- new-product / candidate-b9beb3c3c16888af226f: Cannot confirm that the product is a material or printer
+- new-product / candidate-cad8f56f01c2b60db941: Cannot confirm that the product is a material or printer
+- new-product / candidate-9b13421d7b73ddf95732: HTTP Error 429: Too Many Requests
+- new-product / candidate-770a34d4afde4e56129c: Cannot confirm that the product is a material or printer
+- new-product / candidate-b9beb3c3c16888af226f: HTTP Error 429: Too Many Requests
 - new-product / candidate-825844afab0db6e0070a: Cannot confirm that the product is a material or printer
-- new-product / candidate-0676dd5c0fcfc75cf660: HTTP Error 429: Too Many Requests
-- new-product / candidate-f1f50cb087ffeec9f8c2: Cannot confirm that the product is a material or printer
-- new-product / candidate-04084a1de35dfcff6606: HTTP Error 429: Too Many Requests
-- new-product / candidate-07594e95d215e7a6fcda: Cannot confirm that the product is a material or printer
+- new-product / candidate-0676dd5c0fcfc75cf660: Cannot confirm that the product is a material or printer
+- new-product / candidate-f1f50cb087ffeec9f8c2: HTTP Error 429: Too Many Requests
+- new-product / candidate-04084a1de35dfcff6606: Cannot confirm that the product is a material or printer
+- new-product / candidate-07594e95d215e7a6fcda: HTTP Error 429: Too Many Requests
 - new-product / candidate-9e228ba8116c2bc02896: Cannot confirm that the product is a material or printer
 - new-product / candidate-25195484b0440452097d: Cannot confirm that the product is a material or printer
-- new-product / candidate-59fffef1101aed1bbddd: Cannot confirm that the product is a material or printer
-- new-product / candidate-b245a8a8a340607fc9a5: HTTP Error 429: Too Many Requests
+- new-product / candidate-59fffef1101aed1bbddd: HTTP Error 429: Too Many Requests
+- new-product / candidate-b245a8a8a340607fc9a5: Cannot confirm that the product is a material or printer
 - new-product / candidate-72937768a06d597aecdc: HTTP Error 429: Too Many Requests
 - new-product / candidate-b08f0a13575cce1ad30c: Cannot confirm that the product is a material or printer
-- new-product / candidate-050e92c7d6ea3174a146: HTTP Error 429: Too Many Requests
-- new-product / candidate-d1236c7378ff8cdd98c3: Cannot confirm that the product is a material or printer
-- new-product / candidate-dd7c68f71f3d60fae960: HTTP Error 429: Too Many Requests
-- new-product / candidate-c286072e7652acd3b40f: Cannot confirm that the product is a material or printer
+- new-product / candidate-050e92c7d6ea3174a146: Cannot confirm that the product is a material or printer
+- new-product / candidate-d1236c7378ff8cdd98c3: HTTP Error 429: Too Many Requests
+- new-product / candidate-dd7c68f71f3d60fae960: Cannot confirm that the product is a material or printer
+- new-product / candidate-c286072e7652acd3b40f: HTTP Error 429: Too Many Requests
 - new-product / candidate-b8c5a06506ed7563bc1d: Cannot confirm that the product is a material or printer
-- new-product / candidate-22c016845c2aec86f6c1: HTTP Error 429: Too Many Requests
-- new-product / candidate-5f7a25cf9dc0bf9bf970: Cannot confirm that the product is a material or printer
+- new-product / candidate-22c016845c2aec86f6c1: Cannot confirm that the product is a material or printer
+- new-product / candidate-5f7a25cf9dc0bf9bf970: HTTP Error 429: Too Many Requests
 - new-product / candidate-64238d5a955660fc060e: Cannot confirm that the product is a material or printer
 - new-product / candidate-97ee59f05792f8bce3e8: HTTP Error 429: Too Many Requests
 - new-product / candidate-8753f4b409ae485815c3: Cannot confirm that the product is a material or printer
-- new-product / candidate-666b33bdab7a44764182: HTTP Error 429: Too Many Requests
-- new-product / candidate-1a19e9c5c602067b6598: Cannot confirm that the product is a material or printer
-- new-product / candidate-e51496e9d5336708b257: HTTP Error 429: Too Many Requests
-- new-product / candidate-b28a3de0559cf521df71: Cannot confirm that the product is a material or printer
+- new-product / candidate-666b33bdab7a44764182: Cannot confirm that the product is a material or printer
+- new-product / candidate-1a19e9c5c602067b6598: HTTP Error 429: Too Many Requests
+- new-product / candidate-e51496e9d5336708b257: Cannot confirm that the product is a material or printer
+- new-product / candidate-b28a3de0559cf521df71: HTTP Error 429: Too Many Requests
 - new-product / candidate-c3f27bb8e1c4953c0051: Cannot confirm that the product is a material or printer
-- new-product / candidate-86806dcc3d8a966dbc46: HTTP Error 429: Too Many Requests
-- new-product / candidate-67c203c490c288c23a15: Cannot confirm that the product is a material or printer
+- new-product / candidate-86806dcc3d8a966dbc46: Cannot confirm that the product is a material or printer
+- new-product / candidate-67c203c490c288c23a15: HTTP Error 429: Too Many Requests
 - new-product / candidate-9e676c54cdd5ef7c6949: Cannot confirm that the product is a material or printer
-- new-product / candidate-4456e1a38c18551607dc: Cannot confirm that the product is a material or printer
-- new-product / candidate-3959bc1cc12c631d709f: HTTP Error 429: Too Many Requests
-- new-product / candidate-76bbde298bfac43d8a3e: HTTP Error 429: Too Many Requests
-- new-product / candidate-fc4dd279594973b8af3d: Cannot confirm that the product is a material or printer
-- new-product / candidate-122f30877598e32dfb56: HTTP Error 429: Too Many Requests
-- new-product / candidate-09874cc8d0dbd04b15a7: Cannot confirm that the product is a material or printer
+- new-product / candidate-4456e1a38c18551607dc: HTTP Error 429: Too Many Requests
+- new-product / candidate-3959bc1cc12c631d709f: Cannot confirm that the product is a material or printer
+- new-product / candidate-76bbde298bfac43d8a3e: Cannot confirm that the product is a material or printer
+- new-product / candidate-fc4dd279594973b8af3d: HTTP Error 429: Too Many Requests
+- new-product / candidate-122f30877598e32dfb56: Cannot confirm that the product is a material or printer
+- new-product / candidate-09874cc8d0dbd04b15a7: HTTP Error 429: Too Many Requests
 - new-product / candidate-536e37960408892a16f7: Cannot confirm that the product is a material or printer
-- new-product / candidate-fc610c81740c10f306f7: HTTP Error 429: Too Many Requests
-- new-product / candidate-838301dbcd0cb3e65329: Cannot confirm that the product is a material or printer
-- new-product / candidate-b7e070fecd28b790c61f: HTTP Error 429: Too Many Requests
-- new-product / candidate-99b7f5731a205aaafb2d: Cannot confirm that the product is a material or printer
+- new-product / candidate-fc610c81740c10f306f7: Cannot confirm that the product is a material or printer
+- new-product / candidate-838301dbcd0cb3e65329: HTTP Error 429: Too Many Requests
+- new-product / candidate-b7e070fecd28b790c61f: Cannot confirm that the product is a material or printer
+- new-product / candidate-99b7f5731a205aaafb2d: HTTP Error 429: Too Many Requests
 - new-product / candidate-104f2e2aba0e76a9758e: Cannot confirm that the product is a material or printer
-- new-product / candidate-6348166bb4c130850abc: HTTP Error 429: Too Many Requests
-- new-product / candidate-58faddeb1d3abfaebc79: HTTP Error 429: Too Many Requests
-- new-product / candidate-ccfb55e89123b8960d24: Cannot confirm that the product is a material or printer
+- new-product / candidate-6348166bb4c130850abc: Cannot confirm that the product is a material or printer
+- new-product / candidate-58faddeb1d3abfaebc79: Cannot confirm that the product is a material or printer
+- new-product / candidate-ccfb55e89123b8960d24: HTTP Error 429: Too Many Requests
 - new-product / candidate-c65f80fa135261320fde: Cannot confirm that the product is a material or printer
 - new-product / candidate-4d3fab059fdc0da407b8: HTTP Error 429: Too Many Requests
 - new-product / candidate-174db49ae50c63afdd47: Cannot confirm that the product is a material or printer
-- new-product / candidate-25eb920b8b4cbe94c5af: HTTP Error 429: Too Many Requests
-- new-product / candidate-d3778e26fa176ad0d55a: Cannot confirm that the product is a material or printer
-- new-product / candidate-e173efe4a594abd647b2: HTTP Error 429: Too Many Requests
-- new-product / candidate-c1279b5819468100771d: Cannot confirm that the product is a material or printer
+- new-product / candidate-25eb920b8b4cbe94c5af: Cannot confirm that the product is a material or printer
+- new-product / candidate-d3778e26fa176ad0d55a: HTTP Error 429: Too Many Requests
+- new-product / candidate-e173efe4a594abd647b2: Cannot confirm that the product is a material or printer
+- new-product / candidate-c1279b5819468100771d: HTTP Error 429: Too Many Requests
 - new-product / candidate-bc5c6cc39bcee85dda32: Cannot confirm that the product is a material or printer
-- new-product / candidate-6fa7eba8d4c955bdbc81: HTTP Error 429: Too Many Requests
-- new-product / candidate-963b40c650fe3c9c4726: Cannot confirm that the product is a material or printer
-- new-product / candidate-7b86d90609686db93569: HTTP Error 429: Too Many Requests
-- new-product / candidate-697bc457ca49e9beb74d: Cannot confirm that the product is a material or printer
+- new-product / candidate-6fa7eba8d4c955bdbc81: Cannot confirm that the product is a material or printer
+- new-product / candidate-963b40c650fe3c9c4726: HTTP Error 429: Too Many Requests
+- new-product / candidate-7b86d90609686db93569: Cannot confirm that the product is a material or printer
+- new-product / candidate-697bc457ca49e9beb74d: HTTP Error 429: Too Many Requests
 - new-product / candidate-8561138b43003dfb230f: Cannot confirm that the product is a material or printer
-- new-product / candidate-b8354591e2b056d8c9e8: HTTP Error 429: Too Many Requests
-- new-product / candidate-aba0aa62b82eb65bf5ad: Cannot confirm that the product is a material or printer
+- new-product / candidate-b8354591e2b056d8c9e8: Cannot confirm that the product is a material or printer
+- new-product / candidate-aba0aa62b82eb65bf5ad: HTTP Error 429: Too Many Requests
 - new-product / candidate-4cf7fd2e85e8d79ac661: Cannot confirm that the product is a material or printer
 - new-product / candidate-9c4e6df3d7fab7b308b6: HTTP Error 429: Too Many Requests
 - new-product / candidate-549059a5f71abb39d123: Cannot confirm that the product is a material or printer
-- new-product / candidate-d603db3941c9c70e37c9: HTTP Error 429: Too Many Requests
-- new-product / candidate-ce7e7d85bede054b48d3: Cannot confirm that the product is a material or printer
-- new-product / candidate-4f8477b111e81e838a7a: HTTP Error 429: Too Many Requests
-- new-product / candidate-7433ce74cff99109c7e5: Cannot confirm that the product is a material or printer
+- new-product / candidate-d603db3941c9c70e37c9: Cannot confirm that the product is a material or printer
+- new-product / candidate-ce7e7d85bede054b48d3: HTTP Error 429: Too Many Requests
+- new-product / candidate-4f8477b111e81e838a7a: Cannot confirm that the product is a material or printer
+- new-product / candidate-7433ce74cff99109c7e5: HTTP Error 429: Too Many Requests
 - new-product / candidate-20c7b8d0e5a86188207b: Cannot confirm that the product is a material or printer
-- new-product / candidate-1e2daa5347a22fd14693: HTTP Error 429: Too Many Requests
-- new-product / candidate-120cbf9f78ff994a6cbc: Cannot confirm that the product is a material or printer
-- new-product / candidate-fa6f3a99d7bc896b6f0f: HTTP Error 429: Too Many Requests
-- new-product / candidate-43034e996b7a11c27dd6: Cannot confirm that the product is a material or printer
+- new-product / candidate-1e2daa5347a22fd14693: Cannot confirm that the product is a material or printer
+- new-product / candidate-120cbf9f78ff994a6cbc: HTTP Error 429: Too Many Requests
+- new-product / candidate-fa6f3a99d7bc896b6f0f: Cannot confirm that the product is a material or printer
+- new-product / candidate-43034e996b7a11c27dd6: HTTP Error 429: Too Many Requests
 - new-product / candidate-29830fb414409fedad67: Cannot confirm that the product is a material or printer
 - new-product / candidate-8e2e7f61cd3b8734e5dd: Source does not state the material pack weight; listing skipped
 - new-product / candidate-03b9f7c0a51ee0c9513c: HTTP Error 429: Too Many Requests
-- new-product / candidate-ac7cebfa4f80d6756d42: HTTP Error 429: Too Many Requests
-- new-product / candidate-f9ef75a1d647065dfa8a: Cannot confirm that the product is a material or printer
+- new-product / candidate-ac7cebfa4f80d6756d42: Cannot confirm that the product is a material or printer
+- new-product / candidate-f9ef75a1d647065dfa8a: HTTP Error 429: Too Many Requests
 - new-product / candidate-f8a885075f1b9904c0f9: Cannot confirm that the product is a material or printer
-- new-product / candidate-f72771c3087da1fc8a5f: HTTP Error 429: Too Many Requests
-- new-product / candidate-13bfe85249bda8d540d9: Cannot confirm that the product is a material or printer
-- new-product / candidate-d3fe00fe81f19ccb4db5: HTTP Error 429: Too Many Requests
-- new-product / candidate-81a7f2dbcfd406592aec: Cannot confirm that the product is a material or printer
+- new-product / candidate-f72771c3087da1fc8a5f: Cannot confirm that the product is a material or printer
+- new-product / candidate-13bfe85249bda8d540d9: HTTP Error 429: Too Many Requests
+- new-product / candidate-d3fe00fe81f19ccb4db5: Cannot confirm that the product is a material or printer
+- new-product / candidate-81a7f2dbcfd406592aec: HTTP Error 429: Too Many Requests
 - new-product / candidate-8c41943435e9d7cbbaf8: Cannot confirm that the product is a material or printer
-- new-product / candidate-015faab310463390c6ee: HTTP Error 429: Too Many Requests
-- new-product / candidate-a367cbe7a4c157788fd4: Cannot confirm that the product is a material or printer
-- new-product / candidate-57d03b04573d00e6ff70: HTTP Error 429: Too Many Requests
-- new-product / candidate-99ab6f0d1daba774a0b9: Cannot confirm that the product is a material or printer
+- new-product / candidate-015faab310463390c6ee: Cannot confirm that the product is a material or printer
+- new-product / candidate-a367cbe7a4c157788fd4: HTTP Error 429: Too Many Requests
+- new-product / candidate-57d03b04573d00e6ff70: Cannot confirm that the product is a material or printer
+- new-product / candidate-99ab6f0d1daba774a0b9: HTTP Error 429: Too Many Requests
 - new-product / candidate-ff314f8e15fb350836e2: Cannot confirm that the product is a material or printer
-- new-product / candidate-fef387b95855824c2e64: HTTP Error 429: Too Many Requests
-- new-product / candidate-ee54b496f75c47443e10: Cannot confirm that the product is a material or printer
-- new-product / candidate-d50d1381f27aa0340bfc: HTTP Error 429: Too Many Requests
-- new-product / candidate-b86573ad211530f76a01: Cannot confirm that the product is a material or printer
+- new-product / candidate-fef387b95855824c2e64: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ee54b496f75c47443e10: HTTP Error 429: Too Many Requests
+- new-product / candidate-d50d1381f27aa0340bfc: Cannot confirm that the product is a material or printer
+- new-product / candidate-b86573ad211530f76a01: HTTP Error 429: Too Many Requests
 - new-product / candidate-8c29d0994fa40bbb417a: Cannot confirm that the product is a material or printer
-- new-product / candidate-bb76727412449cfa76b9: HTTP Error 429: Too Many Requests
-- new-product / candidate-c9051d56cd2967305523: Cannot confirm that the product is a material or printer
-- new-product / candidate-da91fd7e10c36a6dbfe3: HTTP Error 429: Too Many Requests
-- new-product / candidate-551f5b5be31f6a16f83f: Cannot confirm that the product is a material or printer
+- new-product / candidate-bb76727412449cfa76b9: Cannot confirm that the product is a material or printer
+- new-product / candidate-c9051d56cd2967305523: HTTP Error 429: Too Many Requests
+- new-product / candidate-da91fd7e10c36a6dbfe3: Cannot confirm that the product is a material or printer
+- new-product / candidate-551f5b5be31f6a16f83f: HTTP Error 429: Too Many Requests
 - new-product / candidate-7e30a83bafc24e6473f4: Cannot confirm that the product is a material or printer
-- new-product / candidate-01d115b0beedefd64fbb: HTTP Error 429: Too Many Requests
-- new-product / candidate-c9b16905dfcad2b03a78: Cannot confirm that the product is a material or printer
-- new-product / candidate-930a0c08fd81f479431c: HTTP Error 429: Too Many Requests
-- new-product / candidate-0b2e4945f3d1cff51cba: Cannot confirm that the product is a material or printer
+- new-product / candidate-01d115b0beedefd64fbb: Cannot confirm that the product is a material or printer
+- new-product / candidate-c9b16905dfcad2b03a78: HTTP Error 429: Too Many Requests
+- new-product / candidate-930a0c08fd81f479431c: Cannot confirm that the product is a material or printer
+- new-product / candidate-0b2e4945f3d1cff51cba: HTTP Error 429: Too Many Requests
 - new-product / candidate-a20dec06c71e32edb64c: Cannot confirm that the product is a material or printer
-- new-product / candidate-af66aa8e37852d0c1033: HTTP Error 429: Too Many Requests
-- new-product / candidate-6e28924e00a6cdd45bcc: Cannot confirm that the product is a material or printer
-- new-product / candidate-8094134b304f8a756c2b: HTTP Error 429: Too Many Requests
+- new-product / candidate-af66aa8e37852d0c1033: Cannot confirm that the product is a material or printer
+- new-product / candidate-6e28924e00a6cdd45bcc: HTTP Error 429: Too Many Requests
+- new-product / candidate-8094134b304f8a756c2b: Cannot confirm that the product is a material or printer
 - new-product / candidate-c63cc1a9ce9516a8f607: Cannot confirm that the product is a material or printer
 - new-product / candidate-751c1133dfd24ae2a3ef: Cannot confirm that the product is a material or printer
 - new-product / candidate-c671fa478b7fe142c392: Cannot confirm that the product is a material or printer
@@ -2213,132 +2369,132 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-3a59178be3c266a32d98: Source robots.txt disallows this URL
 - new-product / candidate-4c94e114db064d16b357: Source robots.txt disallows this URL
 - new-product / candidate-e801921dd5e06346b510: Source robots.txt disallows this URL
-- new-product / candidate-3a71d697af6c58ab06d5: HTTP Error 429: Too Many Requests
-- new-product / candidate-a3609e174a400f96b8ef: HTTP Error 429: Too Many Requests
-- new-product / candidate-a0572ac3174ef6ab1dc2: HTTP Error 429: Too Many Requests
-- new-product / candidate-b7a3855b31f2efc25616: HTTP Error 429: Too Many Requests
-- new-product / candidate-b0b5e90ab1708ea50ebc: HTTP Error 429: Too Many Requests
-- new-product / candidate-7cce8272adb8ad0d1606: HTTP Error 429: Too Many Requests
-- new-product / candidate-c80a211eacb4b28abec7: HTTP Error 429: Too Many Requests
-- new-product / candidate-c0993d127f95a8c9df72: HTTP Error 429: Too Many Requests
-- new-product / candidate-05fdff5ade7de31148c2: HTTP Error 429: Too Many Requests
-- new-product / candidate-db3e54c18170124573ce: HTTP Error 429: Too Many Requests
-- new-product / candidate-52558897eb42d00a79e6: HTTP Error 429: Too Many Requests
-- new-product / candidate-90c4eaf04cd80067188b: HTTP Error 429: Too Many Requests
-- new-product / candidate-9336b683bf094099d10d: HTTP Error 429: Too Many Requests
-- new-product / candidate-ed1d5a864e2dc1288071: HTTP Error 429: Too Many Requests
-- new-product / candidate-f6dbfab48e483d2bab6b: HTTP Error 429: Too Many Requests
-- new-product / candidate-8749b401fbe11bf0c1ce: HTTP Error 429: Too Many Requests
-- new-product / candidate-439b9547f20701c540cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-59b9b13f08d0f9bd3f0c: HTTP Error 429: Too Many Requests
-- new-product / candidate-321deec220cfd1a43f1a: HTTP Error 429: Too Many Requests
-- new-product / candidate-4704a19019abe40900c4: HTTP Error 429: Too Many Requests
-- new-product / candidate-d53e15dc818d0f1906f8: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a83dab5bdee2d322ec5: HTTP Error 429: Too Many Requests
-- new-product / candidate-b8210ae221b1444df49a: HTTP Error 429: Too Many Requests
-- new-product / candidate-73c4f87c29c7a01d1dd2: HTTP Error 429: Too Many Requests
-- new-product / candidate-39a0bf483c6e9a0a9509: HTTP Error 429: Too Many Requests
-- new-product / candidate-41723106d850d128db25: HTTP Error 429: Too Many Requests
-- new-product / candidate-ab547d715c4f09c9e1ae: HTTP Error 429: Too Many Requests
-- new-product / candidate-09f5d5b79911ac2ef5dd: HTTP Error 429: Too Many Requests
-- new-product / candidate-7d37827da995a9db64d2: HTTP Error 429: Too Many Requests
-- new-product / candidate-2b60729d9485f5b99ab7: HTTP Error 429: Too Many Requests
-- new-product / candidate-368a4e0e98b571e44fc7: HTTP Error 429: Too Many Requests
-- new-product / candidate-3dbdb5b7f25dffdfe45c: HTTP Error 429: Too Many Requests
-- new-product / candidate-dc765ddf5625f01f40cf: HTTP Error 429: Too Many Requests
-- new-product / candidate-e5db8e773557f4c8f601: HTTP Error 429: Too Many Requests
-- new-product / candidate-1c6e36dc1a5c6e3a6849: HTTP Error 429: Too Many Requests
-- new-product / candidate-0e6d87aef096cf52a398: HTTP Error 429: Too Many Requests
-- new-product / candidate-77c69f551b330c5fb9fd: HTTP Error 429: Too Many Requests
-- new-product / candidate-6c73bbf15a2d1edaad3e: HTTP Error 429: Too Many Requests
-- new-product / candidate-eccb40cb382fe39114c7: HTTP Error 429: Too Many Requests
-- new-product / candidate-ecf181d866821bf296c9: HTTP Error 429: Too Many Requests
-- new-product / candidate-da469030c872effb362f: HTTP Error 429: Too Many Requests
-- new-product / candidate-814ed100294dce13b7c1: HTTP Error 429: Too Many Requests
-- new-product / candidate-d42a38819ea58d179125: HTTP Error 429: Too Many Requests
-- new-product / candidate-e0d155f9d71309bcad65: HTTP Error 429: Too Many Requests
-- new-product / candidate-71e3cfd5de6fa7d14f6d: HTTP Error 429: Too Many Requests
-- new-product / candidate-17231fa432b96d1a40d8: HTTP Error 429: Too Many Requests
-- new-product / candidate-cb43d6c67a65d98c9f22: HTTP Error 429: Too Many Requests
-- new-product / candidate-060d669eea328429a8ba: HTTP Error 429: Too Many Requests
-- new-product / candidate-430b7fbea48bff90cc3c: HTTP Error 429: Too Many Requests
-- new-product / candidate-01d11af35fc60b548288: HTTP Error 429: Too Many Requests
-- new-product / candidate-61b63a9c8298dacfeeab: HTTP Error 429: Too Many Requests
-- new-product / candidate-6ab1cab3b6c58be87164: HTTP Error 429: Too Many Requests
-- new-product / candidate-4facf39547a666841681: HTTP Error 429: Too Many Requests
-- new-product / candidate-21141856bc451308221f: HTTP Error 429: Too Many Requests
-- new-product / candidate-8d832b88a39a1ed4fcb7: HTTP Error 429: Too Many Requests
-- new-product / candidate-65a65fe425ef78feda62: HTTP Error 429: Too Many Requests
-- new-product / candidate-60ccab9ee99a42e06bc5: HTTP Error 429: Too Many Requests
-- new-product / candidate-397f3622667850737811: HTTP Error 429: Too Many Requests
-- new-product / candidate-b4a20a0d12b6942f1358: HTTP Error 429: Too Many Requests
-- new-product / candidate-e73d8a7fc4996402f26b: HTTP Error 429: Too Many Requests
-- new-product / candidate-787637dc09334ce41eb6: HTTP Error 429: Too Many Requests
-- new-product / candidate-d0c8c8cd74b83dabcfe8: HTTP Error 429: Too Many Requests
-- new-product / candidate-26e6a16fe445ed945aaf: HTTP Error 429: Too Many Requests
-- new-product / candidate-5a89a9a9ce10310e1422: HTTP Error 429: Too Many Requests
-- new-product / candidate-4fc4b8cbc0e8cd45b042: HTTP Error 429: Too Many Requests
-- new-product / candidate-ca77eb4e409f6fa7ed8e: HTTP Error 429: Too Many Requests
-- new-product / candidate-e714adc18f0acb9bb3b2: HTTP Error 429: Too Many Requests
-- new-product / candidate-4f0e07ed91f9aaffd47c: HTTP Error 429: Too Many Requests
-- new-product / candidate-06cc9c4d288d8289a357: HTTP Error 429: Too Many Requests
-- new-product / candidate-7f0fe41f1d61947c5549: HTTP Error 429: Too Many Requests
-- new-product / candidate-5aaa47aa6abd9c65275c: HTTP Error 429: Too Many Requests
-- new-product / candidate-d08ac35c9a21e699be6e: HTTP Error 429: Too Many Requests
-- new-product / candidate-c5708e1d8e8a24609c8f: HTTP Error 429: Too Many Requests
-- new-product / candidate-bf4386f24f2810efd175: HTTP Error 429: Too Many Requests
-- new-product / candidate-79bf682d320c2ed841aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-0f8c7bd41e6a99280c0f: HTTP Error 429: Too Many Requests
-- new-product / candidate-b7be0fe28ebeae3d43d6: HTTP Error 429: Too Many Requests
-- new-product / candidate-e5a2515706e67aad8b05: HTTP Error 429: Too Many Requests
-- new-product / candidate-7efd9ae67c6ca690a451: HTTP Error 429: Too Many Requests
-- new-product / candidate-70722e3084acc4e7dda7: HTTP Error 429: Too Many Requests
-- new-product / candidate-d1be026c970d79c48b77: HTTP Error 429: Too Many Requests
-- new-product / candidate-ff8ca568fdceefae8adb: HTTP Error 429: Too Many Requests
-- new-product / candidate-26fe1c15777af6184547: HTTP Error 429: Too Many Requests
-- new-product / candidate-692b1e75b5b9652b155f: HTTP Error 429: Too Many Requests
-- new-product / candidate-e00aaf29b9ce4e070289: HTTP Error 429: Too Many Requests
-- new-product / candidate-d3e264bb445ae9458549: HTTP Error 429: Too Many Requests
-- new-product / candidate-5df6d9a8a04d32e8f33e: HTTP Error 429: Too Many Requests
-- new-product / candidate-02afc5a6bbdadfe9fe97: HTTP Error 429: Too Many Requests
-- new-product / candidate-132d50415a51c00b9857: HTTP Error 429: Too Many Requests
-- new-product / candidate-291d5a8f92422711a6ec: HTTP Error 429: Too Many Requests
-- new-product / candidate-e0fa1d31f71d69c9129f: HTTP Error 429: Too Many Requests
-- new-product / candidate-39b158624b6890f8a399: HTTP Error 429: Too Many Requests
-- new-product / candidate-6e230ff507b7f2627067: HTTP Error 429: Too Many Requests
-- new-product / candidate-49f39ed207cee461ac2b: HTTP Error 429: Too Many Requests
-- new-product / candidate-ea17f524c4a490cc5ba2: HTTP Error 429: Too Many Requests
-- new-product / candidate-2c55f65b35d1fe9f2f56: HTTP Error 429: Too Many Requests
-- new-product / candidate-b8233ff4b24889d77e46: HTTP Error 429: Too Many Requests
-- new-product / candidate-1c11a40bb666e9898648: HTTP Error 429: Too Many Requests
-- new-product / candidate-e5a491770c17013d33b8: HTTP Error 429: Too Many Requests
-- new-product / candidate-9c2146d180e5da66a0c1: HTTP Error 429: Too Many Requests
-- new-product / candidate-232af5fda0695dfef005: HTTP Error 429: Too Many Requests
-- new-product / candidate-111313f58ac2ca880348: HTTP Error 429: Too Many Requests
-- new-product / candidate-af3ea872a85235ec8f47: HTTP Error 429: Too Many Requests
-- new-product / candidate-fa1d9f25fcdc4478dc96: HTTP Error 429: Too Many Requests
-- new-product / candidate-0ede4ed3c0cd6100e7c7: HTTP Error 429: Too Many Requests
-- new-product / candidate-e4b72af4d04bbb4cd6d2: HTTP Error 429: Too Many Requests
-- new-product / candidate-f57f254ba6714065731d: HTTP Error 429: Too Many Requests
-- new-product / candidate-0d1c2bc525111af551ee: HTTP Error 429: Too Many Requests
-- new-product / candidate-0ae1b3311f70e1e93f1e: HTTP Error 429: Too Many Requests
-- new-product / candidate-0d21eea47c98a9289ebe: HTTP Error 429: Too Many Requests
-- new-product / candidate-702ff2fc9008d5fc3871: HTTP Error 429: Too Many Requests
-- new-product / candidate-fad7437708bc8fb4ffc8: HTTP Error 429: Too Many Requests
-- new-product / candidate-ecff4232c094f44cdfd7: HTTP Error 429: Too Many Requests
-- new-product / candidate-bb4d2d9084e53223a190: HTTP Error 429: Too Many Requests
-- new-product / candidate-ace1cfa4c671864f28d1: HTTP Error 429: Too Many Requests
-- new-product / candidate-c8c21d986a7c7be72d0f: HTTP Error 429: Too Many Requests
-- new-product / candidate-3b7e85cc0a728a10a673: HTTP Error 429: Too Many Requests
-- new-product / candidate-408663a3833a98f03445: HTTP Error 429: Too Many Requests
-- new-product / candidate-a805d7b450254ec49526: HTTP Error 429: Too Many Requests
-- new-product / candidate-a0b451a70eb1a52ec600: HTTP Error 429: Too Many Requests
-- new-product / candidate-d726447c492ea4b24558: HTTP Error 429: Too Many Requests
-- new-product / candidate-931ac5ed49bb6560d86d: HTTP Error 429: Too Many Requests
-- new-product / candidate-ef9cfa9ea779d7dcac18: HTTP Error 429: Too Many Requests
-- new-product / candidate-84079e1c60f2211b0681: HTTP Error 429: Too Many Requests
-- new-product / candidate-1f044b9d127ee022fa6d: HTTP Error 429: Too Many Requests
-- new-product / candidate-c49600e51eb8dad896fb: HTTP Error 429: Too Many Requests
+- new-product / candidate-3a71d697af6c58ab06d5: Source robots.txt disallows this URL
+- new-product / candidate-a3609e174a400f96b8ef: Source robots.txt disallows this URL
+- new-product / candidate-a0572ac3174ef6ab1dc2: Source robots.txt disallows this URL
+- new-product / candidate-b7a3855b31f2efc25616: Source robots.txt disallows this URL
+- new-product / candidate-b0b5e90ab1708ea50ebc: Source robots.txt disallows this URL
+- new-product / candidate-7cce8272adb8ad0d1606: Source robots.txt disallows this URL
+- new-product / candidate-c80a211eacb4b28abec7: Source robots.txt disallows this URL
+- new-product / candidate-c0993d127f95a8c9df72: Source robots.txt disallows this URL
+- new-product / candidate-05fdff5ade7de31148c2: Source robots.txt disallows this URL
+- new-product / candidate-db3e54c18170124573ce: Source robots.txt disallows this URL
+- new-product / candidate-52558897eb42d00a79e6: Source robots.txt disallows this URL
+- new-product / candidate-90c4eaf04cd80067188b: Source robots.txt disallows this URL
+- new-product / candidate-9336b683bf094099d10d: Source robots.txt disallows this URL
+- new-product / candidate-ed1d5a864e2dc1288071: Source robots.txt disallows this URL
+- new-product / candidate-f6dbfab48e483d2bab6b: Source robots.txt disallows this URL
+- new-product / candidate-8749b401fbe11bf0c1ce: Source robots.txt disallows this URL
+- new-product / candidate-439b9547f20701c540cd: Source robots.txt disallows this URL
+- new-product / candidate-59b9b13f08d0f9bd3f0c: Source robots.txt disallows this URL
+- new-product / candidate-321deec220cfd1a43f1a: Source robots.txt disallows this URL
+- new-product / candidate-4704a19019abe40900c4: Source robots.txt disallows this URL
+- new-product / candidate-d53e15dc818d0f1906f8: Source robots.txt disallows this URL
+- new-product / candidate-3a83dab5bdee2d322ec5: Source robots.txt disallows this URL
+- new-product / candidate-b8210ae221b1444df49a: Source robots.txt disallows this URL
+- new-product / candidate-73c4f87c29c7a01d1dd2: Source robots.txt disallows this URL
+- new-product / candidate-39a0bf483c6e9a0a9509: Source robots.txt disallows this URL
+- new-product / candidate-41723106d850d128db25: Source robots.txt disallows this URL
+- new-product / candidate-ab547d715c4f09c9e1ae: Source robots.txt disallows this URL
+- new-product / candidate-09f5d5b79911ac2ef5dd: Source robots.txt disallows this URL
+- new-product / candidate-7d37827da995a9db64d2: Source robots.txt disallows this URL
+- new-product / candidate-2b60729d9485f5b99ab7: Source robots.txt disallows this URL
+- new-product / candidate-368a4e0e98b571e44fc7: Source robots.txt disallows this URL
+- new-product / candidate-3dbdb5b7f25dffdfe45c: Source robots.txt disallows this URL
+- new-product / candidate-dc765ddf5625f01f40cf: Source robots.txt disallows this URL
+- new-product / candidate-e5db8e773557f4c8f601: Source robots.txt disallows this URL
+- new-product / candidate-1c6e36dc1a5c6e3a6849: Source robots.txt disallows this URL
+- new-product / candidate-0e6d87aef096cf52a398: Source robots.txt disallows this URL
+- new-product / candidate-77c69f551b330c5fb9fd: Source robots.txt disallows this URL
+- new-product / candidate-6c73bbf15a2d1edaad3e: Source robots.txt disallows this URL
+- new-product / candidate-eccb40cb382fe39114c7: Source robots.txt disallows this URL
+- new-product / candidate-ecf181d866821bf296c9: Source robots.txt disallows this URL
+- new-product / candidate-da469030c872effb362f: Source robots.txt disallows this URL
+- new-product / candidate-814ed100294dce13b7c1: Source robots.txt disallows this URL
+- new-product / candidate-d42a38819ea58d179125: Source robots.txt disallows this URL
+- new-product / candidate-e0d155f9d71309bcad65: Source robots.txt disallows this URL
+- new-product / candidate-71e3cfd5de6fa7d14f6d: Source robots.txt disallows this URL
+- new-product / candidate-17231fa432b96d1a40d8: Source robots.txt disallows this URL
+- new-product / candidate-cb43d6c67a65d98c9f22: Source robots.txt disallows this URL
+- new-product / candidate-060d669eea328429a8ba: Source robots.txt disallows this URL
+- new-product / candidate-430b7fbea48bff90cc3c: Source robots.txt disallows this URL
+- new-product / candidate-01d11af35fc60b548288: Source robots.txt disallows this URL
+- new-product / candidate-61b63a9c8298dacfeeab: Source robots.txt disallows this URL
+- new-product / candidate-6ab1cab3b6c58be87164: Source robots.txt disallows this URL
+- new-product / candidate-4facf39547a666841681: Source robots.txt disallows this URL
+- new-product / candidate-21141856bc451308221f: Source robots.txt disallows this URL
+- new-product / candidate-8d832b88a39a1ed4fcb7: Source robots.txt disallows this URL
+- new-product / candidate-65a65fe425ef78feda62: Source robots.txt disallows this URL
+- new-product / candidate-60ccab9ee99a42e06bc5: Source robots.txt disallows this URL
+- new-product / candidate-397f3622667850737811: Source robots.txt disallows this URL
+- new-product / candidate-b4a20a0d12b6942f1358: Source robots.txt disallows this URL
+- new-product / candidate-e73d8a7fc4996402f26b: Source robots.txt disallows this URL
+- new-product / candidate-787637dc09334ce41eb6: Source robots.txt disallows this URL
+- new-product / candidate-d0c8c8cd74b83dabcfe8: Source robots.txt disallows this URL
+- new-product / candidate-26e6a16fe445ed945aaf: Source robots.txt disallows this URL
+- new-product / candidate-5a89a9a9ce10310e1422: Source robots.txt disallows this URL
+- new-product / candidate-4fc4b8cbc0e8cd45b042: Source robots.txt disallows this URL
+- new-product / candidate-ca77eb4e409f6fa7ed8e: Source robots.txt disallows this URL
+- new-product / candidate-e714adc18f0acb9bb3b2: Source robots.txt disallows this URL
+- new-product / candidate-4f0e07ed91f9aaffd47c: Source robots.txt disallows this URL
+- new-product / candidate-06cc9c4d288d8289a357: Source robots.txt disallows this URL
+- new-product / candidate-7f0fe41f1d61947c5549: Source robots.txt disallows this URL
+- new-product / candidate-5aaa47aa6abd9c65275c: Source robots.txt disallows this URL
+- new-product / candidate-d08ac35c9a21e699be6e: Source robots.txt disallows this URL
+- new-product / candidate-c5708e1d8e8a24609c8f: Source robots.txt disallows this URL
+- new-product / candidate-bf4386f24f2810efd175: Source robots.txt disallows this URL
+- new-product / candidate-79bf682d320c2ed841aa: Source robots.txt disallows this URL
+- new-product / candidate-0f8c7bd41e6a99280c0f: Source robots.txt disallows this URL
+- new-product / candidate-b7be0fe28ebeae3d43d6: Source robots.txt disallows this URL
+- new-product / candidate-e5a2515706e67aad8b05: Source robots.txt disallows this URL
+- new-product / candidate-7efd9ae67c6ca690a451: Source robots.txt disallows this URL
+- new-product / candidate-70722e3084acc4e7dda7: Source robots.txt disallows this URL
+- new-product / candidate-d1be026c970d79c48b77: Source robots.txt disallows this URL
+- new-product / candidate-ff8ca568fdceefae8adb: Source robots.txt disallows this URL
+- new-product / candidate-26fe1c15777af6184547: Source robots.txt disallows this URL
+- new-product / candidate-692b1e75b5b9652b155f: Source robots.txt disallows this URL
+- new-product / candidate-e00aaf29b9ce4e070289: Source robots.txt disallows this URL
+- new-product / candidate-d3e264bb445ae9458549: Source robots.txt disallows this URL
+- new-product / candidate-5df6d9a8a04d32e8f33e: Source robots.txt disallows this URL
+- new-product / candidate-02afc5a6bbdadfe9fe97: Source robots.txt disallows this URL
+- new-product / candidate-132d50415a51c00b9857: Source robots.txt disallows this URL
+- new-product / candidate-291d5a8f92422711a6ec: Source robots.txt disallows this URL
+- new-product / candidate-e0fa1d31f71d69c9129f: Source robots.txt disallows this URL
+- new-product / candidate-39b158624b6890f8a399: Source robots.txt disallows this URL
+- new-product / candidate-6e230ff507b7f2627067: Source robots.txt disallows this URL
+- new-product / candidate-49f39ed207cee461ac2b: Source robots.txt disallows this URL
+- new-product / candidate-ea17f524c4a490cc5ba2: Source robots.txt disallows this URL
+- new-product / candidate-2c55f65b35d1fe9f2f56: Source robots.txt disallows this URL
+- new-product / candidate-b8233ff4b24889d77e46: Source robots.txt disallows this URL
+- new-product / candidate-1c11a40bb666e9898648: Source robots.txt disallows this URL
+- new-product / candidate-e5a491770c17013d33b8: Source robots.txt disallows this URL
+- new-product / candidate-9c2146d180e5da66a0c1: Source robots.txt disallows this URL
+- new-product / candidate-232af5fda0695dfef005: Source robots.txt disallows this URL
+- new-product / candidate-111313f58ac2ca880348: Source robots.txt disallows this URL
+- new-product / candidate-af3ea872a85235ec8f47: Source robots.txt disallows this URL
+- new-product / candidate-fa1d9f25fcdc4478dc96: Source robots.txt disallows this URL
+- new-product / candidate-0ede4ed3c0cd6100e7c7: Source robots.txt disallows this URL
+- new-product / candidate-e4b72af4d04bbb4cd6d2: Source robots.txt disallows this URL
+- new-product / candidate-f57f254ba6714065731d: Source robots.txt disallows this URL
+- new-product / candidate-0d1c2bc525111af551ee: Source robots.txt disallows this URL
+- new-product / candidate-0ae1b3311f70e1e93f1e: Source robots.txt disallows this URL
+- new-product / candidate-0d21eea47c98a9289ebe: Source robots.txt disallows this URL
+- new-product / candidate-702ff2fc9008d5fc3871: Source robots.txt disallows this URL
+- new-product / candidate-fad7437708bc8fb4ffc8: Source robots.txt disallows this URL
+- new-product / candidate-ecff4232c094f44cdfd7: Source robots.txt disallows this URL
+- new-product / candidate-bb4d2d9084e53223a190: Source robots.txt disallows this URL
+- new-product / candidate-ace1cfa4c671864f28d1: Source robots.txt disallows this URL
+- new-product / candidate-c8c21d986a7c7be72d0f: Source robots.txt disallows this URL
+- new-product / candidate-3b7e85cc0a728a10a673: Source robots.txt disallows this URL
+- new-product / candidate-408663a3833a98f03445: Source robots.txt disallows this URL
+- new-product / candidate-a805d7b450254ec49526: Source robots.txt disallows this URL
+- new-product / candidate-a0b451a70eb1a52ec600: Source robots.txt disallows this URL
+- new-product / candidate-d726447c492ea4b24558: Source robots.txt disallows this URL
+- new-product / candidate-931ac5ed49bb6560d86d: Source robots.txt disallows this URL
+- new-product / candidate-ef9cfa9ea779d7dcac18: Source robots.txt disallows this URL
+- new-product / candidate-84079e1c60f2211b0681: Source robots.txt disallows this URL
+- new-product / candidate-1f044b9d127ee022fa6d: Source robots.txt disallows this URL
+- new-product / candidate-c49600e51eb8dad896fb: Source robots.txt disallows this URL
 - new-product / candidate-011de292db769bb72933: HTTP Error 429: Too Many Requests
 - new-product / candidate-b55c62ba29caa1d2c292: HTTP Error 429: Too Many Requests
 - new-product / candidate-bbc2bc9d7e869520e56d: HTTP Error 429: Too Many Requests
@@ -2367,53 +2523,53 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-dd386b8e516e7e5688a8: HTTP Error 429: Too Many Requests
 - new-product / candidate-e67d5da6facb15a4080d: HTTP Error 429: Too Many Requests
 - new-product / candidate-173daeee313b0cc65305: HTTP Error 429: Too Many Requests
-- new-product / candidate-652a58a3872004ed51c1: HTTP Error 429: Too Many Requests
-- new-product / candidate-cb964fbc0f09fe2a4489: HTTP Error 429: Too Many Requests
-- new-product / candidate-6b24b83b421e48ea9c30: HTTP Error 429: Too Many Requests
-- new-product / candidate-c3db83d2ac00e82ddeea: HTTP Error 429: Too Many Requests
-- new-product / candidate-afb212a1f423b5b09efe: HTTP Error 429: Too Many Requests
-- new-product / candidate-eff4206a4d0453dbf506: HTTP Error 429: Too Many Requests
-- new-product / candidate-84c1c90423fc2ae4b6b0: HTTP Error 429: Too Many Requests
-- new-product / candidate-13629718ae0358645928: HTTP Error 429: Too Many Requests
-- new-product / candidate-19fc14ffc3ff0cb7a86b: HTTP Error 429: Too Many Requests
-- new-product / candidate-96ac8aec7507943257d7: HTTP Error 429: Too Many Requests
-- new-product / candidate-1c3eb9ff07f6e2c1a0ff: HTTP Error 429: Too Many Requests
-- new-product / candidate-bc69632101dd6e875ecb: HTTP Error 429: Too Many Requests
-- new-product / candidate-d428e30b600095c583c8: HTTP Error 429: Too Many Requests
-- new-product / candidate-c03c9fa03e1d0a1e3ad3: HTTP Error 429: Too Many Requests
-- new-product / candidate-c63baa169d60e3f6f1dc: HTTP Error 429: Too Many Requests
-- new-product / candidate-49ed89f545874ba674ce: HTTP Error 429: Too Many Requests
-- new-product / candidate-7c58a315512d40a9e968: HTTP Error 429: Too Many Requests
-- new-product / candidate-080b6b43f5732f3c6b8d: HTTP Error 429: Too Many Requests
-- new-product / candidate-724a17c78b59d4ba7f00: HTTP Error 429: Too Many Requests
-- new-product / candidate-01ccfef04c8e1a03ca91: HTTP Error 429: Too Many Requests
-- new-product / candidate-3fdace7e6c5c3a126a71: HTTP Error 429: Too Many Requests
-- new-product / candidate-470b94a37ab83918d6c4: HTTP Error 429: Too Many Requests
-- new-product / candidate-6f3dd5d978461e3624e6: HTTP Error 429: Too Many Requests
-- new-product / candidate-4bde6d16849325f5d561: Source robots.txt disallows this URL
-- new-product / candidate-cb811ee68039e2b0e494: Source robots.txt disallows this URL
-- new-product / candidate-d357b561b3cca5c94e1c: Source robots.txt disallows this URL
-- new-product / candidate-8e5094e9ae9b434eca71: Source robots.txt disallows this URL
-- new-product / candidate-c4ca6a6ce44238b0b914: Source robots.txt disallows this URL
-- new-product / candidate-f292daf459586bb65a55: Source robots.txt disallows this URL
-- new-product / candidate-31308d5ca044b1b49f84: Source robots.txt disallows this URL
-- new-product / candidate-e2588ed9c8fbe1941310: Source robots.txt disallows this URL
-- new-product / candidate-8d04d792e386edc96bbf: Source robots.txt disallows this URL
-- new-product / candidate-10ea3c0ecbcf36ba7838: Source robots.txt disallows this URL
-- new-product / candidate-365b8f56c66e15fb7609: Source robots.txt disallows this URL
-- new-product / candidate-b0b492076f71d48982b6: Source robots.txt disallows this URL
-- new-product / candidate-7199aadd6535041ad3f5: Source robots.txt disallows this URL
-- new-product / candidate-8f56899f918b5bb7751e: Source robots.txt disallows this URL
-- new-product / candidate-d80a593e1852720910c5: Source robots.txt disallows this URL
-- new-product / candidate-9b034562e70f0c9b8383: Source robots.txt disallows this URL
-- new-product / candidate-07a82c946eef1a831a94: Source robots.txt disallows this URL
-- new-product / candidate-77923d64c293c0718be3: Source robots.txt disallows this URL
-- new-product / candidate-074c7e674a1dfef7144b: Source robots.txt disallows this URL
-- new-product / candidate-1aa221c4ef7c10ee0a4e: Source robots.txt disallows this URL
-- new-product / candidate-48a8db5bdc61329baf2f: Source robots.txt disallows this URL
-- new-product / candidate-e297da502040bce9d9d6: Source robots.txt disallows this URL
-- new-product / candidate-2ff452c4884c048c20f3: Source robots.txt disallows this URL
-- new-product / candidate-d27804fe6c36c118c915: Source robots.txt disallows this URL
+- new-product / candidate-652a58a3872004ed51c1: Source robots.txt disallows this URL
+- new-product / candidate-cb964fbc0f09fe2a4489: Source robots.txt disallows this URL
+- new-product / candidate-6b24b83b421e48ea9c30: Source robots.txt disallows this URL
+- new-product / candidate-c3db83d2ac00e82ddeea: Source robots.txt disallows this URL
+- new-product / candidate-afb212a1f423b5b09efe: Source robots.txt disallows this URL
+- new-product / candidate-eff4206a4d0453dbf506: Source robots.txt disallows this URL
+- new-product / candidate-84c1c90423fc2ae4b6b0: Source robots.txt disallows this URL
+- new-product / candidate-13629718ae0358645928: Source robots.txt disallows this URL
+- new-product / candidate-19fc14ffc3ff0cb7a86b: Source robots.txt disallows this URL
+- new-product / candidate-96ac8aec7507943257d7: Source robots.txt disallows this URL
+- new-product / candidate-1c3eb9ff07f6e2c1a0ff: Source robots.txt disallows this URL
+- new-product / candidate-bc69632101dd6e875ecb: Source robots.txt disallows this URL
+- new-product / candidate-d428e30b600095c583c8: Source robots.txt disallows this URL
+- new-product / candidate-c03c9fa03e1d0a1e3ad3: Source robots.txt disallows this URL
+- new-product / candidate-c63baa169d60e3f6f1dc: Source robots.txt disallows this URL
+- new-product / candidate-49ed89f545874ba674ce: Source robots.txt disallows this URL
+- new-product / candidate-7c58a315512d40a9e968: Source robots.txt disallows this URL
+- new-product / candidate-080b6b43f5732f3c6b8d: Source robots.txt disallows this URL
+- new-product / candidate-724a17c78b59d4ba7f00: Source robots.txt disallows this URL
+- new-product / candidate-01ccfef04c8e1a03ca91: Source robots.txt disallows this URL
+- new-product / candidate-3fdace7e6c5c3a126a71: Source robots.txt disallows this URL
+- new-product / candidate-470b94a37ab83918d6c4: Source robots.txt disallows this URL
+- new-product / candidate-6f3dd5d978461e3624e6: Source robots.txt disallows this URL
+- new-product / candidate-4bde6d16849325f5d561: HTTP Error 429: Too Many Requests
+- new-product / candidate-cb811ee68039e2b0e494: HTTP Error 429: Too Many Requests
+- new-product / candidate-d357b561b3cca5c94e1c: HTTP Error 429: Too Many Requests
+- new-product / candidate-8e5094e9ae9b434eca71: HTTP Error 429: Too Many Requests
+- new-product / candidate-c4ca6a6ce44238b0b914: HTTP Error 429: Too Many Requests
+- new-product / candidate-f292daf459586bb65a55: HTTP Error 429: Too Many Requests
+- new-product / candidate-31308d5ca044b1b49f84: HTTP Error 429: Too Many Requests
+- new-product / candidate-e2588ed9c8fbe1941310: HTTP Error 429: Too Many Requests
+- new-product / candidate-8d04d792e386edc96bbf: HTTP Error 429: Too Many Requests
+- new-product / candidate-10ea3c0ecbcf36ba7838: HTTP Error 429: Too Many Requests
+- new-product / candidate-365b8f56c66e15fb7609: HTTP Error 429: Too Many Requests
+- new-product / candidate-b0b492076f71d48982b6: HTTP Error 429: Too Many Requests
+- new-product / candidate-7199aadd6535041ad3f5: HTTP Error 429: Too Many Requests
+- new-product / candidate-8f56899f918b5bb7751e: HTTP Error 429: Too Many Requests
+- new-product / candidate-d80a593e1852720910c5: HTTP Error 429: Too Many Requests
+- new-product / candidate-9b034562e70f0c9b8383: HTTP Error 429: Too Many Requests
+- new-product / candidate-07a82c946eef1a831a94: HTTP Error 429: Too Many Requests
+- new-product / candidate-77923d64c293c0718be3: HTTP Error 429: Too Many Requests
+- new-product / candidate-074c7e674a1dfef7144b: HTTP Error 429: Too Many Requests
+- new-product / candidate-1aa221c4ef7c10ee0a4e: HTTP Error 429: Too Many Requests
+- new-product / candidate-48a8db5bdc61329baf2f: HTTP Error 429: Too Many Requests
+- new-product / candidate-e297da502040bce9d9d6: HTTP Error 429: Too Many Requests
+- new-product / candidate-2ff452c4884c048c20f3: HTTP Error 429: Too Many Requests
+- new-product / candidate-d27804fe6c36c118c915: HTTP Error 429: Too Many Requests
 - new-product / candidate-926b5788011e5d21eff2: HTTP Error 429: Too Many Requests
 - new-product / candidate-c7c37e567127625545b7: HTTP Error 429: Too Many Requests
 - new-product / candidate-fa96312432ce4db7b4a1: HTTP Error 429: Too Many Requests
@@ -2427,87 +2583,87 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-c045a4b24e482cb5425b: HTTP Error 429: Too Many Requests
 - new-product / candidate-292fc7f09cd4bb63ebca: HTTP Error 429: Too Many Requests
 - new-product / candidate-7f033ffe03adf9c799a8: HTTP Error 429: Too Many Requests
-- new-product / candidate-7c6cba5f009f4ab246fd: HTTP Error 429: Too Many Requests
-- new-product / candidate-0e66a40603740bc29bc6: HTTP Error 429: Too Many Requests
-- new-product / candidate-9962bfa5137566d58753: HTTP Error 429: Too Many Requests
-- new-product / candidate-1dfb96a248b5db33fe0b: HTTP Error 429: Too Many Requests
-- new-product / candidate-dae793899d60ad3a9be8: HTTP Error 429: Too Many Requests
-- new-product / candidate-59aa87fa51c2e0d5fb65: HTTP Error 429: Too Many Requests
-- new-product / candidate-bc3f8734d198d923ec6e: HTTP Error 429: Too Many Requests
-- new-product / candidate-8829d333015c8396dc5a: HTTP Error 429: Too Many Requests
-- new-product / candidate-8ddd22f312adc40ea27c: HTTP Error 429: Too Many Requests
-- new-product / candidate-6cc04a14b92994f2a451: HTTP Error 429: Too Many Requests
-- new-product / candidate-d5e8a63c603e312861a8: HTTP Error 429: Too Many Requests
-- new-product / candidate-5eab73e085d6b7e45f11: HTTP Error 429: Too Many Requests
-- new-product / candidate-3ef3d33637c79da4a1ad: HTTP Error 429: Too Many Requests
-- new-product / candidate-ca29caa2f2fbe9edc643: HTTP Error 429: Too Many Requests
-- new-product / candidate-dbcf658adb76e84b48bb: HTTP Error 429: Too Many Requests
-- new-product / candidate-97979d3fb5805579f185: HTTP Error 429: Too Many Requests
-- new-product / candidate-a65ac7e238d36d40c92a: HTTP Error 429: Too Many Requests
-- new-product / candidate-0e7de98e48e29bfe5115: HTTP Error 429: Too Many Requests
-- new-product / candidate-dc65c2659389bd4f21f5: HTTP Error 429: Too Many Requests
-- new-product / candidate-bd4cf1781a441f13c515: HTTP Error 429: Too Many Requests
-- new-product / candidate-451696d0a41ba7e7658e: HTTP Error 429: Too Many Requests
-- new-product / candidate-c97895d254efda03234d: HTTP Error 429: Too Many Requests
-- new-product / candidate-becb6bd1c4a3d39846ff: HTTP Error 429: Too Many Requests
-- new-product / candidate-f81cecb043c0bfaee8dc: HTTP Error 429: Too Many Requests
-- new-product / candidate-5377af674e4b3894825c: HTTP Error 429: Too Many Requests
-- new-product / candidate-8768e2bd609de2e310e0: HTTP Error 429: Too Many Requests
-- new-product / candidate-6e8be5ff3469c12b2089: HTTP Error 429: Too Many Requests
-- new-product / candidate-30e4869e52f709b6c3f6: HTTP Error 429: Too Many Requests
-- new-product / candidate-b6a82e901b0db3ed86bc: HTTP Error 429: Too Many Requests
-- new-product / candidate-7744da5f4f0801675c3f: HTTP Error 429: Too Many Requests
-- new-product / candidate-945ede68763b81903d35: HTTP Error 429: Too Many Requests
-- new-product / candidate-ad932228fdb78181d6dd: HTTP Error 429: Too Many Requests
-- new-product / candidate-475b6b3c19ba2ced1239: HTTP Error 429: Too Many Requests
-- new-product / candidate-cfd8d6c2839fae1d9293: HTTP Error 429: Too Many Requests
-- new-product / candidate-21791b1cfa4d2d511680: HTTP Error 429: Too Many Requests
-- new-product / candidate-8d0ebfdb7ae2d977a7ce: HTTP Error 429: Too Many Requests
-- new-product / candidate-9a5f4eada3aab8c9d999: HTTP Error 429: Too Many Requests
-- new-product / candidate-ca8a80b3a8416880517b: HTTP Error 429: Too Many Requests
-- new-product / candidate-6812953db3c0656eb243: HTTP Error 429: Too Many Requests
-- new-product / candidate-4e3bc7d880b6672df02d: HTTP Error 429: Too Many Requests
-- new-product / candidate-1d3f5751a7387fc3df34: HTTP Error 429: Too Many Requests
-- new-product / candidate-491ca55c61897821510f: HTTP Error 429: Too Many Requests
-- new-product / candidate-16e532d222a6b37267ab: HTTP Error 429: Too Many Requests
-- new-product / candidate-0038465a07d067b22ea2: HTTP Error 429: Too Many Requests
-- new-product / candidate-21022fc94bde9c5f8333: HTTP Error 429: Too Many Requests
-- new-product / candidate-156cf18d6d1ac48eb738: HTTP Error 429: Too Many Requests
-- new-product / candidate-e89114b5a429bca6fe7a: HTTP Error 429: Too Many Requests
-- new-product / candidate-02556755f1bcea4c88bb: HTTP Error 429: Too Many Requests
-- new-product / candidate-7ff9bd9ceb6d6f7c9ac7: HTTP Error 429: Too Many Requests
-- new-product / candidate-b8ef25adda0c49b70713: HTTP Error 429: Too Many Requests
-- new-product / candidate-c25b647691f1469cc97c: HTTP Error 429: Too Many Requests
-- new-product / candidate-7894cf12ad268f53c6cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-1dc387a3e0742199eaed: HTTP Error 429: Too Many Requests
-- new-product / candidate-81f2c5343233fef6cab7: HTTP Error 429: Too Many Requests
-- new-product / candidate-99619c5e65df55b6fe4a: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a3b8b4dbd7abce11f42: HTTP Error 429: Too Many Requests
-- new-product / candidate-5f517cccae040f663e44: HTTP Error 429: Too Many Requests
-- new-product / candidate-49df135a8c51dcaf22bd: HTTP Error 429: Too Many Requests
-- new-product / candidate-d877de9f43c414379772: HTTP Error 429: Too Many Requests
-- new-product / candidate-359780ba59346d404940: HTTP Error 429: Too Many Requests
-- new-product / candidate-9758ee061f2d76e19a09: HTTP Error 429: Too Many Requests
-- new-product / candidate-cb8dd5a7b9f8fdb389db: HTTP Error 429: Too Many Requests
-- new-product / candidate-037690b19ffbb64bdfad: HTTP Error 429: Too Many Requests
-- new-product / candidate-2929a2da0324fe91a44b: HTTP Error 429: Too Many Requests
-- new-product / candidate-32d076c3c2510811637c: HTTP Error 429: Too Many Requests
-- new-product / candidate-91fd3f5dd1333ac245f0: HTTP Error 429: Too Many Requests
-- new-product / candidate-38c2f040750ed8035b41: HTTP Error 429: Too Many Requests
-- new-product / candidate-a5d16e60a3be8ee2ceb4: HTTP Error 429: Too Many Requests
-- new-product / candidate-2f4369de87946c7ade60: HTTP Error 429: Too Many Requests
-- new-product / candidate-7e27a270f52a4ee93a97: HTTP Error 429: Too Many Requests
-- new-product / candidate-d788bb510b6eac6b33bf: HTTP Error 429: Too Many Requests
-- new-product / candidate-fec3802639d833d280de: HTTP Error 429: Too Many Requests
-- new-product / candidate-baa86ccd5379a7da4d60: HTTP Error 429: Too Many Requests
-- new-product / candidate-ac1d910eecfa52540dd8: HTTP Error 429: Too Many Requests
-- new-product / candidate-fb5421681002d4246b18: HTTP Error 429: Too Many Requests
-- new-product / candidate-629b9c22d65716e73195: HTTP Error 429: Too Many Requests
-- new-product / candidate-5b0547ebae145a9746e3: HTTP Error 429: Too Many Requests
-- new-product / candidate-41c837c88cccf2629f14: HTTP Error 429: Too Many Requests
-- new-product / candidate-0f86c3790beca029d3cb: HTTP Error 429: Too Many Requests
-- new-product / candidate-8f55f11524d759acbbb6: HTTP Error 429: Too Many Requests
-- new-product / candidate-53bf81140bbd978fad5f: HTTP Error 429: Too Many Requests
+- new-product / candidate-7c6cba5f009f4ab246fd: Source robots.txt disallows this URL
+- new-product / candidate-0e66a40603740bc29bc6: Source robots.txt disallows this URL
+- new-product / candidate-9962bfa5137566d58753: Source robots.txt disallows this URL
+- new-product / candidate-1dfb96a248b5db33fe0b: Source robots.txt disallows this URL
+- new-product / candidate-dae793899d60ad3a9be8: Source robots.txt disallows this URL
+- new-product / candidate-59aa87fa51c2e0d5fb65: Source robots.txt disallows this URL
+- new-product / candidate-bc3f8734d198d923ec6e: Source robots.txt disallows this URL
+- new-product / candidate-8829d333015c8396dc5a: Source robots.txt disallows this URL
+- new-product / candidate-8ddd22f312adc40ea27c: Source robots.txt disallows this URL
+- new-product / candidate-6cc04a14b92994f2a451: Source robots.txt disallows this URL
+- new-product / candidate-d5e8a63c603e312861a8: Source robots.txt disallows this URL
+- new-product / candidate-5eab73e085d6b7e45f11: Source robots.txt disallows this URL
+- new-product / candidate-3ef3d33637c79da4a1ad: Source robots.txt disallows this URL
+- new-product / candidate-ca29caa2f2fbe9edc643: Source robots.txt disallows this URL
+- new-product / candidate-dbcf658adb76e84b48bb: Source robots.txt disallows this URL
+- new-product / candidate-97979d3fb5805579f185: Source robots.txt disallows this URL
+- new-product / candidate-a65ac7e238d36d40c92a: Source robots.txt disallows this URL
+- new-product / candidate-0e7de98e48e29bfe5115: Source robots.txt disallows this URL
+- new-product / candidate-dc65c2659389bd4f21f5: Source robots.txt disallows this URL
+- new-product / candidate-bd4cf1781a441f13c515: Source robots.txt disallows this URL
+- new-product / candidate-451696d0a41ba7e7658e: Source robots.txt disallows this URL
+- new-product / candidate-c97895d254efda03234d: Source robots.txt disallows this URL
+- new-product / candidate-becb6bd1c4a3d39846ff: Source robots.txt disallows this URL
+- new-product / candidate-f81cecb043c0bfaee8dc: Source robots.txt disallows this URL
+- new-product / candidate-5377af674e4b3894825c: Source robots.txt disallows this URL
+- new-product / candidate-8768e2bd609de2e310e0: Source robots.txt disallows this URL
+- new-product / candidate-6e8be5ff3469c12b2089: Source robots.txt disallows this URL
+- new-product / candidate-30e4869e52f709b6c3f6: Source robots.txt disallows this URL
+- new-product / candidate-b6a82e901b0db3ed86bc: Source robots.txt disallows this URL
+- new-product / candidate-7744da5f4f0801675c3f: Source robots.txt disallows this URL
+- new-product / candidate-945ede68763b81903d35: Source robots.txt disallows this URL
+- new-product / candidate-ad932228fdb78181d6dd: Source robots.txt disallows this URL
+- new-product / candidate-475b6b3c19ba2ced1239: Source robots.txt disallows this URL
+- new-product / candidate-cfd8d6c2839fae1d9293: Source robots.txt disallows this URL
+- new-product / candidate-21791b1cfa4d2d511680: Source robots.txt disallows this URL
+- new-product / candidate-8d0ebfdb7ae2d977a7ce: Source robots.txt disallows this URL
+- new-product / candidate-9a5f4eada3aab8c9d999: Source robots.txt disallows this URL
+- new-product / candidate-ca8a80b3a8416880517b: Source robots.txt disallows this URL
+- new-product / candidate-6812953db3c0656eb243: Source robots.txt disallows this URL
+- new-product / candidate-4e3bc7d880b6672df02d: Source robots.txt disallows this URL
+- new-product / candidate-1d3f5751a7387fc3df34: Source robots.txt disallows this URL
+- new-product / candidate-491ca55c61897821510f: Source robots.txt disallows this URL
+- new-product / candidate-16e532d222a6b37267ab: Source robots.txt disallows this URL
+- new-product / candidate-0038465a07d067b22ea2: Source robots.txt disallows this URL
+- new-product / candidate-21022fc94bde9c5f8333: Source robots.txt disallows this URL
+- new-product / candidate-156cf18d6d1ac48eb738: Source robots.txt disallows this URL
+- new-product / candidate-e89114b5a429bca6fe7a: Source robots.txt disallows this URL
+- new-product / candidate-02556755f1bcea4c88bb: Source robots.txt disallows this URL
+- new-product / candidate-7ff9bd9ceb6d6f7c9ac7: Source robots.txt disallows this URL
+- new-product / candidate-b8ef25adda0c49b70713: Source robots.txt disallows this URL
+- new-product / candidate-c25b647691f1469cc97c: Source robots.txt disallows this URL
+- new-product / candidate-7894cf12ad268f53c6cd: Source robots.txt disallows this URL
+- new-product / candidate-1dc387a3e0742199eaed: Source robots.txt disallows this URL
+- new-product / candidate-81f2c5343233fef6cab7: Source robots.txt disallows this URL
+- new-product / candidate-99619c5e65df55b6fe4a: Source robots.txt disallows this URL
+- new-product / candidate-3a3b8b4dbd7abce11f42: Source robots.txt disallows this URL
+- new-product / candidate-5f517cccae040f663e44: Source robots.txt disallows this URL
+- new-product / candidate-49df135a8c51dcaf22bd: Source robots.txt disallows this URL
+- new-product / candidate-d877de9f43c414379772: Source robots.txt disallows this URL
+- new-product / candidate-359780ba59346d404940: Source robots.txt disallows this URL
+- new-product / candidate-9758ee061f2d76e19a09: Source robots.txt disallows this URL
+- new-product / candidate-cb8dd5a7b9f8fdb389db: Source robots.txt disallows this URL
+- new-product / candidate-037690b19ffbb64bdfad: Source robots.txt disallows this URL
+- new-product / candidate-2929a2da0324fe91a44b: Source robots.txt disallows this URL
+- new-product / candidate-32d076c3c2510811637c: Source robots.txt disallows this URL
+- new-product / candidate-91fd3f5dd1333ac245f0: Source robots.txt disallows this URL
+- new-product / candidate-38c2f040750ed8035b41: Source robots.txt disallows this URL
+- new-product / candidate-a5d16e60a3be8ee2ceb4: Source robots.txt disallows this URL
+- new-product / candidate-2f4369de87946c7ade60: Source robots.txt disallows this URL
+- new-product / candidate-7e27a270f52a4ee93a97: Source robots.txt disallows this URL
+- new-product / candidate-d788bb510b6eac6b33bf: Source robots.txt disallows this URL
+- new-product / candidate-fec3802639d833d280de: Source robots.txt disallows this URL
+- new-product / candidate-baa86ccd5379a7da4d60: Source robots.txt disallows this URL
+- new-product / candidate-ac1d910eecfa52540dd8: Source robots.txt disallows this URL
+- new-product / candidate-fb5421681002d4246b18: Source robots.txt disallows this URL
+- new-product / candidate-629b9c22d65716e73195: Source robots.txt disallows this URL
+- new-product / candidate-5b0547ebae145a9746e3: Source robots.txt disallows this URL
+- new-product / candidate-41c837c88cccf2629f14: Source robots.txt disallows this URL
+- new-product / candidate-0f86c3790beca029d3cb: Source robots.txt disallows this URL
+- new-product / candidate-8f55f11524d759acbbb6: Source robots.txt disallows this URL
+- new-product / candidate-53bf81140bbd978fad5f: Source robots.txt disallows this URL
 - new-product / candidate-496096867d187e74a4bc: Source robots.txt disallows this URL
 - new-product / candidate-e717c64b905f2fcaa1b8: Source robots.txt disallows this URL
 - new-product / candidate-43e451faafd18c694126: Source robots.txt disallows this URL
@@ -2517,144 +2673,144 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-063dbcdc9e291aae2dd7: Source robots.txt disallows this URL
 - new-product / candidate-4e9257764cb5c87d34e1: Source robots.txt disallows this URL
 - new-product / candidate-9588575c86d98f7b1f56: Source robots.txt disallows this URL
-- new-product / candidate-a4fa090a2bb2dc802a6b: Source robots.txt disallows this URL
-- new-product / candidate-bbc44316fd4c3e9e85a0: Source robots.txt disallows this URL
-- new-product / candidate-a77fb8612c4aaa7f9c21: Source robots.txt disallows this URL
-- new-product / candidate-424091d36c7726b29c65: Source robots.txt disallows this URL
-- new-product / candidate-ff8dd0373858adf1d70a: Source robots.txt disallows this URL
-- new-product / candidate-ebafb332e81e4d6a5707: Source robots.txt disallows this URL
-- new-product / candidate-9e004f1c313d19769036: Source robots.txt disallows this URL
-- new-product / candidate-a8dd2a3658540931d8d4: Source robots.txt disallows this URL
-- new-product / candidate-b10b59c18db828754b64: Source robots.txt disallows this URL
+- new-product / candidate-a4fa090a2bb2dc802a6b: HTTP Error 429: Too Many Requests
+- new-product / candidate-bbc44316fd4c3e9e85a0: HTTP Error 429: Too Many Requests
+- new-product / candidate-a77fb8612c4aaa7f9c21: HTTP Error 429: Too Many Requests
+- new-product / candidate-424091d36c7726b29c65: HTTP Error 429: Too Many Requests
+- new-product / candidate-ff8dd0373858adf1d70a: HTTP Error 429: Too Many Requests
+- new-product / candidate-ebafb332e81e4d6a5707: HTTP Error 429: Too Many Requests
+- new-product / candidate-9e004f1c313d19769036: HTTP Error 429: Too Many Requests
+- new-product / candidate-a8dd2a3658540931d8d4: HTTP Error 429: Too Many Requests
+- new-product / candidate-b10b59c18db828754b64: HTTP Error 429: Too Many Requests
 - new-product / candidate-5cca341eda1ee615977a: HTTP Error 429: Too Many Requests
 - new-product / candidate-03b3ea75109523fcd073: HTTP Error 429: Too Many Requests
 - new-product / candidate-dc870c028fcb8dc5a5df: HTTP Error 429: Too Many Requests
 - new-product / candidate-597a6bd41f309dd8c904: HTTP Error 429: Too Many Requests
-- new-product / candidate-ce0fda9bc50fa317e342: Source robots.txt disallows this URL
-- new-product / candidate-f251681775a26893549e: Source robots.txt disallows this URL
-- new-product / candidate-5f02637780a36a2d1899: Source robots.txt disallows this URL
-- new-product / candidate-041cd129eb9ec964f32c: Source robots.txt disallows this URL
-- new-product / candidate-5623e8af3194eb899c43: Source robots.txt disallows this URL
-- new-product / candidate-218088aa5bc071c0915f: Source robots.txt disallows this URL
-- new-product / candidate-6a394e0b85b1aef8f60b: HTTP Error 429: Too Many Requests
-- new-product / candidate-0bb392b13e1e2d7768a2: HTTP Error 429: Too Many Requests
-- new-product / candidate-711a27cb0e2958b0b644: HTTP Error 429: Too Many Requests
-- new-product / candidate-4b24dbde8147c1eb7acc: HTTP Error 429: Too Many Requests
-- new-product / candidate-a6c9f104fc382e9d1bd7: HTTP Error 429: Too Many Requests
-- new-product / candidate-0f56bd5008e06cced2f1: HTTP Error 429: Too Many Requests
+- new-product / candidate-ce0fda9bc50fa317e342: HTTP Error 429: Too Many Requests
+- new-product / candidate-f251681775a26893549e: HTTP Error 429: Too Many Requests
+- new-product / candidate-5f02637780a36a2d1899: HTTP Error 429: Too Many Requests
+- new-product / candidate-041cd129eb9ec964f32c: HTTP Error 429: Too Many Requests
+- new-product / candidate-5623e8af3194eb899c43: HTTP Error 429: Too Many Requests
+- new-product / candidate-218088aa5bc071c0915f: HTTP Error 429: Too Many Requests
+- new-product / candidate-6a394e0b85b1aef8f60b: Source robots.txt disallows this URL
+- new-product / candidate-0bb392b13e1e2d7768a2: Source robots.txt disallows this URL
+- new-product / candidate-711a27cb0e2958b0b644: Source robots.txt disallows this URL
+- new-product / candidate-4b24dbde8147c1eb7acc: Source robots.txt disallows this URL
+- new-product / candidate-a6c9f104fc382e9d1bd7: Source robots.txt disallows this URL
+- new-product / candidate-0f56bd5008e06cced2f1: Source robots.txt disallows this URL
 - new-product / candidate-8181f7feabf812d2b817: Source robots.txt disallows this URL
 - new-product / candidate-d54ee419ec5ddde12922: Source robots.txt disallows this URL
 - new-product / candidate-a22f414da3edc715f24b: Source robots.txt disallows this URL
-- new-product / candidate-a7bbc37c32a4fd6aef58: Source robots.txt disallows this URL
-- new-product / candidate-1e81073278c00e074c03: Source robots.txt disallows this URL
-- new-product / candidate-837d38ab07d0a21572cf: Source robots.txt disallows this URL
+- new-product / candidate-a7bbc37c32a4fd6aef58: HTTP Error 429: Too Many Requests
+- new-product / candidate-1e81073278c00e074c03: HTTP Error 429: Too Many Requests
+- new-product / candidate-837d38ab07d0a21572cf: HTTP Error 429: Too Many Requests
 - new-product / candidate-c4fedc44cabc3cbb1caf: HTTP Error 429: Too Many Requests
 - new-product / candidate-fc1589081616c5d8901a: HTTP Error 429: Too Many Requests
 - new-product / candidate-3cfb4a30227bbce07270: HTTP Error 429: Too Many Requests
-- new-product / candidate-f8104fdf66923e368e22: Source robots.txt disallows this URL
-- new-product / candidate-7f9da464e98d17eaa120: Source robots.txt disallows this URL
-- new-product / candidate-4f53d758c7065420fc7f: Source robots.txt disallows this URL
+- new-product / candidate-f8104fdf66923e368e22: HTTP Error 429: Too Many Requests
+- new-product / candidate-7f9da464e98d17eaa120: HTTP Error 429: Too Many Requests
+- new-product / candidate-4f53d758c7065420fc7f: HTTP Error 429: Too Many Requests
 - new-product / candidate-e2d90cd3263a74cabf3f: Source robots.txt disallows this URL
 - new-product / candidate-e3b781c57260b9e6ab59: Source robots.txt disallows this URL
 - new-product / candidate-6f46702f913619aa3821: Source robots.txt disallows this URL
-- new-product / candidate-a5cf9a5643af5e3ee78f: HTTP Error 429: Too Many Requests
-- new-product / candidate-63259253f181fd3f7dad: HTTP Error 429: Too Many Requests
-- new-product / candidate-cc7a47d7fdaad29e6ea1: HTTP Error 429: Too Many Requests
-- new-product / candidate-ea320d608ffb6dfc651c: HTTP Error 429: Too Many Requests
-- new-product / candidate-f98a716d9d6fbaa56ebf: HTTP Error 429: Too Many Requests
-- new-product / candidate-e57bb963effb4d405b68: HTTP Error 429: Too Many Requests
-- new-product / candidate-edad166d9c214882f12d: HTTP Error 429: Too Many Requests
-- new-product / candidate-a4f4f3dc9d6bdb26f472: HTTP Error 429: Too Many Requests
-- new-product / candidate-0a568e8d9a73be5916aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-4da39cc9d94c906b2cb5: HTTP Error 429: Too Many Requests
-- new-product / candidate-c3816a7b733db3388ebc: HTTP Error 429: Too Many Requests
-- new-product / candidate-d57775a7ea933c321bb8: HTTP Error 429: Too Many Requests
-- new-product / candidate-be9d7950ddc740f3d2c5: HTTP Error 429: Too Many Requests
-- new-product / candidate-9503160722b85f47d92d: Source robots.txt disallows this URL
-- new-product / candidate-48fb3d4b947883a6615c: Source robots.txt disallows this URL
-- new-product / candidate-4040c324c43896933320: Source robots.txt disallows this URL
+- new-product / candidate-a5cf9a5643af5e3ee78f: Source robots.txt disallows this URL
+- new-product / candidate-63259253f181fd3f7dad: Source robots.txt disallows this URL
+- new-product / candidate-cc7a47d7fdaad29e6ea1: Source robots.txt disallows this URL
+- new-product / candidate-ea320d608ffb6dfc651c: Source robots.txt disallows this URL
+- new-product / candidate-f98a716d9d6fbaa56ebf: Source robots.txt disallows this URL
+- new-product / candidate-e57bb963effb4d405b68: Source robots.txt disallows this URL
+- new-product / candidate-edad166d9c214882f12d: Source robots.txt disallows this URL
+- new-product / candidate-a4f4f3dc9d6bdb26f472: Source robots.txt disallows this URL
+- new-product / candidate-0a568e8d9a73be5916aa: Source robots.txt disallows this URL
+- new-product / candidate-4da39cc9d94c906b2cb5: Source robots.txt disallows this URL
+- new-product / candidate-c3816a7b733db3388ebc: Source robots.txt disallows this URL
+- new-product / candidate-d57775a7ea933c321bb8: Source robots.txt disallows this URL
+- new-product / candidate-be9d7950ddc740f3d2c5: Source robots.txt disallows this URL
+- new-product / candidate-9503160722b85f47d92d: HTTP Error 429: Too Many Requests
+- new-product / candidate-48fb3d4b947883a6615c: HTTP Error 429: Too Many Requests
+- new-product / candidate-4040c324c43896933320: HTTP Error 429: Too Many Requests
 - new-product / candidate-ab168fafdc3f36e95d8d: HTTP Error 429: Too Many Requests
 - new-product / candidate-c95b84ad12a80f8c6c6a: HTTP Error 429: Too Many Requests
 - new-product / candidate-624b6dab6cc514fabc30: HTTP Error 429: Too Many Requests
-- new-product / candidate-f61fc6d65223f3a90e5e: Source robots.txt disallows this URL
-- new-product / candidate-099df669329c459536bf: Source robots.txt disallows this URL
-- new-product / candidate-cea9e2f49ee46ae0c984: Source robots.txt disallows this URL
-- new-product / candidate-93178136d9e289c1aa72: Source robots.txt disallows this URL
-- new-product / candidate-49f2a75c83cbdf27909c: Source robots.txt disallows this URL
-- new-product / candidate-93189b0fc33d2923fc65: Source robots.txt disallows this URL
-- new-product / candidate-433a96ff0fcfeac1f987: Source robots.txt disallows this URL
-- new-product / candidate-15c36d25b28e1eac78f2: Source robots.txt disallows this URL
-- new-product / candidate-3fd75378e38575264daa: Source robots.txt disallows this URL
-- new-product / candidate-a3ca4c6db63dbdd2465f: Source robots.txt disallows this URL
-- new-product / candidate-5c3ffbc234955349a37a: Source robots.txt disallows this URL
-- new-product / candidate-51067d97543d0eecc710: Source robots.txt disallows this URL
-- new-product / candidate-dedb1a60e4332df45316: Source robots.txt disallows this URL
-- new-product / candidate-0a39e3026b13ca7b57ca: Source robots.txt disallows this URL
-- new-product / candidate-f98cec2cac8ab9d0ec25: Source robots.txt disallows this URL
-- new-product / candidate-004a3419b0bf2b615b61: Source robots.txt disallows this URL
-- new-product / candidate-c802403bb6f2f10a9868: Source robots.txt disallows this URL
-- new-product / candidate-3585c1aa326bbefbe0e0: Source robots.txt disallows this URL
-- new-product / candidate-059fc2f7c49b9380a76c: Source robots.txt disallows this URL
-- new-product / candidate-e9ab133b76874fa33e28: Source robots.txt disallows this URL
-- new-product / candidate-669f88bb3327991aa69c: Source robots.txt disallows this URL
-- new-product / candidate-af6638c2f6c8c9ecccfe: Source robots.txt disallows this URL
-- new-product / candidate-4c50af7940e9fe726144: Source robots.txt disallows this URL
-- new-product / candidate-6da8512e4830f9480a53: Source robots.txt disallows this URL
-- new-product / candidate-337a74661f2ea542e742: Source robots.txt disallows this URL
-- new-product / candidate-6fe224c2e0e3bd54f16c: Source robots.txt disallows this URL
-- new-product / candidate-d88882970b45a37215c9: Source robots.txt disallows this URL
-- new-product / candidate-73c7c227f8d1a7caab67: Source robots.txt disallows this URL
-- new-product / candidate-bb0afa888ceef13453f6: Source robots.txt disallows this URL
-- new-product / candidate-27b233ba12f0c66117d5: Source robots.txt disallows this URL
-- new-product / candidate-ae563f77842073e040cd: Source robots.txt disallows this URL
-- new-product / candidate-7339aa5a0330bb3b5fe9: Source robots.txt disallows this URL
-- new-product / candidate-7b15cdbf2a7e663f2fa6: Source robots.txt disallows this URL
-- new-product / candidate-e345f6321a80e0249779: Source robots.txt disallows this URL
-- new-product / candidate-eac7ead452e8f863d068: Source robots.txt disallows this URL
-- new-product / candidate-182f6183c4160d75da7a: HTTP Error 429: Too Many Requests
-- new-product / candidate-cac709b0c72cb01f0915: HTTP Error 429: Too Many Requests
-- new-product / candidate-b543cda9c4fe1513fc67: HTTP Error 429: Too Many Requests
-- new-product / candidate-005e4075135be82542e2: HTTP Error 429: Too Many Requests
+- new-product / candidate-f61fc6d65223f3a90e5e: HTTP Error 429: Too Many Requests
+- new-product / candidate-099df669329c459536bf: HTTP Error 429: Too Many Requests
+- new-product / candidate-cea9e2f49ee46ae0c984: HTTP Error 429: Too Many Requests
+- new-product / candidate-93178136d9e289c1aa72: HTTP Error 429: Too Many Requests
+- new-product / candidate-49f2a75c83cbdf27909c: HTTP Error 429: Too Many Requests
+- new-product / candidate-93189b0fc33d2923fc65: HTTP Error 429: Too Many Requests
+- new-product / candidate-433a96ff0fcfeac1f987: HTTP Error 429: Too Many Requests
+- new-product / candidate-15c36d25b28e1eac78f2: HTTP Error 429: Too Many Requests
+- new-product / candidate-3fd75378e38575264daa: HTTP Error 429: Too Many Requests
+- new-product / candidate-a3ca4c6db63dbdd2465f: HTTP Error 429: Too Many Requests
+- new-product / candidate-5c3ffbc234955349a37a: HTTP Error 429: Too Many Requests
+- new-product / candidate-51067d97543d0eecc710: HTTP Error 429: Too Many Requests
+- new-product / candidate-dedb1a60e4332df45316: HTTP Error 429: Too Many Requests
+- new-product / candidate-0a39e3026b13ca7b57ca: HTTP Error 429: Too Many Requests
+- new-product / candidate-f98cec2cac8ab9d0ec25: HTTP Error 429: Too Many Requests
+- new-product / candidate-004a3419b0bf2b615b61: HTTP Error 429: Too Many Requests
+- new-product / candidate-c802403bb6f2f10a9868: HTTP Error 429: Too Many Requests
+- new-product / candidate-3585c1aa326bbefbe0e0: HTTP Error 429: Too Many Requests
+- new-product / candidate-059fc2f7c49b9380a76c: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9ab133b76874fa33e28: HTTP Error 429: Too Many Requests
+- new-product / candidate-669f88bb3327991aa69c: HTTP Error 429: Too Many Requests
+- new-product / candidate-af6638c2f6c8c9ecccfe: HTTP Error 429: Too Many Requests
+- new-product / candidate-4c50af7940e9fe726144: HTTP Error 429: Too Many Requests
+- new-product / candidate-6da8512e4830f9480a53: HTTP Error 429: Too Many Requests
+- new-product / candidate-337a74661f2ea542e742: HTTP Error 429: Too Many Requests
+- new-product / candidate-6fe224c2e0e3bd54f16c: HTTP Error 429: Too Many Requests
+- new-product / candidate-d88882970b45a37215c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-73c7c227f8d1a7caab67: HTTP Error 429: Too Many Requests
+- new-product / candidate-bb0afa888ceef13453f6: HTTP Error 429: Too Many Requests
+- new-product / candidate-27b233ba12f0c66117d5: HTTP Error 429: Too Many Requests
+- new-product / candidate-ae563f77842073e040cd: HTTP Error 429: Too Many Requests
+- new-product / candidate-7339aa5a0330bb3b5fe9: HTTP Error 429: Too Many Requests
+- new-product / candidate-7b15cdbf2a7e663f2fa6: HTTP Error 429: Too Many Requests
+- new-product / candidate-e345f6321a80e0249779: HTTP Error 429: Too Many Requests
+- new-product / candidate-eac7ead452e8f863d068: HTTP Error 429: Too Many Requests
+- new-product / candidate-182f6183c4160d75da7a: Source robots.txt disallows this URL
+- new-product / candidate-cac709b0c72cb01f0915: Source robots.txt disallows this URL
+- new-product / candidate-b543cda9c4fe1513fc67: Source robots.txt disallows this URL
+- new-product / candidate-005e4075135be82542e2: Source robots.txt disallows this URL
 - new-product / candidate-c239bdeefd064817dd79: Source robots.txt disallows this URL
 - new-product / candidate-a6e2577cba09e22ac481: Source robots.txt disallows this URL
 - new-product / candidate-3aa17a08e403f30f0e42: Source robots.txt disallows this URL
 - new-product / candidate-5394355f4fbe38397cb7: Source robots.txt disallows this URL
-- new-product / candidate-2c8983f68d911b153177: Source robots.txt disallows this URL
-- new-product / candidate-f8456ae2a0f2e70a9ab2: Source robots.txt disallows this URL
-- new-product / candidate-d6c66b329e8729799f54: Source robots.txt disallows this URL
-- new-product / candidate-65e62cea7a491f492745: Source robots.txt disallows this URL
-- new-product / candidate-f93594bb407eb83ff3b2: Source robots.txt disallows this URL
-- new-product / candidate-b4c9337cac06be500428: Source robots.txt disallows this URL
-- new-product / candidate-f9cc51861420b3767181: Source robots.txt disallows this URL
-- new-product / candidate-fc0b379a26737ba6e7d1: Source robots.txt disallows this URL
-- new-product / candidate-a15702565d0583420e5e: Source robots.txt disallows this URL
-- new-product / candidate-15236f53a693da024973: Source robots.txt disallows this URL
-- new-product / candidate-e1bb100f22290c1fb957: Source robots.txt disallows this URL
-- new-product / candidate-8bb5d6d2f0ffefc306c4: Source robots.txt disallows this URL
-- new-product / candidate-2592c592206b419a8268: Source robots.txt disallows this URL
-- new-product / candidate-68630d8e9c51216e8b04: Source robots.txt disallows this URL
-- new-product / candidate-b0af7d8a2c369f5b60f9: Source robots.txt disallows this URL
-- new-product / candidate-953e5181b6426dfd5065: Source robots.txt disallows this URL
-- new-product / candidate-8dc7f8420da0c1a2b707: Source robots.txt disallows this URL
-- new-product / candidate-3818454c9152b46d8ca9: Source robots.txt disallows this URL
-- new-product / candidate-9842f3f19768abb0b531: Source robots.txt disallows this URL
-- new-product / candidate-039f33fb4de040b4650f: Source robots.txt disallows this URL
-- new-product / candidate-32f5730369dee718db45: Source robots.txt disallows this URL
-- new-product / candidate-19d63fe05316829f33f2: Source robots.txt disallows this URL
-- new-product / candidate-1e6125ed435a3adf510a: Source robots.txt disallows this URL
-- new-product / candidate-373ce877d9c23ac717ca: Source robots.txt disallows this URL
-- new-product / candidate-8d8afb60e358dc8b2637: Source robots.txt disallows this URL
-- new-product / candidate-b02126f6304eb0101a88: Source robots.txt disallows this URL
-- new-product / candidate-a045c82bc41c556f8293: Source robots.txt disallows this URL
-- new-product / candidate-0e92db8ccc4303c8246e: Source robots.txt disallows this URL
-- new-product / candidate-38fb02377155dfedc6f2: Source robots.txt disallows this URL
-- new-product / candidate-119698379972732a471a: Source robots.txt disallows this URL
-- new-product / candidate-37f13065cd9a552d65fe: Source robots.txt disallows this URL
-- new-product / candidate-a1313a98757949395465: Source robots.txt disallows this URL
-- new-product / candidate-90c4a7773d7489f6f9fe: Source robots.txt disallows this URL
-- new-product / candidate-114c79649c7276ae57c1: Source robots.txt disallows this URL
-- new-product / candidate-7002453cb4743d08e29d: Source robots.txt disallows this URL
-- new-product / candidate-731ac28da9ffc51ae67f: Source robots.txt disallows this URL
+- new-product / candidate-2c8983f68d911b153177: HTTP Error 429: Too Many Requests
+- new-product / candidate-f8456ae2a0f2e70a9ab2: HTTP Error 429: Too Many Requests
+- new-product / candidate-d6c66b329e8729799f54: HTTP Error 429: Too Many Requests
+- new-product / candidate-65e62cea7a491f492745: HTTP Error 429: Too Many Requests
+- new-product / candidate-f93594bb407eb83ff3b2: HTTP Error 429: Too Many Requests
+- new-product / candidate-b4c9337cac06be500428: HTTP Error 429: Too Many Requests
+- new-product / candidate-f9cc51861420b3767181: HTTP Error 429: Too Many Requests
+- new-product / candidate-fc0b379a26737ba6e7d1: HTTP Error 429: Too Many Requests
+- new-product / candidate-a15702565d0583420e5e: HTTP Error 429: Too Many Requests
+- new-product / candidate-15236f53a693da024973: HTTP Error 429: Too Many Requests
+- new-product / candidate-e1bb100f22290c1fb957: HTTP Error 429: Too Many Requests
+- new-product / candidate-8bb5d6d2f0ffefc306c4: HTTP Error 429: Too Many Requests
+- new-product / candidate-2592c592206b419a8268: HTTP Error 429: Too Many Requests
+- new-product / candidate-68630d8e9c51216e8b04: HTTP Error 429: Too Many Requests
+- new-product / candidate-b0af7d8a2c369f5b60f9: HTTP Error 429: Too Many Requests
+- new-product / candidate-953e5181b6426dfd5065: HTTP Error 429: Too Many Requests
+- new-product / candidate-8dc7f8420da0c1a2b707: HTTP Error 429: Too Many Requests
+- new-product / candidate-3818454c9152b46d8ca9: HTTP Error 429: Too Many Requests
+- new-product / candidate-9842f3f19768abb0b531: HTTP Error 429: Too Many Requests
+- new-product / candidate-039f33fb4de040b4650f: HTTP Error 429: Too Many Requests
+- new-product / candidate-32f5730369dee718db45: HTTP Error 429: Too Many Requests
+- new-product / candidate-19d63fe05316829f33f2: HTTP Error 429: Too Many Requests
+- new-product / candidate-1e6125ed435a3adf510a: HTTP Error 429: Too Many Requests
+- new-product / candidate-373ce877d9c23ac717ca: HTTP Error 429: Too Many Requests
+- new-product / candidate-8d8afb60e358dc8b2637: HTTP Error 429: Too Many Requests
+- new-product / candidate-b02126f6304eb0101a88: HTTP Error 429: Too Many Requests
+- new-product / candidate-a045c82bc41c556f8293: HTTP Error 429: Too Many Requests
+- new-product / candidate-0e92db8ccc4303c8246e: HTTP Error 429: Too Many Requests
+- new-product / candidate-38fb02377155dfedc6f2: HTTP Error 429: Too Many Requests
+- new-product / candidate-119698379972732a471a: HTTP Error 429: Too Many Requests
+- new-product / candidate-37f13065cd9a552d65fe: HTTP Error 429: Too Many Requests
+- new-product / candidate-a1313a98757949395465: HTTP Error 429: Too Many Requests
+- new-product / candidate-90c4a7773d7489f6f9fe: HTTP Error 429: Too Many Requests
+- new-product / candidate-114c79649c7276ae57c1: HTTP Error 429: Too Many Requests
+- new-product / candidate-7002453cb4743d08e29d: HTTP Error 429: Too Many Requests
+- new-product / candidate-731ac28da9ffc51ae67f: HTTP Error 429: Too Many Requests
 - new-product / candidate-8fd413ee8711e32aa42c: HTTP Error 429: Too Many Requests
 - new-product / candidate-97d78d83285eeac360a9: HTTP Error 429: Too Many Requests
 - new-product / candidate-1d09b5d94a4aa78db580: HTTP Error 429: Too Many Requests
@@ -2675,32 +2831,32 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-ff158362b14765e673c8: HTTP Error 429: Too Many Requests
 - new-product / candidate-2edca41b0293d2b93485: HTTP Error 429: Too Many Requests
 - new-product / candidate-01aa948e6767a7ee2112: HTTP Error 429: Too Many Requests
-- new-product / candidate-fd4911b312a77d9bb190: Source robots.txt disallows this URL
-- new-product / candidate-a37ed11c047cc0f834da: Source robots.txt disallows this URL
-- new-product / candidate-3d3968e4a57e1cbadb29: Source robots.txt disallows this URL
-- new-product / candidate-4ed383a22287ebfe05ce: Source robots.txt disallows this URL
-- new-product / candidate-b11c3d3ef2146e0271a6: Source robots.txt disallows this URL
-- new-product / candidate-2df43d0a597833139927: Source robots.txt disallows this URL
-- new-product / candidate-07b1ac6855823719f928: Source robots.txt disallows this URL
-- new-product / candidate-9b2f8fd9c3347acf35e0: Source robots.txt disallows this URL
-- new-product / candidate-c3a30bf561031d5b5ad6: Source robots.txt disallows this URL
-- new-product / candidate-b20dd87b27341199906a: Source robots.txt disallows this URL
-- new-product / candidate-907a9694d1dbcea6b1b1: Source robots.txt disallows this URL
-- new-product / candidate-adf858b2817d30f707e4: Source robots.txt disallows this URL
-- new-product / candidate-0382a40137752ff77d7f: Source robots.txt disallows this URL
-- new-product / candidate-efae28091696448345b7: Source robots.txt disallows this URL
-- new-product / candidate-1dab6a6a341f70d0119c: Source robots.txt disallows this URL
-- new-product / candidate-29ca89dedc7aa5d3830f: Source robots.txt disallows this URL
-- new-product / candidate-63e34b8ceb41c310e429: Source robots.txt disallows this URL
-- new-product / candidate-3fcf49ca4a9fed4fcf70: Source robots.txt disallows this URL
-- new-product / candidate-905bb0e835edb185b66b: Source robots.txt disallows this URL
-- new-product / candidate-d0444530e0cc769dba71: Source robots.txt disallows this URL
-- new-product / candidate-b4d94119f9d5e15abd5b: Source robots.txt disallows this URL
-- new-product / candidate-4e19c7ba5ea4db4ad641: Source robots.txt disallows this URL
-- new-product / candidate-14478100128b651f96b6: Source robots.txt disallows this URL
-- new-product / candidate-9d7dc42671e7dbc45125: Source robots.txt disallows this URL
-- new-product / candidate-55956d556d5be8b340c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-d0f05cbf66f04568b3c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-fd4911b312a77d9bb190: HTTP Error 429: Too Many Requests
+- new-product / candidate-a37ed11c047cc0f834da: HTTP Error 429: Too Many Requests
+- new-product / candidate-3d3968e4a57e1cbadb29: HTTP Error 429: Too Many Requests
+- new-product / candidate-4ed383a22287ebfe05ce: HTTP Error 429: Too Many Requests
+- new-product / candidate-b11c3d3ef2146e0271a6: HTTP Error 429: Too Many Requests
+- new-product / candidate-2df43d0a597833139927: HTTP Error 429: Too Many Requests
+- new-product / candidate-07b1ac6855823719f928: HTTP Error 429: Too Many Requests
+- new-product / candidate-9b2f8fd9c3347acf35e0: HTTP Error 429: Too Many Requests
+- new-product / candidate-c3a30bf561031d5b5ad6: HTTP Error 429: Too Many Requests
+- new-product / candidate-b20dd87b27341199906a: HTTP Error 429: Too Many Requests
+- new-product / candidate-907a9694d1dbcea6b1b1: HTTP Error 429: Too Many Requests
+- new-product / candidate-adf858b2817d30f707e4: HTTP Error 429: Too Many Requests
+- new-product / candidate-0382a40137752ff77d7f: HTTP Error 429: Too Many Requests
+- new-product / candidate-efae28091696448345b7: HTTP Error 429: Too Many Requests
+- new-product / candidate-1dab6a6a341f70d0119c: HTTP Error 429: Too Many Requests
+- new-product / candidate-29ca89dedc7aa5d3830f: HTTP Error 429: Too Many Requests
+- new-product / candidate-63e34b8ceb41c310e429: HTTP Error 429: Too Many Requests
+- new-product / candidate-3fcf49ca4a9fed4fcf70: HTTP Error 429: Too Many Requests
+- new-product / candidate-905bb0e835edb185b66b: HTTP Error 429: Too Many Requests
+- new-product / candidate-d0444530e0cc769dba71: HTTP Error 429: Too Many Requests
+- new-product / candidate-b4d94119f9d5e15abd5b: HTTP Error 429: Too Many Requests
+- new-product / candidate-4e19c7ba5ea4db4ad641: HTTP Error 429: Too Many Requests
+- new-product / candidate-14478100128b651f96b6: HTTP Error 429: Too Many Requests
+- new-product / candidate-9d7dc42671e7dbc45125: HTTP Error 429: Too Many Requests
+- new-product / candidate-55956d556d5be8b340c6: Source robots.txt disallows this URL
+- new-product / candidate-d0f05cbf66f04568b3c9: Source robots.txt disallows this URL
 - new-product / candidate-c597b254f1c9c0b7e513: Source robots.txt disallows this URL
 - new-product / candidate-c6108fcae3605fd0001c: Source robots.txt disallows this URL
 - new-product / candidate-f56b35108c7296f27bcb: Source robots.txt disallows this URL
@@ -2718,14 +2874,14 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-59f9b96941a72c0d364a: Source robots.txt disallows this URL
 - new-product / candidate-d37bbcb8565250f519a2: Source robots.txt disallows this URL
 - new-product / candidate-1b073afec776780cc1b9: Source robots.txt disallows this URL
-- new-product / candidate-655d1601d1a97a85d73a: Source robots.txt disallows this URL
-- new-product / candidate-4a32f701aed27aced6bc: Source robots.txt disallows this URL
-- new-product / candidate-d27d6cef7464a24ba1d9: Source robots.txt disallows this URL
-- new-product / candidate-79bfcb159fd34b21214e: Source robots.txt disallows this URL
-- new-product / candidate-4d402d846e963cbe3663: Source robots.txt disallows this URL
-- new-product / candidate-5fe075cfba66141cce95: Source robots.txt disallows this URL
-- new-product / candidate-4e9a25b6ccbe59224987: Source robots.txt disallows this URL
-- new-product / candidate-5dab6be2ae8469b58bdc: Source robots.txt disallows this URL
+- new-product / candidate-655d1601d1a97a85d73a: HTTP Error 429: Too Many Requests
+- new-product / candidate-4a32f701aed27aced6bc: HTTP Error 429: Too Many Requests
+- new-product / candidate-d27d6cef7464a24ba1d9: HTTP Error 429: Too Many Requests
+- new-product / candidate-79bfcb159fd34b21214e: HTTP Error 429: Too Many Requests
+- new-product / candidate-4d402d846e963cbe3663: HTTP Error 429: Too Many Requests
+- new-product / candidate-5fe075cfba66141cce95: HTTP Error 429: Too Many Requests
+- new-product / candidate-4e9a25b6ccbe59224987: HTTP Error 429: Too Many Requests
+- new-product / candidate-5dab6be2ae8469b58bdc: HTTP Error 429: Too Many Requests
 - new-product / candidate-cb74860ea94bfcefcde1: HTTP Error 429: Too Many Requests
 - new-product / candidate-656a67768916f8811555: HTTP Error 429: Too Many Requests
 - new-product / candidate-649543b36514949ba09b: HTTP Error 429: Too Many Requests
@@ -2988,97 +3144,97 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-9bac6607174f977927b5: HTTP Error 429: Too Many Requests
 - new-product / candidate-ead3644fef556ec54910: HTTP Error 429: Too Many Requests
 - new-product / candidate-ccc5212875037352c1ef: HTTP Error 429: Too Many Requests
-- new-product / candidate-79ce3652710370d11982: Source robots.txt disallows this URL
-- new-product / candidate-87e2e99616694d1b91d2: HTTP Error 429: Too Many Requests
-- new-product / candidate-177b5e18387c1930615d: HTTP Error 429: Too Many Requests
-- new-product / candidate-4e176580022c9a72f466: HTTP Error 429: Too Many Requests
-- new-product / candidate-aefcefaf38445970da07: HTTP Error 429: Too Many Requests
-- new-product / candidate-10b782465bcef44f524c: HTTP Error 429: Too Many Requests
-- new-product / candidate-87beba89868a3ca3d655: HTTP Error 429: Too Many Requests
-- new-product / candidate-7a0ba03f97ee81767510: HTTP Error 429: Too Many Requests
-- new-product / candidate-63f5f4515e9d03261da2: HTTP Error 429: Too Many Requests
-- new-product / candidate-3355964e990aad7b79e7: HTTP Error 429: Too Many Requests
-- new-product / candidate-b0ed987cf448d7625eab: HTTP Error 429: Too Many Requests
-- new-product / candidate-e2d9d114e980f97cf856: HTTP Error 429: Too Many Requests
-- new-product / candidate-5da1f3253e2fe225c43f: HTTP Error 429: Too Many Requests
-- new-product / candidate-e32408574f395ba46688: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a28b936fa62fc145ea5: HTTP Error 429: Too Many Requests
-- new-product / candidate-2211b9b803b61dc8bf1f: HTTP Error 429: Too Many Requests
-- new-product / candidate-b0b8dde18a0cdd4bd9f7: HTTP Error 429: Too Many Requests
-- new-product / candidate-526b33351c2b339ed689: HTTP Error 429: Too Many Requests
-- new-product / candidate-61ee5a01169709f08010: Source robots.txt disallows this URL
-- new-product / candidate-b1227d13200f31befff5: Source robots.txt disallows this URL
-- new-product / candidate-5c3a6b8c0aff08e8e308: Source robots.txt disallows this URL
-- new-product / candidate-dc0a9d925b4dfaf87668: Source robots.txt disallows this URL
-- new-product / candidate-1526e0a1bdad265c08b3: Source robots.txt disallows this URL
-- new-product / candidate-60e5541f5bbdf8ac876b: Source robots.txt disallows this URL
-- new-product / candidate-d54bc52213be0ac95d94: Source robots.txt disallows this URL
-- new-product / candidate-00c23a370c2fdd28aca4: Source robots.txt disallows this URL
-- new-product / candidate-f5e9aaf4b653cbccd396: Source robots.txt disallows this URL
-- new-product / candidate-19ecc268f87d0abbbe93: Source robots.txt disallows this URL
-- new-product / candidate-d724dcc851e41c2daa79: Source robots.txt disallows this URL
-- new-product / candidate-6b9b366c568155930ead: Source robots.txt disallows this URL
-- new-product / candidate-0e29fae26d02fb90299c: Source robots.txt disallows this URL
-- new-product / candidate-4792bfa1a8d61511745e: Source robots.txt disallows this URL
-- new-product / candidate-bba2746b5cdcf349bba2: Source robots.txt disallows this URL
-- new-product / candidate-cf41994f5cd5a1e27bdb: Source robots.txt disallows this URL
-- new-product / candidate-4708956ad5cb1072aa7d: Source robots.txt disallows this URL
-- new-product / candidate-13736b6dbbb69c2982ae: HTTP Error 429: Too Many Requests
-- new-product / candidate-471b3a354b049374626a: HTTP Error 429: Too Many Requests
-- new-product / candidate-f953774ed31138e03857: HTTP Error 429: Too Many Requests
-- new-product / candidate-d704f73e566ce41950ea: HTTP Error 429: Too Many Requests
-- new-product / candidate-4ebf58c9db307584af76: HTTP Error 429: Too Many Requests
-- new-product / candidate-033345722e86a66284a0: HTTP Error 429: Too Many Requests
-- new-product / candidate-3cb6d9ccc81eb4513227: HTTP Error 429: Too Many Requests
-- new-product / candidate-6a42b754398f773322f8: Source robots.txt disallows this URL
-- new-product / candidate-5f882e19d86077caf9c4: Source robots.txt disallows this URL
-- new-product / candidate-a45fec4c041117dc35e7: Source robots.txt disallows this URL
-- new-product / candidate-320fa8113accb91dcfeb: Source robots.txt disallows this URL
-- new-product / candidate-7169933afbd4a42bf9fe: Source robots.txt disallows this URL
-- new-product / candidate-6b95911a1c557e3965b3: Source robots.txt disallows this URL
-- new-product / candidate-0aeb824071190954f78a: Source robots.txt disallows this URL
-- new-product / candidate-faa1dad8262a4816465a: Source robots.txt disallows this URL
-- new-product / candidate-f40fd31ac7d4d48aa48a: Source robots.txt disallows this URL
-- new-product / candidate-540064187bf0aa3683ff: Source robots.txt disallows this URL
-- new-product / candidate-9ebede09e380e5af1586: Source robots.txt disallows this URL
-- new-product / candidate-c98bd07c56b330482e31: Source robots.txt disallows this URL
-- new-product / candidate-d4b73213219f2d8cc282: HTTP Error 429: Too Many Requests
-- new-product / candidate-6852c6e093901f1c1c79: Source robots.txt disallows this URL
-- new-product / candidate-0ce925b64e6413ccb0f6: HTTP Error 429: Too Many Requests
-- new-product / candidate-080b457cc0a5e5e880c3: HTTP Error 429: Too Many Requests
-- new-product / candidate-e88f92cf9c5d46037c83: HTTP Error 429: Too Many Requests
-- new-product / candidate-ab05b010cba7270573c2: HTTP Error 429: Too Many Requests
-- new-product / candidate-aee9ade88c4712adb52b: HTTP Error 429: Too Many Requests
-- new-product / candidate-87d5aadb42a9cfc5987c: HTTP Error 429: Too Many Requests
-- new-product / candidate-2ecad41c9b6f10ebb53d: HTTP Error 429: Too Many Requests
-- new-product / candidate-0cdadce1083479048616: HTTP Error 429: Too Many Requests
-- new-product / candidate-9c5a98d9b503659fd080: HTTP Error 429: Too Many Requests
-- new-product / candidate-53bf3ba16fd40008075d: HTTP Error 429: Too Many Requests
-- new-product / candidate-8bdc49ff76536be40490: HTTP Error 429: Too Many Requests
-- new-product / candidate-ed33133ac0bffa05e015: HTTP Error 429: Too Many Requests
-- new-product / candidate-a9f6657a182ee0ab17e1: HTTP Error 429: Too Many Requests
-- new-product / candidate-09f45d1c60f486ef6412: HTTP Error 429: Too Many Requests
-- new-product / candidate-c271078ef4373431ca49: HTTP Error 429: Too Many Requests
-- new-product / candidate-cc8cad9dd0097a4db4fe: HTTP Error 429: Too Many Requests
-- new-product / candidate-66d56dcb827bc7c47026: HTTP Error 429: Too Many Requests
-- new-product / candidate-3b9afd8a62f78e3c7906: Source robots.txt disallows this URL
-- new-product / candidate-818dbba01490c54429df: Source robots.txt disallows this URL
-- new-product / candidate-b3213602aa2773ca9d32: Source robots.txt disallows this URL
-- new-product / candidate-78aedc8b9b2e18ef121a: Source robots.txt disallows this URL
-- new-product / candidate-8533d1e1b49e569ef7a1: Source robots.txt disallows this URL
-- new-product / candidate-7cc1cafb3bebb08dc731: Source robots.txt disallows this URL
-- new-product / candidate-cbe9e290f1db39bd4e14: Source robots.txt disallows this URL
-- new-product / candidate-f6f5272de9e92939651e: Source robots.txt disallows this URL
-- new-product / candidate-fa06ce31ca808693ac6a: Source robots.txt disallows this URL
-- new-product / candidate-b3ecbd0217cfbc695aa6: Source robots.txt disallows this URL
-- new-product / candidate-288e3071f4eacc6c638c: Source robots.txt disallows this URL
-- new-product / candidate-2009c3c5e0dd02b1f3e1: Source robots.txt disallows this URL
-- new-product / candidate-affef3204a0c8037df74: Source robots.txt disallows this URL
-- new-product / candidate-8df3003f8e493ad5c49b: Source robots.txt disallows this URL
-- new-product / candidate-3c2de2e3056a7aea4744: Source robots.txt disallows this URL
-- new-product / candidate-448c7f2f227940cc3a89: Source robots.txt disallows this URL
-- new-product / candidate-9677bf52abd6af390ed4: Source robots.txt disallows this URL
-- new-product / candidate-c54c0506298f76b42da1: Source robots.txt disallows this URL
+- new-product / candidate-79ce3652710370d11982: HTTP Error 429: Too Many Requests
+- new-product / candidate-87e2e99616694d1b91d2: Source robots.txt disallows this URL
+- new-product / candidate-177b5e18387c1930615d: Source robots.txt disallows this URL
+- new-product / candidate-4e176580022c9a72f466: Source robots.txt disallows this URL
+- new-product / candidate-aefcefaf38445970da07: Source robots.txt disallows this URL
+- new-product / candidate-10b782465bcef44f524c: Source robots.txt disallows this URL
+- new-product / candidate-87beba89868a3ca3d655: Source robots.txt disallows this URL
+- new-product / candidate-7a0ba03f97ee81767510: Source robots.txt disallows this URL
+- new-product / candidate-63f5f4515e9d03261da2: Source robots.txt disallows this URL
+- new-product / candidate-3355964e990aad7b79e7: Source robots.txt disallows this URL
+- new-product / candidate-b0ed987cf448d7625eab: Source robots.txt disallows this URL
+- new-product / candidate-e2d9d114e980f97cf856: Source robots.txt disallows this URL
+- new-product / candidate-5da1f3253e2fe225c43f: Source robots.txt disallows this URL
+- new-product / candidate-e32408574f395ba46688: Source robots.txt disallows this URL
+- new-product / candidate-3a28b936fa62fc145ea5: Source robots.txt disallows this URL
+- new-product / candidate-2211b9b803b61dc8bf1f: Source robots.txt disallows this URL
+- new-product / candidate-b0b8dde18a0cdd4bd9f7: Source robots.txt disallows this URL
+- new-product / candidate-526b33351c2b339ed689: Source robots.txt disallows this URL
+- new-product / candidate-61ee5a01169709f08010: HTTP Error 429: Too Many Requests
+- new-product / candidate-b1227d13200f31befff5: HTTP Error 429: Too Many Requests
+- new-product / candidate-5c3a6b8c0aff08e8e308: HTTP Error 429: Too Many Requests
+- new-product / candidate-dc0a9d925b4dfaf87668: HTTP Error 429: Too Many Requests
+- new-product / candidate-1526e0a1bdad265c08b3: HTTP Error 429: Too Many Requests
+- new-product / candidate-60e5541f5bbdf8ac876b: HTTP Error 429: Too Many Requests
+- new-product / candidate-d54bc52213be0ac95d94: HTTP Error 429: Too Many Requests
+- new-product / candidate-00c23a370c2fdd28aca4: HTTP Error 429: Too Many Requests
+- new-product / candidate-f5e9aaf4b653cbccd396: HTTP Error 429: Too Many Requests
+- new-product / candidate-19ecc268f87d0abbbe93: HTTP Error 429: Too Many Requests
+- new-product / candidate-d724dcc851e41c2daa79: HTTP Error 429: Too Many Requests
+- new-product / candidate-6b9b366c568155930ead: HTTP Error 429: Too Many Requests
+- new-product / candidate-0e29fae26d02fb90299c: HTTP Error 429: Too Many Requests
+- new-product / candidate-4792bfa1a8d61511745e: HTTP Error 429: Too Many Requests
+- new-product / candidate-bba2746b5cdcf349bba2: HTTP Error 429: Too Many Requests
+- new-product / candidate-cf41994f5cd5a1e27bdb: HTTP Error 429: Too Many Requests
+- new-product / candidate-4708956ad5cb1072aa7d: HTTP Error 429: Too Many Requests
+- new-product / candidate-13736b6dbbb69c2982ae: Source robots.txt disallows this URL
+- new-product / candidate-471b3a354b049374626a: Source robots.txt disallows this URL
+- new-product / candidate-f953774ed31138e03857: Source robots.txt disallows this URL
+- new-product / candidate-d704f73e566ce41950ea: Source robots.txt disallows this URL
+- new-product / candidate-4ebf58c9db307584af76: Source robots.txt disallows this URL
+- new-product / candidate-033345722e86a66284a0: Source robots.txt disallows this URL
+- new-product / candidate-3cb6d9ccc81eb4513227: Source robots.txt disallows this URL
+- new-product / candidate-6a42b754398f773322f8: HTTP Error 429: Too Many Requests
+- new-product / candidate-5f882e19d86077caf9c4: HTTP Error 429: Too Many Requests
+- new-product / candidate-a45fec4c041117dc35e7: HTTP Error 429: Too Many Requests
+- new-product / candidate-320fa8113accb91dcfeb: HTTP Error 429: Too Many Requests
+- new-product / candidate-7169933afbd4a42bf9fe: HTTP Error 429: Too Many Requests
+- new-product / candidate-6b95911a1c557e3965b3: HTTP Error 429: Too Many Requests
+- new-product / candidate-0aeb824071190954f78a: HTTP Error 429: Too Many Requests
+- new-product / candidate-faa1dad8262a4816465a: HTTP Error 429: Too Many Requests
+- new-product / candidate-f40fd31ac7d4d48aa48a: HTTP Error 429: Too Many Requests
+- new-product / candidate-540064187bf0aa3683ff: HTTP Error 429: Too Many Requests
+- new-product / candidate-9ebede09e380e5af1586: HTTP Error 429: Too Many Requests
+- new-product / candidate-c98bd07c56b330482e31: HTTP Error 429: Too Many Requests
+- new-product / candidate-d4b73213219f2d8cc282: Source robots.txt disallows this URL
+- new-product / candidate-6852c6e093901f1c1c79: HTTP Error 429: Too Many Requests
+- new-product / candidate-0ce925b64e6413ccb0f6: Source robots.txt disallows this URL
+- new-product / candidate-080b457cc0a5e5e880c3: Source robots.txt disallows this URL
+- new-product / candidate-e88f92cf9c5d46037c83: Source robots.txt disallows this URL
+- new-product / candidate-ab05b010cba7270573c2: Source robots.txt disallows this URL
+- new-product / candidate-aee9ade88c4712adb52b: Source robots.txt disallows this URL
+- new-product / candidate-87d5aadb42a9cfc5987c: Source robots.txt disallows this URL
+- new-product / candidate-2ecad41c9b6f10ebb53d: Source robots.txt disallows this URL
+- new-product / candidate-0cdadce1083479048616: Source robots.txt disallows this URL
+- new-product / candidate-9c5a98d9b503659fd080: Source robots.txt disallows this URL
+- new-product / candidate-53bf3ba16fd40008075d: Source robots.txt disallows this URL
+- new-product / candidate-8bdc49ff76536be40490: Source robots.txt disallows this URL
+- new-product / candidate-ed33133ac0bffa05e015: Source robots.txt disallows this URL
+- new-product / candidate-a9f6657a182ee0ab17e1: Source robots.txt disallows this URL
+- new-product / candidate-09f45d1c60f486ef6412: Source robots.txt disallows this URL
+- new-product / candidate-c271078ef4373431ca49: Source robots.txt disallows this URL
+- new-product / candidate-cc8cad9dd0097a4db4fe: Source robots.txt disallows this URL
+- new-product / candidate-66d56dcb827bc7c47026: Source robots.txt disallows this URL
+- new-product / candidate-3b9afd8a62f78e3c7906: HTTP Error 429: Too Many Requests
+- new-product / candidate-818dbba01490c54429df: HTTP Error 429: Too Many Requests
+- new-product / candidate-b3213602aa2773ca9d32: HTTP Error 429: Too Many Requests
+- new-product / candidate-78aedc8b9b2e18ef121a: HTTP Error 429: Too Many Requests
+- new-product / candidate-8533d1e1b49e569ef7a1: HTTP Error 429: Too Many Requests
+- new-product / candidate-7cc1cafb3bebb08dc731: HTTP Error 429: Too Many Requests
+- new-product / candidate-cbe9e290f1db39bd4e14: HTTP Error 429: Too Many Requests
+- new-product / candidate-f6f5272de9e92939651e: HTTP Error 429: Too Many Requests
+- new-product / candidate-fa06ce31ca808693ac6a: HTTP Error 429: Too Many Requests
+- new-product / candidate-b3ecbd0217cfbc695aa6: HTTP Error 429: Too Many Requests
+- new-product / candidate-288e3071f4eacc6c638c: HTTP Error 429: Too Many Requests
+- new-product / candidate-2009c3c5e0dd02b1f3e1: HTTP Error 429: Too Many Requests
+- new-product / candidate-affef3204a0c8037df74: HTTP Error 429: Too Many Requests
+- new-product / candidate-8df3003f8e493ad5c49b: HTTP Error 429: Too Many Requests
+- new-product / candidate-3c2de2e3056a7aea4744: HTTP Error 429: Too Many Requests
+- new-product / candidate-448c7f2f227940cc3a89: HTTP Error 429: Too Many Requests
+- new-product / candidate-9677bf52abd6af390ed4: HTTP Error 429: Too Many Requests
+- new-product / candidate-c54c0506298f76b42da1: HTTP Error 429: Too Many Requests
 - new-product / candidate-73293bda455798f700f6: Source robots.txt disallows this URL
 - new-product / candidate-dc5213a843983a68e57b: Source robots.txt disallows this URL
 - new-product / candidate-35140531b19bbddec557: Source robots.txt disallows this URL
@@ -3237,403 +3393,403 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-61b3eef0146af04f4bce: HTTP Error 429: Too Many Requests
 - new-product / candidate-5c05810b75ab4a140fa9: HTTP Error 429: Too Many Requests
 - new-product / candidate-8bb3522c1d309ab8de13: HTTP Error 429: Too Many Requests
-- new-product / candidate-8b030341c96f64735699: Source robots.txt disallows this URL
-- new-product / candidate-616dac100612c8c71c81: Source robots.txt disallows this URL
-- new-product / candidate-30af61f9ea02b93f6236: Source robots.txt disallows this URL
-- new-product / candidate-6189946cd9e52534ceae: Source robots.txt disallows this URL
-- new-product / candidate-c2c9cd45baebcd77afc6: Source robots.txt disallows this URL
-- new-product / candidate-1b97329ed96755888a7c: Source robots.txt disallows this URL
-- new-product / candidate-260653c97f8ccd4c8048: Source robots.txt disallows this URL
-- new-product / candidate-bbbf9f189c63c72da916: Source robots.txt disallows this URL
-- new-product / candidate-1370ba7e45a096d23523: HTTP Error 429: Too Many Requests
-- new-product / candidate-9c135a562a2bc8021c8a: HTTP Error 429: Too Many Requests
-- new-product / candidate-d346997fe03da04b03ca: HTTP Error 429: Too Many Requests
-- new-product / candidate-420a8d605181ae861054: HTTP Error 429: Too Many Requests
-- new-product / candidate-3754573201774b673ae0: HTTP Error 429: Too Many Requests
-- new-product / candidate-d06eed21a06528ab9012: HTTP Error 429: Too Many Requests
-- new-product / candidate-6b4a39102e5280ea5e22: HTTP Error 429: Too Many Requests
-- new-product / candidate-21912ec0a2559db6fc41: HTTP Error 429: Too Many Requests
-- new-product / candidate-d6a7e3cde6287c0f29b0: HTTP Error 429: Too Many Requests
-- new-product / candidate-9c8cdbdc114573886d50: HTTP Error 429: Too Many Requests
-- new-product / candidate-3d072a603282a140ae7d: HTTP Error 429: Too Many Requests
-- new-product / candidate-d83dd34be3f8b666b1c5: HTTP Error 429: Too Many Requests
-- new-product / candidate-9b968c91c08d315e6f2d: HTTP Error 429: Too Many Requests
-- new-product / candidate-9b857c7147532088f53b: HTTP Error 429: Too Many Requests
-- new-product / candidate-9556b4024c7d16cc0ee5: HTTP Error 429: Too Many Requests
-- new-product / candidate-bc0b7ef093ed558b4a82: HTTP Error 429: Too Many Requests
-- new-product / candidate-dd43fcd516659183d373: HTTP Error 429: Too Many Requests
-- new-product / candidate-bc06dfa4b1ee3ea74a25: HTTP Error 429: Too Many Requests
-- new-product / candidate-78912f533681149ee102: HTTP Error 429: Too Many Requests
-- new-product / candidate-011f5868df2026cdaaf0: HTTP Error 429: Too Many Requests
-- new-product / candidate-8ab751e1ccac14b4a8fc: HTTP Error 429: Too Many Requests
-- new-product / candidate-e2c05158cba350b80767: HTTP Error 429: Too Many Requests
-- new-product / candidate-1ada39485133cc52c225: HTTP Error 429: Too Many Requests
-- new-product / candidate-a5032845bf0ca5dc5b80: HTTP Error 429: Too Many Requests
-- new-product / candidate-60d6d41a6f665e7f0730: HTTP Error 429: Too Many Requests
-- new-product / candidate-a392f12654ccfe478d19: Source robots.txt disallows this URL
-- new-product / candidate-6fafdf5ed83c3d0de1d2: HTTP Error 429: Too Many Requests
-- new-product / candidate-08c540ba8aaafd02faea: Source robots.txt disallows this URL
-- new-product / candidate-b1338361d553c8c42bde: Source robots.txt disallows this URL
-- new-product / candidate-f8b136544cabd160b8d0: Source robots.txt disallows this URL
-- new-product / candidate-1a3206e5542879d9bc4c: Source robots.txt disallows this URL
-- new-product / candidate-eb3ff47537586c078599: Source robots.txt disallows this URL
-- new-product / candidate-c6ef35628d7e4cf94ad4: Source robots.txt disallows this URL
-- new-product / candidate-30c4b06cf3ca440e69a7: Source robots.txt disallows this URL
-- new-product / candidate-06c13704ac380e51e0de: Source robots.txt disallows this URL
-- new-product / candidate-a4bc67a1ce5104ba9561: Source robots.txt disallows this URL
-- new-product / candidate-d270d00ebd7720f9a56e: Source robots.txt disallows this URL
-- new-product / candidate-cdf4d8d685ec0f4d43e6: Source robots.txt disallows this URL
-- new-product / candidate-fb17232410fe5edc941f: Source robots.txt disallows this URL
-- new-product / candidate-85f55a4064ffead16d42: Source robots.txt disallows this URL
-- new-product / candidate-2347b1a7b8e5c4b095b8: Source robots.txt disallows this URL
-- new-product / candidate-97c657282e94ac9b32a5: Source robots.txt disallows this URL
-- new-product / candidate-9e8425f65ad83598cf24: Source robots.txt disallows this URL
-- new-product / candidate-02e88843588201f2b114: Source robots.txt disallows this URL
-- new-product / candidate-b9c824c6c0607123e97b: Source robots.txt disallows this URL
-- new-product / candidate-2a8f34de79a429b8b837: Source robots.txt disallows this URL
-- new-product / candidate-78204b4cc3aca821a7bd: Source robots.txt disallows this URL
-- new-product / candidate-50156d8533a8117ea782: Source robots.txt disallows this URL
-- new-product / candidate-c3752002cd76f5f6ecc1: Source robots.txt disallows this URL
-- new-product / candidate-ffc878e8bf3bc4ec20b9: Source robots.txt disallows this URL
-- new-product / candidate-238bd98fd44e01fd19de: Source robots.txt disallows this URL
-- new-product / candidate-f25979003b72bc73c2dc: Source robots.txt disallows this URL
-- new-product / candidate-e9521a4541546bdf277d: Source robots.txt disallows this URL
-- new-product / candidate-494158ef60ceea17b29d: Source robots.txt disallows this URL
-- new-product / candidate-8e7da08b480f01dec3a7: Source robots.txt disallows this URL
-- new-product / candidate-06370358afaeb526b6cc: Source robots.txt disallows this URL
-- new-product / candidate-2ccd322f960995aa1226: Source robots.txt disallows this URL
-- new-product / candidate-0bb074b0ae383cfad55e: Source robots.txt disallows this URL
-- new-product / candidate-d7b0b96b8c2a311d98b8: Source robots.txt disallows this URL
-- new-product / candidate-fb7b1b563b5c53cbea09: Source robots.txt disallows this URL
-- new-product / candidate-d28ad3a6c5519b8eaaa8: Source robots.txt disallows this URL
-- new-product / candidate-072efe9fd16ee5c055ec: Source robots.txt disallows this URL
-- new-product / candidate-d4e29be71af4716c22d8: Source robots.txt disallows this URL
-- new-product / candidate-bb0806ded76198a00d22: HTTP Error 429: Too Many Requests
-- new-product / candidate-9d700f8791721e3f4caf: Source robots.txt disallows this URL
-- new-product / candidate-dc06fa1e1c4953f57418: Source robots.txt disallows this URL
-- new-product / candidate-ad714d865f6ace820b1f: Source robots.txt disallows this URL
-- new-product / candidate-2e8d67ff5d86707e3142: Source robots.txt disallows this URL
-- new-product / candidate-fbd2ed3aed8c72ef7bb7: HTTP Error 429: Too Many Requests
-- new-product / candidate-63ce5fbe929899e25b31: Source robots.txt disallows this URL
-- new-product / candidate-58d738338d5495d3be0f: Source robots.txt disallows this URL
-- new-product / candidate-0d68175d8eebb3a612c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-bed892868dcba1a7fb7c: Source robots.txt disallows this URL
-- new-product / candidate-64379db6d7a4b002f87d: HTTP Error 429: Too Many Requests
-- new-product / candidate-dc0ec00e7c2c5f59ebef: Source robots.txt disallows this URL
-- new-product / candidate-e4f4baf97a0007a97f9f: Source robots.txt disallows this URL
-- new-product / candidate-83ea24945b4f783da983: HTTP Error 429: Too Many Requests
-- new-product / candidate-a4ab9764be7ce6c09ade: Source robots.txt disallows this URL
-- new-product / candidate-de4b281ef61b1efac204: Source robots.txt disallows this URL
-- new-product / candidate-c0c178e339f1108411c9: Source robots.txt disallows this URL
-- new-product / candidate-4a5fa4ce54e54ec66bdc: Source robots.txt disallows this URL
-- new-product / candidate-44291b5c33b7afb19589: Source robots.txt disallows this URL
-- new-product / candidate-da43fcf425b085dddd28: HTTP Error 429: Too Many Requests
-- new-product / candidate-6114ddaf8a4dd3df9569: Source robots.txt disallows this URL
-- new-product / candidate-9e2941f6fcd9d1b53c04: HTTP Error 429: Too Many Requests
-- new-product / candidate-6512c6745b4606c44aa2: Source robots.txt disallows this URL
+- new-product / candidate-8b030341c96f64735699: HTTP Error 429: Too Many Requests
+- new-product / candidate-616dac100612c8c71c81: HTTP Error 429: Too Many Requests
+- new-product / candidate-30af61f9ea02b93f6236: HTTP Error 429: Too Many Requests
+- new-product / candidate-6189946cd9e52534ceae: HTTP Error 429: Too Many Requests
+- new-product / candidate-c2c9cd45baebcd77afc6: HTTP Error 429: Too Many Requests
+- new-product / candidate-1b97329ed96755888a7c: HTTP Error 429: Too Many Requests
+- new-product / candidate-260653c97f8ccd4c8048: HTTP Error 429: Too Many Requests
+- new-product / candidate-bbbf9f189c63c72da916: HTTP Error 429: Too Many Requests
+- new-product / candidate-1370ba7e45a096d23523: Source robots.txt disallows this URL
+- new-product / candidate-9c135a562a2bc8021c8a: Source robots.txt disallows this URL
+- new-product / candidate-d346997fe03da04b03ca: Source robots.txt disallows this URL
+- new-product / candidate-420a8d605181ae861054: Source robots.txt disallows this URL
+- new-product / candidate-3754573201774b673ae0: Source robots.txt disallows this URL
+- new-product / candidate-d06eed21a06528ab9012: Source robots.txt disallows this URL
+- new-product / candidate-6b4a39102e5280ea5e22: Source robots.txt disallows this URL
+- new-product / candidate-21912ec0a2559db6fc41: Source robots.txt disallows this URL
+- new-product / candidate-d6a7e3cde6287c0f29b0: Source robots.txt disallows this URL
+- new-product / candidate-9c8cdbdc114573886d50: Source robots.txt disallows this URL
+- new-product / candidate-3d072a603282a140ae7d: Source robots.txt disallows this URL
+- new-product / candidate-d83dd34be3f8b666b1c5: Source robots.txt disallows this URL
+- new-product / candidate-9b968c91c08d315e6f2d: Source robots.txt disallows this URL
+- new-product / candidate-9b857c7147532088f53b: Source robots.txt disallows this URL
+- new-product / candidate-9556b4024c7d16cc0ee5: Source robots.txt disallows this URL
+- new-product / candidate-bc0b7ef093ed558b4a82: Source robots.txt disallows this URL
+- new-product / candidate-dd43fcd516659183d373: Source robots.txt disallows this URL
+- new-product / candidate-bc06dfa4b1ee3ea74a25: Source robots.txt disallows this URL
+- new-product / candidate-78912f533681149ee102: Source robots.txt disallows this URL
+- new-product / candidate-011f5868df2026cdaaf0: Source robots.txt disallows this URL
+- new-product / candidate-8ab751e1ccac14b4a8fc: Source robots.txt disallows this URL
+- new-product / candidate-e2c05158cba350b80767: Source robots.txt disallows this URL
+- new-product / candidate-1ada39485133cc52c225: Source robots.txt disallows this URL
+- new-product / candidate-a5032845bf0ca5dc5b80: Source robots.txt disallows this URL
+- new-product / candidate-60d6d41a6f665e7f0730: Source robots.txt disallows this URL
+- new-product / candidate-a392f12654ccfe478d19: HTTP Error 429: Too Many Requests
+- new-product / candidate-6fafdf5ed83c3d0de1d2: Source robots.txt disallows this URL
+- new-product / candidate-08c540ba8aaafd02faea: HTTP Error 429: Too Many Requests
+- new-product / candidate-b1338361d553c8c42bde: HTTP Error 429: Too Many Requests
+- new-product / candidate-f8b136544cabd160b8d0: HTTP Error 429: Too Many Requests
+- new-product / candidate-1a3206e5542879d9bc4c: HTTP Error 429: Too Many Requests
+- new-product / candidate-eb3ff47537586c078599: HTTP Error 429: Too Many Requests
+- new-product / candidate-c6ef35628d7e4cf94ad4: HTTP Error 429: Too Many Requests
+- new-product / candidate-30c4b06cf3ca440e69a7: HTTP Error 429: Too Many Requests
+- new-product / candidate-06c13704ac380e51e0de: HTTP Error 429: Too Many Requests
+- new-product / candidate-a4bc67a1ce5104ba9561: HTTP Error 429: Too Many Requests
+- new-product / candidate-d270d00ebd7720f9a56e: HTTP Error 429: Too Many Requests
+- new-product / candidate-cdf4d8d685ec0f4d43e6: HTTP Error 429: Too Many Requests
+- new-product / candidate-fb17232410fe5edc941f: HTTP Error 429: Too Many Requests
+- new-product / candidate-85f55a4064ffead16d42: HTTP Error 429: Too Many Requests
+- new-product / candidate-2347b1a7b8e5c4b095b8: HTTP Error 429: Too Many Requests
+- new-product / candidate-97c657282e94ac9b32a5: HTTP Error 429: Too Many Requests
+- new-product / candidate-9e8425f65ad83598cf24: HTTP Error 429: Too Many Requests
+- new-product / candidate-02e88843588201f2b114: HTTP Error 429: Too Many Requests
+- new-product / candidate-b9c824c6c0607123e97b: HTTP Error 429: Too Many Requests
+- new-product / candidate-2a8f34de79a429b8b837: HTTP Error 429: Too Many Requests
+- new-product / candidate-78204b4cc3aca821a7bd: HTTP Error 429: Too Many Requests
+- new-product / candidate-50156d8533a8117ea782: HTTP Error 429: Too Many Requests
+- new-product / candidate-c3752002cd76f5f6ecc1: HTTP Error 429: Too Many Requests
+- new-product / candidate-ffc878e8bf3bc4ec20b9: HTTP Error 429: Too Many Requests
+- new-product / candidate-238bd98fd44e01fd19de: HTTP Error 429: Too Many Requests
+- new-product / candidate-f25979003b72bc73c2dc: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9521a4541546bdf277d: HTTP Error 429: Too Many Requests
+- new-product / candidate-494158ef60ceea17b29d: HTTP Error 429: Too Many Requests
+- new-product / candidate-8e7da08b480f01dec3a7: HTTP Error 429: Too Many Requests
+- new-product / candidate-06370358afaeb526b6cc: HTTP Error 429: Too Many Requests
+- new-product / candidate-2ccd322f960995aa1226: HTTP Error 429: Too Many Requests
+- new-product / candidate-0bb074b0ae383cfad55e: HTTP Error 429: Too Many Requests
+- new-product / candidate-d7b0b96b8c2a311d98b8: HTTP Error 429: Too Many Requests
+- new-product / candidate-fb7b1b563b5c53cbea09: HTTP Error 429: Too Many Requests
+- new-product / candidate-d28ad3a6c5519b8eaaa8: HTTP Error 429: Too Many Requests
+- new-product / candidate-072efe9fd16ee5c055ec: HTTP Error 429: Too Many Requests
+- new-product / candidate-d4e29be71af4716c22d8: HTTP Error 429: Too Many Requests
+- new-product / candidate-bb0806ded76198a00d22: Source robots.txt disallows this URL
+- new-product / candidate-9d700f8791721e3f4caf: HTTP Error 429: Too Many Requests
+- new-product / candidate-dc06fa1e1c4953f57418: HTTP Error 429: Too Many Requests
+- new-product / candidate-ad714d865f6ace820b1f: HTTP Error 429: Too Many Requests
+- new-product / candidate-2e8d67ff5d86707e3142: HTTP Error 429: Too Many Requests
+- new-product / candidate-fbd2ed3aed8c72ef7bb7: Source robots.txt disallows this URL
+- new-product / candidate-63ce5fbe929899e25b31: HTTP Error 429: Too Many Requests
+- new-product / candidate-58d738338d5495d3be0f: HTTP Error 429: Too Many Requests
+- new-product / candidate-0d68175d8eebb3a612c6: Source robots.txt disallows this URL
+- new-product / candidate-bed892868dcba1a7fb7c: HTTP Error 429: Too Many Requests
+- new-product / candidate-64379db6d7a4b002f87d: Source robots.txt disallows this URL
+- new-product / candidate-dc0ec00e7c2c5f59ebef: HTTP Error 429: Too Many Requests
+- new-product / candidate-e4f4baf97a0007a97f9f: HTTP Error 429: Too Many Requests
+- new-product / candidate-83ea24945b4f783da983: Source robots.txt disallows this URL
+- new-product / candidate-a4ab9764be7ce6c09ade: HTTP Error 429: Too Many Requests
+- new-product / candidate-de4b281ef61b1efac204: HTTP Error 429: Too Many Requests
+- new-product / candidate-c0c178e339f1108411c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-4a5fa4ce54e54ec66bdc: HTTP Error 429: Too Many Requests
+- new-product / candidate-44291b5c33b7afb19589: HTTP Error 429: Too Many Requests
+- new-product / candidate-da43fcf425b085dddd28: Source robots.txt disallows this URL
+- new-product / candidate-6114ddaf8a4dd3df9569: HTTP Error 429: Too Many Requests
+- new-product / candidate-9e2941f6fcd9d1b53c04: Source robots.txt disallows this URL
+- new-product / candidate-6512c6745b4606c44aa2: HTTP Error 429: Too Many Requests
 - new-product / candidate-64a717dfb8609b21feb9: Source robots.txt disallows this URL
-- new-product / candidate-1e7733f1fd633f9e0193: HTTP Error 429: Too Many Requests
-- new-product / candidate-9e4876ba1a79c17d4964: Source robots.txt disallows this URL
-- new-product / candidate-dc9ef639969b256b52c8: Source robots.txt disallows this URL
-- new-product / candidate-aaea2f82c347c2dea92a: Source robots.txt disallows this URL
-- new-product / candidate-cf6deac58455c4054f45: Source robots.txt disallows this URL
-- new-product / candidate-812cc2912785c26ee06f: Source robots.txt disallows this URL
-- new-product / candidate-25a87cee4e9ac88d5b6a: Source robots.txt disallows this URL
-- new-product / candidate-214dee6d0030ac9a4c9f: HTTP Error 429: Too Many Requests
-- new-product / candidate-fdbe5df9f67c211e5cbc: HTTP Error 429: Too Many Requests
-- new-product / candidate-004022a61e6595bd3673: HTTP Error 429: Too Many Requests
-- new-product / candidate-eae1ecb0f1eb4b47805f: HTTP Error 429: Too Many Requests
-- new-product / candidate-0e55aa0a1c73606b86c8: HTTP Error 429: Too Many Requests
-- new-product / candidate-37ed311ae867b37f80e0: HTTP Error 429: Too Many Requests
-- new-product / candidate-ca589d31c2d5843c38a4: HTTP Error 429: Too Many Requests
-- new-product / candidate-7a870bad5616c0b05536: HTTP Error 429: Too Many Requests
-- new-product / candidate-f99a946feeac28f32a8f: HTTP Error 429: Too Many Requests
-- new-product / candidate-30bfaf4afeac637ec552: HTTP Error 429: Too Many Requests
-- new-product / candidate-23280acd65ac3cbc5bd7: HTTP Error 429: Too Many Requests
-- new-product / candidate-2d0192ca423031e78599: HTTP Error 429: Too Many Requests
-- new-product / candidate-587ad2131a311f336137: HTTP Error 429: Too Many Requests
-- new-product / candidate-bd1480063565226f9814: HTTP Error 429: Too Many Requests
-- new-product / candidate-9e4eb2c7fd0c8f4bdb91: HTTP Error 429: Too Many Requests
-- new-product / candidate-8102f63c4a6ddb14574b: HTTP Error 429: Too Many Requests
-- new-product / candidate-65ce90cc27ab0a12492a: HTTP Error 429: Too Many Requests
-- new-product / candidate-2e0d29923acd17d1d30e: HTTP Error 429: Too Many Requests
-- new-product / candidate-e759207a8a375663de02: Source robots.txt disallows this URL
-- new-product / candidate-7dd30c8f47d195b0c565: Source robots.txt disallows this URL
-- new-product / candidate-40b9effb1a6767f44ded: Source robots.txt disallows this URL
-- new-product / candidate-867dc5a100f45136ba7c: Source robots.txt disallows this URL
-- new-product / candidate-d828a5b72fb74598dd58: Source robots.txt disallows this URL
-- new-product / candidate-62b79a5c1a0b1fe933a9: Source robots.txt disallows this URL
-- new-product / candidate-912604d72881a64dd093: Source robots.txt disallows this URL
-- new-product / candidate-7683c22c611316fa2d11: Source robots.txt disallows this URL
-- new-product / candidate-08e34ce2d26f889c25b6: Source robots.txt disallows this URL
-- new-product / candidate-a37b69f422369132bb5c: Source robots.txt disallows this URL
-- new-product / candidate-c4acd180cee5e067a775: Source robots.txt disallows this URL
-- new-product / candidate-b8eeb9ef8acaef05db7e: Source robots.txt disallows this URL
-- new-product / candidate-53d092c2a0d4969b0086: Source robots.txt disallows this URL
-- new-product / candidate-a8a8814659a5567cf318: Source robots.txt disallows this URL
-- new-product / candidate-96c01b6e19d9b5af8b03: Source robots.txt disallows this URL
-- new-product / candidate-888868c9cf2dc0bd6b00: Source robots.txt disallows this URL
-- new-product / candidate-26f24b440f27bc4c25ab: Source robots.txt disallows this URL
-- new-product / candidate-25c3deef8136b3d88c13: Source robots.txt disallows this URL
-- new-product / candidate-41c75007d8e08b93d090: Source robots.txt disallows this URL
-- new-product / candidate-5807f94664807e9561fa: HTTP Error 429: Too Many Requests
-- new-product / candidate-693bfcd856110eba92ea: HTTP Error 429: Too Many Requests
-- new-product / candidate-129e4dbeb32372a2c822: HTTP Error 429: Too Many Requests
-- new-product / candidate-a846ec7f370734707004: HTTP Error 429: Too Many Requests
-- new-product / candidate-54259f42afec278a9463: HTTP Error 429: Too Many Requests
-- new-product / candidate-7e95e76c1bd93a709d4e: HTTP Error 429: Too Many Requests
-- new-product / candidate-b96c5cfd1473b49ec9e5: HTTP Error 429: Too Many Requests
-- new-product / candidate-51eed70fa9efcbe99f06: HTTP Error 429: Too Many Requests
-- new-product / candidate-d37b03bfed9a9a9944cc: HTTP Error 429: Too Many Requests
-- new-product / candidate-d15422eed933142f9995: HTTP Error 429: Too Many Requests
-- new-product / candidate-710b0f1dc053760e332c: HTTP Error 429: Too Many Requests
-- new-product / candidate-eee5c63f9b9299c3847c: HTTP Error 429: Too Many Requests
-- new-product / candidate-2ff88d359db321c0d108: HTTP Error 429: Too Many Requests
-- new-product / candidate-f4a7a10c11e1b41aced8: HTTP Error 429: Too Many Requests
-- new-product / candidate-1543238b969123f561ce: HTTP Error 429: Too Many Requests
-- new-product / candidate-113606c932e1c0d6a8eb: HTTP Error 429: Too Many Requests
-- new-product / candidate-32aeae64bf297413f3c8: HTTP Error 429: Too Many Requests
-- new-product / candidate-2dd9c26f77a0e7b2abba: HTTP Error 429: Too Many Requests
-- new-product / candidate-ee88a36e6a5d1885c2b5: HTTP Error 429: Too Many Requests
+- new-product / candidate-1e7733f1fd633f9e0193: Source robots.txt disallows this URL
+- new-product / candidate-9e4876ba1a79c17d4964: HTTP Error 429: Too Many Requests
+- new-product / candidate-dc9ef639969b256b52c8: HTTP Error 429: Too Many Requests
+- new-product / candidate-aaea2f82c347c2dea92a: HTTP Error 429: Too Many Requests
+- new-product / candidate-cf6deac58455c4054f45: HTTP Error 429: Too Many Requests
+- new-product / candidate-812cc2912785c26ee06f: HTTP Error 429: Too Many Requests
+- new-product / candidate-25a87cee4e9ac88d5b6a: HTTP Error 429: Too Many Requests
+- new-product / candidate-214dee6d0030ac9a4c9f: Source robots.txt disallows this URL
+- new-product / candidate-fdbe5df9f67c211e5cbc: Source robots.txt disallows this URL
+- new-product / candidate-004022a61e6595bd3673: Source robots.txt disallows this URL
+- new-product / candidate-eae1ecb0f1eb4b47805f: Source robots.txt disallows this URL
+- new-product / candidate-0e55aa0a1c73606b86c8: Source robots.txt disallows this URL
+- new-product / candidate-37ed311ae867b37f80e0: Source robots.txt disallows this URL
+- new-product / candidate-ca589d31c2d5843c38a4: Source robots.txt disallows this URL
+- new-product / candidate-7a870bad5616c0b05536: Source robots.txt disallows this URL
+- new-product / candidate-f99a946feeac28f32a8f: Source robots.txt disallows this URL
+- new-product / candidate-30bfaf4afeac637ec552: Source robots.txt disallows this URL
+- new-product / candidate-23280acd65ac3cbc5bd7: Source robots.txt disallows this URL
+- new-product / candidate-2d0192ca423031e78599: Source robots.txt disallows this URL
+- new-product / candidate-587ad2131a311f336137: Source robots.txt disallows this URL
+- new-product / candidate-bd1480063565226f9814: Source robots.txt disallows this URL
+- new-product / candidate-9e4eb2c7fd0c8f4bdb91: Source robots.txt disallows this URL
+- new-product / candidate-8102f63c4a6ddb14574b: Source robots.txt disallows this URL
+- new-product / candidate-65ce90cc27ab0a12492a: Source robots.txt disallows this URL
+- new-product / candidate-2e0d29923acd17d1d30e: Source robots.txt disallows this URL
+- new-product / candidate-e759207a8a375663de02: HTTP Error 429: Too Many Requests
+- new-product / candidate-7dd30c8f47d195b0c565: HTTP Error 429: Too Many Requests
+- new-product / candidate-40b9effb1a6767f44ded: HTTP Error 429: Too Many Requests
+- new-product / candidate-867dc5a100f45136ba7c: HTTP Error 429: Too Many Requests
+- new-product / candidate-d828a5b72fb74598dd58: HTTP Error 429: Too Many Requests
+- new-product / candidate-62b79a5c1a0b1fe933a9: HTTP Error 429: Too Many Requests
+- new-product / candidate-912604d72881a64dd093: HTTP Error 429: Too Many Requests
+- new-product / candidate-7683c22c611316fa2d11: HTTP Error 429: Too Many Requests
+- new-product / candidate-08e34ce2d26f889c25b6: HTTP Error 429: Too Many Requests
+- new-product / candidate-a37b69f422369132bb5c: HTTP Error 429: Too Many Requests
+- new-product / candidate-c4acd180cee5e067a775: HTTP Error 429: Too Many Requests
+- new-product / candidate-b8eeb9ef8acaef05db7e: HTTP Error 429: Too Many Requests
+- new-product / candidate-53d092c2a0d4969b0086: HTTP Error 429: Too Many Requests
+- new-product / candidate-a8a8814659a5567cf318: HTTP Error 429: Too Many Requests
+- new-product / candidate-96c01b6e19d9b5af8b03: HTTP Error 429: Too Many Requests
+- new-product / candidate-888868c9cf2dc0bd6b00: HTTP Error 429: Too Many Requests
+- new-product / candidate-26f24b440f27bc4c25ab: HTTP Error 429: Too Many Requests
+- new-product / candidate-25c3deef8136b3d88c13: HTTP Error 429: Too Many Requests
+- new-product / candidate-41c75007d8e08b93d090: HTTP Error 429: Too Many Requests
+- new-product / candidate-5807f94664807e9561fa: Source robots.txt disallows this URL
+- new-product / candidate-693bfcd856110eba92ea: Source robots.txt disallows this URL
+- new-product / candidate-129e4dbeb32372a2c822: Source robots.txt disallows this URL
+- new-product / candidate-a846ec7f370734707004: Source robots.txt disallows this URL
+- new-product / candidate-54259f42afec278a9463: Source robots.txt disallows this URL
+- new-product / candidate-7e95e76c1bd93a709d4e: Source robots.txt disallows this URL
+- new-product / candidate-b96c5cfd1473b49ec9e5: Source robots.txt disallows this URL
+- new-product / candidate-51eed70fa9efcbe99f06: Source robots.txt disallows this URL
+- new-product / candidate-d37b03bfed9a9a9944cc: Source robots.txt disallows this URL
+- new-product / candidate-d15422eed933142f9995: Source robots.txt disallows this URL
+- new-product / candidate-710b0f1dc053760e332c: Source robots.txt disallows this URL
+- new-product / candidate-eee5c63f9b9299c3847c: Source robots.txt disallows this URL
+- new-product / candidate-2ff88d359db321c0d108: Source robots.txt disallows this URL
+- new-product / candidate-f4a7a10c11e1b41aced8: Source robots.txt disallows this URL
+- new-product / candidate-1543238b969123f561ce: Source robots.txt disallows this URL
+- new-product / candidate-113606c932e1c0d6a8eb: Source robots.txt disallows this URL
+- new-product / candidate-32aeae64bf297413f3c8: Source robots.txt disallows this URL
+- new-product / candidate-2dd9c26f77a0e7b2abba: Source robots.txt disallows this URL
+- new-product / candidate-ee88a36e6a5d1885c2b5: Source robots.txt disallows this URL
 - new-product / candidate-b8f9e1abbbd098bbe492: Source robots.txt disallows this URL
 - new-product / candidate-4511faf1b31afb84c7d5: Source robots.txt disallows this URL
-- new-product / candidate-654b7af2e7ec30bf6f47: Source robots.txt disallows this URL
-- new-product / candidate-92992424853dfde0a06b: Source robots.txt disallows this URL
-- new-product / candidate-7862a650df1e7d6d24fc: Source robots.txt disallows this URL
-- new-product / candidate-42c6fc27bf8cb3b114c4: Source robots.txt disallows this URL
-- new-product / candidate-a41c59a828237323ee24: Source robots.txt disallows this URL
-- new-product / candidate-e1b2c171c1ef502b61da: HTTP Error 429: Too Many Requests
-- new-product / candidate-0416aa57e7e4be07e00f: HTTP Error 429: Too Many Requests
-- new-product / candidate-347180b036636001e679: HTTP Error 429: Too Many Requests
-- new-product / candidate-d24123a6f96753298f77: HTTP Error 429: Too Many Requests
-- new-product / candidate-01456f1c6cfa3c8b81f3: Source robots.txt disallows this URL
-- new-product / candidate-fe84abdbe00d95857755: Source robots.txt disallows this URL
-- new-product / candidate-4a596f98cf34ce2fac68: Source robots.txt disallows this URL
-- new-product / candidate-a9e79853cdbf8f753c78: HTTP Error 429: Too Many Requests
-- new-product / candidate-2b61a4c3a9bac43de90f: HTTP Error 429: Too Many Requests
-- new-product / candidate-af349b7da303dd2ff77d: HTTP Error 429: Too Many Requests
-- new-product / candidate-46480ec44b9425015321: HTTP Error 429: Too Many Requests
-- new-product / candidate-522c74689c0d4969924b: HTTP Error 429: Too Many Requests
-- new-product / candidate-749f7d152e3c4052ed56: HTTP Error 429: Too Many Requests
-- new-product / candidate-14d568a96e98acc0b57a: HTTP Error 429: Too Many Requests
-- new-product / candidate-addfa0b2b58631189ab6: HTTP Error 429: Too Many Requests
+- new-product / candidate-654b7af2e7ec30bf6f47: HTTP Error 429: Too Many Requests
+- new-product / candidate-92992424853dfde0a06b: HTTP Error 429: Too Many Requests
+- new-product / candidate-7862a650df1e7d6d24fc: HTTP Error 429: Too Many Requests
+- new-product / candidate-42c6fc27bf8cb3b114c4: HTTP Error 429: Too Many Requests
+- new-product / candidate-a41c59a828237323ee24: HTTP Error 429: Too Many Requests
+- new-product / candidate-e1b2c171c1ef502b61da: Source robots.txt disallows this URL
+- new-product / candidate-0416aa57e7e4be07e00f: Source robots.txt disallows this URL
+- new-product / candidate-347180b036636001e679: Source robots.txt disallows this URL
+- new-product / candidate-d24123a6f96753298f77: Source robots.txt disallows this URL
+- new-product / candidate-01456f1c6cfa3c8b81f3: HTTP Error 429: Too Many Requests
+- new-product / candidate-fe84abdbe00d95857755: HTTP Error 429: Too Many Requests
+- new-product / candidate-4a596f98cf34ce2fac68: HTTP Error 429: Too Many Requests
+- new-product / candidate-a9e79853cdbf8f753c78: Source robots.txt disallows this URL
+- new-product / candidate-2b61a4c3a9bac43de90f: Source robots.txt disallows this URL
+- new-product / candidate-af349b7da303dd2ff77d: Source robots.txt disallows this URL
+- new-product / candidate-46480ec44b9425015321: Source robots.txt disallows this URL
+- new-product / candidate-522c74689c0d4969924b: Source robots.txt disallows this URL
+- new-product / candidate-749f7d152e3c4052ed56: Source robots.txt disallows this URL
+- new-product / candidate-14d568a96e98acc0b57a: Source robots.txt disallows this URL
+- new-product / candidate-addfa0b2b58631189ab6: Source robots.txt disallows this URL
 - new-product / candidate-ca982c3c794360ffeb2d: Source robots.txt disallows this URL
 - new-product / candidate-acedccf89d668100f4d9: Source robots.txt disallows this URL
-- new-product / candidate-6c7a1908bddf5da20d70: Source robots.txt disallows this URL
-- new-product / candidate-c53ecabca977cf64264a: Source robots.txt disallows this URL
-- new-product / candidate-0326b62c74e77a91c5cd: Source robots.txt disallows this URL
-- new-product / candidate-156555b257bb0fbbc0eb: Source robots.txt disallows this URL
-- new-product / candidate-fe160daa14794781876f: Source robots.txt disallows this URL
-- new-product / candidate-0eb71c3bbc8e8101c5df: Source robots.txt disallows this URL
-- new-product / candidate-e54c6d7ed93c741ce787: Source robots.txt disallows this URL
-- new-product / candidate-75b523635b54179393de: Source robots.txt disallows this URL
-- new-product / candidate-b720690ff3613065c2f9: Source robots.txt disallows this URL
-- new-product / candidate-7d48ae942db3cf1d6146: Source robots.txt disallows this URL
-- new-product / candidate-10aa1593f63e4e3b8604: Source robots.txt disallows this URL
-- new-product / candidate-c2128c5cf8548242881b: Source robots.txt disallows this URL
-- new-product / candidate-b9ccb3e22cb62bc3b9df: Source robots.txt disallows this URL
-- new-product / candidate-328d3d09f982d6727b83: Source robots.txt disallows this URL
-- new-product / candidate-72718ca212bb4140206b: Source robots.txt disallows this URL
-- new-product / candidate-e80cba4b0d512ee7285f: Source robots.txt disallows this URL
-- new-product / candidate-8b7d6468606c6e40073f: Source robots.txt disallows this URL
-- new-product / candidate-378f4c930e9428e4925b: HTTP Error 429: Too Many Requests
-- new-product / candidate-342668b51d5f52a949cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-ae8c4e066fd878dc4563: HTTP Error 429: Too Many Requests
-- new-product / candidate-75c5dc91f50a869167fe: HTTP Error 429: Too Many Requests
-- new-product / candidate-47ae18411c6eb8970f65: HTTP Error 429: Too Many Requests
-- new-product / candidate-ef47ea79107aef982457: Source robots.txt disallows this URL
-- new-product / candidate-b7703027d71a2cbe592b: HTTP Error 429: Too Many Requests
+- new-product / candidate-6c7a1908bddf5da20d70: HTTP Error 429: Too Many Requests
+- new-product / candidate-c53ecabca977cf64264a: HTTP Error 429: Too Many Requests
+- new-product / candidate-0326b62c74e77a91c5cd: HTTP Error 429: Too Many Requests
+- new-product / candidate-156555b257bb0fbbc0eb: HTTP Error 429: Too Many Requests
+- new-product / candidate-fe160daa14794781876f: HTTP Error 429: Too Many Requests
+- new-product / candidate-0eb71c3bbc8e8101c5df: HTTP Error 429: Too Many Requests
+- new-product / candidate-e54c6d7ed93c741ce787: HTTP Error 429: Too Many Requests
+- new-product / candidate-75b523635b54179393de: HTTP Error 429: Too Many Requests
+- new-product / candidate-b720690ff3613065c2f9: HTTP Error 429: Too Many Requests
+- new-product / candidate-7d48ae942db3cf1d6146: HTTP Error 429: Too Many Requests
+- new-product / candidate-10aa1593f63e4e3b8604: HTTP Error 429: Too Many Requests
+- new-product / candidate-c2128c5cf8548242881b: HTTP Error 429: Too Many Requests
+- new-product / candidate-b9ccb3e22cb62bc3b9df: HTTP Error 429: Too Many Requests
+- new-product / candidate-328d3d09f982d6727b83: HTTP Error 429: Too Many Requests
+- new-product / candidate-72718ca212bb4140206b: HTTP Error 429: Too Many Requests
+- new-product / candidate-e80cba4b0d512ee7285f: HTTP Error 429: Too Many Requests
+- new-product / candidate-8b7d6468606c6e40073f: HTTP Error 429: Too Many Requests
+- new-product / candidate-378f4c930e9428e4925b: Source robots.txt disallows this URL
+- new-product / candidate-342668b51d5f52a949cd: Source robots.txt disallows this URL
+- new-product / candidate-ae8c4e066fd878dc4563: Source robots.txt disallows this URL
+- new-product / candidate-75c5dc91f50a869167fe: Source robots.txt disallows this URL
+- new-product / candidate-47ae18411c6eb8970f65: Source robots.txt disallows this URL
+- new-product / candidate-ef47ea79107aef982457: HTTP Error 429: Too Many Requests
+- new-product / candidate-b7703027d71a2cbe592b: Source robots.txt disallows this URL
 - new-product / candidate-1c3580849945d9792b1c: Source robots.txt disallows this URL
-- new-product / candidate-9a8db1d70556a69c975d: Source robots.txt disallows this URL
-- new-product / candidate-f8fe78ae4f7820bd26a4: Source robots.txt disallows this URL
-- new-product / candidate-60528a99dad457792948: Source robots.txt disallows this URL
-- new-product / candidate-d0b02d2b392def03a8c6: Source robots.txt disallows this URL
-- new-product / candidate-f5e8a1457fed78d5283e: Source robots.txt disallows this URL
-- new-product / candidate-190dd0386d9a61b960c4: Source robots.txt disallows this URL
-- new-product / candidate-0d9aed750e18c20317f4: Source robots.txt disallows this URL
-- new-product / candidate-9698e0ac5c964708c259: Source robots.txt disallows this URL
-- new-product / candidate-003913d10b100533c9b9: HTTP Error 429: Too Many Requests
-- new-product / candidate-0ed3cb3ea8d29265b717: HTTP Error 429: Too Many Requests
-- new-product / candidate-5c2b5de1dbefa8252223: HTTP Error 429: Too Many Requests
-- new-product / candidate-e30c72cbf21154758de6: HTTP Error 429: Too Many Requests
-- new-product / candidate-4994dc1c5ac067d97ea5: HTTP Error 429: Too Many Requests
-- new-product / candidate-8e8ca3285d74a116ab85: HTTP Error 429: Too Many Requests
-- new-product / candidate-701e1f823fac9ea04570: HTTP Error 429: Too Many Requests
-- new-product / candidate-59c3d4adcab8b0931145: HTTP Error 429: Too Many Requests
-- new-product / candidate-59a743df2746d6421212: HTTP Error 429: Too Many Requests
-- new-product / candidate-93471d4bcbd54d50bc8e: HTTP Error 429: Too Many Requests
-- new-product / candidate-553e0845416b09538778: HTTP Error 429: Too Many Requests
-- new-product / candidate-569b24addf5b9c150771: HTTP Error 429: Too Many Requests
-- new-product / candidate-7ceee74f3618c00d220e: HTTP Error 429: Too Many Requests
-- new-product / candidate-4ce2b899b887de8c1201: HTTP Error 429: Too Many Requests
-- new-product / candidate-d20db00a2b4386a98a8f: HTTP Error 429: Too Many Requests
-- new-product / candidate-d579298fb1f81a7de0dd: HTTP Error 429: Too Many Requests
-- new-product / candidate-9d220250c0562218547a: HTTP Error 429: Too Many Requests
-- new-product / candidate-7752daee7c55769daf5c: HTTP Error 429: Too Many Requests
-- new-product / candidate-94f040d36dd66061d5f5: HTTP Error 429: Too Many Requests
-- new-product / candidate-dbfe0ec573b3c4baeeda: Source robots.txt disallows this URL
-- new-product / candidate-577e50d20b3a47a66eb3: Source robots.txt disallows this URL
-- new-product / candidate-e491afee001ba133f812: Source robots.txt disallows this URL
-- new-product / candidate-b3ce887356ac7bdfdda0: Source robots.txt disallows this URL
-- new-product / candidate-0ca8e8c463a5033e791b: Source robots.txt disallows this URL
-- new-product / candidate-108ae9ffa50354334120: Source robots.txt disallows this URL
-- new-product / candidate-80a9d0850dac788d04ae: Source robots.txt disallows this URL
-- new-product / candidate-bb06246aac00fa493f2b: Source robots.txt disallows this URL
-- new-product / candidate-8ddd4b5cf15dc80b7bf4: Source robots.txt disallows this URL
-- new-product / candidate-3d760f4230b382ac800b: Source robots.txt disallows this URL
-- new-product / candidate-8b38ae933e1252060806: Source robots.txt disallows this URL
-- new-product / candidate-f32c1331f5ae7738ff06: Source robots.txt disallows this URL
-- new-product / candidate-12013c7d944f1567c4b5: Source robots.txt disallows this URL
-- new-product / candidate-7731a9043ff7f8990fb3: Source robots.txt disallows this URL
-- new-product / candidate-71703c930ecf2feccda6: Source robots.txt disallows this URL
-- new-product / candidate-8c42a036a9372f134bfc: Source robots.txt disallows this URL
-- new-product / candidate-93e068de4a0df62c9511: Source robots.txt disallows this URL
-- new-product / candidate-6e1ecce341e24eb7ebcd: Source robots.txt disallows this URL
-- new-product / candidate-9e6db6c453d87d5886cd: Source robots.txt disallows this URL
-- new-product / candidate-d62ec52230116eb42f13: HTTP Error 429: Too Many Requests
+- new-product / candidate-9a8db1d70556a69c975d: HTTP Error 429: Too Many Requests
+- new-product / candidate-f8fe78ae4f7820bd26a4: HTTP Error 429: Too Many Requests
+- new-product / candidate-60528a99dad457792948: HTTP Error 429: Too Many Requests
+- new-product / candidate-d0b02d2b392def03a8c6: HTTP Error 429: Too Many Requests
+- new-product / candidate-f5e8a1457fed78d5283e: HTTP Error 429: Too Many Requests
+- new-product / candidate-190dd0386d9a61b960c4: HTTP Error 429: Too Many Requests
+- new-product / candidate-0d9aed750e18c20317f4: HTTP Error 429: Too Many Requests
+- new-product / candidate-9698e0ac5c964708c259: HTTP Error 429: Too Many Requests
+- new-product / candidate-003913d10b100533c9b9: Source robots.txt disallows this URL
+- new-product / candidate-0ed3cb3ea8d29265b717: Source robots.txt disallows this URL
+- new-product / candidate-5c2b5de1dbefa8252223: Source robots.txt disallows this URL
+- new-product / candidate-e30c72cbf21154758de6: Source robots.txt disallows this URL
+- new-product / candidate-4994dc1c5ac067d97ea5: Source robots.txt disallows this URL
+- new-product / candidate-8e8ca3285d74a116ab85: Source robots.txt disallows this URL
+- new-product / candidate-701e1f823fac9ea04570: Source robots.txt disallows this URL
+- new-product / candidate-59c3d4adcab8b0931145: Source robots.txt disallows this URL
+- new-product / candidate-59a743df2746d6421212: Source robots.txt disallows this URL
+- new-product / candidate-93471d4bcbd54d50bc8e: Source robots.txt disallows this URL
+- new-product / candidate-553e0845416b09538778: Source robots.txt disallows this URL
+- new-product / candidate-569b24addf5b9c150771: Source robots.txt disallows this URL
+- new-product / candidate-7ceee74f3618c00d220e: Source robots.txt disallows this URL
+- new-product / candidate-4ce2b899b887de8c1201: Source robots.txt disallows this URL
+- new-product / candidate-d20db00a2b4386a98a8f: Source robots.txt disallows this URL
+- new-product / candidate-d579298fb1f81a7de0dd: Source robots.txt disallows this URL
+- new-product / candidate-9d220250c0562218547a: Source robots.txt disallows this URL
+- new-product / candidate-7752daee7c55769daf5c: Source robots.txt disallows this URL
+- new-product / candidate-94f040d36dd66061d5f5: Source robots.txt disallows this URL
+- new-product / candidate-dbfe0ec573b3c4baeeda: HTTP Error 429: Too Many Requests
+- new-product / candidate-577e50d20b3a47a66eb3: HTTP Error 429: Too Many Requests
+- new-product / candidate-e491afee001ba133f812: HTTP Error 429: Too Many Requests
+- new-product / candidate-b3ce887356ac7bdfdda0: HTTP Error 429: Too Many Requests
+- new-product / candidate-0ca8e8c463a5033e791b: HTTP Error 429: Too Many Requests
+- new-product / candidate-108ae9ffa50354334120: HTTP Error 429: Too Many Requests
+- new-product / candidate-80a9d0850dac788d04ae: HTTP Error 429: Too Many Requests
+- new-product / candidate-bb06246aac00fa493f2b: HTTP Error 429: Too Many Requests
+- new-product / candidate-8ddd4b5cf15dc80b7bf4: HTTP Error 429: Too Many Requests
+- new-product / candidate-3d760f4230b382ac800b: HTTP Error 429: Too Many Requests
+- new-product / candidate-8b38ae933e1252060806: HTTP Error 429: Too Many Requests
+- new-product / candidate-f32c1331f5ae7738ff06: HTTP Error 429: Too Many Requests
+- new-product / candidate-12013c7d944f1567c4b5: HTTP Error 429: Too Many Requests
+- new-product / candidate-7731a9043ff7f8990fb3: HTTP Error 429: Too Many Requests
+- new-product / candidate-71703c930ecf2feccda6: HTTP Error 429: Too Many Requests
+- new-product / candidate-8c42a036a9372f134bfc: HTTP Error 429: Too Many Requests
+- new-product / candidate-93e068de4a0df62c9511: HTTP Error 429: Too Many Requests
+- new-product / candidate-6e1ecce341e24eb7ebcd: HTTP Error 429: Too Many Requests
+- new-product / candidate-9e6db6c453d87d5886cd: HTTP Error 429: Too Many Requests
+- new-product / candidate-d62ec52230116eb42f13: Source robots.txt disallows this URL
 - new-product / candidate-abf6dc4d070a64b26fe0: Source robots.txt disallows this URL
-- new-product / candidate-399fe45f77a945c7dae6: Source robots.txt disallows this URL
-- new-product / candidate-4518487f33985ce5c117: Source robots.txt disallows this URL
-- new-product / candidate-2539e79e269897bd8e35: Source robots.txt disallows this URL
-- new-product / candidate-ea6c2193a2d3c8ed426b: Source robots.txt disallows this URL
-- new-product / candidate-2a0582e3cf2d433971bf: Source robots.txt disallows this URL
-- new-product / candidate-043af02cbc64d478f960: Source robots.txt disallows this URL
-- new-product / candidate-ef6cd620bf46f052bea2: HTTP Error 429: Too Many Requests
-- new-product / candidate-1700e6c1969a3b75beca: HTTP Error 429: Too Many Requests
-- new-product / candidate-4d32beeb8a3db59eb7b8: HTTP Error 429: Too Many Requests
-- new-product / candidate-984ddd988164e27de236: HTTP Error 429: Too Many Requests
-- new-product / candidate-35d195d9e84013dc6643: Source robots.txt disallows this URL
-- new-product / candidate-78f1d32a1abe5785a543: Source robots.txt disallows this URL
+- new-product / candidate-399fe45f77a945c7dae6: HTTP Error 429: Too Many Requests
+- new-product / candidate-4518487f33985ce5c117: HTTP Error 429: Too Many Requests
+- new-product / candidate-2539e79e269897bd8e35: HTTP Error 429: Too Many Requests
+- new-product / candidate-ea6c2193a2d3c8ed426b: HTTP Error 429: Too Many Requests
+- new-product / candidate-2a0582e3cf2d433971bf: HTTP Error 429: Too Many Requests
+- new-product / candidate-043af02cbc64d478f960: HTTP Error 429: Too Many Requests
+- new-product / candidate-ef6cd620bf46f052bea2: Source robots.txt disallows this URL
+- new-product / candidate-1700e6c1969a3b75beca: Source robots.txt disallows this URL
+- new-product / candidate-4d32beeb8a3db59eb7b8: Source robots.txt disallows this URL
+- new-product / candidate-984ddd988164e27de236: Source robots.txt disallows this URL
+- new-product / candidate-35d195d9e84013dc6643: HTTP Error 429: Too Many Requests
+- new-product / candidate-78f1d32a1abe5785a543: HTTP Error 429: Too Many Requests
 - new-product / candidate-4427a77e33b4efe5bfaf: Source robots.txt disallows this URL
 - new-product / candidate-4dfc14816810f776896d: Source robots.txt disallows this URL
 - new-product / candidate-bd177b830d57adafae76: Source robots.txt disallows this URL
 - new-product / candidate-730cc60d115be07d7848: Source robots.txt disallows this URL
 - new-product / candidate-51b3a58880a42aa2be12: Source robots.txt disallows this URL
 - new-product / candidate-ef8a58728033d5ebadf6: Source robots.txt disallows this URL
-- new-product / candidate-f7003de617f6fe15153e: HTTP Error 429: Too Many Requests
-- new-product / candidate-1b8bcf237a433becf78d: HTTP Error 429: Too Many Requests
-- new-product / candidate-99699604b44a1bd53062: HTTP Error 429: Too Many Requests
-- new-product / candidate-9699e6ae48fcc2ca3e44: HTTP Error 429: Too Many Requests
-- new-product / candidate-b29fddc9440819c396e2: HTTP Error 429: Too Many Requests
-- new-product / candidate-839d79fc21f4d5217797: HTTP Error 429: Too Many Requests
-- new-product / candidate-c746cd966bea93abe574: Source robots.txt disallows this URL
-- new-product / candidate-23961eb34e6581a19cf4: Source robots.txt disallows this URL
-- new-product / candidate-71dde38b63eb5263938b: Source robots.txt disallows this URL
-- new-product / candidate-ff8c7b6efc487c701556: Source robots.txt disallows this URL
-- new-product / candidate-6629819f40877849eb39: HTTP Error 429: Too Many Requests
-- new-product / candidate-cc0366b7ad0b0e235ed3: HTTP Error 429: Too Many Requests
-- new-product / candidate-476fc483ae207fd6f0a0: HTTP Error 429: Too Many Requests
-- new-product / candidate-775eb8bf52648249056b: HTTP Error 429: Too Many Requests
-- new-product / candidate-661e35352230d2f8ca15: Source robots.txt disallows this URL
-- new-product / candidate-3af56cb0ee6295841927: HTTP Error 429: Too Many Requests
+- new-product / candidate-f7003de617f6fe15153e: Source robots.txt disallows this URL
+- new-product / candidate-1b8bcf237a433becf78d: Source robots.txt disallows this URL
+- new-product / candidate-99699604b44a1bd53062: Source robots.txt disallows this URL
+- new-product / candidate-9699e6ae48fcc2ca3e44: Source robots.txt disallows this URL
+- new-product / candidate-b29fddc9440819c396e2: Source robots.txt disallows this URL
+- new-product / candidate-839d79fc21f4d5217797: Source robots.txt disallows this URL
+- new-product / candidate-c746cd966bea93abe574: HTTP Error 429: Too Many Requests
+- new-product / candidate-23961eb34e6581a19cf4: HTTP Error 429: Too Many Requests
+- new-product / candidate-71dde38b63eb5263938b: HTTP Error 429: Too Many Requests
+- new-product / candidate-ff8c7b6efc487c701556: HTTP Error 429: Too Many Requests
+- new-product / candidate-6629819f40877849eb39: Source robots.txt disallows this URL
+- new-product / candidate-cc0366b7ad0b0e235ed3: Source robots.txt disallows this URL
+- new-product / candidate-476fc483ae207fd6f0a0: Source robots.txt disallows this URL
+- new-product / candidate-775eb8bf52648249056b: Source robots.txt disallows this URL
+- new-product / candidate-661e35352230d2f8ca15: HTTP Error 429: Too Many Requests
+- new-product / candidate-3af56cb0ee6295841927: Source robots.txt disallows this URL
 - new-product / candidate-0e3250cfe509f3824541: Source robots.txt disallows this URL
 - new-product / candidate-8214a9605483b2e1d599: Source robots.txt disallows this URL
-- new-product / candidate-d53e43224f93c428d2d8: Source robots.txt disallows this URL
-- new-product / candidate-a8b42a5dc9709b522be0: Source robots.txt disallows this URL
-- new-product / candidate-f788d75f3f0e5fb3b9c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-b33484fa9d53d1888d97: HTTP Error 429: Too Many Requests
-- new-product / candidate-2a9395a944268733eb2a: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a975ac1118451a8ee5b: HTTP Error 429: Too Many Requests
-- new-product / candidate-fdc202ba4575cdf5dfef: HTTP Error 429: Too Many Requests
-- new-product / candidate-16822d8563de06153302: HTTP Error 429: Too Many Requests
-- new-product / candidate-8ecba29b5c2b70919f00: HTTP Error 429: Too Many Requests
-- new-product / candidate-0908099e489576ef6b9e: HTTP Error 429: Too Many Requests
-- new-product / candidate-3c6950bdd47c886e0794: HTTP Error 429: Too Many Requests
-- new-product / candidate-a502959040b876a9afdd: HTTP Error 429: Too Many Requests
-- new-product / candidate-5727caaebb156f6085df: HTTP Error 429: Too Many Requests
-- new-product / candidate-65419b7f4f83d183280c: HTTP Error 429: Too Many Requests
-- new-product / candidate-b882007252bccc79e339: Source robots.txt disallows this URL
-- new-product / candidate-c7cb88578b6c8dc86cfd: Source robots.txt disallows this URL
-- new-product / candidate-a29cbf44cfc8a8c2ee20: Source robots.txt disallows this URL
-- new-product / candidate-1cf8c9c39e44ef82c9cc: Source robots.txt disallows this URL
-- new-product / candidate-9cdc577fe86f4637dc45: Source robots.txt disallows this URL
-- new-product / candidate-1445a3e2e0bcd7cf82a8: Source robots.txt disallows this URL
-- new-product / candidate-dfd4d8eb33c3b9e37c9c: Source robots.txt disallows this URL
-- new-product / candidate-e1825ad6025df4bdfb06: Source robots.txt disallows this URL
-- new-product / candidate-8981ac1724f8807fbf7b: Source robots.txt disallows this URL
-- new-product / candidate-14bbcd15bd6aceab7fc7: Source robots.txt disallows this URL
-- new-product / candidate-b4a416b32d7d65bcbcbf: Source robots.txt disallows this URL
-- new-product / candidate-29881368916ceef1a602: Source robots.txt disallows this URL
-- new-product / candidate-942a8b5c31510fcc4941: Source robots.txt disallows this URL
-- new-product / candidate-9601707d4ce9e697ea83: Source robots.txt disallows this URL
-- new-product / candidate-0a912fc209e69a0f6cce: Source robots.txt disallows this URL
-- new-product / candidate-854f20810488de95db76: Source robots.txt disallows this URL
-- new-product / candidate-0ac462f59632f138901a: Source robots.txt disallows this URL
-- new-product / candidate-1a851d606d85b52f15db: Source robots.txt disallows this URL
-- new-product / candidate-7637e9ddbb2173cd6cf7: Source robots.txt disallows this URL
-- new-product / candidate-b6a4c4f2318155e4cbfe: Source robots.txt disallows this URL
-- new-product / candidate-f95d455ee34e669b3bd7: Source robots.txt disallows this URL
-- new-product / candidate-b133a9f8673a5dbfba0b: Source robots.txt disallows this URL
-- new-product / candidate-87f0eadd25cf5a3ab7fd: Source robots.txt disallows this URL
-- new-product / candidate-d5869e33ee10b48e8327: Source robots.txt disallows this URL
-- new-product / candidate-a5205661c1c0280ec808: Source robots.txt disallows this URL
-- new-product / candidate-4535280eaaf3ffed2aeb: Source robots.txt disallows this URL
-- new-product / candidate-513753f6a6eb1cd8e109: Source robots.txt disallows this URL
-- new-product / candidate-e7a94442d644e7570222: Source robots.txt disallows this URL
-- new-product / candidate-ead6648d0a993b3d98e5: Source robots.txt disallows this URL
-- new-product / candidate-7e07f307047525520c1b: Source robots.txt disallows this URL
-- new-product / candidate-a9c8c3fd0dff2b610eab: Source robots.txt disallows this URL
-- new-product / candidate-e322fba2c3701d8c2e33: Source robots.txt disallows this URL
-- new-product / candidate-0530e4804740a6eee56f: Source robots.txt disallows this URL
-- new-product / candidate-e2f07dc5c678f46c1217: Source robots.txt disallows this URL
-- new-product / candidate-00f554a6789d87395843: Source robots.txt disallows this URL
-- new-product / candidate-2e0ade048b8e0c949bc2: Source robots.txt disallows this URL
-- new-product / candidate-db4d207657d775212ccb: Source robots.txt disallows this URL
-- new-product / candidate-91cde10234a74dfd658a: Source robots.txt disallows this URL
-- new-product / candidate-7e5b5f30e4e4160e7eed: Source robots.txt disallows this URL
-- new-product / candidate-122d3100aa026ef1ffda: Source robots.txt disallows this URL
-- new-product / candidate-dfddeb0c87c53e07f8db: Source robots.txt disallows this URL
-- new-product / candidate-d37c4c483ab460dffd71: Source robots.txt disallows this URL
-- new-product / candidate-a5ecb68adc7ef1a58f7a: Source robots.txt disallows this URL
-- new-product / candidate-cb38f5ac438574fcc645: Source robots.txt disallows this URL
-- new-product / candidate-0412b51fa24a17ddff4f: Source robots.txt disallows this URL
-- new-product / candidate-ce441164ef7d7a9f8be6: Source robots.txt disallows this URL
-- new-product / candidate-0a3b70f8498ab45eb903: HTTP Error 429: Too Many Requests
-- new-product / candidate-99260c91be255097706f: HTTP Error 429: Too Many Requests
-- new-product / candidate-f5ef88c42a35ef13ac98: HTTP Error 429: Too Many Requests
-- new-product / candidate-c731e433fdc2a4d9f09e: HTTP Error 429: Too Many Requests
-- new-product / candidate-f7beeed55802e94a16c8: HTTP Error 429: Too Many Requests
-- new-product / candidate-6367b9ca26dcebe09d33: HTTP Error 429: Too Many Requests
-- new-product / candidate-7090abfc63438dbc81c0: HTTP Error 429: Too Many Requests
-- new-product / candidate-ae0db83c4ef6bbfe6f07: HTTP Error 429: Too Many Requests
-- new-product / candidate-9cee98ff9a7d8f0b538e: HTTP Error 429: Too Many Requests
-- new-product / candidate-f28fb44e16abb1c67ecf: HTTP Error 429: Too Many Requests
-- new-product / candidate-ec6278768d80517c7536: HTTP Error 429: Too Many Requests
-- new-product / candidate-a53aa1a4380a6316fee6: HTTP Error 429: Too Many Requests
-- new-product / candidate-755d30ccb291698b33d9: HTTP Error 429: Too Many Requests
-- new-product / candidate-0001b56c67650c8842e3: HTTP Error 429: Too Many Requests
-- new-product / candidate-2c53a8a223a7df014cc6: HTTP Error 429: Too Many Requests
-- new-product / candidate-96e8402f3e9fba100856: HTTP Error 429: Too Many Requests
-- new-product / candidate-df8cdaa2c94330eb96cb: HTTP Error 429: Too Many Requests
-- new-product / candidate-87ee4f6e1b773f23dbbc: HTTP Error 429: Too Many Requests
-- new-product / candidate-0ccbac1449d04dc9bf60: HTTP Error 429: Too Many Requests
-- new-product / candidate-67ee754def135ca7261a: HTTP Error 429: Too Many Requests
-- new-product / candidate-9420d0a4408011b34a76: HTTP Error 429: Too Many Requests
-- new-product / candidate-e1db47bba9111e8c78bd: HTTP Error 429: Too Many Requests
-- new-product / candidate-b44ee21ffb8c9f255e88: HTTP Error 429: Too Many Requests
-- new-product / candidate-915f466ecc0bff42f8a6: HTTP Error 429: Too Many Requests
-- new-product / candidate-fb55bb797b604b6e46d4: HTTP Error 429: Too Many Requests
-- new-product / candidate-53d5ecdb47304e40f390: HTTP Error 429: Too Many Requests
-- new-product / candidate-1b6b307656d0c2b4f0c5: HTTP Error 429: Too Many Requests
-- new-product / candidate-fddfc851c3f7e590af3d: HTTP Error 429: Too Many Requests
-- new-product / candidate-d7d519585c6c9d5d90e8: HTTP Error 429: Too Many Requests
-- new-product / candidate-0426457da4dd9e60c4af: HTTP Error 429: Too Many Requests
-- new-product / candidate-b9cb813ef187eb615402: HTTP Error 429: Too Many Requests
-- new-product / candidate-f30854b9a827857f5f6b: HTTP Error 429: Too Many Requests
-- new-product / candidate-59bcf37fbad513807ca7: HTTP Error 429: Too Many Requests
-- new-product / candidate-67d474450a8f2ac04fcf: HTTP Error 429: Too Many Requests
-- new-product / candidate-e086ca2788cf5433957b: HTTP Error 429: Too Many Requests
-- new-product / candidate-ad77b75a316552ef1bae: HTTP Error 429: Too Many Requests
-- new-product / candidate-94deadd22e83477ae13d: HTTP Error 429: Too Many Requests
-- new-product / candidate-8537040ba5f0c66b2fc3: HTTP Error 429: Too Many Requests
-- new-product / candidate-bf384f88e28e71178368: HTTP Error 429: Too Many Requests
-- new-product / candidate-ed32eef3237afee1c045: HTTP Error 429: Too Many Requests
-- new-product / candidate-672e76c4fba72d0b4414: HTTP Error 429: Too Many Requests
-- new-product / candidate-c23b491727a06b5885b6: HTTP Error 429: Too Many Requests
-- new-product / candidate-1957196fbf7634461526: HTTP Error 429: Too Many Requests
-- new-product / candidate-fdb914f428cd30eff100: HTTP Error 429: Too Many Requests
-- new-product / candidate-4e44b8323f5532bedb58: HTTP Error 429: Too Many Requests
-- new-product / candidate-1345d1d843ae10721b5a: HTTP Error 429: Too Many Requests
+- new-product / candidate-d53e43224f93c428d2d8: HTTP Error 429: Too Many Requests
+- new-product / candidate-a8b42a5dc9709b522be0: HTTP Error 429: Too Many Requests
+- new-product / candidate-f788d75f3f0e5fb3b9c6: Source robots.txt disallows this URL
+- new-product / candidate-b33484fa9d53d1888d97: Source robots.txt disallows this URL
+- new-product / candidate-2a9395a944268733eb2a: Source robots.txt disallows this URL
+- new-product / candidate-3a975ac1118451a8ee5b: Source robots.txt disallows this URL
+- new-product / candidate-fdc202ba4575cdf5dfef: Source robots.txt disallows this URL
+- new-product / candidate-16822d8563de06153302: Source robots.txt disallows this URL
+- new-product / candidate-8ecba29b5c2b70919f00: Source robots.txt disallows this URL
+- new-product / candidate-0908099e489576ef6b9e: Source robots.txt disallows this URL
+- new-product / candidate-3c6950bdd47c886e0794: Source robots.txt disallows this URL
+- new-product / candidate-a502959040b876a9afdd: Source robots.txt disallows this URL
+- new-product / candidate-5727caaebb156f6085df: Source robots.txt disallows this URL
+- new-product / candidate-65419b7f4f83d183280c: Source robots.txt disallows this URL
+- new-product / candidate-b882007252bccc79e339: HTTP Error 429: Too Many Requests
+- new-product / candidate-c7cb88578b6c8dc86cfd: HTTP Error 429: Too Many Requests
+- new-product / candidate-a29cbf44cfc8a8c2ee20: HTTP Error 429: Too Many Requests
+- new-product / candidate-1cf8c9c39e44ef82c9cc: HTTP Error 429: Too Many Requests
+- new-product / candidate-9cdc577fe86f4637dc45: HTTP Error 429: Too Many Requests
+- new-product / candidate-1445a3e2e0bcd7cf82a8: HTTP Error 429: Too Many Requests
+- new-product / candidate-dfd4d8eb33c3b9e37c9c: HTTP Error 429: Too Many Requests
+- new-product / candidate-e1825ad6025df4bdfb06: HTTP Error 429: Too Many Requests
+- new-product / candidate-8981ac1724f8807fbf7b: HTTP Error 429: Too Many Requests
+- new-product / candidate-14bbcd15bd6aceab7fc7: HTTP Error 429: Too Many Requests
+- new-product / candidate-b4a416b32d7d65bcbcbf: HTTP Error 429: Too Many Requests
+- new-product / candidate-29881368916ceef1a602: HTTP Error 429: Too Many Requests
+- new-product / candidate-942a8b5c31510fcc4941: HTTP Error 429: Too Many Requests
+- new-product / candidate-9601707d4ce9e697ea83: HTTP Error 429: Too Many Requests
+- new-product / candidate-0a912fc209e69a0f6cce: HTTP Error 429: Too Many Requests
+- new-product / candidate-854f20810488de95db76: HTTP Error 429: Too Many Requests
+- new-product / candidate-0ac462f59632f138901a: HTTP Error 429: Too Many Requests
+- new-product / candidate-1a851d606d85b52f15db: HTTP Error 429: Too Many Requests
+- new-product / candidate-7637e9ddbb2173cd6cf7: HTTP Error 429: Too Many Requests
+- new-product / candidate-b6a4c4f2318155e4cbfe: HTTP Error 429: Too Many Requests
+- new-product / candidate-f95d455ee34e669b3bd7: HTTP Error 429: Too Many Requests
+- new-product / candidate-b133a9f8673a5dbfba0b: HTTP Error 429: Too Many Requests
+- new-product / candidate-87f0eadd25cf5a3ab7fd: HTTP Error 429: Too Many Requests
+- new-product / candidate-d5869e33ee10b48e8327: HTTP Error 429: Too Many Requests
+- new-product / candidate-a5205661c1c0280ec808: HTTP Error 429: Too Many Requests
+- new-product / candidate-4535280eaaf3ffed2aeb: HTTP Error 429: Too Many Requests
+- new-product / candidate-513753f6a6eb1cd8e109: HTTP Error 429: Too Many Requests
+- new-product / candidate-e7a94442d644e7570222: HTTP Error 429: Too Many Requests
+- new-product / candidate-ead6648d0a993b3d98e5: HTTP Error 429: Too Many Requests
+- new-product / candidate-7e07f307047525520c1b: HTTP Error 429: Too Many Requests
+- new-product / candidate-a9c8c3fd0dff2b610eab: HTTP Error 429: Too Many Requests
+- new-product / candidate-e322fba2c3701d8c2e33: HTTP Error 429: Too Many Requests
+- new-product / candidate-0530e4804740a6eee56f: HTTP Error 429: Too Many Requests
+- new-product / candidate-e2f07dc5c678f46c1217: HTTP Error 429: Too Many Requests
+- new-product / candidate-00f554a6789d87395843: HTTP Error 429: Too Many Requests
+- new-product / candidate-2e0ade048b8e0c949bc2: HTTP Error 429: Too Many Requests
+- new-product / candidate-db4d207657d775212ccb: HTTP Error 429: Too Many Requests
+- new-product / candidate-91cde10234a74dfd658a: HTTP Error 429: Too Many Requests
+- new-product / candidate-7e5b5f30e4e4160e7eed: HTTP Error 429: Too Many Requests
+- new-product / candidate-122d3100aa026ef1ffda: HTTP Error 429: Too Many Requests
+- new-product / candidate-dfddeb0c87c53e07f8db: HTTP Error 429: Too Many Requests
+- new-product / candidate-d37c4c483ab460dffd71: HTTP Error 429: Too Many Requests
+- new-product / candidate-a5ecb68adc7ef1a58f7a: HTTP Error 429: Too Many Requests
+- new-product / candidate-cb38f5ac438574fcc645: HTTP Error 429: Too Many Requests
+- new-product / candidate-0412b51fa24a17ddff4f: HTTP Error 429: Too Many Requests
+- new-product / candidate-ce441164ef7d7a9f8be6: HTTP Error 429: Too Many Requests
+- new-product / candidate-0a3b70f8498ab45eb903: Source robots.txt disallows this URL
+- new-product / candidate-99260c91be255097706f: Source robots.txt disallows this URL
+- new-product / candidate-f5ef88c42a35ef13ac98: Source robots.txt disallows this URL
+- new-product / candidate-c731e433fdc2a4d9f09e: Source robots.txt disallows this URL
+- new-product / candidate-f7beeed55802e94a16c8: Source robots.txt disallows this URL
+- new-product / candidate-6367b9ca26dcebe09d33: Source robots.txt disallows this URL
+- new-product / candidate-7090abfc63438dbc81c0: Source robots.txt disallows this URL
+- new-product / candidate-ae0db83c4ef6bbfe6f07: Source robots.txt disallows this URL
+- new-product / candidate-9cee98ff9a7d8f0b538e: Source robots.txt disallows this URL
+- new-product / candidate-f28fb44e16abb1c67ecf: Source robots.txt disallows this URL
+- new-product / candidate-ec6278768d80517c7536: Source robots.txt disallows this URL
+- new-product / candidate-a53aa1a4380a6316fee6: Source robots.txt disallows this URL
+- new-product / candidate-755d30ccb291698b33d9: Source robots.txt disallows this URL
+- new-product / candidate-0001b56c67650c8842e3: Source robots.txt disallows this URL
+- new-product / candidate-2c53a8a223a7df014cc6: Source robots.txt disallows this URL
+- new-product / candidate-96e8402f3e9fba100856: Source robots.txt disallows this URL
+- new-product / candidate-df8cdaa2c94330eb96cb: Source robots.txt disallows this URL
+- new-product / candidate-87ee4f6e1b773f23dbbc: Source robots.txt disallows this URL
+- new-product / candidate-0ccbac1449d04dc9bf60: Source robots.txt disallows this URL
+- new-product / candidate-67ee754def135ca7261a: Source robots.txt disallows this URL
+- new-product / candidate-9420d0a4408011b34a76: Source robots.txt disallows this URL
+- new-product / candidate-e1db47bba9111e8c78bd: Source robots.txt disallows this URL
+- new-product / candidate-b44ee21ffb8c9f255e88: Source robots.txt disallows this URL
+- new-product / candidate-915f466ecc0bff42f8a6: Source robots.txt disallows this URL
+- new-product / candidate-fb55bb797b604b6e46d4: Source robots.txt disallows this URL
+- new-product / candidate-53d5ecdb47304e40f390: Source robots.txt disallows this URL
+- new-product / candidate-1b6b307656d0c2b4f0c5: Source robots.txt disallows this URL
+- new-product / candidate-fddfc851c3f7e590af3d: Source robots.txt disallows this URL
+- new-product / candidate-d7d519585c6c9d5d90e8: Source robots.txt disallows this URL
+- new-product / candidate-0426457da4dd9e60c4af: Source robots.txt disallows this URL
+- new-product / candidate-b9cb813ef187eb615402: Source robots.txt disallows this URL
+- new-product / candidate-f30854b9a827857f5f6b: Source robots.txt disallows this URL
+- new-product / candidate-59bcf37fbad513807ca7: Source robots.txt disallows this URL
+- new-product / candidate-67d474450a8f2ac04fcf: Source robots.txt disallows this URL
+- new-product / candidate-e086ca2788cf5433957b: Source robots.txt disallows this URL
+- new-product / candidate-ad77b75a316552ef1bae: Source robots.txt disallows this URL
+- new-product / candidate-94deadd22e83477ae13d: Source robots.txt disallows this URL
+- new-product / candidate-8537040ba5f0c66b2fc3: Source robots.txt disallows this URL
+- new-product / candidate-bf384f88e28e71178368: Source robots.txt disallows this URL
+- new-product / candidate-ed32eef3237afee1c045: Source robots.txt disallows this URL
+- new-product / candidate-672e76c4fba72d0b4414: Source robots.txt disallows this URL
+- new-product / candidate-c23b491727a06b5885b6: Source robots.txt disallows this URL
+- new-product / candidate-1957196fbf7634461526: Source robots.txt disallows this URL
+- new-product / candidate-fdb914f428cd30eff100: Source robots.txt disallows this URL
+- new-product / candidate-4e44b8323f5532bedb58: Source robots.txt disallows this URL
+- new-product / candidate-1345d1d843ae10721b5a: Source robots.txt disallows this URL
 - new-product / candidate-401eb8fa113f4cfdc0a8: Source robots.txt disallows this URL
 - new-product / candidate-beade3140d0bf0071efd: Source robots.txt disallows this URL
 - new-product / candidate-291fd6dbbb1b70c4eab3: Source robots.txt disallows this URL
@@ -3780,11 +3936,11 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-c1effa7c783c6ea7621f: Source robots.txt disallows this URL
 - new-product / candidate-29a4a6bcdc5321624ad3: Source robots.txt disallows this URL
 - new-product / candidate-d572cf30bc32d2bfd30e: Source robots.txt disallows this URL
-- new-product / candidate-2151dcec3aff4be48e0c: Source robots.txt disallows this URL
-- new-product / candidate-0398aced7e69c06a0817: Source robots.txt disallows this URL
-- new-product / candidate-2020ee1c1769cc3f3eb3: HTTP Error 429: Too Many Requests
-- new-product / candidate-18fdb76d8b730c85312f: HTTP Error 429: Too Many Requests
-- new-product / candidate-115fa1d795334f395ca5: HTTP Error 429: Too Many Requests
+- new-product / candidate-2151dcec3aff4be48e0c: HTTP Error 429: Too Many Requests
+- new-product / candidate-0398aced7e69c06a0817: HTTP Error 429: Too Many Requests
+- new-product / candidate-2020ee1c1769cc3f3eb3: Source robots.txt disallows this URL
+- new-product / candidate-18fdb76d8b730c85312f: Source robots.txt disallows this URL
+- new-product / candidate-115fa1d795334f395ca5: Source robots.txt disallows this URL
 - new-product / candidate-982e4b963c16a50b88da: Source robots.txt disallows this URL
 - new-product / candidate-77977de1e3f9cbcc9447: Source robots.txt disallows this URL
 - new-product / candidate-9f40430b58fdd069ebf4: Source robots.txt disallows this URL
@@ -3805,45 +3961,45 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-aef95ca13320080ea14d: Source robots.txt disallows this URL
 - new-product / candidate-33270665bf1d0806d64a: Source robots.txt disallows this URL
 - new-product / candidate-e7285980c6a70f8402ec: Source robots.txt disallows this URL
-- new-product / candidate-e8826ba22c7d34f3972e: Source robots.txt disallows this URL
-- new-product / candidate-ecd758d7f6f0b2480ec4: Source robots.txt disallows this URL
-- new-product / candidate-a6a1eb6c445ef429dd2b: Source robots.txt disallows this URL
-- new-product / candidate-560a6ed04d9f9be7f444: Source robots.txt disallows this URL
-- new-product / candidate-45721675cb87d3facc68: Source robots.txt disallows this URL
-- new-product / candidate-a442a751bb2a7381c2c9: Source robots.txt disallows this URL
-- new-product / candidate-28b0a0bf08ded4c639d8: HTTP Error 429: Too Many Requests
-- new-product / candidate-3f98785145ed4e7c0b98: HTTP Error 429: Too Many Requests
-- new-product / candidate-191f94ea2533b2ece370: HTTP Error 429: Too Many Requests
-- new-product / candidate-673d88125378807372ad: HTTP Error 429: Too Many Requests
-- new-product / candidate-6e4f99283acc4745552c: Source robots.txt disallows this URL
+- new-product / candidate-e8826ba22c7d34f3972e: HTTP Error 429: Too Many Requests
+- new-product / candidate-ecd758d7f6f0b2480ec4: HTTP Error 429: Too Many Requests
+- new-product / candidate-a6a1eb6c445ef429dd2b: HTTP Error 429: Too Many Requests
+- new-product / candidate-560a6ed04d9f9be7f444: HTTP Error 429: Too Many Requests
+- new-product / candidate-45721675cb87d3facc68: HTTP Error 429: Too Many Requests
+- new-product / candidate-a442a751bb2a7381c2c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-28b0a0bf08ded4c639d8: Source robots.txt disallows this URL
+- new-product / candidate-3f98785145ed4e7c0b98: Source robots.txt disallows this URL
+- new-product / candidate-191f94ea2533b2ece370: Source robots.txt disallows this URL
+- new-product / candidate-673d88125378807372ad: Source robots.txt disallows this URL
+- new-product / candidate-6e4f99283acc4745552c: HTTP Error 429: Too Many Requests
 - new-product / candidate-1aec3679d0a1eee22e61: Source robots.txt disallows this URL
-- new-product / candidate-2b0b3326f6b01c5b1b1d: HTTP Error 429: Too Many Requests
-- new-product / candidate-fa1331c45dbff5122bc2: Source robots.txt disallows this URL
-- new-product / candidate-2ac769c5815b6775264f: HTTP Error 429: Too Many Requests
-- new-product / candidate-ab3961142c8200e5a161: Source robots.txt disallows this URL
-- new-product / candidate-c444b9b738cb82431eb5: HTTP Error 429: Too Many Requests
+- new-product / candidate-2b0b3326f6b01c5b1b1d: Source robots.txt disallows this URL
+- new-product / candidate-fa1331c45dbff5122bc2: HTTP Error 429: Too Many Requests
+- new-product / candidate-2ac769c5815b6775264f: Source robots.txt disallows this URL
+- new-product / candidate-ab3961142c8200e5a161: HTTP Error 429: Too Many Requests
+- new-product / candidate-c444b9b738cb82431eb5: Source robots.txt disallows this URL
 - new-product / candidate-3029426d4e99e13edc2c: Source robots.txt disallows this URL
-- new-product / candidate-66e925121ceeda3b0c92: Source robots.txt disallows this URL
-- new-product / candidate-34ba29166b9e6a643014: HTTP Error 429: Too Many Requests
-- new-product / candidate-80e62fb7990416ff8df9: Source robots.txt disallows this URL
-- new-product / candidate-0786394016359627410c: HTTP Error 429: Too Many Requests
+- new-product / candidate-66e925121ceeda3b0c92: HTTP Error 429: Too Many Requests
+- new-product / candidate-34ba29166b9e6a643014: Source robots.txt disallows this URL
+- new-product / candidate-80e62fb7990416ff8df9: HTTP Error 429: Too Many Requests
+- new-product / candidate-0786394016359627410c: Source robots.txt disallows this URL
 - new-product / candidate-24da5d713211b0f224e0: Source robots.txt disallows this URL
-- new-product / candidate-f16305e8fe3264825b73: Source robots.txt disallows this URL
-- new-product / candidate-3c7891bd39f43c9c4b9c: HTTP Error 429: Too Many Requests
-- new-product / candidate-c6c7ea7c1710ace9e7dc: Source robots.txt disallows this URL
-- new-product / candidate-c927fde60ada18a5d2fb: HTTP Error 429: Too Many Requests
+- new-product / candidate-f16305e8fe3264825b73: HTTP Error 429: Too Many Requests
+- new-product / candidate-3c7891bd39f43c9c4b9c: Source robots.txt disallows this URL
+- new-product / candidate-c6c7ea7c1710ace9e7dc: HTTP Error 429: Too Many Requests
+- new-product / candidate-c927fde60ada18a5d2fb: Source robots.txt disallows this URL
 - new-product / candidate-a4bec8dee1f7a996f12c: Source robots.txt disallows this URL
-- new-product / candidate-8605204de3b6824b4c06: Source robots.txt disallows this URL
-- new-product / candidate-db64e83e8a558b36a2ac: HTTP Error 429: Too Many Requests
-- new-product / candidate-ef095b02935fc7a9e5f7: Source robots.txt disallows this URL
-- new-product / candidate-c558f9db4a3f5b5e16fe: HTTP Error 429: Too Many Requests
+- new-product / candidate-8605204de3b6824b4c06: HTTP Error 429: Too Many Requests
+- new-product / candidate-db64e83e8a558b36a2ac: Source robots.txt disallows this URL
+- new-product / candidate-ef095b02935fc7a9e5f7: HTTP Error 429: Too Many Requests
+- new-product / candidate-c558f9db4a3f5b5e16fe: Source robots.txt disallows this URL
 - new-product / candidate-110dc36c666729c1de98: Source robots.txt disallows this URL
-- new-product / candidate-25420c00222b8a7d89c7: Source robots.txt disallows this URL
+- new-product / candidate-25420c00222b8a7d89c7: HTTP Error 429: Too Many Requests
 - new-product / candidate-fc7ef298f2792e20e7de: Source robots.txt disallows this URL
 - new-product / candidate-695868b31d79a0fd4cc5: HTTP Error 429: Too Many Requests
-- new-product / candidate-6bd872ff945e80cd9b87: HTTP Error 429: Too Many Requests
-- new-product / candidate-a033b0edcc80a2292d1b: HTTP Error 429: Too Many Requests
-- new-product / candidate-77a73ae47f35d151aed3: HTTP Error 429: Too Many Requests
+- new-product / candidate-6bd872ff945e80cd9b87: Source robots.txt disallows this URL
+- new-product / candidate-a033b0edcc80a2292d1b: Source robots.txt disallows this URL
+- new-product / candidate-77a73ae47f35d151aed3: Source robots.txt disallows this URL
 - new-product / candidate-a626f136fa7e638a1fc9: Source robots.txt disallows this URL
 - new-product / candidate-c9da61cb8c6af818c00f: Source robots.txt disallows this URL
 - new-product / candidate-0c07b2bdca4c93223370: Source robots.txt disallows this URL
@@ -3855,20 +4011,20 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-0985097dad5cb1292930: Source robots.txt disallows this URL
 - new-product / candidate-f878d85c6fa18787b4d8: Source robots.txt disallows this URL
 - new-product / candidate-ef3a6809f20f10c674d7: Source robots.txt disallows this URL
-- new-product / candidate-704cbf7daf77fc7d7f35: Source robots.txt disallows this URL
-- new-product / candidate-fe0a20c6a4124f2e62f9: Source robots.txt disallows this URL
-- new-product / candidate-ad8d3d60da78174a1cc9: Source robots.txt disallows this URL
-- new-product / candidate-6b05cb5f9db96ae55581: Source robots.txt disallows this URL
-- new-product / candidate-f23db6bb48ac2365dddd: Source robots.txt disallows this URL
-- new-product / candidate-7ca681f5cfcc9586792a: Source robots.txt disallows this URL
-- new-product / candidate-671cb702f90afaed8be3: Source robots.txt disallows this URL
-- new-product / candidate-b3ff91830113136e840f: HTTP Error 429: Too Many Requests
-- new-product / candidate-a72770fb3e2ea47e40d8: HTTP Error 429: Too Many Requests
-- new-product / candidate-bbd095223fefe0742ee5: HTTP Error 429: Too Many Requests
-- new-product / candidate-a854df91a82a65ca42d9: Source robots.txt disallows this URL
-- new-product / candidate-369020f48bcbadb177a2: Source robots.txt disallows this URL
-- new-product / candidate-595164a05a5bdc01e30d: Source robots.txt disallows this URL
-- new-product / candidate-626f53e2cf65bb894a31: HTTP Error 429: Too Many Requests
+- new-product / candidate-704cbf7daf77fc7d7f35: HTTP Error 429: Too Many Requests
+- new-product / candidate-fe0a20c6a4124f2e62f9: HTTP Error 429: Too Many Requests
+- new-product / candidate-ad8d3d60da78174a1cc9: HTTP Error 429: Too Many Requests
+- new-product / candidate-6b05cb5f9db96ae55581: HTTP Error 429: Too Many Requests
+- new-product / candidate-f23db6bb48ac2365dddd: HTTP Error 429: Too Many Requests
+- new-product / candidate-7ca681f5cfcc9586792a: HTTP Error 429: Too Many Requests
+- new-product / candidate-671cb702f90afaed8be3: HTTP Error 429: Too Many Requests
+- new-product / candidate-b3ff91830113136e840f: Source robots.txt disallows this URL
+- new-product / candidate-a72770fb3e2ea47e40d8: Source robots.txt disallows this URL
+- new-product / candidate-bbd095223fefe0742ee5: Source robots.txt disallows this URL
+- new-product / candidate-a854df91a82a65ca42d9: HTTP Error 429: Too Many Requests
+- new-product / candidate-369020f48bcbadb177a2: HTTP Error 429: Too Many Requests
+- new-product / candidate-595164a05a5bdc01e30d: HTTP Error 429: Too Many Requests
+- new-product / candidate-626f53e2cf65bb894a31: Source robots.txt disallows this URL
 - new-product / candidate-98e3993edf6f69612b54: Source robots.txt disallows this URL
 - new-product / candidate-f7638d9a7bef42188c4e: Source robots.txt disallows this URL
 - new-product / candidate-f68a5307bc23d5cb33b4: Source robots.txt disallows this URL
@@ -3882,135 +4038,135 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-65f275cc92baafab7226: Source robots.txt disallows this URL
 - new-product / candidate-f5782d8f0d04f5c5374d: Source robots.txt disallows this URL
 - new-product / candidate-de9800b4f484605f0d2a: Source robots.txt disallows this URL
-- new-product / candidate-495240494c1a809c6b37: Source robots.txt disallows this URL
-- new-product / candidate-dc6a93e2efd74709e04c: Source robots.txt disallows this URL
-- new-product / candidate-89a797d61be6976a14ca: Source robots.txt disallows this URL
-- new-product / candidate-52b733bf7a20955031fd: Source robots.txt disallows this URL
-- new-product / candidate-8f864da723a3806426c2: Source robots.txt disallows this URL
-- new-product / candidate-8f4485060c47ae16fe6e: Source robots.txt disallows this URL
-- new-product / candidate-af619cf6bfb82e8f467e: Source robots.txt disallows this URL
-- new-product / candidate-c8fb2ef8a2c2f1e2c35b: Source robots.txt disallows this URL
-- new-product / candidate-a1fd8489c667fb0e3abf: Source robots.txt disallows this URL
-- new-product / candidate-b415900bfaddce38f73d: Source robots.txt disallows this URL
-- new-product / candidate-cf3c378f98d8e9aa1403: Source robots.txt disallows this URL
-- new-product / candidate-8f26756e3958f46c4110: Source robots.txt disallows this URL
-- new-product / candidate-e9da65bce61a040050ae: Source robots.txt disallows this URL
-- new-product / candidate-4dd00856761112721868: HTTP Error 429: Too Many Requests
-- new-product / candidate-83d7f9ad771229136927: HTTP Error 429: Too Many Requests
-- new-product / candidate-1671446e96ff6b47b1fd: HTTP Error 429: Too Many Requests
-- new-product / candidate-5d4a70cac0ec5e9b284c: HTTP Error 429: Too Many Requests
-- new-product / candidate-efdbddde23d2ccbf4c69: HTTP Error 429: Too Many Requests
-- new-product / candidate-301cfa240562cb24cd47: HTTP Error 429: Too Many Requests
-- new-product / candidate-37656eef11e89e73eee9: HTTP Error 429: Too Many Requests
-- new-product / candidate-4103012642fd16f15ddb: HTTP Error 429: Too Many Requests
-- new-product / candidate-134b79cdc7db391f09f4: HTTP Error 429: Too Many Requests
-- new-product / candidate-a031bb84083f58665123: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a8ccf6def11dc46c44d: HTTP Error 429: Too Many Requests
-- new-product / candidate-e5caf3b78e6f45a0d8aa: Source robots.txt disallows this URL
-- new-product / candidate-1d1cf040cf34445547f4: Source robots.txt disallows this URL
-- new-product / candidate-cc2a511a654cd90920bf: Source robots.txt disallows this URL
-- new-product / candidate-c103c9100e9bfb607a20: Source robots.txt disallows this URL
-- new-product / candidate-fa1bcde9995ce549aef3: Source robots.txt disallows this URL
-- new-product / candidate-210d9debaa41c708cb4b: Source robots.txt disallows this URL
+- new-product / candidate-495240494c1a809c6b37: HTTP Error 429: Too Many Requests
+- new-product / candidate-dc6a93e2efd74709e04c: HTTP Error 429: Too Many Requests
+- new-product / candidate-89a797d61be6976a14ca: HTTP Error 429: Too Many Requests
+- new-product / candidate-52b733bf7a20955031fd: HTTP Error 429: Too Many Requests
+- new-product / candidate-8f864da723a3806426c2: HTTP Error 429: Too Many Requests
+- new-product / candidate-8f4485060c47ae16fe6e: HTTP Error 429: Too Many Requests
+- new-product / candidate-af619cf6bfb82e8f467e: HTTP Error 429: Too Many Requests
+- new-product / candidate-c8fb2ef8a2c2f1e2c35b: HTTP Error 429: Too Many Requests
+- new-product / candidate-a1fd8489c667fb0e3abf: HTTP Error 429: Too Many Requests
+- new-product / candidate-b415900bfaddce38f73d: HTTP Error 429: Too Many Requests
+- new-product / candidate-cf3c378f98d8e9aa1403: HTTP Error 429: Too Many Requests
+- new-product / candidate-8f26756e3958f46c4110: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9da65bce61a040050ae: HTTP Error 429: Too Many Requests
+- new-product / candidate-4dd00856761112721868: Source robots.txt disallows this URL
+- new-product / candidate-83d7f9ad771229136927: Source robots.txt disallows this URL
+- new-product / candidate-1671446e96ff6b47b1fd: Source robots.txt disallows this URL
+- new-product / candidate-5d4a70cac0ec5e9b284c: Source robots.txt disallows this URL
+- new-product / candidate-efdbddde23d2ccbf4c69: Source robots.txt disallows this URL
+- new-product / candidate-301cfa240562cb24cd47: Source robots.txt disallows this URL
+- new-product / candidate-37656eef11e89e73eee9: Source robots.txt disallows this URL
+- new-product / candidate-4103012642fd16f15ddb: Source robots.txt disallows this URL
+- new-product / candidate-134b79cdc7db391f09f4: Source robots.txt disallows this URL
+- new-product / candidate-a031bb84083f58665123: Source robots.txt disallows this URL
+- new-product / candidate-3a8ccf6def11dc46c44d: Source robots.txt disallows this URL
+- new-product / candidate-e5caf3b78e6f45a0d8aa: HTTP Error 429: Too Many Requests
+- new-product / candidate-1d1cf040cf34445547f4: HTTP Error 429: Too Many Requests
+- new-product / candidate-cc2a511a654cd90920bf: HTTP Error 429: Too Many Requests
+- new-product / candidate-c103c9100e9bfb607a20: HTTP Error 429: Too Many Requests
+- new-product / candidate-fa1bcde9995ce549aef3: HTTP Error 429: Too Many Requests
+- new-product / candidate-210d9debaa41c708cb4b: HTTP Error 429: Too Many Requests
 - new-product / candidate-1ab7abbc1cc263f7b3a9: Source robots.txt disallows this URL
 - new-product / candidate-3d1309e86868049a1b4a: Source robots.txt disallows this URL
 - new-product / candidate-c57bb9bd805effebbd78: Source robots.txt disallows this URL
-- new-product / candidate-b275ef88b9aa9dfba71d: HTTP Error 429: Too Many Requests
-- new-product / candidate-8275055690d9ff5a539f: Source robots.txt disallows this URL
-- new-product / candidate-139eaf9829a069709171: Source robots.txt disallows this URL
-- new-product / candidate-58472be4324b6721aec3: Source robots.txt disallows this URL
-- new-product / candidate-e5eb81e20e258442c754: Source robots.txt disallows this URL
-- new-product / candidate-ccf63091282858824f84: Source robots.txt disallows this URL
-- new-product / candidate-9bd229606b974abeb68b: Source robots.txt disallows this URL
-- new-product / candidate-09c7d1527024153691c1: Source robots.txt disallows this URL
-- new-product / candidate-61e4c28ca2fe979fe1a9: Source robots.txt disallows this URL
-- new-product / candidate-1362dc5790589d82a805: Source robots.txt disallows this URL
-- new-product / candidate-cf9fcf3aaa622038c0b5: Source robots.txt disallows this URL
-- new-product / candidate-eb554d0782c2ab3b58cc: Source robots.txt disallows this URL
-- new-product / candidate-cbfa0a96c3aef630f393: Source robots.txt disallows this URL
-- new-product / candidate-cb052cbd01dd92655e10: Source robots.txt disallows this URL
-- new-product / candidate-f44698e6b53d8ce2f5ad: HTTP Error 429: Too Many Requests
-- new-product / candidate-81da8305407a3ac3bf25: Source robots.txt disallows this URL
-- new-product / candidate-5b61116b7fb838efe029: HTTP Error 429: Too Many Requests
+- new-product / candidate-b275ef88b9aa9dfba71d: Source robots.txt disallows this URL
+- new-product / candidate-8275055690d9ff5a539f: HTTP Error 429: Too Many Requests
+- new-product / candidate-139eaf9829a069709171: HTTP Error 429: Too Many Requests
+- new-product / candidate-58472be4324b6721aec3: HTTP Error 429: Too Many Requests
+- new-product / candidate-e5eb81e20e258442c754: HTTP Error 429: Too Many Requests
+- new-product / candidate-ccf63091282858824f84: HTTP Error 429: Too Many Requests
+- new-product / candidate-9bd229606b974abeb68b: HTTP Error 429: Too Many Requests
+- new-product / candidate-09c7d1527024153691c1: HTTP Error 429: Too Many Requests
+- new-product / candidate-61e4c28ca2fe979fe1a9: HTTP Error 429: Too Many Requests
+- new-product / candidate-1362dc5790589d82a805: HTTP Error 429: Too Many Requests
+- new-product / candidate-cf9fcf3aaa622038c0b5: HTTP Error 429: Too Many Requests
+- new-product / candidate-eb554d0782c2ab3b58cc: HTTP Error 429: Too Many Requests
+- new-product / candidate-cbfa0a96c3aef630f393: HTTP Error 429: Too Many Requests
+- new-product / candidate-cb052cbd01dd92655e10: HTTP Error 429: Too Many Requests
+- new-product / candidate-f44698e6b53d8ce2f5ad: Source robots.txt disallows this URL
+- new-product / candidate-81da8305407a3ac3bf25: HTTP Error 429: Too Many Requests
+- new-product / candidate-5b61116b7fb838efe029: Source robots.txt disallows this URL
 - new-product / candidate-d42b895497808a7a526b: Source robots.txt disallows this URL
 - new-product / candidate-be4e2cf76520af8b4729: Source robots.txt disallows this URL
 - new-product / candidate-00fd4c0350b4d65d54d6: Source robots.txt disallows this URL
-- new-product / candidate-1f2aca6776503215db0c: Source robots.txt disallows this URL
-- new-product / candidate-c3bb4375eb0e8c8b6b56: Source robots.txt disallows this URL
-- new-product / candidate-9301eb79a66159981146: Source robots.txt disallows this URL
-- new-product / candidate-20c7984a716242468f73: Source robots.txt disallows this URL
-- new-product / candidate-68e31ed8a97db54b0ac4: Source robots.txt disallows this URL
-- new-product / candidate-4a811b76974a293baf91: Source robots.txt disallows this URL
-- new-product / candidate-9f397413b5e600811164: Source robots.txt disallows this URL
-- new-product / candidate-b993115aec16c3e488c2: Source robots.txt disallows this URL
-- new-product / candidate-46014e4043876c15af18: Source robots.txt disallows this URL
-- new-product / candidate-532061f6597929e5cda4: HTTP Error 429: Too Many Requests
-- new-product / candidate-a88e6babfcd3fff92b55: HTTP Error 429: Too Many Requests
-- new-product / candidate-57b3ecf903bc44ae2028: HTTP Error 429: Too Many Requests
-- new-product / candidate-38a36a7d5bd51a6af27b: HTTP Error 429: Too Many Requests
-- new-product / candidate-282743ff2ec6b1c99cb7: HTTP Error 429: Too Many Requests
-- new-product / candidate-33376cafb20ba2bc1536: HTTP Error 429: Too Many Requests
-- new-product / candidate-75e3a5c5ea6c2de78065: HTTP Error 429: Too Many Requests
-- new-product / candidate-eaa10887d5b39f493d25: HTTP Error 429: Too Many Requests
-- new-product / candidate-dd0c2d32c4e01af73755: HTTP Error 429: Too Many Requests
-- new-product / candidate-751ebffd267562368648: HTTP Error 429: Too Many Requests
-- new-product / candidate-d532a4132a2ce6c849d9: HTTP Error 429: Too Many Requests
-- new-product / candidate-16c0985369b058239fdf: HTTP Error 429: Too Many Requests
-- new-product / candidate-1ee29d7d3d0b6b47e8cf: HTTP Error 429: Too Many Requests
-- new-product / candidate-5337518005276176961b: HTTP Error 429: Too Many Requests
-- new-product / candidate-eda183acdfabcb21d4bb: HTTP Error 429: Too Many Requests
-- new-product / candidate-f3fc7ba64d8a9bc4869f: HTTP Error 429: Too Many Requests
-- new-product / candidate-b08c2bc396365bd25246: HTTP Error 429: Too Many Requests
-- new-product / candidate-b09c1b4142ecce7feaa4: HTTP Error 429: Too Many Requests
-- new-product / candidate-411238f3f6527b830177: HTTP Error 429: Too Many Requests
-- new-product / candidate-056e1d7aee6d7118e856: HTTP Error 429: Too Many Requests
-- new-product / candidate-b17b8c206f7326353017: HTTP Error 429: Too Many Requests
-- new-product / candidate-e282d1ca628ffa51a5b5: HTTP Error 429: Too Many Requests
-- new-product / candidate-0dcc92c14b06ed292dfa: HTTP Error 429: Too Many Requests
-- new-product / candidate-35891ea42fc6d6bb3316: HTTP Error 429: Too Many Requests
-- new-product / candidate-54e108d25d392a45179f: HTTP Error 429: Too Many Requests
-- new-product / candidate-a09d7a5254ca509aa213: HTTP Error 429: Too Many Requests
-- new-product / candidate-9719c67c7a93e63f4e47: HTTP Error 429: Too Many Requests
-- new-product / candidate-b1abbf86921b9082fad9: HTTP Error 429: Too Many Requests
-- new-product / candidate-406a5d61bf62d063ad71: HTTP Error 429: Too Many Requests
-- new-product / candidate-97c896d9bffb94475c4c: HTTP Error 429: Too Many Requests
-- new-product / candidate-e341cb60fef133005d1d: HTTP Error 429: Too Many Requests
-- new-product / candidate-43b9fafe4a5994641c42: HTTP Error 429: Too Many Requests
-- new-product / candidate-54b51a68bbce85ce33d3: HTTP Error 429: Too Many Requests
-- new-product / candidate-18cf5a3e6d345e86795a: HTTP Error 429: Too Many Requests
-- new-product / candidate-b6129c753cc4afcd5745: HTTP Error 429: Too Many Requests
-- new-product / candidate-119388153771017d8dc9: HTTP Error 429: Too Many Requests
-- new-product / candidate-96aff43a5d8f63a3fc75: HTTP Error 429: Too Many Requests
-- new-product / candidate-e6369c4a9e673fab15a2: HTTP Error 429: Too Many Requests
-- new-product / candidate-1beba932f2cf60fdab89: HTTP Error 429: Too Many Requests
-- new-product / candidate-4a37895356c6314d405f: HTTP Error 429: Too Many Requests
-- new-product / candidate-64715745955ecc0d9444: HTTP Error 429: Too Many Requests
-- new-product / candidate-4231bf9665c76dc39dd8: HTTP Error 429: Too Many Requests
-- new-product / candidate-83938b7a4f586bbbdcf0: HTTP Error 429: Too Many Requests
-- new-product / candidate-402ce4db61e9d76b4d69: HTTP Error 429: Too Many Requests
-- new-product / candidate-f48cf785bd19f276e98c: HTTP Error 429: Too Many Requests
-- new-product / candidate-334356baf5d90431dd43: HTTP Error 429: Too Many Requests
-- new-product / candidate-2031ed12aec0a8c4e588: HTTP Error 429: Too Many Requests
-- new-product / candidate-2cf27276f03697dbd2d8: HTTP Error 429: Too Many Requests
-- new-product / candidate-5922bd27e13de91638b1: HTTP Error 429: Too Many Requests
-- new-product / candidate-34432ad47a3e291f8755: Source robots.txt disallows this URL
-- new-product / candidate-c9567da6da608db7cbfe: Source robots.txt disallows this URL
-- new-product / candidate-0dc89928ff8a7b0533e4: Source robots.txt disallows this URL
-- new-product / candidate-89277a389655c4b66a11: HTTP Error 429: Too Many Requests
-- new-product / candidate-101d59fb16901ab4467e: HTTP Error 429: Too Many Requests
-- new-product / candidate-8f712389776e69ea07a1: HTTP Error 429: Too Many Requests
-- new-product / candidate-05127d2c43e4c873e51d: HTTP Error 429: Too Many Requests
-- new-product / candidate-537c793873b1e277a33e: HTTP Error 429: Too Many Requests
-- new-product / candidate-fff6a14ef56c4db5a326: HTTP Error 429: Too Many Requests
-- new-product / candidate-62b1b3f77767f600ee5a: HTTP Error 429: Too Many Requests
-- new-product / candidate-4ec80838749363b41739: HTTP Error 429: Too Many Requests
-- new-product / candidate-4aae35f231f96190ddca: HTTP Error 429: Too Many Requests
-- new-product / candidate-229a99313e1c202dec6c: HTTP Error 429: Too Many Requests
-- new-product / candidate-4b4b7ce7a2a7ce9ec530: HTTP Error 429: Too Many Requests
-- new-product / candidate-2e4586cb94586ff83031: HTTP Error 429: Too Many Requests
-- new-product / candidate-093aeeb2d105a9173ae3: HTTP Error 429: Too Many Requests
-- new-product / candidate-f09318023edf756d38f9: HTTP Error 429: Too Many Requests
-- new-product / candidate-1cdc780267d21d2457b8: HTTP Error 429: Too Many Requests
+- new-product / candidate-1f2aca6776503215db0c: HTTP Error 429: Too Many Requests
+- new-product / candidate-c3bb4375eb0e8c8b6b56: HTTP Error 429: Too Many Requests
+- new-product / candidate-9301eb79a66159981146: HTTP Error 429: Too Many Requests
+- new-product / candidate-20c7984a716242468f73: HTTP Error 429: Too Many Requests
+- new-product / candidate-68e31ed8a97db54b0ac4: HTTP Error 429: Too Many Requests
+- new-product / candidate-4a811b76974a293baf91: HTTP Error 429: Too Many Requests
+- new-product / candidate-9f397413b5e600811164: HTTP Error 429: Too Many Requests
+- new-product / candidate-b993115aec16c3e488c2: HTTP Error 429: Too Many Requests
+- new-product / candidate-46014e4043876c15af18: HTTP Error 429: Too Many Requests
+- new-product / candidate-532061f6597929e5cda4: Source robots.txt disallows this URL
+- new-product / candidate-a88e6babfcd3fff92b55: Source robots.txt disallows this URL
+- new-product / candidate-57b3ecf903bc44ae2028: Source robots.txt disallows this URL
+- new-product / candidate-38a36a7d5bd51a6af27b: Source robots.txt disallows this URL
+- new-product / candidate-282743ff2ec6b1c99cb7: Source robots.txt disallows this URL
+- new-product / candidate-33376cafb20ba2bc1536: Source robots.txt disallows this URL
+- new-product / candidate-75e3a5c5ea6c2de78065: Source robots.txt disallows this URL
+- new-product / candidate-eaa10887d5b39f493d25: Source robots.txt disallows this URL
+- new-product / candidate-dd0c2d32c4e01af73755: Source robots.txt disallows this URL
+- new-product / candidate-751ebffd267562368648: Source robots.txt disallows this URL
+- new-product / candidate-d532a4132a2ce6c849d9: Source robots.txt disallows this URL
+- new-product / candidate-16c0985369b058239fdf: Source robots.txt disallows this URL
+- new-product / candidate-1ee29d7d3d0b6b47e8cf: Source robots.txt disallows this URL
+- new-product / candidate-5337518005276176961b: Source robots.txt disallows this URL
+- new-product / candidate-eda183acdfabcb21d4bb: Source robots.txt disallows this URL
+- new-product / candidate-f3fc7ba64d8a9bc4869f: Source robots.txt disallows this URL
+- new-product / candidate-b08c2bc396365bd25246: Source robots.txt disallows this URL
+- new-product / candidate-b09c1b4142ecce7feaa4: Source robots.txt disallows this URL
+- new-product / candidate-411238f3f6527b830177: Source robots.txt disallows this URL
+- new-product / candidate-056e1d7aee6d7118e856: Source robots.txt disallows this URL
+- new-product / candidate-b17b8c206f7326353017: Source robots.txt disallows this URL
+- new-product / candidate-e282d1ca628ffa51a5b5: Source robots.txt disallows this URL
+- new-product / candidate-0dcc92c14b06ed292dfa: Source robots.txt disallows this URL
+- new-product / candidate-35891ea42fc6d6bb3316: Source robots.txt disallows this URL
+- new-product / candidate-54e108d25d392a45179f: Source robots.txt disallows this URL
+- new-product / candidate-a09d7a5254ca509aa213: Source robots.txt disallows this URL
+- new-product / candidate-9719c67c7a93e63f4e47: Source robots.txt disallows this URL
+- new-product / candidate-b1abbf86921b9082fad9: Source robots.txt disallows this URL
+- new-product / candidate-406a5d61bf62d063ad71: Source robots.txt disallows this URL
+- new-product / candidate-97c896d9bffb94475c4c: Source robots.txt disallows this URL
+- new-product / candidate-e341cb60fef133005d1d: Source robots.txt disallows this URL
+- new-product / candidate-43b9fafe4a5994641c42: Source robots.txt disallows this URL
+- new-product / candidate-54b51a68bbce85ce33d3: Source robots.txt disallows this URL
+- new-product / candidate-18cf5a3e6d345e86795a: Source robots.txt disallows this URL
+- new-product / candidate-b6129c753cc4afcd5745: Source robots.txt disallows this URL
+- new-product / candidate-119388153771017d8dc9: Source robots.txt disallows this URL
+- new-product / candidate-96aff43a5d8f63a3fc75: Source robots.txt disallows this URL
+- new-product / candidate-e6369c4a9e673fab15a2: Source robots.txt disallows this URL
+- new-product / candidate-1beba932f2cf60fdab89: Source robots.txt disallows this URL
+- new-product / candidate-4a37895356c6314d405f: Source robots.txt disallows this URL
+- new-product / candidate-64715745955ecc0d9444: Source robots.txt disallows this URL
+- new-product / candidate-4231bf9665c76dc39dd8: Source robots.txt disallows this URL
+- new-product / candidate-83938b7a4f586bbbdcf0: Source robots.txt disallows this URL
+- new-product / candidate-402ce4db61e9d76b4d69: Source robots.txt disallows this URL
+- new-product / candidate-f48cf785bd19f276e98c: Source robots.txt disallows this URL
+- new-product / candidate-334356baf5d90431dd43: Source robots.txt disallows this URL
+- new-product / candidate-2031ed12aec0a8c4e588: Source robots.txt disallows this URL
+- new-product / candidate-2cf27276f03697dbd2d8: Source robots.txt disallows this URL
+- new-product / candidate-5922bd27e13de91638b1: Source robots.txt disallows this URL
+- new-product / candidate-34432ad47a3e291f8755: HTTP Error 429: Too Many Requests
+- new-product / candidate-c9567da6da608db7cbfe: HTTP Error 429: Too Many Requests
+- new-product / candidate-0dc89928ff8a7b0533e4: HTTP Error 429: Too Many Requests
+- new-product / candidate-89277a389655c4b66a11: Source robots.txt disallows this URL
+- new-product / candidate-101d59fb16901ab4467e: Source robots.txt disallows this URL
+- new-product / candidate-8f712389776e69ea07a1: Source robots.txt disallows this URL
+- new-product / candidate-05127d2c43e4c873e51d: Source robots.txt disallows this URL
+- new-product / candidate-537c793873b1e277a33e: Source robots.txt disallows this URL
+- new-product / candidate-fff6a14ef56c4db5a326: Source robots.txt disallows this URL
+- new-product / candidate-62b1b3f77767f600ee5a: Source robots.txt disallows this URL
+- new-product / candidate-4ec80838749363b41739: Source robots.txt disallows this URL
+- new-product / candidate-4aae35f231f96190ddca: Source robots.txt disallows this URL
+- new-product / candidate-229a99313e1c202dec6c: Source robots.txt disallows this URL
+- new-product / candidate-4b4b7ce7a2a7ce9ec530: Source robots.txt disallows this URL
+- new-product / candidate-2e4586cb94586ff83031: Source robots.txt disallows this URL
+- new-product / candidate-093aeeb2d105a9173ae3: Source robots.txt disallows this URL
+- new-product / candidate-f09318023edf756d38f9: Source robots.txt disallows this URL
+- new-product / candidate-1cdc780267d21d2457b8: Source robots.txt disallows this URL
 - new-product / candidate-58e8dde4aa2f7d4f5574: Source robots.txt disallows this URL
 - new-product / candidate-e43d13a58a646201b1c1: Source robots.txt disallows this URL
 - new-product / candidate-71010380b290057b8b58: Source robots.txt disallows this URL
@@ -4026,20 +4182,20 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-715c789bf3faaf7296b9: Source robots.txt disallows this URL
 - new-product / candidate-df2a646e7539f00af824: Source robots.txt disallows this URL
 - new-product / candidate-87e4f098927a5d528e7c: Source robots.txt disallows this URL
-- new-product / candidate-f020ff10cbb627a5324b: Source robots.txt disallows this URL
-- new-product / candidate-53893480c2b8f9ab1a17: Source robots.txt disallows this URL
-- new-product / candidate-4d5706aaaaa619e742f5: Source robots.txt disallows this URL
-- new-product / candidate-15a1d6f2055905a995df: Source robots.txt disallows this URL
-- new-product / candidate-d40576f78a942a8ab5a1: Source robots.txt disallows this URL
-- new-product / candidate-9e89fe7efbdf090303b8: Source robots.txt disallows this URL
-- new-product / candidate-5c113ded5a158cf707a4: Source robots.txt disallows this URL
-- new-product / candidate-d17bb2476358b0c9d230: HTTP Error 429: Too Many Requests
-- new-product / candidate-48bf2d82bb23ea06c717: HTTP Error 429: Too Many Requests
-- new-product / candidate-df68c472c955ac21bcc9: HTTP Error 429: Too Many Requests
-- new-product / candidate-e6c1693e215718dffd18: HTTP Error 429: Too Many Requests
-- new-product / candidate-be9423529b584e62948e: HTTP Error 429: Too Many Requests
-- new-product / candidate-555a22ab2da2b04df886: HTTP Error 429: Too Many Requests
-- new-product / candidate-166e0b89d3bb307b0c9e: HTTP Error 429: Too Many Requests
+- new-product / candidate-f020ff10cbb627a5324b: HTTP Error 429: Too Many Requests
+- new-product / candidate-53893480c2b8f9ab1a17: HTTP Error 429: Too Many Requests
+- new-product / candidate-4d5706aaaaa619e742f5: HTTP Error 429: Too Many Requests
+- new-product / candidate-15a1d6f2055905a995df: HTTP Error 429: Too Many Requests
+- new-product / candidate-d40576f78a942a8ab5a1: HTTP Error 429: Too Many Requests
+- new-product / candidate-9e89fe7efbdf090303b8: HTTP Error 429: Too Many Requests
+- new-product / candidate-5c113ded5a158cf707a4: HTTP Error 429: Too Many Requests
+- new-product / candidate-d17bb2476358b0c9d230: Source robots.txt disallows this URL
+- new-product / candidate-48bf2d82bb23ea06c717: Source robots.txt disallows this URL
+- new-product / candidate-df68c472c955ac21bcc9: Source robots.txt disallows this URL
+- new-product / candidate-e6c1693e215718dffd18: Source robots.txt disallows this URL
+- new-product / candidate-be9423529b584e62948e: Source robots.txt disallows this URL
+- new-product / candidate-555a22ab2da2b04df886: Source robots.txt disallows this URL
+- new-product / candidate-166e0b89d3bb307b0c9e: Source robots.txt disallows this URL
 - new-product / candidate-ff5a55fe21c93b159854: Source robots.txt disallows this URL
 - new-product / candidate-cc8abf39fbd6d9c8a63b: Source robots.txt disallows this URL
 - new-product / candidate-fb29b6ca8d2ad2bdcd46: Source robots.txt disallows this URL
@@ -4053,48 +4209,48 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-13110fea554164462a85: Source robots.txt disallows this URL
 - new-product / candidate-d9e1d0cc9f83dce71b20: Source robots.txt disallows this URL
 - new-product / candidate-9a1d07903faf0ba7486c: Source robots.txt disallows this URL
-- new-product / candidate-e018723cef00a471371b: Source robots.txt disallows this URL
-- new-product / candidate-60796702138dd8cc0704: Source robots.txt disallows this URL
-- new-product / candidate-44937f310c2847ec2616: Source robots.txt disallows this URL
-- new-product / candidate-ef253755049d8a670262: Source robots.txt disallows this URL
-- new-product / candidate-6c98faf651e986969206: Source robots.txt disallows this URL
-- new-product / candidate-e9d0f73a72945c482faa: Source robots.txt disallows this URL
-- new-product / candidate-fee7c5f54bdd8fa05ce7: Source robots.txt disallows this URL
-- new-product / candidate-e359d37b870a6f3c1b09: HTTP Error 429: Too Many Requests
-- new-product / candidate-16163aed7e0005643c6a: HTTP Error 429: Too Many Requests
-- new-product / candidate-a6eabca745550e9a5b41: HTTP Error 429: Too Many Requests
-- new-product / candidate-b84301c836c21d7ca735: HTTP Error 429: Too Many Requests
-- new-product / candidate-669a6eb11a78a333aa22: HTTP Error 429: Too Many Requests
-- new-product / candidate-33a98cfd4a45fff756d8: HTTP Error 429: Too Many Requests
-- new-product / candidate-3283b94043b3bff8abdc: HTTP Error 429: Too Many Requests
-- new-product / candidate-909b2dc2ff822bfaf8da: Source robots.txt disallows this URL
-- new-product / candidate-5c6e44a1406f9e39ed76: HTTP Error 429: Too Many Requests
+- new-product / candidate-e018723cef00a471371b: HTTP Error 429: Too Many Requests
+- new-product / candidate-60796702138dd8cc0704: HTTP Error 429: Too Many Requests
+- new-product / candidate-44937f310c2847ec2616: HTTP Error 429: Too Many Requests
+- new-product / candidate-ef253755049d8a670262: HTTP Error 429: Too Many Requests
+- new-product / candidate-6c98faf651e986969206: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9d0f73a72945c482faa: HTTP Error 429: Too Many Requests
+- new-product / candidate-fee7c5f54bdd8fa05ce7: HTTP Error 429: Too Many Requests
+- new-product / candidate-e359d37b870a6f3c1b09: Source robots.txt disallows this URL
+- new-product / candidate-16163aed7e0005643c6a: Source robots.txt disallows this URL
+- new-product / candidate-a6eabca745550e9a5b41: Source robots.txt disallows this URL
+- new-product / candidate-b84301c836c21d7ca735: Source robots.txt disallows this URL
+- new-product / candidate-669a6eb11a78a333aa22: Source robots.txt disallows this URL
+- new-product / candidate-33a98cfd4a45fff756d8: Source robots.txt disallows this URL
+- new-product / candidate-3283b94043b3bff8abdc: Source robots.txt disallows this URL
+- new-product / candidate-909b2dc2ff822bfaf8da: HTTP Error 429: Too Many Requests
+- new-product / candidate-5c6e44a1406f9e39ed76: Source robots.txt disallows this URL
 - new-product / candidate-6f448753f1267c1a565c: Source robots.txt disallows this URL
-- new-product / candidate-6b6e511982465d6a284f: Source robots.txt disallows this URL
-- new-product / candidate-5ba5d553667b706a871b: HTTP Error 429: Too Many Requests
-- new-product / candidate-140505c6755baa362959: Source robots.txt disallows this URL
-- new-product / candidate-7761d83a310b884546c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-6b6e511982465d6a284f: HTTP Error 429: Too Many Requests
+- new-product / candidate-5ba5d553667b706a871b: Source robots.txt disallows this URL
+- new-product / candidate-140505c6755baa362959: HTTP Error 429: Too Many Requests
+- new-product / candidate-7761d83a310b884546c9: Source robots.txt disallows this URL
 - new-product / candidate-ff286688c6de3be80b5c: Source robots.txt disallows this URL
-- new-product / candidate-4683ee842847f92d13aa: Source robots.txt disallows this URL
-- new-product / candidate-ca91d01e937f569770d7: HTTP Error 429: Too Many Requests
-- new-product / candidate-3a148d749077011305b8: HTTP Error 429: Too Many Requests
-- new-product / candidate-93026d117fa46b5dde7f: HTTP Error 429: Too Many Requests
-- new-product / candidate-098675aa29aa0d748b71: HTTP Error 429: Too Many Requests
-- new-product / candidate-c075375304c399062d9d: HTTP Error 429: Too Many Requests
-- new-product / candidate-e6f912fa3c9b030cd581: HTTP Error 429: Too Many Requests
-- new-product / candidate-414cccd6ec11714e4898: HTTP Error 429: Too Many Requests
-- new-product / candidate-06a5839e49a5e46abe88: HTTP Error 429: Too Many Requests
-- new-product / candidate-c938dbe00bbfec1b212b: HTTP Error 429: Too Many Requests
-- new-product / candidate-297082f702e804d37980: HTTP Error 429: Too Many Requests
-- new-product / candidate-7ffcecb5b7635694f960: Source robots.txt disallows this URL
-- new-product / candidate-d07645c59362a30c0ec3: Source robots.txt disallows this URL
-- new-product / candidate-1769642f2261f7d113ee: Source robots.txt disallows this URL
-- new-product / candidate-10d0f1a205f72442b9e1: Source robots.txt disallows this URL
-- new-product / candidate-c5a4b8fffdab202f08a4: Source robots.txt disallows this URL
-- new-product / candidate-f60b6b4e2c027f0b2273: Source robots.txt disallows this URL
-- new-product / candidate-8aa21c8869b7cfb734e8: HTTP Error 429: Too Many Requests
-- new-product / candidate-82ef606c87f174967f93: HTTP Error 429: Too Many Requests
-- new-product / candidate-fe9929e7e0d181b8673e: HTTP Error 429: Too Many Requests
+- new-product / candidate-4683ee842847f92d13aa: HTTP Error 429: Too Many Requests
+- new-product / candidate-ca91d01e937f569770d7: Source robots.txt disallows this URL
+- new-product / candidate-3a148d749077011305b8: Source robots.txt disallows this URL
+- new-product / candidate-93026d117fa46b5dde7f: Source robots.txt disallows this URL
+- new-product / candidate-098675aa29aa0d748b71: Source robots.txt disallows this URL
+- new-product / candidate-c075375304c399062d9d: Source robots.txt disallows this URL
+- new-product / candidate-e6f912fa3c9b030cd581: Source robots.txt disallows this URL
+- new-product / candidate-414cccd6ec11714e4898: Source robots.txt disallows this URL
+- new-product / candidate-06a5839e49a5e46abe88: Source robots.txt disallows this URL
+- new-product / candidate-c938dbe00bbfec1b212b: Source robots.txt disallows this URL
+- new-product / candidate-297082f702e804d37980: Source robots.txt disallows this URL
+- new-product / candidate-7ffcecb5b7635694f960: HTTP Error 429: Too Many Requests
+- new-product / candidate-d07645c59362a30c0ec3: HTTP Error 429: Too Many Requests
+- new-product / candidate-1769642f2261f7d113ee: HTTP Error 429: Too Many Requests
+- new-product / candidate-10d0f1a205f72442b9e1: HTTP Error 429: Too Many Requests
+- new-product / candidate-c5a4b8fffdab202f08a4: HTTP Error 429: Too Many Requests
+- new-product / candidate-f60b6b4e2c027f0b2273: HTTP Error 429: Too Many Requests
+- new-product / candidate-8aa21c8869b7cfb734e8: Source robots.txt disallows this URL
+- new-product / candidate-82ef606c87f174967f93: Source robots.txt disallows this URL
+- new-product / candidate-fe9929e7e0d181b8673e: Source robots.txt disallows this URL
 - new-product / candidate-eb48d283c9a6db608ab7: Source robots.txt disallows this URL
 - new-product / candidate-a9779f0e6354e50caea5: Source robots.txt disallows this URL
 - new-product / candidate-97e2e73aff684a2426b7: Source robots.txt disallows this URL
@@ -4141,137 +4297,137 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-f52fcf784821059e6372: Source robots.txt disallows this URL
 - new-product / candidate-828d6e04f3f9d930b428: Source robots.txt disallows this URL
 - new-product / candidate-0df35bd996f9527afdde: Source robots.txt disallows this URL
-- new-product / candidate-9abb7290bcf7cb6f3e19: Source robots.txt disallows this URL
-- new-product / candidate-40c31bfe5b31aabaf15a: Source robots.txt disallows this URL
-- new-product / candidate-8a482b7450ce1025b6e2: Source robots.txt disallows this URL
-- new-product / candidate-311b322c422b6ce152c6: Source robots.txt disallows this URL
-- new-product / candidate-cac0412a108315b86209: Source robots.txt disallows this URL
-- new-product / candidate-6fa02e44a372d4e50480: Source robots.txt disallows this URL
-- new-product / candidate-511351e39ed99471b8b7: Source robots.txt disallows this URL
-- new-product / candidate-98211a321d7076507513: HTTP Error 429: Too Many Requests
-- new-product / candidate-245307d6a03a730d8a30: HTTP Error 429: Too Many Requests
-- new-product / candidate-c4323701e3ec78f83183: HTTP Error 429: Too Many Requests
-- new-product / candidate-4bb4c509c86bf1f1bc9b: HTTP Error 429: Too Many Requests
-- new-product / candidate-621f2cd559d37c725d62: HTTP Error 429: Too Many Requests
-- new-product / candidate-1cff3f67e95da1afe9e8: HTTP Error 429: Too Many Requests
-- new-product / candidate-131e3d9f0f313e69bd63: HTTP Error 429: Too Many Requests
-- new-product / candidate-355e0b75c82c51b337c0: HTTP Error 429: Too Many Requests
-- new-product / candidate-16c80c8729f964c79ee4: HTTP Error 429: Too Many Requests
-- new-product / candidate-8512b041a2ecc6543e8d: HTTP Error 429: Too Many Requests
-- new-product / candidate-1bc30a6e2f506c3bfe61: HTTP Error 429: Too Many Requests
-- new-product / candidate-4d8f5eb18b2e6f061700: HTTP Error 429: Too Many Requests
-- new-product / candidate-0a097e7a2219147416a6: HTTP Error 429: Too Many Requests
-- new-product / candidate-8e747389b807c3f805dd: HTTP Error 429: Too Many Requests
-- new-product / candidate-aae102a1deac47864e6b: HTTP Error 429: Too Many Requests
-- new-product / candidate-f3491702386a74508c11: Source robots.txt disallows this URL
-- new-product / candidate-b7a09b454216dea6138d: Source robots.txt disallows this URL
-- new-product / candidate-e9822b2a1086184d2df8: Source robots.txt disallows this URL
-- new-product / candidate-576b4d7656dc6b8b6ebf: HTTP Error 429: Too Many Requests
-- new-product / candidate-6d567c89eda5f47f1a2a: HTTP Error 429: Too Many Requests
-- new-product / candidate-6ece2ca321ffa935a71b: HTTP Error 429: Too Many Requests
-- new-product / candidate-342029fb6cb38dac72aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-bfaad61538d617eaacaf: HTTP Error 429: Too Many Requests
-- new-product / candidate-8f0a37c183ca41ff1529: HTTP Error 429: Too Many Requests
-- new-product / candidate-35e4be4f5490465f2aa3: HTTP Error 429: Too Many Requests
-- new-product / candidate-e168422e196ff448dd98: HTTP Error 429: Too Many Requests
-- new-product / candidate-63ff996aa139161c8df3: HTTP Error 429: Too Many Requests
-- new-product / candidate-79906f2e16b0ac287d57: HTTP Error 429: Too Many Requests
-- new-product / candidate-172052fae0449721c3ee: HTTP Error 429: Too Many Requests
-- new-product / candidate-3b66fbb6eebff4b45fe8: HTTP Error 429: Too Many Requests
-- new-product / candidate-962c8cd0084c66869101: HTTP Error 429: Too Many Requests
-- new-product / candidate-970dc7576f611a47589e: HTTP Error 429: Too Many Requests
-- new-product / candidate-d7c52072945742e47c2a: HTTP Error 429: Too Many Requests
-- new-product / candidate-be9fa4b60eee2e63da8f: HTTP Error 429: Too Many Requests
+- new-product / candidate-9abb7290bcf7cb6f3e19: HTTP Error 429: Too Many Requests
+- new-product / candidate-40c31bfe5b31aabaf15a: HTTP Error 429: Too Many Requests
+- new-product / candidate-8a482b7450ce1025b6e2: HTTP Error 429: Too Many Requests
+- new-product / candidate-311b322c422b6ce152c6: HTTP Error 429: Too Many Requests
+- new-product / candidate-cac0412a108315b86209: HTTP Error 429: Too Many Requests
+- new-product / candidate-6fa02e44a372d4e50480: HTTP Error 429: Too Many Requests
+- new-product / candidate-511351e39ed99471b8b7: HTTP Error 429: Too Many Requests
+- new-product / candidate-98211a321d7076507513: Source robots.txt disallows this URL
+- new-product / candidate-245307d6a03a730d8a30: Source robots.txt disallows this URL
+- new-product / candidate-c4323701e3ec78f83183: Source robots.txt disallows this URL
+- new-product / candidate-4bb4c509c86bf1f1bc9b: Source robots.txt disallows this URL
+- new-product / candidate-621f2cd559d37c725d62: Source robots.txt disallows this URL
+- new-product / candidate-1cff3f67e95da1afe9e8: Source robots.txt disallows this URL
+- new-product / candidate-131e3d9f0f313e69bd63: Source robots.txt disallows this URL
+- new-product / candidate-355e0b75c82c51b337c0: Source robots.txt disallows this URL
+- new-product / candidate-16c80c8729f964c79ee4: Source robots.txt disallows this URL
+- new-product / candidate-8512b041a2ecc6543e8d: Source robots.txt disallows this URL
+- new-product / candidate-1bc30a6e2f506c3bfe61: Source robots.txt disallows this URL
+- new-product / candidate-4d8f5eb18b2e6f061700: Source robots.txt disallows this URL
+- new-product / candidate-0a097e7a2219147416a6: Source robots.txt disallows this URL
+- new-product / candidate-8e747389b807c3f805dd: Source robots.txt disallows this URL
+- new-product / candidate-aae102a1deac47864e6b: Source robots.txt disallows this URL
+- new-product / candidate-f3491702386a74508c11: HTTP Error 429: Too Many Requests
+- new-product / candidate-b7a09b454216dea6138d: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9822b2a1086184d2df8: HTTP Error 429: Too Many Requests
+- new-product / candidate-576b4d7656dc6b8b6ebf: Source robots.txt disallows this URL
+- new-product / candidate-6d567c89eda5f47f1a2a: Source robots.txt disallows this URL
+- new-product / candidate-6ece2ca321ffa935a71b: Source robots.txt disallows this URL
+- new-product / candidate-342029fb6cb38dac72aa: Source robots.txt disallows this URL
+- new-product / candidate-bfaad61538d617eaacaf: Source robots.txt disallows this URL
+- new-product / candidate-8f0a37c183ca41ff1529: Source robots.txt disallows this URL
+- new-product / candidate-35e4be4f5490465f2aa3: Source robots.txt disallows this URL
+- new-product / candidate-e168422e196ff448dd98: Source robots.txt disallows this URL
+- new-product / candidate-63ff996aa139161c8df3: Source robots.txt disallows this URL
+- new-product / candidate-79906f2e16b0ac287d57: Source robots.txt disallows this URL
+- new-product / candidate-172052fae0449721c3ee: Source robots.txt disallows this URL
+- new-product / candidate-3b66fbb6eebff4b45fe8: Source robots.txt disallows this URL
+- new-product / candidate-962c8cd0084c66869101: Source robots.txt disallows this URL
+- new-product / candidate-970dc7576f611a47589e: Source robots.txt disallows this URL
+- new-product / candidate-d7c52072945742e47c2a: Source robots.txt disallows this URL
+- new-product / candidate-be9fa4b60eee2e63da8f: Source robots.txt disallows this URL
 - new-product / candidate-7ae9cf53dec0f402bf8c: Source robots.txt disallows this URL
 - new-product / candidate-935d6b70547543ead5a8: Source robots.txt disallows this URL
 - new-product / candidate-c2c6ca76beb1f88105e0: Source robots.txt disallows this URL
 - new-product / candidate-94e68ca521c7f6d327f9: Source robots.txt disallows this URL
-- new-product / candidate-5a0eb1c76817686890c1: Source robots.txt disallows this URL
-- new-product / candidate-6786233b8112a1afd185: Source robots.txt disallows this URL
-- new-product / candidate-62b39610a887d050c1c2: Source robots.txt disallows this URL
-- new-product / candidate-247ed861ec6f3624641a: Source robots.txt disallows this URL
-- new-product / candidate-7699c26613790981f59a: Source robots.txt disallows this URL
-- new-product / candidate-bd62fd72ca212a80a5b9: Source robots.txt disallows this URL
-- new-product / candidate-d5c55ef338ce312c7b51: HTTP Error 429: Too Many Requests
-- new-product / candidate-86b120a600cf22ca5770: HTTP Error 429: Too Many Requests
-- new-product / candidate-d3d7c590b6f3153989ef: HTTP Error 429: Too Many Requests
-- new-product / candidate-d4d7fa6c6f9de626aea1: HTTP Error 429: Too Many Requests
-- new-product / candidate-6298dda9c38ddd84b1ef: Source robots.txt disallows this URL
-- new-product / candidate-3103c27fb21781370069: HTTP Error 429: Too Many Requests
+- new-product / candidate-5a0eb1c76817686890c1: HTTP Error 429: Too Many Requests
+- new-product / candidate-6786233b8112a1afd185: HTTP Error 429: Too Many Requests
+- new-product / candidate-62b39610a887d050c1c2: HTTP Error 429: Too Many Requests
+- new-product / candidate-247ed861ec6f3624641a: HTTP Error 429: Too Many Requests
+- new-product / candidate-7699c26613790981f59a: HTTP Error 429: Too Many Requests
+- new-product / candidate-bd62fd72ca212a80a5b9: HTTP Error 429: Too Many Requests
+- new-product / candidate-d5c55ef338ce312c7b51: Source robots.txt disallows this URL
+- new-product / candidate-86b120a600cf22ca5770: Source robots.txt disallows this URL
+- new-product / candidate-d3d7c590b6f3153989ef: Source robots.txt disallows this URL
+- new-product / candidate-d4d7fa6c6f9de626aea1: Source robots.txt disallows this URL
+- new-product / candidate-6298dda9c38ddd84b1ef: HTTP Error 429: Too Many Requests
+- new-product / candidate-3103c27fb21781370069: Source robots.txt disallows this URL
 - new-product / candidate-54dca6498cde3fa3c7e9: Source robots.txt disallows this URL
 - new-product / candidate-36ff5aaf89cceef8ad09: Source robots.txt disallows this URL
 - new-product / candidate-50c1cd99b1816b197a6e: Source robots.txt disallows this URL
 - new-product / candidate-9cc0546bea4f994e394b: Source robots.txt disallows this URL
 - new-product / candidate-472858099283cb9cc365: Source robots.txt disallows this URL
 - new-product / candidate-cfdba820b427ff99088a: Source robots.txt disallows this URL
-- new-product / candidate-7f1e808381c151094de6: Source robots.txt disallows this URL
-- new-product / candidate-14b5387b22115242c023: Source robots.txt disallows this URL
-- new-product / candidate-6c2c4f95bd425727a602: Source robots.txt disallows this URL
-- new-product / candidate-a3537a7b9996ae4528e9: HTTP Error 429: Too Many Requests
-- new-product / candidate-e60aeb1401d9936af136: HTTP Error 429: Too Many Requests
-- new-product / candidate-ccae1ad018756fa54e2d: HTTP Error 429: Too Many Requests
-- new-product / candidate-a7c8362c2be41ff8ec5d: HTTP Error 429: Too Many Requests
-- new-product / candidate-ee3e3f85e1ecfd96396d: HTTP Error 429: Too Many Requests
-- new-product / candidate-385bfb1005896e0731eb: HTTP Error 429: Too Many Requests
-- new-product / candidate-448dfde26f7077a9af9c: Source robots.txt disallows this URL
-- new-product / candidate-e0c79b89e52c82f0d862: Source robots.txt disallows this URL
-- new-product / candidate-f7608f53792a477f6663: Source robots.txt disallows this URL
-- new-product / candidate-c236caffccfe4eff8731: Source robots.txt disallows this URL
-- new-product / candidate-6d8d1ffce7851cbee733: Source robots.txt disallows this URL
-- new-product / candidate-8b74a62d3d276db2f1e8: Source robots.txt disallows this URL
-- new-product / candidate-23c34e271e6ea89dbd26: Source robots.txt disallows this URL
-- new-product / candidate-e9088910e5d223dfdf49: Source robots.txt disallows this URL
-- new-product / candidate-a01c2c37598ddd38a983: Source robots.txt disallows this URL
-- new-product / candidate-6fb2738ed4a02918b586: Source robots.txt disallows this URL
-- new-product / candidate-a6114e9cfd77ad162e0a: Source robots.txt disallows this URL
-- new-product / candidate-b7b7ebed4bbb04cc28a6: Source robots.txt disallows this URL
-- new-product / candidate-16b5944c336d49562a24: Source robots.txt disallows this URL
-- new-product / candidate-1157b61749dfcc4027de: HTTP Error 429: Too Many Requests
+- new-product / candidate-7f1e808381c151094de6: HTTP Error 429: Too Many Requests
+- new-product / candidate-14b5387b22115242c023: HTTP Error 429: Too Many Requests
+- new-product / candidate-6c2c4f95bd425727a602: HTTP Error 429: Too Many Requests
+- new-product / candidate-a3537a7b9996ae4528e9: Source robots.txt disallows this URL
+- new-product / candidate-e60aeb1401d9936af136: Source robots.txt disallows this URL
+- new-product / candidate-ccae1ad018756fa54e2d: Source robots.txt disallows this URL
+- new-product / candidate-a7c8362c2be41ff8ec5d: Source robots.txt disallows this URL
+- new-product / candidate-ee3e3f85e1ecfd96396d: Source robots.txt disallows this URL
+- new-product / candidate-385bfb1005896e0731eb: Source robots.txt disallows this URL
+- new-product / candidate-448dfde26f7077a9af9c: HTTP Error 429: Too Many Requests
+- new-product / candidate-e0c79b89e52c82f0d862: HTTP Error 429: Too Many Requests
+- new-product / candidate-f7608f53792a477f6663: HTTP Error 429: Too Many Requests
+- new-product / candidate-c236caffccfe4eff8731: HTTP Error 429: Too Many Requests
+- new-product / candidate-6d8d1ffce7851cbee733: HTTP Error 429: Too Many Requests
+- new-product / candidate-8b74a62d3d276db2f1e8: HTTP Error 429: Too Many Requests
+- new-product / candidate-23c34e271e6ea89dbd26: HTTP Error 429: Too Many Requests
+- new-product / candidate-e9088910e5d223dfdf49: HTTP Error 429: Too Many Requests
+- new-product / candidate-a01c2c37598ddd38a983: HTTP Error 429: Too Many Requests
+- new-product / candidate-6fb2738ed4a02918b586: HTTP Error 429: Too Many Requests
+- new-product / candidate-a6114e9cfd77ad162e0a: HTTP Error 429: Too Many Requests
+- new-product / candidate-b7b7ebed4bbb04cc28a6: HTTP Error 429: Too Many Requests
+- new-product / candidate-16b5944c336d49562a24: HTTP Error 429: Too Many Requests
+- new-product / candidate-1157b61749dfcc4027de: Source robots.txt disallows this URL
 - new-product / candidate-e26a93fcdc68b409a7a0: Source robots.txt disallows this URL
 - new-product / candidate-43e258f3cceb2d1a411e: Source robots.txt disallows this URL
 - new-product / candidate-83361280b7fc5255a6d3: Source robots.txt disallows this URL
-- new-product / candidate-7763a3e37277f80facb9: Source robots.txt disallows this URL
-- new-product / candidate-12a03513e880b0507e77: Source robots.txt disallows this URL
-- new-product / candidate-2cf4fb24cfed5fbf889b: Source robots.txt disallows this URL
-- new-product / candidate-79b63592bfe425951087: Source robots.txt disallows this URL
-- new-product / candidate-0da334e429eef7442292: Source robots.txt disallows this URL
-- new-product / candidate-4dce5cec9058f5fd89fe: Source robots.txt disallows this URL
-- new-product / candidate-dd0ec4c9f2380c3b9cda: HTTP Error 429: Too Many Requests
-- new-product / candidate-dd89a14df5ae0e494c46: HTTP Error 429: Too Many Requests
-- new-product / candidate-f3c68de89e68b9ac2206: HTTP Error 429: Too Many Requests
-- new-product / candidate-0afbf14c469c51603fc9: Source robots.txt disallows this URL
-- new-product / candidate-db1093b594131abf004e: HTTP Error 429: Too Many Requests
-- new-product / candidate-b2615199613474e48538: HTTP Error 429: Too Many Requests
-- new-product / candidate-4f2c2bd67ab2cd1c431d: Source robots.txt disallows this URL
-- new-product / candidate-51f41f74c498d8d38041: Source robots.txt disallows this URL
-- new-product / candidate-03fd862a04fb3404831b: Source robots.txt disallows this URL
-- new-product / candidate-1505694376b9e512e651: Source robots.txt disallows this URL
-- new-product / candidate-c6fc2612adc3cee0e917: Source robots.txt disallows this URL
-- new-product / candidate-ba7c6560bf0080312fe3: Source robots.txt disallows this URL
-- new-product / candidate-1014bf63b876467d7ebf: Source robots.txt disallows this URL
-- new-product / candidate-65018b4f1f5567bae70e: Source robots.txt disallows this URL
-- new-product / candidate-8eec4a08a1b8682a5b62: Source robots.txt disallows this URL
-- new-product / candidate-5bfab6db923cb1dc80e0: HTTP Error 429: Too Many Requests
-- new-product / candidate-a46bfcf971e548a03fb9: HTTP Error 429: Too Many Requests
-- new-product / candidate-e6208ea42bd183f32cb2: HTTP Error 429: Too Many Requests
-- new-product / candidate-8faac91140c494b75d1e: HTTP Error 429: Too Many Requests
-- new-product / candidate-c5425254c7436df9d7e5: HTTP Error 429: Too Many Requests
-- new-product / candidate-2c34d043aa3eccba3ed2: HTTP Error 429: Too Many Requests
-- new-product / candidate-d7694c3c13858af29875: HTTP Error 429: Too Many Requests
-- new-product / candidate-cd60bdf02276e6fdfd06: HTTP Error 429: Too Many Requests
-- new-product / candidate-ece323d1de25a4af6291: HTTP Error 429: Too Many Requests
-- new-product / candidate-597fe66758567c969746: Source robots.txt disallows this URL
-- new-product / candidate-4e892c6558f323d00665: Source robots.txt disallows this URL
-- new-product / candidate-2f8ad414cb2807836d1e: Source robots.txt disallows this URL
-- new-product / candidate-b26c6c0f45d2c897b8d6: Source robots.txt disallows this URL
-- new-product / candidate-01d92db1321e703ee7bf: Source robots.txt disallows this URL
-- new-product / candidate-9ac674d4b3c52e66655c: Source robots.txt disallows this URL
-- new-product / candidate-1317c067c0f6d24e2d1b: Source robots.txt disallows this URL
-- new-product / candidate-3094d02e1e1ddaea98db: Source robots.txt disallows this URL
-- new-product / candidate-5610c3ce0255bdaa93ba: Source robots.txt disallows this URL
-- new-product / candidate-75afd632095c38e45878: Source robots.txt disallows this URL
-- new-product / candidate-9392604ef434c9a5d3ce: Source robots.txt disallows this URL
-- new-product / candidate-84d72feb0eb38d86af70: HTTP Error 429: Too Many Requests
+- new-product / candidate-7763a3e37277f80facb9: HTTP Error 429: Too Many Requests
+- new-product / candidate-12a03513e880b0507e77: HTTP Error 429: Too Many Requests
+- new-product / candidate-2cf4fb24cfed5fbf889b: HTTP Error 429: Too Many Requests
+- new-product / candidate-79b63592bfe425951087: HTTP Error 429: Too Many Requests
+- new-product / candidate-0da334e429eef7442292: HTTP Error 429: Too Many Requests
+- new-product / candidate-4dce5cec9058f5fd89fe: HTTP Error 429: Too Many Requests
+- new-product / candidate-dd0ec4c9f2380c3b9cda: Source robots.txt disallows this URL
+- new-product / candidate-dd89a14df5ae0e494c46: Source robots.txt disallows this URL
+- new-product / candidate-f3c68de89e68b9ac2206: Source robots.txt disallows this URL
+- new-product / candidate-0afbf14c469c51603fc9: HTTP Error 429: Too Many Requests
+- new-product / candidate-db1093b594131abf004e: Source robots.txt disallows this URL
+- new-product / candidate-b2615199613474e48538: Source robots.txt disallows this URL
+- new-product / candidate-4f2c2bd67ab2cd1c431d: HTTP Error 429: Too Many Requests
+- new-product / candidate-51f41f74c498d8d38041: HTTP Error 429: Too Many Requests
+- new-product / candidate-03fd862a04fb3404831b: HTTP Error 429: Too Many Requests
+- new-product / candidate-1505694376b9e512e651: HTTP Error 429: Too Many Requests
+- new-product / candidate-c6fc2612adc3cee0e917: HTTP Error 429: Too Many Requests
+- new-product / candidate-ba7c6560bf0080312fe3: HTTP Error 429: Too Many Requests
+- new-product / candidate-1014bf63b876467d7ebf: HTTP Error 429: Too Many Requests
+- new-product / candidate-65018b4f1f5567bae70e: HTTP Error 429: Too Many Requests
+- new-product / candidate-8eec4a08a1b8682a5b62: HTTP Error 429: Too Many Requests
+- new-product / candidate-5bfab6db923cb1dc80e0: Source robots.txt disallows this URL
+- new-product / candidate-a46bfcf971e548a03fb9: Source robots.txt disallows this URL
+- new-product / candidate-e6208ea42bd183f32cb2: Source robots.txt disallows this URL
+- new-product / candidate-8faac91140c494b75d1e: Source robots.txt disallows this URL
+- new-product / candidate-c5425254c7436df9d7e5: Source robots.txt disallows this URL
+- new-product / candidate-2c34d043aa3eccba3ed2: Source robots.txt disallows this URL
+- new-product / candidate-d7694c3c13858af29875: Source robots.txt disallows this URL
+- new-product / candidate-cd60bdf02276e6fdfd06: Source robots.txt disallows this URL
+- new-product / candidate-ece323d1de25a4af6291: Source robots.txt disallows this URL
+- new-product / candidate-597fe66758567c969746: HTTP Error 429: Too Many Requests
+- new-product / candidate-4e892c6558f323d00665: HTTP Error 429: Too Many Requests
+- new-product / candidate-2f8ad414cb2807836d1e: HTTP Error 429: Too Many Requests
+- new-product / candidate-b26c6c0f45d2c897b8d6: HTTP Error 429: Too Many Requests
+- new-product / candidate-01d92db1321e703ee7bf: HTTP Error 429: Too Many Requests
+- new-product / candidate-9ac674d4b3c52e66655c: HTTP Error 429: Too Many Requests
+- new-product / candidate-1317c067c0f6d24e2d1b: HTTP Error 429: Too Many Requests
+- new-product / candidate-3094d02e1e1ddaea98db: HTTP Error 429: Too Many Requests
+- new-product / candidate-5610c3ce0255bdaa93ba: HTTP Error 429: Too Many Requests
+- new-product / candidate-75afd632095c38e45878: HTTP Error 429: Too Many Requests
+- new-product / candidate-9392604ef434c9a5d3ce: HTTP Error 429: Too Many Requests
+- new-product / candidate-84d72feb0eb38d86af70: Source robots.txt disallows this URL
 - new-product / candidate-f6b25914078d68270411: Source robots.txt disallows this URL
 - new-product / candidate-cdf99bb7e95c7d5f9a2b: Source robots.txt disallows this URL
 - new-product / candidate-e0d9efd7118ec11ae839: Source robots.txt disallows this URL
@@ -4297,10 +4453,10 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-055457a394f2aeed7899: HTTP Error 429: Too Many Requests
 - new-product / candidate-265de1dbde82a343e48a: HTTP Error 429: Too Many Requests
 - new-product / candidate-9993c301204846c6cac6: HTTP Error 429: Too Many Requests
-- new-product / candidate-e63b96815568a8d78721: Source robots.txt disallows this URL
-- new-product / candidate-281974ae2281b8056d0e: HTTP Error 429: Too Many Requests
-- new-product / candidate-92c7c2f7d94716a6a976: HTTP Error 429: Too Many Requests
-- new-product / candidate-7733ad1643ca10689cc5: HTTP Error 429: Too Many Requests
+- new-product / candidate-e63b96815568a8d78721: HTTP Error 429: Too Many Requests
+- new-product / candidate-281974ae2281b8056d0e: Source robots.txt disallows this URL
+- new-product / candidate-92c7c2f7d94716a6a976: Source robots.txt disallows this URL
+- new-product / candidate-7733ad1643ca10689cc5: Source robots.txt disallows this URL
 - new-product / candidate-6743289fc7d2fb659478: Source robots.txt disallows this URL
 - new-product / candidate-b85d6f7106e2afc2ba2d: Source robots.txt disallows this URL
 - new-product / candidate-36e83103f7ba077e8917: Source robots.txt disallows this URL
@@ -4314,48 +4470,48 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-50d754f3177b4ea43a82: Source robots.txt disallows this URL
 - new-product / candidate-f4aa5715117362682fbd: Source robots.txt disallows this URL
 - new-product / candidate-b18d7e094f93522d86e0: Source robots.txt disallows this URL
-- new-product / candidate-afdfb12277cc1833afff: Source robots.txt disallows this URL
-- new-product / candidate-ec1cf2035738cdd69ef5: Source robots.txt disallows this URL
-- new-product / candidate-31f494b09f3c18c83f3a: Source robots.txt disallows this URL
-- new-product / candidate-961284994b2eed9b52d0: Source robots.txt disallows this URL
-- new-product / candidate-01d49601987f37a0cae2: Source robots.txt disallows this URL
-- new-product / candidate-eb489cd302fdbe2f4f43: Source robots.txt disallows this URL
-- new-product / candidate-728d940c7a39b2ca651c: Source robots.txt disallows this URL
-- new-product / candidate-c3bb650c782aa6a2d872: HTTP Error 429: Too Many Requests
-- new-product / candidate-91a77ffc16e92d882d35: HTTP Error 429: Too Many Requests
-- new-product / candidate-1b447e794beb73511cd4: HTTP Error 429: Too Many Requests
-- new-product / candidate-af62f8978877936d665a: HTTP Error 429: Too Many Requests
-- new-product / candidate-7e48b46fe3ccc9639524: HTTP Error 429: Too Many Requests
-- new-product / candidate-de7e181639e320e69ade: HTTP Error 429: Too Many Requests
-- new-product / candidate-47fec31c888500272334: HTTP Error 429: Too Many Requests
-- new-product / candidate-242d8fe7567c1674e5b8: Source robots.txt disallows this URL
-- new-product / candidate-7f6a86963d90cb1fb90a: Source robots.txt disallows this URL
-- new-product / candidate-79aeaa4275dfe062c4c6: Source robots.txt disallows this URL
-- new-product / candidate-4461c36d920da4df8327: Source robots.txt disallows this URL
-- new-product / candidate-952683a5886ed182f7b1: Source robots.txt disallows this URL
-- new-product / candidate-7600b607b4885edfad3c: Source robots.txt disallows this URL
-- new-product / candidate-0981ee5062fac1bb63d3: Source robots.txt disallows this URL
-- new-product / candidate-7cb4472a47603a8134e4: Source robots.txt disallows this URL
-- new-product / candidate-458def3fe55a442bf602: Source robots.txt disallows this URL
-- new-product / candidate-ccf243de347bb34ffa2f: Source robots.txt disallows this URL
-- new-product / candidate-df57254c8c1c0cd154d8: HTTP Error 429: Too Many Requests
+- new-product / candidate-afdfb12277cc1833afff: HTTP Error 429: Too Many Requests
+- new-product / candidate-ec1cf2035738cdd69ef5: HTTP Error 429: Too Many Requests
+- new-product / candidate-31f494b09f3c18c83f3a: HTTP Error 429: Too Many Requests
+- new-product / candidate-961284994b2eed9b52d0: HTTP Error 429: Too Many Requests
+- new-product / candidate-01d49601987f37a0cae2: HTTP Error 429: Too Many Requests
+- new-product / candidate-eb489cd302fdbe2f4f43: HTTP Error 429: Too Many Requests
+- new-product / candidate-728d940c7a39b2ca651c: HTTP Error 429: Too Many Requests
+- new-product / candidate-c3bb650c782aa6a2d872: Source robots.txt disallows this URL
+- new-product / candidate-91a77ffc16e92d882d35: Source robots.txt disallows this URL
+- new-product / candidate-1b447e794beb73511cd4: Source robots.txt disallows this URL
+- new-product / candidate-af62f8978877936d665a: Source robots.txt disallows this URL
+- new-product / candidate-7e48b46fe3ccc9639524: Source robots.txt disallows this URL
+- new-product / candidate-de7e181639e320e69ade: Source robots.txt disallows this URL
+- new-product / candidate-47fec31c888500272334: Source robots.txt disallows this URL
+- new-product / candidate-242d8fe7567c1674e5b8: HTTP Error 429: Too Many Requests
+- new-product / candidate-7f6a86963d90cb1fb90a: HTTP Error 429: Too Many Requests
+- new-product / candidate-79aeaa4275dfe062c4c6: HTTP Error 429: Too Many Requests
+- new-product / candidate-4461c36d920da4df8327: HTTP Error 429: Too Many Requests
+- new-product / candidate-952683a5886ed182f7b1: HTTP Error 429: Too Many Requests
+- new-product / candidate-7600b607b4885edfad3c: HTTP Error 429: Too Many Requests
+- new-product / candidate-0981ee5062fac1bb63d3: HTTP Error 429: Too Many Requests
+- new-product / candidate-7cb4472a47603a8134e4: HTTP Error 429: Too Many Requests
+- new-product / candidate-458def3fe55a442bf602: HTTP Error 429: Too Many Requests
+- new-product / candidate-ccf243de347bb34ffa2f: HTTP Error 429: Too Many Requests
+- new-product / candidate-df57254c8c1c0cd154d8: Source robots.txt disallows this URL
 - new-product / candidate-3a2784659e3658511722: Source robots.txt disallows this URL
-- new-product / candidate-1732cf967dc7688e97a2: Source robots.txt disallows this URL
-- new-product / candidate-a01bf82c023dc443bc69: HTTP Error 429: Too Many Requests
-- new-product / candidate-5277117c229a14d653f8: Source robots.txt disallows this URL
-- new-product / candidate-1edb54cb7196a0509ba9: HTTP Error 429: Too Many Requests
+- new-product / candidate-1732cf967dc7688e97a2: HTTP Error 429: Too Many Requests
+- new-product / candidate-a01bf82c023dc443bc69: Source robots.txt disallows this URL
+- new-product / candidate-5277117c229a14d653f8: HTTP Error 429: Too Many Requests
+- new-product / candidate-1edb54cb7196a0509ba9: Source robots.txt disallows this URL
 - new-product / candidate-cfb2a4b773a781a3fa81: Source robots.txt disallows this URL
-- new-product / candidate-a8fb43877f633b667cd3: Source robots.txt disallows this URL
-- new-product / candidate-1b36554485c747284a15: HTTP Error 429: Too Many Requests
-- new-product / candidate-b649ea6c04f04df89d4b: HTTP Error 429: Too Many Requests
-- new-product / candidate-499a7484b9d165893f42: HTTP Error 429: Too Many Requests
-- new-product / candidate-d6ad4a158ff5d3c4e358: HTTP Error 429: Too Many Requests
-- new-product / candidate-71dbeb554c2a6b0338d4: HTTP Error 429: Too Many Requests
-- new-product / candidate-d43d20f6950797f0140f: Source robots.txt disallows this URL
-- new-product / candidate-73b3bf66ba555214cf84: Source robots.txt disallows this URL
-- new-product / candidate-29f00764885b1c703e28: Source robots.txt disallows this URL
-- new-product / candidate-f160f35fa7c72846f0ad: Source robots.txt disallows this URL
-- new-product / candidate-44e3e12f7407d5f8434b: HTTP Error 429: Too Many Requests
+- new-product / candidate-a8fb43877f633b667cd3: HTTP Error 429: Too Many Requests
+- new-product / candidate-1b36554485c747284a15: Source robots.txt disallows this URL
+- new-product / candidate-b649ea6c04f04df89d4b: Source robots.txt disallows this URL
+- new-product / candidate-499a7484b9d165893f42: Source robots.txt disallows this URL
+- new-product / candidate-d6ad4a158ff5d3c4e358: Source robots.txt disallows this URL
+- new-product / candidate-71dbeb554c2a6b0338d4: Source robots.txt disallows this URL
+- new-product / candidate-d43d20f6950797f0140f: HTTP Error 429: Too Many Requests
+- new-product / candidate-73b3bf66ba555214cf84: HTTP Error 429: Too Many Requests
+- new-product / candidate-29f00764885b1c703e28: HTTP Error 429: Too Many Requests
+- new-product / candidate-f160f35fa7c72846f0ad: HTTP Error 429: Too Many Requests
+- new-product / candidate-44e3e12f7407d5f8434b: Source robots.txt disallows this URL
 - new-product / candidate-4f509e8704cac600031d: Source robots.txt disallows this URL
 - new-product / candidate-0376a70a0e51c7c9faef: Source robots.txt disallows this URL
 - new-product / candidate-856e4135424145ba7f71: Source robots.txt disallows this URL
@@ -4366,10 +4522,10 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-6001470d1b49315fa10d: Source robots.txt disallows this URL
 - new-product / candidate-765185a5241f157788bf: Source robots.txt disallows this URL
 - new-product / candidate-f49c038ec1c3318fbcfa: Source robots.txt disallows this URL
-- new-product / candidate-e38741a09e676743264c: Source robots.txt disallows this URL
-- new-product / candidate-b3b9aae5428392a58f10: HTTP Error 429: Too Many Requests
-- new-product / candidate-34083374d01567b34598: Source robots.txt disallows this URL
-- new-product / candidate-31d6bdea9234619778c0: HTTP Error 429: Too Many Requests
+- new-product / candidate-e38741a09e676743264c: HTTP Error 429: Too Many Requests
+- new-product / candidate-b3b9aae5428392a58f10: Source robots.txt disallows this URL
+- new-product / candidate-34083374d01567b34598: HTTP Error 429: Too Many Requests
+- new-product / candidate-31d6bdea9234619778c0: Source robots.txt disallows this URL
 - new-product / candidate-bf6f450337e0cad253aa: Source robots.txt disallows this URL
 - new-product / candidate-ac53294a972a6f2fec39: Source robots.txt disallows this URL
 - new-product / candidate-b3d7b405c3f4af05347a: Source robots.txt disallows this URL
@@ -4377,61 +4533,61 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-145b2a91993f82587d1f: Source robots.txt disallows this URL
 - new-product / candidate-82acc0fddd07d1043366: Source robots.txt disallows this URL
 - new-product / candidate-c4bbb190ee77f6b38f1b: Source robots.txt disallows this URL
-- new-product / candidate-7aaebcbe5a8daa728ab3: Source robots.txt disallows this URL
-- new-product / candidate-f183568ae7af52380a09: Source robots.txt disallows this URL
-- new-product / candidate-54ffea05028eb4ca7568: Source robots.txt disallows this URL
-- new-product / candidate-ed126ce5af90c025b4ed: Source robots.txt disallows this URL
-- new-product / candidate-4f0a105bae9063461f23: Source robots.txt disallows this URL
-- new-product / candidate-590e4eef0be6f6694de7: Source robots.txt disallows this URL
-- new-product / candidate-5db8ffe7ee75a2eaa30d: Source robots.txt disallows this URL
-- new-product / candidate-bedbd710a0cf5e9c9595: Source robots.txt disallows this URL
-- new-product / candidate-d0249a9ee184ed535a6b: HTTP Error 429: Too Many Requests
-- new-product / candidate-fca98b56c7b78e1e0521: HTTP Error 429: Too Many Requests
-- new-product / candidate-1bfab6a1f050e8217055: HTTP Error 429: Too Many Requests
-- new-product / candidate-6d0100c51247dfac0ce7: HTTP Error 429: Too Many Requests
-- new-product / candidate-2bff7568936551c499ea: HTTP Error 429: Too Many Requests
-- new-product / candidate-26e9b52dfe71e07575e3: HTTP Error 429: Too Many Requests
-- new-product / candidate-5b42d16f8f4171ecc690: HTTP Error 429: Too Many Requests
-- new-product / candidate-d15a37859b2184c4eef1: HTTP Error 429: Too Many Requests
-- new-product / candidate-1ea2fb54599244570bea: HTTP Error 429: Too Many Requests
-- new-product / candidate-981d8258a412527b58a6: HTTP Error 429: Too Many Requests
-- new-product / candidate-4ab0facb6c1ea32226c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-7b29549f5d7a3cb306bb: HTTP Error 429: Too Many Requests
-- new-product / candidate-cb565070b81f46e92311: HTTP Error 429: Too Many Requests
-- new-product / candidate-f85e6260571d106e580f: HTTP Error 429: Too Many Requests
-- new-product / candidate-18451f165abfdbd7f458: Source robots.txt disallows this URL
-- new-product / candidate-65d74a7a954cd1c9c0a0: Source robots.txt disallows this URL
-- new-product / candidate-a386dace8eda89c89223: Source robots.txt disallows this URL
-- new-product / candidate-baf8bf18d638699f4cf3: Source robots.txt disallows this URL
-- new-product / candidate-18f62699cc541c772dcb: Source robots.txt disallows this URL
-- new-product / candidate-1e57ef2107fb0ddbd773: Source robots.txt disallows this URL
-- new-product / candidate-affffaf838c6c005a124: Source robots.txt disallows this URL
-- new-product / candidate-7503990330c9c6b9337c: Source robots.txt disallows this URL
-- new-product / candidate-cf57458413a42f306dc7: Source robots.txt disallows this URL
-- new-product / candidate-bbc652b4229a6e03e0c1: Source robots.txt disallows this URL
-- new-product / candidate-48ac4fe137b7fd6b37cb: Source robots.txt disallows this URL
-- new-product / candidate-88170feefcd8e2abff85: Source robots.txt disallows this URL
-- new-product / candidate-5bc4efc2a18d30a7b6cc: Source robots.txt disallows this URL
-- new-product / candidate-e3efac18f0a7773190f1: Source robots.txt disallows this URL
-- new-product / candidate-f22f48a9f743c215c09d: Source robots.txt disallows this URL
-- new-product / candidate-b81e0aaad7b70e0f6b55: Source robots.txt disallows this URL
-- new-product / candidate-8a82b9ca38338d9ca4a9: Source robots.txt disallows this URL
-- new-product / candidate-962d140a420c35456d01: Source robots.txt disallows this URL
-- new-product / candidate-5393c1a613c15d99a3bf: Source robots.txt disallows this URL
-- new-product / candidate-561b79abcd2dc221fbfc: Source robots.txt disallows this URL
-- new-product / candidate-4cae6415b059be74cced: Source robots.txt disallows this URL
-- new-product / candidate-04f90fec6219f80658c9: Source robots.txt disallows this URL
-- new-product / candidate-06703487066f1fa96fad: Source robots.txt disallows this URL
-- new-product / candidate-460f8b92dc6fde273bbe: Source robots.txt disallows this URL
-- new-product / candidate-3488a38608ca4796a3bc: HTTP Error 429: Too Many Requests
+- new-product / candidate-7aaebcbe5a8daa728ab3: HTTP Error 429: Too Many Requests
+- new-product / candidate-f183568ae7af52380a09: HTTP Error 429: Too Many Requests
+- new-product / candidate-54ffea05028eb4ca7568: HTTP Error 429: Too Many Requests
+- new-product / candidate-ed126ce5af90c025b4ed: HTTP Error 429: Too Many Requests
+- new-product / candidate-4f0a105bae9063461f23: HTTP Error 429: Too Many Requests
+- new-product / candidate-590e4eef0be6f6694de7: HTTP Error 429: Too Many Requests
+- new-product / candidate-5db8ffe7ee75a2eaa30d: HTTP Error 429: Too Many Requests
+- new-product / candidate-bedbd710a0cf5e9c9595: HTTP Error 429: Too Many Requests
+- new-product / candidate-d0249a9ee184ed535a6b: Source robots.txt disallows this URL
+- new-product / candidate-fca98b56c7b78e1e0521: Source robots.txt disallows this URL
+- new-product / candidate-1bfab6a1f050e8217055: Source robots.txt disallows this URL
+- new-product / candidate-6d0100c51247dfac0ce7: Source robots.txt disallows this URL
+- new-product / candidate-2bff7568936551c499ea: Source robots.txt disallows this URL
+- new-product / candidate-26e9b52dfe71e07575e3: Source robots.txt disallows this URL
+- new-product / candidate-5b42d16f8f4171ecc690: Source robots.txt disallows this URL
+- new-product / candidate-d15a37859b2184c4eef1: Source robots.txt disallows this URL
+- new-product / candidate-1ea2fb54599244570bea: Source robots.txt disallows this URL
+- new-product / candidate-981d8258a412527b58a6: Source robots.txt disallows this URL
+- new-product / candidate-4ab0facb6c1ea32226c6: Source robots.txt disallows this URL
+- new-product / candidate-7b29549f5d7a3cb306bb: Source robots.txt disallows this URL
+- new-product / candidate-cb565070b81f46e92311: Source robots.txt disallows this URL
+- new-product / candidate-f85e6260571d106e580f: Source robots.txt disallows this URL
+- new-product / candidate-18451f165abfdbd7f458: HTTP Error 429: Too Many Requests
+- new-product / candidate-65d74a7a954cd1c9c0a0: HTTP Error 429: Too Many Requests
+- new-product / candidate-a386dace8eda89c89223: HTTP Error 429: Too Many Requests
+- new-product / candidate-baf8bf18d638699f4cf3: HTTP Error 429: Too Many Requests
+- new-product / candidate-18f62699cc541c772dcb: HTTP Error 429: Too Many Requests
+- new-product / candidate-1e57ef2107fb0ddbd773: HTTP Error 429: Too Many Requests
+- new-product / candidate-affffaf838c6c005a124: HTTP Error 429: Too Many Requests
+- new-product / candidate-7503990330c9c6b9337c: HTTP Error 429: Too Many Requests
+- new-product / candidate-cf57458413a42f306dc7: HTTP Error 429: Too Many Requests
+- new-product / candidate-bbc652b4229a6e03e0c1: HTTP Error 429: Too Many Requests
+- new-product / candidate-48ac4fe137b7fd6b37cb: HTTP Error 429: Too Many Requests
+- new-product / candidate-88170feefcd8e2abff85: HTTP Error 429: Too Many Requests
+- new-product / candidate-5bc4efc2a18d30a7b6cc: HTTP Error 429: Too Many Requests
+- new-product / candidate-e3efac18f0a7773190f1: HTTP Error 429: Too Many Requests
+- new-product / candidate-f22f48a9f743c215c09d: HTTP Error 429: Too Many Requests
+- new-product / candidate-b81e0aaad7b70e0f6b55: HTTP Error 429: Too Many Requests
+- new-product / candidate-8a82b9ca38338d9ca4a9: HTTP Error 429: Too Many Requests
+- new-product / candidate-962d140a420c35456d01: HTTP Error 429: Too Many Requests
+- new-product / candidate-5393c1a613c15d99a3bf: HTTP Error 429: Too Many Requests
+- new-product / candidate-561b79abcd2dc221fbfc: HTTP Error 429: Too Many Requests
+- new-product / candidate-4cae6415b059be74cced: HTTP Error 429: Too Many Requests
+- new-product / candidate-04f90fec6219f80658c9: HTTP Error 429: Too Many Requests
+- new-product / candidate-06703487066f1fa96fad: HTTP Error 429: Too Many Requests
+- new-product / candidate-460f8b92dc6fde273bbe: HTTP Error 429: Too Many Requests
+- new-product / candidate-3488a38608ca4796a3bc: Source robots.txt disallows this URL
 - new-product / candidate-aa3fdbefb71a03aaac7a: Source robots.txt disallows this URL
-- new-product / candidate-25b659e0753460ce45e8: Source robots.txt disallows this URL
-- new-product / candidate-ac61e19b19491513a6cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-09f537b057d223791724: Source robots.txt disallows this URL
-- new-product / candidate-1bdfd8144388f651bbc4: HTTP Error 429: Too Many Requests
+- new-product / candidate-25b659e0753460ce45e8: HTTP Error 429: Too Many Requests
+- new-product / candidate-ac61e19b19491513a6cd: Source robots.txt disallows this URL
+- new-product / candidate-09f537b057d223791724: HTTP Error 429: Too Many Requests
+- new-product / candidate-1bdfd8144388f651bbc4: Source robots.txt disallows this URL
 - new-product / candidate-d7cd902b21316e14479e: Source robots.txt disallows this URL
 - new-product / candidate-fb9d29176d1e95d8f8e9: Source robots.txt disallows this URL
-- new-product / candidate-47b17775049f137953b0: Source robots.txt disallows this URL
+- new-product / candidate-47b17775049f137953b0: HTTP Error 429: Too Many Requests
 - new-product / candidate-8432c0961c118a3c763e: Source robots.txt disallows this URL
 - new-product / candidate-00bda3289b9872f365e0: Source robots.txt disallows this URL
 - new-product / candidate-bc2b5a9263145c3f4c87: Source robots.txt disallows this URL
@@ -4456,68 +4612,68 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-6e128cb0cbb5d59479ce: Source robots.txt disallows this URL
 - new-product / candidate-893ebcf9ca8925647cff: Source robots.txt disallows this URL
 - new-product / candidate-a0c0401539b6c8508dd7: HTTP Error 429: Too Many Requests
-- new-product / candidate-18f5c8bdc5897a19ed65: HTTP Error 429: Too Many Requests
+- new-product / candidate-18f5c8bdc5897a19ed65: Source robots.txt disallows this URL
 - new-product / candidate-d9a2818dcd346d4b61ab: Source robots.txt disallows this URL
-- new-product / candidate-20581ffe276e86015805: Source robots.txt disallows this URL
-- new-product / candidate-995791f0aa58430fd4b7: HTTP Error 429: Too Many Requests
-- new-product / candidate-661f43aab8b4ab789559: Source robots.txt disallows this URL
-- new-product / candidate-f7029f3528b8f0e5e51e: HTTP Error 429: Too Many Requests
+- new-product / candidate-20581ffe276e86015805: HTTP Error 429: Too Many Requests
+- new-product / candidate-995791f0aa58430fd4b7: Source robots.txt disallows this URL
+- new-product / candidate-661f43aab8b4ab789559: HTTP Error 429: Too Many Requests
+- new-product / candidate-f7029f3528b8f0e5e51e: Source robots.txt disallows this URL
 - new-product / candidate-c675ce579048ca01d99a: Source robots.txt disallows this URL
-- new-product / candidate-f6cf95d295bf8b45403a: Source robots.txt disallows this URL
-- new-product / candidate-506a0b52736af9d7fccd: HTTP Error 429: Too Many Requests
-- new-product / candidate-cf65af7c2bb7dc5a5e97: Source robots.txt disallows this URL
-- new-product / candidate-8816c9b69f60cb2771b5: HTTP Error 429: Too Many Requests
+- new-product / candidate-f6cf95d295bf8b45403a: HTTP Error 429: Too Many Requests
+- new-product / candidate-506a0b52736af9d7fccd: Source robots.txt disallows this URL
+- new-product / candidate-cf65af7c2bb7dc5a5e97: HTTP Error 429: Too Many Requests
+- new-product / candidate-8816c9b69f60cb2771b5: Source robots.txt disallows this URL
 - new-product / candidate-ebb2ca844b00a1b21501: Source robots.txt disallows this URL
-- new-product / candidate-c89835a705d6a7d0f269: Source robots.txt disallows this URL
-- new-product / candidate-e0759d70e95fd9ed7390: HTTP Error 429: Too Many Requests
-- new-product / candidate-de128947131586e0e538: HTTP Error 429: Too Many Requests
-- new-product / candidate-25aa29cea25ac86eb500: HTTP Error 429: Too Many Requests
-- new-product / candidate-5860f53dfc24ede48cb7: HTTP Error 429: Too Many Requests
-- new-product / candidate-c2a264bfe2e872c7a5ca: HTTP Error 429: Too Many Requests
-- new-product / candidate-7101fb2f3abc1a59661d: HTTP Error 429: Too Many Requests
-- new-product / candidate-b2d3da81a525673dbf29: HTTP Error 429: Too Many Requests
-- new-product / candidate-296f8f1c66c9e5bd3037: HTTP Error 429: Too Many Requests
-- new-product / candidate-8f273eb68cee612c7a16: HTTP Error 429: Too Many Requests
-- new-product / candidate-3428317c7506e6bf00aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-dab16e86f64aeccbc2b5: HTTP Error 429: Too Many Requests
-- new-product / candidate-6d66bcc2634a3198991d: HTTP Error 429: Too Many Requests
-- new-product / candidate-d47ab03e965e2ef369cf: HTTP Error 429: Too Many Requests
-- new-product / candidate-28eedcf2958f25ddf1c7: Source robots.txt disallows this URL
-- new-product / candidate-ec19087be63b85912ff2: Source robots.txt disallows this URL
-- new-product / candidate-0fbbdaded6271287f80a: Source robots.txt disallows this URL
-- new-product / candidate-b6aa55b710592433b144: Source robots.txt disallows this URL
-- new-product / candidate-2a921bef8a810a673829: Source robots.txt disallows this URL
-- new-product / candidate-aceea34bae01f6f3903b: Source robots.txt disallows this URL
-- new-product / candidate-039bdae0d2d84141148e: Source robots.txt disallows this URL
-- new-product / candidate-2ce34c23482995a04fce: HTTP Error 429: Too Many Requests
-- new-product / candidate-e3159974222d42e704a4: HTTP Error 429: Too Many Requests
-- new-product / candidate-d79012ff8c604fdfa7f0: HTTP Error 429: Too Many Requests
-- new-product / candidate-b10531ae935ed1b593c2: HTTP Error 429: Too Many Requests
-- new-product / candidate-6bd20f0e27d3cc75908e: HTTP Error 429: Too Many Requests
-- new-product / candidate-d411a23ce20e03616e43: HTTP Error 429: Too Many Requests
-- new-product / candidate-1de659cae5a5738139bb: HTTP Error 429: Too Many Requests
-- new-product / candidate-f9825db536c409241f7c: HTTP Error 429: Too Many Requests
-- new-product / candidate-370569681555907a441c: HTTP Error 429: Too Many Requests
-- new-product / candidate-c7ca22f4a3da9351ba49: HTTP Error 429: Too Many Requests
+- new-product / candidate-c89835a705d6a7d0f269: HTTP Error 429: Too Many Requests
+- new-product / candidate-e0759d70e95fd9ed7390: Source robots.txt disallows this URL
+- new-product / candidate-de128947131586e0e538: Source robots.txt disallows this URL
+- new-product / candidate-25aa29cea25ac86eb500: Source robots.txt disallows this URL
+- new-product / candidate-5860f53dfc24ede48cb7: Source robots.txt disallows this URL
+- new-product / candidate-c2a264bfe2e872c7a5ca: Source robots.txt disallows this URL
+- new-product / candidate-7101fb2f3abc1a59661d: Source robots.txt disallows this URL
+- new-product / candidate-b2d3da81a525673dbf29: Source robots.txt disallows this URL
+- new-product / candidate-296f8f1c66c9e5bd3037: Source robots.txt disallows this URL
+- new-product / candidate-8f273eb68cee612c7a16: Source robots.txt disallows this URL
+- new-product / candidate-3428317c7506e6bf00aa: Source robots.txt disallows this URL
+- new-product / candidate-dab16e86f64aeccbc2b5: Source robots.txt disallows this URL
+- new-product / candidate-6d66bcc2634a3198991d: Source robots.txt disallows this URL
+- new-product / candidate-d47ab03e965e2ef369cf: Source robots.txt disallows this URL
+- new-product / candidate-28eedcf2958f25ddf1c7: HTTP Error 429: Too Many Requests
+- new-product / candidate-ec19087be63b85912ff2: HTTP Error 429: Too Many Requests
+- new-product / candidate-0fbbdaded6271287f80a: HTTP Error 429: Too Many Requests
+- new-product / candidate-b6aa55b710592433b144: HTTP Error 429: Too Many Requests
+- new-product / candidate-2a921bef8a810a673829: HTTP Error 429: Too Many Requests
+- new-product / candidate-aceea34bae01f6f3903b: HTTP Error 429: Too Many Requests
+- new-product / candidate-039bdae0d2d84141148e: HTTP Error 429: Too Many Requests
+- new-product / candidate-2ce34c23482995a04fce: Source robots.txt disallows this URL
+- new-product / candidate-e3159974222d42e704a4: Source robots.txt disallows this URL
+- new-product / candidate-d79012ff8c604fdfa7f0: Source robots.txt disallows this URL
+- new-product / candidate-b10531ae935ed1b593c2: Source robots.txt disallows this URL
+- new-product / candidate-6bd20f0e27d3cc75908e: Source robots.txt disallows this URL
+- new-product / candidate-d411a23ce20e03616e43: Source robots.txt disallows this URL
+- new-product / candidate-1de659cae5a5738139bb: Source robots.txt disallows this URL
+- new-product / candidate-f9825db536c409241f7c: Source robots.txt disallows this URL
+- new-product / candidate-370569681555907a441c: Source robots.txt disallows this URL
+- new-product / candidate-c7ca22f4a3da9351ba49: Source robots.txt disallows this URL
 - new-product / candidate-9b8c419af52e6fae676c: Source robots.txt disallows this URL
-- new-product / candidate-b77d7f2feb0b610944cc: Source robots.txt disallows this URL
-- new-product / candidate-7bff0b51844c06eda032: HTTP Error 429: Too Many Requests
-- new-product / candidate-325e934abca8d4999d76: HTTP Error 429: Too Many Requests
-- new-product / candidate-d71c9092d4303b3ec498: HTTP Error 429: Too Many Requests
-- new-product / candidate-c12d239a57df3c838b12: HTTP Error 429: Too Many Requests
-- new-product / candidate-b5ecf911faee80efa386: HTTP Error 429: Too Many Requests
-- new-product / candidate-bb8c7bd9d2abe874bd38: HTTP Error 429: Too Many Requests
-- new-product / candidate-75a4b56301e25645073a: HTTP Error 429: Too Many Requests
-- new-product / candidate-bfd0578a3e3a27296e91: Source robots.txt disallows this URL
-- new-product / candidate-eb28ab9e0ff8765642ea: Source robots.txt disallows this URL
-- new-product / candidate-6ae9c2de1bba05f4c8b9: Source robots.txt disallows this URL
-- new-product / candidate-904d227d035fe8d260d2: Source robots.txt disallows this URL
-- new-product / candidate-ed7e960be5affd103746: Source robots.txt disallows this URL
-- new-product / candidate-221a4fcbfe1924616c5b: Source robots.txt disallows this URL
-- new-product / candidate-a5efd13f83f590a643c0: Source robots.txt disallows this URL
-- new-product / candidate-bd7acdb7ffd8a7e1e673: HTTP Error 429: Too Many Requests
-- new-product / candidate-e9d4f745d959ccc7059f: HTTP Error 429: Too Many Requests
-- new-product / candidate-e8533769073e209ee1ba: HTTP Error 429: Too Many Requests
+- new-product / candidate-b77d7f2feb0b610944cc: HTTP Error 429: Too Many Requests
+- new-product / candidate-7bff0b51844c06eda032: Source robots.txt disallows this URL
+- new-product / candidate-325e934abca8d4999d76: Source robots.txt disallows this URL
+- new-product / candidate-d71c9092d4303b3ec498: Source robots.txt disallows this URL
+- new-product / candidate-c12d239a57df3c838b12: Source robots.txt disallows this URL
+- new-product / candidate-b5ecf911faee80efa386: Source robots.txt disallows this URL
+- new-product / candidate-bb8c7bd9d2abe874bd38: Source robots.txt disallows this URL
+- new-product / candidate-75a4b56301e25645073a: Source robots.txt disallows this URL
+- new-product / candidate-bfd0578a3e3a27296e91: HTTP Error 429: Too Many Requests
+- new-product / candidate-eb28ab9e0ff8765642ea: HTTP Error 429: Too Many Requests
+- new-product / candidate-6ae9c2de1bba05f4c8b9: HTTP Error 429: Too Many Requests
+- new-product / candidate-904d227d035fe8d260d2: HTTP Error 429: Too Many Requests
+- new-product / candidate-ed7e960be5affd103746: HTTP Error 429: Too Many Requests
+- new-product / candidate-221a4fcbfe1924616c5b: HTTP Error 429: Too Many Requests
+- new-product / candidate-a5efd13f83f590a643c0: HTTP Error 429: Too Many Requests
+- new-product / candidate-bd7acdb7ffd8a7e1e673: Source robots.txt disallows this URL
+- new-product / candidate-e9d4f745d959ccc7059f: Source robots.txt disallows this URL
+- new-product / candidate-e8533769073e209ee1ba: Source robots.txt disallows this URL
 - new-product / candidate-31cd1dee8da98e8bb054: Source robots.txt disallows this URL
 - new-product / candidate-bc68f756d4a4c0919942: Source robots.txt disallows this URL
 - new-product / candidate-38ddf3c3cf3734a601e9: Source robots.txt disallows this URL
@@ -4529,72 +4685,72 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-3208e980ec016b1e4d48: Source robots.txt disallows this URL
 - new-product / candidate-240e3877202a9625bdd0: Source robots.txt disallows this URL
 - new-product / candidate-0eb262e281c44ced71eb: Source robots.txt disallows this URL
-- new-product / candidate-a872e5a34e38aac97ac7: Source robots.txt disallows this URL
-- new-product / candidate-2c48a29fe4f634d05fe4: HTTP Error 429: Too Many Requests
-- new-product / candidate-9aec0df551d935270d56: HTTP Error 429: Too Many Requests
-- new-product / candidate-cbf339f0d048db3dd04f: HTTP Error 429: Too Many Requests
-- new-product / candidate-c13a6531df8e484dac03: HTTP Error 429: Too Many Requests
-- new-product / candidate-214f3e34275a0ad2103f: HTTP Error 429: Too Many Requests
-- new-product / candidate-abda5e1919a7527f5864: HTTP Error 429: Too Many Requests
-- new-product / candidate-2ce8ac949aa650f9c00d: Source robots.txt disallows this URL
-- new-product / candidate-a47a077ff7352802f433: Source robots.txt disallows this URL
-- new-product / candidate-829e70b9e30e7d81651a: Source robots.txt disallows this URL
-- new-product / candidate-0ff71c508546116dc6b0: Source robots.txt disallows this URL
-- new-product / candidate-c14ab1daeffdb33cd8b3: Source robots.txt disallows this URL
-- new-product / candidate-000ef548614de0045a25: Source robots.txt disallows this URL
-- new-product / candidate-aeb6481c313d8076fec0: Source robots.txt disallows this URL
-- new-product / candidate-4b6f8cc758a65e45cd42: Source robots.txt disallows this URL
-- new-product / candidate-a86f2b93d22290df3f50: Source robots.txt disallows this URL
-- new-product / candidate-5d33c586145d6a9b2e48: Source robots.txt disallows this URL
-- new-product / candidate-baaea3ac6b6ffcd0c7e7: Source robots.txt disallows this URL
-- new-product / candidate-9c5160b14b4810618cea: HTTP Error 429: Too Many Requests
-- new-product / candidate-e97668ffba938d4c9207: HTTP Error 429: Too Many Requests
-- new-product / candidate-7db784ae6b319f43f8c2: HTTP Error 429: Too Many Requests
-- new-product / candidate-9cb58f7219c070b13920: HTTP Error 429: Too Many Requests
-- new-product / candidate-37e0c37b7bd8f42f4f63: HTTP Error 429: Too Many Requests
-- new-product / candidate-befe8f21699f39135dbb: HTTP Error 429: Too Many Requests
-- new-product / candidate-82af19b01cfc6ea77fce: HTTP Error 429: Too Many Requests
-- new-product / candidate-d9610f977763cb849524: HTTP Error 429: Too Many Requests
-- new-product / candidate-fb14b7616a4173c3de9b: HTTP Error 429: Too Many Requests
+- new-product / candidate-a872e5a34e38aac97ac7: HTTP Error 429: Too Many Requests
+- new-product / candidate-2c48a29fe4f634d05fe4: Source robots.txt disallows this URL
+- new-product / candidate-9aec0df551d935270d56: Source robots.txt disallows this URL
+- new-product / candidate-cbf339f0d048db3dd04f: Source robots.txt disallows this URL
+- new-product / candidate-c13a6531df8e484dac03: Source robots.txt disallows this URL
+- new-product / candidate-214f3e34275a0ad2103f: Source robots.txt disallows this URL
+- new-product / candidate-abda5e1919a7527f5864: Source robots.txt disallows this URL
+- new-product / candidate-2ce8ac949aa650f9c00d: HTTP Error 429: Too Many Requests
+- new-product / candidate-a47a077ff7352802f433: HTTP Error 429: Too Many Requests
+- new-product / candidate-829e70b9e30e7d81651a: HTTP Error 429: Too Many Requests
+- new-product / candidate-0ff71c508546116dc6b0: HTTP Error 429: Too Many Requests
+- new-product / candidate-c14ab1daeffdb33cd8b3: HTTP Error 429: Too Many Requests
+- new-product / candidate-000ef548614de0045a25: HTTP Error 429: Too Many Requests
+- new-product / candidate-aeb6481c313d8076fec0: HTTP Error 429: Too Many Requests
+- new-product / candidate-4b6f8cc758a65e45cd42: HTTP Error 429: Too Many Requests
+- new-product / candidate-a86f2b93d22290df3f50: HTTP Error 429: Too Many Requests
+- new-product / candidate-5d33c586145d6a9b2e48: HTTP Error 429: Too Many Requests
+- new-product / candidate-baaea3ac6b6ffcd0c7e7: HTTP Error 429: Too Many Requests
+- new-product / candidate-9c5160b14b4810618cea: Source robots.txt disallows this URL
+- new-product / candidate-e97668ffba938d4c9207: Source robots.txt disallows this URL
+- new-product / candidate-7db784ae6b319f43f8c2: Source robots.txt disallows this URL
+- new-product / candidate-9cb58f7219c070b13920: Source robots.txt disallows this URL
+- new-product / candidate-37e0c37b7bd8f42f4f63: Source robots.txt disallows this URL
+- new-product / candidate-befe8f21699f39135dbb: Source robots.txt disallows this URL
+- new-product / candidate-82af19b01cfc6ea77fce: Source robots.txt disallows this URL
+- new-product / candidate-d9610f977763cb849524: Source robots.txt disallows this URL
+- new-product / candidate-fb14b7616a4173c3de9b: Source robots.txt disallows this URL
 - new-product / candidate-aed5adb0038f0e9c05dd: Source robots.txt disallows this URL
-- new-product / candidate-7af1ae96c90a75348c27: Source robots.txt disallows this URL
-- new-product / candidate-ad0fedebf860f3bff331: HTTP Error 429: Too Many Requests
-- new-product / candidate-06abdf399f8589e0e9dd: Source robots.txt disallows this URL
-- new-product / candidate-664c46702435b1775d15: HTTP Error 429: Too Many Requests
+- new-product / candidate-7af1ae96c90a75348c27: HTTP Error 429: Too Many Requests
+- new-product / candidate-ad0fedebf860f3bff331: Source robots.txt disallows this URL
+- new-product / candidate-06abdf399f8589e0e9dd: HTTP Error 429: Too Many Requests
+- new-product / candidate-664c46702435b1775d15: Source robots.txt disallows this URL
 - new-product / candidate-1b2d43af92fe00610932: Source robots.txt disallows this URL
-- new-product / candidate-72d35b44b1744bfd0d77: Source robots.txt disallows this URL
-- new-product / candidate-65e262623661f4dcb8b4: HTTP Error 429: Too Many Requests
-- new-product / candidate-ff7ce7754c798baf77f8: Source robots.txt disallows this URL
-- new-product / candidate-8add47991a9721c79dea: HTTP Error 429: Too Many Requests
+- new-product / candidate-72d35b44b1744bfd0d77: HTTP Error 429: Too Many Requests
+- new-product / candidate-65e262623661f4dcb8b4: Source robots.txt disallows this URL
+- new-product / candidate-ff7ce7754c798baf77f8: HTTP Error 429: Too Many Requests
+- new-product / candidate-8add47991a9721c79dea: Source robots.txt disallows this URL
 - new-product / candidate-6bc2e7a39c6122665ef4: Source robots.txt disallows this URL
-- new-product / candidate-e7d04d42cd7946b6154b: Source robots.txt disallows this URL
-- new-product / candidate-bfff7496a62a2a338de0: HTTP Error 429: Too Many Requests
-- new-product / candidate-2d9c70d59664ea3203a1: Source robots.txt disallows this URL
-- new-product / candidate-7a7fe55797c99c981579: HTTP Error 429: Too Many Requests
+- new-product / candidate-e7d04d42cd7946b6154b: HTTP Error 429: Too Many Requests
+- new-product / candidate-bfff7496a62a2a338de0: Source robots.txt disallows this URL
+- new-product / candidate-2d9c70d59664ea3203a1: HTTP Error 429: Too Many Requests
+- new-product / candidate-7a7fe55797c99c981579: Source robots.txt disallows this URL
 - new-product / candidate-f2ad360985da24e17777: Source robots.txt disallows this URL
-- new-product / candidate-110ad2f05ae425378118: Source robots.txt disallows this URL
-- new-product / candidate-22a97f427cf8c6d170c2: HTTP Error 429: Too Many Requests
-- new-product / candidate-28a8532208845e49df57: Source robots.txt disallows this URL
-- new-product / candidate-66e69f778fc2d4e0a08f: HTTP Error 429: Too Many Requests
+- new-product / candidate-110ad2f05ae425378118: HTTP Error 429: Too Many Requests
+- new-product / candidate-22a97f427cf8c6d170c2: Source robots.txt disallows this URL
+- new-product / candidate-28a8532208845e49df57: HTTP Error 429: Too Many Requests
+- new-product / candidate-66e69f778fc2d4e0a08f: Source robots.txt disallows this URL
 - new-product / candidate-1fe64e13d501520302e5: Source robots.txt disallows this URL
-- new-product / candidate-281a996be46018e2d135: Source robots.txt disallows this URL
-- new-product / candidate-f5e59439c77a5c0e0e03: HTTP Error 429: Too Many Requests
-- new-product / candidate-abbf9a41aa03e0fc9015: Source robots.txt disallows this URL
-- new-product / candidate-22ad9a3b1416906ec222: HTTP Error 429: Too Many Requests
+- new-product / candidate-281a996be46018e2d135: HTTP Error 429: Too Many Requests
+- new-product / candidate-f5e59439c77a5c0e0e03: Source robots.txt disallows this URL
+- new-product / candidate-abbf9a41aa03e0fc9015: HTTP Error 429: Too Many Requests
+- new-product / candidate-22ad9a3b1416906ec222: Source robots.txt disallows this URL
 - new-product / candidate-270e0defc1c3438e4e28: Source robots.txt disallows this URL
 - new-product / candidate-237c9e9eac7a9fd88394: Source robots.txt disallows this URL
 - new-product / candidate-2ff89598e22de2e00966: Source robots.txt disallows this URL
 - new-product / candidate-049813f371698e1f659a: Source robots.txt disallows this URL
 - new-product / candidate-27dea0bb6c0357004bad: Source robots.txt disallows this URL
 - new-product / candidate-1a8c298e63e0b2791db5: Source robots.txt disallows this URL
-- new-product / candidate-c2f71e934fdd149f9d48: Source robots.txt disallows this URL
+- new-product / candidate-c2f71e934fdd149f9d48: HTTP Error 429: Too Many Requests
 - new-product / candidate-1c87c501e4d3570b75cd: Source robots.txt disallows this URL
 - new-product / candidate-290f560ae5864afeec95: HTTP Error 429: Too Many Requests
 - new-product / candidate-a4a300ac79b75348d4d0: HTTP Error 429: Too Many Requests
-- new-product / candidate-06e7014b2a56a4af0de8: HTTP Error 429: Too Many Requests
-- new-product / candidate-e648c1d21c3a527c135f: HTTP Error 429: Too Many Requests
-- new-product / candidate-15c5c5ef5bf0a1b939cb: HTTP Error 429: Too Many Requests
-- new-product / candidate-09b8f82b4a78462e990c: HTTP Error 429: Too Many Requests
+- new-product / candidate-06e7014b2a56a4af0de8: Source robots.txt disallows this URL
+- new-product / candidate-e648c1d21c3a527c135f: Source robots.txt disallows this URL
+- new-product / candidate-15c5c5ef5bf0a1b939cb: Source robots.txt disallows this URL
+- new-product / candidate-09b8f82b4a78462e990c: Source robots.txt disallows this URL
 - new-product / candidate-803b65b799a3adcadcec: Source robots.txt disallows this URL
 - new-product / candidate-7f8f389516fb7a2a19d7: Source robots.txt disallows this URL
 - new-product / candidate-f7ccbf028ae9df3c4c57: Source robots.txt disallows this URL
@@ -4602,11 +4758,11 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-56ef3c9476984e2c6c35: Source robots.txt disallows this URL
 - new-product / candidate-b312679136feb7b30dc3: Source robots.txt disallows this URL
 - new-product / candidate-d16a504f33a9e6e52059: Source robots.txt disallows this URL
-- new-product / candidate-4087e2cd3620ac7bead9: Source robots.txt disallows this URL
-- new-product / candidate-9f23f6481a0bdbde88f4: Source robots.txt disallows this URL
-- new-product / candidate-52dde528614c10ebf4e9: Source robots.txt disallows this URL
-- new-product / candidate-f913b4d7798d556ead2c: Source robots.txt disallows this URL
-- new-product / candidate-529f0dca3f10fffc387f: Source robots.txt disallows this URL
+- new-product / candidate-4087e2cd3620ac7bead9: HTTP Error 429: Too Many Requests
+- new-product / candidate-9f23f6481a0bdbde88f4: HTTP Error 429: Too Many Requests
+- new-product / candidate-52dde528614c10ebf4e9: HTTP Error 429: Too Many Requests
+- new-product / candidate-f913b4d7798d556ead2c: HTTP Error 429: Too Many Requests
+- new-product / candidate-529f0dca3f10fffc387f: HTTP Error 429: Too Many Requests
 - new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
 - new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
 - new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
@@ -5040,180 +5196,180 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-d984fa6dd11b5982609b: Source robots.txt disallows this URL
 - new-product / candidate-dc060d0f5872f997e5ed: Source robots.txt disallows this URL
 - new-product / candidate-885204761606bf182b82: Source robots.txt disallows this URL
-- new-product / candidate-a54d0dc9a769b0dc955e: HTTP Error 429: Too Many Requests
-- new-product / candidate-f437042e319c7f0895f7: HTTP Error 429: Too Many Requests
-- new-product / candidate-ecd5aba8fd27fe0e414d: HTTP Error 429: Too Many Requests
-- new-product / candidate-03887e33ab6e7d20889d: HTTP Error 429: Too Many Requests
-- new-product / candidate-24f6f83ca596cc6f29a4: HTTP Error 429: Too Many Requests
-- new-product / candidate-4c6bc076a0b852c41c50: HTTP Error 429: Too Many Requests
-- new-product / candidate-3ca4d18d86657fb3da2b: HTTP Error 429: Too Many Requests
-- new-product / candidate-f213b3d80f998e9dfd38: HTTP Error 429: Too Many Requests
-- new-product / candidate-a086e309d4f344a26520: HTTP Error 429: Too Many Requests
-- new-product / candidate-a432768a3698ef6d57c3: HTTP Error 429: Too Many Requests
-- new-product / candidate-3c28f33fede8160f2844: HTTP Error 429: Too Many Requests
-- new-product / candidate-da5798de13ab9a3dcc79: HTTP Error 429: Too Many Requests
-- new-product / candidate-fccaa11ebc2b0d8dea6e: HTTP Error 429: Too Many Requests
-- new-product / candidate-6f7ad1cd6a1bc5aa43b6: HTTP Error 429: Too Many Requests
-- new-product / candidate-4bf0ba5476540a4ad557: HTTP Error 429: Too Many Requests
-- new-product / candidate-8da2da42e82a74d94091: HTTP Error 429: Too Many Requests
-- new-product / candidate-0d7aa6c3e968f9d33f22: HTTP Error 429: Too Many Requests
-- new-product / candidate-32226c599517c868b399: HTTP Error 429: Too Many Requests
-- new-product / candidate-f8df8c9354f53ad50bb7: HTTP Error 429: Too Many Requests
-- new-product / candidate-0c4bd089e6e25acbf60b: HTTP Error 429: Too Many Requests
-- new-product / candidate-32bb4d1c7c95a8240155: HTTP Error 429: Too Many Requests
-- new-product / candidate-505818a7aa4a2d5be066: HTTP Error 429: Too Many Requests
-- new-product / candidate-7e157194fcdee9f3a702: HTTP Error 429: Too Many Requests
-- new-product / candidate-55f7ca91f1a713aa97bd: HTTP Error 429: Too Many Requests
-- new-product / candidate-f941147de89807c1b0ef: HTTP Error 429: Too Many Requests
-- new-product / candidate-b855a6eda5b8e6183bb3: HTTP Error 429: Too Many Requests
-- new-product / candidate-fbe404ab69826e06ec01: HTTP Error 429: Too Many Requests
-- new-product / candidate-ab06544c46258c400b9d: HTTP Error 429: Too Many Requests
-- new-product / candidate-3736fcdf2d060bd4baaf: HTTP Error 429: Too Many Requests
-- new-product / candidate-88823f5aa70b9251f1f7: HTTP Error 429: Too Many Requests
-- new-product / candidate-ef7d45f22efc13a13e85: HTTP Error 429: Too Many Requests
-- new-product / candidate-9154d9257a81590bb2d2: HTTP Error 429: Too Many Requests
-- new-product / candidate-89ad7f4be0cf39a1ff72: HTTP Error 429: Too Many Requests
-- new-product / candidate-32cb94fa329a9d7fc6a0: HTTP Error 429: Too Many Requests
-- new-product / candidate-4bb10d66bccc3c439210: HTTP Error 429: Too Many Requests
-- new-product / candidate-d317ff383eee70ddc2ae: HTTP Error 429: Too Many Requests
-- new-product / candidate-da80282c91e98f741ab7: HTTP Error 429: Too Many Requests
-- new-product / candidate-1e043d8bad31c290f4e6: HTTP Error 429: Too Many Requests
-- new-product / candidate-303e191baaf9c13d5047: HTTP Error 429: Too Many Requests
-- new-product / candidate-5c44f5e28c28687ae06c: HTTP Error 429: Too Many Requests
-- new-product / candidate-b0a9606881109c4367e8: HTTP Error 429: Too Many Requests
-- new-product / candidate-bd379320a288f529c533: HTTP Error 429: Too Many Requests
-- new-product / candidate-17d122e159373fe00083: HTTP Error 429: Too Many Requests
-- new-product / candidate-48f72a743e9e04fcdcdc: HTTP Error 429: Too Many Requests
-- new-product / candidate-980d2f340d4a9e3b6699: HTTP Error 429: Too Many Requests
-- new-product / candidate-b46f47362627471d53b6: HTTP Error 429: Too Many Requests
-- new-product / candidate-a04e76a12d13e09b9acc: HTTP Error 429: Too Many Requests
-- new-product / candidate-635d248e76e27cc86e2a: HTTP Error 429: Too Many Requests
-- new-product / candidate-87835166201722e262c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-41c90dd2ef457051b99d: HTTP Error 429: Too Many Requests
-- new-product / candidate-a767a3a17df31d3c4a1f: HTTP Error 429: Too Many Requests
-- new-product / candidate-947fd67f6563876ded70: HTTP Error 429: Too Many Requests
-- new-product / candidate-1a6cc19a680f3278370a: HTTP Error 429: Too Many Requests
-- new-product / candidate-863a3f59ca17b15430f6: HTTP Error 429: Too Many Requests
-- new-product / candidate-9ee1d76653aa215aa7d0: HTTP Error 429: Too Many Requests
-- new-product / candidate-69ed49856fc923212e7a: HTTP Error 429: Too Many Requests
-- new-product / candidate-dcf824aaf677582471bd: HTTP Error 429: Too Many Requests
-- new-product / candidate-4f5e32b02476c54f76aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-d6572767631b74564172: HTTP Error 429: Too Many Requests
-- new-product / candidate-977ad67bcad3b3d2f09f: HTTP Error 429: Too Many Requests
-- new-product / candidate-a034d0d9e7efacb01887: HTTP Error 429: Too Many Requests
-- new-product / candidate-b32209e89c1fed06e0ee: HTTP Error 429: Too Many Requests
-- new-product / candidate-445286ddb4de895df879: HTTP Error 429: Too Many Requests
-- new-product / candidate-e4df3f8218cc7671a1b8: HTTP Error 429: Too Many Requests
-- new-product / candidate-b3c345cacce507449a85: HTTP Error 429: Too Many Requests
-- new-product / candidate-38df61c83305d5c87394: HTTP Error 429: Too Many Requests
-- new-product / candidate-ce0c6f6ccc249f322134: HTTP Error 429: Too Many Requests
-- new-product / candidate-56499c0ed78e202a8de4: HTTP Error 429: Too Many Requests
-- new-product / candidate-c0f46b499a91a2574da2: HTTP Error 429: Too Many Requests
-- new-product / candidate-d9f965efeded4fa54646: HTTP Error 429: Too Many Requests
-- new-product / candidate-b3f329c36da4b4fd3daa: HTTP Error 429: Too Many Requests
-- new-product / candidate-67c28affb88232dbb894: HTTP Error 429: Too Many Requests
-- new-product / candidate-0274b62a44e635685e88: HTTP Error 429: Too Many Requests
-- new-product / candidate-ac2792fe910a93fdaf56: HTTP Error 429: Too Many Requests
-- new-product / candidate-5778c376f903d1159530: HTTP Error 429: Too Many Requests
-- new-product / candidate-9814f9d1d9e0daae37aa: HTTP Error 429: Too Many Requests
-- new-product / candidate-8f9fc269acf8810b26cd: HTTP Error 429: Too Many Requests
-- new-product / candidate-ddec7c53ca8419cc5615: HTTP Error 429: Too Many Requests
-- new-product / candidate-03e8e0cbec149184b600: HTTP Error 429: Too Many Requests
-- new-product / candidate-470aeb37e5d42d218d1a: HTTP Error 429: Too Many Requests
-- new-product / candidate-f57e11cf40a3db2d718a: HTTP Error 429: Too Many Requests
-- new-product / candidate-c316167674cd3f479fd9: HTTP Error 429: Too Many Requests
-- new-product / candidate-700a12d353eb0f02827d: HTTP Error 429: Too Many Requests
-- new-product / candidate-e0b02b70854d0738a08b: HTTP Error 429: Too Many Requests
-- new-product / candidate-7a93ff641d042ba218f0: HTTP Error 429: Too Many Requests
-- new-product / candidate-866853f8c60de6a5f29b: HTTP Error 429: Too Many Requests
-- new-product / candidate-d0f106cd6e57abba4ab2: HTTP Error 429: Too Many Requests
-- new-product / candidate-99bd9864f2d8da860be5: HTTP Error 429: Too Many Requests
-- new-product / candidate-eb27e5799b2600efdfb1: HTTP Error 429: Too Many Requests
-- new-product / candidate-5f9c69f1c2e6c625e99b: HTTP Error 429: Too Many Requests
-- new-product / candidate-10ddc7a0bd2cb8bdd3b5: HTTP Error 429: Too Many Requests
-- new-product / candidate-7d18599a93ffd7f88f0b: HTTP Error 429: Too Many Requests
-- new-product / candidate-d072d815cb4752b7d23c: HTTP Error 429: Too Many Requests
-- new-product / candidate-589573428461a546ae7f: HTTP Error 429: Too Many Requests
-- new-product / candidate-aeea8d2f0434b6d3d268: HTTP Error 429: Too Many Requests
-- new-product / candidate-b34da1134d25327fd8c4: HTTP Error 429: Too Many Requests
-- new-product / candidate-58804dd47840fa69052b: HTTP Error 429: Too Many Requests
-- new-product / candidate-6ac42cbe4cf2881c0573: HTTP Error 429: Too Many Requests
-- new-product / candidate-30799b4253006e10df70: HTTP Error 429: Too Many Requests
-- new-product / candidate-a54d5eeeb4b6fa0a0b2f: HTTP Error 429: Too Many Requests
-- new-product / candidate-c482e565bc0d58acb4c4: HTTP Error 429: Too Many Requests
-- new-product / candidate-bfe2063127dd93b1bc30: HTTP Error 429: Too Many Requests
-- new-product / candidate-f70d031b2e170b26a055: HTTP Error 429: Too Many Requests
-- new-product / candidate-ae51b7154b08996fd114: HTTP Error 429: Too Many Requests
-- new-product / candidate-4727c9c75a0c946399f9: HTTP Error 429: Too Many Requests
-- new-product / candidate-0f8690a5826b32a1cecf: HTTP Error 429: Too Many Requests
-- new-product / candidate-2a9aa67583317cac421d: HTTP Error 429: Too Many Requests
-- new-product / candidate-c9f30a2bf9250eb41532: HTTP Error 429: Too Many Requests
-- new-product / candidate-0ed65c17d80c86369202: HTTP Error 429: Too Many Requests
-- new-product / candidate-3ec0a6e0842f3b400c1d: HTTP Error 429: Too Many Requests
-- new-product / candidate-be94771f3444751e7e3a: HTTP Error 429: Too Many Requests
-- new-product / candidate-6b21e5156e6bec384b78: HTTP Error 429: Too Many Requests
-- new-product / candidate-18dd31b5ca062d4f39e5: HTTP Error 429: Too Many Requests
-- new-product / candidate-3cb0e8ec400822b57696: HTTP Error 429: Too Many Requests
-- new-product / candidate-0490c636ab332babc536: HTTP Error 429: Too Many Requests
-- new-product / candidate-2c53f5f1b31e55d97483: HTTP Error 429: Too Many Requests
-- new-product / candidate-b315b2ffbb5bbe71f9f2: HTTP Error 429: Too Many Requests
-- new-product / candidate-2a3d088cd748bf00a014: HTTP Error 429: Too Many Requests
-- new-product / candidate-a59e56958e6227741239: HTTP Error 429: Too Many Requests
-- new-product / candidate-e2431be621de6f93992c: HTTP Error 429: Too Many Requests
-- new-product / candidate-36f757e63d8097d0ed7c: HTTP Error 429: Too Many Requests
-- new-product / candidate-23457250aeefd1e540c7: HTTP Error 429: Too Many Requests
-- new-product / candidate-20979af6f53e8eed8d61: HTTP Error 429: Too Many Requests
-- new-product / candidate-3fdcc6d2ce91dbeb714c: HTTP Error 429: Too Many Requests
-- new-product / candidate-27d02a912ee60d4f419a: HTTP Error 429: Too Many Requests
-- new-product / candidate-b9babadafdeec49c88e7: HTTP Error 429: Too Many Requests
-- new-product / candidate-f21097686c6cf47481e6: HTTP Error 429: Too Many Requests
-- new-product / candidate-63febc303f3f8f50bd46: HTTP Error 429: Too Many Requests
-- new-product / candidate-1650fe86dd663fe7072f: HTTP Error 429: Too Many Requests
-- new-product / candidate-d2d44d389d94496faae4: HTTP Error 429: Too Many Requests
-- new-product / candidate-7d4e96fe4f986d8e1308: HTTP Error 429: Too Many Requests
-- new-product / candidate-91ffc1e9bbb098fdb173: HTTP Error 429: Too Many Requests
-- new-product / candidate-971a2e480d1182edff49: HTTP Error 429: Too Many Requests
-- new-product / candidate-27f1526b0876d110f1b1: HTTP Error 429: Too Many Requests
-- new-product / candidate-8e76c6abe68393864168: HTTP Error 429: Too Many Requests
-- new-product / candidate-d654a8f3b7baac39504d: HTTP Error 429: Too Many Requests
-- new-product / candidate-dc239d0225e693f5a0c8: HTTP Error 429: Too Many Requests
-- new-product / candidate-a484c8e32f231636f51d: HTTP Error 429: Too Many Requests
-- new-product / candidate-23aba451745217439e3f: HTTP Error 429: Too Many Requests
-- new-product / candidate-baea11bbcb238e05bf3f: HTTP Error 429: Too Many Requests
-- new-product / candidate-6e680c2c7c7cfc533e13: HTTP Error 429: Too Many Requests
-- new-product / candidate-77dc25cbd51a1c9ef8bf: HTTP Error 429: Too Many Requests
-- new-product / candidate-80a353f5e85b0eb38d1a: HTTP Error 429: Too Many Requests
-- new-product / candidate-c205c63a5bdd1f2c40b7: HTTP Error 429: Too Many Requests
-- new-product / candidate-ad3a46df67c853400194: HTTP Error 429: Too Many Requests
-- new-product / candidate-50f4cb319423b092b91d: HTTP Error 429: Too Many Requests
-- new-product / candidate-b3667b8621ca2d70e656: HTTP Error 429: Too Many Requests
-- new-product / candidate-f4dcae655667811351f9: HTTP Error 429: Too Many Requests
-- new-product / candidate-78594f542af3e3db85d9: HTTP Error 429: Too Many Requests
-- new-product / candidate-0624f140d693cc80bbeb: HTTP Error 429: Too Many Requests
-- new-product / candidate-d6bde0a793756dbf33c6: HTTP Error 429: Too Many Requests
-- new-product / candidate-700cb9fb271aa3d4bcf7: HTTP Error 429: Too Many Requests
-- new-product / candidate-0d2efff04da99a7b4438: HTTP Error 429: Too Many Requests
-- new-product / candidate-f88377d2802f8b948693: HTTP Error 429: Too Many Requests
-- new-product / candidate-dd78881fedd9f3735dbd: HTTP Error 429: Too Many Requests
-- new-product / candidate-77b48f301bb5ca818c96: HTTP Error 429: Too Many Requests
-- new-product / candidate-e2445dac38955acec2c3: HTTP Error 429: Too Many Requests
-- new-product / candidate-fd91490a44aadce7d5d7: HTTP Error 429: Too Many Requests
-- new-product / candidate-50cfae62a9c5644d144a: HTTP Error 429: Too Many Requests
-- new-product / candidate-df247ec869b9b06afa46: HTTP Error 429: Too Many Requests
-- new-product / candidate-a6ff1b5f4551e88fb87c: HTTP Error 429: Too Many Requests
-- new-product / candidate-c9f1546b1c0deafe5449: HTTP Error 429: Too Many Requests
-- new-product / candidate-ac218eb3aa1352f0178f: HTTP Error 429: Too Many Requests
-- new-product / candidate-82ecb1068733b4437bc2: HTTP Error 429: Too Many Requests
-- new-product / candidate-cdab35d9337a2c8556c0: HTTP Error 429: Too Many Requests
-- new-product / candidate-149a5160641474daa64a: HTTP Error 429: Too Many Requests
-- new-product / candidate-3715bb2c9805cfc8a142: HTTP Error 429: Too Many Requests
-- new-product / candidate-a03c2df4e87745b23835: Source robots.txt disallows this URL
-- new-product / candidate-8a7c04c02d9bbfd5beed: Source robots.txt disallows this URL
-- new-product / candidate-32319039194411ca07d4: Source robots.txt disallows this URL
-- new-product / candidate-85d87c8c397d888bf689: Source robots.txt disallows this URL
-- new-product / candidate-9b14e328849092f0e910: Source robots.txt disallows this URL
-- new-product / candidate-acbba8ae99fc0366de50: Source robots.txt disallows this URL
-- new-product / candidate-7701352610a50fa9f9e0: Source robots.txt disallows this URL
+- new-product / candidate-a54d0dc9a769b0dc955e: Source robots.txt disallows this URL
+- new-product / candidate-f437042e319c7f0895f7: Source robots.txt disallows this URL
+- new-product / candidate-ecd5aba8fd27fe0e414d: Source robots.txt disallows this URL
+- new-product / candidate-03887e33ab6e7d20889d: Source robots.txt disallows this URL
+- new-product / candidate-24f6f83ca596cc6f29a4: Source robots.txt disallows this URL
+- new-product / candidate-4c6bc076a0b852c41c50: Source robots.txt disallows this URL
+- new-product / candidate-3ca4d18d86657fb3da2b: Source robots.txt disallows this URL
+- new-product / candidate-f213b3d80f998e9dfd38: Source robots.txt disallows this URL
+- new-product / candidate-a086e309d4f344a26520: Source robots.txt disallows this URL
+- new-product / candidate-a432768a3698ef6d57c3: Source robots.txt disallows this URL
+- new-product / candidate-3c28f33fede8160f2844: Source robots.txt disallows this URL
+- new-product / candidate-da5798de13ab9a3dcc79: Source robots.txt disallows this URL
+- new-product / candidate-fccaa11ebc2b0d8dea6e: Source robots.txt disallows this URL
+- new-product / candidate-6f7ad1cd6a1bc5aa43b6: Source robots.txt disallows this URL
+- new-product / candidate-4bf0ba5476540a4ad557: Source robots.txt disallows this URL
+- new-product / candidate-8da2da42e82a74d94091: Source robots.txt disallows this URL
+- new-product / candidate-0d7aa6c3e968f9d33f22: Source robots.txt disallows this URL
+- new-product / candidate-32226c599517c868b399: Source robots.txt disallows this URL
+- new-product / candidate-f8df8c9354f53ad50bb7: Source robots.txt disallows this URL
+- new-product / candidate-0c4bd089e6e25acbf60b: Source robots.txt disallows this URL
+- new-product / candidate-32bb4d1c7c95a8240155: Source robots.txt disallows this URL
+- new-product / candidate-505818a7aa4a2d5be066: Source robots.txt disallows this URL
+- new-product / candidate-7e157194fcdee9f3a702: Source robots.txt disallows this URL
+- new-product / candidate-55f7ca91f1a713aa97bd: Source robots.txt disallows this URL
+- new-product / candidate-f941147de89807c1b0ef: Source robots.txt disallows this URL
+- new-product / candidate-b855a6eda5b8e6183bb3: Source robots.txt disallows this URL
+- new-product / candidate-fbe404ab69826e06ec01: Source robots.txt disallows this URL
+- new-product / candidate-ab06544c46258c400b9d: Source robots.txt disallows this URL
+- new-product / candidate-3736fcdf2d060bd4baaf: Source robots.txt disallows this URL
+- new-product / candidate-88823f5aa70b9251f1f7: Source robots.txt disallows this URL
+- new-product / candidate-ef7d45f22efc13a13e85: Source robots.txt disallows this URL
+- new-product / candidate-9154d9257a81590bb2d2: Source robots.txt disallows this URL
+- new-product / candidate-89ad7f4be0cf39a1ff72: Source robots.txt disallows this URL
+- new-product / candidate-32cb94fa329a9d7fc6a0: Source robots.txt disallows this URL
+- new-product / candidate-4bb10d66bccc3c439210: Source robots.txt disallows this URL
+- new-product / candidate-d317ff383eee70ddc2ae: Source robots.txt disallows this URL
+- new-product / candidate-da80282c91e98f741ab7: Source robots.txt disallows this URL
+- new-product / candidate-1e043d8bad31c290f4e6: Source robots.txt disallows this URL
+- new-product / candidate-303e191baaf9c13d5047: Source robots.txt disallows this URL
+- new-product / candidate-5c44f5e28c28687ae06c: Source robots.txt disallows this URL
+- new-product / candidate-b0a9606881109c4367e8: Source robots.txt disallows this URL
+- new-product / candidate-bd379320a288f529c533: Source robots.txt disallows this URL
+- new-product / candidate-17d122e159373fe00083: Source robots.txt disallows this URL
+- new-product / candidate-48f72a743e9e04fcdcdc: Source robots.txt disallows this URL
+- new-product / candidate-980d2f340d4a9e3b6699: Source robots.txt disallows this URL
+- new-product / candidate-b46f47362627471d53b6: Source robots.txt disallows this URL
+- new-product / candidate-a04e76a12d13e09b9acc: Source robots.txt disallows this URL
+- new-product / candidate-635d248e76e27cc86e2a: Source robots.txt disallows this URL
+- new-product / candidate-87835166201722e262c6: Source robots.txt disallows this URL
+- new-product / candidate-41c90dd2ef457051b99d: Source robots.txt disallows this URL
+- new-product / candidate-a767a3a17df31d3c4a1f: Source robots.txt disallows this URL
+- new-product / candidate-947fd67f6563876ded70: Source robots.txt disallows this URL
+- new-product / candidate-1a6cc19a680f3278370a: Source robots.txt disallows this URL
+- new-product / candidate-863a3f59ca17b15430f6: Source robots.txt disallows this URL
+- new-product / candidate-9ee1d76653aa215aa7d0: Source robots.txt disallows this URL
+- new-product / candidate-69ed49856fc923212e7a: Source robots.txt disallows this URL
+- new-product / candidate-dcf824aaf677582471bd: Source robots.txt disallows this URL
+- new-product / candidate-4f5e32b02476c54f76aa: Source robots.txt disallows this URL
+- new-product / candidate-d6572767631b74564172: Source robots.txt disallows this URL
+- new-product / candidate-977ad67bcad3b3d2f09f: Source robots.txt disallows this URL
+- new-product / candidate-a034d0d9e7efacb01887: Source robots.txt disallows this URL
+- new-product / candidate-b32209e89c1fed06e0ee: Source robots.txt disallows this URL
+- new-product / candidate-445286ddb4de895df879: Source robots.txt disallows this URL
+- new-product / candidate-e4df3f8218cc7671a1b8: Source robots.txt disallows this URL
+- new-product / candidate-b3c345cacce507449a85: Source robots.txt disallows this URL
+- new-product / candidate-38df61c83305d5c87394: Source robots.txt disallows this URL
+- new-product / candidate-ce0c6f6ccc249f322134: Source robots.txt disallows this URL
+- new-product / candidate-56499c0ed78e202a8de4: Source robots.txt disallows this URL
+- new-product / candidate-c0f46b499a91a2574da2: Source robots.txt disallows this URL
+- new-product / candidate-d9f965efeded4fa54646: Source robots.txt disallows this URL
+- new-product / candidate-b3f329c36da4b4fd3daa: Source robots.txt disallows this URL
+- new-product / candidate-67c28affb88232dbb894: Source robots.txt disallows this URL
+- new-product / candidate-0274b62a44e635685e88: Source robots.txt disallows this URL
+- new-product / candidate-ac2792fe910a93fdaf56: Source robots.txt disallows this URL
+- new-product / candidate-5778c376f903d1159530: Source robots.txt disallows this URL
+- new-product / candidate-9814f9d1d9e0daae37aa: Source robots.txt disallows this URL
+- new-product / candidate-8f9fc269acf8810b26cd: Source robots.txt disallows this URL
+- new-product / candidate-ddec7c53ca8419cc5615: Source robots.txt disallows this URL
+- new-product / candidate-03e8e0cbec149184b600: Source robots.txt disallows this URL
+- new-product / candidate-470aeb37e5d42d218d1a: Source robots.txt disallows this URL
+- new-product / candidate-f57e11cf40a3db2d718a: Source robots.txt disallows this URL
+- new-product / candidate-c316167674cd3f479fd9: Source robots.txt disallows this URL
+- new-product / candidate-700a12d353eb0f02827d: Source robots.txt disallows this URL
+- new-product / candidate-e0b02b70854d0738a08b: Source robots.txt disallows this URL
+- new-product / candidate-7a93ff641d042ba218f0: Source robots.txt disallows this URL
+- new-product / candidate-866853f8c60de6a5f29b: Source robots.txt disallows this URL
+- new-product / candidate-d0f106cd6e57abba4ab2: Source robots.txt disallows this URL
+- new-product / candidate-99bd9864f2d8da860be5: Source robots.txt disallows this URL
+- new-product / candidate-eb27e5799b2600efdfb1: Source robots.txt disallows this URL
+- new-product / candidate-5f9c69f1c2e6c625e99b: Source robots.txt disallows this URL
+- new-product / candidate-10ddc7a0bd2cb8bdd3b5: Source robots.txt disallows this URL
+- new-product / candidate-7d18599a93ffd7f88f0b: Source robots.txt disallows this URL
+- new-product / candidate-d072d815cb4752b7d23c: Source robots.txt disallows this URL
+- new-product / candidate-589573428461a546ae7f: Source robots.txt disallows this URL
+- new-product / candidate-aeea8d2f0434b6d3d268: Source robots.txt disallows this URL
+- new-product / candidate-b34da1134d25327fd8c4: Source robots.txt disallows this URL
+- new-product / candidate-58804dd47840fa69052b: Source robots.txt disallows this URL
+- new-product / candidate-6ac42cbe4cf2881c0573: Source robots.txt disallows this URL
+- new-product / candidate-30799b4253006e10df70: Source robots.txt disallows this URL
+- new-product / candidate-a54d5eeeb4b6fa0a0b2f: Source robots.txt disallows this URL
+- new-product / candidate-c482e565bc0d58acb4c4: Source robots.txt disallows this URL
+- new-product / candidate-bfe2063127dd93b1bc30: Source robots.txt disallows this URL
+- new-product / candidate-f70d031b2e170b26a055: Source robots.txt disallows this URL
+- new-product / candidate-ae51b7154b08996fd114: Source robots.txt disallows this URL
+- new-product / candidate-4727c9c75a0c946399f9: Source robots.txt disallows this URL
+- new-product / candidate-0f8690a5826b32a1cecf: Source robots.txt disallows this URL
+- new-product / candidate-2a9aa67583317cac421d: Source robots.txt disallows this URL
+- new-product / candidate-c9f30a2bf9250eb41532: Source robots.txt disallows this URL
+- new-product / candidate-0ed65c17d80c86369202: Source robots.txt disallows this URL
+- new-product / candidate-3ec0a6e0842f3b400c1d: Source robots.txt disallows this URL
+- new-product / candidate-be94771f3444751e7e3a: Source robots.txt disallows this URL
+- new-product / candidate-6b21e5156e6bec384b78: Source robots.txt disallows this URL
+- new-product / candidate-18dd31b5ca062d4f39e5: Source robots.txt disallows this URL
+- new-product / candidate-3cb0e8ec400822b57696: Source robots.txt disallows this URL
+- new-product / candidate-0490c636ab332babc536: Source robots.txt disallows this URL
+- new-product / candidate-2c53f5f1b31e55d97483: Source robots.txt disallows this URL
+- new-product / candidate-b315b2ffbb5bbe71f9f2: Source robots.txt disallows this URL
+- new-product / candidate-2a3d088cd748bf00a014: Source robots.txt disallows this URL
+- new-product / candidate-a59e56958e6227741239: Source robots.txt disallows this URL
+- new-product / candidate-e2431be621de6f93992c: Source robots.txt disallows this URL
+- new-product / candidate-36f757e63d8097d0ed7c: Source robots.txt disallows this URL
+- new-product / candidate-23457250aeefd1e540c7: Source robots.txt disallows this URL
+- new-product / candidate-20979af6f53e8eed8d61: Source robots.txt disallows this URL
+- new-product / candidate-3fdcc6d2ce91dbeb714c: Source robots.txt disallows this URL
+- new-product / candidate-27d02a912ee60d4f419a: Source robots.txt disallows this URL
+- new-product / candidate-b9babadafdeec49c88e7: Source robots.txt disallows this URL
+- new-product / candidate-f21097686c6cf47481e6: Source robots.txt disallows this URL
+- new-product / candidate-63febc303f3f8f50bd46: Source robots.txt disallows this URL
+- new-product / candidate-1650fe86dd663fe7072f: Source robots.txt disallows this URL
+- new-product / candidate-d2d44d389d94496faae4: Source robots.txt disallows this URL
+- new-product / candidate-7d4e96fe4f986d8e1308: Source robots.txt disallows this URL
+- new-product / candidate-91ffc1e9bbb098fdb173: Source robots.txt disallows this URL
+- new-product / candidate-971a2e480d1182edff49: Source robots.txt disallows this URL
+- new-product / candidate-27f1526b0876d110f1b1: Source robots.txt disallows this URL
+- new-product / candidate-8e76c6abe68393864168: Source robots.txt disallows this URL
+- new-product / candidate-d654a8f3b7baac39504d: Source robots.txt disallows this URL
+- new-product / candidate-dc239d0225e693f5a0c8: Source robots.txt disallows this URL
+- new-product / candidate-a484c8e32f231636f51d: Source robots.txt disallows this URL
+- new-product / candidate-23aba451745217439e3f: Source robots.txt disallows this URL
+- new-product / candidate-baea11bbcb238e05bf3f: Source robots.txt disallows this URL
+- new-product / candidate-6e680c2c7c7cfc533e13: Source robots.txt disallows this URL
+- new-product / candidate-77dc25cbd51a1c9ef8bf: Source robots.txt disallows this URL
+- new-product / candidate-80a353f5e85b0eb38d1a: Source robots.txt disallows this URL
+- new-product / candidate-c205c63a5bdd1f2c40b7: Source robots.txt disallows this URL
+- new-product / candidate-ad3a46df67c853400194: Source robots.txt disallows this URL
+- new-product / candidate-50f4cb319423b092b91d: Source robots.txt disallows this URL
+- new-product / candidate-b3667b8621ca2d70e656: Source robots.txt disallows this URL
+- new-product / candidate-f4dcae655667811351f9: Source robots.txt disallows this URL
+- new-product / candidate-78594f542af3e3db85d9: Source robots.txt disallows this URL
+- new-product / candidate-0624f140d693cc80bbeb: Source robots.txt disallows this URL
+- new-product / candidate-d6bde0a793756dbf33c6: Source robots.txt disallows this URL
+- new-product / candidate-700cb9fb271aa3d4bcf7: Source robots.txt disallows this URL
+- new-product / candidate-0d2efff04da99a7b4438: Source robots.txt disallows this URL
+- new-product / candidate-f88377d2802f8b948693: Source robots.txt disallows this URL
+- new-product / candidate-dd78881fedd9f3735dbd: Source robots.txt disallows this URL
+- new-product / candidate-77b48f301bb5ca818c96: Source robots.txt disallows this URL
+- new-product / candidate-e2445dac38955acec2c3: Source robots.txt disallows this URL
+- new-product / candidate-fd91490a44aadce7d5d7: Source robots.txt disallows this URL
+- new-product / candidate-50cfae62a9c5644d144a: Source robots.txt disallows this URL
+- new-product / candidate-df247ec869b9b06afa46: Source robots.txt disallows this URL
+- new-product / candidate-a6ff1b5f4551e88fb87c: Source robots.txt disallows this URL
+- new-product / candidate-c9f1546b1c0deafe5449: Source robots.txt disallows this URL
+- new-product / candidate-ac218eb3aa1352f0178f: Source robots.txt disallows this URL
+- new-product / candidate-82ecb1068733b4437bc2: Source robots.txt disallows this URL
+- new-product / candidate-cdab35d9337a2c8556c0: Source robots.txt disallows this URL
+- new-product / candidate-149a5160641474daa64a: Source robots.txt disallows this URL
+- new-product / candidate-3715bb2c9805cfc8a142: Source robots.txt disallows this URL
+- new-product / candidate-a03c2df4e87745b23835: HTTP Error 429: Too Many Requests
+- new-product / candidate-8a7c04c02d9bbfd5beed: HTTP Error 429: Too Many Requests
+- new-product / candidate-32319039194411ca07d4: HTTP Error 429: Too Many Requests
+- new-product / candidate-85d87c8c397d888bf689: HTTP Error 429: Too Many Requests
+- new-product / candidate-9b14e328849092f0e910: HTTP Error 429: Too Many Requests
+- new-product / candidate-acbba8ae99fc0366de50: HTTP Error 429: Too Many Requests
+- new-product / candidate-7701352610a50fa9f9e0: HTTP Error 429: Too Many Requests
 - new-product / candidate-0063116e485ec51c908a: Source robots.txt disallows this URL
 - new-product / candidate-3ccf6c590e6332a3ef74: Source robots.txt disallows this URL
 - new-product / candidate-166a59e97f90a41fbf6f: Source robots.txt disallows this URL
@@ -5227,35 +5383,35 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-53c97ad4768a11c17d15: HTTP Error 429: Too Many Requests
 - new-product / candidate-e3a895cb22ec98fbb274: HTTP Error 429: Too Many Requests
 - new-product / candidate-d0cff17033486042e1ff: HTTP Error 429: Too Many Requests
-- new-product / candidate-a29fe03f2a413932a3d0: Source robots.txt disallows this URL
-- new-product / candidate-a2f77cf5911096c04949: Source robots.txt disallows this URL
-- new-product / candidate-c5c2a08fd8a9f60e5123: Source robots.txt disallows this URL
-- new-product / candidate-6e65713500fcf56a43c0: Source robots.txt disallows this URL
-- new-product / candidate-26570e1ba51d4af388c0: Source robots.txt disallows this URL
-- new-product / candidate-dd330fefa12b2872bd55: Source robots.txt disallows this URL
-- new-product / candidate-67be2d87618689ee9115: Source robots.txt disallows this URL
-- new-product / candidate-09a2d2a3c795cd023e9b: Source robots.txt disallows this URL
-- new-product / candidate-34e52cda09b9f90f30f5: Source robots.txt disallows this URL
-- new-product / candidate-8a4e20fa5d951f1c1359: Source robots.txt disallows this URL
-- new-product / candidate-8cc281b3c76e55edc65d: Source robots.txt disallows this URL
-- new-product / candidate-549e6a0431cd32e4b729: Source robots.txt disallows this URL
-- new-product / candidate-4a6eb628edcae9244223: Source robots.txt disallows this URL
-- new-product / candidate-7db6f0ffdb417caf7591: Source robots.txt disallows this URL
-- new-product / candidate-9b69fe67182eb4348c3b: Source robots.txt disallows this URL
-- new-product / candidate-81d0de81f9b493c310a2: HTTP Error 429: Too Many Requests
-- new-product / candidate-2e1f51ff3b22160c8a76: HTTP Error 429: Too Many Requests
-- new-product / candidate-cdecff0a2ecf2eae8548: HTTP Error 429: Too Many Requests
-- new-product / candidate-ab059031754b8a1f8954: HTTP Error 429: Too Many Requests
-- new-product / candidate-fde774eccdae7da0ec2b: HTTP Error 429: Too Many Requests
-- new-product / candidate-e711aaa102409c80cab2: HTTP Error 429: Too Many Requests
-- new-product / candidate-d012b1f9d655cd8e34c3: Source robots.txt disallows this URL
-- new-product / candidate-53802a9fa924322f4015: Source robots.txt disallows this URL
-- new-product / candidate-c7bafe7e7ed528bf2aca: Source robots.txt disallows this URL
-- new-product / candidate-d424e8b45f21fdb99e7f: Source robots.txt disallows this URL
-- new-product / candidate-6e7dfa77fc04c06b8190: Source robots.txt disallows this URL
-- new-product / candidate-fd4e3a27bb7ddf7a0f29: Source robots.txt disallows this URL
-- new-product / candidate-faf4da85eeaf97a7ac51: Source robots.txt disallows this URL
-- new-product / candidate-4993e6418bb18e01bf13: Source robots.txt disallows this URL
+- new-product / candidate-a29fe03f2a413932a3d0: HTTP Error 429: Too Many Requests
+- new-product / candidate-a2f77cf5911096c04949: HTTP Error 429: Too Many Requests
+- new-product / candidate-c5c2a08fd8a9f60e5123: HTTP Error 429: Too Many Requests
+- new-product / candidate-6e65713500fcf56a43c0: HTTP Error 429: Too Many Requests
+- new-product / candidate-26570e1ba51d4af388c0: HTTP Error 429: Too Many Requests
+- new-product / candidate-dd330fefa12b2872bd55: HTTP Error 429: Too Many Requests
+- new-product / candidate-67be2d87618689ee9115: HTTP Error 429: Too Many Requests
+- new-product / candidate-09a2d2a3c795cd023e9b: HTTP Error 429: Too Many Requests
+- new-product / candidate-34e52cda09b9f90f30f5: HTTP Error 429: Too Many Requests
+- new-product / candidate-8a4e20fa5d951f1c1359: HTTP Error 429: Too Many Requests
+- new-product / candidate-8cc281b3c76e55edc65d: HTTP Error 429: Too Many Requests
+- new-product / candidate-549e6a0431cd32e4b729: HTTP Error 429: Too Many Requests
+- new-product / candidate-4a6eb628edcae9244223: HTTP Error 429: Too Many Requests
+- new-product / candidate-7db6f0ffdb417caf7591: HTTP Error 429: Too Many Requests
+- new-product / candidate-9b69fe67182eb4348c3b: HTTP Error 429: Too Many Requests
+- new-product / candidate-81d0de81f9b493c310a2: Source robots.txt disallows this URL
+- new-product / candidate-2e1f51ff3b22160c8a76: Source robots.txt disallows this URL
+- new-product / candidate-cdecff0a2ecf2eae8548: Source robots.txt disallows this URL
+- new-product / candidate-ab059031754b8a1f8954: Source robots.txt disallows this URL
+- new-product / candidate-fde774eccdae7da0ec2b: Source robots.txt disallows this URL
+- new-product / candidate-e711aaa102409c80cab2: Source robots.txt disallows this URL
+- new-product / candidate-d012b1f9d655cd8e34c3: HTTP Error 429: Too Many Requests
+- new-product / candidate-53802a9fa924322f4015: HTTP Error 429: Too Many Requests
+- new-product / candidate-c7bafe7e7ed528bf2aca: HTTP Error 429: Too Many Requests
+- new-product / candidate-d424e8b45f21fdb99e7f: HTTP Error 429: Too Many Requests
+- new-product / candidate-6e7dfa77fc04c06b8190: HTTP Error 429: Too Many Requests
+- new-product / candidate-fd4e3a27bb7ddf7a0f29: HTTP Error 429: Too Many Requests
+- new-product / candidate-faf4da85eeaf97a7ac51: HTTP Error 429: Too Many Requests
+- new-product / candidate-4993e6418bb18e01bf13: HTTP Error 429: Too Many Requests
 - new-product / candidate-9ae0d1747eccdc570bf0: HTTP Error 429: Too Many Requests
 - new-product / candidate-0b4298becbfb2975c3cf: HTTP Error 429: Too Many Requests
 - new-product / candidate-581aa18a1b3b443aafef: HTTP Error 429: Too Many Requests
@@ -5309,23 +5465,23 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-d6d3a2b33385f0a854bf: HTTP Error 429: Too Many Requests
 - new-product / candidate-5f1c935f5895731b81e2: HTTP Error 429: Too Many Requests
 - new-product / candidate-7e4ae82134ef16223659: HTTP Error 429: Too Many Requests
-- new-product / candidate-8d2999f4b0fbc88c05bd: Source robots.txt disallows this URL
-- new-product / candidate-0b267f1e9aa0e0df3046: Source robots.txt disallows this URL
-- new-product / candidate-c30fbeaa85c128353fb1: Source robots.txt disallows this URL
-- new-product / candidate-d73d3a53bebb4d125415: Source robots.txt disallows this URL
-- new-product / candidate-d8ded8c8f75dbc5a6fd8: Source robots.txt disallows this URL
-- new-product / candidate-e8beec3476f66682a8a1: Source robots.txt disallows this URL
-- new-product / candidate-44ad70019e16e8af4e81: Source robots.txt disallows this URL
-- new-product / candidate-04ca1caa96bae13200d6: Source robots.txt disallows this URL
-- new-product / candidate-4ffb499d417179c5de7c: Source robots.txt disallows this URL
-- new-product / candidate-c3dc5f8706f95b9c7048: Source robots.txt disallows this URL
-- new-product / candidate-dbabad733bfa6d69ed02: Source robots.txt disallows this URL
-- new-product / candidate-81177b09972bfb91b2ef: Source robots.txt disallows this URL
-- new-product / candidate-6fa6248fd281e3f85fbc: Source robots.txt disallows this URL
-- new-product / candidate-6c89086f6852e198e670: Source robots.txt disallows this URL
-- new-product / candidate-ffaaf7f2f2b57d0f9d87: Source robots.txt disallows this URL
-- new-product / candidate-d3d471ca57b409a95756: Source robots.txt disallows this URL
-- new-product / candidate-81bcf47741571b9a8799: Source robots.txt disallows this URL
+- new-product / candidate-8d2999f4b0fbc88c05bd: HTTP Error 429: Too Many Requests
+- new-product / candidate-0b267f1e9aa0e0df3046: HTTP Error 429: Too Many Requests
+- new-product / candidate-c30fbeaa85c128353fb1: HTTP Error 429: Too Many Requests
+- new-product / candidate-d73d3a53bebb4d125415: HTTP Error 429: Too Many Requests
+- new-product / candidate-d8ded8c8f75dbc5a6fd8: HTTP Error 429: Too Many Requests
+- new-product / candidate-e8beec3476f66682a8a1: HTTP Error 429: Too Many Requests
+- new-product / candidate-44ad70019e16e8af4e81: HTTP Error 429: Too Many Requests
+- new-product / candidate-04ca1caa96bae13200d6: HTTP Error 429: Too Many Requests
+- new-product / candidate-4ffb499d417179c5de7c: HTTP Error 429: Too Many Requests
+- new-product / candidate-c3dc5f8706f95b9c7048: HTTP Error 429: Too Many Requests
+- new-product / candidate-dbabad733bfa6d69ed02: HTTP Error 429: Too Many Requests
+- new-product / candidate-81177b09972bfb91b2ef: HTTP Error 429: Too Many Requests
+- new-product / candidate-6fa6248fd281e3f85fbc: HTTP Error 429: Too Many Requests
+- new-product / candidate-6c89086f6852e198e670: HTTP Error 429: Too Many Requests
+- new-product / candidate-ffaaf7f2f2b57d0f9d87: HTTP Error 429: Too Many Requests
+- new-product / candidate-d3d471ca57b409a95756: HTTP Error 429: Too Many Requests
+- new-product / candidate-81bcf47741571b9a8799: HTTP Error 429: Too Many Requests
 - new-product / candidate-6883f9724ce4f2445f34: Source robots.txt disallows this URL
 - new-product / candidate-3a0508ff661d2083e4e5: Source robots.txt disallows this URL
 - new-product / candidate-2720e4302d9766aebc4a: Source robots.txt disallows this URL
@@ -6117,7 +6273,7 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-c7d74e513829760a7c12: Source robots.txt disallows this URL
 - new-product / candidate-2ff77bd921da4fbebb4e: Source robots.txt disallows this URL
 - new-product / candidate-49e1bcfdf0a5c9cdd076: Source robots.txt disallows this URL
-- new-product / candidate-f1f50cb087ffeec9f8c2: Cannot confirm that the product is a material or printer
+- new-product / candidate-f1f50cb087ffeec9f8c2: HTTP Error 429: Too Many Requests
 - new-product / candidate-f4b8f71d66e37272b7c4: Source robots.txt disallows this URL
 - new-product / candidate-7f81ed4447b14dc48ee6: Source robots.txt disallows this URL
 - new-product / candidate-f709d5d4eccf26b53339: Source robots.txt disallows this URL
@@ -6145,3 +6301,6 @@ Checked: 2026-10-10T00:07:11+01:00
 - new-product / candidate-e33212c35d37153ecd80: No single GBP offer for the exact product
 - new-product / candidate-97c1246dcad0dd050314: Approved URL is outside its recorded retailer
 - new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
+- new-product / candidate-6fd2a0be280598657192: No single GBP offer for the exact product
+- new-product / candidate-3c030e4a392fed2cfccc: Approved URL is outside its recorded retailer
+- new-product / candidate-3a0d717ec197f48a2c44: No single GBP offer for the exact product
