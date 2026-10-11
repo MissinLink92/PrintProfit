@@ -2,6 +2,35 @@
 if(window.__printProfitHeroSloganLayout)return;
 window.__printProfitHeroSloganLayout=true;
 
+function installAnalyticsLoader(){
+  try{
+    const host=window.parent&&window.parent!==window?window.parent:window;
+    const doc=host.document;
+    if(doc.getElementById('ppAnalyticsLoader'))return;
+    const marker=doc.createElement('meta');
+    marker.id='ppAnalyticsLoader';
+    doc.head.appendChild(marker);
+
+    const loadAnalytics=()=>{
+      if(doc.getElementById('ppAnalyticsScript'))return;
+      const analytics=doc.createElement('script');
+      analytics.id='ppAnalyticsScript';
+      analytics.src='./analytics.js?v=1';
+      analytics.defer=true;
+      doc.head.appendChild(analytics);
+    };
+
+    if(host.PRINTPROFIT_ANALYTICS){loadAnalytics();return;}
+    const config=doc.createElement('script');
+    config.id='ppAnalyticsConfigScript';
+    config.src='./config/analytics-config.js?v=1';
+    config.onload=loadAnalytics;
+    doc.head.appendChild(config);
+  }catch(error){
+    console.warn('PrintProfit analytics loader unavailable',error);
+  }
+}
+
 function installStyles(){
   if(document.getElementById('ppHeroSloganLayoutStyles'))return;
   const style=document.createElement('style');
@@ -32,6 +61,7 @@ function placeSlogan(){
   return true;
 }
 
+installAnalyticsLoader();
 installStyles();
 if(!placeSlogan()){
   const observer=new MutationObserver(()=>{
