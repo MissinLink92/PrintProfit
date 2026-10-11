@@ -1,5 +1,5 @@
 // PrintProfit analytics configuration.
-// Add the GA4 Measurement ID here (format: G-XXXXXXXXXX) once the web data stream exists.
+// GA4 web data stream for https://printprofit.co.uk
 window.PRINTPROFIT_ANALYTICS = Object.freeze({
-  measurementId: ''
+  measurementId: 'G-65PZ82KE4Q'
 });
