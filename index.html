@@ -165,13 +165,10 @@ frame.addEventListener('load',async()=>{
   // Size the iframe only during initial settling. Do not continuously observe
   // the child document: the calculator changes its own layout during startup,
   // and a parent resize observer can create a parent/child resize feedback loop.
+  // Set the iframe height while it is still hidden, before revealing the page.
   const settle=()=>{fit();wireTopModals();};
   settle();
   revealCalculator();
-  setTimeout(settle,100);
-  setTimeout(settle,500);
-  setTimeout(settle,1500);
-  setTimeout(settle,3000);
  }catch(e){
   console.error('PrintProfit enhancement load failed',e);
   if(generation===loadGeneration)showLoadError();
