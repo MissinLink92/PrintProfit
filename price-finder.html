@@ -324,22 +324,11 @@ body.pp-light .kind.printer .pp-shared-icon{color:#286f91!important}
 body.pp-light .kind.equipment .pp-shared-icon{color:#238b59!important}
 body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
+<link rel="stylesheet" href="./site-header.css?v=1">
 </head>
 <body data-pp-standalone-i18n="1">
+<div id="ppSiteHeader"></div><script src="./site-header.js?v=1"></script>
 <div class="wrap">
-<header class="header">
-<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"></a>
-<nav class="nav" aria-label="PrintProfit navigation">
-<a href="./index.html"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-home"></use></svg></span>Home</a>
-<a href="./price-finder.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-compare"></use></svg></span>Compare Products</a>
-<a href="./guide.html"><span class="nav-icon" aria-hidden="true"><svg class="" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-book"></use></svg></span>Guide &amp; Help</a>
-</nav>
-<label class="pp-theme-toggle" title="Toggle dark mode">
-  <span id="themeLabel">Dark mode</span>
-  <input id="darkModeToggle" type="checkbox" role="switch" aria-label="Dark mode">
-  <span class="pp-toggle-track" aria-hidden="true"><span></span></span>
-</label>
-</header>
 
 <section class="hero">
 <div class="kicker">PRINTPROFIT • COMPARE PRODUCTS</div>
@@ -403,7 +392,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 </div>
 <div class="card-grid" id="cardGrid"></div>
-<div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><button class="compare-btn secondary" id="loadMoreResults" type="button">Show 24 more listings</button></div>
+<div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><nav class="results-pagination" aria-label="Product result pages"><button class="compare-btn secondary" id="previousResults" type="button" disabled>Previous</button><span id="resultsPage" aria-live="polite"></span><button class="compare-btn secondary" id="nextResults" type="button">Next</button></nav></div>
 
 <div class="compare-bar" id="compareBar" hidden>
   <div class="compare-summary">
@@ -476,7 +465,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
-<script defer src="./data/price-finder.js?v=20261004-nightly1"></script>
+<script defer src="./data/price-finder-lite.js?v=20261012-compact1"></script>
 <script defer src="./product-categories.js?v=20261004-categories1"></script>
 <script>
 window.addEventListener('DOMContentLoaded',()=>{
@@ -485,8 +474,10 @@ window.addEventListener('DOMContentLoaded',()=>{
 const $=id=>document.getElementById(id);
 const money=v=>'£'+Number(v).toFixed(2);
 let db={products:[],sources:[],brandDirectory:[],updatedAt:''};
-const LISTING_PAGE_SIZE=24;
-let visibleListingCount=LISTING_PAGE_SIZE,expandSources=false,expandBrands=false;
+const LISTING_PAGE_SIZE=20;
+let currentListingPage=0,expandSources=false,expandBrands=false;
+const priceHistoryPageCache=new Map(),priceHistoryPageRequests=new Map();
+let detailsGeneration=0;
 const catalogue=window.PRINTPROFIT_CATEGORIES;
 const categoryCache=new WeakMap();
 function categoryInfo(product){
@@ -632,8 +623,28 @@ function latestPriceChange(x){
  if(Math.abs(diff)<0.005)return {text:'No recorded change',cls:'price-flat'};
  return diff<0?{text:'↓ £'+Math.abs(diff).toFixed(2)+' since baseline',cls:'price-down'}:{text:'↑ £'+diff.toFixed(2)+' since baseline',cls:'price-up'};
 }
+function priceHistoryMarkup(product){
+ const history=Array.isArray(product.priceHistory)?product.priceHistory:[];
+ return sparkline(history)+'<div class="history-list">'+(history.slice(-6).map(point=>'<span class="history-point">'+esc(formatDate(point.date))+' • '+money(point.price)+'</span>').join('')||'<span class="muted">No recorded history yet.</span>')+'</div>';
+}
+function loadPriceHistoryPage(page){
+ if(priceHistoryPageCache.has(page))return Promise.resolve(priceHistoryPageCache.get(page));
+ if(priceHistoryPageRequests.has(page))return priceHistoryPageRequests.get(page);
+ const filename='page-'+String(page).padStart(3,'0')+'.json';
+ const request=fetch('./data/price-history/'+filename,{cache:'force-cache'}).then(response=>{
+  if(!response.ok)throw new Error('History page request failed: '+response.status);
+  return response.json();
+ }).then(data=>{
+  if(!data||typeof data!=='object'||Array.isArray(data))throw new Error('Price history page is invalid');
+  priceHistoryPageCache.set(page,data);
+  return data;
+ }).finally(()=>priceHistoryPageRequests.delete(page));
+ priceHistoryPageRequests.set(page,request);
+ return request;
+}
 function openDetailsModal(id){
  const x=productById(id);if(!x)return;
+ const generation=++detailsGeneration;
  const change=latestPriceChange(x),unit=x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Not tracked';
  const delivery=x.shippingPrice!=null?money(Number(x.price||0)+Number(x.shippingPrice))+' delivered':'Not tracked';
  $('detailsTitle').textContent=x.name;
@@ -650,11 +661,27 @@ function openDetailsModal(id){
  '<div class="detail-item"><small>Delivered price</small><strong>'+delivery+'</strong></div>'+
  '<div class="detail-item"><small>Availability</small><strong>'+esc(x.availability||'Not tracked')+'</strong></div>'+
  '</div><h3 class="history-title">Price history <span class="price-change '+change.cls+'">'+esc(change.text)+'</span></h3>'+
- '<div class="history-wrap">'+sparkline(x.priceHistory)+'<div class="history-list">'+((x.priceHistory||[]).slice(-6).map(p=>'<span class="history-point">'+esc(formatDate(p.date))+' • '+money(p.price)+'</span>').join('')||'<span class="muted">No recorded history yet.</span>')+'</div></div>'+
+ '<div class="history-wrap">'+(Array.isArray(x.priceHistory)?priceHistoryMarkup(x):x.priceHistoryPage==null?'<span class="muted">No recorded history yet.</span>':'<span class="muted" role="status">Loading price history…</span>')+'</div>'+
  '<div class="detail-actions"><button class="compare-btn" type="button" data-details-compare="'+esc(x.id)+'">'+(selectedIds.has(String(x.id))?'Remove from compare':'Add to compare')+'</button><a class="detail-link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Open retailer ↗</a></div></div>';
  $('detailsModal').classList.add('open');document.body.style.overflow='hidden';
+ if(!Array.isArray(x.priceHistory)&&x.priceHistoryPage!=null){
+  loadPriceHistoryPage(Number(x.priceHistoryPage)).then(page=>{
+   if(generation!==detailsGeneration||!$('detailsModal').classList.contains('open'))return;
+   x.priceHistory=Array.isArray(page[String(x.id)])?page[String(x.id)]:[];
+   const change=latestPriceChange(x),badge=$('detailsBody').querySelector('.price-change');
+   if(badge){badge.className='price-change '+change.cls;badge.textContent=change.text}
+   const wrap=$('detailsBody').querySelector('.history-wrap');
+   if(wrap)wrap.innerHTML=priceHistoryMarkup(x);
+  }).catch(error=>{
+   if(generation!==detailsGeneration)return;
+   console.warn('PrintProfit product price history failed to load:',error);
+   const wrap=$('detailsBody').querySelector('.history-wrap');
+   if(wrap)wrap.innerHTML='<span class="muted" role="status">Price history could not be loaded. Please try again later.</span>';
+  });
+ }
 }
 function closeDetailsModal(){
+ detailsGeneration++;
  $('detailsModal').classList.remove('open');
  if(!$('compareModal').classList.contains('open'))document.body.style.overflow='';
 }
@@ -788,9 +815,11 @@ function setResultView(mode){
  const cards=mode==='cards';table.style.display=cards?'none':'';grid.classList.toggle('active',cards);tb.classList.toggle('active',!cards);cb.classList.toggle('active',cards);
  try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
 }
-function render(resetListingLimit=true){
- if(resetListingLimit)visibleListingCount=LISTING_PAGE_SIZE;
- const rows=filtered(),visibleRows=rows.slice(0,visibleListingCount);
+function render(resetPage=true){
+ if(resetPage)currentListingPage=0;
+ const rows=filtered(),pageCount=Math.max(1,Math.ceil(rows.length/LISTING_PAGE_SIZE));
+ currentListingPage=Math.min(currentListingPage,pageCount-1);
+ const firstIndex=currentListingPage*LISTING_PAGE_SIZE,visibleRows=rows.slice(firstIndex,firstIndex+LISTING_PAGE_SIZE);
  const current=$('category').value,leaf=catalogue.categories.find(category=>category.id===current);
  document.querySelectorAll('[data-quick]').forEach(button=>{
   const mode=button.dataset.quick;
@@ -812,10 +841,13 @@ function render(resetListingLimit=true){
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
  $('resultSummary').textContent=rows.length+' '+(rows.length===1?'matching listing':'matching listings')+(window.__compareSelectedOnly?' • selected only':'');
  renderCards(visibleRows);
- const more=$('resultsMore'),shown=$('resultsShown'),button=$('loadMoreResults');
- if(shown)shown.textContent='Showing '+visibleRows.length+' of '+rows.length+' matching listings';
- if(more)more.hidden=rows.length<=visibleRows.length;
- if(button)button.textContent='Show '+Math.min(LISTING_PAGE_SIZE,rows.length-visibleRows.length)+' more listings';
+ const more=$('resultsMore'),shown=$('resultsShown'),pageLabel=$('resultsPage');
+ const previous=$('previousResults'),next=$('nextResults');
+ if(shown)shown.textContent=rows.length?'Showing '+(firstIndex+1)+'–'+Math.min(firstIndex+visibleRows.length,rows.length)+' of '+rows.length+' matching listings':'No matching listings';
+ if(pageLabel)pageLabel.textContent='Page '+(currentListingPage+1)+' of '+pageCount;
+ if(more)more.hidden=pageCount<=1;
+ if(previous)previous.disabled=currentListingPage<=0;
+ if(next)next.disabled=currentListingPage>=pageCount-1;
  renderInsights(rows);
 }
 function renderCoverage(){
@@ -940,7 +972,8 @@ $('cardGrid').addEventListener('click',e=>{
  if(btn)return;
 });
 loadCompareSelection();
-$('loadMoreResults').addEventListener('click',()=>{visibleListingCount+=LISTING_PAGE_SIZE;render(false);});
+$('previousResults').addEventListener('click',()=>{if(currentListingPage>0){currentListingPage--;render(false)}});
+$('nextResults').addEventListener('click',()=>{const rows=filtered(),pages=Math.ceil(rows.length/LISTING_PAGE_SIZE);if(currentListingPage+1<pages){currentListingPage++;render(false)}});
 $('toggleSources').addEventListener('click',()=>{expandSources=!expandSources;renderCoverage();});
 $('toggleBrands').addEventListener('click',()=>{expandBrands=!expandBrands;renderCoverage();});
 loadData();
@@ -975,7 +1008,10 @@ body #tableViewWrap .table-compare-check{width:14px!important;height:14px!import
 body #tableViewWrap .product-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:135px}
 body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wrap:anywhere}
 .results-more{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0;color:var(--muted)}.results-more[hidden],.coverage-toggle[hidden]{display:none!important}.coverage-toggle{margin-top:12px}
+
+.results-pagination{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.results-pagination>span{min-width:92px;text-align:center;font-size:13px;color:var(--text)}.results-pagination button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+@media(max-width:520px){.results-more{align-items:stretch;flex-direction:column}.results-pagination{justify-content:center}.results-pagination .compare-btn{width:auto;min-width:102px}}
 </style>
-<link rel="stylesheet" href="./readability.css?v=13">
+<link rel="stylesheet" href="./readability.css?v=14">
 </body>
 </html>
