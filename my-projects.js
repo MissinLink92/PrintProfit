@@ -2,6 +2,8 @@
 'use strict';
 if(window.__printProfitProjects)return; window.__printProfitProjects=true;
 const KEY='printprofit.projects.v1';
+const PROJECT_OWNER_KEY='printprofit.projects.owner.v1';
+const PROJECT_CACHE_PREFIX='printprofit.projects.user-cache.v1.';
 const FILE_DB='printprofit.project-files.v1';
 let activeProjectId=null;
 window.__ppClearActiveProject=()=>{
@@ -44,17 +46,62 @@ const flashUpdateConfirmation=()=>{
 };
 const PROJECT_DB='printprofit.project-records.v1';
 const projectDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(PROJECT_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('projects',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+const projectOwner=()=>{try{return localStorage.getItem(PROJECT_OWNER_KEY)||'guest'}catch(e){return'guest'}};
+const projectCacheKey=owner=>PROJECT_CACHE_PREFIX+(owner||'guest');
+const readProjectCache=owner=>{try{const data=JSON.parse(localStorage.getItem(projectCacheKey(owner))||'null');return Array.isArray(data)?data:null}catch(e){return null}};
+const writeProjectCache=(owner,projects)=>{try{localStorage.setItem(projectCacheKey(owner),JSON.stringify(Array.isArray(projects)?projects:[]));return true}catch(e){return false}};
 const persistProjects=async projects=>{try{const db=await projectDb();await new Promise((res,rej)=>{const tx=db.transaction('projects','readwrite'),store=tx.objectStore('projects');store.clear();projects.forEach(p=>store.put(p));tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close();return true}catch(e){console.warn('PrintProfit project backup save failed:',e);return false}};
 const readProjectsBackup=async()=>{try{const db=await projectDb();const values=await new Promise((res,rej)=>{const tx=db.transaction('projects','readonly'),q=tx.objectStore('projects').getAll();q.onsuccess=()=>res(q.result||[]);q.onerror=()=>rej(q.error)});db.close();return values}catch(e){console.warn('PrintProfit project backup read failed:',e);return[]}};
-const hydrateProjects=async()=>{const current=read();if(current.length){persistProjects(current);return current;}const backup=await readProjectsBackup();if(backup.length){try{localStorage.setItem(KEY,JSON.stringify(backup));}catch(e){console.warn('PrintProfit project local restore failed:',e)}return backup;}return current};
+const read=()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){console.warn('PrintProfit project read error:',e);return[]}};
+const storeProjects=(projects,{notify=true,cache=true}={})=>{
+ const next=Array.isArray(projects)?projects:[],before=read();
+ try{localStorage.setItem(KEY,JSON.stringify(next));if(cache)writeProjectCache(projectOwner(),next);persistProjects(next);}
+ catch(e){console.warn('PrintProfit project save error:',e);persistProjects(next);return false}
+ if(notify)document.dispatchEvent(new CustomEvent('pp-projects-data-changed',{detail:{kind:'projects',before,after:next,owner:projectOwner()}}));
+ return true;
+};
+const write=v=>storeProjects(v);
+const hydrateProjects=async()=>{const current=read();if(current.length){await persistProjects(current);writeProjectCache(projectOwner(),current);return current;}const backup=await readProjectsBackup();if(backup.length){storeProjects(backup,{notify:false});return backup;}return current;};
+const mergeProjectRecords=(left,right)=>{
+ const byId=new Map();
+ [...(Array.isArray(left)?left:[]),...(Array.isArray(right)?right:[])].forEach(p=>{
+  if(!p||!p.id)return;const old=byId.get(String(p.id));
+  if(!old||Number(p.updated||0)>=Number(old.updated||0))byId.set(String(p.id),p);
+ });
+ return [...byId.values()];
+};
+window.__ppGetProjectWorkspace=()=>read();
+window.__ppGetProjectWorkspaceForOwner=owner=>String(owner||'guest')===projectOwner()?read():(readProjectCache(owner)||[]);
+window.__ppHasProjectWorkspaceForOwner=owner=>window.__ppGetProjectWorkspaceForOwner(owner).length>0;
+window.__ppSetProjectsFromSync=async projects=>{
+ const next=Array.isArray(projects)?projects:[];
+ if(!storeProjects(next,{notify:false}))return false;
+ await persistProjects(next);render();const count=document.getElementById('ppProjectCount');if(count)count.textContent=next.length+' saved '+(next.length===1?'project':'projects');return true;
+};
+window.__ppSetProjectWorkspaceOwner=async(nextOwner,options={})=>{
+ const target=String(nextOwner||'guest'),currentOwner=projectOwner();
+ if(target===currentOwner){try{localStorage.setItem(PROJECT_OWNER_KEY,target);return true}catch(e){return false}}
+ const current=await hydrateProjects();
+ if(!writeProjectCache(currentOwner,current))return false;
+ const cached=readProjectCache(target)||[];
+ const next=options.keepCurrentLocal?mergeProjectRecords(cached,current):cached;
+ window.__ppClearActiveProject?.();
+ try{
+  localStorage.setItem(KEY,JSON.stringify(next));
+  if(!writeProjectCache(target,next))throw new Error('Project workspace cache could not be saved.');
+  localStorage.setItem(PROJECT_OWNER_KEY,target);
+ }catch(e){
+  try{localStorage.setItem(KEY,JSON.stringify(current));localStorage.setItem(PROJECT_OWNER_KEY,currentOwner)}catch(restoreError){}
+  console.warn('PrintProfit project workspace could not be switched:',e);return false;
+ }
+ await persistProjects(next);render();const count=document.getElementById('ppProjectCount');if(count)count.textContent=next.length+' saved '+(next.length===1?'project':'projects');return true;
+};
 
 const fileDb=()=>new Promise((resolve,reject)=>{const r=indexedDB.open(FILE_DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const putProjectFile=async(id,file)=>{if(!file)return;try{const db=await fileDb();await new Promise((res,rej)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').put({blob:file,name:file.name,type:file.type,lastModified:file.lastModified},id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close()}catch(e){console.warn('PrintProfit could not save project file:',e)}};
 const getProjectFile=async id=>{try{const db=await fileDb();const v=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get(id);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close();return v||null}catch(e){console.warn('PrintProfit could not restore project file:',e);return null}};
-const restoreProjectFile=async id=>{let saved=await getProjectFile(id);if(!saved){try{const db=await fileDb();saved=await new Promise((res,rej)=>{const tx=db.transaction('files','readonly');const q=tx.objectStore('files').get('latest');q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});db.close()}catch(e){}}if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;window.__ppRestoringPlate=window.__ppFileData?.selectedPlate;window.__ppRestoringFile=true;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
+const restoreProjectFile=async id=>{const saved=await getProjectFile(id);if(!saved)return false;const input=document.getElementById('file');if(!input)return false;try{const file=new File([saved.blob],saved.name,{type:saved.type||'application/octet-stream',lastModified:saved.lastModified||Date.now()});const dt=new DataTransfer();dt.items.add(file);input.files=dt.files;window.__ppRestoringPlate=window.__ppFileData?.selectedPlate;window.__ppRestoringFile=true;input.dispatchEvent(new Event('change',{bubbles:true}));return true}catch(e){console.warn('PrintProfit could not put saved file back into upload control:',e);return false}};
 const val=id=>document.getElementById(id)?.value??'';
-const read=()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){console.warn('PrintProfit project read error:',e);return[]}};
-const write=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));persistProjects(v);return true}catch(e){console.warn('PrintProfit project save error:',e);persistProjects(v);return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const snapshot=()=>{
  const data={};
@@ -133,7 +180,7 @@ function open(){
   panel=document.createElement('div');panel.id='ppProjectsPanel';
   panel.innerHTML=`<div class="pp-projects-backdrop" data-project-close></div>
   <section class="pp-projects-dialog" role="dialog" aria-modal="true" aria-labelledby="ppProjectsTitle">
-   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Workspace</h2><p>Your saved calculator projects, workshop profiles and account settings in one place.</p><small class="pp-projects-local-note">Projects stay on this device. Sign in to sync printer and material profiles.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
+   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Workspace</h2><p>Your saved calculator projects, workshop profiles and account settings in one place.</p><small class="pp-projects-local-note">Sign in and enable sync to carry saved project settings between devices. Uploaded 3D model files stay on this device.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
    <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page">Projects</button><button type="button" data-workspace-section="workshop">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
    <div class="pp-projects-toolbar"><span class="pp-project-count" id="ppProjectCount"></span></div>
    <div id="ppProjectsList"></div>
@@ -216,7 +263,8 @@ async function saveNew(){
  try{window.__ppFileData=(p.fileData&&typeof p.fileData==='object')?p.fileData:(p.data?.fileData&&typeof p.data.fileData==='object'?p.data.fileData:{});}catch(e){window.__ppFileData={};}
  if(p.fileStatus){const status=document.getElementById('status');if(status)status.textContent=p.fileStatus;}
  restore(p.data);
- await restoreProjectFile(id);
+ const fileRestored=await restoreProjectFile(id);
+ if(p.file&&!fileRestored){const status=document.getElementById('status');if(status)status.textContent='This project’s 3D model file stays on the device where it was uploaded. Upload the file here to restore the model preview.';}
  window.__ppRefreshModelHub?.();
  setTimeout(()=>window.__ppRefreshModelHub?.(),180);
  close();
@@ -243,7 +291,7 @@ async function renameProject(id){
  const c=document.getElementById('ppProjectCount');
  if(c)c.textContent=read().length+' saved '+(read().length===1?'project':'projects');
 }
-function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=structuredClone?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
+function duplicateProject(id){const p=read().find(x=>x.id===id);if(!p)return;const copy=typeof structuredClone==='function'?structuredClone(p):JSON.parse(JSON.stringify(p));copy.id=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random();copy.name=p.name+' (Copy)';copy.updated=Date.now();write([...read(),copy]);render();document.getElementById('ppProjectCount').textContent=read().length+' saved projects';}
 function deleteProject(id){
  const p=read().find(x=>x.id===id);if(!p)return;
  if(!confirm('Delete “'+p.name+'”?'))return;
