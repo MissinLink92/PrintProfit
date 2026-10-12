@@ -372,7 +372,7 @@ async function syncProjects(user,deletedIds,importGuest){
  if(batchCount)await batch.commit();
  const merged=[...next.values()].filter(entry=>!entry.deleted&&entry.project).map(entry=>{
   const localProject=localRawById.get(entry.id);
-  if(localProject?.fileData&&String(entry.project.fileStatus||'').includes('Detailed slicer data was too large to sync')){
+  if(localProject?.fileData&&Number(localProject.updated||0)===Number(entry.project.updated||0)&&String(entry.project.fileStatus||'').includes('Detailed slicer data was too large to sync')){
    return{...entry.project,fileData:localProject.fileData,fileStatus:localProject.fileStatus||entry.project.fileStatus};
   }
   return entry.project;
