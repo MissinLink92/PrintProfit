@@ -125,7 +125,7 @@ function errorText(error){
  if(code.includes('weak-password'))return'Choose a password with at least 8 characters.';
  if(code.includes('operation-not-allowed'))return'Email and password sign-up is disabled in Firebase Authentication. Enable the Email/Password provider for PrintProfit.';
  if(code.includes('unauthorized-domain'))return'Firebase sign-in is not enabled for printprofit.co.uk. Add this domain to Firebase Authentication’s authorised domains.';
- if(code.includes('invalid-api-key')||code.includes('api-key-not-valid')||code.includes('app-not-authorized')||code.includes('configuration-not-found'))return'The account service is misconfigured. Check the Firebase web app settings for PrintProfit.';
+ if(code.includes('invalid-api-key')||code.includes('api-key-not-valid')||code.includes('app-not-authorized')||code.includes('configuration-not-found'))return'Firebase rejected the PrintProfit web API key. Check that the key is active, allows the Identity Toolkit API in Google Cloud, and matches the Firebase web app settings.';
  if(code.includes('email-send-quota-exceeded')||code.includes('quota-exceeded'))return'Firebase could not send an email right now. Wait a little, then try again.';
  if(code.includes('too-many-requests'))return'Too many attempts. Please wait a little and try again.';
  if(code.includes('requires-recent-login'))return'For security, sign out and sign back in before deleting this account.';
