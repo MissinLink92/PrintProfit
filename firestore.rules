@@ -2,7 +2,37 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Each signed-in, email-verified user can access only their own workshop profile.
+    // Acceptance records are versioned, immutable and limited to the account owner.
+    match /users/{userId}/legal/{acceptanceId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      allow get: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+      allow list: if false;
+      allow create: if isOwner()
+        && acceptanceId == 'acceptance-2026-10-12-v1'
+        && request.resource.data.keys().hasOnly([
+          'termsVersion',
+          'privacyVersion',
+          'syncConsent',
+          'acceptedAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'termsVersion',
+          'privacyVersion',
+          'syncConsent',
+          'acceptedAt'
+        ])
+        && request.resource.data.termsVersion == '2026-10-12-v1'
+        && request.resource.data.privacyVersion == '2026-10-12-v1'
+        && request.resource.data.syncConsent == true
+        && request.resource.data.acceptedAt == request.time;
+      allow update: if false;
+      allow delete: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+    }
+
+    // Each signed-in, email-verified user with current policy acceptance can access only their own profile.
     match /users/{userId}/workshop/profiles {
       function isVerifiedOwner() {
         return request.auth != null
@@ -10,9 +40,14 @@ service cloud.firestore {
           && request.auth.token.email_verified == true;
       }
 
-      allow get: if isVerifiedOwner();
+      function hasCurrentAcceptance() {
+        return exists(/databases/$(database)/documents/users/$(userId)/legal/acceptance-2026-10-12-v1);
+      }
+
+      allow get: if isVerifiedOwner() && hasCurrentAcceptance();
       allow list: if false;
       allow create, update: if isVerifiedOwner()
+        && hasCurrentAcceptance()
         && request.resource.data.keys().hasOnly([
           'materials',
           'printers',
@@ -36,7 +71,8 @@ service cloud.firestore {
         && request.resource.data.printers.size() <= 100
         && request.resource.data.deletedMaterials.size() <= 10000
         && request.resource.data.deletedPrinters.size() <= 10000;
-      allow delete: if isVerifiedOwner();
+      // Owners may delete their own profile even if email verification or policy acceptance is missing.
+      allow delete: if request.auth != null && request.auth.uid == userId;
     }
 
     // Deny access to all other documents unless another explicit rule is added.
