@@ -11,7 +11,7 @@ const STATE_PREFIX='printprofit.workshop.sync-state.v1.';
 const CACHE_PREFIX='printprofit.workshop.user-cache.v1.';
 const FIREBASE_VERSION='12.19.0';
 let auth=null,db=null,sdk=null,activeUser=null,initPromise=null,accountHostReady=false;
-let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false;
+let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false;
 
 const isConfigured=()=>Boolean(CONFIG.apiKey&&CONFIG.authDomain&&CONFIG.projectId&&CONFIG.appId);
 const ownerId=()=>{try{return localStorage.getItem(OWNER_KEY)||'guest'}catch(e){return'guest'}};
@@ -74,14 +74,14 @@ function ensureAccountUI(){
     '<div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="sign-in">Sign in</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-up">Create account</button></div>'+
     '<div class="pp-account-links"><button type="button" data-pp-account-action="reset-password">Forgot password?</button></div>'+
    '</div>'+
-   '<div id="ppAccountSignedIn" class="pp-account-signed-in" hidden><span id="ppAccountEmailLabel"></span><div class="pp-account-actions"><button type="button" class="pp-account-secondary" data-pp-account-action="sync">Sync now</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-out">Sign out</button></div></div>'+
+   '<div id="ppAccountSignedIn" class="pp-account-signed-in" hidden><span id="ppAccountEmailLabel"></span><div class="pp-account-actions"><button type="button" class="pp-account-secondary" data-pp-account-action="sync">Sync now</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-out">Sign out</button></div><button type="button" class="pp-account-danger" data-pp-account-action="delete-account">Delete account and data</button></div>'+
    '<p id="ppAccountMessage" class="pp-account-message" role="status" aria-live="polite"></p>'+
    '<small class="pp-account-footnote">Your password is handled securely by Firebase. Printer and material profiles are private to your account.</small>'+
   '</section>';
  if(!document.getElementById('ppAccountStyles')){
   const style=document.createElement('style');style.id='ppAccountStyles';style.textContent=
    '.pp-account-card{margin:0 28px 16px;padding:17px 18px;border:1px solid #355363;border-radius:14px;background:linear-gradient(145deg,#0c202a,#0a1820);color:#edf3f6;font-family:Inter,Segoe UI,system-ui,sans-serif}'+
-   '.pp-account-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.pp-account-kicker{display:block;color:#ffae62;font-size:9px;font-weight:900;letter-spacing:.16em}.pp-account-heading h3{margin:4px 0 6px;font-size:16px}.pp-account-status{display:flex;flex-direction:column;gap:3px;color:#aebdc6;font-size:12px}.pp-account-status strong{color:#edf3f6;font-size:12px}.pp-account-badge{flex:0 0 auto;padding:5px 8px;border:1px solid #355363;border-radius:999px;color:#aebdc6;font-size:9px;font-weight:900;letter-spacing:.08em}.pp-account-badge.is-synced{border-color:#16865f;color:#70e0b5;background:#0a3028}.pp-account-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.pp-account-fields label{color:#aebdc6;font-size:11px}.pp-account-fields input{display:block;width:100%;box-sizing:border-box;margin-top:5px;padding:10px 11px;border:1px solid #355363;border-radius:8px;background:#07141c;color:#f5f8fb;font:inherit;font-size:13px}.pp-account-actions{display:flex;gap:8px;align-items:center}.pp-account-primary,.pp-account-secondary{min-height:36px;padding:8px 12px;border:1px solid #ff7800;border-radius:8px;background:#ff7800;color:#fff;font-weight:800;cursor:pointer}.pp-account-secondary{border-color:#355363;background:#0d2029;color:#dce8ed}.pp-account-primary:disabled,.pp-account-secondary:disabled{opacity:.55;cursor:wait}.pp-account-fields>.pp-account-actions{grid-column:1/-1}.pp-account-links{grid-column:1/-1;display:flex;gap:12px}.pp-account-links button{padding:0;border:0;background:transparent;color:#75d8f2;font:inherit;font-size:11px;text-decoration:underline;cursor:pointer}.pp-account-signed-in{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;color:#dce8ed;font-size:12px}.pp-account-message{min-height:17px;margin:8px 0 0;color:#77e1b8;font-size:11px}.pp-account-message.is-error{color:#ff9b9b}.pp-account-not-configured{margin-top:12px;padding:10px 12px;border:1px solid #765021;border-radius:9px;background:#312411;color:#f8d8a8;font-size:12px;line-height:1.5}.pp-account-footnote{display:block;color:#81949f;font-size:10px;line-height:1.45}.pp-account-fields[hidden],.pp-account-signed-in[hidden],.pp-account-not-configured[hidden],.pp-account-links [hidden]{display:none!important}'+
+   '.pp-account-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.pp-account-kicker{display:block;color:#ffae62;font-size:9px;font-weight:900;letter-spacing:.16em}.pp-account-heading h3{margin:4px 0 6px;font-size:16px}.pp-account-status{display:flex;flex-direction:column;gap:3px;color:#aebdc6;font-size:12px}.pp-account-status strong{color:#edf3f6;font-size:12px}.pp-account-badge{flex:0 0 auto;padding:5px 8px;border:1px solid #355363;border-radius:999px;color:#aebdc6;font-size:9px;font-weight:900;letter-spacing:.08em}.pp-account-badge.is-synced{border-color:#16865f;color:#70e0b5;background:#0a3028}.pp-account-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.pp-account-fields label{color:#aebdc6;font-size:11px}.pp-account-fields input{display:block;width:100%;box-sizing:border-box;margin-top:5px;padding:10px 11px;border:1px solid #355363;border-radius:8px;background:#07141c;color:#f5f8fb;font:inherit;font-size:13px}.pp-account-actions{display:flex;gap:8px;align-items:center}.pp-account-primary,.pp-account-secondary{min-height:36px;padding:8px 12px;border:1px solid #ff7800;border-radius:8px;background:#ff7800;color:#fff;font-weight:800;cursor:pointer}.pp-account-secondary{border-color:#355363;background:#0d2029;color:#dce8ed}.pp-account-danger{padding:0;border:0;background:transparent;color:#ff9b9b;font:inherit;font-size:11px;text-decoration:underline;cursor:pointer}.pp-account-primary:disabled,.pp-account-secondary:disabled{opacity:.55;cursor:wait}.pp-account-fields>.pp-account-actions{grid-column:1/-1}.pp-account-links{grid-column:1/-1;display:flex;gap:12px}.pp-account-links button{padding:0;border:0;background:transparent;color:#75d8f2;font:inherit;font-size:11px;text-decoration:underline;cursor:pointer}.pp-account-signed-in{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:12px;margin-top:14px;color:#dce8ed;font-size:12px}.pp-account-signed-in>.pp-account-actions{margin-left:auto}.pp-account-danger{flex-basis:100%;text-align:left}.pp-account-message{min-height:17px;margin:8px 0 0;color:#77e1b8;font-size:11px}.pp-account-message.is-error{color:#ff9b9b}.pp-account-not-configured{margin-top:12px;padding:10px 12px;border:1px solid #765021;border-radius:9px;background:#312411;color:#f8d8a8;font-size:12px;line-height:1.5}.pp-account-footnote{display:block;color:#81949f;font-size:10px;line-height:1.45}.pp-account-fields[hidden],.pp-account-signed-in[hidden],.pp-account-not-configured[hidden],.pp-account-links [hidden]{display:none!important}'+
    '@media(max-width:650px){.pp-account-card{margin-left:20px;margin-right:20px}.pp-account-fields{grid-template-columns:1fr}.pp-account-fields>.pp-account-actions,.pp-account-links{grid-column:auto}.pp-account-signed-in{align-items:flex-start;flex-direction:column}}';
   document.head.appendChild(style);
  }
@@ -111,6 +111,7 @@ function errorText(error){
  if(code.includes('invalid-email'))return'Enter a valid email address.';
  if(code.includes('weak-password'))return'Choose a password with at least 8 characters.';
  if(code.includes('too-many-requests'))return'Too many attempts. Please wait a little and try again.';
+ if(code.includes('requires-recent-login'))return'For security, sign out and sign back in before deleting this account.';
  if(code.includes('network-request-failed'))return'Network connection failed. Check your connection and try again.';
  if(code.includes('permission-denied')||code.includes('unauthorized'))return'Your account is signed in, but cloud sync is not allowed. Check the Firestore rules and verify your email.';
  return'We could not complete that step. Please try again.';
@@ -153,11 +154,8 @@ async function initializeFirebase(){
    }else if(!activeUser){handledUid=''}
   });
   return{app,auth,db};
- })();
+ })().catch(error=>{initPromise=null;throw error});
  return initPromise;
-}
-function tombstonesFor(scope){
- return readSyncState(scope).deleted;
 }
 function rememberDeletion(state,kind,before,after){
  const afterIds=new Set(normalizeList(after).map(item=>String(item.id)));
@@ -182,9 +180,17 @@ function handleLocalChange(event){
 const emptyWorkshop=()=>({materials:[],printers:[]});
 function readSyncCache(uid){return readCache(uid)||null}
 function sameWorkshop(a,b){return JSON.stringify(a)===JSON.stringify(b)}
-async function saveCloud(user,value){
- const ref=sdk.firestore.doc(db,'users',user.uid,'workshop','profiles');
- await sdk.firestore.setDoc(ref,{materials:normalizeList(value.materials),printers:normalizeList(value.printers),schemaVersion:1,updatedAt:sdk.firestore.serverTimestamp()});
+const emptyDeleted=()=>({materials:[],printers:[]});
+const mergeDeleted=(...sets)=>({
+ materials:[...new Set(sets.flatMap(set=>Array.isArray(set?.materials)?set.materials:[]).map(String))],
+ printers:[...new Set(sets.flatMap(set=>Array.isArray(set?.printers)?set.printers:[]).map(String))]
+});
+const sameDeleted=(a,b)=>JSON.stringify([...a.materials].sort())===JSON.stringify([...b.materials].sort())&&JSON.stringify([...a.printers].sort())===JSON.stringify([...b.printers].sort());
+function cloudWorkshop(data){
+ return{materials:normalizeList(data?.materials),printers:normalizeList(data?.printers)};
+}
+function cloudDeleted(data){
+ return{materials:Array.isArray(data?.deletedMaterials)?data.deletedMaterials.map(String):[],printers:Array.isArray(data?.deletedPrinters)?data.deletedPrinters.map(String):[]};
 }
 async function syncWorkshop(user){
  if(!user||!user.emailVerified)return;
@@ -198,36 +204,39 @@ async function syncWorkshop(user){
   writeWorkshop(local);
   scope=user.uid;pendingState=readSyncState(scope);
  }else if(currentOwner==='guest'){
-  const ownCache=readSyncCache(user.uid);
-  if(ownCache){
-   local=mergeWorkshop(local,ownCache, pendingState.deleted);
-  }
+  const ownCache=readSyncCache(user.uid),accountState=readSyncState(user.uid);
+  pendingState={pending:pendingState.pending||accountState.pending,deleted:mergeDeleted(pendingState.deleted,accountState.deleted)};
+  if(ownCache)local=mergeWorkshop(local,ownCache,pendingState.deleted);
  }
  const ref=sdk.firestore.doc(db,'users',user.uid,'workshop','profiles');
- const snapshot=await sdk.firestore.getDoc(ref);
- let next;
- if(snapshot.exists()){
-  const cloud=snapshot.data()||emptyWorkshop();
-  if(currentOwner===user.uid&&!pendingState.pending){
-   next={materials:normalizeList(cloud.materials),printers:normalizeList(cloud.printers)};
-  }else{
-   next=mergeWorkshop(local,cloud,pendingState.deleted);
-  }
-  if(!writeWorkshop(next))throw new Error('Workshop data could not be stored in this browser.');
-  if(!sameWorkshop(next,{materials:normalizeList(cloud.materials),printers:normalizeList(cloud.printers)})||pendingState.pending){
-   await saveCloud(user,next);
-  }
- }else{
-  next={materials:normalizeList(local.materials),printers:normalizeList(local.printers)};
-  if(!writeWorkshop(next))throw new Error('Workshop data could not be stored in this browser.');
-  await saveCloud(user,next);
- }
+ let result;
  try{
-  localStorage.setItem(OWNER_KEY,user.uid);
-  writeCache(user.uid,next);
-  writeSyncState(user.uid,{pending:false,deleted:{materials:[],printers:[]}});
-  if(scope==='guest')writeSyncState('guest',{pending:false,deleted:{materials:[],printers:[]}});
- }catch(e){}
+  result=await sdk.firestore.runTransaction(db,async transaction=>{
+   const snapshot=await transaction.get(ref);
+   let next,deleted=mergeDeleted(pendingState.deleted);
+   if(snapshot.exists()){
+    const cloud=snapshot.data()||{};
+    const cloudLists=cloudWorkshop(cloud);
+    deleted=mergeDeleted(cloudDeleted(cloud),pendingState.deleted);
+    next=currentOwner===user.uid&&!pendingState.pending
+     ?mergeWorkshop(emptyWorkshop(),cloudLists,deleted)
+     :mergeWorkshop(local,cloudLists,deleted);
+    const cloudAlreadyCurrent=sameWorkshop(next,cloudLists)&&sameDeleted(deleted,cloudDeleted(cloud));
+    if(!cloudAlreadyCurrent||pendingState.pending)transaction.set(ref,{materials:normalizeList(next.materials),printers:normalizeList(next.printers),deletedMaterials:deleted.materials,deletedPrinters:deleted.printers,schemaVersion:1,updatedAt:sdk.firestore.serverTimestamp()});
+   }else{
+    next=mergeWorkshop(local,emptyWorkshop(),deleted);
+    transaction.set(ref,{materials:normalizeList(next.materials),printers:normalizeList(next.printers),deletedMaterials:deleted.materials,deletedPrinters:deleted.printers,schemaVersion:1,updatedAt:sdk.firestore.serverTimestamp()});
+   }
+   return{next,deleted};
+  });
+ }catch(error){throw error}
+ const next=result.next,deleted=result.deleted;
+ writeCache(user.uid,next);
+ writeSyncState(user.uid,{pending:false,deleted:emptyDeleted()});
+ if(scope==='guest')writeSyncState('guest',{pending:false,deleted:emptyDeleted()});
+ if(signingOut||auth.currentUser?.uid!==user.uid)return;
+ if(!writeWorkshop(next))throw new Error('Workshop data could not be stored in this browser.');
+ try{localStorage.setItem(OWNER_KEY,user.uid)}catch(e){}
  setStatus('Workshop synced','Your printer and material profiles are saved to your account.');
  setMessage('Sync complete. Changes you make here will be saved automatically.',false);
 }
@@ -281,9 +290,31 @@ async function handleAction(action){
    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
    await sdk.auth.sendPasswordResetEmail(auth,email,{url:window.location.origin});
    setMessage('If an account uses that email, Firebase will send password-reset instructions.',false);
+  }else if(action==='delete-account'){
+   const user=auth.currentUser;
+   if(!user)throw new Error('No account is signed in.');
+   if(!window.confirm('Permanently delete this account and its cloud printer and material profiles? This cannot be undone.'))return;
+   const password=window.prompt('Enter your password to confirm account deletion.');
+   if(password===null)return;
+   const credential=sdk.auth.EmailAuthProvider.credential(user.email,password);
+   await sdk.auth.reauthenticateWithCredential(user,credential);
+   await sdk.firestore.deleteDoc(sdk.firestore.doc(db,'users',user.uid,'workshop','profiles'));
+   await sdk.auth.deleteUser(user);
+   try{localStorage.removeItem(cacheKey(user.uid));localStorage.removeItem(stateKey(user.uid));localStorage.removeItem(OWNER_KEY)}catch(e){}
+   writeWorkshop(emptyWorkshop());activeUser=null;handledUid='';
+   updateAccountUI();setStatus('Account deleted','Your account and cloud workshop profiles have been deleted.');
+   setMessage('Account deleted. Your printer and material profiles were removed.',false);
   }else if(action==='sign-out'){
-   await sdk.auth.signOut(auth);activeUser=null;handledUid='';
-   updateAccountUI();setStatus('Signed out','Your profiles remain saved on this device.');setMessage('Signed out.','');
+   const user=auth.currentUser;
+   if(user){
+    signingOut=true;
+    writeCache(user.uid,readWorkshop());
+    try{localStorage.setItem(OWNER_KEY,'guest')}catch(e){}
+    writeWorkshop(readCache('guest')||emptyWorkshop());
+   }
+   try{await sdk.auth.signOut(auth)}finally{signingOut=false}
+   activeUser=null;handledUid='';
+   updateAccountUI();setStatus('Signed out','Your account profiles are saved privately and return when you sign in again.');setMessage('Signed out.','');
   }else if(action==='sync'){
    const user=auth.currentUser;
    if(!user||!user.emailVerified){setMessage('Sign in with a verified email to sync your workshop.',true);return}

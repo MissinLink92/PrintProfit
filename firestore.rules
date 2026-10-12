@@ -16,18 +16,26 @@ service cloud.firestore {
         && request.resource.data.keys().hasOnly([
           'materials',
           'printers',
+          'deletedMaterials',
+          'deletedPrinters',
           'schemaVersion',
           'updatedAt'
         ])
         && request.resource.data.keys().hasAll([
           'materials',
           'printers',
+          'deletedMaterials',
+          'deletedPrinters',
           'schemaVersion'
         ])
         && request.resource.data.materials is list
         && request.resource.data.printers is list
+        && request.resource.data.deletedMaterials is list
+        && request.resource.data.deletedPrinters is list
         && request.resource.data.materials.size() <= 1000
-        && request.resource.data.printers.size() <= 100;
+        && request.resource.data.printers.size() <= 100
+        && request.resource.data.deletedMaterials.size() <= 10000
+        && request.resource.data.deletedPrinters.size() <= 10000;
       allow delete: if isVerifiedOwner();
     }
 

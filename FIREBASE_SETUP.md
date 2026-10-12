@@ -22,8 +22,9 @@ The website loads Firebase's modular JavaScript SDK only when someone opens **My
 
 - Printer and material profiles are stored locally while signed out.
 - On the first verified sign-in, existing local profiles are copied into the account.
-- A different account on the same browser gets its own local profile cache; one account's workshop is not merged into another account.
-- Changes made while signed in sync automatically. If a save fails, the profiles remain in browser storage and can be retried with **Sync now**.
+- A different account on the same browser gets its own local profile cache; one account's workshop is not merged into another account. Signing out hides that account's profiles from the workshop until the same user signs back in.
+- Changes made while signed in sync automatically. If a save fails, the profiles remain in browser storage and can be retried with **Sync now**. Profile deletions are recorded in the cloud so another device does not restore a deleted profile.
+- Signed-in users can delete their account and cloud workshop profile from **My Workshop**; deletion requires confirming their password.
 - My Projects and uploaded print files are not synced in this first version.
 - Firebase sends verification and password reset emails. The default sender is controlled by Firebase; custom sender branding can be configured separately.
 - Before enabling public account creation, update PrintProfit's privacy information to explain account data, Firebase processing, and the process for deleting an account and its cloud data.
