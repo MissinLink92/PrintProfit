@@ -69,6 +69,7 @@ function showLoadError(){
  retryButton.hidden=false;
 }
 function revealCalculator(){
+ try{const d=frame.contentDocument;if(d?.documentElement?.dataset.ppParentShell==='true')d.documentElement.dataset.ppReady='true';}catch(e){}
  document.body.dataset.ppReady='true';
  document.body.setAttribute('aria-busy','false');
 }
