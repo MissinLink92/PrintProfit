@@ -631,7 +631,7 @@ function loadPriceHistoryPage(page){
  if(priceHistoryPageCache.has(page))return Promise.resolve(priceHistoryPageCache.get(page));
  if(priceHistoryPageRequests.has(page))return priceHistoryPageRequests.get(page);
  const filename='page-'+String(page).padStart(3,'0')+'.json';
- const request=fetch('./data/price-history/'+filename,{cache:'force-cache'}).then(response=>{
+ const request=fetch('./data/price-history/'+filename,{cache:'no-cache'}).then(response=>{
   if(!response.ok)throw new Error('History page request failed: '+response.status);
   return response.json();
  }).then(data=>{
