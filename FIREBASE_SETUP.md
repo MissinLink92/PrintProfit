@@ -8,13 +8,13 @@ This feature keeps the existing browser-only workshop available to everyone. A u
 2. Create a Firebase project and stay on the no-cost Spark plan to begin. Firebase currently lists no payment method as required for Spark. Cloud Firestore's standard free quota includes 1 GiB stored data, 50,000 reads/day, 20,000 writes/day and 20,000 deletes/day. Review Firebase's current [pricing page](https://firebase.google.com/pricing) before enabling paid services.
 3. Add a **Web app** to the Firebase project and copy its web configuration.
 4. In **Authentication → Sign-in method**, enable **Email/Password**.
-5. In **Authentication → Settings → Authorized domains**, ensure \`printprofit.co.uk\` is listed.
-6. Create the default **Cloud Firestore** database in **London (\`europe-west2\`)**. Choose the location carefully: Firebase says the database location cannot be changed after provisioning.
-7. In **Firestore → Rules**, publish the contents of \`firestore.rules\`.
+5. In **Authentication → Settings → Authorized domains**, ensure `printprofit.co.uk` is listed.
+6. Create the default **Cloud Firestore** database in **London (`europe-west2`)**. Choose the location carefully: Firebase says the database location cannot be changed after provisioning.
+7. In **Firestore → Rules**, publish the contents of `firestore.rules`.
 
 ## Add the public web configuration
 
-Copy the Firebase web app's \`apiKey\`, \`authDomain\`, \`projectId\`, and \`appId\` into \`config/firebase-config.js\`. These values are intended to be used in a browser. Do not use or copy a service-account JSON file or Admin SDK private key into the website.
+The public web app configuration for project `printprofit-fd30f` is already set in `config/firebase-config.js`. These values are meant to appear in the browser. If you replace the Firebase project, update the `apiKey`, `authDomain`, `projectId`, and `appId` fields. Never put a service-account JSON file or Admin SDK private key in the website.
 
 The website loads Firebase's modular JavaScript SDK only when someone opens **My Workshop** and the Firebase configuration is present.
 
