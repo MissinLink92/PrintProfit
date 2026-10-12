@@ -73,6 +73,7 @@ function ensureAccountUI(){
    '<div class="pp-account-heading"><div><span class="pp-account-kicker">ACCOUNT SYNC</span><h3 id="ppAccountTitle">Take your workshop to any device</h3><div id="ppAccountStatus" class="pp-account-status"></div></div><span class="pp-account-badge" id="ppAccountBadge">LOCAL</span></div>'+
    '<div id="ppAccountNotConfigured" class="pp-account-not-configured" hidden>Cloud accounts are being connected. Your printer and material profiles will continue saving in this browser.</div>'+
    '<div id="ppAccountSignedOut" class="pp-account-fields">'+
+    '<div class="pp-account-signup-help">To create an account, enter a valid email and a password of at least 8 characters, then select both boxes below. Verify your email before signing in.</div>'+
     '<label>Email address<input id="ppAccountEmail" type="email" autocomplete="email" placeholder="you@example.com"></label>'+
     '<label>Password<input id="ppAccountPassword" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters"></label>'+
     '<div class="pp-account-consents"><span>For new accounts:</span><label><input id="ppAccountTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountSyncConsent" type="checkbox"><span>I choose to sync printer and material profiles using Firebase. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label></div>'+
@@ -118,16 +119,20 @@ function setBusy(value){
 }
 function errorText(error){
  const code=String(error?.code||'');
- if(code.includes('email-already-in-use'))return'That email already has an account. Try signing in instead.';
+ if(code.includes('email-already-in-use'))return'That email already has an account. Sign in to request another verification email if needed.';
  if(code.includes('invalid-credential')||code.includes('user-not-found')||code.includes('wrong-password'))return'Email or password was not recognised.';
  if(code.includes('invalid-email'))return'Enter a valid email address.';
  if(code.includes('weak-password'))return'Choose a password with at least 8 characters.';
+ if(code.includes('operation-not-allowed'))return'Email and password sign-up is disabled in Firebase Authentication. Enable the Email/Password provider for PrintProfit.';
+ if(code.includes('unauthorized-domain'))return'Firebase sign-in is not enabled for printprofit.co.uk. Add this domain to Firebase Authentication’s authorised domains.';
+ if(code.includes('invalid-api-key')||code.includes('api-key-not-valid')||code.includes('app-not-authorized')||code.includes('configuration-not-found'))return'Firebase rejected the PrintProfit web API key. Check that the key is active, allows the Identity Toolkit API in Google Cloud, and matches the Firebase web app settings.';
+ if(code.includes('email-send-quota-exceeded')||code.includes('quota-exceeded'))return'Firebase could not send an email right now. Wait a little, then try again.';
  if(code.includes('too-many-requests'))return'Too many attempts. Please wait a little and try again.';
  if(code.includes('requires-recent-login'))return'For security, sign out and sign back in before deleting this account.';
  if(code.includes('network-request-failed'))return'Network connection failed. Check your connection and try again.';
  if(code.includes('permission-denied')||code.includes('unauthorized'))return'Your account is signed in, but cloud sync is not allowed. Check the Firestore rules and verify your email.';
  return'We could not complete that step. Please try again.';
-}
+ }
 function configReady(){
  return isConfigured()&&Object.values(CONFIG).every(value=>typeof value==='string');
 }
@@ -384,24 +389,26 @@ async function handleAction(action){
   await initializeFirebase();
   const email=emailValue(),password=passwordValue();
   if(action==='sign-up'){
-   if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
-   if(password.length<8)throw Object.assign(new Error('Weak password'),{code:'auth/weak-password'});
-   if(!document.getElementById('ppAccountTerms')?.checked)throw new Error('Please agree to the Terms of Use before creating an account.');
-   if(!document.getElementById('ppAccountSyncConsent')?.checked)throw new Error('Please choose whether to sync your printer and material profiles before creating an account.');
-   creatingAccount=true;
-   try{
-    const credential=await sdk.auth.createUserWithEmailAndPassword(auth,email,password);
-    let acceptanceSaved=false;
-    try{await writeCurrentLegalAcceptance(credential.user);acceptanceSaved=true}catch(error){console.warn('PrintProfit account acceptance could not be saved yet:',error)}
-    await sdk.auth.sendEmailVerification(credential.user,{url:window.location.origin});
-    await sdk.auth.signOut(auth);
-    setMessage(acceptanceSaved?'Account created. Check your email and verify it before signing in.':'Account created and verification sent. Sign in after verifying, then complete the one-time terms check before syncing.',false);
-   }finally{
-    creatingAccount=false;
-    if(auth.currentUser&&!auth.currentUser.emailVerified)await sdk.auth.signOut(auth).catch(()=>{});
-   }
-
-  }else if(action==='accept-current-terms'){
+    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
+    if(password.length<8)throw Object.assign(new Error('Weak password'),{code:'auth/weak-password'});
+    if(!document.getElementById('ppAccountTerms')?.checked)throw new Error('Please agree to the Terms of Use before creating an account.');
+    if(!document.getElementById('ppAccountSyncConsent')?.checked)throw new Error('Please choose whether to sync your printer and material profiles before creating an account.');
+    creatingAccount=true;
+    try{
+     const credential=await sdk.auth.createUserWithEmailAndPassword(auth,email,password);
+     let acceptanceSaved=false;
+     try{await writeCurrentLegalAcceptance(credential.user);acceptanceSaved=true}catch(error){console.warn('PrintProfit account acceptance could not be saved yet:',error)}
+     let verificationSent=false;
+     try{await sdk.auth.sendEmailVerification(credential.user,{url:window.location.origin});verificationSent=true}
+     catch(error){console.warn('PrintProfit verification email could not be sent:',error)}
+     await sdk.auth.signOut(auth).catch(error=>console.warn('PrintProfit could not sign out the unverified account:',error));
+     if(verificationSent)setMessage(acceptanceSaved?'Account created. Check your inbox and spam folder, then verify your email before signing in.':'Account created and verification sent. After verifying, sign in and complete the one-time Terms and profile-sync check.',false);
+     else setMessage('Your account was created, but Firebase could not send the verification email. Check your inbox and spam folder; you can try signing in to request another email.',true);
+    }finally{
+     creatingAccount=false;
+     if(auth.currentUser&&!auth.currentUser.emailVerified)await sdk.auth.signOut(auth).catch(()=>{});
+    }
+   }else if(action==='accept-current-terms'){
    const user=auth.currentUser;
    if(!user||!user.emailVerified)throw new Error('Sign in with a verified email before accepting the current terms.');
    if(!document.getElementById('ppAccountExistingTerms')?.checked)throw new Error('Please agree to the Terms of Use to continue.');
@@ -430,9 +437,11 @@ async function handleAction(action){
    const credential=await sdk.auth.signInWithEmailAndPassword(auth,email,password);
    await sdk.auth.reload(credential.user);
    if(!credential.user.emailVerified){
-    await sdk.auth.sendEmailVerification(credential.user,{url:window.location.origin}).catch(()=>{});
+    let verificationSent=false;
+    try{await sdk.auth.sendEmailVerification(credential.user,{url:window.location.origin});verificationSent=true}
+    catch(error){console.warn('PrintProfit verification email could not be resent:',error)}
     await sdk.auth.signOut(auth);
-    setMessage('That address is not verified yet. We sent a fresh verification email; verify it and sign in again.',true);return;
+    setMessage(verificationSent?'That address is not verified yet. We sent another verification email; check your inbox and spam folder, then sign in again.':'That address is not verified, and Firebase could not send a verification email. Wait a little and try signing in again.',true);return;
    }
    setMessage('Signed in. Syncing your workshop…',false);
   }else if(action==='reset-password'){
@@ -499,14 +508,19 @@ document.addEventListener('pp-workshop-open',()=>{
  }).catch(error=>{
   console.warn('PrintProfit Firebase initialization failed:',error);
   setStatus('Account service unavailable','Your local profiles remain available.');
-  setMessage('We could not load the account service. Please try again later.',true);
+  setMessage(errorText(error),true);
  });
 });
 document.addEventListener('pp-workshop-data-changed',handleLocalChange);
 document.addEventListener('click',event=>{
  const button=event.target.closest('#ppWorkshopAccount [data-pp-account-action]');
  if(!button)return;
- event.preventDefault();handleAction(button.dataset.ppAccountAction);
+ const action=button.dataset.ppAccountAction;
+ if(action==='sign-up'||action==='sign-in'){
+  const password=document.getElementById('ppAccountPassword');
+  if(password)password.autocomplete=action==='sign-up'?'new-password':'current-password';
+ }
+ event.preventDefault();handleAction(action);
 },true);
 window.addEventListener('online',()=>{if(activeUser&&legalAccepted&&!localImportPending)queueSync()});
 })();
