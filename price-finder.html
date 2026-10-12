@@ -394,6 +394,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
     <button class="selected-toggle" id="selectedOnly" type="button" aria-pressed="false">Selected only</button>
   </div>
 </div>
+<div class="empty" id="compareLoading" role="status" aria-live="polite">Loading comparison products…</div>
 <div class="table-wrap" id="tableViewWrap">
 <table>
 <thead><tr><th>Type</th><th>Brand / Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Status</th><th>Checked</th><th></th></tr></thead>
@@ -402,6 +403,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 </div>
 <div class="card-grid" id="cardGrid"></div>
+<div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><button class="compare-btn secondary" id="loadMoreResults" type="button">Show 24 more listings</button></div>
 
 <div class="compare-bar" id="compareBar" hidden>
   <div class="compare-summary">
@@ -462,24 +464,29 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <section class="section">
 <h2>Tracked sources</h2>
 <div class="cards" id="sourceCards"></div>
+<button class="compare-btn secondary coverage-toggle" id="toggleSources" type="button" hidden></button>
 </section>
 
 <section class="section">
 <h2>Brands in the database</h2>
 <div class="brand-cloud" id="brandCloud"></div>
+<button class="compare-btn secondary coverage-toggle" id="toggleBrands" type="button" hidden></button>
 </section>
 
 <div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
-<script src="./data/price-finder.js?v=20261004-nightly1"></script>
-<script src="./product-categories.js?v=20261004-categories1"></script>
+<script defer src="./data/price-finder.js?v=20261004-nightly1"></script>
+<script defer src="./product-categories.js?v=20261004-categories1"></script>
 <script>
+window.addEventListener('DOMContentLoaded',()=>{
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id);
 const money=v=>'£'+Number(v).toFixed(2);
 let db={products:[],sources:[],brandDirectory:[],updatedAt:''};
+const LISTING_PAGE_SIZE=24;
+let visibleListingCount=LISTING_PAGE_SIZE,expandSources=false,expandBrands=false;
 const catalogue=window.PRINTPROFIT_CATEGORIES;
 const categoryCache=new WeakMap();
 function categoryInfo(product){
@@ -679,19 +686,22 @@ function deleteSelectedSaved(){
  if(!window.confirm('Delete "'+list[index].name+'"?'))return;
  list.splice(index,1);writeSavedComparisons(list);renderSavedComparisons();
 }
-function renderInsights(){
- const rows=filtered(),box=$('insight');if(!box)return;
+function renderInsights(rows=filtered()){
+ const box=$('insight');if(!box)return;
  if(!rows.length){box.hidden=true;return;}
  box.hidden=false;
  $('insightSummary').textContent=rows.length+' matching '+(rows.length===1?'listing':'listings');
- const retailers=new Set(rows.map(x=>x.retailer).filter(Boolean));
+ const retailers=new Set();let byPrice=null,bestUnit=null;
+ rows.forEach(product=>{
+  if(product.retailer)retailers.add(product.retailer);
+  if(product.price!=null&&(!byPrice||Number(product.price)<Number(byPrice.price)))byPrice=product;
+  if(product.unit!=null&&(!bestUnit||Number(product.unit)<Number(bestUnit.unit)))bestUnit=product;
+ });
  $('insightSummarySub').textContent=retailers.size+' retailer'+(retailers.size===1?'':'s')+' represented';
- const byPrice=[...rows].sort((a,b)=>Number(a.price??Infinity)-Number(b.price??Infinity))[0];
  $('insightPrice').textContent=byPrice?money(byPrice.price):'—';
  $('insightPriceSub').textContent=byPrice?(byPrice.brand+' • '+byPrice.name):'';
- const units=rows.filter(x=>x.unit!=null).sort((a,b)=>Number(a.unit)-Number(b.unit));
- $('insightUnit').textContent=units.length?money(units[0].unit)+'/kg':'—';
- $('insightUnitSub').textContent=units.length?(units[0].brand+' • '+units[0].name):'Unit cost not available';
+ $('insightUnit').textContent=bestUnit?money(bestUnit.unit)+'/kg':'—';
+ $('insightUnitSub').textContent=bestUnit?(bestUnit.brand+' • '+bestUnit.name):'Unit cost not available';
 }
 function colourChip(x){
  if(!x||!x.colour)return '';
@@ -778,15 +788,16 @@ function setResultView(mode){
  const cards=mode==='cards';table.style.display=cards?'none':'';grid.classList.toggle('active',cards);tb.classList.toggle('active',!cards);cb.classList.toggle('active',cards);
  try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
 }
-function render(){
- const rows=filtered();
+function render(resetListingLimit=true){
+ if(resetListingLimit)visibleListingCount=LISTING_PAGE_SIZE;
+ const rows=filtered(),visibleRows=rows.slice(0,visibleListingCount);
  const current=$('category').value,leaf=catalogue.categories.find(category=>category.id===current);
  document.querySelectorAll('[data-quick]').forEach(button=>{
   const mode=button.dataset.quick;
   const active=mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===mode||leaf?.group===mode;
   button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
  });
- $('rows').innerHTML=rows.map(x=>'<tr>'+
+ $('rows').innerHTML=visibleRows.map(x=>'<tr>'+
   '<td><div class="type-cell"><span class="kind '+categoryClass(x)+'" title="'+esc(categoryInfo(x).label)+'">'+sharedIcon(categoryInfo(x).family.icon)+esc(categoryInfo(x).label)+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
   '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
@@ -800,8 +811,12 @@ function render(){
  $('empty').hidden=rows.length>0;
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
  $('resultSummary').textContent=rows.length+' '+(rows.length===1?'matching listing':'matching listings')+(window.__compareSelectedOnly?' • selected only':'');
- renderCards(rows);
- renderInsights();
+ renderCards(visibleRows);
+ const more=$('resultsMore'),shown=$('resultsShown'),button=$('loadMoreResults');
+ if(shown)shown.textContent='Showing '+visibleRows.length+' of '+rows.length+' matching listings';
+ if(more)more.hidden=rows.length<=visibleRows.length;
+ if(button)button.textContent='Show '+Math.min(LISTING_PAGE_SIZE,rows.length-visibleRows.length)+' more listings';
+ renderInsights(rows);
 }
 function renderCoverage(){
  const p=db.products||[],s=db.sources||[],b=db.brandDirectory||[];
@@ -809,19 +824,23 @@ function renderCoverage(){
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
- $('brandCloud').innerHTML=b.map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
+ $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
+ $('brandCloud').innerHTML=b.slice(0,expandBrands?b.length:36).map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
+ const sourceToggle=$('toggleSources');if(sourceToggle){sourceToggle.hidden=s.length<=8;sourceToggle.textContent=expandSources?'Show fewer sources':'Show all '+s.length+' sources';}
+ const brandToggle=$('toggleBrands');if(brandToggle){brandToggle.hidden=b.length<=36;brandToggle.textContent=expandBrands?'Show fewer brands':'Show all '+b.length+' brands';}
 }
 function loadData(){
  try{
   const payload=window.PRINTPROFIT_PRICE_DATA;
   if(!payload||!Array.isArray(payload.products))throw new Error('Static comparison dataset missing');
   db=payload;
+  const loading=$('compareLoading');if(loading)loading.hidden=true;
   populateCategories();
   refreshFilters();renderCoverage();render();
  }catch(err){
   console.error('PrintProfit Compare Products data load failed:',err);
   db={products:[],sources:[],brandDirectory:[],updatedAt:''};
+  const loading=$('compareLoading');if(loading)loading.hidden=true;
   refreshFilters();
   renderCoverage();
   $('coverage').textContent='Comparison data could not be loaded. Please refresh the page.';
@@ -868,10 +887,12 @@ $('quickTools').addEventListener('click',e=>{
  render();
 });
 $('category').addEventListener('change',()=>{refreshFilters();render();});
-['search','brand','type','colour','retailer','minPrice','maxPrice','availability','view','sort'].forEach(id=>{
+['brand','type','colour','retailer','minPrice','maxPrice','availability','view','sort'].forEach(id=>{
  const el=$(id);if(!el)return;
- el.addEventListener(el.tagName==='SELECT'?'change':'input',render);
+ el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>render());
 });
+let searchTimer=0;
+$('search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>render(),180);});
 $('rows').addEventListener('change',e=>{
  const input=e.target.closest('.compare-check');
  if(!input)return;
@@ -919,6 +940,9 @@ $('cardGrid').addEventListener('click',e=>{
  if(btn)return;
 });
 loadCompareSelection();
+$('loadMoreResults').addEventListener('click',()=>{visibleListingCount+=LISTING_PAGE_SIZE;render(false);});
+$('toggleSources').addEventListener('click',()=>{expandSources=!expandSources;renderCoverage();});
+$('toggleBrands').addEventListener('click',()=>{expandBrands=!expandBrands;renderCoverage();});
 loadData();
 $('selectedOnly').classList.toggle('active',!!window.__compareSelectedOnly);
 $('selectedOnly').setAttribute('aria-pressed',String(!!window.__compareSelectedOnly));
@@ -926,6 +950,7 @@ initThemeSwitch();
 renderSavedComparisons();
 updateCompareBar();
 })();
+},{once:true});
 </script>
 <script src="./i18n-extra.js?v=4"></script>
 <link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
@@ -949,6 +974,7 @@ body #tableViewWrap .product-thumb-wrap.failed .product-thumb{display:none!impor
 body #tableViewWrap .table-compare-check{width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;max-width:14px!important;max-height:14px!important;padding:0!important;flex:0 0 14px!important;box-sizing:border-box!important}
 body #tableViewWrap .product-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:135px}
 body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wrap:anywhere}
+.results-more{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0;color:var(--muted)}.results-more[hidden],.coverage-toggle[hidden]{display:none!important}.coverage-toggle{margin-top:12px}
 </style>
 <link rel="stylesheet" href="./readability.css?v=13">
 </body>
