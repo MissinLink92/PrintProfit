@@ -11,7 +11,7 @@ const STATE_PREFIX='printprofit.workshop.sync-state.v1.';
 const CACHE_PREFIX='printprofit.workshop.user-cache.v1.';
 const FIREBASE_VERSION='12.19.0';
 let auth=null,db=null,sdk=null,activeUser=null,initPromise=null,accountHostReady=false;
-let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false;
+let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false,localChangeVersion=0;
 
 const isConfigured=()=>Boolean(CONFIG.apiKey&&CONFIG.authDomain&&CONFIG.projectId&&CONFIG.appId);
 const ownerId=()=>{try{return localStorage.getItem(OWNER_KEY)||'guest'}catch(e){return'guest'}};
@@ -165,6 +165,7 @@ function rememberDeletion(state,kind,before,after){
  });
 }
 function handleLocalChange(event){
+ localChangeVersion++;
  const detail=event.detail||{},scope=ownerId(),state=readSyncState(scope);
  if((detail.kind==='materials'||detail.kind==='printers')&&Array.isArray(detail.before)&&Array.isArray(detail.after)){
   rememberDeletion(state,detail.kind,detail.before,detail.after);
@@ -194,6 +195,7 @@ function cloudDeleted(data){
 }
 async function syncWorkshop(user){
  if(!user||!user.emailVerified)return;
+ const syncVersion=localChangeVersion;
  const currentOwner=ownerId();
  let local=readWorkshop(),scope=(currentOwner==='guest'||!currentOwner)?'guest':currentOwner;
  let pendingState=readSyncState(scope);
@@ -207,7 +209,10 @@ async function syncWorkshop(user){
   const ownCache=readSyncCache(user.uid),accountState=readSyncState(user.uid);
   pendingState={pending:pendingState.pending||accountState.pending,deleted:mergeDeleted(pendingState.deleted,accountState.deleted)};
   if(ownCache)local=mergeWorkshop(local,ownCache,pendingState.deleted);
+  writeSyncState(user.uid,{pending:pendingState.pending,deleted:pendingState.deleted});
+  writeSyncState('guest', {pending:false,deleted:emptyDeleted()});
  }
+ try{localStorage.setItem(OWNER_KEY,user.uid)}catch(e){}
  const ref=sdk.firestore.doc(db,'users',user.uid,'workshop','profiles');
  let result;
  try{
@@ -231,12 +236,26 @@ async function syncWorkshop(user){
   });
  }catch(error){throw error}
  const next=result.next,deleted=result.deleted;
+ const changedDuringSync=localChangeVersion!==syncVersion;
+ if(signingOut||auth.currentUser?.uid!==user.uid){
+  if(!changedDuringSync){
+   writeCache(user.uid,next);
+   writeSyncState(user.uid,{pending:false,deleted:emptyDeleted()});
+  }
+  return;
+ }
+ if(changedDuringSync){
+  const latestState=readSyncState(user.uid);
+  writeCache(user.uid,readWorkshop());
+  writeSyncState(user.uid,{pending:true,deleted:mergeDeleted(deleted,pendingState.deleted,latestState.deleted)});
+  setStatus('Saving latest changes','Finishing your workshop sync.');
+  queueSync();
+  return;
+ }
  writeCache(user.uid,next);
  writeSyncState(user.uid,{pending:false,deleted:emptyDeleted()});
  if(scope==='guest')writeSyncState('guest',{pending:false,deleted:emptyDeleted()});
- if(signingOut||auth.currentUser?.uid!==user.uid)return;
  if(!writeWorkshop(next))throw new Error('Workshop data could not be stored in this browser.');
- try{localStorage.setItem(OWNER_KEY,user.uid)}catch(e){}
  setStatus('Workshop synced','Your printer and material profiles are saved to your account.');
  setMessage('Sync complete. Changes you make here will be saved automatically.',false);
 }
