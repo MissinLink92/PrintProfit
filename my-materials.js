@@ -7,7 +7,7 @@ let selectedMaterialId='';
 let applyingMaterial=false;
 let lastDeductedSignatures=new Set();
 const readPrinters=()=>{try{const data=JSON.parse(localStorage.getItem(PRINTER_KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){return[]}};
-const writePrinters=v=>{try{localStorage.setItem(PRINTER_KEY,JSON.stringify(v));return true}catch(e){console.warn('PrintProfit printer profile save failed:',e);return false}};
+const writePrinters=v=>{try{const before=readPrinters();localStorage.setItem(PRINTER_KEY,JSON.stringify(v));document.dispatchEvent(new CustomEvent('pp-workshop-data-changed',{detail:{kind:'printers',before,after:v}}));return true}catch(e){console.warn('PrintProfit printer profile save failed:',e);return false}};
 const materialRemaining=m=>{const value=m&&m.remaining!==undefined?Number(m.remaining):Number(m?.amount);return Math.max(0,Number.isFinite(value)?value:0)};
 const materialThreshold=m=>{const value=m&&m.lowStock!==undefined?Number(m.lowStock):(m?.type==='Resin'?50:200);return Math.max(0,Number.isFinite(value)?value:0)};
 const materialUnit=m=>m?.type==='Resin'?'ml':'g';
@@ -35,7 +35,7 @@ function toGBP(value){
  return meta.rate>0?(Number(value)||0)/meta.rate:(Number(value)||0);
 }
 const read=()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){return[]}};
-const write=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));return true}catch(e){console.warn('PrintProfit material save failed:',e);return false}};
+const write=v=>{try{const before=read();localStorage.setItem(KEY,JSON.stringify(v));document.dispatchEvent(new CustomEvent('pp-workshop-data-changed',{detail:{kind:'materials',before,after:v}}));return true}catch(e){console.warn('PrintProfit material save failed:',e);return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const val=id=>document.getElementById(id)?.value??'';
 function render(){
@@ -263,7 +263,8 @@ function open(){
  if(!panel){
   panel=document.createElement('div');panel.id='ppMaterialsPanel';
   panel.innerHTML=`<div class="pp-materials-backdrop" data-material-close></div><section class="pp-materials-dialog" role="dialog" aria-modal="true" aria-labelledby="ppMaterialsTitle">
-  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workshop</h2><p>Keep printer profiles and material stock ready for your next print. Saved in this browser.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
+  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workshop</h2><p>Keep printer profiles and material stock ready for your next print. Sign in to sync them across devices.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
+  <div id="ppWorkshopAccount"></div>
   <div class="pp-workshop-tabs" role="tablist" aria-label="Workshop library"><button type="button" class="active" data-workshop-tab="materials" aria-selected="true">Materials &amp; stock</button><button type="button" data-workshop-tab="printers" aria-selected="false">Printers</button></div>
   <div id="ppWorkshopMaterialsView"><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></div>
   <div id="ppWorkshopPrintersView" hidden><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-printer-new>＋ Add Printer</button><span id="ppPrinterCount"></span></div>
@@ -290,7 +291,7 @@ function open(){
 @media(max-width:650px){.pp-materials-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-materials-head,.pp-materials-toolbar,#ppMaterialsList,#ppWorkshopPrintersList{padding-left:20px;padding-right:20px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid,.pp-workshop-printer-form-grid{grid-template-columns:1fr}.pp-workshop-printer-form{margin-left:20px;margin-right:20px}.pp-workshop-tabs{padding-left:20px;padding-right:20px}.pp-workshop-usage{align-items:flex-start;flex-direction:column}.pp-workshop-usage-actions,.pp-workshop-usage-actions button{width:100%}}
 `;document.head.appendChild(style);
  }
- refreshCurrencyUI();panel.classList.add('open');document.body.style.overflow='hidden';setWorkshopTab('materials');render();const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
+ refreshCurrencyUI();panel.classList.add('open');document.body.style.overflow='hidden';setWorkshopTab('materials');render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
 
 document.addEventListener('click',e=>{

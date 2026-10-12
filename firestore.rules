@@ -1,0 +1,39 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Each signed-in, email-verified user can access only their own workshop profile.
+    match /users/{userId}/workshop/profiles {
+      function isVerifiedOwner() {
+        return request.auth != null
+          && request.auth.uid == userId
+          && request.auth.token.email_verified == true;
+      }
+
+      allow get: if isVerifiedOwner();
+      allow list: if false;
+      allow create, update: if isVerifiedOwner()
+        && request.resource.data.keys().hasOnly([
+          'materials',
+          'printers',
+          'schemaVersion',
+          'updatedAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'materials',
+          'printers',
+          'schemaVersion'
+        ])
+        && request.resource.data.materials is list
+        && request.resource.data.printers is list
+        && request.resource.data.materials.size() <= 1000
+        && request.resource.data.printers.size() <= 100;
+      allow delete: if isVerifiedOwner();
+    }
+
+    // Deny access to all other documents unless another explicit rule is added.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
