@@ -45,7 +45,7 @@ function render(){
   if(!materials.length)list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin, then track how much remains after each print.</p><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button></div>';
   else list.innerHTML=materials.map(m=>{
    const remaining=materialRemaining(m),threshold=materialThreshold(m),unit=materialUnit(m),low=threshold>0&&remaining<=threshold;
-   return '<article class="pp-material-card" data-material-id="'+esc(m.id)+'"><div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>'+esc(m.name)+' '+(low?'<span class="pp-stock-low">Low stock</span>':'')+'</h3><p>'+esc(m.type)+' · '+amountText(remaining)+' '+unit+' remaining of '+amountText(m.amount)+' '+unit+'</p><small>'+esc(m.brand||'No brand')+(m.colour?' · '+esc(m.colour):'')+' · '+moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))+' / '+unit+' · alert at '+amountText(threshold)+' '+unit+'</small></div></div><div class="pp-material-actions"><button type="button" data-use-material="'+esc(m.id)+'">Use</button><button type="button" data-edit-material="'+esc(m.id)+'">Edit</button><button type="button" class="danger" data-delete-material="'+esc(m.id)+'">Delete</button></div></article>';
+   return '<article class="pp-material-card" data-material-id="'+esc(m.id)+'"><div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>'+esc(m.name)+' '+(low?'<span class="pp-stock-low">Low stock</span>':'')+'</h3><p>'+esc(m.type)+' · '+amountText(remaining)+' '+unit+' remaining · '+amountText(m.amount)+' '+unit+' package</p><small>'+esc(m.brand||'No brand')+(m.colour?' · '+esc(m.colour):'')+' · '+moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))+' / '+unit+' · alert at '+amountText(threshold)+' '+unit+'</small></div></div><div class="pp-material-actions"><button type="button" data-use-material="'+esc(m.id)+'">Use</button><button type="button" data-edit-material="'+esc(m.id)+'">Edit</button><button type="button" class="danger" data-delete-material="'+esc(m.id)+'">Delete</button></div></article>';
   }).join('');
  }
  renderPrinters();syncWorkshopUsage();
@@ -106,7 +106,7 @@ function fillPrinterFromPreset(){
  const parts=value.split(/[|,]/),name=document.getElementById('ppWorkshopPrinterName');
  if(name&&!name.value)name.value=option.textContent.trim();
  const power=document.getElementById('ppWorkshopPrinterWatts'),price=document.getElementById('ppWorkshopPrinterPrice'),life=document.getElementById('ppWorkshopPrinterLife'),type=document.getElementById('ppWorkshopPrinterType');
- if(power)power.value=Number(parts[0])||0;if(price)price.value=Number(parts[1])||0;if(life)life.value=Number(parts[2])||0;
+ if(power)power.value=Number(parts[0])||0;if(price)price.value=currentMoneyValue(Number(parts[1])||0).toFixed(2);if(life)life.value=Number(parts[2])||0;
  if(type)type.value=option.dataset.materialType==='resin'?'Resin':'Filament';
 }
 function openPrinterForm(existing){
@@ -116,7 +116,7 @@ function openPrinterForm(existing){
  populatePrinterPresets(existing?.presetValue||preset);
  document.getElementById('ppWorkshopPrinterName').value=existing?.name||'';
  document.getElementById('ppWorkshopPrinterWatts').value=existing?.watts??0;
- document.getElementById('ppWorkshopPrinterPrice').value=existing?.price??0;
+ document.getElementById('ppWorkshopPrinterPrice').value=existing?currentMoneyValue(existing.price??0).toFixed(2):0;
  document.getElementById('ppWorkshopPrinterLife').value=existing?.lifetime??0;
  document.getElementById('ppWorkshopPrinterType').value=existing?.materialType||(document.getElementById('materialType')?.value==='resin'?'Resin':'Filament');
  if(!existing&&preset)fillPrinterFromPreset();
@@ -133,7 +133,9 @@ function savePrinterForm(){
  const form=document.getElementById('ppWorkshopPrinterForm'),name=document.getElementById('ppWorkshopPrinterName').value.trim();
  if(!name){alert('Please enter a printer name.');return}
  const editId=form.dataset.editId,presetValue=document.getElementById('ppWorkshopPrinterPreset').value;
- const profile={id:editId||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,watts:Number(document.getElementById('ppWorkshopPrinterWatts').value)||0,price:Number(document.getElementById('ppWorkshopPrinterPrice').value)||0,lifetime:Number(document.getElementById('ppWorkshopPrinterLife').value)||0,materialType:document.getElementById('ppWorkshopPrinterType').value,presetValue,updated:Date.now()};
+ const watts=Number(document.getElementById('ppWorkshopPrinterWatts').value),priceInput=Number(document.getElementById('ppWorkshopPrinterPrice').value),lifetime=Number(document.getElementById('ppWorkshopPrinterLife').value);
+ if([watts,priceInput,lifetime].some(value=>!Number.isFinite(value)||value<0)){alert('Printer values cannot be negative.');return}
+ const profile={id:editId||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,watts,price:toGBP(priceInput),lifetime,materialType:document.getElementById('ppWorkshopPrinterType').value,presetValue,updated:Date.now()};
  const list=readPrinters();const next=editId?list.map(item=>String(item.id)===String(editId)?profile:item):[...list,profile];
  if(!writePrinters(next)){alert('Could not save this printer profile in this browser.');return}
  closePrinterForm();renderPrinters();
@@ -141,7 +143,7 @@ function savePrinterForm(){
 function usePrinter(id){
  const profile=readPrinters().find(item=>String(item.id)===String(id)),printer=document.getElementById('printer');if(!profile||!printer)return;
  applyingMaterial=true;printer.value='custom';printer.dispatchEvent(new Event('change',{bubbles:true}));
- const values=[['customPrinterPrice',profile.price],['customPrinterPower',profile.watts],['customPrinterLife',profile.lifetime]];
+ const values=[['customPrinterPrice',currentMoneyValue(profile.price)],['customPrinterPower',profile.watts],['customPrinterLife',profile.lifetime]];
  values.forEach(([field,value])=>{const input=document.getElementById(field);if(input){input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}))}});
  const type=document.getElementById('materialType');if(type){type.value=profile.materialType==='Resin'?'resin':'filament';type.dispatchEvent(new Event('change',{bubbles:true}))}
  applyingMaterial=false;selectedMaterialId='';syncWorkshopUsage();
@@ -155,7 +157,7 @@ function deletePrinter(id){
 function updateMaterialFormLabels(){
  const resin=document.getElementById('ppMatType')?.value==='Resin',unit=resin?'ml':'g';
  const amount=document.getElementById('ppMatAmountLabel'),remaining=document.getElementById('ppMatRemainingLabel'),low=document.getElementById('ppMatLowStockLabel');
- if(amount)amount.textContent=resin?'Bottle amount (ml)':'Spool weight (g)';
+ if(amount)amount.textContent=resin?'Bottle size (ml)':'Spool size (g)';
  if(remaining)remaining.textContent='Remaining stock ('+unit+')';
  if(low)low.textContent='Low-stock alert ('+unit+')';
 }
@@ -219,7 +221,8 @@ function saveForm(){
  const remaining=Number(document.getElementById('ppMatRemaining').value),lowStock=Number(document.getElementById('ppMatLowStock').value)||0;
  if(!name){alert('Please enter a material name.');return}
  if(amount<=0){alert('Please enter a package amount greater than 0.');return}
- if(!Number.isFinite(remaining)||remaining<0||remaining>amount){alert('Remaining stock must be between 0 and the package amount.');return}
+ if(!Number.isFinite(remaining)||remaining<0){alert('Remaining stock cannot be negative.');return}
+ if(lowStock<0){alert('The low-stock alert cannot be negative.');return}
  const brandSelect=document.getElementById('ppMatBrand'),brandCustom=document.getElementById('ppMatBrandCustom'),brand=(brandSelect?.value==='__other__'?(brandCustom?.value||''):brandSelect?.value||'').trim(),colour=document.getElementById('ppMatColour').value.trim();
  const costGBP=toGBP(cost),unitCost=moneyFromGBP(costGBP/amount)+' / '+(type==='Resin'?'ml':'g'),items=read(),id=document.getElementById('ppMaterialForm').dataset.editId;
  const obj={id:id||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,type,brand,colour,amount,remaining,lowStock,cost:costGBP,unitCost,updated:Date.now()};
