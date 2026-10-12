@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
-<meta name="description" content="Free 3D printing cost and pricing calculator for filament and resin. Calculate material, electricity, labour, printer costs, selling fees and profit.">
+<title>3D Printing Cost Calculator | PrintProfit</title>
+<meta name="description" content="Estimate 3D printing costs and selling prices for filament or resin. Include material, electricity, printer, labour, packaging and selling fees.">
+<link rel="canonical" href="https://printprofit.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PrintProfit">
+<meta property="og:title" content="3D Printing Cost Calculator | PrintProfit">
+<meta property="og:description" content="Estimate 3D printing costs and selling prices for filament or resin, including material, electricity, printer, labour and selling fees.">
+<meta property="og:url" content="https://printprofit.co.uk/">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="./assets/printprofit-favicon-orange.svg?v=1">
 <link rel="apple-touch-icon" href="./assets/printprofit-app-icon-orange.svg?v=1">
 <meta name="theme-color" content="#071018">
@@ -37,6 +44,15 @@ body:not([data-pp-ready="true"]) #ppFloatingSave,body:not([data-pp-ready="true"]
 .pp-loading p{margin:0}
 .pp-loading button{border:0;border-radius:10px;padding:12px 20px;background:#ff8a24;color:#17100a;font:700 14px Segoe UI,system-ui,sans-serif;cursor:pointer}
 body[data-pp-ready="true"] .pp-loading{display:none}
+
+#ppSearchIntro{max-width:1120px;margin:32px auto 48px;padding:24px;border:1px solid #24404e;border-radius:14px;background:#0b1821;color:#dce6eb;font:15px/1.65 Inter,Segoe UI,system-ui,sans-serif}
+#ppSearchIntro .pp-search-kicker{font-size:10px;font-weight:800;letter-spacing:.16em;color:#ff8a24}
+#ppSearchIntro h1{margin:8px 0 12px;font-size:clamp(26px,4vw,38px);line-height:1.1;color:#f5f8fb}
+#ppSearchIntro h2{margin:22px 0 6px;font-size:18px;color:#f5f8fb}
+#ppSearchIntro p{max-width:850px;margin:0;color:#c3d0d6}
+#ppSearchIntro a{color:#ffad65;text-underline-offset:3px}
+#ppSearchIntro .pp-search-links{margin-top:16px}
+@media(max-width:650px){#ppSearchIntro{margin:20px 12px 84px;padding:18px}}
 </style>
 </head>
 <body aria-busy="true">
@@ -49,6 +65,16 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 <noscript><style>.pp-loading{display:none}</style><p>Please enable JavaScript to use the PrintProfit calculator.</p></noscript>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261012-pagespeed1" style="width:100%;border:0;display:block"></iframe>
 </main>
+<section id="ppSearchIntro" aria-labelledby="ppSearchIntroTitle">
+<div class="pp-search-kicker">PRINTPROFIT • 3D PRINTING TOOLS</div>
+<h1 id="ppSearchIntroTitle">3D printing cost calculator</h1>
+<p>Estimate what it costs to make a 3D print and choose a selling price using your own printer, material and business figures. PrintProfit supports filament and resin workflows.</p>
+<h2>What goes into an estimate?</h2>
+<p>Add material usage, print time, electricity, printer depreciation, labour, packaging, delivery and selling fees. The calculator brings these costs together to show estimated cost, break-even price, profit and margin. Results depend on the values and rates you enter, so check them against your actual costs.</p>
+<h2>Can a print file fill in the details?</h2>
+<p>Upload a supported print or model file to see which details PrintProfit can read. Some files include print time or material usage; others do not. Review detected values and enter anything missing from your slicer before relying on the estimate.</p>
+<p class="pp-search-links"><a href="./guide.html">Read the calculator guide</a> · <a href="./price-finder.html">Compare UK 3D printing products</a></p>
+</section>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
