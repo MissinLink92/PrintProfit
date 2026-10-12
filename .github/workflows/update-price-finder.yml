@@ -34,6 +34,10 @@ jobs:
         run: python -m pip install -r scripts/requirements-nightly.txt
       - name: Refresh UK reference prices, product prices and photos
         run: python scripts/nightly_update.py
+      - name: Check compact comparison data builder
+        run: python scripts/build_compare_catalogue.py --self-test
+      - name: Build compact listings and on-demand price histories
+        run: python scripts/build_compare_catalogue.py
       - name: Keep update report
         if: always()
         uses: actions/upload-artifact@v4
@@ -58,6 +62,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/price-finder.json data/price-finder.js data/reference-data.json data/reference-data.js
           git add data/review-queue.json data/nightly-report.json printer-price-data.js assets/products config/nightly-sources.json reports
+          git add -A -- data/price-finder-lite.js data/price-history/
           if ! git diff --cached --quiet; then
             git commit -m "Refresh PrintProfit UK prices and update report"
             git pull --rebase origin main
