@@ -8,40 +8,58 @@ service cloud.firestore {
         return request.auth != null && request.auth.uid == userId;
       }
 
-      allow get: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+      allow get: if isOwner()
+        && acceptanceId in [
+          'acceptance-2026-10-12-v1',
+          'acceptance-2026-10-12-v2'
+        ];
       allow list: if false;
       allow create: if isOwner()
-        && acceptanceId == 'acceptance-2026-10-12-v1'
+        && acceptanceId == 'acceptance-2026-10-12-v2'
         && request.resource.data.keys().hasOnly([
           'termsVersion',
           'privacyVersion',
           'syncConsent',
+          'projectSyncConsent',
           'acceptedAt'
         ])
         && request.resource.data.keys().hasAll([
           'termsVersion',
           'privacyVersion',
           'syncConsent',
+          'projectSyncConsent',
           'acceptedAt'
         ])
-        && request.resource.data.termsVersion == '2026-10-12-v1'
-        && request.resource.data.privacyVersion == '2026-10-12-v1'
+        && request.resource.data.termsVersion == '2026-10-12-v2'
+        && request.resource.data.privacyVersion == '2026-10-12-v2'
         && request.resource.data.syncConsent == true
+        && request.resource.data.projectSyncConsent == true
         && request.resource.data.acceptedAt == request.time;
       allow update: if false;
-      allow delete: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+      allow delete: if isOwner()
+        && acceptanceId in [
+          'acceptance-2026-10-12-v1',
+          'acceptance-2026-10-12-v2'
+        ];
     }
 
-    // Each signed-in, email-verified user with current policy acceptance can access only their own profile.
+    // Each verified account owner with current consent can access their own profiles.
     match /users/{userId}/workshop/profiles {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
       function isVerifiedOwner() {
-        return request.auth != null
-          && request.auth.uid == userId
-          && request.auth.token.email_verified == true;
+        return isOwner() && request.auth.token.email_verified == true;
       }
 
       function hasCurrentAcceptance() {
-        return exists(/databases/$(database)/documents/users/$(userId)/legal/acceptance-2026-10-12-v1);
+        let acceptancePath = /databases/$(database)/documents/users/$(userId)/legal/acceptance-2026-10-12-v2;
+        return exists(acceptancePath)
+          && get(acceptancePath).data.termsVersion == '2026-10-12-v2'
+          && get(acceptancePath).data.privacyVersion == '2026-10-12-v2'
+          && get(acceptancePath).data.syncConsent == true
+          && get(acceptancePath).data.projectSyncConsent == true;
       }
 
       allow get: if isVerifiedOwner() && hasCurrentAcceptance();
@@ -71,8 +89,87 @@ service cloud.firestore {
         && request.resource.data.printers.size() <= 100
         && request.resource.data.deletedMaterials.size() <= 10000
         && request.resource.data.deletedPrinters.size() <= 10000;
-      // Owners may delete their own profile even if email verification or policy acceptance is missing.
-      allow delete: if request.auth != null && request.auth.uid == userId;
+      // Owners may delete their profile even if email verification or policy acceptance is missing.
+      allow delete: if isOwner();
+    }
+
+    // A project document contains saved calculator state and metadata, never the uploaded model-file blob.
+    match /users/{userId}/projects/{projectId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function isVerifiedOwner() {
+        return isOwner() && request.auth.token.email_verified == true;
+      }
+
+      function hasCurrentAcceptance() {
+        let acceptancePath = /databases/$(database)/documents/users/$(userId)/legal/acceptance-2026-10-12-v2;
+        return exists(acceptancePath)
+          && get(acceptancePath).data.termsVersion == '2026-10-12-v2'
+          && get(acceptancePath).data.privacyVersion == '2026-10-12-v2'
+          && get(acceptancePath).data.syncConsent == true
+          && get(acceptancePath).data.projectSyncConsent == true;
+      }
+
+      function validProjectDocument() {
+        return request.resource.data.keys().hasOnly([
+            'schemaVersion',
+            'updated',
+            'deleted',
+            'project'
+          ])
+          && request.resource.data.keys().hasAll([
+            'schemaVersion',
+            'updated',
+            'deleted'
+          ])
+          && request.resource.data.schemaVersion == 1
+          && request.resource.data.updated is number
+          && request.resource.data.deleted is bool
+          && (request.resource.data.deleted
+            ? !request.resource.data.keys().hasAny(['project'])
+            : request.resource.data.keys().hasAll(['project'])
+              && request.resource.data.project is map
+              && request.resource.data.project.keys().hasOnly([
+                'id',
+                'name',
+                'updated',
+                'material',
+                'hours',
+                'used',
+                'currency',
+                'data',
+                'file',
+                'fileData',
+                'fileStatus'
+              ])
+              && request.resource.data.project.keys().hasAll([
+                'id',
+                'name',
+                'updated',
+                'material',
+                'hours',
+                'used',
+                'currency',
+                'data',
+                'file',
+                'fileData',
+                'fileStatus'
+              ])
+              && request.resource.data.project.id == projectId
+              && request.resource.data.project.name is string
+              && request.resource.data.project.updated is number
+              && request.resource.data.project.data is map);
+      }
+
+      // Owners can retrieve their records for sync or account deletion.
+      allow get, list: if isVerifiedOwner();
+      allow create, update: if isVerifiedOwner()
+        && hasCurrentAcceptance()
+        && validProjectDocument();
+      // Owners can remove their project records when deleting an account.
+      allow delete: if isOwner();
     }
 
     // Deny access to all other documents unless another explicit rule is added.
