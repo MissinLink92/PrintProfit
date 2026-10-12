@@ -1,4 +1,4 @@
-name: Build and publish compact comparison catalogue
+name: Build compact comparison catalogue
 
 on:
   push:
@@ -21,15 +21,10 @@ concurrency:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -49,14 +44,3 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Prepare the public website
-        run: python scripts/build_pages.py
-      - name: Upload website
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - name: Deploy website
-        id: deployment
-        uses: actions/deploy-pages@v4
