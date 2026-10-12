@@ -4,6 +4,25 @@ window.__printProfitMarketPriceSync=true;
 
 function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
 function products(){return Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products)?window.PRINTPROFIT_PRICE_DATA.products:[];}
+let priceDataPromise=null;
+let lookupGeneration=0;
+function loadPriceData(){
+  if(Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products))return Promise.resolve(true);
+  if(priceDataPromise)return priceDataPromise;
+  priceDataPromise=new Promise(resolve=>{
+    const script=document.createElement('script');
+    script.src='./data/price-finder.js?v=20261004-nightly1';
+    script.async=true;
+    script.onload=()=>{
+      const loaded=Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products);
+      if(!loaded)priceDataPromise=null;
+      resolve(loaded);
+    };
+    script.onerror=()=>{priceDataPromise=null;resolve(false);};
+    document.head.appendChild(script);
+  });
+  return priceDataPromise;
+}
 function priceOf(p){const n=Number(p?.price);return Number.isFinite(n)&&n>0?n:null;}
 function typeMatches(item, selectedType, materialType){
   const a=norm(selectedType), b=norm(item?.type);
@@ -37,10 +56,17 @@ function status(text){
   const el=document.getElementById('materialStatus');
   if(el)el.textContent=text;
 }
-function applyLivePrice(){
+async function applyLivePrice(){
   const cost=document.getElementById('materialPackCost');
   const pack=document.getElementById('materialPack');
   if(!cost)return false;
+  const generation=++lookupGeneration;
+  status('Checking live market prices…');
+  if(!await loadPriceData()){
+    if(generation===lookupGeneration)status('Live market prices are unavailable. Enter your actual material cost manually.');
+    return false;
+  }
+  if(generation!==lookupGeneration||cost.dataset.ppManual==='1')return false;
   const best=findBest();
   if(!best){
     status('No verified live market match found. Enter your actual material cost manually.');
@@ -85,7 +111,7 @@ function bind(){
   if(cost.dataset.ppMarketInitialised!=='1'){
     cost.dataset.ppMarketInitialised='1';
     if(Number(cost.value)||String(cost.value).trim()) cost.dataset.ppManual='1';
-    else applyLivePrice();
+    else status('Change the material or type to check live market prices, or enter your cost manually.');
   }
 
   return true;
