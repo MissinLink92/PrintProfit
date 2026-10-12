@@ -25,13 +25,11 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 .section{margin-top:14px}.section-title{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:8px 2px}.faq{border:1px solid var(--line);border-radius:12px;background:#081720;padding:13px;margin-top:8px}.faq strong{display:block;font-size:12px;margin-bottom:4px}.faq p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.note{margin-top:14px;padding:13px 14px;border-left:3px solid var(--accent);background:#0a1d27;color:var(--muted);font-size:10px;line-height:1.55}.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:#6f8794;font-size:9px}
 @media(max-width:760px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto}.nav a{white-space:nowrap}.grid{grid-template-columns:1fr}.wrap{width:min(100% - 20px,1180px)}}
 </style>
+<link rel="stylesheet" href="./site-header.css?v=1">
 </head>
 <body data-pp-standalone-i18n="1">
+<div id="ppSiteHeader"></div><script src="./site-header.js?v=1"></script>
 <div class="wrap">
-<header class="header">
-<a class="brand" href="./index.html" aria-label="Back to PrintProfit calculator"><img src="./assets/printprofit-logo-dark-canonical.webp?v=1" alt="PrintProfit"></a>
-<nav class="nav" aria-label="Guide navigation"><a href="./index.html">Calculator</a><a href="./price-finder.html">Compare Products</a><a href="./guide.html" class="active" aria-current="page">Guide &amp; Help</a></nav>
-</header>
 
 <section class="hero">
 <div class="kicker">PRINTPROFIT • INFORMATION CENTRE</div>
@@ -126,7 +124,7 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 <div class="section">
 <div class="section-title">My Workspace</div>
 <div class="grid">
-<article class="card"><h3>Projects</h3><p>Save and manage named calculator setups from the Projects section. Projects stay on this device and are not automatically synced.</p></article>
+<article class="card"><h3>Projects</h3><p>Save and manage named calculator setups from the Projects section. Projects save on this device by default. If you sign in and choose account sync, project settings can also appear on your other devices. Uploaded 3D model files stay on the device where you added them.</p></article>
 <article class="card"><h3>Workshop</h3><p>Keep printer profiles and material stock ready for your next print. Sign in with a verified email address to sync these profiles across devices.</p></article>
 <article class="card"><h3>Profile &amp; Account</h3><p>Manage sign-in, verification, password recovery and account deletion. Creating an account is optional; the calculator and local projects remain available without one.</p></article>
 </div>
@@ -148,7 +146,7 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 <article class="card"><h3>Temporary working draft</h3><p>PrintProfit keeps a temporary working draft on the current device while you work and when you deliberately move between calculator areas such as Compare Products or Profit Advisor. This prevents ordinary section changes from losing your inputs.</p></article>
 <article class="card"><h3>Save Project</h3><p>Save Project creates a named project containing the current calculator setup. After loading a project, Save becomes Update so changes can be saved back to that same project.</p></article>
 <article class="card"><h3>Manage saved projects</h3><p>The Projects section of My Workspace lets you Load, Update, Rename, Duplicate and Delete saved projects. Reset clears the current working state but does not delete separately saved projects.</p></article>
-<article class="card"><h3>Where saved projects live</h3><p><strong>Projects are saved on this device only and are not automatically available on another computer.</strong> They are not cloud-synchronised. Keep an exported/backup copy or the original print files separately if you need to move work between devices.</p></article>
+<article class="card"><h3>Where saved projects live</h3><p>Projects save in this browser. If you enable account sync, a copy of your saved project settings and slicer-analysis details can sync to your other devices. Uploaded print files stay on the device where you added them.</p></article>
 </div>
 </div>
 
@@ -180,11 +178,11 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 
 <div class="section" id="account-privacy">
 <div class="section-title">Account data &amp; privacy</div>
-<div class="note">You can use PrintProfit without an account. If you create one, Firebase sync is optional and covers printer and material profiles only. Existing local profiles are imported only after you choose; Saved Projects and print files stay in this browser. Read the full <a href="./privacy.html">Privacy Notice</a> and <a href="./terms.html">Terms of Use</a>.</div>
+<div class="note">You can use PrintProfit without an account. With your consent, account sync can include printer and material profiles plus saved project settings and slicer-analysis details. Existing local profiles and Projects are copied only if you choose “Import profiles &amp; projects”. Uploaded 3D model files stay on this device. Read the full <a href="./privacy.html">Privacy Notice</a> and <a href="./terms.html">Terms of Use</a>.</div>
 <div class="grid">
 <article class="card"><h3>Who operates PrintProfit?</h3><p>PrintProfit is operated by <strong>Mr Connor Steven Jones</strong>. For account or privacy questions, email <a href="mailto:Printprofit26@outlook.com">Printprofit26@outlook.com</a>.</p></article>
-<article class="card"><h3>What is stored in an account?</h3><p>Firebase Authentication handles your email address, account ID, verification and password recovery. PrintProfit does not store your password. With your choice to sync, your printer and material profiles and the small records needed to keep devices in sync are stored in your own Firebase account area. Profiles already saved in a browser are imported only if you choose “Import profiles” there; you can choose to keep them on that device.</p></article>
-<article class="card"><h3>What stays on my device?</h3><p>Calculator inputs, saved Projects and file analysis are stored in your browser. Supported files are analysed locally and are not uploaded to PrintProfit. Account deletion does not remotely clear saved Projects or browser data on other devices.</p></article>
+<article class="card"><h3>What is stored in an account?</h3><p>Firebase Authentication handles your email address, account ID, verification and password recovery. PrintProfit does not store your password. With your choice to sync, your printer and material profiles, saved project settings, slicer-analysis details and the small records needed to keep devices in sync are stored in your own Firebase account area. Uploaded 3D model file contents stay on the device where they were added. Profiles and Projects already saved in a browser are copied only if you choose “Import profiles &amp; projects”; you can keep them on that device instead.</p></article>
+<article class="card"><h3>What stays on my device?</h3><p>Calculator inputs and supported print files stay in your browser. If you enable account sync, a copy of saved project settings and slicer-analysis details is sent to your account; the original model files are not uploaded. Deleting your account does not remove local Projects, files or browser data from your other devices.</p></article>
 <article class="card"><h3>Where is account data stored?</h3><p>Firebase Authentication processes authentication information in the United States. This project's Firestore database is in London, United Kingdom. Optional Google Analytics runs only after you accept it. Read the <a href="./privacy.html">full Privacy Notice</a> for providers, lawful bases, retention and your rights.</p></article>
 </div>
 </div>
@@ -194,7 +192,7 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 <div class="faq"><strong>Why did nothing auto-fill from my file?</strong><p>The file may not contain readable metadata. PrintProfit does not guess missing values. Enter print time and material usage manually, or use a sliced file that includes the metadata needed for analysis.</p></div>
 <div class="faq"><strong>Why does the file show detailed analysis but the calculator value is different?</strong><p>File intelligence can report information separately from the live calculator inputs. Review detected values and use Apply detected settings when appropriate, then confirm the final printer, material and usage values.</p></div>
 <div class="faq"><strong>Why did the result switch to Batch Pricing?</strong><p>Quantity greater than one automatically selects the Batch Pricing result view. Returning quantity to one selects the single-print result.</p></div>
-<div class="faq"><strong>Does saving a project save it in the cloud?</strong><p>No. Projects in My Workspace are currently local to the device and browser where they were saved. A different computer will not automatically have access to them.</p></div>
+<div class="faq"><strong>Does saving a project save it in the cloud?</strong><p>Projects save locally by default. If you sign in, accept the current sync notice and choose to sync, saved project settings and slicer-analysis details can be available on your other devices. Uploaded model files stay on the device where you added them.</p></div>
 <div class="faq"><strong>Can I rely on the listed electricity, courier, platform or product prices?</strong><p>Use them as reference starting points only. Provider tariffs, delivery rates, marketplace fees, product prices, promotions and stock can change. Check the live or actual source whenever accuracy matters.</p></div>
 <div class="faq"><strong>What is the safest way to price a real order?</strong><p>Use the actual material cost and usage, real print time, a realistic labour rate, your actual electricity tariff, the real delivery cost, the actual customer delivery charge and the selling platform fees you pay.</p></div>
 <div class="note"><strong>Important:</strong> PrintProfit is an estimating tool. Provider prices, marketplace fees, delivery charges, electricity rates and other market values may not be current. Estimates should be checked against your actual costs before you use them for a real sale.</div>
@@ -204,6 +202,6 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 </div>
 <script src="./i18n-extra.js?v=4"></script>
 
-<link rel="stylesheet" href="./readability.css?v=13">
+<link rel="stylesheet" href="./readability.css?v=14">
 </body>
 </html>
