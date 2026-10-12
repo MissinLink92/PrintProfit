@@ -42,7 +42,7 @@ function render(){
  const list=document.getElementById('ppMaterialsList');
  if(list){
   const materials=read().sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
-  if(!materials.length)list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin, then track how much remains after each print.</p><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button></div>';
+  if(!materials.length)list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin, then track how much remains after each print.</p><button type="button" class="pp-material-new" data-material-new>＋ Create material profile</button></div>';
   else list.innerHTML=materials.map(m=>{
    const remaining=materialRemaining(m),threshold=materialThreshold(m),unit=materialUnit(m),low=threshold>0&&remaining<=threshold;
    return '<article class="pp-material-card" data-material-id="'+esc(m.id)+'"><div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>'+esc(m.name)+' '+(low?'<span class="pp-stock-low">Low stock</span>':'')+'</h3><p>'+esc(m.type)+' · '+amountText(remaining)+' '+unit+' remaining · '+amountText(m.amount)+' '+unit+' package</p><small>'+esc(m.brand||'No brand')+(m.colour?' · '+esc(m.colour):'')+' · '+moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))+' / '+unit+' · alert at '+amountText(threshold)+' '+unit+'</small></div></div><div class="pp-material-actions"><button type="button" data-use-material="'+esc(m.id)+'">Use</button><button type="button" data-edit-material="'+esc(m.id)+'">Edit</button><button type="button" class="danger" data-delete-material="'+esc(m.id)+'">Delete</button></div></article>';
@@ -54,7 +54,7 @@ function renderPrinters(){
  const list=document.getElementById('ppWorkshopPrintersList');if(!list)return;
  const printers=readPrinters().sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
  const count=document.getElementById('ppPrinterCount');if(count)count.textContent=printers.length+' saved '+(printers.length===1?'printer':'printers');
- if(!printers.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">▱</div><h3>No printers saved yet</h3><p>Add the printers you own so their power and depreciation details are ready to use.</p><button type="button" class="pp-material-new" data-printer-new>＋ Add Printer</button></div>';return;}
+ if(!printers.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">▱</div><h3>No printers saved yet</h3><p>Add the printers you own so their power and depreciation details are ready to use.</p><button type="button" class="pp-material-new" data-printer-new>＋ Create printer profile</button></div>';return;}
  list.innerHTML=printers.map(p=>'<article class="pp-material-card pp-printer-card" data-printer-id="'+esc(p.id)+'"><div class="pp-material-main"><div class="pp-printer-dot"></div><div><h3>'+esc(p.name)+'</h3><p>'+amountText(p.watts)+' W · '+moneyFromGBP(p.price)+' purchase price · '+amountText(p.lifetime)+' expected hours</p><small>'+esc(p.materialType||'Filament')+' printer profile</small></div></div><div class="pp-material-actions"><button type="button" data-printer-use="'+esc(p.id)+'">Use</button><button type="button" data-printer-edit="'+esc(p.id)+'">Edit</button><button type="button" class="danger" data-printer-delete="'+esc(p.id)+'">Delete</button></div></article>').join('');
 }
 function setWorkshopTab(name){
@@ -65,13 +65,14 @@ function setWorkshopTab(name){
 function setWorkspaceSection(section){
  const active=['workshop','account'].includes(section)?section:'workshop';
  document.querySelectorAll('[data-workspace-section]').forEach(button=>{const selected=button.dataset.workspaceSection===active;if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});
- const account=active==='account',tabs=document.querySelector('#ppMaterialsPanel .pp-workshop-tabs'),materials=document.getElementById('ppWorkshopMaterialsView'),printers=document.getElementById('ppWorkshopPrintersView');
+ const account=active==='account',accountPanel=document.getElementById('ppWorkshopAccount'),tabs=document.querySelector('#ppMaterialsPanel .pp-workshop-tabs'),materials=document.getElementById('ppWorkshopMaterialsView'),printers=document.getElementById('ppWorkshopPrintersView');
+ if(accountPanel)accountPanel.hidden=!account;
  if(tabs)tabs.hidden=account;
  if(account){if(materials)materials.hidden=true;if(printers)printers.hidden=true;}
  else{const selectedTab=document.querySelector('#ppMaterialsPanel [data-workshop-tab].active')?.dataset.workshopTab||'materials';setWorkshopTab(selectedTab);}
  const title=document.getElementById('ppMaterialsTitle'),description=document.getElementById('ppWorkspaceDescription');
  if(title)title.textContent='My Workspace';
- if(description)description.textContent=account?'Manage your sign-in and account details here. Account sync is optional; projects stay on this device.':'Manage printer and material profiles. Sign in to sync them across devices.';
+ if(description)description.textContent=account?'Manage your sign-in and account details here. Account sync is optional; projects stay on this device.':'Create reusable printer and material profiles here. Choose a tab below to get started.';
 }
 function syncWorkshopUsage(){
  const tabs=document.getElementById('resultTabs');if(!tabs)return;
@@ -136,7 +137,7 @@ function openPrinterForm(existing){
   document.getElementById('ppWorkshopPrinterPrice').value=Number(val('customPrinterPrice'))||0;
   document.getElementById('ppWorkshopPrinterLife').value=Number(val('customPrinterLife'))||0;
  }
- document.getElementById('ppWorkshopPrinterFormTitle').textContent=existing?'Edit printer profile':'Add a printer';
+ document.getElementById('ppWorkshopPrinterFormTitle').textContent=existing?'Edit printer profile':'Create printer profile';
  wrap.hidden=false;document.getElementById('ppWorkshopPrinterName').focus();
 }
 function closePrinterForm(){const wrap=document.getElementById('ppWorkshopPrinterForm');if(wrap)wrap.hidden=true}
@@ -223,7 +224,7 @@ function openForm(existing){
  document.getElementById('ppMatLowStock').value=existing?.lowStock??(existing?.type==='Resin'?50:200);
  document.getElementById('ppMatCost').value=currentMoneyValue(existing?.cost??20).toFixed(2);
  updateMaterialFormLabels();
- document.getElementById('ppMaterialFormTitle').textContent=existing?'Edit Material':'Add Material';
+ document.getElementById('ppMaterialFormTitle').textContent=existing?'Edit material profile':'Create material profile';
  document.getElementById('ppMaterialFormPanel').classList.add('open');
 }function closeForm(){document.getElementById('ppMaterialFormPanel')?.classList.remove('open')}
 function saveForm(){
@@ -275,24 +276,24 @@ function open(workspaceSection='workshop'){
  if(!panel){
   panel=document.createElement('div');panel.id='ppMaterialsPanel';
   panel.innerHTML=`<div class="pp-materials-backdrop" data-material-close></div><section class="pp-materials-dialog" role="dialog" aria-modal="true" aria-labelledby="ppMaterialsTitle">
-  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workspace</h2><p id="ppWorkspaceDescription">Manage your printer and material profiles. Sign in to sync them across devices.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
+  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workspace</h2><p id="ppWorkspaceDescription">Create reusable printer and material profiles here. Choose a tab below to get started.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects">Projects</button><button type="button" data-workspace-section="workshop" aria-current="page">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
   <div id="ppWorkshopAccount"></div>
   <div class="pp-workshop-tabs" role="tablist" aria-label="Workshop library"><button type="button" class="active" data-workshop-tab="materials" aria-selected="true">Materials &amp; stock</button><button type="button" data-workshop-tab="printers" aria-selected="false">Printers</button></div>
-  <div id="ppWorkshopMaterialsView"><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></div>
-  <div id="ppWorkshopPrintersView" hidden><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-printer-new>＋ Add Printer</button><span id="ppPrinterCount"></span></div>
-   <form id="ppWorkshopPrinterForm" class="pp-workshop-printer-form" onsubmit="return false" hidden><div class="pp-workshop-printer-form-head"><strong id="ppWorkshopPrinterFormTitle">Add a printer</strong><button type="button" class="pp-materials-close" data-printer-form-close aria-label="Close printer form">×</button></div><div class="pp-workshop-printer-form-grid">
+  <div id="ppWorkshopMaterialsView"><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Create material profile</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></div>
+  <div id="ppWorkshopPrintersView" hidden><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-printer-new>＋ Create printer profile</button><span id="ppPrinterCount"></span></div>
+   <form id="ppWorkshopPrinterForm" class="pp-workshop-printer-form" onsubmit="return false" hidden><div class="pp-workshop-printer-form-head"><strong id="ppWorkshopPrinterFormTitle">Create printer profile</strong><button type="button" class="pp-materials-close" data-printer-form-close aria-label="Close printer form">×</button></div><div class="pp-workshop-printer-form-grid">
     <label>Printer name<input id="ppWorkshopPrinterName" placeholder="e.g. Elegoo Neptune 4"></label><label>Start from a printer preset<select id="ppWorkshopPrinterPreset"><option value="">Custom printer details</option></select></label>
     <label>Power draw (W)<input id="ppWorkshopPrinterWatts" type="number" min="0" step="1" value="0"></label><label>Purchase price (£)<input id="ppWorkshopPrinterPrice" type="number" min="0" step=".01" value="0"></label>
     <label>Expected life (hours)<input id="ppWorkshopPrinterLife" type="number" min="0" step="1" value="4000"></label><label>Material type<select id="ppWorkshopPrinterType"><option>Filament</option><option>Resin</option></select></label>
-   </div><div class="pp-workshop-printer-form-actions"><button type="button" class="pp-material-cancel" data-printer-form-close>Cancel</button><button type="button" class="pp-material-save" data-printer-save>Save Printer</button></div></form><div id="ppWorkshopPrintersList"></div>
+   </div><div class="pp-workshop-printer-form-actions"><button type="button" class="pp-material-cancel" data-printer-form-close>Cancel</button><button type="button" class="pp-material-save" data-printer-save>Save printer profile</button></div></form><div id="ppWorkshopPrintersList"></div>
   </div></section>
-  <div id="ppMaterialFormPanel"><div class="pp-material-form-backdrop" data-material-form-close></div><form id="ppMaterialForm" class="pp-material-form" onsubmit="return false"><div class="pp-material-form-head"><div><div class="pp-materials-kicker">MATERIAL LIBRARY</div><h2 id="ppMaterialFormTitle">Add Material</h2></div><button type="button" class="pp-materials-close" data-material-form-close>×</button></div>
+  <div id="ppMaterialFormPanel"><div class="pp-material-form-backdrop" data-material-form-close></div><form id="ppMaterialForm" class="pp-material-form" onsubmit="return false"><div class="pp-material-form-head"><div><div class="pp-materials-kicker">MATERIAL LIBRARY</div><h2 id="ppMaterialFormTitle">Create material profile</h2></div><button type="button" class="pp-materials-close" data-material-form-close>×</button></div>
   <div class="pp-material-form-grid"><label>Material name<input id="ppMatName" placeholder="e.g. eSUN PLA+ Black"></label><label>Type<select id="ppMatType"><option>Filament</option><option>Resin</option></select></label><label>Brand<select id="ppMatBrand"><option value="">Select a brand...</option><option value="__other__">Other / Custom</option></select><input id="ppMatBrandCustom" class="pp-brand-custom" placeholder="Enter brand name" style="display:none" aria-label="Custom brand name"></label><label>Colour<input id="ppMatColour" placeholder="Optional"></label><label><span id="ppMatAmountLabel">Spool weight (g)</span><input id="ppMatAmount" type="number" min="0" step=".01" value="1000"></label><label><span id="ppMatRemainingLabel">Remaining stock (g)</span><input id="ppMatRemaining" type="number" min="0" step=".01" value="1000"></label><label><span id="ppMatLowStockLabel">Low-stock alert (g)</span><input id="ppMatLowStock" type="number" min="0" step=".01" value="200"></label><label><span id="ppMatCostLabel">Package cost (£)</span><input id="ppMatCost" type="number" min="0" step=".01" value="20"></label></div>
-  <div class="pp-material-form-actions"><button type="button" class="pp-material-cancel" data-material-form-close>Cancel</button><button type="button" class="pp-material-save" data-material-save>Save Material</button></div></form></div>`;
+  <div class="pp-material-form-actions"><button type="button" class="pp-material-cancel" data-material-form-close>Cancel</button><button type="button" class="pp-material-save" data-material-save>Save material profile</button></div></form></div>`;
   document.body.appendChild(panel);
   const style=document.createElement('style');style.textContent=`
-#ppMaterialsPanel{display:none;position:fixed;inset:0;z-index:100001}#ppMaterialsPanel.open{display:block}.pp-materials-backdrop{position:absolute;inset:0;background:#000b;backdrop-filter:blur(5px)}
+#ppMaterialsPanel{display:none;position:fixed;inset:0;z-index:100001}#ppWorkshopAccount[hidden]{display:none!important}#ppMaterialsPanel.open{display:block}.pp-materials-backdrop{position:absolute;inset:0;background:#000b;backdrop-filter:blur(5px)}
 .pp-materials-dialog{position:relative;width:min(1120px,calc(100vw - 32px));max-width:calc(100vw - 16px);max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);margin:16px auto;background:#081720;color:#edf3f6;border:1px solid #294957;border-radius:20px;box-shadow:0 25px 80px #000d;overflow:auto;overscroll-behavior:contain;font-family:Inter,Segoe UI,system-ui,sans-serif}
 .pp-materials-head{display:flex;justify-content:space-between;gap:20px;padding:25px 28px 20px;border-bottom:1px solid #294957;background:linear-gradient(145deg,#0b202b,#07141d)}.pp-materials-kicker{font-size:10px;font-weight:900;letter-spacing:.18em;color:#ff7800}.pp-materials-head h2{margin:5px 0;font-size:30px}.pp-materials-head p{margin:0;color:#9fb0b9}.pp-materials-close{width:38px;height:38px;border:1px solid #355363;border-radius:10px;background:#091923;color:#fff;font-size:26px;cursor:pointer}
 .pp-workspace-nav{display:flex;gap:8px;padding:14px 28px 0;background:#081720}.pp-workspace-nav button{border:1px solid #355363;border-radius:9px;background:#0a1b25;color:#aebdc6;padding:9px 13px;font-weight:800;cursor:pointer}.pp-workspace-nav button[aria-current="page"]{background:#143140;color:#f5f9fb;border-color:#35d6e5}.pp-workspace-nav button:focus-visible{outline:2px solid #35d6e5;outline-offset:2px}
