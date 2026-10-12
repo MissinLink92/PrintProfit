@@ -1,6 +1,12 @@
 (()=>{ 
 'use strict';
 if(window.__printProfitProjects)return; window.__printProfitProjects=true;
+function syncWorkspaceModalState(){
+ const open=!!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open');
+ const bodies=[document.body];
+ try{if(window.parent&&window.parent!==window)bodies.push(window.parent.document.body)}catch(e){}
+ bodies.forEach(body=>{if(open)body.dataset.ppModalOpen='true';else delete body.dataset.ppModalOpen;});
+}
 const KEY='printprofit.projects.v1';
 const PROJECT_OWNER_KEY='printprofit.projects.owner.v1';
 const PROJECT_CACHE_PREFIX='printprofit.projects.user-cache.v1.';
@@ -157,7 +163,7 @@ const projectInfo=()=>{
  const currency=(document.getElementById('singleSellOut')?.textContent||'').trim();
  return {material,hours,used,currency};
 };
-function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow=document.querySelector('#ppMaterialsPanel.open')?'hidden':'';if(!document.querySelector('#ppProjectsPanel.open,#ppMaterialsPanel.open,#ppMaterialFormPanel.open'))delete document.body.dataset.ppModalOpen;}
+function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow=document.querySelector('#ppMaterialsPanel.open')?'hidden':'';syncWorkspaceModalState();}
 function setWorkspaceNavigation(section){document.querySelectorAll('[data-workspace-section]').forEach(button=>{const active=button.dataset.workspaceSection===section;if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});}
 window.__ppOpenWorkspaceProjects=()=>open();
 window.__ppCloseWorkspaceProjects=()=>close();
@@ -200,7 +206,7 @@ function open(){
 @keyframes ppProjectUpdated{0%{transform:scale(1)}45%{transform:scale(1.012)}100%{transform:scale(1)}}
 `;document.head.appendChild(style);
  }
- panel.classList.add('open');document.body.dataset.ppModalOpen='true';document.body.style.overflow='hidden';setWorkspaceNavigation('projects');render();
+ panel.classList.add('open');syncWorkspaceModalState();document.body.style.overflow='hidden';setWorkspaceNavigation('projects');render();
  const count=document.getElementById('ppProjectCount');if(count)count.textContent=read().length+' saved '+(read().length===1?'project':'projects');
  hydrateProjects().then(projects=>{
    render();

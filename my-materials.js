@@ -1,6 +1,12 @@
 (()=>{ 
 'use strict';
 if(window.__printProfitMaterials)return; window.__printProfitMaterials=true;
+function syncWorkspaceModalState(){
+ const open=!!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open');
+ const bodies=[document.body];
+ try{if(window.parent&&window.parent!==window)bodies.push(window.parent.document.body)}catch(e){}
+ bodies.forEach(body=>{if(open)body.dataset.ppModalOpen='true';else delete body.dataset.ppModalOpen;});
+}
 const KEY='printprofit.materials.v1';
 const PRINTER_KEY='printprofit.workshop-printers.v1';
 let selectedMaterialId='';
@@ -210,7 +216,7 @@ function openFormFromCalculator(){
  document.getElementById('ppMatCost').value=currentMoneyValue(cost||0).toFixed(2);
  updateMaterialFormLabels();
  document.getElementById('ppMaterialFormTitle').textContent='Save Current Material';
- document.getElementById('ppMaterialFormPanel').classList.add('open');document.body.dataset.ppModalOpen='true';
+ document.getElementById('ppMaterialFormPanel').classList.add('open');syncWorkspaceModalState();
 }
 function openForm(existing){
  const form=document.getElementById('ppMaterialForm');if(!form)return;
@@ -225,8 +231,8 @@ function openForm(existing){
  document.getElementById('ppMatCost').value=currentMoneyValue(existing?.cost??20).toFixed(2);
  updateMaterialFormLabels();
  document.getElementById('ppMaterialFormTitle').textContent=existing?'Edit material profile':'Create material profile';
- document.getElementById('ppMaterialFormPanel').classList.add('open');document.body.dataset.ppModalOpen='true';
-}function closeForm(){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');if(!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open,#ppMaterialFormPanel.open'))delete document.body.dataset.ppModalOpen}
+ document.getElementById('ppMaterialFormPanel').classList.add('open');syncWorkspaceModalState();
+}function closeForm(){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');syncWorkspaceModalState()}
 function saveForm(){
  const name=document.getElementById('ppMatName').value.trim(),type=document.getElementById('ppMatType').value;
  const amount=Number(document.getElementById('ppMatAmount').value)||0,cost=Number(document.getElementById('ppMatCost').value)||0;
@@ -306,9 +312,9 @@ function open(workspaceSection='workshop'){
 @media(max-width:760px){.pp-materials-dialog{width:calc(100vw - 16px);max-width:calc(100vw - 16px);margin:8px auto;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);border-radius:14px}.pp-materials-head,.pp-materials-toolbar,#ppMaterialsList,#ppWorkshopPrintersList{padding-left:16px;padding-right:16px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid,.pp-workshop-printer-form-grid{grid-template-columns:1fr}.pp-workshop-printer-form{margin-left:16px;margin-right:16px}.pp-workspace-nav{padding-left:16px;padding-right:16px;flex-wrap:wrap}.pp-workshop-tabs{padding-left:16px;padding-right:16px}.pp-workshop-usage{align-items:flex-start;flex-direction:column}.pp-workshop-usage-actions,.pp-workshop-usage-actions button{width:100%}}
 `;document.head.appendChild(style);
  }
- refreshCurrencyUI();panel.classList.add('open');document.body.dataset.ppModalOpen='true';document.body.style.overflow='hidden';setWorkshopTab('materials');setWorkspaceSection(workspaceSection);render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
+ refreshCurrencyUI();panel.classList.add('open');syncWorkspaceModalState();document.body.style.overflow='hidden';setWorkshopTab('materials');setWorkspaceSection(workspaceSection);render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }
-function closeWorkspaceWorkshop(){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';if(!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open,#ppMaterialFormPanel.open'))delete document.body.dataset.ppModalOpen;}
+function closeWorkspaceWorkshop(){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';syncWorkspaceModalState();}
 window.__ppOpenWorkspaceWorkshop=(section='workshop')=>open(section);
 window.__ppCloseWorkspaceWorkshop=()=>closeWorkspaceWorkshop();
 function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
@@ -349,6 +355,6 @@ document.addEventListener('change',e=>{
 document.addEventListener('input',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
 document.addEventListener('change',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
 document.addEventListener('click',e=>{if(e.target.closest('#calc'))queueMicrotask(syncWorkshopUsage)});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');document.getElementById('ppMaterialsPanel')?.classList.remove('open');closePrinterForm();document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';if(!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open,#ppMaterialFormPanel.open'))delete document.body.dataset.ppModalOpen}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');document.getElementById('ppMaterialsPanel')?.classList.remove('open');closePrinterForm();document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';syncWorkspaceModalState()}});
 // Box 3 remains clean; the Material Library can be surfaced elsewhere.
 })();
