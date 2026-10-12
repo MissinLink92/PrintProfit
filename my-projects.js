@@ -157,7 +157,7 @@ const projectInfo=()=>{
  const currency=(document.getElementById('singleSellOut')?.textContent||'').trim();
  return {material,hours,used,currency};
 };
-function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow='';}
+function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow=document.querySelector('#ppMaterialsPanel.open')?'hidden':'';if(!document.querySelector('#ppProjectsPanel.open,#ppMaterialsPanel.open,#ppMaterialFormPanel.open'))delete document.body.dataset.ppModalOpen;}
 function setWorkspaceNavigation(section){document.querySelectorAll('[data-workspace-section]').forEach(button=>{const active=button.dataset.workspaceSection===section;if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});}
 window.__ppOpenWorkspaceProjects=()=>open();
 window.__ppCloseWorkspaceProjects=()=>close();
@@ -200,7 +200,7 @@ function open(){
 @keyframes ppProjectUpdated{0%{transform:scale(1)}45%{transform:scale(1.012)}100%{transform:scale(1)}}
 `;document.head.appendChild(style);
  }
- panel.classList.add('open');document.body.style.overflow='hidden';setWorkspaceNavigation('projects');render();
+ panel.classList.add('open');document.body.dataset.ppModalOpen='true';document.body.style.overflow='hidden';setWorkspaceNavigation('projects');render();
  const count=document.getElementById('ppProjectCount');if(count)count.textContent=read().length+' saved '+(read().length===1?'project':'projects');
  hydrateProjects().then(projects=>{
    render();
