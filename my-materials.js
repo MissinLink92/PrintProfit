@@ -322,6 +322,7 @@ document.addEventListener('change',e=>{
 });
 document.addEventListener('input',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
 document.addEventListener('change',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
+document.addEventListener('click',e=>{if(e.target.closest('#calc'))queueMicrotask(syncWorkshopUsage)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');document.getElementById('ppMaterialsPanel')?.classList.remove('open');closePrinterForm();document.body.style.overflow=''}});
 // Box 3 remains clean; the Material Library can be surfaced elsewhere.
 })();
