@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PrintProfit — 3D Printing Cost & Pricing Calculator</title>
+<meta name="description" content="Free 3D printing cost and pricing calculator for filament and resin. Calculate material, electricity, labour, printer costs, selling fees and profit.">
 <link rel="icon" type="image/svg+xml" href="./assets/printprofit-favicon-orange.svg?v=1">
 <link rel="apple-touch-icon" href="./assets/printprofit-app-icon-orange.svg?v=1">
 <meta name="theme-color" content="#071018">
@@ -39,6 +40,7 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 </style>
 </head>
 <body aria-busy="true">
+<main id="main-content">
 <div id="ppLoading" class="pp-loading" role="status" aria-live="polite">
 <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit" width="240">
 <p id="ppLoadingMessage">Loading your calculator…</p>
@@ -46,6 +48,7 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 </div>
 <noscript><style>.pp-loading{display:none}</style><p>Please enable JavaScript to use the PrintProfit calculator.</p></noscript>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261004-nightly1" style="width:100%;border:0;display:block"></iframe>
+</main>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
