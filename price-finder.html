@@ -274,6 +274,9 @@ body .tools input,body .tools select,body .extra-tools input,body .extra-tools s
 .table-compare-check.compare-check:checked:after{font-size:10px!important}
 
 /* Easier to scan category, date, and product details */
+.checked-date{display:inline-block;white-space:nowrap}
+.product-card .mini:last-child strong{white-space:nowrap}
+
 .kind{font-size:11px!important;padding:6px 9px!important;white-space:nowrap;color:#e4edf2!important}
 .checked{min-width:118px;white-space:nowrap;color:#e2edf1!important;font-size:12px!important}
 .fresh{font-size:9px!important;color:#bfd0d7!important}
@@ -504,7 +507,7 @@ function compareValue(x,label){
  if(label==='Price')return money(x.price);
  if(label==='Unit cost')return x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—';
  if(label==='Availability')return String(x.availability||'Check retailer');
- if(label==='Checked')return esc(formatDate(x.updated));
+ if(label==='Checked')return '<span class="checked-date">'+esc(formatDate(x.updated))+'</span>';
  if(label==='Live listing')return '<a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a>';
  return '—';
 }
