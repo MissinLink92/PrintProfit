@@ -67,16 +67,13 @@
     const steps=[...progress.querySelectorAll('.pp-step')],ids=['details','machine','costs','results'];
     /* Measure every stage once and reserve enough workspace height for the tallest one. */
     function stabiliseWorkspace(){
-      const current=Object.values(panels).find(panel=>panel.classList.contains('active'))||panels.details;
-      const previous={};
-      Object.values(panels).forEach(panel=>previous[panel.dataset.panel]=panel.classList.contains('active'));
+      const list=Object.values(panels);
+      const previous=new Map(list.map(panel=>[panel,panel.classList.contains('active')]));
+      // Batch visibility changes before measuring so the browser performs one layout pass.
+      list.forEach(panel=>panel.classList.add('active'));
       let max=0;
-      Object.values(panels).forEach(panel=>{
-        Object.values(panels).forEach(p=>p.classList.remove('active'));
-        panel.classList.add('active');
-        max=Math.max(max,panel.offsetHeight,panel.scrollHeight);
-      });
-      Object.values(panels).forEach(panel=>panel.classList.toggle('active',!!previous[panel.dataset.panel]));
+      list.forEach(panel=>{max=Math.max(max,panel.offsetHeight,panel.scrollHeight);});
+      list.forEach(panel=>panel.classList.toggle('active',previous.get(panel)));
       workspace.style.minHeight=Math.ceil(max)+'px';
     }
     stabiliseWorkspace();
