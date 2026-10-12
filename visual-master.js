@@ -27,9 +27,9 @@ top.id='ppVisualMaster';
 top.setAttribute('aria-label','PrintProfit introduction');
 
 top.innerHTML='<header class="pvm-header"><a class="pvm-brand" href="#home"><img src="./assets/printprofit-logo-orange-compact.svg?v=1" alt="PrintProfit"><span class="pvm-brand-fallback">PrintProfit</span></a>'+
-'<nav class="pvm-nav" aria-label="PrintProfit navigation"><button type="button" data-a="home"><span class="pvm-icon">'+svg('home')+'</span>Home</button><button type="button" data-a="workshop" data-material-open><span class="pvm-icon">'+svg('printer')+'</span>My Workshop</button><button type="button" data-a="projects"><span class="pvm-icon">'+svg('folder')+'</span>My Projects</button><button type="button" data-a="compare"><span class="pvm-icon">'+svg('compare')+'</span>Compare Products</button><button type="button" data-a="guide"><span class="pvm-icon">'+svg('book')+'</span>Guide &amp; Help</button><button type="button" data-a="settings"><span class="pvm-icon">'+svg('gear')+'</span>Settings</button></nav>'+
+'<nav class="pvm-nav" aria-label="PrintProfit navigation"><button type="button" data-a="home"><span class="pvm-icon">'+svg('home')+'</span>Home</button><button type="button" data-a="workspace"><span class="pvm-icon">'+svg('folder')+'</span>My Workspace</button><button type="button" data-a="compare"><span class="pvm-icon">'+svg('compare')+'</span>Compare Products</button><button type="button" data-a="guide"><span class="pvm-icon">'+svg('book')+'</span>Guide &amp; Help</button><button type="button" data-a="settings"><span class="pvm-icon">'+svg('gear')+'</span>Settings</button></nav>'+
 '<div class="pvm-prefs"><label class="pvm-dark"><span>◐</span><b>Dark Mode</b><input id="pvmDarkMode" type="checkbox"><i></i></label><label class="pvm-language"><span class="pvm-flag"></span><select id="pvmLanguage"><option value="en">EN</option><option value="pl">PL</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="nl">NL</option><option value="pt">PT</option><option value="cs">CS</option><option value="sv">SV</option><option value="da">DA</option></select><em>⌄</em></label></div></header>'+
-'<div class="pvm-hero"><img class="pvm-bg" src="./assets/hero-hd.webp?v=1" alt="" aria-hidden="true" fetchpriority="high" decoding="async"><div class="pvm-overlay"></div><div class="pvm-copy"><div class="pvm-kicker">3D PRINTING PRICING, MADE SIMPLE</div><h1>Know what it costs.<br><strong>Know what to charge.</strong></h1><p>Accurate 3D printing cost and pricing calculations to help you<br class="pvm-desktop"> price with confidence and maximise your profit.</p><div class="pvm-actions"><button type="button" class="pvm-primary" data-a="calculate"><span>'+svg('calculator')+'</span>Start Calculating <b>›</b></button><button type="button" class="pvm-projects" data-a="projects"><span>'+svg('folder')+'</span>My Projects</button></div></div>'+
+'<div class="pvm-hero"><img class="pvm-bg" src="./assets/hero-hd.webp?v=1" alt="" aria-hidden="true" fetchpriority="high" decoding="async"><div class="pvm-overlay"></div><div class="pvm-copy"><div class="pvm-kicker">3D PRINTING PRICING, MADE SIMPLE</div><h1>Know what it costs.<br><strong>Know what to charge.</strong></h1><p>Accurate 3D printing cost and pricing calculations to help you<br class="pvm-desktop"> price with confidence and maximise your profit.</p><div class="pvm-actions"><button type="button" class="pvm-primary" data-a="calculate"><span>'+svg('calculator')+'</span>Start Calculating <b>›</b></button><button type="button" class="pvm-projects" data-a="workspace"><span>'+svg('folder')+'</span>My Workspace</button></div></div>'+
 '<div class="pvm-tagline pvm-hero-tagline">Print Smarter.<br>Price Better.<br>Profit More.</div></div>'+
 '<div class="pvm-journey"><button type="button" data-stage="details"><span class="n one">1</span><span class="jicon">'+svg('model')+'</span><span><strong>Your Model</strong><small>Upload your print &amp; view its data</small></span></button><em>→</em><button type="button" data-stage="machine"><span class="n two">2</span><span class="jicon">'+svg('printsetup')+'</span><span><strong>Print Setup</strong><small>Choose your printer &amp; material</small></span></button><em>→</em><button type="button" data-stage="costs"><span class="n three">3</span><span class="jicon">'+svg('costs')+'</span><span><strong>Costs &amp; Fees</strong><small>Add your business costs</small></span></button><em>→</em><button type="button" data-stage="results"><span class="n four">4</span><span class="jicon">'+svg('results')+'</span><span><strong>Results</strong><small>Review cost, price &amp; profit</small></span></button></div>';
 
@@ -49,8 +49,7 @@ function setCurrentNav(key){
 }
 function syncNavToOpenSection(){
   const activeKey=document.querySelector('#ppSettingsPanel.open')?'settings':
-    document.querySelector('#ppMaterialsPanel.open')?'workshop':
-    document.querySelector('#ppProjectsPanel.open')?'projects':
+    document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open')?'workspace':
     document.querySelector('#ppGuidePanel.open')?'guide':'home';
   setCurrentNav(activeKey);
 }
@@ -130,13 +129,14 @@ window.addEventListener('pageshow',()=>{setFlag();setTimeout(setFlag,50);setTime
 
 top.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>{
 const a=b.getAttribute('data-a');
-if(['home','workshop','projects','compare','guide','settings'].includes(a))setCurrentNav(a);
+if(['home','workspace','compare','guide','settings'].includes(a))setCurrentNav(a);
 else if(a==='calculate')setCurrentNav('home');
 if(a==='home')window.scrollTo({top:0,behavior:'smooth'});
 else if(a==='calculate')goStage('details');
 else if(a==='compare')window.top.location.href='./price-finder.html';
 else if(a==='guide'&&typeof window.__openPrintProfitGuide==='function')window.__openPrintProfitGuide();
 else if(a==='settings'&&typeof window.__openPrintProfitSettings==='function')window.__openPrintProfitSettings();
+else if(a==='workspace'&&typeof window.__ppOpenWorkspaceProjects==='function')window.__ppOpenWorkspaceProjects();
 else if(a==='projects'){b.setAttribute('data-target','projects');b.dispatchEvent(new Event('project-launch',{bubbles:true}))}
 }));
 top.querySelector('[data-a="projects"]')?.addEventListener('project-launch',()=>{const proxy=document.createElement('button');proxy.type='button';proxy.dataset.target='projects';proxy.hidden=true;document.body.appendChild(proxy);proxy.click();proxy.remove();});
