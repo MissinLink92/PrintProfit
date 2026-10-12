@@ -6,19 +6,23 @@ window.__ppWorkshopAccountSync=true;
 const CONFIG=window.PRINTPROFIT_FIREBASE_CONFIG||{};
 const MATERIAL_KEY='printprofit.materials.v1';
 const PRINTER_KEY='printprofit.workshop-printers.v1';
+const PROJECT_KEY='printprofit.projects.v1';
+const PROJECT_OWNER_KEY='printprofit.projects.owner.v1';
+const PROJECT_CACHE_PREFIX='printprofit.projects.user-cache.v1.';
 const OWNER_KEY='printprofit.workshop.owner.v1';
 const STATE_PREFIX='printprofit.workshop.sync-state.v1.';
 const CACHE_PREFIX='printprofit.workshop.user-cache.v1.';
-const IMPORT_CHOICE_PREFIX='printprofit.workshop.import-choice.v1.';
+const IMPORT_CHOICE_PREFIX='printprofit.workshop.import-choice.v2.';
 const FIREBASE_VERSION='12.19.0';
-const TERMS_VERSION='2026-10-12-v1';
-const PRIVACY_VERSION='2026-10-12-v1';
-const ACCEPTANCE_DOCUMENT_ID='acceptance-2026-10-12-v1';
+const TERMS_VERSION='2026-10-12-v2';
+const PRIVACY_VERSION='2026-10-12-v2';
+const ACCEPTANCE_DOCUMENT_ID='acceptance-2026-10-12-v2';
 let auth=null,db=null,sdk=null,activeUser=null,initPromise=null,accountHostReady=false,legalAccepted=false,creatingAccount=false,legalCheckGeneration=0,localImportPending=false;
-let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false,localChangeVersion=0;
+let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false,deletingAccount=false,activeSyncCount=0,localChangeVersion=0;
 
 const isConfigured=()=>Boolean(CONFIG.apiKey&&CONFIG.authDomain&&CONFIG.projectId&&CONFIG.appId);
 const ownerId=()=>{try{return localStorage.getItem(OWNER_KEY)||'guest'}catch(e){return'guest'}};
+const projectOwnerId=()=>{try{return localStorage.getItem(PROJECT_OWNER_KEY)||'guest'}catch(e){return'guest'}};
 const readJson=(key,fallback)=>{try{const value=JSON.parse(localStorage.getItem(key)||'null');return value===null?fallback:value}catch(e){return fallback}};
 const readList=key=>{const value=readJson(key,[]);return Array.isArray(value)?value:[]};
 const readWorkshop=()=>({materials:readList(MATERIAL_KEY),printers:readList(PRINTER_KEY)});
@@ -31,7 +35,7 @@ const writeWorkshop=value=>{
 };
 const stateKey=scope=>STATE_PREFIX+scope;
 const cacheKey=uid=>CACHE_PREFIX+uid;
-const readSyncState=scope=>{const state=readJson(stateKey(scope),{});return{pending:Boolean(state&&state.pending),deleted:{materials:Array.isArray(state?.deleted?.materials)?state.deleted.materials:[],printers:Array.isArray(state?.deleted?.printers)?state.deleted.printers:[]}}};
+const readSyncState=scope=>{const state=readJson(stateKey(scope),{});return{pending:Boolean(state&&state.pending),deleted:{materials:Array.isArray(state?.deleted?.materials)?state.deleted.materials:[],printers:Array.isArray(state?.deleted?.printers)?state.deleted.printers:[],projects:Array.isArray(state?.deleted?.projects)?state.deleted.projects:[]}}};
 const writeSyncState=(scope,state)=>{try{localStorage.setItem(stateKey(scope),JSON.stringify(state));return true}catch(e){return false}};
 const readCache=uid=>readJson(cacheKey(uid),null);
 const writeCache=(uid,value)=>{try{localStorage.setItem(cacheKey(uid),JSON.stringify(value));return true}catch(e){return false}};
@@ -71,18 +75,18 @@ function ensureAccountUI(){
  host.innerHTML=
   '<section class="pp-account-card" aria-labelledby="ppAccountTitle">'+
    '<div class="pp-account-heading"><div><span class="pp-account-kicker">ACCOUNT SYNC</span><h3 id="ppAccountTitle">Take your workshop to any device</h3><div id="ppAccountStatus" class="pp-account-status"></div></div><span class="pp-account-badge" id="ppAccountBadge">LOCAL</span></div>'+
-   '<div id="ppAccountNotConfigured" class="pp-account-not-configured" hidden>Cloud accounts are being connected. Your printer and material profiles will continue saving in this browser.</div>'+
+   '<div id="ppAccountNotConfigured" class="pp-account-not-configured" hidden>Cloud accounts are being connected. Your printer, material and project data will continue saving in this browser.</div>'+
    '<div id="ppAccountSignedOut" class="pp-account-fields">'+
     '<div class="pp-account-signup-help">To create an account, enter a valid email and a password of at least 8 characters, then select both boxes below. Verify your email before signing in.</div>'+
     '<label>Email address<input id="ppAccountEmail" type="email" autocomplete="email" placeholder="you@example.com"></label>'+
     '<label>Password<input id="ppAccountPassword" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters"></label>'+
-    '<div class="pp-account-consents"><span>For new accounts:</span><label><input id="ppAccountTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountSyncConsent" type="checkbox"><span>I choose to sync printer and material profiles using Firebase. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label></div>'+
+    '<div class="pp-account-consents"><span>For new accounts:</span><label><input id="ppAccountTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountSyncConsent" type="checkbox"><span>I choose to sync printer and material profiles and saved project settings and analysis details using Firebase. Uploaded 3D model files stay on this device. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label></div>'+
     '<div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="sign-in">Sign in</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-up">Create account</button></div>'+
     '<div class="pp-account-links"><button type="button" data-pp-account-action="reset-password">Forgot password?</button></div>'+
    '</div>'+
-   '<div id="ppAccountSignedIn" class="pp-account-signed-in" hidden><span id="ppAccountEmailLabel"></span><div id="ppAccountLegalPending" class="pp-account-legal-pending" hidden><strong>One-time policy check</strong><p>Review the current terms and choose whether to sync your printer and material profiles. You can delete your account without accepting.</p><label><input id="ppAccountExistingTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountExistingSync" type="checkbox"><span>I choose to sync printer and material profiles using Firebase. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label><button type="button" class="pp-account-primary" data-pp-account-action="accept-current-terms">Agree &amp; enable sync</button></div><div id="ppAccountLocalImportPending" class="pp-account-legal-pending" hidden><strong>Profiles saved on this device</strong><p>This browser has local profiles. Choose whether to copy them into your account. Only import them if they belong to you.</p><div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="import-local-profiles">Import profiles</button><button type="button" class="pp-account-secondary" data-pp-account-action="skip-local-import">Keep them on this device</button></div></div><div class="pp-account-actions"><button type="button" class="pp-account-secondary" data-pp-account-action="sync">Sync now</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-out">Sign out</button></div><button type="button" class="pp-account-danger" data-pp-account-action="delete-account">Delete account…</button><div id="ppAccountDeleteConfirm" class="pp-account-delete-confirm" hidden><p>This removes your Firebase account and cloud workshop profiles. It cannot erase copies in other browsers or delete saved Projects. Clear PrintProfit&#39;s site data on your other devices too. Enter your password to continue.</p><label for="ppAccountDeletePassword">Password</label><input id="ppAccountDeletePassword" type="password" autocomplete="current-password" placeholder="Your account password"><div class="pp-account-actions"><button type="button" class="pp-account-delete-final" data-pp-account-action="confirm-delete-account">Permanently delete</button><button type="button" class="pp-account-secondary" data-pp-account-action="cancel-delete-account">Cancel</button></div></div></div>'+
+   '<div id="ppAccountSignedIn" class="pp-account-signed-in" hidden><span id="ppAccountEmailLabel"></span><div id="ppAccountLegalPending" class="pp-account-legal-pending" hidden><strong>One-time policy check</strong><p>Review the current terms and choose whether to sync your profiles and saved projects. You can delete your account without accepting.</p><label><input id="ppAccountExistingTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountExistingSync" type="checkbox"><span>I choose to sync printer and material profiles and saved project settings and analysis details using Firebase. Uploaded 3D model files stay on this device. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label><button type="button" class="pp-account-primary" data-pp-account-action="accept-current-terms">Agree &amp; enable sync</button></div><div id="ppAccountLocalImportPending" class="pp-account-legal-pending" hidden><strong>Profiles and projects saved on this device</strong><p>This browser has local profiles and projects. Choose whether to copy them into your account. Only import them if they belong to you.</p><div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="import-local-profiles">Import profiles &amp; projects</button><button type="button" class="pp-account-secondary" data-pp-account-action="skip-local-import">Keep them on this device</button></div></div><div class="pp-account-actions"><button type="button" class="pp-account-secondary" data-pp-account-action="sync">Sync now</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-out">Sign out</button></div><button type="button" class="pp-account-danger" data-pp-account-action="delete-account">Delete account…</button><div id="ppAccountDeleteConfirm" class="pp-account-delete-confirm" hidden><p>This removes your Firebase account and cloud profiles and projects. It cannot erase local copies or uploaded model files on other devices. Enter your password to continue.</p><label for="ppAccountDeletePassword">Password</label><input id="ppAccountDeletePassword" type="password" autocomplete="current-password" placeholder="Your account password"><div class="pp-account-actions"><button type="button" class="pp-account-delete-final" data-pp-account-action="confirm-delete-account">Permanently delete</button><button type="button" class="pp-account-secondary" data-pp-account-action="cancel-delete-account">Cancel</button></div></div></div>'+
    '<p id="ppAccountMessage" class="pp-account-message" role="status" aria-live="polite"></p>'+
-   '<small class="pp-account-footnote">Your password is handled securely by Firebase. Printer and material profiles are private to your account.</small>'+
+   '<small class="pp-account-footnote">Your password is handled securely by Firebase. Synced profiles and project settings are private to your account. Uploaded 3D model files stay on this device.</small>'+
    '<a class="pp-account-privacy-link" href="./privacy.html" target="_top">Privacy Notice</a><a class="pp-account-privacy-link" href="./terms.html" target="_top">Terms of Use</a>'+
   '</section>';
  if(!document.getElementById('ppAccountStyles')){
@@ -109,16 +113,17 @@ function updateAccountUI(){
  const syncButton=document.querySelector('#ppWorkshopAccount [data-pp-account-action="sync"]');if(syncButton)syncButton.disabled=!legalAccepted||localImportPending;
  const emailLabel=document.getElementById('ppAccountEmailLabel');if(emailLabel)emailLabel.textContent=activeUser?activeUser.email||'Signed in':'';
  if(!configured)setStatus('Saved on this device','Add the Firebase project settings to enable secure account sync.');
- else if(activeUser&&!legalAccepted)setStatus('Review the current terms','Accept the Terms and choose profile sync before cloud sync is enabled.');
- else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles into your account.');
- else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles sync with your account.');
- else setStatus('Saved in this browser','Create an account or sign in to sync your workshop between devices.');
+ else if(activeUser&&!legalAccepted)setStatus('Review the current terms','Accept the Terms and choose whether to sync profiles and projects before cloud sync is enabled.');
+ else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles and projects into your account.');
+ else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles and saved projects sync with your account. Uploaded 3D model files stay on this device.');
+ else setStatus('Saved in this browser','Create an account or sign in to sync your profiles and projects between devices.');
 }
 function setBusy(value){
  document.querySelectorAll('#ppWorkshopAccount [data-pp-account-action]').forEach(button=>{button.disabled=Boolean(value)});
 }
 function errorText(error){
  const code=String(error?.code||'');
+ if(String(error?.message||'').startsWith('Project “'))return error.message;
  if(code.includes('email-already-in-use'))return'That email already has an account. Sign in to request another verification email if needed.';
  if(code.includes('invalid-credential')||code.includes('user-not-found')||code.includes('wrong-password'))return'Email or password was not recognised.';
  if(code.includes('invalid-email'))return'Enter a valid email address.';
@@ -140,13 +145,14 @@ function legalDocument(user){return sdk.firestore.doc(db,'users',user.uid,'legal
 async function hasCurrentLegalAcceptance(user){
  const snapshot=await sdk.firestore.getDoc(legalDocument(user));
  const data=snapshot.exists()?(snapshot.data()||{}):{};
- return data.termsVersion===TERMS_VERSION&&data.privacyVersion===PRIVACY_VERSION&&data.syncConsent===true;
+ return data.termsVersion===TERMS_VERSION&&data.privacyVersion===PRIVACY_VERSION&&data.syncConsent===true&&data.projectSyncConsent===true;
 }
 async function writeCurrentLegalAcceptance(user){
  await sdk.firestore.setDoc(legalDocument(user),{
   termsVersion:TERMS_VERSION,
   privacyVersion:PRIVACY_VERSION,
   syncConsent:true,
+  projectSyncConsent:true,
   acceptedAt:sdk.firestore.serverTimestamp()
  });
 }
@@ -164,7 +170,7 @@ async function initializeFirebase(){
   const app=appSdk.getApps().find(item=>item.name==='[DEFAULT]')||appSdk.initializeApp(CONFIG);
   auth=authSdk.getAuth(app);db=firestoreSdk.getFirestore(app);
   sdk={auth:authSdk,firestore:firestoreSdk};
-  authSdk.onAuthStateChanged(auth,user=>{
+  authSdk.onAuthStateChanged(auth,async user=>{
    const generation=++legalCheckGeneration;
    if(user&&!user.emailVerified){
     activeUser=null;legalAccepted=false;localImportPending=false;handledUid='';
@@ -175,10 +181,19 @@ async function initializeFirebase(){
     }
     return;
    }
-   if(user&&!switchLocalWorkspaceToUser(user)){
-    activeUser=null;legalAccepted=false;localImportPending=false;handledUid='';updateAccountUI();
-    setMessage('We could not safely separate this browser’s profiles. Sign out, keep the profiles on this device and try again after freeing browser storage.',true);
-    authSdk.signOut(auth).catch(()=>{});return;
+   if(user){
+    let projectsSeparated=true;
+    try{if(typeof window.__ppSetProjectWorkspaceOwner==='function')projectsSeparated=await window.__ppSetProjectWorkspaceOwner(user.uid)}catch(error){projectsSeparated=false;console.warn('PrintProfit project workspace switch failed:',error)}
+    if(generation!==legalCheckGeneration||auth.currentUser?.uid!==user.uid)return;
+    if(!projectsSeparated){
+     activeUser=null;legalAccepted=false;localImportPending=false;handledUid='';updateAccountUI();
+     setMessage('We could not safely separate this browser’s saved projects. Keep the projects on this device and try again after freeing browser storage.',true);
+     authSdk.signOut(auth).catch(()=>{});return;
+    }
+    if(!switchLocalWorkspaceToUser(user)){
+     activeUser=null;legalAccepted=false;localImportPending=false;handledUid='';updateAccountUI();
+     setMessage('We could not safely separate this browser’s profiles. Sign out, keep the profiles on this device and try again after freeing browser storage.',true);
+     authSdk.signOut(auth).catch(()=>{});return;
    }
    activeUser=user||null;legalAccepted=false;localImportPending=false;
    updateAccountUI();
@@ -186,19 +201,19 @@ async function initializeFirebase(){
    hasCurrentLegalAcceptance(activeUser).then(accepted=>{
     if(generation!==legalCheckGeneration||auth.currentUser?.uid!==user.uid)return;
     legalAccepted=accepted;updateAccountUI();
-    if(!accepted){handledUid='';setMessage('Review the current Terms and choose whether to enable profile sync.',false);return}
+    if(!accepted){handledUid='';setMessage('Review the current Terms and Privacy Notice and choose whether to enable profile and project sync.',false);return}
     if(needsLocalImportDecision(user)){
      localImportPending=true;handledUid='';updateAccountUI();
-     setStatus('Choose what to sync','This browser has profiles saved locally. Import only if they belong to you.');
-     setMessage('Choose whether to copy local profiles into this account, or keep them on this device.',false);return;
+     setStatus('Choose what to sync','This browser has profiles and projects saved locally. Import only if they belong to you.');
+     setMessage('Choose whether to copy local profiles and projects into this account, or keep them on this device.',false);return;
     }
     localImportPending=false;
     if(handledUid!==user.uid){
      handledUid=user.uid;
-     setStatus('Syncing workshop','Loading your printer and material profiles.');
+     setStatus('Syncing workshop','Loading your profiles and saved projects.');
      syncWorkshop(user).catch(error=>{
       console.warn('PrintProfit account sync failed:',error);
-      setStatus('Sync needs attention','Your local profiles are still available on this device.');
+      setStatus('Sync needs attention','Your local profiles and projects are still available on this device.');
       setMessage(errorText(error),true);
      });
     }
@@ -206,7 +221,7 @@ async function initializeFirebase(){
     if(generation!==legalCheckGeneration||auth.currentUser?.uid!==user.uid)return;
     console.warn('PrintProfit legal acceptance check failed:',error);
     legalAccepted=false;handledUid='';updateAccountUI();
-    setMessage('We could not verify your current account terms. Your profiles remain on this device; try again later.',true);
+    setMessage('We could not verify your current account terms. Your profiles and projects remain on this device; try again later.',true);
    });
   });
   return{app,auth,db};
@@ -223,7 +238,7 @@ function rememberDeletion(state,kind,before,after){
 function handleLocalChange(event){
  localChangeVersion++;
  const detail=event.detail||{},scope=ownerId(),state=readSyncState(scope);
- if((detail.kind==='materials'||detail.kind==='printers')&&Array.isArray(detail.before)&&Array.isArray(detail.after)){
+ if((detail.kind==='materials'||detail.kind==='printers'||detail.kind==='projects')&&Array.isArray(detail.before)&&Array.isArray(detail.after)){
   rememberDeletion(state,detail.kind,detail.before,detail.after);
  }
  state.pending=true;writeSyncState(scope,state);
@@ -232,7 +247,7 @@ function handleLocalChange(event){
   setStatus('Saving workshop','Sending your latest changes to your account.');
   queueSync();
  }else{
-  setStatus('Saved on this device','Sign in whenever you want to sync these profiles.');
+  setStatus('Saved on this device','Sign in whenever you want to sync your profiles and projects.');
  }
 }
 const emptyWorkshop=()=>({materials:[],printers:[]});
@@ -241,6 +256,22 @@ const readLocalImportChoice=uid=>{try{return localStorage.getItem(importChoiceKe
 function saveLocalImportChoice(uid,choice){try{localStorage.setItem(importChoiceKey(uid),choice);return true}catch(e){return false}}
 function invalidateLocalImportChoices(){try{for(let i=localStorage.length-1;i>=0;i--){const key=localStorage.key(i);if(key&&key.startsWith(IMPORT_CHOICE_PREFIX))localStorage.removeItem(key)}}catch(e){}}
 function hasProfiles(value){return normalizeList(value?.materials).length>0||normalizeList(value?.printers).length>0}
+const readProjectsForOwner=owner=>{
+ try{
+  if(typeof window.__ppGetProjectWorkspaceForOwner==='function')return window.__ppGetProjectWorkspaceForOwner(owner)||[];
+  const value=readJson(PROJECT_CACHE_PREFIX+(owner||'guest'),null);
+  return Array.isArray(value)?value:[];
+ }catch(e){return[]}
+};
+const currentProjects=()=>{
+ try{const value=typeof window.__ppGetProjectWorkspace==='function'?window.__ppGetProjectWorkspace():readList(PROJECT_KEY);return Array.isArray(value)?value:[]}
+ catch(e){return readList(PROJECT_KEY)}
+};
+const hasProjects=value=>Array.isArray(value)&&value.length>0;
+const writeProjectsFromSync=async projects=>{
+ if(typeof window.__ppSetProjectsFromSync==='function')return window.__ppSetProjectsFromSync(projects);
+ try{localStorage.setItem(PROJECT_KEY,JSON.stringify(projects));return true}catch(e){return false}
+};
 function switchLocalWorkspaceToUser(user){
  const currentOwner=ownerId();
  if(currentOwner===user.uid)return true;
@@ -256,29 +287,105 @@ function switchLocalWorkspaceToUser(user){
 }
 function needsLocalImportDecision(user){
  if(readLocalImportChoice(user.uid))return false;
- const guest=readCache('guest');
- if(!hasProfiles(guest)){
+ const guest=readCache('guest'),guestProjects=readProjectsForOwner('guest');
+ if(!hasProfiles(guest)&&!hasProjects(guestProjects)){
   saveLocalImportChoice(user.uid,'skip');
   return false;
  }
  return true;
 }
-function readSyncCache(uid){return readCache(uid)||null}
+ function readSyncCache(uid){return readCache(uid)||null}
 function sameWorkshop(a,b){return JSON.stringify(a)===JSON.stringify(b)}
-const emptyDeleted=()=>({materials:[],printers:[]});
+const emptyDeleted=()=>({materials:[],printers:[],projects:[]});
 const mergeDeleted=(...sets)=>({
  materials:[...new Set(sets.flatMap(set=>Array.isArray(set?.materials)?set.materials:[]).map(String))],
- printers:[...new Set(sets.flatMap(set=>Array.isArray(set?.printers)?set.printers:[]).map(String))]
+ printers:[...new Set(sets.flatMap(set=>Array.isArray(set?.printers)?set.printers:[]).map(String))],
+ projects:[...new Set(sets.flatMap(set=>Array.isArray(set?.projects)?set.projects:[]).map(String))]
 });
-const sameDeleted=(a,b)=>JSON.stringify([...a.materials].sort())===JSON.stringify([...b.materials].sort())&&JSON.stringify([...a.printers].sort())===JSON.stringify([...b.printers].sort());
+const sameDeleted=(a,b)=>JSON.stringify([...a.materials].sort())===JSON.stringify([...b.materials].sort())&&JSON.stringify([...a.printers].sort())===JSON.stringify([...b.printers].sort())&&JSON.stringify([...(a.projects||[])].sort())===JSON.stringify([...(b.projects||[])].sort());
 function cloudWorkshop(data){
  return{materials:normalizeList(data?.materials),printers:normalizeList(data?.printers)};
 }
 function cloudDeleted(data){
  return{materials:Array.isArray(data?.deletedMaterials)?data.deletedMaterials.map(String):[],printers:Array.isArray(data?.deletedPrinters)?data.deletedPrinters.map(String):[]};
 }
+const MAX_SYNCED_PROJECT_BYTES=700*1024;
+function sanitizeProject(project){
+ if(!project||typeof project!=='object'||!project.id)return null;
+ const clean={
+  id:String(project.id),name:String(project.name||'My project'),updated:Number(project.updated)||Date.now(),
+  material:String(project.material||''),hours:String(project.hours||''),used:String(project.used||''),currency:String(project.currency||''),
+  data:project.data&&typeof project.data==='object'?JSON.parse(JSON.stringify(project.data)): {},
+  file:project.file&&typeof project.file==='object'?{name:String(project.file.name||''),type:String(project.file.type||''),lastModified:Number(project.file.lastModified)||0}:null,
+  fileData:project.fileData&&typeof project.fileData==='object'?JSON.parse(JSON.stringify(project.fileData)):{},
+  fileStatus:String(project.fileStatus||'')
+ };
+ const bytes=value=>{const json=JSON.stringify(value);try{return new TextEncoder().encode(json).length}catch(e){return json.length*3}};
+ if(bytes(clean)>MAX_SYNCED_PROJECT_BYTES){
+  delete clean.fileData;
+  clean.fileStatus='Project settings synced. Detailed slicer data was too large to sync; the original model file remains on its device.';
+ }
+ if(bytes(clean)>MAX_SYNCED_PROJECT_BYTES)throw new Error('Project “'+clean.name+'” is too large to sync. Remove extra model analysis data and try again.');
+ return clean;
+}
+async function syncProjects(user,deletedIds,importGuest){
+ const projectSyncVersion=localChangeVersion;
+ const localRaw=currentProjects();
+ const guestRaw=importGuest?readProjectsForOwner('guest'):[];
+ const local=localRaw.map(sanitizeProject).filter(Boolean);
+ const guest=guestRaw.map(sanitizeProject).filter(Boolean);
+ const localRawById=new Map();
+ [...guestRaw,...localRaw].forEach(project=>{if(!project||!project.id)return;const old=localRawById.get(String(project.id));if(!old||Number(project.updated||0)>=Number(old.updated||0))localRawById.set(String(project.id),project)});
+ const byId=new Map();
+ [...guest,...local].forEach(project=>{const old=byId.get(project.id);if(!old||project.updated>=old.updated)byId.set(project.id,project)});
+ const projectCollection=sdk.firestore.collection(db,'users',user.uid,'projects');
+ const snapshot=await sdk.firestore.getDocs(projectCollection);
+ const cloud=new Map();
+ snapshot.forEach(doc=>{
+  const data=doc.data()||{};
+  cloud.set(doc.id,{id:doc.id,deleted:data.deleted===true,updated:Number(data.updated)||0,project:data.project&&typeof data.project==='object'?sanitizeProject(data.project):null});
+ });
+ const next=new Map(cloud),now=Date.now();
+ const locallyDeleted=new Set((deletedIds||[]).map(String));
+ locallyDeleted.forEach(id=>next.set(id,{id,deleted:true,updated:now,project:null}));
+ byId.forEach(project=>{
+  if(locallyDeleted.has(project.id))return;
+  const remote=cloud.get(project.id);
+  if(!remote||project.updated>remote.updated||(!remote.deleted&&project.updated===remote.updated&&JSON.stringify(project)!==JSON.stringify(remote.project)))next.set(project.id,{id:project.id,deleted:false,updated:project.updated,project});
+ });
+ if(deletingAccount||signingOut||auth.currentUser?.uid!==user.uid||projectOwnerId()!==user.uid)return;
+ const writes=[];
+ next.forEach((entry,id)=>{
+  const remote=cloud.get(id);
+  if(remote&&remote.deleted===entry.deleted&&remote.updated===entry.updated&&JSON.stringify(remote.project||null)===JSON.stringify(entry.project||null))return;
+  const ref=sdk.firestore.doc(projectCollection,id);
+  writes.push({ref,data:{schemaVersion:1,updated:entry.updated,deleted:entry.deleted,...(entry.deleted?{}:{project:entry.project})}});
+ });
+ for(let offset=0;offset<writes.length;offset+=400){
+  const batch=sdk.firestore.writeBatch(db);
+  writes.slice(offset,offset+400).forEach(write=>batch.set(write.ref,write.data));
+  await batch.commit();
+ }
+ const merged=[...next.values()].filter(entry=>!entry.deleted&&entry.project).map(entry=>{
+  const localProject=localRawById.get(entry.id);
+  if(localProject?.fileData&&String(entry.project.fileStatus||'').includes('Detailed slicer data was too large to sync')){
+   return{...entry.project,fileData:localProject.fileData,fileStatus:localProject.fileStatus||entry.project.fileStatus};
+  }
+  return entry.project;
+ });
+ if(deletingAccount||signingOut||auth.currentUser?.uid!==user.uid||projectOwnerId()!==user.uid)return;
+ if(localChangeVersion===projectSyncVersion){
+  const stored=await writeProjectsFromSync(merged);
+  if(!stored)throw new Error('The synced projects could not be saved on this device.');
+ }
+}
 async function syncWorkshop(user){
- if(!user||!user.emailVerified||!legalAccepted||localImportPending)return;
+ if(!user||!user.emailVerified||!legalAccepted||localImportPending||deletingAccount)return;
+ activeSyncCount++;
+ try{return await syncWorkshopImpl(user)}finally{activeSyncCount--}
+}
+async function syncWorkshopImpl(user){
+ if(!user||!user.emailVerified||!legalAccepted||localImportPending||deletingAccount)return;
  const syncVersion=localChangeVersion;
  const currentOwner=ownerId();
  let local=readWorkshop(),scope=(currentOwner==='guest'||!currentOwner)?'guest':currentOwner;
@@ -333,6 +440,7 @@ async function syncWorkshop(user){
   });
  }catch(error){throw error}
  const next=result.next,deleted=result.deleted;
+ await syncProjects(user,pendingState.deleted.projects,readLocalImportChoice(user.uid)==='import');
  const changedDuringSync=localChangeVersion!==syncVersion;
  if(signingOut||auth.currentUser?.uid!==user.uid){
   if(!changedDuringSync){
@@ -357,7 +465,7 @@ async function syncWorkshop(user){
   writeCache('guest',emptyWorkshop());
   writeSyncState('guest',{pending:false,deleted:emptyDeleted()});
  }
- setStatus('Workshop synced','Your printer and material profiles are saved to your account.');
+ setStatus('Workshop synced','Your printer and material profiles and saved projects are in your account.');
  setMessage('Sync complete. Changes you make here will be saved automatically.',false);
 }
 function queueSync(){
@@ -382,7 +490,7 @@ function passwordValue(){return String(document.getElementById('ppAccountPasswor
 function validEmail(value){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)}
 async function handleAction(action){
  if(!isConfigured()){
-  setMessage('Account sync is not connected yet. Your profiles are still saved in this browser.',true);return;
+  setMessage('Account sync is not connected yet. Your profiles and projects are still saved in this browser.',true);return;
  }
  setBusy(true);setMessage('',false);
  try{
@@ -392,7 +500,7 @@ async function handleAction(action){
     if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
     if(password.length<8)throw Object.assign(new Error('Weak password'),{code:'auth/weak-password'});
     if(!document.getElementById('ppAccountTerms')?.checked)throw new Error('Please agree to the Terms of Use before creating an account.');
-    if(!document.getElementById('ppAccountSyncConsent')?.checked)throw new Error('Please choose whether to sync your printer and material profiles before creating an account.');
+    if(!document.getElementById('ppAccountSyncConsent')?.checked)throw new Error('Please choose whether to sync your profiles and saved project settings before creating an account.');
     creatingAccount=true;
     try{
      const credential=await sdk.auth.createUserWithEmailAndPassword(auth,email,password);
@@ -402,7 +510,7 @@ async function handleAction(action){
      try{await sdk.auth.sendEmailVerification(credential.user,{url:window.location.origin});verificationSent=true}
      catch(error){console.warn('PrintProfit verification email could not be sent:',error)}
      await sdk.auth.signOut(auth).catch(error=>console.warn('PrintProfit could not sign out the unverified account:',error));
-     if(verificationSent)setMessage(acceptanceSaved?'Account created. Check your inbox and spam folder, then verify your email before signing in.':'Account created and verification sent. After verifying, sign in and complete the one-time Terms and profile-sync check.',false);
+     if(verificationSent)setMessage(acceptanceSaved?'Account created. Check your inbox and spam folder, then verify your email before signing in.':'Account created and verification sent. After verifying, sign in and complete the one-time Terms and profile-and-project sync check.',false);
      else setMessage('Your account was created, but Firebase could not send the verification email. Check your inbox and spam folder; you can try signing in to request another email.',true);
     }finally{
      creatingAccount=false;
@@ -412,13 +520,13 @@ async function handleAction(action){
    const user=auth.currentUser;
    if(!user||!user.emailVerified)throw new Error('Sign in with a verified email before accepting the current terms.');
    if(!document.getElementById('ppAccountExistingTerms')?.checked)throw new Error('Please agree to the Terms of Use to continue.');
-   if(!document.getElementById('ppAccountExistingSync')?.checked)throw new Error('Please choose profile sync to use cloud sync.');
+   if(!document.getElementById('ppAccountExistingSync')?.checked)throw new Error('Please choose profile and project sync to use cloud sync.');
    await writeCurrentLegalAcceptance(user);
    legalAccepted=true;
    if(needsLocalImportDecision(user)){
     localImportPending=true;updateAccountUI();
-    setStatus('Choose what to sync','This browser has profiles saved locally. Import only if they belong to you.');
-    setMessage('Choose whether to copy local profiles into this account, or keep them on this device.',false);return;
+    setStatus('Choose what to sync','This browser has profiles and projects saved locally. Import only if they belong to you.');
+    setMessage('Choose whether to copy local profiles and projects into this account, or keep them on this device.',false);return;
    }
    localImportPending=false;updateAccountUI();
    setMessage('Terms accepted. Syncing your workshop…',false);
@@ -429,7 +537,7 @@ async function handleAction(action){
    const choice=action==='import-local-profiles'?'import':'skip';
    if(!saveLocalImportChoice(user.uid,choice))throw new Error('This browser could not save your choice. Please allow site storage and try again.');
    localImportPending=false;updateAccountUI();
-   setMessage(choice==='import'?'Copying your local profiles into this account…':'Keeping these profiles on this device. Syncing your account profiles…',false);
+   setMessage(choice==='import'?'Copying local profiles and projects into this account…':'Keeping these profiles and projects on this device. Syncing your account data…',false);
    if(handledUid!==user.uid)handledUid=user.uid;
    await syncWorkshop(user);
   }else if(action==='sign-in'){
@@ -443,7 +551,7 @@ async function handleAction(action){
     await sdk.auth.signOut(auth);
     setMessage(verificationSent?'That address is not verified yet. We sent another verification email; check your inbox and spam folder, then sign in again.':'That address is not verified, and Firebase could not send a verification email. Wait a little and try signing in again.',true);return;
    }
-   setMessage('Signed in. Syncing your workshop…',false);
+   setMessage('Signed in. Syncing your profiles and projects…',false);
   }else if(action==='reset-password'){
    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
    await sdk.auth.sendPasswordResetEmail(auth,email,{url:window.location.origin});
@@ -464,17 +572,31 @@ async function handleAction(action){
    if(!password){setMessage('Enter your password to continue.',true);return}
    const credential=sdk.auth.EmailAuthProvider.credential(user.email,password);
    await sdk.auth.reauthenticateWithCredential(user,credential);
+   deletingAccount=true;
+   while(activeSyncCount>0)await new Promise(resolve=>setTimeout(resolve,40));
+   const cloudProjects=await sdk.firestore.getDocs(sdk.firestore.collection(db,'users',user.uid,'projects'));
+   for(const projectDoc of cloudProjects.docs)await sdk.firestore.deleteDoc(projectDoc.ref);
    await sdk.firestore.deleteDoc(sdk.firestore.doc(db,'users',user.uid,'workshop','profiles'));
    await sdk.firestore.deleteDoc(legalDocument(user));
+   await sdk.firestore.deleteDoc(sdk.firestore.doc(db,'users',user.uid,'legal','acceptance-2026-10-12-v1'));
    legalAccepted=false;updateAccountUI();
+   if(typeof window.__ppSetProjectWorkspaceOwner==='function'){
+    const preserved=await window.__ppSetProjectWorkspaceOwner('guest',{keepCurrentLocal:true});
+    if(!preserved)throw new Error('Cloud data was removed, but local projects could not be safely preserved. Keep this page open and retry.');
+   }
    await sdk.auth.deleteUser(user);
-   try{localStorage.removeItem(cacheKey(user.uid));localStorage.removeItem(stateKey(user.uid));localStorage.removeItem(importChoiceKey(user.uid));localStorage.removeItem(OWNER_KEY)}catch(e){}
+   deletingAccount=false;
+   try{localStorage.removeItem(cacheKey(user.uid));localStorage.removeItem(stateKey(user.uid));localStorage.removeItem(importChoiceKey(user.uid));localStorage.removeItem(PROJECT_CACHE_PREFIX+user.uid);localStorage.removeItem(OWNER_KEY)}catch(e){}
    writeWorkshop(emptyWorkshop());activeUser=null;handledUid='';
-   updateAccountUI();setStatus('Account deleted','Your account and cloud workshop profiles have been deleted.');
-   setMessage('Account deleted. Your printer and material profiles were removed.',false);
+   updateAccountUI();setStatus('Account deleted','Your account and cloud profiles and projects have been deleted.');
+   setMessage('Account deleted. Your cloud profiles and projects were removed. Local projects remain on this device.',false);
   }else if(action==='sign-out'){
    const user=auth.currentUser;
    if(user){
+    if(typeof window.__ppSetProjectWorkspaceOwner==='function'){
+     const switched=await window.__ppSetProjectWorkspaceOwner('guest');
+     if(!switched)throw new Error('Saved projects could not be safely separated from this account.');
+    }
     signingOut=true;
     writeCache(user.uid,readWorkshop());
     try{localStorage.setItem(OWNER_KEY,'guest')}catch(e){}
@@ -482,17 +604,18 @@ async function handleAction(action){
    }
    try{await sdk.auth.signOut(auth)}finally{signingOut=false}
    activeUser=null;handledUid='';
-   updateAccountUI();setStatus('Signed out','Your account profiles are saved privately and return when you sign in again.');setMessage('Signed out.','');
+   updateAccountUI();setStatus('Signed out','Your account profiles and projects are saved privately and return when you sign in again.');setMessage('Signed out.','');
   }else if(action==='sync'){
    const user=auth.currentUser;
-   if(!user||!user.emailVerified){setMessage('Sign in with a verified email to sync your workshop.',true);return}
-   if(!legalAccepted){setMessage('Accept the current Terms and profile-sync notice before syncing.',true);return}
-   if(localImportPending){setMessage('Choose whether to import this browser’s profiles before syncing.',true);return}
+   if(!user||!user.emailVerified){setMessage('Sign in with a verified email to sync your profiles and projects.',true);return}
+   if(!legalAccepted){setMessage('Accept the current Terms and profile-and-project sync notice before syncing.',true);return}
+   if(localImportPending){setMessage('Choose whether to import this browser’s profiles and projects before syncing.',true);return}
    await syncWorkshop(user);
   }
  }catch(error){
   console.warn('PrintProfit account action failed:',error);
-  if(action==='confirm-delete-account'&&!legalAccepted&&auth.currentUser){setMessage('Your cloud profiles were removed, but Firebase could not finish deleting the login. Sign in again and retry, or contact Printprofit26@outlook.com.',true)}
+  if(action==='confirm-delete-account')deletingAccount=false;
+  if(action==='confirm-delete-account'&&!legalAccepted&&auth.currentUser){setMessage('Your cloud data was removed, but Firebase could not finish deleting the login. Sign in again and retry, or contact Printprofit26@outlook.com.',true)}
   else setMessage(errorText(error),true);
  }finally{setBusy(false);updateAccountUI()}
 }
@@ -504,14 +627,15 @@ document.addEventListener('pp-workshop-open',()=>{
  }
  setStatus('Checking account','Connecting securely to your workshop account.');
  initializeFirebase().then(()=>{
-  if(!activeUser)setStatus('Saved in this browser','Create an account or sign in to sync your workshop between devices.');
+  if(!activeUser)setStatus('Saved in this browser','Create an account or sign in to sync your profiles and projects between devices.');
  }).catch(error=>{
   console.warn('PrintProfit Firebase initialization failed:',error);
-  setStatus('Account service unavailable','Your local profiles remain available.');
+  setStatus('Account service unavailable','Your local profiles and projects remain available.');
   setMessage(errorText(error),true);
  });
 });
 document.addEventListener('pp-workshop-data-changed',handleLocalChange);
+ document.addEventListener('pp-projects-data-changed',handleLocalChange);
 document.addEventListener('click',event=>{
  const button=event.target.closest('#ppWorkshopAccount [data-pp-account-action]');
  if(!button)return;
