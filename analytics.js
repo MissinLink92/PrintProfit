@@ -5,7 +5,7 @@ const config=window.PRINTPROFIT_ANALYTICS||{};
 const measurementId=String(config.measurementId||'').trim();
 if(!/^G-[A-Z0-9]+$/i.test(measurementId))return;
 
-const CONSENT_KEY='pp_analytics_consent_v1';
+const CONSENT_KEY='pp_analytics_consent_v2';
 const GA_SCRIPT_ID='ppGa4Script';
 let enabled=false;
 let innerBoundDoc=null;
@@ -34,7 +34,7 @@ function loadGa(){
  if(document.getElementById(GA_SCRIPT_ID))return;
  window.dataLayer=window.dataLayer||[];
  gtag('js',new Date());
- gtag('config',measurementId,{send_page_view:true,allow_google_signals:false,allow_ad_personalization_signals:false});
+ gtag('config',measurementId,{send_page_view:true,allow_google_signals:false,allow_ad_personalization_signals:false,cookie_expires:5184000,cookie_update:false});
  const script=document.createElement('script');
  script.id=GA_SCRIPT_ID;
  script.async=true;
@@ -55,7 +55,7 @@ function ensureStyles(){
  style.id='ppAnalyticsStyles';
  style.textContent=`
 #ppAnalyticsBanner{position:fixed;left:18px;right:18px;bottom:18px;z-index:12000;max-width:760px;margin:auto;padding:16px 18px;border:1px solid #34515f;border-radius:14px;background:rgba(7,16,24,.98);color:#f5f8fb;box-shadow:0 18px 50px #0009;font:14px/1.45 Inter,Segoe UI,system-ui,sans-serif}
-#ppAnalyticsBanner strong{display:block;margin-bottom:5px;font-size:15px}#ppAnalyticsBanner p{margin:0;color:#c5d5de}
+#ppAnalyticsBanner strong{display:block;margin-bottom:5px;font-size:15px}#ppAnalyticsBanner p{margin:0;color:#c5d5de}#ppAnalyticsPrivacy{display:inline-block;margin-top:8px;color:#75d8f2;font-size:12px}
 #ppAnalyticsActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:13px}#ppAnalyticsActions button,#ppAnalyticsSettings{border:1px solid #52707f;border-radius:9px;padding:9px 12px;background:#10232f;color:#fff;font:700 12px Inter,Segoe UI,system-ui,sans-serif;cursor:pointer}
 #ppAnalyticsActions button[data-choice="accept"]{border-color:#009fef;background:#0b79b5}#ppAnalyticsActions button:hover,#ppAnalyticsSettings:hover{filter:brightness(1.1)}
 #ppAnalyticsSettings{position:fixed;left:50%;bottom:5px;transform:translateX(-50%);z-index:11990;padding:5px 9px;border-radius:8px;font-size:10px;opacity:.72}
@@ -70,7 +70,7 @@ function buildUi(){
   banner.id='ppAnalyticsBanner';
   banner.setAttribute('role','dialog');
   banner.setAttribute('aria-label','Analytics preferences');
-  banner.innerHTML=`<strong>Help us improve PrintProfit</strong><p>We'd like to use optional analytics to understand visits and which calculator features are used. We do not send uploaded filenames, model names, entered prices or free-text content to analytics.</p><div id="ppAnalyticsActions"><button type="button" data-choice="reject">Reject analytics</button><button type="button" data-choice="accept">Accept analytics</button></div>`;
+  banner.innerHTML=`<strong>Help us improve PrintProfit</strong><p>Optional analytics help us understand visits and which calculator features are used. We do not send uploaded filenames, model names, entered prices or free-text content to analytics. You can reject analytics and still use the site.</p><a id="ppAnalyticsPrivacy" href="./privacy.html">Read the Privacy Notice</a><div id="ppAnalyticsActions"><button type="button" data-choice="reject">Reject analytics</button><button type="button" data-choice="accept">Accept analytics</button></div>`;
   banner.addEventListener('click',e=>{
    const button=e.target.closest('button[data-choice]');
    if(!button)return;
