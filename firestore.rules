@@ -1,0 +1,83 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Acceptance records are versioned, immutable and limited to the account owner.
+    match /users/{userId}/legal/{acceptanceId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      allow get: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+      allow list: if false;
+      allow create: if isOwner()
+        && acceptanceId == 'acceptance-2026-10-12-v1'
+        && request.resource.data.keys().hasOnly([
+          'termsVersion',
+          'privacyVersion',
+          'syncConsent',
+          'acceptedAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'termsVersion',
+          'privacyVersion',
+          'syncConsent',
+          'acceptedAt'
+        ])
+        && request.resource.data.termsVersion == '2026-10-12-v1'
+        && request.resource.data.privacyVersion == '2026-10-12-v1'
+        && request.resource.data.syncConsent == true
+        && request.resource.data.acceptedAt == request.time;
+      allow update: if false;
+      allow delete: if isOwner() && acceptanceId == 'acceptance-2026-10-12-v1';
+    }
+
+    // Each signed-in, email-verified user with current policy acceptance can access only their own profile.
+    match /users/{userId}/workshop/profiles {
+      function isVerifiedOwner() {
+        return request.auth != null
+          && request.auth.uid == userId
+          && request.auth.token.email_verified == true;
+      }
+
+      function hasCurrentAcceptance() {
+        return exists(/databases/$(database)/documents/users/$(userId)/legal/acceptance-2026-10-12-v1);
+      }
+
+      allow get: if isVerifiedOwner() && hasCurrentAcceptance();
+      allow list: if false;
+      allow create, update: if isVerifiedOwner()
+        && hasCurrentAcceptance()
+        && request.resource.data.keys().hasOnly([
+          'materials',
+          'printers',
+          'deletedMaterials',
+          'deletedPrinters',
+          'schemaVersion',
+          'updatedAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'materials',
+          'printers',
+          'deletedMaterials',
+          'deletedPrinters',
+          'schemaVersion'
+        ])
+        && request.resource.data.materials is list
+        && request.resource.data.printers is list
+        && request.resource.data.deletedMaterials is list
+        && request.resource.data.deletedPrinters is list
+        && request.resource.data.materials.size() <= 1000
+        && request.resource.data.printers.size() <= 100
+        && request.resource.data.deletedMaterials.size() <= 10000
+        && request.resource.data.deletedPrinters.size() <= 10000;
+      // Owners may delete their own profile even if email verification or policy acceptance is missing.
+      allow delete: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Deny access to all other documents unless another explicit rule is added.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -111,6 +111,9 @@ const projectInfo=()=>{
  return {material,hours,used,currency};
 };
 function close(){const p=document.getElementById('ppProjectsPanel');if(p)p.classList.remove('open');document.body.style.overflow='';}
+function setWorkspaceNavigation(section){document.querySelectorAll('[data-workspace-section]').forEach(button=>{const active=button.dataset.workspaceSection===section;if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});}
+window.__ppOpenWorkspaceProjects=()=>open();
+window.__ppCloseWorkspaceProjects=()=>close();
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
  const projects=read().sort((a,b)=>b.updated-a.updated);
@@ -124,12 +127,14 @@ function render(){
  </article>`).join('');
 }
 function open(){
+ window.__ppCloseWorkspaceWorkshop?.();
  let panel=document.getElementById('ppProjectsPanel');
  if(!panel){
   panel=document.createElement('div');panel.id='ppProjectsPanel';
   panel.innerHTML=`<div class="pp-projects-backdrop" data-project-close></div>
   <section class="pp-projects-dialog" role="dialog" aria-modal="true" aria-labelledby="ppProjectsTitle">
-   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Projects</h2><p>Load, duplicate or delete your saved calculator setups.</p><small class="pp-projects-local-note">Projects are saved on this device only and are not automatically available on another computer.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
+   <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Workspace</h2><p>Your saved calculator projects, workshop profiles and account settings in one place.</p><small class="pp-projects-local-note">Projects stay on this device. Sign in to sync printer and material profiles.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
+   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page">Projects</button><button type="button" data-workspace-section="workshop">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
    <div class="pp-projects-toolbar"><span class="pp-project-count" id="ppProjectCount"></span></div>
    <div id="ppProjectsList"></div>
   </section>`;
@@ -140,14 +145,15 @@ function open(){
 .pp-projects-dialog{position:relative;width:min(900px,calc(100% - 28px));max-height:calc(100vh - 40px);margin:20px auto;background:#081720;color:#edf3f6;border:1px solid #294957;border-radius:20px;box-shadow:0 25px 80px #000d;overflow:auto;font-family:Inter,Segoe UI,system-ui,sans-serif}
 .pp-projects-head{display:flex;justify-content:space-between;gap:20px;padding:25px 28px 20px;border-bottom:1px solid #294957;background:linear-gradient(145deg,#0b202b,#07141d)}
 .pp-projects-kicker{font-size:10px;font-weight:900;letter-spacing:.18em;color:#ff7800}.pp-projects-head h2{margin:5px 0 5px;font-size:30px}.pp-projects-head p{margin:0;color:#9fb0b9}.pp-projects-local-note{display:block;margin-top:7px;color:#718792;font-size:10px;line-height:1.45}.pp-projects-close{width:38px;height:38px;border:1px solid #355363;border-radius:10px;background:#091923;color:#fff;font-size:26px;cursor:pointer}
+.pp-workspace-nav{display:flex;gap:8px;padding:14px 28px 0;background:#081720}.pp-workspace-nav button{border:1px solid #355363;border-radius:9px;background:#0a1b25;color:#aebdc6;padding:9px 13px;font-weight:800;cursor:pointer}.pp-workspace-nav button[aria-current="page"]{background:#143140;color:#f5f9fb;border-color:#35d6e5}.pp-workspace-nav button:focus-visible{outline:2px solid #35d6e5;outline-offset:2px}
 .pp-projects-toolbar{display:flex;align-items:center;justify-content:space-between;padding:18px 28px 8px}.pp-project-new{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:10px 15px;font-weight:800;cursor:pointer}.pp-project-count{color:#9fb0b9;font-size:12px}
 #ppProjectsList{padding:10px 28px 28px}.pp-project-card{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:17px;margin-top:10px;border:1px solid #294957;border-radius:14px;background:#0b202b}.pp-project-card-main{display:flex;gap:14px;align-items:center;min-width:0}.pp-project-icon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:#ff780015;border:1px solid #ff780055;color:#ff7800;font-size:20px}.pp-project-card h3{margin:0 0 4px;font-size:16px}.pp-project-card p{margin:0;color:#c5d1d7;font-size:12px}.pp-project-card small{display:block;color:#758a95;margin-top:5px}.pp-project-actions{display:flex;gap:7px;flex-wrap:wrap}.pp-project-actions button{border:1px solid #355363;background:#091923;color:#e6eef2;border-radius:8px;padding:8px 10px;cursor:pointer;font-weight:700}.pp-project-actions button:hover{border-color:#ff7800}.pp-project-actions .danger:hover{border-color:#d9534f;color:#ff9a96}.pp-projects-empty{text-align:center;padding:55px 20px;color:#9fb0b9}.pp-projects-empty-icon{font-size:38px;color:#ff7800}.pp-projects-empty h3{color:#edf3f6;margin:10px 0 5px}.pp-projects-empty p{margin:0 0 20px}
-@media(max-width:650px){.pp-projects-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-projects-head{padding:20px}.pp-projects-toolbar,#ppProjectsList{padding-left:20px;padding-right:20px}.pp-project-card{align-items:flex-start;flex-direction:column}.pp-project-actions{width:100%}.pp-project-actions button{flex:1}.pp-projects-head h2{font-size:25px}}
+@media(max-width:650px){.pp-projects-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-projects-head{padding:20px}.pp-workspace-nav{padding-left:20px;padding-right:20px;flex-wrap:wrap}.pp-projects-toolbar,#ppProjectsList{padding-left:20px;padding-right:20px}.pp-project-card{align-items:flex-start;flex-direction:column}.pp-project-actions{width:100%}.pp-project-actions button{flex:1}.pp-projects-head h2{font-size:25px}}
 .pp-project-card.pp-project-updated{border-color:#36e58b;box-shadow:0 0 0 1px #36e58b55,0 0 24px #36e58b18;animation:ppProjectUpdated .65s ease}
 @keyframes ppProjectUpdated{0%{transform:scale(1)}45%{transform:scale(1.012)}100%{transform:scale(1)}}
 `;document.head.appendChild(style);
  }
- panel.classList.add('open');document.body.style.overflow='hidden';render();
+ panel.classList.add('open');document.body.style.overflow='hidden';setWorkspaceNavigation('projects');render();
  const count=document.getElementById('ppProjectCount');if(count)count.textContent=read().length+' saved '+(read().length===1?'project':'projects');
  hydrateProjects().then(projects=>{
    render();
@@ -249,9 +255,15 @@ function deleteProject(id){
 }
 document.getElementById('reset')?.addEventListener('click',()=>window.__ppClearActiveProject?.());
 document.addEventListener('click',e=>{
- const target=e.target.closest('[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-rename-project],[data-duplicate-project],[data-delete-project]');
+ const target=e.target.closest('[data-workspace-section],[data-target="projects"],[data-project-close],[data-project-new],[data-save-project],[data-load-project],[data-rename-project],[data-duplicate-project],[data-delete-project]');
  if(!target)return;
- if(target.matches('[data-target="projects"]')){e.preventDefault();e.stopPropagation();open();}
+ if(target.hasAttribute('data-workspace-section')){
+  if(!target.closest('#ppProjectsPanel'))return;
+  e.preventDefault();e.stopImmediatePropagation();
+  const section=target.dataset.workspaceSection;
+  if(section==='projects')open();else{close();window.__ppOpenWorkspaceWorkshop?.(section)}
+ }
+ else if(target.matches('[data-target="projects"]')){e.preventDefault();e.stopPropagation();open();}
  else if(target.hasAttribute('data-project-close'))close();
  else if(target.hasAttribute('data-project-new'))saveNew();
   else if(target.hasAttribute('data-save-project'))saveNew();

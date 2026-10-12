@@ -7,7 +7,7 @@ let selectedMaterialId='';
 let applyingMaterial=false;
 let lastDeductedSignatures=new Set();
 const readPrinters=()=>{try{const data=JSON.parse(localStorage.getItem(PRINTER_KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){return[]}};
-const writePrinters=v=>{try{localStorage.setItem(PRINTER_KEY,JSON.stringify(v));return true}catch(e){console.warn('PrintProfit printer profile save failed:',e);return false}};
+const writePrinters=v=>{try{const before=readPrinters();localStorage.setItem(PRINTER_KEY,JSON.stringify(v));document.dispatchEvent(new CustomEvent('pp-workshop-data-changed',{detail:{kind:'printers',before,after:v}}));return true}catch(e){console.warn('PrintProfit printer profile save failed:',e);return false}};
 const materialRemaining=m=>{const value=m&&m.remaining!==undefined?Number(m.remaining):Number(m?.amount);return Math.max(0,Number.isFinite(value)?value:0)};
 const materialThreshold=m=>{const value=m&&m.lowStock!==undefined?Number(m.lowStock):(m?.type==='Resin'?50:200);return Math.max(0,Number.isFinite(value)?value:0)};
 const materialUnit=m=>m?.type==='Resin'?'ml':'g';
@@ -35,7 +35,7 @@ function toGBP(value){
  return meta.rate>0?(Number(value)||0)/meta.rate:(Number(value)||0);
 }
 const read=()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(data)?data:[]}catch(e){return[]}};
-const write=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));return true}catch(e){console.warn('PrintProfit material save failed:',e);return false}};
+const write=v=>{try{const before=read();localStorage.setItem(KEY,JSON.stringify(v));document.dispatchEvent(new CustomEvent('pp-workshop-data-changed',{detail:{kind:'materials',before,after:v}}));return true}catch(e){console.warn('PrintProfit material save failed:',e);return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const val=id=>document.getElementById(id)?.value??'';
 function render(){
@@ -61,6 +61,17 @@ function setWorkshopTab(name){
  const materials=name!=='printers',matView=document.getElementById('ppWorkshopMaterialsView'),printerView=document.getElementById('ppWorkshopPrintersView');
  if(matView)matView.hidden=!materials;if(printerView)printerView.hidden=materials;
  document.querySelectorAll('[data-workshop-tab]').forEach(button=>{const active=button.dataset.workshopTab===(materials?'materials':'printers');button.setAttribute('aria-selected',String(active));button.classList.toggle('active',active)});
+}
+function setWorkspaceSection(section){
+ const active=['workshop','account'].includes(section)?section:'workshop';
+ document.querySelectorAll('[data-workspace-section]').forEach(button=>{const selected=button.dataset.workspaceSection===active;if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});
+ const account=active==='account',tabs=document.querySelector('#ppMaterialsPanel .pp-workshop-tabs'),materials=document.getElementById('ppWorkshopMaterialsView'),printers=document.getElementById('ppWorkshopPrintersView');
+ if(tabs)tabs.hidden=account;
+ if(account){if(materials)materials.hidden=true;if(printers)printers.hidden=true;}
+ else{const selectedTab=document.querySelector('#ppMaterialsPanel [data-workshop-tab].active')?.dataset.workshopTab||'materials';setWorkshopTab(selectedTab);}
+ const title=document.getElementById('ppMaterialsTitle'),description=document.getElementById('ppWorkspaceDescription');
+ if(title)title.textContent='My Workspace';
+ if(description)description.textContent=account?'Manage your sign-in and account details here. Account sync is optional; projects stay on this device.':'Manage printer and material profiles. Sign in to sync them across devices.';
 }
 function syncWorkshopUsage(){
  const tabs=document.getElementById('resultTabs');if(!tabs)return;
@@ -258,12 +269,15 @@ document.addEventListener('printprofit-settings-changed',()=>{
  refreshCurrencyUI();
  if(document.getElementById('ppMaterialsPanel')?.classList.contains('open'))render();
 });
-function open(){
+function open(workspaceSection='workshop'){
+ window.__ppCloseWorkspaceProjects?.();
  let panel=document.getElementById('ppMaterialsPanel');
  if(!panel){
   panel=document.createElement('div');panel.id='ppMaterialsPanel';
   panel.innerHTML=`<div class="pp-materials-backdrop" data-material-close></div><section class="pp-materials-dialog" role="dialog" aria-modal="true" aria-labelledby="ppMaterialsTitle">
-  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workshop</h2><p>Keep printer profiles and material stock ready for your next print. Saved in this browser.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
+  <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workspace</h2><p id="ppWorkspaceDescription">Manage your printer and material profiles. Sign in to sync them across devices.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
+  <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects">Projects</button><button type="button" data-workspace-section="workshop" aria-current="page">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
+  <div id="ppWorkshopAccount"></div>
   <div class="pp-workshop-tabs" role="tablist" aria-label="Workshop library"><button type="button" class="active" data-workshop-tab="materials" aria-selected="true">Materials &amp; stock</button><button type="button" data-workshop-tab="printers" aria-selected="false">Printers</button></div>
   <div id="ppWorkshopMaterialsView"><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Add Material</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></div>
   <div id="ppWorkshopPrintersView" hidden><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-printer-new>＋ Add Printer</button><span id="ppPrinterCount"></span></div>
@@ -281,24 +295,35 @@ function open(){
 #ppMaterialsPanel{display:none;position:fixed;inset:0;z-index:100001}#ppMaterialsPanel.open{display:block}.pp-materials-backdrop{position:absolute;inset:0;background:#000b;backdrop-filter:blur(5px)}
 .pp-materials-dialog{position:relative;width:min(900px,calc(100% - 28px));max-height:calc(100vh - 40px);margin:20px auto;background:#081720;color:#edf3f6;border:1px solid #294957;border-radius:20px;box-shadow:0 25px 80px #000d;overflow:auto;font-family:Inter,Segoe UI,system-ui,sans-serif}
 .pp-materials-head{display:flex;justify-content:space-between;gap:20px;padding:25px 28px 20px;border-bottom:1px solid #294957;background:linear-gradient(145deg,#0b202b,#07141d)}.pp-materials-kicker{font-size:10px;font-weight:900;letter-spacing:.18em;color:#ff7800}.pp-materials-head h2{margin:5px 0;font-size:30px}.pp-materials-head p{margin:0;color:#9fb0b9}.pp-materials-close{width:38px;height:38px;border:1px solid #355363;border-radius:10px;background:#091923;color:#fff;font-size:26px;cursor:pointer}
+.pp-workspace-nav{display:flex;gap:8px;padding:14px 28px 0;background:#081720}.pp-workspace-nav button{border:1px solid #355363;border-radius:9px;background:#0a1b25;color:#aebdc6;padding:9px 13px;font-weight:800;cursor:pointer}.pp-workspace-nav button[aria-current="page"]{background:#143140;color:#f5f9fb;border-color:#35d6e5}.pp-workspace-nav button:focus-visible{outline:2px solid #35d6e5;outline-offset:2px}
 .pp-materials-toolbar{display:flex;justify-content:space-between;align-items:center;padding:18px 28px 8px;color:#9fb0b9;font-size:12px}.pp-material-new,.pp-material-save{border:1px solid #ff7800;background:#ff7800;color:#fff;border-radius:9px;padding:10px 15px;font-weight:800;cursor:pointer}.pp-materials-dialog>#ppWorkshopMaterialsView,#ppWorkshopPrintersView{padding-bottom:18px}#ppMaterialsList,#ppWorkshopPrintersList{padding:10px 28px 28px}
 .pp-material-card{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:17px;margin-top:10px;border:1px solid #294957;border-radius:14px;background:#0b202b}.pp-material-main{display:flex;align-items:center;gap:14px;min-width:0}.pp-material-dot,.pp-printer-dot{width:14px;height:14px;flex:0 0 14px;border-radius:50%;background:#ff7800;box-shadow:0 0 15px #ff780066}.pp-printer-dot{background:#35d6e5;box-shadow:0 0 15px #35d6e566}.pp-material-card h3{margin:0 0 4px;font-size:16px}.pp-material-card p{margin:0;color:#c5d1d7;font-size:12px}.pp-material-card small{display:block;color:#93a8b2;margin-top:5px}.pp-material-actions{display:flex;gap:7px;flex-wrap:wrap}.pp-material-actions button,.pp-material-cancel{border:1px solid #355363;background:#091923;color:#e6eef2;border-radius:8px;padding:8px 10px;cursor:pointer;font-weight:700}.pp-material-actions button:hover{border-color:#ff7800}.pp-material-actions .danger:hover{border-color:#d9534f;color:#ff9a96}.pp-stock-low{display:inline-block;margin-left:7px;padding:3px 7px;border:1px solid #e8a44377;border-radius:999px;color:#ffd094;font-size:10px;vertical-align:middle}.pp-materials-empty{text-align:center;padding:55px 20px;color:#9fb0b9}.pp-materials-empty-icon{font-size:38px;color:#ff7800}.pp-materials-empty h3{color:#edf3f6;margin:10px 0 5px}.pp-materials-empty p{margin:0 0 20px}
 .pp-workshop-tabs{display:flex;gap:8px;padding:16px 28px 0}.pp-workshop-tabs button{border:1px solid #355363;border-radius:10px 10px 0 0;background:#0a1b25;color:#aebdc6;padding:10px 14px;font-weight:800;cursor:pointer}.pp-workshop-tabs button.active{background:#143140;color:#f5f9fb;border-color:#35d6e5}
 .pp-workshop-printer-form{margin:12px 28px;padding:16px;border:1px solid #355363;border-radius:14px;background:#0a1b25}.pp-workshop-printer-form-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pp-workshop-printer-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pp-workshop-printer-form-grid label{font-size:12px;color:#aebdc6}.pp-workshop-printer-form-grid input,.pp-workshop-printer-form-grid select{display:block;width:100%;margin-top:6px;padding:10px;border:1px solid #355363;border-radius:8px;background:#081720;color:#f5f9fb}.pp-workshop-printer-form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
 .pp-material-form-grid{grid-template-columns:1fr 1fr 1fr}.pp-material-form-grid input,.pp-material-form-grid select{font-size:14px}.pp-material-form{max-height:calc(100vh - 40px);overflow:auto}
 .pp-workshop-usage{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:14px 0;padding:15px;border:1px solid #315767;border-left:4px solid #ff8a24;border-radius:12px;background:linear-gradient(145deg,#0d2230,#102a39);color:#f5f9fb}.pp-workshop-usage-copy{min-width:0}.pp-workshop-usage-copy>span{display:block;color:#ffae62;font-size:9px;font-weight:900;letter-spacing:.15em}.pp-workshop-usage-copy strong{display:block;margin-top:4px;font-size:14px}.pp-workshop-usage-copy p{margin:4px 0 0;color:#bfd0d7;font-size:12px;line-height:1.4}.pp-workshop-usage-actions{display:flex;gap:8px;flex-wrap:wrap}.pp-workshop-usage-actions button{border:1px solid #486775;border-radius:9px;padding:9px 11px;background:#091923;color:#e6eef2;font-weight:800;cursor:pointer}.pp-workshop-usage-actions .pp-workshop-mark{background:#0d986b;border-color:#10b981;color:#fff}.pp-workshop-usage-actions button:disabled{opacity:.48;cursor:not-allowed}
-@media(max-width:650px){.pp-materials-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-materials-head,.pp-materials-toolbar,#ppMaterialsList,#ppWorkshopPrintersList{padding-left:20px;padding-right:20px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid,.pp-workshop-printer-form-grid{grid-template-columns:1fr}.pp-workshop-printer-form{margin-left:20px;margin-right:20px}.pp-workshop-tabs{padding-left:20px;padding-right:20px}.pp-workshop-usage{align-items:flex-start;flex-direction:column}.pp-workshop-usage-actions,.pp-workshop-usage-actions button{width:100%}}
+@media(max-width:650px){.pp-materials-dialog{margin:10px auto;max-height:calc(100vh - 20px)}.pp-materials-head,.pp-materials-toolbar,#ppMaterialsList,#ppWorkshopPrintersList{padding-left:20px;padding-right:20px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid,.pp-workshop-printer-form-grid{grid-template-columns:1fr}.pp-workshop-printer-form{margin-left:20px;margin-right:20px}.pp-workspace-nav{padding-left:20px;padding-right:20px;flex-wrap:wrap}.pp-workshop-tabs{padding-left:20px;padding-right:20px}.pp-workshop-usage{align-items:flex-start;flex-direction:column}.pp-workshop-usage-actions,.pp-workshop-usage-actions button{width:100%}}
 `;document.head.appendChild(style);
  }
- refreshCurrencyUI();panel.classList.add('open');document.body.style.overflow='hidden';setWorkshopTab('materials');render();const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
-}function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
+ refreshCurrencyUI();panel.classList.add('open');document.body.style.overflow='hidden';setWorkshopTab('materials');setWorkspaceSection(workspaceSection);render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
+}
+function closeWorkspaceWorkshop(){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow='';}
+window.__ppOpenWorkspaceWorkshop=(section='workshop')=>open(section);
+window.__ppCloseWorkspaceWorkshop=()=>closeWorkspaceWorkshop();
+function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
 
 document.addEventListener('click',e=>{
- const t=e.target.closest('[data-material-open],[data-material-save-current],[data-material-close],[data-material-new],[data-material-save],[data-material-form-close],[data-use-material],[data-edit-material],[data-delete-material],[data-workshop-tab],[data-printer-new],[data-printer-form-close],[data-printer-save],[data-printer-use],[data-printer-edit],[data-printer-delete],[data-mark-printed]');
+ const t=e.target.closest('[data-workspace-section],[data-material-open],[data-material-save-current],[data-material-close],[data-material-new],[data-material-save],[data-material-form-close],[data-use-material],[data-edit-material],[data-delete-material],[data-workshop-tab],[data-printer-new],[data-printer-form-close],[data-printer-save],[data-printer-use],[data-printer-edit],[data-printer-delete],[data-mark-printed]');
  if(!t)return;
- if(t.hasAttribute('data-material-open')){e.preventDefault();open()}
+ if(t.hasAttribute('data-workspace-section')){
+  if(!t.closest('#ppMaterialsPanel'))return;
+  e.preventDefault();e.stopImmediatePropagation();
+  const section=t.dataset.workspaceSection;
+  if(section==='projects'){closeWorkspaceWorkshop();window.__ppOpenWorkspaceProjects?.();}else setWorkspaceSection(section);
+ }
+ else if(t.hasAttribute('data-material-open')){e.preventDefault();open()}
  else if(t.hasAttribute('data-material-save-current')){e.preventDefault();open();openFormFromCalculator()}
- else if(t.hasAttribute('data-material-close')){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=''}
+ else if(t.hasAttribute('data-material-close'))closeWorkspaceWorkshop()
  else if(t.hasAttribute('data-material-new'))openForm()
  else if(t.hasAttribute('data-material-save'))saveForm()
  else if(t.hasAttribute('data-material-form-close'))closeForm()

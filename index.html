@@ -52,7 +52,8 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 #ppSearchIntro p{max-width:850px;margin:0;color:#c3d0d6}
 #ppSearchIntro a{color:#ffad65;text-underline-offset:3px}
 #ppSearchIntro .pp-search-links{margin-top:16px}
-@media(max-width:650px){#ppSearchIntro{margin:20px 12px 84px;padding:18px}}
+.pp-legal-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:18px 16px 36px;font:13px/1.5 Inter,Segoe UI,system-ui,sans-serif}.pp-legal-links a{color:#75d8f2;text-underline-offset:3px}
+@media(max-width:650px){#ppSearchIntro{margin:20px 12px 84px;padding:18px}.pp-legal-links{padding-bottom:90px}}
 </style>
 </head>
 <body aria-busy="true">
@@ -75,6 +76,7 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 <p>Upload a supported print or model file to see which details PrintProfit can read. Some files include print time or material usage; others do not. Review detected values and enter anything missing from your slicer before relying on the estimate.</p>
 <p class="pp-search-links"><a href="./guide.html">Read the calculator guide</a> · <a href="./price-finder.html">Compare UK 3D printing products</a></p>
 </section>
+<footer class="pp-legal-links" aria-label="Legal information"><a href="./privacy.html">Privacy Notice</a><a href="./terms.html">Terms of Use</a><a href="./guide.html#account-privacy">Account privacy &amp; help</a></footer>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
 (()=>{
@@ -117,8 +119,10 @@ const scripts=[
 'electricity-providers.js?v=20261004-nightly1',
 'i18n-extra.js?v=5',
 'settings-preferences.js?v=20261004-theme1',
-'my-projects.js?v=20261004-file-info1',
-'my-materials.js?v=8',
+'my-projects.js?v=20261012-workspace1',
+'my-materials.js?v=20261012-workspace1',
+'config/firebase-config.js?v=2',
+'workshop-account-sync.js?v=3',
 'quantity-auto-batch.js?v=2',
 'printer-material-polish.js?v=4',
 'material-brands.js?v=1',
@@ -129,7 +133,7 @@ const scripts=[
 'market-price-sync.js?v=2',
 'calculator-state.js?v=20261004-file-info1',
 'calculator-visual.js?v=8',
-'visual-master.js?v=20261012-pagespeed1',
+'visual-master.js?v=20261012-workspace1',
 'printprofit-missed-icons.js?v=6',
 'printprofit-icon-art.js?v=4',
 'hero-slogan-layout.js?v=1'
@@ -205,5 +209,7 @@ frame.addEventListener('load',async()=>{
 });
 })();
 </script>
+<script src="./config/analytics-config.js?v=1"></script>
+<script src="./analytics.js?v=20261012-privacy1"></script>
 </body>
 </html>
