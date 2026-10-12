@@ -1,0 +1,62 @@
+name: Build and publish compact comparison catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'assets/**'
+      - 'data/price-finder.json'
+      - 'data/reference-data.json'
+      - 'data/reference-data.js'
+      - 'scripts/build_pages.py'
+      - 'scripts/build_compare_catalogue.py'
+      - '.github/workflows/*.yml'
+
+concurrency:
+  group: printprofit-refresh-and-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check compact comparison data builder
+        run: python scripts/build_compare_catalogue.py --self-test
+      - name: Build compact listings and on-demand price histories
+        run: python scripts/build_compare_catalogue.py
+      - name: Save generated comparison data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- data/price-finder-lite.js data/price-history/
+          if ! git diff --cached --quiet; then
+            git commit -m "Build compact comparison catalogue"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare the public website
+        run: python scripts/build_pages.py
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
