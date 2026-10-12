@@ -106,7 +106,12 @@ function bind(){
   }
   if(!cost.dataset.ppManualBound){
     cost.dataset.ppManualBound='1';
-    cost.addEventListener('input',()=>{if(cost.dataset.ppLiveWriting!=='1')cost.dataset.ppManual='1';});
+    cost.addEventListener('input',()=>{
+      if(cost.dataset.ppLiveWriting!=='1'){
+        cost.dataset.ppManual='1';
+        if(priceDataPromise)status('Using your entered material cost.');
+      }
+    });
   }
   if(cost.dataset.ppMarketInitialised!=='1'){
     cost.dataset.ppMarketInitialised='1';
