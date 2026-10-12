@@ -293,6 +293,28 @@ body.pp-light .detail-item small{color:#536a74!important}
 body.pp-light .detail-item strong{color:#19252d!important}
 body.pp-light .history-point{color:#304651!important}
 body.pp-light .product-card .mini small{color:#526873!important}
+
+/* Keep every product family visually distinct in every compare view */
+body .kind.filament{color:#ffd5b0!important;border-color:#ff8a2490!important;background:#ff8a2418!important}
+body .kind.resin{color:#a7e8ee!important;border-color:#43b8c277!important;background:#43b8c21a!important}
+body .kind.printer{color:#b8def2!important;border-color:#4c9ec399!important;background:#0798ff1c!important}
+body .kind.equipment{color:#b4f0ca!important;border-color:#39c77988!important;background:#39c77918!important}
+body .kind.accessory{color:#d8c7ff!important;border-color:#a979df99!important;background:#a979df1e!important}
+body .kind.filament .pp-shared-icon{color:#ff9e46!important}
+body .kind.resin .pp-shared-icon{color:#43b8c2!important}
+body .kind.printer .pp-shared-icon{color:#55bce8!important}
+body .kind.equipment .pp-shared-icon{color:#39c779!important}
+body .kind.accessory .pp-shared-icon{color:#b887e8!important}
+body.pp-light .kind.filament{color:#7a4200!important;border-color:#c27b2e!important;background:#ffb25a24!important}
+body.pp-light .kind.resin{color:#185b65!important;border-color:#559ca4!important;background:#43b8c21c!important}
+body.pp-light .kind.printer{color:#1f5c78!important;border-color:#5b9bb6!important;background:#0798ff18!important}
+body.pp-light .kind.equipment{color:#1f6b49!important;border-color:#6aa78a!important;background:#36b77720!important}
+body.pp-light .kind.accessory{color:#553278!important;border-color:#8e64b4!important;background:#a979df20!important}
+body.pp-light .kind.filament .pp-shared-icon{color:#995400!important}
+body.pp-light .kind.resin .pp-shared-icon{color:#247783!important}
+body.pp-light .kind.printer .pp-shared-icon{color:#286f91!important}
+body.pp-light .kind.equipment .pp-shared-icon{color:#238b59!important}
+body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
 </head>
 <body data-pp-standalone-i18n="1">
@@ -461,7 +483,7 @@ function matchesCategory(product,choice){
  return choice==='all'||category.id===choice||category.group===choice;
 }
 function categoryUnit(product){return categoryInfo(product).material?'kg':'unit';}
-function categoryClass(product){const group=categoryInfo(product).group;return group==='filament'||group==='resin-material'?'filament':group==='printer'?'printer':'accessory';}
+function categoryClass(product){const group=categoryInfo(product).group;return group==='filament'?'filament':group==='resin-material'?'resin':group==='printer'?'printer':group==='equipment'?'equipment':'accessory';}
 function populateCategories(){
  const select=$('category'),current=select.value;
  const counts=new Map(),totals=new Map();
@@ -499,7 +521,7 @@ function toggleCompare(id,checked){
  updateCompareBar();
 }
 function compareValue(x,label){
- if(label==='Type')return esc(categoryInfo(x).label);
+ if(label==='Type')return '<span class="kind '+categoryClass(x)+'" title="'+esc(categoryInfo(x).label)+'">'+sharedIcon(categoryInfo(x).family.icon)+esc(categoryInfo(x).label)+'</span>';
  if(label==='Brand')return x.brand||'—';
  if(label==='Product')return x.name||'—';
  if(label==='Retailer')return x.retailer||'—';
@@ -602,7 +624,7 @@ function openDetailsModal(id){
  $('detailsTitle').textContent=x.name;
  $('detailsBody').innerHTML='<div><img class="details-image" src="'+esc(x.image||imageFallback(x))+'" alt="'+esc(x.image?x.name:'Product photo unavailable')+'" onerror="this.src=\''+imageFallback(x)+'\'">'+(x.imageNote?'<p class="muted">'+esc(x.imageNote)+'</p>':'')+'</div>'+
  '<div><div class="details-grid">'+
- '<div class="detail-item"><small>Category</small><strong>'+esc(categoryInfo(x).label)+'</strong></div>'+
+ '<div class="detail-item"><small>Category</small><strong><span class="kind '+categoryClass(x)+'" title="'+esc(categoryInfo(x).label)+'">'+sharedIcon(categoryInfo(x).family.icon)+esc(categoryInfo(x).label)+'</span></strong></div>'+
  '<div class="detail-item"><small>Brand</small><strong>'+esc(x.brand||'Not tracked')+'</strong></div>'+
  '<div class="detail-item"><small>Technology / material</small><strong>'+esc(x.type||'Not tracked')+'</strong></div>'+
  '<div class="detail-item"><small>Colour</small><strong>'+esc(x.colour||'Not specified')+'</strong></div>'+
