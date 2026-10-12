@@ -361,11 +361,15 @@ async function syncProjects(user,deletedIds,importGuest){
   const ref=sdk.firestore.doc(projectCollection,id);
   writes.push({ref,data:{schemaVersion:1,updated:entry.updated,deleted:entry.deleted,...(entry.deleted?{}:{project:entry.project})}});
  });
- for(let offset=0;offset<writes.length;offset+=400){
-  const batch=sdk.firestore.writeBatch(db);
-  writes.slice(offset,offset+400).forEach(write=>batch.set(write.ref,write.data));
-  await batch.commit();
+ let batch=sdk.firestore.writeBatch(db),batchCount=0,batchBytes=0;
+ for(const write of writes){
+  const size=(()=>{const json=JSON.stringify(write.data);try{return new TextEncoder().encode(json).length}catch(e){return json.length*3}})();
+  if(batchCount&&(batchCount>=400||batchBytes+size>8*1024*1024)){
+   await batch.commit();batch=sdk.firestore.writeBatch(db);batchCount=0;batchBytes=0;
+  }
+  batch.set(write.ref,write.data);batchCount++;batchBytes+=size;
  }
+ if(batchCount)await batch.commit();
  const merged=[...next.values()].filter(entry=>!entry.deleted&&entry.project).map(entry=>{
   const localProject=localRawById.get(entry.id);
   if(localProject?.fileData&&String(entry.project.fileStatus||'').includes('Detailed slicer data was too large to sync')){
