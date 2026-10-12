@@ -8,7 +8,11 @@ from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[1]
 HISTORY_PAGE_SIZE = 100
-OMIT_PRODUCT_FIELDS = {"priceHistory", "description", "options", "variantOptions"}
+PRODUCT_FIELDS = frozenset({
+    "id", "name", "brand", "retailer", "url", "type", "colour", "colourHex",
+    "image", "imageNote", "price", "shippingPrice", "pack", "unit",
+    "availability", "updated", "lastCheckStatus",
+})
 SUMMARY_FIELDS = ("currency", "updatedAt", "refreshPolicy", "lastRefreshSummary", "sources", "brandDirectory")
 
 
@@ -62,7 +66,7 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
 
         history = product.get("priceHistory")
         page = index // history_page_size
-        row = {key: value for key, value in product.items() if key not in OMIT_PRODUCT_FIELDS}
+        row = {key: value for key, value in product.items() if key in PRODUCT_FIELDS}
         row["priceHistoryPage"] = page if isinstance(history, list) and history else None
         summary_products.append(row)
 
@@ -117,6 +121,9 @@ def self_test():
                 "id": "product-" + str(i),
                 "name": "Product " + str(i),
                 "price": float(21 - i),
+                "type": "PLA",
+                "colourHex": "#123456",
+                "sourceId": "source-" + str(i),
                 "description": "remove this detail",
                 "options": ["unused"],
                 "priceHistory": [{"date": "2026-10-12", "price": 21 - i}],
@@ -129,6 +136,9 @@ def self_test():
     assert summary["products"][0]["id"] == "product-20"
     assert "priceHistory" not in summary["products"][0]
     assert "description" not in summary["products"][0]
+    assert "sourceId" not in summary["products"][0]
+    assert summary["products"][0]["type"] == "PLA"
+    assert summary["products"][0]["colourHex"] == "#123456"
     assert summary["products"][0]["priceHistoryPage"] == 0
     assert summary["products"][20]["priceHistoryPage"] == 1
     assert len(pages) == 2 and len(pages[0]) == 20 and len(pages[1]) == 1
@@ -144,6 +154,8 @@ def self_test():
         assert not stale.exists()
         compact = (root / "data" / "price-finder-lite.js").read_text(encoding="utf-8")
         assert '"priceHistory"' not in compact and '"description"' not in compact
+        assert '"sourceId"' not in compact
+        assert '"colourHex"' in compact and '"type":"PLA"' in compact
         saved_page = json.loads((root / "data" / "price-history" / "page-000.json").read_text(encoding="utf-8"))
         assert len(saved_page) == 20
     print("Catalogue builder checks passed.")
