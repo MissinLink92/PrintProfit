@@ -177,16 +177,16 @@ html#ppReadableTypography body *{
   letter-spacing:normal!important;
 }
 html#ppReadableTypography body :is(h1,h2,h3,h4,h5,h6){
-  font-weight:600!important;
+  font-weight:500!important;
   line-height:1.2!important;
   letter-spacing:-.01em!important;
 }
 html#ppReadableTypography body :is(strong,b,th,.price,.value,.total,.pp-account-kicker,.pp-account-badge,.pp-account-consents>span,.pp-advisor-pill,.kind,.stock,.section-title,.kicker){
-  font-weight:600!important;
+  font-weight:500!important;
 }
 html#ppReadableTypography body :is(button,.btn,.tab,.nav a,.pp-account-primary,.pp-account-secondary,.pp-account-delete-final){
   font-size:14px!important;
-  font-weight:600!important;
+  font-weight:500!important;
   letter-spacing:normal!important;
 }
 html#ppReadableTypography body :is(label,.label){
@@ -231,3 +231,8 @@ html#ppReadableTypography body .pp-account-signup-help{
   html#ppReadableTypography body select,
   html#ppReadableTypography body textarea{font-size:16px!important}
 }
+
+/* Use lighter text while keeping headings and key values distinct. */
+html#ppReadableTypography body{font-weight:400!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html#ppReadableTypography body :is(h1,h2,h3,h4,h5,h6,strong,b,th,label,legend,.price,.value,.total,.pp-account-kicker,.pp-account-badge,.pp-account-consents>span,.pp-advisor-pill,.kind,.stock,.section-title,.kicker,.pp-step-copy strong,.pp-materials-kicker){font-weight:500!important}
+html#ppReadableTypography body :is(button,.btn,.tab,.nav a,.pp-account-primary,.pp-account-secondary,.pp-account-delete-final,.pvm-nav a){font-weight:500!important}
