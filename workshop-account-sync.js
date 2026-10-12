@@ -194,6 +194,7 @@ async function initializeFirebase(){
      activeUser=null;legalAccepted=false;localImportPending=false;handledUid='';updateAccountUI();
      setMessage('We could not safely separate this browser’s profiles. Sign out, keep the profiles on this device and try again after freeing browser storage.',true);
      authSdk.signOut(auth).catch(()=>{});return;
+    }
    }
    activeUser=user||null;legalAccepted=false;localImportPending=false;
    updateAccountUI();
