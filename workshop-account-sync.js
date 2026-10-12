@@ -347,7 +347,7 @@ async function syncProjects(user,deletedIds,importGuest){
  });
  const next=new Map(cloud),now=Date.now();
  const locallyDeleted=new Set((deletedIds||[]).map(String));
- locallyDeleted.forEach(id=>next.set(id,{id,deleted:true,updated:now,project:null}));
+ locallyDeleted.forEach(id=>{const remote=cloud.get(id);next.set(id,{id,deleted:true,updated:Math.max(now,(remote?.updated||0)+1),project:null})});
  byId.forEach(project=>{
   if(locallyDeleted.has(project.id))return;
   const remote=cloud.get(project.id);
