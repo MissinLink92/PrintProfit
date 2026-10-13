@@ -97,3 +97,12 @@ body.pp-policy-page.pp-light code{color:#34505c}
  #ppSiteHeader .pvm-icon{width:20px!important;height:20px!important;flex-basis:20px!important}
  #ppSiteHeader .pvm-icon svg{width:19px!important;height:19px!important}
 }
+
+/* Give each navigation icon the same dark tile used in the calculator header. */
+#ppSiteHeader .pvm-icon{
+ width:30px!important;height:30px!important;flex:0 0 30px!important;border-radius:8px!important;
+ background:#04141d!important;box-shadow:inset 0 0 0 1px #ffffff12!important
+}
+@media(max-width:540px){
+ #ppSiteHeader .pvm-icon{width:20px!important;height:20px!important;flex-basis:20px!important;border-radius:6px!important}
+}
