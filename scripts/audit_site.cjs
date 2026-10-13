@@ -33,7 +33,7 @@ async function auditPage(browser, name, viewport) {
   await scope.locator('#pvmLanguage').waitFor({ state: 'visible', timeout: 15000 });
   const readyMs = Date.now() - started;
   check(await scope.locator('#pvmLanguage option').count() === 6, 'Language menu must have six choices');
-  check(await scope.locator('#darkModeToggle').count() === 1, 'Shared theme switch missing');
+  check(await scope.locator('.pvm-dark input').count() === 1, 'Shared theme switch missing');
   if (name === 'index.html') {
    await scope.locator('.pvm-nav button[data-a="account"]').waitFor({ state: 'visible', timeout: 5000 });
    await scope.locator('.pvm-nav button[data-a="account"]').click();
@@ -57,7 +57,8 @@ async function auditPage(browser, name, viewport) {
    check(await langRoot.getAttribute('lang') === lang, `Language did not change to ${lang}`);
   }
   for (const dark of [false, true]) {
-   await scope.locator('#darkModeToggle').setChecked(dark, { force: true });
+   if (await scope.locator('.pvm-dark input').isChecked() !== dark) await scope.locator('.pvm-dark').click();
+   check(await scope.locator('.pvm-dark input').isChecked() === dark, 'Theme switch did not change');
    await page.waitForTimeout(150);
    const layout = await scope.locator('body').evaluate(body => ({
     width: body.ownerDocument.defaultView.innerWidth,

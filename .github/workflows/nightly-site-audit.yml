@@ -28,14 +28,24 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1
           npx playwright install --with-deps chromium
+      - uses: actions/setup-python@v5
+        if: github.event_name == 'pull_request'
+        with:
+          python-version: '3.12'
+      - name: Serve proposed website for pull request checks
+        if: github.event_name == 'pull_request'
+        run: python -m http.server 8766 --bind 127.0.0.1 &
       - name: Check site on desktop and phone sizes
         run: node scripts/audit_site.cjs
+        env:
+          PP_AUDIT_URL: ${{ github.event_name == 'pull_request' && 'http://127.0.0.1:8766/' || 'https://printprofit.co.uk/' }}
       - name: Save audit and screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: printprofit-site-audit-${{ github.run_id }}
           path: .audit-output/
+          include-hidden-files: true
           retention-days: 30
       - name: Publish audit summary
         if: always()

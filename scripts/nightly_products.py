@@ -134,6 +134,8 @@ def refresh_item(item, config, reader, root, today, queue, report):
             locator['priceUrl'] = price_url
         else:
             html, final_url = reader.text(price_url)
+            if urlparse(final_url).hostname not in retailer['allowedHosts']:
+                raise ValueError('Product redirected outside the recorded retailer')
             products = [product for product in Page(html).products if exact_product(item, product)
                         or (locator.get('expectedProductTitle') and norm(product.get('name')) == norm(locator['expectedProductTitle'])
                             and locator.get('expectedSku') and str(product.get('sku')) == str(locator['expectedSku']))]
