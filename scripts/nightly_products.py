@@ -357,7 +357,9 @@ def add_approved(data, config, queue, reader, root, report):
     automatic = config.get('newProducts') == 'automatic-verified'
     existing = {item['id'] for item in data['products']}
     published = 0
-    for entry in list(queue.entries.values()):
+    attempted = 0
+    entries = sorted(queue.entries.values(), key=lambda entry: entry.get('lastPriceAttempt', ''))
+    for entry in entries:
         if published >= config.get('maxNewProductsPerRun', 50):
             break
         if entry['kind'] != 'new-product' or entry['status'] in ('published','superseded','rejected') or (not automatic and config['reviewDecisions'].get(entry['reviewId']) != 'approve'):
@@ -366,6 +368,10 @@ def add_approved(data, config, queue, reader, root, report):
         candidate.update(config.get('approvedProductDetails', {}).get(entry['reviewId'], {}))
         if candidate['id'] in existing:
             continue
+        if attempted >= config.get('maxNewProductChecks', 200):
+            break
+        attempted += 1
+        entry['lastPriceAttempt'] = report['checkedAt']
         try:
             source = config['retailers'][candidate['sourceId']]
             if urlparse(candidate['url']).hostname not in source['allowedHosts']:
@@ -419,3 +425,4 @@ def add_approved(data, config, queue, reader, root, report):
             if automatic:
                 entry['status'] = 'skipped-unverified'
             report['issues'].append({'area': 'new-product', 'id': candidate['id'], 'message': str(exc)})
+    report['newProductChecks'] = attempted
