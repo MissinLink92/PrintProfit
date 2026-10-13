@@ -9,6 +9,7 @@ function syncWorkspaceModalState(){
 }
 const KEY='printprofit.materials.v1';
 const PRINTER_KEY='printprofit.workshop-printers.v1';
+const SELECTED_PRINTER_KEY='printprofit.workshop-printer-selected.v1';
 let selectedMaterialId='';
 let applyingMaterial=false;
 let lastDeductedSignatures=new Set();
@@ -56,8 +57,45 @@ function render(){
  }
  renderPrinters();syncWorkshopUsage();
 }
+function syncPrinterProfileOptions(preferredId,refreshActive=false){
+ const printer=document.getElementById('printer');if(!printer)return;
+ const currentValue=printer.value||'';
+ const currentId=currentValue.startsWith('workshop:')?currentValue.slice(9):'';
+ const groupId='ppWorkshopPrinterOptions';
+ printer.querySelector('#'+groupId)?.remove();
+ const printers=readPrinters().filter(p=>p&&p.id).sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
+ const group=document.createElement('optgroup');group.id=groupId;group.label='My Workshop';
+ printers.forEach(p=>{
+  const option=new Option('My Workshop · '+String(p.name||'Printer profile'),'workshop:'+String(p.id));
+  option.dataset.profileId=String(p.id);
+  option.dataset.profileName=String(p.name||'Printer profile');
+  option.dataset.watts=String(Number(p.watts)||0);
+  option.dataset.price=String(Number(p.price)||0);
+  option.dataset.lifetime=String(Number(p.lifetime)||0);
+  option.dataset.materialType=String(p.materialType||'Filament').toLowerCase()==='resin'?'resin':'filament';
+  group.appendChild(option);
+ });
+ if(printers.length){
+  const custom=printer.querySelector('option[value="custom"]');
+  printer.insertBefore(group,custom||null);
+ }
+ let storedId='';try{storedId=localStorage.getItem(SELECTED_PRINTER_KEY)||''}catch(e){}
+ const valid=id=>printers.some(p=>String(p.id)===String(id));
+ const autoId=currentValue===''?String([...printers].sort((a,b)=>(Number(b.updated)||0)-(Number(a.updated)||0))[0]?.id||''):'';
+ const targetId=[preferredId,currentId,storedId,autoId].find(id=>id&&valid(id))||'';
+ if(targetId){
+  const nextValue='workshop:'+targetId;
+  try{localStorage.setItem(SELECTED_PRINTER_KEY,targetId)}catch(e){}
+  if(printer.value!==nextValue||refreshActive||preferredId!=null){
+   printer.value=nextValue;printer.dispatchEvent(new Event('change',{bubbles:true}));
+  }
+ }else if(currentId){
+  try{localStorage.removeItem(SELECTED_PRINTER_KEY)}catch(e){}
+  printer.value='';printer.dispatchEvent(new Event('change',{bubbles:true}));
+ }
+}
 function renderPrinters(){
- const list=document.getElementById('ppWorkshopPrintersList');if(!list)return;
+ const list=document.getElementById('ppWorkshopPrintersList');syncPrinterProfileOptions();if(!list)return;
  const printers=readPrinters().sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
  const count=document.getElementById('ppPrinterCount');if(count)count.textContent=printers.length+' saved '+(printers.length===1?'printer':'printers');
  if(!printers.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">▱</div><h3>No printers saved yet</h3><p>Add the printers you own so their power and depreciation details are ready to use.</p><button type="button" class="pp-material-new" data-printer-new>＋ Create printer profile</button></div>';return;}
@@ -156,11 +194,11 @@ function savePrinterForm(){
  const profile={id:editId||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,watts,price:toGBP(priceInput),lifetime,materialType:document.getElementById('ppWorkshopPrinterType').value,presetValue,updated:Date.now()};
  const list=readPrinters();const next=editId?list.map(item=>String(item.id)===String(editId)?profile:item):[...list,profile];
  if(!writePrinters(next)){alert('Could not save this printer profile in this browser.');return}
- closePrinterForm();renderPrinters();
+ closePrinterForm();syncPrinterProfileOptions(profile.id,true);renderPrinters();
 }
 function usePrinter(id){
  const profile=readPrinters().find(item=>String(item.id)===String(id)),printer=document.getElementById('printer');if(!profile||!printer)return;
- applyingMaterial=true;printer.value='custom';printer.dispatchEvent(new Event('change',{bubbles:true}));
+ applyingMaterial=true;syncPrinterProfileOptions(profile.id,true);
  const values=[['customPrinterPrice',currentMoneyValue(profile.price)],['customPrinterPower',profile.watts],['customPrinterLife',profile.lifetime]];
  values.forEach(([field,value])=>{const input=document.getElementById(field);if(input){input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}))}});
  const type=document.getElementById('materialType');if(type){type.value=profile.materialType==='Resin'?'resin':'filament';type.dispatchEvent(new Event('change',{bubbles:true}))}
@@ -353,6 +391,10 @@ document.addEventListener('change',e=>{
  if(!applyingMaterial&&['material','materialType'].includes(e.target?.id)){selectedMaterialId='';syncWorkshopUsage()}
 });
 document.addEventListener('input',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
+document.addEventListener('pp-workshop-data-changed',event=>{if(event.detail?.kind==='printers'){syncPrinterProfileOptions();renderPrinters()}});
+document.addEventListener('pp-workshop-profiles-updated',()=>{syncPrinterProfileOptions(undefined,true);renderPrinters()});
+const printerSelect=document.getElementById('printer');if(printerSelect)printerSelect.addEventListener('change',()=>{try{if(printerSelect.value.startsWith('workshop:'))localStorage.setItem(SELECTED_PRINTER_KEY,printerSelect.value.slice(9));else localStorage.removeItem(SELECTED_PRINTER_KEY)}catch(e){}});
+syncPrinterProfileOptions();
 document.addEventListener('change',e=>{if(['materialUsed','qty'].includes(e.target?.id))syncWorkshopUsage()});
 document.addEventListener('click',e=>{if(e.target.closest('#calc'))queueMicrotask(syncWorkshopUsage)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('ppMaterialFormPanel')?.classList.remove('open');document.getElementById('ppMaterialsPanel')?.classList.remove('open');closePrinterForm();document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';syncWorkspaceModalState()}});

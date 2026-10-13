@@ -19,7 +19,7 @@ const nav=links.map(item=>{
  return '<a href="'+item.href+'" '+(current?'aria-current="page"':'')+(item.key==='account'?' class="pvm-sign-in"':'')+'><span class="pvm-icon">'+graphic+'</span><span>'+item.label+'</span></a>';
 }).join('');
 mount.innerHTML='<header class="pvm-header">'+
- '<a class="pvm-brand" href="./index.html" aria-label="PrintProfit home"><img src="./assets/printprofit-logo-orange-compact-20261012-v2.svg?v=2" alt="PrintProfit"></a>'+
+ '<a class="pvm-brand" href="./index.html" aria-label="PrintProfit home"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"><span class="pvm-brand-fallback">PrintProfit</span></a>'+
  '<nav class="pvm-nav" aria-label="PrintProfit navigation">'+nav+'</nav>'+
  '<div class="pvm-prefs"><label class="pvm-dark" title="Toggle dark mode"><span aria-hidden="true">◐</span><b id="themeLabel">Dark mode</b><input id="darkModeToggle" type="checkbox" role="switch" aria-label="Dark mode"><i aria-hidden="true"></i></label>'+
  '<label class="pvm-language" aria-label="Language"><span class="pvm-flag" aria-hidden="true"></span><select id="pvmLanguage" aria-label="Language"><option value="en">EN</option><option value="pl">PL</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="nl">NL</option><option value="pt">PT</option><option value="cs">CS</option><option value="sv">SV</option><option value="da">DA</option></select><em aria-hidden="true">⌄</em></label></div></header>';
@@ -45,6 +45,7 @@ const updateFlag=()=>{if(!flag)return;const code=String(lang?.value||'en').toLow
 if(dark)dark.checked=initial.dark!==false;
 const applyTheme=()=>{document.body.classList.toggle('pp-light',!dark?.checked);const label=document.getElementById('themeLabel');if(label)label.textContent=dark?.checked?'Dark mode':'Light mode'};
 applyTheme();updateFlag();
+const brandImage=mount.querySelector('.pvm-brand img');if(brandImage)brandImage.addEventListener('error',()=>{brandImage.style.display='none';const fallback=mount.querySelector('.pvm-brand-fallback');if(fallback)fallback.style.display='block'});
 if(!page.endsWith('/price-finder.html'))dark?.addEventListener('change',()=>{save({dark:dark.checked});applyTheme()});
 lang?.addEventListener('change',()=>{const code=String(lang.value||'en');save({language:code});updateFlag();location.reload()});
 window.addEventListener('storage',()=>{const latest=prefs();if(dark)dark.checked=latest.dark!==false;if(lang)lang.value=latest.language||'en';applyTheme();updateFlag()});

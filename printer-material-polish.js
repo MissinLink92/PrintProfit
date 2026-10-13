@@ -79,10 +79,12 @@ function install(){
    set('ppPrinterLife',life>0?Math.round(life).toLocaleString()+' h':'Not entered');
    set('ppPrinterDep',price>0&&life>0?money(price/life)+'/h':'Enter price + life');
   }else{
-   const parts=String(printer.value||'').split('|');
+   const selected=printer.options[printer.selectedIndex];
+   const workshop=String(printer.value||'').startsWith('workshop:')?selected:null;
+   const parts=workshop?[workshop.dataset.watts,workshop.dataset.price,workshop.dataset.lifetime]:String(printer.value||'').split('|');
    const power=Number(parts[0])||0,price=Number(parts[1])||0,life=Number(parts[2])||0;
    const hint=$('ppPrinterDetailsHint');
-   if(hint)hint.textContent='Values used by PrintProfit for this printer.';
+   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Values used by PrintProfit for this printer.';
    const set=(id,val)=>{const e=$(id);if(e)e.textContent=val;};
    if(price>0){
     set('ppPrinterPrice',money(price));

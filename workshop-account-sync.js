@@ -28,8 +28,11 @@ const readList=key=>{const value=readJson(key,[]);return Array.isArray(value)?va
 const readWorkshop=()=>({materials:readList(MATERIAL_KEY),printers:readList(PRINTER_KEY)});
 const writeWorkshop=value=>{
  try{
-  localStorage.setItem(MATERIAL_KEY,JSON.stringify(Array.isArray(value.materials)?value.materials:[]));
-  localStorage.setItem(PRINTER_KEY,JSON.stringify(Array.isArray(value.printers)?value.printers:[]));
+  const materials=Array.isArray(value.materials)?value.materials:[];
+  const printers=Array.isArray(value.printers)?value.printers:[];
+  localStorage.setItem(MATERIAL_KEY,JSON.stringify(materials));
+  localStorage.setItem(PRINTER_KEY,JSON.stringify(printers));
+  document.dispatchEvent(new CustomEvent('pp-workshop-profiles-updated',{detail:{printers}}));
   return true;
  }catch(e){console.warn('PrintProfit workshop restore failed:',e);return false}
 };
