@@ -1,0 +1,30 @@
+name: Check language and Workshop regressions
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - 'locales/**'
+      - 'scripts/check_*.cjs'
+      - '.github/workflows/check-ui-regressions.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check translation initialization and switching
+        run: node scripts/check_i18n.cjs
+      - name: Check currency labels and calculated values
+        run: node scripts/check_currency_labels.cjs
+      - name: Check saved printer options and metadata
+        run: node scripts/check_workshop_printers.cjs

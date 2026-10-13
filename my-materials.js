@@ -1,11 +1,21 @@
 (()=>{ 
 'use strict';
 if(window.__printProfitMaterials)return; window.__printProfitMaterials=true;
+let workspaceParentScroll=null;
 function syncWorkspaceModalState(){
  const open=!!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open');
  const bodies=[document.body];
  try{if(window.parent&&window.parent!==window)bodies.push(window.parent.document.body)}catch(e){}
  bodies.forEach(body=>{if(open)body.dataset.ppModalOpen='true';else delete body.dataset.ppModalOpen;});
+ try{if(window.parent!==window){
+  document.documentElement.style.setProperty('--pp-modal-viewport-height',window.parent.innerHeight+'px');
+  if(open){
+   if(workspaceParentScroll===null){workspaceParentScroll=window.parent.scrollY;window.parent.scrollTo({top:0,left:0,behavior:'instant'});}
+   window.parent.document.body.style.overflow='hidden';
+  }else if(workspaceParentScroll!==null){
+   window.parent.document.body.style.overflow='';window.parent.scrollTo({top:workspaceParentScroll,behavior:'instant'});workspaceParentScroll=null;
+  }
+ }}catch(e){}
 }
 const KEY='printprofit.materials.v1';
 const PRINTER_KEY='printprofit.workshop-printers.v1';
@@ -52,7 +62,7 @@ function render(){
   if(!materials.length)list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">◉</div><h3>No materials saved yet</h3><p>Add your regular filament and resin, then track how much remains after each print.</p><button type="button" class="pp-material-new" data-material-new>＋ Create material profile</button></div>';
   else list.innerHTML=materials.map(m=>{
    const remaining=materialRemaining(m),threshold=materialThreshold(m),unit=materialUnit(m),low=threshold>0&&remaining<=threshold;
-   return '<article class="pp-material-card" data-material-id="'+esc(m.id)+'"><div class="pp-material-main"><div class="pp-material-dot"></div><div><h3>'+esc(m.name)+' '+(low?'<span class="pp-stock-low">Low stock</span>':'')+'</h3><p>'+esc(m.type)+' · '+amountText(remaining)+' '+unit+' remaining · '+amountText(m.amount)+' '+unit+' package</p><small>'+esc(m.brand||'No brand')+(m.colour?' · '+esc(m.colour):'')+' · '+moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))+' / '+unit+' · alert at '+amountText(threshold)+' '+unit+'</small></div></div><div class="pp-material-actions"><button type="button" data-use-material="'+esc(m.id)+'">Use</button><button type="button" data-edit-material="'+esc(m.id)+'">Edit</button><button type="button" class="danger" data-delete-material="'+esc(m.id)+'">Delete</button></div></article>';
+   return '<article class="pp-material-card" data-material-id="'+esc(m.id)+'"><div class="pp-material-main"><div class="pp-material-dot"></div><div><h3><span translate="no">'+esc(m.name)+'</span> '+(low?'<span class="pp-stock-low">Low stock</span>':'')+'</h3><p>'+esc(m.type)+' · '+amountText(remaining)+' '+unit+' remaining · '+amountText(m.amount)+' '+unit+' package</p><small>'+esc(m.brand||'No brand')+(m.colour?' · '+esc(m.colour):'')+' · '+moneyFromGBP((Number(m.cost)||0)/(Number(m.amount)||1))+' / '+unit+' · alert at '+amountText(threshold)+' '+unit+'</small></div></div><div class="pp-material-actions"><button type="button" data-use-material="'+esc(m.id)+'">Use</button><button type="button" data-edit-material="'+esc(m.id)+'">Edit</button><button type="button" class="danger" data-delete-material="'+esc(m.id)+'">Delete</button></div></article>';
   }).join('');
  }
  renderPrinters();syncWorkshopUsage();
@@ -66,7 +76,8 @@ function syncPrinterProfileOptions(preferredId,refreshActive=false){
  const printers=readPrinters().filter(p=>p&&p.id).sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
  const group=document.createElement('optgroup');group.id=groupId;group.label='My Workshop';
  printers.forEach(p=>{
-  const option=new Option('My Workshop · '+String(p.name||'Printer profile'),'workshop:'+String(p.id));
+  const option=new Option(String(p.name||'Printer profile'),'workshop:'+String(p.id));
+  option.setAttribute('translate','no');
   option.dataset.profileId=String(p.id);
   option.dataset.profileName=String(p.name||'Printer profile');
   option.dataset.watts=String(Number(p.watts)||0);
@@ -77,7 +88,10 @@ function syncPrinterProfileOptions(preferredId,refreshActive=false){
  });
  if(printers.length){
   const custom=printer.querySelector('option[value="custom"]');
-  printer.insertBefore(group,custom||null);
+  // The printer catalogue groups its options by manufacturer. insertBefore
+  // must target a direct child of the select, never an option inside a group.
+  const anchor=custom?.parentElement===printer?custom:custom?.closest('optgroup');
+  printer.insertBefore(group,anchor||null);
  }
  let storedId='';try{storedId=localStorage.getItem(SELECTED_PRINTER_KEY)||''}catch(e){}
  const valid=id=>printers.some(p=>String(p.id)===String(id));
@@ -99,7 +113,7 @@ function renderPrinters(){
  const printers=readPrinters().sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
  const count=document.getElementById('ppPrinterCount');if(count)count.textContent=printers.length+' saved '+(printers.length===1?'printer':'printers');
  if(!printers.length){list.innerHTML='<div class="pp-materials-empty"><div class="pp-materials-empty-icon">▱</div><h3>No printers saved yet</h3><p>Add the printers you own so their power and depreciation details are ready to use.</p><button type="button" class="pp-material-new" data-printer-new>＋ Create printer profile</button></div>';return;}
- list.innerHTML=printers.map(p=>'<article class="pp-material-card pp-printer-card" data-printer-id="'+esc(p.id)+'"><div class="pp-material-main"><div class="pp-printer-dot"></div><div><h3>'+esc(p.name)+'</h3><p>'+amountText(p.watts)+' W · '+moneyFromGBP(p.price)+' purchase price · '+amountText(p.lifetime)+' expected hours</p><small>'+esc(p.materialType||'Filament')+' printer profile</small></div></div><div class="pp-material-actions"><button type="button" data-printer-use="'+esc(p.id)+'">Use</button><button type="button" data-printer-edit="'+esc(p.id)+'">Edit</button><button type="button" class="danger" data-printer-delete="'+esc(p.id)+'">Delete</button></div></article>').join('');
+ list.innerHTML=printers.map(p=>'<article class="pp-material-card pp-printer-card" data-printer-id="'+esc(p.id)+'"><div class="pp-material-main"><div class="pp-printer-dot"></div><div><h3 translate="no">'+esc(p.name)+'</h3><p>'+amountText(p.watts)+' W · '+moneyFromGBP(p.price)+' purchase price · '+amountText(p.lifetime)+' expected hours</p><small>'+esc(p.materialType||'Filament')+' printer profile</small></div></div><div class="pp-material-actions"><button type="button" data-printer-use="'+esc(p.id)+'">Use</button><button type="button" data-printer-edit="'+esc(p.id)+'">Edit</button><button type="button" class="danger" data-printer-delete="'+esc(p.id)+'">Delete</button></div></article>').join('');
 }
 function setWorkshopTab(name){
  const materials=name!=='printers',matView=document.getElementById('ppWorkshopMaterialsView'),printerView=document.getElementById('ppWorkshopPrintersView');
@@ -111,6 +125,7 @@ function setWorkspaceSection(section){
  document.querySelectorAll('[data-workspace-section]').forEach(button=>{const selected=button.dataset.workspaceSection===active;if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});
  const account=active==='account',accountPanel=document.getElementById('ppWorkshopAccount'),tabs=document.querySelector('#ppMaterialsPanel .pp-workshop-tabs'),materials=document.getElementById('ppWorkshopMaterialsView'),printers=document.getElementById('ppWorkshopPrintersView');
  if(accountPanel)accountPanel.hidden=!account;
+ if(account)window.__ppRefreshWorkshopAccountUI?.();
  if(tabs)tabs.hidden=account;
  if(account){if(materials)materials.hidden=true;if(printers)printers.hidden=true;}
  else{const selectedTab=document.querySelector('#ppMaterialsPanel [data-workshop-tab].active')?.dataset.workshopTab||'materials';setWorkshopTab(selectedTab);}
@@ -204,7 +219,9 @@ function usePrinter(id){
  const type=document.getElementById('materialType');if(type){type.value=profile.materialType==='Resin'?'resin':'filament';type.dispatchEvent(new Event('change',{bubbles:true}))}
  applyingMaterial=false;selectedMaterialId='';syncWorkshopUsage();
  const hint=document.getElementById('ppPrinterDetailsHint');if(hint)hint.textContent='Using My Workshop profile: '+profile.name+'.';
- document.getElementById('calc')?.click();document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow='';
+ document.getElementById('calc')?.click();closeWorkspaceWorkshop();
+ document.querySelector('.pp-step[data-tab="machine"]')?.click();
+ document.querySelector('[data-panel="machine"]')?.scrollIntoView({block:'start',behavior:'smooth'});
 }
 function deletePrinter(id){
  const profile=readPrinters().find(item=>String(item.id)===String(id));if(!profile||!confirm('Delete “'+profile.name+'”?'))return;
@@ -295,7 +312,7 @@ function useMaterial(id){
  if(pack)pack.value=m.amount;if(cost)cost.value=m.cost;
  [pack,cost,material].filter(Boolean).forEach(e=>e.dispatchEvent(new Event('input',{bubbles:true})));
  applyingMaterial=false;selectedMaterialId=String(m.id);
- document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow='';
+ closeWorkspaceWorkshop();
  document.getElementById('calc')?.click();syncWorkshopUsage();
 }
 function deleteMaterial(id){const m=read().find(x=>String(x.id)===String(id));if(!m)return;if(!confirm('Delete “'+m.name+'”?'))return;if(write(read().filter(x=>String(x.id)!==String(id)))){if(String(selectedMaterialId)===String(id))selectedMaterialId='';render()}}
@@ -322,7 +339,7 @@ function open(workspaceSection='workshop'){
   panel.innerHTML=`<div class="pp-materials-backdrop" data-material-close></div><section class="pp-materials-dialog" role="dialog" aria-modal="true" aria-labelledby="ppMaterialsTitle">
   <header class="pp-materials-head"><div><div class="pp-materials-kicker">PRINTPROFIT</div><h2 id="ppMaterialsTitle">My Workspace</h2><p id="ppWorkspaceDescription">Create reusable printer and material profiles here. Choose a tab below to get started.</p></div><button type="button" class="pp-materials-close" data-material-close>×</button></header>
   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects">Projects</button><button type="button" data-workspace-section="workshop" aria-current="page">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
-  <div id="ppWorkshopAccount"></div>
+  <div id="ppWorkshopAccount"><p class="pp-account-loading" role="status">Loading account controls…</p><button type="button" data-pp-account-retry>Try again</button></div>
   <div class="pp-workshop-tabs" role="tablist" aria-label="Workshop library"><button type="button" class="active" data-workshop-tab="materials" aria-selected="true">Materials &amp; stock</button><button type="button" data-workshop-tab="printers" aria-selected="false">Printers</button></div>
   <div id="ppWorkshopMaterialsView"><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-material-new>＋ Create material profile</button><span id="ppMaterialCount"></span></div><div id="ppMaterialsList"></div></div>
   <div id="ppWorkshopPrintersView" hidden><div class="pp-materials-toolbar"><button type="button" class="pp-material-new" data-printer-new>＋ Create printer profile</button><span id="ppPrinterCount"></span></div>
@@ -348,13 +365,18 @@ function open(workspaceSection='workshop'){
 .pp-material-form-grid{grid-template-columns:1fr 1fr 1fr}.pp-material-form-grid input,.pp-material-form-grid select{font-size:14px}.pp-material-form{max-height:calc(100vh - 40px);overflow:auto}
 .pp-workshop-usage{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:14px 0;padding:15px;border:1px solid #315767;border-left:4px solid #ff8a24;border-radius:12px;background:linear-gradient(145deg,#0d2230,#102a39);color:#f5f9fb}.pp-workshop-usage-copy{min-width:0}.pp-workshop-usage-copy>span{display:block;color:#ffae62;font-size:9px;font-weight:900;letter-spacing:.15em}.pp-workshop-usage-copy strong{display:block;margin-top:4px;font-size:14px}.pp-workshop-usage-copy p{margin:4px 0 0;color:#bfd0d7;font-size:12px;line-height:1.4}.pp-workshop-usage-actions{display:flex;gap:8px;flex-wrap:wrap}.pp-workshop-usage-actions button{border:1px solid #486775;border-radius:9px;padding:9px 11px;background:#091923;color:#e6eef2;font-weight:800;cursor:pointer}.pp-workshop-usage-actions .pp-workshop-mark{background:#0d986b;border-color:#10b981;color:#fff}.pp-workshop-usage-actions button:disabled{opacity:.48;cursor:not-allowed}
 @media(max-width:760px){.pp-materials-dialog{width:calc(100vw - 16px);max-width:calc(100vw - 16px);margin:8px auto;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);border-radius:14px}.pp-materials-head,.pp-materials-toolbar,#ppMaterialsList,#ppWorkshopPrintersList{padding-left:16px;padding-right:16px}.pp-material-card{flex-direction:column;align-items:flex-start}.pp-material-actions{width:100%}.pp-material-actions button{flex:1}.pp-material-form-grid,.pp-workshop-printer-form-grid{grid-template-columns:1fr}.pp-workshop-printer-form{margin-left:16px;margin-right:16px}.pp-workspace-nav{padding-left:16px;padding-right:16px;flex-wrap:wrap}.pp-workshop-tabs{padding-left:16px;padding-right:16px}.pp-workshop-usage{align-items:flex-start;flex-direction:column}.pp-workshop-usage-actions,.pp-workshop-usage-actions button{width:100%}}
-`;document.head.appendChild(style);
+`;style.textContent+='\n#ppMaterialFormPanel:not(.open){display:none!important}.pp-materials-dialog{max-height:calc(var(--pp-modal-viewport-height,100dvh) - 32px)!important}@media(max-width:760px){.pp-materials-dialog{max-height:calc(var(--pp-modal-viewport-height,100dvh) - 16px)!important}}';document.head.appendChild(style);
  }
  refreshCurrencyUI();panel.classList.add('open');syncWorkspaceModalState();document.body.style.overflow='hidden';setWorkshopTab('materials');setWorkspaceSection(workspaceSection);render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }
 function closeWorkspaceWorkshop(){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';syncWorkspaceModalState();}
 window.__ppOpenWorkspaceWorkshop=(section='workshop')=>open(section);
 window.__ppCloseWorkspaceWorkshop=()=>closeWorkspaceWorkshop();
+document.addEventListener('click',event=>{if(!event.target.closest('[data-pp-account-retry]'))return;
+ const script=document.createElement('script');script.src='./workshop-account-sync.js?v=20261013-language1';
+ script.onload=()=>{window.__ppRefreshWorkshopAccountUI?.();document.dispatchEvent(new Event('pp-workshop-open'));};
+ script.onerror=()=>{const status=document.querySelector('#ppWorkshopAccount .pp-account-loading');if(status)status.textContent='Account controls could not load. Check your connection and try again.';};document.body.appendChild(script);
+});
 function ensureButton(){ /* Material controls are intentionally kept out of Box 3. */ }
 
 document.addEventListener('click',e=>{

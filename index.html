@@ -68,7 +68,7 @@ body[data-pp-theme="light"] .pp-legal-links a{color:#006d88!important}
 body[data-pp-theme="light"] .pp-legal-links{color:#536671!important}
 </style>
 </head>
-<body aria-busy="true">
+<body data-pp-standalone-i18n="1" aria-busy="true">
 <main id="main-content">
 <div id="ppLoading" class="pp-loading" role="status" aria-live="polite">
 <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit" width="240">
@@ -123,18 +123,18 @@ const scripts=[
 'stl-file-preview.js?v=20261004-file-info1',
 'slicer-file-parser.js?v=20261004-file-info1',
 'file-type-support.js?v=20261004-autofill1',
-'tab-layout.js?v=20261012-pagespeed1',
-'ui-modals.js?v=20261004-theme2',
+'tab-layout.js?v=20261013-language1',
+'ui-modals.js?v=20261013-language1',
 'ui-enhancements.js?v=4',
 'gcode-reader.js?v=20261004-file-info1',
 'print-time-input.js?v=20261004-autofill1',
 'electricity-providers.js?v=20261004-nightly1',
-'i18n-extra.js?v=5',
-'settings-preferences.js?v=20261013-light2',
-'my-projects.js?v=20261012-workspace4',
-'my-materials.js?v=20261013-printer-profiles1',
+'i18n-extra.js?v=20261013-language1',
+'settings-preferences.js?v=20261013-language1',
+'my-projects.js?v=20261013-language1',
+'my-materials.js?v=20261013-language1',
 'config/firebase-config.js?v=4',
-'workshop-account-sync.js?v=8',
+'workshop-account-sync.js?v=20261013-language1',
 'quantity-auto-batch.js?v=2',
 'printer-material-polish.js?v=20261013-profile1',
 'material-brands.js?v=1',
@@ -145,7 +145,7 @@ const scripts=[
 'market-price-sync.js?v=2',
 'calculator-state.js?v=20261004-file-info1',
 'calculator-visual.js?v=8',
-'visual-master.js?v=20261013-light3',
+'visual-master.js?v=20261013-language1',
 'printprofit-missed-icons.js?v=6',
 'printprofit-icon-art.js?v=4',
 'hero-slogan-layout.js?v=1'
@@ -231,8 +231,9 @@ frame.addEventListener('load',async()=>{
 });
 })();
 </script>
+<script src="./i18n-extra.js?v=20261013-language1"></script>
 <script src="./config/analytics-config.js?v=1"></script>
 <script src="./analytics.js?v=20261012-privacy1"></script>
-<link rel="stylesheet" href="./readability.css?v=15">
+<link rel="stylesheet" href="./readability.css?v=20261013-language1">
 </body>
 </html>

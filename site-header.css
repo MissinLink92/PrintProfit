@@ -23,8 +23,8 @@
 #ppSiteHeader .pvm-dark input:checked+i:after{transform:translateX(16px)}
 #ppSiteHeader .pvm-dark input:focus-visible+i{outline:2px solid #35d6e5;outline-offset:2px}
 #ppSiteHeader .pvm-language{padding:0 9px}
-#ppSiteHeader .pvm-language select{appearance:none;background:transparent;border:0;outline:0;color:#e8f1f4;font-size:12px;font-weight:500;width:40px;min-height:0;padding:0}
-#ppSiteHeader .pvm-language option{color:#111}
+#ppSiteHeader .pvm-language select{appearance:none;background:transparent;border:0;outline:0;color:#e8f1f4;font-size:12px;font-weight:500;width:106px;min-height:0;padding:0}
+#ppSiteHeader .pvm-language option{color:#e8f1f4;background:#081b26}
 #ppSiteHeader .pvm-language em{font-style:normal;color:#849daa}
 #ppSiteHeader .pvm-flag{width:22px;height:16px;display:block;overflow:hidden;border-radius:2px;box-shadow:0 0 0 1px #fff2}
 #ppSiteHeader .pvm-flag svg{width:22px;height:16px;display:block}
@@ -39,7 +39,7 @@ body.pp-policy-page.pp-light p,body.pp-policy-page.pp-light li,body.pp-policy-pa
 body.pp-policy-page.pp-light .lead{color:#40535d}
 body.pp-policy-page.pp-light th{background:#e7eef1;color:#243740}
 body.pp-policy-page.pp-light code{color:#34505c}
-@media(max-width:1420px){
+@media(max-width:1660px){
  #ppSiteHeader .pvm-header{height:auto;min-height:64px;flex-wrap:wrap;row-gap:6px;padding-block:8px}
  #ppSiteHeader .pvm-brand{width:200px;flex-basis:200px}
  #ppSiteHeader .pvm-nav{order:3;width:100%;flex:1 0 100%;flex-wrap:wrap;overflow:visible;justify-content:flex-start}
@@ -61,7 +61,7 @@ body.pp-policy-page.pp-light code{color:#34505c}
  #ppSiteHeader .pvm-dark b{display:none}
  #ppSiteHeader .pvm-dark{padding-inline:7px}
  #ppSiteHeader .pvm-language{padding-inline:6px}
- #ppSiteHeader .pvm-language select{width:32px}
+ #ppSiteHeader .pvm-language select{width:106px}
 }
 @media(max-width:380px){
  #ppSiteHeader .pvm-brand{width:132px;flex-basis:132px}
