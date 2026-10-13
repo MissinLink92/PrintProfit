@@ -851,5 +851,7 @@
   "Nightly UK checks. discovered": "Nocne kontrole w UK. Znaleziono produkty.",
   "Nightly UK checks. url-discovery-only": "Nocne kontrole w UK. Znaleziono adresy produktów.",
   "RESIN": "Żywica",
-  "RESIN 3D Printers": "Drukarki żywiczne / SLA / LCD"
+  "RESIN 3D Printers": "Drukarki żywiczne / SLA / LCD",
+  "Automatic GBP feed unavailable.": "Automatyczny kanał cen w GBP jest niedostępny.",
+  "Price verified: {verified} / {total}.": "Sprawdzone ceny: {verified} / {total}."
 }

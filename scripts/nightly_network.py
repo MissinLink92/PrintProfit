@@ -7,6 +7,9 @@ import urllib.error
 import urllib.request
 import urllib.robotparser
 from urllib.parse import urlparse, urljoin
+from urllib.parse import quote, urlsplit, urlunsplit
+from email.utils import parsedate_to_datetime
+from datetime import datetime, timezone
 
 UA = 'PrintProfit-Nightly/1.0 (+https://github.com/MissinLink92/PrintProfit)'
 
@@ -35,14 +38,40 @@ class Reader:
     def _read(self, url, limit):
         public_url(url)
         host = urlparse(url).netloc
-        time.sleep(max(0, 0.6 - (time.monotonic() - self.last.get(host, 0))))
-        self.last[host] = time.monotonic()
-        request = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': '*/*'})
-        with self.opener.open(request, timeout=18) as response:
-            body = response.read(limit + 1)
-            if len(body) > limit:
-                raise ValueError('Source exceeds the download size limit')
-            return body, response.headers.get_content_charset() or 'utf-8', response.geturl()
+        origin = urlparse(url).scheme + '://' + host
+        robots = self.robots.get(origin)
+        delay = max(1.2, (robots.crawl_delay(UA) or 0) if robots else 0)
+        parts = urlsplit(url)
+        encoded = urlunsplit((parts.scheme, parts.netloc, quote(parts.path, safe='/%:@!$&\'()*+,;=-._~'),
+                              quote(parts.query, safe='/%?:@!$&\'()*+,;=-._~'), ''))
+        request = urllib.request.Request(encoded, headers={'User-Agent': UA, 'Accept': '*/*'})
+        for attempt in range(3):
+            wait = max(0, delay - (time.monotonic() - self.last.get(host, 0)))
+            if time.monotonic() + wait >= self.deadline:
+                raise TimeoutError('Nightly time budget reached; remaining values retained')
+            time.sleep(wait)
+            self.last[host] = time.monotonic()
+            try:
+                with self.opener.open(request, timeout=18) as response:
+                    body = response.read(limit + 1)
+                    if len(body) > limit:
+                        raise ValueError('Source exceeds the download size limit')
+                    return body, response.headers.get_content_charset() or 'utf-8', response.geturl()
+            except urllib.error.HTTPError as exc:
+                if exc.code not in (429, 503) or attempt == 2:
+                    raise
+                retry = exc.headers.get('Retry-After', '')
+                try:
+                    pause = float(retry)
+                except ValueError:
+                    try:
+                        pause = (parsedate_to_datetime(retry)-datetime.now(timezone.utc)).total_seconds()
+                    except (ValueError, TypeError):
+                        pause = 5 * (attempt + 1)
+                pause = max(delay, pause)
+                if pause > 60 or time.monotonic() + pause >= self.deadline:
+                    raise
+                time.sleep(pause)
 
     def allowed(self, url):
         parsed = urlparse(url)

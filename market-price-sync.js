@@ -3,7 +3,7 @@ if(window.__printProfitMarketPriceSync)return;
 window.__printProfitMarketPriceSync=true;
 
 function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
-function products(){return Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products)?window.PRINTPROFIT_PRICE_DATA.products:[];}
+function products(){return Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products)?window.PRINTPROFIT_PRICE_DATA.products.filter(p=>!p.sourceUnavailable):[];}
 let priceDataPromise=null;
 let lookupGeneration=0;
 function loadPriceData(){
@@ -11,7 +11,7 @@ function loadPriceData(){
   if(priceDataPromise)return priceDataPromise;
   priceDataPromise=new Promise(resolve=>{
     const script=document.createElement('script');
-    script.src='./data/price-finder.js?v=20261004-nightly1';
+    script.src='./data/price-finder-lite.js?v=20261013-feeds1';
     script.async=true;
     script.onload=()=>{
       const loaded=Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products);
@@ -43,7 +43,10 @@ function findBest(){
   const materialType=type.value;
   const packWeight=Number(pack?.value)||1000;
   const category=materialType==='resin'?'resin':'filament';
-  const candidates=products().filter(p=>p.category===category && typeMatches(p,selected,materialType) && priceOf(p));
+  const cutoff=Date.now()-7*24*60*60*1000;
+  const candidates=products().filter(p=>(p.category===category||(category==='resin'&&norm(p.type)==='resin')) &&
+    p.lastCheckStatus==='ok' && p.availability==='In stock' && Date.parse(p.updated)>=cutoff &&
+    typeMatches(p,selected,materialType) && priceOf(p));
   if(!candidates.length)return null;
   return candidates
     .map(p=>({...p,_price:priceOf(p),_distance:Math.abs((Number(p.weightGrams)||packWeight)-packWeight)}))

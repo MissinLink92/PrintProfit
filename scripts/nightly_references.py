@@ -143,6 +143,7 @@ def refresh(ref, config, reader, report, queue):
             action()
             for key in ids:
                 ref['sourceStatus'][key].update(status='verified', lastVerified=today)
+                ref['sourceStatus'][key].pop('error', None)
         except Exception as exc:
             for key in ids:
                 if key in pages:

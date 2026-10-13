@@ -856,7 +856,7 @@ function renderCoverage(){
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
+ $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.lastDiscoveryStatus==='monitor-only'?'Automatic GBP feed unavailable.':x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p>'+(x.lastPriceCheck?'<p>Price verified: '+Number(x.lastPriceCheck.verified)+' / '+Number(x.lastPriceCheck.listed)+'.</p>':'')+'<a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
  $('brandCloud').innerHTML=b.slice(0,expandBrands?b.length:36).map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
  const sourceToggle=$('toggleSources');if(sourceToggle){sourceToggle.hidden=s.length<=8;sourceToggle.textContent=expandSources?'Show fewer sources':'Show all '+s.length+' sources';}
  const brandToggle=$('toggleBrands');if(brandToggle){brandToggle.hidden=b.length<=36;brandToggle.textContent=expandBrands?'Show fewer brands':'Show all '+b.length+' brands';}
@@ -865,7 +865,7 @@ function loadData(){
  try{
   const payload=window.PRINTPROFIT_PRICE_DATA;
   if(!payload||!Array.isArray(payload.products))throw new Error('Static comparison dataset missing');
-  db=payload;
+  db={...payload,products:payload.products.filter(product=>!product.sourceUnavailable)};
   const loading=$('compareLoading');if(loading)loading.hidden=true;
   populateCategories();
   refreshFilters();renderCoverage();render();
@@ -985,7 +985,7 @@ updateCompareBar();
 })();
 },{once:true});
 </script>
-<script src="./i18n-extra.js?v=20261013-language1"></script>
+<script src="./i18n-extra.js?v=20261013-feeds1"></script>
 <link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
 <link rel="stylesheet" href="./pp-target-v1.css?v=1">
 

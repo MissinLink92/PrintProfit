@@ -5,6 +5,9 @@ import io
 import json
 import re
 import xml.etree.ElementTree as ET
+from datetime import date
+import nightly_catalogues
+import urllib.error
 from urllib.parse import urlparse, urljoin, urlencode, urlunparse, parse_qs
 from PIL import Image, ImageOps
 from nightly_html import Page, norm, walk
@@ -32,12 +35,14 @@ def exact_product(item, product):
     sku = item.get('sku')
     return bool(sku and str(sku) == str(product.get('sku')))
 
-def offer_price(product):
+def offer_price(product, variant_sku=None):
     offers = product.get('offers', [])
     offers = offers if isinstance(offers, list) else [offers]
     options = []
     for offer in offers:
         if not isinstance(offer, dict) or offer.get('priceCurrency') != 'GBP':
+            continue
+        if variant_sku and str(offer.get('sku')) != str(variant_sku):
             continue
         # Never substitute the low price of a group of different variants.
         if 'price' not in offer or offer.get('@type') == 'AggregateOffer':
@@ -53,16 +58,17 @@ def offer_price(product):
     return options[0]
 
 def shopify(reader, url, variant_id=None, check_currency=True):
+    cached = nightly_catalogues.record(reader, url, variant_id)
+    if cached is not None:
+        return cached
     endpoint = canonical(url) + '.js'
     product = reader.json(endpoint)
     if not isinstance(product, dict) or not product.get('variants'):
         raise ValueError('No Shopify product variants')
     currency = product.get('currency')
     if currency is None and check_currency:
-        base = origin(url)
-        locale = re.match(r'^/([a-z]{2}(?:-[a-z]{2})?)/products/', urlparse(url).path, re.I)
-        cart_url = base + ('/' + locale[1] if locale else '') + '/cart.js'
-        currency = reader.json(cart_url).get('currency')
+        # Public product HTML identifies currency without reading the restricted cart.
+        currency = nightly_catalogues.storefront_currency(reader.text(url)[0])
     variants = product['variants']
     matches = [v for v in variants if str(v['id']) == str(variant_id)] if variant_id else variants
     if len(matches) != 1:
@@ -124,12 +130,16 @@ def refresh_item(item, config, reader, root, today, queue, report):
                 raise ValueError('Retailer did not return GBP for this exact variant')
             price, availability = record['price'], record['available']
             photo = record.get('image')
+            price_url = record['url']
+            locator['priceUrl'] = price_url
         else:
             html, final_url = reader.text(price_url)
-            products = [product for product in Page(html).products if exact_product(item, product)]
+            products = [product for product in Page(html).products if exact_product(item, product)
+                        or (locator.get('expectedProductTitle') and norm(product.get('name')) == norm(locator['expectedProductTitle'])
+                            and locator.get('expectedSku') and str(product.get('sku')) == str(locator['expectedSku']))]
             if len(products) != 1:
                 raise ValueError('Exact model/colour/pack product offer unavailable on the recorded page')
-            price, availability = offer_price(products[0])
+            price, availability = offer_price(products[0], locator.get('expectedOfferSku'))
             photo = image_url(products[0].get('image'), final_url)
         old = float(item['price']) if item.get('price') is not None else None
         if price <= 0 or price > 100000:
@@ -150,19 +160,37 @@ def refresh_item(item, config, reader, root, today, queue, report):
                 item['priceHistory'] = history[-90:]
             stock = 'In stock' if availability is True or str(availability).endswith('/InStock') else 'Out of stock' if availability is False or str(availability).endswith('/OutOfStock') else 'Check retailer'
             item.update(price=round(price, 2), updated=today, lastCheckStatus='ok', priceSourceUrl=price_url,
-                        availability=stock)
+                        availability=stock, url=price_url)
+            item.pop('sourceUnavailable', None)
+            item.pop('unavailableChecked', None)
             if item.get('weightGrams'):
                 item['unit'] = round(price*1000/float(item['weightGrams']), 2)
         # A variant-specific product photo may refresh only when the price/identity was matched.
         if photo:
-            locator['imageUrl'] = photo
+            # Retain the known exact photo when only a generic placeholder is offered.
+            if not re.search(r'placeholder|comingsoon', photo, re.I):
+                locator['imageUrl'] = photo
             locator['imageSourceUrl'] = price_url
     except Exception as exc:
         item['lastCheckStatus'] = 'retained-unverified'
+        if isinstance(exc, nightly_catalogues.VariantMissing):
+            try:
+                reader.text(price_url)
+            except urllib.error.HTTPError as missing:
+                if missing.code in (404, 410):
+                    item.update(sourceUnavailable=True, unavailableChecked=today, availability='Out of stock')
+            except Exception:
+                pass
         report['issues'].append({'area': 'product', 'id': item['id'], 'message': str(exc)})
     try:
         # Selected source photos can still be checked when price sources are blocked.
+        if config.get('skipImages'):
+            return
         photo = locator.get('imageUrl') or item.get('imageOriginalUrl')
+        previous_check = item.get('imageChecked')
+        unchanged = photo and photo == item.get('imageOriginalUrl') and (root / item.get('image', '')).is_file()
+        if unchanged and item.get('lastImageCheckStatus') == 'ok' and previous_check and (date.fromisoformat(today)-date.fromisoformat(previous_check)).days < config.get('imageCheckDays', 7):
+            return
         if locator.get('imageVariantId') and locator.get('imageSourceUrl'):
             photo = shopify(reader, locator['imageSourceUrl'], locator['imageVariantId'], check_currency=False).get('image') or photo
         if not photo:
@@ -195,7 +223,14 @@ def discovery(data, config, reader, report, queue):
         setup = config['retailers'][source_id]
         health = {'id': source_id, 'name': source['name'], 'checkedAt': report['checkedAt'], 'candidates': 0}
         try:
+            if setup.get('monitorOnly'):
+                health.update(status='monitor-only', message=setup.get('monitorReason', 'Public automatic GBP catalogue unavailable'))
+                report['retailers'].append(health)
+                continue
             if setup.get('catalogUrl'):
+                feed = nightly_catalogues.feed_for(reader, setup['catalogUrl'])
+                if feed and feed.get('error'):
+                    raise ValueError(feed['error'])
                 completed = False
                 for page in range(1, config['maxCatalogPages'] + 1):
                     records = reader.json(setup['catalogUrl'] + '?limit=250&page=' + str(page))['products']
@@ -224,11 +259,29 @@ def discovery(data, config, reader, report, queue):
                 health['status'] = 'discovered' if completed else 'partial-catalog'
                 if not completed:
                     report['issues'].append({'area': 'discovery', 'id': source_id, 'message': 'Catalog page limit reached; remaining products not scanned'})
+            elif setup.get('discoveryUrls'):
+                for discovery_url in setup['discoveryUrls']:
+                    html, final_url = reader.text(discovery_url)
+                    page = Page(html)
+                    candidates = [(p.get('url'), p.get('name', ''), p.get('sku')) for p in page.products if p.get('url')]
+                    if not candidates:
+                        candidates = [(urljoin(final_url, href), label, None) for href, label in page.links if relevant(href + ' ' + label)]
+                    for url, title, sku in candidates:
+                        url = urljoin(final_url, url)
+                        if urlparse(url).hostname not in setup['allowedHosts'] or canonical(url) in known_urls:
+                            continue
+                        known_urls.add(canonical(url))
+                        identifier = candidate_id(source_id, url)
+                        queue('new-product', identifier, {'id': identifier, 'sourceId': source_id, 'url': url, 'name': title,
+                              'retailer': source['name'], 'category': None, 'sku': sku,
+                              'note': 'Public product link. Exact identity and GBP offer required before publication.'})
+                        health['candidates'] += 1
+                health['status'] = 'url-discovery-only'
             else:
                 # Public sitemaps expose URLs without downloading every catalog page.
                 sitemap = setup.get('sitemap') or origin(source['url']) + '/sitemap.xml'
                 raw = reader.get(sitemap)[0]
-                document = ET.fromstring(raw)
+                document = ET.fromstring(raw.lstrip(b'\xef\xbb\xbf \t\r\n'))
                 urls = [node.text for node in document.iter() if node.tag.endswith('loc') and node.text]
                 if document.tag.endswith('sitemapindex'):
                     children = [u for u in urls if re.search(r'product|shop|catalog', u, re.I)]
@@ -236,7 +289,7 @@ def discovery(data, config, reader, report, queue):
                         raise ValueError('No product sitemap identified; source needs a discovery adapter')
                     urls = []
                     for child in children[:config['maxSitemaps']]:
-                        child_document = ET.fromstring(reader.get(child)[0])
+                        child_document = ET.fromstring(reader.get(child)[0].lstrip(b'\xef\xbb\xbf \t\r\n'))
                         urls += [n.text for n in child_document.iter() if n.tag.endswith('loc') and n.text]
                     if len(children) > config['maxSitemaps']:
                         report['issues'].append({'area': 'discovery', 'id': source_id, 'message': 'Sitemap limit reached; partial scan'})
@@ -301,7 +354,10 @@ def automatic_details(candidate, record):
 def add_approved(data, config, queue, reader, root, report):
     automatic = config.get('newProducts') == 'automatic-verified'
     existing = {item['id'] for item in data['products']}
+    published = 0
     for entry in list(queue.entries.values()):
+        if published >= config.get('maxNewProductsPerRun', 50):
+            break
         if entry['kind'] != 'new-product' or entry['status'] in ('published','superseded','rejected') or (not automatic and config['reviewDecisions'].get(entry['reviewId']) != 'approve'):
             continue
         candidate = copy.deepcopy(entry['proposal'])
@@ -356,6 +412,7 @@ def add_approved(data, config, queue, reader, root, report):
             existing.add(candidate['id'])
             entry['status'] = 'published'
             report['addedProducts'].append(candidate['id'])
+            published += 1
         except Exception as exc:
             if automatic:
                 entry['status'] = 'skipped-unverified'

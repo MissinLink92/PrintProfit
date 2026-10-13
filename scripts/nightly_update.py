@@ -14,6 +14,7 @@ from nightly_network import Reader
 from nightly_categories import ProductCategories
 import nightly_references
 import nightly_products
+import nightly_catalogues
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -81,13 +82,16 @@ def review_html(queue):
 
 def report_md(report):
     lines = ['# PrintProfit nightly update', '', 'Checked: ' + report['checkedAt'], '',
+             '- Existing prices verified: ' + str(report.get('verifiedProducts', 0)) + ' / ' + str(report.get('totalProducts', 0)),
+             '- Existing prices retained without verification: ' + str(report.get('retainedProducts', 0)),
              '- Changed existing prices: ' + str(len(report['priceChanges'])),
              '- Refreshed image files: ' + str(len(report['imageChanges'])),
              '- Verified products added: ' + str(len(report['addedProducts'])),
              '- Unresolved source notices: ' + str(report['pendingReview']),
              '- Failed or incomplete checks: ' + str(len(report['issues'])), '',
-             '## Source checks', '', '| Retailer | Status | Candidates |', '|---|---|---|']
-    lines += ['| ' + r['name'].replace('|',' ') + ' | ' + r['status'] + ' | ' + str(r['candidates']) + ' |' for r in report['retailers']]
+             '## Source checks', '', '| Retailer | Price checks | Discovery | Candidates |', '|---|---|---|---|']
+    lines += ['| ' + r['name'].replace('|',' ') + ' | ' + str(r.get('verified', 0)) + ' / ' + str(r.get('listed', 0))
+              + ' | ' + r['status'] + ' | ' + str(r['candidates']) + ' |' for r in report['retailers']]
     lines += ['', '## Items needing attention', '']
     lines += ['- ' + issue['area'] + ' / ' + issue['id'] + ': ' + issue['message'].replace('\n',' ') for issue in report['issues']]
     return '\n'.join(lines) + '\n'
@@ -118,6 +122,7 @@ def main():
     queue.product_details = config['approvedProductDetails']
     reader = Reader(config['maxRunSeconds'])
     nightly_references.refresh(ref, config, reader, report, queue)
+    nightly_catalogues.prepare(config, reader, report)
     for index, item in enumerate(data['products'], 1):
         print('Checking product', index, 'of', len(data['products']), item['id'], flush=True)
         nightly_products.refresh_item(item, config, reader, root, now[:10], queue, report)
@@ -126,6 +131,14 @@ def main():
     report['pendingReview'] = sum(e['status'] == 'pending' for e in queue.entries.values())
     report['requests'] = reader.count
     report['verifiedProducts'] = sum(i.get('lastCheckStatus') == 'ok' and i.get('lastAttempt') == now[:10] for i in data['products'])
+    report['archivedProducts'] = sum(bool(i.get('sourceUnavailable')) for i in data['products'])
+    report['totalProducts'] = len(data['products'])-report['archivedProducts']
+    report['retainedProducts'] = report['totalProducts'] - report['verifiedProducts']
+    for retailer in report['retailers']:
+        items = [i for i in data['products'] if i.get('retailer') == retailer['name'] and not i.get('sourceUnavailable')]
+        retailer['listed'] = len(items)
+        retailer['verified'] = sum(i.get('lastCheckStatus') == 'ok' and i.get('lastAttempt') == now[:10] for i in items)
+        retailer['retained'] = len(items)-retailer['verified']
     data['refreshPolicy'] = {'frequency': 'nightly at 00:00', 'timezone': 'Europe/London', 'newProducts': 'automatic when verified' if automatic else 'review first',
                              'note': 'Checked prices are snapshots. Failed or ambiguous sources retain their last verified values.'}
     data['lastRefreshSummary'] = {'checkedAt': now, 'changedProducts': len(report['priceChanges']), 'changedImages': len(report['imageChanges']),
@@ -138,12 +151,14 @@ def main():
         health = next((r for r in report['retailers'] if r['id'] == source['id']), None)
         if health:
             source['lastDiscoveryStatus'] = health['status']
+            source['lastPriceCheck'] = {k: health[k] for k in ('listed', 'verified', 'retained')}
+            source['checkMessage'] = health.get('message', '')
     printers = {}
     for item in data['products']:
         category = categories.classify(item)
         item['productGroup'] = category['group']
         item['productCategory'] = category['id']
-        if category['group'] == 'printer' and item.get('price'):
+        if category['group'] == 'printer' and item.get('price') and not item.get('sourceUnavailable') and item.get('lastCheckStatus') == 'ok':
             name = item['name']
             for prefix in ('Bambu Lab ', 'ELEGOO ', 'Creality ', 'Flashforge '):
                 if name.startswith(prefix):

@@ -1,0 +1,45 @@
+name: Nightly site audit
+
+on:
+  schedule:
+    - cron: '15 1 * * *'
+      timezone: Europe/London
+  workflow_dispatch:
+  pull_request:
+    paths: ['scripts/audit_site.cjs', '.github/workflows/nightly-site-audit.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: printprofit-site-audit-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser audit tools
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check site on desktop and phone sizes
+        run: node scripts/audit_site.cjs
+      - name: Save audit and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: printprofit-site-audit-${{ github.run_id }}
+          path: .audit-output/
+          retention-days: 30
+      - name: Publish audit summary
+        if: always()
+        run: |
+          if [ -f .audit-output/audit.md ]; then
+            cat .audit-output/audit.md >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -11,7 +11,7 @@ HISTORY_PAGE_SIZE = 100
 PRODUCT_FIELDS = frozenset({
     "id", "name", "brand", "retailer", "url", "type", "colour", "colourHex",
     "image", "imageNote", "price", "shippingPrice", "pack", "unit",
-    "availability", "updated", "lastCheckStatus",
+    "availability", "updated", "lastCheckStatus", "category", "weightGrams",
 })
 SUMMARY_FIELDS = ("currency", "updatedAt", "refreshPolicy", "lastRefreshSummary", "sources", "brandDirectory")
 
@@ -52,7 +52,8 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
     if not isinstance(history_page_size, int) or history_page_size < 1:
         raise ValueError("Price-history page size must be a positive integer")
 
-    ordered = sorted(products, key=_price_key)
+    # Removed offers remain in the source/history archive, outside current results.
+    ordered = sorted((product for product in products if not product.get('sourceUnavailable')), key=_price_key)
     seen = set()
     summary_products = []
     history_pages = {}

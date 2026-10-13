@@ -1,6 +1,11 @@
 name: PrintProfit midnight UK update
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/nightly_*.py'
+      - 'config/nightly-sources.json'
   schedule:
     - cron: '0 0 * * *'
       timezone: Europe/London
