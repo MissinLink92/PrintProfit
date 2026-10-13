@@ -745,6 +745,26 @@ body[data-pp-theme="light"] #ppVisualMaster .pvm-dark,body[data-pp-theme="light"
 body[data-pp-theme="light"] #ppVisualMaster .pvm-language select{color:#29404b!important}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-journey button{background:linear-gradient(180deg,#fff,#edf3f5)!important;color:#17232b!important;border-color:#bccdd6!important}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-journey small{color:#536771!important}
+/* Workspace creates its panels after the theme stylesheet. Keep their
+   foregrounds and surfaces paired in light mode, including account consent. */
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-materials-dialog,.pp-projects-dialog,.pp-material-form,.pp-workshop-printer-form){background:#fff!important;color:#19252d!important;border-color:#b9cbd3!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-materials-head,.pp-projects-head,.pp-workspace-nav){background:#f5f8fa!important;border-color:#c5d3d9!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-material-card,.pp-project-card,.pp-account-card,.pp-account-consents,.pp-workshop-usage){background:#f5f8fa!important;color:#19252d!important;border-color:#b9cbd3!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-materials-dialog,.pp-projects-dialog,.pp-material-form) :is(h2,h3,strong,b,label){color:#19252d!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-materials-dialog,.pp-projects-dialog,.pp-material-form) :is(p,small,.small,.pp-account-status,.pp-account-signup-help,.pp-account-footnote,.pp-account-consents,.pp-account-consents>span,.pp-account-consents label>span,.pp-account-badge,.pp-account-signed-in){color:#425963!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-materials-dialog,.pp-projects-dialog,.pp-material-form) a,
+html#ppReadableTypography body[data-pp-theme="light"] .pp-account-links button{color:#006d88!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-material-actions,.pp-project-actions,.pp-workspace-nav,.pp-workshop-tabs) button,
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-account-secondary,.pp-materials-close,.pp-projects-close){background:#edf3f5!important;color:#243b46!important;border-color:#a8bec9!important}
+html#ppReadableTypography body[data-pp-theme="light"] .pp-workspace-nav button[aria-current="page"],
+html#ppReadableTypography body[data-pp-theme="light"] .pp-workshop-tabs button.active{background:#dcecf2!important;border-color:#1684a2!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-account-legal-pending,.pp-account-not-configured){background:#fff7e8!important;color:#714611!important;border-color:#c49b58!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-account-legal-pending,.pp-account-not-configured) :is(p,strong,label,label>span){color:#714611!important}
+html#ppReadableTypography body[data-pp-theme="light"] .pp-account-delete-confirm{background:#fff4f4!important;border-color:#be8990!important}
+html#ppReadableTypography body[data-pp-theme="light"] .pp-account-delete-confirm :is(p,label),
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-account-danger,.pp-account-message.is-error){color:#a42132!important}
+html#ppReadableTypography body[data-pp-theme="light"] .pp-account-message{color:#176a50!important}
+html#ppReadableTypography body[data-pp-theme="light"] :is(.pp-account-kicker,.pp-materials-kicker,.pp-projects-kicker){color:#865000!important}
 `;
 }
 
