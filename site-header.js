@@ -12,7 +12,7 @@ const links=[
  {key:'account',label:'Sign in',href:'./index.html?open=account',icon:'account'}
 ];
 const page=location.pathname.toLowerCase();
-const active=page.endsWith('/price-finder.html')?'compare':page.endsWith('/guide.html')?'guide':'';
+const active=page.endsWith('/price-finder.html')?'compare':(page.endsWith('/guide.html')||page.endsWith('/privacy.html')||page.endsWith('/terms.html'))?'guide':(page==='/'||page.endsWith('/index.html'))?'home':'';
 const nav=links.map(item=>{
  const current=item.key===active;
  const graphic=item.icon==='account'?signInIcon:icon(item.icon);
