@@ -2,7 +2,7 @@
 if(window.__printProfitMarketPriceSync)return;
 window.__printProfitMarketPriceSync=true;
 
-function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
+function norm(v){return String(v||'').toLowerCase().replace(/[^a-z0-9+]+/g,' ').trim();}
 function products(){return Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products)?window.PRINTPROFIT_PRICE_DATA.products.filter(p=>!p.sourceUnavailable):[];}
 let priceDataPromise=null;
 let lookupGeneration=0;
@@ -25,14 +25,11 @@ function loadPriceData(){
 }
 function priceOf(p){const n=Number(p?.price);return Number.isFinite(n)&&n>0?n:null;}
 function typeMatches(item, selectedType, materialType){
-  const a=norm(selectedType), b=norm(item?.type);
+  const aliases={'pla basic':'pla','pla plus':'pla+'};
+  const a=aliases[norm(selectedType)]||norm(selectedType), b=aliases[norm(item?.type)]||norm(item?.type);
   if(!a||!b)return false;
   if(a===b)return true;
-  if(materialType==='filament'){
-    if(a==='pla' && (b==='pla' || b==='pla basic'))return true;
-    if(a==='pla+' && (b==='pla+' || b==='pla plus'))return true;
-  }
-  return a.includes(b)||b.includes(a);
+  return a===b;
 }
 function findBest(){
   const material=document.getElementById('material');

@@ -721,6 +721,7 @@ function renderInsights(rows=filtered()){
  const retailers=new Set();let byPrice=null,bestUnit=null;
  rows.forEach(product=>{
   if(product.retailer)retailers.add(product.retailer);
+  if(product.lastCheckStatus!=='ok'||Date.parse(product.updated)<Date.now()-7*86400000)return;
   if(product.price!=null&&(!byPrice||Number(product.price)<Number(byPrice.price)))byPrice=product;
   if(product.unit!=null&&(!bestUnit||Number(product.unit)<Number(bestUnit.unit)))bestUnit=product;
  });
