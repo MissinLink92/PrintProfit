@@ -106,3 +106,6 @@ body.pp-policy-page.pp-light code{color:#34505c}
 @media(max-width:540px){
  #ppSiteHeader .pvm-icon{width:20px!important;height:20px!important;flex-basis:20px!important;border-radius:6px!important}
 }
+
+/* Keep the active icon visible against its dark tile. */
+#ppSiteHeader .pvm-nav a[aria-current=page] .pvm-icon{color:#009fef!important}
