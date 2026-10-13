@@ -236,3 +236,85 @@ html#ppReadableTypography body .pp-account-signup-help{
 html#ppReadableTypography body{font-weight:400!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 html#ppReadableTypography body :is(h1,h2,h3,h4,h5,h6,strong,b,th,label,legend,.price,.value,.total,.pp-account-kicker,.pp-account-badge,.pp-account-consents>span,.pp-advisor-pill,.kind,.stock,.section-title,.kicker,.pp-step-copy strong,.pp-materials-kicker){font-weight:500!important}
 html#ppReadableTypography body :is(button,.btn,.tab,.nav a,.pp-account-primary,.pp-account-secondary,.pp-account-delete-final,.pvm-nav a){font-weight:500!important}
+
+
+/* Compare page light mode: override the dark palette's important cell colours. */
+body.pp-light{
+  color-scheme:light!important;
+  --text:#19252d!important;
+  --muted:#536671!important;
+  --ppc-text:#19252d!important;
+  --ppc-muted:#536671!important;
+  background:#f1f4f6!important;
+  color:#24343d!important;
+}
+body.pp-light .kicker,body.pp-light h1 strong{color:#9b4a00!important}
+body.pp-light .meta,body.pp-light .results-heading span,
+body.pp-light .insight-card span,body.pp-light .product-card .card-brand,
+body.pp-light .product-card .mini small,body.pp-light .footer{
+  color:#536671!important;opacity:1!important
+}
+body.pp-light .tool label{color:#344a55!important}
+body.pp-light .tool,body.pp-light .product-card,body.pp-light .card,
+body.pp-light .view-switch,body.pp-light .selected-toggle,body.pp-light .insight-card{
+  background:#fff!important;border-color:#c4d1d7!important
+}
+body.pp-light .insight-card .eyebrow,body.pp-light .insight-card span,
+body.pp-light .product-card .card-brand,body.pp-light .product-card .mini small{
+  color:#536671!important;opacity:1!important
+}
+body.pp-light .insight-card strong,body.pp-light .section h2,
+body.pp-light .card h3,body.pp-light .product-card h3{color:#19252d!important}
+body.pp-light .card p{color:#536671!important}
+body.pp-light .selected-toggle.active,body.pp-light .quick-btn.active{
+  color:#874200!important;border-color:#c27b2e!important;background:#fff5e9!important
+}
+body.pp-light .tool input,body.pp-light .tool select{
+  color:#1c2d36!important;background:#f7f9fa!important;border-color:#aebfc7!important
+}
+body.pp-light #tableViewWrap td,body.pp-light #tableViewWrap td *{
+  color:#263943!important;opacity:1!important
+}
+body.pp-light #tableViewWrap td.price,body.pp-light #tableViewWrap .price,
+body.pp-light .product-card .card-price strong{color:#914600!important}
+body.pp-light #tableViewWrap td.unit,body.pp-light #tableViewWrap .unit,
+body.pp-light .product-card .card-unit{color:#80500d!important}
+body.pp-light #tableViewWrap .checked,body.pp-light #tableViewWrap .fresh{
+  color:#425c67!important;opacity:1!important
+}
+body.pp-light #tableViewWrap .stock.in{color:#17683f!important;border-color:#5aa37a!important;background:#e8f6ed!important}
+body.pp-light #tableViewWrap .stock.out{color:#9a2e2e!important;border-color:#ce8d8d!important;background:#fff0f0!important}
+body.pp-light #tableViewWrap .stock.unknown{color:#526671!important}
+body.pp-light #tableViewWrap .kind.filament{color:#7a4200!important}
+body.pp-light #tableViewWrap .kind.resin{color:#185b65!important}
+body.pp-light #tableViewWrap .kind.printer{color:#1f5c78!important}
+body.pp-light #tableViewWrap .kind.equipment{color:#1f6b49!important}
+body.pp-light #tableViewWrap .kind.accessory{color:#553278!important}
+body.pp-light #tableViewWrap .kind.filament .pp-shared-icon{color:#995400!important}
+body.pp-light #tableViewWrap .kind.resin .pp-shared-icon{color:#247783!important}
+body.pp-light #tableViewWrap .kind.printer .pp-shared-icon{color:#286f91!important}
+body.pp-light #tableViewWrap .kind.equipment .pp-shared-icon{color:#238b59!important}
+body.pp-light #tableViewWrap .kind.accessory .pp-shared-icon{color:#7242a0!important}
+body.pp-light #tableViewWrap .price-change.price-down{color:#17683f!important}
+body.pp-light #tableViewWrap .price-change.price-up{color:#9a2e2e!important}
+body.pp-light #tableViewWrap .price-change.price-flat{color:#526671!important}
+body.pp-light #tableViewWrap .product-thumb{background:#edf2f4!important}
+body.pp-light .compare-bar{color:#24343d!important;background:rgba(255,255,255,.98)!important}
+body.pp-light .compare-btn.secondary,body.pp-light .compare-remove{
+  color:#253942!important;border-color:#9db3be!important;background:#f7f9fa!important
+}
+body.pp-light .compare-chip{color:#31434d!important;background:#f0f4f6!important}
+body.pp-light .compare-chip button{color:#526671!important}
+body.pp-light .compare-table td{color:#263943!important;background:#fff!important}
+body.pp-light .compare-table th{color:#304651!important;background:#edf2f4!important}
+body.pp-light .compare-table th:first-child,body.pp-light .compare-table td:first-child{color:#526671!important;background:#e9eff2!important}
+body.pp-light .compare-product-title{color:#19252d!important}
+body.pp-light .compare-remove{color:#40535d!important}
+body.pp-light .product-card .mini{background:#f4f7f8!important;border-color:#c4d1d7!important}
+body.pp-light .details-dialog,body.pp-light .compare-dialog{
+  color:#19252d!important;background:linear-gradient(180deg,#fff,#f3f6f7)!important
+}
+body.pp-light .compare-head,body.pp-light .details-head{background:rgba(255,255,255,.98)!important}
+body.pp-light .details-body .detail-item,body.pp-light .history-wrap{background:#f5f8f9!important}
+body.pp-light .detail-item small,body.pp-light .history-point{color:#526873!important}
+body.pp-light .detail-item strong,body.pp-light .compare-product-title{color:#19252d!important}
