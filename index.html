@@ -54,6 +54,18 @@ body[data-pp-ready="true"] .pp-loading{display:none}
 #ppSearchIntro .pp-search-links{margin-top:16px}
 .pp-legal-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:18px 16px 36px;font:13px/1.5 Inter,Segoe UI,system-ui,sans-serif}.pp-legal-links a{color:#75d8f2;text-underline-offset:3px}
 @media(max-width:650px){#ppSearchIntro{margin:20px 12px 84px;padding:18px}.pp-legal-links{padding-bottom:90px}}
+/* Keep the supporting content in step with the calculator's light theme. */
+body[data-pp-theme="light"] #ppSearchIntro{
+ background:#ffffff!important;color:#24343d!important;border-color:#c4d1d7!important;
+ box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
+}
+body[data-pp-theme="light"] #ppSearchIntro h1,
+body[data-pp-theme="light"] #ppSearchIntro h2{color:#19252d!important}
+body[data-pp-theme="light"] #ppSearchIntro .pp-search-kicker{color:#984600!important}
+body[data-pp-theme="light"] #ppSearchIntro p{color:#465c66!important}
+body[data-pp-theme="light"] #ppSearchIntro a,
+body[data-pp-theme="light"] .pp-legal-links a{color:#006d88!important}
+body[data-pp-theme="light"] .pp-legal-links{color:#536671!important}
 </style>
 </head>
 <body aria-busy="true">
@@ -118,7 +130,7 @@ const scripts=[
 'print-time-input.js?v=20261004-autofill1',
 'electricity-providers.js?v=20261004-nightly1',
 'i18n-extra.js?v=5',
-'settings-preferences.js?v=20261004-theme1',
+'settings-preferences.js?v=20261013-light2',
 'my-projects.js?v=20261012-workspace4',
 'my-materials.js?v=20261013-printer-profiles1',
 'config/firebase-config.js?v=4',
