@@ -23,6 +23,14 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 .lead{max-width:760px;color:#b8c7d0;font-size:16px;line-height:1.55;margin:0}.actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 15px;border-radius:9px;text-decoration:none;font-weight:800;font-size:12px}.primary{background:var(--accent);border:1px solid var(--accent);color:#fff}.secondary{background:#0a1b25;border:1px solid #355363;color:#e5edf1}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--panel2));padding:16px}.card h2{font-size:16px;margin:0 0 7px}.card h3{font-size:12px;margin:0 0 5px;color:#f5f8fb}.card p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.num{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-weight:900;font-size:12px;margin-bottom:10px}
 .section{margin-top:14px}.section-title{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:8px 2px}.faq{border:1px solid var(--line);border-radius:12px;background:#081720;padding:13px;margin-top:8px}.faq strong{display:block;font-size:12px;margin-bottom:4px}.faq p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.note{margin-top:14px;padding:13px 14px;border-left:3px solid var(--accent);background:#0a1d27;color:var(--muted);font-size:10px;line-height:1.55}.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:#6f8794;font-size:9px}
+.calculator-overview{margin-bottom:24px;scroll-margin-top:190px}
+.calculator-overview summary{cursor:pointer;font-size:18px;font-weight:500;line-height:1.5;color:var(--text)}
+.calculator-overview summary::marker{color:var(--accent)}
+.calculator-overview summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:3px}
+.calculator-overview[open] summary{margin-bottom:16px}
+.calculator-overview .grid{margin-top:18px}
+.calculator-overview h2{font-size:16px;line-height:1.5}
+.calculator-overview .actions a{color:var(--text)}
 @media(max-width:760px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto}.nav a{white-space:nowrap}.grid{grid-template-columns:1fr}.wrap{width:min(100% - 20px,1180px)}}
 /* Keep Guide & Help legible when the shared theme switch selects light mode. */
 body.pp-light{
@@ -49,6 +57,16 @@ body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!impor
 <p class="lead">A practical guide to the current PrintProfit workflow, pricing calculations, saving, file analysis, materials, delivery, selling fees, Profit Toolkit and Compare Products.</p>
 <div class="actions"><a class="btn primary" href="./index.html">Back to Calculator ›</a><a class="btn secondary" href="#workflow">Start here ↓</a></div>
 </section>
+
+<details class="card calculator-overview" id="calculator-basics">
+<summary>3D printing cost calculator</summary>
+<p>Estimate what it costs to make a 3D print and choose a selling price using your own printer, material and business figures. PrintProfit supports filament and resin workflows.</p>
+<div class="grid">
+<article><h2>What goes into an estimate?</h2><p>Add material usage, print time, electricity, printer depreciation, labour, packaging, delivery and selling fees. The calculator brings these costs together to show estimated cost, break-even price, profit and margin. Results depend on the values and rates you enter, so check them against your actual costs.</p></article>
+<article><h2>Can a print file fill in the details?</h2><p>Upload a supported print or model file to see which details PrintProfit can read. Some files include print time or material usage; others do not. Review detected values and enter anything missing from your slicer before relying on the estimate.</p></article>
+</div>
+<div class="actions"><a href="./price-finder.html">Compare UK 3D printing products</a></div>
+</details>
 
 <div class="section" id="workflow">
 <div class="section-title">Start here</div>

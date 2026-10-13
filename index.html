@@ -45,25 +45,8 @@ body:not([data-pp-ready="true"]) #ppFloatingSave,body:not([data-pp-ready="true"]
 .pp-loading button{border:0;border-radius:10px;padding:12px 20px;background:#ff8a24;color:#17100a;font:700 14px Segoe UI,system-ui,sans-serif;cursor:pointer}
 body[data-pp-ready="true"] .pp-loading{display:none}
 
-#ppSearchIntro{max-width:1120px;margin:32px auto 48px;padding:24px;border:1px solid #24404e;border-radius:14px;background:#0b1821;color:#dce6eb;font:15px/1.65 Inter,Segoe UI,system-ui,sans-serif}
-#ppSearchIntro .pp-search-kicker{font-size:10px;font-weight:800;letter-spacing:.16em;color:#ff8a24}
-#ppSearchIntro h1{margin:8px 0 12px;font-size:clamp(26px,4vw,38px);line-height:1.1;color:#f5f8fb}
-#ppSearchIntro h2{margin:22px 0 6px;font-size:18px;color:#f5f8fb}
-#ppSearchIntro p{max-width:850px;margin:0;color:#c3d0d6}
-#ppSearchIntro a{color:#ffad65;text-underline-offset:3px}
-#ppSearchIntro .pp-search-links{margin-top:16px}
 .pp-legal-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:18px 16px 36px;font:13px/1.5 Inter,Segoe UI,system-ui,sans-serif}.pp-legal-links a{color:#75d8f2;text-underline-offset:3px}
-@media(max-width:650px){#ppSearchIntro{margin:20px 12px 84px;padding:18px}.pp-legal-links{padding-bottom:90px}}
-/* Keep the supporting content in step with the calculator's light theme. */
-body[data-pp-theme="light"] #ppSearchIntro{
- background:#ffffff!important;color:#24343d!important;border-color:#c4d1d7!important;
- box-shadow:0 6px 20px rgba(23,50,63,.08)!important;
-}
-body[data-pp-theme="light"] #ppSearchIntro h1,
-body[data-pp-theme="light"] #ppSearchIntro h2{color:#19252d!important}
-body[data-pp-theme="light"] #ppSearchIntro .pp-search-kicker{color:#984600!important}
-body[data-pp-theme="light"] #ppSearchIntro p{color:#465c66!important}
-body[data-pp-theme="light"] #ppSearchIntro a,
+@media(max-width:650px){.pp-legal-links{padding-bottom:90px}}
 body[data-pp-theme="light"] .pp-legal-links a{color:#006d88!important}
 body[data-pp-theme="light"] .pp-legal-links{color:#536671!important}
 </style>
@@ -78,16 +61,6 @@ body[data-pp-theme="light"] .pp-legal-links{color:#536671!important}
 <noscript><style>.pp-loading{display:none}</style><p>Please enable JavaScript to use the PrintProfit calculator.</p></noscript>
 <iframe id="app" title="PrintProfit 3D Printing Cost & Pricing Calculator" src="./legacy-index.html?v=20261013-profile1" style="width:100%;border:0;display:block"></iframe>
 </main>
-<section id="ppSearchIntro" aria-labelledby="ppSearchIntroTitle">
-<div class="pp-search-kicker">PRINTPROFIT • 3D PRINTING TOOLS</div>
-<h1 id="ppSearchIntroTitle">3D printing cost calculator</h1>
-<p>Estimate what it costs to make a 3D print and choose a selling price using your own printer, material and business figures. PrintProfit supports filament and resin workflows.</p>
-<h2>What goes into an estimate?</h2>
-<p>Add material usage, print time, electricity, printer depreciation, labour, packaging, delivery and selling fees. The calculator brings these costs together to show estimated cost, break-even price, profit and margin. Results depend on the values and rates you enter, so check them against your actual costs.</p>
-<h2>Can a print file fill in the details?</h2>
-<p>Upload a supported print or model file to see which details PrintProfit can read. Some files include print time or material usage; others do not. Review detected values and enter anything missing from your slicer before relying on the estimate.</p>
-<p class="pp-search-links"><a href="./guide.html">Read the calculator guide</a> · <a href="./price-finder.html">Compare UK 3D printing products</a></p>
-</section>
 <footer class="pp-legal-links" aria-label="Legal information"><a href="./privacy.html">Privacy Notice</a><a href="./terms.html">Terms of Use</a><a href="./guide.html#account-privacy">Account privacy &amp; help</a></footer>
 <button id="ppFloatingSave" type="button" aria-label="Save project" title="Save project"><span class="pp-save-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-save"></use></svg></span><span class="pp-save-text"><span class="pp-save-main">SAVE</span><span class="pp-save-sub">PROJECT</span></span></button><button id="ppFloatingReset" type="button" aria-label="Reset calculator" title="Reset calculator"><span class="pp-reset-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span><span class="pp-reset-text"><span class="pp-reset-main">RESET</span><span class="pp-reset-sub">CALCULATOR</span></span></button>
 <script>
