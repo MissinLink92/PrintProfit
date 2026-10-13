@@ -6,6 +6,7 @@ function syncWorkspaceModalState(){
  const bodies=[document.body];
  try{if(window.parent&&window.parent!==window)bodies.push(window.parent.document.body)}catch(e){}
  bodies.forEach(body=>{if(open)body.dataset.ppModalOpen='true';else delete body.dataset.ppModalOpen;});
+ window.__ppSyncWorkspaceModalState?.();
 }
 const KEY='printprofit.projects.v1';
 const PROJECT_OWNER_KEY='printprofit.projects.owner.v1';

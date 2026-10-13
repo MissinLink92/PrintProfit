@@ -1,22 +1,36 @@
 (()=>{ 
 'use strict';
 if(window.__printProfitMaterials)return; window.__printProfitMaterials=true;
-let workspaceParentScroll=null;
+let workspaceParentOverflow;
+function alignWorkspaceModal(){
+ try{if(window.parent!==window){
+  const height=window.parent.innerHeight;
+  const top=Math.max(0,-window.frameElement.getBoundingClientRect().top);
+  document.documentElement.style.setProperty('--pp-modal-viewport-height',height+'px');
+  document.querySelectorAll('#ppMaterialsPanel.open,#ppProjectsPanel.open').forEach(panel=>{
+   panel.style.top=top+'px';panel.style.bottom='auto';panel.style.height=height+'px';
+   const dialog=panel.querySelector('[role="dialog"]');
+   if(dialog)dialog.style.maxHeight=Math.max(160,height-32)+'px';
+  });
+ }}catch(e){}
+}
 function syncWorkspaceModalState(){
  const open=!!document.querySelector('#ppMaterialsPanel.open,#ppProjectsPanel.open');
  const bodies=[document.body];
  try{if(window.parent&&window.parent!==window)bodies.push(window.parent.document.body)}catch(e){}
  bodies.forEach(body=>{if(open)body.dataset.ppModalOpen='true';else delete body.dataset.ppModalOpen;});
  try{if(window.parent!==window){
-  document.documentElement.style.setProperty('--pp-modal-viewport-height',window.parent.innerHeight+'px');
   if(open){
-   if(workspaceParentScroll===null){workspaceParentScroll=window.parent.scrollY;window.parent.scrollTo({top:0,left:0,behavior:'instant'});}
+   if(workspaceParentOverflow===undefined)workspaceParentOverflow=window.parent.document.body.style.overflow;
    window.parent.document.body.style.overflow='hidden';
-  }else if(workspaceParentScroll!==null){
-   window.parent.document.body.style.overflow='';window.parent.scrollTo({top:workspaceParentScroll,behavior:'instant'});workspaceParentScroll=null;
+   alignWorkspaceModal();
+  }else if(workspaceParentOverflow!==undefined){
+   window.parent.document.body.style.overflow=workspaceParentOverflow;workspaceParentOverflow=undefined;
   }
  }}catch(e){}
 }
+window.__ppSyncWorkspaceModalState=syncWorkspaceModalState;
+try{if(window.parent!==window){window.parent.addEventListener('scroll',alignWorkspaceModal,{passive:true});window.parent.addEventListener('resize',alignWorkspaceModal,{passive:true});}}catch(e){}
 const KEY='printprofit.materials.v1';
 const PRINTER_KEY='printprofit.workshop-printers.v1';
 const SELECTED_PRINTER_KEY='printprofit.workshop-printer-selected.v1';
