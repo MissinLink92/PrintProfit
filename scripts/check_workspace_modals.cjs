@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const source=fs.readFileSync(path.join(__dirname,'..','my-materials.js'),'utf8');
+const helpers=source.slice(source.indexOf('let workspaceParentOverflow;'),source.indexOf("const KEY='printprofit.materials.v1'"));
+let open=true,frameTop=-1151;
+const dialog={style:{}},panel={style:{},querySelector:()=>dialog};
+const listeners={},parentBody={dataset:{},style:{overflow:'auto'}},body={dataset:{}};
+const host={innerHeight:720,document:{body:parentBody},addEventListener:(name,callback)=>listeners[name]=callback};
+const window={parent:host,frameElement:{getBoundingClientRect:()=>({top:frameTop})}};
+const document={body,documentElement:{style:{setProperty(){}}},querySelector:()=>open?panel:null,querySelectorAll:()=>open?[panel]:[]};
+vm.runInNewContext(helpers,{window,document});
+window.__ppSyncWorkspaceModalState();
+assert.equal(panel.style.top,'1151px','Dialog must align with the visible part of a scrolled parent page');
+assert.equal(panel.style.height,'720px');assert.equal(dialog.style.maxHeight,'688px');
+assert.equal(parentBody.style.overflow,'hidden');assert.equal(body.dataset.ppModalOpen,'true');
+frameTop=-640;listeners.scroll();assert.equal(panel.style.top,'640px','Browser focus scroll must not move the dialog out of view');
+host.innerHeight=844;listeners.resize();assert.equal(panel.style.height,'844px');assert.equal(dialog.style.maxHeight,'812px');
+open=false;window.__ppSyncWorkspaceModalState();assert.equal(parentBody.style.overflow,'auto');assert.equal(body.dataset.ppModalOpen,undefined);
+console.log('PASS: Workspace dialogs follow the visible parent viewport and restore scrolling when closed.');
