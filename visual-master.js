@@ -119,6 +119,8 @@ style.textContent +=
 style.textContent +=
 '#ppVisualMaster .pvm-icon{width:30px!important;height:30px!important;flex-basis:30px!important;border-radius:8px!important;background:#04141d!important;box-shadow:inset 0 0 0 1px #ffffff12!important}'+
 '@media(max-width:540px){#ppVisualMaster .pvm-icon{width:20px!important;height:20px!important;flex-basis:20px!important;border-radius:6px!important}}';
+style.textContent +=
+'#ppVisualMaster .pvm-nav button[aria-current="page"] .pvm-icon{color:#009FEF!important}';
 document.head.appendChild(style);
 const img=top.querySelector('.pvm-brand img');if(img)img.addEventListener('error',()=>{img.style.display='none';top.querySelector('.pvm-brand-fallback').style.display='block'});
 
