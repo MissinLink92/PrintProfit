@@ -890,5 +890,7 @@
   "Nightly UK checks. discovered": "Nächtliche UK-Prüfungen. Produkte gefunden.",
   "Nightly UK checks. url-discovery-only": "Nächtliche UK-Prüfungen. Produktadressen gefunden.",
   "RESIN": "Harz",
-  "RESIN 3D Printers": "Harz- / SLA- / LCD-Drucker"
+  "RESIN 3D Printers": "Harz- / SLA- / LCD-Drucker",
+  "Automatic GBP feed unavailable.": "Automatischer GBP-Preisfeed nicht verfügbar.",
+  "Price verified: {verified} / {total}.": "Geprüfte Preise: {verified} / {total}."
 }

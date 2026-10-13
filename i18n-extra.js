@@ -97,7 +97,7 @@ const localeRequests=new Map();
 function loadLocale(lang){
  if(lang==='en')return Promise.resolve();
  if(localeRequests.has(lang))return localeRequests.get(lang);
- const request=fetch('./locales/'+lang+'.json?v=20261013-language1').then(response=>{
+ const request=fetch('./locales/'+lang+'.json?v=20261013-feeds1').then(response=>{
   if(!response.ok)throw new Error('Translation download failed: '+response.status);
   return response.json();
  }).then(map=>{

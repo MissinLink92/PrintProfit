@@ -882,5 +882,7 @@
   "Nightly UK checks. discovered": "Controlli notturni nel Regno Unito. Prodotti trovati.",
   "Nightly UK checks. url-discovery-only": "Controlli notturni nel Regno Unito. Indirizzi dei prodotti trovati.",
   "RESIN": "Resina",
-  "RESIN 3D Printers": "Stampanti resina / SLA / LCD"
+  "RESIN 3D Printers": "Stampanti resina / SLA / LCD",
+  "Automatic GBP feed unavailable.": "Il feed automatico dei prezzi in GBP non è disponibile.",
+  "Price verified: {verified} / {total}.": "Prezzi verificati: {verified} / {total}."
 }

@@ -26,6 +26,8 @@ jobs:
         run: node scripts/check_i18n.cjs
       - name: Check currency labels and calculated values
         run: node scripts/check_currency_labels.cjs
+      - name: Check verified material market references
+        run: node scripts/check_market_prices.cjs
       - name: Check saved printer options and metadata
         run: node scripts/check_workshop_printers.cjs
       - name: Check Workspace popup placement and scroll restoration
