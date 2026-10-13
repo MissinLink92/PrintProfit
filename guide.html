@@ -24,6 +24,18 @@ body{background:radial-gradient(circle at 82% 8%,rgba(0,129,184,.10),transparent
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--panel2));padding:16px}.card h2{font-size:16px;margin:0 0 7px}.card h3{font-size:12px;margin:0 0 5px;color:#f5f8fb}.card p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.num{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-weight:900;font-size:12px;margin-bottom:10px}
 .section{margin-top:14px}.section-title{color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:8px 2px}.faq{border:1px solid var(--line);border-radius:12px;background:#081720;padding:13px;margin-top:8px}.faq strong{display:block;font-size:12px;margin-bottom:4px}.faq p{font-size:11px;line-height:1.55;color:var(--muted);margin:0}.note{margin-top:14px;padding:13px 14px;border-left:3px solid var(--accent);background:#0a1d27;color:var(--muted);font-size:10px;line-height:1.55}.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:#6f8794;font-size:9px}
 @media(max-width:760px){.header{position:static;flex-wrap:wrap}.nav{width:100%;overflow:auto}.nav a{white-space:nowrap}.grid{grid-template-columns:1fr}.wrap{width:min(100% - 20px,1180px)}}
+/* Keep Guide & Help legible when the shared theme switch selects light mode. */
+body.pp-light{
+ color-scheme:light;
+ --bg:#f1f4f6;--panel:#ffffff;--panel2:#f6f8f9;--text:#19252d;--muted:#536671;--line:#c4d1d7;--accent:#984600;
+ background:#f1f4f6!important;color:#24343d!important;
+}
+body.pp-light .lead{color:#40535d!important}
+body.pp-light .card h3{color:#19252d!important}
+body.pp-light .faq{background:#ffffff!important;border-color:#c4d1d7!important}
+body.pp-light .note{background:#edf3f5!important;color:#425963!important}
+body.pp-light .footer{color:#536671!important;border-top-color:#c4d1d7!important}
+body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!important;color:#304650!important}
 </style>
 <link rel="stylesheet" href="./site-header.css?v=5">
 </head>
