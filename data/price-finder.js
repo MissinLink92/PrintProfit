@@ -16,7 +16,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 7,
+        "verified": 4,
+        "retained": 3
+      },
+      "checkMessage": ""
     },
     {
       "id": "3dprima-uk",
@@ -25,7 +31,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 16,
+        "verified": 10,
+        "retained": 6
+      },
+      "checkMessage": ""
     },
     {
       "id": "123-3d-uk",
@@ -34,7 +46,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 15,
+        "verified": 13,
+        "retained": 2
+      },
+      "checkMessage": ""
     },
     {
       "id": "idig3dprinting",
@@ -43,7 +61,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 4,
+        "verified": 1,
+        "retained": 3
+      },
+      "checkMessage": ""
     },
     {
       "id": "3dgbire",
@@ -52,7 +76,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 447,
+        "verified": 446,
+        "retained": 1
+      },
+      "checkMessage": ""
     },
     {
       "id": "bambu-uk",
@@ -61,7 +91,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 133,
+        "verified": 133,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "creality-uk",
@@ -70,7 +106,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "url-discovery-only"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 12,
+        "verified": 9,
+        "retained": 3
+      },
+      "checkMessage": ""
     },
     {
       "id": "elegoo-uk",
@@ -79,7 +121,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": true,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 11,
+        "verified": 11,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "amazon-uk",
@@ -88,7 +136,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "marketplace",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "monitor-only",
+      "lastPriceCheck": {
+        "listed": 0,
+        "verified": 0,
+        "retained": 0
+      },
+      "checkMessage": "A supported Amazon product feed/API is required; no public GBP catalogue is configured."
     },
     {
       "id": "prusa",
@@ -97,7 +151,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "url-discovery-only"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 0,
+        "verified": 0,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "subliblanks",
@@ -106,7 +166,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 6,
+        "verified": 6,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "nse-imports",
@@ -115,7 +181,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 1,
+        "verified": 0,
+        "retained": 1
+      },
+      "checkMessage": ""
     },
     {
       "id": "additive-x",
@@ -124,7 +196,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 13,
+        "verified": 10,
+        "retained": 3
+      },
+      "checkMessage": ""
     },
     {
       "id": "ooznest",
@@ -133,7 +211,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "url-discovery-only"
+      "lastDiscoveryStatus": "url-discovery-only",
+      "lastPriceCheck": {
+        "listed": 0,
+        "verified": 0,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "3d-filaprint",
@@ -142,7 +226,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "retailer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "monitor-only",
+      "lastPriceCheck": {
+        "listed": 0,
+        "verified": 0,
+        "retained": 0
+      },
+      "checkMessage": "The recorded domain currently serves a parked page and no usable product feed."
     },
     {
       "id": "anycubic-uk",
@@ -151,7 +241,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 1454,
+        "verified": 1444,
+        "retained": 10
+      },
+      "checkMessage": ""
     },
     {
       "id": "qidi-uk",
@@ -160,7 +256,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 36,
+        "verified": 26,
+        "retained": 10
+      },
+      "checkMessage": ""
     },
     {
       "id": "flashforge-uk",
@@ -169,7 +271,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 27,
+        "verified": 27,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "sovol-uk",
@@ -178,7 +286,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "discovered"
+      "lastDiscoveryStatus": "discovered",
+      "lastPriceCheck": {
+        "listed": 4,
+        "verified": 4,
+        "retained": 0
+      },
+      "checkMessage": ""
     },
     {
       "id": "snapmaker-uk",
@@ -187,7 +301,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "kind": "manufacturer",
       "autoRefresh": false,
       "refreshPolicy": "nightly; verified exact offers only",
-      "lastDiscoveryStatus": "failed"
+      "lastDiscoveryStatus": "monitor-only",
+      "lastPriceCheck": {
+        "listed": 1,
+        "verified": 0,
+        "retained": 1
+      },
+      "checkMessage": "The former /en-gb storefront is gone; the public global store quotes USD. A supported GBP source is required."
     }
   ],
   "brandDirectory": [
@@ -244,32 +364,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "price": 11.05,
       "unit": 11.05,
-      "updated": "2026-09-21",
-      "url": "https://www.3djake.uk/the-filament/the-filament-pla-filament",
+      "updated": "2026-10-13",
+      "url": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
       "autoRefresh": true,
       "retailer": "3DJake UK",
       "priceHistory": [
         {
           "date": "2026-09-21",
           "price": 11.05
+        },
+        {
+          "date": "2026-10-13",
+          "price": 11.05
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "The Filament PLA Refill Lite Grey 3DJake UK",
-      "image": "assets/products/the-filament-pla-refill-lite-grey-5bd9ad4fe308.webp",
+      "image": "assets/products/the-filament-pla-refill-lite-grey-82a19a465550.webp",
       "imageSourceUrl": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
       "imageMethod": "retailer-exact-product",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/the-filament-refill-pla-lite-grey-913432-en.jpg",
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/85705_17546413546895b3ca1fd76.128x128.jpg",
       "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/the-filament-refill-pla-lite-grey-913432-en.jpg",
-      "imageSha256": "5bd9ad4fe3087570c3ffc2d88ff31945e2361af77b9cfe081160f9223f2ea0b4",
+      "imageSha256": "82a19a465550f581742d708e79954eaeebb583286d6f05647353725d71adebc8",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
+      "availability": "In stock"
     },
     {
       "id": "esun-pla-basic-black",
@@ -282,32 +408,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "price": 11.5,
       "unit": 11.5,
-      "updated": "2026-09-21",
-      "url": "https://www.3djake.uk/3d-printer-filaments/black-pla-filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3djake.uk/esun/pla-basic-black-1",
       "autoRefresh": true,
       "retailer": "3DJake UK",
       "priceHistory": [
         {
           "date": "2026-09-21",
           "price": 11.5
+        },
+        {
+          "date": "2026-10-13",
+          "price": 11.5
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "eSUN PLA Basic Black 3DJake UK",
-      "image": "assets/products/esun-pla-basic-black-3f4c534e95c4.webp",
+      "image": "assets/products/esun-pla-basic-black-742519be47a9.webp",
       "imageSourceUrl": "https://www.3djake.uk/esun/pla-basic-black-1",
       "imageMethod": "retailer-exact-product",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-pla-basic-black-774021-en.jpg",
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/59832_9c59a91f.128x128.jpg",
       "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-pla-basic-black-774021-en.jpg",
-      "imageSha256": "3f4c534e95c4beafb05133151695e9cd134ad437580c55c4e35fac3ff6257dc9",
+      "imageSha256": "742519be47a95a625dcc31dd10b9cba479c97bd22fcb4e606d9816d2f17c8ff6",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3djake.uk/esun/pla-basic-black-1",
+      "availability": "In stock"
     },
     {
       "id": "elegoo-pla-black",
@@ -396,32 +528,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "price": 13.79,
       "unit": 13.79,
-      "updated": "2026-09-21",
-      "url": "https://www.3djake.uk/3d-printer-filaments/pla-filament-product-range",
+      "updated": "2026-10-13",
+      "url": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
       "autoRefresh": true,
       "retailer": "3DJake UK",
       "priceHistory": [
         {
           "date": "2026-09-21",
           "price": 13.79
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.79
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Polymaker PolyTerra PLA Cotton White 3DJake UK",
-      "image": "assets/products/polymaker-polyterra-pla-cotton-white-00f42cfdcb2e.webp",
+      "image": "assets/products/polymaker-polyterra-pla-cotton-white-9907b07c0740.webp",
       "imageSourceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
       "imageMethod": "retailer-exact-product",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polyterra-pla-cotton-white-175-mm-1000-g-481833-en.jpg",
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/23619_28607dbe.128x128.jpg",
       "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polyterra-pla-cotton-white-175-mm-1000-g-481833-en.jpg",
-      "imageSha256": "00f42cfdcb2eca12cea061a1361a59c83d39b271ffdf60b038e4084db27d0a01",
+      "imageSha256": "9907b07c0740794a8daa86e5fcb464f85427b5ae8e7a497abebb577d97112aab",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
+      "availability": "In stock"
     },
     {
       "id": "sunlu-pla-2-0-white",
@@ -434,17 +572,21 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "price": 12.5,
       "unit": 12.5,
-      "updated": "2026-09-21",
-      "url": "https://www.subliblanks.com/",
+      "updated": "2026-10-13",
+      "url": "https://www.subliblanks.com/products/pla-2-0-white-filament",
       "autoRefresh": false,
       "retailer": "Subliblanks",
       "priceHistory": [
         {
           "date": "2026-09-21",
           "price": 12.5
+        },
+        {
+          "date": "2026-10-13",
+          "price": 12.5
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -459,7 +601,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.subliblanks.com/products/pla-2-0-white-filament",
+      "availability": "In stock"
     },
     {
       "id": "sunlu-pla-blue",
@@ -587,32 +731,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "price": 14.7,
       "unit": 14.7,
-      "updated": "2026-09-21",
-      "url": "https://www.3djake.uk/3d-printer-filaments/bestselling-filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3djake.uk/esun/petg-black-11",
       "autoRefresh": true,
       "retailer": "3DJake UK",
       "priceHistory": [
         {
           "date": "2026-09-21",
           "price": 14.7
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.7
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "eSUN PETG Black 3DJake UK",
-      "image": "assets/products/esun-petg-black-3fceb7f2343e.webp",
+      "image": "assets/products/esun-petg-black-b6efae8c1c07.webp",
       "imageSourceUrl": "https://www.3djake.uk/esun/petg-black-11",
       "imageMethod": "retailer-exact-product",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-petg-solid-black-175-mm-1000-g-623077-en.jpg",
+      "imageOriginalUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/32373_659802b9.128x128.jpg",
       "imageDownloadedFrom": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-petg-solid-black-175-mm-1000-g-623077-en.jpg",
-      "imageSha256": "3fceb7f2343e0e3b5b7f9aa230d79f493dc48c23dead75288b708f9d44d0e81e",
+      "imageSha256": "b6efae8c1c0786e7a157e3eba1418726c1cd99cd184844c9deba05b48d7324f1",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "priceSourceUrl": "https://www.3djake.uk/esun/petg-black-11",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-black",
@@ -626,32 +776,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00001",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Black 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-black-4c2cbe2a16a4.webp",
+      "image": "assets/products/123-3d-pla-black-c8fad4000da1.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Black-1-75mm-1kg-DFB00230c-DFP02295c-DFP02296c-DFP14082c-DFP14110c-i11621.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Black_1.75mm_1kg_DFB00230c_DFP02295c_DFP02296c_DFP14082c_DFP14110c_DHM00001_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00001_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Black_1.75mm_1kg_DFB00230c_DFP02295c_DFP02296c_DFP14082c_DFP14110c_DHM00001_m1_medium.jpg",
-      "imageSha256": "4c2cbe2a16a46e7cbd83f0a71fab66116532099d4793905b045d9c385cff8701",
+      "imageSha256": "c8fad4000da1657d922963893c4267e146ca8b516df33904a06297c1a09aa5c4",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-white",
@@ -665,32 +821,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00002",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA White 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-white-2ba45cbc1a98.webp",
+      "image": "assets/products/123-3d-pla-white-54b08f4254d6.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-White-1-75mm-1-kg-DFB00235c-DFE20224c-DFP02286c-DFP02287c-DFP14074c-i11622.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_White_1.75mm_1_kg_DFB00235c_DFE20224c_DFP02286c_DFP02287c_DFP14074c_DHM00002_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00002_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_White_1.75mm_1_kg_DFB00235c_DFE20224c_DFP02286c_DFP02287c_DFP14074c_DHM00002_m1_medium.jpg",
-      "imageSha256": "2ba45cbc1a989cf71b75145eb3a43c7c282a9faa0518cf3af1e567fa4f5ed7df",
+      "imageSha256": "54b08f4254d6930fd1c1b84547b85023cb8573497a1aa9ab21914dc4512922f8",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-grey",
@@ -704,32 +866,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00003",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Grey 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-grey-2b085ef0eb88.webp",
+      "image": "assets/products/123-3d-pla-grey-279deb897c81.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Grey-1-75mm-1kg-DFB00244c-DFP02248c-DFP02249c-DFP14064c-DFP14102c-i11623.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Grey_1.75mm_1kg_DFB00244c_DFP02248c_DFP02249c_DFP14064c_DFP14102c_DHM00003_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00003_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Grey_1.75mm_1kg_DFB00244c_DFP02248c_DFP02249c_DFP14064c_DFP14102c_DHM00003_m1_medium.jpg",
-      "imageSha256": "2b085ef0eb883ebda66c4796179dbecbe7d52311dd52403d5644553c61ccf58c",
+      "imageSha256": "279deb897c81ad58cb2ec79baff2a6098e6df4592085ab9542fe9be488f29304",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-red",
@@ -743,32 +911,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00004",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Red 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-red-01fba4962a9e.webp",
+      "image": "assets/products/123-3d-pla-red-a4150006fce9.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Red-1-75mm-1-kg-DFB00238c-DFP02253c-DFP02254c-DFP14072c-DFP14108c-i11624.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Red_1.75mm_1_kg_DFB00238c_DFP02253c_DFP02254c_DFP14072c_DFP14108c_DHM00004_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00004_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Red_1.75mm_1_kg_DFB00238c_DFP02253c_DFP02254c_DFP14072c_DFP14108c_DHM00004_m1_medium.jpg",
-      "imageSha256": "01fba4962a9e675dd9aab7c4606244dedd9fa35a3f90cc2348b832c498b5bd43",
+      "imageSha256": "a4150006fce9af3d63eacb362945aa30b613eb7a76bfa9921b9b9e76e45eadcc",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-dark-blue",
@@ -782,32 +956,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00005",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Dark Blue 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-dark-blue-d297c8fdb53b.webp",
+      "image": "assets/products/123-3d-pla-dark-blue-18c61dd84063.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Dark-Blue-1-75mm-1kg-DFP16291c-i11625.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Dark_Blue_1.75mm_1kg_DFP16291c_DHM00005_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00005_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Dark_Blue_1.75mm_1kg_DFP16291c_DHM00005_m1_medium.jpg",
-      "imageSha256": "d297c8fdb53b0cba0bad5b91e7882874f5a3f536f5466a6728dd91eedfaa4561",
+      "imageSha256": "18c61dd8406376b9de696456ca09721f772f010fa3ba3b0e00b20c1de8e270a1",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-yellow",
@@ -821,32 +1001,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00006",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Yellow 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-yellow-3fad8f3dbba6.webp",
+      "image": "assets/products/123-3d-pla-yellow-3d1ab1d6dd6d.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Yellow-1-75mm-1-kg-DFB00240c-DFP02250c-DFP02251c-DFP14062c-DFP14100c-i11626.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Yellow_1.75mm_1_kg_DFB00240c_DFP02250c_DFP02251c_DFP14062c_DFP14100c_DHM00006_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00006_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Yellow_1.75mm_1_kg_DFB00240c_DFP02250c_DFP02251c_DFP14062c_DFP14100c_DHM00006_m1_medium.jpg",
-      "imageSha256": "3fad8f3dbba632a1efe6cb9ef7cbe72bcb1d320f8f65aa1a9c59a9ccb072ed12",
+      "imageSha256": "3d1ab1d6dd6de2d0c9bd4c9d932db48357446c6fda188e4cfa7ff3067288f6c4",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-green",
@@ -860,32 +1046,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00010",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Green 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-green-32abbc320685.webp",
+      "image": "assets/products/123-3d-pla-green-6270266d6b21.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Green-1-75mm-1-kg-DFB00241c-DFP02258c-DFP02259c-DFP14066c-DFP14104c-i11630.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Green_1.75mm_1_kg_DFB00241c_DFP02258c_DFP02259c_DFP14066c_DFP14104c_DHM00010_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00010_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Green_1.75mm_1_kg_DFB00241c_DFP02258c_DFP02259c_DFP14066c_DFP14104c_DHM00010_m1_medium.jpg",
-      "imageSha256": "32abbc320685f5c29d0f9fe4e2fd4f7a3fd79b4f09c8f4b0edc2bb4a6a511053",
+      "imageSha256": "6270266d6b21bab2c4d4913d8bdee92cd8d3ce7104703dd552a22e073db688ff",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-orange",
@@ -899,32 +1091,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00008",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Orange 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-orange-693151138fab.webp",
+      "image": "assets/products/123-3d-pla-orange-3bb784102294.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Orange-1-75mm-1-kg-DFP02265c-DFP02266c-DFP14070c-DFP14106c-i11628.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Orange_1.75mm_1_kg_DFP02265c_DFP02266c_DFP14070c_DFP14106c_DHM00008_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00008_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Orange_1.75mm_1_kg_DFP02265c_DFP02266c_DFP14070c_DFP14106c_DHM00008_m1_medium.jpg",
-      "imageSha256": "693151138fabff99a98f3c778c2b633660245eecef1faa53edaa994908f7d400",
+      "imageSha256": "3bb784102294ecb8c62dd28fab7d069d07d27340f8bc44750699e48d41220a76",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-neutral",
@@ -938,32 +1136,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00009",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Neutral 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-neutral-8e8d9d577552.webp",
+      "image": "assets/products/123-3d-pla-neutral-2b0497100306.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Neutral-1-75mm-1kg-DFP02268c-DFP16288c-i11629.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Neutral_1.75mm_1kg_DFP02268c_DFP16288c_DHM00009_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00009_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Neutral_1.75mm_1kg_DFP02268c_DFP16288c_DHM00009_m1_medium.jpg",
-      "imageSha256": "8e8d9d57755283b6f909e4f26b57baf5a9780be32b8893f4f1f75edf0df7b970",
+      "imageSha256": "2b04971003062192f4ce1d31f177091caf5a60ef6953d1f9b51b278de7e16584",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-brown",
@@ -977,32 +1181,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00020",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Brown 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-brown-812ce374f51b.webp",
+      "image": "assets/products/123-3d-pla-brown-9e8164424b3c.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Brown-1-75mm-1-kg-DFP02257c-DFP02273c-i11640.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Brown_1.75mm_1_kg_DFP02257c_DFP02273c_DHM00020_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00020_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Brown_1.75mm_1_kg_DFP02257c_DFP02273c_DHM00020_m1_medium.jpg",
-      "imageSha256": "812ce374f51baec47bc26ea42141e58e06ff546e5759a61949baf8998654fd74",
+      "imageSha256": "9e8164424b3c2c7a7b4b593ab589e20f994950f0ada7a6909363e8130f200eee",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-sky-blue",
@@ -1016,32 +1226,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00013",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Sky Blue 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-sky-blue-649984b74ac0.webp",
+      "image": "assets/products/123-3d-pla-sky-blue-c942166508d6.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Sky-Blue-1-75mm-1kg-i11633.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Sky_Blue_1.75mm_1kg_DHM00013_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00013_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Sky_Blue_1.75mm_1kg_DHM00013_m1_medium.jpg",
-      "imageSha256": "649984b74ac0fe9d3bc4c082b8f601f4ee958d19dafddc071dd6593d387c2c6a",
+      "imageSha256": "c942166508d6f88a0822f4d107ae3486da9ff5869513775ea1beae75dc3f279f",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-silver",
@@ -1055,32 +1271,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00011",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Silver 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-silver-f5794afcd007.webp",
+      "image": "assets/products/123-3d-pla-silver-fd4b0285e0ec.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Silver-1-75mm-1kg-DFB00243c-DFP02299c-DFP02300c-i11631.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Silver_1.75mm_1kg_DFB00243c_DFP02299c_DFP02300c_DHM00011_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00011_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Silver_1.75mm_1kg_DFB00243c_DFP02299c_DFP02300c_DHM00011_m1_medium.jpg",
-      "imageSha256": "f5794afcd0076ce2cf8c8c4a8a4eec72f08ba240f81d59e0e895bf01e9bafc7a",
+      "imageSha256": "fd4b0285e0ecb0ec0943c4e9bf4814dcecd176777421e5221282b459626cf814",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-matte-black",
@@ -1133,32 +1355,38 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 14.95,
       "unit": 14.95,
       "retailer": "123-3D UK",
-      "updated": "2026-09-27",
-      "url": "https://www.123-3d.co.uk/PLA-p7314.html",
+      "updated": "2026-10-13",
+      "url": "https://www.123-3d.co.uk/products/123-3d-pla",
       "autoRefresh": true,
       "sku": "DHM00017",
       "priceHistory": [
         {
           "date": "2026-09-27",
           "price": 14.95
+        },
+        {
+          "date": "2026-10-13",
+          "price": 14.95
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "123-3D Filament PLA Light Grey 1.75mm 1kg 123-3D UK",
-      "image": "assets/products/123-3d-pla-light-grey-5c4f144c528d.webp",
+      "image": "assets/products/123-3d-pla-light-grey-e2a8362412a9.webp",
       "imageMethod": "retailer-exact-listing",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Light-Grey-1-75mm-1kg-i11637.html",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Light_Grey_1.75mm_1kg_DHM00017_m1_medium.jpg",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00017_01.jpg?v=1786078223",
       "imageDownloadedFrom": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Light_Grey_1.75mm_1kg_DHM00017_m1_medium.jpg",
-      "imageSha256": "5c4f144c528d7685d5e475c09607398cc1d04e459d85f60f12904aab7498be4b",
+      "imageSha256": "e2a8362412a9c09e60942c227ccf2967f67736507886558046bab4728fb74d07",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "availability": "In stock"
     },
     {
       "id": "123-3d-pla-bright-pink",
@@ -1285,30 +1513,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.9,
       "unit": 15.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 15.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/creality-hyper-rfid-pla-black-1-75mm-1kg-1f2828b97e91.webp",
+      "image": "assets/products/creality-hyper-rfid-pla-black-1-75mm-1kg-44875d40ea7d.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
-      "imageSha256": "1f2828b97e911f5a2041bd8ab3cd714b12576599c52b7deb7bdabafde23feb37",
+      "imageSha256": "44875d40ea7d5010021ed7edff40e15b44d3bde73916640b20f98cb9c9a183ac",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
+      "availability": "In stock"
     },
     {
       "id": "creality-hyper-rfid-pla-white-1-75mm-1kg",
@@ -1322,30 +1556,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.9,
       "unit": 15.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 15.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/creality-hyper-rfid-pla-white-1-75mm-1kg-24db31386044.webp",
+      "image": "assets/products/creality-hyper-rfid-pla-white-1-75mm-1kg-11d2dc846c86.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
-      "imageSha256": "24db3138604478e1a604bb40e4d60ba1f2e963f66749db49184626ff950d8269",
+      "imageSha256": "11d2dc846c863862ebc9eee90a71addcab03aacf1e29a9ce220a8080b14f9eb8",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
+      "availability": "In stock"
     },
     {
       "id": "creality-hyper-rfid-pla-blue-1-75mm-1kg",
@@ -1359,30 +1599,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.9,
       "unit": 15.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 15.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/creality-hyper-rfid-pla-blue-1-75mm-1kg-b2de6fdbc24e.webp",
+      "image": "assets/products/creality-hyper-rfid-pla-blue-1-75mm-1kg-7f5266c0dfda.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
-      "imageSha256": "b2de6fdbc24ee67d123dce7b32e8ef0902c6e5f8d2550c495d825143032e2259",
+      "imageSha256": "7f5266c0dfda1836b760eaf52996eef2d4bbbce5c085103bd8212a73bd722e1c",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
+      "availability": "In stock"
     },
     {
       "id": "primavalue-pla-black-1-75mm-1kg",
@@ -1396,30 +1642,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 13.9,
       "unit": 13.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 13.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/primavalue-pla-black-1-75mm-1kg-d28b35100a22.webp",
+      "image": "assets/products/primavalue-pla-black-1-75mm-1kg-5b4e7ffff09a.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
-      "imageSha256": "d28b35100a22573507e7d19322159af98fc79c8a2c01229295ad1cb8e1733f07",
+      "imageSha256": "5b4e7ffff09ae2da584bf85a337fba658fe697239114d9b126507f5624767f67",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
+      "availability": "In stock"
     },
     {
       "id": "primavalue-pla-red-1-75mm-1kg",
@@ -1433,30 +1685,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 13.9,
       "unit": 13.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments?p=3",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 13.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/primavalue-pla-red-1-75mm-1kg-30af98dda003.webp",
+      "image": "assets/products/primavalue-pla-red-1-75mm-1kg-aef3bc39a315.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
-      "imageSha256": "30af98dda00370b0b614036e36df7c25fe4ed3f2999f58c467952bb6bbe47b6f",
+      "imageSha256": "aef3bc39a315b15ea8da94eb8ea5067ef2c8097c9b81ba240ab9fb9246e451ab",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
+      "availability": "In stock"
     },
     {
       "id": "primavalue-pla-orange-1-75mm-1kg",
@@ -1470,30 +1728,36 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 13.9,
       "unit": 13.9,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/filament-resin/filaments?p=3",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 13.9
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.9
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageSearchStatus": "matched",
-      "image": "assets/products/primavalue-pla-orange-1-75mm-1kg-557791289ba1.webp",
+      "image": "assets/products/primavalue-pla-orange-1-75mm-1kg-796bea2c901b.webp",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
       "imageMethod": "retailer-exact-product",
       "imageChecked": "2026-10-13",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
-      "imageSha256": "557791289ba1ffff89fd97a0eda530ee212e151bcc591528d2d8d9b54ab99d90",
+      "imageSha256": "796bea2c901b4fbfc484b4f75150d6f89d09c9ae403e245ef8e1ba52b781da4e",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
+      "availability": "In stock"
     },
     {
       "id": "polymaker-polylite-abs-black-1-75mm-1kg",
@@ -1617,34 +1881,40 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "Grey",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 10,
-      "unit": 10,
+      "price": 10.0,
+      "unit": 10.0,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/brand/copymaster3d",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 10
+        },
+        {
+          "date": "2026-10-13",
+          "price": 10.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Copymaster3D - PET-G - Grey - 1.75mm - 1kg 3D Prima UK",
-      "image": "assets/products/copymaster3d-pet-g-grey-1-75mm-1kg-559a485895ab.webp",
+      "image": "assets/products/copymaster3d-pet-g-grey-1-75mm-1kg-caa147e77be7.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
-      "imageSha256": "559a485895ab899f5cf3961ace42e54bea3f72f8328193340b8722f00fda91d6",
+      "imageSha256": "caa147e77be77a530f23e8bed077e83f79733c23cd4cc9648e76fe8533d52a1b",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
+      "availability": "In stock"
     },
     {
       "id": "copymaster3d-pla-silk-pink-1-75mm-1kg",
@@ -1658,31 +1928,37 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 16.5,
       "unit": 16.5,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/brand/copymaster3d",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 16.5
+        },
+        {
+          "date": "2026-10-13",
+          "price": 16.5
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Copymaster3D - PLA Silk - Pink - 1.75mm - 1kg 3D Prima UK",
-      "image": "assets/products/copymaster3d-pla-silk-pink-1-75mm-1kg-417d77e661a6.webp",
+      "image": "assets/products/copymaster3d-pla-silk-pink-1-75mm-1kg-31a4bebee14e.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
-      "imageSha256": "417d77e661a6d100e08ca3359f25ad996d9f3cee4a45f0272a13ef516576b5fa",
+      "imageSha256": "31a4bebee14e52d26ba75485660b96a1a3121d7ab66adcbb7f192da648dcb168",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
+      "availability": "In stock"
     },
     {
       "id": "copymaster3d-abs-1-75mm-800-g-white",
@@ -1693,34 +1969,40 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "White",
       "weightGrams": 800,
       "pack": "800 g",
-      "price": 10,
+      "price": 10.0,
       "unit": 12.5,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/brand/copymaster3d",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
       "autoRefresh": true,
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 10
+        },
+        {
+          "date": "2026-10-13",
+          "price": 10.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Copymaster3D ABS - 1.75mm - 800 g - White 3D Prima UK",
-      "image": "assets/products/copymaster3d-abs-1-75mm-800-g-white-ecc68655a590.webp",
+      "image": "assets/products/copymaster3d-abs-1-75mm-800-g-white-1cb6e4181fe3.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
-      "imageSha256": "ecc68655a5907a85623552e3e43b78b6b829b74ac57772afb14f15945a8ef0d8",
+      "imageSha256": "1cb6e4181fe34a83cd092d7e1e6ba8bae3676a3dbf62ce9fd85258b5e49000bb",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
+      "availability": "In stock"
     },
     {
       "id": "bambu-lab-petg-hf-refill-1-75mm-1kg-black",
@@ -1771,7 +2053,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 169.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://bambu-lab-uk.myshopify.com/collections/a1-series",
+      "url": "https://bambu-lab-uk.myshopify.com/products/a1-mini",
       "autoRefresh": false,
       "retailer": "Bambu Lab UK",
       "availability": "In stock",
@@ -1930,7 +2212,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 489.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.store.bambulab.com/collections/3d-printer",
+      "url": "https://bambu-lab-uk.myshopify.com/products/p1s",
       "autoRefresh": false,
       "retailer": "Bambu Lab UK",
       "availability": "In stock",
@@ -2009,7 +2291,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "225 × 225 × 265 mm",
       "price": 169.0,
       "unit": null,
-      "updated": "2026-10-02",
+      "updated": "2026-10-13",
       "url": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
       "autoRefresh": true,
       "retailer": "ELEGOO UK",
@@ -2041,9 +2323,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-10-02",
           "price": 169.0
+        },
+        {
+          "date": "2026-10-13",
+          "price": 169.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/elegoo-neptune-4-8a5b4670e72c.webp",
       "imageChecked": "2026-10-13",
@@ -2057,7 +2343,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
+      "availability": "In stock"
     },
     {
       "id": "creality-ender-3-v3-se",
@@ -2068,9 +2356,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "220 × 220 × 250 mm",
-      "price": 149,
+      "price": 149.0,
       "unit": null,
-      "updated": "2026-09-21",
+      "updated": "2026-10-13",
       "url": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
       "autoRefresh": true,
       "retailer": "Creality UK",
@@ -2078,24 +2366,30 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-21",
           "price": 149
+        },
+        {
+          "date": "2026-10-13",
+          "price": 149.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality Ender-3 V3 SE Creality UK",
-      "image": "assets/products/creality-ender-3-v3-se-05c4a8356dd2.webp",
+      "image": "assets/products/creality-ender-3-v3-se-0cd7555ee118.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265&width=600",
-      "imageSha256": "05c4a8356dd2114ed89b036d4c75964732194777af987a0b0b5db90e432d9ab8",
+      "imageSha256": "0cd7555ee11819506df3333027841c64d4383709b00d4710f1f2c2c708d6bff2",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
+      "availability": "In stock"
     },
     {
       "id": "creality-ender-3-v3-ke",
@@ -2144,9 +2438,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "220 × 220 × 250 mm",
-      "price": 379,
+      "price": 379.0,
       "unit": null,
-      "updated": "2026-09-21",
+      "updated": "2026-10-13",
       "url": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
       "autoRefresh": true,
       "retailer": "Creality UK",
@@ -2154,24 +2448,30 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-21",
           "price": 379
+        },
+        {
+          "date": "2026-10-13",
+          "price": 379.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality K1C 2025 Creality UK",
-      "image": "assets/products/creality-k1c-2025-1c6f32861e0c.webp",
+      "image": "assets/products/creality-k1c-2025-86d21a90ad9c.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354&width=600",
-      "imageSha256": "1c6f32861e0c2c60d309adaca4f5222779b39d6ec890a494a0fe29bf83cbb92f",
+      "imageSha256": "86d21a90ad9c31c747b24562c4692d8fe1f5f0cec26fcdaee8fc175a1f24f7d3",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
+      "availability": "In stock"
     },
     {
       "id": "flashforge-adventurer-5m",
@@ -2185,7 +2485,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 209.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.flashforge.com/collections/adventurer-series",
+      "url": "https://uk.flashforge.com/products/adventurer-5m-3d-printer",
       "autoRefresh": false,
       "retailer": "Flashforge UK",
       "availability": "In stock",
@@ -2293,35 +2593,41 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "Grey",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 10,
-      "unit": 10,
+      "price": 10.0,
+      "unit": 10.0,
       "retailer": "3D Prima UK",
-      "updated": "2026-09-28",
-      "url": "https://www.3dprima.co.uk/brand/copymaster3d",
+      "updated": "2026-10-13",
+      "url": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
       "autoRefresh": true,
       "id": "copymaster3d-pla-matte-grey-1-75mm-1kg",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 10
+        },
+        {
+          "date": "2026-10-13",
+          "price": 10.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Copymaster3D PLA Matte - Grey - 1.75mm - 1kg 3D Prima UK",
-      "image": "assets/products/copymaster3d-pla-matte-grey-1-75mm-1kg-d1d6605893ba.webp",
+      "image": "assets/products/copymaster3d-pla-matte-grey-1-75mm-1kg-c48f87850f01.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
+      "imageOriginalUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
       "imageDownloadedFrom": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
-      "imageSha256": "d1d6605893baebcb31202bf18b82353adf6300e7d9c9a58d7f97f26b70aa2d6f",
+      "imageSha256": "c48f87850f01b31f3bbf3408a636311bdb2420e8acc441efbb6c20ab2df31f91",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
+      "availability": "In stock"
     },
     {
       "id": "qidi-pla-basic-black-1kg",
@@ -2333,20 +2639,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#000000",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-black-1kg-4e83d081e486.webp",
       "imageChecked": "2026-10-13",
@@ -2360,7 +2670,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-white-1kg",
@@ -2372,10 +2683,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#F2F0EB",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2383,9 +2694,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-white-1kg-7adbbcb205df.webp",
       "imageChecked": "2026-10-13",
@@ -2399,7 +2714,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-gray-1kg",
@@ -2411,10 +2727,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#888B8D",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2422,9 +2738,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-gray-1kg-f0ad1cc2f4e0.webp",
       "imageChecked": "2026-10-13",
@@ -2438,7 +2758,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-skin-1kg",
@@ -2450,10 +2771,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#E3BC9A",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2461,9 +2782,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-skin-1kg-aee577c4bf15.webp",
       "imageChecked": "2026-10-13",
@@ -2477,7 +2802,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-sky-blue-1kg",
@@ -2489,10 +2815,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#9BCBEB",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2500,9 +2826,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-sky-blue-1kg-4d7bee2cb27d.webp",
       "imageChecked": "2026-10-13",
@@ -2516,7 +2846,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-yellow-1kg",
@@ -2528,10 +2859,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#F8C711",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2539,9 +2870,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-yellow-1kg-c04881c518de.webp",
       "imageChecked": "2026-10-13",
@@ -2555,7 +2890,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-blue-1kg",
@@ -2567,20 +2903,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#0074BC",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-blue-1kg-c78347570391.webp",
       "imageChecked": "2026-10-13",
@@ -2594,7 +2934,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-brown-1kg",
@@ -2606,10 +2947,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#6D3F2B",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2617,9 +2958,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-brown-1kg-5478145b7fdc.webp",
       "imageChecked": "2026-10-13",
@@ -2633,7 +2978,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-red-1kg",
@@ -2645,10 +2991,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#D3100C",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2656,9 +3002,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-red-1kg-c7e38b10ad81.webp",
       "imageChecked": "2026-10-13",
@@ -2672,7 +3022,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-basic-dark-green-1kg",
@@ -2684,10 +3035,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#1F4E3A",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 14.99,
-      "unit": 14.99,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-basic",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2695,9 +3046,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 14.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/qidi-pla-basic-dark-green-1kg-fc6b41688f1e.webp",
       "imageChecked": "2026-10-13",
@@ -2711,7 +3066,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-basic"
     },
     {
       "id": "qidi-pla-rapido-black-1kg",
@@ -2726,7 +3082,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2734,9 +3090,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2751,7 +3111,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-white-1kg",
@@ -2766,7 +3127,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2774,9 +3135,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2791,7 +3156,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-red-1kg",
@@ -2806,7 +3172,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2814,9 +3180,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2831,7 +3201,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-yellow-1kg",
@@ -2886,17 +3257,21 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2911,7 +3286,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-blue-1kg",
@@ -2926,17 +3302,21 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2951,7 +3331,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-green-1kg",
@@ -2966,7 +3347,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -2974,9 +3355,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -2991,7 +3376,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-silver-1kg",
@@ -3006,7 +3392,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -3014,9 +3400,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3031,7 +3421,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-gray-1kg",
@@ -3046,7 +3437,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 15.99,
       "unit": 15.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-tech-pla-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -3054,9 +3445,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 15.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 15.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3071,7 +3466,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-tech-pla-filament"
     },
     {
       "id": "qidi-pla-rapido-pink-1kg",
@@ -3163,10 +3559,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#C51223",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 16.99,
-      "unit": 16.99,
+      "price": 25.99,
+      "unit": 25.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-asa-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -3174,9 +3570,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 16.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 25.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3191,7 +3591,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament"
     },
     {
       "id": "qidi-asa-brown-1kg",
@@ -3203,20 +3604,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#593729",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 16.99,
-      "unit": 16.99,
+      "price": 25.99,
+      "unit": 25.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-asa-filament",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 16.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 25.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3231,7 +3636,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament"
     },
     {
       "id": "qidi-asa-gray-1kg",
@@ -3243,10 +3649,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#BEBFC2",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 16.99,
-      "unit": 16.99,
+      "price": 25.99,
+      "unit": 25.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-asa-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -3254,9 +3660,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 16.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 25.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3271,7 +3681,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament"
     },
     {
       "id": "qidi-asa-blue-1kg",
@@ -3363,20 +3774,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#000000",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 16.99,
-      "unit": 16.99,
+      "price": 25.99,
+      "unit": 25.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-asa-filament",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 16.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 25.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3391,7 +3806,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament"
     },
     {
       "id": "qidi-asa-white-1kg",
@@ -3403,10 +3819,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#FFFFFF",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 16.99,
-      "unit": 16.99,
+      "price": 25.99,
+      "unit": 25.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-asa-filament",
       "autoRefresh": false,
       "availability": "In stock",
@@ -3414,9 +3830,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 16.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 25.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3431,7 +3851,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "abs-asa-filament"
+      "productCategory": "abs-asa-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-asa-filament"
     },
     {
       "id": "qidi-asa-yellow-1kg",
@@ -3526,17 +3947,21 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 17.99,
       "unit": 17.99,
       "retailer": "QIDI UK Store",
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/pla-cf",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 17.99
+        },
+        {
+          "date": "2026-10-13",
+          "price": 17.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -3551,7 +3976,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/pla-cf"
     },
     {
       "id": "qidi-pla-cf-midnight-blue-1kg",
@@ -6467,7 +6893,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6518,7 +6944,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "anycubic-pla-cf-lava-grey-1kg",
@@ -6536,7 +6964,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6587,7 +7015,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "anycubic-pla-cf-cowboy-blue-1kg",
@@ -6605,7 +7035,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6656,7 +7086,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "anycubic-pla-cf-black-1kg",
@@ -6674,7 +7106,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6725,7 +7157,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "anycubic-pla-cf-fish-scale-white-1kg",
@@ -6743,7 +7177,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6794,7 +7228,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "anycubic-pla-cf-jade-green-1kg",
@@ -6812,7 +7248,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "updated": "2026-10-10",
       "url": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "autoRefresh": false,
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
@@ -6863,7 +7299,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-cf-bulk-sale",
       "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "composite-filament"
+      "productCategory": "composite-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "additivex-bambu-pla-matte-mandarin-orange-1kg",
@@ -6875,20 +7313,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#F28C28",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-mandarin-orange-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -6901,9 +7343,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Mandarine-Orange.png?v=1717492102&width=600",
       "imageSha256": "5aebeb565ba7e7e31e4d87e3c74ddd4716dd279bb8b5c0dc28396870354affc6",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-mandarin-orange-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-marine-blue-1kg",
@@ -6915,20 +7358,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#3E5F8A",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-marine-blue-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -6941,9 +7388,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Marine-Blue.png?v=1717492102&width=600",
       "imageSha256": "ddc3e50bf6910837637da209662ac416964cefeea06e7e9a3ce7c2d1126a200a",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-marine-blue-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-ice-blue-1kg",
@@ -6955,20 +7403,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#A8D8F0",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ice-blue-refill-1.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -6981,9 +7433,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ice-Blue.png?v=1717492102&width=600",
       "imageSha256": "c0efc9ff082c4238f8dbb68e0e0db65f4037d2ad5dca300163d346deff7f919e",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ice-blue-refill-1.html"
     },
     {
       "id": "additivex-bambu-pla-matte-ash-grey-1kg",
@@ -6995,20 +7448,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#8E9297",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ash-grey-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7021,9 +7478,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ash-Gray_88522363-188c-48e0-bd7d-6015918a8c6b.png?v=1717492102&width=600",
       "imageSha256": "9927be6fb1ee1c14c9dd04a4a9667e7a19aa42a467c1289bdd01d3dc4e407687",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ash-grey-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-grass-green-1kg",
@@ -7035,20 +7493,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#55A846",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-green-grass-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7061,9 +7523,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Grass-Green.png?v=1717492102&width=600",
       "imageSha256": "35185a99c8836edc2f7886533484a1733d53dea7014e610c41b0487b6b549799",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-green-grass-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-charcoal-1kg",
@@ -7075,20 +7538,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#454545",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-charcoal-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7101,9 +7568,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Charcoal.png?v=1717492102&width=600",
       "imageSha256": "7bf3af1e060ca94925815264150d1710ce41e556e613aa7eef09f0f342414d13",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-charcoal-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-latte-brown-1kg",
@@ -7115,20 +7583,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#A67B5B",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-latte-brown-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7141,9 +7613,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Latte-Brown.png?v=1717492102&width=600",
       "imageSha256": "dc0fca3432e1ed20031d5c2120c5c390696ca1355f2492fc0451b6ec0e6c04fd",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-latte-brown-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-sakura-pink-1kg",
@@ -7155,20 +7628,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#F4A6C1",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-sakura-pink-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7181,9 +7658,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Sakura-Pink.png?v=1717492102&width=600",
       "imageSha256": "1c6001c2306cd8d5976aa1100ba89fba3937002b1bc65147253f75edfe6c5dea",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-sakura-pink-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-lilac-purple-1kg",
@@ -7195,20 +7673,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#A78BFA",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-lilac-purple-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7221,9 +7703,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Lilac-Purple.png?v=1706090484&width=600",
       "imageSha256": "067117448ab37f7afab64749a5eba298d26a9dfa22820fab9d4d67f07b704fef",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-lilac-purple-refill.html"
     },
     {
       "id": "additivex-bambu-pla-matte-scarlet-red-1kg",
@@ -7235,20 +7718,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colourHex": "#D61C2F",
       "weightGrams": 1000,
       "pack": "1 kg",
-      "price": 11.66,
-      "unit": 11.66,
+      "price": 13.99,
+      "unit": 13.99,
       "retailer": "Additive-X",
-      "updated": "2026-09-28",
-      "url": "https://www.additive-x.com/shop/filament-shop-3d-printer-filament-online/pla-filament.html",
+      "updated": "2026-10-13",
+      "url": "https://www.additive-x.com/shop/bambu-lab-pla-matte-scarlet-red-refill.html",
       "autoRefresh": false,
       "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 11.66
+        },
+        {
+          "date": "2026-10-13",
+          "price": 13.99
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7261,9 +7748,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102&width=600",
       "imageSha256": "93d2e826491f1c51edfa7b612443830e1a52ac1616703f0c9f86c5330b5747c5",
       "lastAttempt": "2026-10-13",
-      "lastImageCheckStatus": "ok",
+      "lastImageCheckStatus": "retained-unverified",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "priceSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-scarlet-red-refill.html"
     },
     {
       "id": "additivex-formfutura-petg-black-1kg",
@@ -7394,10 +7882,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "420 × 420 × 500 mm",
-      "price": 519,
+      "price": 519.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.anycubic.com/collections/3d-printers",
+      "updated": "2026-10-13",
+      "url": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7405,24 +7893,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 519
+        },
+        {
+          "date": "2026-10-13",
+          "price": 519.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Anycubic Kobra 3 Max V2 Combo Anycubic UK",
-      "image": "assets/products/anycubic-kobra-3-max-v2-combo-12551eb3e8cf.webp",
+      "image": "assets/products/anycubic-kobra-3-max-v2-combo-b7ea36ce0937.webp",
       "imageMethod": "manufacturer-model-photo",
       "imageSourceUrl": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra3MaxV2Combo.jpg?v=1787835187",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_3_Max_V2_Combo_4_colors.jpg?v=1787835187",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra3MaxV2Combo.jpg?v=1787835187&width=600",
-      "imageSha256": "12551eb3e8cf7664dae30a8da3e9128bbd00a4aa141b70721d208f2f23a4dc78",
+      "imageSha256": "b7ea36ce0937bb2f89cdd32ec7894228624aedb2438c01ae1e93e85f8b2ff4da",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer"
     },
     {
       "id": "anycubic-kobra-s1-ace-2-pro-combo",
@@ -7436,7 +7929,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 449.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/3d-printers",
+      "url": "https://uk.anycubic.com/products/kobra-s1-ace-2-pro-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7513,10 +8006,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "260 × 260 × 260 mm",
-      "price": 289,
+      "price": 299.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.anycubic.com/collections/3d-printers",
+      "updated": "2026-10-13",
+      "url": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7524,9 +8017,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 289
+        },
+        {
+          "date": "2026-10-13",
+          "price": 299.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -7535,13 +8032,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageMethod": "manufacturer-model-photo",
       "imageSourceUrl": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-nofilament.jpg?v=1780396883",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-no_filament.jpg?v=1780396971",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-nofilament.jpg?v=1780396883&width=600",
       "imageSha256": "9e3356b80983e3b1ace76e5f6356495eadb2759fa0e283248e954c57296dfa61",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer"
     },
     {
       "id": "anycubic-kobra-x",
@@ -7552,10 +8050,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "260 × 260 × 260 mm",
-      "price": 249,
+      "price": 279.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.anycubic.com/collections/3d-printers",
+      "updated": "2026-10-13",
+      "url": "https://uk.anycubic.com/products/kobra-x-3d-printer",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7563,24 +8061,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 249
+        },
+        {
+          "date": "2026-10-13",
+          "price": 279.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Anycubic Kobra X Anycubic UK",
-      "image": "assets/products/anycubic-kobra-x-5681f36119a7.webp",
+      "image": "assets/products/anycubic-kobra-x-c3e84801a3b5.webp",
       "imageMethod": "manufacturer-model-photo",
-      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-x",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-x-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_-_4_colors_-_without_filament.jpg?v=1774233625",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_4-Color_3D_Printer_a77c9830-29b1-416e-b7cd-85c2730720aa.jpg?v=1779965188",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_-_4_colors_-_without_filament.jpg?v=1774233625&width=600",
-      "imageSha256": "5681f36119a7e7874daf4a5e7b7456a02f109fbec497fe38a12be133cc1d1f08",
+      "imageSha256": "c3e84801a3b53e132eed12bebfb753f88d63f2c7a62342f8ce8cd5f7e62539a6",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.anycubic.com/products/kobra-x-3d-printer"
     },
     {
       "id": "anycubic-kobra-s1-combo",
@@ -7594,7 +8097,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 399.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/3d-printers",
+      "url": "https://uk.anycubic.com/products/kobra-s1-combo",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "Out of stock",
@@ -7713,7 +8216,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 899.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/resin-printer",
+      "url": "https://uk.anycubic.com/products/photon-p1-max-best-large-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7832,7 +8335,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 699.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/resin-printer",
+      "url": "https://uk.anycubic.com/products/photon-mono-m7-max",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7912,7 +8415,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 399.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/resin-printer",
+      "url": "https://uk.anycubic.com/products/photon-mono-m7",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -7992,7 +8495,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 179.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.anycubic.com/collections/resin-printer",
+      "url": "https://uk.anycubic.com/products/photon-mono-4",
       "autoRefresh": false,
       "retailer": "Anycubic UK",
       "availability": "In stock",
@@ -8069,9 +8572,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "256 × 256 × 256 mm",
-      "price": 199,
+      "price": 239.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.elegoo.com/products/centauri-2",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
@@ -8080,22 +8583,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 199
+        },
+        {
+          "date": "2026-10-13",
+          "price": 239.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/elegoo-centauri-2-e924c00983ba.webp",
+      "image": "assets/products/elegoo-centauri-2-0c02c061a6c4.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2-_-260811.jpg?v=1786704718",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718&width=600",
-      "imageSha256": "e924c00983baca27f127bc0dc09e98dca5c8273a179304f824f97c01bede0cf3",
+      "imageSha256": "0c02c061a6c4f069a4a509b26d6b400bd0332074b4f7ce3f8a8d8644ecb4f6d8",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2"
     },
     {
       "id": "elegoo-centauri-carbon-2",
@@ -8106,9 +8614,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "256 × 256 × 256 mm",
-      "price": 259,
+      "price": 299.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.elegoo.com/products/centauri-carbon-2",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
@@ -8117,22 +8625,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 259
+        },
+        {
+          "date": "2026-10-13",
+          "price": 299.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/elegoo-centauri-carbon-2-083ea3eb0540.webp",
+      "image": "assets/products/elegoo-centauri-carbon-2-fe22d37e73b0.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2-_-260811.jpg?v=1786703989",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989&width=600",
-      "imageSha256": "083ea3eb05404800077b3401986498aae906f51aeaed678ef67b447cdab22a8d",
+      "imageSha256": "fe22d37e73b054bcb6f322cd61095d49e43c5f32504bde5d3cc30fa12c173646",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2"
     },
     {
       "id": "elegoo-centauri-carbon-2-combo",
@@ -8143,9 +8656,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "256 × 256 × 256 mm",
-      "price": 329,
+      "price": 379.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
@@ -8154,22 +8667,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 329
+        },
+        {
+          "date": "2026-10-13",
+          "price": 379.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/elegoo-centauri-carbon-2-combo-5a613602150b.webp",
+      "image": "assets/products/elegoo-centauri-carbon-2-combo-97fd1e83ba1d.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36.png?v=1789961366",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366&width=600",
-      "imageSha256": "5a613602150b73c32f5926587b10b04e676fda9eb148c85d6254ac59f61e8f3b",
+      "imageSha256": "97fd1e83ba1d347429ba7370c43f179da13bad93a9c82d4d543523b7f64dd150",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo"
     },
     {
       "id": "elegoo-saturn-4-ultra-16k",
@@ -8180,10 +8698,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "218.88 × 122.88 × 220 mm",
-      "price": 375,
+      "price": 399.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/saturn-series",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8191,9 +8709,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 375
+        },
+        {
+          "date": "2026-10-13",
+          "price": 399.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8208,7 +8730,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer"
     },
     {
       "id": "elegoo-saturn-4-ultra",
@@ -8219,10 +8742,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "218.88 × 122.88 × 220 mm",
-      "price": 279,
+      "price": 349.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/top-picks-saturn-4-ultra",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8230,9 +8753,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 279
+        },
+        {
+          "date": "2026-10-13",
+          "price": 349.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8247,7 +8774,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer"
     },
     {
       "id": "elegoo-saturn-4",
@@ -8258,10 +8786,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "218.88 × 122.88 × 220 mm",
-      "price": 229,
+      "price": 267.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/saturn-series",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8269,9 +8797,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 229
+        },
+        {
+          "date": "2026-10-13",
+          "price": 267.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8286,7 +8818,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer"
     },
     {
       "id": "elegoo-saturn-3-ultra",
@@ -8297,10 +8830,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "218.88 × 122.88 × 260 mm",
-      "price": 239,
+      "price": 289.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/saturn-series",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/elegoo-saturn-3-ultra-resin-3d-printer-12k",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8308,9 +8841,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 239
+        },
+        {
+          "date": "2026-10-13",
+          "price": 289.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8325,7 +8862,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-saturn-3-ultra-resin-3d-printer-12k"
     },
     {
       "id": "elegoo-saturn-3",
@@ -8336,10 +8874,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "218.88 × 122.88 × 250 mm",
-      "price": 214,
+      "price": 219.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/saturn-series",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/elegoo-saturn-3-resin-3d-printer-12k",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8347,9 +8885,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 214
+        },
+        {
+          "date": "2026-10-13",
+          "price": 219.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8364,7 +8906,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-saturn-3-resin-3d-printer-12k"
     },
     {
       "id": "elegoo-mars-5-ultra",
@@ -8375,10 +8918,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "153.36 × 77.76 × 165 mm",
-      "price": 199,
+      "price": 231.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://uk.elegoo.com/collections/mars-series-bundle",
+      "updated": "2026-10-13",
+      "url": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
       "availability": "In stock",
@@ -8386,9 +8929,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 199
+        },
+        {
+          "date": "2026-10-13",
+          "price": 231.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -8403,7 +8950,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer"
     },
     {
       "id": "elegoo-jupiter-2",
@@ -8414,9 +8962,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "302 × 162 × 300 mm",
-      "price": 699,
+      "price": 799.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.elegoo.com/products/elegoo-jupiter-2",
       "autoRefresh": false,
       "retailer": "ELEGOO UK",
@@ -8425,22 +8973,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 699
+        },
+        {
+          "date": "2026-10-13",
+          "price": 799.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/elegoo-jupiter-2-2ce4fddeb053.webp",
+      "image": "assets/products/elegoo-jupiter-2-21fd6b285cc4.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/JPT2-_02.jpg?v=1782298746",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746&width=600",
-      "imageSha256": "2ce4fddeb053d10f0d52cf570a3226518ed55b50572fb2b7c130ec72cd96b324",
+      "imageSha256": "21fd6b285cc41071e50edec3ad5b85f2544f9bae51f234ba66de34ec1f40a192",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-jupiter-2",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-jupiter-2"
     },
     {
       "id": "creality-k2",
@@ -8451,10 +9004,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "350 × 350 × 350 mm",
-      "price": 439,
+      "price": 339.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/collections/k2-series-3d-printers",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
       "availability": "In stock",
@@ -8462,24 +9015,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 439
+        },
+        {
+          "date": "2026-10-13",
+          "price": 339.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality K2 Creality UK",
-      "image": "assets/products/creality-k2-1b9aabbd3ee0.webp",
+      "image": "assets/products/creality-k2-c313dbc4f934.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811&width=600",
-      "imageSha256": "1b9aabbd3ee08931e46dec1dda9b82ba0622eb1aed5fbebe1f686e1ce0cbef15",
+      "imageSha256": "c313dbc4f9343880190f8580937bf33261fe83021eb4c6e30ba692dd7f811f46",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer"
     },
     {
       "id": "creality-k2-plus",
@@ -8490,9 +9048,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "350 × 350 × 350 mm",
-      "price": 839,
+      "price": 849.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://store.creality.com/uk/products/creality-k2-plus-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
@@ -8501,9 +9059,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 839
+        },
+        {
+          "date": "2026-10-13",
+          "price": 849.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/creality-k2-plus-39e4be1ee778.webp",
       "imageChecked": "2026-10-13",
@@ -8516,7 +9078,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSourceUrl": "https://store.creality.com/uk/products/creality-k2-plus-combo-3d-printer",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/creality-k2-plus-combo-3d-printer"
     },
     {
       "id": "creality-k2-pro",
@@ -8564,35 +9127,40 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "220 × 220 × 250 mm",
-      "price": 359,
+      "price": 249.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/collections/k2-series-3d-printers",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/k2-se-combo-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 359
+        },
+        {
+          "date": "2026-10-13",
+          "price": 249.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality K2 SE Creality UK",
-      "image": "assets/products/creality-k2-se-3d8387732374.webp",
+      "image": "assets/products/creality-k2-se-a14ff2fe6e80.webp",
       "imageSourceUrl": "https://store.creality.com/uk/products/k2-se-combo-3d-printer",
       "imageMethod": "manufacturer-exact-model",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941&width=600",
-      "imageSha256": "3d83877323747d3bcc60db121a6466db87ba870aebc3f8eb963d23cd125c5651",
+      "imageSha256": "a14ff2fe6e805ccb829b8935cce7affdc080067d40ea8b15053cc7975ee0e2c0",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/k2-se-combo-3d-printer"
     },
     {
       "id": "creality-ender-5-max",
@@ -8603,10 +9171,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "400 × 400 × 400 mm",
-      "price": 689,
+      "price": 689.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/ender-5-max-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
       "availability": "In stock",
@@ -8614,24 +9182,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 689
+        },
+        {
+          "date": "2026-10-13",
+          "price": 689.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality Ender-5 Max Creality UK",
-      "image": "assets/products/creality-ender-5-max-dca83f9dd536.webp",
+      "image": "assets/products/creality-ender-5-max-2f26ccd903ee.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/ender-5-max-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811&width=600",
-      "imageSha256": "dca83f9dd536c5a21385612557d4b299bd52869ae029f1edffef45a787d31719",
+      "imageSha256": "2f26ccd903ee8e45fff50c5660cc00ae21a5cfb258e5dee81dcf1aefac30bd21",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/ender-5-max-3d-printer"
     },
     {
       "id": "creality-halot-r6",
@@ -8642,10 +9215,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "130 × 85 × 175 mm",
-      "price": 119,
+      "price": 119.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/collections/resin-3d-printer",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
       "availability": "In stock",
@@ -8653,24 +9226,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 119
+        },
+        {
+          "date": "2026-10-13",
+          "price": 119.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality HALOT-R6 Creality UK",
-      "image": "assets/products/creality-halot-r6-74bb058352a8.webp",
+      "image": "assets/products/creality-halot-r6-95e73595e794.webp",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer",
       "imageMethod": "manufacturer-exact-model",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851&width=600",
-      "imageSha256": "74bb058352a8f80de4e9f9e15fd5e552922b049d2ca09e06c0efa15450636f0b",
+      "imageSha256": "95e73595e794bebb22a138b2342e46aa315be4303b578d977df619bfaae21676",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer"
     },
     {
       "id": "creality-halot-mage-s",
@@ -8681,10 +9259,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "223 × 126 × 230 mm",
-      "price": 439,
+      "price": 439.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/collections/resin-3d-printer",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer",
       "autoRefresh": false,
       "retailer": "Creality UK",
       "availability": "In stock",
@@ -8692,24 +9270,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 439
+        },
+        {
+          "date": "2026-10-13",
+          "price": 439.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality HALOT-MAGE S 14K Creality UK",
-      "image": "assets/products/creality-halot-mage-s-c6dcc98d8414.webp",
+      "image": "assets/products/creality-halot-mage-s-c11ac8c5711f.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169&width=600",
-      "imageSha256": "c6dcc98d84143992029f3564cdd76f359a0db4baa3c92fa0f59f32f9181ffd10",
+      "imageSha256": "c11ac8c5711ffb4bf28f4b57723b625c54689817f784a666239860e7d0ac9fc0",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer"
     },
     {
       "id": "creality-halot-x1",
@@ -8720,10 +9303,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "211.68 × 118.37 × 200 mm",
-      "price": 699,
+      "price": 579.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://store.creality.com/uk/collections/resin-3d-printer",
+      "updated": "2026-10-13",
+      "url": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain",
       "autoRefresh": false,
       "retailer": "Creality UK",
       "availability": "In stock",
@@ -8731,24 +9314,29 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 699
+        },
+        {
+          "date": "2026-10-13",
+          "price": 579.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Creality HALOT X1 All in One Creality UK",
-      "image": "assets/products/creality-halot-x1-bda4663083d8.webp",
+      "image": "assets/products/creality-halot-x1-fe95ad669d67.webp",
       "imageMethod": "retailer-exact-listing",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690&width=384",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690&width=600",
-      "imageSha256": "bda4663083d88ec9a6a2b3800e2d02e76764b42b6625da00875acdcc0b476346",
+      "imageSha256": "fe95ad669d67b2d297ae77d389eaa3625eb1267aca57d182f94d858e3aeaf866",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "resin-printers"
+      "productCategory": "resin-printers",
+      "priceSourceUrl": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain"
     },
     {
       "id": "qidi-q2",
@@ -8759,9 +9347,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "270 × 270 × 256 mm",
-      "price": 429,
+      "price": 429.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/qidi-q2",
       "autoRefresh": false,
       "retailer": "QIDI UK Store",
@@ -8770,22 +9358,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 429
+        },
+        {
+          "date": "2026-10-13",
+          "price": 429.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/qidi-q2-0339eceb8216.webp",
+      "image": "assets/products/qidi-q2-223389b5e432.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=1024",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=600",
-      "imageSha256": "0339eceb8216d6423f45092b83cb2d7c3a9537707e0cc391efce79f9e35d6092",
+      "imageSha256": "223389b5e4320ddb938b2ebb63eead98e5fe72f002d920e77c4a69e38af3e519",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     {
       "id": "qidi-plus5",
@@ -8796,9 +9389,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "320 × 320 × 300 mm",
-      "price": 639,
+      "price": 639.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://uk.qidi3d.com/products/plus5",
       "autoRefresh": false,
       "retailer": "QIDI UK Store",
@@ -8807,22 +9400,27 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 639
+        },
+        {
+          "date": "2026-10-13",
+          "price": 639.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
-      "image": "assets/products/qidi-plus5-452bbf01082c.webp",
+      "image": "assets/products/qidi-plus5-45ce38c65437.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=1024",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-Plus5-main-image1.png?v=1788503019",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=600",
-      "imageSha256": "452bbf01082c08951aaf3020b05fe02eaba4a17b0d9f83c554e397b3a581760b",
+      "imageSha256": "45ce38c6543783c7168a4bffd9c88bab2831fe6bca0e6054ffebaa1faed46d39",
       "imageSearchStatus": "matched",
       "lastAttempt": "2026-10-13",
       "imageSourceUrl": "https://uk.qidi3d.com/products/plus5",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://uk.qidi3d.com/products/plus5"
     },
     {
       "id": "flashforge-adventurer-5m-pro",
@@ -8915,7 +9513,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 299.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.flashforge.com/collections/3d-printers",
+      "url": "https://uk.flashforge.com/products/ad5x-3d-printer",
       "autoRefresh": false,
       "retailer": "Flashforge UK",
       "availability": "In stock",
@@ -8995,7 +9593,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 619.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.flashforge.com/collections/3d-printers",
+      "url": "https://uk.flashforge.com/products/flashforge-creator-5",
       "autoRefresh": false,
       "retailer": "Flashforge UK",
       "availability": "In stock",
@@ -9075,7 +9673,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 749.0,
       "unit": null,
       "updated": "2026-10-13",
-      "url": "https://uk.flashforge.com/collections/3d-printers",
+      "url": "https://uk.flashforge.com/products/flashforge-creator-5-pro",
       "autoRefresh": false,
       "retailer": "Flashforge UK",
       "availability": "In stock",
@@ -9152,20 +9750,24 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "350 × 350 × 350 mm",
-      "price": 1100,
+      "price": 1100.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://sovol.uk/",
+      "updated": "2026-10-13",
+      "url": "https://sovol.uk/products/sovol-m1d-3d-printer",
       "autoRefresh": false,
       "retailer": "Sovol UK",
-      "availability": "Pre-order",
+      "availability": "In stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 1100
+        },
+        {
+          "date": "2026-10-13",
+          "price": 1100.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -9180,7 +9782,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://sovol.uk/products/sovol-m1d-3d-printer"
     },
     {
       "id": "sovol-sv08-max",
@@ -9191,9 +9794,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "500 × 500 × 500 mm",
-      "price": 809,
+      "price": 809.0,
       "unit": null,
-      "updated": "2026-09-28",
+      "updated": "2026-10-13",
       "url": "https://sovol.uk/products/sovol-sv08-max-3d-printer",
       "autoRefresh": false,
       "retailer": "Sovol UK",
@@ -9202,13 +9805,17 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 809
+        },
+        {
+          "date": "2026-10-13",
+          "price": 809.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "image": "assets/products/sovol-sv08-max-dc25feebaf23.webp",
       "imageChecked": "2026-10-13",
-      "imageOriginalUrl": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=1920",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893",
       "imageAutoRefresh": false,
       "imageDownloadedFrom": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=600",
       "imageSha256": "dc25feebaf23e6a91fd289dc11ce4769908f1c8d86fd95d2f734174ef39e24bd",
@@ -9217,7 +9824,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSourceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer"
     },
     {
       "id": "sovol-sv08",
@@ -9228,10 +9836,10 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "350 × 350 × 345 mm",
-      "price": 389,
+      "price": 389.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://sovol.uk/",
+      "updated": "2026-10-13",
+      "url": "https://sovol.uk/products/sovol-sv08-3d-printer",
       "autoRefresh": false,
       "retailer": "Sovol UK",
       "availability": "In stock",
@@ -9239,9 +9847,13 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-09-28",
           "price": 389
+        },
+        {
+          "date": "2026-10-13",
+          "price": 389.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
@@ -9256,7 +9868,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://sovol.uk/products/sovol-sv08-3d-printer"
     },
     {
       "id": "sovol-sv06-ace",
@@ -9267,35 +9880,40 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "300 × 300 × 350 mm",
-      "price": 230,
+      "price": 240.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://sovol.uk/",
+      "updated": "2026-10-13",
+      "url": "https://sovol.uk/products/sovol-sv06-ace",
       "autoRefresh": false,
       "retailer": "Sovol UK",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 230
+        },
+        {
+          "date": "2026-10-13",
+          "price": 240.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "Sovol SV06 ACE Sovol UK",
-      "image": "assets/products/sovol-sv06-ace-b9673547787c.webp",
+      "image": "assets/products/sovol-sv06-ace-fc4aabcf477f.webp",
       "imageMethod": "manufacturer-model-photo",
       "imageSourceUrl": "https://sovol.uk/products/sovol-sv06-ace",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_3D_Printer.jpg?v=1766996075",
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_Auto_Leveling_3D_Printer.jpg?v=1765467696",
       "imageDownloadedFrom": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_3D_Printer.jpg?v=1766996075&width=600",
-      "imageSha256": "b9673547787c5170c362452118972aee7e5aab447bbfc1bbcbdb4b29d2e91656",
+      "imageSha256": "fc4aabcf477f7cc6b17bdf040aaf88989a5d720d42ed33c9d4707014b51dd58d",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://sovol.uk/products/sovol-sv06-ace"
     },
     {
       "id": "snapmaker-u1",
@@ -9383,35 +10001,40 @@ window.PRINTPROFIT_PRICE_DATA={
       "colour": "",
       "weightGrams": null,
       "pack": "200 × 200 × 200 mm",
-      "price": 720,
+      "price": 864.0,
       "unit": null,
-      "updated": "2026-09-28",
-      "url": "https://www.idig3dprinting.co.uk/product-category/3d-printers/?filter_brands=xyzprinting",
+      "updated": "2026-10-13",
+      "url": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/",
       "autoRefresh": false,
       "retailer": "iDig3Dprinting",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "priceHistory": [
         {
           "date": "2026-09-28",
           "price": 720
+        },
+        {
+          "date": "2026-10-13",
+          "price": 864.0
         }
       ],
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "imageStatus": "available",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "imageSearchQuery": "XYZ da Vinci 1.0 Pro 3 in 1 iDig3Dprinting",
-      "image": "assets/products/xyz-da-vinci-1-pro-3-in-1-39f29811c6fe.webp",
+      "image": "assets/products/xyz-da-vinci-1-pro-3-in-1-7d577e2ff9c9.webp",
       "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/",
       "imageMethod": "retailer-exact-product",
       "imageAutoRefresh": false,
-      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side-198x198.jpg",
+      "imageOriginalUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side.jpg",
       "imageDownloadedFrom": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side-198x198.jpg",
-      "imageSha256": "39f29811c6fee607fa7df3fac798057610d23d5b96f7bc3d79ccc796dc628a62",
+      "imageSha256": "7d577e2ff9c94120947992fadc482f7311cb85e9110015ceed14464d31834af3",
       "lastAttempt": "2026-10-13",
       "lastImageCheckStatus": "ok",
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "priceSourceUrl": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/"
     },
     {
       "id": "xyz-da-vinci-junior",
@@ -26958,9 +27581,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 32.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -26977,6 +27600,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 32.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 32.0
         }
       ],
@@ -27080,9 +27707,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 6899.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27099,6 +27726,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 6899.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 6899.0
         }
       ],
@@ -27196,9 +27827,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 13.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27219,6 +27850,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 13.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 13.0
         }
       ],
@@ -27255,9 +27890,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "2.2 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 33.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27270,6 +27905,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 33.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 33.0
         }
       ],
@@ -27306,9 +27945,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "2.2 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 19.99,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27321,6 +27960,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 19.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 19.99
         }
       ],
@@ -27357,9 +28000,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 9295.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27372,6 +28015,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 9295.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 9295.0
         }
       ],
@@ -27407,9 +28054,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 6350.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27430,6 +28077,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 6350.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 6350.0
         }
       ],
@@ -27465,9 +28116,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 32.0,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27488,6 +28139,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 32.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 32.0
         }
       ],
@@ -27524,9 +28179,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 699.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27543,6 +28198,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 699.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 699.0
         }
       ],
@@ -27578,9 +28237,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 2900.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -27601,6 +28260,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 2900.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 2900.0
         }
       ],
@@ -28304,9 +28967,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 37.99,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -28323,6 +28986,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 37.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 37.99
         }
       ],
@@ -28418,9 +29085,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 28.99,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -28437,6 +29104,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 28.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 28.99
         }
       ],
@@ -28599,9 +29270,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -28622,6 +29293,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -28717,9 +29392,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -28736,6 +29411,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -28894,9 +29573,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -28917,6 +29596,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -29016,9 +29699,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 30.0,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29039,6 +29722,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 30.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 30.0
         }
       ],
@@ -29213,9 +29900,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 195.0,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29240,6 +29927,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 195.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 195.0
         }
       ],
@@ -29343,9 +30034,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 55.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29362,6 +30053,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 55.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 55.0
         }
       ],
@@ -29532,9 +30227,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 21.97,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29563,6 +30258,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 21.97
+        },
+        {
+          "date": "2026-10-13",
           "price": 21.97
         }
       ],
@@ -29804,9 +30503,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 21.97,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29831,6 +30530,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 21.97
+        },
+        {
+          "date": "2026-10-13",
           "price": 21.97
         }
       ],
@@ -29867,9 +30570,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 21.97,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -29890,6 +30593,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 21.97
+        },
+        {
+          "date": "2026-10-13",
           "price": 21.97
         }
       ],
@@ -30068,9 +30775,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 50.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30091,6 +30798,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 50.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 50.0
         }
       ],
@@ -30198,9 +30909,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "8.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 150.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30225,6 +30936,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 150.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 150.0
         }
       ],
@@ -30395,9 +31110,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "2.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 37.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30422,6 +31137,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 37.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 37.0
         }
       ],
@@ -30528,9 +31247,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 20.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30555,6 +31274,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 20.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 20.0
         }
       ],
@@ -30792,9 +31515,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 64.25,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30815,6 +31538,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 64.25
+        },
+        {
+          "date": "2026-10-13",
           "price": 64.25
         }
       ],
@@ -30922,9 +31649,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -30953,6 +31680,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -31131,9 +31862,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 35.5,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31150,6 +31881,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 35.5
+        },
+        {
+          "date": "2026-10-13",
           "price": 35.5
         }
       ],
@@ -31265,9 +32000,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31288,6 +32023,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -31462,9 +32201,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 18.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31481,6 +32220,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 18.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 18.0
         }
       ],
@@ -31592,9 +32335,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 27.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31619,6 +32362,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 27.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 27.0
         }
       ],
@@ -31789,9 +32536,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 17.99,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31808,6 +32555,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 17.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 17.99
         }
       ],
@@ -31923,9 +32674,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "18 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 500.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -31942,6 +32693,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 500.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 500.0
         }
       ],
@@ -32123,9 +32878,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 28.99,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -32142,6 +32897,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 28.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 28.99
         }
       ],
@@ -32253,9 +33012,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 29.99,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -32276,6 +33035,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 29.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 29.99
         }
       ],
@@ -32484,7 +33247,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-dd770db64e600eef25b3",
@@ -32643,9 +33408,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 22.99,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -32670,6 +33435,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 22.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 22.99
         }
       ],
@@ -32773,9 +33542,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 1999.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -32796,6 +33565,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 1999.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 1999.0
         }
       ],
@@ -32973,9 +33746,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 25.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -32996,6 +33769,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 25.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 25.0
         }
       ],
@@ -33174,9 +33951,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 25.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -33209,6 +33986,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 25.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 25.0
         }
       ],
@@ -33308,9 +34089,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 25.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -33335,6 +34116,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 25.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 25.0
         }
       ],
@@ -33505,9 +34290,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 26.99,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -33544,6 +34329,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 26.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 26.99
         }
       ],
@@ -33643,9 +34432,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 26.99,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -33670,6 +34459,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 26.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 26.99
         }
       ],
@@ -33844,9 +34637,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 5395.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -33879,6 +34672,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 5395.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 5395.0
         }
       ],
@@ -34123,9 +34920,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 36.5,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -34150,6 +34947,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 36.5
+        },
+        {
+          "date": "2026-10-13",
           "price": 36.5
         }
       ],
@@ -34257,9 +35058,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 55.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -34288,6 +35089,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 55.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 55.0
         }
       ],
@@ -34454,9 +35259,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 35.5,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -34485,6 +35290,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 35.5
+        },
+        {
+          "date": "2026-10-13",
           "price": 35.5
         }
       ],
@@ -38121,7 +38930,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-glow",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -42939,7 +43748,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://bambu-lab-uk.myshopify.com/products/p1p",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -45296,12 +46105,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/16k-standard-resin-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ab341df6538e4c75f395",
@@ -45363,12 +46174,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/16k-standard-resin-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-3a2fcbf583d1f38eb582",
@@ -45435,7 +46248,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f12e0fc72344bb998e3b",
@@ -45497,12 +46312,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/16k-standard-resin-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-0c2006be675da53e2ead",
@@ -45564,12 +46381,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/16k-standard-resin-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-3316c6bbeafef0c8edb0",
@@ -45636,7 +46455,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d7d64be2a3f1658b3921",
@@ -45698,12 +46519,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/tough-resin-2-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-bfc903d0706692388b1f",
@@ -45765,12 +46588,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/dlp-craftsman-resin-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f49aeb31aefb4c040580",
@@ -45837,7 +46662,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-60ac0f6516c0c2079e1f",
@@ -45899,12 +46726,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/plant-based-uv-resin-2-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-9da346dc06607d9cc34b",
@@ -45966,12 +46795,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-abs-like-resin-3-0-prime-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-705bd82b5b7c0b7e52ca",
@@ -46033,12 +46864,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-abs-like-resin-3-0-prime-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-b24adb7f0a39a044a9a8",
@@ -46100,12 +46933,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-abs-like-resin-3-0-prime-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-508dee4ecad5e3361e87",
@@ -46172,7 +47007,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-54b472f8527bf9b326d1",
@@ -46234,12 +47071,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8aadfd83a3b42ff9ba12",
@@ -46301,12 +47140,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-0366af4683e52315d0ac",
@@ -46368,12 +47209,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-97f9f6f36536b3fbc71e",
@@ -46435,12 +47278,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-b3214f4944872629dccf",
@@ -46502,12 +47347,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-4ed73f9bfe1d5d5034bb",
@@ -46569,12 +47416,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-976aa25985552b3587d3",
@@ -46636,12 +47485,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-3-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-aad53fbf74bcaacbd076",
@@ -46708,7 +47559,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d0e3fe76c748237d3917",
@@ -46775,7 +47628,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-736feaacd8ab75257e1d",
@@ -46842,7 +47697,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-cb505c1fa7cb061fc433",
@@ -46909,7 +47766,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-a71dc4446275f335728b",
@@ -46971,12 +47830,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/high-speed-resin-2-0-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ff656668726a0d5793d8",
@@ -47038,12 +47899,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-31021c8e145f14f53873",
@@ -47105,12 +47968,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-2905b390d3c827db9e0d",
@@ -47172,12 +48037,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-5372445ea52d25490ae6",
@@ -47239,12 +48106,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-eb250a8303d8b1fcee20",
@@ -47306,12 +48175,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-a1bc4be251aa552816a2",
@@ -47373,12 +48244,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/water-wash-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f40718b24b8a2880e57f",
@@ -47445,7 +48318,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-4a7454e0f3701bf3b438",
@@ -47512,7 +48387,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8dbd596b608b67ea1ada",
@@ -47579,7 +48456,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-61027055b54732a8045d",
@@ -47646,7 +48525,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-32bfc56045637171ed20",
@@ -47708,12 +48589,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-3021840de68417825e5c",
@@ -47775,12 +48658,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-7fbe0ec25412f0c854eb",
@@ -47842,12 +48727,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-721e566e6f22ad330c2f",
@@ -47909,12 +48796,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-685145f8efb0ba0d1d04",
@@ -47976,12 +48865,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ff54c019a8f528f0f511",
@@ -48043,12 +48934,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-2-0-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-367deef5f291c73b42a2",
@@ -48115,7 +49008,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-04b26b53ba68bb875055",
@@ -48182,7 +49077,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d23026195252891563df",
@@ -48244,12 +49141,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-381abe6185d864d67a00",
@@ -48311,12 +49210,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-4bf0dfe19d41e4850fff",
@@ -48378,12 +49279,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-b55e4f4d877aff7e8012",
@@ -48445,12 +49348,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-72720a142e78ae797489",
@@ -48512,12 +49417,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-edde5ba73d60fef16c2c",
@@ -48579,12 +49486,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-bdb777430d54fe102105",
@@ -48646,12 +49555,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8a1c4803425a42a9e565",
@@ -48713,12 +49624,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/abs-like-resin-pro-2-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-28f86eaf497aeada6f6d",
@@ -48785,7 +49698,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d855d819370084ef7557",
@@ -48847,12 +49762,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/standard-resin-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-c162d9c710b3c6840d3f",
@@ -48919,7 +49836,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-5566d9d2ed358b1ef147",
@@ -48981,12 +49900,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/standard-resin-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8a2dbe6965818c453f91",
@@ -49048,12 +49969,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/standard-resin-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-095ca64d4c22c3822a4f",
@@ -49120,7 +50043,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-e6dc19164eb3c53c727e",
@@ -49182,12 +50107,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/standard-resin-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ec8c47130c382c837935",
@@ -49254,7 +50181,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d9c14fbc5e325d573107",
@@ -49321,7 +50250,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-57902059748eaa7cc8ca",
@@ -49388,7 +50319,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f07490b48ac9c810c9d1",
@@ -49455,7 +50388,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-dcfbaab127d32e32c800",
@@ -49522,7 +50457,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-279840ca28f30a0a5ea6",
@@ -49584,12 +50521,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-special-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8317e8f60b044588dae2",
@@ -49651,12 +50590,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-special-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-c901f50f3f24a5aac11b",
@@ -49718,12 +50659,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-special-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-548f22fb648fb80ae2a7",
@@ -49790,7 +50733,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-06ac5f2b39a493edc57f",
@@ -49857,7 +50802,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-138bfdfb70f4946d6792",
@@ -49919,12 +50866,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/tpu-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-b20153519829d654aed8",
@@ -49991,7 +50940,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-c6c63cbac076660c2241",
@@ -50058,7 +51009,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-622cc9496fbc8ea25565",
@@ -50120,12 +51073,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/tpu-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-a8056985e95276539bee",
@@ -50187,12 +51142,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/tpu-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-145ba813fc23a98ba4f3",
@@ -50259,7 +51216,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-50f81fc9d79c34eb06f1",
@@ -50321,12 +51280,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/tpu-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f4dcbc92eb97d222afc5",
@@ -50393,7 +51354,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "flexible-filament"
+      "productCategory": "flexible-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-428abe03d0472aac284b",
@@ -50460,7 +51423,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-9c69977479dbede98a16",
@@ -50522,12 +51487,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-metal-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ec44c2a651ce74dd9efa",
@@ -50589,12 +51556,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-metal-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-50503415e52793d7f566",
@@ -50656,12 +51625,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-metal-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-7d117e991586dee31227",
@@ -50723,12 +51694,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d4c18d6cba7cfb534737",
@@ -50790,12 +51763,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8e5f2bb86588caa20dc2",
@@ -50862,7 +51837,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-210024366cc73702e641",
@@ -50929,7 +51906,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-c0c98437a564cc3e5051",
@@ -50991,12 +51970,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d80f556c4ea2199d6205",
@@ -51058,12 +52039,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-refill-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-07afbe478ecc276db3e4",
@@ -51130,7 +52113,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8946382dcebc9885f29a",
@@ -51192,12 +52177,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-e2519b6f2750cece76aa",
@@ -51259,12 +52246,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-175fbf292bd81892f9bf",
@@ -51326,12 +52315,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f85230bdefd058bc8bc0",
@@ -51393,12 +52384,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-09de70bd5c2de4959b06",
@@ -51460,12 +52453,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d567339baee9868fe211",
@@ -51532,7 +52527,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-71239f4206a7ee3985df",
@@ -51599,7 +52596,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-d6ffebc56bbc8d759783",
@@ -51666,7 +52665,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-8cfe8b7abcb0168a98c3",
@@ -51733,7 +52734,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-f7fffc476538e32b39d9",
@@ -51800,7 +52803,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-b3ab28f8cbf5c21ec9a7",
@@ -51862,12 +52867,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-86db83339fb6207a2551",
@@ -51929,12 +52936,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-a1a60ac8b5e70bca079e",
@@ -51996,12 +53005,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-c7afb2f03ffe97943c91",
@@ -52063,12 +53074,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-528b3b96fd4a162dda47",
@@ -52130,12 +53143,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-df6a5aee110cff8eb325",
@@ -52197,12 +53212,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-06cede5c3bb3341ab1ef",
@@ -52264,12 +53281,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-high-speed-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-56c568d2b8ea3391203c",
@@ -52336,7 +53355,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ca2a71cd2ad9a872d9d5",
@@ -52398,12 +53419,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/petg-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-0d670b7f39c178823b62",
@@ -52465,12 +53488,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/petg-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-51619c3a5a6d4cc8f338",
@@ -52532,12 +53557,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/petg-bulk-sale",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-16379ce88b50b7034140",
@@ -52604,7 +53631,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-028c055fe5a4dad43ccb",
@@ -52671,7 +53700,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-4b004c05c1bc1aa9c6db",
@@ -52733,12 +53764,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-2605d2236ab32f1c5210",
@@ -52800,12 +53833,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-9263c9c82f0bdb3e12eb",
@@ -52867,12 +53902,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-7dcc01aaaf2c664007eb",
@@ -52934,12 +53971,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-9bd4ff9fbc221c1b0998",
@@ -53001,12 +54040,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-776d241a989b16fe3d97",
@@ -53068,12 +54109,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-42f9818b2d25958a3ceb",
@@ -53135,12 +54178,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-ba06637d8ae105a2f39b",
@@ -53202,12 +54247,14 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-basic-bulk-sale-1",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-7c3a1a99c55c3829f1cc",
@@ -53274,7 +54321,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "sourceUnavailable": true,
+      "unavailableChecked": "2026-10-13"
     },
     {
       "id": "candidate-bc576d3a93e0ddc4e13f",
@@ -76609,7 +77658,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 31.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -76688,7 +77737,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 62.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -80043,7 +81092,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 32.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -85494,7 +86543,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 45.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -85573,7 +86622,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 90.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -85652,7 +86701,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 43.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -85731,7 +86780,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "price": 86.0,
       "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "ok",
+      "lastCheckStatus": "retained-unverified",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -88386,7 +89435,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/pla-plus-refill",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -128533,7 +129582,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/cooling-fan",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -128611,7 +129660,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "priceSourceUrl": "https://uk.anycubic.com/products/cooling-fan",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -170757,9 +171806,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 4750.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -170772,6 +171821,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 4750.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 4750.0
         }
       ],
@@ -170866,9 +171919,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 32.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -170885,6 +171938,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 32.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 32.0
         }
       ],
@@ -170921,9 +171978,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 1500.0,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -170936,6 +171993,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 1500.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 1500.0
         }
       ],
@@ -171026,9 +172087,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171037,6 +172098,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -171132,9 +172197,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 60.0,
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171151,6 +172216,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-10",
+          "price": 60.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 60.0
         }
       ],
@@ -171246,9 +172315,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "8.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 126.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171265,6 +172334,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 126.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 126.0
         }
       ],
@@ -171301,9 +172374,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 64.25,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171312,6 +172385,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 64.25
+        },
+        {
+          "date": "2026-10-13",
           "price": 64.25
         }
       ],
@@ -171411,9 +172488,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 15.5,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171430,6 +172507,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 15.5
+        },
+        {
+          "date": "2026-10-13",
           "price": 15.5
         }
       ],
@@ -171584,9 +172665,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 26.99,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171603,6 +172684,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 26.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 26.99
         }
       ],
@@ -171698,9 +172783,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 43.25,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171713,6 +172798,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 43.25
+        },
+        {
+          "date": "2026-10-13",
           "price": 43.25
         }
       ],
@@ -171749,9 +172838,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 36.3,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171772,6 +172861,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 36.3
+        },
+        {
+          "date": "2026-10-13",
           "price": 36.3
         }
       ],
@@ -171938,9 +173031,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 25.41,
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -171953,6 +173046,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-09",
+          "price": 25.41
+        },
+        {
+          "date": "2026-10-13",
           "price": 25.41
         }
       ],
@@ -171989,9 +173086,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "1 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 36.0,
-      "updated": "2026-10-11",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -172004,6 +173101,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-11",
+          "price": 36.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 36.0
         }
       ],
@@ -172040,9 +173141,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 12.99,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -172051,6 +173152,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-08",
+          "price": 12.99
+        },
+        {
+          "date": "2026-10-13",
           "price": 12.99
         }
       ],
@@ -172205,13 +173310,17 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "4.5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 104.82,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
           "date": "2026-10-08",
+          "price": 104.82
+        },
+        {
+          "date": "2026-10-13",
           "price": 104.82
         }
       ],
@@ -172225,7 +173334,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "productCategory": "abs-asa-filament",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
-      "lastImageCheckStatus": "ok"
+      "lastImageCheckStatus": "ok",
+      "priceSourceUrl": "https://3dgbire.com/products/kimya-abs-s-white-2-85mm-4-5kg",
+      "availability": "In stock"
     },
     {
       "id": "candidate-2f13b6c509df33344385",
@@ -172301,13 +173412,17 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "See retailer specifications",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 2999.0,
-      "updated": "2026-10-08",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
           "date": "2026-10-08",
+          "price": 2999.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 2999.0
         }
       ],
@@ -172320,7 +173435,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "productCategory": "other-printers",
       "imageChecked": "2026-10-13",
       "imageSearchStatus": "matched",
-      "lastImageCheckStatus": "ok"
+      "lastImageCheckStatus": "ok",
+      "priceSourceUrl": "https://3dgbire.com/products/raise3d-pro3-plus-3d-printer-including-hyper-kit-reconditioned",
+      "availability": "Out of stock"
     },
     {
       "id": "candidate-1643ab4a74cc4d8c1b92",
@@ -172341,9 +173458,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "0.75 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 40.95,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -172360,6 +173477,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 40.95
+        },
+        {
+          "date": "2026-10-13",
           "price": 40.95
         }
       ],
@@ -172447,9 +173568,9 @@ window.PRINTPROFIT_PRICE_DATA={
       "pack": "5 kg",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
       "price": 250.0,
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "autoRefresh": true,
-      "lastCheckStatus": "retained-unverified",
+      "lastCheckStatus": "ok",
       "lastAttempt": "2026-10-13",
       "priceHistory": [
         {
@@ -172462,6 +173583,10 @@ window.PRINTPROFIT_PRICE_DATA={
         },
         {
           "date": "2026-10-12",
+          "price": 250.0
+        },
+        {
+          "date": "2026-10-13",
           "price": 250.0
         }
       ],
@@ -172700,12 +173825,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-13T00:08:31+01:00",
-    "changedProducts": 6,
-    "changedImages": 0,
-    "warnings": 6231,
-    "verifiedProducts": 1995,
-    "pendingReview": 5
+    "checkedAt": "2026-10-13T23:31:59+01:00",
+    "changedProducts": 43,
+    "changedImages": 45,
+    "warnings": 412,
+    "verifiedProducts": 2144,
+    "pendingReview": 6167
   },
   "imageCoverage": {
     "checkedAt": "2026-10-03",

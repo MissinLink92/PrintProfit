@@ -966,8 +966,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-13",
       "status": "verified",
-      "contentHash": "f34969bef40630934ab60977493b7ea1bc51ea1f936d1257eca2eb4e054dfd06",
-      "error": "could not convert string to float: '0.40.'",
+      "contentHash": "4e31b7c1ebbaaeb622acb142bea32c53642f0fc4024e95d4bbf0a15468298d30",
       "lastVerified": "2026-10-13"
     },
     "amazon": {
@@ -1020,16 +1019,16 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://stripe.com/gb/pricing",
       "lastAttempt": "2026-10-13",
       "status": "review-required",
-      "contentHash": "2eabe5021763051317b05afa1bcc3098ec7b24aaf2e09b166445de0db6b42f50",
+      "contentHash": "0a7775eed9826c7c311ef9aab5fb18322616529ceac869912972b2655a19cd66",
       "error": "Official source could not be read: folksy"
     },
     "shopify": {
       "url": "https://www.shopify.com/uk/pricing",
       "lastAttempt": "2026-10-13",
       "status": "verified",
-      "contentHash": "d6901ea62efce4a0187b1abcc3d2058d40d6bbe45069d70eab09ed10bc522d7f",
+      "contentHash": "8d06fedb0a76159de09a117ae547f20a0cce5898971dc50562ad71e2b8572447",
       "lastVerified": "2026-10-13"
     }
   },
-  "lastAttempt": "2026-10-13T00:08:31+01:00"
+  "lastAttempt": "2026-10-13T23:31:59+01:00"
 };

@@ -244,14 +244,14 @@
   "productLocators": {
     "the-filament-pla-refill-lite-grey": {
       "priceUrl": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
-      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/the-filament-refill-pla-lite-grey-913432-en.jpg",
+      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/85705_17546413546895b3ca1fd76.128x128.jpg",
       "imageSourceUrl": "https://www.3djake.uk/the-filament/refill-pla-lite-grey",
       "expectedProductTitle": "The Filament Refill PLA Lite Grey, 1,75 mm / 1000 g",
       "expectedSku": "SPC-TF-24230"
     },
     "esun-pla-basic-black": {
       "priceUrl": "https://www.3djake.uk/esun/pla-basic-black-1",
-      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-pla-basic-black-774021-en.jpg",
+      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/59832_9c59a91f.128x128.jpg",
       "imageSourceUrl": "https://www.3djake.uk/esun/pla-basic-black-1",
       "expectedProductTitle": "eSUN PLA Basic Black, 1.75 mm / 1000 g",
       "expectedSku": "ESUNCN-PLA-Basic175B1P1"
@@ -278,7 +278,7 @@
     },
     "polymaker-polyterra-pla-cotton-white": {
       "priceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
-      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/polymaker-polyterra-pla-cotton-white-175-mm-1000-g-481833-en.jpg",
+      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/23619_28607dbe.128x128.jpg",
       "imageSourceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
       "expectedProductTitle": "Polymaker PolyTerra PLA Cotton White, 1.75 mm / 1000 g",
       "expectedSku": "PM-70822"
@@ -286,7 +286,7 @@
     "sunlu-pla-2-0-white": {
       "priceUrl": "https://www.subliblanks.com/products/pla-2-0-white-filament",
       "imageUrl": "https://cdn.shopify.com/s/files/1/1428/8462/files/PLA_2.0_White_Filament_roll.png?v=1751057878",
-      "imageSourceUrl": "https://subliblanks.com/products/pla-2-0-white-filament",
+      "imageSourceUrl": "https://www.subliblanks.com/products/pla-2-0-white-filament",
       "variantId": 56146028364160,
       "expectedProductTitle": "Sunlu PLA+ 2.0 White Filament",
       "expectedVariantTitle": "Default Title",
@@ -310,15 +310,15 @@
     },
     "esun-petg-black": {
       "priceUrl": "https://www.3djake.uk/esun/petg-black-11",
-      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/esun-petg-solid-black-175-mm-1000-g-623077-en.jpg",
+      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/32373_659802b9.128x128.jpg",
       "imageSourceUrl": "https://www.3djake.uk/esun/petg-black-11",
       "expectedProductTitle": "eSUN PETG Black, 1.75 mm / 1000 g",
       "expectedSku": "ESUNVN-PETG175B1P1"
     },
     "123-3d-pla-black": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Black_1.75mm_1kg_DFB00230c_DFP02295c_DFP02296c_DFP14082c_DFP14110c_DHM00001_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Black-1-75mm-1kg-DFB00230c-DFP02295c-DFP02296c-DFP14082c-DFP14110c-i11621.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00001_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386665505032,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Black / 1.75 mm / 1 kg",
@@ -326,8 +326,8 @@
     },
     "123-3d-pla-white": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_White_1.75mm_1_kg_DFB00235c_DFE20224c_DFP02286c_DFP02287c_DFP14074c_DHM00002_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-White-1-75mm-1-kg-DFB00235c-DFE20224c-DFP02286c-DFP02287c-DFP14074c-i11622.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00002_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666750216,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "White / 1.75 mm / 1 kg",
@@ -335,8 +335,8 @@
     },
     "123-3d-pla-grey": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Grey_1.75mm_1kg_DFB00244c_DFP02248c_DFP02249c_DFP14064c_DFP14102c_DHM00003_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Grey-1-75mm-1kg-DFB00244c-DFP02248c-DFP02249c-DFP14064c-DFP14102c-i11623.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00003_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386665898248,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Grey / 1.75 mm / 1 kg",
@@ -344,8 +344,8 @@
     },
     "123-3d-pla-red": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Red_1.75mm_1_kg_DFB00238c_DFP02253c_DFP02254c_DFP14072c_DFP14108c_DHM00004_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Red-1-75mm-1-kg-DFB00238c-DFP02253c-DFP02254c-DFP14072c-DFP14108c-i11624.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00004_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666357000,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Red / 1.75 mm / 1 kg",
@@ -353,8 +353,8 @@
     },
     "123-3d-pla-dark-blue": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Dark_Blue_1.75mm_1kg_DFP16291c_DHM00005_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Dark-Blue-1-75mm-1kg-DFP16291c-i11625.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00005_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386665701640,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Dark blue / 1.75 mm / 1 kg",
@@ -362,8 +362,8 @@
     },
     "123-3d-pla-yellow": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Yellow_1.75mm_1_kg_DFB00240c_DFP02250c_DFP02251c_DFP14062c_DFP14100c_DHM00006_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Yellow-1-75mm-1-kg-DFB00240c-DFP02250c-DFP02251c-DFP14062c-DFP14100c-i11626.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00006_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666848520,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Yellow / 1.75 mm / 1 kg",
@@ -371,8 +371,8 @@
     },
     "123-3d-pla-green": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Green_1.75mm_1_kg_DFB00241c_DFP02258c_DFP02259c_DFP14066c_DFP14104c_DHM00010_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Green-1-75mm-1-kg-DFB00241c-DFP02258c-DFP02259c-DFP14066c-DFP14104c-i11630.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00010_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386665832712,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Green / 1.75 mm / 1 kg",
@@ -380,8 +380,8 @@
     },
     "123-3d-pla-orange": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Orange_1.75mm_1_kg_DFP02265c_DFP02266c_DFP14070c_DFP14106c_DHM00008_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Orange-1-75mm-1-kg-DFP02265c-DFP02266c-DFP14070c-DFP14106c-i11628.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00008_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666225928,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Orange / 1.75 mm / 1 kg",
@@ -389,8 +389,8 @@
     },
     "123-3d-pla-neutral": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Neutral_1.75mm_1kg_DFP02268c_DFP16288c_DHM00009_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Neutral-1-75mm-1kg-DFP02268c-DFP16288c-i11629.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00009_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666127624,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Neutral / 1.75 mm / 1 kg",
@@ -398,8 +398,8 @@
     },
     "123-3d-pla-brown": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Brown_1.75mm_1_kg_DFP02257c_DFP02273c_DHM00020_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Brown-1-75mm-1-kg-DFP02257c-DFP02273c-i11640.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00020_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386665636104,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Brown / 1.75 mm / 1 kg",
@@ -407,8 +407,8 @@
     },
     "123-3d-pla-sky-blue": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Sky_Blue_1.75mm_1kg_DHM00013_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Sky-Blue-1-75mm-1kg-i11633.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00013_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666586376,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Sky blue / 1.75 mm / 1 kg",
@@ -416,8 +416,8 @@
     },
     "123-3d-pla-silver": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Silver_1.75mm_1kg_DFB00243c_DFP02299c_DFP02300c_DHM00011_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Silver-1-75mm-1kg-DFB00243c-DFP02299c-DFP02300c-i11631.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00011_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666488072,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Silver / 1.75 mm / 1 kg",
@@ -430,8 +430,8 @@
     },
     "123-3d-pla-light-grey": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
-      "imageUrl": "https://www.123-3d.co.uk/image/123-3D_Filament_PLA_Light_Grey_1.75mm_1kg_DHM00017_m1_medium.jpg",
-      "imageSourceUrl": "https://www.123-3d.co.uk/123-3D-Filament-PLA-Light-Grey-1-75mm-1kg-i11637.html",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00017_01.jpg?v=1786078223",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666029320,
       "expectedProductTitle": "123-3D PLA Filament",
       "expectedVariantTitle": "Light grey / 1.75 mm / 1 kg",
@@ -456,42 +456,42 @@
     },
     "creality-hyper-rfid-pla-black-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15619-creality-rfid-hyper-pla-31787_9.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15619",
       "expectedProductTitle": "Creality Hyper RFID PLA Black - 1.75mm - 1kg-1 KG-Black-1.75 mm",
       "expectedSku": "15619"
     },
     "creality-hyper-rfid-pla-white-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15624-creality-rfid-hyper-pla-31787_21.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15624",
       "expectedProductTitle": "Creality Hyper RFID PLA White - 1.75mm - 1kg-1 KG-White-1.75 mm",
       "expectedSku": "15624"
     },
     "creality-hyper-rfid-pla-blue-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/5/15620-creality-rfid-hyper-pla-31787_13.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/creality/creality-rfid-hyper-pla-15620",
       "expectedProductTitle": "Creality Hyper RFID PLA Blue - 1.75mm - 1kg-1 KG-Blue-1.75 mm",
       "expectedSku": "15620"
     },
     "primavalue-pla-black-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_60.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12790",
       "expectedProductTitle": "PrimaValue PLA+ - Black - 1.75mm - 1kg-1 KG-Black-1.75 mm",
       "expectedSku": "12790"
     },
     "primavalue-pla-red-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_9_1.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12792",
       "expectedProductTitle": "PrimaValue PLA+ - Red - 1.75mm - 1kg-1 KG-Red-1.75 mm",
       "expectedSku": "12792"
     },
     "primavalue-pla-orange-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30231-primavalue-pla--pv24-pla-175-1000-bk-30231_28_1.png",
       "imageSourceUrl": "https://www.3dprima.co.uk/primacreator/primavalue-pla-12800",
       "expectedProductTitle": "PrimaValue PLA+ - Orange - 1.75mm - 1kg-1 KG-Orange-1.75 mm",
       "expectedSku": "12800"
@@ -513,21 +513,21 @@
     },
     "copymaster3d-pet-g-grey-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/2/12498-copymaster3d-pet-g-cm-petg-001-1-75-30108_20.jpg",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-petg-12498",
       "expectedProductTitle": "Copymaster3D - PET-G - Grey - 1.75mm - 1kg-1 KG-Grey-1.75 mm",
       "expectedSku": "12498"
     },
     "copymaster3d-pla-silk-pink-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30099-copymaster3d-pla-silk-cm-plas-003-1-175-30099_15_1.jpg",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-silk-12437",
       "expectedProductTitle": "Copymaster3D - PLA Silk - Pink - 1.75mm - 1kg-1 KG-Pink-1.75 mm",
       "expectedSku": "12437"
     },
     "copymaster3d-abs-1-75mm-800-g-white": {
       "priceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/1/2/12489-copymaster3d-abs-cm-abs-001-08-175-30107_15.jpg",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-abs-1-75mm-800-g-white-12489",
       "expectedProductTitle": "Copymaster3D ABS - 1.75mm - 800 g - White-800 g-White-1.75 mm",
       "expectedSku": "12489"
@@ -567,7 +567,7 @@
     },
     "elegoo-neptune-4": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
-      "imageUrl": "https://uk.elegoo.com/cdn/shop/products/ELEGOO-Neptune-4-1-With-Model_grande.jpg?v=1756798337",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Neptune-4-1_1.jpg?v=1770789446",
       "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer",
       "imageVariantId": 51976281194777,
       "variantId": 51976281194777,
@@ -577,7 +577,7 @@
     },
     "creality-ender-3-v3-se": {
       "priceUrl": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Ender-3_V3_SE_03.png?v=1735613265",
       "imageSourceUrl": "https://store.creality.com/uk/products/ender-3-v3-se-3d-printer",
       "expectedProductTitle": "Ender-3 V3 SE 3D Printer",
       "expectedSku": "1001020512"
@@ -589,7 +589,7 @@
     },
     "creality-k1c-2025": {
       "priceUrl": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K1C_1_2.png?v=1735612354",
       "imageSourceUrl": "https://store.creality.com/uk/products/k1c-3d-printer-2025",
       "expectedProductTitle": "K1C 3D Printer (2025 Version)",
       "expectedSku": "1001060052"
@@ -610,7 +610,7 @@
     },
     "copymaster3d-pla-matte-grey-1-75mm-1kg": {
       "priceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
-      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/f7da2901be7e2ab9f73f6ca158e8728d/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/8e4f3fe3b726bbcc700ddaa3182d80df/3/0/30094-copymaster3d-pla-matte-cm-plam-001-1-175-30094_10_1.jpg",
       "imageSourceUrl": "https://www.3dprima.co.uk/copymaster3d/copymaster3d-pla-matte-12391",
       "expectedProductTitle": "Copymaster3D - PLA Matte - Grey - 1.75mm - 1kg-1 KG-Grey-1.75 mm",
       "expectedSku": "12391"
@@ -1252,80 +1252,80 @@
     },
     "additivex-bambu-pla-matte-mandarin-orange-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-mandarin-orange-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Mandarine-Orange.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-mandarine_orange_refill_-7.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-mandarin-orange-refill.html",
       "imageVariantId": 40215560880188,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Mandarin Orange (Refill)",
       "expectedSku": "BAMA01-A2-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-marine-blue-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-marine-blue-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Marine-Blue.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-marine_blue_refill_-6.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-marine-blue-refill.html",
       "imageVariantId": 40215561175100,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Marine Blue (Refill)",
       "expectedSku": "BAMA01-B3-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-ice-blue-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ice-blue-refill-1.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ice-Blue.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-ice_blue_refill_-1.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ice-blue-refill-1.html",
       "imageVariantId": 40215561109564,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Ice Blue (Refill)",
       "expectedSku": "BAMA01-B4-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-ash-grey-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ash-grey-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Ash-Gray_88522363-188c-48e0-bd7d-6015918a8c6b.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-ash_gray_refill_-11.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-ash-grey-refill.html",
       "imageVariantId": 40215560847420,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Ash Grey (Refill)",
       "expectedSku": "BAMA01-D3-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-grass-green-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-green-grass-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Grass-Green.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-grass_green_refill_-5.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-green-grass-refill.html",
       "imageVariantId": 40215561011260,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Grass Green (Refill)",
       "expectedSku": "BAMA01-G1-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-charcoal-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-charcoal-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Charcoal.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-charcoal_refill_-10.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-charcoal-refill.html",
       "imageVariantId": 40215560978492,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Charcoal (Refill)",
       "expectedSku": "BAMA01-K1-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-latte-brown-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-latte-brown-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Latte-Brown.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-latte_brown_refill_-9.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-latte-brown-refill.html",
       "imageVariantId": 40215561044028,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Latte Brown (Refill)",
       "expectedSku": "BAMA01-N1-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-sakura-pink-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-sakura-pink-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Sakura-Pink.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-sakura-pink_refill_-2.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-sakura-pink-refill.html",
       "imageVariantId": 40215560912956,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Sakura Pink (Refill)",
       "expectedSku": "BAMA01-P3-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-lilac-purple-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-lilac-purple-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Lilac-Purple.png?v=1706090484",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-lilac_purple_refill_-3.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-lilac-purple-refill.html",
       "imageVariantId": 40215561142332,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Lilac Purple (Refill)",
       "expectedSku": "BAMA01-P4-1.75-1000-SPLFREE-P1"
     },
     "additivex-bambu-pla-matte-scarlet-red-1kg": {
       "priceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-scarlet-red-refill.html",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102",
-      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "imageUrl": "https://www.additive-x.com/shop/media/catalog/product/cache/b80098efb15a6a236a0af04f2ed131a7/p/l/pla_matte-scarlet_red_refill_-8.png",
+      "imageSourceUrl": "https://www.additive-x.com/shop/bambu-lab-pla-matte-scarlet-red-refill.html",
       "imageVariantId": 40215561076796,
       "expectedProductTitle": "Bambu Lab PLA Matte Filament - Scarlet Red (Refill)",
       "expectedSku": "BAMA01-R1-1.75-1000-SPLFREE-P1"
@@ -1347,7 +1347,7 @@
     },
     "anycubic-kobra-3-max-v2-combo": {
       "priceUrl": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra3MaxV2Combo.jpg?v=1787835187",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_3_Max_V2_Combo_4_colors.jpg?v=1787835187",
       "imageSourceUrl": "https://uk.anycubic.com/products/kobra-3-max-v2-combo-3d-printer",
       "variantId": 52825093308701,
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
@@ -1365,7 +1365,7 @@
     },
     "anycubic-kobra-4-combo": {
       "priceUrl": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-nofilament.jpg?v=1780396883",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/K4C-no_filament.jpg?v=1780396971",
       "imageSourceUrl": "https://uk.anycubic.com/products/kobra-4-combo-3d-printer",
       "variantId": 51291243413789,
       "expectedProductTitle": "Anycubic Kobra 4 Combo",
@@ -1374,8 +1374,8 @@
     },
     "anycubic-kobra-x": {
       "priceUrl": "https://uk.anycubic.com/products/kobra-x-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_-_4_colors_-_without_filament.jpg?v=1774233625",
-      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-x",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/Kobra_X_4-Color_3D_Printer_a77c9830-29b1-416e-b7cd-85c2730720aa.jpg?v=1779965188",
+      "imageSourceUrl": "https://uk.anycubic.com/products/kobra-x-3d-printer",
       "variantId": 51502633550109,
       "expectedProductTitle": "Anycubic Kobra X 4-Color Built-in 3D Printer, Perfect First Layer, Quiet Printing, Stable Printing, Easy to Use for Beginners",
       "expectedVariantTitle": "Kobra X (4 Colors) / None",
@@ -1438,24 +1438,24 @@
     },
     "elegoo-centauri-2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2",
-      "imageUrl": "https://uk.elegoo.com/cdn/shop/files/C2-_-260811_grande.jpg?v=1786704718",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2-_-260811.jpg?v=1786704718",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2",
       "variantId": 52496229105945,
       "expectedVariantTitle": "Default Title",
       "expectedProductTitle": "Centauri 2"
     },
     "elegoo-centauri-carbon-2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2",
-      "imageUrl": "https://uk.elegoo.com/cdn/shop/files/CC2-_-260811_grande.jpg?v=1786703989",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2-_-260811.jpg?v=1786703989",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2",
       "variantId": 52920915853593,
       "expectedVariantTitle": "Default Title",
       "expectedProductTitle": "Centauri Carbon 2"
     },
     "elegoo-centauri-carbon-2-combo": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo",
-      "imageUrl": "https://uk.elegoo.com/cdn/shop/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36_grande.png?v=1789961366",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._f8bb88dc-71f5-43a9-b1d3-9c594cc61b36.png?v=1789961366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo",
       "variantId": 52881079894297,
       "expectedVariantTitle": "Default Title",
       "expectedProductTitle": "Centauri Carbon 2 Combo"
@@ -1516,15 +1516,15 @@
     },
     "elegoo-jupiter-2": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-jupiter-2",
-      "imageUrl": "https://uk.elegoo.com/cdn/shop/files/JPT2-_02_grande.jpg?v=1782298746",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/JPT2-_02.jpg?v=1782298746",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-jupiter-2",
       "variantId": 52225010663705,
       "expectedVariantTitle": "Default Title",
       "expectedProductTitle": "Jupiter 2"
     },
     "creality-k2": {
       "priceUrl": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Manual_Turntable1_5.png?v=1774084811",
       "imageSourceUrl": "https://store.creality.com/uk/products/creality-k2-combo-3d-printer",
       "expectedProductTitle": "Creality K2/K2 Combo 3D Printer",
       "expectedSku": "1002110108",
@@ -1533,7 +1533,7 @@
     "creality-k2-plus": {
       "priceUrl": "https://store.creality.com/uk/products/creality-k2-plus-combo-3d-printer",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/K2_plus.png?v=1769939643",
-      "imageSourceUrl": "",
+      "imageSourceUrl": "https://store.creality.com/uk/products/creality-k2-plus-combo-3d-printer",
       "expectedProductTitle": "Creality K2 Plus/K2 Plus Combo 3D Printer",
       "expectedSku": "1002110033",
       "expectedOfferSku": "1002110048"
@@ -1545,7 +1545,7 @@
     },
     "creality-k2-se": {
       "priceUrl": "https://store.creality.com/uk/products/k2-se-combo-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/k2-se-4c-3-printer.png?v=1785460941",
       "imageSourceUrl": "https://store.creality.com/uk/products/k2-se-combo-3d-printer",
       "expectedProductTitle": "K2 SE Series 3D Printer",
       "expectedSku": "1002110212",
@@ -1553,28 +1553,28 @@
     },
     "creality-ender-5-max": {
       "priceUrl": "https://store.creality.com/uk/products/ender-5-max-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Shopify__1600X1600px_Ender-5_Max_9746d004-8d8f-4cb4-92c7-e6d54ab7c291.png?v=1740390811",
       "imageSourceUrl": "https://store.creality.com/uk/products/ender-5-max-3d-printer",
       "expectedProductTitle": "Ender-5 Max 3D Printer",
       "expectedSku": "1001020575"
     },
     "creality-halot-r6": {
       "priceUrl": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-R6_1.png?v=1736921851",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-r6-resin-3d-printer",
       "expectedProductTitle": "Halot-R6 Resin 3D Printer",
       "expectedSku": "1003040154"
     },
     "creality-halot-mage-s": {
       "priceUrl": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/Halot-mage_S_0d234305-a027-4283-9ef1-0f43bfe63975.png?v=1736921169",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-mage-s-14k-resin-3d-printer",
       "expectedProductTitle": "HALOT-MAGE S 14K Resin 3D Printer",
       "expectedSku": "1003040137"
     },
     "creality-halot-x1": {
       "priceUrl": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690&width=384",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/9943/9806/files/X1-_1x_884216db-cbe9-4305-bae4-fad510cc3178.png?v=1761298690",
       "imageSourceUrl": "https://store.creality.com/uk/products/halot-x1-combo-resin-3d-priner-for-miniatures-and-terrain",
       "expectedProductTitle": "Halot X1/Combo Resin 3D Priner",
       "expectedSku": "1003040231",
@@ -1582,8 +1582,8 @@
     },
     "qidi-q2": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
-      "imageUrl": "https://uk.qidi3d.com/cdn/shop/files/Q2.png?v=1773473357&width=1024",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 44670861705260,
       "expectedProductTitle": "QIDI Q2 3D Printer",
       "expectedVariantTitle": "Q2 / Standard",
@@ -1591,8 +1591,8 @@
     },
     "qidi-plus5": {
       "priceUrl": "https://uk.qidi3d.com/products/plus5",
-      "imageUrl": "https://uk.qidi3d.com/cdn/shop/files/qidi-Plus5-main-image2.png?v=1788503021&width=1024",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-Plus5-main-image1.png?v=1788503019",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/plus5",
       "variantId": 45901456048172,
       "expectedProductTitle": "QIDI Plus5 3D Printer",
       "expectedVariantTitle": "Plus5 / Standard",
@@ -1645,8 +1645,8 @@
     },
     "sovol-sv08-max": {
       "priceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer",
-      "imageUrl": "https://sovol.uk/cdn/shop/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893&width=1920",
-      "imageSourceUrl": "",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/sovol-sv08-max-large-printing-model-example.jpg?v=1777454893",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer",
       "variantId": 44379896938541,
       "expectedProductTitle": "Sovol SV08 Max 3D Printer",
       "expectedVariantTitle": "SV08 Max",
@@ -1663,7 +1663,7 @@
     },
     "sovol-sv06-ace": {
       "priceUrl": "https://sovol.uk/products/sovol-sv06-ace",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_3D_Printer.jpg?v=1766996075",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV06_ACE_Auto_Leveling_3D_Printer.jpg?v=1765467696",
       "imageSourceUrl": "https://sovol.uk/products/sovol-sv06-ace",
       "variantId": 44379909226541,
       "expectedProductTitle": "Sovol SV06 ACE 3D Printer",
@@ -1682,7 +1682,7 @@
     },
     "xyz-da-vinci-1-pro-3-in-1": {
       "priceUrl": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/",
-      "imageUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side-198x198.jpg",
+      "imageUrl": "https://www.idig3dprinting.co.uk/wp-content/uploads/2016/05/xyzprinting_da-vinci_pro_3-in-1_side.jpg",
       "imageSourceUrl": "https://www.idig3dprinting.co.uk/shop/3d-printer-accessories/3d-scanners/xyz-da-vinci-1-0-pro-3-in-1/"
     },
     "xyz-da-vinci-junior": {
@@ -18692,7 +18692,8 @@
       "variantId": 54915648160126,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/BoiteKimya_f314c616-071a-4b79-9df4-96e2a009a6b1.jpg?v=1736247047",
       "expectedProductTitle": "Kimya ABS-S White 2.85mm 4.5kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/kimya-abs-s-white-2-85mm-4-5kg"
     },
     "candidate-2f13b6c509df33344385": {
       "priceUrl": "https://3dgbire.com/products/lynxter-petg-001-white-filament-1-75mm-2kg",
@@ -18707,7 +18708,8 @@
       "variantId": 43847313489973,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/Pro3-Plus-HS-Right_1296x_ca0a407a-ac43-4ba0-ae8c-9fa4ea64e168.jpg?v=1723460587",
       "expectedProductTitle": "Raise3D Pro3 Plus 3D Printer Including Hyper Kit Reconditioned",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://3dgbire.com/products/raise3d-pro3-plus-3d-printer-including-hyper-kit-reconditioned"
     },
     "candidate-1643ab4a74cc4d8c1b92": {
       "priceUrl": "https://3dgbire.com/products/ultimaker-petg-green-transparent-2-85mm-750g",
