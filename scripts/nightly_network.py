@@ -32,6 +32,7 @@ class Reader:
     def __init__(self, deadline_seconds=2400):
         self.opener = urllib.request.build_opener(PublicRedirect())
         self.cache, self.robots, self.last = {}, {}, {}
+        self.rate_limited = set()
         self.deadline = time.monotonic() + deadline_seconds
         self.count = 0
 
@@ -59,6 +60,8 @@ class Reader:
                     return body, response.headers.get_content_charset() or 'utf-8', response.geturl()
             except urllib.error.HTTPError as exc:
                 if exc.code not in (429, 503) or attempt == 2:
+                    if exc.code == 429:
+                        self.rate_limited.add(host)
                     raise
                 retry = exc.headers.get('Retry-After', '')
                 try:
@@ -70,6 +73,8 @@ class Reader:
                         pause = 5 * (attempt + 1)
                 pause = max(delay, pause)
                 if pause > 60 or time.monotonic() + pause >= self.deadline:
+                    if exc.code == 429:
+                        self.rate_limited.add(host)
                     raise
                 time.sleep(pause)
 
@@ -85,8 +90,12 @@ class Reader:
                 if exc.code == 404:
                     robots.parse([])
                 else:
-                    raise ValueError('Cannot read robots.txt: HTTP ' + str(exc.code)) from exc
+                    error = ValueError('Cannot read robots.txt: HTTP ' + str(exc.code))
+                    self.robots[origin] = error
+                    raise error from exc
             self.robots[origin] = robots
+        if isinstance(self.robots[origin], Exception):
+            raise self.robots[origin]
         if not self.robots[origin].can_fetch(UA, url):
             raise ValueError('Source robots.txt disallows this URL')
 
@@ -98,6 +107,8 @@ class Reader:
             if isinstance(value, Exception):
                 raise value
             return value
+        if urlparse(url).netloc in self.rate_limited:
+            raise ValueError('Retailer rate limited this run; remaining values retained until the next update')
         try:
             self.allowed(url)
             value = self._read(url, limit)

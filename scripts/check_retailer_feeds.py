@@ -1,9 +1,10 @@
 """Regression checks for currency, exact variants, units and source access."""
 import unittest
 import urllib.error
+from unittest.mock import patch
 from pathlib import Path
 import nightly_catalogues as catalogues
-from nightly_products import shopify, refresh_item, offer_price
+from nightly_products import shopify, refresh_item, offer_price, add_approved
 from nightly_update import ReviewQueue
 
 
@@ -88,6 +89,27 @@ class FeedChecks(unittest.TestCase):
         from build_compare_catalogue import build_catalogue
         summary, history = build_catalogue({'products': [item]})
         self.assertEqual(summary['products'], [])
+
+    def test_new_product_queue_is_bounded_and_rotates(self):
+        queue = ReviewQueue([], {}, 'now')
+        for i in range(5):
+            queue('new-product', str(i), {'id': str(i), 'sourceId': 'r', 'url': 'https://retailer.example/products/' + str(i), 'variantId': i+1})
+        config = {'newProducts': 'automatic-verified', 'maxNewProductChecks': 2, 'retailers': {'r': {'allowedHosts': ['retailer.example']}}}
+        data = {'products': []}
+        for stamp in ['2026-10-13T23:00:00+01:00', '2026-10-14T00:00:00+01:00']:
+            report = {'checkedAt': stamp, 'issues': [], 'addedProducts': []}
+            with patch('nightly_products.shopify', side_effect=ValueError('Pack unavailable')) as read:
+                add_approved(data, config, queue, FakeReader(), Path.cwd(), report)
+                self.assertEqual(read.call_count, 2)
+        self.assertEqual(sum(bool(entry.get('lastPriceAttempt')) for entry in queue.entries.values()), 4)
+
+    def test_rate_limited_host_is_not_hammered(self):
+        from nightly_network import Reader
+        reader = Reader()
+        reader.rate_limited.add('retailer.example')
+        with patch.object(reader, '_read', side_effect=AssertionError('Must not request a rate-limited host')):
+            with self.assertRaisesRegex(ValueError, 'rate limited'):
+                reader.get('https://retailer.example/products/another')
 
 
 if __name__ == '__main__':
