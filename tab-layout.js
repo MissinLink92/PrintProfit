@@ -101,7 +101,7 @@
     function watchModelData(){
       updateModelHub();
       ['file','status','material','materialUsed','printHours','ppPrintTimeHours','ppPrintTimeMinutes'].forEach(id=>{const el=document.getElementById(id);if(!el||el.dataset.ppModelWatch)return;el.dataset.ppModelWatch='1';el.addEventListener('input',updateModelHub);el.addEventListener('change',updateModelHub);});
-      const st=document.getElementById('status');if(st&&window.MutationObserver&&!st.dataset.ppModelObserver){st.dataset.ppModelObserver='1';new MutationObserver(updateModelHub).observe(st,{childList:true,subtree:true,characterData:true});}
+      const st=document.getElementById('status');if(st&&window.MutationObserver&&!st.dataset.ppModelObserver){st.dataset.ppModelObserver='1';new MutationObserver(records=>{if(records.some(record=>!window.__ppIsI18nMutation?.(record)))updateModelHub();}).observe(st,{childList:true,subtree:true,characterData:true});}
     }
     function setStep(id){
       const current=ids.indexOf(id);

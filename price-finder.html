@@ -324,10 +324,10 @@ body.pp-light .kind.printer .pp-shared-icon{color:#286f91!important}
 body.pp-light .kind.equipment .pp-shared-icon{color:#238b59!important}
 body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
-<link rel="stylesheet" href="./site-header.css?v=5">
+<link rel="stylesheet" href="./site-header.css?v=20261013-language1">
 </head>
 <body data-pp-standalone-i18n="1">
-<div id="ppSiteHeader"></div><script src="./site-header.js?v=3"></script>
+<div id="ppSiteHeader"></div><script src="./site-header.js?v=20261013-language1"></script>
 <div class="wrap">
 
 <section class="hero">
@@ -425,7 +425,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="details-modal" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
   <div class="details-dialog">
     <div class="details-head">
-      <h2 id="detailsTitle">Product details</h2>
+      <h2 id="detailsTitle" translate="no">Product details</h2>
       <button class="compare-close" id="closeDetails" type="button">Close ✕</button>
     </div>
     <div id="detailsBody" class="details-body"></div>
@@ -733,7 +733,7 @@ function renderInsights(rows=filtered()){
 function colourChip(x){
  if(!x||!x.colour)return '';
  const bg=x.colourHex||'#687985';
- return '<span style="display:inline-flex;align-items:center;gap:5px;margin-top:3px;color:var(--muted);font-size:9px"><i style="width:10px;height:10px;border-radius:50%;background:'+esc(bg)+';border:1px solid rgba(255,255,255,.25);display:inline-block"></i>'+esc(x.colour)+'</span>';
+ return '<span translate="no" style="display:inline-flex;align-items:center;gap:5px;margin-top:3px;color:var(--muted);font-size:9px"><i style="width:10px;height:10px;border-radius:50%;background:'+esc(bg)+';border:1px solid rgba(255,255,255,.25);display:inline-block"></i>'+esc(x.colour)+'</span>';
 }
 function rowPriceTrend(x){
  const h=(Array.isArray(x.priceHistory)?x.priceHistory:[]).filter(p=>p&&Number.isFinite(Number(p.price)));
@@ -745,7 +745,7 @@ function rowPriceTrend(x){
 function populateSelect(id,values,label){
  const el=$(id);if(!el)return;
  const current=el.value;
- el.innerHTML='<option value="all">'+label+'</option>'+values.sort((a,b)=>a.localeCompare(b)).map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
+ el.innerHTML='<option value="all">'+label+'</option>'+values.sort((a,b)=>a.localeCompare(b)).map(v=>'<option '+(['brand','colour','retailer'].includes(id)?'translate="no" ':'')+'value="'+esc(v)+'">'+esc(v)+'</option>').join('');
  if(values.includes(current))el.value=current;
 }
 function refreshFilters(){
@@ -804,7 +804,7 @@ function renderCards(rows){
  const grid=$('cardGrid');if(!grid)return;
  grid.innerHTML=rows.map(x=>'<article class="product-card">'+
   '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
-  '<div class="product-card-top">'+productImage(x)+'<div><h3>'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
+  '<div class="product-card-top">'+productImage(x)+'<div><h3 translate="no">'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
   '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(formatDate(x.updated))+'</strong></div></div>'+
   '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
   '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div>'+
@@ -828,7 +828,7 @@ function render(resetPage=true){
  });
  $('rows').innerHTML=visibleRows.map(x=>'<tr>'+
   '<td><div class="type-cell"><span class="kind '+categoryClass(x)+'" title="'+esc(categoryInfo(x).label)+'">'+sharedIcon(categoryInfo(x).family.icon)+esc(categoryInfo(x).label)+'</span><input class="compare-check table-compare-check" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'></div></td>'+
-  '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong>'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
+  '<td><div class="compare-name"><div class="product-name-wrap">'+productImage(x)+'<div><strong translate="no">'+esc(x.name)+'</strong>'+colourChip(x)+'</div></div></div></td>'+
   '<td>'+esc(x.retailer)+'</td>'+
   '<td>'+esc(x.pack)+'</td>'+
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
@@ -856,7 +856,7 @@ function renderCoverage(){
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
+ $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p><a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
  $('brandCloud').innerHTML=b.slice(0,expandBrands?b.length:36).map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
  const sourceToggle=$('toggleSources');if(sourceToggle){sourceToggle.hidden=s.length<=8;sourceToggle.textContent=expandSources?'Show fewer sources':'Show all '+s.length+' sources';}
  const brandToggle=$('toggleBrands');if(brandToggle){brandToggle.hidden=b.length<=36;brandToggle.textContent=expandBrands?'Show fewer brands':'Show all '+b.length+' brands';}
@@ -985,7 +985,7 @@ updateCompareBar();
 })();
 },{once:true});
 </script>
-<script src="./i18n-extra.js?v=4"></script>
+<script src="./i18n-extra.js?v=20261013-language1"></script>
 <link rel="stylesheet" href="./pp-design-system.css?v=20260928-design6">
 <link rel="stylesheet" href="./pp-target-v1.css?v=1">
 
@@ -1012,6 +1012,6 @@ body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wr
 .results-pagination{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.results-pagination>span{min-width:92px;text-align:center;font-size:13px;color:var(--text)}.results-pagination button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 @media(max-width:520px){.results-more{align-items:stretch;flex-direction:column}.results-pagination{justify-content:center}.results-pagination .compare-btn{width:auto;min-width:102px}}
 </style>
-<link rel="stylesheet" href="./readability.css?v=15">
+<link rel="stylesheet" href="./readability.css?v=20261013-language1">
 </body>
 </html>

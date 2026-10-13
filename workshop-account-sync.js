@@ -627,6 +627,9 @@ async function handleAction(action){
   else setMessage(errorText(error),true);
  }finally{setBusy(false);updateAccountUI()}
 }
+window.__ppRefreshWorkshopAccountUI=()=>{ensureAccountUI();updateAccountUI();};
+// Hydrate a Workspace opened before this script finished downloading.
+window.__ppRefreshWorkshopAccountUI();
 document.addEventListener('pp-workshop-open',()=>{
  ensureAccountUI();updateAccountUI();
  if(!isConfigured()){
@@ -655,4 +658,5 @@ document.addEventListener('click',event=>{
  event.preventDefault();handleAction(action);
 },true);
 window.addEventListener('online',()=>{if(activeUser&&legalAccepted&&!localImportPending)queueSync()});
+if(document.querySelector('#ppMaterialsPanel.open'))document.dispatchEvent(new Event('pp-workshop-open'));
 })();

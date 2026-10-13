@@ -61,11 +61,6 @@ function openSettings(){
             <option value="fr">Français</option>
             <option value="es">Español</option>
             <option value="it">Italiano</option>
-            <option value="nl">Nederlands</option>
-            <option value="pt">Português</option>
-            <option value="cs">Čeština</option>
-            <option value="sv">Svenska</option>
-            <option value="da">Dansk</option>
           </select>
         </div>
         <div class="pp-settings-card">

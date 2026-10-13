@@ -318,3 +318,17 @@ body.pp-light .compare-head,body.pp-light .details-head{background:rgba(255,255,
 body.pp-light .details-body .detail-item,body.pp-light .history-wrap{background:#f5f8f9!important}
 body.pp-light .detail-item small,body.pp-light .history-point{color:#526873!important}
 body.pp-light .detail-item strong,body.pp-light .compare-product-title{color:#19252d!important}
+
+/* Native menus need a matched foreground/background in every theme. */
+select{color-scheme:dark!important}
+select option,select optgroup{background:#081b26!important;color:#e8f1f4!important}
+body.pp-light select,body[data-pp-theme="light"] select{color-scheme:light!important}
+body.pp-light select option,body.pp-light select optgroup,
+body[data-pp-theme="light"] select option,body[data-pp-theme="light"] select optgroup{background:#fff!important;color:#1b2b34!important}
+:is(#ppSiteHeader,#ppVisualMaster) .pvm-language select{width:106px!important;font-size:13px!important;min-height:30px!important;padding:0!important}
+:is(#ppSiteHeader,#ppVisualMaster) .pvm-language select:focus-visible{outline:2px solid #35d6e5!important;outline-offset:3px}
+@media(max-width:420px){:is(#ppSiteHeader,#ppVisualMaster) .pvm-brand{width:136px!important;flex-basis:136px!important}}
+body.pp-light #ppSiteHeader .pvm-dark,body.pp-light #ppSiteHeader .pvm-dark b,
+body[data-pp-theme="light"] #ppVisualMaster .pvm-dark,body[data-pp-theme="light"] #ppVisualMaster .pvm-dark b{color:#31434d!important}
+body.pp-light #ppSiteHeader .pvm-brand,
+body[data-pp-theme="light"] #ppVisualMaster .pvm-brand{background:#07131b;border-radius:9px;padding:4px 8px;box-sizing:border-box}
