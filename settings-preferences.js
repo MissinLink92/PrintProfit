@@ -213,7 +213,7 @@ function watchTranslations(){
 function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
  document.querySelectorAll('#ppSettingsDark,#pvmDarkMode,#dark').forEach(toggle=>{toggle.checked=pref.dark;});
- try{if(window.parent!==window){window.parent.document.body.style.background=pref.dark?'#071018':'#eef2f5';window.parent.document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';}}catch(e){}
+ try{if(window.parent!==window){window.parent.document.body.dataset.ppTheme=pref.dark?'dark':'light';window.parent.document.body.style.background=pref.dark?'#071018':'#eef2f5';window.parent.document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';}}catch(e){}
  let s=document.getElementById('ppPreferenceTheme');
  if(!s){s=document.createElement('style');s.id='ppPreferenceTheme';document.head.appendChild(s);}
  s.textContent=`
