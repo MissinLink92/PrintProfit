@@ -2,12 +2,57 @@
 const { chromium } = require('playwright');
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const { PNG } = require('pngjs');
 const base = process.env.PP_AUDIT_URL || 'https://printprofit.co.uk/';
 const output = path.resolve(process.env.PP_AUDIT_OUTPUT || '.audit-output');
 const languages = ['en', 'pl', 'de', 'fr', 'es', 'it'];
 const pages = ['index.html', 'price-finder.html', 'guide.html', 'privacy.html', 'terms.html'];
-const report = { checkedAt: new Date().toISOString(), base, pages: [], failures: [], warnings: [] };
+const report = { checkedAt: new Date().toISOString(), base, pages: [], contrastChecks: [], failures: [], warnings: [] };
 const check = (condition, message) => { if (!condition) throw Error(message); };
+
+// Sample the rendered surface behind the text, including gradients and pseudo-elements.
+async function checkHeroContrast(scope, viewport, dark, name) {
+ const home = name === 'index.html';
+ const hero = scope.locator(home ? '#ppVisualMaster .pvm-hero' : '.hero');
+ const selectors = home ? ['.pvm-kicker', '.pvm-copy h1', '.pvm-copy h1 strong', '.pvm-copy > p'] : ['.kicker', 'h1', 'h1 strong', '.lead'];
+ await hero.scrollIntoViewIfNeeded();
+ const samples = await hero.evaluate((element, selectors) => {
+  const heroRect = element.getBoundingClientRect();
+  return selectors.map(selector => {
+   const text = element.querySelector(selector);
+   const rect = text.getBoundingClientRect();
+   const style = getComputedStyle(text);
+   let opacity = 1;
+   for (let node = text; node; node = node.parentElement) opacity *= Number(getComputedStyle(node).opacity);
+   const large = parseFloat(style.fontSize) >= 24 || (parseFloat(style.fontSize) >= 18.66 && Number(style.fontWeight) >= 700);
+   return { selector, color: style.color, opacity, threshold: large ? 3 : 4.5,
+    x: rect.left - heroRect.left, y: rect.top - heroRect.top, width: rect.width, height: rect.height };
+  });
+ }, selectors);
+ const pixels = PNG.sync.read(await hero.screenshot({ scale: 'css',
+  style: '.hero *, .pvm-copy, .pvm-copy *, .pvm-header, #ppFloatingSave, #ppFloatingReset { visibility: hidden !important; }' }));
+ const luminance = rgb => rgb.map(value => value / 255).map(value => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4)
+  .reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
+ for (const sample of samples) {
+  const color = sample.color.match(/[\d.]+/g).map(Number);
+  const alpha = (color[3] ?? 1) * sample.opacity;
+  let minimum = Infinity;
+  for (const across of [.05, .5, .95]) for (const down of [.1, .5, .9]) {
+   const x = Math.max(0, Math.min(pixels.width - 1, Math.floor(sample.x + sample.width * across)));
+   const y = Math.max(0, Math.min(pixels.height - 1, Math.floor(sample.y + sample.height * down)));
+   const offset = (y * pixels.width + x) * 4;
+   const background = [...pixels.data.subarray(offset, offset + 3)];
+   const foreground = color.slice(0, 3).map((value, index) => value * alpha + background[index] * (1 - alpha));
+   const values = [luminance(foreground), luminance(background)].sort((a, b) => a - b);
+   minimum = Math.min(minimum, (values[1] + .05) / (values[0] + .05));
+  }
+  const result = { page: name, viewport: viewport.width, theme: dark ? 'dark' : 'light', selector: sample.selector,
+   ratio: Number(minimum.toFixed(2)), required: sample.threshold };
+  report.contrastChecks.push(result);
+  check(minimum >= sample.threshold, `${name} ${result.theme} ${sample.selector} contrast ${result.ratio}:1; requires ${sample.threshold}:1`);
+ }
+ await hero.screenshot({ path: path.join(output, `${home ? 'home' : 'compare'}-hero-${viewport.width}-${dark ? 'dark' : 'light'}.png`) });
+}
 
 async function auditPage(browser, name, viewport) {
  const context = await browser.newContext({ viewport });
@@ -65,6 +110,7 @@ async function auditPage(browser, name, viewport) {
     contentWidth: body.ownerDocument.documentElement.scrollWidth
    }));
    check(layout.contentWidth <= layout.width + 2, `Horizontal page overflow: ${layout.contentWidth}/${layout.width}`);
+   if (name === 'price-finder.html' || (name === 'index.html' && viewport.width <= 900 && !dark)) await checkHeroContrast(scope, viewport, dark, name);
   }
   const timing = await page.evaluate(() => ({
    navigation: performance.getEntriesByType('navigation').map(n => ({ ttfbMs: Math.round(n.responseStart), loadMs: Math.round(n.loadEventEnd) }))[0],
