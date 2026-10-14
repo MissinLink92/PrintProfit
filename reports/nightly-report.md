@@ -1,27 +1,27 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-14T00:15:27+01:00
+Checked: 2026-10-15T00:17:37+01:00
 
-- Existing prices verified: 2144 / 2187
+- Existing prices verified: 2141 / 2184
 - Existing prices retained without verification: 43
 - Changed existing prices: 0
 - Refreshed image files: 0
 - Verified products added: 0
-- Unresolved source notices: 5967
-- Failed or incomplete checks: 413
+- Unresolved source notices: 5771
+- Failed or incomplete checks: 415
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
-| 3DJake UK | 4 / 7 | url-discovery-only | 3854 |
+| 3DJake UK | 4 / 7 | url-discovery-only | 3849 |
 | 3D Prima UK | 10 / 16 | url-discovery-only | 54 |
-| 123-3D UK | 13 / 15 | discovered | 2016 |
+| 123-3D UK | 13 / 15 | discovered | 2001 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
-| 3DGBIRE | 446 / 447 | discovered | 438 |
+| 3DGBIRE | 443 / 444 | discovered | 435 |
 | Bambu Lab UK | 133 / 133 | discovered | 15 |
-| Creality UK | 9 / 12 | url-discovery-only | 248 |
-| ELEGOO UK | 11 / 11 | discovered | 3646 |
+| Creality UK | 9 / 12 | url-discovery-only | 247 |
+| ELEGOO UK | 11 / 11 | discovered | 3635 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 10 |
@@ -49,7 +49,6 @@ Checked: 2026-10-14T00:15:27+01:00
 - reference / etsy-regulatory: HTTP Error 403: Forbidden
 - reference / etsy-payments: HTTP Error 403: Forbidden
 - reference / depop: HTTP Error 403: Forbidden
-- reference / tiktok: Source did not provide readable pricing guidance
 - reference / facebook: Source robots.txt disallows this URL
 - reference / folksy: Source did not provide readable pricing guidance
 - reference-parser / inpost: Official source could not be read: inpost
@@ -60,7 +59,7 @@ Checked: 2026-10-14T00:15:27+01:00
 - reference-parser / etsy-transaction, etsy-regulatory, etsy-payments: Official source could not be read: etsy-transaction
 - reference-parser / depop: Official source could not be read: depop
 - reference-parser / folksy, stripe: Official source could not be read: folksy
-- reference-parser / tiktok: Official source could not be read: tiktok
+- reference-parser / tiktok: Expected one unambiguous rate; found 0
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
 - product / elegoo-pla-black: Price URL does not belong to the recorded UK retailer
 - product / elegoo-pla-plus-black: Price URL does not belong to the recorded UK retailer
@@ -122,6 +121,8 @@ Checked: 2026-10-14T00:15:27+01:00
 - product / xyz-da-vinci-mini-w-plus: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-junior: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-color: Exact model/colour/pack product offer unavailable on the recorded page
+- product / candidate-fb6268a437e360c42bd1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-552a29425f4a4b8c1dda: Exact variant no longer appears in the retailer catalogue
 - product / candidate-20928822b8aa4eecc6a6: Exact variant no longer appears in the retailer catalogue
 - product / candidate-2501ba8958c1485657a9: Exact variant no longer appears in the retailer catalogue
 - product / candidate-ab341df6538e4c75f395: Exact variant no longer appears in the retailer catalogue
@@ -250,203 +251,204 @@ Checked: 2026-10-14T00:15:27+01:00
 - product / candidate-fb9ef1e81bcc42e4560e: Exact variant no longer appears in the retailer catalogue
 - product / candidate-0a34db9f310e8628a4ce: Exact variant no longer appears in the retailer catalogue
 - product / candidate-fee4f567a15defc1813f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4b2a30b6868fc0ef86f4: Cannot confirm one product on the discovered URL
-- new-product / candidate-88ee8d03e48ee6315f09: Cannot confirm one product on the discovered URL
-- new-product / candidate-cadfa4dae3b0fe7da411: Cannot confirm one product on the discovered URL
-- new-product / candidate-a9b549297fea18ebaa4c: Cannot confirm one product on the discovered URL
-- new-product / candidate-05fcb58b8710ea518822: Cannot confirm one product on the discovered URL
-- new-product / candidate-378b9f9bbcf3bda5fff0: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d790d9250ed153e8373: Cannot confirm one product on the discovered URL
-- new-product / candidate-360e24028d96a37f89b7: Cannot confirm one product on the discovered URL
-- new-product / candidate-3d1f86658f24796dfea3: Cannot confirm one product on the discovered URL
-- new-product / candidate-8e585897643c22a1e159: Cannot confirm one product on the discovered URL
-- new-product / candidate-448782ec5afc362fef59: Cannot confirm one product on the discovered URL
-- new-product / candidate-4ad9b4bddf12c79ce1a5: Cannot confirm one product on the discovered URL
-- new-product / candidate-4470d3026829ea85300e: Cannot confirm one product on the discovered URL
-- new-product / candidate-20efd5cb981b67a87031: Cannot confirm one product on the discovered URL
-- new-product / candidate-a85d03424d836edb3513: Cannot confirm one product on the discovered URL
-- new-product / candidate-6ae03a7d2bb6e9373ccf: Cannot confirm one product on the discovered URL
-- new-product / candidate-2744228fd9a53a08e974: Cannot confirm one product on the discovered URL
-- new-product / candidate-8011af957dd12a876438: Cannot confirm one product on the discovered URL
-- new-product / candidate-7ca3aac56aee43c1dce9: Cannot confirm one product on the discovered URL
-- new-product / candidate-6b55903370b438b89ce6: Cannot confirm one product on the discovered URL
-- new-product / candidate-0f92c022fdf2778d1c34: Cannot confirm one product on the discovered URL
-- new-product / candidate-c8ae683e4d8fc0b6b01d: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d44387bc4b2efade72e: Cannot confirm one product on the discovered URL
-- new-product / candidate-a13efaac9efb7032acbf: Cannot confirm one product on the discovered URL
-- new-product / candidate-245d028134c432abd1ad: Cannot confirm one product on the discovered URL
-- new-product / candidate-edcbfd13c3a30b292dea: Cannot confirm one product on the discovered URL
-- new-product / candidate-fbe27285afac114ee319: Cannot confirm one product on the discovered URL
-- new-product / candidate-d382c1ef322fe7cf6f09: Cannot confirm one product on the discovered URL
-- new-product / candidate-dea3fd2b4a99b4afb4de: Cannot confirm one product on the discovered URL
-- new-product / candidate-828ac2cab2654d39e0ce: Cannot confirm one product on the discovered URL
-- new-product / candidate-5b3acf58775670379089: Cannot confirm one product on the discovered URL
-- new-product / candidate-7730e067b44f952a7ec7: Cannot confirm one product on the discovered URL
-- new-product / candidate-5dbf4783232b93bc80d4: Cannot confirm one product on the discovered URL
-- new-product / candidate-b50e8d9c75c2f9cad726: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b72f6b4a476e4fbf9b4: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d1991174e0e0b4c6bcd: Cannot confirm one product on the discovered URL
-- new-product / candidate-4a3cc99cf27e8c4616a1: Cannot confirm one product on the discovered URL
-- new-product / candidate-5471c8d9cbdcb283ea2e: Cannot confirm one product on the discovered URL
-- new-product / candidate-026790b56c3e0409b5da: Cannot confirm one product on the discovered URL
-- new-product / candidate-121580a2d3378ce392bb: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d8e386bb42df8082d89: Cannot confirm one product on the discovered URL
-- new-product / candidate-a4fd4084ef21fd45ed06: Cannot confirm one product on the discovered URL
-- new-product / candidate-10cbe178482e67aeaf4d: Cannot confirm one product on the discovered URL
-- new-product / candidate-705a156fbf04d03dae4e: Cannot confirm one product on the discovered URL
-- new-product / candidate-67127aa8130e99c049ad: Cannot confirm one product on the discovered URL
-- new-product / candidate-78bb8e9c805001512fc8: Cannot confirm one product on the discovered URL
-- new-product / candidate-a47540387bd5447ec0e8: Cannot confirm one product on the discovered URL
-- new-product / candidate-bd4341b24f651856b230: Cannot confirm one product on the discovered URL
-- new-product / candidate-b837cf76b35f9a82c94f: Cannot confirm one product on the discovered URL
-- new-product / candidate-1bf02f52da0b9bb16999: Cannot confirm one product on the discovered URL
-- new-product / candidate-5f26b4af8b56789b9bc4: Cannot confirm one product on the discovered URL
-- new-product / candidate-c5e8b007dd0b2a42d60c: Cannot confirm one product on the discovered URL
-- new-product / candidate-e1f2c5432302a3a3f89b: Cannot confirm one product on the discovered URL
-- new-product / candidate-5d2b84b1db19f5ef2d2f: Cannot confirm one product on the discovered URL
-- new-product / candidate-cec638ead04f6c5490d6: Cannot confirm one product on the discovered URL
-- new-product / candidate-8d0ccdd272bd3d2a0a27: Cannot confirm one product on the discovered URL
-- new-product / candidate-a6d9d4ba705b70ed8bef: Cannot confirm one product on the discovered URL
-- new-product / candidate-21207bf6dfac79059cf4: Cannot confirm one product on the discovered URL
-- new-product / candidate-212634e36b2fbe1ef4dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-b5a036d20612f61597af: Cannot confirm one product on the discovered URL
-- new-product / candidate-8dc6fef50aefaa3c4673: Cannot confirm one product on the discovered URL
-- new-product / candidate-e421e907c307492c57ff: Cannot confirm one product on the discovered URL
-- new-product / candidate-de48c01daa2e1a468695: Cannot confirm one product on the discovered URL
-- new-product / candidate-f828c29612b099794a08: Cannot confirm one product on the discovered URL
-- new-product / candidate-3d2fd3d258b2244b4b31: Cannot confirm one product on the discovered URL
-- new-product / candidate-8f8381b5a63daadf9275: Cannot confirm one product on the discovered URL
-- new-product / candidate-b97901399b7310d55013: Cannot confirm one product on the discovered URL
-- new-product / candidate-08044c270f2f70f38d47: Cannot confirm one product on the discovered URL
-- new-product / candidate-7e8cae8ca70e5da7e9a0: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc04565afe0829714102: Cannot confirm one product on the discovered URL
-- new-product / candidate-d020c83297701441fb69: Cannot confirm one product on the discovered URL
-- new-product / candidate-187c5b4e772275b703ab: Cannot confirm one product on the discovered URL
-- new-product / candidate-ba05b400a5fdccc8deff: Cannot confirm one product on the discovered URL
-- new-product / candidate-c82d814b8d8cd4ab39cc: Cannot confirm one product on the discovered URL
-- new-product / candidate-c75cbaf44ab525a9a777: Cannot confirm one product on the discovered URL
-- new-product / candidate-41dcfd27fbfec2ddd664: Cannot confirm one product on the discovered URL
-- new-product / candidate-f8f22e595fd1d735f701: Cannot confirm one product on the discovered URL
-- new-product / candidate-a0d23d2a3613421cc897: Cannot confirm one product on the discovered URL
-- new-product / candidate-89d46f54df6944ea4162: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fb2a9b1b703a3643a91: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fda80ac1a523fdf51a6: Cannot confirm one product on the discovered URL
-- new-product / candidate-1992ecd08cc6665e7eef: Cannot confirm one product on the discovered URL
-- new-product / candidate-ecb70b601ce717fcd655: Cannot confirm one product on the discovered URL
-- new-product / candidate-272b508e3cc267b9eff0: Cannot confirm one product on the discovered URL
-- new-product / candidate-056c63b9ede6185f09c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-ab51e5350986d316d3de: Cannot confirm one product on the discovered URL
-- new-product / candidate-ba6364a5e718bb1f9197: Cannot confirm one product on the discovered URL
-- new-product / candidate-0c15b3cb275b8e7ae82c: Cannot confirm one product on the discovered URL
-- new-product / candidate-6888c42c7bfa9d9c4983: Cannot confirm one product on the discovered URL
-- new-product / candidate-14860a3aee1e8e1bfbc3: Cannot confirm one product on the discovered URL
-- new-product / candidate-a61e023f0ba241524bf1: Cannot confirm one product on the discovered URL
-- new-product / candidate-d00f6f2adc244d876ef3: Cannot confirm one product on the discovered URL
-- new-product / candidate-5a3dc8556ebcabc3436f: Cannot confirm one product on the discovered URL
-- new-product / candidate-4a33b24f5e3c98054f39: Cannot confirm one product on the discovered URL
-- new-product / candidate-670ecf4fb823442d1e16: Cannot confirm one product on the discovered URL
-- new-product / candidate-5fd4718e99fb53ab1570: Cannot confirm one product on the discovered URL
-- new-product / candidate-cfd7688d0f7f406c00be: Cannot confirm one product on the discovered URL
-- new-product / candidate-f50b25243a056fb01bef: Cannot confirm one product on the discovered URL
-- new-product / candidate-e869e5f26bec04071f27: Cannot confirm one product on the discovered URL
-- new-product / candidate-db1021a8cc394447501d: Cannot confirm one product on the discovered URL
-- new-product / candidate-e5080377bad133f8f5cd: Cannot confirm one product on the discovered URL
-- new-product / candidate-a6ebc3887dff17c6cd2d: Cannot confirm one product on the discovered URL
-- new-product / candidate-77bb235101e26c6bebff: Cannot confirm one product on the discovered URL
-- new-product / candidate-d49effd6e6ea61fafe3d: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8e56629a3551293b5da: Cannot confirm one product on the discovered URL
-- new-product / candidate-997c3067a37155438ffc: Cannot confirm one product on the discovered URL
-- new-product / candidate-0020f0732f78ab50296d: Cannot confirm one product on the discovered URL
-- new-product / candidate-dd36df6e3f512c50b811: Cannot confirm one product on the discovered URL
-- new-product / candidate-3c79f7b2a560afe800a2: Cannot confirm one product on the discovered URL
-- new-product / candidate-218a343a57010e268fd6: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d6801b72e196a59311d: Cannot confirm one product on the discovered URL
-- new-product / candidate-d652607e64d291f3f648: Cannot confirm one product on the discovered URL
-- new-product / candidate-94d27f44d243c84cf3af: Cannot confirm one product on the discovered URL
-- new-product / candidate-e30df97b0d8ee972f910: Cannot confirm one product on the discovered URL
-- new-product / candidate-d52ff1f15ed8bcec0f3f: Cannot confirm one product on the discovered URL
-- new-product / candidate-ec5eb9018509124f2df6: Cannot confirm one product on the discovered URL
-- new-product / candidate-f257e150f13687ef23c5: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e0363838696d9e4a083: Cannot confirm one product on the discovered URL
-- new-product / candidate-9c291422007dd9127a8b: Cannot confirm one product on the discovered URL
-- new-product / candidate-457b71cac1e0f6910a6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-71a64992cb5ae97d7aa9: Cannot confirm one product on the discovered URL
-- new-product / candidate-3641133382ff2948355e: Cannot confirm one product on the discovered URL
-- new-product / candidate-e9b6c1331a738ab5f2f5: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ed6f669a7d0792ac04d: Cannot confirm one product on the discovered URL
-- new-product / candidate-307930ca28a49c9b54c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-f30ac14163f541bd548f: Cannot confirm one product on the discovered URL
-- new-product / candidate-fab406185bf5cb4d3440: Cannot confirm one product on the discovered URL
-- new-product / candidate-339f6368bddd026ba4af: Cannot confirm one product on the discovered URL
-- new-product / candidate-dc2001727c85c4a8646a: Cannot confirm one product on the discovered URL
-- new-product / candidate-47f9fa9f9a23738232b7: Cannot confirm one product on the discovered URL
-- new-product / candidate-b89eac04b3dc053a9e2e: Cannot confirm one product on the discovered URL
-- new-product / candidate-b515999133b121704cfe: Cannot confirm one product on the discovered URL
-- new-product / candidate-1dd0d9ad957b81fdf7df: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e67549a3fd5fb1fb9c8: Cannot confirm one product on the discovered URL
-- new-product / candidate-c04e8b756497869d12ef: Cannot confirm one product on the discovered URL
-- new-product / candidate-75abc256d032eaee9810: Cannot confirm one product on the discovered URL
-- new-product / candidate-7ee85b790488d1101020: Cannot confirm one product on the discovered URL
-- new-product / candidate-c16e35ff9316fd9bcfa5: Cannot confirm one product on the discovered URL
-- new-product / candidate-750299a7ae450302bc7b: Cannot confirm one product on the discovered URL
-- new-product / candidate-efdb4c492a3ac91bf800: Cannot confirm one product on the discovered URL
-- new-product / candidate-e1a88cd72ce257a8ee6e: Cannot confirm one product on the discovered URL
-- new-product / candidate-38d451a9fbb27ada9ba2: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a3e638acb8f8b0b8322: Cannot confirm one product on the discovered URL
-- new-product / candidate-0c06df73f24dc93084b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-01cedb2fe4ae10279b98: Cannot confirm one product on the discovered URL
-- new-product / candidate-adb2c769a64134e11e7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-e831fc38bb5ddf0a3547: Cannot confirm one product on the discovered URL
-- new-product / candidate-80e92a410dd28f3e96f3: Cannot confirm one product on the discovered URL
-- new-product / candidate-71ff513a20d725954fde: Cannot confirm one product on the discovered URL
-- new-product / candidate-c199c0c3b5703d950570: Cannot confirm one product on the discovered URL
-- new-product / candidate-a33c782d7610f92cef66: Cannot confirm one product on the discovered URL
-- new-product / candidate-039c30f8b93d0670f864: Cannot confirm one product on the discovered URL
-- new-product / candidate-f83cfe8596df038076c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-d758cbc3f23d20e28ecd: Cannot confirm one product on the discovered URL
-- new-product / candidate-b77b3d86f5e84f9bb0cd: Cannot confirm one product on the discovered URL
-- new-product / candidate-0491d6219aff8bc611e1: Cannot confirm one product on the discovered URL
-- new-product / candidate-41c6d636cfe79ceeebfb: Cannot confirm one product on the discovered URL
-- new-product / candidate-e625ee370464a4184f80: Cannot confirm one product on the discovered URL
-- new-product / candidate-5ec79495b3c3d0744ac5: Cannot confirm one product on the discovered URL
-- new-product / candidate-7337ecbb44c86bfc2954: Cannot confirm one product on the discovered URL
-- new-product / candidate-a0759e0041c2885889a0: Cannot confirm one product on the discovered URL
-- new-product / candidate-5cfc3fa28de8933a7075: Cannot confirm one product on the discovered URL
-- new-product / candidate-2fe37753f10a9f999125: Cannot confirm one product on the discovered URL
-- new-product / candidate-9c74824fcda2aadde0b0: Cannot confirm one product on the discovered URL
-- new-product / candidate-e08357ccdf94af10d7d7: Cannot confirm one product on the discovered URL
-- new-product / candidate-049a88e33f00b80a3c0b: Cannot confirm one product on the discovered URL
-- new-product / candidate-05ea1755af423fc026e5: Cannot confirm one product on the discovered URL
-- new-product / candidate-002fd91cfc3411e1af97: Cannot confirm one product on the discovered URL
-- new-product / candidate-a0e9c00bbef3ae1c88b1: Cannot confirm one product on the discovered URL
-- new-product / candidate-5739d2e732c856d02d2f: Cannot confirm one product on the discovered URL
-- new-product / candidate-1c5da42ce20ac6857318: Cannot confirm one product on the discovered URL
-- new-product / candidate-e4d4e96d341283058210: Cannot confirm one product on the discovered URL
-- new-product / candidate-cce31fe11292425aae8b: Cannot confirm one product on the discovered URL
-- new-product / candidate-ce2d3616d77e246626c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-307de6cc55d441b7687b: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef5a7b2bffe49198a392: Cannot confirm one product on the discovered URL
-- new-product / candidate-e7fd999f5d34f091ba79: Cannot confirm one product on the discovered URL
-- new-product / candidate-eaf15c3eda682749fb61: Cannot confirm one product on the discovered URL
-- new-product / candidate-a7b02c6d129b0604cf0b: Cannot confirm one product on the discovered URL
-- new-product / candidate-a51944af44e6f80c3f1a: Cannot confirm one product on the discovered URL
-- new-product / candidate-119196677b7a6f332524: Cannot confirm one product on the discovered URL
-- new-product / candidate-55915e633ce51c449e30: Cannot confirm one product on the discovered URL
-- new-product / candidate-dffdb84e822a26847582: Cannot confirm one product on the discovered URL
-- new-product / candidate-e91bf7a8549c2b3d035b: Cannot confirm one product on the discovered URL
-- new-product / candidate-112e0dcc5eec0bd4814f: Cannot confirm one product on the discovered URL
-- new-product / candidate-468bb63e64ad422737e8: Cannot confirm one product on the discovered URL
-- new-product / candidate-6a84473bc6bdd892d4cc: Cannot confirm one product on the discovered URL
-- new-product / candidate-89a94736a321d7605036: Cannot confirm one product on the discovered URL
-- new-product / candidate-b4ae0ae1088333383e3f: Cannot confirm one product on the discovered URL
-- new-product / candidate-146fede7fe88ac5855d7: Cannot confirm one product on the discovered URL
-- new-product / candidate-6eeabb9b44afb0b041ae: Cannot confirm one product on the discovered URL
-- new-product / candidate-a871855e07d021e00b35: Cannot confirm one product on the discovered URL
-- new-product / candidate-95b7fd6275f11ab0b7e9: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9a4c80a972cd3f29d36: Cannot confirm one product on the discovered URL
-- new-product / candidate-dec1cc987f637ba645f2: Cannot confirm one product on the discovered URL
-- new-product / candidate-821985bc0e8b03baa714: Cannot confirm one product on the discovered URL
-- new-product / candidate-c87e4659acca5f827688: Cannot confirm one product on the discovered URL
-- new-product / candidate-f87e39dd8d5ae749a77e: Cannot confirm one product on the discovered URL
-- new-product / candidate-fe6cfe891decd873ab64: Cannot confirm one product on the discovered URL
-- new-product / candidate-af71a08a06c03e95b93d: Cannot confirm one product on the discovered URL
+- product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee3fe9cc8d9d29e142f0: Cannot confirm one product on the discovered URL
+- new-product / candidate-672d27d4b4f9c3655a7b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a39e9afeeb6747d1bced: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3437bc0dbd6e028776b: Cannot confirm one product on the discovered URL
+- new-product / candidate-31a9acb62ea46f5adb0f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f2dda36e72f2482a17b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-f3e7f0d63e275afe76f1: Cannot confirm one product on the discovered URL
+- new-product / candidate-83d7d166f961213bed56: Cannot confirm one product on the discovered URL
+- new-product / candidate-df0171f4d7ba316b6d61: Cannot confirm one product on the discovered URL
+- new-product / candidate-a24c473802dffe1f45e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-5cd497c859b48cf0cb57: Cannot confirm one product on the discovered URL
+- new-product / candidate-da738bfef2d8712cdd12: Cannot confirm one product on the discovered URL
+- new-product / candidate-9d28c8af9a2be64d3119: Cannot confirm one product on the discovered URL
+- new-product / candidate-5d8b875d36bca46ea2db: Cannot confirm one product on the discovered URL
+- new-product / candidate-c6375edd841c50e4f49a: Cannot confirm one product on the discovered URL
+- new-product / candidate-9eb316356a5ac0ce4581: Cannot confirm one product on the discovered URL
+- new-product / candidate-925dfa20232a3c5b7b68: Cannot confirm one product on the discovered URL
+- new-product / candidate-785cfb4d33d675b00fea: Cannot confirm one product on the discovered URL
+- new-product / candidate-27311188b06db6982e22: Cannot confirm one product on the discovered URL
+- new-product / candidate-92050a2e31087b8ee756: Cannot confirm one product on the discovered URL
+- new-product / candidate-762fa4dc7ab8f5a37cf9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1a17f63852f1a24c61bc: Cannot confirm one product on the discovered URL
+- new-product / candidate-65ad67920580a0fc35e1: Cannot confirm one product on the discovered URL
+- new-product / candidate-2eca390886a78abc021f: Cannot confirm one product on the discovered URL
+- new-product / candidate-3a773bb73ce9ad8ee988: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0858a758ef7bd47469c: Cannot confirm one product on the discovered URL
+- new-product / candidate-0acfdd67a74a8c59b793: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7c07c14e51ab6f73eda: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e8a30c999b9d1bfd17a: Cannot confirm one product on the discovered URL
+- new-product / candidate-c2bae8a17fc41f41133b: Cannot confirm one product on the discovered URL
+- new-product / candidate-16ca2cf91289a4e865af: Cannot confirm one product on the discovered URL
+- new-product / candidate-95cb853b5e05ccce35c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-b60b102f8d71568305df: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a0d374890bd56b00394: Cannot confirm one product on the discovered URL
+- new-product / candidate-9e202fd518407eaeb8fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-461ce801a28a175d36ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-217f183f1a14a5254616: Cannot confirm one product on the discovered URL
+- new-product / candidate-cf76be93ccaea2712bce: Cannot confirm one product on the discovered URL
+- new-product / candidate-149d3c270b445012c65f: Cannot confirm one product on the discovered URL
+- new-product / candidate-72785b882bf999fa66cb: Cannot confirm one product on the discovered URL
+- new-product / candidate-a24f1442afb9fac3a856: Cannot confirm one product on the discovered URL
+- new-product / candidate-a6734ffdd5010228c008: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2acd7441d2bf1e7f01f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff313a50723c728b9763: Cannot confirm one product on the discovered URL
+- new-product / candidate-4d52568f3f8bd6270f80: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e509e2d97e291e62772: Cannot confirm one product on the discovered URL
+- new-product / candidate-ed361df30a91317dba0d: Cannot confirm one product on the discovered URL
+- new-product / candidate-d61ead2bad598ea7bb95: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c2850e223ed82212dde: Cannot confirm one product on the discovered URL
+- new-product / candidate-7c25bd8c4ee14f5a7103: Cannot confirm one product on the discovered URL
+- new-product / candidate-bb3603ffc028af17be45: Cannot confirm one product on the discovered URL
+- new-product / candidate-07c7179392ee860a7e2c: Cannot confirm one product on the discovered URL
+- new-product / candidate-086d4d114e33e7f81c4c: Cannot confirm one product on the discovered URL
+- new-product / candidate-295efb5b11b09c58c634: Cannot confirm one product on the discovered URL
+- new-product / candidate-591840aaf6a949e83359: Cannot confirm one product on the discovered URL
+- new-product / candidate-8ae836105b2d455c4f14: Cannot confirm one product on the discovered URL
+- new-product / candidate-4fc2882840ca740b1654: Cannot confirm one product on the discovered URL
+- new-product / candidate-f9e4ef71f811cfb86d7b: Cannot confirm one product on the discovered URL
+- new-product / candidate-82a2f7f56662d924c0dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-5a3e3a11a304fcc63496: Cannot confirm one product on the discovered URL
+- new-product / candidate-ccea4245710602875b1d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f29a45726bc92fb41a49: Cannot confirm one product on the discovered URL
+- new-product / candidate-da34b6f5db32df08fdf6: Cannot confirm one product on the discovered URL
+- new-product / candidate-c4748819b2023d30bcd6: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a7058a1c9731d1ba9db: Cannot confirm one product on the discovered URL
+- new-product / candidate-5c5051b78392a1aab82f: Cannot confirm one product on the discovered URL
+- new-product / candidate-52afaf8831cb27d3fa66: Cannot confirm one product on the discovered URL
+- new-product / candidate-2cdea4149146988dbe15: Cannot confirm one product on the discovered URL
+- new-product / candidate-70212945614840965ab1: Cannot confirm one product on the discovered URL
+- new-product / candidate-bce3e1b78b17f3689d22: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f968c14e81d37bea4d8: Cannot confirm one product on the discovered URL
+- new-product / candidate-efd0611ba4d52bfb65a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-48a07b0390e23dbbfd2a: Cannot confirm one product on the discovered URL
+- new-product / candidate-179cf96abad18f51d80a: Cannot confirm one product on the discovered URL
+- new-product / candidate-73c6ea934c36722e82e7: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fc919cbc9eecf6e1510: Cannot confirm one product on the discovered URL
+- new-product / candidate-c0c6192e0f30b03f25de: Cannot confirm one product on the discovered URL
+- new-product / candidate-34e94512eb0775555cf4: Cannot confirm one product on the discovered URL
+- new-product / candidate-e5725cc399b2372593ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-52447f7bd2f69b449c72: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf74e9cf46b01e28bd37: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c00444ccad452edc163: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf0b1c699b98f32c1781: Cannot confirm one product on the discovered URL
+- new-product / candidate-bdd02d14b7eaf1ead088: Cannot confirm one product on the discovered URL
+- new-product / candidate-f46e92ba3e7d55039dd9: Cannot confirm one product on the discovered URL
+- new-product / candidate-e841f7b9f51475e47077: Cannot confirm one product on the discovered URL
+- new-product / candidate-bfc75225e829d9866665: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ae1d42009ef3e9f6036: Cannot confirm one product on the discovered URL
+- new-product / candidate-6def3569c6aa136af796: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdc64a2765469fad7fc3: Cannot confirm one product on the discovered URL
+- new-product / candidate-4cf2dc6100e02a17256a: Cannot confirm one product on the discovered URL
+- new-product / candidate-0849a272b4051710857d: Cannot confirm one product on the discovered URL
+- new-product / candidate-304118710b5808d53db8: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f5298a2544c646c1df3: Cannot confirm one product on the discovered URL
+- new-product / candidate-8051641264b9cb4f42f2: Cannot confirm one product on the discovered URL
+- new-product / candidate-6972d913cd3b2829f465: Cannot confirm one product on the discovered URL
+- new-product / candidate-b7e9bda61ca51206eacc: Cannot confirm one product on the discovered URL
+- new-product / candidate-f48cb3aaaafaf9cfb115: Cannot confirm one product on the discovered URL
+- new-product / candidate-fec66ff719a183cfeb26: Cannot confirm one product on the discovered URL
+- new-product / candidate-f20668881e05e0837c10: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9fa76de105f7d6aebc4: Cannot confirm one product on the discovered URL
+- new-product / candidate-0bcc9263aa00dee0db58: Cannot confirm one product on the discovered URL
+- new-product / candidate-0aa92f391fc0f3837e6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-847092292aa933808cfb: Cannot confirm one product on the discovered URL
+- new-product / candidate-ed8e325f486a40aaa2af: Cannot confirm one product on the discovered URL
+- new-product / candidate-27dd5a64ee8fabf7281a: Cannot confirm one product on the discovered URL
+- new-product / candidate-df2aee2a03bf768fb43a: Cannot confirm one product on the discovered URL
+- new-product / candidate-97b93cd63229d3c6f068: Cannot confirm one product on the discovered URL
+- new-product / candidate-491604bc352fb024b19d: Cannot confirm one product on the discovered URL
+- new-product / candidate-20236c701883efda4fa1: Cannot confirm one product on the discovered URL
+- new-product / candidate-6d854db8b7e21d0ca47b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7156aea95a3a897ea086: Cannot confirm one product on the discovered URL
+- new-product / candidate-d9d414ea3ebf295a725b: Cannot confirm one product on the discovered URL
+- new-product / candidate-d77d4c89a38d1d9bf819: Cannot confirm one product on the discovered URL
+- new-product / candidate-ce48064a8479be945f80: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a632f81a5a31bbcc101: Cannot confirm one product on the discovered URL
+- new-product / candidate-5cbd7fb1f2cdd3b1dab9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1515d5cc218b80a3369a: Cannot confirm one product on the discovered URL
+- new-product / candidate-72ca37be4f92d3b2e6fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-0afe7e73afdc18ae9a9d: Cannot confirm one product on the discovered URL
+- new-product / candidate-52b260170b5d66ee88b3: Cannot confirm one product on the discovered URL
+- new-product / candidate-39f4b1b2cbe88d0ec8aa: Cannot confirm one product on the discovered URL
+- new-product / candidate-908c1b988fbc9458f138: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fa3b7ebe056bcb46a1c: Cannot confirm one product on the discovered URL
+- new-product / candidate-857ba69d4febd48a9946: Cannot confirm one product on the discovered URL
+- new-product / candidate-0908a489e0dc38092edd: Cannot confirm one product on the discovered URL
+- new-product / candidate-c42adaa76d8a8fbe2e7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a034c9dc8e4cac41881: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c1aa8e06e232add6398: Cannot confirm one product on the discovered URL
+- new-product / candidate-07cd0d140ff25b9228d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-6edd6a6f28e706a511e1: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f45f6d896d92a3f8c80: Cannot confirm one product on the discovered URL
+- new-product / candidate-4d310e21005f1fad6730: Cannot confirm one product on the discovered URL
+- new-product / candidate-6881459c6d2922f0c71d: Cannot confirm one product on the discovered URL
+- new-product / candidate-59999a1c402120056a24: Cannot confirm one product on the discovered URL
+- new-product / candidate-51c74e24358e8b3e1d17: Cannot confirm one product on the discovered URL
+- new-product / candidate-853b8b4d6abf677b5f27: Cannot confirm one product on the discovered URL
+- new-product / candidate-db26168369421c535d84: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb6e1e81dd6908acf05c: Cannot confirm one product on the discovered URL
+- new-product / candidate-fddb54255e2373551e97: Cannot confirm one product on the discovered URL
+- new-product / candidate-340a50eac16c0efb442b: Cannot confirm one product on the discovered URL
+- new-product / candidate-d78bcf3a553bed0380a9: Cannot confirm one product on the discovered URL
+- new-product / candidate-62f889306cc34c5d5380: Cannot confirm one product on the discovered URL
+- new-product / candidate-571b877dc965ce186a7e: Cannot confirm one product on the discovered URL
+- new-product / candidate-078fce3256675f0cf99c: Cannot confirm one product on the discovered URL
+- new-product / candidate-f3c66b48ac28d2a6f7e6: Cannot confirm one product on the discovered URL
+- new-product / candidate-a4e47734f7faf0114fcc: Cannot confirm one product on the discovered URL
+- new-product / candidate-dad2afb45bf91f92a3c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-214fd892be8584117dc8: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdd69dbdcf0d315d2421: Cannot confirm one product on the discovered URL
+- new-product / candidate-5a88e225a0952594602f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9a3926082ac048d0b1ed: Cannot confirm one product on the discovered URL
+- new-product / candidate-a2ce3ce0e979d7ee6afc: Cannot confirm one product on the discovered URL
+- new-product / candidate-49f9e5c3e801f7590346: Cannot confirm one product on the discovered URL
+- new-product / candidate-f547afc3a98ed1b49e14: Cannot confirm one product on the discovered URL
+- new-product / candidate-108106d67a3638ea9474: Cannot confirm one product on the discovered URL
+- new-product / candidate-0986eddbe88cd9175b60: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef0eaa2f3c9ac92e1d12: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2583e7ac6d553fbc353: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc5bdff610c573b760d1: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff227a27110147b85bf9: Cannot confirm one product on the discovered URL
+- new-product / candidate-21893ff3d3070938ba0e: Cannot confirm one product on the discovered URL
+- new-product / candidate-9645f966d0c00059de91: Cannot confirm one product on the discovered URL
+- new-product / candidate-166862d8c7052b952268: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b5b4c3cde759368dabc: Cannot confirm one product on the discovered URL
+- new-product / candidate-55a40073341f772b91b0: Cannot confirm one product on the discovered URL
+- new-product / candidate-604528058d2d3cc42cc7: Cannot confirm one product on the discovered URL
+- new-product / candidate-a69a4460fbf42a7255de: Cannot confirm one product on the discovered URL
+- new-product / candidate-d7a65deb537e839a9a07: Cannot confirm one product on the discovered URL
+- new-product / candidate-172da2f6a2059a2364b3: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b4667d249800b63fa6f: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ac83d8870daab1f1ec8: Cannot confirm one product on the discovered URL
+- new-product / candidate-7882bf8af234fca5cd64: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8e771709363808366fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-8cb742b933b65f6968ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-c96e3f3f670210fa5779: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c53b61ea454bbc5706f: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b3c69c707def3a9f63a: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ed5c4b3cc56bf72eccb: Cannot confirm one product on the discovered URL
+- new-product / candidate-001663cb558cc175826f: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c4cec2da5e6f1706bae: Cannot confirm one product on the discovered URL
+- new-product / candidate-328eaea940abce6ef27c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e951409c57a83092f076: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fce8d4358b7365be167: Cannot confirm one product on the discovered URL
+- new-product / candidate-b0adafe3c2ec003fb7ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-e7452bd8315cd83cc944: Cannot confirm one product on the discovered URL
+- new-product / candidate-f96006c9fdbf45144c31: Cannot confirm one product on the discovered URL
+- new-product / candidate-a4d7dd3fe19fe691a34e: Cannot confirm one product on the discovered URL
+- new-product / candidate-beffab40a23c7ff10d31: Cannot confirm one product on the discovered URL
+- new-product / candidate-56eab75bf771eac21886: Cannot confirm one product on the discovered URL
+- new-product / candidate-e26cef268870162dc7d9: Cannot confirm one product on the discovered URL
+- new-product / candidate-8df632b993d35b3c6e74: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0edbe3e1043aabbcc7d: Cannot confirm one product on the discovered URL
+- new-product / candidate-96a7dcf685788cb52459: Cannot confirm one product on the discovered URL
+- new-product / candidate-249c6a2f4dc47f67d5e9: Cannot confirm one product on the discovered URL
+- new-product / candidate-0a2829e3f0be7b9ee457: Cannot confirm one product on the discovered URL
+- new-product / candidate-56015c329a9f4be7e8eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-8136d2085eae6d131405: Cannot confirm one product on the discovered URL
+- new-product / candidate-86f839991ca71114f171: Cannot confirm one product on the discovered URL
+- new-product / candidate-59898616a6b3ceb249fa: Cannot confirm one product on the discovered URL

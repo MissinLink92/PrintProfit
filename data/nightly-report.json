@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T00:15:27+01:00",
+  "checkedAt": "2026-10-15T00:17:37+01:00",
   "timezone": "Europe/London",
   "issues": [
     {
@@ -64,11 +64,6 @@
     },
     {
       "area": "reference",
-      "id": "tiktok",
-      "message": "Source did not provide readable pricing guidance"
-    },
-    {
-      "area": "reference",
       "id": "facebook",
       "message": "Source robots.txt disallows this URL"
     },
@@ -120,7 +115,7 @@
     {
       "area": "reference-parser",
       "id": "tiktok",
-      "message": "Official source could not be read: tiktok"
+      "message": "Expected one unambiguous rate; found 0"
     },
     {
       "area": "reference-parser",
@@ -426,6 +421,16 @@
       "area": "product",
       "id": "xyz-da-vinci-color",
       "message": "Exact model/colour/pack product offer unavailable on the recorded page"
+    },
+    {
+      "area": "product",
+      "id": "candidate-fb6268a437e360c42bd1",
+      "message": "Exact variant no longer appears in the retailer catalogue"
+    },
+    {
+      "area": "product",
+      "id": "candidate-552a29425f4a4b8c1dda",
+      "message": "Exact variant no longer appears in the retailer catalogue"
     },
     {
       "area": "product",
@@ -1068,1003 +1073,1008 @@
       "message": "Exact variant no longer appears in the retailer catalogue"
     },
     {
+      "area": "product",
+      "id": "candidate-09d30b525023cc773e1f",
+      "message": "Exact variant no longer appears in the retailer catalogue"
+    },
+    {
       "area": "new-product",
-      "id": "candidate-4b2a30b6868fc0ef86f4",
+      "id": "candidate-ee3fe9cc8d9d29e142f0",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-88ee8d03e48ee6315f09",
+      "id": "candidate-672d27d4b4f9c3655a7b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-cadfa4dae3b0fe7da411",
+      "id": "candidate-a39e9afeeb6747d1bced",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a9b549297fea18ebaa4c",
+      "id": "candidate-e3437bc0dbd6e028776b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-05fcb58b8710ea518822",
+      "id": "candidate-31a9acb62ea46f5adb0f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-378b9f9bbcf3bda5fff0",
+      "id": "candidate-f2dda36e72f2482a17b2",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2d790d9250ed153e8373",
+      "id": "candidate-f3e7f0d63e275afe76f1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-360e24028d96a37f89b7",
+      "id": "candidate-83d7d166f961213bed56",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3d1f86658f24796dfea3",
+      "id": "candidate-df0171f4d7ba316b6d61",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8e585897643c22a1e159",
+      "id": "candidate-a24c473802dffe1f45e0",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-448782ec5afc362fef59",
+      "id": "candidate-5cd497c859b48cf0cb57",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4ad9b4bddf12c79ce1a5",
+      "id": "candidate-da738bfef2d8712cdd12",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4470d3026829ea85300e",
+      "id": "candidate-9d28c8af9a2be64d3119",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-20efd5cb981b67a87031",
+      "id": "candidate-5d8b875d36bca46ea2db",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a85d03424d836edb3513",
+      "id": "candidate-c6375edd841c50e4f49a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6ae03a7d2bb6e9373ccf",
+      "id": "candidate-9eb316356a5ac0ce4581",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2744228fd9a53a08e974",
+      "id": "candidate-925dfa20232a3c5b7b68",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8011af957dd12a876438",
+      "id": "candidate-785cfb4d33d675b00fea",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7ca3aac56aee43c1dce9",
+      "id": "candidate-27311188b06db6982e22",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6b55903370b438b89ce6",
+      "id": "candidate-92050a2e31087b8ee756",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0f92c022fdf2778d1c34",
+      "id": "candidate-762fa4dc7ab8f5a37cf9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c8ae683e4d8fc0b6b01d",
+      "id": "candidate-1a17f63852f1a24c61bc",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2d44387bc4b2efade72e",
+      "id": "candidate-65ad67920580a0fc35e1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a13efaac9efb7032acbf",
+      "id": "candidate-2eca390886a78abc021f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-245d028134c432abd1ad",
+      "id": "candidate-3a773bb73ce9ad8ee988",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-edcbfd13c3a30b292dea",
+      "id": "candidate-f0858a758ef7bd47469c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-fbe27285afac114ee319",
+      "id": "candidate-0acfdd67a74a8c59b793",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d382c1ef322fe7cf6f09",
+      "id": "candidate-f7c07c14e51ab6f73eda",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dea3fd2b4a99b4afb4de",
+      "id": "candidate-4e8a30c999b9d1bfd17a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-828ac2cab2654d39e0ce",
+      "id": "candidate-c2bae8a17fc41f41133b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5b3acf58775670379089",
+      "id": "candidate-16ca2cf91289a4e865af",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7730e067b44f952a7ec7",
+      "id": "candidate-95cb853b5e05ccce35c7",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5dbf4783232b93bc80d4",
+      "id": "candidate-b60b102f8d71568305df",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b50e8d9c75c2f9cad726",
+      "id": "candidate-6a0d374890bd56b00394",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3b72f6b4a476e4fbf9b4",
+      "id": "candidate-9e202fd518407eaeb8fa",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2d1991174e0e0b4c6bcd",
+      "id": "candidate-461ce801a28a175d36ee",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4a3cc99cf27e8c4616a1",
+      "id": "candidate-217f183f1a14a5254616",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5471c8d9cbdcb283ea2e",
+      "id": "candidate-cf76be93ccaea2712bce",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-026790b56c3e0409b5da",
+      "id": "candidate-149d3c270b445012c65f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-121580a2d3378ce392bb",
+      "id": "candidate-72785b882bf999fa66cb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2d8e386bb42df8082d89",
+      "id": "candidate-a24f1442afb9fac3a856",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a4fd4084ef21fd45ed06",
+      "id": "candidate-a6734ffdd5010228c008",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-10cbe178482e67aeaf4d",
+      "id": "candidate-b2acd7441d2bf1e7f01f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-705a156fbf04d03dae4e",
+      "id": "candidate-ff313a50723c728b9763",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-67127aa8130e99c049ad",
+      "id": "candidate-4d52568f3f8bd6270f80",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-78bb8e9c805001512fc8",
+      "id": "candidate-4e509e2d97e291e62772",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a47540387bd5447ec0e8",
+      "id": "candidate-ed361df30a91317dba0d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-bd4341b24f651856b230",
+      "id": "candidate-d61ead2bad598ea7bb95",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b837cf76b35f9a82c94f",
+      "id": "candidate-4c2850e223ed82212dde",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1bf02f52da0b9bb16999",
+      "id": "candidate-7c25bd8c4ee14f5a7103",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5f26b4af8b56789b9bc4",
+      "id": "candidate-bb3603ffc028af17be45",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c5e8b007dd0b2a42d60c",
+      "id": "candidate-07c7179392ee860a7e2c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e1f2c5432302a3a3f89b",
+      "id": "candidate-086d4d114e33e7f81c4c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5d2b84b1db19f5ef2d2f",
+      "id": "candidate-295efb5b11b09c58c634",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-cec638ead04f6c5490d6",
+      "id": "candidate-591840aaf6a949e83359",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8d0ccdd272bd3d2a0a27",
+      "id": "candidate-8ae836105b2d455c4f14",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a6d9d4ba705b70ed8bef",
+      "id": "candidate-4fc2882840ca740b1654",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-21207bf6dfac79059cf4",
+      "id": "candidate-f9e4ef71f811cfb86d7b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-212634e36b2fbe1ef4dc",
+      "id": "candidate-82a2f7f56662d924c0dd",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b5a036d20612f61597af",
+      "id": "candidate-5a3e3a11a304fcc63496",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8dc6fef50aefaa3c4673",
+      "id": "candidate-ccea4245710602875b1d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e421e907c307492c57ff",
+      "id": "candidate-f29a45726bc92fb41a49",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-de48c01daa2e1a468695",
+      "id": "candidate-da34b6f5db32df08fdf6",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f828c29612b099794a08",
+      "id": "candidate-c4748819b2023d30bcd6",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3d2fd3d258b2244b4b31",
+      "id": "candidate-8a7058a1c9731d1ba9db",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8f8381b5a63daadf9275",
+      "id": "candidate-5c5051b78392a1aab82f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b97901399b7310d55013",
+      "id": "candidate-52afaf8831cb27d3fa66",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-08044c270f2f70f38d47",
+      "id": "candidate-2cdea4149146988dbe15",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7e8cae8ca70e5da7e9a0",
+      "id": "candidate-70212945614840965ab1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-cc04565afe0829714102",
+      "id": "candidate-bce3e1b78b17f3689d22",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d020c83297701441fb69",
+      "id": "candidate-7f968c14e81d37bea4d8",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-187c5b4e772275b703ab",
+      "id": "candidate-efd0611ba4d52bfb65a2",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ba05b400a5fdccc8deff",
+      "id": "candidate-48a07b0390e23dbbfd2a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c82d814b8d8cd4ab39cc",
+      "id": "candidate-179cf96abad18f51d80a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c75cbaf44ab525a9a777",
+      "id": "candidate-73c6ea934c36722e82e7",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-41dcfd27fbfec2ddd664",
+      "id": "candidate-7fc919cbc9eecf6e1510",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f8f22e595fd1d735f701",
+      "id": "candidate-c0c6192e0f30b03f25de",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a0d23d2a3613421cc897",
+      "id": "candidate-34e94512eb0775555cf4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-89d46f54df6944ea4162",
+      "id": "candidate-e5725cc399b2372593ce",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7fb2a9b1b703a3643a91",
+      "id": "candidate-52447f7bd2f69b449c72",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7fda80ac1a523fdf51a6",
+      "id": "candidate-bf74e9cf46b01e28bd37",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1992ecd08cc6665e7eef",
+      "id": "candidate-4c00444ccad452edc163",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ecb70b601ce717fcd655",
+      "id": "candidate-bf0b1c699b98f32c1781",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-272b508e3cc267b9eff0",
+      "id": "candidate-bdd02d14b7eaf1ead088",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-056c63b9ede6185f09c6",
+      "id": "candidate-f46e92ba3e7d55039dd9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ab51e5350986d316d3de",
+      "id": "candidate-e841f7b9f51475e47077",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ba6364a5e718bb1f9197",
+      "id": "candidate-bfc75225e829d9866665",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0c15b3cb275b8e7ae82c",
+      "id": "candidate-4ae1d42009ef3e9f6036",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6888c42c7bfa9d9c4983",
+      "id": "candidate-6def3569c6aa136af796",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-14860a3aee1e8e1bfbc3",
+      "id": "candidate-cdc64a2765469fad7fc3",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a61e023f0ba241524bf1",
+      "id": "candidate-4cf2dc6100e02a17256a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d00f6f2adc244d876ef3",
+      "id": "candidate-0849a272b4051710857d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5a3dc8556ebcabc3436f",
+      "id": "candidate-304118710b5808d53db8",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4a33b24f5e3c98054f39",
+      "id": "candidate-7f5298a2544c646c1df3",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-670ecf4fb823442d1e16",
+      "id": "candidate-8051641264b9cb4f42f2",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5fd4718e99fb53ab1570",
+      "id": "candidate-6972d913cd3b2829f465",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-cfd7688d0f7f406c00be",
+      "id": "candidate-b7e9bda61ca51206eacc",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f50b25243a056fb01bef",
+      "id": "candidate-f48cb3aaaafaf9cfb115",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e869e5f26bec04071f27",
+      "id": "candidate-fec66ff719a183cfeb26",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-db1021a8cc394447501d",
+      "id": "candidate-f20668881e05e0837c10",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e5080377bad133f8f5cd",
+      "id": "candidate-b9fa76de105f7d6aebc4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a6ebc3887dff17c6cd2d",
+      "id": "candidate-0bcc9263aa00dee0db58",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-77bb235101e26c6bebff",
+      "id": "candidate-0aa92f391fc0f3837e6e",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d49effd6e6ea61fafe3d",
+      "id": "candidate-847092292aa933808cfb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a8e56629a3551293b5da",
+      "id": "candidate-ed8e325f486a40aaa2af",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-997c3067a37155438ffc",
+      "id": "candidate-27dd5a64ee8fabf7281a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0020f0732f78ab50296d",
+      "id": "candidate-df2aee2a03bf768fb43a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dd36df6e3f512c50b811",
+      "id": "candidate-97b93cd63229d3c6f068",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3c79f7b2a560afe800a2",
+      "id": "candidate-491604bc352fb024b19d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-218a343a57010e268fd6",
+      "id": "candidate-20236c701883efda4fa1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2d6801b72e196a59311d",
+      "id": "candidate-6d854db8b7e21d0ca47b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d652607e64d291f3f648",
+      "id": "candidate-7156aea95a3a897ea086",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-94d27f44d243c84cf3af",
+      "id": "candidate-d9d414ea3ebf295a725b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e30df97b0d8ee972f910",
+      "id": "candidate-d77d4c89a38d1d9bf819",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d52ff1f15ed8bcec0f3f",
+      "id": "candidate-ce48064a8479be945f80",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ec5eb9018509124f2df6",
+      "id": "candidate-4a632f81a5a31bbcc101",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f257e150f13687ef23c5",
+      "id": "candidate-5cbd7fb1f2cdd3b1dab9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4e0363838696d9e4a083",
+      "id": "candidate-1515d5cc218b80a3369a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-9c291422007dd9127a8b",
+      "id": "candidate-72ca37be4f92d3b2e6fe",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-457b71cac1e0f6910a6c",
+      "id": "candidate-0afe7e73afdc18ae9a9d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-71a64992cb5ae97d7aa9",
+      "id": "candidate-52b260170b5d66ee88b3",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3641133382ff2948355e",
+      "id": "candidate-39f4b1b2cbe88d0ec8aa",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e9b6c1331a738ab5f2f5",
+      "id": "candidate-908c1b988fbc9458f138",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0ed6f669a7d0792ac04d",
+      "id": "candidate-5fa3b7ebe056bcb46a1c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-307930ca28a49c9b54c6",
+      "id": "candidate-857ba69d4febd48a9946",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f30ac14163f541bd548f",
+      "id": "candidate-0908a489e0dc38092edd",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-fab406185bf5cb4d3440",
+      "id": "candidate-c42adaa76d8a8fbe2e7c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-339f6368bddd026ba4af",
+      "id": "candidate-4a034c9dc8e4cac41881",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dc2001727c85c4a8646a",
+      "id": "candidate-1c1aa8e06e232add6398",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-47f9fa9f9a23738232b7",
+      "id": "candidate-07cd0d140ff25b9228d5",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b89eac04b3dc053a9e2e",
+      "id": "candidate-6edd6a6f28e706a511e1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b515999133b121704cfe",
+      "id": "candidate-6f45f6d896d92a3f8c80",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1dd0d9ad957b81fdf7df",
+      "id": "candidate-4d310e21005f1fad6730",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4e67549a3fd5fb1fb9c8",
+      "id": "candidate-6881459c6d2922f0c71d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c04e8b756497869d12ef",
+      "id": "candidate-59999a1c402120056a24",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-75abc256d032eaee9810",
+      "id": "candidate-51c74e24358e8b3e1d17",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7ee85b790488d1101020",
+      "id": "candidate-853b8b4d6abf677b5f27",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c16e35ff9316fd9bcfa5",
+      "id": "candidate-db26168369421c535d84",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-750299a7ae450302bc7b",
+      "id": "candidate-cb6e1e81dd6908acf05c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-efdb4c492a3ac91bf800",
+      "id": "candidate-fddb54255e2373551e97",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e1a88cd72ce257a8ee6e",
+      "id": "candidate-340a50eac16c0efb442b",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-38d451a9fbb27ada9ba2",
+      "id": "candidate-d78bcf3a553bed0380a9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0a3e638acb8f8b0b8322",
+      "id": "candidate-62f889306cc34c5d5380",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0c06df73f24dc93084b3",
+      "id": "candidate-571b877dc965ce186a7e",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-01cedb2fe4ae10279b98",
+      "id": "candidate-078fce3256675f0cf99c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-adb2c769a64134e11e7c",
+      "id": "candidate-f3c66b48ac28d2a6f7e6",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e831fc38bb5ddf0a3547",
+      "id": "candidate-a4e47734f7faf0114fcc",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-80e92a410dd28f3e96f3",
+      "id": "candidate-dad2afb45bf91f92a3c7",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-71ff513a20d725954fde",
+      "id": "candidate-214fd892be8584117dc8",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c199c0c3b5703d950570",
+      "id": "candidate-cdd69dbdcf0d315d2421",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a33c782d7610f92cef66",
+      "id": "candidate-5a88e225a0952594602f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-039c30f8b93d0670f864",
+      "id": "candidate-9a3926082ac048d0b1ed",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f83cfe8596df038076c7",
+      "id": "candidate-a2ce3ce0e979d7ee6afc",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d758cbc3f23d20e28ecd",
+      "id": "candidate-49f9e5c3e801f7590346",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b77b3d86f5e84f9bb0cd",
+      "id": "candidate-f547afc3a98ed1b49e14",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0491d6219aff8bc611e1",
+      "id": "candidate-108106d67a3638ea9474",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-41c6d636cfe79ceeebfb",
+      "id": "candidate-0986eddbe88cd9175b60",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e625ee370464a4184f80",
+      "id": "candidate-ef0eaa2f3c9ac92e1d12",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5ec79495b3c3d0744ac5",
+      "id": "candidate-e2583e7ac6d553fbc353",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7337ecbb44c86bfc2954",
+      "id": "candidate-cc5bdff610c573b760d1",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a0759e0041c2885889a0",
+      "id": "candidate-ff227a27110147b85bf9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5cfc3fa28de8933a7075",
+      "id": "candidate-21893ff3d3070938ba0e",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2fe37753f10a9f999125",
+      "id": "candidate-9645f966d0c00059de91",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-9c74824fcda2aadde0b0",
+      "id": "candidate-166862d8c7052b952268",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e08357ccdf94af10d7d7",
+      "id": "candidate-3b5b4c3cde759368dabc",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-049a88e33f00b80a3c0b",
+      "id": "candidate-55a40073341f772b91b0",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-05ea1755af423fc026e5",
+      "id": "candidate-604528058d2d3cc42cc7",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-002fd91cfc3411e1af97",
+      "id": "candidate-a69a4460fbf42a7255de",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a0e9c00bbef3ae1c88b1",
+      "id": "candidate-d7a65deb537e839a9a07",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5739d2e732c856d02d2f",
+      "id": "candidate-172da2f6a2059a2364b3",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1c5da42ce20ac6857318",
+      "id": "candidate-3b4667d249800b63fa6f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e4d4e96d341283058210",
+      "id": "candidate-0ac83d8870daab1f1ec8",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-cce31fe11292425aae8b",
+      "id": "candidate-7882bf8af234fca5cd64",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ce2d3616d77e246626c7",
+      "id": "candidate-d8e771709363808366fb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-307de6cc55d441b7687b",
+      "id": "candidate-8cb742b933b65f6968ee",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ef5a7b2bffe49198a392",
+      "id": "candidate-c96e3f3f670210fa5779",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e7fd999f5d34f091ba79",
+      "id": "candidate-2c53b61ea454bbc5706f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-eaf15c3eda682749fb61",
+      "id": "candidate-0b3c69c707def3a9f63a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a7b02c6d129b0604cf0b",
+      "id": "candidate-2ed5c4b3cc56bf72eccb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a51944af44e6f80c3f1a",
+      "id": "candidate-001663cb558cc175826f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-119196677b7a6f332524",
+      "id": "candidate-3c4cec2da5e6f1706bae",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-55915e633ce51c449e30",
+      "id": "candidate-328eaea940abce6ef27c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dffdb84e822a26847582",
+      "id": "candidate-e951409c57a83092f076",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e91bf7a8549c2b3d035b",
+      "id": "candidate-3fce8d4358b7365be167",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-112e0dcc5eec0bd4814f",
+      "id": "candidate-b0adafe3c2ec003fb7ee",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-468bb63e64ad422737e8",
+      "id": "candidate-e7452bd8315cd83cc944",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6a84473bc6bdd892d4cc",
+      "id": "candidate-f96006c9fdbf45144c31",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-89a94736a321d7605036",
+      "id": "candidate-a4d7dd3fe19fe691a34e",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b4ae0ae1088333383e3f",
+      "id": "candidate-beffab40a23c7ff10d31",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-146fede7fe88ac5855d7",
+      "id": "candidate-56eab75bf771eac21886",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6eeabb9b44afb0b041ae",
+      "id": "candidate-e26cef268870162dc7d9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a871855e07d021e00b35",
+      "id": "candidate-8df632b993d35b3c6e74",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-95b7fd6275f11ab0b7e9",
+      "id": "candidate-e0edbe3e1043aabbcc7d",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b9a4c80a972cd3f29d36",
+      "id": "candidate-96a7dcf685788cb52459",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dec1cc987f637ba645f2",
+      "id": "candidate-249c6a2f4dc47f67d5e9",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-821985bc0e8b03baa714",
+      "id": "candidate-0a2829e3f0be7b9ee457",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c87e4659acca5f827688",
+      "id": "candidate-56015c329a9f4be7e8eb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f87e39dd8d5ae749a77e",
+      "id": "candidate-8136d2085eae6d131405",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-fe6cfe891decd873ab64",
+      "id": "candidate-86f839991ca71114f171",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-af71a08a06c03e95b93d",
+      "id": "candidate-59898616a6b3ceb249fa",
       "message": "Cannot confirm one product on the discovered URL"
     }
   ],
@@ -2075,8 +2085,8 @@
     {
       "id": "3djake-uk",
       "name": "3DJake UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
-      "candidates": 3854,
+      "checkedAt": "2026-10-15T00:17:37+01:00",
+      "candidates": 3849,
       "status": "url-discovery-only",
       "listed": 7,
       "verified": 4,
@@ -2085,7 +2095,7 @@
     {
       "id": "3dprima-uk",
       "name": "3D Prima UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 54,
       "status": "url-discovery-only",
       "listed": 16,
@@ -2095,8 +2105,8 @@
     {
       "id": "123-3d-uk",
       "name": "123-3D UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
-      "candidates": 2016,
+      "checkedAt": "2026-10-15T00:17:37+01:00",
+      "candidates": 2001,
       "status": "discovered",
       "listed": 15,
       "verified": 13,
@@ -2105,7 +2115,7 @@
     {
       "id": "idig3dprinting",
       "name": "iDig3Dprinting",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 221,
       "status": "url-discovery-only",
       "listed": 4,
@@ -2115,17 +2125,17 @@
     {
       "id": "3dgbire",
       "name": "3DGBIRE",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
-      "candidates": 438,
+      "checkedAt": "2026-10-15T00:17:37+01:00",
+      "candidates": 435,
       "status": "discovered",
-      "listed": 447,
-      "verified": 446,
+      "listed": 444,
+      "verified": 443,
       "retained": 1
     },
     {
       "id": "bambu-uk",
       "name": "Bambu Lab UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 15,
       "status": "discovered",
       "listed": 133,
@@ -2135,8 +2145,8 @@
     {
       "id": "creality-uk",
       "name": "Creality UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
-      "candidates": 248,
+      "checkedAt": "2026-10-15T00:17:37+01:00",
+      "candidates": 247,
       "status": "url-discovery-only",
       "listed": 12,
       "verified": 9,
@@ -2145,8 +2155,8 @@
     {
       "id": "elegoo-uk",
       "name": "ELEGOO UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
-      "candidates": 3646,
+      "checkedAt": "2026-10-15T00:17:37+01:00",
+      "candidates": 3635,
       "status": "discovered",
       "listed": 11,
       "verified": 11,
@@ -2155,7 +2165,7 @@
     {
       "id": "amazon-uk",
       "name": "Amazon UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "A supported Amazon product feed/API is required; no public GBP catalogue is configured.",
@@ -2166,7 +2176,7 @@
     {
       "id": "prusa",
       "name": "Prusa Research",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 7,
       "status": "url-discovery-only",
       "listed": 0,
@@ -2176,7 +2186,7 @@
     {
       "id": "subliblanks",
       "name": "Subliblanks",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 10,
       "status": "discovered",
       "listed": 6,
@@ -2186,7 +2196,7 @@
     {
       "id": "nse-imports",
       "name": "NSE Imports",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 677,
       "status": "discovered",
       "listed": 1,
@@ -2196,7 +2206,7 @@
     {
       "id": "additive-x",
       "name": "Additive-X",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 2,
       "status": "url-discovery-only",
       "listed": 13,
@@ -2206,7 +2216,7 @@
     {
       "id": "ooznest",
       "name": "Ooznest",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 0,
       "status": "url-discovery-only",
       "listed": 0,
@@ -2216,7 +2226,7 @@
     {
       "id": "3d-filaprint",
       "name": "3D FilaPrint",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "The recorded domain currently serves a parked page and no usable product feed.",
@@ -2227,7 +2237,7 @@
     {
       "id": "anycubic-uk",
       "name": "Anycubic UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 267,
       "status": "discovered",
       "listed": 1454,
@@ -2237,7 +2247,7 @@
     {
       "id": "qidi-uk",
       "name": "QIDI UK Store",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 116,
       "status": "discovered",
       "listed": 36,
@@ -2247,7 +2257,7 @@
     {
       "id": "flashforge-uk",
       "name": "Flashforge UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 130,
       "status": "discovered",
       "listed": 27,
@@ -2257,7 +2267,7 @@
     {
       "id": "sovol-uk",
       "name": "Sovol UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 42,
       "status": "discovered",
       "listed": 4,
@@ -2267,7 +2277,7 @@
     {
       "id": "snapmaker-uk",
       "name": "Snapmaker UK",
-      "checkedAt": "2026-10-14T00:15:27+01:00",
+      "checkedAt": "2026-10-15T00:17:37+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "The former /en-gb storefront is gone; the public global store quotes USD. A supported GBP source is required.",
@@ -2288,6 +2298,11 @@
       "url": "https://www.shopify.com/uk/pricing"
     },
     {
+      "id": "tiktok",
+      "status": "read-only-monitor",
+      "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB"
+    },
+    {
       "id": "vinted",
       "status": "read-only-monitor",
       "url": "https://www.vinted.co.uk/pricelist"
@@ -2299,10 +2314,10 @@
     }
   ],
   "newProductChecks": 200,
-  "pendingReview": 5967,
+  "pendingReview": 5771,
   "requests": 333,
-  "verifiedProducts": 2144,
-  "archivedProducts": 127,
-  "totalProducts": 2187,
+  "verifiedProducts": 2141,
+  "archivedProducts": 130,
+  "totalProducts": 2184,
   "retainedProducts": 43
 }
