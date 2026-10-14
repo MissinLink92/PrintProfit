@@ -727,7 +727,7 @@ body.pp-light .compare-bar{
 /* Hero artwork disappears cleanly on small displays */
 @media(max-width:800px){
   .wrap .hero{margin:0 -5px!important;padding:38px 20px 28px!important;background-position:68% center!important;}
-  .wrap .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,19,28,.92),rgba(6,19,28,.82))!important;z-index:1}
+  body:not(.pp-light) .wrap .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,19,28,.92),rgba(6,19,28,.82))!important;z-index:1}
   .tools .tool:first-child{grid-column:auto!important}
   #pp-master-quickcards:before{display:none!important}
 }
