@@ -146,6 +146,7 @@ style.textContent +=
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-hero{background:#edf2f4!important}'+
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-bg{filter:contrast(1.02) saturate(.9) brightness(1.04)!important}'+
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-overlay{background:linear-gradient(90deg,rgba(248,251,252,.97) 0%,rgba(248,251,252,.9) 30%,rgba(248,251,252,.64) 58%,rgba(248,251,252,.12) 100%),linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.18))!important}'+
+'@media(max-width:900px){body[data-pp-theme="light"] #ppVisualMaster .pvm-overlay{background:rgba(248,251,252,.95)!important}}'+
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-kicker{color:#8d4300!important}'+
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-copy h1{color:#19252d!important;text-shadow:none!important}'+
 'body[data-pp-theme="light"] #ppVisualMaster .pvm-copy h1 strong{color:#00758c!important}'+
