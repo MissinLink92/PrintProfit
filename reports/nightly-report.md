@@ -1,38 +1,38 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-15T00:17:37+01:00
+Checked: 2026-10-16T00:13:45+01:00
 
-- Existing prices verified: 2141 / 2184
-- Existing prices retained without verification: 43
+- Existing prices verified: 694 / 2182
+- Existing prices retained without verification: 1488
 - Changed existing prices: 0
 - Refreshed image files: 0
 - Verified products added: 0
-- Unresolved source notices: 5771
-- Failed or incomplete checks: 415
+- Unresolved source notices: 5610
+- Failed or incomplete checks: 1864
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
 | 3DJake UK | 4 / 7 | url-discovery-only | 3849 |
-| 3D Prima UK | 10 / 16 | url-discovery-only | 54 |
+| 3D Prima UK | 10 / 16 | url-discovery-only | 62 |
 | 123-3D UK | 13 / 15 | discovered | 2001 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
-| 3DGBIRE | 443 / 444 | discovered | 435 |
+| 3DGBIRE | 442 / 443 | discovered | 435 |
 | Bambu Lab UK | 133 / 133 | discovered | 15 |
-| Creality UK | 9 / 12 | url-discovery-only | 247 |
-| ELEGOO UK | 11 / 11 | discovered | 3635 |
+| Creality UK | 8 / 12 | url-discovery-only | 201 |
+| ELEGOO UK | 11 / 11 | discovered | 3654 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 10 |
-| NSE Imports | 0 / 1 | discovered | 677 |
+| NSE Imports | 0 / 1 | discovered | 676 |
 | Additive-X | 10 / 13 | url-discovery-only | 2 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
-| Anycubic UK | 1444 / 1454 | discovered | 267 |
+| Anycubic UK | 0 / 1454 | failed | 0 |
 | QIDI UK Store | 26 / 36 | discovered | 116 |
 | Flashforge UK | 27 / 27 | discovered | 130 |
-| Sovol UK | 4 / 4 | discovered | 42 |
+| Sovol UK | 3 / 3 | discovered | 42 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
 
 ## Items needing attention
@@ -61,6 +61,7 @@ Checked: 2026-10-15T00:17:37+01:00
 - reference-parser / folksy, stripe: Official source could not be read: folksy
 - reference-parser / tiktok: Expected one unambiguous rate; found 0
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
+- catalogue / anycubic-uk: Storefront redirected outside the recorded retailer
 - product / elegoo-pla-black: Price URL does not belong to the recorded UK retailer
 - product / elegoo-pla-plus-black: Price URL does not belong to the recorded UK retailer
 - product / sunlu-pla-blue: Exact model/colour/pack product offer unavailable on the recorded page
@@ -71,7 +72,7 @@ Checked: 2026-10-15T00:17:37+01:00
 - product / bambu-lab-pla-basic-1-75mm-1kg-black: HTTP Error 403: Forbidden
 - product / bambu-lab-pla-basic-1-75mm-1kg-jade-white: HTTP Error 403: Forbidden
 - product / polymaker-polylite-abs-black-1-75mm-1kg: HTTP Error 403: Forbidden
-- product / copymaster3d-pla-glitter-blue-1-75mm-1kg: Exact model/colour/pack product offer unavailable on the recorded page
+- product / copymaster3d-pla-glitter-blue-1-75mm-1kg: HTTP Error 404: Not Found
 - product / copymaster3d-pla-rainbow-magic-silk-1-75mm-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / bambu-lab-petg-hf-refill-1-75mm-1kg-black: HTTP Error 403: Forbidden
 - product / creality-ender-3-v3-ke: Exact model/colour/pack product offer unavailable on the recorded page
@@ -88,19 +89,53 @@ Checked: 2026-10-15T00:17:37+01:00
 - product / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
 - image / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
 - product / qidi-pla-cf-olive-green-1kg: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-high-speed-pla-pearl-black-1kg: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-pla-cf-vintage-red-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-vintage-red-1kg: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-pla-cf-lava-grey-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-lava-grey-1kg: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-pla-cf-cowboy-blue-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-cowboy-blue-1kg: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-pla-cf-fish-scale-white-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-fish-scale-white-1kg: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-pla-cf-jade-green-1kg: Exact variant no longer appears in the retailer catalogue
-- image / anycubic-pla-cf-jade-green-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-texture-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-white-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-beige-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-black-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-peach-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-tropical-turquoise-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-spring-leaf-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-red-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-bright-red-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-brown-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-green-flash-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-green-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-purple-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-orange-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-plus-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-pearl-black-1kg: Product redirected outside the recorded retailer
+- product / anycubic-high-speed-pla-bright-white-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-texture-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-bright-red-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-vibrant-orange-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-purple-opulence-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-strawberry-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-dazzling-blue-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-high-speed-pla-vibrant-yellow-1kg: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-pla-basic-refill-yellow-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-white-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-red-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-blue-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-green-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-orange-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-purple-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-pink-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-black-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-basic-refill-texture-grey-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
+- image / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
 - image / additivex-bambu-pla-matte-mandarin-orange-1kg: HTTP Error 404: Not Found
 - image / additivex-bambu-pla-matte-marine-blue-1kg: HTTP Error 404: Not Found
 - image / additivex-bambu-pla-matte-ice-blue-1kg: HTTP Error 404: Not Found
@@ -114,341 +149,1755 @@ Checked: 2026-10-15T00:17:37+01:00
 - product / additivex-formfutura-petg-black-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-formfutura-petg-red-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-formfutura-petg-white-1kg: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-photon-p1: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-photon-mono-m7-pro: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-kobra-3-max-v2-combo: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-kobra-s1-ace-2-pro-combo: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-kobra-4-combo: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-kobra-x: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-kobra-s1-combo: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-photon-p1: Product redirected outside the recorded retailer
+- product / anycubic-photon-p1-max: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-photon-mono-m7-pro: Product redirected outside the recorded retailer
+- product / anycubic-photon-mono-m7-max: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-photon-mono-m7: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-photon-mono-4: Exact Shopify variant ID required; refusing a default variant price
 - product / creality-k2-pro: Exact model/colour/pack product offer unavailable on the recorded page
+- product / creality-k2-se: No single GBP offer for the exact product
+- product / sovol-sv06-ace: Exact variant no longer appears in the retailer catalogue
 - product / snapmaker-u1: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-mini-w-plus: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-junior: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-color: Exact model/colour/pack product offer unavailable on the recorded page
 - product / candidate-fb6268a437e360c42bd1: Exact variant no longer appears in the retailer catalogue
 - product / candidate-552a29425f4a4b8c1dda: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0cb71df3c489fe3c73aa: Exact variant no longer appears in the retailer catalogue
 - product / candidate-20928822b8aa4eecc6a6: Exact variant no longer appears in the retailer catalogue
-- product / candidate-2501ba8958c1485657a9: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ab341df6538e4c75f395: Exact variant no longer appears in the retailer catalogue
-- product / candidate-3a2fcbf583d1f38eb582: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f12e0fc72344bb998e3b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-0c2006be675da53e2ead: Exact variant no longer appears in the retailer catalogue
-- product / candidate-3316c6bbeafef0c8edb0: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d7d64be2a3f1658b3921: Exact variant no longer appears in the retailer catalogue
-- product / candidate-bfc903d0706692388b1f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f49aeb31aefb4c040580: Exact variant no longer appears in the retailer catalogue
-- product / candidate-60ac0f6516c0c2079e1f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-9da346dc06607d9cc34b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-705bd82b5b7c0b7e52ca: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b24adb7f0a39a044a9a8: Exact variant no longer appears in the retailer catalogue
-- product / candidate-508dee4ecad5e3361e87: Exact variant no longer appears in the retailer catalogue
-- product / candidate-54b472f8527bf9b326d1: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8aadfd83a3b42ff9ba12: Exact variant no longer appears in the retailer catalogue
-- product / candidate-0366af4683e52315d0ac: Exact variant no longer appears in the retailer catalogue
-- product / candidate-97f9f6f36536b3fbc71e: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b3214f4944872629dccf: Exact variant no longer appears in the retailer catalogue
-- product / candidate-4ed73f9bfe1d5d5034bb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-976aa25985552b3587d3: Exact variant no longer appears in the retailer catalogue
-- product / candidate-aad53fbf74bcaacbd076: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d0e3fe76c748237d3917: Exact variant no longer appears in the retailer catalogue
-- product / candidate-736feaacd8ab75257e1d: Exact variant no longer appears in the retailer catalogue
-- product / candidate-cb505c1fa7cb061fc433: Exact variant no longer appears in the retailer catalogue
-- product / candidate-a71dc4446275f335728b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ff656668726a0d5793d8: Exact variant no longer appears in the retailer catalogue
-- product / candidate-31021c8e145f14f53873: Exact variant no longer appears in the retailer catalogue
-- product / candidate-2905b390d3c827db9e0d: Exact variant no longer appears in the retailer catalogue
-- product / candidate-5372445ea52d25490ae6: Exact variant no longer appears in the retailer catalogue
-- product / candidate-eb250a8303d8b1fcee20: Exact variant no longer appears in the retailer catalogue
-- product / candidate-a1bc4be251aa552816a2: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f40718b24b8a2880e57f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-4a7454e0f3701bf3b438: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8dbd596b608b67ea1ada: Exact variant no longer appears in the retailer catalogue
-- product / candidate-61027055b54732a8045d: Exact variant no longer appears in the retailer catalogue
-- product / candidate-32bfc56045637171ed20: Exact variant no longer appears in the retailer catalogue
-- product / candidate-3021840de68417825e5c: Exact variant no longer appears in the retailer catalogue
-- product / candidate-7fbe0ec25412f0c854eb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-721e566e6f22ad330c2f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-685145f8efb0ba0d1d04: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ff54c019a8f528f0f511: Exact variant no longer appears in the retailer catalogue
-- product / candidate-367deef5f291c73b42a2: Exact variant no longer appears in the retailer catalogue
-- product / candidate-04b26b53ba68bb875055: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d23026195252891563df: Exact variant no longer appears in the retailer catalogue
-- product / candidate-381abe6185d864d67a00: Exact variant no longer appears in the retailer catalogue
-- product / candidate-4bf0dfe19d41e4850fff: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b55e4f4d877aff7e8012: Exact variant no longer appears in the retailer catalogue
-- product / candidate-72720a142e78ae797489: Exact variant no longer appears in the retailer catalogue
-- product / candidate-edde5ba73d60fef16c2c: Exact variant no longer appears in the retailer catalogue
-- product / candidate-bdb777430d54fe102105: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8a1c4803425a42a9e565: Exact variant no longer appears in the retailer catalogue
-- product / candidate-28f86eaf497aeada6f6d: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d855d819370084ef7557: Exact variant no longer appears in the retailer catalogue
-- product / candidate-c162d9c710b3c6840d3f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-5566d9d2ed358b1ef147: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8a2dbe6965818c453f91: Exact variant no longer appears in the retailer catalogue
-- product / candidate-095ca64d4c22c3822a4f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-e6dc19164eb3c53c727e: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ec8c47130c382c837935: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d9c14fbc5e325d573107: Exact variant no longer appears in the retailer catalogue
-- product / candidate-57902059748eaa7cc8ca: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f07490b48ac9c810c9d1: Exact variant no longer appears in the retailer catalogue
-- product / candidate-dcfbaab127d32e32c800: Exact variant no longer appears in the retailer catalogue
-- product / candidate-279840ca28f30a0a5ea6: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8317e8f60b044588dae2: Exact variant no longer appears in the retailer catalogue
-- product / candidate-c901f50f3f24a5aac11b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-548f22fb648fb80ae2a7: Exact variant no longer appears in the retailer catalogue
-- product / candidate-06ac5f2b39a493edc57f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-138bfdfb70f4946d6792: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b20153519829d654aed8: Exact variant no longer appears in the retailer catalogue
-- product / candidate-c6c63cbac076660c2241: Exact variant no longer appears in the retailer catalogue
-- product / candidate-622cc9496fbc8ea25565: Exact variant no longer appears in the retailer catalogue
-- product / candidate-a8056985e95276539bee: Exact variant no longer appears in the retailer catalogue
-- product / candidate-145ba813fc23a98ba4f3: Exact variant no longer appears in the retailer catalogue
-- product / candidate-50f81fc9d79c34eb06f1: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f4dcbc92eb97d222afc5: Exact variant no longer appears in the retailer catalogue
-- product / candidate-428abe03d0472aac284b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-9c69977479dbede98a16: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ec44c2a651ce74dd9efa: Exact variant no longer appears in the retailer catalogue
-- product / candidate-50503415e52793d7f566: Exact variant no longer appears in the retailer catalogue
-- product / candidate-7d117e991586dee31227: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d4c18d6cba7cfb534737: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8e5f2bb86588caa20dc2: Exact variant no longer appears in the retailer catalogue
-- product / candidate-210024366cc73702e641: Exact variant no longer appears in the retailer catalogue
-- product / candidate-c0c98437a564cc3e5051: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d80f556c4ea2199d6205: Exact variant no longer appears in the retailer catalogue
-- product / candidate-07afbe478ecc276db3e4: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8946382dcebc9885f29a: Exact variant no longer appears in the retailer catalogue
-- product / candidate-e2519b6f2750cece76aa: Exact variant no longer appears in the retailer catalogue
-- product / candidate-175fbf292bd81892f9bf: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f85230bdefd058bc8bc0: Exact variant no longer appears in the retailer catalogue
-- product / candidate-09de70bd5c2de4959b06: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d567339baee9868fe211: Exact variant no longer appears in the retailer catalogue
-- product / candidate-71239f4206a7ee3985df: Exact variant no longer appears in the retailer catalogue
-- product / candidate-d6ffebc56bbc8d759783: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8cfe8b7abcb0168a98c3: Exact variant no longer appears in the retailer catalogue
-- product / candidate-f7fffc476538e32b39d9: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b3ab28f8cbf5c21ec9a7: Exact variant no longer appears in the retailer catalogue
-- product / candidate-86db83339fb6207a2551: Exact variant no longer appears in the retailer catalogue
-- product / candidate-a1a60ac8b5e70bca079e: Exact variant no longer appears in the retailer catalogue
-- product / candidate-c7afb2f03ffe97943c91: Exact variant no longer appears in the retailer catalogue
-- product / candidate-528b3b96fd4a162dda47: Exact variant no longer appears in the retailer catalogue
-- product / candidate-df6a5aee110cff8eb325: Exact variant no longer appears in the retailer catalogue
-- product / candidate-06cede5c3bb3341ab1ef: Exact variant no longer appears in the retailer catalogue
-- product / candidate-56c568d2b8ea3391203c: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ca2a71cd2ad9a872d9d5: Exact variant no longer appears in the retailer catalogue
-- product / candidate-0d670b7f39c178823b62: Exact variant no longer appears in the retailer catalogue
-- product / candidate-51619c3a5a6d4cc8f338: Exact variant no longer appears in the retailer catalogue
-- product / candidate-16379ce88b50b7034140: Exact variant no longer appears in the retailer catalogue
-- product / candidate-028c055fe5a4dad43ccb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-4b004c05c1bc1aa9c6db: Exact variant no longer appears in the retailer catalogue
-- product / candidate-2605d2236ab32f1c5210: Exact variant no longer appears in the retailer catalogue
-- product / candidate-9263c9c82f0bdb3e12eb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-7dcc01aaaf2c664007eb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-9bd4ff9fbc221c1b0998: Exact variant no longer appears in the retailer catalogue
-- product / candidate-776d241a989b16fe3d97: Exact variant no longer appears in the retailer catalogue
-- product / candidate-42f9818b2d25958a3ceb: Exact variant no longer appears in the retailer catalogue
-- product / candidate-ba06637d8ae105a2f39b: Exact variant no longer appears in the retailer catalogue
-- product / candidate-7c3a1a99c55c3829f1cc: Exact variant no longer appears in the retailer catalogue
-- product / candidate-36e837bb7233a98dfa21: Exact variant no longer appears in the retailer catalogue
-- product / candidate-8817c15f112daa57e839: Exact variant no longer appears in the retailer catalogue
-- product / candidate-b7fbfd588d25a4b1999f: Exact variant no longer appears in the retailer catalogue
-- product / candidate-a16f0637b5a1899c134a: Exact variant no longer appears in the retailer catalogue
-- product / candidate-fb9ef1e81bcc42e4560e: Exact variant no longer appears in the retailer catalogue
-- product / candidate-0a34db9f310e8628a4ce: Exact variant no longer appears in the retailer catalogue
-- product / candidate-fee4f567a15defc1813f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2501ba8958c1485657a9: HTTP Error 404: Not Found
+- product / candidate-ab341df6538e4c75f395: HTTP Error 404: Not Found
+- product / candidate-3a2fcbf583d1f38eb582: HTTP Error 404: Not Found
+- product / candidate-f12e0fc72344bb998e3b: HTTP Error 404: Not Found
+- product / candidate-0c2006be675da53e2ead: HTTP Error 404: Not Found
+- product / candidate-3316c6bbeafef0c8edb0: HTTP Error 404: Not Found
+- product / candidate-d7d64be2a3f1658b3921: HTTP Error 404: Not Found
+- product / candidate-bfc903d0706692388b1f: HTTP Error 404: Not Found
+- product / candidate-f49aeb31aefb4c040580: HTTP Error 404: Not Found
+- product / candidate-60ac0f6516c0c2079e1f: HTTP Error 404: Not Found
+- product / candidate-9da346dc06607d9cc34b: HTTP Error 404: Not Found
+- product / candidate-705bd82b5b7c0b7e52ca: HTTP Error 404: Not Found
+- product / candidate-b24adb7f0a39a044a9a8: HTTP Error 404: Not Found
+- product / candidate-508dee4ecad5e3361e87: HTTP Error 404: Not Found
+- product / candidate-54b472f8527bf9b326d1: HTTP Error 404: Not Found
+- product / candidate-8aadfd83a3b42ff9ba12: HTTP Error 404: Not Found
+- product / candidate-0366af4683e52315d0ac: HTTP Error 404: Not Found
+- product / candidate-97f9f6f36536b3fbc71e: HTTP Error 404: Not Found
+- product / candidate-b3214f4944872629dccf: HTTP Error 404: Not Found
+- product / candidate-4ed73f9bfe1d5d5034bb: HTTP Error 404: Not Found
+- product / candidate-976aa25985552b3587d3: HTTP Error 404: Not Found
+- product / candidate-aad53fbf74bcaacbd076: HTTP Error 404: Not Found
+- product / candidate-d0e3fe76c748237d3917: HTTP Error 404: Not Found
+- product / candidate-736feaacd8ab75257e1d: HTTP Error 404: Not Found
+- product / candidate-cb505c1fa7cb061fc433: HTTP Error 404: Not Found
+- product / candidate-a71dc4446275f335728b: HTTP Error 404: Not Found
+- product / candidate-ff656668726a0d5793d8: HTTP Error 404: Not Found
+- product / candidate-31021c8e145f14f53873: HTTP Error 404: Not Found
+- product / candidate-2905b390d3c827db9e0d: HTTP Error 404: Not Found
+- product / candidate-5372445ea52d25490ae6: HTTP Error 404: Not Found
+- product / candidate-eb250a8303d8b1fcee20: HTTP Error 404: Not Found
+- product / candidate-a1bc4be251aa552816a2: HTTP Error 404: Not Found
+- product / candidate-f40718b24b8a2880e57f: HTTP Error 404: Not Found
+- product / candidate-4a7454e0f3701bf3b438: HTTP Error 404: Not Found
+- product / candidate-8dbd596b608b67ea1ada: HTTP Error 404: Not Found
+- product / candidate-61027055b54732a8045d: HTTP Error 404: Not Found
+- product / candidate-32bfc56045637171ed20: HTTP Error 404: Not Found
+- product / candidate-3021840de68417825e5c: HTTP Error 404: Not Found
+- product / candidate-7fbe0ec25412f0c854eb: HTTP Error 404: Not Found
+- product / candidate-721e566e6f22ad330c2f: HTTP Error 404: Not Found
+- product / candidate-685145f8efb0ba0d1d04: HTTP Error 404: Not Found
+- product / candidate-ff54c019a8f528f0f511: HTTP Error 404: Not Found
+- product / candidate-367deef5f291c73b42a2: HTTP Error 404: Not Found
+- product / candidate-04b26b53ba68bb875055: HTTP Error 404: Not Found
+- product / candidate-d23026195252891563df: HTTP Error 404: Not Found
+- product / candidate-381abe6185d864d67a00: HTTP Error 404: Not Found
+- product / candidate-4bf0dfe19d41e4850fff: HTTP Error 404: Not Found
+- product / candidate-b55e4f4d877aff7e8012: HTTP Error 404: Not Found
+- product / candidate-72720a142e78ae797489: HTTP Error 404: Not Found
+- product / candidate-edde5ba73d60fef16c2c: HTTP Error 404: Not Found
+- product / candidate-bdb777430d54fe102105: HTTP Error 404: Not Found
+- product / candidate-8a1c4803425a42a9e565: HTTP Error 404: Not Found
+- product / candidate-28f86eaf497aeada6f6d: HTTP Error 404: Not Found
+- product / candidate-d855d819370084ef7557: HTTP Error 404: Not Found
+- product / candidate-c162d9c710b3c6840d3f: HTTP Error 404: Not Found
+- product / candidate-5566d9d2ed358b1ef147: HTTP Error 404: Not Found
+- product / candidate-8a2dbe6965818c453f91: HTTP Error 404: Not Found
+- product / candidate-095ca64d4c22c3822a4f: HTTP Error 404: Not Found
+- product / candidate-e6dc19164eb3c53c727e: HTTP Error 404: Not Found
+- product / candidate-ec8c47130c382c837935: HTTP Error 404: Not Found
+- product / candidate-d9c14fbc5e325d573107: HTTP Error 404: Not Found
+- product / candidate-57902059748eaa7cc8ca: HTTP Error 404: Not Found
+- product / candidate-f07490b48ac9c810c9d1: HTTP Error 404: Not Found
+- product / candidate-dcfbaab127d32e32c800: HTTP Error 404: Not Found
+- product / candidate-279840ca28f30a0a5ea6: HTTP Error 404: Not Found
+- product / candidate-8317e8f60b044588dae2: HTTP Error 404: Not Found
+- product / candidate-c901f50f3f24a5aac11b: HTTP Error 404: Not Found
+- product / candidate-548f22fb648fb80ae2a7: HTTP Error 404: Not Found
+- product / candidate-06ac5f2b39a493edc57f: HTTP Error 404: Not Found
+- product / candidate-138bfdfb70f4946d6792: HTTP Error 404: Not Found
+- product / candidate-b20153519829d654aed8: HTTP Error 404: Not Found
+- product / candidate-c6c63cbac076660c2241: HTTP Error 404: Not Found
+- product / candidate-622cc9496fbc8ea25565: HTTP Error 404: Not Found
+- product / candidate-a8056985e95276539bee: HTTP Error 404: Not Found
+- product / candidate-145ba813fc23a98ba4f3: HTTP Error 404: Not Found
+- product / candidate-50f81fc9d79c34eb06f1: HTTP Error 404: Not Found
+- product / candidate-f4dcbc92eb97d222afc5: HTTP Error 404: Not Found
+- product / candidate-428abe03d0472aac284b: HTTP Error 404: Not Found
+- product / candidate-9c69977479dbede98a16: HTTP Error 404: Not Found
+- product / candidate-ec44c2a651ce74dd9efa: HTTP Error 404: Not Found
+- product / candidate-50503415e52793d7f566: HTTP Error 404: Not Found
+- product / candidate-7d117e991586dee31227: HTTP Error 404: Not Found
+- product / candidate-d4c18d6cba7cfb534737: HTTP Error 404: Not Found
+- product / candidate-8e5f2bb86588caa20dc2: HTTP Error 404: Not Found
+- product / candidate-210024366cc73702e641: HTTP Error 404: Not Found
+- product / candidate-c0c98437a564cc3e5051: HTTP Error 404: Not Found
+- product / candidate-d80f556c4ea2199d6205: HTTP Error 404: Not Found
+- product / candidate-07afbe478ecc276db3e4: HTTP Error 404: Not Found
+- product / candidate-8946382dcebc9885f29a: HTTP Error 404: Not Found
+- product / candidate-e2519b6f2750cece76aa: HTTP Error 404: Not Found
+- product / candidate-175fbf292bd81892f9bf: HTTP Error 404: Not Found
+- product / candidate-f85230bdefd058bc8bc0: HTTP Error 404: Not Found
+- product / candidate-09de70bd5c2de4959b06: HTTP Error 404: Not Found
+- product / candidate-d567339baee9868fe211: HTTP Error 404: Not Found
+- product / candidate-71239f4206a7ee3985df: HTTP Error 404: Not Found
+- product / candidate-d6ffebc56bbc8d759783: HTTP Error 404: Not Found
+- product / candidate-8cfe8b7abcb0168a98c3: HTTP Error 404: Not Found
+- product / candidate-f7fffc476538e32b39d9: HTTP Error 404: Not Found
+- product / candidate-b3ab28f8cbf5c21ec9a7: HTTP Error 404: Not Found
+- product / candidate-86db83339fb6207a2551: HTTP Error 404: Not Found
+- product / candidate-a1a60ac8b5e70bca079e: HTTP Error 404: Not Found
+- product / candidate-c7afb2f03ffe97943c91: HTTP Error 404: Not Found
+- product / candidate-528b3b96fd4a162dda47: HTTP Error 404: Not Found
+- product / candidate-df6a5aee110cff8eb325: HTTP Error 404: Not Found
+- product / candidate-06cede5c3bb3341ab1ef: HTTP Error 404: Not Found
+- product / candidate-56c568d2b8ea3391203c: HTTP Error 404: Not Found
+- product / candidate-ca2a71cd2ad9a872d9d5: HTTP Error 404: Not Found
+- product / candidate-0d670b7f39c178823b62: HTTP Error 404: Not Found
+- product / candidate-51619c3a5a6d4cc8f338: HTTP Error 404: Not Found
+- product / candidate-16379ce88b50b7034140: HTTP Error 404: Not Found
+- product / candidate-028c055fe5a4dad43ccb: HTTP Error 404: Not Found
+- product / candidate-4b004c05c1bc1aa9c6db: HTTP Error 404: Not Found
+- product / candidate-2605d2236ab32f1c5210: HTTP Error 404: Not Found
+- product / candidate-9263c9c82f0bdb3e12eb: HTTP Error 404: Not Found
+- product / candidate-7dcc01aaaf2c664007eb: HTTP Error 404: Not Found
+- product / candidate-9bd4ff9fbc221c1b0998: HTTP Error 404: Not Found
+- product / candidate-776d241a989b16fe3d97: HTTP Error 404: Not Found
+- product / candidate-42f9818b2d25958a3ceb: HTTP Error 404: Not Found
+- product / candidate-ba06637d8ae105a2f39b: HTTP Error 404: Not Found
+- product / candidate-7c3a1a99c55c3829f1cc: HTTP Error 404: Not Found
+- product / candidate-bc576d3a93e0ddc4e13f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-70172f4888e8ae7cb414: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e4f4a5b8d0f4e89a60bd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6bc1df3a8057a45919bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-937abffbbe12a3d59eb3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9d13e3db4fd1937a31fb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-70e12a3e6992eaccd3fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c12acdd2008ec3e11c67: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8047b20c1796d89631b7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e74341a5e27020758de4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c5f64335e34cbfdb6a47: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-61ce0ef0d92abb898de4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2a9e78c07a051351a1b6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6618253dfab031c4be39: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f6153220683fe4c527b8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-63b8a3dbc39e34def5fc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-947828cd9e4a89031763: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-adb2ceafa93c06829a49: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17b90a49b6706ef99626: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-67872b83a0893891a59f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b3c9e36d824a9e5e2a85: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4335112375bd48770230: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-edca8dbc5673b06dfeee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4ef85352b58b17900b8b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7423ae7df67286f11511: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fb0205d016453ce4bd42: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-39591aab184d5ae44a3e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1ce76ae0349f2728a76f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4be134ac6dc1c71872bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-11ef043ed8a3adc02f21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7e172ccd99b43fbd3528: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c465ac3e04771122b3b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a7204287f5ab4ab4e636: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-737b90bca02ba27bcaa8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1bee1570862dcb3b3d66: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-909e74acd383a81bb9ae: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-791a00a2e4372c891718: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c59e409800051d02a9a0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5b64971edf194725087f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-531b2dea109e89b5389b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6b1e26a94d5d786204e0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-723a76bcb8793b9acf13: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d71150b6778c2c7b2163: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-581b94eadce401d00bd9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-13e390208c262e9edcad: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7f1b29414caf74fe39a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-eacc59d598505007010b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bddd358e81bae023dc2d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b6eac90f10ee94b01d08: HTTP Error 404: Not Found
+- product / candidate-333241683777b5548651: HTTP Error 404: Not Found
+- product / candidate-17961fe4fd92c80bcc15: HTTP Error 404: Not Found
+- product / candidate-85f067979e6ce7aabb1b: HTTP Error 404: Not Found
+- product / candidate-976aabd1ee9f82625bcd: HTTP Error 404: Not Found
+- product / candidate-0c29d211c2b219ccb6b7: HTTP Error 404: Not Found
+- product / candidate-6f5ee7302ce1fc48e6f7: HTTP Error 404: Not Found
+- product / candidate-457edf06be5e6f50e2a1: HTTP Error 404: Not Found
+- product / candidate-7013c8a1112fd732970c: HTTP Error 404: Not Found
+- product / candidate-cb20784432bf829f034a: HTTP Error 404: Not Found
+- product / candidate-455b81ba0a43b65fee5e: HTTP Error 404: Not Found
+- product / candidate-fff9b1dbae97aa1a6de3: HTTP Error 404: Not Found
+- product / candidate-f6544d71ba00453f165d: HTTP Error 404: Not Found
+- product / candidate-eb5bb2f36c9528ef0229: HTTP Error 404: Not Found
+- product / candidate-285cf9c441162d1806f0: HTTP Error 404: Not Found
+- product / candidate-c121defe66bb8b6ca2d3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9b1127d43f9e6d0d7e94: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a23b309363a9214ad260: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-56ae3932e6c12f9cdd01: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5850025cc6235d6a7d63: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5112bdd9bdc4c24eca76: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8c5506c216ac69a910a3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-094075f1acb8144514f4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c8295461fc6dbc99c0ce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c473b4c4484c6819596: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-847e887b08fc6ccfb14a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b15bcba53f598d75f6b5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0314b65e2bb09cb9c2f4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a7c9c2eaf2a55b5d2de3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d53a9499b7eebdf74324: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c5a7696abbfe29d519dd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-609bb237b38e7fed6aae: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d44a2b14456ea8980695: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-feaa60f0d9817a2c953c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-67f0768356a5b56edc7c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fed2347cb7d5cc3821ad: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d516a684518587258b22: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-18f79ef24dca8a5fd0c5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aeb440402d24f83b510f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9a09792ff6f42278465d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8ffbe1653bd2a5f2b2fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7e14a43cf6cef656b4a8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-544938d8d23b9139a55f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-559dd9aa0cdb5842fbaa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-873b1895530a1827bc1d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-277d1ba85c9ace3b5b86: HTTP Error 404: Not Found
+- product / candidate-9f15218729d47e1870ec: HTTP Error 404: Not Found
+- product / candidate-f9c9af961bcde8a8e8ee: HTTP Error 404: Not Found
+- product / candidate-2b4084dc980c1544df8b: HTTP Error 404: Not Found
+- product / candidate-a795f9102699dbe3f422: HTTP Error 404: Not Found
+- product / candidate-cafb2e28b34a91668b42: HTTP Error 404: Not Found
+- product / candidate-b08e5a7613611bc5d840: HTTP Error 404: Not Found
+- product / candidate-c70fe4506d49586fdf9d: HTTP Error 404: Not Found
+- product / candidate-4afc55882cd439197d67: HTTP Error 404: Not Found
+- product / candidate-d73a5fba522c1579e04b: HTTP Error 404: Not Found
+- product / candidate-4f90d26f003904b77e0f: HTTP Error 404: Not Found
+- product / candidate-cdc4640fe5056c3142db: HTTP Error 404: Not Found
+- product / candidate-cb8bbee0e03770b7adfd: HTTP Error 404: Not Found
+- product / candidate-c86ad60a61f3dc71e983: HTTP Error 404: Not Found
+- product / candidate-4ac32c8f339a1bca68c7: HTTP Error 404: Not Found
+- product / candidate-322eb987e541a0b9d1a5: HTTP Error 404: Not Found
+- product / candidate-25cb88e9a6ce68059414: HTTP Error 404: Not Found
+- product / candidate-e40ff063bfd7fc392ef8: HTTP Error 404: Not Found
+- product / candidate-eb606692d45adee7b212: HTTP Error 404: Not Found
+- product / candidate-911ef9a347ea3ba5995f: HTTP Error 404: Not Found
+- product / candidate-4f0322d9c6c89c5ef9f4: HTTP Error 404: Not Found
+- product / candidate-c096c3c8cf283ac568f9: HTTP Error 404: Not Found
+- product / candidate-385450f9ced66b06baa7: HTTP Error 404: Not Found
+- product / candidate-6ae8ffe9900858d8be68: HTTP Error 404: Not Found
+- product / candidate-6d33a3a928d7b1c95fa5: HTTP Error 404: Not Found
+- product / candidate-0dd495115267c64e093b: HTTP Error 404: Not Found
+- product / candidate-74ec4fe7a201b4e3c03e: HTTP Error 404: Not Found
+- product / candidate-07aeef917bc1cee8d4ed: HTTP Error 404: Not Found
+- product / candidate-3e0f18c81a0e8b15a9d7: HTTP Error 404: Not Found
+- product / candidate-b69d035a51ca91ba04f0: HTTP Error 404: Not Found
+- product / candidate-f1167a51622919adf01b: HTTP Error 404: Not Found
+- product / candidate-62e42b5deecc9ea05a9a: HTTP Error 404: Not Found
+- product / candidate-36a42be3297f7148bab0: HTTP Error 404: Not Found
+- product / candidate-47fdc254a0d4f87b35ff: HTTP Error 404: Not Found
+- product / candidate-43d693e573f00aa59933: HTTP Error 404: Not Found
+- product / candidate-b3a460a82e3a4335e1fb: HTTP Error 404: Not Found
+- product / candidate-0710e629824625f1734a: HTTP Error 404: Not Found
+- product / candidate-6458ca28f50a3e457e4b: HTTP Error 404: Not Found
+- product / candidate-f36d89a1b5ed2485d20e: HTTP Error 404: Not Found
+- product / candidate-2758125b29e525b7c136: HTTP Error 404: Not Found
+- product / candidate-96add66a9bcbe32fb718: HTTP Error 404: Not Found
+- product / candidate-3b619bedd31075829bd7: HTTP Error 404: Not Found
+- product / candidate-711ee805a29fa36fc162: HTTP Error 404: Not Found
+- product / candidate-7c4db6d75869826d2f05: HTTP Error 404: Not Found
+- product / candidate-20f9710a6411a32590c2: HTTP Error 404: Not Found
+- product / candidate-cc9f76f1ea93663ed010: HTTP Error 404: Not Found
+- product / candidate-ed80e4b09fcd9a638759: HTTP Error 404: Not Found
+- product / candidate-b4a7308652148deb82cb: HTTP Error 404: Not Found
+- product / candidate-c34a297b5f9f5ce079f7: HTTP Error 404: Not Found
+- product / candidate-f6fae6f0ecb1632dbf8a: HTTP Error 404: Not Found
+- product / candidate-acda275e7c8f08ea2d33: HTTP Error 404: Not Found
+- product / candidate-6e89c17394637df78308: HTTP Error 404: Not Found
+- product / candidate-359fbc62799876b5bc2a: HTTP Error 404: Not Found
+- product / candidate-1a0893e3cb05d4d312d1: HTTP Error 404: Not Found
+- product / candidate-52834db148799ed6d6af: HTTP Error 404: Not Found
+- product / candidate-83f9f4aca13beb63fe06: HTTP Error 404: Not Found
+- product / candidate-2161550a9bc6adc8add7: HTTP Error 404: Not Found
+- product / candidate-7662914638ba37410e69: HTTP Error 404: Not Found
+- product / candidate-7a280498defe167d9605: HTTP Error 404: Not Found
+- product / candidate-b9909c08236356dc6cbc: HTTP Error 404: Not Found
+- product / candidate-99630fb3659a5b1dc382: HTTP Error 404: Not Found
+- product / candidate-a3e7debf3ff7c702e460: HTTP Error 404: Not Found
+- product / candidate-489d7d6dd39541bc24f8: HTTP Error 404: Not Found
+- product / candidate-7ec2a57c6322a497fdac: HTTP Error 404: Not Found
+- product / candidate-e7119b22fa0cfb527ffa: HTTP Error 404: Not Found
+- product / candidate-4cbd7f1d5b8577c460ed: HTTP Error 404: Not Found
+- product / candidate-e9c67139043bc366cb84: HTTP Error 404: Not Found
+- product / candidate-5b3f5dc6ca426af1e057: HTTP Error 404: Not Found
+- product / candidate-069fca49b1ad075e97ca: HTTP Error 404: Not Found
+- product / candidate-7a1ee2c386259d31b5fc: HTTP Error 404: Not Found
+- product / candidate-14d1b76deee0d0ca44ee: HTTP Error 404: Not Found
+- product / candidate-67344d888950cc3f579c: HTTP Error 404: Not Found
+- product / candidate-f3eb9dc4627f85864e1f: HTTP Error 404: Not Found
+- product / candidate-1eda905346b0829b9ea1: HTTP Error 404: Not Found
+- product / candidate-27bd0d6427eb4cf7b753: HTTP Error 404: Not Found
+- product / candidate-53c5798e4b7d8a18d8bc: HTTP Error 404: Not Found
+- product / candidate-1c4d5c88d5f6880bfb41: HTTP Error 404: Not Found
+- product / candidate-eacc36e79e7b16546372: HTTP Error 404: Not Found
+- product / candidate-cde810d6b99a3408118e: HTTP Error 404: Not Found
+- product / candidate-89dfd128bb7544965f9a: HTTP Error 404: Not Found
+- product / candidate-ad94ca954c153f2b4a58: HTTP Error 404: Not Found
+- product / candidate-f75a586fdd6cb06bdebe: HTTP Error 404: Not Found
+- product / candidate-4f5d560f4f6ab1aa7826: HTTP Error 404: Not Found
+- product / candidate-4a137a32f263c108baf5: HTTP Error 404: Not Found
+- product / candidate-a6d6ef1fc3afe3f7b033: HTTP Error 404: Not Found
+- product / candidate-0967b49d87cd23ccd7f6: HTTP Error 404: Not Found
+- product / candidate-f8ac81382b550f4ede25: HTTP Error 404: Not Found
+- product / candidate-107047f7b3336db02cfd: HTTP Error 404: Not Found
+- product / candidate-15f2e1fca6815d7e1f89: HTTP Error 404: Not Found
+- product / candidate-fd4b85523d9dc7a2eb0f: HTTP Error 404: Not Found
+- product / candidate-b14d2c8a48df24832aba: HTTP Error 404: Not Found
+- product / candidate-d7033a1a6ff8313002e4: HTTP Error 404: Not Found
+- product / candidate-9783565ade1ef9ae1d1d: HTTP Error 404: Not Found
+- product / candidate-b55572fb14fa8a25006f: HTTP Error 404: Not Found
+- product / candidate-bfad0f81160842e1d5d8: HTTP Error 404: Not Found
+- product / candidate-0781cdd33a6d0f15c384: HTTP Error 404: Not Found
+- product / candidate-fd942ee7fa9d6c2c6a51: HTTP Error 404: Not Found
+- product / candidate-6da297b347c6785bdb38: HTTP Error 404: Not Found
+- product / candidate-0f972caf40b411beb971: HTTP Error 404: Not Found
+- product / candidate-2f68d8afe7da37c1e70e: HTTP Error 404: Not Found
+- product / candidate-fb693e9baad906a07771: HTTP Error 404: Not Found
+- product / candidate-21e6e5e6c559eee514e1: HTTP Error 404: Not Found
+- product / candidate-6df852ed71ceb8e8b8d5: HTTP Error 404: Not Found
+- product / candidate-cc97856e87fdf5d7d615: HTTP Error 404: Not Found
+- product / candidate-9cd9cbc9d7413ab785a2: HTTP Error 404: Not Found
+- product / candidate-cd093f66e89e275b7ae4: HTTP Error 404: Not Found
+- product / candidate-697b9a83c4681a902e9f: HTTP Error 404: Not Found
+- product / candidate-f3e2ff0cd237f1c37535: HTTP Error 404: Not Found
+- product / candidate-2b2c53a8e71cad446f51: HTTP Error 404: Not Found
+- product / candidate-f6a4b971e919b653e828: HTTP Error 404: Not Found
+- product / candidate-c0e6c947489a1d9d2534: HTTP Error 404: Not Found
+- product / candidate-b6417f934d9a00708cd9: HTTP Error 404: Not Found
+- product / candidate-d7351db837e1ec6c6e94: HTTP Error 404: Not Found
+- product / candidate-179331da4ee99a7081d5: HTTP Error 404: Not Found
+- product / candidate-44e8f55a2248b265409b: HTTP Error 404: Not Found
+- product / candidate-b027e460e22dce81ca88: HTTP Error 404: Not Found
+- product / candidate-1de5e6669b34394f1e6d: HTTP Error 404: Not Found
+- product / candidate-e8fe697c2d438e715f8b: HTTP Error 404: Not Found
+- product / candidate-77599d1e358eef4a82fd: HTTP Error 404: Not Found
+- product / candidate-9f6ecc09375fd75b8a30: HTTP Error 404: Not Found
+- product / candidate-2658597eb7d84e33773e: HTTP Error 404: Not Found
+- product / candidate-dd38f302bcd95e6f6865: HTTP Error 404: Not Found
+- product / candidate-ffee3d0a4ed22f8c642c: HTTP Error 404: Not Found
+- product / candidate-19427f79c9d090c440e2: HTTP Error 404: Not Found
+- product / candidate-1fa6a476ac7978ea48d6: HTTP Error 404: Not Found
+- product / candidate-6752733c150a0541d728: HTTP Error 404: Not Found
+- product / candidate-3ceb6baa2acd4a3e2524: HTTP Error 404: Not Found
+- product / candidate-7301eb2a29ae871804d3: HTTP Error 404: Not Found
+- product / candidate-cc4ce5aaaa2fa55f2aa9: HTTP Error 404: Not Found
+- product / candidate-c51be5765cd5efcca68f: HTTP Error 404: Not Found
+- product / candidate-b0caf839e48c1aea3974: HTTP Error 404: Not Found
+- product / candidate-8f8568d2e8d1863c7a8b: HTTP Error 404: Not Found
+- product / candidate-50adae373660aac456d0: HTTP Error 404: Not Found
+- product / candidate-05b3c96a9c7dc36eaa31: HTTP Error 404: Not Found
+- product / candidate-14be1911e5edba316ac3: HTTP Error 404: Not Found
+- product / candidate-07abb18f3bcf5d9385bb: HTTP Error 404: Not Found
+- product / candidate-75e8ffdc9fed71839ece: HTTP Error 404: Not Found
+- product / candidate-c5e0ad59f828104af123: HTTP Error 404: Not Found
+- product / candidate-59a283b2d5ed98e858bf: HTTP Error 404: Not Found
+- product / candidate-5b0776952068040690f0: HTTP Error 404: Not Found
+- product / candidate-4f4b99791b82ef38adb2: HTTP Error 404: Not Found
+- product / candidate-f4f3882d0423450369ea: HTTP Error 404: Not Found
+- product / candidate-a6b30cee48d3ec1a2026: HTTP Error 404: Not Found
+- product / candidate-6558a2cc0b565971917e: HTTP Error 404: Not Found
+- product / candidate-2a9b6e39ae1f15cf8286: HTTP Error 404: Not Found
+- product / candidate-f0f5cd682007d3f9a3e0: HTTP Error 404: Not Found
+- product / candidate-120135104ce17a9e1f6e: HTTP Error 404: Not Found
+- product / candidate-4c66d504e836ec1d0ec9: HTTP Error 404: Not Found
+- product / candidate-a62421fbe97b4be659e6: HTTP Error 404: Not Found
+- product / candidate-a6f386f7b97bb0e373bb: HTTP Error 404: Not Found
+- product / candidate-843e11c0bd2e4d73cd74: HTTP Error 404: Not Found
+- product / candidate-dd7579f6f6b6430f4c98: HTTP Error 404: Not Found
+- product / candidate-3a4a4285020e7be2bdad: HTTP Error 404: Not Found
+- product / candidate-f144e351a314e6955fc5: HTTP Error 404: Not Found
+- product / candidate-70ba076742ea2c5cc57a: HTTP Error 404: Not Found
+- product / candidate-9b8fc4d06b143942e7cf: HTTP Error 404: Not Found
+- product / candidate-0772661a14149d854a0f: HTTP Error 404: Not Found
+- product / candidate-2f35d4a1f1422706c184: HTTP Error 404: Not Found
+- product / candidate-d3c1d48e97e8064c8311: HTTP Error 404: Not Found
+- product / candidate-1ebeead6ff6627160c0e: HTTP Error 404: Not Found
+- product / candidate-c79e2703c4f90cc1bfe8: HTTP Error 404: Not Found
+- product / candidate-2a458b8be3d5b2927388: HTTP Error 404: Not Found
+- product / candidate-e82778ce4316aa388c23: HTTP Error 404: Not Found
+- product / candidate-d7b5f277a8e6e719680e: HTTP Error 404: Not Found
+- product / candidate-4ac2ebebd16dcbb5a71d: HTTP Error 404: Not Found
+- product / candidate-7c0ff346e7b395f7cd92: HTTP Error 404: Not Found
+- product / candidate-30f037c1353e91d4ea75: HTTP Error 404: Not Found
+- product / candidate-2c6a23f51a81143a2aee: HTTP Error 404: Not Found
+- product / candidate-f2b01af432461d189495: HTTP Error 404: Not Found
+- product / candidate-4517a142850ca5972b0d: HTTP Error 404: Not Found
+- product / candidate-7797601c19946dbae635: HTTP Error 404: Not Found
+- product / candidate-df1ffed9c3d20046695d: HTTP Error 404: Not Found
+- product / candidate-c29a01d4d3840942c95e: HTTP Error 404: Not Found
+- product / candidate-92cbabd99389bf991f3d: HTTP Error 404: Not Found
+- product / candidate-9e4bfb01d6d1ad2a634f: HTTP Error 404: Not Found
+- product / candidate-96227cb87a12b5b4978a: HTTP Error 404: Not Found
+- product / candidate-8fa2aa892b7b50b470c9: HTTP Error 404: Not Found
+- product / candidate-90b40cb42aeb03c6d00c: HTTP Error 404: Not Found
+- product / candidate-5c79937d59283dd94d8a: HTTP Error 404: Not Found
+- product / candidate-813e6ca1ca71b446f77b: HTTP Error 404: Not Found
+- product / candidate-a138086029cf5a788c1e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ede54b634bcd235b9806: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-43f7bcf850334cc06359: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cfcfb5d46ad7bbd172b7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-065688f16e0fd4aead39: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b8a228fb7118e38a6f9f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-19c4ce5a7759f546a687: HTTP Error 404: Not Found
+- product / candidate-51daf79ac972f1366e09: HTTP Error 404: Not Found
+- product / candidate-625ecba05bf0ca9c8e06: HTTP Error 404: Not Found
+- product / candidate-2ae8a5c8c558d2bff066: HTTP Error 404: Not Found
+- product / candidate-418a66e7ea763694b7f1: HTTP Error 404: Not Found
+- product / candidate-eba4874d5e539db9a96f: HTTP Error 404: Not Found
+- product / candidate-67a5c05d056ff00ea705: HTTP Error 404: Not Found
+- product / candidate-eeb14c55ae75dbee0fea: HTTP Error 404: Not Found
+- product / candidate-634bbba768f7e40ac841: HTTP Error 404: Not Found
+- product / candidate-939f51e4dbc500ea9854: HTTP Error 404: Not Found
+- product / candidate-066e31f333b4a96ca3e7: HTTP Error 404: Not Found
+- product / candidate-0b00312b462373becd4b: HTTP Error 404: Not Found
+- product / candidate-6b1ad8e81d8cf3b39ee6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-50ce4d64f4ba58c31216: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-039b81a7344d58e96d74: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d43d249e95374cc8669e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c8b92d0832f33225d601: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-36e837bb7233a98dfa21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8817c15f112daa57e839: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2776a644fd3db5d9edbb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ea69ae33c4e690209629: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-010b22c86559d54773f5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-164a4d5adc3e1996ff83: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-24d278988d8b635bf2ca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e898dde814c59f88d89d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0e03fde98cec75c6c767: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4cc8ddd1ef4a8338aa84: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33ea110aa08b8f0fc842: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-782e5454c274593fadb8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7df8096b5053dea27b99: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dff7700358e50ed5f7f4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cc152cead06ee6dcd66a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c75d3b16252529538a3f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e8e14548f8cc93a9a377: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e76608d8bdd5646861eb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c3b4cb4d4308a3a8b50f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cba78416978b63ebd1ce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c7f903a2615b2dd25e32: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-886019186dc3f8cc6404: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e9aa1b343b748cfa2013: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-233d562284ed73e56123: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b08748b0be1216989ac7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-24c06cd41c12dc58d695: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-abbb4bb5c5cf6dc0a652: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-715ef653a2e40eedb8fb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5fe4a535d70405c82360: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-12214312ca64be4e35ac: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1f742d301da1615e4f29: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-18a44ee6196e63ef2f40: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b2d654406995ad8aae69: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b53665123bd6989ca505: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6e89f8797f3bf8577f95: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bb31d5d80ceaebd77450: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ce76bdaf04b3375c404a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-20950912f060392f5c11: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-45bf2fe04e566d1c3f3d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3bb57b8a41d0d4894f6b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f18e4e29fc7acdd7fb1a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dd9431ef487c8fe4a6d7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-633ae2094c32b348402c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c18ff99d24e560aeabf6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7fbfd588d25a4b1999f: HTTP Error 404: Not Found
+- product / candidate-4c59da97deb5259e0e50: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c92c1f13681cec007b8f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b5364351c470f4cda22c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-77fffb384192a56cf630: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d3b07abebb7ca83d677f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-26e9e5dd8b7751f34422: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cf0d7ee175e631c5b03a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c898203f601fc1aa3574: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6f05902ed04431a23ae4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a852f4ede7f6bb41b0c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d77b7452012dc2e92554: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-628f1fb6a4229ac58658: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-18a2cbe1a0b2f78f8fae: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b9b46aa32298215131ce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-98c7895b75bcf24577c2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-626b81c3a992b228b119: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-02c693c882f41e22f8e3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-11756dc7ee7c7205c93f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-11196999fdf7998d46c8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6b68715aaea225b3eef1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-39369cb8c2e6562dcc47: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3b1eca4f88f6c11b9608: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-879929f3021fe47a6172: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d8824f7f2d34fdd7fd07: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c7e7e468efbad86c14b8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e4214941780aca279675: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5f3db12944a886a1cd56: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-64f8a683d5253d97ff96: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7b78e6ac0358d0264905: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c9620f1345bc902906a: HTTP Error 404: Not Found
+- product / candidate-2df4e079224b44569b8b: HTTP Error 404: Not Found
+- product / candidate-d6e3e56266326ce4fcf6: HTTP Error 404: Not Found
+- product / candidate-f7d9b26dca0c940e7bae: HTTP Error 404: Not Found
+- product / candidate-4067237d8f48c4254c73: HTTP Error 404: Not Found
+- product / candidate-faea89add842ef3b577e: HTTP Error 404: Not Found
+- product / candidate-b797f22563ab4ba25802: HTTP Error 404: Not Found
+- product / candidate-547990c8fca48c206387: HTTP Error 404: Not Found
+- product / candidate-3c47842d687d22d3bbd5: HTTP Error 404: Not Found
+- product / candidate-8f315997482757ca2903: HTTP Error 404: Not Found
+- product / candidate-edff6e3653f4c1f37cca: HTTP Error 404: Not Found
+- product / candidate-c00225c0a97c57c499f6: HTTP Error 404: Not Found
+- product / candidate-6eb6bd22bfdf3be4ce52: HTTP Error 404: Not Found
+- product / candidate-d6e3adf0c0c2bdff42f8: HTTP Error 404: Not Found
+- product / candidate-43cbdcd899f7df852ae1: HTTP Error 404: Not Found
+- product / candidate-e23b89b15c85d7a661b4: HTTP Error 404: Not Found
+- product / candidate-e3377de6c7dde0db817b: HTTP Error 404: Not Found
+- product / candidate-b62583bfd84235ef8fa8: HTTP Error 404: Not Found
+- product / candidate-2ceec8c934b7da729b5b: HTTP Error 404: Not Found
+- product / candidate-48e342bf4bc6815cc9af: HTTP Error 404: Not Found
+- product / candidate-f18decafec5c2434b71f: HTTP Error 404: Not Found
+- product / candidate-b7b53ca5372c7ef65030: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c3c1d0f1cddf700706f6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-37751cb1a60223e38a29: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-124f2df35a36679eee46: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4a9158c4e4f7ba9862c3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-720a758158562be1cabf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f64dbc567fed5446ee2e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-78cd371b5db68be742a0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bbdbc2a8af1f8acfdf5e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c9f4851f7f1f238d9a3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-de686de0be57f758de81: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f9266673cb99af412242: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8638e15d78281790ed67: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-466268708103b71ff0dd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-741aa7e48c5c05614fa6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6ecbb732efb7677f9ad5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8dcd0c40725b06e64303: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ab83d6c2563cc02ff978: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a16f0637b5a1899c134a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fb9ef1e81bcc42e4560e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0a34db9f310e8628a4ce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fee4f567a15defc1813f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f8c99c55b7442b663785: HTTP Error 404: Not Found
+- product / candidate-03f02ad23fab7948425f: HTTP Error 404: Not Found
+- product / candidate-d188696196ad1bdab88e: HTTP Error 404: Not Found
+- product / candidate-637ba245a6b98816a488: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51bbcadc45c5fea05766: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7a88612feb488f52de56: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-887b4ff2869e55e0ce4a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-45b07e36fea51d62ea26: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-693b21e7df52819d1d3f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e528326e11b8d53bbc16: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6eb84abe1d37e64bb7cb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-149067f447b8c094ff55: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c82908f3651a9895d91f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-234447e2d509a37ad2f0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-38b901b21575779d3ed3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8c03bef48cdaadfa1ffd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6136e9daa5d310ddcfaf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c583e05d41cf67ece0c4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c0c535579430c3658e24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8db110280306796f7ac3: HTTP Error 404: Not Found
+- product / candidate-2057288d79d233c4b78d: HTTP Error 404: Not Found
+- product / candidate-c554b4429a190e58c282: HTTP Error 404: Not Found
+- product / candidate-40d641a658f8024adcda: HTTP Error 404: Not Found
+- product / candidate-f56470a437346b858878: HTTP Error 404: Not Found
+- product / candidate-73ce05baa6b91c774941: HTTP Error 404: Not Found
+- product / candidate-44907e21521fd94103cd: HTTP Error 404: Not Found
+- product / candidate-5639dc596c0d6871029a: HTTP Error 404: Not Found
+- product / candidate-22e3551fdda752d6d27f: HTTP Error 404: Not Found
+- product / candidate-05eed2c8e2288025c0ba: HTTP Error 404: Not Found
+- product / candidate-c1a2bc0ac1d10b927773: HTTP Error 404: Not Found
+- product / candidate-e9faf7ffc752c8f0c9f4: HTTP Error 404: Not Found
+- product / candidate-a918d989fa7c4dee4a7a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c247984fcee23ba9f449: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-49620738acee9caaae90: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ef9a6842af3b5b0b58c5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4b4809fb94d371659164: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-229ac778aa02cad58eee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fd5de5e21ab4a4535457: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9496948250cfe9dee907: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e0641a0aa10ce82f9853: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f99d9459226a9d13807f: HTTP Error 404: Not Found
+- product / candidate-b05d3d988485687f375b: HTTP Error 404: Not Found
+- product / candidate-d72dec379d07daf0f43f: HTTP Error 404: Not Found
+- product / candidate-e94249fb6a0870e8b717: HTTP Error 404: Not Found
+- product / candidate-be5355a59145d38c6ec4: HTTP Error 404: Not Found
+- product / candidate-fdd0759d2ecc2d775ebe: HTTP Error 404: Not Found
+- product / candidate-5cd121558a789828079a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-39d44e2f863573cb0a97: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-89f8f69061c99de29079: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-368fbafbd81bd9d8314b: HTTP Error 404: Not Found
+- product / candidate-e3be4fbf4c5d358d81f9: HTTP Error 404: Not Found
+- product / candidate-2cde67224ad6604c1f24: HTTP Error 404: Not Found
+- product / candidate-a81684e558eb9728452e: HTTP Error 404: Not Found
+- product / candidate-e32aaa3c99b6d91c4e60: HTTP Error 404: Not Found
+- product / candidate-dccaaaee0fcaab66b5c7: HTTP Error 404: Not Found
+- product / candidate-14a60c49c4fc2e10324e: HTTP Error 404: Not Found
+- product / candidate-59f026072ae5eb348319: HTTP Error 404: Not Found
+- product / candidate-1012f74dd12ada38b12a: HTTP Error 404: Not Found
+- product / candidate-8557e64c9aca5753a72d: HTTP Error 404: Not Found
+- product / candidate-8f924d6e9a72bdf68972: HTTP Error 404: Not Found
+- product / candidate-2a4e5f5e99d1cfa775c0: HTTP Error 404: Not Found
+- product / candidate-b8c0129f369ad8bc4130: HTTP Error 404: Not Found
+- product / candidate-4178271ff80794aef3af: HTTP Error 404: Not Found
+- product / candidate-b1111c9f8c91108586e2: HTTP Error 404: Not Found
+- product / candidate-441c21dce4e07d86a6b7: HTTP Error 404: Not Found
+- product / candidate-95a755b368760fa27d98: HTTP Error 404: Not Found
+- product / candidate-ef9634541d18f44f520f: HTTP Error 404: Not Found
+- product / candidate-bb48fdbe76463f37cc0b: HTTP Error 404: Not Found
+- product / candidate-adee63362f243b8feaeb: HTTP Error 404: Not Found
+- product / candidate-bbc429444f42ae6a7a18: HTTP Error 404: Not Found
+- product / candidate-b9b83182311f0263f1f7: HTTP Error 404: Not Found
+- product / candidate-ffee6a18a3b50463e93b: HTTP Error 404: Not Found
+- product / candidate-418836a04164f5f43b7d: HTTP Error 404: Not Found
+- product / candidate-793d64710109c2f26cab: HTTP Error 404: Not Found
+- product / candidate-05537dbd9a9d615de53f: HTTP Error 404: Not Found
+- product / candidate-4bd9b5ef106ba33a608f: HTTP Error 404: Not Found
+- product / candidate-afe998fdd9e45ad32a39: HTTP Error 404: Not Found
+- product / candidate-912ce4ec221579d8c90d: HTTP Error 404: Not Found
+- product / candidate-bf600fa187883e341ffd: HTTP Error 404: Not Found
+- product / candidate-ca8733823988818b270a: HTTP Error 404: Not Found
+- product / candidate-05498f494fd4bda8b30a: HTTP Error 404: Not Found
+- product / candidate-5d0fac541082f1f5c2d1: HTTP Error 404: Not Found
+- product / candidate-82c079dbf9970decfb43: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8e9e826975fe75e532fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c276c505d38d71e56276: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6faa76bc2e6d322e252b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a7ecbbca0a98f40f32b4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5d6d3e1da98010fc9160: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2241cb286d1190660a13: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4679f50e66412596f819: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8f8469a36da75ce51275: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6bc3d4a8889889c69470: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-70df7dd479e6ceeb362f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6654948f1c06fe5c09ff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b58f9946b1a3165b0209: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d831490279d1a4e288c8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3ae1166f5d9d77337856: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-25299b3ba0ea39261774: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ac1d2d4bf13ef5f71788: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-86256411218c2448d24d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5fbea80ff99c41f36c2b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3ba2a7a59ea414c846be: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-467fa1867aacf57cda8e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-121faf98b9a9d87433f2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4818398afbc19a21dbec: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e4a28c9cc3596f18b844: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ed7eea03014ff0da3c40: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-87b4d2a610866c1c8b99: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-567ebe6480c0cccb0dd0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f28e53cbe88590a92d8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9006a1684bec304b17ad: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c8cb564d49eed38b150f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a3c772d6394f79a22056: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bd5fdae2056622f60a45: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6b7864d33f4236491d7f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a66e599377b09b4a2ee5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0d530bf48016a7f73f55: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-283e7e3b4b0d1c14f613: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5c518b27988d93493c5c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b50a0af0a7f7d2ce7aee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9f02201cad3fb1f98ffe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c36cfdd523240a224b98: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d73c9191e088393f2ca3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7a7e46730b87d743e3a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ce6de31ccd3f6c0c03ea: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6fa31724e434aecc3229: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51eb6db9c55b2dc4f2f3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-956fc150aec5828938ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dd3b0b786089b4dedc9f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-84a7b90ef92e35459328: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8cc5780397e6194f964d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1670b018f751a79bfe0e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6260ff2afcbc4382944b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-53720f1589778bd3bc60: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-16df6171c77428b1f096: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ac43163de1cce0735af2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bb6a7cb0f4d3ff7c7bab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7ac9a88d3e05bc81499e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6ae12419d8ecf31fb29e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d82cf457592e67aff235: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1d8c33c70bc48033b465: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-29465c24d6459b9100f3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e6e116f1d0b7e7a7ac6a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8f38b7dc2c3b6aeaee24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-68f3780b4897b4d23dd3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5a930fbf78ede20c0fbb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7fbcaa022313b0c1220: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0a062dc2f096a7da33ec: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9ade685298b7e464f7c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-157c229d45d473d8ac24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5ac06e6be190253b0905: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33a6f6e0e6a8ecd3a5e3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e1e597018c8acc4b7fd5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-787ed96f33391bab13a2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-640ab2b858c2a4c42f72: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-105d70f3959e19665fe6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5e3ca2bc4d8a9468be61: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5b9b57aaa0759735aa9c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-13ac56d1b792ea22c782: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5e101d4681afdf3ef8ca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-db71f58ea5041415b6cb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-764990121e263972e619: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8f2a87a7b2e5e9f4f462: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e888bf7d9566e4533f76: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a17749049682a90a45b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-653a5c8def3f2b4b39b2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cdabaf832dc76beb62a9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-67e82503def0e231d0ab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4fd12544c30b824affcd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b5ad76c711f3e059ce82: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-899734639c64e3bf5f35: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7fa36aca0b04bdff9dd4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-388215eb7cf40ddbfcc6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bbad162a087663b27bce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-017a9d13be14dd19f71d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a13e172fb1d73532741b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8cbbad5bac36621d97ac: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9448c9601e8cdf660501: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-21464022eb2c2c8a4414: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9f45976ed764a868b5d3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-063a5d6297ce65f5fb98: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d3dad8260378f99c710a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-838e9e8f0a25620944cb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e8d0b21586ac88a4c188: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1f6a962d8ffda2c68ef8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-095de35a78ded5824648: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d3083605c590201c616c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6e4dde85710a1ee0d4ce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4bec22011aeb98555327: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9755ca5b683f3a25e857: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-06ab348fbaedd018beff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3401340be2d3ba7d66d7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7d42f574a29e0d748e16: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8a14124b76b2cd7bf29a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-277114b7718fe9b4a24c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f52f68a887f9dce22c3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75bcf2f1fd90386437fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9107ed53502bc0c4fc82: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5c3887b4f6138343d8ef: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f35efec8791a4a5d6211: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4ab49abfbe20783379d1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4397c01bba9de2b9a03f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e18f044c4cb011fddd11: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f9a4c7d997cd58b854e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a8a5b23c42a4a9209153: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a2ddf4db4309f59b9ff5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2b54f8d11a0f4353af10: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9695592dda72f5647b75: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-565340a6b022c9f4171c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2befb4ddd33d8f21386c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b07c1d72c2e9cf090c59: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-730fb5d294555e517c97: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3de5fa6b01d16bdfecc3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-25905633ba1db21b2a1c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-91e56321b96241ad5cbf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1246ffd11d5bc4e82960: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-45936282e6477a11bb44: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9fc6e8ef1a96a6e75413: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-de5c3287c082a7effcfa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-01cbe8df0cdbc7fff97b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6d751529b400ab4e46fd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-368b22e1d081793d811a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b30d694848a2b4954a9a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ac2a80d920d504973684: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c34f20a07e6784015b32: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8e819f99bcafb12e850f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3aa94a074958b42a220b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-68b0720c531d82926bc1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7bf3c367ace24c590369: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3d3c02108ccfc747b86e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-31c124c47fa615949b1e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8d084bfa8d21c90889dd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2b1006b24baea549d05c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-135f4ae2c9cb536ec9ea: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-be0d80b1421e6f87b2ca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-27440112e682ceb37238: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-705e21b9b742822d6c24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-343c4c42dd68f4b4a436: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33704055b51cd93953db: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ec60c173eadfeb87de1b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-24b1be53e47936f6852b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ab042a7764facade1415: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5250205e66e873f82d6d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-42760db925d4ba8b40c7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-df5b061c87c40914ebcc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7f5aa7a1e005f3cde15: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-456f82c088310acdcb9f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dd4c929916e86bc82afb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-98685e620fc71ed24e32: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b6042c430475f8977642: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7421ac608d763aff68e5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-447bee64ff6e2cc88d15: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e59f91f7709b8245af1c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f4c7bdd3812e46b5de9a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7034134f44bdff6078b1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-327beae452605f46e4f5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0fc8637d619610cfa7ff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0c43c0cd504790f30b06: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-03533638d1c0079b830a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dbef8cdf6dc2b8cc4159: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4c100f983f35100544bd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f75a2a7e3cf906c4a0a1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-09329cd970d4bbeb3bc0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d598a2c558bf7a62696f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-318e9032940f43d9beca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-15939448b685bd2990c9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ff801b71a959bcd2686a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33985e48491d8d5f3a0b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-00bfab44c128dd60ba0d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-db72d3d5c102fdde2178: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9e67f91f59ec3381d01e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5f8cda4a31a76f63e7c7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-199b00f712a54e48641a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1067b1e738cbe5bda0b6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-72d97c6416bf88bbc866: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7208aa8f8d28229ff9f7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33d1965560e68fc528f2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7ec7eba575d49c6be8c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-781ad19f16072e0081e6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4ddaf42da372bf2f4854: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-48092995874882cbe66c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-19bae3e5f0c883713bd4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d3e0000327c97bc5c6a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0ef0a291c4c355204808: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ed6157a4074baac59b9e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c363f3bef6c734a38b7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9c79ed84185c99823c63: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8e672a540fb65b2e5ed8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e6d58a143fdfda5852d3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51fcc84aed7a757020a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-81e7d281ff3b81bfe608: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dfa04669bddaac1a8a1b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3ccf25a41181a8003e2c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3727dfa804dbe3c81efa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-432255f221f85b9817ac: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e2217b1a998441abf2e5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c33eea347b806e6f39d0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9439cd15dba2be725ed5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3a24bff6a956cd1e63e8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f3acb10c2d3c218ed414: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-37c8651f9f65b2576738: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d71b81c18a60cbc0ad14: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9a260629a7f753179bab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-331e814eac0088259325: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b2249f7adba9aad67b8e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-39d24ea8dff834d8fefd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d5d1c09fb9a04cbd46e9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d6be3181314dbbf3a63d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c1b7739f7f8394e14bb2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a4b58aa72106f2970686: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-794e29d53308240f1a27: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bb1f9ae190dcc5ee50de: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-daac202b4ce130779795: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d5f20e6b7b229105934e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a8a0b1e67e1d479094c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-78b866fb4d225c516bcc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e917c8dc97c37de6c900: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-eea4b469b6502a541b78: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-079d93edf941c386522b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8be835bb1adcfbd176ad: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ce9f580de22acad0f285: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-24586bd57fb6731a242e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3ae11bc21403edfe33ad: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7e83d68357a4dcac0afb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e356cb80fc7c15e1555a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cd27ee948ce1972a1389: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a75c1ef03727de776bf3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-71ce5f82a40621a92fbd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-591f416bcab8c8c3d60b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4aae21e3fa9f0328ab5a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-db60559f5ebcb83fce6e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-183e0a9075870260ac0f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dc7381185328818a417e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-19a812cf2a6a1d69e177: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2e1bdb43fd5c39dcf1f8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-015968c2c5788412bd24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-82ff0bd447f0cf8a1acc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7fb918e7515b9937190: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6645c4c2e5eecfe5e2c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f6245b07b68d04e894e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b63fbd53883a132cc5cc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-473ad7f49d18413f5a67: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d749cbb62e53268071b4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7f14e17ed1cd2a1be160: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17cc1ba32a806832563c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75dc20b7d36238e6c584: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ea96996dc5a13c3ca169: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f976a543932b6d28af94: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-47599143441b81e4fb5e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aed9362a88dca16679ab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-052dfa6ebbf2151e0745: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c8ac75b8c76d72c2049d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d8915c7bbeb4b7572cfe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3aa4f0eceb3212bddbb1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-04686d96bf22ff8d32f3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-59011e6a7158b8516f67: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fed831cd991cf3746965: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ec9e75c44c40ee396316: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b1cd27150c5b036cbb81: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-642d0cbc486f9b6b3768: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-53bf382cbe1f4e568954: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1fd8335ae4838b409ae8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-88a83e18015f8808fbd9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-05d052f26665323f0c49: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c0d59b34a86b5ecac581: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4344c3d6713611ae472e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-602088321bc66f17277d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dbd70365456b241a848f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c893a5125daac94e54ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c00a9ef6134ffffe9fa4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-80c1971a7c2522138dc0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-681a5626b81efc83fac5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0448e22c0f355ba95b22: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f474f56e22a14213714: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b8d78e5b7c1af10e97e2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-43ff78d0c9b84bd7e3b8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-760c23a6860dc3833ada: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e1367b78235c51d9651c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-591c1a72c1942ead5465: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9780c18f21171c33861e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-46fd76572215359cc2e2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d921ff869c7d1c34aef8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a516ad717536f4fc6534: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-99a5b9b3a89f39701ade: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1041af276f3f0cf1ecb2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c66dacb44fca4c60e3d3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5596cd3fb0962c35d57c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a246d190acd8419a383a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8f47e66c6d8c6c51d46a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a7ae3e884b50d57dd73a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c2e3d668ccbad6a8b644: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-406ab3902c6507223558: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-25b33e3b1f5e3cf7fa8c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a37c62f87dde9e16aff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cf6ce24474d486ae110d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2a85a28ea900e9904771: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6686c754a49bbf394f0f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cc24d76c660fb3aae8cf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-85b876da826509e3b278: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b6749769a4c45dad058f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-49f6a106c18465be3d10: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-947005c62c773f0b8714: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-28b6bcc712dbeee7f875: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-84556890ab110d409f4c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-785f37f96e95e5fac52b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0cbfe42180674ea92ae3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8a7af30c43311a1714e7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a87ffeace8846dfdbd7f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8bc95b95a20fdc2883b0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cd36143fe1e7daa90700: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-732fb025b53047e0fe4b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fb0868cd5d27ea3e3353: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d32782e5914cc853498f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-86b9b6fbea8a1180dc93: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-54c2efdb5a054f192d54: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-18489873231cffa33704: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d003a5c0aa2060c08ea7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d2c83cc901fa4fe1fe9c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5e836a0c09ed3fd08168: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c34df37210e6f8c5bbd2: HTTP Error 404: Not Found
+- product / candidate-1b5fce19ccf42caa2943: HTTP Error 404: Not Found
+- product / candidate-4bbfe9e7943c871243af: HTTP Error 404: Not Found
+- product / candidate-a398cc9f5380e51ec1e0: HTTP Error 404: Not Found
+- product / candidate-87d6820194eaa95008c4: HTTP Error 404: Not Found
+- product / candidate-7ff8b6f56f89bc4e8603: HTTP Error 404: Not Found
+- product / candidate-741a8a3b65d27d3da069: HTTP Error 404: Not Found
+- product / candidate-084b3a93e5abcf3b2ae4: HTTP Error 404: Not Found
+- product / candidate-e2de7b45fb5dccd514ac: HTTP Error 404: Not Found
+- product / candidate-d72b9f4065038f2fdca2: HTTP Error 404: Not Found
+- product / candidate-15f302367bb08d14911a: HTTP Error 404: Not Found
+- product / candidate-5056344667c245870d63: HTTP Error 404: Not Found
+- product / candidate-d26070170d1d5c8d03e1: HTTP Error 404: Not Found
+- product / candidate-fe89604a95a4fc4e92cd: HTTP Error 404: Not Found
+- product / candidate-544a7fdf15505f687a07: HTTP Error 404: Not Found
+- product / candidate-15259e473af29f32e278: HTTP Error 404: Not Found
+- product / candidate-488a848553258e4891e7: HTTP Error 404: Not Found
+- product / candidate-ae6c8760b958de526b14: HTTP Error 404: Not Found
+- product / candidate-511aeb050260ab1ac466: HTTP Error 404: Not Found
+- product / candidate-080d31841d6ccf783c4a: HTTP Error 404: Not Found
+- product / candidate-6680d6322ece533ad5c6: HTTP Error 404: Not Found
+- product / candidate-9f804b6f3a11381bb43f: HTTP Error 404: Not Found
+- product / candidate-00625c22bda62e9c4b69: HTTP Error 404: Not Found
+- product / candidate-89a621ff9754088ae754: HTTP Error 404: Not Found
+- product / candidate-19a5570c2b8b254a6e89: HTTP Error 404: Not Found
+- product / candidate-8081bbf096ee1345b6c8: HTTP Error 404: Not Found
+- product / candidate-035d7a5ea4bdd78a85ab: HTTP Error 404: Not Found
+- product / candidate-33c566c17188cb56ec3b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3e1e6d04fcd7e4e61440: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-743f012bf2df565b47bd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-555cd95532a52a45bb5b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9cbadff2259db0ccffdf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-969fa786609e1e3f9713: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7c24b5aec6d805c93b29: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-43354fe8c3f841218d73: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-881b54bb66431c2709bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a64f13187e94724ad56b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c185fb1c9e2af629c5c7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-24ad0f4d1e83f0a7634d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-735ebc3de69f6f297e47: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-39d881d2827c2943dee0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0e37f813bddcc2d96fa6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0ca9930b0bbb9d6cbe27: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-deda2604bc00250dace3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-16b66aa44da4b7ec436c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8b5fbab4130c3b922356: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-94efe3564afd81cce651: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-139a6d26afaf33468717: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-47b9408991301c8b916d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fb0f0d3fb6c794f96abe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e893d5254d9080c29dde: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5ba402b677020d4aa5d3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2ff81cfb4f7ea4288108: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-919cc3f915b37f4e2eda: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-412540b3ebf29101b57e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c0ba6b2632261e6b7226: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-105ee3b6f23064327d21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-84768844edd9e1f3ec05: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-403944b7421bda2651eb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2330123bd738aad96735: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-37254e720e688fcdf78f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a9d536f45ccff702b08: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-99bbade0391c5ab63cbd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d68951e852f9fcaf0a6d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17246fc51b6febe11a5c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a0f0f4282d186cca2285: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-965ae9cb90c0bdd08475: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d0a96813e7f62573e764: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c524b27bb7a6a88e345: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-74767511ca4a0e5ed166: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8184734cdabec77d18c4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d22c211dcfec4ba79784: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cae3816a967c304a2e50: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5a2b2c5d97ee938c4dfa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-059c42eea0fa6140714b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-68c35861744b0372e55b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2bae52d28e3bf058e14d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-34276614254e9cda45ba: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4e1976b4add32082fd20: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9e045991075dfd4bbf04: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f3d12ba6b0964cd9fd31: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33b15c27d4798e44e4ff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-181f2ef3fb36c696a3ac: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5c255d2f04fdb359d2e7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33e86a7cc05795db73ba: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3e54ad031a3d988f35f9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-abb1abdeb9e7ffa22857: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e752cebeeba701396d21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b250bf833adf29e8532f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9fe407328ce857326166: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2e9f0ea137c821a8ffff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aecc09df26c49a966c4c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-944032611e6e6c875587: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0f83e34ac9b3f75837e6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-216260212a9071ec886f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9987035eb6fe6e7368e5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7fe052b1ee9d8a63710: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75a7b6c3403b48f518a1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-de7d4cbe28aebb9d2871: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f041bcc6815cd3b1c368: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-239d7d6f209db9b4ea50: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b551db4a42033e59ff84: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17e335f7ddaed5cfe804: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-45d28f987fb224d01bf2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-56096874995ea3753e19: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-66722e964523c62ccb5c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d9faf010a2c0b360b20d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-50c3ead153b80ea0a705: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-08c94c7ee702cd8bc6d7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0475b677fc242891defb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-572afaeec391b64c4199: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d955d22dd8464d523f9f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9dfd6aea98255e7d2ea5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c802347c2db5e65f114d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-38dfafa0ece236df0218: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-da12d030ebe6ec7b95c6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0bd5c2efe347bedf82fc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3dcce266d04714330033: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51e5b497e29c97658db6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f0ba15ccfbaf9158013f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17ac1455d1c0680e137f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0b2b9c1aae464d277143: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1a128ad60394d783247f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-06c5107890ac7932f818: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d8475614e4df629080c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9c64ad157146e425afb0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c170c982817ff1e8e06f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ebfb71cc7a518655305c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d462d0117930fb0ac0e2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7ae4f6992fc6a60316e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e81380e20a597d07fcce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5bf60b0ad95c6c6d309a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-421750048d2ee9c5de62: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fd608bdbbee36c3ec54c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fcc82292725dc0298e29: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-671aec9821d43577b6cf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e45a49ebd07c1c5dddfc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a7d96d70b89815e62d4b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-edf36b7fd196baa8f7eb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4d0dd03fa896f806da91: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9e710e5febdd735b9118: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6250904ca33274a723fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f05cc972414fe3582951: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a32e6cb31e593a7f4587: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7ec26a01ba65f9113736: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d2bf8bae43976d68dfd8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-83727ac840e6e635f842: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b852a27a61ac9ea6d1e3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dc569717b2fbc9d6cb8a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2cbc70faeba2fc37d8d6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cfb6f9cca20b822574a1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dc8a883cce5534e9c56a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6cf4021f3c2d54f0ea6e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-eaf4771347f555df2b30: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-414cb2070dfec10ef7cb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-86b959809492a1817721: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ff1064d30b7b885360a8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-212c26d84ab21688fda4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-92ac551c60514a84ec74: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33652aaa31396cbb6280: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cd53923ae96ec180ebb0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4b5b922d56835ea0b677: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-604adc9bb840199e7c9a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5a59cf9fd32b88084a18: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7221385bba6aa966ed21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-59828155887c044ccdc2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bd91f17e4e0a69396d26: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-35c667dfd3c7e67508e5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-22cc248bf4b242574a4d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e32820ddcce16dfa36ab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f55fe0198246a34e05e8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-732835edc39c009f9e2a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0e1821a00aafa3ea8ef1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-531097bcd56b5240441e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-33dc5fa607c39be4a3eb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2490c53b2ba5cb25dd96: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-493b3ba550c81de7685f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-15e21476c66d892ae4b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d3006ac798d70bb2750b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c065147ad05614782d60: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1247f93103fc96296590: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a8faf091b2b62fb9eec: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f7d26a6c964c1fb5276b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d386a2fe4efd4c735aab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e9d674e7a468456c509d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e4f5e4a27888a5e204ec: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-154ffe9864e7cf8f80e3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a402dca9dff462cb38e6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f48e951eade6e1e3f76d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-133116b3762528b682f9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-77eb647c2478b8bdbfda: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0d1822df95b7cf055239: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-71636749047deca937c3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2f457277bb26658b847b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d60f4f791e7f281c85f8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9ab39494831ceecca9ae: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75bdd0b97ceb2566911a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-104c6585bc83a029dc69: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cedb423e7cb1fc1f8909: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7c29ca8f6d1f887640cd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0dba52887a92abec0dd5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e4c670b65dfcb732eab2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-31eda12ae812c0e22224: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e447ae54ed93e2721306: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c017998098928b664da: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f02dff03f5136a7ae00b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-596bb9d126146d23852b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-773add6757c4fd69cf8f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2246ef49ef4e96c7775b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ef73c8f0a6769b957ce5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-99108ca0a49caa8332cc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c1f3d31ff8f05c46cfce: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-974c69e3116444edf31e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d0a8ed40a0ab0cf6ae5a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1b34084a43f4f41ccebe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a6b581f47fd648b01e62: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cefca7071188d77ada68: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fef63dfb0e15af3f5c7b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c0b0d0db3b282e1df9d5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3f55f7ed060f8d735d6b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-98acd75b05d640f035b8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b37393f39dcc87946da2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-126b86d351cb22b53093: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3ee9ef86cafaa14f34c0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4f673bcc219b0404d5ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1a3e15bcd2b4c5b12078: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bb2e7ccb3d96691c0675: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1773cfdefa2759b7e444: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-589c02dd352658428db3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51aed3ab30ca729c6e06: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d5587bb09b781d90cb4d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e848d4ef281d6cbd69b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b91bd7510ea1ceb19c01: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8b7b952a9dd0cb282530: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f514909b8329b4f2417b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cb99d073d23cb1285d31: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-38289c00ce22fbab571f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c51068a4840a1f13f282: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1c9060736891b6a3df77: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-602bfffd3472a9cffc22: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4972c337da826609e5c6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bf672a85e413d7a03aa7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3be9f12d641aa8954dd4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9c8d22cea198d390eeb1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3837fbe32c7573aec26c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d91d66c57e9782db1a0e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a6aafcb223b66c1e8d1a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-be1b5af8271fa3b627fa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f74c0c1ce3f783469f06: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-37ab68f0f9f4018a0f8b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3516c534aa146efd5049: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b89c7cda074162565a60: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8d18e52f46941e18bf1f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51281dbbf03e61c931d7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-46ac278d49681a02743b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0171ce71f912572daf3c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2795107c2e9fba9d617e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f79e93637474149dbfe4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-594c5f85358ccda2d156: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4d1aa42496afed673a23: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c8c06cc3ced7c062b28: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5367c7a41392d049fd72: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-874f5ab0bd6bb8b8d1c6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1cbd445fb3784b04e2d8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-52e48168c5be5b9acfab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0317d7893652e2609600: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e7be69a83cf6f3f5224e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ab1c03398923116b87a0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1e0a05d99c217a754596: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1d8def0a9b5e73048c2b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0ecc914735b9c59a479d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c35f11136f74bd5656f7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dff0c7008dbe405ac96b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dc3c13be2b28cb28497d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-502b58bd041980285d8d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-56a572a94af9b54e8360: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2585d8e7249e41e41831: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4fddc2403b38cd667be8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ca86bdbc54ee42ecefcc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-023bacd76e35e156d584: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1bc805456dfe1f1c7e49: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-da16e37610963b6aa41c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a234be2705b34aa10dcc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8a6e901aa3740d528884: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8d0ae1c85a5632887f84: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-835943b06b56304dee12: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7ec4ed6747849420cfcf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4baeb2da77094875f57a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d455579d6bbae47a7ed4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-852961bedb4e20bac2a2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d683386473e62060d0c3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3dae8f76dec61247b9b8: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-46db38f8f791f6734a5f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fcf7418a595b8f9850e7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-753aed2e9fb5a3945355: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c08a6a83b63c6497f906: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-25fa6fff1f96af87265f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bfe07fcf0ead7247c82b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f0000ddae89b7bf587ef: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-93c1db0d3b07c1f7afbd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cfab54f12bb682a0c88a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75a887eae3c7c56231c7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4728a456f1824ba3910f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-395081911231f99cf2c4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-530283c94714140e9934: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e6bc02a6d9bfcf5f10df: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7cfa095b0e9d969c19d0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3de4985eff7b5a9e8d92: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4a565706e77559beb495: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-601c33b8fdd7b693ecb2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d29f7bf5152f025f6db1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7f48a80493cf6cd3eb76: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c935fddffcd2621d3634: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e0f1c7f4bf283ca18826: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c39e3200461ea6f9437: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cb509e54def45531f87b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bfbc1adea4278cd07ee3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e6ede6c067034c1d058e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-80bb5022df8134a07a6d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ec2f6b8d7b43efc118ab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9bc6dd4e8795707405aa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d6d0df51528dcefac8cc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-93daf7fad4db6723749f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-346a09b52390ec6e2b76: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2bf8cbfd6db7f65593c4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-75562b1a71d046055d5c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4b609829fa5081ccd027: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e52f069da789aae3824d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-58f29822efa975ae2ac2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8d7f2fe95a4c94ce8c5e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-41d4adbf5950ad64eed3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3deb0b469aea7eaafd9b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-448356cd05930a310d32: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-36bea25f1746e7fc573e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5af6ea8623a07d4ab33e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-18808cb80557de48d1d4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fbf12b7dfd552ac9b932: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9efeb083d7fbe2b71f50: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9eb589967f2909568cee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9e2eea4ad6613582161d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1f20ce63c01d42887152: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a00bdaff7f560c808c26: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-85be1bcc3dda16e2d1a3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-16facfe4e8330deaa4f5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-732bc57d6915183298ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b2f706c94a636ca5ca0f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5fc987c0388dd691c79e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d1948f96cac89314df11: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5cf6ad1983b795a031af: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1e622cf9176a6b5593c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-505a63fcc3ba8b1dca13: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-34eee5628ada60df1efd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-76d824ca69eb5cee0d98: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-58a9215641dfeb73dfea: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2586de31ee858c13e850: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-350b8f96a37d54b1c371: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b3174479d489e8042717: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-08d932161cb2556b0215: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4e8a959900e1ecd1bb63: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ef578232c00d98a936f4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3426e4373a6df43c66bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ed56ce14216665b79dbb: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-224b166fb5135e07d230: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-393ea11db4529866f47c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-51c87b26ae90ff5e213e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ecccc8566a58eb871101: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d11ced117689ef7d5332: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fa6bce7b25a6274f6e47: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1c8b7ac1a1ab1fd19e1c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-13136de231ebc593ca4e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b6f7fe51c2aeed61fa95: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2a02036bedb491ddc758: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-88b50a684750fc35be72: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f593cdcf7c111906dbc4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fe2a16e9877f5ea878ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c55084c717263713c727: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a3f30d9c6fa5d99e6599: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3b123975f16f5698f608: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-54eed3110d2732440132: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f066d9c097a60c26bc08: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c75244ee347c22a7d907: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3bf806752a093ed776af: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-90ae80dd1871a706df37: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aa47ac470d091773faed: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f60a3b35075717634917: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ace13ba181fa36de775e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d193996492f636cfc035: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8a68edad379c8461aab0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b3b9956d72e9bd2bb1ca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f7af00222951f9f06fc4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ba9365e8d92885f469ff: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4195fd726c98a92e2319: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-96d0eb8917118aecb206: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9b5713fbaf670eac219f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e575fb3367a45d7a85f2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-017d36b40e3111b8b704: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1f9e8669deb2190a52fe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fb6493927d841fbf0282: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c55eefe8b2f3a227c50d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-11bfed78fd575741c4bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-be17c1a6e65f5fe291e5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fd356f67f2d32f56cab6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-37341c3d99a279f5516f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-07a49e200792c016abab: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2c09f8d5fd7bd6bd35aa: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-efddbe85dae1c451faa5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4e00336523ab38e533ef: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2d19c9cd7cacf836cc5f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b7efceffe9ed0fd4e5d2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-580751f1eff407d7e154: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3d9aed30e2c6167edcb9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8a4def609d2127ae85af: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-56705f95984613fcfee2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7f751ce1fa7e3b47af51: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-23595b0013651e2efc36: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-85873267acea5e47f63e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1cd33c9a2bfb4598d919: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7795afc9733044ab1b02: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9c48d7ae96c827739187: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a37854e4dd9e2a96f169: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2903aca816a585996ea0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-21a63e902a90bd9b5f94: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9aba482b40520fe8f305: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-89ff87654b6f68b9a3b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8d45fb437c8b140291b3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-761a0e45592dcd23a11a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7e2382b235d86099eb99: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7e66808cdddd9dda1433: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a843608fedb64de47872: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ef7e26b2ca2b342af7d6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-16eba8354dc5c04cc725: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5194e9f4a7284e28b5b2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f89e6f2f0610ed4754e1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3f2c953fec3fb0af0637: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6b9cce78ae39435a66e3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-07a653662f750390e137: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a2719f968148267e795a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ce68aaafb8b709ae4015: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-58be38e640fa424bef21: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1af74c8f54ebe4a0a7bc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-92d14a43120828c8f85d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2d3b1fc3d06ab1d62a3c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-446d573921f24c079c24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-44b4b383c2a6958509af: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e9f1f399c662561b7654: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7fed5c576979d9da4779: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-da3e6986fd5b95d37cc4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-63618ea3f2a5651726de: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-19d716905db8987c42fd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-76afdb589c922d8d6777: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4be4fbeeba29b8c19be2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-48d20410185c7521fe84: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-892a862688f13c5499f2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2633ebdaf97fca3c28c1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9e988b66610cd033599e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a3906db69856575e1048: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a55a902927fabd059c8f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6507d9702d221dbcbc7e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-790149a27cdbc9596840: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-259e1ced7a933dcd483d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a1baec4e24f59bcbca9f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9d3b171bce7e46651226: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b94b5ce157c972d062d7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-92267f8a7a084879e382: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8c305ddb5962c5ffbb07: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-31da0fde8bc6c9d9b193: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9db3e8958220ffc2eadc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f085c56110011365b430: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-385661f6aa6df50d9fc3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b93a225998eab802a3e1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8abf4bb319547834cd61: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d30b6e3fcc074be929ae: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-83926b6c9ddbcb65a44d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-213ab7ab43fd57b476c2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-5f6c2a937d11513e33b4: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-40f172ddd7b7446c05a0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aa1872fa9e5c1005edc0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a64b2cc2685aff603e2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2a9dbbbf3e379939b4ee: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-571e3c28eb1fa80e2492: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e5c1842111c4c49d06a1: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-58628485f2a58f97a6fe: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-81596a6acfda522139a9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-17997f15e8c50eb93b3e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-29ca35bcc91645d6faca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8de9001265a80d50a550: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d0dc97438da90610edca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3231496c650c24ca9d87: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2219c446a2b7eeb9d4a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-32ad8268ff8099ba991b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-09e3862670822dc3c435: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6402f31417f4ac400649: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-55bb361e9e27d7c80fc0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8b1cdcaaf10dc51508bf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ebb7f25ced36a851e90f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-af1d50a8a6bfffac1342: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6331a8c0c8944d3fb72f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9bee2fdd067e2b1c9e56: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6fab54c800cc6268208d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d38a3d24fcf24e13668e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ebb5f3d30b6fd2609ffd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-931fdaea2a0de6339641: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3b186700526ee9429d5b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b20cd3aa4265a662757a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fe6102c38e9b311fed66: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-98814d140ee474aaf3fc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-1a5c3d120830cb782c91: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-98cda8aede9daf74625a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-e2baa59f7457416669b9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-88e00df7bc9613fcc823: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c08cc630ad7ea5fcbb34: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bdbbc2a0cf6f3c116a79: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-b2b6da4114dfdad5b71a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c2ec1ef1a9100ae057a7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d9e2f02c64bc94ae3ca0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bbda233c66e8773a2684: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-cd1d08f1ba7c943b7cf2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3e453ca796f643cdffa6: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-97fdaf2f85b0bc1a0af9: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d1d59e911d62e618dfcd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-55d516eb85dc8182f5b5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8fce2de774b777450b95: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6d500d8887f06d4a718b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3a2300c9cd740baeae38: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ae76605072cf8348f0bc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d0a8b6e30707a1650dba: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4df59f53c3d21be82765: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-8ea81eca3611da957fdf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-73dc14d2475c09598c0c: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2d620b84732e79c64762: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d135b22824c4af5249fd: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-08fee828dc64e6735417: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-100c6aa67f0da67ba162: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fa1feb868dc3cdb711f0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-3369e8380bb1dfacd219: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-243a32de65849705714f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4a5ffe1946d21b6858db: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-473398c9ae279c25538f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ad0d842791b4eae19866: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-35b64972678857c19cf3: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c9a4c6f46e742d9e816b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fd42378e0816ab5a438f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7011e66ed590f5a525b2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-15a362d59e43afbb9adf: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2fec225c8843dfb21f4e: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-31d4dadc8b08565f8b24: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-919d5108d56ef2f29ded: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-734f39dcd15a5d25ed5d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c762a611ca5e3011c557: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-477372c4d36d0f5ff0ca: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-03f8f9798581af53bebc: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9d9d8890ec6af69a5400: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-6a50f0ea2f0d97f1578d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-427d2488e728132e105f: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-fe6b767e931cc15d9481: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-656d172fc4ca5421da91: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-513b2c9fdea7a326e065: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-77c270bfab812b0487f2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-aab16ea9aaf44dfab7b2: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-ee82ef84e776b9b10b27: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7aca0c4ce7635c16be4d: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-36bfd0441870e03d49de: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-a511394356098fbf8df0: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-f0b1fed5e520aa661ba7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-958e995fd76bab5a6d67: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0c05bb75c3b22d6cd505: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-dcfa5c5e1462c930023b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7b72fc9a6bb5b3ba9e9b: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-935230e93694d69b0ad5: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-9f5d7d070f6ac1deeb10: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-bff2e47d3960987a8c41: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-0b181c24f4e1ed0403b7: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-4813de42c20355e3a32a: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-c8f6f4a4995075d4e239: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-7fe4f049b41985130984: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-d5dec3d37a71ef1b1349: Exact Shopify variant ID required; refusing a default variant price
 - product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ee3fe9cc8d9d29e142f0: Cannot confirm one product on the discovered URL
-- new-product / candidate-672d27d4b4f9c3655a7b: Cannot confirm one product on the discovered URL
-- new-product / candidate-a39e9afeeb6747d1bced: Cannot confirm one product on the discovered URL
-- new-product / candidate-e3437bc0dbd6e028776b: Cannot confirm one product on the discovered URL
-- new-product / candidate-31a9acb62ea46f5adb0f: Cannot confirm one product on the discovered URL
-- new-product / candidate-f2dda36e72f2482a17b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-f3e7f0d63e275afe76f1: Cannot confirm one product on the discovered URL
-- new-product / candidate-83d7d166f961213bed56: Cannot confirm one product on the discovered URL
-- new-product / candidate-df0171f4d7ba316b6d61: Cannot confirm one product on the discovered URL
-- new-product / candidate-a24c473802dffe1f45e0: Cannot confirm one product on the discovered URL
-- new-product / candidate-5cd497c859b48cf0cb57: Cannot confirm one product on the discovered URL
-- new-product / candidate-da738bfef2d8712cdd12: Cannot confirm one product on the discovered URL
-- new-product / candidate-9d28c8af9a2be64d3119: Cannot confirm one product on the discovered URL
-- new-product / candidate-5d8b875d36bca46ea2db: Cannot confirm one product on the discovered URL
-- new-product / candidate-c6375edd841c50e4f49a: Cannot confirm one product on the discovered URL
-- new-product / candidate-9eb316356a5ac0ce4581: Cannot confirm one product on the discovered URL
-- new-product / candidate-925dfa20232a3c5b7b68: Cannot confirm one product on the discovered URL
-- new-product / candidate-785cfb4d33d675b00fea: Cannot confirm one product on the discovered URL
-- new-product / candidate-27311188b06db6982e22: Cannot confirm one product on the discovered URL
-- new-product / candidate-92050a2e31087b8ee756: Cannot confirm one product on the discovered URL
-- new-product / candidate-762fa4dc7ab8f5a37cf9: Cannot confirm one product on the discovered URL
-- new-product / candidate-1a17f63852f1a24c61bc: Cannot confirm one product on the discovered URL
-- new-product / candidate-65ad67920580a0fc35e1: Cannot confirm one product on the discovered URL
-- new-product / candidate-2eca390886a78abc021f: Cannot confirm one product on the discovered URL
-- new-product / candidate-3a773bb73ce9ad8ee988: Cannot confirm one product on the discovered URL
-- new-product / candidate-f0858a758ef7bd47469c: Cannot confirm one product on the discovered URL
-- new-product / candidate-0acfdd67a74a8c59b793: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7c07c14e51ab6f73eda: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e8a30c999b9d1bfd17a: Cannot confirm one product on the discovered URL
-- new-product / candidate-c2bae8a17fc41f41133b: Cannot confirm one product on the discovered URL
-- new-product / candidate-16ca2cf91289a4e865af: Cannot confirm one product on the discovered URL
-- new-product / candidate-95cb853b5e05ccce35c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-b60b102f8d71568305df: Cannot confirm one product on the discovered URL
-- new-product / candidate-6a0d374890bd56b00394: Cannot confirm one product on the discovered URL
-- new-product / candidate-9e202fd518407eaeb8fa: Cannot confirm one product on the discovered URL
-- new-product / candidate-461ce801a28a175d36ee: Cannot confirm one product on the discovered URL
-- new-product / candidate-217f183f1a14a5254616: Cannot confirm one product on the discovered URL
-- new-product / candidate-cf76be93ccaea2712bce: Cannot confirm one product on the discovered URL
-- new-product / candidate-149d3c270b445012c65f: Cannot confirm one product on the discovered URL
-- new-product / candidate-72785b882bf999fa66cb: Cannot confirm one product on the discovered URL
-- new-product / candidate-a24f1442afb9fac3a856: Cannot confirm one product on the discovered URL
-- new-product / candidate-a6734ffdd5010228c008: Cannot confirm one product on the discovered URL
-- new-product / candidate-b2acd7441d2bf1e7f01f: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff313a50723c728b9763: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d52568f3f8bd6270f80: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e509e2d97e291e62772: Cannot confirm one product on the discovered URL
-- new-product / candidate-ed361df30a91317dba0d: Cannot confirm one product on the discovered URL
-- new-product / candidate-d61ead2bad598ea7bb95: Cannot confirm one product on the discovered URL
-- new-product / candidate-4c2850e223ed82212dde: Cannot confirm one product on the discovered URL
-- new-product / candidate-7c25bd8c4ee14f5a7103: Cannot confirm one product on the discovered URL
-- new-product / candidate-bb3603ffc028af17be45: Cannot confirm one product on the discovered URL
-- new-product / candidate-07c7179392ee860a7e2c: Cannot confirm one product on the discovered URL
-- new-product / candidate-086d4d114e33e7f81c4c: Cannot confirm one product on the discovered URL
-- new-product / candidate-295efb5b11b09c58c634: Cannot confirm one product on the discovered URL
-- new-product / candidate-591840aaf6a949e83359: Cannot confirm one product on the discovered URL
-- new-product / candidate-8ae836105b2d455c4f14: Cannot confirm one product on the discovered URL
-- new-product / candidate-4fc2882840ca740b1654: Cannot confirm one product on the discovered URL
-- new-product / candidate-f9e4ef71f811cfb86d7b: Cannot confirm one product on the discovered URL
-- new-product / candidate-82a2f7f56662d924c0dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-5a3e3a11a304fcc63496: Cannot confirm one product on the discovered URL
-- new-product / candidate-ccea4245710602875b1d: Cannot confirm one product on the discovered URL
-- new-product / candidate-f29a45726bc92fb41a49: Cannot confirm one product on the discovered URL
-- new-product / candidate-da34b6f5db32df08fdf6: Cannot confirm one product on the discovered URL
-- new-product / candidate-c4748819b2023d30bcd6: Cannot confirm one product on the discovered URL
-- new-product / candidate-8a7058a1c9731d1ba9db: Cannot confirm one product on the discovered URL
-- new-product / candidate-5c5051b78392a1aab82f: Cannot confirm one product on the discovered URL
-- new-product / candidate-52afaf8831cb27d3fa66: Cannot confirm one product on the discovered URL
-- new-product / candidate-2cdea4149146988dbe15: Cannot confirm one product on the discovered URL
-- new-product / candidate-70212945614840965ab1: Cannot confirm one product on the discovered URL
-- new-product / candidate-bce3e1b78b17f3689d22: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f968c14e81d37bea4d8: Cannot confirm one product on the discovered URL
-- new-product / candidate-efd0611ba4d52bfb65a2: Cannot confirm one product on the discovered URL
-- new-product / candidate-48a07b0390e23dbbfd2a: Cannot confirm one product on the discovered URL
-- new-product / candidate-179cf96abad18f51d80a: Cannot confirm one product on the discovered URL
-- new-product / candidate-73c6ea934c36722e82e7: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fc919cbc9eecf6e1510: Cannot confirm one product on the discovered URL
-- new-product / candidate-c0c6192e0f30b03f25de: Cannot confirm one product on the discovered URL
-- new-product / candidate-34e94512eb0775555cf4: Cannot confirm one product on the discovered URL
-- new-product / candidate-e5725cc399b2372593ce: Cannot confirm one product on the discovered URL
-- new-product / candidate-52447f7bd2f69b449c72: Cannot confirm one product on the discovered URL
-- new-product / candidate-bf74e9cf46b01e28bd37: Cannot confirm one product on the discovered URL
-- new-product / candidate-4c00444ccad452edc163: Cannot confirm one product on the discovered URL
-- new-product / candidate-bf0b1c699b98f32c1781: Cannot confirm one product on the discovered URL
-- new-product / candidate-bdd02d14b7eaf1ead088: Cannot confirm one product on the discovered URL
-- new-product / candidate-f46e92ba3e7d55039dd9: Cannot confirm one product on the discovered URL
-- new-product / candidate-e841f7b9f51475e47077: Cannot confirm one product on the discovered URL
-- new-product / candidate-bfc75225e829d9866665: Cannot confirm one product on the discovered URL
-- new-product / candidate-4ae1d42009ef3e9f6036: Cannot confirm one product on the discovered URL
-- new-product / candidate-6def3569c6aa136af796: Cannot confirm one product on the discovered URL
-- new-product / candidate-cdc64a2765469fad7fc3: Cannot confirm one product on the discovered URL
-- new-product / candidate-4cf2dc6100e02a17256a: Cannot confirm one product on the discovered URL
-- new-product / candidate-0849a272b4051710857d: Cannot confirm one product on the discovered URL
-- new-product / candidate-304118710b5808d53db8: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f5298a2544c646c1df3: Cannot confirm one product on the discovered URL
-- new-product / candidate-8051641264b9cb4f42f2: Cannot confirm one product on the discovered URL
-- new-product / candidate-6972d913cd3b2829f465: Cannot confirm one product on the discovered URL
-- new-product / candidate-b7e9bda61ca51206eacc: Cannot confirm one product on the discovered URL
-- new-product / candidate-f48cb3aaaafaf9cfb115: Cannot confirm one product on the discovered URL
-- new-product / candidate-fec66ff719a183cfeb26: Cannot confirm one product on the discovered URL
-- new-product / candidate-f20668881e05e0837c10: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9fa76de105f7d6aebc4: Cannot confirm one product on the discovered URL
-- new-product / candidate-0bcc9263aa00dee0db58: Cannot confirm one product on the discovered URL
-- new-product / candidate-0aa92f391fc0f3837e6e: Cannot confirm one product on the discovered URL
-- new-product / candidate-847092292aa933808cfb: Cannot confirm one product on the discovered URL
-- new-product / candidate-ed8e325f486a40aaa2af: Cannot confirm one product on the discovered URL
-- new-product / candidate-27dd5a64ee8fabf7281a: Cannot confirm one product on the discovered URL
-- new-product / candidate-df2aee2a03bf768fb43a: Cannot confirm one product on the discovered URL
-- new-product / candidate-97b93cd63229d3c6f068: Cannot confirm one product on the discovered URL
-- new-product / candidate-491604bc352fb024b19d: Cannot confirm one product on the discovered URL
-- new-product / candidate-20236c701883efda4fa1: Cannot confirm one product on the discovered URL
-- new-product / candidate-6d854db8b7e21d0ca47b: Cannot confirm one product on the discovered URL
-- new-product / candidate-7156aea95a3a897ea086: Cannot confirm one product on the discovered URL
-- new-product / candidate-d9d414ea3ebf295a725b: Cannot confirm one product on the discovered URL
-- new-product / candidate-d77d4c89a38d1d9bf819: Cannot confirm one product on the discovered URL
-- new-product / candidate-ce48064a8479be945f80: Cannot confirm one product on the discovered URL
-- new-product / candidate-4a632f81a5a31bbcc101: Cannot confirm one product on the discovered URL
-- new-product / candidate-5cbd7fb1f2cdd3b1dab9: Cannot confirm one product on the discovered URL
-- new-product / candidate-1515d5cc218b80a3369a: Cannot confirm one product on the discovered URL
-- new-product / candidate-72ca37be4f92d3b2e6fe: Cannot confirm one product on the discovered URL
-- new-product / candidate-0afe7e73afdc18ae9a9d: Cannot confirm one product on the discovered URL
-- new-product / candidate-52b260170b5d66ee88b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-39f4b1b2cbe88d0ec8aa: Cannot confirm one product on the discovered URL
-- new-product / candidate-908c1b988fbc9458f138: Cannot confirm one product on the discovered URL
-- new-product / candidate-5fa3b7ebe056bcb46a1c: Cannot confirm one product on the discovered URL
-- new-product / candidate-857ba69d4febd48a9946: Cannot confirm one product on the discovered URL
-- new-product / candidate-0908a489e0dc38092edd: Cannot confirm one product on the discovered URL
-- new-product / candidate-c42adaa76d8a8fbe2e7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-4a034c9dc8e4cac41881: Cannot confirm one product on the discovered URL
-- new-product / candidate-1c1aa8e06e232add6398: Cannot confirm one product on the discovered URL
-- new-product / candidate-07cd0d140ff25b9228d5: Cannot confirm one product on the discovered URL
-- new-product / candidate-6edd6a6f28e706a511e1: Cannot confirm one product on the discovered URL
-- new-product / candidate-6f45f6d896d92a3f8c80: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d310e21005f1fad6730: Cannot confirm one product on the discovered URL
-- new-product / candidate-6881459c6d2922f0c71d: Cannot confirm one product on the discovered URL
-- new-product / candidate-59999a1c402120056a24: Cannot confirm one product on the discovered URL
-- new-product / candidate-51c74e24358e8b3e1d17: Cannot confirm one product on the discovered URL
-- new-product / candidate-853b8b4d6abf677b5f27: Cannot confirm one product on the discovered URL
-- new-product / candidate-db26168369421c535d84: Cannot confirm one product on the discovered URL
-- new-product / candidate-cb6e1e81dd6908acf05c: Cannot confirm one product on the discovered URL
-- new-product / candidate-fddb54255e2373551e97: Cannot confirm one product on the discovered URL
-- new-product / candidate-340a50eac16c0efb442b: Cannot confirm one product on the discovered URL
-- new-product / candidate-d78bcf3a553bed0380a9: Cannot confirm one product on the discovered URL
-- new-product / candidate-62f889306cc34c5d5380: Cannot confirm one product on the discovered URL
-- new-product / candidate-571b877dc965ce186a7e: Cannot confirm one product on the discovered URL
-- new-product / candidate-078fce3256675f0cf99c: Cannot confirm one product on the discovered URL
-- new-product / candidate-f3c66b48ac28d2a6f7e6: Cannot confirm one product on the discovered URL
-- new-product / candidate-a4e47734f7faf0114fcc: Cannot confirm one product on the discovered URL
-- new-product / candidate-dad2afb45bf91f92a3c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-214fd892be8584117dc8: Cannot confirm one product on the discovered URL
-- new-product / candidate-cdd69dbdcf0d315d2421: Cannot confirm one product on the discovered URL
-- new-product / candidate-5a88e225a0952594602f: Cannot confirm one product on the discovered URL
-- new-product / candidate-9a3926082ac048d0b1ed: Cannot confirm one product on the discovered URL
-- new-product / candidate-a2ce3ce0e979d7ee6afc: Cannot confirm one product on the discovered URL
-- new-product / candidate-49f9e5c3e801f7590346: Cannot confirm one product on the discovered URL
-- new-product / candidate-f547afc3a98ed1b49e14: Cannot confirm one product on the discovered URL
-- new-product / candidate-108106d67a3638ea9474: Cannot confirm one product on the discovered URL
-- new-product / candidate-0986eddbe88cd9175b60: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef0eaa2f3c9ac92e1d12: Cannot confirm one product on the discovered URL
-- new-product / candidate-e2583e7ac6d553fbc353: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc5bdff610c573b760d1: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff227a27110147b85bf9: Cannot confirm one product on the discovered URL
-- new-product / candidate-21893ff3d3070938ba0e: Cannot confirm one product on the discovered URL
-- new-product / candidate-9645f966d0c00059de91: Cannot confirm one product on the discovered URL
-- new-product / candidate-166862d8c7052b952268: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b5b4c3cde759368dabc: Cannot confirm one product on the discovered URL
-- new-product / candidate-55a40073341f772b91b0: Cannot confirm one product on the discovered URL
-- new-product / candidate-604528058d2d3cc42cc7: Cannot confirm one product on the discovered URL
-- new-product / candidate-a69a4460fbf42a7255de: Cannot confirm one product on the discovered URL
-- new-product / candidate-d7a65deb537e839a9a07: Cannot confirm one product on the discovered URL
-- new-product / candidate-172da2f6a2059a2364b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b4667d249800b63fa6f: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ac83d8870daab1f1ec8: Cannot confirm one product on the discovered URL
-- new-product / candidate-7882bf8af234fca5cd64: Cannot confirm one product on the discovered URL
-- new-product / candidate-d8e771709363808366fb: Cannot confirm one product on the discovered URL
-- new-product / candidate-8cb742b933b65f6968ee: Cannot confirm one product on the discovered URL
-- new-product / candidate-c96e3f3f670210fa5779: Cannot confirm one product on the discovered URL
-- new-product / candidate-2c53b61ea454bbc5706f: Cannot confirm one product on the discovered URL
-- new-product / candidate-0b3c69c707def3a9f63a: Cannot confirm one product on the discovered URL
-- new-product / candidate-2ed5c4b3cc56bf72eccb: Cannot confirm one product on the discovered URL
-- new-product / candidate-001663cb558cc175826f: Cannot confirm one product on the discovered URL
-- new-product / candidate-3c4cec2da5e6f1706bae: Cannot confirm one product on the discovered URL
-- new-product / candidate-328eaea940abce6ef27c: Cannot confirm one product on the discovered URL
-- new-product / candidate-e951409c57a83092f076: Cannot confirm one product on the discovered URL
-- new-product / candidate-3fce8d4358b7365be167: Cannot confirm one product on the discovered URL
-- new-product / candidate-b0adafe3c2ec003fb7ee: Cannot confirm one product on the discovered URL
-- new-product / candidate-e7452bd8315cd83cc944: Cannot confirm one product on the discovered URL
-- new-product / candidate-f96006c9fdbf45144c31: Cannot confirm one product on the discovered URL
-- new-product / candidate-a4d7dd3fe19fe691a34e: Cannot confirm one product on the discovered URL
-- new-product / candidate-beffab40a23c7ff10d31: Cannot confirm one product on the discovered URL
-- new-product / candidate-56eab75bf771eac21886: Cannot confirm one product on the discovered URL
-- new-product / candidate-e26cef268870162dc7d9: Cannot confirm one product on the discovered URL
-- new-product / candidate-8df632b993d35b3c6e74: Cannot confirm one product on the discovered URL
-- new-product / candidate-e0edbe3e1043aabbcc7d: Cannot confirm one product on the discovered URL
-- new-product / candidate-96a7dcf685788cb52459: Cannot confirm one product on the discovered URL
-- new-product / candidate-249c6a2f4dc47f67d5e9: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a2829e3f0be7b9ee457: Cannot confirm one product on the discovered URL
-- new-product / candidate-56015c329a9f4be7e8eb: Cannot confirm one product on the discovered URL
-- new-product / candidate-8136d2085eae6d131405: Cannot confirm one product on the discovered URL
-- new-product / candidate-86f839991ca71114f171: Cannot confirm one product on the discovered URL
-- new-product / candidate-59898616a6b3ceb249fa: Cannot confirm one product on the discovered URL
+- discovery / anycubic-uk: Storefront redirected outside the recorded retailer
+- new-product / candidate-f9aaac7b2427f73d19b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-180a2c1d8b603a9d3c92: Cannot confirm one product on the discovered URL
+- new-product / candidate-f07b91f3ce437bd777b3: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b5640fcac50a2cebcfd: Cannot confirm one product on the discovered URL
+- new-product / candidate-ecf4cf8b07c3ec8d2d98: Cannot confirm one product on the discovered URL
+- new-product / candidate-7bb34d8a17c1ec6d635c: Cannot confirm one product on the discovered URL
+- new-product / candidate-5af446e86a1e673545d3: Cannot confirm one product on the discovered URL
+- new-product / candidate-311362b0dcaf0e2ed933: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff2536e6be11ddc9d0ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-04a9ba2b4c5948e4d351: Cannot confirm one product on the discovered URL
+- new-product / candidate-a16ad247d079eba10a8d: Cannot confirm one product on the discovered URL
+- new-product / candidate-86f91480d14846222428: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc814a547ccc4b5d1c7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e46b0ce0718851586538: Cannot confirm one product on the discovered URL
+- new-product / candidate-214e101346ce8166d56d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f204245dea1b58ef4beb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7cbd2f2f3d5bb83f3976: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f6a3b7233beb30630c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-9ba5fc3f401505d53a73: Cannot confirm one product on the discovered URL
+- new-product / candidate-57b1547b9b84b1988ff4: Cannot confirm one product on the discovered URL
+- new-product / candidate-8fbd56e4720b76c96704: Cannot confirm one product on the discovered URL
+- new-product / candidate-fb56f0cd357a20653751: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff7ae8987b1ff5d951ae: Cannot confirm one product on the discovered URL
+- new-product / candidate-eca640b0157b8bd03bdf: Cannot confirm one product on the discovered URL
+- new-product / candidate-e4f30764183603e52b6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-f5c62fcaa9aaf65dac29: Cannot confirm one product on the discovered URL
+- new-product / candidate-129a5b703c501c620492: Cannot confirm one product on the discovered URL
+- new-product / candidate-bb7c1ecc818ecaeeec47: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef76043f71413a44f1b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-231de485f51d059d365b: Cannot confirm one product on the discovered URL
+- new-product / candidate-796128e76acc49524864: Cannot confirm one product on the discovered URL
+- new-product / candidate-8516bc9d717b26ec8538: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1c05454f07ff9e87508: Cannot confirm one product on the discovered URL
+- new-product / candidate-62777cb4d92508973a13: Cannot confirm one product on the discovered URL
+- new-product / candidate-e111b5e12c91c04bd7db: Cannot confirm one product on the discovered URL
+- new-product / candidate-de72aab6a2ccdbba096b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f5a724df5606b8f2b021: Cannot confirm one product on the discovered URL
+- new-product / candidate-5af3eb043bf5058df55c: Cannot confirm one product on the discovered URL
+- new-product / candidate-8c7a14a75da4cfba0a1a: Cannot confirm one product on the discovered URL
+- new-product / candidate-a2f1e77a40a9b9fe768b: Cannot confirm one product on the discovered URL
+- new-product / candidate-927dd70cdf2092d345e6: Cannot confirm one product on the discovered URL
+- new-product / candidate-9e7f4c2890ef20d83cb0: Cannot confirm one product on the discovered URL
+- new-product / candidate-39642b6db16acd79e492: Cannot confirm one product on the discovered URL
+- new-product / candidate-5aa58ceab6204e850522: Cannot confirm one product on the discovered URL
+- new-product / candidate-936c392cedbe3651f710: Cannot confirm one product on the discovered URL
+- new-product / candidate-a1c34902dfb4b435674c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3ba049d797931ae7ba7: Cannot confirm one product on the discovered URL
+- new-product / candidate-d97a88c3e5954c6e1728: Cannot confirm one product on the discovered URL
+- new-product / candidate-a903baafc1d429ba0e9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7df566aa8660d710711: Cannot confirm one product on the discovered URL
+- new-product / candidate-e539184658e6045edf4c: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee587f0d6846760c7a67: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b17c4f39af742aea6df: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c53a462c06812c32ac6: Cannot confirm one product on the discovered URL
+- new-product / candidate-980642f1ad3ab7da2940: Cannot confirm one product on the discovered URL
+- new-product / candidate-b57d308ddbd80df15ddc: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f2ac092e30536a5a2d3: Cannot confirm one product on the discovered URL
+- new-product / candidate-5ff090f37df00ddc14dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ae20f307c2a7ec62715: Cannot confirm one product on the discovered URL
+- new-product / candidate-7cb7661f048c861dd29b: Cannot confirm one product on the discovered URL
+- new-product / candidate-4723edaf2b974b437e18: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e0eb957484d25c04311: Cannot confirm one product on the discovered URL
+- new-product / candidate-fe2ba0610d589ef17ba5: Cannot confirm one product on the discovered URL
+- new-product / candidate-9810f7700eccab5b0a4b: Cannot confirm one product on the discovered URL
+- new-product / candidate-48b1fb770f9df4d88988: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f540240003341dd480e: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3edc58d2ef20d71207a: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e456c75198f95bac66a: Cannot confirm one product on the discovered URL
+- new-product / candidate-55b6ea94e19beb72e52b: Cannot confirm one product on the discovered URL
+- new-product / candidate-5029c01233568928f062: Cannot confirm one product on the discovered URL
+- new-product / candidate-0fe54ee16335257c7db6: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e59425e594c21fccae5: Cannot confirm one product on the discovered URL
+- new-product / candidate-3edc54e615f91fff2874: Cannot confirm one product on the discovered URL
+- new-product / candidate-22219456e9b7004efbeb: Cannot confirm one product on the discovered URL
+- new-product / candidate-3d2880be4a0f5c638595: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8de9774e9f5068ca2fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-da1e0190a80405c316bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-30791d9c59e5513f338b: Cannot confirm one product on the discovered URL
+- new-product / candidate-558f6bbb4512863c3ae0: Cannot confirm one product on the discovered URL
+- new-product / candidate-eccd5480da74a2103dda: Cannot confirm one product on the discovered URL
+- new-product / candidate-619101fde5151d25530d: Cannot confirm one product on the discovered URL
+- new-product / candidate-61e034e03dce67ed3059: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee61551f263bc8ce41fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-29b2de4f18b3966e003c: Cannot confirm one product on the discovered URL
+- new-product / candidate-aaba3d05aba0844e979e: Cannot confirm one product on the discovered URL
+- new-product / candidate-deb8b15148895ab98ebd: Cannot confirm one product on the discovered URL
+- new-product / candidate-67e6925e046194ab0737: Cannot confirm one product on the discovered URL
+- new-product / candidate-6cfb36d738b744bc271c: Cannot confirm one product on the discovered URL
+- new-product / candidate-82a9f385fecdf97062eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d7ee0b69a81c711a92b: Cannot confirm one product on the discovered URL
+- new-product / candidate-4660d6bb6e23b8be213e: Cannot confirm one product on the discovered URL
+- new-product / candidate-4bee37ddb89c495cf5f4: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee881efb90b957d14a1c: Cannot confirm one product on the discovered URL
+- new-product / candidate-2eb3f767cc674010c0f6: Cannot confirm one product on the discovered URL
+- new-product / candidate-a927a454d677a057b772: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2ab43f8f828ad5eb591: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8bc118723338c4c6d68: Cannot confirm one product on the discovered URL
+- new-product / candidate-6c2c99cfa03efb1fe363: Cannot confirm one product on the discovered URL
+- new-product / candidate-0808b5daa14bd77d269c: Cannot confirm one product on the discovered URL
+- new-product / candidate-1a2d84f99c636b9621f8: Cannot confirm one product on the discovered URL
+- new-product / candidate-da7baad9c34728293243: Cannot confirm one product on the discovered URL
+- new-product / candidate-2a6159c4f6736d8b783d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f8b071d522bdc08fa9db: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ac3845501da5b0081cf: Cannot confirm one product on the discovered URL
+- new-product / candidate-0c736c04416b55b159f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-6eda5e054d987665dfab: Cannot confirm one product on the discovered URL
+- new-product / candidate-06dfd09b01af5de6773e: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc1134b622a3ad2a5d04: Cannot confirm one product on the discovered URL
+- new-product / candidate-663a6187b80470223aa6: Cannot confirm one product on the discovered URL
+- new-product / candidate-61b3e1766758cbb27ee8: Cannot confirm one product on the discovered URL
+- new-product / candidate-b37c3c0d5a810bf20325: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ed86cd4b5656fa20afe: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e2873399024552afd6b: Cannot confirm one product on the discovered URL
+- new-product / candidate-c3e1871cc7aa7e67a05b: Cannot confirm one product on the discovered URL
+- new-product / candidate-dac0c695fd3e71f94a69: Cannot confirm one product on the discovered URL
+- new-product / candidate-73109d6c2d6ecce061b1: Cannot confirm one product on the discovered URL
+- new-product / candidate-75f8ff4adf04a6c84e66: Cannot confirm one product on the discovered URL
+- new-product / candidate-c46e806853d67266adf6: Cannot confirm one product on the discovered URL
+- new-product / candidate-924580cc4703893e5e3a: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c2ef77f900c64569aa1: Cannot confirm one product on the discovered URL
+- new-product / candidate-e861f17f33b8d7dacaec: Cannot confirm one product on the discovered URL
+- new-product / candidate-0e85c3bd6414a75782c5: Cannot confirm one product on the discovered URL
+- new-product / candidate-df50815aeb469d0541a9: Cannot confirm one product on the discovered URL
+- new-product / candidate-4279b0e4ef2aca3fcf16: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fc78489fa689406aa67: Cannot confirm one product on the discovered URL
+- new-product / candidate-70c1cda069b52d536983: Cannot confirm one product on the discovered URL
+- new-product / candidate-3a6af156a785db51b6a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-49b2355203ec3ddc860d: Cannot confirm one product on the discovered URL
+- new-product / candidate-80b6abc86d00163dc542: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae97d6f9d2ce50e971af: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae53a190f5415190491e: Cannot confirm one product on the discovered URL
+- new-product / candidate-76d835a67cc2db3e1150: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a30eb2fb72b166a6192: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6054a0a75b2cd2c5965: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae4f89c39e4632a2e7fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-34c82228e55fa9e61820: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f4ac2fc51ca0434193c: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b562211a71021019474: Cannot confirm one product on the discovered URL
+- new-product / candidate-d0298a53022c0c36ba1b: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1c2e0afd55cae7fe374: Cannot confirm one product on the discovered URL
+- new-product / candidate-786d90592e17a60d9ab4: Cannot confirm one product on the discovered URL
+- new-product / candidate-0daa2396cd3596f03df0: Cannot confirm one product on the discovered URL
+- new-product / candidate-d48d9f7a59297a82c717: Cannot confirm one product on the discovered URL
+- new-product / candidate-8bc10314c12966537fc5: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f4786ba0fca47169e31: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f211d60966ba3b47761: Cannot confirm one product on the discovered URL
+- new-product / candidate-f918ad9110b48b5c7805: Cannot confirm one product on the discovered URL
+- new-product / candidate-8ff5c4211666bdd89ace: Cannot confirm one product on the discovered URL
+- new-product / candidate-5e3c0bc6e85ecb0a69ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc98ccf9664141c4ce22: Cannot confirm one product on the discovered URL
+- new-product / candidate-da3b46eaa7424d9f6b03: Cannot confirm one product on the discovered URL
+- new-product / candidate-a45bfb0d80b0d9e0df7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-18a6ca7bfc5200abb316: Cannot confirm one product on the discovered URL
+- new-product / candidate-e469eb1051600c1dfada: Cannot confirm one product on the discovered URL
+- new-product / candidate-060b002e328cb02570dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-5577ca5357f1b0c48def: Cannot confirm one product on the discovered URL
+- new-product / candidate-4d53cfc108e52c7d3321: Cannot confirm one product on the discovered URL
+- new-product / candidate-a34799dbddac2203d2f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b651b52f2e0034ad904: Cannot confirm one product on the discovered URL
+- new-product / candidate-1cc2e919c5f1ebb7c05e: Cannot confirm one product on the discovered URL
+- new-product / candidate-5a98a3276b93fa3bab73: Cannot confirm one product on the discovered URL
+- new-product / candidate-5d04b11f75c20f30a78f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f8bb1e4919f5778f6fbb: Cannot confirm one product on the discovered URL
+- new-product / candidate-bb6bc5ccce61bb84ebe1: Cannot confirm one product on the discovered URL
+- new-product / candidate-2b0cd3bca43b6d3b9882: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fef55f47a22e34c52d2: Cannot confirm one product on the discovered URL
+- new-product / candidate-679c7f9a395a98ba199d: Cannot confirm one product on the discovered URL
+- new-product / candidate-006f31cdcf938f4038ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-a698500b4133d9d89f4c: Cannot confirm one product on the discovered URL
+- new-product / candidate-ec9be1f8ccfbfba6c412: Cannot confirm one product on the discovered URL
+- new-product / candidate-278641c6c28248d1c6df: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7801bbc723e79efcc2d: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ad862b64a1afb2059e7: Cannot confirm one product on the discovered URL
+- new-product / candidate-5c2e8bdb5cc19ca1ebd8: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c4676643a0a3641e433: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e937c6faf43f132613c: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0655fa07ded7f2169c1: Cannot confirm one product on the discovered URL
+- new-product / candidate-14fec269223dda324074: Cannot confirm one product on the discovered URL
+- new-product / candidate-1131fda08e05503279ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-8751953b82121fe18765: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8db8098bcc7ee01b0a6: Cannot confirm one product on the discovered URL
+- new-product / candidate-8e491862b4bb134262c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-1be54686fde8e4632e74: Cannot confirm one product on the discovered URL
+- new-product / candidate-55e650d0791adfcf22bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-88ae26a196c4ee64fcb2: Cannot confirm one product on the discovered URL
+- new-product / candidate-50f1cc3add7bbf414657: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ac767729b82f401f4e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b3ff032ebaa6dd612c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-1389e4b999522f6f25fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef05ae6cb907492fa5ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-560d2cf4841eba5ef184: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee03cfaafd5fba023429: Cannot confirm one product on the discovered URL
+- new-product / candidate-fa43aab481c8e7d9bfb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-4950fdc019cc1f504d6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-72386c5e55380548dafc: Cannot confirm one product on the discovered URL
+- new-product / candidate-e4f85f634b2845149e41: Cannot confirm one product on the discovered URL
+- new-product / candidate-c628083d74a7af5421de: Cannot confirm one product on the discovered URL
+- new-product / candidate-50e898965b025535aa55: Cannot confirm one product on the discovered URL
+- new-product / candidate-97c8937ba7b706e3446f: Cannot confirm one product on the discovered URL
+- new-product / candidate-31970f68b9ddda14e579: Cannot confirm one product on the discovered URL
