@@ -4,7 +4,7 @@ import urllib.error
 from unittest.mock import patch
 from pathlib import Path
 import nightly_catalogues as catalogues
-from nightly_products import shopify, refresh_item, offer_price, add_approved
+from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries
 from nightly_update import ReviewQueue
 
 
@@ -22,6 +22,30 @@ class FakeReader:
 
 
 class FeedChecks(unittest.TestCase):
+    def test_discovery_checks_missing_variants_on_known_product_url(self):
+        url = 'https://retailer.example/products/pla'
+        source = {'id':'test', 'name':'Test'}
+        config = {'retailers':{'test':{'catalogUrl':'https://retailer.example/products.json',
+                  'productBase':'https://retailer.example/'}}, 'productLocators':{'existing':{'variantId':11}},
+                  'maxCatalogPages':2}
+        data = {'sources':[source], 'products':[{'id':'existing','retailer':'Test','url':url}]}
+        product = {'title':'PLA filament 1kg','handle':'pla','variants':[
+                   {'id':11,'title':'Black'}, {'id':12,'title':'White'}]}
+        class Reader:
+            def json(self, endpoint):
+                return {'products':[product] if 'page=1' in endpoint else []}
+        queued = []
+        report = {'checkedAt':'2026-10-16','issues':[], 'retailers':[]}
+        with patch('nightly_catalogues.feed_for', return_value=None):
+            discovery(data,config,Reader(),report,lambda *args:queued.append(args))
+        self.assertEqual([entry[2]['variantId'] for entry in queued],[12])
+
+    def test_discovery_budget_is_shared_between_retailers(self):
+        entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':source}}
+                   for source in ['large']*20+['small','third']]
+        self.assertEqual([e['proposal']['sourceId'] for e in fair_discovery_entries(entries)][:3],
+                         ['large','small','third'])
+
     def test_native_gbp_required(self):
         self.assertEqual(catalogues.storefront_currency('Shopify.currency = {"active":"GBP","rate":"1.0"};'), 'GBP')
         for html in ['Shopify.currency={"active":"USD","rate":"1.0"};',

@@ -1,5 +1,6 @@
 """Exact product/variant prices, locally hosted photos and discovery for review."""
 import copy
+from collections import defaultdict, deque
 import hashlib
 import io
 import json
@@ -220,6 +221,8 @@ def discovery(data, config, reader, report, queue):
     known_urls = {canonical(item['url']) for item in data['products']}
     known_urls.update(canonical(l['priceUrl']) for l in config['productLocators'].values() if l.get('priceUrl'))
     known_urls.update(canonical(i['imageSourceUrl']) for i in data['products'] if i.get('imageSourceUrl'))
+    known_variants = {(item.get('retailer'), str(locator_for(item, config).get('variantId')))
+                      for item in data['products'] if locator_for(item, config).get('variantId')}
     for source in data['sources']:
         source_id = source['id']
         setup = config['retailers'][source_id]
@@ -243,10 +246,12 @@ def discovery(data, config, reader, report, queue):
                         if not relevant(product.get('title', '') + ' ' + product.get('product_type', '')):
                             continue
                         url = urljoin(setup['productBase'], 'products/' + product['handle'])
-                        if canonical(url) in known_urls:
-                            continue
+                        # A product URL can contain many colours and pack sizes.
+                        # Deduplicate exact variants, not the whole product URL.
                         # Discovery offers stay unverified until accepted and refreshed in GBP.
                         for variant in product.get('variants', []):
+                            if (source['name'], str(variant['id'])) in known_variants:
+                                continue
                             name = product['title'] + (' — ' + variant['title'] if variant.get('title') != 'Default Title' else '')
                             identifier = candidate_id(source_id, url, variant['id'])
                             category = 'filament' if re.search(r'filament|\b(?:pla|petg|abs|asa|tpu|resin)\b', product.get('product_type', '') + ' ' + name, re.I) else 'printer'
@@ -353,12 +358,24 @@ def automatic_details(candidate, record):
     else:
         candidate['pack'] = variant if variant != 'Default Title' else 'See retailer specifications'
 
+def fair_discovery_entries(entries):
+    """Round-robin suppliers so one large/failed catalogue cannot starve others."""
+    groups = defaultdict(deque)
+    for entry in sorted(entries, key=lambda entry: entry.get('lastPriceAttempt', '')):
+        if entry['kind'] == 'new-product' and entry['status'] not in ('published', 'superseded', 'rejected'):
+            groups[entry['proposal']['sourceId']].append(entry)
+    while groups:
+        for source in list(groups):
+            yield groups[source].popleft()
+            if not groups[source]:
+                del groups[source]
+
 def add_approved(data, config, queue, reader, root, report):
     automatic = config.get('newProducts') == 'automatic-verified'
     existing = {item['id'] for item in data['products']}
     published = 0
     attempted = 0
-    entries = sorted(queue.entries.values(), key=lambda entry: entry.get('lastPriceAttempt', ''))
+    entries = fair_discovery_entries(queue.entries.values())
     for entry in entries:
         if published >= config.get('maxNewProductsPerRun', 50):
             break
