@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-10-16T21:40:40.244970+00:00
+2026-10-16T22:21:44.679053+00:00
 
 ## Attention needed
 - inpost: failed; last verified never
@@ -33,25 +33,25 @@
 |---|---:|---:|
 | 3DJake UK | 7 | 4 |
 | 3D Prima UK | 17 | 11 |
-| 123-3D UK | 266 | 264 |
+| 123-3D UK | 453 | 447 |
 | iDig3Dprinting | 4 | 1 |
-| 3DGBIRE | 585 | 584 |
+| 3DGBIRE | 631 | 628 |
 | Bambu Lab UK | 192 | 0 |
 | Creality UK | 12 | 8 |
-| ELEGOO UK | 230 | 230 |
+| ELEGOO UK | 393 | 393 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
-| NSE Imports | 201 | 200 |
+| NSE Imports | 303 | 298 |
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 109 | 106 |
+| Anycubic UK | 197 | 194 |
 | QIDI UK Store | 116 | 107 |
 | Flashforge UK | 27 | 27 |
 | Sovol UK | 20 | 20 |
 | Snapmaker UK | 1 | 0 |
-| SUNLU UK | 212 | 212 |
+| SUNLU UK | 408 | 408 |
 | Polymaker UK | 0 | 0 |
 | eSUN UK | 0 | 0 |
 | 3DQF UK | 0 | 0 |

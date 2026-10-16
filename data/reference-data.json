@@ -971,7 +971,7 @@
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "5c6ad1b1a8f75362d4099dcc6edae0361d143f1b5d468855675af287ecacdd55",
+      "contentHash": "bc4d8f2cff07dc97a3e559e7f80c17ccb82de51e54ce297a49e24b915949db3a",
       "lastVerified": "2026-10-16"
     },
     "amazon": {
@@ -1036,7 +1036,7 @@
       "lastVerified": "2026-10-16"
     }
   },
-  "lastAttempt": "2026-10-16T22:07:36+01:00",
+  "lastAttempt": "2026-10-16T22:41:42+01:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-16",
@@ -1063,7 +1063,7 @@
       "ZAR": 21.91503229
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-16T22:07:36+01:00",
+    "lastAttempt": "2026-10-16T22:41:42+01:00",
     "status": "verified"
   }
 }
