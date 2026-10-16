@@ -54,3 +54,9 @@ ui.window.__ppRestoreFarm({ppFarmEnabled:{checked:true},ppFarmConfiguration:{val
 assert.equal(doc.getElementById('ppFarmDetails').hidden,false);doc.getElementById('ppFarmAdd').click();assert.equal(JSON.parse(doc.getElementById('ppFarmConfiguration').value).groups.length,2);
 ui.window.__ppRestoreFarm({});assert.equal(enabled.checked,false);assert.equal(doc.getElementById('ppFarmDetails').hidden,true);assert.equal(ui.window.__ppFarmCosts(11),null);
 console.log('PASS: real farm UI mounts, edits groups, serialises, restores saved setup and resets to single-printer mode.');
+controls.qty.value='500';
+ui.window.__ppRestoreFarm({ppFarmEnabled:{checked:true},ppFarmConfiguration:{value:JSON.stringify({version:1,groups:[{...group,printer:'100|300|3000',materialType:'filament',machines:3,perBuild:30,hours:1.5,watts:150}]})}});
+const example=ui.window.__ppFarmCosts(500);assert.equal(example.plan.builds,17);assert.equal(example.plan.elapsedHours,9);
+const texts=[];(function collect(n){if(n.textContent)texts.push(n.textContent);for(const c of n.children||[])collect(c);})(doc.getElementById('ppFarmSummary'));
+assert.ok(texts.some(t=>t.includes('17 print cycles')));assert.ok(texts.includes('5–6'));assert.ok(texts.includes('20 of 30 products'));assert.ok(texts.includes('9 h 0 min'));
+console.log('PASS: 500-product summary shows 17 cycles, 5–6 per printer, a 20-product partial cycle and nine-hour finish.');
