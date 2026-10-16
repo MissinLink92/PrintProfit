@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "maxNewProductsPerRun": 1000,
+  "maxNewProductChecks": 4000,
+  "retailers": {
+    "sunlu-uk": {
+      "name": "SUNLU UK",
+      "url": "https://uk.store.sunlu.com/",
+      "allowedHosts": [
+        "uk.store.sunlu.com"
+      ],
+      "productBase": "https://uk.store.sunlu.com/",
+      "catalogUrl": "https://uk.store.sunlu.com/products.json"
+    },
+    "polymaker-uk": {
+      "name": "Polymaker UK",
+      "url": "https://shop.polymaker.com/en-gb/",
+      "allowedHosts": [
+        "shop.polymaker.com"
+      ],
+      "productBase": "https://shop.polymaker.com/en-gb/",
+      "catalogUrl": "https://shop.polymaker.com/en-gb/products.json"
+    },
+    "esun-uk": {
+      "name": "eSUN UK",
+      "url": "https://uk.esun3d.com/",
+      "allowedHosts": [
+        "uk.esun3d.com"
+      ],
+      "discoveryUrls": [
+        "https://uk.esun3d.com/filaments",
+        "https://uk.esun3d.com/resins"
+      ]
+    },
+    "3dqf-uk": {
+      "name": "3DQF UK",
+      "url": "https://www.3dqf.co.uk/",
+      "allowedHosts": [
+        "www.3dqf.co.uk",
+        "3dqf.co.uk"
+      ],
+      "sitemap": "https://www.3dqf.co.uk/sitemap.xml"
+    }
+  }
+}

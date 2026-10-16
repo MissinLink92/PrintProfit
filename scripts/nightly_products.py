@@ -211,9 +211,11 @@ def refresh_item(item, config, reader, root, today, queue, report):
         item['lastImageCheckStatus'] = 'retained-unverified'
         report['issues'].append({'area': 'image', 'id': item['id'], 'message': str(exc)})
 
+MATERIAL_PATTERN = r'\b(?:resin|PLA(?:\+|[- ]?(?:CF|GF|Plus))?|PETG(?:[- ]?(?:CF|GF))?|PCTG|ABS|ASA|TPU|TPE|PET|Nylon|PA(?:6|12|612)?(?:[- ]?(?:CF|GF))?|PC(?:[- ]?(?:FR|CF|ABS))?|PVA|BVOH|HIPS|PP|PEEK|PEKK|PEI|PPS(?:[- ]?CF)?)\b'
+ACCESSORY_PATTERN = r'\b(?:nozzles?|hotends?|extruders?|covers?|plates?|replacement|spares?|accessor(?:y|ies)|parts|dryers?|drying|storage|sensors?|tubes?|adhesive|glue|cleaner|cleaning|screens?|tanks?|vats?)\b'
+
 def relevant(name):
-    lower = name.lower()
-    return bool(re.search(r'filament|\b(?:pla|petg|abs|asa|tpu|resin)\b|3d.?printer', lower)) and not bool(re.search(r'nozzle|hotend|extruder|cover|plate|replacement|spare', lower))
+    return bool(re.search(r'filament|3d.?printer|' + MATERIAL_PATTERN, name, re.I)) and not bool(re.search(ACCESSORY_PATTERN, name, re.I))
 
 def data_sources(config):
     return config['retailers'].values()
@@ -258,7 +260,7 @@ def discovery(data, config, reader, report, queue):
                                 continue
                             name = product['title'] + (' — ' + variant['title'] if variant.get('title') != 'Default Title' else '')
                             identifier = candidate_id(source_id, url, variant['id'])
-                            category = 'filament' if re.search(r'filament|\b(?:pla|petg|abs|asa|tpu|resin)\b', product.get('product_type', '') + ' ' + name, re.I) else 'printer'
+                            category = 'filament' if re.search(r'filament|' + MATERIAL_PATTERN, product.get('product_type', '') + ' ' + name, re.I) else 'printer'
                             queue('new-product', identifier, {'id': identifier, 'sourceId': source_id, 'name': name, 'brand': product.get('vendor', ''),
                                   'retailer': source['name'], 'url': url, 'variantId': variant['id'], 'category': category,
                                   'type': product.get('product_type', ''), 'colour': variant.get('option1', ''),
@@ -344,16 +346,18 @@ def material_weight(*texts):
 def automatic_details(candidate, record):
     variant = record.get('variantTitle') or ''
     title = record['name']
-    if re.search(r'accessor|spare|replacement|parts', str(record.get('type') or ''), re.I):
+    if re.search(ACCESSORY_PATTERN, title + ' ' + str(record.get('type') or ''), re.I):
         raise ValueError('Accessories and spare parts are not printers or printing materials')
-    material = re.search(r'\b(PLA\+|PLA(?:[- ]?(?:CF|Plus))?|PETG(?:[- ]?CF)?|ABS|ASA|TPU|PET|Nylon|Resin)\b', title, re.I)
+    material = re.search(MATERIAL_PATTERN, title, re.I)
     printer = re.search(r'3d.?printer', title + ' ' + str(record.get('type') or ''), re.I)
+    if not material and re.search(r'\bfilaments?\b', str(record.get('type') or ''), re.I):
+        material = re.search(r'filament', 'filament', re.I)
     if not material and not printer:
         raise ValueError('Cannot confirm that the product is a material or printer')
     candidate['category'] = 'filament' if material and not printer else 'printer'
     candidate['name'] = title + (' — ' + variant if variant != 'Default Title' else '')
     candidate['brand'] = record.get('brand') or candidate.get('brand', '')
-    candidate['type'] = material[1].upper() if candidate['category'] == 'filament' else record.get('type') or '3D Printer'
+    candidate['type'] = ('RESIN' if re.search(r'\bresin\b', title, re.I) else material[0].upper()) if candidate['category'] == 'filament' else record.get('type') or '3D Printer'
     for index, option in enumerate(record.get('options', [])):
         label = option.get('name', '') if isinstance(option, dict) else str(option)
         if norm(label) in ('colour', 'color') and index < len(record['variantOptions']):
@@ -365,23 +369,30 @@ def automatic_details(candidate, record):
         candidate['pack'] = variant if variant != 'Default Title' else 'See retailer specifications'
 
 def fair_discovery_entries(entries):
-    """Round-robin suppliers so one large/failed catalogue cannot starve others."""
-    groups = defaultdict(deque)
+    """Rotate retailers AND product families before filling in colour variants."""
+    groups = defaultdict(lambda: defaultdict(deque))
     def priority(entry):
-        proposal = entry.get('proposal', {})
-        text = str(proposal.get('name') or '') + ' ' + str(proposal.get('pack') or '')
-        # Exact pack masses can be validated without guessing. Do not let a
-        # long sequence of ambiguous clearance bundles starve ordinary spools.
-        explicit_mass = bool(re.search(r'\d+(?:\.\d+)?\s*(?:kg|g)\b', text, re.I))
-        accessory = bool(re.search(r'accessor|spare|replacement|parts', str(proposal.get('type') or ''), re.I))
-        return (accessory, not explicit_mass, entry.get('lastPriceAttempt', ''))
+        p = entry.get('proposal', {})
+        text = str(p.get('name') or '') + ' ' + str(p.get('pack') or '')
+        mass = bool(re.search(r'\d+(?:\.\d+)?\s*(?:kg|g)\b', text, re.I))
+        accessory = bool(re.search(ACCESSORY_PATTERN, text + ' ' + str(p.get('type') or ''), re.I))
+        return (accessory, not mass, entry.get('lastPriceAttempt', ''))
     for entry in sorted(entries, key=priority):
         if entry['kind'] == 'new-product' and entry['status'] not in ('published', 'superseded', 'rejected'):
-            groups[entry['proposal']['sourceId']].append(entry)
+            p = entry['proposal']
+            # Canonical product URL keeps colour/size variants together without
+            # conflating distinct material families, bundles or printer models.
+            family = canonical(p.get('url') or '') or str(p.get('name') or '').split(' — ')[0]
+            groups[p['sourceId']][family].append(entry)
     while groups:
         for source in list(groups):
-            yield groups[source].popleft()
-            if not groups[source]:
+            families = groups[source]
+            family = next(iter(families))
+            values = families.pop(family)
+            yield values.popleft()
+            if values:
+                families[family] = values
+            if not families:
                 del groups[source]
 
 def add_approved(data, config, queue, reader, root, report):

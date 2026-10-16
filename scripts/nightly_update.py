@@ -106,6 +106,11 @@ def main():
     config = load(root / 'config/nightly-sources.json')
     if not isinstance(config, dict):
         raise ValueError('Missing nightly source configuration')
+    extra = load(root / 'config/catalogue-expansion.json', {})
+    config['retailers'].update(extra.get('retailers', {}))
+    for key in ('maxNewProductsPerRun', 'maxNewProductChecks'):
+        if key in extra:
+            config[key] = int(extra[key])
     automatic = config.get('newProducts') == 'automatic-verified'
     saved_review = {} if automatic else load(root / 'config/review-decisions.json', {})
     config['reviewDecisions'] = saved_review.get('decisions', saved_review)
@@ -116,6 +121,10 @@ def main():
     ref = load(root / 'data/reference-data.json')
     if data.get('currency') != 'GBP' or ref.get('currency') != 'GBP':
         raise ValueError('The updater only supports the configured UK GBP data set')
+    known_sources = {source['id'] for source in data['sources']}
+    for key, source in extra.get('retailers', {}).items():
+        if key not in known_sources:
+            data['sources'].append({'id': key, 'name': source['name'], 'url': source['url'], 'kind': 'retailer', 'autoRefresh': True})
     now = datetime.now(ZoneInfo('Europe/London')).isoformat(timespec='seconds')
     report = {'checkedAt': now, 'timezone': 'Europe/London', 'issues': [], 'priceChanges': [], 'imageChanges': [],
               'addedProducts': [], 'retailers': [], 'monitors': []}
@@ -135,6 +144,18 @@ def main():
     report['verifiedProducts'] = sum(i.get('lastCheckStatus') == 'ok' and i.get('lastAttempt') == now[:10] for i in data['products'])
     report['archivedProducts'] = sum(bool(i.get('sourceUnavailable')) for i in data['products'])
     report['totalProducts'] = len(data['products'])-report['archivedProducts']
+    brand_materials = {}
+    for item in data['products']:
+        if item.get('sourceUnavailable'):
+            continue
+        category = categories.classify(item)
+        if not category.get('material'):
+            continue
+        key = (str(item.get('brand') or 'Unknown'), category['id'])
+        row = brand_materials.setdefault(key, {'brand': key[0], 'material': key[1], 'listings': 0, 'verified': 0})
+        row['listings'] += 1
+        row['verified'] += int(item.get('lastCheckStatus') == 'ok' and item.get('lastAttempt') == now[:10])
+    report['brandMaterials'] = sorted(brand_materials.values(), key=lambda row: (row['brand'].lower(), row['material']))
     report['retainedProducts'] = report['totalProducts'] - report['verifiedProducts']
     for retailer in report['retailers']:
         items = [i for i in data['products'] if i.get('retailer') == retailer['name'] and not i.get('sourceUnavailable')]

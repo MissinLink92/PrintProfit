@@ -6,7 +6,7 @@ from pathlib import Path
 import nightly_catalogues as catalogues
 from nightly_html import Page
 from nightly_references import folksy_commission, stripe_standard_uk
-from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries, automatic_details
+from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries, automatic_details, relevant
 from nightly_update import ReviewQueue
 
 
@@ -24,6 +24,21 @@ class FakeReader:
 
 
 class FeedChecks(unittest.TestCase):
+    def test_material_families_before_more_colours(self):
+        entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':name,'url':url}}
+                   for name,url in [('PLA Black 1kg','https://example.com/pla'),('PLA White 1kg','https://example.com/pla'),('Resin Grey 1kg','https://example.com/resin')]]
+        names = [e['proposal']['name'] for e in fair_discovery_entries(entries)]
+        self.assertEqual(names[:2], ['PLA Black 1kg','Resin Grey 1kg'])
+
+    def test_engineering_materials_and_resin_identity(self):
+        for title,kind in [('PC-FR Filament 1kg','PC-FR'),('PCTG 1kg','PCTG'),('PVA 500g','PVA'),('ABS-Like Resin 1kg','RESIN')]:
+            self.assertTrue(relevant(title))
+            candidate = {}
+            automatic_details(candidate, {'name':title,'variantTitle':'Grey','type':'Filament','options':[],'variantOptions':[]})
+            self.assertEqual(candidate['type'],kind)
+        for title in ['Resin tank 1kg','PLA Filament dryer','PETG nozzle replacement']:
+            self.assertFalse(relevant(title))
+
     def test_known_pack_sizes_precede_ambiguous_bundles(self):
         entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':n}}
                    for n in ['Clearance Resin Bundle','PLA Black 1kg']]

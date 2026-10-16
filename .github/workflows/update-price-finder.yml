@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/nightly_*.py'
       - 'config/nightly-sources.json'
+      - 'config/catalogue-expansion.json'
   schedule:
     - cron: '0 0 * * *'
       timezone: Europe/London
