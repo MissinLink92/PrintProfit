@@ -1,39 +1,43 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-16T16:28:54+01:00
+Checked: 2026-10-16T22:07:36+01:00
 
-- Existing prices verified: 982 / 1018
-- Existing prices retained without verification: 36
+- Existing prices verified: 1790 / 2018
+- Existing prices retained without verification: 228
 - Changed existing prices: 0
 - Refreshed image files: 0
-- Verified products added: 200
-- Unresolved source notices: 7024
-- Failed or incomplete checks: 2064
+- Verified products added: 1000
+- Unresolved source notices: 8349
+- Failed or incomplete checks: 3247
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
-| 3DJake UK | 4 / 7 | url-discovery-only | 3845 |
-| 3D Prima UK | 11 / 17 | url-discovery-only | 62 |
-| 123-3D UK | 55 / 57 | discovered | 2017 |
-| iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
-| 3DGBIRE | 442 / 443 | discovered | 435 |
-| Bambu Lab UK | 192 / 192 | discovered | 86 |
-| Creality UK | 8 / 12 | url-discovery-only | 201 |
-| ELEGOO UK | 46 / 46 | discovered | 3716 |
+| 3DJake UK | 4 / 7 | url-discovery-only | 4288 |
+| 3D Prima UK | 11 / 17 | url-discovery-only | 59 |
+| 123-3D UK | 264 / 266 | discovered | 1901 |
+| iDig3Dprinting | 1 / 4 | url-discovery-only | 223 |
+| 3DGBIRE | 584 / 585 | discovered | 441 |
+| Bambu Lab UK | 0 / 192 | failed | 0 |
+| Creality UK | 8 / 12 | url-discovery-only | 199 |
+| ELEGOO UK | 230 / 230 | discovered | 3603 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
-| Subliblanks | 6 / 6 | discovered | 10 |
-| NSE Imports | 70 / 71 | discovered | 659 |
+| Subliblanks | 6 / 6 | discovered | 30 |
+| NSE Imports | 200 / 201 | discovered | 404 |
 | Additive-X | 10 / 13 | url-discovery-only | 2 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
-| Anycubic UK | 0 / 3 | discovered | 1653 |
-| QIDI UK Store | 91 / 100 | discovered | 105 |
-| Flashforge UK | 27 / 27 | discovered | 129 |
-| Sovol UK | 19 / 19 | discovered | 33 |
+| Anycubic UK | 106 / 109 | discovered | 1095 |
+| QIDI UK Store | 107 / 116 | discovered | 51 |
+| Flashforge UK | 27 / 27 | discovered | 128 |
+| Sovol UK | 20 / 20 | discovered | 24 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
+| SUNLU UK | 212 / 212 | discovered | 1731 |
+| Polymaker UK | 0 / 0 | failed | 0 |
+| eSUN UK | 0 / 0 | url-discovery-only | 29 |
+| 3DQF UK | 0 / 0 | url-discovery-only | 94 |
 
 ## Items needing attention
 
@@ -49,7 +53,6 @@ Checked: 2026-10-16T16:28:54+01:00
 - reference / etsy-regulatory: HTTP Error 403: Forbidden
 - reference / etsy-payments: HTTP Error 403: Forbidden
 - reference / depop: HTTP Error 403: Forbidden
-- reference / tiktok: Source did not provide readable pricing guidance
 - reference / facebook: Source robots.txt disallows this URL
 - reference-parser / inpost: Official source could not be read: inpost
 - reference-parser / royalmail-first, royalmail-second: Official source could not be read: royalmail-first
@@ -58,8 +61,10 @@ Checked: 2026-10-16T16:28:54+01:00
 - reference-parser / parcelforce: Official source could not be read: parcelforce
 - reference-parser / etsy-transaction, etsy-regulatory, etsy-payments: Official source could not be read: etsy-transaction
 - reference-parser / depop: Official source could not be read: depop
-- reference-parser / tiktok: Official source could not be read: tiktok
+- reference-parser / tiktok: Expected one unambiguous rate; found 0
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
+- catalogue / bambu-uk: HTTP Error 500: Internal Server Error
+- catalogue / polymaker-uk: Public catalogue does not quote native GBP prices
 - product / elegoo-pla-black: Price URL does not belong to the recorded UK retailer
 - product / elegoo-pla-plus-black: Price URL does not belong to the recorded UK retailer
 - product / sunlu-pla-blue: Exact model/colour/pack product offer unavailable on the recorded page
@@ -73,6 +78,9 @@ Checked: 2026-10-16T16:28:54+01:00
 - product / copymaster3d-pla-glitter-blue-1-75mm-1kg: HTTP Error 404: Not Found
 - product / copymaster3d-pla-rainbow-magic-silk-1-75mm-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / bambu-lab-petg-hf-refill-1-75mm-1kg-black: HTTP Error 403: Forbidden
+- product / bambu-lab-a1-mini: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / bambu-lab-a1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / bambu-lab-p1s: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
 - product / creality-ender-3-v3-ke: Exact model/colour/pack product offer unavailable on the recorded page
 - product / 3dgbire-pet: Exact model/colour/pack product offer unavailable on the recorded page
 - image / 3dgbire-pet: Exact product identity/photo needs review
@@ -146,7 +154,7 @@ Checked: 2026-10-16T16:28:54+01:00
 - product / anycubic-kobra-4-combo: Exact variant no longer appears in the retailer catalogue
 - product / anycubic-kobra-x: Exact variant no longer appears in the retailer catalogue
 - product / anycubic-kobra-s1-combo: Exact variant no longer appears in the retailer catalogue
-- product / anycubic-photon-p1: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-photon-p1: HTTP Error 500: Internal Server Error
 - product / anycubic-photon-p1-max: Exact variant no longer appears in the retailer catalogue
 - product / anycubic-photon-mono-m7-pro: Exact model/colour/pack product offer unavailable on the recorded page
 - product / anycubic-photon-mono-m7-max: Exact variant no longer appears in the retailer catalogue
@@ -163,6 +171,136 @@ Checked: 2026-10-16T16:28:54+01:00
 - product / candidate-552a29425f4a4b8c1dda: Exact variant no longer appears in the retailer catalogue
 - product / candidate-0cb71df3c489fe3c73aa: Exact variant no longer appears in the retailer catalogue
 - product / candidate-20928822b8aa4eecc6a6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d2570d69b92f850d6509: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-826fe4c7ed9078a39e98: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-99b0629cd2b87b3a0dfd: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-8e89dd1a68a486063078: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-df4765d99f852f171cd2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-0068a2fee8404f3b6578: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-cc77e4e0800c2cea1645: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9cf2e6af2ddadf25529f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-709974f4f1ff8f81edfa: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-e367a62f82865dcb1676: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-76b48e9397a304c9e8f6: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c65f9d90fc0b744ba8f6: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-aee8063180e3e5f7409b: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-07e2e640e1b31e4113a1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-82c0c6004f23b280ba14: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-35a1b64e0de452f222da: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a59ae2debabe074cac5b: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-e370ce5ea12451730e54: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-5f38a782db4b502ea739: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1ab8e0d3a9a91605bad2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-b8947d92a3dc93196471: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-8ab2e513483cac696c21: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a431adf912ac8f5d1520: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-26cf9474f5b140923e01: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-85a5a925508ce5632566: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-26bab5e27894a1055261: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4b2cadecd3d4525aee3c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1fbe0ca59b529c4f088a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a949d935dc0e2895eda3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ea2801de4766b63fb9f3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c7d4e23de5cc259fa11c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6ce3546090ef9847ae82: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-803a9486e1ae86388a12: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-05458172fefa49262288: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-297bb247446846bcfa72: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-2f50a282afc01c267d57: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-09144a43cec97300127e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-283f46006b8dffdb649a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-75a5832c8ce13006b7fa: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-78df649014e278d823b7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-57c5d5a9aaf2a7d51280: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-d064362805ca56cefdaf: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-11a093b1466296df994f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9046c414359690266746: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7580766084dd01e92e58: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ff1f84817111d8a31c1a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-02d5a0ee9bf290a1367a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ea90992ba8c18dd5fdbd: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7726a104347a4795f49f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f6f15e4408ad2ef637b5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-99c6dd3dbe24c0ec03f8: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-2daef8d5ff8bd959495a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c082ebe05b58d4eb8bb8: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-8dcf0b8b2799eaf02528: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-bec4c9ae6b85e8741d1c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-b508d358da92886623bd: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1a4f0c3ab743669e6e40: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-82fcf29ad95e9c273225: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-063aba8d55d1d31c0490: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-491e3fd037d1add75bf2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-974b1f1c472976fa79df: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4a016dfbfc47cbf65288: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-976d07821c91a2bb07c4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-764dda6c51fd416f6a74: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-d77a99b08d542702286e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-12ebaffa4be329b76194: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a3c8ca692fba22f283e6: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-bf61e5b25b0112a7d692: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-06d817bcade526955dd7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-96905f15e98cc6dafa7d: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-299bf318a2a19e8d0f6e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-fcad6275e315d0ed0b63: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-5f99a25dea0de262f016: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-b9c00a17936087535bbd: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-42ca72a983125c16d052: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7e6133defc241e8f355c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-80f6c9aea0e1a371ca65: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ef479f75d92d75235dba: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-dd6e92649a26ba401a26: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ae4fa27160dc4172c41d: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-94989be77f69aa17705d: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-37b39fbb3e182ba60d09: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7ab78f9b80fd6b766aa4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-404d3d17e7c0c7e81321: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-bbbc8f90fcac522f0f5f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a94b345568a1c64ed2ed: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-e4e619ea8b13120dbeaf: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c1cfe51789adb32d3f03: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f6684c56e12425b83814: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-0c6d060495085207dc74: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a568dd3831a514fdb770: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-248b6aa1a82a886502ec: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a613e9ef6513f33327c9: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4d04f9cb7dc695af91d5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-61836451545b87289e80: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-10ca11a87eba9724792f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1bfa603b140e49f77cd8: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a32c26916b64750eae7b: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-93ede11185e0bcfc08fc: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-d6e77f42568ff9e60683: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f2d763be79ebde2463e4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-dee7ae1e55b42255c5ce: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-5cb677288b539936e78d: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9c121dcca1c620e6577a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-11d892503d5758d875f7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-5bfc783d3f352c9147b7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-876a15501e7e77d0aa35: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-89ab2f9d73765fd4d666: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-db2553f1b63f989fd1b2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ddb8b6628cb373397121: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f819aef36044a2d3471f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-94b026644ade68e940e0: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f574c5de70730e9691b1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-45085b555b4a67eeb8d4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-98cf12322da20d721682: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-55d78fdbe729585a3a41: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4287ea887c8c9ed9b2d5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4054f19817f006048436: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-5826ec352729d7735a8e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-b881ff56821d3fb366a1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-40f06e5e22eebd84bf78: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-16164a4f4d90c9921102: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9b731aed398febd76baa: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c3c68bd04a36f9f87721: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-43b1761ef0cad1912cda: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6f150ee92c390c8ed1a5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a605943dcf3c811aa8ee: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-768e9c6ee23a30a329d1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-162fe79facb41122d3a8: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-92f113d91e73b566c6b0: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
 - product / candidate-2501ba8958c1485657a9: Exact variant no longer appears in the retailer catalogue
 - product / candidate-ab341df6538e4c75f395: Exact variant no longer appears in the retailer catalogue
 - product / candidate-3a2fcbf583d1f38eb582: Exact variant no longer appears in the retailer catalogue
@@ -1692,412 +1830,1461 @@ Checked: 2026-10-16T16:28:54+01:00
 - product / candidate-7fe4f049b41985130984: Exact variant no longer appears in the retailer catalogue
 - product / candidate-d5dec3d37a71ef1b1349: Exact variant no longer appears in the retailer catalogue
 - product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3cdcf3c9a3610b9f14b6: Cannot confirm one product on the discovered URL
-- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-70cac257ed9e9faec920: No verified product image URL
-- new-product / candidate-651731aa08341d350e20: Cannot confirm that the product is a material or printer
-- new-product / candidate-ab9a05d1b1533b08a4b3: No single GBP offer for the exact product
+- product / candidate-34cb2c46699895d95a87: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-8ff1680aaec17d113236: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-306b820c51a6bb85cc1c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c45880c9ff70c5027a7b: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-3611220d330b1b70e40f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f1a1a95d6710d1c8a620: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-49d55b485f76c6c626e9: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-dd9b0a3692a0497c901c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6f4d642f121b340e7849: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-c1f6f0cef2c98bb7349c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4d3505afe3d96cfbb56a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6b1646494b68184792ca: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-34cfa83c6a984a98feb4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-fea1bc4e64f6b2bacb50: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-38e4fce6999b81ef027c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-edcc5040b774f086ca88: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-d63ecab1ab68351b7bad: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-fe6483b7ae7d7086931f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f7d0b18c29cf43fdee18: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9e1f6783f6f8267fc2be: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f31b741bda7eaf3212a2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1d41f43a37466f1c61b2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-04edd27e32e6d062340e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4aea019b58550f2faf5a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6411b4f5e4f07fed7a10: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a682f42c513e7918f8f7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7b98b8177784180bdea5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-72026cd57bb10e13209d: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7be9a4539a8d12a5a5bd: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-76fb21d5099ab7061fbc: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f029f74c7d96ea892737: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-44f3cc937e5177c8c9ca: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ecb6aeb322f349598277: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6564c93941291cc7dfe3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-9c69ad23f5e097f3dc42: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-56e17efcd110f7317b46: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-078daf7019857da02f6f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-256ca8a4b45928bfaaf6: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-2c1bd0c80ece7d195b2f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f979bdf79a0f8765c047: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-849ce5101124faf89e89: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-64ebbc15d26c03ea3013: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-1531b10a64e92b685c33: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-7d7bc87fd2576a4db131: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-16c2930614fafe2bd77a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-0ff046994ff6e63bf7e4: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-39078d76e634e3b77a01: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6920d919a4108b5aa6d1: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-de79c6625468f89bac2c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-61606795220943d4ea69: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-6c57eb81dcf5656bcb7f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-bc3bddcc9d12cf9f8217: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-d682b6136fef3243573c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-055077c81928d3098628: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-4ebd43286f1097dbc576: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-a85abf5b5ca2fac019fc: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-2c013bb19ef81a90932e: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-f1e377435076555263ea: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- product / candidate-ed03b43fffc8377425f5: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- discovery / bambu-uk: HTTP Error 500: Internal Server Error
+- discovery / polymaker-uk: Public catalogue does not quote native GBP prices
+- new-product / candidate-895bb39ed3b7a75a1a5b: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-647e5467e771969127b1: Cannot confirm that the product is a material or printer
+- new-product / candidate-5dfc8aa03598dd8b09b4: No single GBP offer for the exact product
+- new-product / candidate-f50bd537cb319a30c3e0: Cannot confirm one product on the discovered URL
 - new-product / candidate-54a2c46e236b5ca1a761: Pack weight is ambiguous; listing skipped
-- new-product / candidate-5ab8dd60421722d143f5: No verified product image URL
-- new-product / candidate-432e457799727f24a0b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
-- new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-94c91b78d7d7c85ff961: Cannot confirm that the product is a material or printer
-- new-product / candidate-ed398141cf9889704f77: Cannot confirm one product on the discovered URL
-- new-product / candidate-356f948f5fa5eadf12ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5c9bad509369a8abeb6f: HTTP Error 403: Forbidden
-- new-product / candidate-7c792f3e999c7f23cd9d: No verified product image URL
-- new-product / candidate-33fde748e58736f15449: Cannot confirm that the product is a material or printer
-- new-product / candidate-8110e594e4fa6f916d7e: No single GBP offer for the exact product
-- new-product / candidate-eb9450ba72bfd8fd2e3c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-555881b52e83091d08da: No verified product image URL
-- new-product / candidate-c0aeb1e0fdbde8c520c2: Cannot confirm one product on the discovered URL
-- new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
-- new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5fb9854e1bfacbc94153: Cannot confirm that the product is a material or printer
-- new-product / candidate-8a144ce0fd1e775f869e: Cannot confirm one product on the discovered URL
-- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bf164e921b9d29ef65f8: HTTP Error 403: Forbidden
-- new-product / candidate-a18b9ec716e3ef1e32b3: No verified product image URL
-- new-product / candidate-2e171d47ddeeaedad904: Cannot confirm that the product is a material or printer
-- new-product / candidate-326de91957426dcbbf23: No single GBP offer for the exact product
-- new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-91449d06ebfde09fcaa4: No verified product image URL
-- new-product / candidate-aa4dc1141c1a498ad340: Cannot confirm one product on the discovered URL
-- new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
-- new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0495ec8e3f9fcef7ac77: Cannot confirm that the product is a material or printer
-- new-product / candidate-dbf9de0175401ebdfb7a: Cannot confirm one product on the discovered URL
-- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-00d691390547fac947ad: HTTP Error 403: Forbidden
-- new-product / candidate-2895d1ef6a21ffabac57: No verified product image URL
-- new-product / candidate-3433aa02e4d80e9c0554: Cannot confirm that the product is a material or printer
-- new-product / candidate-5ca5b584be2228ca4bf1: HTTP Error 404: Not Found
-- new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0ba92ed2828fbe9c4af5: Cannot confirm one product on the discovered URL
-- new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
-- new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
-- new-product / candidate-61e9ba837e1d309a90b8: Cannot confirm that the product is a material or printer
-- new-product / candidate-61bc3ac8fbc3175d4930: Cannot confirm one product on the discovered URL
-- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b11e4c94364add54ebec: HTTP Error 403: Forbidden
-- new-product / candidate-efc7e28f7c698bb46946: No verified product image URL
-- new-product / candidate-4886c155d4931729e9c3: Cannot confirm that the product is a material or printer
-- new-product / candidate-d83134d0478c6c3c6552: No single GBP offer for the exact product
-- new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-420f21c87cf37a7d252d: Cannot confirm one product on the discovered URL
-- new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
-- new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-da7b7ae4dc8228c36a69: Cannot confirm one product on the discovered URL
-- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1c26615eb28cb254a26b: HTTP Error 403: Forbidden
-- new-product / candidate-cdb3767d138d2d7c6180: No verified product image URL
-- new-product / candidate-c282a521454ee6e2207f: Cannot confirm that the product is a material or printer
-- new-product / candidate-30ee9779e728afaf49f9: No single GBP offer for the exact product
-- new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e7a4fa33583aa1311ce1: Cannot confirm one product on the discovered URL
-- new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
-- new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9f6257dddc1ad556092e: Cannot confirm that the product is a material or printer
-- new-product / candidate-aa9124acbb989eb015fa: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1e2f0cf5c1ee67d431e6: HTTP Error 403: Forbidden
-- new-product / candidate-8a6fa22808a9df5d1e37: No verified product image URL
-- new-product / candidate-9161275797bd5ab11633: Cannot confirm that the product is a material or printer
-- new-product / candidate-31a1d44d92216663d9e4: Cannot confirm that the product is a material or printer
-- new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-354b8c5cf711a499171b: Cannot confirm one product on the discovered URL
-- new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a67b4a00cf7f8d91a2fd: Cannot confirm that the product is a material or printer
-- new-product / candidate-8ef4789175df3ef4deb6: Cannot confirm one product on the discovered URL
-- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c2e3b4a5104fbd579850: HTTP Error 403: Forbidden
-- new-product / candidate-e2e322e447a0ed39ce5b: No verified product image URL
-- new-product / candidate-4321c3b7a07e75f3dd09: Cannot confirm that the product is a material or printer
-- new-product / candidate-a977be636e5e2acc659f: No single GBP offer for the exact product
-- new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cabe9bad84fec81dd94f: No verified product image URL
-- new-product / candidate-cfd055e14c702d0a448c: Cannot confirm one product on the discovered URL
-- new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-44e610b3732bbe3cb568: Cannot confirm that the product is a material or printer
-- new-product / candidate-8b0e47049d293af12f6e: Cannot confirm one product on the discovered URL
-- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-324adf3504461e59faae: HTTP Error 403: Forbidden
-- new-product / candidate-6d8d57cad65ba6bf0221: No verified product image URL
-- new-product / candidate-6dbcbe8bd6614435119a: Cannot confirm that the product is a material or printer
-- new-product / candidate-66a8a61e68a3ea18649b: Cannot confirm that the product is a material or printer
-- new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e57b252921bf0ee24b3d: No verified product image URL
-- new-product / candidate-ad5b599da526f207cd64: Cannot confirm one product on the discovered URL
-- new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ad4fb1df871a7848d74f: Cannot confirm that the product is a material or printer
-- new-product / candidate-4f0a90f89e67a8f22b52: Cannot confirm one product on the discovered URL
-- new-product / candidate-1b4362e98a79d90dd834: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d358eee9e37ae321b507: HTTP Error 403: Forbidden
-- new-product / candidate-fc18a1faa755683d49bd: No verified product image URL
-- new-product / candidate-0050db4aff002bd7d0dd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e9394f480cdb63b3ba73: Cannot confirm that the product is a material or printer
-- new-product / candidate-b1d8504aadb279343fed: No single GBP offer for the exact product
-- new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ba8e3bc516bb64c77020: No verified product image URL
-- new-product / candidate-d5559a8e487a6e8b22fa: Cannot confirm one product on the discovered URL
-- new-product / candidate-8bd628979d63ab4bcdfe: Cannot confirm that the product is a material or printer
-- new-product / candidate-fb269c25480c50429183: Cannot confirm one product on the discovered URL
-- new-product / candidate-0234a874fc6e75cf7ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e34d6ca000ecbb9ee12c: HTTP Error 403: Forbidden
-- new-product / candidate-da12b3e33d6921ecda1d: Cannot confirm that the product is a material or printer
-- new-product / candidate-d3076bd6917d56e03f41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1647ac9f424b01a81d28: Cannot confirm that the product is a material or printer
-- new-product / candidate-ebad08612651df174622: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5ac06a8507fa7e18b63e: No verified product image URL
-- new-product / candidate-3d62d28d72a08f189e8a: Cannot confirm one product on the discovered URL
-- new-product / candidate-bed08a59d7f34c5e4c97: Cannot confirm one product on the discovered URL
-- new-product / candidate-9495b557932f11ac99b3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4506b5d58c28e91e5236: HTTP Error 403: Forbidden
-- new-product / candidate-85f4cbf0aaeb068687b1: Cannot confirm that the product is a material or printer
-- new-product / candidate-b8926aba23d228af78ef: No single GBP offer for the exact product
-- new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b3f5dbbb915e26792697: No verified product image URL
-- new-product / candidate-f0afc9296a27923681ec: Cannot confirm one product on the discovered URL
-- new-product / candidate-308a85bbfe6dd8bf62a5: Cannot confirm that the product is a material or printer
-- new-product / candidate-e627dc8fbdcc63fe18b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-26210dd79274f0ddefed: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cd9c9f2fdf6d6dabaf9d: HTTP Error 403: Forbidden
-- new-product / candidate-2caba5ff7ffd331f1a52: No verified product image URL
-- new-product / candidate-93f8f0a00b1db83fc209: No single GBP offer for the exact product
-- new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
-- new-product / candidate-dcf5b21469a8b49f13a2: No verified product image URL
-- new-product / candidate-9dbe3a57cee34b689678: Cannot confirm one product on the discovered URL
-- new-product / candidate-029bc903375a8dbbd3f4: Cannot confirm that the product is a material or printer
-- new-product / candidate-e47960587bdc4a128526: Cannot confirm one product on the discovered URL
-- new-product / candidate-72ff504d0dd052d962dc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ed1b11db30ff15b5b299: HTTP Error 403: Forbidden
-- new-product / candidate-a949da2d0341ba5b19e5: Cannot confirm that the product is a material or printer
-- new-product / candidate-4897525329b9f6e69df1: No single GBP offer for the exact product
-- new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-eb86ff5a04a3ad55b383: No verified product image URL
-- new-product / candidate-e8133d5082fce5b37f04: Cannot confirm one product on the discovered URL
-- new-product / candidate-b536388535c36a8425c9: Cannot confirm one product on the discovered URL
-- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-624cc97d4e8dfee48cc5: HTTP Error 403: Forbidden
-- new-product / candidate-a427ff75a9b1aae292cd: Cannot confirm that the product is a material or printer
-- new-product / candidate-37082fdfa1e3cc25b50a: Cannot confirm that the product is a material or printer
-- new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-52aca3d5213af404e941: No verified product image URL
-- new-product / candidate-e38ba80b9081dfd17d75: Cannot confirm one product on the discovered URL
-- new-product / candidate-b2499af4059abbe609d7: Cannot confirm that the product is a material or printer
-- new-product / candidate-6ad76da50e68fe8029dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b4a960faab8357701e01: HTTP Error 403: Forbidden
-- new-product / candidate-86f755593e561ae8966d: Cannot confirm that the product is a material or printer
-- new-product / candidate-2c96fa3baf3f9a6e5cd9: No single GBP offer for the exact product
-- new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1bdc4e1ee898615397c0: No verified product image URL
-- new-product / candidate-d2027aaeb631d39f1e4c: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8422d3c438dfeb8a05d: Cannot confirm that the product is a material or printer
-- new-product / candidate-7cbc72373eea6d6ebb79: Cannot confirm one product on the discovered URL
-- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f5560708283601091dc8: HTTP Error 403: Forbidden
-- new-product / candidate-2a89ea9ff1809f1396c2: Cannot confirm that the product is a material or printer
-- new-product / candidate-3fff308800379a2b107a: No single GBP offer for the exact product
-- new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ed982d7a12e73498937d: No verified product image URL
-- new-product / candidate-c1689a0655597e52dcbd: Cannot confirm one product on the discovered URL
-- new-product / candidate-d8481e197551a3e09f72: Cannot confirm that the product is a material or printer
-- new-product / candidate-7be9eeda63979f3c5dd9: Cannot confirm one product on the discovered URL
-- new-product / candidate-797d433de58d580eedad: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b5c1a36216e1369da4f8: HTTP Error 403: Forbidden
-- new-product / candidate-dca90606f1178b6d77b2: Cannot confirm that the product is a material or printer
-- new-product / candidate-4de019b4aa884a5ddbee: No single GBP offer for the exact product
-- new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c7d74e513829760a7c12: No verified product image URL
-- new-product / candidate-63bab2caf6e9e395a2cd: Cannot confirm one product on the discovered URL
-- new-product / candidate-402248390caa14789030: Cannot confirm that the product is a material or printer
-- new-product / candidate-1175727c9f1158a1306b: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e9929e3aefcbf552f29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-00e111c00285ef98a0f1: HTTP Error 403: Forbidden
-- new-product / candidate-35e60d204a4489c96fad: Cannot confirm that the product is a material or printer
-- new-product / candidate-f4eb740bcf8b08eab918: Cannot confirm that the product is a material or printer
-- new-product / candidate-d8fd0bd09dbb0992b89d: No single GBP offer for the exact product
-- new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ff77bd921da4fbebb4e: No verified product image URL
-- new-product / candidate-692de496c4a5f3ee65d0: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fbbddd847557dcc3fad: Cannot confirm that the product is a material or printer
-- new-product / candidate-0e3a45f51f197413bb0b: Cannot confirm one product on the discovered URL
-- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e6b3d73f8c19cb8c67c6: HTTP Error 403: Forbidden
-- new-product / candidate-ec0db7a3e737acf3f9f9: Cannot confirm that the product is a material or printer
-- new-product / candidate-f90cd7ef53124d3efbc9: No single GBP offer for the exact product
-- new-product / candidate-c3b624367c7b15ca166e: Cannot confirm that the product is a material or printer
 - new-product / candidate-35279a23076451181e10: No verified product image URL
-- new-product / candidate-811cedf5af4861a5fa6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-eccf0ce0b910fa5d6beb: Cannot confirm one product on the discovered URL
-- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-93c9f5813de91534e838: HTTP Error 403: Forbidden
-- new-product / candidate-1667b09e3781c2483e74: Cannot confirm that the product is a material or printer
-- new-product / candidate-81709ddcaa352def44e2: No single GBP offer for the exact product
-- new-product / candidate-c4535611d3695eebe57b: Cannot confirm that the product is a material or printer
-- new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
-- new-product / candidate-97f8a20400e7dfab1e8e: Cannot confirm one product on the discovered URL
-- new-product / candidate-f99fe9d183930a46e8a2: Cannot confirm one product on the discovered URL
-- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-159b1b90eb1b958d682f: Cannot confirm one product on the discovered URL
-- new-product / candidate-13dea97ff2c9ab251a68: Cannot confirm that the product is a material or printer
-- new-product / candidate-a38513b3c6313eab8a5d: Cannot confirm that the product is a material or printer
-- new-product / candidate-5a097889d4f50e8a3470: Cannot confirm that the product is a material or printer
-- new-product / candidate-5e100c7706994e9acea9: No verified product image URL
-- new-product / candidate-3625f4e304d59ee8bbf7: Cannot confirm one product on the discovered URL
-- new-product / candidate-28daac5a033e11a61e8f: Cannot confirm one product on the discovered URL
-- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e4d7dbcefd97e034ec28: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8b764696ffb29d90404: Cannot confirm that the product is a material or printer
-- new-product / candidate-3f9fb06b43ef81d14b5a: No single GBP offer for the exact product
-- new-product / candidate-e6eeb0b823a81e07c628: Cannot confirm that the product is a material or printer
+- new-product / candidate-3cdcf3c9a3610b9f14b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-9589e4ba243309da8073: Cannot confirm one product on the discovered URL
+- new-product / candidate-caa4f8846bbaac144058: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c5b502c05fb8cd80fefb: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a85edad57fe4002d6df: HTTP Error 403: Forbidden
+- new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c63cc1a9ce9516a8f607: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-a71a867b91b7fa8ed60c: Cannot confirm that the product is a material or printer
+- new-product / candidate-ac81a9709385de26bb64: No single GBP offer for the exact product
+- new-product / candidate-d9c4173ff745dda144c1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8caa010446f0e7ef4255: HTTP Error 500: Internal Server Error
+- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
-- new-product / candidate-10f3661b381efda729c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-31e0d068618871ec82c2: Cannot confirm that the product is a material or printer
-- new-product / candidate-735d7183112b70d1e947: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cc3ca6b7c0ed9d79e95c: Cannot confirm one product on the discovered URL
-- new-product / candidate-a94845a10bc18c237152: Cannot confirm that the product is a material or printer
-- new-product / candidate-9a3abf1ed90d4a79b33e: No single GBP offer for the exact product
-- new-product / candidate-0920d071fad4e3f8fe7e: Cannot confirm that the product is a material or printer
-- new-product / candidate-06a27693bd02f7d582da: Cannot confirm that the product is a material or printer
-- new-product / candidate-7ae283cb9405ab21e6ab: Cannot confirm one product on the discovered URL
-- new-product / candidate-33615314282cb5405ad4: Cannot confirm that the product is a material or printer
-- new-product / candidate-2d6a1450d1807e5a65dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-21fd2ef28e75902d28ed: HTTP Error 403: Forbidden
-- new-product / candidate-752c43a650c15d8f8ade: Cannot confirm that the product is a material or printer
-- new-product / candidate-c7db91fecc741c30ae91: No single GBP offer for the exact product
-- new-product / candidate-3807cb538a56c2dfc4bf: Cannot confirm that the product is a material or printer
+- new-product / candidate-ed398141cf9889704f77: Cannot confirm one product on the discovered URL
+- new-product / candidate-e97f9daf009a4fd8b041: Cannot confirm one product on the discovered URL
+- new-product / candidate-95321f6e741327174404: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3a2c8203e56e4caa5865: Cannot confirm one product on the discovered URL
+- new-product / candidate-b1b47eb93a0cb8ac601e: HTTP Error 403: Forbidden
+- new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
+- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
+- new-product / candidate-751c1133dfd24ae2a3ef: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-be98f196540dbad253a0: Cannot confirm that the product is a material or printer
+- new-product / candidate-d0d26372c4ae14ff202a: No single GBP offer for the exact product
+- new-product / candidate-a83530ea1ef297bbf6b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-fce6ae87375878b35f14: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8a144ce0fd1e775f869e: Cannot confirm one product on the discovered URL
+- new-product / candidate-93ea8a01fa93a244d3cf: Cannot confirm one product on the discovered URL
+- new-product / candidate-4072bc25500cf2a92cb1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6a6fa77fd4be78d17565: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae932a133bdf248b9954: HTTP Error 403: Forbidden
+- new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
+- new-product / candidate-c671fa478b7fe142c392: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-d95f1aafd7daf44818cd: Cannot confirm that the product is a material or printer
+- new-product / candidate-396a914b291fb74c42c6: No single GBP offer for the exact product
+- new-product / candidate-9ff5ee235ebff7197e3e: Cannot confirm one product on the discovered URL
+- new-product / candidate-fce1ba3929b340c5c680: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
-- new-product / candidate-132f335ca6d7b410fa48: Cannot confirm one product on the discovered URL
-- new-product / candidate-c08ec737ca363e086f14: Cannot confirm one product on the discovered URL
-- new-product / candidate-9cc14bbfd90eb87d64c9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e0da2d5f90c28882091a: HTTP Error 403: Forbidden
-- new-product / candidate-ad8722a33c216b019996: Cannot confirm that the product is a material or printer
-- new-product / candidate-64463eb674588b7a052e: No single GBP offer for the exact product
-- new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
-- new-product / candidate-b2b5f39d77c5c0b681b8: Cannot confirm one product on the discovered URL
-- new-product / candidate-3cd68de01b83cb392d48: Cannot confirm one product on the discovered URL
-- new-product / candidate-394cbae7c1b77f43c6e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2402dabe3d76dbe00b49: HTTP Error 403: Forbidden
-- new-product / candidate-7067bfc9a296a2925d7b: Cannot confirm that the product is a material or printer
-- new-product / candidate-f912209637b948108a1f: No single GBP offer for the exact product
-- new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
-- new-product / candidate-37d8cab5ed965e83b838: Cannot confirm one product on the discovered URL
-- new-product / candidate-91d6a720ed5b85017c4f: Cannot confirm one product on the discovered URL
-- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a7be4477e86baffd7cef: HTTP Error 403: Forbidden
-- new-product / candidate-82805fec8c0fe6c09382: Cannot confirm that the product is a material or printer
-- new-product / candidate-96246cab40d13107106b: Cannot confirm that the product is a material or printer
-- new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-49e1bcfdf0a5c9cdd076: Cannot confirm that the product is a material or printer
-- new-product / candidate-4feea9e2ec9627098d2e: Cannot confirm one product on the discovered URL
-- new-product / candidate-04880b5ed74b717d8d5e: Cannot confirm one product on the discovered URL
-- new-product / candidate-0e9630f081027e1957c4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d182f933fcb0d0a66a0c: HTTP Error 403: Forbidden
-- new-product / candidate-5d9db45033e6a5ce9a29: Cannot confirm that the product is a material or printer
-- new-product / candidate-09262837ba0c3e4028c7: No single GBP offer for the exact product
-- new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dbf9de0175401ebdfb7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-c0c8799f13ecfda7bac1: Cannot confirm one product on the discovered URL
+- new-product / candidate-07eb17435d2dd31410a3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-16fd16d1b7e78514073e: HTTP Error 404: Not Found
+- new-product / candidate-ad00c2fc017a8342ad56: HTTP Error 403: Forbidden
+- new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f5140f7537b3fcb9bb3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-bfa66ce5a947b879393e: Cannot confirm that the product is a material or printer
+- new-product / candidate-252a0787c168d3be02fb: No single GBP offer for the exact product
+- new-product / candidate-62bee27d999998dc1975: Cannot confirm one product on the discovered URL
+- new-product / candidate-556b938b9c7e5faf1cc4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cabe9bad84fec81dd94f: No verified product image URL
+- new-product / candidate-61bc3ac8fbc3175d4930: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff3c9f7fade4264fdc3f: Cannot confirm one product on the discovered URL
+- new-product / candidate-37e2b83a0dca3ad0de5c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0161c4068eaf541f2f19: Cannot confirm one product on the discovered URL
+- new-product / candidate-7913be9603ae3822b3b4: HTTP Error 403: Forbidden
+- new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
+- new-product / candidate-ba9bebde0ef572eff3a2: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-8cfb6810a6ed2243427a: Cannot confirm that the product is a material or printer
+- new-product / candidate-de9ea372a6bd38550ad1: No single GBP offer for the exact product
+- new-product / candidate-f06f55d11daeb8c1c5ab: Cannot confirm one product on the discovered URL
+- new-product / candidate-23dad5918cc695b4f16d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b3f5dbbb915e26792697: No verified product image URL
+- new-product / candidate-ac7c3fb3c7c4bc32f1ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-f28af1112fab23ccdacb: Cannot confirm one product on the discovered URL
+- new-product / candidate-db39e822975c775f9f66: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cf631a7d86143107098b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a57fb41375b1befaffe8: HTTP Error 403: Forbidden
+- new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
+- new-product / candidate-37b35ddb47116992a67c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-53a67fd9a808aae8eb4e: Cannot confirm that the product is a material or printer
+- new-product / candidate-54048055d3bedd5a1fe6: No single GBP offer for the exact product
+- new-product / candidate-92e556163edc57cda79f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0cfb397fdf6356ade524: Cannot confirm one product on the discovered URL
+- new-product / candidate-97b566f69692ce3f6282: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1bdc4e1ee898615397c0: No verified product image URL
+- new-product / candidate-5ac4a2eab95510bf56a3: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff80e649cd24caa81250: Cannot confirm one product on the discovered URL
+- new-product / candidate-294dee3df540b150933b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2c63f6eb0588c173087d: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3212209da92d9dbe768: HTTP Error 403: Forbidden
+- new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1215824b64ef8534c16: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-188eb4605cdd8e1c8cd2: Cannot confirm that the product is a material or printer
+- new-product / candidate-9902baf82e0019dc6d67: Cannot confirm that the product is a material or printer
+- new-product / candidate-626f6ffb4ad79ca74fb4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-077e05f7011ba673d296: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
 - new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-23d0652c172096273a65: Cannot confirm one product on the discovered URL
-- new-product / candidate-66af18ac840a3cce814f: Cannot confirm that the product is a material or printer
-- new-product / candidate-bc063062871e32a1f051: Cannot confirm one product on the discovered URL
-- new-product / candidate-2319b4be81d888c3f990: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-46013cd1019a9a816087: HTTP Error 403: Forbidden
-- new-product / candidate-7790dc56f0a01a9c23d6: Cannot confirm that the product is a material or printer
-- new-product / candidate-2c1218d77746a522e82d: No single GBP offer for the exact product
-- new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fa23e2883cfbbf45a75d: Cannot confirm that the product is a material or printer
-- new-product / candidate-41f7254c0586db177e52: Cannot confirm one product on the discovered URL
-- new-product / candidate-1003f6f7bb57bc6ff385: Cannot confirm one product on the discovered URL
-- new-product / candidate-6c2c5838ed6c97f3a97e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-32be3ab618b807d9ec6b: HTTP Error 403: Forbidden
-- new-product / candidate-ae08f2b4c6ce1c1ba7ca: Cannot confirm that the product is a material or printer
-- new-product / candidate-a5b7aaa45ee8883c1fa6: No single GBP offer for the exact product
-- new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f19670188d1b9018c9f1: Cannot confirm that the product is a material or printer
-- new-product / candidate-1f62091d59fcf327e076: Cannot confirm one product on the discovered URL
-- new-product / candidate-4ccb5f3c6bc2518b504a: Cannot confirm one product on the discovered URL
-- new-product / candidate-9769c409bd4f02454db3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dc63550d353e282ba7e9: HTTP Error 403: Forbidden
-- new-product / candidate-09050cac2cc891de1f74: Cannot confirm that the product is a material or printer
-- new-product / candidate-137583788860fc1ac12c: No single GBP offer for the exact product
-- new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-be75f2ccb7d3e9ecd1f3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f7a32d2b5470dced87b7: Cannot confirm one product on the discovered URL
-- new-product / candidate-6ef3c5d5e641f683b7bb: Cannot confirm one product on the discovered URL
-- new-product / candidate-e1305888c90b7b13e5b5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-07ee66bc33d01cbdb5b5: HTTP Error 403: Forbidden
-- new-product / candidate-1a0aa66aa1303fcc90de: Cannot confirm that the product is a material or printer
-- new-product / candidate-370c8f5c03439bcbbf8b: No single GBP offer for the exact product
-- new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d35a546f9ec5bad8cf6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-654878f60193675af1ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-5ff0f37526ec50e3ca9f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6eae80c562ad8c61ae60: Cannot confirm one product on the discovered URL
+- new-product / candidate-739e00d2dbd8d7890afa: HTTP Error 403: Forbidden
+- new-product / candidate-eb85f48038a9b3877db7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-7a1834e19add25aa5891: Cannot confirm that the product is a material or printer
+- new-product / candidate-c766c07813937a587b00: No single GBP offer for the exact product
+- new-product / candidate-acf1a16df1e82233f96f: Pack weight is ambiguous; listing skipped
+- new-product / candidate-5346b795711ca8a883bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bde6337dae90f04c359e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c6c66e9f18c56a5fd697: Cannot confirm one product on the discovered URL
-- new-product / candidate-e538622aebd085ccd45f: Cannot confirm one product on the discovered URL
-- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9bb2a792799339e75324: HTTP Error 403: Forbidden
-- new-product / candidate-4b2e95885c42d92cf4a6: Cannot confirm that the product is a material or printer
-- new-product / candidate-ac15ae29fa2956cc3f9d: No single GBP offer for the exact product
-- new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0be2b642945ef8f72336: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b29bd389147939851c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-67238c0c76f47e624efd: HTTP Error 403: Forbidden
-- new-product / candidate-39a4172c9973d006fdec: Cannot confirm that the product is a material or printer
-- new-product / candidate-284a7a027e19f8c14426: No single GBP offer for the exact product
-- new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0770ef51b53630b8a790: Cannot confirm one product on the discovered URL
-- new-product / candidate-26a8a07cc580339c06ad: Cannot confirm one product on the discovered URL
-- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c9800c6e94897c3714e5: HTTP Error 403: Forbidden
-- new-product / candidate-23fefb69d2647271c416: Cannot confirm that the product is a material or printer
-- new-product / candidate-62c0d8112a546de2a059: No single GBP offer for the exact product
-- new-product / candidate-ccbe595b65e5ff1156fc: Cannot confirm that the product is a material or printer
-- new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1c42fe15b47db7d759a: Cannot confirm one product on the discovered URL
-- new-product / candidate-04109828050e42f629fd: Cannot confirm one product on the discovered URL
-- new-product / candidate-e6d1b7b4a7b3c1be7169: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-01344e6fd219e3a5202c: HTTP Error 403: Forbidden
-- new-product / candidate-c13a4ef06ec333438afc: Cannot confirm that the product is a material or printer
-- new-product / candidate-72fe38228f86f750aaea: No single GBP offer for the exact product
-- new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2c876451689908969e8e: Cannot confirm one product on the discovered URL
-- new-product / candidate-d8129461d694409e6cd3: Cannot confirm one product on the discovered URL
-- new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-044ab3eb6511eba80b0a: HTTP Error 403: Forbidden
-- new-product / candidate-cba2a1774a41aa6c33ad: Cannot confirm that the product is a material or printer
-- new-product / candidate-1f987c2e139b372de93e: No single GBP offer for the exact product
-- new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a1f720fabe05e007602c: Cannot confirm one product on the discovered URL
-- new-product / candidate-962229670c98befcd777: Cannot confirm one product on the discovered URL
-- new-product / candidate-eadcd7a067161d6ec25a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ae1ad541ec71c1b3b202: HTTP Error 403: Forbidden
-- new-product / candidate-30894dc2275000171d3e: Cannot confirm that the product is a material or printer
-- new-product / candidate-9958140a52d57dc731e3: Pack weight is ambiguous; listing skipped
-- new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3fa911c5acbf25f144a6: Cannot confirm one product on the discovered URL
-- new-product / candidate-72326ef14958c7054a13: Cannot confirm one product on the discovered URL
-- new-product / candidate-5761be978497cc54b18c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-567b6b7f77ba73383692: HTTP Error 403: Forbidden
-- new-product / candidate-2be7c231e1f113ba69ee: Cannot confirm that the product is a material or printer
-- new-product / candidate-2cffa41862674f0673ab: No single GBP offer for the exact product
-- new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e98c6c61d48a02e1b602: Cannot confirm one product on the discovered URL
-- new-product / candidate-81c16eaa001ea073cb3c: Cannot confirm one product on the discovered URL
-- new-product / candidate-16c602f6396e9362ad96: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3ce02cba0e2f8c373c65: HTTP Error 403: Forbidden
-- new-product / candidate-4caf51517ec948c4513c: Cannot confirm that the product is a material or printer
-- new-product / candidate-ec943efa0308db2a2bdf: No single GBP offer for the exact product
-- new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
-- new-product / candidate-87d24681d6b9e15ba544: Cannot confirm one product on the discovered URL
-- new-product / candidate-6ac95dccf647cbe713ff: Cannot confirm that the product is a material or printer
-- new-product / candidate-bfe8cecd283f3f6e91fb: Cannot confirm one product on the discovered URL
-- new-product / candidate-d84ef37c7aef34d763a2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0cd9591216d4ea549559: Cannot confirm one product on the discovered URL
-- new-product / candidate-39d44324ac423af10468: Cannot confirm that the product is a material or printer
-- new-product / candidate-a0eefa3ccee684a79fb0: No single GBP offer for the exact product
-- new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c5476950bf04d695a687: Cannot confirm one product on the discovered URL
-- new-product / candidate-d06f0b72534da12f6520: Cannot confirm that the product is a material or printer
-- new-product / candidate-830fa4205828629e3b86: Cannot confirm one product on the discovered URL
-- new-product / candidate-3817e7c486c0c8ce3f50: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f6b20ef0e411873553a1: Cannot confirm one product on the discovered URL
-- new-product / candidate-f84ac361de1a73ccf4be: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ab40fdb3623aabb1c85e: No single GBP offer for the exact product
-- new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a15810f5416ea0cb9a06: Cannot confirm one product on the discovered URL
-- new-product / candidate-90314bec5c319d9a8dd0: Cannot confirm that the product is a material or printer
-- new-product / candidate-f6429d46d4b962467385: Cannot confirm one product on the discovered URL
-- new-product / candidate-be247ee3bf0ea7d87719: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f1b8c14898a242654934: Cannot confirm one product on the discovered URL
+- new-product / candidate-e92a4018c3368296e077: Cannot confirm one product on the discovered URL
+- new-product / candidate-92fcce8d9db164b60fb2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2bdc8a8fc2e3dfee6731: Cannot confirm one product on the discovered URL
+- new-product / candidate-84edd4e05ef1bc10565a: HTTP Error 403: Forbidden
+- new-product / candidate-bee12f97ed7a4a2e9513: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-62c1e50f77638ceedbba: Cannot confirm that the product is a material or printer
+- new-product / candidate-4219ff311bd014290891: No single GBP offer for the exact product
+- new-product / candidate-4bbea4f5c5b29a2f96d0: Pack weight is ambiguous; listing skipped
+- new-product / candidate-dde82a73c19cf94510f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fa23e2883cfbbf45a75d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3efb3718ce2e0e84930c: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac35c87ad11dd7a82aa5: Cannot confirm one product on the discovered URL
+- new-product / candidate-d431efdfeac6e1250860: Source does not state the material pack weight; listing skipped
+- new-product / candidate-90625358fcf8e1d310ef: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd5329aa205a7dc9875c: HTTP Error 403: Forbidden
+- new-product / candidate-496655b483325e12f7ab: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-056e6659925158b2aeab: Cannot confirm that the product is a material or printer
+- new-product / candidate-4f9a6841003255a06151: No single GBP offer for the exact product
+- new-product / candidate-48e6426ee65e3c26e2b8: Pack weight is ambiguous; listing skipped
+- new-product / candidate-15f9cd8e3353419264dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f19670188d1b9018c9f1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1775bf9d0c4a440fa3df: Cannot confirm one product on the discovered URL
+- new-product / candidate-14733c24e0b7a1954e76: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7746a373c29bf17e25c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dc12685e1df40d28f34b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fe87725357a22b2ada2: HTTP Error 403: Forbidden
+- new-product / candidate-2ae5b5a2e8a6b1ef98a6: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-b9bd048c43af23a5dc77: Cannot confirm that the product is a material or printer
+- new-product / candidate-948498430d01eb44ae97: No single GBP offer for the exact product
+- new-product / candidate-525ae27b0c863fdfa280: Pack weight is ambiguous; listing skipped
+- new-product / candidate-21c4150122e28b73a0a8: Cannot confirm one product on the discovered URL
+- new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-be75f2ccb7d3e9ecd1f3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2b08eecc5afd0dc9be0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3422a8e9ca192863984: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8b61754d606f4c9c882: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0fa0450970bea0651163: Cannot confirm one product on the discovered URL
+- new-product / candidate-e77c5eea463b15be4691: HTTP Error 403: Forbidden
+- new-product / candidate-85aab4697386ea3cba38: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-5f9d666ec4b78b94943a: Cannot confirm that the product is a material or printer
+- new-product / candidate-dc2b55403c5399027de2: No single GBP offer for the exact product
+- new-product / candidate-59b3e60c98a700bea704: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0ba7b6398ecb974b8033: Cannot confirm one product on the discovered URL
+- new-product / candidate-c4535611d3695eebe57b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-49e1bcfdf0a5c9cdd076: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ad30c385b9c0bb5f98d3: Cannot confirm one product on the discovered URL
+- new-product / candidate-60f32bd113f54560c37b: Cannot confirm one product on the discovered URL
+- new-product / candidate-399af7be52483532dc59: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3c3026fff52bf2d91f78: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b95d3ec8ce37e98c936: HTTP Error 403: Forbidden
+- new-product / candidate-6bb556c8025616a8f32f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-54c92b0e56ce9ba63200: Cannot confirm that the product is a material or printer
+- new-product / candidate-5701b1119aa9249d3bc7: No single GBP offer for the exact product
+- new-product / candidate-3f8e67d003cdc49c75dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-5a097889d4f50e8a3470: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
+- new-product / candidate-f21d1cfefe8ee4d87f9e: Cannot confirm one product on the discovered URL
+- new-product / candidate-35defdcc29a3a474cb03: Cannot confirm one product on the discovered URL
+- new-product / candidate-4878cc835e450e6e15c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-921589079216f695fd02: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8fa307af32efab5999f: HTTP Error 403: Forbidden
+- new-product / candidate-b1de0aedf6ba53c27154: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-68d66e28993096c3f125: Cannot confirm that the product is a material or printer
+- new-product / candidate-59af1176e4bff47f1d80: No single GBP offer for the exact product
+- new-product / candidate-1af75270a2b170829c9b: Pack weight is ambiguous; listing skipped
+- new-product / candidate-40d6a9195fbac907af29: Cannot confirm one product on the discovered URL
+- new-product / candidate-c3b624367c7b15ca166e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
+- new-product / candidate-5b6e063c94689a56a98f: Cannot confirm one product on the discovered URL
+- new-product / candidate-6380cccf17f217a3d944: Cannot confirm one product on the discovered URL
+- new-product / candidate-95f92af283a3943925e0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-27b0d2e92d84850a6ffa: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e537e7b385a186c2d47: HTTP Error 403: Forbidden
+- new-product / candidate-20628a23ff0a0b728090: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-cea84124b106efbe871a: Cannot confirm that the product is a material or printer
+- new-product / candidate-4abde21ecad8c74e1d96: No single GBP offer for the exact product
+- new-product / candidate-c9ac2b7fa5af248a85eb: Pack weight is ambiguous; listing skipped
+- new-product / candidate-083e6e1c0c891cc89033: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb9450ba72bfd8fd2e3c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e57b252921bf0ee24b3d: No verified product image URL
+- new-product / candidate-3fc2135e9b9b2dc23f83: Cannot confirm one product on the discovered URL
+- new-product / candidate-3601184c2a2a95249385: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2504394ef9721b5f55e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-07a27d5c210e46dd680e: Cannot confirm one product on the discovered URL
+- new-product / candidate-1114b7ce2fb25afb8e0e: HTTP Error 403: Forbidden
+- new-product / candidate-92a6c620c08556fcf02f: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-bc33b2e61f9a3e4b0e1b: Cannot confirm that the product is a material or printer
+- new-product / candidate-d6480e227a539b3cd9d6: No single GBP offer for the exact product
+- new-product / candidate-ffe871292d74f7a28edf: Cannot confirm one product on the discovered URL
+- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dcf5b21469a8b49f13a2: No verified product image URL
+- new-product / candidate-009129cabb1d6437b71f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ddf0d97095fc3f760704: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f2b9a9533562214765d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b7098398be756088d725: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c17f7fd10543185dc08: HTTP Error 403: Forbidden
+- new-product / candidate-27405e3b3d32cc7d66b9: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-2fe11fbd01c6852810b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-c1e051af16bd7542fe67: No single GBP offer for the exact product
+- new-product / candidate-0ac6fe9208deb2c07b20: Source does not state the material pack weight; listing skipped
+- new-product / candidate-299307c345b07888caa1: Cannot confirm one product on the discovered URL
+- new-product / candidate-84ed230726e3c799d3c1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ed982d7a12e73498937d: No verified product image URL
+- new-product / candidate-a303e9859d2d496d4ad2: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff373bc37f170426fda7: Cannot confirm one product on the discovered URL
+- new-product / candidate-033ba17a0018581b32b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8ad88b1278e1e2303ef7: Cannot confirm one product on the discovered URL
+- new-product / candidate-90f8cda33d9c0d8c0fc8: HTTP Error 403: Forbidden
+- new-product / candidate-7fd89bc10762210295c7: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-3ae6e9e1e2e26f610bb9: No verified product image URL
+- new-product / candidate-c48606cb12400492453d: Cannot confirm that the product is a material or printer
+- new-product / candidate-d014c38701f89ff5d55c: No single GBP offer for the exact product
+- new-product / candidate-a54d0dc9a769b0dc955e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2ce2c42994331522a268: Source does not state the material pack weight; listing skipped
+- new-product / candidate-71cbc633f00f9bd8fbd4: Cannot confirm one product on the discovered URL
+- new-product / candidate-e414cf540eecb13721ac: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5e100c7706994e9acea9: No verified product image URL
+- new-product / candidate-e7dd6ebd48cd07f3b0d7: Cannot confirm one product on the discovered URL
+- new-product / candidate-7674a3b22d0be962288e: Cannot confirm one product on the discovered URL
+- new-product / candidate-09013d9cd328b94fcd1d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-03adeeb4ac9dea431419: Cannot confirm one product on the discovered URL
+- new-product / candidate-164aee7f4a3f69435198: HTTP Error 403: Forbidden
+- new-product / candidate-1f3a7b04f15f63c48015: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-65557a0341dc558c322b: Cannot confirm that the product is a material or printer
+- new-product / candidate-e750e7e6145869445be1: No single GBP offer for the exact product
+- new-product / candidate-6dc942ebc1e112b3d2d3: Pack weight is ambiguous; listing skipped
+- new-product / candidate-40868c72c9d180ceba9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd21c88a39fb0a28d8d4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
+- new-product / candidate-aaebe9d8f89c2a6dd746: Cannot confirm one product on the discovered URL
+- new-product / candidate-31e5f15d9e169dcd17c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-1870d1e856ad274a2e72: Source does not state the material pack weight; listing skipped
+- new-product / candidate-095409d82aa7be401065: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ca5738b13ac10e126dd: HTTP Error 403: Forbidden
+- new-product / candidate-1c35248400fb89878d68: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-3e5541b8f46d5c563289: Cannot confirm that the product is a material or printer
+- new-product / candidate-f3173a980527e73f7aad: No single GBP offer for the exact product
+- new-product / candidate-57d45be50af66f522f8d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c2a23c5db3b5f484a4d8: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cf4bd1423c8ab4e7e66: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba8e3bc516bb64c77020: No verified product image URL
+- new-product / candidate-95e70755b23fb7626620: Cannot confirm one product on the discovered URL
+- new-product / candidate-55ce92e89e8b034d8e79: Cannot confirm one product on the discovered URL
+- new-product / candidate-d7b9ee625f5eb20de570: Source does not state the material pack weight; listing skipped
+- new-product / candidate-673bdf38bb3a589c654e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f93a93f4c5152bf775f7: HTTP Error 403: Forbidden
+- new-product / candidate-5976d547a369a913d898: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-dedb65a7d25eb3c6a7b2: Cannot confirm that the product is a material or printer
+- new-product / candidate-12c9f8529277d0ae3d9a: No single GBP offer for the exact product
+- new-product / candidate-ebd76b7fbf1bf40ab032: Source does not state the material pack weight; listing skipped
+- new-product / candidate-452c41feedb96e26a816: Cannot confirm one product on the discovered URL
+- new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-eb86ff5a04a3ad55b383: No verified product image URL
+- new-product / candidate-27fbc7a159e0431c1904: Cannot confirm one product on the discovered URL
+- new-product / candidate-084cdcdca490639303e9: Cannot confirm one product on the discovered URL
+- new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c39e5d221f2d4f2cb7cf: Cannot confirm one product on the discovered URL
+- new-product / candidate-5c9bad509369a8abeb6f: HTTP Error 403: Forbidden
+- new-product / candidate-44dc7715049a9e318c71: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-8e88f4f6d34338c47eba: No single GBP offer for the exact product
+- new-product / candidate-90277e946144dba5b0ef: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1b2d301aeff0e2993238: Cannot confirm one product on the discovered URL
+- new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c7d74e513829760a7c12: No verified product image URL
+- new-product / candidate-6d3f388557c8036e4f03: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f60a5ff0b672ab89d05: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e3887902ddc079053dad: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf164e921b9d29ef65f8: HTTP Error 403: Forbidden
+- new-product / candidate-b16dd983bb7008a65820: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-91e76434dcd985162019: No single GBP offer for the exact product
+- new-product / candidate-00ee6ccffc7473b96cd1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d2609f543c666e57119b: Cannot confirm one product on the discovered URL
+- new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5ab8dd60421722d143f5: No verified product image URL
+- new-product / candidate-0a022d845784673faf7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-57fc2bfaded87ea66a50: Cannot confirm one product on the discovered URL
+- new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
+- new-product / candidate-951f898a912f64c6baeb: Cannot confirm one product on the discovered URL
+- new-product / candidate-00d691390547fac947ad: HTTP Error 403: Forbidden
+- new-product / candidate-108873f002671419ec7a: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-9a9163b08fdb77e38931: No single GBP offer for the exact product
+- new-product / candidate-f42a53d531596ec9458a: Pack weight is ambiguous; listing skipped
+- new-product / candidate-35cd3a1d6c92dea44d42: Cannot confirm one product on the discovered URL
+- new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5ac06a8507fa7e18b63e: No verified product image URL
+- new-product / candidate-2c71d98db51ee59bc39a: Cannot confirm one product on the discovered URL
+- new-product / candidate-2341abebc211808efd80: Cannot confirm one product on the discovered URL
+- new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
+- new-product / candidate-45504fbb292ee42f0a09: Cannot confirm one product on the discovered URL
+- new-product / candidate-b11e4c94364add54ebec: HTTP Error 403: Forbidden
+- new-product / candidate-e0170b009ac71ca3e430: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-c58be09870e7a2c9263d: No verified product image URL
+- new-product / candidate-cc2dc494c9745f0d5802: No single GBP offer for the exact product
+- new-product / candidate-5d186a478dddb53456ff: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6eeb0b823a81e07c628: Source does not state the material pack weight; listing skipped
+- new-product / candidate-52aca3d5213af404e941: No verified product image URL
+- new-product / candidate-a9b381cabe038e709b56: Cannot confirm one product on the discovered URL
+- new-product / candidate-79d1540292ec43243877: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1a937ebf1814e06be9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c26615eb28cb254a26b: HTTP Error 403: Forbidden
+- new-product / candidate-103c2f7d91c1244a56f3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-f59be60f03df71f55f26: No verified product image URL
+- new-product / candidate-bb30eb7dffc235bb7a9a: No single GBP offer for the exact product
+- new-product / candidate-9bda0f8dbb151527e868: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ae039d92de08587ed2d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2ff77bd921da4fbebb4e: No verified product image URL
+- new-product / candidate-20bc87e871380b33bc4a: Cannot confirm one product on the discovered URL
+- new-product / candidate-da67bf424141c497d505: Cannot confirm one product on the discovered URL
+- new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bd0dd649388a8e708989: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e2f0cf5c1ee67d431e6: HTTP Error 403: Forbidden
+- new-product / candidate-45b84dced82ebcc75bde: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-bcc9557d668006315522: No single GBP offer for the exact product
+- new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
+- new-product / candidate-aafc320f9f8f338687f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fe35d1d214f8d4a8455: Source does not state the material pack weight; listing skipped
+- new-product / candidate-555881b52e83091d08da: No verified product image URL
+- new-product / candidate-1ed06f8e8463d125882d: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6187b4f9b8a97a15428: Cannot confirm one product on the discovered URL
+- new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
+- new-product / candidate-65e4c5760856b7da8280: Cannot confirm one product on the discovered URL
+- new-product / candidate-c2e3b4a5104fbd579850: HTTP Error 403: Forbidden
+- new-product / candidate-be32f0c0ce5df6b39af9: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-d22e2c2ef601784af630: No single GBP offer for the exact product
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-c5d16cbc55e1e862cfb4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a2f824ee6130df33a990: Cannot confirm one product on the discovered URL
+- new-product / candidate-6c2fceea4c1d272bab1a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-91449d06ebfde09fcaa4: No verified product image URL
+- new-product / candidate-25c4866b3cdac7544c9b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a60f4449c43bcb1bc69c: Cannot confirm one product on the discovered URL
+- new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-725b5a579199274e9e92: Cannot confirm one product on the discovered URL
+- new-product / candidate-324adf3504461e59faae: HTTP Error 403: Forbidden
+- new-product / candidate-420afb824ff91023c8ae: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-8e3686af8ce89426ea9a: Pack weight is ambiguous; listing skipped
+- new-product / candidate-c397b7f7cdad72b01785: No single GBP offer for the exact product
+- new-product / candidate-2e6b8ac373bc66b2b007: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-94cbd377a3890a7213dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-aa3b4952092fe697fe45: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a3f02426ef1961d08e3a: Cannot confirm one product on the discovered URL
+- new-product / candidate-39445b97d06589794546: Cannot confirm one product on the discovered URL
+- new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d358eee9e37ae321b507: HTTP Error 403: Forbidden
+- new-product / candidate-e7c353ad773bfad9daec: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-a7f313cb947ed1418f69: No verified product image URL
+- new-product / candidate-912793674106bd623bb5: No single GBP offer for the exact product
+- new-product / candidate-abe8ee8f0e9e44bc3a38: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d0692f1e665ab9a37637: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f86351d29e1bd77c22a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-273cebb30275df93d74d: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9cc7b7d7e30d5fa6f3d: Cannot confirm one product on the discovered URL
+- new-product / candidate-8bd628979d63ab4bcdfe: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e34d6ca000ecbb9ee12c: HTTP Error 403: Forbidden
+- new-product / candidate-f0a117327223edd02426: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-545bc62594e1844762ea: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0a036164caf904e517cb: No single GBP offer for the exact product
+- new-product / candidate-6084b1cc9ee03a3cf671: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a1bdb3341aee223267a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1a93adc4d90a9ed61131: Cannot confirm one product on the discovered URL
+- new-product / candidate-99cc77c8bde44b1bc0b9: Cannot confirm one product on the discovered URL
+- new-product / candidate-4506b5d58c28e91e5236: HTTP Error 403: Forbidden
+- new-product / candidate-a6c9cfb8bba5396b1a0c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-3e03adcea97f6a7b6e08: No verified product image URL
+- new-product / candidate-89f69e0e0a3e40f9c74e: Cannot confirm that the product is a material or printer
+- new-product / candidate-f9e798658a1467f2c3bd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9758bde5c8a10dee6931: Cannot confirm one product on the discovered URL
+- new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
+- new-product / candidate-da9fe41d67e540d7fedc: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd468dfa0cb5549f7bc3: Cannot confirm one product on the discovered URL
+- new-product / candidate-cd9c9f2fdf6d6dabaf9d: HTTP Error 403: Forbidden
+- new-product / candidate-b5d481e0cfcc327b86e3: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-66a66dd6c271fa5a35aa: No single GBP offer for the exact product
+- new-product / candidate-abb88f5fc4e9f1eb8094: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d03d09c3684310ae8f24: Cannot confirm one product on the discovered URL
+- new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
+- new-product / candidate-73c2e2198fed47c73a54: Cannot confirm one product on the discovered URL
+- new-product / candidate-7796ec27898d68f58505: Cannot confirm one product on the discovered URL
+- new-product / candidate-ed1b11db30ff15b5b299: HTTP Error 403: Forbidden
+- new-product / candidate-2fe623af107b845d9bac: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-0adb0dbee1c1019fe2cf: No verified product image URL
+- new-product / candidate-cad8f56f01c2b60db941: Pack weight is ambiguous; listing skipped
+- new-product / candidate-e2fb644830bba3708070: Cannot confirm that the product is a material or printer
+- new-product / candidate-65a65fe425ef78feda62: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0050db4aff002bd7d0dd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc0305cc333dce8ebc0f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2f2718941b08f14bafb9: Cannot confirm one product on the discovered URL
+- new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6315b90b350227c8a4b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-dfc8e151e13a6abfd5fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-624cc97d4e8dfee48cc5: HTTP Error 403: Forbidden
+- new-product / candidate-4d29885c7044a29c0e54: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-7079f44fd87f0f09be32: Pack weight is ambiguous; listing skipped
+- new-product / candidate-51b27933da2049153abc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc6a921afa8af6a38f17: Cannot confirm one product on the discovered URL
+- new-product / candidate-0920d071fad4e3f8fe7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b6ee28dfd5c45bbb3529: Cannot confirm one product on the discovered URL
+- new-product / candidate-607d4236f4b0acab15bc: Cannot confirm one product on the discovered URL
+- new-product / candidate-b4a960faab8357701e01: HTTP Error 403: Forbidden
+- new-product / candidate-3e7757e3e95c0803794c: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-e4964233c48699d02e08: Pack weight is ambiguous; listing skipped
+- new-product / candidate-bd87af530f1f5f51e889: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-65ae18b5000187d458de: Cannot confirm one product on the discovered URL
+- new-product / candidate-71b7e8ab3acf79967ac2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-458036134888499b9e79: Cannot confirm one product on the discovered URL
+- new-product / candidate-d4f4224c335eb56e1450: Cannot confirm one product on the discovered URL
+- new-product / candidate-f5560708283601091dc8: HTTP Error 403: Forbidden
+- new-product / candidate-cd83b2381003b04e5779: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-cbb1c8b01d87b7352e02: No single GBP offer for the exact product
+- new-product / candidate-3fd5e24f1715bb9c52b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6ac4c6c2299c3af0c10: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bb11e9cdc01fde1bd193: Cannot confirm one product on the discovered URL
+- new-product / candidate-24698e831921e6c1b436: Cannot confirm one product on the discovered URL
+- new-product / candidate-b5c1a36216e1369da4f8: HTTP Error 403: Forbidden
+- new-product / candidate-2961b7ef118c353ccdda: Retailer catalogue unavailable this run: HTTP Error 500: Internal Server Error
+- new-product / candidate-825844afab0db6e0070a: Pack weight is ambiguous; listing skipped
+- new-product / candidate-dde32ebe6c957c177102: No single GBP offer for the exact product
+- new-product / candidate-a2935246b4865228ca1a: Cannot confirm one product on the discovered URL
+- new-product / candidate-6b2ee274dc84249e680c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6b609c7c2718db2477ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-16774781b794c7d1a1fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-00e111c00285ef98a0f1: HTTP Error 403: Forbidden
+- new-product / candidate-96595bec4ea895bb1a7b: No single GBP offer for the exact product
+- new-product / candidate-15394f6200fc7d286749: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cca93de1bf2f3da4228e: Cannot confirm one product on the discovered URL
+- new-product / candidate-b34746f9658827378f18: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b3de3f1d4fd565526c8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-cf26e503bbcc9b4f1515: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6b3d73f8c19cb8c67c6: HTTP Error 403: Forbidden
+- new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
+- new-product / candidate-6f366d04c1b036e09447: No single GBP offer for the exact product
+- new-product / candidate-813dfa262bbca094df53: Pack weight is ambiguous; listing skipped
+- new-product / candidate-5bcd4ac840945b0c85e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-2cbf2eec2b91d7db383d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3f4e33d744748a4ef445: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2644e661a839d20f2e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-93c9f5813de91534e838: HTTP Error 403: Forbidden
+- new-product / candidate-d82d4d263b5d635b6f70: No single GBP offer for the exact product
+- new-product / candidate-926b5788011e5d21eff2: Pack weight is ambiguous; listing skipped
+- new-product / candidate-b4edf60055082839664d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-9aa5fa12061c1663a244: Cannot confirm one product on the discovered URL
+- new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-07a37a1a00c9293bab8b: Cannot confirm one product on the discovered URL
+- new-product / candidate-eff66e49df16a57f52ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-159b1b90eb1b958d682f: Cannot confirm one product on the discovered URL
+- new-product / candidate-bb0eed017e0dea658012: No verified product image URL
+- new-product / candidate-618c511944a36fa58555: No single GBP offer for the exact product
+- new-product / candidate-ba900546153d2ed37464: Pack weight is ambiguous; listing skipped
+- new-product / candidate-b2507fcb38b158e9afe6: Cannot confirm one product on the discovered URL
+- new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
+- new-product / candidate-88df8eeb3f328fda41e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-4dd889e5569a090b4979: Cannot confirm one product on the discovered URL
+- new-product / candidate-e4d7dbcefd97e034ec28: Cannot confirm one product on the discovered URL
+- new-product / candidate-710f40be91a3449cda6e: No verified product image URL
+- new-product / candidate-f48664da967efb2e46e1: No single GBP offer for the exact product
+- new-product / candidate-0b69e35794d2a3421519: Cannot confirm one product on the discovered URL
+- new-product / candidate-3807cb538a56c2dfc4bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d65e6d73e1e34c45aaad: Cannot confirm one product on the discovered URL
+- new-product / candidate-535c89a976211a98aca5: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc3ca6b7c0ed9d79e95c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ecc1cc021edc9592d18: No single GBP offer for the exact product
+- new-product / candidate-746bce8c93b96ec2f672: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4a055b363e3e2c9babff: Cannot confirm one product on the discovered URL
+- new-product / candidate-3d77ec1915f8f0bda6c5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-990d39bd4862018e61e3: Cannot confirm one product on the discovered URL
+- new-product / candidate-104b0f9502e9f4ea92fb: Cannot confirm one product on the discovered URL
 - new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
-- new-product / candidate-c1bde86a8ab12b064b43: Cannot confirm that the product is a material or printer
-- new-product / candidate-eb2c0da088e0e9ff37a9: No single GBP offer for the exact product
-- new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6dc9ce073b0c50051253: Cannot confirm one product on the discovered URL
-- new-product / candidate-8feffd2b6a8f5d94439e: Cannot confirm that the product is a material or printer
-- new-product / candidate-4189259ecacd0db29a37: Cannot confirm one product on the discovered URL
-- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-423b3186e5e14e4aa598: No single GBP offer for the exact product
+- new-product / candidate-5dabe7f16b0aeca0af21: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1dd845c4caa572604f93: Cannot confirm one product on the discovered URL
+- new-product / candidate-f73e832fa925c7740a05: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1768b7d773b6f552881: Cannot confirm one product on the discovered URL
+- new-product / candidate-1cce8ec5d1a4886936ac: Cannot confirm one product on the discovered URL
 - new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
-- new-product / candidate-1df8864c7679e603bb44: Cannot confirm that the product is a material or printer
-- new-product / candidate-2eeb697f0961303ed58c: No single GBP offer for the exact product
-- new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bca45f9c22482c7fb783: Cannot confirm one product on the discovered URL
-- new-product / candidate-5d71d2c08d03af45e296: Cannot confirm one product on the discovered URL
-- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5f103af2e4ec3a0ab6ed: No single GBP offer for the exact product
+- new-product / candidate-2582519367f803e8ea94: Source does not state the material pack weight; listing skipped
+- new-product / candidate-99803b685466cb2844b3: Cannot confirm one product on the discovered URL
+- new-product / candidate-c06232c1944928431f65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d6a507068e55e4bf140c: Cannot confirm one product on the discovered URL
+- new-product / candidate-0463d265b211881a8f39: Cannot confirm one product on the discovered URL
 - new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
-- new-product / candidate-ae995c1124f163e21ebc: Cannot confirm that the product is a material or printer
-- new-product / candidate-1a7abcfe2b3a7287e17d: No single GBP offer for the exact product
-- new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c897ed754b95491f2910: Cannot confirm one product on the discovered URL
-- new-product / candidate-f80529ec58212d82343b: Cannot confirm one product on the discovered URL
-- new-product / candidate-7aa684bc0262dd122f19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
+- new-product / candidate-72937768a06d597aecdc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eb3f5039dbe8c4795243: No single GBP offer for the exact product
+- new-product / candidate-3cc56fa193a5f92291ad: Source does not state the material pack weight; listing skipped
+- new-product / candidate-94ecd96573ab9027e3fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-ad538daf1ae8072eac24: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b7bf7d1c77eb4fa6d7f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-c95ffd473e014c1c4114: Cannot confirm one product on the discovered URL
 - new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden
+- new-product / candidate-434e8e5937db89d18d45: No verified product image URL
+- new-product / candidate-c805686d2e2dd2dc27fc: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7310de001890d9ebceb9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
+- new-product / candidate-fd3de0857780b1c4ae09: Cannot confirm one product on the discovered URL
+- new-product / candidate-7621e62c1f2f9e526237: Source does not state the material pack weight; listing skipped
+- new-product / candidate-840ef9cd0ec50c69312a: Cannot confirm one product on the discovered URL
+- new-product / candidate-3812dc0aeedc298c078f: Cannot confirm one product on the discovered URL
+- new-product / candidate-21fd2ef28e75902d28ed: HTTP Error 403: Forbidden
+- new-product / candidate-6c558d66fc27c9ddb595: No single GBP offer for the exact product
+- new-product / candidate-e55117457ca224ad0cd6: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4c171e6be8f017c98cda: Cannot confirm one product on the discovered URL
+- new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1a6af88b7d55136c407: Cannot confirm one product on the discovered URL
+- new-product / candidate-af87680c071518f503a8: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0da2d5f90c28882091a: HTTP Error 403: Forbidden
+- new-product / candidate-cdef1de6d1730d03c279: No single GBP offer for the exact product
+- new-product / candidate-878b23c53a3104deb095: Cannot confirm one product on the discovered URL
+- new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0b9bea1971c95c96d082: Cannot confirm one product on the discovered URL
+- new-product / candidate-39741d6b4ab0242e8034: Cannot confirm one product on the discovered URL
+- new-product / candidate-2402dabe3d76dbe00b49: HTTP Error 403: Forbidden
+- new-product / candidate-ea499154b1663be3a451: No verified product image URL
+- new-product / candidate-dd7c68f71f3d60fae960: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4245bb7df03baf4777d3: No single GBP offer for the exact product
+- new-product / candidate-436a9aa2256d5cc18ccf: Pack weight is ambiguous; listing skipped
+- new-product / candidate-fd76c4082b7a9710260b: Cannot confirm one product on the discovered URL
+- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cfa05cbc5df5a3ac5ee4: Cannot confirm one product on the discovered URL
+- new-product / candidate-27e2ec27f265e1678b91: Cannot confirm one product on the discovered URL
+- new-product / candidate-a7be4477e86baffd7cef: HTTP Error 403: Forbidden
+- new-product / candidate-ab9a05d1b1533b08a4b3: No single GBP offer for the exact product
+- new-product / candidate-5ee5d6328f5c0d63b8b5: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4339ddc12734c72eacf0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0a0d9a89f2e82e78d33b: Cannot confirm one product on the discovered URL
+- new-product / candidate-6647e5c0fd4f181770af: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4b43a325d74110353321: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8a5880920f71c63e613: Cannot confirm one product on the discovered URL
+- new-product / candidate-d182f933fcb0d0a66a0c: HTTP Error 403: Forbidden
+- new-product / candidate-8110e594e4fa6f916d7e: No single GBP offer for the exact product
+- new-product / candidate-a448d0343b0f150f0446: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5eb9780304b302bcd4d9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-79b65259032d54dc8ca3: Cannot confirm one product on the discovered URL
+- new-product / candidate-08fed14fa311e7f5eb98: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b14f2d26668562e03ec3: Cannot confirm one product on the discovered URL
+- new-product / candidate-12e49c2e6d492b53f90a: Cannot confirm one product on the discovered URL
+- new-product / candidate-46013cd1019a9a816087: HTTP Error 403: Forbidden
+- new-product / candidate-326de91957426dcbbf23: No single GBP offer for the exact product
+- new-product / candidate-8d8e9732c8febcee12ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-1811e587c1dd83edf013: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c4653396d301a3be279c: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e0e17a1bb02b9d7cc56: Cannot confirm one product on the discovered URL
+- new-product / candidate-32be3ab618b807d9ec6b: HTTP Error 403: Forbidden
+- new-product / candidate-5ca5b584be2228ca4bf1: HTTP Error 404: Not Found
+- new-product / candidate-67f1670f748995592c44: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c483a428eed1863c0dd3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-80755e3343fff8f99ecd: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3952daa88a3473e1c84: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ffd96c3db79047fbf779: Cannot confirm one product on the discovered URL
+- new-product / candidate-0582e229436938cfbc55: Cannot confirm one product on the discovered URL
+- new-product / candidate-07ee66bc33d01cbdb5b5: HTTP Error 403: Forbidden
+- new-product / candidate-d83134d0478c6c3c6552: No single GBP offer for the exact product
+- new-product / candidate-3b9afd8a62f78e3c7906: No verified product image URL
+- new-product / candidate-ea5bb7fccc89d35f49a9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-53fcd3f1fa1d97fa8c26: Cannot confirm one product on the discovered URL
+- new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-04d11c482daafdd44c7e: Cannot confirm one product on the discovered URL
+- new-product / candidate-4b428ba776530ce2fc4d: Cannot confirm one product on the discovered URL
+- new-product / candidate-9bb2a792799339e75324: HTTP Error 403: Forbidden
+- new-product / candidate-97ee59f05792f8bce3e8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-30ee9779e728afaf49f9: No single GBP offer for the exact product
+- new-product / candidate-33a7cd1d5aa5c3d6f4c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-985492b60dcdcb52b871: Cannot confirm one product on the discovered URL
+- new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-69af04803ee2df38072c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e444d452f19d9e63253f: Cannot confirm one product on the discovered URL
+- new-product / candidate-67238c0c76f47e624efd: HTTP Error 403: Forbidden
+- new-product / candidate-31a1d44d92216663d9e4: No single GBP offer for the exact product
+- new-product / candidate-0a8b63972b7c088ec124: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-abf86553f7cd3bef3112: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9b444085e026a3da4ada: Cannot confirm one product on the discovered URL
+- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-02eaea3c4ea84fbde144: Cannot confirm one product on the discovered URL
+- new-product / candidate-0315cca282308671f54e: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9800c6e94897c3714e5: HTTP Error 403: Forbidden
+- new-product / candidate-a977be636e5e2acc659f: No single GBP offer for the exact product
+- new-product / candidate-baa23f3ccd045c416182: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2301fb3e762bc599d3a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4fca466945d8b78bdff7: Cannot confirm one product on the discovered URL
+- new-product / candidate-72e9ac6e3bffa59b71b0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-340d266053479b88be6f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b623effb38e7245a59f: Cannot confirm one product on the discovered URL
+- new-product / candidate-01344e6fd219e3a5202c: HTTP Error 403: Forbidden
+- new-product / candidate-66a8a61e68a3ea18649b: Cannot confirm that the product is a material or printer
+- new-product / candidate-66110c2261688f5cb360: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5ed11ab9e69b8391a9f2: Cannot confirm one product on the discovered URL
+- new-product / candidate-a07376580d15cc4173d2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f979735d67064f419f19: Cannot confirm one product on the discovered URL
+- new-product / candidate-8783b70f2145d351b3f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae1ad541ec71c1b3b202: HTTP Error 403: Forbidden
+- new-product / candidate-b1d8504aadb279343fed: No single GBP offer for the exact product
+- new-product / candidate-d048ed7dcb892c4a46bf: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a06980288c33c8b8fc6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e9eb2543f049230dbd2e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-35a512e37f4fe57b0344: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdb627f2a69941d66a9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-567b6b7f77ba73383692: HTTP Error 403: Forbidden
+- new-product / candidate-ebad08612651df174622: Source does not state the material pack weight; listing skipped
+- new-product / candidate-de4b281ef61b1efac204: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0c96d4337de2dcbcebfb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-45f7e5d9edb419e4d70a: Cannot confirm one product on the discovered URL
+- new-product / candidate-b60db6b50f8578dd4a70: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c8b036463212974c05ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0993b17aba0db333bf7: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ce02cba0e2f8c373c65: HTTP Error 403: Forbidden
+- new-product / candidate-b8926aba23d228af78ef: No single GBP offer for the exact product
+- new-product / candidate-bd0c2beaf5bb8fcc734c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e2158be4290b439140de: Cannot confirm one product on the discovered URL
+- new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d080a6f010b1fd4dd207: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0c9e2a40ce27be217f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cd9591216d4ea549559: Cannot confirm one product on the discovered URL
+- new-product / candidate-93f8f0a00b1db83fc209: No single GBP offer for the exact product
+- new-product / candidate-d726671c3995b31af7f3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d1e318ee0f10f1eb4059: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0798fd9918a71efc3ea1: Cannot confirm one product on the discovered URL
+- new-product / candidate-b4e9d6a9dcfde993cbdc: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6b20ef0e411873553a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-4897525329b9f6e69df1: No single GBP offer for the exact product
+- new-product / candidate-36c8ff0eb8c3e5a07af1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3fb202f8a56e2aa226eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-f9db6b62635e2e3b3269: Source does not state the material pack weight; listing skipped
+- new-product / candidate-738baa6f8b32f700c57c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e27fceb2b6d0a3d1f210: Cannot confirm one product on the discovered URL
+- new-product / candidate-b0fc3d73c88b04b390b1: HTTP Error 403: Forbidden
+- new-product / candidate-37082fdfa1e3cc25b50a: Cannot confirm that the product is a material or printer
+- new-product / candidate-9a05667089e22b748bd1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-76f9bced2b2b5e7c679e: Cannot confirm one product on the discovered URL
+- new-product / candidate-39fc57fbe97576e57434: Source does not state the material pack weight; listing skipped
+- new-product / candidate-147d55d32c3328fb7b76: Cannot confirm one product on the discovered URL
+- new-product / candidate-1da2ad251e9830cdfb89: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc63550d353e282ba7e9: HTTP Error 403: Forbidden
+- new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
+- new-product / candidate-2c96fa3baf3f9a6e5cd9: No single GBP offer for the exact product
+- new-product / candidate-635d248e76e27cc86e2a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-56c68ff60bdb308abf03: Cannot confirm one product on the discovered URL
+- new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-246da19df756708948d4: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f6a89e4db7c38385c8a: Cannot confirm one product on the discovered URL
+- new-product / candidate-044ab3eb6511eba80b0a: HTTP Error 403: Forbidden
+- new-product / candidate-3c2c78386f8cd6b0e666: No verified product image URL
+- new-product / candidate-3fff308800379a2b107a: No single GBP offer for the exact product
+- new-product / candidate-69ed49856fc923212e7a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fc78ac00775b778cd11b: Cannot confirm one product on the discovered URL
+- new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
+- new-product / candidate-632e17eb5df20de5924e: Cannot confirm one product on the discovered URL
+- new-product / candidate-30773eba72f0cb50cab7: Cannot confirm one product on the discovered URL
+- new-product / candidate-4de019b4aa884a5ddbee: No single GBP offer for the exact product
+- new-product / candidate-a034d0d9e7efacb01887: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-edf9d976af8d432caecf: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc41184b3f3a474e730f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e13a82ed4ea99dfa4ab2: Cannot confirm one product on the discovered URL
+- new-product / candidate-0dbd24102b8071f5f9e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8fd0bd09dbb0992b89d: No single GBP offer for the exact product
+- new-product / candidate-470aeb37e5d42d218d1a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eec19f7bc812c78e4af5: HTTP Error 500: Internal Server Error
+- new-product / candidate-7f406cef624cdf525799: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3d3039c89418a4335e29: Cannot confirm one product on the discovered URL
+- new-product / candidate-810ea5ba605bd1a483d6: Cannot confirm one product on the discovered URL
+- new-product / candidate-55f5e7d12814c741b256: No verified product image URL
+- new-product / candidate-f90cd7ef53124d3efbc9: No single GBP offer for the exact product
+- new-product / candidate-88b5e48fddea6a2b32a8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f4c77a86bd498287c7df: Cannot confirm one product on the discovered URL
+- new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
+- new-product / candidate-10d14e2c48d4be2ddb65: Cannot confirm one product on the discovered URL
+- new-product / candidate-cfb5beda66d61e9e7d8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
+- new-product / candidate-81709ddcaa352def44e2: No single GBP offer for the exact product
+- new-product / candidate-7db6f0ffdb417caf7591: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-96826d6603e044c1b59d: Cannot confirm one product on the discovered URL
+- new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-17c11549f55abfc459c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fa633daf4760cd29e0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a38513b3c6313eab8a5d: No single GBP offer for the exact product
+- new-product / candidate-81d0de81f9b493c310a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0b9bbf3d6e72f19d0be7: Cannot confirm one product on the discovered URL
+- new-product / candidate-4218c423baad4d844f16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-58168e070c140293bfbd: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b50f776f183a2f9ba3c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3f9fb06b43ef81d14b5a: No single GBP offer for the exact product
+- new-product / candidate-d012b1f9d655cd8e34c3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-35c9bb64a2cad4d0a0c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dadcf47c581355f1c202: Cannot confirm one product on the discovered URL
+- new-product / candidate-55fd5f20d3ca848e64f4: Cannot confirm one product on the discovered URL
+- new-product / candidate-9a3abf1ed90d4a79b33e: No single GBP offer for the exact product
+- new-product / candidate-9327bc5a5a2d1701ca8f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9dda09be42f8a6e2930d: Cannot confirm one product on the discovered URL
+- new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
+- new-product / candidate-952784ed56a24352b43c: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d63f60cbc7176377dc9: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7db91fecc741c30ae91: No single GBP offer for the exact product
+- new-product / candidate-d93979ce977c24761e41: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df5dba9132db32d313ff: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0e7bea197a6bbdc723d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9a82f32a4e523e5b0c6a: Cannot confirm one product on the discovered URL
+- new-product / candidate-a58ca7e255d5de9781ab: Cannot confirm one product on the discovered URL
+- new-product / candidate-677ae4a4d0538a87333d: No verified product image URL
+- new-product / candidate-64463eb674588b7a052e: No single GBP offer for the exact product
+- new-product / candidate-f7003de617f6fe15153e: No verified product image URL
+- new-product / candidate-6fdd114cc7bc304fd1a6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0fc1ac44214f0f0e4375: Cannot confirm one product on the discovered URL
+- new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c48eb3d01f61e31b1624: Cannot confirm one product on the discovered URL
+- new-product / candidate-771c25ca7f9db97349d8: Cannot confirm one product on the discovered URL
+- new-product / candidate-f912209637b948108a1f: No single GBP offer for the exact product
+- new-product / candidate-3f7cdd425668ccc07aa0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b5738353746e5302721a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ca7aeed7cfed9d90030e: Cannot confirm one product on the discovered URL
+- new-product / candidate-afe7c7858ae6ae4d1b33: Cannot confirm one product on the discovered URL
+- new-product / candidate-96246cab40d13107106b: Cannot confirm that the product is a material or printer
+- new-product / candidate-756f5d9f2dae0fce677f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-85d0e645902e8cc7b77b: Cannot confirm one product on the discovered URL
+- new-product / candidate-dab3501ad59ff4029857: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bde775aae3311d869f9d: Cannot confirm one product on the discovered URL
+- new-product / candidate-52fccd4a70245f7dc6a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-09262837ba0c3e4028c7: No single GBP offer for the exact product
+- new-product / candidate-1df1c5ec970663346e7b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6b3ec3cb3364dc6b5009: Cannot confirm one product on the discovered URL
+- new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-780bd823649861c1cc94: Cannot confirm one product on the discovered URL
+- new-product / candidate-14106f669450c5926b0a: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c1218d77746a522e82d: No single GBP offer for the exact product
+- new-product / candidate-ceddcd4ba4f8591f1bf8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fdc89fe383814f1ca781: Cannot confirm one product on the discovered URL
+- new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
+- new-product / candidate-42af5b4f646cae1475e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-a669d4167c0079c5f6f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-a5b7aaa45ee8883c1fa6: No single GBP offer for the exact product
+- new-product / candidate-aaf1efbfc440d2aae7fe: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cc0b97017469303448d9: Cannot confirm one product on the discovered URL
+- new-product / candidate-42de812451581f1897c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6e9853502fefa6333720: Cannot confirm one product on the discovered URL
+- new-product / candidate-898d0b6412bd55ccd763: Cannot confirm one product on the discovered URL
+- new-product / candidate-137583788860fc1ac12c: No single GBP offer for the exact product
+- new-product / candidate-ac218eb3aa1352f0178f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-49ef77243b95e7a89049: Cannot confirm one product on the discovered URL
+- new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b3408a8c40d362c18974: Cannot confirm one product on the discovered URL
+- new-product / candidate-5425cb666af2227424bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-780b66432fa1958d2351: No verified product image URL
+- new-product / candidate-370c8f5c03439bcbbf8b: No single GBP offer for the exact product
+- new-product / candidate-82ecb1068733b4437bc2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0b73c86558c54ea36ffb: Cannot confirm one product on the discovered URL
+- new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4f1ea397363aeae53505: Cannot confirm one product on the discovered URL
+- new-product / candidate-c78675d17a8f2ee95b4b: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac15ae29fa2956cc3f9d: No single GBP offer for the exact product
+- new-product / candidate-a29fe03f2a413932a3d0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bbe6db5bc94ef47dc121: Cannot confirm one product on the discovered URL
+- new-product / candidate-b36c62ee3450cf70d8a6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7858d59926c5d7225273: Cannot confirm one product on the discovered URL
+- new-product / candidate-d85221b0cd49ba46b43a: Cannot confirm one product on the discovered URL
+- new-product / candidate-284a7a027e19f8c14426: No single GBP offer for the exact product
+- new-product / candidate-652557044712835e2fba: Cannot confirm one product on the discovered URL
+- new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9459c2183c7cd65443a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-31a63ebebfaef390b96e: Cannot confirm one product on the discovered URL
+- new-product / candidate-62c0d8112a546de2a059: No single GBP offer for the exact product
+- new-product / candidate-401eb8fa113f4cfdc0a8: No verified product image URL
+- new-product / candidate-0e234b875c62454548f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
+- new-product / candidate-34d5c79cedab0ec4db3b: Cannot confirm one product on the discovered URL
+- new-product / candidate-115cd76a98229ae7712b: Cannot confirm one product on the discovered URL
+- new-product / candidate-72fe38228f86f750aaea: No single GBP offer for the exact product
+- new-product / candidate-a3b08a1a513990b50fef: Cannot confirm one product on the discovered URL
+- new-product / candidate-c052bbbba24e9ea8dbc3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b18b9f6fc78decc41c1b: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3bfd70c7a087619b509: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f987c2e139b372de93e: No single GBP offer for the exact product
+- new-product / candidate-e1b29e26696caffe9031: Cannot confirm one product on the discovered URL
+- new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c259c292a49009f31b01: Cannot confirm one product on the discovered URL
+- new-product / candidate-2137f67e1c51e7c51e50: Cannot confirm one product on the discovered URL
+- new-product / candidate-9958140a52d57dc731e3: Pack weight is ambiguous; listing skipped
+- new-product / candidate-6ddbaf672a5522edf430: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-21cbd3b10056756f94aa: Cannot confirm one product on the discovered URL
+- new-product / candidate-6fc4d6ad7127c052f387: Cannot confirm one product on the discovered URL
+- new-product / candidate-2cffa41862674f0673ab: No single GBP offer for the exact product
+- new-product / candidate-05ebe93407b06ff30994: Cannot confirm one product on the discovered URL
+- new-product / candidate-b55373fe8e819209d6b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8ead40d047d0b97d171a: Cannot confirm one product on the discovered URL
+- new-product / candidate-88c7242633694034eca1: Cannot confirm one product on the discovered URL
+- new-product / candidate-ec943efa0308db2a2bdf: No single GBP offer for the exact product
+- new-product / candidate-648805ade8ba1754a716: Cannot confirm one product on the discovered URL
+- new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e76079a4e9848b329dd2: Cannot confirm one product on the discovered URL
+- new-product / candidate-1bc979f5859e3c2d8101: Cannot confirm one product on the discovered URL
+- new-product / candidate-a0eefa3ccee684a79fb0: No single GBP offer for the exact product
+- new-product / candidate-6deca42ce2a90df8c29d: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f2e075534dcc37855a6b: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fc160e3def2ca7ec2f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-ab40fdb3623aabb1c85e: No single GBP offer for the exact product
+- new-product / candidate-e75ba2b6f4e4b373bb4f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b1cca919ae37dc007f0b: Cannot confirm one product on the discovered URL
+- new-product / candidate-6fd2ac9a22a6041b6d5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb2c0da088e0e9ff37a9: No single GBP offer for the exact product
+- new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7f09211b5d77d39fd4ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-8ed7e6b1ffcbd4ad39d1: Cannot confirm one product on the discovered URL
+- new-product / candidate-9c4e6df3d7fab7b308b6: Cannot confirm that the product is a material or printer
+- new-product / candidate-2eeb697f0961303ed58c: No single GBP offer for the exact product
+- new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-03e82112c50bb66ea201: Cannot confirm one product on the discovered URL
+- new-product / candidate-b16228d4208a66364b19: Cannot confirm one product on the discovered URL
+- new-product / candidate-1a7abcfe2b3a7287e17d: No single GBP offer for the exact product
+- new-product / candidate-ee5a938e0de95ced3640: Source does not state the material pack weight; listing skipped
+- new-product / candidate-78621a35468d4a243277: Cannot confirm one product on the discovered URL
+- new-product / candidate-8636cc2d1cff85d7c779: Cannot confirm one product on the discovered URL
+- new-product / candidate-abde35f9dbb05cb76c9a: No single GBP offer for the exact product
+- new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0ecf588b09d1ac34ffa0: Cannot confirm one product on the discovered URL
+- new-product / candidate-d7b0e54370027ff17b09: Cannot confirm one product on the discovered URL
+- new-product / candidate-82a09b97e4d980bfac43: Cannot confirm that the product is a material or printer
+- new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-41b77c52f39b9d6bdd2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fe360dea4415758ba90: Cannot confirm one product on the discovered URL
+- new-product / candidate-a123a4b70ee2eae93cf5: No single GBP offer for the exact product
+- new-product / candidate-a81a5432047cdfea662b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ff1f4cf3f60aa340192a: Cannot confirm one product on the discovered URL
+- new-product / candidate-de88879341653a332e87: Cannot confirm one product on the discovered URL
+- new-product / candidate-87a98d5c4f46b85bd44e: No verified product image URL
+- new-product / candidate-bbc84edf1751dde3a275: No single GBP offer for the exact product
+- new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2df20358c7a8e7906df8: Cannot confirm one product on the discovered URL
+- new-product / candidate-727a1035a62d144e460b: Cannot confirm one product on the discovered URL
+- new-product / candidate-25b93054cf2b3f55b870: No single GBP offer for the exact product
+- new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2014ed157433e6776476: Cannot confirm one product on the discovered URL
+- new-product / candidate-53d2ff40e9bae154e076: Cannot confirm one product on the discovered URL
+- new-product / candidate-9218c5eac4af755234ec: Cannot confirm that the product is a material or printer
+- new-product / candidate-aa8a1435f8413bbb75d6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6623ee45b4babd24757e: Cannot confirm one product on the discovered URL
+- new-product / candidate-b78228d5e6437c403b9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-779e056cd051adbd9ba1: No single GBP offer for the exact product
+- new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d6956570146c7f24411e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6ff1bfd3bc457c17edb: Cannot confirm one product on the discovered URL
+- new-product / candidate-263edf7db2730c9e30bb: Cannot confirm that the product is a material or printer
+- new-product / candidate-a869a11c7fbf4c870488: No single GBP offer for the exact product
+- new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d0c13d356ecea44a3327: Cannot confirm one product on the discovered URL
+- new-product / candidate-69778d3dca8fb1f8a7f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-20f4b9b669e9227eba69: No single GBP offer for the exact product
+- new-product / candidate-8ef71f952812e965d103: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bfece126df5896a71836: Cannot confirm one product on the discovered URL
+- new-product / candidate-a0f113a3df7b693aa269: Cannot confirm one product on the discovered URL
+- new-product / candidate-c400bf0467d3e8ecb259: No single GBP offer for the exact product
+- new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1bd41817944733985c72: Cannot confirm one product on the discovered URL
+- new-product / candidate-7705c36be2e37c22cfa3: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7635438e5d5287e461a: No single GBP offer for the exact product
+- new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3ed511c0c316ce8cdde9: Cannot confirm one product on the discovered URL
+- new-product / candidate-13d3946e89065f3a3ef4: Cannot confirm one product on the discovered URL
+- new-product / candidate-5470c37cfe057b82fd58: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-262826907b6b620682d1: Cannot confirm that the product is a material or printer
+- new-product / candidate-7f13ac7bef9ded0f6343: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3d0defab449308f90d13: Cannot confirm one product on the discovered URL
+- new-product / candidate-902e376c0a9228872c2c: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f19854fd769ba4696bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6a05b1f0bea461f18054: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8cf5f3bff481f74837da: Cannot confirm one product on the discovered URL
+- new-product / candidate-22715a90adf7d0d8860e: Cannot confirm one product on the discovered URL
+- new-product / candidate-037c05896107c410f796: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8b3218a3ed00f615d7c7: No single GBP offer for the exact product
+- new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1193a7030aa4a9a7847: Cannot confirm one product on the discovered URL
+- new-product / candidate-4889a614fe020667c4c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-319476547da8c0d0ef4f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6c40004ef9c678a8595a: No single GBP offer for the exact product
+- new-product / candidate-6879865458fb86b4edd5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c2fdc5791521b7fedc3d: Cannot confirm one product on the discovered URL
+- new-product / candidate-5c84d9a6d53a69b1ffd8: Cannot confirm one product on the discovered URL
+- new-product / candidate-9d1452990603eb9a6221: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-13bfe85249bda8d540d9: Cannot confirm that the product is a material or printer
+- new-product / candidate-70a0ec8b8380ad980b97: No single GBP offer for the exact product
+- new-product / candidate-837740bde275395aeae4: Cannot confirm that the product is a material or printer
+- new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-766db322a872ae09d30d: Cannot confirm one product on the discovered URL
+- new-product / candidate-a75d80e41e2dd37ec90b: Cannot confirm one product on the discovered URL
+- new-product / candidate-39b1819bf076a0452a10: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d3fe00fe81f19ccb4db5: Cannot confirm that the product is a material or printer
+- new-product / candidate-a246afa27024aa2e30a2: No single GBP offer for the exact product
+- new-product / candidate-d3076bd6917d56e03f41: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6b859a0bbd0b9d77e425: Cannot confirm one product on the discovered URL
+- new-product / candidate-77b3f0b58087837d9557: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb1e5e1b463c9d85e3c5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4096814af20dac146667: No single GBP offer for the exact product
+- new-product / candidate-550d547cd9da64b58dfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bbfb237f43bb38e7459c: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd6e210739cffa36928b: Cannot confirm one product on the discovered URL
+- new-product / candidate-6366c1ad3bec65ca9d33: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-20c11546c0782b4d4d88: No single GBP offer for the exact product
+- new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-66f2aa1895bfdbda6e9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-33e1a4ccb6917ae81c72: Cannot confirm one product on the discovered URL
+- new-product / candidate-b36d078e84d6a7a2a56e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a5302dfd53cb0ffe963a: No single GBP offer for the exact product
+- new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-efc5bb90f54b7c6bd2c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-36b4534f2c0d408d48d6: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6e9b28d5eb418dbb4f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-683c04399e05ea73921f: No single GBP offer for the exact product
+- new-product / candidate-7e34006d807868683524: Source does not state the material pack weight; listing skipped
+- new-product / candidate-903a7f2f5c7c485d19c1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3ada5aa854c61302f84e: Cannot confirm one product on the discovered URL
+- new-product / candidate-221e57e00a0eedd0b61b: Cannot confirm one product on the discovered URL
+- new-product / candidate-686411c706e6460cd188: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e5e29eb76feb68c30627: Cannot confirm that the product is a material or printer
+- new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-54a6cdcc2edc29b27ef0: Cannot confirm one product on the discovered URL
+- new-product / candidate-16ad9ab6556d39f06b59: Cannot confirm one product on the discovered URL
+- new-product / candidate-2588607eeed3989673c3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-16d2feb0b176177bdb68: Cannot confirm that the product is a material or printer
+- new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ef31139ee4044bf95d67: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac0649fb975faec699aa: Cannot confirm one product on the discovered URL
+- new-product / candidate-977e582013f20aa587ca: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-db5d348e3b26ba1f0d99: No single GBP offer for the exact product
+- new-product / candidate-e09ff4aba764d08a0598: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5c54d7f1932994a9b52e: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b0f88baab99e9393acc: Cannot confirm one product on the discovered URL
+- new-product / candidate-2df06a2570a305b6cc45: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-43e40942578b83a2e538: Cannot confirm that the product is a material or printer
+- new-product / candidate-4f5bf219f37e355b5d5d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4705c4e9c47922361c3: Cannot confirm one product on the discovered URL
+- new-product / candidate-e62afe5bbb8b6e8dbaed: Cannot confirm one product on the discovered URL
+- new-product / candidate-3454f64836a3295a0a86: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-163e6dba7eb967df7f92: No single GBP offer for the exact product
+- new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f1526713b25888c9a839: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b684add7b9656f17cc2: Cannot confirm one product on the discovered URL
+- new-product / candidate-fcf3cdfa0dc6bd02dde3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9655ac5f83f6a9bb24cc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0c03cc9ead400fd6f30b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e3da88082de26130a026: Cannot confirm one product on the discovered URL
+- new-product / candidate-a16d115359d02cacf239: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f5475268cbc66122392: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-677b24683d8c087bf02b: Cannot confirm that the product is a material or printer
+- new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4c1eb24b13d4de968cbb: Cannot confirm one product on the discovered URL
+- new-product / candidate-90bbd97554f62f3914ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-fee9cdb947f094624108: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8d39d4b1047f84d54df8: No single GBP offer for the exact product
+- new-product / candidate-8a5a3dd30db7ebeab3f0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dddcd5bd2636ed8e55c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a3ed87967b0eb3c0ae4: Cannot confirm one product on the discovered URL
+- new-product / candidate-416962af11e05f8bebd0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f0553767aa4fd787fcec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7791a6b5e4dd8a8f7825: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e899370569ad6cfe100c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-300bd374b3fa284c1c6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-6896e670f807b78a4d55: Cannot confirm one product on the discovered URL
+- new-product / candidate-d26cbc8b9b349baafa8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2692474ac7c5fbae9ee8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a9b541b83db749f22019: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
+- new-product / candidate-174e0dd61c05f38c9f8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f20b4ea2499ebf0e0660: Cannot confirm one product on the discovered URL
+- new-product / candidate-1bb043a1872050e6bbc4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-32a4b13f9287cd502d5c: No single GBP offer for the exact product
+- new-product / candidate-7469b05aa64fd81b9f33: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-09c34fd0cde56ce09c43: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d0f956716145cfad60bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-11aedc5f2e6d29ea681c: Cannot confirm one product on the discovered URL
+- new-product / candidate-955cbe4f82b6709abcb6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e7068c867ab4c6bf3375: No single GBP offer for the exact product
+- new-product / candidate-5d95ef33c7a8fc2f36fb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-feb97f885265930006f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-36505c75a928e473ec7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-79fe962e563bbaf7a3f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6459cf41755eb76c644: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fe4ad2ec1767b4e4195e: No single GBP offer for the exact product
+- new-product / candidate-b8e96a436bba06d81fde: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44dd93c81b99a8df7efe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-97ec895a937582cf8d5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e243c1860b8b731bbcf: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdd05cea962d5ff65196: No verified product image URL
+- new-product / candidate-5e7b6547c3693620e7e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-676ef5aee357c885f8ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba2fd85787389c15bb5f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3595dca6df48eb7ffce4: Cannot confirm one product on the discovered URL
+- new-product / candidate-f459adbd122c0e1de771: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0c4086038d681afa229: No verified product image URL
+- new-product / candidate-94aa8b73ff4bc9fa5799: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-59c83eebe6620929f903: No single GBP offer for the exact product
+- new-product / candidate-1631cfbc45042ed112bd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7a6d08d7f98ee645a13a: Cannot confirm one product on the discovered URL
+- new-product / candidate-3bd6011fbef85b3389c1: Cannot confirm one product on the discovered URL
+- new-product / candidate-70367aa5e53315b126d6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f3d04f0e84ef13411770: No single GBP offer for the exact product
+- new-product / candidate-fbbb0342156f2562dc1e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f304ddce8940b46ce724: Cannot confirm one product on the discovered URL
+- new-product / candidate-9ae81aed960501ad7020: Cannot confirm one product on the discovered URL
+- new-product / candidate-2282fbde10b5e92bc10c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-39eeec5fa7a328231940: No single GBP offer for the exact product
+- new-product / candidate-87835166201722e262c6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9c7b60c8a45a899f2cf6: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2d93c8c8b83c04acbfa: Cannot confirm one product on the discovered URL
+- new-product / candidate-41c5aea0d2c52e839869: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e0244c4b7721adf0586c: No single GBP offer for the exact product
+- new-product / candidate-dcf824aaf677582471bd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc61cedf25801d1c1a89: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8763c87f70757cbb894: Cannot confirm one product on the discovered URL
+- new-product / candidate-2dda42a651129e1718e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4f9010eea34c56d0a27d: No single GBP offer for the exact product
+- new-product / candidate-b32209e89c1fed06e0ee: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c245e2a05eecf35eab33: Cannot confirm one product on the discovered URL
+- new-product / candidate-976780a5db55038fad1f: Cannot confirm one product on the discovered URL
+- new-product / candidate-d4ab6319bb249c820ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f8fa70509e2d10dd81e7: HTTP Error 404: Not Found
+- new-product / candidate-f57e11cf40a3db2d718a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20515f60fd555e9657a4: Cannot confirm one product on the discovered URL
+- new-product / candidate-40466b6dcfea22c08efe: Cannot confirm one product on the discovered URL
+- new-product / candidate-c003b0067281866b9b2a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0714f52044b947b58db9: No single GBP offer for the exact product
+- new-product / candidate-7de209a95cb97f8a3e44: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-651d2f4970716ccedbdf: Cannot confirm one product on the discovered URL
+- new-product / candidate-251c1751573c74a79cb9: Cannot confirm one product on the discovered URL
+- new-product / candidate-0183b09cc1771cd2b55c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a59456a903a907b535ec: No single GBP offer for the exact product
+- new-product / candidate-9b69fe67182eb4348c3b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-317dc533fa01770964f6: Cannot confirm one product on the discovered URL
+- new-product / candidate-97672a2406b5ed863a28: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e6199bd67eb0f8c5291: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b46bdd1d799c90c5d417: Cannot confirm that the product is a material or printer
+- new-product / candidate-2e1f51ff3b22160c8a76: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5de5500c1331ff47a789: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ada7bd70ad8b469cec6: Cannot confirm one product on the discovered URL
+- new-product / candidate-a499be2290750c207feb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d4e9bc26003151ad952f: No single GBP offer for the exact product
+- new-product / candidate-53802a9fa924322f4015: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-13ab6a0206c62a31e233: Cannot confirm one product on the discovered URL
+- new-product / candidate-29348cf1779d7634ef21: Cannot confirm one product on the discovered URL
+- new-product / candidate-7775779ada4026695ca3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1a03983af58bd402fa90: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a7b245437aa0b6da5974: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c66d74795e6cd9c63d4a: Cannot confirm one product on the discovered URL
+- new-product / candidate-abcb1d56704220914b75: Cannot confirm one product on the discovered URL
+- new-product / candidate-cf9f267f06e078a5383d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3c5199a4eab074681f3e: No single GBP offer for the exact product
+- new-product / candidate-f984c07c2a68facd3d85: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f0c4f20619efdcca39e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-4de7c58285e846b1b81a: Cannot confirm one product on the discovered URL
+- new-product / candidate-865d683b6f17bc55ed88: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b2421ec58afd17415b02: No single GBP offer for the exact product
+- new-product / candidate-36bd015e77daf586b0c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2cf4652d81c6b07546fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-e58ff9364aba1bab3c6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-31e7bae76fb6a3ca0c4c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-96bcabe53c27ad5fbc04: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-53285b641dcddf16f42d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f9549f9b6641b146fd2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-604bdfa7a40ce110f5fe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-38a034d371ad03282707: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1cb740f484b1d43f5c7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-56bdaff4ec8a8f42aac5: Cannot confirm one product on the discovered URL
+- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a7c1ae724ff4ac0615c2: No single GBP offer for the exact product
+- new-product / candidate-cdab35d9337a2c8556c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-974b8b9a821d97974f17: Cannot confirm one product on the discovered URL
+- new-product / candidate-dff4157a40f08f52e309: Cannot confirm one product on the discovered URL
+- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4eb8d2a601d99a09146d: No single GBP offer for the exact product
+- new-product / candidate-a2f77cf5911096c04949: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-881d741e61b09ad6918f: Cannot confirm one product on the discovered URL
+- new-product / candidate-d9af3ade66eeeb173c59: Cannot confirm one product on the discovered URL
+- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7b26d0169b3bb96cb6c0: No single GBP offer for the exact product
+- new-product / candidate-29414b136ce243ef1fc2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1e1773ef2eed1ea48cb4: Cannot confirm one product on the discovered URL
+- new-product / candidate-86206b446b83621ff271: Cannot confirm one product on the discovered URL
+- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-91e59c5616fba3c457e5: No single GBP offer for the exact product
+- new-product / candidate-da7b7ae4dc8228c36a69: Cannot confirm one product on the discovered URL
+- new-product / candidate-a380c7cc396d7abf7998: Cannot confirm one product on the discovered URL
+- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-302e3c604287a9c6064a: No single GBP offer for the exact product
+- new-product / candidate-aa9124acbb989eb015fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-3a9ff871e9e9c977bae3: Cannot confirm one product on the discovered URL
+- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-09082425bb1cb7089087: Cannot confirm that the product is a material or printer
+- new-product / candidate-8f23641d310ff6e4bf1a: No single GBP offer for the exact product
+- new-product / candidate-8ef4789175df3ef4deb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac4f099742ceebac0171: Cannot confirm one product on the discovered URL
+- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2de219742ffe920749ff: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-67318b2ec697a9d45205: No single GBP offer for the exact product
+- new-product / candidate-8b0e47049d293af12f6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6d88538beeb1a896874: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-15b29c1c5c6f83ba680b: No single GBP offer for the exact product
+- new-product / candidate-4f0a90f89e67a8f22b52: Cannot confirm one product on the discovered URL
+- new-product / candidate-70b9c9770994453187c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2221aba97ffead630514: Cannot confirm that the product is a material or printer
+- new-product / candidate-aad4385e3ba369b98d51: No single GBP offer for the exact product
+- new-product / candidate-f0ca27274fb11bb8c03f: No verified product image URL
+- new-product / candidate-fb269c25480c50429183: Cannot confirm one product on the discovered URL
+- new-product / candidate-9c3506c3427aa41d36a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5f87bf8e74f08cbf4125: No single GBP offer for the exact product
+- new-product / candidate-bed08a59d7f34c5e4c97: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6dead035e719e1f7bab: Cannot confirm one product on the discovered URL
+- new-product / candidate-ba6d6b7d6e46ae7b5c7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e627dc8fbdcc63fe18b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-e236228b2cd9fbab4723: Cannot confirm one product on the discovered URL
+- new-product / candidate-d97580f15f0e0f213587: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4fa897312e0531f8a3b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e47960587bdc4a128526: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc94c1289b1d03b2fa05: Cannot confirm one product on the discovered URL
+- new-product / candidate-a7c36a6e2fac59ca8f9d: No single GBP offer for the exact product
+- new-product / candidate-2f9e17b1ab4d40d9170f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b536388535c36a8425c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-f1216b1bcfcb414fcb5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7e1a546f2f1a0ecf2c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5e6f5dc53ca11a6c89aa: No single GBP offer for the exact product
+- new-product / candidate-bb8de21a19982705a3f2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6ad76da50e68fe8029dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-0742f1eee95d85be9e5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-972cba4fa698a5128af9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a88ed9a3b3af8e51602a: No single GBP offer for the exact product
+- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7cbc72373eea6d6ebb79: Cannot confirm one product on the discovered URL
+- new-product / candidate-f31790fb123e1235f99f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ab2dda6617b9216e8abe: Cannot confirm that the product is a material or printer
+- new-product / candidate-e373499f15a7879d5c46: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2c25ac61e215bedbb479: Source does not state the material pack weight; listing skipped
+- new-product / candidate-24be338c072df31bce81: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7be9eeda63979f3c5dd9: Cannot confirm one product on the discovered URL
+- new-product / candidate-c541a67bc59e645d76f3: Cannot confirm one product on the discovered URL
+- new-product / candidate-c89cec79869695388e86: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1175727c9f1158a1306b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7a243d8a5d75cefb19b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f3084e8b8d1d97bb651: Cannot confirm that the product is a material or printer
+- new-product / candidate-5fc44552e4e532b81d9d: Cannot confirm that the product is a material or printer
+- new-product / candidate-bcc45c01a855619e62a5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0e3a45f51f197413bb0b: Cannot confirm one product on the discovered URL
+- new-product / candidate-828050d911b53fd2b88d: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b720cca83b8ed7351da: Cannot confirm that the product is a material or printer
+- new-product / candidate-e3936e1db1f0d8b3c1e7: No single GBP offer for the exact product
+- new-product / candidate-a4bec37f2fa8de1c8a65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-eccf0ce0b910fa5d6beb: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd82250b496ecdf3691a: Cannot confirm one product on the discovered URL
+- new-product / candidate-7ad80c9f5cff5b72b023: Cannot confirm that the product is a material or printer
+- new-product / candidate-bbb3cc2f21fb5249bdf4: No single GBP offer for the exact product
+- new-product / candidate-f99fe9d183930a46e8a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-5d706c2f5d789fb400e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-900d31c49adb33b84ab5: Cannot confirm that the product is a material or printer
+- new-product / candidate-640c95584d6758a95a31: No single GBP offer for the exact product
+- new-product / candidate-28daac5a033e11a61e8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ec2fad59c556f4793798: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f1a513dd1fc9de9ed3f: Cannot confirm that the product is a material or printer
+- new-product / candidate-47f109e674bd0d00778e: No single GBP offer for the exact product
+- new-product / candidate-735d7183112b70d1e947: Cannot confirm one product on the discovered URL
+- new-product / candidate-3f272603c89e17da600d: Cannot confirm one product on the discovered URL
+- new-product / candidate-835c012af67ede7d41bd: Cannot confirm that the product is a material or printer
+- new-product / candidate-c9540d70bf07e306e5dc: No single GBP offer for the exact product
+- new-product / candidate-7480f8a3078f7a71c3f8: No verified product image URL
+- new-product / candidate-2d6a1450d1807e5a65dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-fcd8b02bcf567401619f: Cannot confirm one product on the discovered URL
+- new-product / candidate-661a92e6429dcf056a2c: Cannot confirm that the product is a material or printer
+- new-product / candidate-442689fa5fc9810dfda6: No single GBP offer for the exact product
+- new-product / candidate-0365a71211559e11c2cb: No verified product image URL
+- new-product / candidate-c08ec737ca363e086f14: Cannot confirm one product on the discovered URL
+- new-product / candidate-82b348fb5928e0c9cefa: Cannot confirm one product on the discovered URL
+- new-product / candidate-381f6644b102998c72cc: Cannot confirm that the product is a material or printer
+- new-product / candidate-d69ef02b1d9d41c32ce5: No single GBP offer for the exact product
+- new-product / candidate-3cd68de01b83cb392d48: Cannot confirm one product on the discovered URL
+- new-product / candidate-3d6ac619dc5997c86cdc: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d990452a1abdb9e084f: No verified product image URL
+- new-product / candidate-774d75de4ed001226677: Source does not state the material pack weight; listing skipped
+- new-product / candidate-91d6a720ed5b85017c4f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b07d4f75c9e4f89ff6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-193682a94843b6794723: No verified product image URL
+- new-product / candidate-2f28e267611110ae7c2c: No single GBP offer for the exact product
+- new-product / candidate-04880b5ed74b717d8d5e: Cannot confirm one product on the discovered URL
+- new-product / candidate-6096c88cf13c5f2228a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-65eecba56dbff301e74b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-736398479bba7752fb64: No verified product image URL
+- new-product / candidate-9886b6ae1c7187d3bd25: Approved URL is outside its recorded retailer
+- new-product / candidate-bc063062871e32a1f051: Cannot confirm one product on the discovered URL
+- new-product / candidate-a11cf435022f2a9e5bc5: Cannot confirm one product on the discovered URL
+- new-product / candidate-0fec11d1d04a822d857c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cb7b4aca369e6577277f: No single GBP offer for the exact product
+- new-product / candidate-1003f6f7bb57bc6ff385: Cannot confirm one product on the discovered URL
+- new-product / candidate-8839e7c5e1f34331d640: Cannot confirm one product on the discovered URL
+- new-product / candidate-82c4cdad5ceff68125ae: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c3ea99ff5e0fd53f6836: No single GBP offer for the exact product
+- new-product / candidate-4ccb5f3c6bc2518b504a: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a8924ddb7ca097fd9b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae305f611bfb29661165: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a6eb5b78550c5280e115: No verified product image URL
+- new-product / candidate-d6cdccc24dfb9f0135d3: Cannot confirm that the product is a material or printer
+- new-product / candidate-6ef3c5d5e641f683b7bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f05c1707577ae2454ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-9727d015d0e91ca676d9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-30aac989e7eb1fcb24e9: No single GBP offer for the exact product
+- new-product / candidate-e538622aebd085ccd45f: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b0429105432e2945772: Cannot confirm one product on the discovered URL
+- new-product / candidate-4bf53bc75827a16e3c54: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a2738c785c00ec420af: No single GBP offer for the exact product
+- new-product / candidate-cf5d87c78a03a9bc184c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-3b29bd389147939851c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-5450088f35c7ab26b692: Cannot confirm one product on the discovered URL
+- new-product / candidate-1a30e8ab5a98259eee23: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d5d0ff48d73527ffee8: Catalogue GBP price outside supported range
+- new-product / candidate-09302f2ce4ae8e76339a: No single GBP offer for the exact product
+- new-product / candidate-26a8a07cc580339c06ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-6fc312252e458af94b30: Cannot confirm one product on the discovered URL
+- new-product / candidate-578e661b7d2ac7b6607e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a5e8f46c712fc2ae8322: No verified product image URL
+- new-product / candidate-6ce503402c519ed5b05f: No single GBP offer for the exact product
+- new-product / candidate-16a1ae4714da745b1223: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-04109828050e42f629fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-9cf312559ac9015e195a: Cannot confirm one product on the discovered URL
+- new-product / candidate-26e39b3a3ad198821f84: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-21969bf73671339efc23: No verified product image URL
+- new-product / candidate-3b7add0b1e948767c3bc: No single GBP offer for the exact product
+- new-product / candidate-4a83cc6a6ccb70efd254: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d8129461d694409e6cd3: Cannot confirm one product on the discovered URL
+- new-product / candidate-feae2bb00190a7f5188a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1496a24e2128542bfef: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1d944edb4f0263f7131a: No verified product image URL
+- new-product / candidate-dd5470e54c9c00b43aca: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c3b8cfdcaac181a82686: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-962229670c98befcd777: Cannot confirm one product on the discovered URL
+- new-product / candidate-2cceded651bb6cd00d0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e44293644f88d8c76ff1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7db081cefbede08bc618: No verified product image URL
+- new-product / candidate-c690e00391f47e65af3e: Cannot confirm that the product is a material or printer
+- new-product / candidate-5fd367120543ca631e95: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-72326ef14958c7054a13: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb2bdf4d0e735f5426ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-f301a995d74c088498ec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e75ec4ea9f550a9ce989: No verified product image URL
+- new-product / candidate-c0ee2e37d3d8b392768f: No single GBP offer for the exact product
+- new-product / candidate-7c6cba5f009f4ab246fd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-57f9f9d662589bfe8ac5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-81c16eaa001ea073cb3c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3e7e195a7523a5591f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-a5aea53bd4e011209b2d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5ec931c2a6a0fadad468: No verified product image URL
+- new-product / candidate-5d9f2d389691b9ae8ce9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5cca341eda1ee615977a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a2b2e013976dc69b6d33: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bfe8cecd283f3f6e91fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-039c7ff59f433e29393e: Cannot confirm one product on the discovered URL
+- new-product / candidate-3cb7a2e3428d087347a3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9ccd5f79892bbf133faa: No verified product image URL
+- new-product / candidate-1e7e817f10ecc735d383: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ce0fda9bc50fa317e342: Source does not state the material pack weight; listing skipped
+- new-product / candidate-414c7aa0ffb8fd65afe9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-830fa4205828629e3b86: Cannot confirm one product on the discovered URL
+- new-product / candidate-0a41d74cd0b2f48430a7: Cannot confirm one product on the discovered URL
+- new-product / candidate-b16cab0fa3f85c5919b9: No verified product image URL
+- new-product / candidate-07ac566c6b802df8bf30: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c7e40e00f7fef8765e56: No verified product image URL
+- new-product / candidate-a2146b0e600a98a68b1a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6a394e0b85b1aef8f60b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-41c90dd2ef457051b99d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f6429d46d4b962467385: Cannot confirm one product on the discovered URL
+- new-product / candidate-fc311a7a5bded3b2be9d: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ae3efeaedc3a94574b7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b11b267dcb7484dbf43a: No verified product image URL
+- new-product / candidate-bf44e9ef649dd8edad8e: No single GBP offer for the exact product
+- new-product / candidate-445286ddb4de895df879: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4189259ecacd0db29a37: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f84838bff18e8d7ed30: Cannot confirm one product on the discovered URL
+- new-product / candidate-91e1827395e2d3cf72d4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9d435f361c6f0de820c8: No verified product image URL
+- new-product / candidate-6b167ee7e0f19e83f658: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c316167674cd3f479fd9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f80529ec58212d82343b: Cannot confirm one product on the discovered URL
+- new-product / candidate-89e5777c22e44ba5de1a: Cannot confirm one product on the discovered URL
+- new-product / candidate-be18b4b219957a37a381: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d941ab314d281718e263: No verified product image URL
+- new-product / candidate-eaa351480cf030e0a810: Cannot confirm that the product is a material or printer
+- new-product / candidate-1a30766a0f3e5a5eaed0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cf89ad0741e7d9196ad4: Cannot confirm one product on the discovered URL
+- new-product / candidate-239a172ecb9d89420eef: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7249a7acb731a559919: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-819e340b085c3176db82: No verified product image URL
+- new-product / candidate-77e8352f56fa74870093: No single GBP offer for the exact product
+- new-product / candidate-cdecff0a2ecf2eae8548: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8b4e79a33821657e6470: Cannot confirm one product on the discovered URL
+- new-product / candidate-86145409f93495f9d6af: Cannot confirm one product on the discovered URL
+- new-product / candidate-c713acf427d4a560ed38: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-258eea905bd59c4a3e61: No verified product image URL
+- new-product / candidate-05e9f7cae833716567d8: No single GBP offer for the exact product
+- new-product / candidate-c7bafe7e7ed528bf2aca: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-41fd62b6b46fa4fe9c56: Cannot confirm one product on the discovered URL
+- new-product / candidate-20746a5ed5935a1cd859: Cannot confirm one product on the discovered URL
+- new-product / candidate-3313dc14f6f5115245ba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9d31fe7206a06fad3ee1: Cannot confirm that the product is a material or printer
+- new-product / candidate-411b24ab54d2318e9f60: No single GBP offer for the exact product
+- new-product / candidate-9cb64730559221d6094b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22f4fb18eebf0e57359f: Cannot confirm one product on the discovered URL
+- new-product / candidate-933c702b5a240a4f9968: Cannot confirm one product on the discovered URL
+- new-product / candidate-7af7eb1bce91cbdcf85c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eaca298e049fd967999c: Cannot confirm that the product is a material or printer
+- new-product / candidate-cb2fa022b9551413b477: No single GBP offer for the exact product
+- new-product / candidate-f84dcaf43dc042e4d6f5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f4b472907a3e4947ea57: Cannot confirm one product on the discovered URL
+- new-product / candidate-0e5ff554ceeedcc1438e: Cannot confirm one product on the discovered URL
+- new-product / candidate-227c6521b663e05db8c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a663f77521330556ac52: No single GBP offer for the exact product
+- new-product / candidate-2c8983f68d911b153177: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5c65ae68f18a06a5ef1b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b29d73690d616a383d6d: Cannot confirm one product on the discovered URL
+- new-product / candidate-450d662decf339410daa: Cannot confirm one product on the discovered URL
+- new-product / candidate-b344b97f6b4f67f06797: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-62efcc460b98d13007f1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8fd413ee8711e32aa42c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-149a5160641474daa64a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d71d2c08d03af45e296: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ca694424111905ac390: Cannot confirm one product on the discovered URL
+- new-product / candidate-88e0e33780113509aa20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-929c2e44c03619eb3263: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fd4911b312a77d9bb190: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c5c2a08fd8a9f60e5123: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-962fd7fd12f0bccc9821: Cannot confirm one product on the discovered URL
+- new-product / candidate-962a98fba02bfb33f44b: No verified product image URL
+- new-product / candidate-7f0561afad2adcaf648f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-98138a0fe6340db9d7dd: Cannot confirm that the product is a material or printer
+- new-product / candidate-968101ab868b1a458c81: Cannot confirm that the product is a material or printer
+- new-product / candidate-716eeb23b8ec9bd8d4d2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2c1ed869099c06c37191: Cannot confirm one product on the discovered URL
+- new-product / candidate-63b9f5e142ad3b91f092: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cf886d93a5ba1933790d: No single GBP offer for the exact product
+- new-product / candidate-554a28ede4ee5740009c: Cannot confirm one product on the discovered URL
+- new-product / candidate-bfa28a8fae7480fba0cb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-787703ef55122a632030: No single GBP offer for the exact product
+- new-product / candidate-9ccb5c4a6f495a1c71fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ae0fbfca545f9fbf5e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6ee867765e22a109d9de: Cannot confirm that the product is a material or printer
+- new-product / candidate-a2d198fdb17acf231ab3: No single GBP offer for the exact product
+- new-product / candidate-8737cfc6745f7ca29f41: Cannot confirm one product on the discovered URL
+- new-product / candidate-bbba60d66bfb16c33073: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
+- new-product / candidate-0a4c63cce667c2fcec35: No single GBP offer for the exact product
+- new-product / candidate-a3453f3fd8d0d607b889: Cannot confirm one product on the discovered URL
+- new-product / candidate-a92eebb6e6f83a32cc9c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
+- new-product / candidate-68b41fbb54001b9934ca: No single GBP offer for the exact product
+- new-product / candidate-d4b73213219f2d8cc282: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-928afe9c8744e883a2f1: Cannot confirm one product on the discovered URL
+- new-product / candidate-4b9daf4d2dd94ae789fb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-61b78171263bada7bf01: No single GBP offer for the exact product
+- new-product / candidate-cead7e5a80d154f72c25: Cannot confirm one product on the discovered URL
+- new-product / candidate-9eef1b9febec0f338e2f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d9e139afadf6ac696e1f: No single GBP offer for the exact product
+- new-product / candidate-9b312e45dba00afe9d44: Cannot confirm one product on the discovered URL
+- new-product / candidate-8743a41eae23b00023b7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-52d78e51b4f98925ca31: No single GBP offer for the exact product
+- new-product / candidate-caece1932bcf7665bcf9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1723727d1996971ba115: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-9a8583979c2abfad3cec: No single GBP offer for the exact product
+- new-product / candidate-abb62607bf55e95abe03: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0244117a5f6e92ac5f2d: Cannot confirm one product on the discovered URL
+- new-product / candidate-78e06b32dbe427957eb6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-abb54c825dc19f220070: Cannot confirm that the product is a material or printer
+- new-product / candidate-4c5c851b44d08bb45aa3: No single GBP offer for the exact product
+- new-product / candidate-7c142c1b408e91392b89: Cannot confirm one product on the discovered URL
+- new-product / candidate-45df341afe3758a5c5e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
+- new-product / candidate-91f579999c8e92e4ad78: Approved URL is outside its recorded retailer
+- new-product / candidate-76a9e54efb3c5c3426a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd53beb29f63e4c2c145: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-103fb274255f286ae1d3: No single GBP offer for the exact product
+- new-product / candidate-64379db6d7a4b002f87d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3e4955817759027d6225: Cannot confirm one product on the discovered URL
+- new-product / candidate-bef27b60dd7ee9670fc0: Accessories and spare parts are not printers or printing materials

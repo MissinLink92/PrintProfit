@@ -971,14 +971,14 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "cb0d26c06d3305f67c2cb2e09b1a206c9ce57fd10528c686da8d0d83e3fab6c1",
+      "contentHash": "5c6ad1b1a8f75362d4099dcc6edae0361d143f1b5d468855675af287ecacdd55",
       "lastVerified": "2026-10-16"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "f1c7607898ddf1294071a7b55b45e5d54e82cbf150151c42da3236b9e8cfbb17",
+      "contentHash": "599d55dd305fd9910435e58cb79d3d5ca74d87444f7453ef0149474a839a04c0",
       "lastVerified": "2026-10-16"
     },
     "depop": {
@@ -997,9 +997,9 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-16",
-      "status": "failed",
-      "contentHash": "0ac5ac1da1e73e741008f201b9ed260eb78f5ed574232585a77b38e6e3996e79",
-      "error": "Source did not provide readable pricing guidance"
+      "status": "review-required",
+      "contentHash": "2756549ce89d3b24bb791085b0120685bde63be79e1cd7d53922c6216727883f",
+      "error": "Expected one unambiguous rate; found 0"
     },
     "facebook": {
       "url": "https://www.facebook.com/help/1159837417996719",
@@ -1036,7 +1036,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "lastVerified": "2026-10-16"
     }
   },
-  "lastAttempt": "2026-10-16T16:28:54+01:00",
+  "lastAttempt": "2026-10-16T22:07:36+01:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-16",
@@ -1063,7 +1063,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "ZAR": 21.91503229
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-16T16:28:54+01:00",
+    "lastAttempt": "2026-10-16T22:07:36+01:00",
     "status": "verified"
   }
 };
