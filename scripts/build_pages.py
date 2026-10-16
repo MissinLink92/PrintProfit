@@ -6,8 +6,8 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 destination = root / '_site'
 destination.mkdir(exist_ok=True)
-excluded = {'scripts', 'config', 'reports', 'work', 'outputs', 'node_modules'}
-private_data = {'data/review-queue.json', 'data/nightly-report.json'}
+excluded = {'scripts', 'config', 'reports', 'work', 'outputs', 'node_modules', 'functions', 'docs'}
+private_data = {'data/review-queue.json', 'data/nightly-report.json', 'firebase.billing.json'}
 for relative in subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0'):
     if not relative:
         continue

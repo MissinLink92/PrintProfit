@@ -1,0 +1,16 @@
+{
+  "name": "printprofit-billing",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "test": "node --test billing-core.test.js billing-handlers.test.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0",
+    "firebase-functions": "^6.0.0",
+    "stripe": "^18.0.0"
+  }
+}
