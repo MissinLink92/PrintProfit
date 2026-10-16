@@ -6,8 +6,8 @@ function plan(quantity, groups){
  if(!integer(quantity,1,10000000))throw new Error('Enter a whole-number production quantity between 1 and 10,000,000.');
  if(!Array.isArray(groups)||!groups.length||groups.length>10)throw new Error('Add between one and ten printer groups.');
  const rows=groups.map(g=>{
-  if(!integer(g.machines,1,10000)||!integer(g.perBuild,1,10000))throw new Error('Printer counts and products per build must be whole numbers from 1 to 10,000.');
-  if(!Number.isFinite(Number(g.hours))||Number(g.hours)<=0||Number(g.hours)>10000)throw new Error('Enter a positive time per build for every printer group.');
+  if(!integer(g.machines,1,10000)||!integer(g.perBuild,1,10000))throw new Error('Printer counts and products per cycle must be whole numbers from 1 to 10,000.');
+  if(!Number.isFinite(Number(g.hours))||Number(g.hours)<=0||Number(g.hours)>10000)throw new Error('Enter a positive time per cycle for every printer group.');
   if(!Number.isFinite(Number(g.watts))||Number(g.watts)<=0||Number(g.watts)>100000)throw new Error('Choose a printer or enter its average power draw for every group.');
   if(!Number.isFinite(Number(g.price))||Number(g.price)<0||Number(g.price)>100000000||!Number.isFinite(Number(g.lifetime))||Number(g.lifetime)<0||Number(g.lifetime)>100000000||(Number(g.price)>0&&Number(g.lifetime)<1))throw new Error('Enter a printer lifetime when including its purchase cost.');
   return {...g,machines:Number(g.machines),perBuild:Number(g.perBuild),hours:Number(g.hours),watts:Number(g.watts),price:Number(g.price),lifetime:Number(g.lifetime)};
