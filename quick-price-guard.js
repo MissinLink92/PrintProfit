@@ -15,7 +15,9 @@
   function baseCost(){
     const printer=get('printer')?.value||'';
     let watts=0,price=0,lifetime=0;
-    if(printer==='custom'){
+    const profile=window.__ppPrinterCostProfile?.();
+    if(profile){watts=profile.watts;price=profile.price;lifetime=profile.lifetime;}
+    else if(printer==='custom'){
       watts=num('customPrinterPower');price=num('customPrinterPrice');lifetime=num('customPrinterLife');
     }else if(printer){
       const parts=printer.split(/[|,]/);

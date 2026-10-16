@@ -2,7 +2,7 @@
 'use strict';
 if(window.__ppMaterialScanner)return;window.__ppMaterialScanner=true;
 let stream=null,timer=null,token=0,video,stopButton,status,codeInput;
-const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+const el=(tag,text)=>{const n=document.createElement(tag);if(tag==='button')n.className='pp-material-new';if(text!==undefined)n.textContent=text;return n;};
 function stop(){token++;if(timer)clearTimeout(timer);timer=null;if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;if(video){video.pause();video.srcObject=null;video.hidden=true;}if(stopButton)stopButton.hidden=true;}
 function review(raw){
  const code=window.PrintProfitBusinessMath?.barcode(raw);if(!code){status.textContent='That is not a valid EAN/UPC product barcode. Check the digits or enter the material manually.';return;}

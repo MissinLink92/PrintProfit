@@ -54,3 +54,8 @@ const numbers={qty:10,discount:0,printHours:2,materialPack:1000,materialPackCost
 const totals={},calculation={Math,Number,state:{},window:{__ppFarmCosts:()=>({powerUsed:p.powerPerItem,depreciation:p.depreciationPerItem,materialMultiplier:p.materialMultiplier,extraLabourHours:p.extraLabourHours})},n:id=>numbers[id]||0,printerData:()=>({watts:100,price:300,lifetime:3000}),document:{getElementById:()=>null},$:()=>null,setValue(){},setText:(k,v)=>totals[k]=v,setProfitClass(){},money:n=>n,renderSingle(){},current:{}};
 vm.createContext(calculation);vm.runInContext(batch+'\n'+calc+'\ncalc();',calculation);assert.ok(Math.abs(totals.batchCost-(26+65+10/6+15+3+.18+.6))<1e-8);
 console.log('PASS: real calculator includes failure material/labour and changeover labour while leaving packaging and delivery on good products.');
+// Every pricing/export tool now uses the core's saved-printer metadata reader.
+for(const f of ['profit-advisor.js','profit-tools.js','reset-fix.js','quick-price-guard.js'])assert.ok(fs.readFileSync(f,'utf8').includes('__ppPrinterCostProfile'),f);
+const corePrinter=fs.readFileSync('legacy-index.html','utf8').match(/  function printerData\(\)\{[^\r\n]+/)[0];
+const printerContext={$:()=>({value:'workshop:test',selectedIndex:0,options:[{dataset:{watts:'150',price:'169',lifetime:'3000'}}]}),n:()=>0};vm.createContext(printerContext);vm.runInContext(corePrinter+'\nvar actual=printerData();',printerContext);assert.equal(printerContext.actual.watts,150);assert.equal(printerContext.actual.price,169);
+console.log('PASS: export and pricing paths share the core saved-printer profile reader.');

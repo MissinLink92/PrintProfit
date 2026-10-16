@@ -402,6 +402,7 @@ function t(key,vars={}){
 }
 
 function printerData(){
+  if(window.__ppPrinterCostProfile)return window.__ppPrinterCostProfile();
   const el=$('printer');
   if(!el)return{watts:0,price:0,lifetime:0};
   if(el.value==='custom')return{watts:num('customPrinterPower'),price:num('customPrinterPrice'),lifetime:num('customPrinterLife')};

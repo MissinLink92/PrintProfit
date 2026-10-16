@@ -24,6 +24,7 @@ function money(v){
 }
 
 function printerData(){
+  if(window.__ppPrinterCostProfile)return window.__ppPrinterCostProfile();
   const el=$('printer'),v=el?.value||'';
   if(v==='custom'){
     return{

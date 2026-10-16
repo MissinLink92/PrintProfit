@@ -11,6 +11,7 @@
   function number(id){const value=Number.parseFloat(getValue(id)||'0');return Number.isFinite(value)?value:0;}
 
   function printer(){
+  if(window.__ppPrinterCostProfile)return window.__ppPrinterCostProfile();
     const value=getValue('printer');
     if(value==='custom')return{watts:number('customPrinterPower'),price:number('customPrinterPrice'),lifetime:number('customPrinterLife')};
     if(!value)return{watts:0,price:0,lifetime:0};
