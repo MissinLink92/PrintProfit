@@ -1,6 +1,6 @@
 {
   "id": "/",
-  "name": "PrintProfit — 3D Printing Costs",
+  "name": "PrintProfit \u2014 3D Printing Costs",
   "short_name": "PrintProfit",
   "description": "Calculate 3D printing costs and selling prices, manage projects and compare products.",
   "lang": "en-GB",
@@ -10,8 +10,23 @@
   "background_color": "#071018",
   "theme_color": "#071018",
   "icons": [
-    {"src": "/assets/pwa-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "/assets/pwa-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "/assets/pwa-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "/assets/app-symbol-192-v2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/app-symbol-512-v2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/app-symbol-maskable-v2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
