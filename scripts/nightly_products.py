@@ -59,6 +59,11 @@ def offer_price(product, variant_sku=None):
     return options[0]
 
 def shopify(reader, url, variant_id=None, check_currency=True):
+    feed = nightly_catalogues.feed_for(reader, url)
+    if feed and feed.get('error'):
+        # A failed store/currency check applies to all its variants. Avoid
+        # hundreds of doomed per-product fallbacks consuming discovery time.
+        raise ValueError('Retailer catalogue unavailable this run: ' + feed['error'])
     cached = nightly_catalogues.record(reader, url, variant_id)
     if cached is not None:
         return cached
@@ -177,13 +182,12 @@ def refresh_item(item, config, reader, root, today, queue, report):
     except Exception as exc:
         item['lastCheckStatus'] = 'retained-unverified'
         if isinstance(exc, nightly_catalogues.VariantMissing):
-            try:
-                reader.text(price_url)
-            except urllib.error.HTTPError as missing:
-                if missing.code in (404, 410):
-                    item.update(sourceUnavailable=True, unavailableChecked=today, availability='Out of stock')
-            except Exception:
-                pass
+            # VariantMissing is raised only after a complete, native-GBP scan.
+            # The parent product may still exist with other colours/packs; its
+            # HTTP status cannot establish availability of this exact offer.
+            item.update(sourceUnavailable=True, unavailableChecked=today, availability='Unavailable from current catalogue')
+            report['issues'].append({'area': 'product', 'id': item['id'], 'message': str(exc)})
+            return
         report['issues'].append({'area': 'product', 'id': item['id'], 'message': str(exc)})
     try:
         # Selected source photos can still be checked when price sources are blocked.
@@ -340,6 +344,8 @@ def material_weight(*texts):
 def automatic_details(candidate, record):
     variant = record.get('variantTitle') or ''
     title = record['name']
+    if re.search(r'accessor|spare|replacement|parts', str(record.get('type') or ''), re.I):
+        raise ValueError('Accessories and spare parts are not printers or printing materials')
     material = re.search(r'\b(PLA\+|PLA(?:[- ]?(?:CF|Plus))?|PETG(?:[- ]?CF)?|ABS|ASA|TPU|PET|Nylon|Resin)\b', title, re.I)
     printer = re.search(r'3d.?printer', title + ' ' + str(record.get('type') or ''), re.I)
     if not material and not printer:
@@ -353,7 +359,7 @@ def automatic_details(candidate, record):
         if norm(label) in ('colour', 'color') and index < len(record['variantOptions']):
             candidate['colour'] = record['variantOptions'][index] or ''
     if candidate['category'] == 'filament':
-        candidate['weightGrams'] = material_weight(variant, variant+' '+title, variant+' '+record.get('description',''))
+        candidate['weightGrams'] = material_weight(variant, variant+' '+title, variant+' '+(record.get('description') or ''))
         candidate['pack'] = format(candidate['weightGrams']/1000, 'g') + ' kg'
     else:
         candidate['pack'] = variant if variant != 'Default Title' else 'See retailer specifications'
@@ -361,7 +367,15 @@ def automatic_details(candidate, record):
 def fair_discovery_entries(entries):
     """Round-robin suppliers so one large/failed catalogue cannot starve others."""
     groups = defaultdict(deque)
-    for entry in sorted(entries, key=lambda entry: entry.get('lastPriceAttempt', '')):
+    def priority(entry):
+        proposal = entry.get('proposal', {})
+        text = str(proposal.get('name') or '') + ' ' + str(proposal.get('pack') or '')
+        # Exact pack masses can be validated without guessing. Do not let a
+        # long sequence of ambiguous clearance bundles starve ordinary spools.
+        explicit_mass = bool(re.search(r'\d+(?:\.\d+)?\s*(?:kg|g)\b', text, re.I))
+        accessory = bool(re.search(r'accessor|spare|replacement|parts', str(proposal.get('type') or ''), re.I))
+        return (accessory, not explicit_mass, entry.get('lastPriceAttempt', ''))
+    for entry in sorted(entries, key=priority):
         if entry['kind'] == 'new-product' and entry['status'] not in ('published', 'superseded', 'rejected'):
             groups[entry['proposal']['sourceId']].append(entry)
     while groups:

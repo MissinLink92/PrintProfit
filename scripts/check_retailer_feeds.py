@@ -6,7 +6,7 @@ from pathlib import Path
 import nightly_catalogues as catalogues
 from nightly_html import Page
 from nightly_references import folksy_commission, stripe_standard_uk
-from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries
+from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries, automatic_details
 from nightly_update import ReviewQueue
 
 
@@ -24,6 +24,34 @@ class FakeReader:
 
 
 class FeedChecks(unittest.TestCase):
+    def test_known_pack_sizes_precede_ambiguous_bundles(self):
+        entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':n}}
+                   for n in ['Clearance Resin Bundle','PLA Black 1kg']]
+        self.assertEqual(next(fair_discovery_entries(entries))['proposal']['name'], 'PLA Black 1kg')
+
+    def test_absent_variant_archives_without_parent_page_probe(self):
+        item = {'id':'gone','name':'PLA','retailer':'Retailer','url':'https://retailer.example/products/pla','price':20}
+        config = {'productLocators':{'gone':{'variantId':99}}, 'retailers':{'r':{'name':'Retailer','allowedHosts':['retailer.example']}},'reviewDecisions':{},'skipImages':True}
+        report = {'issues':[], 'priceChanges':[], 'imageChanges':[]}
+        refresh_item(item, config, FakeReader(), Path.cwd(), '2026-10-16', ReviewQueue([], {}, 'now'), report)
+        self.assertTrue(item['sourceUnavailable'])
+        self.assertEqual(item['price'],20)
+
+    def test_failed_catalogue_does_not_retry_every_product(self):
+        reader = FakeReader()
+        reader.catalogues[0]['error'] = 'Store no longer quotes GBP'
+        with self.assertRaisesRegex(ValueError, 'Retailer catalogue unavailable'):
+            shopify(reader, 'https://retailer.example/products/pla', 11)
+
+    def test_accessories_are_not_imported_as_printers(self):
+        with self.assertRaisesRegex(ValueError, 'Accessories'):
+            automatic_details({}, {'name':'Build Plate for 3D Printer', 'type':'3D Printer Accessories'})
+
+    def test_material_title_weight_with_null_description(self):
+        candidate = {}
+        automatic_details(candidate, {'name':'PLA Filament 10 kg','variantTitle':'Black','type':'3D Filaments','description':None,'options':[]})
+        self.assertEqual(candidate['weightGrams'], 10000)
+
     def test_official_fee_scope_and_ambiguity(self):
         self.assertEqual(folksy_commission(Page('<p>We charge 6% + VAT sales commission on the selling price.</p>')), 6)
         self.assertEqual(stripe_standard_uk(Page('<p>1.5% + 20p for standard UK cards</p><p>2.8% + 20p for premium UK cards</p>')), (1.5, .2))

@@ -190,13 +190,15 @@
     },
     "anycubic-uk": {
       "name": "Anycubic UK",
-      "url": "https://uk.anycubic.com/",
+      "url": "https://uk.anycubic3d.com/",
       "allowedHosts": [
         "uk.anycubic.com",
-        "www.uk.anycubic.com"
+        "www.uk.anycubic.com",
+        "uk.anycubic3d.com",
+        "www.uk.anycubic3d.com"
       ],
-      "productBase": "https://uk.anycubic.com/",
-      "catalogUrl": "https://uk.anycubic.com/products.json"
+      "productBase": "https://uk.anycubic3d.com/",
+      "catalogUrl": "https://uk.anycubic3d.com/products.json"
     },
     "qidi-uk": {
       "name": "QIDI UK Store",
@@ -19027,5 +19029,6 @@
   },
   "approvedProductDetails": {},
   "imageCheckDays": 7,
-  "maxNewProductsPerRun": 50
+  "maxNewProductsPerRun": 200,
+  "maxNewProductChecks": 800
 }
