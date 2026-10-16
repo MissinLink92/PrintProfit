@@ -4,6 +4,7 @@ import argparse
 import json
 import math
 from pathlib import Path
+from catalogue_brands import normalise_brand
 from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,6 +69,8 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
         history = product.get("priceHistory")
         page = index // history_page_size
         row = {key: value for key, value in product.items() if key in PRODUCT_FIELDS}
+        if row.get("brand"):
+            row["brand"] = normalise_brand(row["brand"])
         row["priceHistoryPage"] = page if isinstance(history, list) and history else None
         summary_products.append(row)
 
@@ -82,6 +85,7 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
             ]
 
     summary = {key: data[key] for key in SUMMARY_FIELDS if key in data}
+    summary["brandDirectory"] = sorted({normalise_brand(name) for name in data.get("brandDirectory", []) if name} | {row["brand"] for row in summary_products if row.get("brand")}, key=str.casefold)
     summary["products"] = summary_products
     return summary, history_pages
 

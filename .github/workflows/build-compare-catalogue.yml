@@ -13,6 +13,8 @@ on:
       - 'data/reference-data.js'
       - 'scripts/build_pages.py'
       - 'scripts/build_compare_catalogue.py'
+      - 'scripts/catalogue_brands.py'
+      - 'config/brand-aliases.json'
       - '.github/workflows/*.yml'
 
 concurrency:
