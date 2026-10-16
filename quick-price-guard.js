@@ -25,11 +25,11 @@
     const pack=num('materialPack');
     const packPrice=num('materialPackCost');
     const used=num('materialUsed');
-    const material=pack>0&&used>0?packPrice*(used/pack):0;
     const farm=window.__ppFarmCosts?.(Math.max(1,Math.floor(num('qty'))));
+    const material=(pack>0&&used>0?packPrice*(used/pack):0)*(farm?.materialMultiplier||1);
     const electricity=(farm?farm.powerUsed:(watts>0&&hours>0?watts/1000*hours:0))*num('electricityRate');
     const depreciation=farm?farm.depreciation:(lifetime&&hours?price/lifetime*hours:0);
-    const labour=num('labourRate')*num('labourHours');
+    const labour=num('labourRate')*(num('labourHours')*(farm?.materialMultiplier||1)+(farm?.extraLabourHours||0));
     return material+electricity+depreciation+labour+num('pack')+num('other')+num('delivery');
   }
 

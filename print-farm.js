@@ -2,6 +2,7 @@
 'use strict';
 if(window.__ppPrintFarm)return;window.__ppPrintFarm=true;
 const $=id=>document.getElementById(id),MAX=10;
+let allowances={failurePercent:0,downtimePercent:0,changeoverMinutes:0};
 let groups=[],nextId=1,restoring=false,lastSummary='',configured=false,quantityInput;
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const number=id=>Number($(id)?.value)||0;
@@ -14,7 +15,7 @@ function profile(value){
  const p=value.split(/[|,]/);return{watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0,materialType:option?.dataset.materialType||'filament'};
 }
 function fresh(){const printer=$('printer')?.value||'';return{id:nextId++,printer,machines:1,perBuild:1,hours:number('printHours'),...profile(printer)};}
-function saved(){return JSON.stringify({version:1,groups});}
+function saved(){return JSON.stringify({version:1,groups,allowances});}
 function persist(){const field=$('ppFarmConfiguration');if(field)field.value=saved();}
 function changed(){persist();if(restoring)return;$('ppFarmConfiguration')?.dispatchEvent(new Event('input',{bubbles:true}));$('calc')?.click();}
 function field(row,g,name,label,step,min,max){
@@ -56,12 +57,12 @@ function showSummary(result,error){
  status.replaceChildren(el('p',summary));
  status.append(el('p','One print cycle is one print job on one printer. Several printers can run cycles at the same time.'));
  const stats=(entries,parent)=>{const dl=el('dl',undefined,'pp-farm-stats');entries.forEach(([label,value])=>{const item=el('div');item.append(el('dt',label),el('dd',String(value)));dl.append(item);});parent.append(dl);};
- stats([['Printers used',active+' of '+printers],['Combined printer time',duration(result.printerHours)],['Total energy',result.kWh.toFixed(3)+' kWh'],['Electricity for the run',money(result.kWh*rate)],['Depreciation for the run',money(result.depreciation)]],status);
+ stats([['Planned attempts (including failures)',result.plannedProducts],['Failure allowance',result.failurePercent+'%'],['Changeover hands-on time',duration(result.changeoverHours)],['Downtime allowance',result.downtimePercent+'%'],['Printers used',active+' of '+printers],['Combined printer time',duration(result.printerHours)],['Total energy',result.kWh.toFixed(3)+' kWh'],['Electricity for the run',money(result.kWh*rate)],['Depreciation for the run',money(result.depreciation)]],status);
  result.allocations.forEach((g,i)=>{
   const card=el('section',undefined,'pp-farm-allocation');const name=g.printerName||[...($('printer')?.options||[])].find(o=>o.value===g.printer)?.textContent||'Custom printer';
   card.append(el('h3','Group '+(i+1)+' — '+name));
   const low=Math.floor(g.builds/g.machines),high=Math.ceil(g.builds/g.machines),partial=g.products%g.perBuild;
-  stats([['Products to make',g.products],['Printers',g.machines],['Products per cycle',g.perBuild],['Time per cycle',duration(g.hours)],['Total print cycles',g.builds],['Cycles per printer',low===high?low:low+'–'+high],['Full cycles',Math.floor(g.products/g.perBuild)],['Final partial cycle',partial?partial+' of '+g.perBuild+' products':'None'],['Estimated finish',duration(g.elapsedHours)],['Energy',g.kWh.toFixed(3)+' kWh']],card);
+  stats([[result.failurePercent?'Planned product attempts':'Products to make',g.products],['Printers',g.machines],['Products per cycle',g.perBuild],['Time per cycle',duration(g.hours)],['Total print cycles',g.builds],['Cycles per printer',low===high?low:low+'–'+high],['Full cycles',Math.floor(g.products/g.perBuild)],['Final partial cycle',partial?partial+' of '+g.perBuild+' products':'None'],['Estimated finish',duration(g.elapsedHours)],['Energy',g.kWh.toFixed(3)+' kWh']],card);
   status.append(card);
  });
  if(resultStatus)resultStatus.textContent=summary+'. Costs below use the run’s average cost per product.';
@@ -72,7 +73,7 @@ window.__ppFarmCosts=quantity=>{
  if(quantityInput&&document.activeElement!==quantityInput)quantityInput.value=String(quantity);
  try{
   if(groups.some(g=>g.materialType!==materialType()))throw new Error('All groups must use the selected material workflow. Calculate filament and resin runs separately.');
-  const result=window.PrintProfitFarmMath.plan(Number($('qty')?.value),groups);showSummary(result);return{valid:true,powerUsed:result.powerPerItem,depreciation:result.depreciationPerItem,plan:result};
+  const result=window.PrintProfitFarmMath.plan(Number($('qty')?.value),groups,allowances);showSummary(result);return{valid:true,materialMultiplier:result.materialMultiplier,extraLabourHours:result.extraLabourHours,powerUsed:result.powerPerItem,depreciation:result.depreciationPerItem,plan:result};
  }catch(e){showSummary(null,e.message);return{valid:false,powerUsed:0,depreciation:0};}
 };
 window.__ppRestoreFarm=fields=>{
@@ -81,6 +82,8 @@ window.__ppRestoreFarm=fields=>{
  try{
   const raw=fields?.ppFarmConfiguration?.value;const data=raw?JSON.parse(raw):null;
   groups=data?.version===1&&Array.isArray(data.groups)&&data.groups.length?data.groups.slice(0,MAX).map(g=>({...g,id:nextId++})): [fresh()];
+  allowances={failurePercent:0,downtimePercent:0,changeoverMinutes:0,...(data?.allowances||{})};
+  document.querySelectorAll?.('[data-farm-allowance]').forEach(input=>input.value=String(allowances[input.dataset.farmAllowance]??0));
   configured=!!data; $('ppFarmEnabled').checked=fields?.ppFarmEnabled?.checked===true;render();updateVisibility();
  }catch(e){groups=[fresh()];$('ppFarmEnabled').checked=false;render();updateVisibility();}finally{restoring=false;}
 };
@@ -93,9 +96,14 @@ function mount(){
  const details=el('div');details.id='ppFarmDetails';details.hidden=true;
  details.append(el('p','Use Quantity in Costs & Fees for the total number of products. Material usage, hands-on labour, packaging and other costs remain per product. Enter actual slicer time for a full plate (one print cycle) in each group. All groups use your existing electricity rate.'));
  const quantityLabel=el('label','Total products in run');quantityInput=el('input');quantityInput.type='number';quantityInput.min='1';quantityInput.max='10000000';quantityInput.step='1';quantityInput.value=String(number('qty')||1);quantityInput.addEventListener('input',()=>{const qty=$('qty');if(qty){qty.value=quantityInput.value;qty.dispatchEvent(new Event('input',{bubbles:true}));}changed();});quantityLabel.append(quantityInput);details.append(quantityLabel);
+ const allowanceGrid=el('div',undefined,'pp-farm-grid');
+ for(const [key,label,max] of [['failurePercent','Expected failed prints (%)',50],['downtimePercent','Unavailable / downtime (%)',90],['changeoverMinutes','Hands-on changeover minutes between cycles',1440]]){
+  const wrap=el('label',label),input=el('input');input.type='number';input.min='0';input.max=String(max);input.step='0.1';input.value='0';input.dataset.farmAllowance=key;input.addEventListener('input',()=>{allowances[key]=input.value===''?0:Number(input.value);changed();});wrap.append(input);allowanceGrid.append(wrap);
+ }
+ details.append(allowanceGrid,el('p','Failure allowance estimates extra full attempts, including material and per-product hands-on labour. Changeover adds labour at your existing hourly rate and extends completion time. Downtime extends elapsed time only; idle electricity and wear are excluded. Packaging and delivery apply to the requested good products.'));
  const list=el('div');list.id='ppFarmGroups';details.append(list);
  const add=el('button','Add another printer group');add.id='ppFarmAdd';add.type='button';add.addEventListener('click',()=>{if(groups.length<MAX){groups.push(fresh());render();changed();}});details.append(add);
- details.append(el('p','Allocation follows group order and plate capacity, not fastest-printer optimisation. Groups start together; elapsed time excludes cooling, unloading, changeovers and downtime. A partly filled final cycle uses the full entered cycle time. Use the same material and units throughout; calculate resin and filament separately.'));
+ details.append(el('p','Allocation follows group order and plate capacity, not fastest-printer optimisation. Groups start together; elapsed time excludes cooling and other unentered delays. Changeovers and downtime use the allowances above. A partly filled final cycle uses the full entered cycle time. Use the same material and units throughout; calculate resin and filament separately.'));
  const summary=el('div',undefined,'pp-farm-summary');summary.id='ppFarmSummary';summary.setAttribute('aria-live','polite');details.append(summary);panel.append(details);setup.append(panel);
  const result=el('div',undefined,'pp-farm-result-status');result.id='ppFarmResultStatus';result.hidden=true;result.setAttribute('role','status');document.querySelector('.result')?.prepend(result);
  groups=[fresh()];render();check.addEventListener('change',()=>{if(check.checked&&!configured){groups=[fresh()];configured=true;render();}updateVisibility();changed();});

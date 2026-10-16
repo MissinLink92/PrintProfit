@@ -274,7 +274,7 @@ function openFormFromCalculator(){
  const pack=Number(document.getElementById('materialPack')?.value)||0;
  const cost=Number(document.getElementById('materialPackCost')?.value)||0;
  const form=document.getElementById('ppMaterialForm');if(!form)return;
- form.dataset.editId='';
+ form.dataset.editId='';form.dataset.barcode='';
  document.getElementById('ppMatName').value=selected&&selected!=='Other / Custom Filament'&&selected!=='Other / Custom Resin'?selected:'';
  document.getElementById('ppMatType').value=type;
  syncBrandOptions('');
@@ -289,7 +289,7 @@ function openFormFromCalculator(){
 }
 function openForm(existing){
  const form=document.getElementById('ppMaterialForm');if(!form)return;
- form.dataset.editId=existing?.id||'';
+ form.dataset.editId=existing?.id||'';form.dataset.barcode=existing?.barcode||'';
  document.getElementById('ppMatName').value=existing?.name||'';
  document.getElementById('ppMatType').value=existing?.type||'Filament';
  syncBrandOptions(existing?.brand||'');
@@ -306,13 +306,15 @@ function saveForm(){
  const name=document.getElementById('ppMatName').value.trim(),type=document.getElementById('ppMatType').value;
  const amount=Number(document.getElementById('ppMatAmount').value)||0,cost=Number(document.getElementById('ppMatCost').value)||0;
  const remaining=Number(document.getElementById('ppMatRemaining').value),lowStock=Number(document.getElementById('ppMatLowStock').value)||0;
+ if(document.getElementById('ppMaterialForm').dataset.barcode&&document.getElementById('ppMatCost').value.trim()===''){alert('Enter the purchase cost, including 0 if it was free.');return}
  if(!name){alert('Please enter a material name.');return}
  if(amount<=0){alert('Please enter a package amount greater than 0.');return}
  if(!Number.isFinite(remaining)||remaining<0){alert('Remaining stock cannot be negative.');return}
  if(lowStock<0){alert('The low-stock alert cannot be negative.');return}
  const brandSelect=document.getElementById('ppMatBrand'),brandCustom=document.getElementById('ppMatBrandCustom'),brand=(brandSelect?.value==='__other__'?(brandCustom?.value||''):brandSelect?.value||'').trim(),colour=document.getElementById('ppMatColour').value.trim();
  const costGBP=toGBP(cost),unitCost=moneyFromGBP(costGBP/amount)+' / '+(type==='Resin'?'ml':'g'),items=read(),id=document.getElementById('ppMaterialForm').dataset.editId;
- const obj={id:id||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,type,brand,colour,amount,remaining,lowStock,cost:costGBP,unitCost,updated:Date.now()};
+ const barcode=window.PrintProfitBusinessMath?.barcode(document.getElementById('ppMaterialForm').dataset.barcode);
+ const obj={...(barcode?{barcode}:{}),id:id||((crypto.randomUUID&&crypto.randomUUID())||String(Date.now())),name,type,brand,colour,amount,remaining,lowStock,cost:costGBP,unitCost,updated:Date.now()};
  if(!write(id?items.map(x=>String(x.id)===String(id)?obj:x):[...items,obj])){alert('Could not save this material in this browser.');return}
  closeForm();render();
 }
@@ -384,6 +386,16 @@ function open(workspaceSection='workshop'){
  refreshCurrencyUI();panel.classList.add('open');syncWorkspaceModalState();document.body.style.overflow='hidden';setWorkshopTab('materials');setWorkspaceSection(workspaceSection);render();document.dispatchEvent(new Event('pp-workshop-open'));const c=document.getElementById('ppMaterialCount');if(c){const n=read().length;c.textContent=n+' saved '+(n===1?'material':'materials')}
 }
 function closeWorkspaceWorkshop(){document.getElementById('ppMaterialsPanel')?.classList.remove('open');document.body.style.overflow=document.querySelector('#ppProjectsPanel.open')?'hidden':'';syncWorkspaceModalState();}
+window.__ppPrepareMaterialScan=raw=>{
+ const code=window.PrintProfitBusinessMath?.barcode(raw);if(!code)throw new Error('Enter a valid EAN or UPC barcode.');
+ const match=window.PrintProfitBusinessMath.matchMaterial(read(),code);
+ open('workshop');setWorkshopTab('materials');openForm(match||undefined);
+ const form=document.getElementById('ppMaterialForm');form.dataset.editId='';form.dataset.barcode=code;
+ document.getElementById('ppMaterialFormTitle').textContent='Review scanned material — '+code;
+ if(match)document.getElementById('ppMatRemaining').value=match.amount;
+ else for(const id of ['ppMatName','ppMatAmount','ppMatRemaining','ppMatCost'])document.getElementById(id).value='';
+ return !!match;
+};
 window.__ppOpenWorkspaceWorkshop=(section='workshop')=>open(section);
 window.__ppCloseWorkspaceWorkshop=()=>closeWorkspaceWorkshop();
 document.addEventListener('click',event=>{if(!event.target.closest('[data-pp-account-retry]'))return;

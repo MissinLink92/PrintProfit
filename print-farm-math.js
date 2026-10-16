@@ -1,10 +1,13 @@
 /* Production-run arithmetic. No DOM, network or account dependencies. */
 (function(root){
 'use strict';
-function plan(quantity, groups){
+function plan(quantity, groups, options={}){
  const integer=(v,min,max)=>Number.isInteger(Number(v))&&Number(v)>=min&&Number(v)<=max;
  if(!integer(quantity,1,10000000))throw new Error('Enter a whole-number production quantity between 1 and 10,000,000.');
  if(!Array.isArray(groups)||!groups.length||groups.length>10)throw new Error('Add between one and ten printer groups.');
+ const option=(key,max)=>{const n=Number(options[key]??0);if(!Number.isFinite(n)||n<0||n>max)throw new Error('Production allowances are outside their supported range.');return n;};
+ const failurePercent=option('failurePercent',50),downtimePercent=option('downtimePercent',90),changeoverMinutes=option('changeoverMinutes',1440);
+ const plannedProducts=Math.ceil(Number(quantity)/(1-failurePercent/100));
  const rows=groups.map(g=>{
   if(!integer(g.machines,1,10000)||!integer(g.perBuild,1,10000))throw new Error('Printer counts and products per cycle must be whole numbers from 1 to 10,000.');
   if(!Number.isFinite(Number(g.hours))||Number(g.hours)<=0||Number(g.hours)>10000)throw new Error('Enter a positive time per cycle for every printer group.');
@@ -13,20 +16,24 @@ function plan(quantity, groups){
   return {...g,machines:Number(g.machines),perBuild:Number(g.perBuild),hours:Number(g.hours),watts:Number(g.watts),price:Number(g.price),lifetime:Number(g.lifetime)};
  });
  const capacity=rows.reduce((sum,g)=>sum+g.machines*g.perBuild,0);
- const rounds=Math.floor(Number(quantity)/capacity);let remainder=Number(quantity)%capacity;
- let kWh=0,depreciation=0,printerHours=0,elapsedHours=0,builds=0;
+ const rounds=Math.floor(plannedProducts/capacity);let remainder=plannedProducts%capacity;
+ let kWh=0,depreciation=0,printerHours=0,elapsedHours=0,builds=0,changeoverHours=0;
  const allocations=rows.map(g=>{
   const extra=Math.min(remainder,g.machines*g.perBuild);remainder-=extra;
   const products=rounds*g.machines*g.perBuild+extra;
   const jobs=rounds*g.machines+Math.ceil(extra/g.perBuild);
   const occupiedHours=jobs*g.hours;
-  const elapsed=(rounds+(extra>0?1:0))*g.hours;
+  const waves=rounds+(extra>0?1:0);
+  const changes=Math.max(0,jobs-Math.min(g.machines,jobs));
+  const handling=changes*changeoverMinutes/60;
+  const elapsed=(waves*g.hours+Math.max(0,waves-1)*changeoverMinutes/60)/(1-downtimePercent/100);
+  changeoverHours+=handling;
   const energy=occupiedHours*g.watts/1000;
   const wear=g.lifetime>0?occupiedHours*g.price/g.lifetime:0;
   kWh+=energy;depreciation+=wear;printerHours+=occupiedHours;elapsedHours=Math.max(elapsedHours,elapsed);builds+=jobs;
-  return {...g,products,builds:jobs,printerHours:occupiedHours,elapsedHours:elapsed,kWh:energy,depreciation:wear};
+  return {...g,products,builds:jobs,printerHours:occupiedHours,elapsedHours:elapsed,changeoverHours:handling,kWh:energy,depreciation:wear};
  });
- return {quantity:Number(quantity),capacity,builds,kWh,depreciation,printerHours,elapsedHours,allocations,powerPerItem:kWh/quantity,depreciationPerItem:depreciation/quantity};
+ return {quantity:Number(quantity),plannedProducts,failurePercent,downtimePercent,changeoverMinutes,changeoverHours,materialMultiplier:plannedProducts/quantity,extraLabourHours:changeoverHours/quantity,capacity,builds,kWh,depreciation,printerHours,elapsedHours,allocations,powerPerItem:kWh/quantity,depreciationPerItem:depreciation/quantity};
 }
 const api={plan};if(typeof module==='object'&&module.exports)module.exports=api;else root.PrintProfitFarmMath=api;
 })(typeof window==='object'?window:globalThis);

@@ -431,12 +431,12 @@ function snapshot(){
   const h=$('ppPrintTimeHours'),m=$('ppPrintTimeMinutes');
   const hours=(h&&m)?Math.max(0,Math.floor(Number(h.value)||0)+Math.max(0,Math.min(59,Math.floor(Number(m.value)||0)))/60):hiddenHours;
   const pack=num('materialPack'), packPrice=num('materialPackCost'), used=num('materialUsed');
-  const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
   const farm=window.__ppFarmCosts?.(qty);
+  const materialCost=(pack>0&&used>0?packPrice*(used/pack):0)*(farm?.materialMultiplier||1);
   const powerUsed=farm?farm.powerUsed:(p.watts>0&&hours>0?p.watts/1000*hours:0);
   const elec=powerUsed*num('electricityRate');
   const depreciation=farm?farm.depreciation:(p.lifetime&&hours?p.price/p.lifetime*hours:0);
-  const labour=num('labourRate')*num('labourHours');
+  const labour=num('labourRate')*(num('labourHours')*(farm?.materialMultiplier||1)+(farm?.extraLabourHours||0));
   const packagingOther=num('pack')+num('other');
   const delivery=num('delivery');
   const deliveryCharge=num('deliveryCharge');
