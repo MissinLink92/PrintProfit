@@ -97,5 +97,10 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "QIDI Q2 3D Printer — Q2C / Standard": 299.0,
   "QIDI Q2 3D Printer — Q2C / Polar Cooler Bundle": 448.0,
   "QIDI Q2 3D Printer — Q2C Combo / Standard": 429.0,
-  "QIDI Q2 3D Printer — Q2C Combo / Polar Cooler Bundle": 578.0
+  "QIDI Q2 3D Printer — Q2C Combo / Polar Cooler Bundle": 578.0,
+  "Jupiter 2 Bundle: Get 2 kg Resin for Just £1 — Random Resin1": 800.0,
+  "Jupiter 2 Bundle: Get 2 kg Resin for Just £1 — Random Resin2": 800.0,
+  "Jupiter 2 Bundle: Get 2 kg Resin for Just £1 — Random Resin3": 800.0,
+  "Jupiter 2 Bundle: Get 2 kg Resin for Just £1 — Random Resin4": 800.0,
+  "Jupiter 2 Bundle: Get 2 kg Resin for Just £1 — Random Resin5": 800.0
 };

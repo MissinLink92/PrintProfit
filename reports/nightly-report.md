@@ -1,38 +1,38 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-16T16:10:25+01:00
+Checked: 2026-10-16T16:28:54+01:00
 
-- Existing prices verified: 782 / 2271
-- Existing prices retained without verification: 1489
+- Existing prices verified: 982 / 1018
+- Existing prices retained without verification: 36
 - Changed existing prices: 0
 - Refreshed image files: 0
-- Verified products added: 50
-- Unresolved source notices: 5616
-- Failed or incomplete checks: 1783
+- Verified products added: 200
+- Unresolved source notices: 7024
+- Failed or incomplete checks: 2064
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
 | 3DJake UK | 4 / 7 | url-discovery-only | 3845 |
-| 3D Prima UK | 10 / 16 | url-discovery-only | 62 |
-| 123-3D UK | 30 / 32 | discovered | 2025 |
+| 3D Prima UK | 11 / 17 | url-discovery-only | 62 |
+| 123-3D UK | 55 / 57 | discovered | 2017 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
 | 3DGBIRE | 442 / 443 | discovered | 435 |
-| Bambu Lab UK | 145 / 145 | discovered | 98 |
+| Bambu Lab UK | 192 / 192 | discovered | 86 |
 | Creality UK | 8 / 12 | url-discovery-only | 201 |
-| ELEGOO UK | 12 / 12 | discovered | 3717 |
+| ELEGOO UK | 46 / 46 | discovered | 3716 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 10 |
-| NSE Imports | 26 / 27 | discovered | 671 |
+| NSE Imports | 70 / 71 | discovered | 659 |
 | Additive-X | 10 / 13 | url-discovery-only | 2 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
-| Anycubic UK | 0 / 1454 | failed | 0 |
-| QIDI UK Store | 46 / 57 | discovered | 116 |
+| Anycubic UK | 0 / 3 | discovered | 1653 |
+| QIDI UK Store | 91 / 100 | discovered | 105 |
 | Flashforge UK | 27 / 27 | discovered | 129 |
-| Sovol UK | 15 / 15 | discovered | 39 |
+| Sovol UK | 19 / 19 | discovered | 33 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
 
 ## Items needing attention
@@ -49,6 +49,7 @@ Checked: 2026-10-16T16:10:25+01:00
 - reference / etsy-regulatory: HTTP Error 403: Forbidden
 - reference / etsy-payments: HTTP Error 403: Forbidden
 - reference / depop: HTTP Error 403: Forbidden
+- reference / tiktok: Source did not provide readable pricing guidance
 - reference / facebook: Source robots.txt disallows this URL
 - reference-parser / inpost: Official source could not be read: inpost
 - reference-parser / royalmail-first, royalmail-second: Official source could not be read: royalmail-first
@@ -57,9 +58,8 @@ Checked: 2026-10-16T16:10:25+01:00
 - reference-parser / parcelforce: Official source could not be read: parcelforce
 - reference-parser / etsy-transaction, etsy-regulatory, etsy-payments: Official source could not be read: etsy-transaction
 - reference-parser / depop: Official source could not be read: depop
-- reference-parser / tiktok: Expected one unambiguous rate; found 0
+- reference-parser / tiktok: Official source could not be read: tiktok
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
-- catalogue / anycubic-uk: Storefront redirected outside the recorded retailer
 - product / elegoo-pla-black: Price URL does not belong to the recorded UK retailer
 - product / elegoo-pla-plus-black: Price URL does not belong to the recorded UK retailer
 - product / sunlu-pla-blue: Exact model/colour/pack product offer unavailable on the recorded page
@@ -86,55 +86,48 @@ Checked: 2026-10-16T16:10:25+01:00
 - product / qidi-pla-cf-lavender-purple-1kg: Exact variant no longer appears in the retailer catalogue
 - product / qidi-pla-cf-midnight-blue-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
-- image / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
 - product / qidi-pla-cf-olive-green-1kg: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-pla-plus-texture-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-white-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-beige-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-black-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-peach-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-tropical-turquoise-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-spring-leaf-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-red-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-bright-red-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-brown-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-green-flash-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-green-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-purple-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-orange-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-plus-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-pearl-black-1kg: Product redirected outside the recorded retailer
-- product / anycubic-high-speed-pla-bright-white-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-texture-grey-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-bright-red-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-vibrant-orange-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-purple-opulence-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-strawberry-pink-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-dazzling-blue-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-high-speed-pla-vibrant-yellow-1kg: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-pla-basic-refill-yellow-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-white-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-red-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-blue-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-green-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-orange-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-purple-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-pink-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-black-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-basic-refill-texture-grey-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-vintage-red-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-lava-grey-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-cowboy-blue-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-black-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-fish-scale-white-1kg: HTTP Error 404: Not Found
-- product / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
-- image / anycubic-pla-cf-jade-green-1kg: HTTP Error 404: Not Found
+- product / anycubic-pla-plus-texture-grey-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-white-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-beige-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-black-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-peach-pink-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-tropical-turquoise-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-spring-leaf-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-red-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-bright-red-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-brown-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-green-flash-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-green-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-purple-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-pink-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-orange-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-plus-grey-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-pearl-black-1kg: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-high-speed-pla-bright-white-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-texture-grey-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-bright-red-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-vibrant-orange-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-purple-opulence-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-strawberry-pink-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-dazzling-blue-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-high-speed-pla-vibrant-yellow-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-yellow-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-white-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-red-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-blue-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-green-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-orange-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-purple-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-pink-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-black-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-basic-refill-texture-grey-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-vintage-red-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-lava-grey-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-cowboy-blue-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-fish-scale-white-1kg: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-pla-cf-jade-green-1kg: Exact variant no longer appears in the retailer catalogue
 - image / additivex-bambu-pla-matte-mandarin-orange-1kg: HTTP Error 404: Not Found
 - image / additivex-bambu-pla-matte-marine-blue-1kg: HTTP Error 404: Not Found
 - image / additivex-bambu-pla-matte-ice-blue-1kg: HTTP Error 404: Not Found
@@ -148,17 +141,17 @@ Checked: 2026-10-16T16:10:25+01:00
 - product / additivex-formfutura-petg-black-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-formfutura-petg-red-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / additivex-formfutura-petg-white-1kg: Exact model/colour/pack product offer unavailable on the recorded page
-- product / anycubic-kobra-3-max-v2-combo: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-kobra-s1-ace-2-pro-combo: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-kobra-4-combo: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-kobra-x: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-kobra-s1-combo: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-photon-p1: Product redirected outside the recorded retailer
-- product / anycubic-photon-p1-max: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-photon-mono-m7-pro: Product redirected outside the recorded retailer
-- product / anycubic-photon-mono-m7-max: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-photon-mono-m7: Exact Shopify variant ID required; refusing a default variant price
-- product / anycubic-photon-mono-4: Exact Shopify variant ID required; refusing a default variant price
+- product / anycubic-kobra-3-max-v2-combo: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-kobra-s1-ace-2-pro-combo: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-kobra-4-combo: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-kobra-x: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-kobra-s1-combo: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-photon-p1: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-photon-p1-max: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-photon-mono-m7-pro: Exact model/colour/pack product offer unavailable on the recorded page
+- product / anycubic-photon-mono-m7-max: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-photon-mono-m7: Exact variant no longer appears in the retailer catalogue
+- product / anycubic-photon-mono-4: Exact variant no longer appears in the retailer catalogue
 - product / creality-k2-pro: Exact model/colour/pack product offer unavailable on the recorded page
 - product / creality-k2-se: No single GBP offer for the exact product
 - product / sovol-sv06-ace: Exact variant no longer appears in the retailer catalogue
@@ -170,1653 +163,1941 @@ Checked: 2026-10-16T16:10:25+01:00
 - product / candidate-552a29425f4a4b8c1dda: Exact variant no longer appears in the retailer catalogue
 - product / candidate-0cb71df3c489fe3c73aa: Exact variant no longer appears in the retailer catalogue
 - product / candidate-20928822b8aa4eecc6a6: Exact variant no longer appears in the retailer catalogue
-- product / candidate-2501ba8958c1485657a9: HTTP Error 404: Not Found
-- product / candidate-ab341df6538e4c75f395: HTTP Error 404: Not Found
-- product / candidate-3a2fcbf583d1f38eb582: HTTP Error 404: Not Found
-- product / candidate-f12e0fc72344bb998e3b: HTTP Error 404: Not Found
-- product / candidate-0c2006be675da53e2ead: HTTP Error 404: Not Found
-- product / candidate-3316c6bbeafef0c8edb0: HTTP Error 404: Not Found
-- product / candidate-d7d64be2a3f1658b3921: HTTP Error 404: Not Found
-- product / candidate-bfc903d0706692388b1f: HTTP Error 404: Not Found
-- product / candidate-f49aeb31aefb4c040580: HTTP Error 404: Not Found
-- product / candidate-60ac0f6516c0c2079e1f: HTTP Error 404: Not Found
-- product / candidate-9da346dc06607d9cc34b: HTTP Error 404: Not Found
-- product / candidate-705bd82b5b7c0b7e52ca: HTTP Error 404: Not Found
-- product / candidate-b24adb7f0a39a044a9a8: HTTP Error 404: Not Found
-- product / candidate-508dee4ecad5e3361e87: HTTP Error 404: Not Found
-- product / candidate-54b472f8527bf9b326d1: HTTP Error 404: Not Found
-- product / candidate-8aadfd83a3b42ff9ba12: HTTP Error 404: Not Found
-- product / candidate-0366af4683e52315d0ac: HTTP Error 404: Not Found
-- product / candidate-97f9f6f36536b3fbc71e: HTTP Error 404: Not Found
-- product / candidate-b3214f4944872629dccf: HTTP Error 404: Not Found
-- product / candidate-4ed73f9bfe1d5d5034bb: HTTP Error 404: Not Found
-- product / candidate-976aa25985552b3587d3: HTTP Error 404: Not Found
-- product / candidate-aad53fbf74bcaacbd076: HTTP Error 404: Not Found
-- product / candidate-d0e3fe76c748237d3917: HTTP Error 404: Not Found
-- product / candidate-736feaacd8ab75257e1d: HTTP Error 404: Not Found
-- product / candidate-cb505c1fa7cb061fc433: HTTP Error 404: Not Found
-- product / candidate-a71dc4446275f335728b: HTTP Error 404: Not Found
-- product / candidate-ff656668726a0d5793d8: HTTP Error 404: Not Found
-- product / candidate-31021c8e145f14f53873: HTTP Error 404: Not Found
-- product / candidate-2905b390d3c827db9e0d: HTTP Error 404: Not Found
-- product / candidate-5372445ea52d25490ae6: HTTP Error 404: Not Found
-- product / candidate-eb250a8303d8b1fcee20: HTTP Error 404: Not Found
-- product / candidate-a1bc4be251aa552816a2: HTTP Error 404: Not Found
-- product / candidate-f40718b24b8a2880e57f: HTTP Error 404: Not Found
-- product / candidate-4a7454e0f3701bf3b438: HTTP Error 404: Not Found
-- product / candidate-8dbd596b608b67ea1ada: HTTP Error 404: Not Found
-- product / candidate-61027055b54732a8045d: HTTP Error 404: Not Found
-- product / candidate-32bfc56045637171ed20: HTTP Error 404: Not Found
-- product / candidate-3021840de68417825e5c: HTTP Error 404: Not Found
-- product / candidate-7fbe0ec25412f0c854eb: HTTP Error 404: Not Found
-- product / candidate-721e566e6f22ad330c2f: HTTP Error 404: Not Found
-- product / candidate-685145f8efb0ba0d1d04: HTTP Error 404: Not Found
-- product / candidate-ff54c019a8f528f0f511: HTTP Error 404: Not Found
-- product / candidate-367deef5f291c73b42a2: HTTP Error 404: Not Found
-- product / candidate-04b26b53ba68bb875055: HTTP Error 404: Not Found
-- product / candidate-d23026195252891563df: HTTP Error 404: Not Found
-- product / candidate-381abe6185d864d67a00: HTTP Error 404: Not Found
-- product / candidate-4bf0dfe19d41e4850fff: HTTP Error 404: Not Found
-- product / candidate-b55e4f4d877aff7e8012: HTTP Error 404: Not Found
-- product / candidate-72720a142e78ae797489: HTTP Error 404: Not Found
-- product / candidate-edde5ba73d60fef16c2c: HTTP Error 404: Not Found
-- product / candidate-bdb777430d54fe102105: HTTP Error 404: Not Found
-- product / candidate-8a1c4803425a42a9e565: HTTP Error 404: Not Found
-- product / candidate-28f86eaf497aeada6f6d: HTTP Error 404: Not Found
-- product / candidate-d855d819370084ef7557: HTTP Error 404: Not Found
-- product / candidate-c162d9c710b3c6840d3f: HTTP Error 404: Not Found
-- product / candidate-5566d9d2ed358b1ef147: HTTP Error 404: Not Found
-- product / candidate-8a2dbe6965818c453f91: HTTP Error 404: Not Found
-- product / candidate-095ca64d4c22c3822a4f: HTTP Error 404: Not Found
-- product / candidate-e6dc19164eb3c53c727e: HTTP Error 404: Not Found
-- product / candidate-ec8c47130c382c837935: HTTP Error 404: Not Found
-- product / candidate-d9c14fbc5e325d573107: HTTP Error 404: Not Found
-- product / candidate-57902059748eaa7cc8ca: HTTP Error 404: Not Found
-- product / candidate-f07490b48ac9c810c9d1: HTTP Error 404: Not Found
-- product / candidate-dcfbaab127d32e32c800: HTTP Error 404: Not Found
-- product / candidate-279840ca28f30a0a5ea6: HTTP Error 404: Not Found
-- product / candidate-8317e8f60b044588dae2: HTTP Error 404: Not Found
-- product / candidate-c901f50f3f24a5aac11b: HTTP Error 404: Not Found
-- product / candidate-548f22fb648fb80ae2a7: HTTP Error 404: Not Found
-- product / candidate-06ac5f2b39a493edc57f: HTTP Error 404: Not Found
-- product / candidate-138bfdfb70f4946d6792: HTTP Error 404: Not Found
-- product / candidate-b20153519829d654aed8: HTTP Error 404: Not Found
-- product / candidate-c6c63cbac076660c2241: HTTP Error 404: Not Found
-- product / candidate-622cc9496fbc8ea25565: HTTP Error 404: Not Found
-- product / candidate-a8056985e95276539bee: HTTP Error 404: Not Found
-- product / candidate-145ba813fc23a98ba4f3: HTTP Error 404: Not Found
-- product / candidate-50f81fc9d79c34eb06f1: HTTP Error 404: Not Found
-- product / candidate-f4dcbc92eb97d222afc5: HTTP Error 404: Not Found
-- product / candidate-428abe03d0472aac284b: HTTP Error 404: Not Found
-- product / candidate-9c69977479dbede98a16: HTTP Error 404: Not Found
-- product / candidate-ec44c2a651ce74dd9efa: HTTP Error 404: Not Found
-- product / candidate-50503415e52793d7f566: HTTP Error 404: Not Found
-- product / candidate-7d117e991586dee31227: HTTP Error 404: Not Found
-- product / candidate-d4c18d6cba7cfb534737: HTTP Error 404: Not Found
-- product / candidate-8e5f2bb86588caa20dc2: HTTP Error 404: Not Found
-- product / candidate-210024366cc73702e641: HTTP Error 404: Not Found
-- product / candidate-c0c98437a564cc3e5051: HTTP Error 404: Not Found
-- product / candidate-d80f556c4ea2199d6205: HTTP Error 404: Not Found
-- product / candidate-07afbe478ecc276db3e4: HTTP Error 404: Not Found
-- product / candidate-8946382dcebc9885f29a: HTTP Error 404: Not Found
-- product / candidate-e2519b6f2750cece76aa: HTTP Error 404: Not Found
-- product / candidate-175fbf292bd81892f9bf: HTTP Error 404: Not Found
-- product / candidate-f85230bdefd058bc8bc0: HTTP Error 404: Not Found
-- product / candidate-09de70bd5c2de4959b06: HTTP Error 404: Not Found
-- product / candidate-d567339baee9868fe211: HTTP Error 404: Not Found
-- product / candidate-71239f4206a7ee3985df: HTTP Error 404: Not Found
-- product / candidate-d6ffebc56bbc8d759783: HTTP Error 404: Not Found
-- product / candidate-8cfe8b7abcb0168a98c3: HTTP Error 404: Not Found
-- product / candidate-f7fffc476538e32b39d9: HTTP Error 404: Not Found
-- product / candidate-b3ab28f8cbf5c21ec9a7: HTTP Error 404: Not Found
-- product / candidate-86db83339fb6207a2551: HTTP Error 404: Not Found
-- product / candidate-a1a60ac8b5e70bca079e: HTTP Error 404: Not Found
-- product / candidate-c7afb2f03ffe97943c91: HTTP Error 404: Not Found
-- product / candidate-528b3b96fd4a162dda47: HTTP Error 404: Not Found
-- product / candidate-df6a5aee110cff8eb325: HTTP Error 404: Not Found
-- product / candidate-06cede5c3bb3341ab1ef: HTTP Error 404: Not Found
-- product / candidate-56c568d2b8ea3391203c: HTTP Error 404: Not Found
-- product / candidate-ca2a71cd2ad9a872d9d5: HTTP Error 404: Not Found
-- product / candidate-0d670b7f39c178823b62: HTTP Error 404: Not Found
-- product / candidate-51619c3a5a6d4cc8f338: HTTP Error 404: Not Found
-- product / candidate-16379ce88b50b7034140: HTTP Error 404: Not Found
-- product / candidate-028c055fe5a4dad43ccb: HTTP Error 404: Not Found
-- product / candidate-4b004c05c1bc1aa9c6db: HTTP Error 404: Not Found
-- product / candidate-2605d2236ab32f1c5210: HTTP Error 404: Not Found
-- product / candidate-9263c9c82f0bdb3e12eb: HTTP Error 404: Not Found
-- product / candidate-7dcc01aaaf2c664007eb: HTTP Error 404: Not Found
-- product / candidate-9bd4ff9fbc221c1b0998: HTTP Error 404: Not Found
-- product / candidate-776d241a989b16fe3d97: HTTP Error 404: Not Found
-- product / candidate-42f9818b2d25958a3ceb: HTTP Error 404: Not Found
-- product / candidate-ba06637d8ae105a2f39b: HTTP Error 404: Not Found
-- product / candidate-7c3a1a99c55c3829f1cc: HTTP Error 404: Not Found
-- product / candidate-bc576d3a93e0ddc4e13f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-70172f4888e8ae7cb414: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e4f4a5b8d0f4e89a60bd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6bc1df3a8057a45919bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-937abffbbe12a3d59eb3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9d13e3db4fd1937a31fb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-70e12a3e6992eaccd3fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c12acdd2008ec3e11c67: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8047b20c1796d89631b7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e74341a5e27020758de4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c5f64335e34cbfdb6a47: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-61ce0ef0d92abb898de4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2a9e78c07a051351a1b6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6618253dfab031c4be39: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f6153220683fe4c527b8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-63b8a3dbc39e34def5fc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-947828cd9e4a89031763: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-adb2ceafa93c06829a49: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17b90a49b6706ef99626: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-67872b83a0893891a59f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b3c9e36d824a9e5e2a85: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4335112375bd48770230: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-edca8dbc5673b06dfeee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4ef85352b58b17900b8b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7423ae7df67286f11511: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fb0205d016453ce4bd42: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-39591aab184d5ae44a3e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1ce76ae0349f2728a76f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4be134ac6dc1c71872bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-11ef043ed8a3adc02f21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7e172ccd99b43fbd3528: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c465ac3e04771122b3b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a7204287f5ab4ab4e636: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-737b90bca02ba27bcaa8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1bee1570862dcb3b3d66: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-909e74acd383a81bb9ae: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-791a00a2e4372c891718: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c59e409800051d02a9a0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5b64971edf194725087f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-531b2dea109e89b5389b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6b1e26a94d5d786204e0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-723a76bcb8793b9acf13: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d71150b6778c2c7b2163: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-581b94eadce401d00bd9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-13e390208c262e9edcad: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7f1b29414caf74fe39a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-eacc59d598505007010b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bddd358e81bae023dc2d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b6eac90f10ee94b01d08: HTTP Error 404: Not Found
-- product / candidate-333241683777b5548651: HTTP Error 404: Not Found
-- product / candidate-17961fe4fd92c80bcc15: HTTP Error 404: Not Found
-- product / candidate-85f067979e6ce7aabb1b: HTTP Error 404: Not Found
-- product / candidate-976aabd1ee9f82625bcd: HTTP Error 404: Not Found
-- product / candidate-0c29d211c2b219ccb6b7: HTTP Error 404: Not Found
-- product / candidate-6f5ee7302ce1fc48e6f7: HTTP Error 404: Not Found
-- product / candidate-457edf06be5e6f50e2a1: HTTP Error 404: Not Found
-- product / candidate-7013c8a1112fd732970c: HTTP Error 404: Not Found
-- product / candidate-cb20784432bf829f034a: HTTP Error 404: Not Found
-- product / candidate-455b81ba0a43b65fee5e: HTTP Error 404: Not Found
-- product / candidate-fff9b1dbae97aa1a6de3: HTTP Error 404: Not Found
-- product / candidate-f6544d71ba00453f165d: HTTP Error 404: Not Found
-- product / candidate-eb5bb2f36c9528ef0229: HTTP Error 404: Not Found
-- product / candidate-285cf9c441162d1806f0: HTTP Error 404: Not Found
-- product / candidate-c121defe66bb8b6ca2d3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9b1127d43f9e6d0d7e94: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a23b309363a9214ad260: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-56ae3932e6c12f9cdd01: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5850025cc6235d6a7d63: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5112bdd9bdc4c24eca76: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8c5506c216ac69a910a3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-094075f1acb8144514f4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c8295461fc6dbc99c0ce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c473b4c4484c6819596: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-847e887b08fc6ccfb14a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b15bcba53f598d75f6b5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0314b65e2bb09cb9c2f4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a7c9c2eaf2a55b5d2de3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d53a9499b7eebdf74324: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c5a7696abbfe29d519dd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-609bb237b38e7fed6aae: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d44a2b14456ea8980695: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-feaa60f0d9817a2c953c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-67f0768356a5b56edc7c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fed2347cb7d5cc3821ad: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d516a684518587258b22: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-18f79ef24dca8a5fd0c5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aeb440402d24f83b510f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9a09792ff6f42278465d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8ffbe1653bd2a5f2b2fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7e14a43cf6cef656b4a8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-544938d8d23b9139a55f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-559dd9aa0cdb5842fbaa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-873b1895530a1827bc1d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-277d1ba85c9ace3b5b86: HTTP Error 404: Not Found
-- product / candidate-9f15218729d47e1870ec: HTTP Error 404: Not Found
-- product / candidate-f9c9af961bcde8a8e8ee: HTTP Error 404: Not Found
-- product / candidate-2b4084dc980c1544df8b: HTTP Error 404: Not Found
-- product / candidate-a795f9102699dbe3f422: HTTP Error 404: Not Found
-- product / candidate-cafb2e28b34a91668b42: HTTP Error 404: Not Found
-- product / candidate-b08e5a7613611bc5d840: HTTP Error 404: Not Found
-- product / candidate-c70fe4506d49586fdf9d: HTTP Error 404: Not Found
-- product / candidate-4afc55882cd439197d67: HTTP Error 404: Not Found
-- product / candidate-d73a5fba522c1579e04b: HTTP Error 404: Not Found
-- product / candidate-4f90d26f003904b77e0f: HTTP Error 404: Not Found
-- product / candidate-cdc4640fe5056c3142db: HTTP Error 404: Not Found
-- product / candidate-cb8bbee0e03770b7adfd: HTTP Error 404: Not Found
-- product / candidate-c86ad60a61f3dc71e983: HTTP Error 404: Not Found
-- product / candidate-4ac32c8f339a1bca68c7: HTTP Error 404: Not Found
-- product / candidate-322eb987e541a0b9d1a5: HTTP Error 404: Not Found
-- product / candidate-25cb88e9a6ce68059414: HTTP Error 404: Not Found
-- product / candidate-e40ff063bfd7fc392ef8: HTTP Error 404: Not Found
-- product / candidate-eb606692d45adee7b212: HTTP Error 404: Not Found
-- product / candidate-911ef9a347ea3ba5995f: HTTP Error 404: Not Found
-- product / candidate-4f0322d9c6c89c5ef9f4: HTTP Error 404: Not Found
-- product / candidate-c096c3c8cf283ac568f9: HTTP Error 404: Not Found
-- product / candidate-385450f9ced66b06baa7: HTTP Error 404: Not Found
-- product / candidate-6ae8ffe9900858d8be68: HTTP Error 404: Not Found
-- product / candidate-6d33a3a928d7b1c95fa5: HTTP Error 404: Not Found
-- product / candidate-0dd495115267c64e093b: HTTP Error 404: Not Found
-- product / candidate-74ec4fe7a201b4e3c03e: HTTP Error 404: Not Found
-- product / candidate-07aeef917bc1cee8d4ed: HTTP Error 404: Not Found
-- product / candidate-3e0f18c81a0e8b15a9d7: HTTP Error 404: Not Found
-- product / candidate-b69d035a51ca91ba04f0: HTTP Error 404: Not Found
-- product / candidate-f1167a51622919adf01b: HTTP Error 404: Not Found
-- product / candidate-62e42b5deecc9ea05a9a: HTTP Error 404: Not Found
-- product / candidate-36a42be3297f7148bab0: HTTP Error 404: Not Found
-- product / candidate-47fdc254a0d4f87b35ff: HTTP Error 404: Not Found
-- product / candidate-43d693e573f00aa59933: HTTP Error 404: Not Found
-- product / candidate-b3a460a82e3a4335e1fb: HTTP Error 404: Not Found
-- product / candidate-0710e629824625f1734a: HTTP Error 404: Not Found
-- product / candidate-6458ca28f50a3e457e4b: HTTP Error 404: Not Found
-- product / candidate-f36d89a1b5ed2485d20e: HTTP Error 404: Not Found
-- product / candidate-2758125b29e525b7c136: HTTP Error 404: Not Found
-- product / candidate-96add66a9bcbe32fb718: HTTP Error 404: Not Found
-- product / candidate-3b619bedd31075829bd7: HTTP Error 404: Not Found
-- product / candidate-711ee805a29fa36fc162: HTTP Error 404: Not Found
-- product / candidate-7c4db6d75869826d2f05: HTTP Error 404: Not Found
-- product / candidate-20f9710a6411a32590c2: HTTP Error 404: Not Found
-- product / candidate-cc9f76f1ea93663ed010: HTTP Error 404: Not Found
-- product / candidate-ed80e4b09fcd9a638759: HTTP Error 404: Not Found
-- product / candidate-b4a7308652148deb82cb: HTTP Error 404: Not Found
-- product / candidate-c34a297b5f9f5ce079f7: HTTP Error 404: Not Found
-- product / candidate-f6fae6f0ecb1632dbf8a: HTTP Error 404: Not Found
-- product / candidate-acda275e7c8f08ea2d33: HTTP Error 404: Not Found
-- product / candidate-6e89c17394637df78308: HTTP Error 404: Not Found
-- product / candidate-359fbc62799876b5bc2a: HTTP Error 404: Not Found
-- product / candidate-1a0893e3cb05d4d312d1: HTTP Error 404: Not Found
-- product / candidate-52834db148799ed6d6af: HTTP Error 404: Not Found
-- product / candidate-83f9f4aca13beb63fe06: HTTP Error 404: Not Found
-- product / candidate-2161550a9bc6adc8add7: HTTP Error 404: Not Found
-- product / candidate-7662914638ba37410e69: HTTP Error 404: Not Found
-- product / candidate-7a280498defe167d9605: HTTP Error 404: Not Found
-- product / candidate-b9909c08236356dc6cbc: HTTP Error 404: Not Found
-- product / candidate-99630fb3659a5b1dc382: HTTP Error 404: Not Found
-- product / candidate-a3e7debf3ff7c702e460: HTTP Error 404: Not Found
-- product / candidate-489d7d6dd39541bc24f8: HTTP Error 404: Not Found
-- product / candidate-7ec2a57c6322a497fdac: HTTP Error 404: Not Found
-- product / candidate-e7119b22fa0cfb527ffa: HTTP Error 404: Not Found
-- product / candidate-4cbd7f1d5b8577c460ed: HTTP Error 404: Not Found
-- product / candidate-e9c67139043bc366cb84: HTTP Error 404: Not Found
-- product / candidate-5b3f5dc6ca426af1e057: HTTP Error 404: Not Found
-- product / candidate-069fca49b1ad075e97ca: HTTP Error 404: Not Found
-- product / candidate-7a1ee2c386259d31b5fc: HTTP Error 404: Not Found
-- product / candidate-14d1b76deee0d0ca44ee: HTTP Error 404: Not Found
-- product / candidate-67344d888950cc3f579c: HTTP Error 404: Not Found
-- product / candidate-f3eb9dc4627f85864e1f: HTTP Error 404: Not Found
-- product / candidate-1eda905346b0829b9ea1: HTTP Error 404: Not Found
-- product / candidate-27bd0d6427eb4cf7b753: HTTP Error 404: Not Found
-- product / candidate-53c5798e4b7d8a18d8bc: HTTP Error 404: Not Found
-- product / candidate-1c4d5c88d5f6880bfb41: HTTP Error 404: Not Found
-- product / candidate-eacc36e79e7b16546372: HTTP Error 404: Not Found
-- product / candidate-cde810d6b99a3408118e: HTTP Error 404: Not Found
-- product / candidate-89dfd128bb7544965f9a: HTTP Error 404: Not Found
-- product / candidate-ad94ca954c153f2b4a58: HTTP Error 404: Not Found
-- product / candidate-f75a586fdd6cb06bdebe: HTTP Error 404: Not Found
-- product / candidate-4f5d560f4f6ab1aa7826: HTTP Error 404: Not Found
-- product / candidate-4a137a32f263c108baf5: HTTP Error 404: Not Found
-- product / candidate-a6d6ef1fc3afe3f7b033: HTTP Error 404: Not Found
-- product / candidate-0967b49d87cd23ccd7f6: HTTP Error 404: Not Found
-- product / candidate-f8ac81382b550f4ede25: HTTP Error 404: Not Found
-- product / candidate-107047f7b3336db02cfd: HTTP Error 404: Not Found
-- product / candidate-15f2e1fca6815d7e1f89: HTTP Error 404: Not Found
-- product / candidate-fd4b85523d9dc7a2eb0f: HTTP Error 404: Not Found
-- product / candidate-b14d2c8a48df24832aba: HTTP Error 404: Not Found
-- product / candidate-d7033a1a6ff8313002e4: HTTP Error 404: Not Found
-- product / candidate-9783565ade1ef9ae1d1d: HTTP Error 404: Not Found
-- product / candidate-b55572fb14fa8a25006f: HTTP Error 404: Not Found
-- product / candidate-bfad0f81160842e1d5d8: HTTP Error 404: Not Found
-- product / candidate-0781cdd33a6d0f15c384: HTTP Error 404: Not Found
-- product / candidate-fd942ee7fa9d6c2c6a51: HTTP Error 404: Not Found
-- product / candidate-6da297b347c6785bdb38: HTTP Error 404: Not Found
-- product / candidate-0f972caf40b411beb971: HTTP Error 404: Not Found
-- product / candidate-2f68d8afe7da37c1e70e: HTTP Error 404: Not Found
-- product / candidate-fb693e9baad906a07771: HTTP Error 404: Not Found
-- product / candidate-21e6e5e6c559eee514e1: HTTP Error 404: Not Found
-- product / candidate-6df852ed71ceb8e8b8d5: HTTP Error 404: Not Found
-- product / candidate-cc97856e87fdf5d7d615: HTTP Error 404: Not Found
-- product / candidate-9cd9cbc9d7413ab785a2: HTTP Error 404: Not Found
-- product / candidate-cd093f66e89e275b7ae4: HTTP Error 404: Not Found
-- product / candidate-697b9a83c4681a902e9f: HTTP Error 404: Not Found
-- product / candidate-f3e2ff0cd237f1c37535: HTTP Error 404: Not Found
-- product / candidate-2b2c53a8e71cad446f51: HTTP Error 404: Not Found
-- product / candidate-f6a4b971e919b653e828: HTTP Error 404: Not Found
-- product / candidate-c0e6c947489a1d9d2534: HTTP Error 404: Not Found
-- product / candidate-b6417f934d9a00708cd9: HTTP Error 404: Not Found
-- product / candidate-d7351db837e1ec6c6e94: HTTP Error 404: Not Found
-- product / candidate-179331da4ee99a7081d5: HTTP Error 404: Not Found
-- product / candidate-44e8f55a2248b265409b: HTTP Error 404: Not Found
-- product / candidate-b027e460e22dce81ca88: HTTP Error 404: Not Found
-- product / candidate-1de5e6669b34394f1e6d: HTTP Error 404: Not Found
-- product / candidate-e8fe697c2d438e715f8b: HTTP Error 404: Not Found
-- product / candidate-77599d1e358eef4a82fd: HTTP Error 404: Not Found
-- product / candidate-9f6ecc09375fd75b8a30: HTTP Error 404: Not Found
-- product / candidate-2658597eb7d84e33773e: HTTP Error 404: Not Found
-- product / candidate-dd38f302bcd95e6f6865: HTTP Error 404: Not Found
-- product / candidate-ffee3d0a4ed22f8c642c: HTTP Error 404: Not Found
-- product / candidate-19427f79c9d090c440e2: HTTP Error 404: Not Found
-- product / candidate-1fa6a476ac7978ea48d6: HTTP Error 404: Not Found
-- product / candidate-6752733c150a0541d728: HTTP Error 404: Not Found
-- product / candidate-3ceb6baa2acd4a3e2524: HTTP Error 404: Not Found
-- product / candidate-7301eb2a29ae871804d3: HTTP Error 404: Not Found
-- product / candidate-cc4ce5aaaa2fa55f2aa9: HTTP Error 404: Not Found
-- product / candidate-c51be5765cd5efcca68f: HTTP Error 404: Not Found
-- product / candidate-b0caf839e48c1aea3974: HTTP Error 404: Not Found
-- product / candidate-8f8568d2e8d1863c7a8b: HTTP Error 404: Not Found
-- product / candidate-50adae373660aac456d0: HTTP Error 404: Not Found
-- product / candidate-05b3c96a9c7dc36eaa31: HTTP Error 404: Not Found
-- product / candidate-14be1911e5edba316ac3: HTTP Error 404: Not Found
-- product / candidate-07abb18f3bcf5d9385bb: HTTP Error 404: Not Found
-- product / candidate-75e8ffdc9fed71839ece: HTTP Error 404: Not Found
-- product / candidate-c5e0ad59f828104af123: HTTP Error 404: Not Found
-- product / candidate-59a283b2d5ed98e858bf: HTTP Error 404: Not Found
-- product / candidate-5b0776952068040690f0: HTTP Error 404: Not Found
-- product / candidate-4f4b99791b82ef38adb2: HTTP Error 404: Not Found
-- product / candidate-f4f3882d0423450369ea: HTTP Error 404: Not Found
-- product / candidate-a6b30cee48d3ec1a2026: HTTP Error 404: Not Found
-- product / candidate-6558a2cc0b565971917e: HTTP Error 404: Not Found
-- product / candidate-2a9b6e39ae1f15cf8286: HTTP Error 404: Not Found
-- product / candidate-f0f5cd682007d3f9a3e0: HTTP Error 404: Not Found
-- product / candidate-120135104ce17a9e1f6e: HTTP Error 404: Not Found
-- product / candidate-4c66d504e836ec1d0ec9: HTTP Error 404: Not Found
-- product / candidate-a62421fbe97b4be659e6: HTTP Error 404: Not Found
-- product / candidate-a6f386f7b97bb0e373bb: HTTP Error 404: Not Found
-- product / candidate-843e11c0bd2e4d73cd74: HTTP Error 404: Not Found
-- product / candidate-dd7579f6f6b6430f4c98: HTTP Error 404: Not Found
-- product / candidate-3a4a4285020e7be2bdad: HTTP Error 404: Not Found
-- product / candidate-f144e351a314e6955fc5: HTTP Error 404: Not Found
-- product / candidate-70ba076742ea2c5cc57a: HTTP Error 404: Not Found
-- product / candidate-9b8fc4d06b143942e7cf: HTTP Error 404: Not Found
-- product / candidate-0772661a14149d854a0f: HTTP Error 404: Not Found
-- product / candidate-2f35d4a1f1422706c184: HTTP Error 404: Not Found
-- product / candidate-d3c1d48e97e8064c8311: HTTP Error 404: Not Found
-- product / candidate-1ebeead6ff6627160c0e: HTTP Error 404: Not Found
-- product / candidate-c79e2703c4f90cc1bfe8: HTTP Error 404: Not Found
-- product / candidate-2a458b8be3d5b2927388: HTTP Error 404: Not Found
-- product / candidate-e82778ce4316aa388c23: HTTP Error 404: Not Found
-- product / candidate-d7b5f277a8e6e719680e: HTTP Error 404: Not Found
-- product / candidate-4ac2ebebd16dcbb5a71d: HTTP Error 404: Not Found
-- product / candidate-7c0ff346e7b395f7cd92: HTTP Error 404: Not Found
-- product / candidate-30f037c1353e91d4ea75: HTTP Error 404: Not Found
-- product / candidate-2c6a23f51a81143a2aee: HTTP Error 404: Not Found
-- product / candidate-f2b01af432461d189495: HTTP Error 404: Not Found
-- product / candidate-4517a142850ca5972b0d: HTTP Error 404: Not Found
-- product / candidate-7797601c19946dbae635: HTTP Error 404: Not Found
-- product / candidate-df1ffed9c3d20046695d: HTTP Error 404: Not Found
-- product / candidate-c29a01d4d3840942c95e: HTTP Error 404: Not Found
-- product / candidate-92cbabd99389bf991f3d: HTTP Error 404: Not Found
-- product / candidate-9e4bfb01d6d1ad2a634f: HTTP Error 404: Not Found
-- product / candidate-96227cb87a12b5b4978a: HTTP Error 404: Not Found
-- product / candidate-8fa2aa892b7b50b470c9: HTTP Error 404: Not Found
-- product / candidate-90b40cb42aeb03c6d00c: HTTP Error 404: Not Found
-- product / candidate-5c79937d59283dd94d8a: HTTP Error 404: Not Found
-- product / candidate-813e6ca1ca71b446f77b: HTTP Error 404: Not Found
-- product / candidate-a138086029cf5a788c1e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ede54b634bcd235b9806: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-43f7bcf850334cc06359: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cfcfb5d46ad7bbd172b7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-065688f16e0fd4aead39: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b8a228fb7118e38a6f9f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-19c4ce5a7759f546a687: HTTP Error 404: Not Found
-- product / candidate-51daf79ac972f1366e09: HTTP Error 404: Not Found
-- product / candidate-625ecba05bf0ca9c8e06: HTTP Error 404: Not Found
-- product / candidate-2ae8a5c8c558d2bff066: HTTP Error 404: Not Found
-- product / candidate-418a66e7ea763694b7f1: HTTP Error 404: Not Found
-- product / candidate-eba4874d5e539db9a96f: HTTP Error 404: Not Found
-- product / candidate-67a5c05d056ff00ea705: HTTP Error 404: Not Found
-- product / candidate-eeb14c55ae75dbee0fea: HTTP Error 404: Not Found
-- product / candidate-634bbba768f7e40ac841: HTTP Error 404: Not Found
-- product / candidate-939f51e4dbc500ea9854: HTTP Error 404: Not Found
-- product / candidate-066e31f333b4a96ca3e7: HTTP Error 404: Not Found
-- product / candidate-0b00312b462373becd4b: HTTP Error 404: Not Found
-- product / candidate-6b1ad8e81d8cf3b39ee6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-50ce4d64f4ba58c31216: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-039b81a7344d58e96d74: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d43d249e95374cc8669e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c8b92d0832f33225d601: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-36e837bb7233a98dfa21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8817c15f112daa57e839: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2776a644fd3db5d9edbb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ea69ae33c4e690209629: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-010b22c86559d54773f5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-164a4d5adc3e1996ff83: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-24d278988d8b635bf2ca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e898dde814c59f88d89d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0e03fde98cec75c6c767: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4cc8ddd1ef4a8338aa84: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33ea110aa08b8f0fc842: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-782e5454c274593fadb8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7df8096b5053dea27b99: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dff7700358e50ed5f7f4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cc152cead06ee6dcd66a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c75d3b16252529538a3f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e8e14548f8cc93a9a377: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e76608d8bdd5646861eb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c3b4cb4d4308a3a8b50f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cba78416978b63ebd1ce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c7f903a2615b2dd25e32: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-886019186dc3f8cc6404: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e9aa1b343b748cfa2013: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-233d562284ed73e56123: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b08748b0be1216989ac7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-24c06cd41c12dc58d695: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-abbb4bb5c5cf6dc0a652: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-715ef653a2e40eedb8fb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5fe4a535d70405c82360: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-12214312ca64be4e35ac: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1f742d301da1615e4f29: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-18a44ee6196e63ef2f40: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b2d654406995ad8aae69: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b53665123bd6989ca505: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6e89f8797f3bf8577f95: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bb31d5d80ceaebd77450: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ce76bdaf04b3375c404a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-20950912f060392f5c11: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-45bf2fe04e566d1c3f3d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3bb57b8a41d0d4894f6b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f18e4e29fc7acdd7fb1a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dd9431ef487c8fe4a6d7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-633ae2094c32b348402c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c18ff99d24e560aeabf6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7fbfd588d25a4b1999f: HTTP Error 404: Not Found
-- product / candidate-4c59da97deb5259e0e50: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c92c1f13681cec007b8f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b5364351c470f4cda22c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-77fffb384192a56cf630: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d3b07abebb7ca83d677f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-26e9e5dd8b7751f34422: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cf0d7ee175e631c5b03a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c898203f601fc1aa3574: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6f05902ed04431a23ae4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a852f4ede7f6bb41b0c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d77b7452012dc2e92554: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-628f1fb6a4229ac58658: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-18a2cbe1a0b2f78f8fae: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b9b46aa32298215131ce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-98c7895b75bcf24577c2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-626b81c3a992b228b119: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-02c693c882f41e22f8e3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-11756dc7ee7c7205c93f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-11196999fdf7998d46c8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6b68715aaea225b3eef1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-39369cb8c2e6562dcc47: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3b1eca4f88f6c11b9608: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-879929f3021fe47a6172: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d8824f7f2d34fdd7fd07: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c7e7e468efbad86c14b8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e4214941780aca279675: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5f3db12944a886a1cd56: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-64f8a683d5253d97ff96: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7b78e6ac0358d0264905: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c9620f1345bc902906a: HTTP Error 404: Not Found
-- product / candidate-2df4e079224b44569b8b: HTTP Error 404: Not Found
-- product / candidate-d6e3e56266326ce4fcf6: HTTP Error 404: Not Found
-- product / candidate-f7d9b26dca0c940e7bae: HTTP Error 404: Not Found
-- product / candidate-4067237d8f48c4254c73: HTTP Error 404: Not Found
-- product / candidate-faea89add842ef3b577e: HTTP Error 404: Not Found
-- product / candidate-b797f22563ab4ba25802: HTTP Error 404: Not Found
-- product / candidate-547990c8fca48c206387: HTTP Error 404: Not Found
-- product / candidate-3c47842d687d22d3bbd5: HTTP Error 404: Not Found
-- product / candidate-8f315997482757ca2903: HTTP Error 404: Not Found
-- product / candidate-edff6e3653f4c1f37cca: HTTP Error 404: Not Found
-- product / candidate-c00225c0a97c57c499f6: HTTP Error 404: Not Found
-- product / candidate-6eb6bd22bfdf3be4ce52: HTTP Error 404: Not Found
-- product / candidate-d6e3adf0c0c2bdff42f8: HTTP Error 404: Not Found
-- product / candidate-43cbdcd899f7df852ae1: HTTP Error 404: Not Found
-- product / candidate-e23b89b15c85d7a661b4: HTTP Error 404: Not Found
-- product / candidate-e3377de6c7dde0db817b: HTTP Error 404: Not Found
-- product / candidate-b62583bfd84235ef8fa8: HTTP Error 404: Not Found
-- product / candidate-2ceec8c934b7da729b5b: HTTP Error 404: Not Found
-- product / candidate-48e342bf4bc6815cc9af: HTTP Error 404: Not Found
-- product / candidate-f18decafec5c2434b71f: HTTP Error 404: Not Found
-- product / candidate-b7b53ca5372c7ef65030: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c3c1d0f1cddf700706f6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-37751cb1a60223e38a29: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-124f2df35a36679eee46: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4a9158c4e4f7ba9862c3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-720a758158562be1cabf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f64dbc567fed5446ee2e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-78cd371b5db68be742a0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bbdbc2a8af1f8acfdf5e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c9f4851f7f1f238d9a3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-de686de0be57f758de81: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f9266673cb99af412242: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8638e15d78281790ed67: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-466268708103b71ff0dd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-741aa7e48c5c05614fa6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6ecbb732efb7677f9ad5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8dcd0c40725b06e64303: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ab83d6c2563cc02ff978: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a16f0637b5a1899c134a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fb9ef1e81bcc42e4560e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0a34db9f310e8628a4ce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fee4f567a15defc1813f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f8c99c55b7442b663785: HTTP Error 404: Not Found
-- product / candidate-03f02ad23fab7948425f: HTTP Error 404: Not Found
-- product / candidate-d188696196ad1bdab88e: HTTP Error 404: Not Found
-- product / candidate-637ba245a6b98816a488: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51bbcadc45c5fea05766: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7a88612feb488f52de56: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-887b4ff2869e55e0ce4a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-45b07e36fea51d62ea26: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-693b21e7df52819d1d3f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e528326e11b8d53bbc16: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6eb84abe1d37e64bb7cb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-149067f447b8c094ff55: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c82908f3651a9895d91f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-234447e2d509a37ad2f0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-38b901b21575779d3ed3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8c03bef48cdaadfa1ffd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6136e9daa5d310ddcfaf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c583e05d41cf67ece0c4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c0c535579430c3658e24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8db110280306796f7ac3: HTTP Error 404: Not Found
-- product / candidate-2057288d79d233c4b78d: HTTP Error 404: Not Found
-- product / candidate-c554b4429a190e58c282: HTTP Error 404: Not Found
-- product / candidate-40d641a658f8024adcda: HTTP Error 404: Not Found
-- product / candidate-f56470a437346b858878: HTTP Error 404: Not Found
-- product / candidate-73ce05baa6b91c774941: HTTP Error 404: Not Found
-- product / candidate-44907e21521fd94103cd: HTTP Error 404: Not Found
-- product / candidate-5639dc596c0d6871029a: HTTP Error 404: Not Found
-- product / candidate-22e3551fdda752d6d27f: HTTP Error 404: Not Found
-- product / candidate-05eed2c8e2288025c0ba: HTTP Error 404: Not Found
-- product / candidate-c1a2bc0ac1d10b927773: HTTP Error 404: Not Found
-- product / candidate-e9faf7ffc752c8f0c9f4: HTTP Error 404: Not Found
-- product / candidate-a918d989fa7c4dee4a7a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c247984fcee23ba9f449: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-49620738acee9caaae90: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ef9a6842af3b5b0b58c5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4b4809fb94d371659164: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-229ac778aa02cad58eee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fd5de5e21ab4a4535457: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9496948250cfe9dee907: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e0641a0aa10ce82f9853: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f99d9459226a9d13807f: HTTP Error 404: Not Found
-- product / candidate-b05d3d988485687f375b: HTTP Error 404: Not Found
-- product / candidate-d72dec379d07daf0f43f: HTTP Error 404: Not Found
-- product / candidate-e94249fb6a0870e8b717: HTTP Error 404: Not Found
-- product / candidate-be5355a59145d38c6ec4: HTTP Error 404: Not Found
-- product / candidate-fdd0759d2ecc2d775ebe: HTTP Error 404: Not Found
-- product / candidate-5cd121558a789828079a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-39d44e2f863573cb0a97: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-89f8f69061c99de29079: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-368fbafbd81bd9d8314b: HTTP Error 404: Not Found
-- product / candidate-e3be4fbf4c5d358d81f9: HTTP Error 404: Not Found
-- product / candidate-2cde67224ad6604c1f24: HTTP Error 404: Not Found
-- product / candidate-a81684e558eb9728452e: HTTP Error 404: Not Found
-- product / candidate-e32aaa3c99b6d91c4e60: HTTP Error 404: Not Found
-- product / candidate-dccaaaee0fcaab66b5c7: HTTP Error 404: Not Found
-- product / candidate-14a60c49c4fc2e10324e: HTTP Error 404: Not Found
-- product / candidate-59f026072ae5eb348319: HTTP Error 404: Not Found
-- product / candidate-1012f74dd12ada38b12a: HTTP Error 404: Not Found
-- product / candidate-8557e64c9aca5753a72d: HTTP Error 404: Not Found
-- product / candidate-8f924d6e9a72bdf68972: HTTP Error 404: Not Found
-- product / candidate-2a4e5f5e99d1cfa775c0: HTTP Error 404: Not Found
-- product / candidate-b8c0129f369ad8bc4130: HTTP Error 404: Not Found
-- product / candidate-4178271ff80794aef3af: HTTP Error 404: Not Found
-- product / candidate-b1111c9f8c91108586e2: HTTP Error 404: Not Found
-- product / candidate-441c21dce4e07d86a6b7: HTTP Error 404: Not Found
-- product / candidate-95a755b368760fa27d98: HTTP Error 404: Not Found
-- product / candidate-ef9634541d18f44f520f: HTTP Error 404: Not Found
-- product / candidate-bb48fdbe76463f37cc0b: HTTP Error 404: Not Found
-- product / candidate-adee63362f243b8feaeb: HTTP Error 404: Not Found
-- product / candidate-bbc429444f42ae6a7a18: HTTP Error 404: Not Found
-- product / candidate-b9b83182311f0263f1f7: HTTP Error 404: Not Found
-- product / candidate-ffee6a18a3b50463e93b: HTTP Error 404: Not Found
-- product / candidate-418836a04164f5f43b7d: HTTP Error 404: Not Found
-- product / candidate-793d64710109c2f26cab: HTTP Error 404: Not Found
-- product / candidate-05537dbd9a9d615de53f: HTTP Error 404: Not Found
-- product / candidate-4bd9b5ef106ba33a608f: HTTP Error 404: Not Found
-- product / candidate-afe998fdd9e45ad32a39: HTTP Error 404: Not Found
-- product / candidate-912ce4ec221579d8c90d: HTTP Error 404: Not Found
-- product / candidate-bf600fa187883e341ffd: HTTP Error 404: Not Found
-- product / candidate-ca8733823988818b270a: HTTP Error 404: Not Found
-- product / candidate-05498f494fd4bda8b30a: HTTP Error 404: Not Found
-- product / candidate-5d0fac541082f1f5c2d1: HTTP Error 404: Not Found
-- product / candidate-82c079dbf9970decfb43: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8e9e826975fe75e532fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c276c505d38d71e56276: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6faa76bc2e6d322e252b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a7ecbbca0a98f40f32b4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5d6d3e1da98010fc9160: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2241cb286d1190660a13: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4679f50e66412596f819: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8f8469a36da75ce51275: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6bc3d4a8889889c69470: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-70df7dd479e6ceeb362f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6654948f1c06fe5c09ff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b58f9946b1a3165b0209: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d831490279d1a4e288c8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3ae1166f5d9d77337856: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-25299b3ba0ea39261774: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ac1d2d4bf13ef5f71788: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-86256411218c2448d24d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5fbea80ff99c41f36c2b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3ba2a7a59ea414c846be: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-467fa1867aacf57cda8e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-121faf98b9a9d87433f2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4818398afbc19a21dbec: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e4a28c9cc3596f18b844: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ed7eea03014ff0da3c40: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-87b4d2a610866c1c8b99: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-567ebe6480c0cccb0dd0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f28e53cbe88590a92d8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9006a1684bec304b17ad: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c8cb564d49eed38b150f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a3c772d6394f79a22056: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bd5fdae2056622f60a45: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6b7864d33f4236491d7f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a66e599377b09b4a2ee5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0d530bf48016a7f73f55: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-283e7e3b4b0d1c14f613: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5c518b27988d93493c5c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b50a0af0a7f7d2ce7aee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9f02201cad3fb1f98ffe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c36cfdd523240a224b98: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d73c9191e088393f2ca3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7a7e46730b87d743e3a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ce6de31ccd3f6c0c03ea: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6fa31724e434aecc3229: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51eb6db9c55b2dc4f2f3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-956fc150aec5828938ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dd3b0b786089b4dedc9f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-84a7b90ef92e35459328: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8cc5780397e6194f964d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1670b018f751a79bfe0e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6260ff2afcbc4382944b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-53720f1589778bd3bc60: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-16df6171c77428b1f096: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ac43163de1cce0735af2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bb6a7cb0f4d3ff7c7bab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7ac9a88d3e05bc81499e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6ae12419d8ecf31fb29e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d82cf457592e67aff235: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1d8c33c70bc48033b465: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-29465c24d6459b9100f3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e6e116f1d0b7e7a7ac6a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8f38b7dc2c3b6aeaee24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-68f3780b4897b4d23dd3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5a930fbf78ede20c0fbb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7fbcaa022313b0c1220: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0a062dc2f096a7da33ec: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9ade685298b7e464f7c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-157c229d45d473d8ac24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5ac06e6be190253b0905: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33a6f6e0e6a8ecd3a5e3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e1e597018c8acc4b7fd5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-787ed96f33391bab13a2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-640ab2b858c2a4c42f72: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-105d70f3959e19665fe6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5e3ca2bc4d8a9468be61: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5b9b57aaa0759735aa9c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-13ac56d1b792ea22c782: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5e101d4681afdf3ef8ca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-db71f58ea5041415b6cb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-764990121e263972e619: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8f2a87a7b2e5e9f4f462: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e888bf7d9566e4533f76: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a17749049682a90a45b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-653a5c8def3f2b4b39b2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cdabaf832dc76beb62a9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-67e82503def0e231d0ab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4fd12544c30b824affcd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b5ad76c711f3e059ce82: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-899734639c64e3bf5f35: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7fa36aca0b04bdff9dd4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-388215eb7cf40ddbfcc6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bbad162a087663b27bce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-017a9d13be14dd19f71d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a13e172fb1d73532741b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8cbbad5bac36621d97ac: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9448c9601e8cdf660501: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-21464022eb2c2c8a4414: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9f45976ed764a868b5d3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-063a5d6297ce65f5fb98: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d3dad8260378f99c710a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-838e9e8f0a25620944cb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e8d0b21586ac88a4c188: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1f6a962d8ffda2c68ef8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-095de35a78ded5824648: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d3083605c590201c616c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6e4dde85710a1ee0d4ce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4bec22011aeb98555327: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9755ca5b683f3a25e857: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-06ab348fbaedd018beff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3401340be2d3ba7d66d7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7d42f574a29e0d748e16: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8a14124b76b2cd7bf29a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-277114b7718fe9b4a24c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f52f68a887f9dce22c3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75bcf2f1fd90386437fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9107ed53502bc0c4fc82: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5c3887b4f6138343d8ef: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f35efec8791a4a5d6211: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4ab49abfbe20783379d1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4397c01bba9de2b9a03f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e18f044c4cb011fddd11: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f9a4c7d997cd58b854e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a8a5b23c42a4a9209153: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a2ddf4db4309f59b9ff5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2b54f8d11a0f4353af10: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9695592dda72f5647b75: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-565340a6b022c9f4171c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2befb4ddd33d8f21386c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b07c1d72c2e9cf090c59: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-730fb5d294555e517c97: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3de5fa6b01d16bdfecc3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-25905633ba1db21b2a1c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-91e56321b96241ad5cbf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1246ffd11d5bc4e82960: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-45936282e6477a11bb44: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9fc6e8ef1a96a6e75413: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-de5c3287c082a7effcfa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-01cbe8df0cdbc7fff97b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6d751529b400ab4e46fd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-368b22e1d081793d811a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b30d694848a2b4954a9a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ac2a80d920d504973684: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c34f20a07e6784015b32: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8e819f99bcafb12e850f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3aa94a074958b42a220b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-68b0720c531d82926bc1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7bf3c367ace24c590369: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3d3c02108ccfc747b86e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-31c124c47fa615949b1e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8d084bfa8d21c90889dd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2b1006b24baea549d05c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-135f4ae2c9cb536ec9ea: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-be0d80b1421e6f87b2ca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-27440112e682ceb37238: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-705e21b9b742822d6c24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-343c4c42dd68f4b4a436: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33704055b51cd93953db: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ec60c173eadfeb87de1b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-24b1be53e47936f6852b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ab042a7764facade1415: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5250205e66e873f82d6d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-42760db925d4ba8b40c7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-df5b061c87c40914ebcc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7f5aa7a1e005f3cde15: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-456f82c088310acdcb9f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dd4c929916e86bc82afb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-98685e620fc71ed24e32: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b6042c430475f8977642: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7421ac608d763aff68e5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-447bee64ff6e2cc88d15: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e59f91f7709b8245af1c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f4c7bdd3812e46b5de9a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7034134f44bdff6078b1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-327beae452605f46e4f5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0fc8637d619610cfa7ff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0c43c0cd504790f30b06: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-03533638d1c0079b830a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dbef8cdf6dc2b8cc4159: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4c100f983f35100544bd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f75a2a7e3cf906c4a0a1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-09329cd970d4bbeb3bc0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d598a2c558bf7a62696f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-318e9032940f43d9beca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-15939448b685bd2990c9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ff801b71a959bcd2686a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33985e48491d8d5f3a0b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-00bfab44c128dd60ba0d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-db72d3d5c102fdde2178: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9e67f91f59ec3381d01e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5f8cda4a31a76f63e7c7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-199b00f712a54e48641a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1067b1e738cbe5bda0b6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-72d97c6416bf88bbc866: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7208aa8f8d28229ff9f7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33d1965560e68fc528f2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7ec7eba575d49c6be8c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-781ad19f16072e0081e6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4ddaf42da372bf2f4854: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-48092995874882cbe66c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-19bae3e5f0c883713bd4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d3e0000327c97bc5c6a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0ef0a291c4c355204808: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ed6157a4074baac59b9e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c363f3bef6c734a38b7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9c79ed84185c99823c63: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8e672a540fb65b2e5ed8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e6d58a143fdfda5852d3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51fcc84aed7a757020a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-81e7d281ff3b81bfe608: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dfa04669bddaac1a8a1b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3ccf25a41181a8003e2c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3727dfa804dbe3c81efa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-432255f221f85b9817ac: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e2217b1a998441abf2e5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c33eea347b806e6f39d0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9439cd15dba2be725ed5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3a24bff6a956cd1e63e8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f3acb10c2d3c218ed414: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-37c8651f9f65b2576738: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d71b81c18a60cbc0ad14: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9a260629a7f753179bab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-331e814eac0088259325: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b2249f7adba9aad67b8e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-39d24ea8dff834d8fefd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d5d1c09fb9a04cbd46e9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d6be3181314dbbf3a63d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c1b7739f7f8394e14bb2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a4b58aa72106f2970686: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-794e29d53308240f1a27: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bb1f9ae190dcc5ee50de: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-daac202b4ce130779795: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d5f20e6b7b229105934e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a8a0b1e67e1d479094c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-78b866fb4d225c516bcc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e917c8dc97c37de6c900: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-eea4b469b6502a541b78: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-079d93edf941c386522b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8be835bb1adcfbd176ad: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ce9f580de22acad0f285: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-24586bd57fb6731a242e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3ae11bc21403edfe33ad: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7e83d68357a4dcac0afb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e356cb80fc7c15e1555a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cd27ee948ce1972a1389: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a75c1ef03727de776bf3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-71ce5f82a40621a92fbd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-591f416bcab8c8c3d60b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4aae21e3fa9f0328ab5a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-db60559f5ebcb83fce6e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-183e0a9075870260ac0f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dc7381185328818a417e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-19a812cf2a6a1d69e177: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2e1bdb43fd5c39dcf1f8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-015968c2c5788412bd24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-82ff0bd447f0cf8a1acc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7fb918e7515b9937190: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6645c4c2e5eecfe5e2c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f6245b07b68d04e894e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b63fbd53883a132cc5cc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-473ad7f49d18413f5a67: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d749cbb62e53268071b4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7f14e17ed1cd2a1be160: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17cc1ba32a806832563c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75dc20b7d36238e6c584: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ea96996dc5a13c3ca169: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f976a543932b6d28af94: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-47599143441b81e4fb5e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aed9362a88dca16679ab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-052dfa6ebbf2151e0745: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c8ac75b8c76d72c2049d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d8915c7bbeb4b7572cfe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3aa4f0eceb3212bddbb1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-04686d96bf22ff8d32f3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-59011e6a7158b8516f67: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fed831cd991cf3746965: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ec9e75c44c40ee396316: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b1cd27150c5b036cbb81: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-642d0cbc486f9b6b3768: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-53bf382cbe1f4e568954: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1fd8335ae4838b409ae8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-88a83e18015f8808fbd9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-05d052f26665323f0c49: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c0d59b34a86b5ecac581: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4344c3d6713611ae472e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-602088321bc66f17277d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dbd70365456b241a848f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c893a5125daac94e54ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c00a9ef6134ffffe9fa4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-80c1971a7c2522138dc0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-681a5626b81efc83fac5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0448e22c0f355ba95b22: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f474f56e22a14213714: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b8d78e5b7c1af10e97e2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-43ff78d0c9b84bd7e3b8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-760c23a6860dc3833ada: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e1367b78235c51d9651c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-591c1a72c1942ead5465: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9780c18f21171c33861e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-46fd76572215359cc2e2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d921ff869c7d1c34aef8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a516ad717536f4fc6534: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-99a5b9b3a89f39701ade: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1041af276f3f0cf1ecb2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c66dacb44fca4c60e3d3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5596cd3fb0962c35d57c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a246d190acd8419a383a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8f47e66c6d8c6c51d46a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a7ae3e884b50d57dd73a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c2e3d668ccbad6a8b644: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-406ab3902c6507223558: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-25b33e3b1f5e3cf7fa8c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a37c62f87dde9e16aff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cf6ce24474d486ae110d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2a85a28ea900e9904771: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6686c754a49bbf394f0f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cc24d76c660fb3aae8cf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-85b876da826509e3b278: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b6749769a4c45dad058f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-49f6a106c18465be3d10: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-947005c62c773f0b8714: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-28b6bcc712dbeee7f875: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-84556890ab110d409f4c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-785f37f96e95e5fac52b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0cbfe42180674ea92ae3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8a7af30c43311a1714e7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a87ffeace8846dfdbd7f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8bc95b95a20fdc2883b0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cd36143fe1e7daa90700: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-732fb025b53047e0fe4b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fb0868cd5d27ea3e3353: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d32782e5914cc853498f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-86b9b6fbea8a1180dc93: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-54c2efdb5a054f192d54: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-18489873231cffa33704: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d003a5c0aa2060c08ea7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d2c83cc901fa4fe1fe9c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5e836a0c09ed3fd08168: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c34df37210e6f8c5bbd2: HTTP Error 404: Not Found
-- product / candidate-1b5fce19ccf42caa2943: HTTP Error 404: Not Found
-- product / candidate-4bbfe9e7943c871243af: HTTP Error 404: Not Found
-- product / candidate-a398cc9f5380e51ec1e0: HTTP Error 404: Not Found
-- product / candidate-87d6820194eaa95008c4: HTTP Error 404: Not Found
-- product / candidate-7ff8b6f56f89bc4e8603: HTTP Error 404: Not Found
-- product / candidate-741a8a3b65d27d3da069: HTTP Error 404: Not Found
-- product / candidate-084b3a93e5abcf3b2ae4: HTTP Error 404: Not Found
-- product / candidate-e2de7b45fb5dccd514ac: HTTP Error 404: Not Found
-- product / candidate-d72b9f4065038f2fdca2: HTTP Error 404: Not Found
-- product / candidate-15f302367bb08d14911a: HTTP Error 404: Not Found
-- product / candidate-5056344667c245870d63: HTTP Error 404: Not Found
-- product / candidate-d26070170d1d5c8d03e1: HTTP Error 404: Not Found
-- product / candidate-fe89604a95a4fc4e92cd: HTTP Error 404: Not Found
-- product / candidate-544a7fdf15505f687a07: HTTP Error 404: Not Found
-- product / candidate-15259e473af29f32e278: HTTP Error 404: Not Found
-- product / candidate-488a848553258e4891e7: HTTP Error 404: Not Found
-- product / candidate-ae6c8760b958de526b14: HTTP Error 404: Not Found
-- product / candidate-511aeb050260ab1ac466: HTTP Error 404: Not Found
-- product / candidate-080d31841d6ccf783c4a: HTTP Error 404: Not Found
-- product / candidate-6680d6322ece533ad5c6: HTTP Error 404: Not Found
-- product / candidate-9f804b6f3a11381bb43f: HTTP Error 404: Not Found
-- product / candidate-00625c22bda62e9c4b69: HTTP Error 404: Not Found
-- product / candidate-89a621ff9754088ae754: HTTP Error 404: Not Found
-- product / candidate-19a5570c2b8b254a6e89: HTTP Error 404: Not Found
-- product / candidate-8081bbf096ee1345b6c8: HTTP Error 404: Not Found
-- product / candidate-035d7a5ea4bdd78a85ab: HTTP Error 404: Not Found
-- product / candidate-33c566c17188cb56ec3b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3e1e6d04fcd7e4e61440: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-743f012bf2df565b47bd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-555cd95532a52a45bb5b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9cbadff2259db0ccffdf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-969fa786609e1e3f9713: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7c24b5aec6d805c93b29: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-43354fe8c3f841218d73: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-881b54bb66431c2709bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a64f13187e94724ad56b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c185fb1c9e2af629c5c7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-24ad0f4d1e83f0a7634d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-735ebc3de69f6f297e47: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-39d881d2827c2943dee0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0e37f813bddcc2d96fa6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0ca9930b0bbb9d6cbe27: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-deda2604bc00250dace3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-16b66aa44da4b7ec436c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8b5fbab4130c3b922356: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-94efe3564afd81cce651: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-139a6d26afaf33468717: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-47b9408991301c8b916d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fb0f0d3fb6c794f96abe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e893d5254d9080c29dde: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5ba402b677020d4aa5d3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2ff81cfb4f7ea4288108: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-919cc3f915b37f4e2eda: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-412540b3ebf29101b57e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c0ba6b2632261e6b7226: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-105ee3b6f23064327d21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-84768844edd9e1f3ec05: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-403944b7421bda2651eb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2330123bd738aad96735: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-37254e720e688fcdf78f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a9d536f45ccff702b08: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-99bbade0391c5ab63cbd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d68951e852f9fcaf0a6d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17246fc51b6febe11a5c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a0f0f4282d186cca2285: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-965ae9cb90c0bdd08475: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d0a96813e7f62573e764: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c524b27bb7a6a88e345: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-74767511ca4a0e5ed166: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8184734cdabec77d18c4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d22c211dcfec4ba79784: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cae3816a967c304a2e50: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5a2b2c5d97ee938c4dfa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-059c42eea0fa6140714b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-68c35861744b0372e55b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2bae52d28e3bf058e14d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-34276614254e9cda45ba: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4e1976b4add32082fd20: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9e045991075dfd4bbf04: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f3d12ba6b0964cd9fd31: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33b15c27d4798e44e4ff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-181f2ef3fb36c696a3ac: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5c255d2f04fdb359d2e7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33e86a7cc05795db73ba: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3e54ad031a3d988f35f9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-abb1abdeb9e7ffa22857: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e752cebeeba701396d21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b250bf833adf29e8532f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9fe407328ce857326166: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2e9f0ea137c821a8ffff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aecc09df26c49a966c4c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-944032611e6e6c875587: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0f83e34ac9b3f75837e6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-216260212a9071ec886f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9987035eb6fe6e7368e5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7fe052b1ee9d8a63710: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75a7b6c3403b48f518a1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-de7d4cbe28aebb9d2871: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f041bcc6815cd3b1c368: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-239d7d6f209db9b4ea50: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b551db4a42033e59ff84: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17e335f7ddaed5cfe804: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-45d28f987fb224d01bf2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-56096874995ea3753e19: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-66722e964523c62ccb5c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d9faf010a2c0b360b20d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-50c3ead153b80ea0a705: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-08c94c7ee702cd8bc6d7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0475b677fc242891defb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-572afaeec391b64c4199: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d955d22dd8464d523f9f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9dfd6aea98255e7d2ea5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c802347c2db5e65f114d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-38dfafa0ece236df0218: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-da12d030ebe6ec7b95c6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0bd5c2efe347bedf82fc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3dcce266d04714330033: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51e5b497e29c97658db6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f0ba15ccfbaf9158013f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17ac1455d1c0680e137f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0b2b9c1aae464d277143: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1a128ad60394d783247f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-06c5107890ac7932f818: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d8475614e4df629080c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9c64ad157146e425afb0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c170c982817ff1e8e06f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ebfb71cc7a518655305c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d462d0117930fb0ac0e2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7ae4f6992fc6a60316e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e81380e20a597d07fcce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5bf60b0ad95c6c6d309a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-421750048d2ee9c5de62: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fd608bdbbee36c3ec54c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fcc82292725dc0298e29: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-671aec9821d43577b6cf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e45a49ebd07c1c5dddfc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a7d96d70b89815e62d4b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-edf36b7fd196baa8f7eb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4d0dd03fa896f806da91: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9e710e5febdd735b9118: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6250904ca33274a723fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f05cc972414fe3582951: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a32e6cb31e593a7f4587: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7ec26a01ba65f9113736: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d2bf8bae43976d68dfd8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-83727ac840e6e635f842: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b852a27a61ac9ea6d1e3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dc569717b2fbc9d6cb8a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2cbc70faeba2fc37d8d6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cfb6f9cca20b822574a1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dc8a883cce5534e9c56a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6cf4021f3c2d54f0ea6e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-eaf4771347f555df2b30: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-414cb2070dfec10ef7cb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-86b959809492a1817721: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ff1064d30b7b885360a8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-212c26d84ab21688fda4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-92ac551c60514a84ec74: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33652aaa31396cbb6280: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cd53923ae96ec180ebb0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4b5b922d56835ea0b677: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-604adc9bb840199e7c9a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5a59cf9fd32b88084a18: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7221385bba6aa966ed21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-59828155887c044ccdc2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bd91f17e4e0a69396d26: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-35c667dfd3c7e67508e5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-22cc248bf4b242574a4d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e32820ddcce16dfa36ab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f55fe0198246a34e05e8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-732835edc39c009f9e2a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0e1821a00aafa3ea8ef1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-531097bcd56b5240441e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-33dc5fa607c39be4a3eb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2490c53b2ba5cb25dd96: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-493b3ba550c81de7685f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-15e21476c66d892ae4b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d3006ac798d70bb2750b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c065147ad05614782d60: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1247f93103fc96296590: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a8faf091b2b62fb9eec: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f7d26a6c964c1fb5276b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d386a2fe4efd4c735aab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e9d674e7a468456c509d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e4f5e4a27888a5e204ec: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-154ffe9864e7cf8f80e3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a402dca9dff462cb38e6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f48e951eade6e1e3f76d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-133116b3762528b682f9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-77eb647c2478b8bdbfda: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0d1822df95b7cf055239: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-71636749047deca937c3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2f457277bb26658b847b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d60f4f791e7f281c85f8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9ab39494831ceecca9ae: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75bdd0b97ceb2566911a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-104c6585bc83a029dc69: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cedb423e7cb1fc1f8909: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7c29ca8f6d1f887640cd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0dba52887a92abec0dd5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e4c670b65dfcb732eab2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-31eda12ae812c0e22224: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e447ae54ed93e2721306: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c017998098928b664da: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f02dff03f5136a7ae00b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-596bb9d126146d23852b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-773add6757c4fd69cf8f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2246ef49ef4e96c7775b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ef73c8f0a6769b957ce5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-99108ca0a49caa8332cc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c1f3d31ff8f05c46cfce: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-974c69e3116444edf31e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d0a8ed40a0ab0cf6ae5a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1b34084a43f4f41ccebe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a6b581f47fd648b01e62: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cefca7071188d77ada68: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fef63dfb0e15af3f5c7b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c0b0d0db3b282e1df9d5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3f55f7ed060f8d735d6b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-98acd75b05d640f035b8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b37393f39dcc87946da2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-126b86d351cb22b53093: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3ee9ef86cafaa14f34c0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4f673bcc219b0404d5ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1a3e15bcd2b4c5b12078: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bb2e7ccb3d96691c0675: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1773cfdefa2759b7e444: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-589c02dd352658428db3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51aed3ab30ca729c6e06: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d5587bb09b781d90cb4d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e848d4ef281d6cbd69b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b91bd7510ea1ceb19c01: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8b7b952a9dd0cb282530: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f514909b8329b4f2417b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cb99d073d23cb1285d31: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-38289c00ce22fbab571f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c51068a4840a1f13f282: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1c9060736891b6a3df77: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-602bfffd3472a9cffc22: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4972c337da826609e5c6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bf672a85e413d7a03aa7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3be9f12d641aa8954dd4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9c8d22cea198d390eeb1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3837fbe32c7573aec26c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d91d66c57e9782db1a0e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a6aafcb223b66c1e8d1a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-be1b5af8271fa3b627fa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f74c0c1ce3f783469f06: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-37ab68f0f9f4018a0f8b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3516c534aa146efd5049: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b89c7cda074162565a60: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8d18e52f46941e18bf1f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51281dbbf03e61c931d7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-46ac278d49681a02743b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0171ce71f912572daf3c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2795107c2e9fba9d617e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f79e93637474149dbfe4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-594c5f85358ccda2d156: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4d1aa42496afed673a23: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c8c06cc3ced7c062b28: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5367c7a41392d049fd72: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-874f5ab0bd6bb8b8d1c6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1cbd445fb3784b04e2d8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-52e48168c5be5b9acfab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0317d7893652e2609600: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e7be69a83cf6f3f5224e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ab1c03398923116b87a0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1e0a05d99c217a754596: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1d8def0a9b5e73048c2b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0ecc914735b9c59a479d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c35f11136f74bd5656f7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dff0c7008dbe405ac96b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dc3c13be2b28cb28497d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-502b58bd041980285d8d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-56a572a94af9b54e8360: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2585d8e7249e41e41831: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4fddc2403b38cd667be8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ca86bdbc54ee42ecefcc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-023bacd76e35e156d584: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1bc805456dfe1f1c7e49: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-da16e37610963b6aa41c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a234be2705b34aa10dcc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8a6e901aa3740d528884: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8d0ae1c85a5632887f84: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-835943b06b56304dee12: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7ec4ed6747849420cfcf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4baeb2da77094875f57a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d455579d6bbae47a7ed4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-852961bedb4e20bac2a2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d683386473e62060d0c3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3dae8f76dec61247b9b8: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-46db38f8f791f6734a5f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fcf7418a595b8f9850e7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-753aed2e9fb5a3945355: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c08a6a83b63c6497f906: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-25fa6fff1f96af87265f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bfe07fcf0ead7247c82b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f0000ddae89b7bf587ef: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-93c1db0d3b07c1f7afbd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cfab54f12bb682a0c88a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75a887eae3c7c56231c7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4728a456f1824ba3910f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-395081911231f99cf2c4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-530283c94714140e9934: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e6bc02a6d9bfcf5f10df: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7cfa095b0e9d969c19d0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3de4985eff7b5a9e8d92: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4a565706e77559beb495: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-601c33b8fdd7b693ecb2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d29f7bf5152f025f6db1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7f48a80493cf6cd3eb76: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c935fddffcd2621d3634: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e0f1c7f4bf283ca18826: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c39e3200461ea6f9437: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cb509e54def45531f87b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bfbc1adea4278cd07ee3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e6ede6c067034c1d058e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-80bb5022df8134a07a6d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ec2f6b8d7b43efc118ab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9bc6dd4e8795707405aa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d6d0df51528dcefac8cc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-93daf7fad4db6723749f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-346a09b52390ec6e2b76: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2bf8cbfd6db7f65593c4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-75562b1a71d046055d5c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4b609829fa5081ccd027: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e52f069da789aae3824d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-58f29822efa975ae2ac2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8d7f2fe95a4c94ce8c5e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-41d4adbf5950ad64eed3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3deb0b469aea7eaafd9b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-448356cd05930a310d32: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-36bea25f1746e7fc573e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5af6ea8623a07d4ab33e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-18808cb80557de48d1d4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fbf12b7dfd552ac9b932: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9efeb083d7fbe2b71f50: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9eb589967f2909568cee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9e2eea4ad6613582161d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1f20ce63c01d42887152: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a00bdaff7f560c808c26: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-85be1bcc3dda16e2d1a3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-16facfe4e8330deaa4f5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-732bc57d6915183298ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b2f706c94a636ca5ca0f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5fc987c0388dd691c79e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d1948f96cac89314df11: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5cf6ad1983b795a031af: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1e622cf9176a6b5593c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-505a63fcc3ba8b1dca13: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-34eee5628ada60df1efd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-76d824ca69eb5cee0d98: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-58a9215641dfeb73dfea: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2586de31ee858c13e850: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-350b8f96a37d54b1c371: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b3174479d489e8042717: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-08d932161cb2556b0215: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4e8a959900e1ecd1bb63: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ef578232c00d98a936f4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3426e4373a6df43c66bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ed56ce14216665b79dbb: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-224b166fb5135e07d230: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-393ea11db4529866f47c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-51c87b26ae90ff5e213e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ecccc8566a58eb871101: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d11ced117689ef7d5332: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fa6bce7b25a6274f6e47: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1c8b7ac1a1ab1fd19e1c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-13136de231ebc593ca4e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b6f7fe51c2aeed61fa95: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2a02036bedb491ddc758: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-88b50a684750fc35be72: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f593cdcf7c111906dbc4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fe2a16e9877f5ea878ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c55084c717263713c727: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a3f30d9c6fa5d99e6599: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3b123975f16f5698f608: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-54eed3110d2732440132: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f066d9c097a60c26bc08: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c75244ee347c22a7d907: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3bf806752a093ed776af: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-90ae80dd1871a706df37: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aa47ac470d091773faed: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f60a3b35075717634917: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ace13ba181fa36de775e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d193996492f636cfc035: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8a68edad379c8461aab0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b3b9956d72e9bd2bb1ca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f7af00222951f9f06fc4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ba9365e8d92885f469ff: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4195fd726c98a92e2319: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-96d0eb8917118aecb206: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9b5713fbaf670eac219f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e575fb3367a45d7a85f2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-017d36b40e3111b8b704: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1f9e8669deb2190a52fe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fb6493927d841fbf0282: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c55eefe8b2f3a227c50d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-11bfed78fd575741c4bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-be17c1a6e65f5fe291e5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fd356f67f2d32f56cab6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-37341c3d99a279f5516f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-07a49e200792c016abab: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2c09f8d5fd7bd6bd35aa: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-efddbe85dae1c451faa5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4e00336523ab38e533ef: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2d19c9cd7cacf836cc5f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b7efceffe9ed0fd4e5d2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-580751f1eff407d7e154: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3d9aed30e2c6167edcb9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8a4def609d2127ae85af: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-56705f95984613fcfee2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7f751ce1fa7e3b47af51: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-23595b0013651e2efc36: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-85873267acea5e47f63e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1cd33c9a2bfb4598d919: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7795afc9733044ab1b02: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9c48d7ae96c827739187: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a37854e4dd9e2a96f169: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2903aca816a585996ea0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-21a63e902a90bd9b5f94: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9aba482b40520fe8f305: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-89ff87654b6f68b9a3b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8d45fb437c8b140291b3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-761a0e45592dcd23a11a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7e2382b235d86099eb99: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7e66808cdddd9dda1433: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a843608fedb64de47872: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ef7e26b2ca2b342af7d6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-16eba8354dc5c04cc725: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5194e9f4a7284e28b5b2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f89e6f2f0610ed4754e1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3f2c953fec3fb0af0637: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6b9cce78ae39435a66e3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-07a653662f750390e137: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a2719f968148267e795a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ce68aaafb8b709ae4015: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-58be38e640fa424bef21: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1af74c8f54ebe4a0a7bc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-92d14a43120828c8f85d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2d3b1fc3d06ab1d62a3c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-446d573921f24c079c24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-44b4b383c2a6958509af: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e9f1f399c662561b7654: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7fed5c576979d9da4779: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-da3e6986fd5b95d37cc4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-63618ea3f2a5651726de: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-19d716905db8987c42fd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-76afdb589c922d8d6777: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4be4fbeeba29b8c19be2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-48d20410185c7521fe84: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-892a862688f13c5499f2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2633ebdaf97fca3c28c1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9e988b66610cd033599e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a3906db69856575e1048: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a55a902927fabd059c8f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6507d9702d221dbcbc7e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-790149a27cdbc9596840: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-259e1ced7a933dcd483d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a1baec4e24f59bcbca9f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9d3b171bce7e46651226: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b94b5ce157c972d062d7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-92267f8a7a084879e382: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8c305ddb5962c5ffbb07: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-31da0fde8bc6c9d9b193: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9db3e8958220ffc2eadc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f085c56110011365b430: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-385661f6aa6df50d9fc3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b93a225998eab802a3e1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8abf4bb319547834cd61: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d30b6e3fcc074be929ae: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-83926b6c9ddbcb65a44d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-213ab7ab43fd57b476c2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-5f6c2a937d11513e33b4: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-40f172ddd7b7446c05a0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aa1872fa9e5c1005edc0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a64b2cc2685aff603e2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2a9dbbbf3e379939b4ee: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-571e3c28eb1fa80e2492: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e5c1842111c4c49d06a1: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-58628485f2a58f97a6fe: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-81596a6acfda522139a9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-17997f15e8c50eb93b3e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-29ca35bcc91645d6faca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8de9001265a80d50a550: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d0dc97438da90610edca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3231496c650c24ca9d87: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2219c446a2b7eeb9d4a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-32ad8268ff8099ba991b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-09e3862670822dc3c435: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6402f31417f4ac400649: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-55bb361e9e27d7c80fc0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8b1cdcaaf10dc51508bf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ebb7f25ced36a851e90f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-af1d50a8a6bfffac1342: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6331a8c0c8944d3fb72f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9bee2fdd067e2b1c9e56: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6fab54c800cc6268208d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d38a3d24fcf24e13668e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ebb5f3d30b6fd2609ffd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-931fdaea2a0de6339641: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3b186700526ee9429d5b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b20cd3aa4265a662757a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fe6102c38e9b311fed66: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-98814d140ee474aaf3fc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-1a5c3d120830cb782c91: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-98cda8aede9daf74625a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-e2baa59f7457416669b9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-88e00df7bc9613fcc823: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c08cc630ad7ea5fcbb34: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bdbbc2a0cf6f3c116a79: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-b2b6da4114dfdad5b71a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c2ec1ef1a9100ae057a7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d9e2f02c64bc94ae3ca0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bbda233c66e8773a2684: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-cd1d08f1ba7c943b7cf2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3e453ca796f643cdffa6: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-97fdaf2f85b0bc1a0af9: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d1d59e911d62e618dfcd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-55d516eb85dc8182f5b5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8fce2de774b777450b95: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6d500d8887f06d4a718b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3a2300c9cd740baeae38: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ae76605072cf8348f0bc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d0a8b6e30707a1650dba: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4df59f53c3d21be82765: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-8ea81eca3611da957fdf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-73dc14d2475c09598c0c: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2d620b84732e79c64762: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d135b22824c4af5249fd: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-08fee828dc64e6735417: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-100c6aa67f0da67ba162: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fa1feb868dc3cdb711f0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-3369e8380bb1dfacd219: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-243a32de65849705714f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4a5ffe1946d21b6858db: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-473398c9ae279c25538f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ad0d842791b4eae19866: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-35b64972678857c19cf3: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c9a4c6f46e742d9e816b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fd42378e0816ab5a438f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7011e66ed590f5a525b2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-15a362d59e43afbb9adf: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-2fec225c8843dfb21f4e: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-31d4dadc8b08565f8b24: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-919d5108d56ef2f29ded: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-734f39dcd15a5d25ed5d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c762a611ca5e3011c557: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-477372c4d36d0f5ff0ca: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-03f8f9798581af53bebc: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9d9d8890ec6af69a5400: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-6a50f0ea2f0d97f1578d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-427d2488e728132e105f: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-fe6b767e931cc15d9481: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-656d172fc4ca5421da91: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-513b2c9fdea7a326e065: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-77c270bfab812b0487f2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-aab16ea9aaf44dfab7b2: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-ee82ef84e776b9b10b27: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7aca0c4ce7635c16be4d: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-36bfd0441870e03d49de: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-a511394356098fbf8df0: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-f0b1fed5e520aa661ba7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-958e995fd76bab5a6d67: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0c05bb75c3b22d6cd505: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-dcfa5c5e1462c930023b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7b72fc9a6bb5b3ba9e9b: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-935230e93694d69b0ad5: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-9f5d7d070f6ac1deeb10: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-bff2e47d3960987a8c41: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-0b181c24f4e1ed0403b7: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-4813de42c20355e3a32a: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-c8f6f4a4995075d4e239: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-7fe4f049b41985130984: Exact Shopify variant ID required; refusing a default variant price
-- product / candidate-d5dec3d37a71ef1b1349: Exact Shopify variant ID required; refusing a default variant price
+- product / candidate-2501ba8958c1485657a9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ab341df6538e4c75f395: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3a2fcbf583d1f38eb582: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f12e0fc72344bb998e3b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0c2006be675da53e2ead: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3316c6bbeafef0c8edb0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d7d64be2a3f1658b3921: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bfc903d0706692388b1f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f49aeb31aefb4c040580: Exact variant no longer appears in the retailer catalogue
+- product / candidate-60ac0f6516c0c2079e1f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9da346dc06607d9cc34b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-705bd82b5b7c0b7e52ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b24adb7f0a39a044a9a8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-508dee4ecad5e3361e87: Exact variant no longer appears in the retailer catalogue
+- product / candidate-54b472f8527bf9b326d1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8aadfd83a3b42ff9ba12: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0366af4683e52315d0ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-97f9f6f36536b3fbc71e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3214f4944872629dccf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ed73f9bfe1d5d5034bb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-976aa25985552b3587d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aad53fbf74bcaacbd076: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d0e3fe76c748237d3917: Exact variant no longer appears in the retailer catalogue
+- product / candidate-736feaacd8ab75257e1d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cb505c1fa7cb061fc433: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a71dc4446275f335728b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ff656668726a0d5793d8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-31021c8e145f14f53873: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2905b390d3c827db9e0d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5372445ea52d25490ae6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eb250a8303d8b1fcee20: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a1bc4be251aa552816a2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f40718b24b8a2880e57f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4a7454e0f3701bf3b438: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8dbd596b608b67ea1ada: Exact variant no longer appears in the retailer catalogue
+- product / candidate-61027055b54732a8045d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-32bfc56045637171ed20: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3021840de68417825e5c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7fbe0ec25412f0c854eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-721e566e6f22ad330c2f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-685145f8efb0ba0d1d04: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ff54c019a8f528f0f511: Exact variant no longer appears in the retailer catalogue
+- product / candidate-367deef5f291c73b42a2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-04b26b53ba68bb875055: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d23026195252891563df: Exact variant no longer appears in the retailer catalogue
+- product / candidate-381abe6185d864d67a00: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4bf0dfe19d41e4850fff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b55e4f4d877aff7e8012: Exact variant no longer appears in the retailer catalogue
+- product / candidate-72720a142e78ae797489: Exact variant no longer appears in the retailer catalogue
+- product / candidate-edde5ba73d60fef16c2c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bdb777430d54fe102105: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a1c4803425a42a9e565: Exact variant no longer appears in the retailer catalogue
+- product / candidate-28f86eaf497aeada6f6d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d855d819370084ef7557: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c162d9c710b3c6840d3f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5566d9d2ed358b1ef147: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a2dbe6965818c453f91: Exact variant no longer appears in the retailer catalogue
+- product / candidate-095ca64d4c22c3822a4f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e6dc19164eb3c53c727e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ec8c47130c382c837935: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d9c14fbc5e325d573107: Exact variant no longer appears in the retailer catalogue
+- product / candidate-57902059748eaa7cc8ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f07490b48ac9c810c9d1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dcfbaab127d32e32c800: Exact variant no longer appears in the retailer catalogue
+- product / candidate-279840ca28f30a0a5ea6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8317e8f60b044588dae2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c901f50f3f24a5aac11b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-548f22fb648fb80ae2a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-06ac5f2b39a493edc57f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-138bfdfb70f4946d6792: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b20153519829d654aed8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c6c63cbac076660c2241: Exact variant no longer appears in the retailer catalogue
+- product / candidate-622cc9496fbc8ea25565: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a8056985e95276539bee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-145ba813fc23a98ba4f3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-50f81fc9d79c34eb06f1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f4dcbc92eb97d222afc5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-428abe03d0472aac284b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9c69977479dbede98a16: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ec44c2a651ce74dd9efa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-50503415e52793d7f566: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7d117e991586dee31227: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d4c18d6cba7cfb534737: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8e5f2bb86588caa20dc2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-210024366cc73702e641: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0c98437a564cc3e5051: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d80f556c4ea2199d6205: Exact variant no longer appears in the retailer catalogue
+- product / candidate-07afbe478ecc276db3e4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8946382dcebc9885f29a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e2519b6f2750cece76aa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-175fbf292bd81892f9bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f85230bdefd058bc8bc0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-09de70bd5c2de4959b06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d567339baee9868fe211: Exact variant no longer appears in the retailer catalogue
+- product / candidate-71239f4206a7ee3985df: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d6ffebc56bbc8d759783: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8cfe8b7abcb0168a98c3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f7fffc476538e32b39d9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3ab28f8cbf5c21ec9a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-86db83339fb6207a2551: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a1a60ac8b5e70bca079e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c7afb2f03ffe97943c91: Exact variant no longer appears in the retailer catalogue
+- product / candidate-528b3b96fd4a162dda47: Exact variant no longer appears in the retailer catalogue
+- product / candidate-df6a5aee110cff8eb325: Exact variant no longer appears in the retailer catalogue
+- product / candidate-06cede5c3bb3341ab1ef: Exact variant no longer appears in the retailer catalogue
+- product / candidate-56c568d2b8ea3391203c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ca2a71cd2ad9a872d9d5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0d670b7f39c178823b62: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51619c3a5a6d4cc8f338: Exact variant no longer appears in the retailer catalogue
+- product / candidate-16379ce88b50b7034140: Exact variant no longer appears in the retailer catalogue
+- product / candidate-028c055fe5a4dad43ccb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4b004c05c1bc1aa9c6db: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2605d2236ab32f1c5210: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9263c9c82f0bdb3e12eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7dcc01aaaf2c664007eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9bd4ff9fbc221c1b0998: Exact variant no longer appears in the retailer catalogue
+- product / candidate-776d241a989b16fe3d97: Exact variant no longer appears in the retailer catalogue
+- product / candidate-42f9818b2d25958a3ceb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ba06637d8ae105a2f39b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7c3a1a99c55c3829f1cc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bc576d3a93e0ddc4e13f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-70172f4888e8ae7cb414: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e4f4a5b8d0f4e89a60bd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6bc1df3a8057a45919bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-937abffbbe12a3d59eb3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9d13e3db4fd1937a31fb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-70e12a3e6992eaccd3fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c12acdd2008ec3e11c67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8047b20c1796d89631b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e74341a5e27020758de4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c5f64335e34cbfdb6a47: Exact variant no longer appears in the retailer catalogue
+- product / candidate-61ce0ef0d92abb898de4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a9e78c07a051351a1b6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6618253dfab031c4be39: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f6153220683fe4c527b8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-63b8a3dbc39e34def5fc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-947828cd9e4a89031763: Exact variant no longer appears in the retailer catalogue
+- product / candidate-adb2ceafa93c06829a49: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17b90a49b6706ef99626: Exact variant no longer appears in the retailer catalogue
+- product / candidate-67872b83a0893891a59f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3c9e36d824a9e5e2a85: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4335112375bd48770230: Exact variant no longer appears in the retailer catalogue
+- product / candidate-edca8dbc5673b06dfeee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ef85352b58b17900b8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7423ae7df67286f11511: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb0205d016453ce4bd42: Exact variant no longer appears in the retailer catalogue
+- product / candidate-39591aab184d5ae44a3e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1ce76ae0349f2728a76f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4be134ac6dc1c71872bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-11ef043ed8a3adc02f21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7e172ccd99b43fbd3528: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c465ac3e04771122b3b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a7204287f5ab4ab4e636: Exact variant no longer appears in the retailer catalogue
+- product / candidate-737b90bca02ba27bcaa8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1bee1570862dcb3b3d66: Exact variant no longer appears in the retailer catalogue
+- product / candidate-909e74acd383a81bb9ae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-791a00a2e4372c891718: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c59e409800051d02a9a0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5b64971edf194725087f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-531b2dea109e89b5389b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6b1e26a94d5d786204e0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-723a76bcb8793b9acf13: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d71150b6778c2c7b2163: Exact variant no longer appears in the retailer catalogue
+- product / candidate-581b94eadce401d00bd9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-13e390208c262e9edcad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7f1b29414caf74fe39a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eacc59d598505007010b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bddd358e81bae023dc2d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b6eac90f10ee94b01d08: Exact variant no longer appears in the retailer catalogue
+- product / candidate-333241683777b5548651: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17961fe4fd92c80bcc15: Exact variant no longer appears in the retailer catalogue
+- product / candidate-85f067979e6ce7aabb1b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-976aabd1ee9f82625bcd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0c29d211c2b219ccb6b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6f5ee7302ce1fc48e6f7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-457edf06be5e6f50e2a1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7013c8a1112fd732970c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cb20784432bf829f034a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-455b81ba0a43b65fee5e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fff9b1dbae97aa1a6de3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f6544d71ba00453f165d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eb5bb2f36c9528ef0229: Exact variant no longer appears in the retailer catalogue
+- product / candidate-285cf9c441162d1806f0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c121defe66bb8b6ca2d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9b1127d43f9e6d0d7e94: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a23b309363a9214ad260: Exact variant no longer appears in the retailer catalogue
+- product / candidate-56ae3932e6c12f9cdd01: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5850025cc6235d6a7d63: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5112bdd9bdc4c24eca76: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8c5506c216ac69a910a3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-094075f1acb8144514f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c8295461fc6dbc99c0ce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c473b4c4484c6819596: Exact variant no longer appears in the retailer catalogue
+- product / candidate-847e887b08fc6ccfb14a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b15bcba53f598d75f6b5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0314b65e2bb09cb9c2f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a7c9c2eaf2a55b5d2de3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d53a9499b7eebdf74324: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c5a7696abbfe29d519dd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-609bb237b38e7fed6aae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d44a2b14456ea8980695: Exact variant no longer appears in the retailer catalogue
+- product / candidate-feaa60f0d9817a2c953c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-67f0768356a5b56edc7c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fed2347cb7d5cc3821ad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d516a684518587258b22: Exact variant no longer appears in the retailer catalogue
+- product / candidate-18f79ef24dca8a5fd0c5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aeb440402d24f83b510f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9a09792ff6f42278465d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8ffbe1653bd2a5f2b2fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7e14a43cf6cef656b4a8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-544938d8d23b9139a55f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-559dd9aa0cdb5842fbaa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-873b1895530a1827bc1d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-277d1ba85c9ace3b5b86: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f15218729d47e1870ec: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f9c9af961bcde8a8e8ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2b4084dc980c1544df8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a795f9102699dbe3f422: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cafb2e28b34a91668b42: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b08e5a7613611bc5d840: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c70fe4506d49586fdf9d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4afc55882cd439197d67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d73a5fba522c1579e04b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4f90d26f003904b77e0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cdc4640fe5056c3142db: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cb8bbee0e03770b7adfd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c86ad60a61f3dc71e983: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ac32c8f339a1bca68c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-322eb987e541a0b9d1a5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-25cb88e9a6ce68059414: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e40ff063bfd7fc392ef8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eb606692d45adee7b212: Exact variant no longer appears in the retailer catalogue
+- product / candidate-911ef9a347ea3ba5995f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4f0322d9c6c89c5ef9f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c096c3c8cf283ac568f9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-385450f9ced66b06baa7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6ae8ffe9900858d8be68: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6d33a3a928d7b1c95fa5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0dd495115267c64e093b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-74ec4fe7a201b4e3c03e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-07aeef917bc1cee8d4ed: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3e0f18c81a0e8b15a9d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b69d035a51ca91ba04f0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f1167a51622919adf01b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-62e42b5deecc9ea05a9a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-36a42be3297f7148bab0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-47fdc254a0d4f87b35ff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-43d693e573f00aa59933: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3a460a82e3a4335e1fb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0710e629824625f1734a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6458ca28f50a3e457e4b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f36d89a1b5ed2485d20e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2758125b29e525b7c136: Exact variant no longer appears in the retailer catalogue
+- product / candidate-96add66a9bcbe32fb718: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3b619bedd31075829bd7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-711ee805a29fa36fc162: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7c4db6d75869826d2f05: Exact variant no longer appears in the retailer catalogue
+- product / candidate-20f9710a6411a32590c2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cc9f76f1ea93663ed010: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ed80e4b09fcd9a638759: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b4a7308652148deb82cb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c34a297b5f9f5ce079f7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f6fae6f0ecb1632dbf8a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-acda275e7c8f08ea2d33: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6e89c17394637df78308: Exact variant no longer appears in the retailer catalogue
+- product / candidate-359fbc62799876b5bc2a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1a0893e3cb05d4d312d1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-52834db148799ed6d6af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-83f9f4aca13beb63fe06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2161550a9bc6adc8add7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7662914638ba37410e69: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7a280498defe167d9605: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b9909c08236356dc6cbc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-99630fb3659a5b1dc382: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a3e7debf3ff7c702e460: Exact variant no longer appears in the retailer catalogue
+- product / candidate-489d7d6dd39541bc24f8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7ec2a57c6322a497fdac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e7119b22fa0cfb527ffa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4cbd7f1d5b8577c460ed: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e9c67139043bc366cb84: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5b3f5dc6ca426af1e057: Exact variant no longer appears in the retailer catalogue
+- product / candidate-069fca49b1ad075e97ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7a1ee2c386259d31b5fc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-14d1b76deee0d0ca44ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-67344d888950cc3f579c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f3eb9dc4627f85864e1f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1eda905346b0829b9ea1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-27bd0d6427eb4cf7b753: Exact variant no longer appears in the retailer catalogue
+- product / candidate-53c5798e4b7d8a18d8bc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1c4d5c88d5f6880bfb41: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eacc36e79e7b16546372: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cde810d6b99a3408118e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-89dfd128bb7544965f9a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ad94ca954c153f2b4a58: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f75a586fdd6cb06bdebe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4f5d560f4f6ab1aa7826: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4a137a32f263c108baf5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a6d6ef1fc3afe3f7b033: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0967b49d87cd23ccd7f6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f8ac81382b550f4ede25: Exact variant no longer appears in the retailer catalogue
+- product / candidate-107047f7b3336db02cfd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15f2e1fca6815d7e1f89: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd4b85523d9dc7a2eb0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b14d2c8a48df24832aba: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d7033a1a6ff8313002e4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9783565ade1ef9ae1d1d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b55572fb14fa8a25006f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bfad0f81160842e1d5d8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0781cdd33a6d0f15c384: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd942ee7fa9d6c2c6a51: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6da297b347c6785bdb38: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f972caf40b411beb971: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2f68d8afe7da37c1e70e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb693e9baad906a07771: Exact variant no longer appears in the retailer catalogue
+- product / candidate-21e6e5e6c559eee514e1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6df852ed71ceb8e8b8d5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cc97856e87fdf5d7d615: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9cd9cbc9d7413ab785a2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cd093f66e89e275b7ae4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-697b9a83c4681a902e9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f3e2ff0cd237f1c37535: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2b2c53a8e71cad446f51: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f6a4b971e919b653e828: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0e6c947489a1d9d2534: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b6417f934d9a00708cd9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d7351db837e1ec6c6e94: Exact variant no longer appears in the retailer catalogue
+- product / candidate-179331da4ee99a7081d5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-44e8f55a2248b265409b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b027e460e22dce81ca88: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1de5e6669b34394f1e6d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e8fe697c2d438e715f8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-77599d1e358eef4a82fd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f6ecc09375fd75b8a30: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2658597eb7d84e33773e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dd38f302bcd95e6f6865: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ffee3d0a4ed22f8c642c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19427f79c9d090c440e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1fa6a476ac7978ea48d6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6752733c150a0541d728: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ceb6baa2acd4a3e2524: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7301eb2a29ae871804d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cc4ce5aaaa2fa55f2aa9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c51be5765cd5efcca68f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b0caf839e48c1aea3974: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f8568d2e8d1863c7a8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-50adae373660aac456d0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-05b3c96a9c7dc36eaa31: Exact variant no longer appears in the retailer catalogue
+- product / candidate-14be1911e5edba316ac3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-07abb18f3bcf5d9385bb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75e8ffdc9fed71839ece: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c5e0ad59f828104af123: Exact variant no longer appears in the retailer catalogue
+- product / candidate-59a283b2d5ed98e858bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5b0776952068040690f0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4f4b99791b82ef38adb2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f4f3882d0423450369ea: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a6b30cee48d3ec1a2026: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6558a2cc0b565971917e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a9b6e39ae1f15cf8286: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f0f5cd682007d3f9a3e0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-120135104ce17a9e1f6e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4c66d504e836ec1d0ec9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a62421fbe97b4be659e6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a6f386f7b97bb0e373bb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-843e11c0bd2e4d73cd74: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dd7579f6f6b6430f4c98: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3a4a4285020e7be2bdad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f144e351a314e6955fc5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-70ba076742ea2c5cc57a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9b8fc4d06b143942e7cf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0772661a14149d854a0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2f35d4a1f1422706c184: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3c1d48e97e8064c8311: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1ebeead6ff6627160c0e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c79e2703c4f90cc1bfe8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a458b8be3d5b2927388: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e82778ce4316aa388c23: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d7b5f277a8e6e719680e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ac2ebebd16dcbb5a71d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7c0ff346e7b395f7cd92: Exact variant no longer appears in the retailer catalogue
+- product / candidate-30f037c1353e91d4ea75: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c6a23f51a81143a2aee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f2b01af432461d189495: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4517a142850ca5972b0d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7797601c19946dbae635: Exact variant no longer appears in the retailer catalogue
+- product / candidate-df1ffed9c3d20046695d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c29a01d4d3840942c95e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-92cbabd99389bf991f3d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e4bfb01d6d1ad2a634f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-96227cb87a12b5b4978a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8fa2aa892b7b50b470c9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-90b40cb42aeb03c6d00c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5c79937d59283dd94d8a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-813e6ca1ca71b446f77b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a138086029cf5a788c1e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ede54b634bcd235b9806: Exact variant no longer appears in the retailer catalogue
+- product / candidate-43f7bcf850334cc06359: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cfcfb5d46ad7bbd172b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-065688f16e0fd4aead39: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b8a228fb7118e38a6f9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19c4ce5a7759f546a687: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51daf79ac972f1366e09: Exact variant no longer appears in the retailer catalogue
+- product / candidate-625ecba05bf0ca9c8e06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2ae8a5c8c558d2bff066: Exact variant no longer appears in the retailer catalogue
+- product / candidate-418a66e7ea763694b7f1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eba4874d5e539db9a96f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-67a5c05d056ff00ea705: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eeb14c55ae75dbee0fea: Exact variant no longer appears in the retailer catalogue
+- product / candidate-634bbba768f7e40ac841: Exact variant no longer appears in the retailer catalogue
+- product / candidate-939f51e4dbc500ea9854: Exact variant no longer appears in the retailer catalogue
+- product / candidate-066e31f333b4a96ca3e7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0b00312b462373becd4b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6b1ad8e81d8cf3b39ee6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-50ce4d64f4ba58c31216: Exact variant no longer appears in the retailer catalogue
+- product / candidate-039b81a7344d58e96d74: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d43d249e95374cc8669e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c8b92d0832f33225d601: Exact variant no longer appears in the retailer catalogue
+- product / candidate-36e837bb7233a98dfa21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8817c15f112daa57e839: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2776a644fd3db5d9edbb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ea69ae33c4e690209629: Exact variant no longer appears in the retailer catalogue
+- product / candidate-010b22c86559d54773f5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-164a4d5adc3e1996ff83: Exact variant no longer appears in the retailer catalogue
+- product / candidate-24d278988d8b635bf2ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e898dde814c59f88d89d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0e03fde98cec75c6c767: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4cc8ddd1ef4a8338aa84: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33ea110aa08b8f0fc842: Exact variant no longer appears in the retailer catalogue
+- product / candidate-782e5454c274593fadb8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7df8096b5053dea27b99: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dff7700358e50ed5f7f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cc152cead06ee6dcd66a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c75d3b16252529538a3f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e8e14548f8cc93a9a377: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e76608d8bdd5646861eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c3b4cb4d4308a3a8b50f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cba78416978b63ebd1ce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c7f903a2615b2dd25e32: Exact variant no longer appears in the retailer catalogue
+- product / candidate-886019186dc3f8cc6404: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e9aa1b343b748cfa2013: Exact variant no longer appears in the retailer catalogue
+- product / candidate-233d562284ed73e56123: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b08748b0be1216989ac7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-24c06cd41c12dc58d695: Exact variant no longer appears in the retailer catalogue
+- product / candidate-abbb4bb5c5cf6dc0a652: Exact variant no longer appears in the retailer catalogue
+- product / candidate-715ef653a2e40eedb8fb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5fe4a535d70405c82360: Exact variant no longer appears in the retailer catalogue
+- product / candidate-12214312ca64be4e35ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1f742d301da1615e4f29: Exact variant no longer appears in the retailer catalogue
+- product / candidate-18a44ee6196e63ef2f40: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b2d654406995ad8aae69: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b53665123bd6989ca505: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6e89f8797f3bf8577f95: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bb31d5d80ceaebd77450: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ce76bdaf04b3375c404a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-20950912f060392f5c11: Exact variant no longer appears in the retailer catalogue
+- product / candidate-45bf2fe04e566d1c3f3d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3bb57b8a41d0d4894f6b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f18e4e29fc7acdd7fb1a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dd9431ef487c8fe4a6d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-633ae2094c32b348402c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c18ff99d24e560aeabf6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7fbfd588d25a4b1999f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4c59da97deb5259e0e50: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c92c1f13681cec007b8f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b5364351c470f4cda22c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-77fffb384192a56cf630: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3b07abebb7ca83d677f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-26e9e5dd8b7751f34422: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cf0d7ee175e631c5b03a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c898203f601fc1aa3574: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6f05902ed04431a23ae4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a852f4ede7f6bb41b0c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d77b7452012dc2e92554: Exact variant no longer appears in the retailer catalogue
+- product / candidate-628f1fb6a4229ac58658: Exact variant no longer appears in the retailer catalogue
+- product / candidate-18a2cbe1a0b2f78f8fae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b9b46aa32298215131ce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-98c7895b75bcf24577c2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-626b81c3a992b228b119: Exact variant no longer appears in the retailer catalogue
+- product / candidate-02c693c882f41e22f8e3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-11756dc7ee7c7205c93f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-11196999fdf7998d46c8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6b68715aaea225b3eef1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-39369cb8c2e6562dcc47: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3b1eca4f88f6c11b9608: Exact variant no longer appears in the retailer catalogue
+- product / candidate-879929f3021fe47a6172: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d8824f7f2d34fdd7fd07: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c7e7e468efbad86c14b8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e4214941780aca279675: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5f3db12944a886a1cd56: Exact variant no longer appears in the retailer catalogue
+- product / candidate-64f8a683d5253d97ff96: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7b78e6ac0358d0264905: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c9620f1345bc902906a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2df4e079224b44569b8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d6e3e56266326ce4fcf6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f7d9b26dca0c940e7bae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4067237d8f48c4254c73: Exact variant no longer appears in the retailer catalogue
+- product / candidate-faea89add842ef3b577e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b797f22563ab4ba25802: Exact variant no longer appears in the retailer catalogue
+- product / candidate-547990c8fca48c206387: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3c47842d687d22d3bbd5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f315997482757ca2903: Exact variant no longer appears in the retailer catalogue
+- product / candidate-edff6e3653f4c1f37cca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c00225c0a97c57c499f6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6eb6bd22bfdf3be4ce52: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d6e3adf0c0c2bdff42f8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-43cbdcd899f7df852ae1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e23b89b15c85d7a661b4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e3377de6c7dde0db817b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b62583bfd84235ef8fa8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2ceec8c934b7da729b5b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-48e342bf4bc6815cc9af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f18decafec5c2434b71f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7b53ca5372c7ef65030: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c3c1d0f1cddf700706f6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-37751cb1a60223e38a29: Exact variant no longer appears in the retailer catalogue
+- product / candidate-124f2df35a36679eee46: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4a9158c4e4f7ba9862c3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-720a758158562be1cabf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f64dbc567fed5446ee2e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-78cd371b5db68be742a0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bbdbc2a8af1f8acfdf5e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c9f4851f7f1f238d9a3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-de686de0be57f758de81: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f9266673cb99af412242: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8638e15d78281790ed67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-466268708103b71ff0dd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-741aa7e48c5c05614fa6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6ecbb732efb7677f9ad5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8dcd0c40725b06e64303: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ab83d6c2563cc02ff978: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a16f0637b5a1899c134a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb9ef1e81bcc42e4560e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0a34db9f310e8628a4ce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fee4f567a15defc1813f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f8c99c55b7442b663785: Exact variant no longer appears in the retailer catalogue
+- product / candidate-03f02ad23fab7948425f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d188696196ad1bdab88e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-637ba245a6b98816a488: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51bbcadc45c5fea05766: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7a88612feb488f52de56: Exact variant no longer appears in the retailer catalogue
+- product / candidate-887b4ff2869e55e0ce4a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-45b07e36fea51d62ea26: Exact variant no longer appears in the retailer catalogue
+- product / candidate-693b21e7df52819d1d3f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e528326e11b8d53bbc16: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6eb84abe1d37e64bb7cb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-149067f447b8c094ff55: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c82908f3651a9895d91f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-234447e2d509a37ad2f0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-38b901b21575779d3ed3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8c03bef48cdaadfa1ffd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6136e9daa5d310ddcfaf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c583e05d41cf67ece0c4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0c535579430c3658e24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8db110280306796f7ac3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2057288d79d233c4b78d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c554b4429a190e58c282: Exact variant no longer appears in the retailer catalogue
+- product / candidate-40d641a658f8024adcda: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f56470a437346b858878: Exact variant no longer appears in the retailer catalogue
+- product / candidate-73ce05baa6b91c774941: Exact variant no longer appears in the retailer catalogue
+- product / candidate-44907e21521fd94103cd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5639dc596c0d6871029a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-22e3551fdda752d6d27f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-05eed2c8e2288025c0ba: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c1a2bc0ac1d10b927773: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e9faf7ffc752c8f0c9f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a918d989fa7c4dee4a7a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c247984fcee23ba9f449: Exact variant no longer appears in the retailer catalogue
+- product / candidate-49620738acee9caaae90: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ef9a6842af3b5b0b58c5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4b4809fb94d371659164: Exact variant no longer appears in the retailer catalogue
+- product / candidate-229ac778aa02cad58eee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd5de5e21ab4a4535457: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9496948250cfe9dee907: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e0641a0aa10ce82f9853: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f99d9459226a9d13807f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b05d3d988485687f375b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d72dec379d07daf0f43f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e94249fb6a0870e8b717: Exact variant no longer appears in the retailer catalogue
+- product / candidate-be5355a59145d38c6ec4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fdd0759d2ecc2d775ebe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5cd121558a789828079a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-39d44e2f863573cb0a97: Exact variant no longer appears in the retailer catalogue
+- product / candidate-89f8f69061c99de29079: Exact variant no longer appears in the retailer catalogue
+- product / candidate-368fbafbd81bd9d8314b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e3be4fbf4c5d358d81f9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2cde67224ad6604c1f24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a81684e558eb9728452e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e32aaa3c99b6d91c4e60: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dccaaaee0fcaab66b5c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-14a60c49c4fc2e10324e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-59f026072ae5eb348319: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1012f74dd12ada38b12a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8557e64c9aca5753a72d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f924d6e9a72bdf68972: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a4e5f5e99d1cfa775c0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b8c0129f369ad8bc4130: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4178271ff80794aef3af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b1111c9f8c91108586e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-441c21dce4e07d86a6b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-95a755b368760fa27d98: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ef9634541d18f44f520f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bb48fdbe76463f37cc0b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-adee63362f243b8feaeb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bbc429444f42ae6a7a18: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b9b83182311f0263f1f7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ffee6a18a3b50463e93b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-418836a04164f5f43b7d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-793d64710109c2f26cab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-05537dbd9a9d615de53f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4bd9b5ef106ba33a608f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-afe998fdd9e45ad32a39: Exact variant no longer appears in the retailer catalogue
+- product / candidate-912ce4ec221579d8c90d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bf600fa187883e341ffd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ca8733823988818b270a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-05498f494fd4bda8b30a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5d0fac541082f1f5c2d1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-82c079dbf9970decfb43: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8e9e826975fe75e532fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c276c505d38d71e56276: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6faa76bc2e6d322e252b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a7ecbbca0a98f40f32b4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5d6d3e1da98010fc9160: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2241cb286d1190660a13: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4679f50e66412596f819: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f8469a36da75ce51275: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6bc3d4a8889889c69470: Exact variant no longer appears in the retailer catalogue
+- product / candidate-70df7dd479e6ceeb362f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6654948f1c06fe5c09ff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b58f9946b1a3165b0209: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d831490279d1a4e288c8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ae1166f5d9d77337856: Exact variant no longer appears in the retailer catalogue
+- product / candidate-25299b3ba0ea39261774: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ac1d2d4bf13ef5f71788: Exact variant no longer appears in the retailer catalogue
+- product / candidate-86256411218c2448d24d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5fbea80ff99c41f36c2b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ba2a7a59ea414c846be: Exact variant no longer appears in the retailer catalogue
+- product / candidate-467fa1867aacf57cda8e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-121faf98b9a9d87433f2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4818398afbc19a21dbec: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e4a28c9cc3596f18b844: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ed7eea03014ff0da3c40: Exact variant no longer appears in the retailer catalogue
+- product / candidate-87b4d2a610866c1c8b99: Exact variant no longer appears in the retailer catalogue
+- product / candidate-567ebe6480c0cccb0dd0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f28e53cbe88590a92d8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9006a1684bec304b17ad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c8cb564d49eed38b150f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a3c772d6394f79a22056: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bd5fdae2056622f60a45: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6b7864d33f4236491d7f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a66e599377b09b4a2ee5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0d530bf48016a7f73f55: Exact variant no longer appears in the retailer catalogue
+- product / candidate-283e7e3b4b0d1c14f613: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5c518b27988d93493c5c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b50a0af0a7f7d2ce7aee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f02201cad3fb1f98ffe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c36cfdd523240a224b98: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d73c9191e088393f2ca3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7a7e46730b87d743e3a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ce6de31ccd3f6c0c03ea: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6fa31724e434aecc3229: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51eb6db9c55b2dc4f2f3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-956fc150aec5828938ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dd3b0b786089b4dedc9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-84a7b90ef92e35459328: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8cc5780397e6194f964d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1670b018f751a79bfe0e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6260ff2afcbc4382944b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-53720f1589778bd3bc60: Exact variant no longer appears in the retailer catalogue
+- product / candidate-16df6171c77428b1f096: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ac43163de1cce0735af2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bb6a7cb0f4d3ff7c7bab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7ac9a88d3e05bc81499e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6ae12419d8ecf31fb29e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d82cf457592e67aff235: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1d8c33c70bc48033b465: Exact variant no longer appears in the retailer catalogue
+- product / candidate-29465c24d6459b9100f3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e6e116f1d0b7e7a7ac6a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f38b7dc2c3b6aeaee24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-68f3780b4897b4d23dd3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5a930fbf78ede20c0fbb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7fbcaa022313b0c1220: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0a062dc2f096a7da33ec: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9ade685298b7e464f7c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-157c229d45d473d8ac24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5ac06e6be190253b0905: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33a6f6e0e6a8ecd3a5e3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e1e597018c8acc4b7fd5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-787ed96f33391bab13a2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-640ab2b858c2a4c42f72: Exact variant no longer appears in the retailer catalogue
+- product / candidate-105d70f3959e19665fe6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5e3ca2bc4d8a9468be61: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5b9b57aaa0759735aa9c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-13ac56d1b792ea22c782: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5e101d4681afdf3ef8ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-db71f58ea5041415b6cb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-764990121e263972e619: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f2a87a7b2e5e9f4f462: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e888bf7d9566e4533f76: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a17749049682a90a45b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-653a5c8def3f2b4b39b2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cdabaf832dc76beb62a9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-67e82503def0e231d0ab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4fd12544c30b824affcd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b5ad76c711f3e059ce82: Exact variant no longer appears in the retailer catalogue
+- product / candidate-899734639c64e3bf5f35: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7fa36aca0b04bdff9dd4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-388215eb7cf40ddbfcc6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bbad162a087663b27bce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-017a9d13be14dd19f71d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a13e172fb1d73532741b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8cbbad5bac36621d97ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9448c9601e8cdf660501: Exact variant no longer appears in the retailer catalogue
+- product / candidate-21464022eb2c2c8a4414: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f45976ed764a868b5d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-063a5d6297ce65f5fb98: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3dad8260378f99c710a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-838e9e8f0a25620944cb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e8d0b21586ac88a4c188: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1f6a962d8ffda2c68ef8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-095de35a78ded5824648: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3083605c590201c616c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6e4dde85710a1ee0d4ce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4bec22011aeb98555327: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9755ca5b683f3a25e857: Exact variant no longer appears in the retailer catalogue
+- product / candidate-06ab348fbaedd018beff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3401340be2d3ba7d66d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7d42f574a29e0d748e16: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a14124b76b2cd7bf29a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-277114b7718fe9b4a24c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f52f68a887f9dce22c3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75bcf2f1fd90386437fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9107ed53502bc0c4fc82: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5c3887b4f6138343d8ef: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f35efec8791a4a5d6211: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ab49abfbe20783379d1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4397c01bba9de2b9a03f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e18f044c4cb011fddd11: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f9a4c7d997cd58b854e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a8a5b23c42a4a9209153: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a2ddf4db4309f59b9ff5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2b54f8d11a0f4353af10: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9695592dda72f5647b75: Exact variant no longer appears in the retailer catalogue
+- product / candidate-565340a6b022c9f4171c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2befb4ddd33d8f21386c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b07c1d72c2e9cf090c59: Exact variant no longer appears in the retailer catalogue
+- product / candidate-730fb5d294555e517c97: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3de5fa6b01d16bdfecc3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-25905633ba1db21b2a1c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-91e56321b96241ad5cbf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1246ffd11d5bc4e82960: Exact variant no longer appears in the retailer catalogue
+- product / candidate-45936282e6477a11bb44: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9fc6e8ef1a96a6e75413: Exact variant no longer appears in the retailer catalogue
+- product / candidate-de5c3287c082a7effcfa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-01cbe8df0cdbc7fff97b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6d751529b400ab4e46fd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-368b22e1d081793d811a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b30d694848a2b4954a9a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ac2a80d920d504973684: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c34f20a07e6784015b32: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8e819f99bcafb12e850f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3aa94a074958b42a220b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-68b0720c531d82926bc1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7bf3c367ace24c590369: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3d3c02108ccfc747b86e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-31c124c47fa615949b1e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8d084bfa8d21c90889dd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2b1006b24baea549d05c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-135f4ae2c9cb536ec9ea: Exact variant no longer appears in the retailer catalogue
+- product / candidate-be0d80b1421e6f87b2ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-27440112e682ceb37238: Exact variant no longer appears in the retailer catalogue
+- product / candidate-705e21b9b742822d6c24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-343c4c42dd68f4b4a436: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33704055b51cd93953db: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ec60c173eadfeb87de1b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-24b1be53e47936f6852b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ab042a7764facade1415: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5250205e66e873f82d6d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-42760db925d4ba8b40c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-df5b061c87c40914ebcc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7f5aa7a1e005f3cde15: Exact variant no longer appears in the retailer catalogue
+- product / candidate-456f82c088310acdcb9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dd4c929916e86bc82afb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-98685e620fc71ed24e32: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b6042c430475f8977642: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7421ac608d763aff68e5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-447bee64ff6e2cc88d15: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e59f91f7709b8245af1c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f4c7bdd3812e46b5de9a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7034134f44bdff6078b1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-327beae452605f46e4f5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0fc8637d619610cfa7ff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0c43c0cd504790f30b06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-03533638d1c0079b830a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dbef8cdf6dc2b8cc4159: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4c100f983f35100544bd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f75a2a7e3cf906c4a0a1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-09329cd970d4bbeb3bc0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d598a2c558bf7a62696f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-318e9032940f43d9beca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15939448b685bd2990c9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ff801b71a959bcd2686a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33985e48491d8d5f3a0b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-00bfab44c128dd60ba0d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-db72d3d5c102fdde2178: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e67f91f59ec3381d01e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5f8cda4a31a76f63e7c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-199b00f712a54e48641a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1067b1e738cbe5bda0b6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-72d97c6416bf88bbc866: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7208aa8f8d28229ff9f7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33d1965560e68fc528f2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7ec7eba575d49c6be8c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-781ad19f16072e0081e6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4ddaf42da372bf2f4854: Exact variant no longer appears in the retailer catalogue
+- product / candidate-48092995874882cbe66c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19bae3e5f0c883713bd4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3e0000327c97bc5c6a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0ef0a291c4c355204808: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ed6157a4074baac59b9e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c363f3bef6c734a38b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9c79ed84185c99823c63: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8e672a540fb65b2e5ed8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e6d58a143fdfda5852d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51fcc84aed7a757020a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-81e7d281ff3b81bfe608: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dfa04669bddaac1a8a1b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ccf25a41181a8003e2c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3727dfa804dbe3c81efa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-432255f221f85b9817ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e2217b1a998441abf2e5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c33eea347b806e6f39d0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9439cd15dba2be725ed5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3a24bff6a956cd1e63e8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f3acb10c2d3c218ed414: Exact variant no longer appears in the retailer catalogue
+- product / candidate-37c8651f9f65b2576738: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d71b81c18a60cbc0ad14: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9a260629a7f753179bab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-331e814eac0088259325: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b2249f7adba9aad67b8e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-39d24ea8dff834d8fefd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d5d1c09fb9a04cbd46e9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d6be3181314dbbf3a63d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c1b7739f7f8394e14bb2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a4b58aa72106f2970686: Exact variant no longer appears in the retailer catalogue
+- product / candidate-794e29d53308240f1a27: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bb1f9ae190dcc5ee50de: Exact variant no longer appears in the retailer catalogue
+- product / candidate-daac202b4ce130779795: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d5f20e6b7b229105934e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a8a0b1e67e1d479094c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-78b866fb4d225c516bcc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e917c8dc97c37de6c900: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eea4b469b6502a541b78: Exact variant no longer appears in the retailer catalogue
+- product / candidate-079d93edf941c386522b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8be835bb1adcfbd176ad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ce9f580de22acad0f285: Exact variant no longer appears in the retailer catalogue
+- product / candidate-24586bd57fb6731a242e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ae11bc21403edfe33ad: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7e83d68357a4dcac0afb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e356cb80fc7c15e1555a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cd27ee948ce1972a1389: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a75c1ef03727de776bf3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-71ce5f82a40621a92fbd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-591f416bcab8c8c3d60b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4aae21e3fa9f0328ab5a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-db60559f5ebcb83fce6e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-183e0a9075870260ac0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dc7381185328818a417e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19a812cf2a6a1d69e177: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2e1bdb43fd5c39dcf1f8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-015968c2c5788412bd24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-82ff0bd447f0cf8a1acc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7fb918e7515b9937190: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6645c4c2e5eecfe5e2c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f6245b07b68d04e894e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b63fbd53883a132cc5cc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-473ad7f49d18413f5a67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d749cbb62e53268071b4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7f14e17ed1cd2a1be160: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17cc1ba32a806832563c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75dc20b7d36238e6c584: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ea96996dc5a13c3ca169: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f976a543932b6d28af94: Exact variant no longer appears in the retailer catalogue
+- product / candidate-47599143441b81e4fb5e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aed9362a88dca16679ab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-052dfa6ebbf2151e0745: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c8ac75b8c76d72c2049d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d8915c7bbeb4b7572cfe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3aa4f0eceb3212bddbb1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-04686d96bf22ff8d32f3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-59011e6a7158b8516f67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fed831cd991cf3746965: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ec9e75c44c40ee396316: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b1cd27150c5b036cbb81: Exact variant no longer appears in the retailer catalogue
+- product / candidate-642d0cbc486f9b6b3768: Exact variant no longer appears in the retailer catalogue
+- product / candidate-53bf382cbe1f4e568954: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1fd8335ae4838b409ae8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-88a83e18015f8808fbd9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-05d052f26665323f0c49: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0d59b34a86b5ecac581: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4344c3d6713611ae472e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-602088321bc66f17277d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dbd70365456b241a848f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c893a5125daac94e54ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c00a9ef6134ffffe9fa4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-80c1971a7c2522138dc0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-681a5626b81efc83fac5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0448e22c0f355ba95b22: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f474f56e22a14213714: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b8d78e5b7c1af10e97e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-43ff78d0c9b84bd7e3b8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-760c23a6860dc3833ada: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e1367b78235c51d9651c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-591c1a72c1942ead5465: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9780c18f21171c33861e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-46fd76572215359cc2e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d921ff869c7d1c34aef8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a516ad717536f4fc6534: Exact variant no longer appears in the retailer catalogue
+- product / candidate-99a5b9b3a89f39701ade: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1041af276f3f0cf1ecb2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c66dacb44fca4c60e3d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5596cd3fb0962c35d57c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a246d190acd8419a383a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8f47e66c6d8c6c51d46a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a7ae3e884b50d57dd73a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c2e3d668ccbad6a8b644: Exact variant no longer appears in the retailer catalogue
+- product / candidate-406ab3902c6507223558: Exact variant no longer appears in the retailer catalogue
+- product / candidate-25b33e3b1f5e3cf7fa8c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a37c62f87dde9e16aff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cf6ce24474d486ae110d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a85a28ea900e9904771: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6686c754a49bbf394f0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cc24d76c660fb3aae8cf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-85b876da826509e3b278: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b6749769a4c45dad058f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-49f6a106c18465be3d10: Exact variant no longer appears in the retailer catalogue
+- product / candidate-947005c62c773f0b8714: Exact variant no longer appears in the retailer catalogue
+- product / candidate-28b6bcc712dbeee7f875: Exact variant no longer appears in the retailer catalogue
+- product / candidate-84556890ab110d409f4c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-785f37f96e95e5fac52b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0cbfe42180674ea92ae3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a7af30c43311a1714e7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a87ffeace8846dfdbd7f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8bc95b95a20fdc2883b0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cd36143fe1e7daa90700: Exact variant no longer appears in the retailer catalogue
+- product / candidate-732fb025b53047e0fe4b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb0868cd5d27ea3e3353: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d32782e5914cc853498f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-86b9b6fbea8a1180dc93: Exact variant no longer appears in the retailer catalogue
+- product / candidate-54c2efdb5a054f192d54: Exact variant no longer appears in the retailer catalogue
+- product / candidate-18489873231cffa33704: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d003a5c0aa2060c08ea7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d2c83cc901fa4fe1fe9c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5e836a0c09ed3fd08168: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c34df37210e6f8c5bbd2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1b5fce19ccf42caa2943: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4bbfe9e7943c871243af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a398cc9f5380e51ec1e0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-87d6820194eaa95008c4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7ff8b6f56f89bc4e8603: Exact variant no longer appears in the retailer catalogue
+- product / candidate-741a8a3b65d27d3da069: Exact variant no longer appears in the retailer catalogue
+- product / candidate-084b3a93e5abcf3b2ae4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e2de7b45fb5dccd514ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d72b9f4065038f2fdca2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15f302367bb08d14911a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5056344667c245870d63: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d26070170d1d5c8d03e1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fe89604a95a4fc4e92cd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-544a7fdf15505f687a07: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15259e473af29f32e278: Exact variant no longer appears in the retailer catalogue
+- product / candidate-488a848553258e4891e7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ae6c8760b958de526b14: Exact variant no longer appears in the retailer catalogue
+- product / candidate-511aeb050260ab1ac466: Exact variant no longer appears in the retailer catalogue
+- product / candidate-080d31841d6ccf783c4a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6680d6322ece533ad5c6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f804b6f3a11381bb43f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-00625c22bda62e9c4b69: Exact variant no longer appears in the retailer catalogue
+- product / candidate-89a621ff9754088ae754: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19a5570c2b8b254a6e89: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8081bbf096ee1345b6c8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-035d7a5ea4bdd78a85ab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33c566c17188cb56ec3b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3e1e6d04fcd7e4e61440: Exact variant no longer appears in the retailer catalogue
+- product / candidate-743f012bf2df565b47bd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-555cd95532a52a45bb5b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9cbadff2259db0ccffdf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-969fa786609e1e3f9713: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7c24b5aec6d805c93b29: Exact variant no longer appears in the retailer catalogue
+- product / candidate-43354fe8c3f841218d73: Exact variant no longer appears in the retailer catalogue
+- product / candidate-881b54bb66431c2709bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a64f13187e94724ad56b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c185fb1c9e2af629c5c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-24ad0f4d1e83f0a7634d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-735ebc3de69f6f297e47: Exact variant no longer appears in the retailer catalogue
+- product / candidate-39d881d2827c2943dee0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0e37f813bddcc2d96fa6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0ca9930b0bbb9d6cbe27: Exact variant no longer appears in the retailer catalogue
+- product / candidate-deda2604bc00250dace3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-16b66aa44da4b7ec436c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8b5fbab4130c3b922356: Exact variant no longer appears in the retailer catalogue
+- product / candidate-94efe3564afd81cce651: Exact variant no longer appears in the retailer catalogue
+- product / candidate-139a6d26afaf33468717: Exact variant no longer appears in the retailer catalogue
+- product / candidate-47b9408991301c8b916d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb0f0d3fb6c794f96abe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e893d5254d9080c29dde: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5ba402b677020d4aa5d3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2ff81cfb4f7ea4288108: Exact variant no longer appears in the retailer catalogue
+- product / candidate-919cc3f915b37f4e2eda: Exact variant no longer appears in the retailer catalogue
+- product / candidate-412540b3ebf29101b57e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0ba6b2632261e6b7226: Exact variant no longer appears in the retailer catalogue
+- product / candidate-105ee3b6f23064327d21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-84768844edd9e1f3ec05: Exact variant no longer appears in the retailer catalogue
+- product / candidate-403944b7421bda2651eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2330123bd738aad96735: Exact variant no longer appears in the retailer catalogue
+- product / candidate-37254e720e688fcdf78f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a9d536f45ccff702b08: Exact variant no longer appears in the retailer catalogue
+- product / candidate-99bbade0391c5ab63cbd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d68951e852f9fcaf0a6d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17246fc51b6febe11a5c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a0f0f4282d186cca2285: Exact variant no longer appears in the retailer catalogue
+- product / candidate-965ae9cb90c0bdd08475: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d0a96813e7f62573e764: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c524b27bb7a6a88e345: Exact variant no longer appears in the retailer catalogue
+- product / candidate-74767511ca4a0e5ed166: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8184734cdabec77d18c4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d22c211dcfec4ba79784: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cae3816a967c304a2e50: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5a2b2c5d97ee938c4dfa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-059c42eea0fa6140714b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-68c35861744b0372e55b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2bae52d28e3bf058e14d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-34276614254e9cda45ba: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4e1976b4add32082fd20: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e045991075dfd4bbf04: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f3d12ba6b0964cd9fd31: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33b15c27d4798e44e4ff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-181f2ef3fb36c696a3ac: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5c255d2f04fdb359d2e7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33e86a7cc05795db73ba: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3e54ad031a3d988f35f9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-abb1abdeb9e7ffa22857: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e752cebeeba701396d21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b250bf833adf29e8532f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9fe407328ce857326166: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2e9f0ea137c821a8ffff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aecc09df26c49a966c4c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-944032611e6e6c875587: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0f83e34ac9b3f75837e6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-216260212a9071ec886f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9987035eb6fe6e7368e5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7fe052b1ee9d8a63710: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75a7b6c3403b48f518a1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-de7d4cbe28aebb9d2871: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f041bcc6815cd3b1c368: Exact variant no longer appears in the retailer catalogue
+- product / candidate-239d7d6f209db9b4ea50: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b551db4a42033e59ff84: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17e335f7ddaed5cfe804: Exact variant no longer appears in the retailer catalogue
+- product / candidate-45d28f987fb224d01bf2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-56096874995ea3753e19: Exact variant no longer appears in the retailer catalogue
+- product / candidate-66722e964523c62ccb5c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d9faf010a2c0b360b20d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-50c3ead153b80ea0a705: Exact variant no longer appears in the retailer catalogue
+- product / candidate-08c94c7ee702cd8bc6d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0475b677fc242891defb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-572afaeec391b64c4199: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d955d22dd8464d523f9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9dfd6aea98255e7d2ea5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c802347c2db5e65f114d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-38dfafa0ece236df0218: Exact variant no longer appears in the retailer catalogue
+- product / candidate-da12d030ebe6ec7b95c6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0bd5c2efe347bedf82fc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3dcce266d04714330033: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51e5b497e29c97658db6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f0ba15ccfbaf9158013f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17ac1455d1c0680e137f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0b2b9c1aae464d277143: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1a128ad60394d783247f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-06c5107890ac7932f818: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d8475614e4df629080c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9c64ad157146e425afb0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c170c982817ff1e8e06f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ebfb71cc7a518655305c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d462d0117930fb0ac0e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7ae4f6992fc6a60316e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e81380e20a597d07fcce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5bf60b0ad95c6c6d309a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-421750048d2ee9c5de62: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd608bdbbee36c3ec54c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fcc82292725dc0298e29: Exact variant no longer appears in the retailer catalogue
+- product / candidate-671aec9821d43577b6cf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e45a49ebd07c1c5dddfc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a7d96d70b89815e62d4b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-edf36b7fd196baa8f7eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4d0dd03fa896f806da91: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e710e5febdd735b9118: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6250904ca33274a723fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f05cc972414fe3582951: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a32e6cb31e593a7f4587: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7ec26a01ba65f9113736: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d2bf8bae43976d68dfd8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-83727ac840e6e635f842: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b852a27a61ac9ea6d1e3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dc569717b2fbc9d6cb8a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2cbc70faeba2fc37d8d6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cfb6f9cca20b822574a1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dc8a883cce5534e9c56a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6cf4021f3c2d54f0ea6e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-eaf4771347f555df2b30: Exact variant no longer appears in the retailer catalogue
+- product / candidate-414cb2070dfec10ef7cb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-86b959809492a1817721: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ff1064d30b7b885360a8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-212c26d84ab21688fda4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-92ac551c60514a84ec74: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33652aaa31396cbb6280: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cd53923ae96ec180ebb0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4b5b922d56835ea0b677: Exact variant no longer appears in the retailer catalogue
+- product / candidate-604adc9bb840199e7c9a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5a59cf9fd32b88084a18: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7221385bba6aa966ed21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-59828155887c044ccdc2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bd91f17e4e0a69396d26: Exact variant no longer appears in the retailer catalogue
+- product / candidate-35c667dfd3c7e67508e5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-22cc248bf4b242574a4d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e32820ddcce16dfa36ab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f55fe0198246a34e05e8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-732835edc39c009f9e2a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0e1821a00aafa3ea8ef1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-531097bcd56b5240441e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-33dc5fa607c39be4a3eb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2490c53b2ba5cb25dd96: Exact variant no longer appears in the retailer catalogue
+- product / candidate-493b3ba550c81de7685f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15e21476c66d892ae4b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d3006ac798d70bb2750b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c065147ad05614782d60: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1247f93103fc96296590: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a8faf091b2b62fb9eec: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f7d26a6c964c1fb5276b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d386a2fe4efd4c735aab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e9d674e7a468456c509d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e4f5e4a27888a5e204ec: Exact variant no longer appears in the retailer catalogue
+- product / candidate-154ffe9864e7cf8f80e3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a402dca9dff462cb38e6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f48e951eade6e1e3f76d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-133116b3762528b682f9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-77eb647c2478b8bdbfda: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0d1822df95b7cf055239: Exact variant no longer appears in the retailer catalogue
+- product / candidate-71636749047deca937c3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2f457277bb26658b847b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d60f4f791e7f281c85f8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9ab39494831ceecca9ae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75bdd0b97ceb2566911a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-104c6585bc83a029dc69: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cedb423e7cb1fc1f8909: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7c29ca8f6d1f887640cd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0dba52887a92abec0dd5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e4c670b65dfcb732eab2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-31eda12ae812c0e22224: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e447ae54ed93e2721306: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c017998098928b664da: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f02dff03f5136a7ae00b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-596bb9d126146d23852b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-773add6757c4fd69cf8f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2246ef49ef4e96c7775b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ef73c8f0a6769b957ce5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-99108ca0a49caa8332cc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c1f3d31ff8f05c46cfce: Exact variant no longer appears in the retailer catalogue
+- product / candidate-974c69e3116444edf31e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d0a8ed40a0ab0cf6ae5a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1b34084a43f4f41ccebe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a6b581f47fd648b01e62: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cefca7071188d77ada68: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fef63dfb0e15af3f5c7b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c0b0d0db3b282e1df9d5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3f55f7ed060f8d735d6b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-98acd75b05d640f035b8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b37393f39dcc87946da2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-126b86d351cb22b53093: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3ee9ef86cafaa14f34c0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4f673bcc219b0404d5ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1a3e15bcd2b4c5b12078: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bb2e7ccb3d96691c0675: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1773cfdefa2759b7e444: Exact variant no longer appears in the retailer catalogue
+- product / candidate-589c02dd352658428db3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51aed3ab30ca729c6e06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d5587bb09b781d90cb4d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e848d4ef281d6cbd69b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b91bd7510ea1ceb19c01: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8b7b952a9dd0cb282530: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f514909b8329b4f2417b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cb99d073d23cb1285d31: Exact variant no longer appears in the retailer catalogue
+- product / candidate-38289c00ce22fbab571f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c51068a4840a1f13f282: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1c9060736891b6a3df77: Exact variant no longer appears in the retailer catalogue
+- product / candidate-602bfffd3472a9cffc22: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4972c337da826609e5c6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bf672a85e413d7a03aa7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3be9f12d641aa8954dd4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9c8d22cea198d390eeb1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3837fbe32c7573aec26c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d91d66c57e9782db1a0e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a6aafcb223b66c1e8d1a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-be1b5af8271fa3b627fa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f74c0c1ce3f783469f06: Exact variant no longer appears in the retailer catalogue
+- product / candidate-37ab68f0f9f4018a0f8b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3516c534aa146efd5049: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b89c7cda074162565a60: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8d18e52f46941e18bf1f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51281dbbf03e61c931d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-46ac278d49681a02743b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0171ce71f912572daf3c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2795107c2e9fba9d617e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f79e93637474149dbfe4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-594c5f85358ccda2d156: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4d1aa42496afed673a23: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c8c06cc3ced7c062b28: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5367c7a41392d049fd72: Exact variant no longer appears in the retailer catalogue
+- product / candidate-874f5ab0bd6bb8b8d1c6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1cbd445fb3784b04e2d8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-52e48168c5be5b9acfab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0317d7893652e2609600: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e7be69a83cf6f3f5224e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ab1c03398923116b87a0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1e0a05d99c217a754596: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1d8def0a9b5e73048c2b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0ecc914735b9c59a479d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c35f11136f74bd5656f7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dff0c7008dbe405ac96b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dc3c13be2b28cb28497d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-502b58bd041980285d8d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-56a572a94af9b54e8360: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2585d8e7249e41e41831: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4fddc2403b38cd667be8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ca86bdbc54ee42ecefcc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-023bacd76e35e156d584: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1bc805456dfe1f1c7e49: Exact variant no longer appears in the retailer catalogue
+- product / candidate-da16e37610963b6aa41c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a234be2705b34aa10dcc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a6e901aa3740d528884: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8d0ae1c85a5632887f84: Exact variant no longer appears in the retailer catalogue
+- product / candidate-835943b06b56304dee12: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7ec4ed6747849420cfcf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4baeb2da77094875f57a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d455579d6bbae47a7ed4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-852961bedb4e20bac2a2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d683386473e62060d0c3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3dae8f76dec61247b9b8: Exact variant no longer appears in the retailer catalogue
+- product / candidate-46db38f8f791f6734a5f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fcf7418a595b8f9850e7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-753aed2e9fb5a3945355: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c08a6a83b63c6497f906: Exact variant no longer appears in the retailer catalogue
+- product / candidate-25fa6fff1f96af87265f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bfe07fcf0ead7247c82b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f0000ddae89b7bf587ef: Exact variant no longer appears in the retailer catalogue
+- product / candidate-93c1db0d3b07c1f7afbd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cfab54f12bb682a0c88a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75a887eae3c7c56231c7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4728a456f1824ba3910f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-395081911231f99cf2c4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-530283c94714140e9934: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e6bc02a6d9bfcf5f10df: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7cfa095b0e9d969c19d0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3de4985eff7b5a9e8d92: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4a565706e77559beb495: Exact variant no longer appears in the retailer catalogue
+- product / candidate-601c33b8fdd7b693ecb2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d29f7bf5152f025f6db1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7f48a80493cf6cd3eb76: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c935fddffcd2621d3634: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e0f1c7f4bf283ca18826: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c39e3200461ea6f9437: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cb509e54def45531f87b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bfbc1adea4278cd07ee3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e6ede6c067034c1d058e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-80bb5022df8134a07a6d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ec2f6b8d7b43efc118ab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9bc6dd4e8795707405aa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d6d0df51528dcefac8cc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-93daf7fad4db6723749f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-346a09b52390ec6e2b76: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2bf8cbfd6db7f65593c4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-75562b1a71d046055d5c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4b609829fa5081ccd027: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e52f069da789aae3824d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-58f29822efa975ae2ac2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8d7f2fe95a4c94ce8c5e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-41d4adbf5950ad64eed3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3deb0b469aea7eaafd9b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-448356cd05930a310d32: Exact variant no longer appears in the retailer catalogue
+- product / candidate-36bea25f1746e7fc573e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5af6ea8623a07d4ab33e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-18808cb80557de48d1d4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fbf12b7dfd552ac9b932: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9efeb083d7fbe2b71f50: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9eb589967f2909568cee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e2eea4ad6613582161d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1f20ce63c01d42887152: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a00bdaff7f560c808c26: Exact variant no longer appears in the retailer catalogue
+- product / candidate-85be1bcc3dda16e2d1a3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-16facfe4e8330deaa4f5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-732bc57d6915183298ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b2f706c94a636ca5ca0f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5fc987c0388dd691c79e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d1948f96cac89314df11: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5cf6ad1983b795a031af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1e622cf9176a6b5593c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-505a63fcc3ba8b1dca13: Exact variant no longer appears in the retailer catalogue
+- product / candidate-34eee5628ada60df1efd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-76d824ca69eb5cee0d98: Exact variant no longer appears in the retailer catalogue
+- product / candidate-58a9215641dfeb73dfea: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2586de31ee858c13e850: Exact variant no longer appears in the retailer catalogue
+- product / candidate-350b8f96a37d54b1c371: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3174479d489e8042717: Exact variant no longer appears in the retailer catalogue
+- product / candidate-08d932161cb2556b0215: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4e8a959900e1ecd1bb63: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ef578232c00d98a936f4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3426e4373a6df43c66bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ed56ce14216665b79dbb: Exact variant no longer appears in the retailer catalogue
+- product / candidate-224b166fb5135e07d230: Exact variant no longer appears in the retailer catalogue
+- product / candidate-393ea11db4529866f47c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-51c87b26ae90ff5e213e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ecccc8566a58eb871101: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d11ced117689ef7d5332: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fa6bce7b25a6274f6e47: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1c8b7ac1a1ab1fd19e1c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-13136de231ebc593ca4e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b6f7fe51c2aeed61fa95: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a02036bedb491ddc758: Exact variant no longer appears in the retailer catalogue
+- product / candidate-88b50a684750fc35be72: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f593cdcf7c111906dbc4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fe2a16e9877f5ea878ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c55084c717263713c727: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a3f30d9c6fa5d99e6599: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3b123975f16f5698f608: Exact variant no longer appears in the retailer catalogue
+- product / candidate-54eed3110d2732440132: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f066d9c097a60c26bc08: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c75244ee347c22a7d907: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3bf806752a093ed776af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-90ae80dd1871a706df37: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aa47ac470d091773faed: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f60a3b35075717634917: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ace13ba181fa36de775e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d193996492f636cfc035: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a68edad379c8461aab0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b3b9956d72e9bd2bb1ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f7af00222951f9f06fc4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ba9365e8d92885f469ff: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4195fd726c98a92e2319: Exact variant no longer appears in the retailer catalogue
+- product / candidate-96d0eb8917118aecb206: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9b5713fbaf670eac219f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e575fb3367a45d7a85f2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-017d36b40e3111b8b704: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1f9e8669deb2190a52fe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fb6493927d841fbf0282: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c55eefe8b2f3a227c50d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-11bfed78fd575741c4bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-be17c1a6e65f5fe291e5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd356f67f2d32f56cab6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-37341c3d99a279f5516f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-07a49e200792c016abab: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2c09f8d5fd7bd6bd35aa: Exact variant no longer appears in the retailer catalogue
+- product / candidate-efddbe85dae1c451faa5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4e00336523ab38e533ef: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2d19c9cd7cacf836cc5f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b7efceffe9ed0fd4e5d2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-580751f1eff407d7e154: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3d9aed30e2c6167edcb9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8a4def609d2127ae85af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-56705f95984613fcfee2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7f751ce1fa7e3b47af51: Exact variant no longer appears in the retailer catalogue
+- product / candidate-23595b0013651e2efc36: Exact variant no longer appears in the retailer catalogue
+- product / candidate-85873267acea5e47f63e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1cd33c9a2bfb4598d919: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7795afc9733044ab1b02: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9c48d7ae96c827739187: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a37854e4dd9e2a96f169: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2903aca816a585996ea0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-21a63e902a90bd9b5f94: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9aba482b40520fe8f305: Exact variant no longer appears in the retailer catalogue
+- product / candidate-89ff87654b6f68b9a3b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8d45fb437c8b140291b3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-761a0e45592dcd23a11a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7e2382b235d86099eb99: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7e66808cdddd9dda1433: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a843608fedb64de47872: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ef7e26b2ca2b342af7d6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-16eba8354dc5c04cc725: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5194e9f4a7284e28b5b2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f89e6f2f0610ed4754e1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3f2c953fec3fb0af0637: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6b9cce78ae39435a66e3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-07a653662f750390e137: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a2719f968148267e795a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ce68aaafb8b709ae4015: Exact variant no longer appears in the retailer catalogue
+- product / candidate-58be38e640fa424bef21: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1af74c8f54ebe4a0a7bc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-92d14a43120828c8f85d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2d3b1fc3d06ab1d62a3c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-446d573921f24c079c24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-44b4b383c2a6958509af: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e9f1f399c662561b7654: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7fed5c576979d9da4779: Exact variant no longer appears in the retailer catalogue
+- product / candidate-da3e6986fd5b95d37cc4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-63618ea3f2a5651726de: Exact variant no longer appears in the retailer catalogue
+- product / candidate-19d716905db8987c42fd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-76afdb589c922d8d6777: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4be4fbeeba29b8c19be2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-48d20410185c7521fe84: Exact variant no longer appears in the retailer catalogue
+- product / candidate-892a862688f13c5499f2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2633ebdaf97fca3c28c1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9e988b66610cd033599e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a3906db69856575e1048: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a55a902927fabd059c8f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6507d9702d221dbcbc7e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-790149a27cdbc9596840: Exact variant no longer appears in the retailer catalogue
+- product / candidate-259e1ced7a933dcd483d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a1baec4e24f59bcbca9f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9d3b171bce7e46651226: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b94b5ce157c972d062d7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-92267f8a7a084879e382: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8c305ddb5962c5ffbb07: Exact variant no longer appears in the retailer catalogue
+- product / candidate-31da0fde8bc6c9d9b193: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9db3e8958220ffc2eadc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f085c56110011365b430: Exact variant no longer appears in the retailer catalogue
+- product / candidate-385661f6aa6df50d9fc3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b93a225998eab802a3e1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8abf4bb319547834cd61: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d30b6e3fcc074be929ae: Exact variant no longer appears in the retailer catalogue
+- product / candidate-83926b6c9ddbcb65a44d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-213ab7ab43fd57b476c2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-5f6c2a937d11513e33b4: Exact variant no longer appears in the retailer catalogue
+- product / candidate-40f172ddd7b7446c05a0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aa1872fa9e5c1005edc0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a64b2cc2685aff603e2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2a9dbbbf3e379939b4ee: Exact variant no longer appears in the retailer catalogue
+- product / candidate-571e3c28eb1fa80e2492: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e5c1842111c4c49d06a1: Exact variant no longer appears in the retailer catalogue
+- product / candidate-58628485f2a58f97a6fe: Exact variant no longer appears in the retailer catalogue
+- product / candidate-81596a6acfda522139a9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-17997f15e8c50eb93b3e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-29ca35bcc91645d6faca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8de9001265a80d50a550: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d0dc97438da90610edca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3231496c650c24ca9d87: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2219c446a2b7eeb9d4a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-32ad8268ff8099ba991b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-09e3862670822dc3c435: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6402f31417f4ac400649: Exact variant no longer appears in the retailer catalogue
+- product / candidate-55bb361e9e27d7c80fc0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8b1cdcaaf10dc51508bf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ebb7f25ced36a851e90f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-af1d50a8a6bfffac1342: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6331a8c0c8944d3fb72f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9bee2fdd067e2b1c9e56: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6fab54c800cc6268208d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d38a3d24fcf24e13668e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ebb5f3d30b6fd2609ffd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-931fdaea2a0de6339641: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3b186700526ee9429d5b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b20cd3aa4265a662757a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fe6102c38e9b311fed66: Exact variant no longer appears in the retailer catalogue
+- product / candidate-98814d140ee474aaf3fc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1a5c3d120830cb782c91: Exact variant no longer appears in the retailer catalogue
+- product / candidate-98cda8aede9daf74625a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-e2baa59f7457416669b9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-88e00df7bc9613fcc823: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c08cc630ad7ea5fcbb34: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bdbbc2a0cf6f3c116a79: Exact variant no longer appears in the retailer catalogue
+- product / candidate-b2b6da4114dfdad5b71a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c2ec1ef1a9100ae057a7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d9e2f02c64bc94ae3ca0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bbda233c66e8773a2684: Exact variant no longer appears in the retailer catalogue
+- product / candidate-cd1d08f1ba7c943b7cf2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3e453ca796f643cdffa6: Exact variant no longer appears in the retailer catalogue
+- product / candidate-97fdaf2f85b0bc1a0af9: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d1d59e911d62e618dfcd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-55d516eb85dc8182f5b5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8fce2de774b777450b95: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6d500d8887f06d4a718b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3a2300c9cd740baeae38: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ae76605072cf8348f0bc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d0a8b6e30707a1650dba: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4df59f53c3d21be82765: Exact variant no longer appears in the retailer catalogue
+- product / candidate-8ea81eca3611da957fdf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-73dc14d2475c09598c0c: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2d620b84732e79c64762: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d135b22824c4af5249fd: Exact variant no longer appears in the retailer catalogue
+- product / candidate-08fee828dc64e6735417: Exact variant no longer appears in the retailer catalogue
+- product / candidate-100c6aa67f0da67ba162: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fa1feb868dc3cdb711f0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-3369e8380bb1dfacd219: Exact variant no longer appears in the retailer catalogue
+- product / candidate-243a32de65849705714f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4a5ffe1946d21b6858db: Exact variant no longer appears in the retailer catalogue
+- product / candidate-473398c9ae279c25538f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ad0d842791b4eae19866: Exact variant no longer appears in the retailer catalogue
+- product / candidate-35b64972678857c19cf3: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c9a4c6f46e742d9e816b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fd42378e0816ab5a438f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7011e66ed590f5a525b2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-15a362d59e43afbb9adf: Exact variant no longer appears in the retailer catalogue
+- product / candidate-2fec225c8843dfb21f4e: Exact variant no longer appears in the retailer catalogue
+- product / candidate-31d4dadc8b08565f8b24: Exact variant no longer appears in the retailer catalogue
+- product / candidate-919d5108d56ef2f29ded: Exact variant no longer appears in the retailer catalogue
+- product / candidate-734f39dcd15a5d25ed5d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c762a611ca5e3011c557: Exact variant no longer appears in the retailer catalogue
+- product / candidate-477372c4d36d0f5ff0ca: Exact variant no longer appears in the retailer catalogue
+- product / candidate-03f8f9798581af53bebc: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9d9d8890ec6af69a5400: Exact variant no longer appears in the retailer catalogue
+- product / candidate-6a50f0ea2f0d97f1578d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-427d2488e728132e105f: Exact variant no longer appears in the retailer catalogue
+- product / candidate-fe6b767e931cc15d9481: Exact variant no longer appears in the retailer catalogue
+- product / candidate-656d172fc4ca5421da91: Exact variant no longer appears in the retailer catalogue
+- product / candidate-513b2c9fdea7a326e065: Exact variant no longer appears in the retailer catalogue
+- product / candidate-77c270bfab812b0487f2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-aab16ea9aaf44dfab7b2: Exact variant no longer appears in the retailer catalogue
+- product / candidate-ee82ef84e776b9b10b27: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7aca0c4ce7635c16be4d: Exact variant no longer appears in the retailer catalogue
+- product / candidate-36bfd0441870e03d49de: Exact variant no longer appears in the retailer catalogue
+- product / candidate-a511394356098fbf8df0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-f0b1fed5e520aa661ba7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-958e995fd76bab5a6d67: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0c05bb75c3b22d6cd505: Exact variant no longer appears in the retailer catalogue
+- product / candidate-dcfa5c5e1462c930023b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7b72fc9a6bb5b3ba9e9b: Exact variant no longer appears in the retailer catalogue
+- product / candidate-935230e93694d69b0ad5: Exact variant no longer appears in the retailer catalogue
+- product / candidate-9f5d7d070f6ac1deeb10: Exact variant no longer appears in the retailer catalogue
+- product / candidate-bff2e47d3960987a8c41: Exact variant no longer appears in the retailer catalogue
+- product / candidate-0b181c24f4e1ed0403b7: Exact variant no longer appears in the retailer catalogue
+- product / candidate-4813de42c20355e3a32a: Exact variant no longer appears in the retailer catalogue
+- product / candidate-c8f6f4a4995075d4e239: Exact variant no longer appears in the retailer catalogue
+- product / candidate-7fe4f049b41985130984: Exact variant no longer appears in the retailer catalogue
+- product / candidate-d5dec3d37a71ef1b1349: Exact variant no longer appears in the retailer catalogue
 - product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
-- discovery / anycubic-uk: Storefront redirected outside the recorded retailer
-- new-product / candidate-6b1a0e3e1aeb8aef25a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-bd5329aa205a7dc9875c: HTTP Error 403: Forbidden
-- new-product / candidate-651d2f4970716ccedbdf: Cannot confirm one product on the discovered URL
-- new-product / candidate-96dce9aa58ece261a7c0: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-bf70c6199a7d623bc9ec: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1fa70ad88f7245e3c74f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4245bb7df03baf4777d3: No single GBP offer for the exact product
-- new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3cdcf3c9a3610b9f14b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-70cac257ed9e9faec920: No verified product image URL
+- new-product / candidate-651731aa08341d350e20: Cannot confirm that the product is a material or printer
+- new-product / candidate-ab9a05d1b1533b08a4b3: No single GBP offer for the exact product
+- new-product / candidate-54a2c46e236b5ca1a761: Pack weight is ambiguous; listing skipped
+- new-product / candidate-5ab8dd60421722d143f5: No verified product image URL
+- new-product / candidate-432e457799727f24a0b2: Cannot confirm one product on the discovered URL
 - new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
 - new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-116f70179f78ec63d2b0: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fe87725357a22b2ada2: HTTP Error 403: Forbidden
-- new-product / candidate-53b6244b4b7b4497df9c: Cannot confirm that the product is a material or printer
-- new-product / candidate-317dc533fa01770964f6: Cannot confirm one product on the discovered URL
-- new-product / candidate-8683e28fbef0dd18a56c: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-922db40e7d4704a480f3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a7f8b9014db7a73259ed: Catalogue GBP price outside supported range
-- new-product / candidate-05656b87bde4c8c9696e: No single GBP offer for the exact product
-- new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-94c91b78d7d7c85ff961: Cannot confirm that the product is a material or printer
+- new-product / candidate-ed398141cf9889704f77: Cannot confirm one product on the discovered URL
+- new-product / candidate-356f948f5fa5eadf12ba: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5c9bad509369a8abeb6f: HTTP Error 403: Forbidden
+- new-product / candidate-7c792f3e999c7f23cd9d: No verified product image URL
+- new-product / candidate-33fde748e58736f15449: Cannot confirm that the product is a material or printer
+- new-product / candidate-8110e594e4fa6f916d7e: No single GBP offer for the exact product
+- new-product / candidate-eb9450ba72bfd8fd2e3c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-555881b52e83091d08da: No verified product image URL
+- new-product / candidate-c0aeb1e0fdbde8c520c2: Cannot confirm one product on the discovered URL
 - new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
 - new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8b56624f268aa9fb90c5: Cannot confirm one product on the discovered URL
-- new-product / candidate-e77c5eea463b15be4691: HTTP Error 403: Forbidden
-- new-product / candidate-5de5500c1331ff47a789: Cannot confirm one product on the discovered URL
-- new-product / candidate-da4819bff0b588076919: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
-- new-product / candidate-0ecd703342fb3fcd2ea1: Cannot confirm that the product is a material or printer
-- new-product / candidate-15415b92734d4ee8c2ac: Cannot confirm that the product is a material or printer
-- new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5fb9854e1bfacbc94153: Cannot confirm that the product is a material or printer
+- new-product / candidate-8a144ce0fd1e775f869e: Cannot confirm one product on the discovered URL
+- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bf164e921b9d29ef65f8: HTTP Error 403: Forbidden
+- new-product / candidate-a18b9ec716e3ef1e32b3: No verified product image URL
+- new-product / candidate-2e171d47ddeeaedad904: Cannot confirm that the product is a material or printer
+- new-product / candidate-326de91957426dcbbf23: No single GBP offer for the exact product
+- new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-91449d06ebfde09fcaa4: No verified product image URL
+- new-product / candidate-aa4dc1141c1a498ad340: Cannot confirm one product on the discovered URL
 - new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
 - new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
-- new-product / candidate-03a6f07ec50c09226187: Cannot confirm one product on the discovered URL
-- new-product / candidate-9b95d3ec8ce37e98c936: HTTP Error 403: Forbidden
-- new-product / candidate-13ab6a0206c62a31e233: The read operation timed out
-- new-product / candidate-a83c7f124a57cc66f8a2: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
-- new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
-- new-product / candidate-1ff05526fd5404bdc49e: Approved URL is outside its recorded retailer
-- new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0495ec8e3f9fcef7ac77: Cannot confirm that the product is a material or printer
+- new-product / candidate-dbf9de0175401ebdfb7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-00d691390547fac947ad: HTTP Error 403: Forbidden
+- new-product / candidate-2895d1ef6a21ffabac57: No verified product image URL
+- new-product / candidate-3433aa02e4d80e9c0554: Cannot confirm that the product is a material or printer
+- new-product / candidate-5ca5b584be2228ca4bf1: HTTP Error 404: Not Found
+- new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0ba92ed2828fbe9c4af5: Cannot confirm one product on the discovered URL
 - new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
 - new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8bb76130856075f69976: Cannot confirm one product on the discovered URL
-- new-product / candidate-b8fa307af32efab5999f: HTTP Error 403: Forbidden
-- new-product / candidate-096539fb91e0517dcc85: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c66d74795e6cd9c63d4a: Cannot confirm one product on the discovered URL
-- new-product / candidate-bf321a3cdaef8377ccee: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
-- new-product / candidate-abb54c825dc19f220070: Cannot confirm that the product is a material or printer
-- new-product / candidate-dcca848dde0651fe0677: No single GBP offer for the exact product
-- new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-61e9ba837e1d309a90b8: Cannot confirm that the product is a material or printer
+- new-product / candidate-61bc3ac8fbc3175d4930: Cannot confirm one product on the discovered URL
+- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b11e4c94364add54ebec: HTTP Error 403: Forbidden
+- new-product / candidate-efc7e28f7c698bb46946: No verified product image URL
+- new-product / candidate-4886c155d4931729e9c3: Cannot confirm that the product is a material or printer
+- new-product / candidate-d83134d0478c6c3c6552: No single GBP offer for the exact product
+- new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-420f21c87cf37a7d252d: Cannot confirm one product on the discovered URL
 - new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
 - new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-31658aa8710646e2df66: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e537e7b385a186c2d47: HTTP Error 403: Forbidden
-- new-product / candidate-466c52a6f8b721f9d674: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f0c4f20619efdcca39e0: Cannot confirm one product on the discovered URL
-- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
-- new-product / candidate-06a27693bd02f7d582da: Cannot confirm that the product is a material or printer
-- new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
-- new-product / candidate-bb5ea712215ce946b6f3: No single GBP offer for the exact product
-- new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-da7b7ae4dc8228c36a69: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1c26615eb28cb254a26b: HTTP Error 403: Forbidden
+- new-product / candidate-cdb3767d138d2d7c6180: No verified product image URL
+- new-product / candidate-c282a521454ee6e2207f: Cannot confirm that the product is a material or printer
+- new-product / candidate-30ee9779e728afaf49f9: No single GBP offer for the exact product
+- new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e7a4fa33583aa1311ce1: Cannot confirm one product on the discovered URL
 - new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
 - new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e807525b1f500253779b: Cannot confirm one product on the discovered URL
-- new-product / candidate-1114b7ce2fb25afb8e0e: HTTP Error 403: Forbidden
-- new-product / candidate-2cf4652d81c6b07546fe: Cannot confirm one product on the discovered URL
-- new-product / candidate-984fc19b786d66b97cb9: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-8f6d5acb86e5a6351b70: Pack weight is ambiguous; listing skipped
-- new-product / candidate-f19670188d1b9018c9f1: Cannot confirm that the product is a material or printer
-- new-product / candidate-7cf9d57a580294338f27: Catalogue GBP price outside supported range
-- new-product / candidate-4693f85190c302510f23: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9f6257dddc1ad556092e: Cannot confirm that the product is a material or printer
+- new-product / candidate-aa9124acbb989eb015fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1e2f0cf5c1ee67d431e6: HTTP Error 403: Forbidden
+- new-product / candidate-8a6fa22808a9df5d1e37: No verified product image URL
+- new-product / candidate-9161275797bd5ab11633: Cannot confirm that the product is a material or printer
+- new-product / candidate-31a1d44d92216663d9e4: Cannot confirm that the product is a material or printer
+- new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-354b8c5cf711a499171b: Cannot confirm one product on the discovered URL
 - new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
 - new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d1caa6d65b3d034fad3e: Cannot confirm one product on the discovered URL
-- new-product / candidate-3c17f7fd10543185dc08: HTTP Error 403: Forbidden
-- new-product / candidate-53285b641dcddf16f42d: Cannot confirm one product on the discovered URL
-- new-product / candidate-00dd4c7d07ac0d134906: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-a28c1cfe50e4aa37b1a4: Catalogue GBP price outside supported range
-- new-product / candidate-4c8bb5fc6f2dbc1a4e6b: No single GBP offer for the exact product
-- new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a67b4a00cf7f8d91a2fd: Cannot confirm that the product is a material or printer
+- new-product / candidate-8ef4789175df3ef4deb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c2e3b4a5104fbd579850: HTTP Error 403: Forbidden
+- new-product / candidate-e2e322e447a0ed39ce5b: No verified product image URL
+- new-product / candidate-4321c3b7a07e75f3dd09: Cannot confirm that the product is a material or printer
+- new-product / candidate-a977be636e5e2acc659f: No single GBP offer for the exact product
+- new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cabe9bad84fec81dd94f: No verified product image URL
+- new-product / candidate-cfd055e14c702d0a448c: Cannot confirm one product on the discovered URL
 - new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a92f1da5dfea208f8c6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-90f8cda33d9c0d8c0fc8: HTTP Error 403: Forbidden
-- new-product / candidate-1cb740f484b1d43f5c7a: Cannot confirm one product on the discovered URL
-- new-product / candidate-0cb4de37a9a34c183038: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-f0ca27274fb11bb8c03f: No verified product image URL
-- new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
-- new-product / candidate-5fd441c8af01ca01e734: Cannot confirm that the product is a material or printer
-- new-product / candidate-5c80545437722ea97978: No single GBP offer for the exact product
-- new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
+- new-product / candidate-44e610b3732bbe3cb568: Cannot confirm that the product is a material or printer
+- new-product / candidate-8b0e47049d293af12f6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-324adf3504461e59faae: HTTP Error 403: Forbidden
+- new-product / candidate-6d8d57cad65ba6bf0221: No verified product image URL
+- new-product / candidate-6dbcbe8bd6614435119a: Cannot confirm that the product is a material or printer
+- new-product / candidate-66a8a61e68a3ea18649b: Cannot confirm that the product is a material or printer
+- new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e57b252921bf0ee24b3d: No verified product image URL
+- new-product / candidate-ad5b599da526f207cd64: Cannot confirm one product on the discovered URL
 - new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f1517af8c45a24738ff6: Cannot confirm one product on the discovered URL
-- new-product / candidate-164aee7f4a3f69435198: HTTP Error 403: Forbidden
-- new-product / candidate-974b8b9a821d97974f17: Cannot confirm one product on the discovered URL
-- new-product / candidate-ecc82e423c7920be0e75: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-d7d2edc50ad51a9f9ac1: No verified product image URL
-- new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
-- new-product / candidate-649e63e9829c6b47cf39: Catalogue GBP price outside supported range
-- new-product / candidate-62adee1e043b3eb2eddc: No single GBP offer for the exact product
-- new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ad4fb1df871a7848d74f: Cannot confirm that the product is a material or printer
+- new-product / candidate-4f0a90f89e67a8f22b52: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b4362e98a79d90dd834: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d358eee9e37ae321b507: HTTP Error 403: Forbidden
+- new-product / candidate-fc18a1faa755683d49bd: No verified product image URL
+- new-product / candidate-0050db4aff002bd7d0dd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e9394f480cdb63b3ba73: Cannot confirm that the product is a material or printer
+- new-product / candidate-b1d8504aadb279343fed: No single GBP offer for the exact product
+- new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba8e3bc516bb64c77020: No verified product image URL
+- new-product / candidate-d5559a8e487a6e8b22fa: Cannot confirm one product on the discovered URL
 - new-product / candidate-8bd628979d63ab4bcdfe: Cannot confirm that the product is a material or printer
-- new-product / candidate-272e16a9147b9fcaf06a: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ca5738b13ac10e126dd: HTTP Error 403: Forbidden
-- new-product / candidate-881d741e61b09ad6918f: Cannot confirm one product on the discovered URL
-- new-product / candidate-8df74168633811a67a2f: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-cc0c5c9f3391a76af80b: No verified product image URL
+- new-product / candidate-fb269c25480c50429183: Cannot confirm one product on the discovered URL
+- new-product / candidate-0234a874fc6e75cf7ceb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e34d6ca000ecbb9ee12c: HTTP Error 403: Forbidden
+- new-product / candidate-da12b3e33d6921ecda1d: Cannot confirm that the product is a material or printer
+- new-product / candidate-d3076bd6917d56e03f41: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1647ac9f424b01a81d28: Cannot confirm that the product is a material or printer
+- new-product / candidate-ebad08612651df174622: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5ac06a8507fa7e18b63e: No verified product image URL
+- new-product / candidate-3d62d28d72a08f189e8a: Cannot confirm one product on the discovered URL
+- new-product / candidate-bed08a59d7f34c5e4c97: Cannot confirm one product on the discovered URL
+- new-product / candidate-9495b557932f11ac99b3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4506b5d58c28e91e5236: HTTP Error 403: Forbidden
+- new-product / candidate-85f4cbf0aaeb068687b1: Cannot confirm that the product is a material or printer
+- new-product / candidate-b8926aba23d228af78ef: No single GBP offer for the exact product
+- new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b3f5dbbb915e26792697: No verified product image URL
+- new-product / candidate-f0afc9296a27923681ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-308a85bbfe6dd8bf62a5: Cannot confirm that the product is a material or printer
+- new-product / candidate-e627dc8fbdcc63fe18b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-26210dd79274f0ddefed: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cd9c9f2fdf6d6dabaf9d: HTTP Error 403: Forbidden
+- new-product / candidate-2caba5ff7ffd331f1a52: No verified product image URL
+- new-product / candidate-93f8f0a00b1db83fc209: No single GBP offer for the exact product
+- new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dcf5b21469a8b49f13a2: No verified product image URL
+- new-product / candidate-9dbe3a57cee34b689678: Cannot confirm one product on the discovered URL
+- new-product / candidate-029bc903375a8dbbd3f4: Cannot confirm that the product is a material or printer
+- new-product / candidate-e47960587bdc4a128526: Cannot confirm one product on the discovered URL
+- new-product / candidate-72ff504d0dd052d962dc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ed1b11db30ff15b5b299: HTTP Error 403: Forbidden
+- new-product / candidate-a949da2d0341ba5b19e5: Cannot confirm that the product is a material or printer
+- new-product / candidate-4897525329b9f6e69df1: No single GBP offer for the exact product
+- new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-eb86ff5a04a3ad55b383: No verified product image URL
+- new-product / candidate-e8133d5082fce5b37f04: Cannot confirm one product on the discovered URL
+- new-product / candidate-b536388535c36a8425c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-624cc97d4e8dfee48cc5: HTTP Error 403: Forbidden
+- new-product / candidate-a427ff75a9b1aae292cd: Cannot confirm that the product is a material or printer
+- new-product / candidate-37082fdfa1e3cc25b50a: Cannot confirm that the product is a material or printer
+- new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-52aca3d5213af404e941: No verified product image URL
+- new-product / candidate-e38ba80b9081dfd17d75: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2499af4059abbe609d7: Cannot confirm that the product is a material or printer
+- new-product / candidate-6ad76da50e68fe8029dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b4a960faab8357701e01: HTTP Error 403: Forbidden
+- new-product / candidate-86f755593e561ae8966d: Cannot confirm that the product is a material or printer
+- new-product / candidate-2c96fa3baf3f9a6e5cd9: No single GBP offer for the exact product
+- new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1bdc4e1ee898615397c0: No verified product image URL
+- new-product / candidate-d2027aaeb631d39f1e4c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8422d3c438dfeb8a05d: Cannot confirm that the product is a material or printer
+- new-product / candidate-7cbc72373eea6d6ebb79: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f5560708283601091dc8: HTTP Error 403: Forbidden
+- new-product / candidate-2a89ea9ff1809f1396c2: Cannot confirm that the product is a material or printer
+- new-product / candidate-3fff308800379a2b107a: No single GBP offer for the exact product
+- new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ed982d7a12e73498937d: No verified product image URL
+- new-product / candidate-c1689a0655597e52dcbd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8481e197551a3e09f72: Cannot confirm that the product is a material or printer
+- new-product / candidate-7be9eeda63979f3c5dd9: Cannot confirm one product on the discovered URL
+- new-product / candidate-797d433de58d580eedad: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b5c1a36216e1369da4f8: HTTP Error 403: Forbidden
+- new-product / candidate-dca90606f1178b6d77b2: Cannot confirm that the product is a material or printer
+- new-product / candidate-4de019b4aa884a5ddbee: No single GBP offer for the exact product
+- new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c7d74e513829760a7c12: No verified product image URL
+- new-product / candidate-63bab2caf6e9e395a2cd: Cannot confirm one product on the discovered URL
+- new-product / candidate-402248390caa14789030: Cannot confirm that the product is a material or printer
+- new-product / candidate-1175727c9f1158a1306b: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e9929e3aefcbf552f29: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-00e111c00285ef98a0f1: HTTP Error 403: Forbidden
+- new-product / candidate-35e60d204a4489c96fad: Cannot confirm that the product is a material or printer
+- new-product / candidate-f4eb740bcf8b08eab918: Cannot confirm that the product is a material or printer
+- new-product / candidate-d8fd0bd09dbb0992b89d: No single GBP offer for the exact product
+- new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2ff77bd921da4fbebb4e: No verified product image URL
+- new-product / candidate-692de496c4a5f3ee65d0: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fbbddd847557dcc3fad: Cannot confirm that the product is a material or printer
+- new-product / candidate-0e3a45f51f197413bb0b: Cannot confirm one product on the discovered URL
+- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e6b3d73f8c19cb8c67c6: HTTP Error 403: Forbidden
+- new-product / candidate-ec0db7a3e737acf3f9f9: Cannot confirm that the product is a material or printer
+- new-product / candidate-f90cd7ef53124d3efbc9: No single GBP offer for the exact product
+- new-product / candidate-c3b624367c7b15ca166e: Cannot confirm that the product is a material or printer
+- new-product / candidate-35279a23076451181e10: No verified product image URL
+- new-product / candidate-811cedf5af4861a5fa6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-eccf0ce0b910fa5d6beb: Cannot confirm one product on the discovered URL
+- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-93c9f5813de91534e838: HTTP Error 403: Forbidden
+- new-product / candidate-1667b09e3781c2483e74: Cannot confirm that the product is a material or printer
+- new-product / candidate-81709ddcaa352def44e2: No single GBP offer for the exact product
+- new-product / candidate-c4535611d3695eebe57b: Cannot confirm that the product is a material or printer
+- new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
+- new-product / candidate-97f8a20400e7dfab1e8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f99fe9d183930a46e8a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-159b1b90eb1b958d682f: Cannot confirm one product on the discovered URL
+- new-product / candidate-13dea97ff2c9ab251a68: Cannot confirm that the product is a material or printer
+- new-product / candidate-a38513b3c6313eab8a5d: Cannot confirm that the product is a material or printer
+- new-product / candidate-5a097889d4f50e8a3470: Cannot confirm that the product is a material or printer
+- new-product / candidate-5e100c7706994e9acea9: No verified product image URL
+- new-product / candidate-3625f4e304d59ee8bbf7: Cannot confirm one product on the discovered URL
+- new-product / candidate-28daac5a033e11a61e8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e4d7dbcefd97e034ec28: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8b764696ffb29d90404: Cannot confirm that the product is a material or printer
+- new-product / candidate-3f9fb06b43ef81d14b5a: No single GBP offer for the exact product
+- new-product / candidate-e6eeb0b823a81e07c628: Cannot confirm that the product is a material or printer
+- new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
+- new-product / candidate-10f3661b381efda729c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-31e0d068618871ec82c2: Cannot confirm that the product is a material or printer
+- new-product / candidate-735d7183112b70d1e947: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc3ca6b7c0ed9d79e95c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a94845a10bc18c237152: Cannot confirm that the product is a material or printer
+- new-product / candidate-9a3abf1ed90d4a79b33e: No single GBP offer for the exact product
+- new-product / candidate-0920d071fad4e3f8fe7e: Cannot confirm that the product is a material or printer
+- new-product / candidate-06a27693bd02f7d582da: Cannot confirm that the product is a material or printer
+- new-product / candidate-7ae283cb9405ab21e6ab: Cannot confirm one product on the discovered URL
+- new-product / candidate-33615314282cb5405ad4: Cannot confirm that the product is a material or printer
+- new-product / candidate-2d6a1450d1807e5a65dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-21fd2ef28e75902d28ed: HTTP Error 403: Forbidden
+- new-product / candidate-752c43a650c15d8f8ade: Cannot confirm that the product is a material or printer
+- new-product / candidate-c7db91fecc741c30ae91: No single GBP offer for the exact product
+- new-product / candidate-3807cb538a56c2dfc4bf: Cannot confirm that the product is a material or printer
+- new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
+- new-product / candidate-132f335ca6d7b410fa48: Cannot confirm one product on the discovered URL
+- new-product / candidate-c08ec737ca363e086f14: Cannot confirm one product on the discovered URL
+- new-product / candidate-9cc14bbfd90eb87d64c9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e0da2d5f90c28882091a: HTTP Error 403: Forbidden
+- new-product / candidate-ad8722a33c216b019996: Cannot confirm that the product is a material or printer
+- new-product / candidate-64463eb674588b7a052e: No single GBP offer for the exact product
+- new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
+- new-product / candidate-b2b5f39d77c5c0b681b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-3cd68de01b83cb392d48: Cannot confirm one product on the discovered URL
+- new-product / candidate-394cbae7c1b77f43c6e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2402dabe3d76dbe00b49: HTTP Error 403: Forbidden
+- new-product / candidate-7067bfc9a296a2925d7b: Cannot confirm that the product is a material or printer
+- new-product / candidate-f912209637b948108a1f: No single GBP offer for the exact product
+- new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
-- new-product / candidate-893cf38c48655139dcef: Catalogue GBP price outside supported range
-- new-product / candidate-325667f8f9ddc8b60078: No single GBP offer for the exact product
-- new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b75089f493c2fb348370: Cannot confirm one product on the discovered URL
-- new-product / candidate-f93a93f4c5152bf775f7: HTTP Error 403: Forbidden
-- new-product / candidate-468e32cf32ea7e313c55: Cannot confirm that the product is a material or printer
-- new-product / candidate-1e1773ef2eed1ea48cb4: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ab69e51ed78fe94f8a6: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-08efdee71302ed32a42d: No verified product image URL
+- new-product / candidate-37d8cab5ed965e83b838: Cannot confirm one product on the discovered URL
+- new-product / candidate-91d6a720ed5b85017c4f: Cannot confirm one product on the discovered URL
+- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a7be4477e86baffd7cef: HTTP Error 403: Forbidden
+- new-product / candidate-82805fec8c0fe6c09382: Cannot confirm that the product is a material or printer
+- new-product / candidate-96246cab40d13107106b: Cannot confirm that the product is a material or printer
+- new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-49e1bcfdf0a5c9cdd076: Cannot confirm that the product is a material or printer
+- new-product / candidate-4feea9e2ec9627098d2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-04880b5ed74b717d8d5e: Cannot confirm one product on the discovered URL
+- new-product / candidate-0e9630f081027e1957c4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d182f933fcb0d0a66a0c: HTTP Error 403: Forbidden
+- new-product / candidate-5d9db45033e6a5ce9a29: Cannot confirm that the product is a material or printer
+- new-product / candidate-09262837ba0c3e4028c7: No single GBP offer for the exact product
+- new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-23d0652c172096273a65: Cannot confirm one product on the discovered URL
+- new-product / candidate-66af18ac840a3cce814f: Cannot confirm that the product is a material or printer
+- new-product / candidate-bc063062871e32a1f051: Cannot confirm one product on the discovered URL
+- new-product / candidate-2319b4be81d888c3f990: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-46013cd1019a9a816087: HTTP Error 403: Forbidden
+- new-product / candidate-7790dc56f0a01a9c23d6: Cannot confirm that the product is a material or printer
+- new-product / candidate-2c1218d77746a522e82d: No single GBP offer for the exact product
+- new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fa23e2883cfbbf45a75d: Cannot confirm that the product is a material or printer
+- new-product / candidate-41f7254c0586db177e52: Cannot confirm one product on the discovered URL
+- new-product / candidate-1003f6f7bb57bc6ff385: Cannot confirm one product on the discovered URL
+- new-product / candidate-6c2c5838ed6c97f3a97e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-32be3ab618b807d9ec6b: HTTP Error 403: Forbidden
+- new-product / candidate-ae08f2b4c6ce1c1ba7ca: Cannot confirm that the product is a material or printer
+- new-product / candidate-a5b7aaa45ee8883c1fa6: No single GBP offer for the exact product
+- new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f19670188d1b9018c9f1: Cannot confirm that the product is a material or printer
+- new-product / candidate-1f62091d59fcf327e076: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ccb5f3c6bc2518b504a: Cannot confirm one product on the discovered URL
+- new-product / candidate-9769c409bd4f02454db3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc63550d353e282ba7e9: HTTP Error 403: Forbidden
+- new-product / candidate-09050cac2cc891de1f74: Cannot confirm that the product is a material or printer
+- new-product / candidate-137583788860fc1ac12c: No single GBP offer for the exact product
+- new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-be75f2ccb7d3e9ecd1f3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f7a32d2b5470dced87b7: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ef3c5d5e641f683b7bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1305888c90b7b13e5b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-07ee66bc33d01cbdb5b5: HTTP Error 403: Forbidden
+- new-product / candidate-1a0aa66aa1303fcc90de: Cannot confirm that the product is a material or printer
+- new-product / candidate-370c8f5c03439bcbbf8b: No single GBP offer for the exact product
+- new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bde6337dae90f04c359e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c6c66e9f18c56a5fd697: Cannot confirm one product on the discovered URL
+- new-product / candidate-e538622aebd085ccd45f: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9bb2a792799339e75324: HTTP Error 403: Forbidden
+- new-product / candidate-4b2e95885c42d92cf4a6: Cannot confirm that the product is a material or printer
+- new-product / candidate-ac15ae29fa2956cc3f9d: No single GBP offer for the exact product
+- new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0be2b642945ef8f72336: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b29bd389147939851c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-67238c0c76f47e624efd: HTTP Error 403: Forbidden
+- new-product / candidate-39a4172c9973d006fdec: Cannot confirm that the product is a material or printer
+- new-product / candidate-284a7a027e19f8c14426: No single GBP offer for the exact product
+- new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0770ef51b53630b8a790: Cannot confirm one product on the discovered URL
+- new-product / candidate-26a8a07cc580339c06ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c9800c6e94897c3714e5: HTTP Error 403: Forbidden
+- new-product / candidate-23fefb69d2647271c416: Cannot confirm that the product is a material or printer
+- new-product / candidate-62c0d8112a546de2a059: No single GBP offer for the exact product
+- new-product / candidate-ccbe595b65e5ff1156fc: Cannot confirm that the product is a material or printer
+- new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1c42fe15b47db7d759a: Cannot confirm one product on the discovered URL
+- new-product / candidate-04109828050e42f629fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6d1b7b4a7b3c1be7169: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-01344e6fd219e3a5202c: HTTP Error 403: Forbidden
+- new-product / candidate-c13a4ef06ec333438afc: Cannot confirm that the product is a material or printer
+- new-product / candidate-72fe38228f86f750aaea: No single GBP offer for the exact product
+- new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2c876451689908969e8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8129461d694409e6cd3: Cannot confirm one product on the discovered URL
+- new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-044ab3eb6511eba80b0a: HTTP Error 403: Forbidden
+- new-product / candidate-cba2a1774a41aa6c33ad: Cannot confirm that the product is a material or printer
+- new-product / candidate-1f987c2e139b372de93e: No single GBP offer for the exact product
+- new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a1f720fabe05e007602c: Cannot confirm one product on the discovered URL
+- new-product / candidate-962229670c98befcd777: Cannot confirm one product on the discovered URL
+- new-product / candidate-eadcd7a067161d6ec25a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ae1ad541ec71c1b3b202: HTTP Error 403: Forbidden
+- new-product / candidate-30894dc2275000171d3e: Cannot confirm that the product is a material or printer
+- new-product / candidate-9958140a52d57dc731e3: Pack weight is ambiguous; listing skipped
+- new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3fa911c5acbf25f144a6: Cannot confirm one product on the discovered URL
+- new-product / candidate-72326ef14958c7054a13: Cannot confirm one product on the discovered URL
+- new-product / candidate-5761be978497cc54b18c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-567b6b7f77ba73383692: HTTP Error 403: Forbidden
+- new-product / candidate-2be7c231e1f113ba69ee: Cannot confirm that the product is a material or printer
+- new-product / candidate-2cffa41862674f0673ab: No single GBP offer for the exact product
+- new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e98c6c61d48a02e1b602: Cannot confirm one product on the discovered URL
+- new-product / candidate-81c16eaa001ea073cb3c: Cannot confirm one product on the discovered URL
+- new-product / candidate-16c602f6396e9362ad96: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3ce02cba0e2f8c373c65: HTTP Error 403: Forbidden
+- new-product / candidate-4caf51517ec948c4513c: Cannot confirm that the product is a material or printer
+- new-product / candidate-ec943efa0308db2a2bdf: No single GBP offer for the exact product
+- new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
+- new-product / candidate-87d24681d6b9e15ba544: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ac95dccf647cbe713ff: Cannot confirm that the product is a material or printer
+- new-product / candidate-bfe8cecd283f3f6e91fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-d84ef37c7aef34d763a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0cd9591216d4ea549559: Cannot confirm one product on the discovered URL
+- new-product / candidate-39d44324ac423af10468: Cannot confirm that the product is a material or printer
+- new-product / candidate-a0eefa3ccee684a79fb0: No single GBP offer for the exact product
+- new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c5476950bf04d695a687: Cannot confirm one product on the discovered URL
+- new-product / candidate-d06f0b72534da12f6520: Cannot confirm that the product is a material or printer
+- new-product / candidate-830fa4205828629e3b86: Cannot confirm one product on the discovered URL
+- new-product / candidate-3817e7c486c0c8ce3f50: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f6b20ef0e411873553a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-f84ac361de1a73ccf4be: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ab40fdb3623aabb1c85e: No single GBP offer for the exact product
+- new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a15810f5416ea0cb9a06: Cannot confirm one product on the discovered URL
+- new-product / candidate-90314bec5c319d9a8dd0: Cannot confirm that the product is a material or printer
+- new-product / candidate-f6429d46d4b962467385: Cannot confirm one product on the discovered URL
+- new-product / candidate-be247ee3bf0ea7d87719: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1bde86a8ab12b064b43: Cannot confirm that the product is a material or printer
+- new-product / candidate-eb2c0da088e0e9ff37a9: No single GBP offer for the exact product
+- new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6dc9ce073b0c50051253: Cannot confirm one product on the discovered URL
+- new-product / candidate-8feffd2b6a8f5d94439e: Cannot confirm that the product is a material or printer
+- new-product / candidate-4189259ecacd0db29a37: Cannot confirm one product on the discovered URL
+- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
+- new-product / candidate-1df8864c7679e603bb44: Cannot confirm that the product is a material or printer
+- new-product / candidate-2eeb697f0961303ed58c: No single GBP offer for the exact product
+- new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bca45f9c22482c7fb783: Cannot confirm one product on the discovered URL
+- new-product / candidate-5d71d2c08d03af45e296: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
+- new-product / candidate-ae995c1124f163e21ebc: Cannot confirm that the product is a material or printer
+- new-product / candidate-1a7abcfe2b3a7287e17d: No single GBP offer for the exact product
+- new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c897ed754b95491f2910: Cannot confirm one product on the discovered URL
+- new-product / candidate-f80529ec58212d82343b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7aa684bc0262dd122f19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden

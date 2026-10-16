@@ -19070,350 +19070,1800 @@
       "variantId": 58387000230152,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20227_01.jpg?v=1786085867",
       "expectedProductTitle": "eSun eStars-PLA Filament Galaxy Black 1.75mm 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/esun-estars-pla-filament-1-75mm-galaxy-black-1-kg"
     },
     "candidate-34cb2c46699895d95a87": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450231356,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/5_eff9bf5f-988d-479e-b807-eb689999e75d.jpg?v=1721202005",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Red (33200) / Refill / 1 kg"
+      "expectedVariantTitle": "Red (33200) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-079146b93ae97dca2181": {
       "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
       "variantId": 56982843457922,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-S24227c8073d04f00bfe976839692a459W_1501_1501.webp?v=1792141531",
       "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
-      "expectedVariantTitle": "Glowing Iridescent / Luminous PLA"
+      "expectedVariantTitle": "Glowing Iridescent / Luminous PLA",
+      "imageSourceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament"
     },
     "candidate-afd05be131b4df3774a8": {
       "priceUrl": "https://uk.qidi3d.com/products/plus5",
       "variantId": 45901456080940,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-Plus5-main-image1.png?v=1788503019",
       "expectedProductTitle": "QIDI Plus5 3D Printer",
-      "expectedVariantTitle": "Plus5 / Polar Cooler Bundle"
+      "expectedVariantTitle": "Plus5 / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/plus5"
     },
     "candidate-aba3c597ab0735f2a294": {
       "priceUrl": "https://sovol.uk/products/sovol-m1d-3d-printer",
       "variantId": 67427283730477,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/sovol-m1d-enclosed-idex-3d-printer-front-render.jpg?v=1787799338",
       "expectedProductTitle": "Pre-Order Sovol M1D 3D Printer",
-      "expectedVariantTitle": "M1D  Advanced"
+      "expectedVariantTitle": "M1D  Advanced",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-m1d-3d-printer"
     },
     "candidate-8ff1680aaec17d113236": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450264124,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/5_eff9bf5f-988d-479e-b807-eb689999e75d.jpg?v=1721202005",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Red (33200) / Filament with spool / 1 kg"
+      "expectedVariantTitle": "Red (33200) / Filament with spool / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-06fea75b27d98cf6d5f5": {
       "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
       "variantId": 56982843490690,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-Se4354b18b6754277ad3b541f2b21db75W_1620_1620.webp?v=1792141531",
       "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
-      "expectedVariantTitle": "Glowing Neon Rainbow / Luminous PLA"
+      "expectedVariantTitle": "Glowing Neon Rainbow / Luminous PLA",
+      "imageSourceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament"
     },
     "candidate-f369520c41b70d8c4736": {
       "priceUrl": "https://uk.qidi3d.com/products/plus5",
       "variantId": 45901456113708,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-Plus5combo-main-image1.png?v=1788503021",
       "expectedProductTitle": "QIDI Plus5 3D Printer",
-      "expectedVariantTitle": "Plus5 Combo / Standard"
+      "expectedVariantTitle": "Plus5 Combo / Standard",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/plus5"
     },
     "candidate-d79308fd1a0aceae6f4a": {
       "priceUrl": "https://sovol.uk/products/sovol-sv08-3d-printer",
       "variantId": 44379922726957,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_SV08_Open_Source_Pre-assembled_CoreXY_3D_Printer_350350300mm_1.png?v=1770086509",
       "expectedProductTitle": "Sovol SV08 3D Printer",
-      "expectedVariantTitle": "SV08+Enclosure (350*350*330mm)"
+      "expectedVariantTitle": "SV08+Enclosure (350*350*330mm)",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-sv08-3d-printer"
     },
     "candidate-3db15ab5973ccd84a183": {
       "priceUrl": "https://www.123-3d.co.uk/products/creality-3d-sermoon-d3-3d-printer",
       "variantId": 58386992693512,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DKI00140_01.jpg?v=1786085798",
       "expectedProductTitle": "Creality 3D Sermoon D3 3D printer",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/creality-3d-sermoon-d3-3d-printer"
     },
     "candidate-306b820c51a6bb85cc1c": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450296892,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_6.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Black (33102) / Refill / 1 kg"
+      "expectedVariantTitle": "Black (33102) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-cef336bc87f2995a3735": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077313610,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-15.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Black / PLA PLUS"
+      "expectedVariantTitle": "Black / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-0d90a758271e2f600d65": {
       "priceUrl": "https://uk.qidi3d.com/products/plus5",
       "variantId": 45901456146476,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-Plus5combo-main-image1.png?v=1788503021",
       "expectedProductTitle": "QIDI Plus5 3D Printer",
-      "expectedVariantTitle": "Plus5 Combo / Polar Cooler Bundle"
+      "expectedVariantTitle": "Plus5 Combo / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/plus5"
     },
     "candidate-ee907764c0e476783a48": {
       "priceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer",
       "variantId": 44379896971309,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SV08MAX_4.jpg?v=1765467518",
       "expectedProductTitle": "Sovol SV08 Max 3D Printer",
-      "expectedVariantTitle": "SV08 Max with Enclosure"
+      "expectedVariantTitle": "SV08 Max with Enclosure",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-sv08-max-3d-printer"
     },
     "candidate-670ccef300623d0dfdca": {
       "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-green-pla-filament-1-75mm-1kg",
       "variantId": 58386992627976,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14247_01.jpg?v=1786085795",
       "expectedProductTitle": "Polymaker PolyTerra PLA+ Filament Green 1.75mm 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-green-pla-filament-1-75mm-1kg"
     },
     "candidate-c45880c9ff70c5027a7b": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450329660,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_6.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Black (33102) / Filament with spool / 1 kg"
+      "expectedVariantTitle": "Black (33102) / Filament with spool / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-684b52a7fb804f24692b": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077444682,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-16.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Blue / PLA PLUS"
+      "expectedVariantTitle": "Blue / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-f2e3b6f312e103ce6097": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 45770692231212,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2 / Polar Cooler Bundle"
+      "expectedVariantTitle": "Q2 / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-34491b0cca3a3314bbfc": {
       "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
       "variantId": 44379937931309,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilament_Dual-GoldRed_8.jpg?v=1764574060",
       "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
-      "expectedVariantTitle": "China to UK / Dual-Gold Red"
+      "expectedVariantTitle": "China to UK / Dual-Gold Red",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll"
     },
     "candidate-3611220d330b1b70e40f": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450362428,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_7.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "White (33100) / Refill / 1 kg"
+      "expectedVariantTitle": "White (33100) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-2a07f9f7e30a5fab70a9": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077477450,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-19.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Green / PLA PLUS"
+      "expectedVariantTitle": "Green / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-b30b02d4790f4ffacf98": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 44670861770796,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2 Combo / Standard"
+      "expectedVariantTitle": "Q2 Combo / Standard",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-521d7d021d0800c79f2f": {
       "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
       "variantId": 44379938029613,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilament_Tri-BlueYellowFuchsia_7.jpg?v=1764574060",
       "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
-      "expectedVariantTitle": "China to UK / Tri-Blue Yellow Fuchsia"
+      "expectedVariantTitle": "China to UK / Tri-Blue Yellow Fuchsia",
+      "imageSourceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll"
     },
     "candidate-f1a1a95d6710d1c8a620": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450395196,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_7.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "White (33100) / Filament with spool / 1 kg"
+      "expectedVariantTitle": "White (33100) / Filament with spool / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-4b2a34d2ec00ea407e57": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077379146,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-18.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Grey / PLA PLUS"
+      "expectedVariantTitle": "Grey / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-5185d582e1629ddb7761": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 45770692263980,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2 Combo / Polar Cooler Bundle"
+      "expectedVariantTitle": "Q2 Combo / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-1a18992c765b259823bb": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-st-80-black-resin-1kg",
       "variantId": 58386983780616,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ04048_01.jpg?v=1786085638",
       "expectedProductTitle": "BASF Ultracur3D ST 80 black resin, 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-st-80-black-resin-1kg"
     },
     "candidate-49d55b485f76c6c626e9": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450427964,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_5.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Blue (33600) / Refill / 1 kg"
+      "expectedVariantTitle": "Blue (33600) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-5a2624e1fa503c4563b7": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077510218,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-20.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Orange / PLA PLUS"
+      "expectedVariantTitle": "Orange / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-1e8cdf52055987248dd8": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46333039869996,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2C_78a7a603-7a9d-4119-8227-c1dbce78c9ec.png?v=1791192835",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2C / Standard"
+      "expectedVariantTitle": "Q2C / Standard",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-38a320d9fe02dba935be": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-st-80-grey-resin-1kg",
       "variantId": 58386983289096,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ04041_01.jpg?v=1786085630",
       "expectedProductTitle": "BASF Ultracur3D ST 80 grey resin, 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-st-80-grey-resin-1kg"
     },
     "candidate-f5ad0dc61a0c3a90cd3e": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-4-get-1-kg-filament-for-just-1",
       "variantId": 52601210568985,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_1_1_1KG_1_3ac1a1f9-d5d5-4e85-88b7-1a092b7803fc.jpg?v=1782118269",
       "expectedProductTitle": "Neptune 4: Get 1 kg Filament for Just £1",
-      "expectedVariantTitle": "Black"
+      "expectedVariantTitle": "Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-get-1-kg-filament-for-just-1"
     },
     "candidate-dd9b0a3692a0497c901c": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450460732,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_5.jpg?v=1721202013",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Blue (33600) / Filament with spool / 1 kg"
+      "expectedVariantTitle": "Blue (33600) / Filament with spool / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-5d5048154d9aa491db08": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 55186702238082,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S7f5d3265549b44c8af042cd6d4f3b10dc.webp?v=1746795910",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Purple / PLA PLUS"
+      "expectedVariantTitle": "Purple / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-905307d2ba8c29d20cc5": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46333039902764,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2C_78a7a603-7a9d-4119-8227-c1dbce78c9ec.png?v=1791192835",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2C / Polar Cooler Bundle"
+      "expectedVariantTitle": "Q2C / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-39c1ca75252c064e4a75": {
       "priceUrl": "https://sovol.uk/products/10kg-bundle-sale-sovol-1-75mm-petg-3d-printing-filaments-1kg-rolls",
       "variantId": 44379909521453,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol10KGPETGFilamentBundle.jpg?v=1784602582",
       "expectedProductTitle": "Sovol PETG 3D Filaments 10KG",
-      "expectedVariantTitle": "UK / Black+White"
+      "expectedVariantTitle": "UK / Black+White",
+      "imageSourceUrl": "https://sovol.uk/products/10kg-bundle-sale-sovol-1-75mm-petg-3d-printing-filaments-1kg-rolls"
     },
     "candidate-36fc47e999f29af3fa06": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-dm-2505-beige-resin-5kg",
       "variantId": 58386981683464,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ04001_01.jpg?v=1786085603",
       "expectedProductTitle": "BASF Ultracur3D DM 2505 beige resin, 5kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-dm-2505-beige-resin-5kg"
     },
     "candidate-6f4d642f121b340e7849": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450493500,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_1.jpg?v=1721202012",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Gray (33101) / Refill / 1 kg"
+      "expectedVariantTitle": "Gray (33101) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-446f664dacb08af4884b": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077411914,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-21.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Red / PLA PLUS"
+      "expectedVariantTitle": "Red / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-412f90bfa82841773bf2": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46333039935532,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2c_Combo_e7beae82-f59e-420f-822f-677488454656.png?v=1791192851",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2C Combo / Standard"
+      "expectedVariantTitle": "Q2C Combo / Standard",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-03e503c347202270cdb4": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-dm-2505-beige-resin-1kg",
       "variantId": 58386981617928,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ04000_01.jpg?v=1786085602",
       "expectedProductTitle": "BASF Ultracur3D DM 2505 beige resin, 1kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-dm-2505-beige-resin-1kg"
     },
     "candidate-c1f6f0cef2c98bb7349c": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450526268,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_1.jpg?v=1721202012",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Gray (33101) / Filament with spool / 1 kg"
+      "expectedVariantTitle": "Gray (33101) / Filament with spool / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-ea75026b1d31398cad8c": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077575754,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-29.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Silver / PLA PLUS"
+      "expectedVariantTitle": "Silver / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-19b169a3343f9d089358": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46333039968300,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2c_Combo_e7beae82-f59e-420f-822f-677488454656.png?v=1791192851",
       "expectedProductTitle": "QIDI Q2 3D Printer",
-      "expectedVariantTitle": "Q2C Combo / Polar Cooler Bundle"
+      "expectedVariantTitle": "Q2C Combo / Polar Cooler Bundle",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
     },
     "candidate-a0210d085e505d85205c": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-resin-cleaner-20kg",
       "variantId": 58386981552392,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR00803_01.jpg?v=1786085599",
       "expectedProductTitle": "BASF Ultracur3D resin cleaner, 20kg",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultracur3d-resin-cleaner-20kg"
     },
     "candidate-4d3505afe3d96cfbb56a": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450034748,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_2.jpg?v=1721202012",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Yellow (33400) / Refill / 1 kg"
+      "expectedVariantTitle": "Yellow (33400) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-a40534c32137690a669f": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 55186478530946,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S407d2ee7971740af8489c283a462e9b3b.webp?v=1746790551",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "Transparent / PLA PLUS"
+      "expectedVariantTitle": "Transparent / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
     },
     "candidate-746f25c9cbfa118304a3": {
       "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
       "variantId": 44848143335468,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoDiffuseClearWhite.jpg?v=1772862122",
       "expectedProductTitle": "PETG Rapido",
-      "expectedVariantTitle": "1 Kg / Diffuse Clear White HEX Code #FFFFFF"
+      "expectedVariantTitle": "1 Kg / Diffuse Clear White HEX Code #FFFFFF",
+      "imageSourceUrl": "https://uk.qidi3d.com/products/petg-rapido"
     },
     "candidate-6b1646494b68184792ca": {
       "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
       "variantId": 42010450165820,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_3.jpg?v=1721202012",
       "expectedProductTitle": "PETG HF",
-      "expectedVariantTitle": "Green (33500) / Refill / 1 kg"
+      "expectedVariantTitle": "Green (33500) / Refill / 1 kg",
+      "imageSourceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf"
     },
     "candidate-fa5c1cda55e3c8ed4546": {
       "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
       "variantId": 40129077346378,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-22.jpg?v=1708011460",
       "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
-      "expectedVariantTitle": "White / PLA PLUS"
+      "expectedVariantTitle": "White / PLA PLUS",
+      "imageSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs"
+    },
+    "candidate-f048a646a0a7ecd09083": {
+      "priceUrl": "https://www.123-3d.co.uk/products/photocentric-black-uv-dlp-uv80-resin-0-5kg",
+      "variantId": 58386980208904,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR00787_01.jpg?v=1786085568",
+      "expectedProductTitle": "Photocentric black UV-DLP UV80 resin, 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-f3d01beabd80e6383f55": {
+      "priceUrl": "https://www.3dprima.co.uk/polymaker/polymaker-polylite-petg-blue-1-75mm-1kg-10095",
+      "variantId": null,
+      "imageUrl": "https://www.3dprima.co.uk/media/catalog/product/cache/d24a34bded6d2df740ef66d66d2112c9/2/8/28556-polymaker-polylite-petg-pb01011-28556_57_1.png",
+      "expectedProductTitle": null,
+      "expectedVariantTitle": null
+    },
+    "candidate-34cfa83c6a984a98feb4": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42010450100284,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_4.jpg?v=1721202012",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Orange (33300) / Refill / 1 kg"
+    },
+    "candidate-17e4761491ac66060f73": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
+      "variantId": 40129077542986,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/sunlu-pla-3d-printer-filament-stronger-than-pla-1-75mm-1kg2-2lbs-nse-imports-17.jpg?v=1708011460",
+      "expectedProductTitle": "SUNLU PLA+ 3D Printer Filament: Stronger than regular PLA 1.75mm 1kg/2.2lbs",
+      "expectedVariantTitle": "Yellow / PLA PLUS"
+    },
+    "candidate-5dc2bacb3058a25064fa": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143368236,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoBlue.jpg?v=1772862120",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Blue HEX Code #00187F"
+    },
+    "candidate-fea1bc4e64f6b2bacb50": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150873366588,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETG_HF_3.jpg?v=1721202012",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Green (33500) / Filament with spool / 1 kg"
+    },
+    "candidate-68fec1ef198616d08daa": {
+      "priceUrl": "https://nseimports.co.uk/products/eryone-luminous-pla-filament-1-75mm-1kg",
+      "variantId": 56982845194626,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-S24227c8073d04f00bfe976839692a459W_1501_1501.webp?v=1792141531",
+      "expectedProductTitle": "ERYONE Luminous PLA Filament 1.75mm 1kg Glow in the Dark Green 3D Printer Filament Ideal for Halloween",
+      "expectedVariantTitle": "Glowing Iridescent / Luminous PLA"
+    },
+    "candidate-dc11b3cfaa721a0e42ac": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143401004,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoCopper.jpg?v=1772862119",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Copper HEX Code #604629"
+    },
+    "candidate-38e4fce6999b81ef027c": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150874579004,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_6.jpg?v=1725433645",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Forest Green (33502) / Refill / 1 kg"
+    },
+    "candidate-93ea900264a66fe35376": {
+      "priceUrl": "https://nseimports.co.uk/products/eryone-luminous-pla-filament-1-75mm-1kg",
+      "variantId": 56982845227394,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-Se4354b18b6754277ad3b541f2b21db75W_1620_1620.webp?v=1792141531",
+      "expectedProductTitle": "ERYONE Luminous PLA Filament 1.75mm 1kg Glow in the Dark Green 3D Printer Filament Ideal for Halloween",
+      "expectedVariantTitle": "Glowing Neon Rainbow / Luminous PLA"
+    },
+    "candidate-10bf0fd9dd5b0e9f7d3e": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143433772,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoGrassgreen.jpg?v=1772862122",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Grass green HEX Code #7CCE51"
+    },
+    "candidate-edcc5040b774f086ca88": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150874972220,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_1.jpg?v=1725433644",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Peanut Brown (33801) / Refill / 1 kg"
+    },
+    "candidate-58178b77e2719d10e651": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426339714,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/12-S04b99d2c5a30467da5ae2885040504c16.webp?v=1742227386",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Blue / PETG"
+    },
+    "candidate-bb46bf15690a79e13706": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143466540,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoYellow.jpg?v=1772862126",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Yellow HEX Code #FCE300"
+    },
+    "candidate-cf89ff2937fc860180f1": {
+      "priceUrl": "https://sovol.uk/products/sovol-glow-in-dark-pla-filament-1-kg",
+      "variantId": 44379903590445,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/Sovol_Glow_in_Dark_Rainbow_PLA_Filament_Main_Image.jpg?v=1784536776",
+      "expectedProductTitle": "Sovol Glow in dark PLA Filament (1KG/6KG/10KG)",
+      "expectedVariantTitle": "UK / Glow in Dark Rainbow PLA 1KG"
+    },
+    "candidate-d63ecab1ab68351b7bad": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150875267132,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_3.jpg?v=1725433644",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Dark Gray (33103) / Refill / 1 kg"
+    },
+    "candidate-bbf6df4781437075a0b4": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426372482,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/11-Sb5be29a33e634ec3834d6a6b4bb13e3aV.webp?v=1742227386",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Sunny Orange / Light Green / PETG"
+    },
+    "candidate-7ace2d180ed128f2f638": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143499308,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoGray.jpg?v=1772862122",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Gray HEX Code #A0A0A0"
+    },
+    "candidate-3d4f1c990ff440880044": {
+      "priceUrl": "https://sovol.uk/products/sovol-glow-in-dark-pla-filament-1-kg",
+      "variantId": 67427047243821,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/6KG_56bb97f7-fd6c-4e58-8207-278a157777b1.webp?v=1787797068",
+      "expectedProductTitle": "Sovol Glow in dark PLA Filament (1KG/6KG/10KG)",
+      "expectedVariantTitle": "UK / Glow in Dark Rainbow PLA 6KG"
+    },
+    "candidate-dd3655d67694f26a57d3": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-neutral-asa-filament-1-75mm-0-75kg",
+      "variantId": 58386954977544,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00038_01.jpg?v=1786085092",
+      "expectedProductTitle": "BASF Ultrafuse ASA Filament Neutral 1.75mm 0.75kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-fe6483b7ae7d7086931f": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150875660348,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_5.jpg?v=1725433645",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Cream (33401) / Refill / 1 kg"
+    },
+    "candidate-d982e18eb80c99957c70": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426438018,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/3-Sa2b5e51608424c178f3cd39ad2f50807K.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Black / PETG"
+    },
+    "candidate-6379e822e5e93f340a77": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143532076,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoRed.jpg?v=1772862122",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Red HEX Code #AF0009"
+    },
+    "candidate-353ac3bd77f3e2fc3a73": {
+      "priceUrl": "https://sovol.uk/products/sovol-glow-in-dark-pla-filament-1-kg",
+      "variantId": 67427047276589,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/2026SovolGlowindarkPLAFilament10KG_fa651ed1-a6e5-4639-9fbb-ee028a4148d4.jpg?v=1787797137",
+      "expectedProductTitle": "Sovol Glow in dark PLA Filament (1KG/6KG/10KG)",
+      "expectedVariantTitle": "UK / Glow in Dark Rainbow PLA 10KG"
+    },
+    "candidate-f7d0b18c29cf43fdee18": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150876086332,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_4.jpg?v=1725433644",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Lime Green (33501) / Refill / 1 kg"
+    },
+    "candidate-404824690e410bcd4d3d": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426470786,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/8-Sfcd18f9a8c38455aa7b566ea1f0d694eG.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Black / Grey / PETG"
+    },
+    "candidate-8f50ef26fd6944e40951": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-cf",
+      "variantId": 44848038084652,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETG-CFBlack-_2.jpg?v=1772862116",
+      "expectedProductTitle": "PETG-CF",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #000000"
+    },
+    "candidate-2b9797f514ab407d6fcf": {
+      "priceUrl": "https://sovol.uk/products/sovol-petg-3d-filaments-2kg",
+      "variantId": 44379903295533,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolPETGFilament2KGMainImage.jpg?v=1784602978",
+      "expectedProductTitle": "Sovol PETG 3D Filaments 2KG",
+      "expectedVariantTitle": "UK / Black+White"
+    },
+    "candidate-9e1f6783f6f8267fc2be": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/petg-hf",
+      "variantId": 42150876348476,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PETGHFNEWCOLOR_2.jpg?v=1725433644",
+      "expectedProductTitle": "PETG HF",
+      "expectedVariantTitle": "Lake Blue (33601) / Refill / 1 kg"
+    },
+    "candidate-d1597bccda152cd80833": {
+      "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
+      "variantId": 54873898484098,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/eryone-luminous-pla-filament-1-75mm-1kg-glow-in-the-dark-green-3d-printer-filament-ideal-for-halloween-nse-imports-27.jpg?v=1694266618",
+      "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
+      "expectedVariantTitle": "Glowing Blue / Luminous PLA"
+    },
+    "candidate-9f67ccc8d511c8ba56b2": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-gf",
+      "variantId": 44847706964012,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETG-GFBlack-_1.jpg?v=1772862113",
+      "expectedProductTitle": "PETG-GF",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #000000"
+    },
+    "candidate-f31b741bda7eaf3212a2": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189035580,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Jade-White.png?v=1709192913",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Jade White (10100) / Refill / 1 kg"
+    },
+    "candidate-94c5f6adf79a4bccb366": {
+      "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
+      "variantId": 54873898516866,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/eryone-luminous-pla-filament-1-75mm-1kg-glow-in-the-dark-green-3d-printer-filament-ideal-for-halloween-nse-imports-15.jpg?v=1698000818",
+      "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
+      "expectedVariantTitle": "Glowing Green / Luminous PLA"
+    },
+    "candidate-ab4bd30f3d351f8522b5": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-gf",
+      "variantId": 44847706996780,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETG-GFSkylightBlue.jpg?v=1772862114",
+      "expectedProductTitle": "PETG-GF",
+      "expectedVariantTitle": "1 Kg / Skylight Blue HEX Code #C8E0E0"
+    },
+    "candidate-1d41f43a37466f1c61b2": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40589883768892,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Jade-White.png?v=1709192913",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Jade White (10100) / Filament with spool / 1 kg"
+    },
+    "candidate-69538759efddb6629706": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-gf",
+      "variantId": 44847706898476,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETG-GFMacchiatoBrown.jpg?v=1772862114",
+      "expectedProductTitle": "PETG-GF",
+      "expectedVariantTitle": "1 Kg / Macchiato Brown HEX Code #AC8266"
+    },
+    "candidate-932ba1150c092dc0e42f": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-orange-red-precision-model-resin-0-5kg",
+      "variantId": 58386938757384,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20173_01.jpg?v=1786084728",
+      "expectedProductTitle": "eSun orange-red precision model resin, 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-04edd27e32e6d062340e": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189166652,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLABasicBeige.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Beige (10201) / Refill / 1 kg"
+    },
+    "candidate-7f0d4ee94c0a9c2d3af2": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-gf",
+      "variantId": 44847706931244,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETG-GFWhite.jpg?v=1772862114",
+      "expectedProductTitle": "PETG-GF",
+      "expectedVariantTitle": "1 Kg / White HEX Code #FFFFFF"
+    },
+    "candidate-21c7c0099c5e16f09289": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-green-castable-jewellery-resin-1kg",
+      "variantId": 58386938659080,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20162_01.jpg?v=1786084728",
+      "expectedProductTitle": "eSun green castable jewellery resin, 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-4aea019b58550f2faf5a": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42145706442812,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/plalightgray.jpg?v=1725263724",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Light Gray (10104) / Refill / 1 kg"
+    },
+    "candidate-efb2051e32eb057dbe8e": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435301657,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1147TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Black"
+    },
+    "candidate-667b7ab7349a30c8121b": {
+      "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
+      "variantId": 54873898615170,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/products/eryone-luminous-pla-filament-1-75mm-1kg-glow-in-the-dark-green-3d-printer-filament-ideal-for-halloween-nse-imports-28.jpg?v=1694266620",
+      "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
+      "expectedVariantTitle": "Glowing Purple / Luminous PLA"
+    },
+    "candidate-74ad5d8004ac500ef46d": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711306284,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTranslucentClear.jpg?v=1772862105",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Clear HEX Code #E0E0E0"
+    },
+    "candidate-6411b4f5e4f07fed7a10": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301696049212,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/SunflowerYellow.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Sunflower Yellow (10402) / Refill / 1 kg"
+    },
+    "candidate-aae833e17be5f20d07cb": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435334425,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1148TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "White"
+    },
+    "candidate-a211dde8576051d80177": {
+      "priceUrl": "https://nseimports.co.uk/products/us-eryone-glow-in-the-dark-filament",
+      "variantId": 54873898647938,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/eryone-luminous-pla-filament-1-75mm-1kg-glow-in-the-dark-green-3d-printer-filament-ideal-for-halloween-nse-imports-24.jpg?v=1694266613",
+      "expectedProductTitle": "[US] ERYONE Glow in the Dark Filament: 1.75mm 1kg 3D Printer Luminous PLA Filament",
+      "expectedVariantTitle": "Glowing Rainbow / Luminous PLA"
+    },
+    "candidate-32f0a290e4ca750257c9": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711339052,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTransparentBlack.jpg?v=1772862105",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Black HEX Code #333333"
+    },
+    "candidate-a682f42c513e7918f8f7": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189232188,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/yellowplabasic.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Yellow (10400) / Refill / 1 kg"
+    },
+    "candidate-081f85ca9921ec3e0e7b": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435367193,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1149TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Grey"
+    },
+    "candidate-c40133e78a4b1f0a09c5": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951336834,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-S8255776e72e646189e87dd9d63e70a03K.webp?v=1733328818",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Red / Polylactic acid (PLA)"
+    },
+    "candidate-a7d34a24ca7408fea608": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711371820,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTranslucentBlue.jpg?v=1772862107",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Blue HEX Code #3399FF"
+    },
+    "candidate-de00c60049abe266a260": {
+      "priceUrl": "https://www.123-3d.co.uk/products/sunlu-marble-pla-filament-1-75mm-1kg",
+      "variantId": 58386931155208,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP00171_01.jpg?v=1786084526",
+      "expectedProductTitle": "SUNLU Marble PLA Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-7b98b8177784180bdea5": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465089261628,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PLAGold.jpg?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Gold (10401) / Refill / 1 kg"
+    },
+    "candidate-283b4de2a8de95eb889a": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435399961,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1150TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Red"
+    },
+    "candidate-71b03c2d6a52830b96fc": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951402370,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-S7a36077bfb064a7eafadba75e375c43cp.webp?v=1733328846",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Green / Polylactic acid (PLA)"
+    },
+    "candidate-953b212a99bf8b3f8bdc": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711404588,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTransparentPurple.jpg?v=1772862107",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Purple HEX Code #9933FF"
+    },
+    "candidate-72026cd57bb10e13209d": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189068348,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Orange.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Orange (10300) / Refill / 1 kg"
+    },
+    "candidate-ae4a55f8e4f07669a167": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435432729,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1151TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-f5aaf459d6d51a91fce6": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951369602,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/3-S7f7b446da8a248a7ad616f02acdfcd41p.webp?v=1733328879",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "White / Polylactic acid (PLA)"
+    },
+    "candidate-8dfa4d7f7dabfeea211c": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711437356,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTransparentRed.jpg?v=1772862109",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Red HEX Code #FF4D4D"
+    },
+    "candidate-7be9a4539a8d12a5a5bd": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301702012988,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PumpkinOrange.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Pumpkin Orange (10301) / Refill / 1 kg"
+    },
+    "candidate-e2a3b8c81254dd96b3bc": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435465497,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1152TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Blue"
+    },
+    "candidate-ac7eab31bd73ca51cff0": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951435138,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/4-S49801fad50fd4c0c8eafc3600db36edeJ.webp?v=1733328898",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Black / Polylactic acid (PLA)"
+    },
+    "candidate-cc151a6d085fe3d5706a": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-translucent",
+      "variantId": 44770711470124,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGTransparentYellow.jpg?v=1772862110",
+      "expectedProductTitle": "PETG Translucent",
+      "expectedVariantTitle": "1 kg / Yellow HEX Code #FFFF33"
+    },
+    "candidate-76fb21d5099ab7061fbc": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301698670652,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/BrightGreen.jpg?v=1730272653",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Bright Green (10503) / Refill / 1 kg"
+    },
+    "candidate-142bce1a7fec7147f7fe": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-72d-filament-10-kg",
+      "variantId": 53218435498265,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1153TPU72D10KG_1.75mm.jpg?v=1789892656",
+      "expectedProductTitle": "TPU 72D Filament 10 kg",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-41a4d8ffadbb0d7f384f": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951467906,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/5-S8572c8fe799d4885b6ab2ee796144780s.webp?v=1733328926",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Pink / Polylactic acid (PLA)"
+    },
+    "candidate-b6f9933b8eef7067da79": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711011372,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Latte_Brown.jpg?v=1772862099",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Latte Brown HEX Code #8C6952"
+    },
+    "candidate-f029f74c7d96ea892737": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465095782460,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/Plabasicbambugreen.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Bambu Green (10501) / Refill / 1 kg"
+    },
+    "candidate-6164ed8e5ff307483ea4": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951500674,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/6-S9daad20a14114ed8a0f012748ca5424eP.webp?v=1733328945",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Grey / Polylactic acid (PLA)"
+    },
+    "candidate-e450b180a281c69a2b4a": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711044140,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Sesame_Black.jpg?v=1772862099",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Sesame Black HEX Code #000000"
+    },
+    "candidate-44f3cc937e5177c8c9ca": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40621342294076,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/Plabasicbambugreen.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Bambu Green (10501) / Filament with spool / 1 kg"
+    },
+    "candidate-5de1b604fae365f6993e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-get-2-kg-filament-for-just-1",
+      "variantId": 52149174370585,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C_2Filament_7a365409-d41b-480f-8e91-862a24233521.jpg?v=1789897326",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Get 2 kg Filament for Just £1",
+      "expectedVariantTitle": "Random Filament1"
+    },
+    "candidate-81688012fae1212e35cb": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861951533442,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/7-Sb7175a101b4b4297a96ba5ddb1ae8887c.webp?v=1733328972",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Yellow / Polylactic acid (PLA)"
+    },
+    "candidate-8c8a1a702145dce779fc": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711076908,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Coconut_White.jpg?v=1772862100",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Coconut White HEX Code #FFFFFF"
+    },
+    "candidate-5c77abee3726a60915ec": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-plus-pellets-1kg",
+      "variantId": 58386889015560,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DPL00009_01.jpg?v=1786083521",
+      "expectedProductTitle": "123-3D PLA Plus Pellets 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-ecb6aeb322f349598277": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465096077372,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/063c3c25cb6510ea2566af540e5e3c99_b75752d5-9ea6-4606-a617-17224f081e0e.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Mistletoe Green (10502) / Refill / 1 kg"
+    },
+    "candidate-068e339e9e82f168ee1d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-get-2-kg-filament-for-just-1",
+      "variantId": 52210400067865,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C_2Filament_7a365409-d41b-480f-8e91-862a24233521.jpg?v=1789897326",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Get 2 kg Filament for Just £1",
+      "expectedVariantTitle": "Random Filament2"
+    },
+    "candidate-24a3a09767a7b647684d": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861954482562,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/8-S381fc69e69a941669fdb3a88a6a27730f.webp?v=1733329004",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Blue / Polylactic acid (PLA)"
+    },
+    "candidate-778c763417042861c7c6": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711109676,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Mint_Blue.jpg?v=1772862100",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Mint Blue HEX Code #9CD4EB"
+    },
+    "candidate-0c2f751755eee030621f": {
+      "priceUrl": "https://www.123-3d.co.uk/products/f136-c1-nylon-pellets-1kg-123-3d-brand",
+      "variantId": 58386888917256,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DPL00008_01.jpg?v=1786083514",
+      "expectedProductTitle": "123-3D F136-C1 Nylon Pellets 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-6564c93941291cc7dfe3": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189297724,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Pink.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Pink (10203) / Refill / 1 kg"
+    },
+    "candidate-c86c58e6ba8685fe8571": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-get-2-kg-filament-for-just-1",
+      "variantId": 52210400166169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C_2Filament_7a365409-d41b-480f-8e91-862a24233521.jpg?v=1789897326",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Get 2 kg Filament for Just £1",
+      "expectedVariantTitle": "Random Filament3"
+    },
+    "candidate-ba2a098db3cf0dab889c": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861954744706,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/9-Sa047b069e0104e90ad93d9cc8d98335eB.webp?v=1733329026",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "Mixed / Polylactic acid (PLA)"
+    },
+    "candidate-703dc9a2c5ec6a28ed06": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711142444,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Malt_Green.jpg?v=1772862102",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Malt Green HEX Code #9AD24B"
+    },
+    "candidate-8265bd36cd1ff5c77c19": {
+      "priceUrl": "https://www.123-3d.co.uk/products/tpu-pellets-1kg-123-3d-brand",
+      "variantId": 58386888851720,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DPL00007_01.jpg?v=1786083511",
+      "expectedProductTitle": "123-3D TPU Pellets 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-9c69ad23f5e097f3dc42": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301699850300,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/HotPink.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Hot Pink (10204) / Refill / 1 kg"
+    },
+    "candidate-87b9f79dc783f7da3176": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-get-2-kg-filament-for-just-1",
+      "variantId": 52351417418009,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C_2Filament_7a365409-d41b-480f-8e91-862a24233521.jpg?v=1789897326",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Get 2 kg Filament for Just £1",
+      "expectedVariantTitle": "Random Filament4"
+    },
+    "candidate-c65666ce62d902c07d96": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-meta-10kg",
+      "variantId": 54861954777474,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/10-S99e9afa3c93a45e1a9c6f4dfdba4fe3fk.webp?v=1733328787",
+      "expectedProductTitle": "JAYO PLA META 10x1kg 1.75mm: High Strength easy to print 3D filament",
+      "expectedVariantTitle": "White x5 / Black x5 / Polylactic acid (PLA)"
+    },
+    "candidate-4a4f82fc1a322946595f": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711175212,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Peach_Pink.jpg?v=1772862101",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Peach Pink HEX Code #F5D3D6"
+    },
+    "candidate-56e17efcd110f7317b46": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465093718076,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/CMYK-Magenta-1.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Magenta (10202) / Refill / 1 kg"
+    },
+    "candidate-aaf06eb869cdacfe5ee1": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-get-2-kg-filament-for-just-1",
+      "variantId": 52351417516313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C_2Filament_7a365409-d41b-480f-8e91-862a24233521.jpg?v=1789897326",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Get 2 kg Filament for Just £1",
+      "expectedVariantTitle": "Random Filament5"
+    },
+    "candidate-2d398f47aef5e5a018c2": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861929415042,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-S1bb10f8a4c734a2f8950968c1597bb6dC.webp?v=1733327893",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Silver / Polylactic acid (PLA)"
+    },
+    "candidate-8465cbe392b661148179": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711207980,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Watermelon_Red.jpg?v=1772862105",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Watermelon Red HEX Code #F45D6D"
+    },
+    "candidate-078daf7019857da02f6f": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189396028,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Red.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Red (10200) / Refill / 1 kg"
+    },
+    "candidate-c29fb7ac9ea758aa21f9": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-bundle-get-2-kg-resin-for-just-1",
+      "variantId": 52423092764953,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/J2_2KGresin.jpg?v=1779417139",
+      "expectedProductTitle": "Jupiter 2 Bundle: Get 2 kg Resin for Just £1",
+      "expectedVariantTitle": "Random Resin1"
+    },
+    "candidate-b6fedd6e6d662d0ee117": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934166402,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-Saaa61caed35141cba080970304ddb556B.webp?v=1733327958",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "White / Polylactic acid (PLA)"
+    },
+    "candidate-2965142fbd12cf5645f7": {
+      "priceUrl": "https://uk.qidi3d.com/products/pla-matte-basic",
+      "variantId": 44770711240748,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA_Matte_Basic_Milky_green.jpg?v=1772862104",
+      "expectedProductTitle": "PLA Matte Basic",
+      "expectedVariantTitle": "1 kg / Milky green HEX Code #D8E9DB"
+    },
+    "candidate-82e20c2cc836354ffeb1": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla-filament-2-85mm-bronze-0-5kg",
+      "variantId": 58386881380616,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20085_01.jpg?v=1786083290",
+      "expectedProductTitle": "eSun PLA Filament Bronze 2.85mm 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-256ca8a4b45928bfaaf6": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40589883670588,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Red.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Red (10200) / Filament with spool / 1 kg"
+    },
+    "candidate-68f93e632c9858a93fe4": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-bundle-get-2-kg-resin-for-just-1",
+      "variantId": 52423175569689,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/J2_2KGresin.jpg?v=1779417139",
+      "expectedProductTitle": "Jupiter 2 Bundle: Get 2 kg Resin for Just £1",
+      "expectedVariantTitle": "Random Resin2"
+    },
+    "candidate-53d3064a097ac7b6ad88": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934199170,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/3-S5c5109783eba4860aae49c1229517af4N.webp?v=1733327981",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Red Copper / Polylactic acid (PLA)"
+    },
+    "candidate-c9471bf5b93c39534c62": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710650924,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicKleinBlue_a668dd4b-dc1b-4f23-a1d9-c0270fa40292.jpg?v=1772862071",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Klein Blue HEX Code #0065BD"
+    },
+    "candidate-1470c02934959afce83e": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-emarble-white-pla-filament-1-75mm-1kg",
+      "variantId": 58386880561416,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20061_01.jpg?v=1786083271",
+      "expectedProductTitle": "eSun eMarble PLA Filament White 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-2c1bd0c80ece7d195b2f": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301695131708,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/MaroonRed.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Maroon Red (10205) / Refill / 1 kg"
+    },
+    "candidate-60209c65612f09b7758c": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-bundle-get-2-kg-resin-for-just-1",
+      "variantId": 52423175602457,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/J2_2KGresin.jpg?v=1779417139",
+      "expectedProductTitle": "Jupiter 2 Bundle: Get 2 kg Resin for Just £1",
+      "expectedVariantTitle": "Random Resin3"
+    },
+    "candidate-762fc099f8b644c4b68d": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934231938,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/4-S13c93721ed844441aa344e8df74f3e10K.webp?v=1733328001",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Black / Polylactic acid (PLA)"
+    },
+    "candidate-50c901862a33e348e2cb": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710683692,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicBlack_8bda6ba5-264d-42ac-b2d8-34ab6c7edd04.jpg?v=1772862071",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Black HEX Code #000000"
+    },
+    "candidate-b4f6efe02b9839d22329": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-epa-cf-nylon-with-carbon-fibre-filament-1-75mm-neutral-1kg",
+      "variantId": 58386880495880,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20040_01.jpg?v=1786083267",
+      "expectedProductTitle": "eSun ePA-CF Nylon with Carbon Fibre Filament Neutral 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-f979bdf79a0f8765c047": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301698408508,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/IndigoPurple.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Indigo Purple (10701) / Refill / 1 kg"
+    },
+    "candidate-cd656d6773b80c80c806": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-bundle-get-2-kg-resin-for-just-1",
+      "variantId": 52423175635225,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/J2_2KGresin.jpg?v=1779417139",
+      "expectedProductTitle": "Jupiter 2 Bundle: Get 2 kg Resin for Just £1",
+      "expectedVariantTitle": "Random Resin4"
+    },
+    "candidate-4d2842bdd5f751fb7f1e": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934264706,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/5-S7fd04469b42248d09dddc6780c9619cdZ.webp?v=1733328025",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Rainbow #01 / Polylactic acid (PLA)"
+    },
+    "candidate-3f265100b08f38395def": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710716460,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicWhite_cef85f84-a013-4966-8ddb-921ab213425c.jpg?v=1772862093",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / White HEX Code #F2F0EB"
+    },
+    "candidate-d2fb2bb44bb0d8684ee0": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-epa-nylon-filament-1-75mm-neutral-1kg",
+      "variantId": 58386880463112,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20038_01.jpg?v=1786083266",
+      "expectedProductTitle": "eSun ePA Nylon Filament Neutral 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-849ce5101124faf89e89": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465098960956,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PLAPurple.jpg?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Purple (10700) / Refill / 1 kg"
+    },
+    "candidate-68553c5cdaf82cd0723b": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-bundle-get-2-kg-resin-for-just-1",
+      "variantId": 52423175667993,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/J2_2KGresin.jpg?v=1779417139",
+      "expectedProductTitle": "Jupiter 2 Bundle: Get 2 kg Resin for Just £1",
+      "expectedVariantTitle": "Random Resin5"
+    },
+    "candidate-fe9ba439474751011d5f": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934297474,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/6-S7fd87e24f0a748209a9e66c94b7092ea2.webp?v=1733328050",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Rainbow #02 / Polylactic acid (PLA)"
+    },
+    "candidate-b9238954ce2d0889ad30": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710749228,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicBeige_943c0702-7fe6-4d30-8949-32f4f9d8e609.jpg?v=1772862093",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Beige HEX Code #D0B891"
+    },
+    "candidate-64ebbc15d26c03ea3013": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301696475196,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/Turquoise.jpg?v=1730272654",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Turquoise (10605) / Refill / 1 kg"
+    },
+    "candidate-f7400dcf9b888d459652": {
+      "priceUrl": "https://uk.elegoo.com/products/8k-water-washable-abs-like-resin-5-kg",
+      "variantId": 53140163821849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0461-_ABS-8K_-_-1000g-Bundle_5.jpg?v=1789124590",
+      "expectedProductTitle": "8K Water-Washable ABS-Like Resin 5 kg",
+      "expectedVariantTitle": "#Space Grey"
+    },
+    "candidate-ad85304b099021d6770d": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-silk-10kg",
+      "variantId": 54861934330242,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/7-S4b4023213263480c84cea045b887e6919.webp?v=1733327868",
+      "expectedProductTitle": "JAYO PLA SILK 10x1kg 1.75mm: High Quality 3D Printer Filament with a Silk finish",
+      "expectedVariantTitle": "Light Gold / Polylactic acid (PLA)"
+    },
+    "candidate-cb4a6b3c7694b8dd41c7": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710781996,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicCyan_28636ab3-6b36-4cce-a93c-39a5bf1f6195.jpg?v=1772862095",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Cyan HEX Code #00AEEF"
+    },
+    "candidate-400595b51633055e7a4d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-black-pc-petg-filament-2-85mm-1kg",
+      "variantId": 58386859131144,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE02061_01.jpg?v=1786082697",
+      "expectedProductTitle": "REAL PC-PETG Filament Black 2.85mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-1531b10a64e92b685c33": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465098207292,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/CMYK-Cyan-1.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Cyan (10603) / Refill / 1 kg"
+    },
+    "candidate-6f8c5094d945696699ba": {
+      "priceUrl": "https://uk.elegoo.com/products/8k-water-washable-abs-like-resin-5-kg",
+      "variantId": 53140163854617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0461-_ABS-8K_-_-1000g-Bundle_5.jpg?v=1789124590",
+      "expectedProductTitle": "8K Water-Washable ABS-Like Resin 5 kg",
+      "expectedVariantTitle": "#Vanilla"
+    },
+    "candidate-a187dd328bfc17de102d": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-marble-10kg",
+      "variantId": 54861919584642,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/4-S04498832147a4dd79fd55a75edba6ba2w.webp?v=1733327106",
+      "expectedProductTitle": "JAYO PLA MARBLE 10x1kg 1.75mm: High Quality Stone Effect 3D Printer Filament",
+      "expectedVariantTitle": "Marble / Polylactic acid (PLA)"
+    },
+    "candidate-eb621b3c6c73d28bf5de": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710814764,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicYellow_3a71834d-4140-4b59-af36-f655b3f07a2e.jpg?v=1772862095",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Yellow HEX Code #F6D155"
+    },
+    "candidate-c7678f7b903ca61928b3": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-red-tpu-98a-filament-1-75mm-0-5kg",
+      "variantId": 58386858901768,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFF03022_01.jpg?v=1786082692",
+      "expectedProductTitle": "REAL TPU 98A Filament Red 1.75mm 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-7d7bc87fd2576a4db131": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189101116,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PLABasicBlue.jpg?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Blue (10601) / Refill / 1 kg"
+    },
+    "candidate-7e308a4b2f0ab8984920": {
+      "priceUrl": "https://uk.elegoo.com/products/8k-water-washable-abs-like-resin-5-kg",
+      "variantId": 53140163887385,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0461-_ABS-8K_-_-1000g-Bundle_5.jpg?v=1789124590",
+      "expectedProductTitle": "8K Water-Washable ABS-Like Resin 5 kg",
+      "expectedVariantTitle": "#White Smoke"
+    },
+    "candidate-f780b24dbe47f9044327": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895664002,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-S04f6066058e5475da35e380b56cd2893a.webp?v=1733326704",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Rainbow #1 / Polylactic acid (PLA)"
+    },
+    "candidate-55048df6adcd6eca7fb0": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710847532,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicGreen_d94ece0e-4773-4d09-8ee9-012cf5c0b4bc.jpg?v=1772862097",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Green HEX Code #1F4E3A"
+    },
+    "candidate-f40bede8def04bbe50f8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/photocentric-grey-uv-dlp-high-tensile-resin-1kg",
+      "variantId": 58386826166536,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ00024_01.jpg?v=1786081999",
+      "expectedProductTitle": "Photocentric grey UV-DLP high tensile resin, 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-16c2930614fafe2bd77a": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40630665674812,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PLABasicBlue.jpg?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Blue (10601) / Filament with spool / 1 kg"
+    },
+    "candidate-37fedd5c8868a3cfe5f9": {
+      "priceUrl": "https://uk.elegoo.com/products/8k-water-washable-abs-like-resin-5-kg",
+      "variantId": 53140163920153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0461-_ABS-8K_-_-1000g-Bundle_5.jpg?v=1789124590",
+      "expectedProductTitle": "8K Water-Washable ABS-Like Resin 5 kg",
+      "expectedVariantTitle": "#Red Clay"
+    },
+    "candidate-f0c0221227fd03003f2b": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895696770,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-Sea30a8d15b2a4df180f0f3eba88cf77dd.webp?v=1733326679",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Rainbow #2 / Polylactic acid (PLA)"
+    },
+    "candidate-56aa3a428c90f5dadee5": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710880300,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicLightGray_076b2209-aa48-4c67-b355-cab83338cada.jpg?v=1772862097",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Light Gray HEX Code #D1D3D4"
+    },
+    "candidate-ffcd0ea4bb20eb164959": {
+      "priceUrl": "https://www.123-3d.co.uk/products/photocentric-grey-uv-dlp-hard-resin-1kg",
+      "variantId": 58386825969928,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ00015_01.jpg?v=1786081992",
+      "expectedProductTitle": "Photocentric grey UV-DLP hard resin, 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-0ff046994ff6e63bf7e4": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301701652540,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/CobaltBlue.jpg?v=1730272653",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Cobalt Blue (10604) / Refill / 1 kg"
+    },
+    "candidate-7864a9d969f2e6a06da2": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553415961,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1087_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Black"
+    },
+    "candidate-fa3833afd68bf2cd7692": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895729538,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/3-Se14b429fcf694be8bf8bd827875d7109N.webp?v=1733326733",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Red / Polylactic acid (PLA)"
+    },
+    "candidate-46b2468fc3d41f8d22bb": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710913068,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicRed_02e74f3f-d242-4903-9a05-c019f10933a0.jpg?v=1772862070",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Red HEX Code #D3100C"
+    },
+    "candidate-417385632bac74dc1f54": {
+      "priceUrl": "https://www.123-3d.co.uk/products/photocentric-black-uv-dlp-hard-resin-1kg",
+      "variantId": 58386825937160,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ00013_01.jpg?v=1786081991",
+      "expectedProductTitle": "Photocentric black UV-DLP hard resin, 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-39078d76e634e3b77a01": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42301699129404,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/CocoaBrown.jpg?v=1730272653",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Cocoa Brown (10802) / Refill / 1 kg"
+    },
+    "candidate-0a526c35c3e27986b064": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553448729,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1088_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "White"
+    },
+    "candidate-830d8373d6ea8dcf4c49": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861889438082,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/5-S64d3a72b71634665a2ed503a75faccfaS.webp?v=1733326755",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "White / Polylactic acid (PLA)"
+    },
+    "candidate-e6e2605271d5a2ebd0ce": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-basic",
+      "variantId": 44770710945836,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGBasicSkin_0d00a4fb-350c-4788-a2e5-620d4afe69b0.jpg?v=1772862072",
+      "expectedProductTitle": "PETG Basic",
+      "expectedVariantTitle": "1 kg / Skin HEX Code #E3BC9A"
+    },
+    "candidate-0a8df6a6f21dc81ee338": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-satin-sun-pla-filament-2-85mm-0-5kg",
+      "variantId": 58386809192712,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02059_01.jpg?v=1786081730",
+      "expectedProductTitle": "REAL PLA Filament Satin Sun 2.85mm 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-6920d919a4108b5aa6d1": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189363260,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Brown.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Brown (10800) / Refill / 1 kg"
+    },
+    "candidate-70cfc19284cb69646e58": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553481497,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1093_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Gray"
+    },
+    "candidate-5dabf60ffd58f024df49": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895762306,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/6-S52934aeaf7d7473496024e1b7889871ds.webp?v=1733326778",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Grey / Polylactic acid (PLA)"
+    },
+    "candidate-77b4682179f214073223": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-orange-abs-pro-filament-1-75mm-1kg",
+      "variantId": 58386802508040,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFA11040_01.jpg?v=1786081528",
+      "expectedProductTitle": "123-3D ABS Pro Filament Orange 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-de79c6625468f89bac2c": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 41465100435516,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/PLABronze.jpg?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Bronze (10801) / Refill / 1 kg"
+    },
+    "candidate-cbbd628e28e178507408": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553514265,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1089_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Red"
+    },
+    "candidate-923fa2575c6aef064eee": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861889470850,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/7-Sb65b2156b73549a7b0fbb94ab195ac32h.webp?v=1733326801",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Black / Polylactic acid (PLA)"
+    },
+    "candidate-8960e8e98e9275c44286": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 44426549329964,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_5843f3fd-9ac3-423c-a4dd-246f7ce3ebb9.jpg?v=1772862598",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / UK / Rose Red HEX Code #D6A2A1"
+    },
+    "candidate-a9ecf42f990528759b05": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-petg-pellets-1-kg",
+      "variantId": 58386793398536,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DPL00002_01.jpg?v=1786081281",
+      "expectedProductTitle": "123-3D PETG Pellets 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-61606795220943d4ea69": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189133884,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Gray_5c6dd843-18de-4485-ac1e-9f419e4aaebb.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Gray (10103) / Refill / 1 kg"
+    },
+    "candidate-b8c520291cebf3d2df8f": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553547033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1090_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Blue"
+    },
+    "candidate-4ac9a95564b395dcab1c": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895795074,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/11-S9bc18d6ba67040a1b9ac124a6e449edbW.webp?v=1733326653",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Blue / Polylactic acid (PLA)"
+    },
+    "candidate-c2d97bb5ba1fa2ff29d8": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 44426549362732,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_b34aa5e9-a1d3-494b-97d3-325fcb464cfc.jpg?v=1772862601",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / UK / Skin HEX Code #F2DCC2"
+    },
+    "candidate-fb4e93759d61d834628b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/phrozen-aqua-4k-resin-ivory-1kg",
+      "variantId": 58386792382728,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR03175.jpg?v=1791473552",
+      "expectedProductTitle": "Phrozen Aqua 4K Resin Ivory 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-6c57eb81dcf5656bcb7f": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40674109751356,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Gray_5c6dd843-18de-4485-ac1e-9f419e4aaebb.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Gray (10103) / Filament with spool / 1 kg"
+    },
+    "candidate-44bf92608c8351c04632": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553579801,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1091_PETGHF10KG_1.75mm.jpg?v=1789092178",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-c7cc897cd3c313baf684": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895827842,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/8-Sfa83ebf299d44278a4cfde993ab28379n.webp?v=1733326819",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "White x5 / Grey x5 / Polylactic acid (PLA)"
+    },
+    "candidate-ce574405616ca71d855e": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 44426549428268,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_df7c5c7d-7339-4206-be5c-8123f17537a5.jpg?v=1772862600",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / UK / Bronze HEX Code #BEB09E"
+    },
+    "candidate-b79124a893f589d7b6ac": {
+      "priceUrl": "https://www.123-3d.co.uk/products/prusa-prusament-pla-pristine-white-2kg-nfc",
+      "variantId": 58386791465224,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16393_01.jpg?v=1786081213",
+      "expectedProductTitle": "Prusa Prusament PLA Filament Pristine White 1.75mm 2kg (NFC)",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-bc3bddcc9d12cf9f8217": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189199420,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Silver.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Silver (10102) / Refill / 1 kg"
+    },
+    "candidate-46dd4a2f625b1a09054c": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553612569,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1092_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-17449f45780e3e44edef": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861889503618,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/9-S07396adc1e544cf8bcf9ef23fa2cc171C.webp?v=1733326838",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "White x5 / Black x5 / Polylactic acid (PLA)"
+    },
+    "candidate-f80ff3a2b6557ff7e520": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166169132,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/QIDI_PLA_Silk_Silver_3D_Printer_Filament_with_RFID_1.75mm_Silk_PLA.png?v=1778577399",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / UK / Sliver HEX Code #8A8D8F"
+    },
+    "candidate-4bb175cf3cb590bc9932": {
+      "priceUrl": "https://www.123-3d.co.uk/products/prusa-prusament-petg-signal-white-2kg-nfc",
+      "variantId": 58386791399688,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16392_01.jpg?v=1786081211",
+      "expectedProductTitle": "Prusa Prusament PETG Filament Signal White 1.75mm 2kg (NFC)",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-d682b6136fef3243573c": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40206189264956,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Blue-Gray.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Blue Grey (10602) / Refill / 1 kg"
+    },
+    "candidate-53c5f747448c78d4594d": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553645337,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1094_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-68f71cf4a19a5c2547c2": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-10kg",
+      "variantId": 54861895860610,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/10-S78b2bd612653430495c1609bde04f519k.webp?v=1733326856",
+      "expectedProductTitle": "JAYO PLA 10x1kg 1.75mm: High Quality 3D Printer Filament, Many Colours",
+      "expectedVariantTitle": "Mixed / Polylactic acid (PLA)"
+    },
+    "candidate-aa78435033230d655e75": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166201900,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/QIDI_PLA_Silk_Gold_3D_Printer_Filament_with_RFID_1.75mm_Silk_PLA.png?v=1778577400",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / UK / Gold HEX Code #C99700"
+    },
+    "candidate-055077c81928d3098628": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 42145708441660,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/files/pladarkgray.jpg?v=1725263764",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Dark Gray (10105) / Refill / 1 kg"
+    },
+    "candidate-d335cbb28d9b4532d843": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553678105,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1095_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Brown"
+    },
+    "candidate-73938513c14a50a8869d": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-matte-10kg",
+      "variantId": 54861874725250,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S258cac51c5b6457e8b4a800c7af4a53cT.webp?v=1733325668",
+      "expectedProductTitle": "JAYO PLA MATTE 10x1kg 1.75mm: High Quality Matte Finish 3D Printer Filament",
+      "expectedVariantTitle": "White / Polylactic acid (PLA)"
+    },
+    "candidate-7f5710efb94bd3027140": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166234668,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_5843f3fd-9ac3-423c-a4dd-246f7ce3ebb9.jpg?v=1772862598",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / China / Rose Red HEX Code #D6A2A1"
+    },
+    "candidate-4ebd43286f1097dbc576": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40567645372476,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Black (10101) / Refill / 1 kg"
+    },
+    "candidate-8c84a6b63b84962162e0": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553710873,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1096_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Beige"
+    },
+    "candidate-fefcac4af4d01ba6c963": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-matte-10kg",
+      "variantId": 54861874823554,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/Sd53faf8ca85d420d9e6eb8f18d47eaac9.webp?v=1733325695",
+      "expectedProductTitle": "JAYO PLA MATTE 10x1kg 1.75mm: High Quality Matte Finish 3D Printer Filament",
+      "expectedVariantTitle": "Black / Polylactic acid (PLA)"
+    },
+    "candidate-a2a656dc53607b54322f": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166267436,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_b34aa5e9-a1d3-494b-97d3-325fcb464cfc.jpg?v=1772862601",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / China / Skin HEX Code #F2DCC2"
+    },
+    "candidate-a85abf5b5ca2fac019fc": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-basic-filament",
+      "variantId": 40589883736124,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Basic_Black.png?v=1717491931",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Black (10101) / Filament with spool / 1 kg"
+    },
+    "candidate-d28e0a2accda2d5d4c97": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553743641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1097_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Transparent"
+    },
+    "candidate-1382d6e847cf8f5d38df": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-pla-matte-10kg",
+      "variantId": 54861874954626,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/Sff511d0cb5384beab65a5d163040b498e.webp?v=1733325718",
+      "expectedProductTitle": "JAYO PLA MATTE 10x1kg 1.75mm: High Quality Matte Finish 3D Printer Filament",
+      "expectedVariantTitle": "White x5 / Black x5 / Polylactic acid (PLA)"
+    },
+    "candidate-b4fd976e97af33ba5f9a": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166300204,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_09a8778c-cd23-43aa-955c-08ff8be7ffb4.jpg?v=1772862599",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / China / Green HEX Code #BDF2E0"
+    },
+    "candidate-2c013bb19ef81a90932e": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "variantId": 40215561142332,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Lilac-Purple.png?v=1706090484",
+      "expectedProductTitle": "PLA Matte",
+      "expectedVariantTitle": "Matte Lilac purple (11700) / Refill / 1kg"
+    },
+    "candidate-ed23c8266b752a8258ba": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-hf-filament-10-kg",
+      "variantId": 53134553776409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1098_PETGHF10KG_1.75mm.jpg?v=1789092177",
+      "expectedProductTitle": "PETG HF Filament 10 kg",
+      "expectedVariantTitle": "Space Gray"
+    },
+    "candidate-ba3e8b49264dc68e04d7": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-tpu-10x500g",
+      "variantId": 54861867680130,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S1652c08dd3c04a6da797748ad16dfe169.webp?v=1733325060",
+      "expectedProductTitle": "JAYO TPU 10x500g 1.75mm: High Quality Flexible 3D Printer Filament",
+      "expectedVariantTitle": "Black / Thermoplastic polyurethane (TPU)"
+    },
+    "candidate-dd6cb5b1a273b83cd0a0": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166332972,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PLA-Silk_df7c5c7d-7339-4206-be5c-8123f17537a5.jpg?v=1772862600",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / China / Bronze HEX Code #BEB09E"
+    },
+    "candidate-ea051840f348363eb293": {
+      "priceUrl": "https://www.123-3d.co.uk/products/uniformation-standard-resin-white-1-2kg",
+      "variantId": 58386784747784,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ06070_01.jpg?v=1786080966",
+      "expectedProductTitle": "Uniformation Standard Resin White 1.2kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-f1e377435076555263ea": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "variantId": 40215561076796,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102",
+      "expectedProductTitle": "PLA Matte",
+      "expectedVariantTitle": "Matte Scarlet Red (11200) / Refill / 1kg"
+    },
+    "candidate-4a4749e8076ff8513831": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-pro-get-1-kg-filament-for-just-1",
+      "variantId": 52601209520409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4P_1_1_1KG_1.jpg?v=1782118303",
+      "expectedProductTitle": "Neptune 4 Pro: Get 1 kg Filament for Just £1",
+      "expectedVariantTitle": "Red"
+    },
+    "candidate-eb0d9a912616902d8c5c": {
+      "priceUrl": "https://nseimports.co.uk/products/jayo-tpu-10x500g",
+      "variantId": 54861867712898,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S13abdccc86b04d798e194247b4bc6e90f.webp?v=1733325081",
+      "expectedProductTitle": "JAYO TPU 10x500g 1.75mm: High Quality Flexible 3D Printer Filament",
+      "expectedVariantTitle": "White / Thermoplastic polyurethane (TPU)"
+    },
+    "candidate-8ffcdef860ac1adea2b8": {
+      "priceUrl": "https://uk.qidi3d.com/products/silk-pla-rapido-filament",
+      "variantId": 45535166398508,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/QIDI_PLA_Silk_Silver_3D_Printer_Filament_with_RFID_1.75mm_Silk_PLA.png?v=1778577399",
+      "expectedProductTitle": "PLA Silk Filament",
+      "expectedVariantTitle": "1kg / China / Sliver HEX Code #8A8D8F"
+    },
+    "candidate-96f170c3cc4509f73a04": {
+      "priceUrl": "https://www.123-3d.co.uk/products/uniformation-standard-resin-light-grey-1-2kg",
+      "variantId": 58386784715016,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ06069_01.jpg?v=1786080964",
+      "expectedProductTitle": "Uniformation Standard Resin Light Grey 1.2kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-ed03b43fffc8377425f5": {
+      "priceUrl": "https://bambu-lab-uk.myshopify.com/products/pla-matte-filament",
+      "variantId": 40589886259260,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0573/5320/7868/products/PLA-Matte_Scarlet-Red_86a37231-8997-49b9-9350-d55ee34a46a3.png?v=1717492102",
+      "expectedProductTitle": "PLA Matte",
+      "expectedVariantTitle": "Matte Scarlet Red (11200) / Filament with spool / 1kg"
     }
   },
   "approvedProductDetails": {},

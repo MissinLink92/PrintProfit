@@ -971,7 +971,7 @@
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "b8fd2b2de60738b485521809a136bbfa7f43b8f8e042df35ed9c97a57970373e",
+      "contentHash": "cb0d26c06d3305f67c2cb2e09b1a206c9ce57fd10528c686da8d0d83e3fab6c1",
       "lastVerified": "2026-10-16"
     },
     "amazon": {
@@ -991,15 +991,15 @@
       "url": "https://www.vinted.co.uk/pricelist",
       "lastAttempt": "2026-10-16",
       "status": "review-required",
-      "contentHash": "e719367f16127dc2c7d34d9f73d360740acd1e76a7a1f1a900146b609914894a",
+      "contentHash": "0c79a2c304acac03175d734abf2e609d98f62573f57b614dde7a83504d78ff07",
       "error": "Zero seller fee guidance changed; keep the previous value for review"
     },
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-16",
-      "status": "review-required",
+      "status": "failed",
       "contentHash": "0ac5ac1da1e73e741008f201b9ed260eb78f5ed574232585a77b38e6e3996e79",
-      "error": "Expected one unambiguous rate; found 0"
+      "error": "Source did not provide readable pricing guidance"
     },
     "facebook": {
       "url": "https://www.facebook.com/help/1159837417996719",
@@ -1032,11 +1032,11 @@
       "url": "https://www.shopify.com/uk/pricing",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "973c471b77ddd2d47958a9ab72cf19ce11bd9c6e234dfd7ff26d4df1f648526e",
+      "contentHash": "d948e36b666768ca5c0db21afcba559e474f86c3a96bf7e03a58d7d05b9f1080",
       "lastVerified": "2026-10-16"
     }
   },
-  "lastAttempt": "2026-10-16T16:10:25+01:00",
+  "lastAttempt": "2026-10-16T16:28:54+01:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-16",
@@ -1063,7 +1063,7 @@
       "ZAR": 21.91503229
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-16T16:10:25+01:00",
+    "lastAttempt": "2026-10-16T16:28:54+01:00",
     "status": "verified"
   }
 }
