@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T00:13:45+01:00",
+  "checkedAt": "2026-10-16T15:53:11+01:00",
   "timezone": "Europe/London",
   "issues": [
     {
@@ -241,6 +241,11 @@
       "area": "product",
       "id": "qidi-pla-cf-dark-red-1kg",
       "message": "Exact model/colour/pack product offer unavailable on the recorded page"
+    },
+    {
+      "area": "product",
+      "id": "qidi-pla-cf-lavender-purple-1kg",
+      "message": "Exact variant no longer appears in the retailer catalogue"
     },
     {
       "area": "product",
@@ -8324,1014 +8329,910 @@
     },
     {
       "area": "new-product",
-      "id": "candidate-f9aaac7b2427f73d19b6",
+      "id": "candidate-c9338e3daf3c98af8731",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-180a2c1d8b603a9d3c92",
+      "id": "candidate-ff660a1488482c248633",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f07b91f3ce437bd777b3",
+      "id": "candidate-4c1eb24b13d4de968cbb",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-9b5640fcac50a2cebcfd",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-ecf4cf8b07c3ec8d2d98",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-7bb34d8a17c1ec6d635c",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-5af446e86a1e673545d3",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-311362b0dcaf0e2ed933",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-ff2536e6be11ddc9d0ee",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-04a9ba2b4c5948e4d351",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-a16ad247d079eba10a8d",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-86f91480d14846222428",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-dc814a547ccc4b5d1c7c",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-e46b0ce0718851586538",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-214e101346ce8166d56d",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-f204245dea1b58ef4beb",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-7cbd2f2f3d5bb83f3976",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-9f6a3b7233beb30630c7",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-9ba5fc3f401505d53a73",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-57b1547b9b84b1988ff4",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-8fbd56e4720b76c96704",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-fb56f0cd357a20653751",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-ff7ae8987b1ff5d951ae",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-eca640b0157b8bd03bdf",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-e4f30764183603e52b6c",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-f5c62fcaa9aaf65dac29",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-129a5b703c501c620492",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-bb7c1ecc818ecaeeec47",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-ef76043f71413a44f1b8",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-231de485f51d059d365b",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-796128e76acc49524864",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-8516bc9d717b26ec8538",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-c1c05454f07ff9e87508",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-62777cb4d92508973a13",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-e111b5e12c91c04bd7db",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-de72aab6a2ccdbba096b",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-f5a724df5606b8f2b021",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-5af3eb043bf5058df55c",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-8c7a14a75da4cfba0a1a",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-a2f1e77a40a9b9fe768b",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-927dd70cdf2092d345e6",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-9e7f4c2890ef20d83cb0",
-      "message": "Cannot confirm one product on the discovered URL"
-    },
-    {
-      "area": "new-product",
-      "id": "candidate-39642b6db16acd79e492",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-0f7c7041a3528dd3f7d5",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-5aa58ceab6204e850522",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8b8a261f181d8b0920cb",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-936c392cedbe3651f710",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-425c1bb6f76876f9abcb",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-a1c34902dfb4b435674c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7b14b33ae1d3c83a69ee",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-a3ba049d797931ae7ba7",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-9d5eb9632af2217bdda8",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-d97a88c3e5954c6e1728",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b560720aebd4741f87a4",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-a903baafc1d429ba0e9f",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c63cc1a9ce9516a8f607",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-f7df566aa8660d710711",
+      "id": "candidate-19b2add6caca11311855",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e539184658e6045edf4c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-d38ef1e6e2b02d4e0cf9",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-ee587f0d6846760c7a67",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-bde6337dae90f04c359e",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-1b17c4f39af742aea6df",
+      "id": "candidate-a601d8b49fa920fcb3ec",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1c53a462c06812c32ac6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7b25f7429b956ad15636",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-980642f1ad3ab7da2940",
+      "id": "candidate-dddcd5bd2636ed8e55c4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-b57d308ddbd80df15ddc",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c64641a9b6f3391f5155",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1f2ac092e30536a5a2d3",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-865d683b6f17bc55ed88",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-5ff090f37df00ddc14dd",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-4773bea6b50fb1ea3e71",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-0ae20f307c2a7ec62715",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-07ff212ee54855c1d32f",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-7cb7661f048c861dd29b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-0afa5f93320b13c11a78",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-4723edaf2b974b437e18",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c280ea764fec53e8e442",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-2e0eb957484d25c04311",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-751c1133dfd24ae2a3ef",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-fe2ba0610d589ef17ba5",
+      "id": "candidate-3382073bb0021ee0aa2f",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-9810f7700eccab5b0a4b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7b4c238f26c30a9b9690",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-48b1fb770f9df4d88988",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-9625f61c9f426195e05f",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-9f540240003341dd480e",
+      "id": "candidate-fc1a7b8a55c01003f1a5",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e3edc58d2ef20d71207a",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-9fe2d729c2bdc989bd8a",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-1e456c75198f95bac66a",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-fea14ddd37629c1be86c",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-55b6ea94e19beb72e52b",
+      "id": "candidate-300bd374b3fa284c1c6c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-5029c01233568928f062",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-1052620153394a369c81",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-0fe54ee16335257c7db6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-d6265f19d947d1695fca",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1e59425e594c21fccae5",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-83ddb0b4c6d69245f00a",
+      "message": "Approved URL is outside its recorded retailer"
     },
     {
       "area": "new-product",
-      "id": "candidate-3edc54e615f91fff2874",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-dff76aa660f4bcff0b38",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-22219456e9b7004efbeb",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-84f3b5270612ed3ecb9e",
+      "message": "Catalogue GBP price outside supported range"
     },
     {
       "area": "new-product",
-      "id": "candidate-3d2880be4a0f5c638595",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c671fa478b7fe142c392",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-a8de9774e9f5068ca2fc",
+      "id": "candidate-7895ac55754f90a43c59",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-da1e0190a80405c316bf",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-f30fc7ab4115d53e3551",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-30791d9c59e5513f338b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-fa23e2883cfbbf45a75d",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-558f6bbb4512863c3ae0",
+      "id": "candidate-0ad1db587a039b8368d4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-eccd5480da74a2103dda",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6bb35849ce22c64cde85",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-619101fde5151d25530d",
+      "id": "candidate-174e0dd61c05f38c9f8e",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-61e034e03dce67ed3059",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8436d7fe6fdf70522ba8",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-ee61551f263bc8ce41fc",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-94692daf3656b01541ec",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-29b2de4f18b3966e003c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-54e5825bb7450acd5144",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-aaba3d05aba0844e979e",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6f7cb75934b81620177c",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-deb8b15148895ab98ebd",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e4bb3c09ebbd1fd2534e",
+      "message": "Catalogue GBP price outside supported range"
     },
     {
       "area": "new-product",
-      "id": "candidate-67e6925e046194ab0737",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-5f5140f7537b3fcb9bb3",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-6cfb36d738b744bc271c",
+      "id": "candidate-8a4dcec7abd6d63a9948",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-82a9f385fecdf97062eb",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-20811143d4c8d331c827",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-7d7ee0b69a81c711a92b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-35279a23076451181e10",
+      "message": "No verified product image URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4660d6bb6e23b8be213e",
+      "id": "candidate-343335ac77d259c9805a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-4bee37ddb89c495cf5f4",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8a85edad57fe4002d6df",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-ee881efb90b957d14a1c",
+      "id": "candidate-d0f956716145cfad60bf",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2eb3f767cc674010c0f6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-3bc16252dfabfc412233",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-a927a454d677a057b772",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b772fe0599e1cea968fb",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-b2ab43f8f828ad5eb591",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-3e977ca8eb53ffc1bef6",
+      "message": "Approved URL is outside its recorded retailer"
     },
     {
       "area": "new-product",
-      "id": "candidate-d8bc118723338c4c6d68",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8685ae813cbdb26cda3e",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-6c2c99cfa03efb1fe363",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-64c4b41910b3ebbf3621",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-0808b5daa14bd77d269c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-496655b483325e12f7ab",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-1a2d84f99c636b9621f8",
+      "id": "candidate-550c023853126dd6b38a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-da7baad9c34728293243",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e3b951e190310be5cc1d",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-2a6159c4f6736d8b783d",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b41d6089f6eae4dce5a7",
+      "message": "No verified product image URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f8b071d522bdc08fa9db",
+      "id": "candidate-a14dccbc8d113bcb565c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-0ac3845501da5b0081cf",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b1b47eb93a0cb8ac601e",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-0c736c04416b55b159f9",
+      "id": "candidate-36505c75a928e473ec7c",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-6eda5e054d987665dfab",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6abe5afd22bc2abc5804",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-06dfd09b01af5de6773e",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-cb1aafe8767a5fda67a1",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-cc1134b622a3ad2a5d04",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-a163efd511c73f87f9c7",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-663a6187b80470223aa6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-0d37b2ed627f8c1fde46",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-61b3e1766758cbb27ee8",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c37aa39617358e581097",
+      "message": "Catalogue GBP price outside supported range"
     },
     {
       "area": "new-product",
-      "id": "candidate-b37c3c0d5a810bf20325",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6bb556c8025616a8f32f",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-2ed86cd4b5656fa20afe",
+      "id": "candidate-d03f088ee05818addedd",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-3e2873399024552afd6b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8323ff41725696e16acb",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-c3e1871cc7aa7e67a05b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-5e100c7706994e9acea9",
+      "message": "No verified product image URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-dac0c695fd3e71f94a69",
+      "id": "candidate-23a63ee254bf58f95e98",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-73109d6c2d6ecce061b1",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ae932a133bdf248b9954",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-75f8ff4adf04a6c84e66",
+      "id": "candidate-97ec895a937582cf8d5a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-c46e806853d67266adf6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-5edc7aaf850f02bd8353",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-924580cc4703893e5e3a",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-9cfc20cc6b46a512b9c4",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1c2ef77f900c64569aa1",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6c558d66fc27c9ddb595",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-e861f17f33b8d7dacaec",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-177480d7c2b951a5415c",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-0e85c3bd6414a75782c5",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e02b6ae5b407d1e2ddfd",
+      "message": "Catalogue GBP price outside supported range"
     },
     {
       "area": "new-product",
-      "id": "candidate-df50815aeb469d0541a9",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b1de0aedf6ba53c27154",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-4279b0e4ef2aca3fcf16",
+      "id": "candidate-21a5c88dcb9cedbca6dd",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-7fc78489fa689406aa67",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-29474a34e170d309ae78",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-70c1cda069b52d536983",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-bf345e3e433cef2cfa99",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-3a6af156a785db51b6a2",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-dc5eda7e8cf13b5fbe7f",
+      "message": "No verified product image URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-49b2355203ec3ddc860d",
+      "id": "candidate-e7e01c8f44095b076f72",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-80b6abc86d00163dc542",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ad00c2fc017a8342ad56",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-ae97d6f9d2ce50e971af",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-d5a025bdfc542c9bbd64",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-ae53a190f5415190491e",
+      "id": "candidate-3595dca6df48eb7ffce4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-76d835a67cc2db3e1150",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-28ac4c09d91075405d30",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-8a30eb2fb72b166a6192",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-0211b288c328c28c7238",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-f6054a0a75b2cd2c5965",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8d09e8a7c12897a61c12",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-ae4f89c39e4632a2e7fe",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ec35b22d30ae012b17d0",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-34c82228e55fa9e61820",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e9b35c82ef3913eba0dd",
+      "message": "Catalogue GBP price outside supported range"
     },
     {
       "area": "new-product",
-      "id": "candidate-9f4ac2fc51ca0434193c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-20628a23ff0a0b728090",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-9b562211a71021019474",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b39835f77dd810f43de6",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-d0298a53022c0c36ba1b",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-1c2b2eef94e6e929b1ef",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-e1c2e0afd55cae7fe374",
+      "id": "candidate-f0d31fb14d4e4f4957c5",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-786d90592e17a60d9ab4",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7913be9603ae3822b3b4",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-0daa2396cd3596f03df0",
+      "id": "candidate-7a6d08d7f98ee645a13a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-d48d9f7a59297a82c717",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-80feba3e5ed06f5a0ace",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-8bc10314c12966537fc5",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-58bb1895fd829de4e9a7",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1f4786ba0fca47169e31",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-006e0d5f5068ef06fe67",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-9f211d60966ba3b47761",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-d6c2ca4a9a688bcc79d6",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-f918ad9110b48b5c7805",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e0453d4243683ae5a0c7",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-8ff5c4211666bdd89ace",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-92a6c620c08556fcf02f",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-5e3c0bc6e85ecb0a69ca",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-30ca8f8cba8afc6f19a2",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-cc98ccf9664141c4ce22",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-2e96ddba614ea5e31167",
+      "message": "Pack weight is ambiguous; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-da3b46eaa7424d9f6b03",
+      "id": "candidate-3683c989cd75950ab9ce",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-a45bfb0d80b0d9e0df7c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-a57fb41375b1befaffe8",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-18a6ca7bfc5200abb316",
+      "id": "candidate-f304ddce8940b46ce724",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-e469eb1051600c1dfada",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ca3abb9f1e2c46a97430",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-060b002e328cb02570dc",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-9219825ab121c18b2efa",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-5577ca5357f1b0c48def",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-29fd4ac47ca2ba476f7e",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-4d53cfc108e52c7d3321",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-d4cb88348a4fbc0a3c80",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-a34799dbddac2203d2f9",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-f1cadfbb4ca0dc665bbc",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-3b651b52f2e0034ad904",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-27405e3b3d32cc7d66b9",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-1cc2e919c5f1ebb7c05e",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-8bd628979d63ab4bcdfe",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-5a98a3276b93fa3bab73",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b18ace904bcc8e2cfc47",
+      "message": "Pack weight is ambiguous; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-5d04b11f75c20f30a78f",
+      "id": "candidate-68883a8bf8aeb513799a",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f8bb1e4919f5778f6fbb",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-b0fc3d73c88b04b390b1",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-bb6bc5ccce61bb84ebe1",
+      "id": "candidate-9c7b60c8a45a899f2cf6",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-2b0cd3bca43b6d3b9882",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-c900123fcd13260398a2",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-5fef55f47a22e34c52d2",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-09f37a557f1a8b02b8c3",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-679c7f9a395a98ba199d",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-e7ab83cbc78fca22f6dd",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-006f31cdcf938f4038ea",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ee1c57c3c02d2a042a1f",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-a698500b4133d9d89f4c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ffa073f40b05533615ae",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-ec9be1f8ccfbfba6c412",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7fd89bc10762210295c7",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-278641c6c28248d1c6df",
+      "id": "candidate-5ca1cabde0d0725aa3d5",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-f7801bbc723e79efcc2d",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-a3212209da92d9dbe768",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-3ad862b64a1afb2059e7",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-7f52aee5e833aa721cd6",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-5c2e8bdb5cc19ca1ebd8",
+      "id": "candidate-bc61cedf25801d1c1a89",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-1c4676643a0a3641e433",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-fbd02e5dfa84d4a460b0",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-1e937c6faf43f132613c",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-0c9eea89370335cc21b3",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-f0655fa07ded7f2169c1",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-cdef1de6d1730d03c279",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-14fec269223dda324074",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-414abea4ed87c5bd3ce4",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1131fda08e05503279ea",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-24332587e60afb11c8bc",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-8751953b82121fe18765",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-1c35248400fb89878d68",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-b8db8098bcc7ee01b0a6",
+      "id": "candidate-156cb210c46355caa815",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-8e491862b4bb134262c4",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-739e00d2dbd8d7890afa",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-1be54686fde8e4632e74",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-caea8fe88a97c0e7098d",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-55e650d0791adfcf22bd",
+      "id": "candidate-c245e2a05eecf35eab33",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-88ae26a196c4ee64fcb2",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-55946e005fa9a735987a",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-50f1cc3add7bbf414657",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-3486b970326223e6828d",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-4ac767729b82f401f4e4",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-44eacca675ca47c03434",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-1b3ff032ebaa6dd612c6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-48945ec2160edfb3d1fd",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-1389e4b999522f6f25fd",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-f084d8b34541e30b9f06",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-ef05ae6cb907492fa5ea",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-ba9bebde0ef572eff3a2",
+      "message": "No verified product image URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-560d2cf4841eba5ef184",
+      "id": "candidate-e5ace3e9e5ea0d4b69da",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-ee03cfaafd5fba023429",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-84edd4e05ef1bc10565a",
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "area": "new-product",
-      "id": "candidate-fa43aab481c8e7d9bfb6",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-1c38a599eeb09ba051bf",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-4950fdc019cc1f504d6c",
+      "id": "candidate-20515f60fd555e9657a4",
       "message": "Cannot confirm one product on the discovered URL"
     },
     {
       "area": "new-product",
-      "id": "candidate-72386c5e55380548dafc",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-71ea9bd5fb7bfe32ade8",
+      "message": "Exact Shopify variant ID required; refusing a default variant price"
     },
     {
       "area": "new-product",
-      "id": "candidate-e4f85f634b2845149e41",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-675547b6e3295fd86892",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-c628083d74a7af5421de",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-6277fae9f990d7bd8cb0",
+      "message": "No single GBP offer for the exact product"
     },
     {
       "area": "new-product",
-      "id": "candidate-50e898965b025535aa55",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-fc0f220f75469acdbe21",
+      "message": "Source does not state the material pack weight; listing skipped"
     },
     {
       "area": "new-product",
-      "id": "candidate-97c8937ba7b706e3446f",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-866261d14b351fa050be",
+      "message": "Cannot confirm that the product is a material or printer"
     },
     {
       "area": "new-product",
-      "id": "candidate-31970f68b9ddda14e579",
-      "message": "Cannot confirm one product on the discovered URL"
+      "id": "candidate-37b35ddb47116992a67c",
+      "message": "Cannot confirm that the product is a material or printer"
     }
   ],
-  "priceChanges": [],
+  "priceChanges": [
+    {
+      "id": "qidi-pla-basic-black-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-white-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-gray-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-skin-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-sky-blue-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-yellow-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-blue-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-brown-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-red-1kg",
+      "old": 13.99,
+      "new": 14.99
+    },
+    {
+      "id": "qidi-pla-basic-dark-green-1kg",
+      "old": 13.99,
+      "new": 14.99
+    }
+  ],
   "imageChanges": [],
-  "addedProducts": [],
+  "addedProducts": [
+    "candidate-8dc318869bc55a9a6c3d",
+    "candidate-84856fa0a0898db18ff0",
+    "candidate-e890617ab4d9d1d5ce6b",
+    "candidate-9538f08aa382022a32b6",
+    "candidate-ae8258ef82492581961f",
+    "candidate-8a8fc55f56a3e8557b2a",
+    "candidate-3a4236997defb9aba087",
+    "candidate-bd556e2e24e5993275b8",
+    "candidate-04ab5d1057cfbc27be87",
+    "candidate-8b13d157e53746667679",
+    "candidate-17b892a1ac27ce808bd8",
+    "candidate-0197ff0dc3d2b73bd479",
+    "candidate-784cc3bcf31b796e1ad6",
+    "candidate-54b78d825b13525495b7",
+    "candidate-d9ac8d7095b5998cfc73",
+    "candidate-5900dd7a6ea0552b4f92",
+    "candidate-8119dc24a772203c535f",
+    "candidate-9a7db263cfcec494c715",
+    "candidate-31439ae82fdbf0816813",
+    "candidate-645cc60e87ca0c96c533",
+    "candidate-30c64d5625a88642665b",
+    "candidate-4d85a02a9418fb9ed7c4",
+    "candidate-15f4e8f2c95c4c027b9f",
+    "candidate-1f7d88841a2a055a9758",
+    "candidate-ec73ab2be9da7d6faca9",
+    "candidate-e796a0aff6480d7a101a",
+    "candidate-63771e024b2b6d2fcfd9",
+    "candidate-52eea8962d93f3cc118c",
+    "candidate-62bcc144e04b7d323c77",
+    "candidate-727383f15412217f8058",
+    "candidate-f06eba685c53c7a710e0",
+    "candidate-f6b7c05bf74620064b96",
+    "candidate-cab8d3ae6dfb8fc57232",
+    "candidate-33eebfd14b2a9d9b9939",
+    "candidate-84c2ce06aaf8ee708ca3",
+    "candidate-0585cc594da93b751e2c",
+    "candidate-f18384aaec9904b0d29e",
+    "candidate-41a6c2687c3e0a8964e8",
+    "candidate-5890e546c2c406b4cb30"
+  ],
   "retailers": [
     {
       "id": "3djake-uk",
       "name": "3DJake UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 3849,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 3845,
       "status": "url-discovery-only",
       "listed": 7,
       "verified": 4,
@@ -9340,7 +9241,7 @@
     {
       "id": "3dprima-uk",
       "name": "3D Prima UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 62,
       "status": "url-discovery-only",
       "listed": 16,
@@ -9350,17 +9251,17 @@
     {
       "id": "123-3d-uk",
       "name": "123-3D UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 2001,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 2034,
       "status": "discovered",
-      "listed": 15,
-      "verified": 13,
+      "listed": 24,
+      "verified": 22,
       "retained": 2
     },
     {
       "id": "idig3dprinting",
       "name": "iDig3Dprinting",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 221,
       "status": "url-discovery-only",
       "listed": 4,
@@ -9370,7 +9271,7 @@
     {
       "id": "3dgbire",
       "name": "3DGBIRE",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 435,
       "status": "discovered",
       "listed": 443,
@@ -9380,8 +9281,8 @@
     {
       "id": "bambu-uk",
       "name": "Bambu Lab UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 15,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 98,
       "status": "discovered",
       "listed": 133,
       "verified": 133,
@@ -9390,7 +9291,7 @@
     {
       "id": "creality-uk",
       "name": "Creality UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 201,
       "status": "url-discovery-only",
       "listed": 12,
@@ -9400,8 +9301,8 @@
     {
       "id": "elegoo-uk",
       "name": "ELEGOO UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 3654,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 3717,
       "status": "discovered",
       "listed": 11,
       "verified": 11,
@@ -9410,7 +9311,7 @@
     {
       "id": "amazon-uk",
       "name": "Amazon UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "A supported Amazon product feed/API is required; no public GBP catalogue is configured.",
@@ -9421,7 +9322,7 @@
     {
       "id": "prusa",
       "name": "Prusa Research",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 7,
       "status": "url-discovery-only",
       "listed": 0,
@@ -9431,7 +9332,7 @@
     {
       "id": "subliblanks",
       "name": "Subliblanks",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 10,
       "status": "discovered",
       "listed": 6,
@@ -9441,17 +9342,17 @@
     {
       "id": "nse-imports",
       "name": "NSE Imports",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 676,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 685,
       "status": "discovered",
-      "listed": 1,
-      "verified": 0,
+      "listed": 15,
+      "verified": 14,
       "retained": 1
     },
     {
       "id": "additive-x",
       "name": "Additive-X",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 2,
       "status": "url-discovery-only",
       "listed": 13,
@@ -9461,7 +9362,7 @@
     {
       "id": "ooznest",
       "name": "Ooznest",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 0,
       "status": "url-discovery-only",
       "listed": 0,
@@ -9471,7 +9372,7 @@
     {
       "id": "3d-filaprint",
       "name": "3D FilaPrint",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "The recorded domain currently serves a parked page and no usable product feed.",
@@ -9482,7 +9383,7 @@
     {
       "id": "anycubic-uk",
       "name": "Anycubic UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 0,
       "status": "failed",
       "message": "Storefront redirected outside the recorded retailer",
@@ -9493,18 +9394,18 @@
     {
       "id": "qidi-uk",
       "name": "QIDI UK Store",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 116,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 126,
       "status": "discovered",
-      "listed": 36,
-      "verified": 26,
-      "retained": 10
+      "listed": 46,
+      "verified": 35,
+      "retained": 11
     },
     {
       "id": "flashforge-uk",
       "name": "Flashforge UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 130,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 129,
       "status": "discovered",
       "listed": 27,
       "verified": 27,
@@ -9513,17 +9414,17 @@
     {
       "id": "sovol-uk",
       "name": "Sovol UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
-      "candidates": 42,
+      "checkedAt": "2026-10-16T15:53:11+01:00",
+      "candidates": 45,
       "status": "discovered",
-      "listed": 3,
-      "verified": 3,
+      "listed": 9,
+      "verified": 9,
       "retained": 0
     },
     {
       "id": "snapmaker-uk",
       "name": "Snapmaker UK",
-      "checkedAt": "2026-10-16T00:13:45+01:00",
+      "checkedAt": "2026-10-16T15:53:11+01:00",
       "candidates": 0,
       "status": "monitor-only",
       "message": "The former /en-gb storefront is gone; the public global store quotes USD. A supported GBP source is required.",
@@ -9560,10 +9461,10 @@
     }
   ],
   "newProductChecks": 200,
-  "pendingReview": 5610,
-  "requests": 682,
-  "verifiedProducts": 694,
+  "pendingReview": 5725,
+  "requests": 561,
+  "verifiedProducts": 732,
   "archivedProducts": 132,
-  "totalProducts": 2182,
-  "retainedProducts": 1488
+  "totalProducts": 2221,
+  "retainedProducts": 1489
 }

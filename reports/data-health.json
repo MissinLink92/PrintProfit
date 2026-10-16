@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T14:48:28.017284+00:00",
+  "checkedAt": "2026-10-16T15:09:36.417775+00:00",
   "warnings": [
     "inpost: failed; last verified never",
     "royalmail-first: failed; last verified never",
@@ -43,10 +43,11 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 15,
-      "verified": 13,
+      "listed": 24,
+      "verified": 22,
       "categories": {
-        "filament": 15
+        "filament": 21,
+        "accessory": 3
       }
     },
     {
@@ -117,10 +118,12 @@
     },
     {
       "name": "NSE Imports",
-      "listed": 1,
-      "verified": 0,
+      "listed": 15,
+      "verified": 14,
       "categories": {
-        "filament": 1
+        "filament": 12,
+        "printer": 2,
+        "accessory": 1
       }
     },
     {
@@ -157,11 +160,11 @@
     },
     {
       "name": "QIDI UK Store",
-      "listed": 36,
-      "verified": 26,
+      "listed": 46,
+      "verified": 35,
       "categories": {
-        "filament": 34,
-        "printer": 2
+        "filament": 40,
+        "printer": 6
       }
     },
     {
@@ -175,10 +178,11 @@
     },
     {
       "name": "Sovol UK",
-      "listed": 3,
-      "verified": 3,
+      "listed": 9,
+      "verified": 9,
       "categories": {
-        "printer": 3
+        "printer": 3,
+        "filament": 6
       }
     },
     {

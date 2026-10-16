@@ -18750,6 +18750,279 @@
       "expectedProductTitle": "Flashforge CJ270 Full-color 3D Printer",
       "expectedVariantTitle": "CJ270",
       "imageSourceUrl": "https://uk.flashforge.com/products/flashforge-cj270"
+    },
+    "candidate-8dc318869bc55a9a6c3d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-tpu-85a-glow-in-the-dark",
+      "variantId": 58532927406344,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_TPU_85A_Glow_in_the_Dark_Green_1.75mm_0.5_kg_DHM00179_m1_big.jpg?v=1787658073",
+      "expectedProductTitle": "123-3D TPU 85A Glow in the Dark Filament 1.75mm 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-84856fa0a0898db18ff0": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-fc01-us",
+      "variantId": 56707146482050,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/14-S39aebb26293641a58ae0f801a0507200s_1520_1520.webp?v=1781268087",
+      "expectedProductTitle": "[US Stock] SUNLU FC01 Filament Connector: Easily join lengths of filament with ease.",
+      "expectedVariantTitle": "US"
+    },
+    "candidate-e890617ab4d9d1d5ce6b": {
+      "priceUrl": "https://uk.qidi3d.com/products/tpu-gf",
+      "variantId": 45950964105260,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-tpu-gf-filament-spool_jpg.png?v=1777102009",
+      "expectedProductTitle": "TPU-GF",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #30312F / UK"
+    },
+    "candidate-9538f08aa382022a32b6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-tpu-98a-glow-in-the-dark",
+      "variantId": 58532911776008,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00171_01_ba32569e-f8ef-4105-b6a1-8dc6098f1477.jpg?v=1787657772",
+      "expectedProductTitle": "123-3D TPU 98A Glow in the Dark Filament 1.75mm 0.5kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-ae8258ef82492581961f": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-fc01-uk",
+      "variantId": 56707120890242,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/14-S39aebb26293641a58ae0f801a0507200s_1520_1520.webp?v=1781268087",
+      "expectedProductTitle": "[UK Stock] SUNLU FC01 Filament Connector: Easily join lengths of filament with ease.",
+      "expectedVariantTitle": "UK"
+    },
+    "candidate-8a8fc55f56a3e8557b2a": {
+      "priceUrl": "https://uk.qidi3d.com/products/tpu-gf",
+      "variantId": 45485980483628,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-tpu-gf-filament-spool_jpg.png?v=1777102009",
+      "expectedProductTitle": "TPU-GF",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #30312F / China"
+    },
+    "candidate-3a4236997defb9aba087": {
+      "priceUrl": "https://nseimports.co.uk/products/artillery-m1-pro-s1",
+      "variantId": 56667816788354,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/WEBP_01-gempages_474922923870651166-607fec99-a0b9-4151-8a04-eced50baee18_1001_1001.webp?v=1779529851",
+      "expectedProductTitle": "Artillery M1 Pro S1 3D Printer: Fully enclosed, 260mm³ Build Volume, High Speed 600mm/s",
+      "expectedVariantTitle": "M1 Pro S1"
+    },
+    "candidate-bd556e2e24e5993275b8": {
+      "priceUrl": "https://uk.qidi3d.com/products/asa-cf20-core",
+      "variantId": 45950964170796,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-asa-cf20-core.png?v=1777017636",
+      "expectedProductTitle": "ASA-CF20 Core",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #3E4342 / UK"
+    },
+    "candidate-04ab5d1057cfbc27be87": {
+      "priceUrl": "https://www.123-3d.co.uk/products/creality-3d-fep-release-film-for-resin-3d-printer-5-pieces",
+      "variantId": 58387020185864,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR01147_01.jpg?v=1786086288",
+      "expectedProductTitle": "Creality 3D FEP Release Film for Resin 3D Printer (5 pieces)",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-8b13d157e53746667679": {
+      "priceUrl": "https://nseimports.co.uk/products/uk-stock-sunlu-fila-dryer-s1-plus",
+      "variantId": 56591253373314,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2000x2000_5_b025023d-cd2a-4b4f-86f4-93428589a877.jpg?v=1708528858",
+      "expectedProductTitle": "[UK Stock] SUNLU Fila Dryer S1+: Upgraded version, Keep Your Filament Dry and Ready to Print",
+      "expectedVariantTitle": "UK"
+    },
+    "candidate-17b892a1ac27ce808bd8": {
+      "priceUrl": "https://uk.qidi3d.com/products/asa-cf20-core",
+      "variantId": 45483953586220,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/qidi-asa-cf20-core.png?v=1777017636",
+      "expectedProductTitle": "ASA-CF20 Core",
+      "expectedVariantTitle": "1 Kg / Black HEX Code #3E4342 / China"
+    },
+    "candidate-0197ff0dc3d2b73bd479": {
+      "priceUrl": "https://www.123-3d.co.uk/products/creality-3d-resin-printer-housing",
+      "variantId": 58387020022024,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR01143_01.jpg?v=1786086284",
+      "expectedProductTitle": "Creality 3D Resin Printer housing",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-784cc3bcf31b796e1ad6": {
+      "priceUrl": "https://nseimports.co.uk/products/high-quality-aluminum-z-axis-lead-screw-bearing-holder",
+      "variantId": 41529157812298,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/aluminium-z-axis-lead-screw-top-mount-z-rod-bearing-holder-for-creality-3d-cr-10-ender-3-pro-fdm-3d-printers-nse-imports-1_638f47f6-e152-4c1c-833c-c124d96574b7.jpg?v=1694230589",
+      "expectedProductTitle": "High-Quality Aluminium Z-Axis Lead Screw Bearing Holder: For Creality 3D CR-10 and Ender-3/Pro 3D Printers",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-54b78d825b13525495b7": {
+      "priceUrl": "https://uk.qidi3d.com/products/q2c",
+      "variantId": 45230210416684,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/094f7add6b81fcf6cf35a75b7c736e6a_0305da56-62f0-426a-b032-3125db173fb2.png?v=1773473242",
+      "expectedProductTitle": "QIDI Q2C 3D Printer",
+      "expectedVariantTitle": "Q2C / In Stock / 1 filament"
+    },
+    "candidate-d9ac8d7095b5998cfc73": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla-cf-filament-1-75mm-black-1-kg",
+      "variantId": 58387017990408,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14321_01.jpg?v=1786086231",
+      "expectedProductTitle": "Polymaker PolyLite PLA-CF Filament Black 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-5900dd7a6ea0552b4f92": {
+      "priceUrl": "https://nseimports.co.uk/products/sovol-sv08-max",
+      "variantId": 55866072891778,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/WEBP_71GRJh6_B7L._AC_SL1500__1489_1500.webp?v=1761309666",
+      "expectedProductTitle": "Sovol SV08 Max: 500mm³ Large Format CoreXY 3D Printer | 700mm/s High-Speed",
+      "expectedVariantTitle": "SV08 Max"
+    },
+    "candidate-8119dc24a772203c535f": {
+      "priceUrl": "https://uk.qidi3d.com/products/q2c",
+      "variantId": 45230210449452,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_30a08fdc-9e01-4a39-aada-0da419222a31.png?v=1773473242",
+      "expectedProductTitle": "QIDI Q2C 3D Printer",
+      "expectedVariantTitle": "Q2C Combo / In Stock / 1 filament"
+    },
+    "candidate-9a7db263cfcec494c715": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla-sparkle-filament-1-75mm-dark-blue-1-kg",
+      "variantId": 58387017957640,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14320_01.jpg?v=1786086231",
+      "expectedProductTitle": "Polymaker PolyLite PLA Sparkle Filament Dark Blue 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-31439ae82fdbf0816813": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426077570,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/2-S23cb43040452444ca166958b04af5a583.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Grey / PETG"
+    },
+    "candidate-645cc60e87ca0c96c533": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426110338,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/1-S200606b65c5f48748ccb4ded4ebdcbd8C.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Orange / PETG"
+    },
+    "candidate-30c64d5625a88642665b": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937341485,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilamentUniverse.jpg?v=1764574060",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Rainbow-Universe"
+    },
+    "candidate-4d85a02a9418fb9ed7c4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-epa12-cf-filament-1-75mm-natural-1-kg-nylon",
+      "variantId": 58387012124936,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20236_01.jpg?v=1786086114",
+      "expectedProductTitle": "eSun ePA12-CF Filament Natural 1.75mm 1kg (Nylon)",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-15f4e8f2c95c4c027b9f": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426143106,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/6-Sa703dde862fd443883a598ff155073d2U.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Cherry Red / Light Blue / PETG"
+    },
+    "candidate-1f7d88841a2a055a9758": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937439789,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilamentcandy.jpg?v=1764574059",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Rainbow-Candy"
+    },
+    "candidate-ec73ab2be9da7d6faca9": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-filament-black-1-75mm-asa-cf-1kg",
+      "variantId": 58387010060552,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS02022_01.jpg?v=1786086062",
+      "expectedProductTitle": "REAL ASA-CF Filament Black 1.75mm 1kg",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-e796a0aff6480d7a101a": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426175874,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/4-Sd3f75ed0d6814f16a394bfe1d59e98eeH.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "White / PETG"
+    },
+    "candidate-63771e024b2b6d2fcfd9": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937538093,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilamentforest.jpg?v=1764574060",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Rainbow-Forest"
+    },
+    "candidate-52eea8962d93f3cc118c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/creality-3d-ender-5-s1-case",
+      "variantId": 58387009175816,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DAR01043_01.jpg?v=1786086034",
+      "expectedProductTitle": "Creality 3D Ender-5 S1 case",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-62bcc144e04b7d323c77": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426208642,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/7-S3490cd46856d4dd29ea0786542ef388fh.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Light Yellow / Light Pink / PETG"
+    },
+    "candidate-727383f15412217f8058": {
+      "priceUrl": "https://uk.qidi3d.com/products/max4",
+      "variantId": 45421480017964,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/M4_9a377881-0018-46e0-8345-792bf8d7bc2a.png?v=1773473303",
+      "expectedProductTitle": "QIDI Max4 3D Printer",
+      "expectedVariantTitle": "Max4 / Standard / Polar Cooler*1"
+    },
+    "candidate-f06eba685c53c7a710e0": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937636397,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilamentR.jpg?v=1764574060",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Rainbow-R"
+    },
+    "candidate-f6b7c05bf74620064b96": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426241410,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/9-Se1075cef4d9c4e3dace0ec623ad115a3g.webp?v=1742227386",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Red / Blue / PETG"
+    },
+    "candidate-cab8d3ae6dfb8fc57232": {
+      "priceUrl": "https://uk.qidi3d.com/products/max4",
+      "variantId": 45421480050732,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/M4combo.png?v=1773473303",
+      "expectedProductTitle": "QIDI Max4 3D Printer",
+      "expectedVariantTitle": "Max4 Combo / Standard / Polar Cooler*1"
+    },
+    "candidate-33eebfd14b2a9d9b9939": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937734701,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilament_Dual-BlueRed_8.jpg?v=1764574060",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Dual-Blue Red"
+    },
+    "candidate-84c2ce06aaf8ee708ca3": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426274178,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/10-S2ed4942cdd7c4879878885fdf2cbff39N.webp?v=1742227386",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "White / Grey / PETG"
+    },
+    "candidate-0585cc594da93b751e2c": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143269932,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoBlack.jpg?v=1772862118",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / Blcak HEX Code #0E0E0F"
+    },
+    "candidate-f18384aaec9904b0d29e": {
+      "priceUrl": "https://sovol.uk/products/sovol-3d-printer-silk-1-75mm-pla-filament-1kg-roll",
+      "variantId": 44379937833005,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0721/4645/2525/files/SovolFilament_SovolPLAFilament_3dprinterfilament_Dual-BlueOrange_8.jpg?v=1764574060",
+      "expectedProductTitle": "Sovol Silk PLA 3D Filament 1KG",
+      "expectedVariantTitle": "China to UK / Dual-Blue Orange"
+    },
+    "candidate-41a6c2687c3e0a8964e8": {
+      "priceUrl": "https://nseimports.co.uk/products/sunlu-petg-twin-pack",
+      "variantId": 55042426306946,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/5-Sa76a28a293724d658f5a85d5952983d9K.webp?v=1742227393",
+      "expectedProductTitle": "SUNLU PETG Twin Pack: 2x1kg: High Quality 3D Printer PETG Filament",
+      "expectedVariantTitle": "Red / PETG"
+    },
+    "candidate-5890e546c2c406b4cb30": {
+      "priceUrl": "https://uk.qidi3d.com/products/petg-rapido",
+      "variantId": 44848143302700,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PETGRapidoWhite.jpg?v=1772862127",
+      "expectedProductTitle": "PETG Rapido",
+      "expectedVariantTitle": "1 Kg / White HEX Code #FFFFFF"
     }
   },
   "approvedProductDetails": {},

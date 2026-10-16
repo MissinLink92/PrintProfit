@@ -77,5 +77,11 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "Photocentric Liquid Crystal Opus 3D Printer Reconditioned": 4750.0,
   "Raise3D E2 3D Printer | Reconditioned": 1500.0,
   "Raise3D Pro3 Plus 3D Printer Including Hyper Kit Reconditioned": 2999.0,
-  "CJ270 Full-color 3D Printer — CJ270": 3499.0
+  "CJ270 Full-color 3D Printer — CJ270": 3499.0,
+  "Artillery M1 Pro S1 3D Printer: Fully enclosed, 260mm³ Build Volume, High Speed 600mm/s — M1 Pro S1": 318.99,
+  "QIDI Q2C 3D Printer — Q2C / In Stock / 1 filament": 299.0,
+  "Sovol SV08 Max: 500mm³ Large Format CoreXY 3D Printer | 700mm/s High-Speed — SV08 Max": 954.99,
+  "QIDI Q2C 3D Printer — Q2C Combo / In Stock / 1 filament": 429.0,
+  "QIDI Max4 3D Printer — Max4 / Standard / Polar Cooler*1": 899.0,
+  "QIDI Max4 3D Printer — Max4 Combo / Standard / Polar Cooler*1": 1029.0
 };

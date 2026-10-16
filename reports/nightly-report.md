@@ -1,38 +1,38 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-16T00:13:45+01:00
+Checked: 2026-10-16T15:53:11+01:00
 
-- Existing prices verified: 694 / 2182
-- Existing prices retained without verification: 1488
-- Changed existing prices: 0
+- Existing prices verified: 732 / 2221
+- Existing prices retained without verification: 1489
+- Changed existing prices: 10
 - Refreshed image files: 0
-- Verified products added: 0
-- Unresolved source notices: 5610
-- Failed or incomplete checks: 1864
+- Verified products added: 39
+- Unresolved source notices: 5725
+- Failed or incomplete checks: 1826
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
-| 3DJake UK | 4 / 7 | url-discovery-only | 3849 |
+| 3DJake UK | 4 / 7 | url-discovery-only | 3845 |
 | 3D Prima UK | 10 / 16 | url-discovery-only | 62 |
-| 123-3D UK | 13 / 15 | discovered | 2001 |
+| 123-3D UK | 22 / 24 | discovered | 2034 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
 | 3DGBIRE | 442 / 443 | discovered | 435 |
-| Bambu Lab UK | 133 / 133 | discovered | 15 |
+| Bambu Lab UK | 133 / 133 | discovered | 98 |
 | Creality UK | 8 / 12 | url-discovery-only | 201 |
-| ELEGOO UK | 11 / 11 | discovered | 3654 |
+| ELEGOO UK | 11 / 11 | discovered | 3717 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 10 |
-| NSE Imports | 0 / 1 | discovered | 676 |
+| NSE Imports | 14 / 15 | discovered | 685 |
 | Additive-X | 10 / 13 | url-discovery-only | 2 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
 | Anycubic UK | 0 / 1454 | failed | 0 |
-| QIDI UK Store | 26 / 36 | discovered | 116 |
-| Flashforge UK | 27 / 27 | discovered | 130 |
-| Sovol UK | 3 / 3 | discovered | 42 |
+| QIDI UK Store | 35 / 46 | discovered | 126 |
+| Flashforge UK | 27 / 27 | discovered | 129 |
+| Sovol UK | 9 / 9 | discovered | 45 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
 
 ## Items needing attention
@@ -85,6 +85,7 @@ Checked: 2026-10-16T00:13:45+01:00
 - product / qidi-asa-green-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / qidi-asa-yellow-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / qidi-pla-cf-dark-red-1kg: Exact model/colour/pack product offer unavailable on the recorded page
+- product / qidi-pla-cf-lavender-purple-1kg: Exact variant no longer appears in the retailer catalogue
 - product / qidi-pla-cf-midnight-blue-1kg: Exact model/colour/pack product offer unavailable on the recorded page
 - product / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
 - image / qidi-pla-cf-black-1kg: Exact variant no longer appears in the retailer catalogue
@@ -1701,203 +1702,164 @@ Checked: 2026-10-16T00:13:45+01:00
 - product / candidate-d5dec3d37a71ef1b1349: Exact Shopify variant ID required; refusing a default variant price
 - product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
 - discovery / anycubic-uk: Storefront redirected outside the recorded retailer
-- new-product / candidate-f9aaac7b2427f73d19b6: Cannot confirm one product on the discovered URL
-- new-product / candidate-180a2c1d8b603a9d3c92: Cannot confirm one product on the discovered URL
-- new-product / candidate-f07b91f3ce437bd777b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-9b5640fcac50a2cebcfd: Cannot confirm one product on the discovered URL
-- new-product / candidate-ecf4cf8b07c3ec8d2d98: Cannot confirm one product on the discovered URL
-- new-product / candidate-7bb34d8a17c1ec6d635c: Cannot confirm one product on the discovered URL
-- new-product / candidate-5af446e86a1e673545d3: Cannot confirm one product on the discovered URL
-- new-product / candidate-311362b0dcaf0e2ed933: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff2536e6be11ddc9d0ee: Cannot confirm one product on the discovered URL
-- new-product / candidate-04a9ba2b4c5948e4d351: Cannot confirm one product on the discovered URL
-- new-product / candidate-a16ad247d079eba10a8d: Cannot confirm one product on the discovered URL
-- new-product / candidate-86f91480d14846222428: Cannot confirm one product on the discovered URL
-- new-product / candidate-dc814a547ccc4b5d1c7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-e46b0ce0718851586538: Cannot confirm one product on the discovered URL
-- new-product / candidate-214e101346ce8166d56d: Cannot confirm one product on the discovered URL
-- new-product / candidate-f204245dea1b58ef4beb: Cannot confirm one product on the discovered URL
-- new-product / candidate-7cbd2f2f3d5bb83f3976: Cannot confirm one product on the discovered URL
-- new-product / candidate-9f6a3b7233beb30630c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-9ba5fc3f401505d53a73: Cannot confirm one product on the discovered URL
-- new-product / candidate-57b1547b9b84b1988ff4: Cannot confirm one product on the discovered URL
-- new-product / candidate-8fbd56e4720b76c96704: Cannot confirm one product on the discovered URL
-- new-product / candidate-fb56f0cd357a20653751: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff7ae8987b1ff5d951ae: Cannot confirm one product on the discovered URL
-- new-product / candidate-eca640b0157b8bd03bdf: Cannot confirm one product on the discovered URL
-- new-product / candidate-e4f30764183603e52b6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-f5c62fcaa9aaf65dac29: Cannot confirm one product on the discovered URL
-- new-product / candidate-129a5b703c501c620492: Cannot confirm one product on the discovered URL
-- new-product / candidate-bb7c1ecc818ecaeeec47: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef76043f71413a44f1b8: Cannot confirm one product on the discovered URL
-- new-product / candidate-231de485f51d059d365b: Cannot confirm one product on the discovered URL
-- new-product / candidate-796128e76acc49524864: Cannot confirm one product on the discovered URL
-- new-product / candidate-8516bc9d717b26ec8538: Cannot confirm one product on the discovered URL
-- new-product / candidate-c1c05454f07ff9e87508: Cannot confirm one product on the discovered URL
-- new-product / candidate-62777cb4d92508973a13: Cannot confirm one product on the discovered URL
-- new-product / candidate-e111b5e12c91c04bd7db: Cannot confirm one product on the discovered URL
-- new-product / candidate-de72aab6a2ccdbba096b: Cannot confirm one product on the discovered URL
-- new-product / candidate-f5a724df5606b8f2b021: Cannot confirm one product on the discovered URL
-- new-product / candidate-5af3eb043bf5058df55c: Cannot confirm one product on the discovered URL
-- new-product / candidate-8c7a14a75da4cfba0a1a: Cannot confirm one product on the discovered URL
-- new-product / candidate-a2f1e77a40a9b9fe768b: Cannot confirm one product on the discovered URL
-- new-product / candidate-927dd70cdf2092d345e6: Cannot confirm one product on the discovered URL
-- new-product / candidate-9e7f4c2890ef20d83cb0: Cannot confirm one product on the discovered URL
-- new-product / candidate-39642b6db16acd79e492: Cannot confirm one product on the discovered URL
-- new-product / candidate-5aa58ceab6204e850522: Cannot confirm one product on the discovered URL
-- new-product / candidate-936c392cedbe3651f710: Cannot confirm one product on the discovered URL
-- new-product / candidate-a1c34902dfb4b435674c: Cannot confirm one product on the discovered URL
-- new-product / candidate-a3ba049d797931ae7ba7: Cannot confirm one product on the discovered URL
-- new-product / candidate-d97a88c3e5954c6e1728: Cannot confirm one product on the discovered URL
-- new-product / candidate-a903baafc1d429ba0e9f: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7df566aa8660d710711: Cannot confirm one product on the discovered URL
-- new-product / candidate-e539184658e6045edf4c: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee587f0d6846760c7a67: Cannot confirm one product on the discovered URL
-- new-product / candidate-1b17c4f39af742aea6df: Cannot confirm one product on the discovered URL
-- new-product / candidate-1c53a462c06812c32ac6: Cannot confirm one product on the discovered URL
-- new-product / candidate-980642f1ad3ab7da2940: Cannot confirm one product on the discovered URL
-- new-product / candidate-b57d308ddbd80df15ddc: Cannot confirm one product on the discovered URL
-- new-product / candidate-1f2ac092e30536a5a2d3: Cannot confirm one product on the discovered URL
-- new-product / candidate-5ff090f37df00ddc14dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ae20f307c2a7ec62715: Cannot confirm one product on the discovered URL
-- new-product / candidate-7cb7661f048c861dd29b: Cannot confirm one product on the discovered URL
-- new-product / candidate-4723edaf2b974b437e18: Cannot confirm one product on the discovered URL
-- new-product / candidate-2e0eb957484d25c04311: Cannot confirm one product on the discovered URL
-- new-product / candidate-fe2ba0610d589ef17ba5: Cannot confirm one product on the discovered URL
-- new-product / candidate-9810f7700eccab5b0a4b: Cannot confirm one product on the discovered URL
-- new-product / candidate-48b1fb770f9df4d88988: Cannot confirm one product on the discovered URL
-- new-product / candidate-9f540240003341dd480e: Cannot confirm one product on the discovered URL
-- new-product / candidate-e3edc58d2ef20d71207a: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e456c75198f95bac66a: Cannot confirm one product on the discovered URL
-- new-product / candidate-55b6ea94e19beb72e52b: Cannot confirm one product on the discovered URL
-- new-product / candidate-5029c01233568928f062: Cannot confirm one product on the discovered URL
-- new-product / candidate-0fe54ee16335257c7db6: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e59425e594c21fccae5: Cannot confirm one product on the discovered URL
-- new-product / candidate-3edc54e615f91fff2874: Cannot confirm one product on the discovered URL
-- new-product / candidate-22219456e9b7004efbeb: Cannot confirm one product on the discovered URL
-- new-product / candidate-3d2880be4a0f5c638595: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8de9774e9f5068ca2fc: Cannot confirm one product on the discovered URL
-- new-product / candidate-da1e0190a80405c316bf: Cannot confirm one product on the discovered URL
-- new-product / candidate-30791d9c59e5513f338b: Cannot confirm one product on the discovered URL
-- new-product / candidate-558f6bbb4512863c3ae0: Cannot confirm one product on the discovered URL
-- new-product / candidate-eccd5480da74a2103dda: Cannot confirm one product on the discovered URL
-- new-product / candidate-619101fde5151d25530d: Cannot confirm one product on the discovered URL
-- new-product / candidate-61e034e03dce67ed3059: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee61551f263bc8ce41fc: Cannot confirm one product on the discovered URL
-- new-product / candidate-29b2de4f18b3966e003c: Cannot confirm one product on the discovered URL
-- new-product / candidate-aaba3d05aba0844e979e: Cannot confirm one product on the discovered URL
-- new-product / candidate-deb8b15148895ab98ebd: Cannot confirm one product on the discovered URL
-- new-product / candidate-67e6925e046194ab0737: Cannot confirm one product on the discovered URL
-- new-product / candidate-6cfb36d738b744bc271c: Cannot confirm one product on the discovered URL
-- new-product / candidate-82a9f385fecdf97062eb: Cannot confirm one product on the discovered URL
-- new-product / candidate-7d7ee0b69a81c711a92b: Cannot confirm one product on the discovered URL
-- new-product / candidate-4660d6bb6e23b8be213e: Cannot confirm one product on the discovered URL
-- new-product / candidate-4bee37ddb89c495cf5f4: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee881efb90b957d14a1c: Cannot confirm one product on the discovered URL
-- new-product / candidate-2eb3f767cc674010c0f6: Cannot confirm one product on the discovered URL
-- new-product / candidate-a927a454d677a057b772: Cannot confirm one product on the discovered URL
-- new-product / candidate-b2ab43f8f828ad5eb591: Cannot confirm one product on the discovered URL
-- new-product / candidate-d8bc118723338c4c6d68: Cannot confirm one product on the discovered URL
-- new-product / candidate-6c2c99cfa03efb1fe363: Cannot confirm one product on the discovered URL
-- new-product / candidate-0808b5daa14bd77d269c: Cannot confirm one product on the discovered URL
-- new-product / candidate-1a2d84f99c636b9621f8: Cannot confirm one product on the discovered URL
-- new-product / candidate-da7baad9c34728293243: Cannot confirm one product on the discovered URL
-- new-product / candidate-2a6159c4f6736d8b783d: Cannot confirm one product on the discovered URL
-- new-product / candidate-f8b071d522bdc08fa9db: Cannot confirm one product on the discovered URL
-- new-product / candidate-0ac3845501da5b0081cf: Cannot confirm one product on the discovered URL
-- new-product / candidate-0c736c04416b55b159f9: Cannot confirm one product on the discovered URL
-- new-product / candidate-6eda5e054d987665dfab: Cannot confirm one product on the discovered URL
-- new-product / candidate-06dfd09b01af5de6773e: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc1134b622a3ad2a5d04: Cannot confirm one product on the discovered URL
-- new-product / candidate-663a6187b80470223aa6: Cannot confirm one product on the discovered URL
-- new-product / candidate-61b3e1766758cbb27ee8: Cannot confirm one product on the discovered URL
-- new-product / candidate-b37c3c0d5a810bf20325: Cannot confirm one product on the discovered URL
-- new-product / candidate-2ed86cd4b5656fa20afe: Cannot confirm one product on the discovered URL
-- new-product / candidate-3e2873399024552afd6b: Cannot confirm one product on the discovered URL
-- new-product / candidate-c3e1871cc7aa7e67a05b: Cannot confirm one product on the discovered URL
-- new-product / candidate-dac0c695fd3e71f94a69: Cannot confirm one product on the discovered URL
-- new-product / candidate-73109d6c2d6ecce061b1: Cannot confirm one product on the discovered URL
-- new-product / candidate-75f8ff4adf04a6c84e66: Cannot confirm one product on the discovered URL
-- new-product / candidate-c46e806853d67266adf6: Cannot confirm one product on the discovered URL
-- new-product / candidate-924580cc4703893e5e3a: Cannot confirm one product on the discovered URL
-- new-product / candidate-1c2ef77f900c64569aa1: Cannot confirm one product on the discovered URL
-- new-product / candidate-e861f17f33b8d7dacaec: Cannot confirm one product on the discovered URL
-- new-product / candidate-0e85c3bd6414a75782c5: Cannot confirm one product on the discovered URL
-- new-product / candidate-df50815aeb469d0541a9: Cannot confirm one product on the discovered URL
-- new-product / candidate-4279b0e4ef2aca3fcf16: Cannot confirm one product on the discovered URL
-- new-product / candidate-7fc78489fa689406aa67: Cannot confirm one product on the discovered URL
-- new-product / candidate-70c1cda069b52d536983: Cannot confirm one product on the discovered URL
-- new-product / candidate-3a6af156a785db51b6a2: Cannot confirm one product on the discovered URL
-- new-product / candidate-49b2355203ec3ddc860d: Cannot confirm one product on the discovered URL
-- new-product / candidate-80b6abc86d00163dc542: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae97d6f9d2ce50e971af: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae53a190f5415190491e: Cannot confirm one product on the discovered URL
-- new-product / candidate-76d835a67cc2db3e1150: Cannot confirm one product on the discovered URL
-- new-product / candidate-8a30eb2fb72b166a6192: Cannot confirm one product on the discovered URL
-- new-product / candidate-f6054a0a75b2cd2c5965: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae4f89c39e4632a2e7fe: Cannot confirm one product on the discovered URL
-- new-product / candidate-34c82228e55fa9e61820: Cannot confirm one product on the discovered URL
-- new-product / candidate-9f4ac2fc51ca0434193c: Cannot confirm one product on the discovered URL
-- new-product / candidate-9b562211a71021019474: Cannot confirm one product on the discovered URL
-- new-product / candidate-d0298a53022c0c36ba1b: Cannot confirm one product on the discovered URL
-- new-product / candidate-e1c2e0afd55cae7fe374: Cannot confirm one product on the discovered URL
-- new-product / candidate-786d90592e17a60d9ab4: Cannot confirm one product on the discovered URL
-- new-product / candidate-0daa2396cd3596f03df0: Cannot confirm one product on the discovered URL
-- new-product / candidate-d48d9f7a59297a82c717: Cannot confirm one product on the discovered URL
-- new-product / candidate-8bc10314c12966537fc5: Cannot confirm one product on the discovered URL
-- new-product / candidate-1f4786ba0fca47169e31: Cannot confirm one product on the discovered URL
-- new-product / candidate-9f211d60966ba3b47761: Cannot confirm one product on the discovered URL
-- new-product / candidate-f918ad9110b48b5c7805: Cannot confirm one product on the discovered URL
-- new-product / candidate-8ff5c4211666bdd89ace: Cannot confirm one product on the discovered URL
-- new-product / candidate-5e3c0bc6e85ecb0a69ca: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc98ccf9664141c4ce22: Cannot confirm one product on the discovered URL
-- new-product / candidate-da3b46eaa7424d9f6b03: Cannot confirm one product on the discovered URL
-- new-product / candidate-a45bfb0d80b0d9e0df7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-18a6ca7bfc5200abb316: Cannot confirm one product on the discovered URL
-- new-product / candidate-e469eb1051600c1dfada: Cannot confirm one product on the discovered URL
-- new-product / candidate-060b002e328cb02570dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-5577ca5357f1b0c48def: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d53cfc108e52c7d3321: Cannot confirm one product on the discovered URL
-- new-product / candidate-a34799dbddac2203d2f9: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b651b52f2e0034ad904: Cannot confirm one product on the discovered URL
-- new-product / candidate-1cc2e919c5f1ebb7c05e: Cannot confirm one product on the discovered URL
-- new-product / candidate-5a98a3276b93fa3bab73: Cannot confirm one product on the discovered URL
-- new-product / candidate-5d04b11f75c20f30a78f: Cannot confirm one product on the discovered URL
-- new-product / candidate-f8bb1e4919f5778f6fbb: Cannot confirm one product on the discovered URL
-- new-product / candidate-bb6bc5ccce61bb84ebe1: Cannot confirm one product on the discovered URL
-- new-product / candidate-2b0cd3bca43b6d3b9882: Cannot confirm one product on the discovered URL
-- new-product / candidate-5fef55f47a22e34c52d2: Cannot confirm one product on the discovered URL
-- new-product / candidate-679c7f9a395a98ba199d: Cannot confirm one product on the discovered URL
-- new-product / candidate-006f31cdcf938f4038ea: Cannot confirm one product on the discovered URL
-- new-product / candidate-a698500b4133d9d89f4c: Cannot confirm one product on the discovered URL
-- new-product / candidate-ec9be1f8ccfbfba6c412: Cannot confirm one product on the discovered URL
-- new-product / candidate-278641c6c28248d1c6df: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7801bbc723e79efcc2d: Cannot confirm one product on the discovered URL
-- new-product / candidate-3ad862b64a1afb2059e7: Cannot confirm one product on the discovered URL
-- new-product / candidate-5c2e8bdb5cc19ca1ebd8: Cannot confirm one product on the discovered URL
-- new-product / candidate-1c4676643a0a3641e433: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e937c6faf43f132613c: Cannot confirm one product on the discovered URL
-- new-product / candidate-f0655fa07ded7f2169c1: Cannot confirm one product on the discovered URL
-- new-product / candidate-14fec269223dda324074: Cannot confirm one product on the discovered URL
-- new-product / candidate-1131fda08e05503279ea: Cannot confirm one product on the discovered URL
-- new-product / candidate-8751953b82121fe18765: Cannot confirm one product on the discovered URL
-- new-product / candidate-b8db8098bcc7ee01b0a6: Cannot confirm one product on the discovered URL
-- new-product / candidate-8e491862b4bb134262c4: Cannot confirm one product on the discovered URL
-- new-product / candidate-1be54686fde8e4632e74: Cannot confirm one product on the discovered URL
-- new-product / candidate-55e650d0791adfcf22bd: Cannot confirm one product on the discovered URL
-- new-product / candidate-88ae26a196c4ee64fcb2: Cannot confirm one product on the discovered URL
-- new-product / candidate-50f1cc3add7bbf414657: Cannot confirm one product on the discovered URL
-- new-product / candidate-4ac767729b82f401f4e4: Cannot confirm one product on the discovered URL
-- new-product / candidate-1b3ff032ebaa6dd612c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-1389e4b999522f6f25fd: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef05ae6cb907492fa5ea: Cannot confirm one product on the discovered URL
-- new-product / candidate-560d2cf4841eba5ef184: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee03cfaafd5fba023429: Cannot confirm one product on the discovered URL
-- new-product / candidate-fa43aab481c8e7d9bfb6: Cannot confirm one product on the discovered URL
-- new-product / candidate-4950fdc019cc1f504d6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-72386c5e55380548dafc: Cannot confirm one product on the discovered URL
-- new-product / candidate-e4f85f634b2845149e41: Cannot confirm one product on the discovered URL
-- new-product / candidate-c628083d74a7af5421de: Cannot confirm one product on the discovered URL
-- new-product / candidate-50e898965b025535aa55: Cannot confirm one product on the discovered URL
-- new-product / candidate-97c8937ba7b706e3446f: Cannot confirm one product on the discovered URL
-- new-product / candidate-31970f68b9ddda14e579: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9338e3daf3c98af8731: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c1eb24b13d4de968cbb: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8b8a261f181d8b0920cb: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7b14b33ae1d3c83a69ee: No single GBP offer for the exact product
+- new-product / candidate-9d5eb9632af2217bdda8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
+- new-product / candidate-c63cc1a9ce9516a8f607: Cannot confirm that the product is a material or printer
+- new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
+- new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bde6337dae90f04c359e: Cannot confirm that the product is a material or printer
+- new-product / candidate-a601d8b49fa920fcb3ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
+- new-product / candidate-dddcd5bd2636ed8e55c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
+- new-product / candidate-865d683b6f17bc55ed88: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-07ff212ee54855c1d32f: No single GBP offer for the exact product
+- new-product / candidate-0afa5f93320b13c11a78: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
+- new-product / candidate-751c1133dfd24ae2a3ef: Cannot confirm that the product is a material or printer
+- new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fc1a7b8a55c01003f1a5: Cannot confirm one product on the discovered URL
+- new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
+- new-product / candidate-fea14ddd37629c1be86c: Cannot confirm that the product is a material or printer
+- new-product / candidate-300bd374b3fa284c1c6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-1052620153394a369c81: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
+- new-product / candidate-83ddb0b4c6d69245f00a: Approved URL is outside its recorded retailer
+- new-product / candidate-dff76aa660f4bcff0b38: Source does not state the material pack weight; listing skipped
+- new-product / candidate-84f3b5270612ed3ecb9e: Catalogue GBP price outside supported range
+- new-product / candidate-c671fa478b7fe142c392: Cannot confirm that the product is a material or printer
+- new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
+- new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fa23e2883cfbbf45a75d: Cannot confirm that the product is a material or printer
+- new-product / candidate-0ad1db587a039b8368d4: Cannot confirm one product on the discovered URL
+- new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden
+- new-product / candidate-174e0dd61c05f38c9f8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-8436d7fe6fdf70522ba8: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-54e5825bb7450acd5144: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6f7cb75934b81620177c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4bb3c09ebbd1fd2534e: Catalogue GBP price outside supported range
+- new-product / candidate-5f5140f7537b3fcb9bb3: Cannot confirm that the product is a material or printer
+- new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
+- new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
+- new-product / candidate-35279a23076451181e10: No verified product image URL
+- new-product / candidate-343335ac77d259c9805a: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a85edad57fe4002d6df: HTTP Error 403: Forbidden
+- new-product / candidate-d0f956716145cfad60bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-3bc16252dfabfc412233: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3e977ca8eb53ffc1bef6: Approved URL is outside its recorded retailer
+- new-product / candidate-8685ae813cbdb26cda3e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-64c4b41910b3ebbf3621: Cannot confirm that the product is a material or printer
+- new-product / candidate-496655b483325e12f7ab: Cannot confirm that the product is a material or printer
+- new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
+- new-product / candidate-a14dccbc8d113bcb565c: Cannot confirm one product on the discovered URL
+- new-product / candidate-b1b47eb93a0cb8ac601e: HTTP Error 403: Forbidden
+- new-product / candidate-36505c75a928e473ec7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-6abe5afd22bc2abc5804: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a163efd511c73f87f9c7: No single GBP offer for the exact product
+- new-product / candidate-0d37b2ed627f8c1fde46: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c37aa39617358e581097: Catalogue GBP price outside supported range
+- new-product / candidate-6bb556c8025616a8f32f: Cannot confirm that the product is a material or printer
+- new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
+- new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5e100c7706994e9acea9: No verified product image URL
+- new-product / candidate-23a63ee254bf58f95e98: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae932a133bdf248b9954: HTTP Error 403: Forbidden
+- new-product / candidate-97ec895a937582cf8d5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-5edc7aaf850f02bd8353: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6c558d66fc27c9ddb595: No single GBP offer for the exact product
+- new-product / candidate-177480d7c2b951a5415c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e02b6ae5b407d1e2ddfd: Catalogue GBP price outside supported range
+- new-product / candidate-b1de0aedf6ba53c27154: Cannot confirm that the product is a material or printer
+- new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bf345e3e433cef2cfa99: Cannot confirm that the product is a material or printer
+- new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
+- new-product / candidate-e7e01c8f44095b076f72: Cannot confirm one product on the discovered URL
+- new-product / candidate-ad00c2fc017a8342ad56: HTTP Error 403: Forbidden
+- new-product / candidate-d5a025bdfc542c9bbd64: Cannot confirm that the product is a material or printer
+- new-product / candidate-3595dca6df48eb7ffce4: Cannot confirm one product on the discovered URL
+- new-product / candidate-28ac4c09d91075405d30: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8d09e8a7c12897a61c12: No single GBP offer for the exact product
+- new-product / candidate-ec35b22d30ae012b17d0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e9b35c82ef3913eba0dd: Catalogue GBP price outside supported range
+- new-product / candidate-20628a23ff0a0b728090: Cannot confirm that the product is a material or printer
+- new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1c2b2eef94e6e929b1ef: Cannot confirm that the product is a material or printer
+- new-product / candidate-f0d31fb14d4e4f4957c5: Cannot confirm one product on the discovered URL
+- new-product / candidate-7913be9603ae3822b3b4: HTTP Error 403: Forbidden
+- new-product / candidate-7a6d08d7f98ee645a13a: Cannot confirm one product on the discovered URL
+- new-product / candidate-80feba3e5ed06f5a0ace: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-006e0d5f5068ef06fe67: No single GBP offer for the exact product
+- new-product / candidate-d6c2ca4a9a688bcc79d6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e0453d4243683ae5a0c7: Cannot confirm that the product is a material or printer
+- new-product / candidate-92a6c620c08556fcf02f: Cannot confirm that the product is a material or printer
+- new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
+- new-product / candidate-3683c989cd75950ab9ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-a57fb41375b1befaffe8: HTTP Error 403: Forbidden
+- new-product / candidate-f304ddce8940b46ce724: Cannot confirm one product on the discovered URL
+- new-product / candidate-ca3abb9f1e2c46a97430: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-29fd4ac47ca2ba476f7e: No single GBP offer for the exact product
+- new-product / candidate-d4cb88348a4fbc0a3c80: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-27405e3b3d32cc7d66b9: Cannot confirm that the product is a material or printer
+- new-product / candidate-8bd628979d63ab4bcdfe: Cannot confirm that the product is a material or printer
+- new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
+- new-product / candidate-68883a8bf8aeb513799a: Cannot confirm one product on the discovered URL
+- new-product / candidate-b0fc3d73c88b04b390b1: HTTP Error 403: Forbidden
+- new-product / candidate-9c7b60c8a45a899f2cf6: Cannot confirm one product on the discovered URL
+- new-product / candidate-c900123fcd13260398a2: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e7ab83cbc78fca22f6dd: No single GBP offer for the exact product
+- new-product / candidate-ee1c57c3c02d2a042a1f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7fd89bc10762210295c7: Cannot confirm that the product is a material or printer
+- new-product / candidate-5ca1cabde0d0725aa3d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3212209da92d9dbe768: HTTP Error 403: Forbidden
+- new-product / candidate-7f52aee5e833aa721cd6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bc61cedf25801d1c1a89: Cannot confirm one product on the discovered URL
+- new-product / candidate-fbd02e5dfa84d4a460b0: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cdef1de6d1730d03c279: No single GBP offer for the exact product
+- new-product / candidate-414abea4ed87c5bd3ce4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1c35248400fb89878d68: Cannot confirm that the product is a material or printer
+- new-product / candidate-156cb210c46355caa815: Cannot confirm one product on the discovered URL
+- new-product / candidate-739e00d2dbd8d7890afa: HTTP Error 403: Forbidden
+- new-product / candidate-caea8fe88a97c0e7098d: Cannot confirm that the product is a material or printer
+- new-product / candidate-c245e2a05eecf35eab33: Cannot confirm one product on the discovered URL
+- new-product / candidate-55946e005fa9a735987a: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-44eacca675ca47c03434: No single GBP offer for the exact product
+- new-product / candidate-48945ec2160edfb3d1fd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba9bebde0ef572eff3a2: No verified product image URL
+- new-product / candidate-e5ace3e9e5ea0d4b69da: Cannot confirm one product on the discovered URL
+- new-product / candidate-84edd4e05ef1bc10565a: HTTP Error 403: Forbidden
+- new-product / candidate-1c38a599eeb09ba051bf: Cannot confirm that the product is a material or printer
+- new-product / candidate-20515f60fd555e9657a4: Cannot confirm one product on the discovered URL
+- new-product / candidate-71ea9bd5fb7bfe32ade8: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6277fae9f990d7bd8cb0: No single GBP offer for the exact product
+- new-product / candidate-fc0f220f75469acdbe21: Source does not state the material pack weight; listing skipped
+- new-product / candidate-866261d14b351fa050be: Cannot confirm that the product is a material or printer
+- new-product / candidate-37b35ddb47116992a67c: Cannot confirm that the product is a material or printer
