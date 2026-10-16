@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-10-16T15:09:36.417775+00:00
+2026-10-16T15:27:50.216727+00:00
 
 ## Attention needed
 - inpost: failed; last verified never
@@ -18,8 +18,6 @@
 - vinted: review-required; last verified never
 - tiktok: review-required; last verified never
 - facebook: failed; last verified never
-- folksy: failed; last verified never
-- stripe: review-required; last verified never
 - Amazon UK: no active listings
 - Prusa Research: no active listings
 - Ooznest: no active listings
@@ -32,21 +30,21 @@
 |---|---:|---:|
 | 3DJake UK | 7 | 4 |
 | 3D Prima UK | 16 | 10 |
-| 123-3D UK | 24 | 22 |
+| 123-3D UK | 32 | 30 |
 | iDig3Dprinting | 4 | 1 |
 | 3DGBIRE | 443 | 442 |
-| Bambu Lab UK | 133 | 133 |
+| Bambu Lab UK | 145 | 145 |
 | Creality UK | 12 | 8 |
-| ELEGOO UK | 11 | 11 |
+| ELEGOO UK | 12 | 12 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
-| NSE Imports | 15 | 14 |
+| NSE Imports | 27 | 26 |
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
 | Anycubic UK | 1454 | 0 |
-| QIDI UK Store | 46 | 35 |
+| QIDI UK Store | 57 | 46 |
 | Flashforge UK | 27 | 27 |
-| Sovol UK | 9 | 9 |
+| Sovol UK | 15 | 15 |
 | Snapmaker UK | 1 | 0 |

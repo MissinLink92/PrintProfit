@@ -83,5 +83,19 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "Sovol SV08 Max: 500mm³ Large Format CoreXY 3D Printer | 700mm/s High-Speed — SV08 Max": 954.99,
   "QIDI Q2C 3D Printer — Q2C Combo / In Stock / 1 filament": 429.0,
   "QIDI Max4 3D Printer — Max4 / Standard / Polar Cooler*1": 899.0,
-  "QIDI Max4 3D Printer — Max4 Combo / Standard / Polar Cooler*1": 1029.0
+  "QIDI Max4 3D Printer — Max4 Combo / Standard / Polar Cooler*1": 1029.0,
+  "QIDI Plus5 3D Printer — Plus5 / Polar Cooler Bundle": 714.0,
+  "Pre-Order Sovol M1D 3D Printer — M1D  Advanced": 1320.0,
+  "QIDI Plus5 3D Printer — Plus5 Combo / Standard": 769.0,
+  "Sovol SV08 3D Printer — SV08+Enclosure (350*350*330mm)": 519.0,
+  "3D Sermoon D3 3D printer": 1874.0,
+  "QIDI Plus5 3D Printer — Plus5 Combo / Polar Cooler Bundle": 844.0,
+  "Sovol SV08 Max 3D Printer — SV08 Max with Enclosure": 968.0,
+  "QIDI Q2 3D Printer — Q2 / Polar Cooler Bundle": 504.0,
+  "QIDI Q2 3D Printer — Q2 Combo / Standard": 559.0,
+  "QIDI Q2 3D Printer — Q2 Combo / Polar Cooler Bundle": 634.0,
+  "QIDI Q2 3D Printer — Q2C / Standard": 299.0,
+  "QIDI Q2 3D Printer — Q2C / Polar Cooler Bundle": 448.0,
+  "QIDI Q2 3D Printer — Q2C Combo / Standard": 429.0,
+  "QIDI Q2 3D Printer — Q2C Combo / Polar Cooler Bundle": 578.0
 };

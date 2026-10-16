@@ -73,7 +73,12 @@
       "platform": 7.2,
       "pay": 1.5,
       "fixed": 0.2,
-      "note": "Folksy Basic: 6% commission + VAT = 7.2%; Stripe standard UK card rate shown as 1.5% + £0.20. Reference value; not yet checked by the nightly updater."
+      "note": "Folksy Basic including commission VAT; Stripe standard UK cards. Listing fees excluded. Platform 7.2%; payments 1.5% + £0.20. Checked 2026-10-16.",
+      "checkedAt": "2026-10-16",
+      "sourceUrls": [
+        "https://folksy.uservoice.com/knowledgebase/articles/58077-how-much-does-it-cost-to-sell-on-folksy",
+        "https://stripe.com/gb/pricing"
+      ]
     },
     "shopify": {
       "platform": 0,
@@ -966,14 +971,14 @@
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "6ece2947314fb919f135f01a0681c7e9581c45cafe92717c2828d789341d8de4",
+      "contentHash": "b8fd2b2de60738b485521809a136bbfa7f43b8f8e042df35ed9c97a57970373e",
       "lastVerified": "2026-10-16"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "599d55dd305fd9910435e58cb79d3d5ca74d87444f7453ef0149474a839a04c0",
+      "contentHash": "f1c7607898ddf1294071a7b55b45e5d54e82cbf150151c42da3236b9e8cfbb17",
       "lastVerified": "2026-10-16"
     },
     "depop": {
@@ -986,14 +991,14 @@
       "url": "https://www.vinted.co.uk/pricelist",
       "lastAttempt": "2026-10-16",
       "status": "review-required",
-      "contentHash": "0c79a2c304acac03175d734abf2e609d98f62573f57b614dde7a83504d78ff07",
+      "contentHash": "e719367f16127dc2c7d34d9f73d360740acd1e76a7a1f1a900146b609914894a",
       "error": "Zero seller fee guidance changed; keep the previous value for review"
     },
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-16",
       "status": "review-required",
-      "contentHash": "2756549ce89d3b24bb791085b0120685bde63be79e1cd7d53922c6216727883f",
+      "contentHash": "0ac5ac1da1e73e741008f201b9ed260eb78f5ed574232585a77b38e6e3996e79",
       "error": "Expected one unambiguous rate; found 0"
     },
     "facebook": {
@@ -1010,27 +1015,28 @@
       "lastVerified": "2026-10-16"
     },
     "folksy": {
-      "url": "https://folksy.com/selling",
+      "url": "https://folksy.uservoice.com/knowledgebase/articles/58077-how-much-does-it-cost-to-sell-on-folksy",
       "lastAttempt": "2026-10-16",
-      "status": "failed",
-      "error": "Source did not provide readable pricing guidance"
+      "status": "verified",
+      "contentHash": "9b2455d30cb2ae0c0991a949a4f5876fba542136c962cdc363092f1da957956a",
+      "lastVerified": "2026-10-16"
     },
     "stripe": {
       "url": "https://stripe.com/gb/pricing",
       "lastAttempt": "2026-10-16",
-      "status": "review-required",
+      "status": "verified",
       "contentHash": "8141294581e80716d9f4a82bcb1c230af8986717dcc0ca14612a49cacc6a60dd",
-      "error": "Official source could not be read: folksy"
+      "lastVerified": "2026-10-16"
     },
     "shopify": {
       "url": "https://www.shopify.com/uk/pricing",
       "lastAttempt": "2026-10-16",
       "status": "verified",
-      "contentHash": "d948e36b666768ca5c0db21afcba559e474f86c3a96bf7e03a58d7d05b9f1080",
+      "contentHash": "973c471b77ddd2d47958a9ab72cf19ce11bd9c6e234dfd7ff26d4df1f648526e",
       "lastVerified": "2026-10-16"
     }
   },
-  "lastAttempt": "2026-10-16T15:53:11+01:00",
+  "lastAttempt": "2026-10-16T16:10:25+01:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-16",
@@ -1057,7 +1063,7 @@
       "ZAR": 21.91503229
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-16T15:53:11+01:00",
+    "lastAttempt": "2026-10-16T16:10:25+01:00",
     "status": "verified"
   }
 }

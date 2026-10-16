@@ -1,14 +1,14 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><title>PrintProfit automatic updates</title><h1>Automatic updates</h1><p>Verified new products publish automatically. Incomplete listings are skipped and retried; no product approval is required.</p><pre># PrintProfit nightly update
 
-Checked: 2026-10-16T15:53:11+01:00
+Checked: 2026-10-16T16:10:25+01:00
 
-- Existing prices verified: 732 / 2221
+- Existing prices verified: 782 / 2271
 - Existing prices retained without verification: 1489
-- Changed existing prices: 10
+- Changed existing prices: 0
 - Refreshed image files: 0
-- Verified products added: 39
-- Unresolved source notices: 5725
-- Failed or incomplete checks: 1826
+- Verified products added: 50
+- Unresolved source notices: 5616
+- Failed or incomplete checks: 1783
 
 ## Source checks
 
@@ -16,23 +16,23 @@ Checked: 2026-10-16T15:53:11+01:00
 |---|---|---|---|
 | 3DJake UK | 4 / 7 | url-discovery-only | 3845 |
 | 3D Prima UK | 10 / 16 | url-discovery-only | 62 |
-| 123-3D UK | 22 / 24 | discovered | 2034 |
+| 123-3D UK | 30 / 32 | discovered | 2025 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 221 |
 | 3DGBIRE | 442 / 443 | discovered | 435 |
-| Bambu Lab UK | 133 / 133 | discovered | 98 |
+| Bambu Lab UK | 145 / 145 | discovered | 98 |
 | Creality UK | 8 / 12 | url-discovery-only | 201 |
-| ELEGOO UK | 11 / 11 | discovered | 3717 |
+| ELEGOO UK | 12 / 12 | discovered | 3717 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 10 |
-| NSE Imports | 14 / 15 | discovered | 685 |
+| NSE Imports | 26 / 27 | discovered | 671 |
 | Additive-X | 10 / 13 | url-discovery-only | 2 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
 | Anycubic UK | 0 / 1454 | failed | 0 |
-| QIDI UK Store | 35 / 46 | discovered | 126 |
+| QIDI UK Store | 46 / 57 | discovered | 116 |
 | Flashforge UK | 27 / 27 | discovered | 129 |
-| Sovol UK | 9 / 9 | discovered | 45 |
+| Sovol UK | 15 / 15 | discovered | 39 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
 
 ## Items needing attention
@@ -50,7 +50,6 @@ Checked: 2026-10-16T15:53:11+01:00
 - reference / etsy-payments: HTTP Error 403: Forbidden
 - reference / depop: HTTP Error 403: Forbidden
 - reference / facebook: Source robots.txt disallows this URL
-- reference / folksy: Source did not provide readable pricing guidance
 - reference-parser / inpost: Official source could not be read: inpost
 - reference-parser / royalmail-first, royalmail-second: Official source could not be read: royalmail-first
 - reference-parser / dpd: Official source could not be read: dpd
@@ -58,7 +57,6 @@ Checked: 2026-10-16T15:53:11+01:00
 - reference-parser / parcelforce: Official source could not be read: parcelforce
 - reference-parser / etsy-transaction, etsy-regulatory, etsy-payments: Official source could not be read: etsy-transaction
 - reference-parser / depop: Official source could not be read: depop
-- reference-parser / folksy, stripe: Official source could not be read: folksy
 - reference-parser / tiktok: Expected one unambiguous rate; found 0
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
 - catalogue / anycubic-uk: Storefront redirected outside the recorded retailer
@@ -1702,165 +1700,124 @@ Checked: 2026-10-16T15:53:11+01:00
 - product / candidate-d5dec3d37a71ef1b1349: Exact Shopify variant ID required; refusing a default variant price
 - product / candidate-09d30b525023cc773e1f: Exact variant no longer appears in the retailer catalogue
 - discovery / anycubic-uk: Storefront redirected outside the recorded retailer
-- new-product / candidate-c9338e3daf3c98af8731: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
-- new-product / candidate-4c1eb24b13d4de968cbb: Cannot confirm one product on the discovered URL
-- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8b8a261f181d8b0920cb: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7b14b33ae1d3c83a69ee: No single GBP offer for the exact product
-- new-product / candidate-9d5eb9632af2217bdda8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
-- new-product / candidate-c63cc1a9ce9516a8f607: Cannot confirm that the product is a material or printer
+- new-product / candidate-6b1a0e3e1aeb8aef25a4: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd5329aa205a7dc9875c: HTTP Error 403: Forbidden
+- new-product / candidate-651d2f4970716ccedbdf: Cannot confirm one product on the discovered URL
+- new-product / candidate-96dce9aa58ece261a7c0: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-bf70c6199a7d623bc9ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1fa70ad88f7245e3c74f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4245bb7df03baf4777d3: No single GBP offer for the exact product
+- new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
 - new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bde6337dae90f04c359e: Cannot confirm that the product is a material or printer
-- new-product / candidate-a601d8b49fa920fcb3ec: Cannot confirm one product on the discovered URL
-- new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
-- new-product / candidate-dddcd5bd2636ed8e55c4: Cannot confirm one product on the discovered URL
-- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
-- new-product / candidate-865d683b6f17bc55ed88: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-07ff212ee54855c1d32f: No single GBP offer for the exact product
-- new-product / candidate-0afa5f93320b13c11a78: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
-- new-product / candidate-751c1133dfd24ae2a3ef: Cannot confirm that the product is a material or printer
+- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-116f70179f78ec63d2b0: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fe87725357a22b2ada2: HTTP Error 403: Forbidden
+- new-product / candidate-53b6244b4b7b4497df9c: Cannot confirm that the product is a material or printer
+- new-product / candidate-317dc533fa01770964f6: Cannot confirm one product on the discovered URL
+- new-product / candidate-8683e28fbef0dd18a56c: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-922db40e7d4704a480f3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a7f8b9014db7a73259ed: Catalogue GBP price outside supported range
+- new-product / candidate-05656b87bde4c8c9696e: No single GBP offer for the exact product
+- new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
 - new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fc1a7b8a55c01003f1a5: Cannot confirm one product on the discovered URL
-- new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
-- new-product / candidate-fea14ddd37629c1be86c: Cannot confirm that the product is a material or printer
-- new-product / candidate-300bd374b3fa284c1c6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-1052620153394a369c81: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
-- new-product / candidate-83ddb0b4c6d69245f00a: Approved URL is outside its recorded retailer
-- new-product / candidate-dff76aa660f4bcff0b38: Source does not state the material pack weight; listing skipped
-- new-product / candidate-84f3b5270612ed3ecb9e: Catalogue GBP price outside supported range
-- new-product / candidate-c671fa478b7fe142c392: Cannot confirm that the product is a material or printer
+- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8b56624f268aa9fb90c5: Cannot confirm one product on the discovered URL
+- new-product / candidate-e77c5eea463b15be4691: HTTP Error 403: Forbidden
+- new-product / candidate-5de5500c1331ff47a789: Cannot confirm one product on the discovered URL
+- new-product / candidate-da4819bff0b588076919: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-0ecd703342fb3fcd2ea1: Cannot confirm that the product is a material or printer
+- new-product / candidate-15415b92734d4ee8c2ac: Cannot confirm that the product is a material or printer
+- new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
 - new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fa23e2883cfbbf45a75d: Cannot confirm that the product is a material or printer
-- new-product / candidate-0ad1db587a039b8368d4: Cannot confirm one product on the discovered URL
-- new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden
-- new-product / candidate-174e0dd61c05f38c9f8e: Cannot confirm one product on the discovered URL
-- new-product / candidate-8436d7fe6fdf70522ba8: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
-- new-product / candidate-54e5825bb7450acd5144: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6f7cb75934b81620177c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e4bb3c09ebbd1fd2534e: Catalogue GBP price outside supported range
-- new-product / candidate-5f5140f7537b3fcb9bb3: Cannot confirm that the product is a material or printer
+- new-product / candidate-03a6f07ec50c09226187: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b95d3ec8ce37e98c936: HTTP Error 403: Forbidden
+- new-product / candidate-13ab6a0206c62a31e233: The read operation timed out
+- new-product / candidate-a83c7f124a57cc66f8a2: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
+- new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-1ff05526fd5404bdc49e: Approved URL is outside its recorded retailer
+- new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
 - new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
-- new-product / candidate-35279a23076451181e10: No verified product image URL
-- new-product / candidate-343335ac77d259c9805a: Cannot confirm one product on the discovered URL
-- new-product / candidate-8a85edad57fe4002d6df: HTTP Error 403: Forbidden
-- new-product / candidate-d0f956716145cfad60bf: Cannot confirm one product on the discovered URL
-- new-product / candidate-3bc16252dfabfc412233: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3e977ca8eb53ffc1bef6: Approved URL is outside its recorded retailer
-- new-product / candidate-8685ae813cbdb26cda3e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-64c4b41910b3ebbf3621: Cannot confirm that the product is a material or printer
-- new-product / candidate-496655b483325e12f7ab: Cannot confirm that the product is a material or printer
+- new-product / candidate-8bb76130856075f69976: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8fa307af32efab5999f: HTTP Error 403: Forbidden
+- new-product / candidate-096539fb91e0517dcc85: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c66d74795e6cd9c63d4a: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf321a3cdaef8377ccee: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
+- new-product / candidate-abb54c825dc19f220070: Cannot confirm that the product is a material or printer
+- new-product / candidate-dcca848dde0651fe0677: No single GBP offer for the exact product
+- new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
 - new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
 - new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
-- new-product / candidate-a14dccbc8d113bcb565c: Cannot confirm one product on the discovered URL
-- new-product / candidate-b1b47eb93a0cb8ac601e: HTTP Error 403: Forbidden
-- new-product / candidate-36505c75a928e473ec7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-6abe5afd22bc2abc5804: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a163efd511c73f87f9c7: No single GBP offer for the exact product
-- new-product / candidate-0d37b2ed627f8c1fde46: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c37aa39617358e581097: Catalogue GBP price outside supported range
-- new-product / candidate-6bb556c8025616a8f32f: Cannot confirm that the product is a material or printer
+- new-product / candidate-31658aa8710646e2df66: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e537e7b385a186c2d47: HTTP Error 403: Forbidden
+- new-product / candidate-466c52a6f8b721f9d674: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f0c4f20619efdcca39e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
+- new-product / candidate-06a27693bd02f7d582da: Cannot confirm that the product is a material or printer
+- new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
+- new-product / candidate-bb5ea712215ce946b6f3: No single GBP offer for the exact product
+- new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
 - new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5e100c7706994e9acea9: No verified product image URL
-- new-product / candidate-23a63ee254bf58f95e98: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae932a133bdf248b9954: HTTP Error 403: Forbidden
-- new-product / candidate-97ec895a937582cf8d5a: Cannot confirm one product on the discovered URL
-- new-product / candidate-5edc7aaf850f02bd8353: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6c558d66fc27c9ddb595: No single GBP offer for the exact product
-- new-product / candidate-177480d7c2b951a5415c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e02b6ae5b407d1e2ddfd: Catalogue GBP price outside supported range
-- new-product / candidate-b1de0aedf6ba53c27154: Cannot confirm that the product is a material or printer
+- new-product / candidate-e807525b1f500253779b: Cannot confirm one product on the discovered URL
+- new-product / candidate-1114b7ce2fb25afb8e0e: HTTP Error 403: Forbidden
+- new-product / candidate-2cf4652d81c6b07546fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-984fc19b786d66b97cb9: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-8f6d5acb86e5a6351b70: Pack weight is ambiguous; listing skipped
+- new-product / candidate-f19670188d1b9018c9f1: Cannot confirm that the product is a material or printer
+- new-product / candidate-7cf9d57a580294338f27: Catalogue GBP price outside supported range
+- new-product / candidate-4693f85190c302510f23: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
 - new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bf345e3e433cef2cfa99: Cannot confirm that the product is a material or printer
-- new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
-- new-product / candidate-e7e01c8f44095b076f72: Cannot confirm one product on the discovered URL
-- new-product / candidate-ad00c2fc017a8342ad56: HTTP Error 403: Forbidden
-- new-product / candidate-d5a025bdfc542c9bbd64: Cannot confirm that the product is a material or printer
-- new-product / candidate-3595dca6df48eb7ffce4: Cannot confirm one product on the discovered URL
-- new-product / candidate-28ac4c09d91075405d30: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8d09e8a7c12897a61c12: No single GBP offer for the exact product
-- new-product / candidate-ec35b22d30ae012b17d0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e9b35c82ef3913eba0dd: Catalogue GBP price outside supported range
-- new-product / candidate-20628a23ff0a0b728090: Cannot confirm that the product is a material or printer
+- new-product / candidate-d1caa6d65b3d034fad3e: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c17f7fd10543185dc08: HTTP Error 403: Forbidden
+- new-product / candidate-53285b641dcddf16f42d: Cannot confirm one product on the discovered URL
+- new-product / candidate-00dd4c7d07ac0d134906: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-a28c1cfe50e4aa37b1a4: Catalogue GBP price outside supported range
+- new-product / candidate-4c8bb5fc6f2dbc1a4e6b: No single GBP offer for the exact product
+- new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1c2b2eef94e6e929b1ef: Cannot confirm that the product is a material or printer
-- new-product / candidate-f0d31fb14d4e4f4957c5: Cannot confirm one product on the discovered URL
-- new-product / candidate-7913be9603ae3822b3b4: HTTP Error 403: Forbidden
-- new-product / candidate-7a6d08d7f98ee645a13a: Cannot confirm one product on the discovered URL
-- new-product / candidate-80feba3e5ed06f5a0ace: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-006e0d5f5068ef06fe67: No single GBP offer for the exact product
-- new-product / candidate-d6c2ca4a9a688bcc79d6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e0453d4243683ae5a0c7: Cannot confirm that the product is a material or printer
-- new-product / candidate-92a6c620c08556fcf02f: Cannot confirm that the product is a material or printer
+- new-product / candidate-a92f1da5dfea208f8c6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-90f8cda33d9c0d8c0fc8: HTTP Error 403: Forbidden
+- new-product / candidate-1cb740f484b1d43f5c7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cb4de37a9a34c183038: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-f0ca27274fb11bb8c03f: No verified product image URL
+- new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
+- new-product / candidate-5fd441c8af01ca01e734: Cannot confirm that the product is a material or printer
+- new-product / candidate-5c80545437722ea97978: No single GBP offer for the exact product
+- new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
 - new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
-- new-product / candidate-3683c989cd75950ab9ce: Cannot confirm one product on the discovered URL
-- new-product / candidate-a57fb41375b1befaffe8: HTTP Error 403: Forbidden
-- new-product / candidate-f304ddce8940b46ce724: Cannot confirm one product on the discovered URL
-- new-product / candidate-ca3abb9f1e2c46a97430: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-29fd4ac47ca2ba476f7e: No single GBP offer for the exact product
-- new-product / candidate-d4cb88348a4fbc0a3c80: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-27405e3b3d32cc7d66b9: Cannot confirm that the product is a material or printer
+- new-product / candidate-f1517af8c45a24738ff6: Cannot confirm one product on the discovered URL
+- new-product / candidate-164aee7f4a3f69435198: HTTP Error 403: Forbidden
+- new-product / candidate-974b8b9a821d97974f17: Cannot confirm one product on the discovered URL
+- new-product / candidate-ecc82e423c7920be0e75: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-d7d2edc50ad51a9f9ac1: No verified product image URL
+- new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
+- new-product / candidate-649e63e9829c6b47cf39: Catalogue GBP price outside supported range
+- new-product / candidate-62adee1e043b3eb2eddc: No single GBP offer for the exact product
+- new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8bd628979d63ab4bcdfe: Cannot confirm that the product is a material or printer
-- new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
-- new-product / candidate-68883a8bf8aeb513799a: Cannot confirm one product on the discovered URL
-- new-product / candidate-b0fc3d73c88b04b390b1: HTTP Error 403: Forbidden
-- new-product / candidate-9c7b60c8a45a899f2cf6: Cannot confirm one product on the discovered URL
-- new-product / candidate-c900123fcd13260398a2: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e7ab83cbc78fca22f6dd: No single GBP offer for the exact product
-- new-product / candidate-ee1c57c3c02d2a042a1f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7fd89bc10762210295c7: Cannot confirm that the product is a material or printer
-- new-product / candidate-5ca1cabde0d0725aa3d5: Cannot confirm one product on the discovered URL
-- new-product / candidate-a3212209da92d9dbe768: HTTP Error 403: Forbidden
-- new-product / candidate-7f52aee5e833aa721cd6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bc61cedf25801d1c1a89: Cannot confirm one product on the discovered URL
-- new-product / candidate-fbd02e5dfa84d4a460b0: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cdef1de6d1730d03c279: No single GBP offer for the exact product
-- new-product / candidate-414abea4ed87c5bd3ce4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1c35248400fb89878d68: Cannot confirm that the product is a material or printer
-- new-product / candidate-156cb210c46355caa815: Cannot confirm one product on the discovered URL
-- new-product / candidate-739e00d2dbd8d7890afa: HTTP Error 403: Forbidden
-- new-product / candidate-caea8fe88a97c0e7098d: Cannot confirm that the product is a material or printer
-- new-product / candidate-c245e2a05eecf35eab33: Cannot confirm one product on the discovered URL
-- new-product / candidate-55946e005fa9a735987a: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-44eacca675ca47c03434: No single GBP offer for the exact product
-- new-product / candidate-48945ec2160edfb3d1fd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ba9bebde0ef572eff3a2: No verified product image URL
-- new-product / candidate-e5ace3e9e5ea0d4b69da: Cannot confirm one product on the discovered URL
-- new-product / candidate-84edd4e05ef1bc10565a: HTTP Error 403: Forbidden
-- new-product / candidate-1c38a599eeb09ba051bf: Cannot confirm that the product is a material or printer
-- new-product / candidate-20515f60fd555e9657a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-71ea9bd5fb7bfe32ade8: Exact Shopify variant ID required; refusing a default variant price
-- new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6277fae9f990d7bd8cb0: No single GBP offer for the exact product
-- new-product / candidate-fc0f220f75469acdbe21: Source does not state the material pack weight; listing skipped
-- new-product / candidate-866261d14b351fa050be: Cannot confirm that the product is a material or printer
-- new-product / candidate-37b35ddb47116992a67c: Cannot confirm that the product is a material or printer
+- new-product / candidate-272e16a9147b9fcaf06a: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ca5738b13ac10e126dd: HTTP Error 403: Forbidden
+- new-product / candidate-881d741e61b09ad6918f: Cannot confirm one product on the discovered URL
+- new-product / candidate-8df74168633811a67a2f: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-cc0c5c9f3391a76af80b: No verified product image URL
+- new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
+- new-product / candidate-893cf38c48655139dcef: Catalogue GBP price outside supported range
+- new-product / candidate-325667f8f9ddc8b60078: No single GBP offer for the exact product
+- new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b75089f493c2fb348370: Cannot confirm one product on the discovered URL
+- new-product / candidate-f93a93f4c5152bf775f7: HTTP Error 403: Forbidden
+- new-product / candidate-468e32cf32ea7e313c55: Cannot confirm that the product is a material or printer
+- new-product / candidate-1e1773ef2eed1ea48cb4: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ab69e51ed78fe94f8a6: Exact Shopify variant ID required; refusing a default variant price
+- new-product / candidate-08efdee71302ed32a42d: No verified product image URL
 </pre></html>
