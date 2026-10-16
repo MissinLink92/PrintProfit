@@ -6,7 +6,7 @@ from pathlib import Path
 import nightly_catalogues as catalogues
 from nightly_html import Page
 from nightly_references import folksy_commission, stripe_standard_uk
-from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries, automatic_details, relevant
+from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries, automatic_details, relevant, material_weight
 from nightly_update import ReviewQueue
 
 
@@ -47,6 +47,15 @@ class FeedChecks(unittest.TestCase):
         bundled = {}
         automatic_details(bundled, {'name':'Neptune 4 3D Printer with PLA Filament','variantTitle':'Black','type':'3D Printers','options':[],'variantOptions':[]})
         self.assertEqual(bundled['category'],'printer')
+
+    def test_net_material_weight_ignores_empty_spool_and_shipping_mass(self):
+        self.assertEqual(material_weight('Grey', 'PLA', 'Filament weight: 1 kg/spool. Empty spool weight: 154 g. Shipping weight: 1.3 kg.'), 1000)
+        self.assertEqual(material_weight('5 rolls Net weight: 1 kg/spool. Empty spool: 154 g.'), 5000)
+        self.assertEqual(material_weight('1 kg / Grey','Net weight: 2kg'), 1000)
+        with self.assertRaises(ValueError):
+            material_weight('Net weight: 1 kg or Net weight: 2 kg')
+        with self.assertRaises(ValueError):
+            material_weight('Shipping weight: 1.3 kg. Empty spool: 154 g.')
 
     def test_known_pack_sizes_precede_ambiguous_bundles(self):
         entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':n}}

@@ -330,7 +330,12 @@ def material_weight(*texts):
     """Read pack mass, never shipping mass. Prefer exact variant text."""
     for text in texts:
         clean = Page(str(text or '')).text
-        matches = re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(kg|g)\b', clean, re.I)
+        # Net material specifications are more precise than all numbers in a
+        # description (which may also contain empty-spool or shipping weights).
+        # Never use generic 'weight' alone, or choose between different pack sizes.
+        labelled = re.findall(r'\b(?:net (?:weight|mass)|filament weight|resin weight|material weight)\s*[:：]?\s*(\d+(?:\.\d+)?)\s*(kg|g)\b', clean, re.I)
+        per_package = re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(kg|g)\s*/\s*(?:spool|bottle)\b', clean, re.I)
+        matches = labelled or per_package or re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(kg|g)\b', clean, re.I)
         if not matches:
             continue
         grams = {float(number)*(1000 if unit.lower() == 'kg' else 1) for number, unit in matches}
