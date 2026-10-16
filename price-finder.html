@@ -1030,5 +1030,13 @@ body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wr
 @media(max-width:520px){.results-more{align-items:stretch;flex-direction:column}.results-pagination{justify-content:center}.results-pagination .compare-btn{width:auto;min-width:102px}}
 </style>
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
+<style id="ppDesktopCompareWidth">
+/* Extra desktop room for listings; preserve existing phone/tablet rules. */
+@media (min-width: 1101px) {
+ body .wrap {width:calc(100% - 64px)!important;max-width:none!important;}
+ .card-grid {grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+ .tool {min-width:0;}
+}
+</style>
 </body>
 </html>
