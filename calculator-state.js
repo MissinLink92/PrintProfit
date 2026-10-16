@@ -85,6 +85,7 @@ function read(){
 function restore(){
   const data=read();
   if(!data?.fields)return false;
+  window.__ppRestoreFarm?.(data.fields);
 
   try{window.__ppFileData=(data.fileData&&typeof data.fileData==='object')?data.fileData:{};}catch(e){window.__ppFileData={};}
   try{window.__ppRestoredFileName=String(data.fileName||'');}catch(e){window.__ppRestoredFileName='';}

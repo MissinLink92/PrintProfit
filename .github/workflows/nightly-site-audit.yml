@@ -1,6 +1,9 @@
 name: Nightly site audit
 
 on:
+  push:
+    branches: [main]
+    paths: ['print-farm*.js', 'scripts/check_print_farm.cjs']
   schedule:
     - cron: '15 1 * * *'
       timezone: Europe/London
@@ -40,6 +43,7 @@ jobs:
         run: python -m http.server 8766 --bind 127.0.0.1 &
       - name: Check calculations and feature integrations
         run: |
+          node scripts/check_print_farm.cjs
           node scripts/check_calculator_math.cjs
           node scripts/check_currency_labels.cjs
           node scripts/check_i18n.cjs

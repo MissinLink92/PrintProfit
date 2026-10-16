@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check print-farm production runs
+        run: node scripts/check_print_farm.cjs
       - name: Check calculator arithmetic
         run: node scripts/check_calculator_math.cjs
       - name: Check translation initialization and switching

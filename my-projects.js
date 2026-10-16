@@ -124,6 +124,7 @@ const snapshot=()=>{
 };
 const restore=data=>{
  if(!data||typeof data!=='object')return;
+ window.__ppRestoreFarm?.(data);
  const pending=[];
  const setSelectValue=(el,state)=>{
   const wanted=String(state?.value??'');

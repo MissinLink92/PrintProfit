@@ -21,9 +21,10 @@
   function currentBaseCost(){
     const p=printer(),hours=number('printHours'),pack=number('materialPack'),packPrice=number('materialPackCost'),used=number('materialUsed');
     const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
-    const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+    const farm=window.__ppFarmCosts?.(Math.max(1,Math.floor(number('qty'))));
+    const powerUsed=farm?farm.powerUsed:(p.watts>0&&hours>0?p.watts/1000*hours:0);
     const electricity=powerUsed*number('electricityRate');
-    const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+    const depreciation=farm?farm.depreciation:(p.lifetime&&hours?p.price/p.lifetime*hours:0);
     const labour=number('labourRate')*number('labourHours');
     return materialCost+electricity+depreciation+labour+number('pack')+number('other')+number('delivery');
   }
@@ -133,6 +134,7 @@
     document.querySelectorAll('[data-m][data-target-view]').forEach(button=>button.classList.remove('active'));
     fields.forEach(dispatchFieldChange);
     resetModelDisplay();
+    window.__ppRestoreFarm?.({});
     recalculate();
     forceSingleResultMode();
   }

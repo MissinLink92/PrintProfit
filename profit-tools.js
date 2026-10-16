@@ -49,9 +49,10 @@ function readState(){
   const packPrice=n('materialPackCost');
   const used=n('materialUsed');
   const materialCost=pack>0&&used>0?packPrice*(used/pack):0;
-  const powerUsed=p.watts>0&&hours>0?p.watts/1000*hours:0;
+  const farm=window.__ppFarmCosts?.(qty);
+  const powerUsed=farm?farm.powerUsed:(p.watts>0&&hours>0?p.watts/1000*hours:0);
   const elec=powerUsed*n('electricityRate');
-  const depreciation=p.lifetime&&hours?p.price/p.lifetime*hours:0;
+  const depreciation=farm?farm.depreciation:(p.lifetime&&hours?p.price/p.lifetime*hours:0);
   const labour=n('labourRate')*n('labourHours');
   const packaging=n('pack');
   const other=n('other');
