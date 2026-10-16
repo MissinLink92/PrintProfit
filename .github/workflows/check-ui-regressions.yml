@@ -24,6 +24,8 @@ jobs:
           node-version: '22'
       - name: Check print-farm production runs
         run: node scripts/check_print_farm.cjs
+      - name: Check labour hours and minutes
+        run: node scripts/check_labour_time.cjs
       - name: Check calculator arithmetic
         run: node scripts/check_calculator_math.cjs
       - name: Check translation initialization and switching
