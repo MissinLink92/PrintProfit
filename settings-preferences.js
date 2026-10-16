@@ -28,6 +28,21 @@ const currencies={
  ZAR:{symbol:'ZAR',locale:'en-ZA',rate:21.8000}
 };
 
+// Use dated central-bank reference data for newly selected currencies.
+// Preserve an existing saved/manual exchange rate until the user changes it.
+const fx=window.PRINTPROFIT_REFERENCE_DATA?.exchangeRates;
+const fxAge=fx?.date?(Date.now()-Date.parse(fx.date+'T00:00:00Z'))/86400000:Infinity;
+const fxUsable=fx?.base==='GBP'&&fxAge>=-1&&fxAge<=7;
+if(fxUsable)for(const [code,meta] of Object.entries(currencies)){
+ const rate=Number(fx.rates?.[code]);if(Number.isFinite(rate)&&rate>0)meta.rate=rate;
+}
+function exchangeRateNote(){
+ const input=document.getElementById('ppSettingsRate');if(!input)return;
+ let note=document.getElementById('ppExchangeRateNote');
+ if(!note){note=document.createElement('p');note.id='ppExchangeRateNote';note.style.cssText='font-size:12px;line-height:1.5;margin:8px 0';input.closest('.pp-settings-card')?.appendChild(note);}
+ note.textContent=fxUsable?'Default rates: ECB reference dated '+fx.date+'. Saved/manual rates are kept; reselect a currency to use its updated default. Your bank may charge a different rate.':'Daily rate unavailable or older than seven days. Preset/saved rates are estimates; enter a current rate manually.';
+}
+
 const moneyFields=['materialPackCost','labourRate','pack','other','electricityRate','fixedFee','delivery','deliveryCharge','sell'];
 const unitFields=['materialPack','materialUsed'];
 
@@ -878,6 +893,7 @@ function ensureApplyButton(){
 }
 
 function refreshDraftControls(){
+ exchangeRateNote();
  const dark=document.getElementById('ppSettingsDark'),lang=document.getElementById('ppSettingsLanguage'),units=document.getElementById('ppSettingsUnits'),cur=document.getElementById('ppSettingsCurrency'),rate=document.getElementById('ppSettingsRate');
  if(dark)dark.checked=!!draft.dark;
  if(lang)lang.value=draft.language;

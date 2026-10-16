@@ -7,7 +7,8 @@ function matching(product,now=Date.now()){
   Array.isArray(o.productIds)&&o.productIds.includes(String(product.id))&&
   Number.isFinite(Date.parse(o.expiresAt))&&Date.parse(o.expiresAt)>now&&
   (!o.startsAt||(Number.isFinite(Date.parse(o.startsAt))&&Date.parse(o.startsAt)<=now))&&
-  o.title&&o.terms&&o.lastChecked&&safeUrl(o.url));
+  o.title&&o.terms&&Number.isFinite(Date.parse(o.lastChecked))&&
+  Date.parse(o.lastChecked)<=now&&now-Date.parse(o.lastChecked)<=7*86400000&&safeUrl(o.url));
 }
 function start(){
  const dialog=document.createElement('dialog');dialog.className='pp-offers-dialog';dialog.setAttribute('aria-labelledby','ppOffersTitle');

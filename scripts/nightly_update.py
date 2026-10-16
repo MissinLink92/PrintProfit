@@ -15,6 +15,7 @@ from nightly_categories import ProductCategories
 import nightly_references
 import nightly_products
 import nightly_catalogues
+import nightly_fx
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -121,6 +122,7 @@ def main():
     queue = ReviewQueue(load(root / 'data/review-queue.json', []), config['reviewDecisions'], now)
     queue.product_details = config['approvedProductDetails']
     reader = Reader(config['maxRunSeconds'])
+    nightly_fx.refresh(ref, reader, report)
     nightly_references.refresh(ref, config, reader, report, queue)
     nightly_catalogues.prepare(config, reader, report)
     for index, item in enumerate(data['products'], 1):

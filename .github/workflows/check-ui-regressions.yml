@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check calculator arithmetic
+        run: node scripts/check_calculator_math.cjs
       - name: Check translation initialization and switching
         run: node scripts/check_i18n.cjs
       - name: Check currency labels and calculated values

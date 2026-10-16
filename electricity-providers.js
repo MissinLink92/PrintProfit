@@ -73,7 +73,7 @@ function addRateSource(input){
    applying=true;
    setRate(b.rate);
    applying=false;
-   note.textContent='Ofgem reference: '+(Number(b.rate)*100).toFixed(2)+'p/kWh. Great Britain average direct debit, including VAT; your supplier tariff may differ. Northern Ireland is outside the price cap.';
+   note.textContent='Ofgem reference: '+(Number(b.rate)*100).toFixed(2)+'p/kWh. Great Britain average direct debit, using the published tax treatment; your supplier tariff may differ. Northern Ireland is outside the price cap.';
  };
  const clearToManual=()=>{
    source.value='manual';

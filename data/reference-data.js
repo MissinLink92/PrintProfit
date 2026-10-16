@@ -1030,5 +1030,34 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "lastVerified": "2026-10-16"
     }
   },
-  "lastAttempt": "2026-10-16T00:13:45+01:00"
+  "lastAttempt": "2026-10-16T00:13:45+01:00",
+  "exchangeRates": {
+    "base": "GBP",
+    "date": "2026-10-16",
+    "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "rates": {
+      "GBP": 1.0,
+      "EUR": 1.18504474,
+      "USD": 1.33353084,
+      "PLN": 5.17864549,
+      "CAD": 1.88836879,
+      "AUD": 1.91633584,
+      "CHF": 1.09877348,
+      "SEK": 13.20732358,
+      "NOK": 12.58991527,
+      "DKK": 8.85797239,
+      "CZK": 28.8238431,
+      "JPY": 210.72465486,
+      "CNY": 8.91627659,
+      "INR": 126.63862061,
+      "NZD": 2.35444688,
+      "SGD": 1.7058719,
+      "BRL": 6.77810037,
+      "MXN": 24.51513895,
+      "ZAR": 21.91503229
+    },
+    "note": "ECB reference rates, not a bank or payment-provider quote.",
+    "status": "verified",
+    "lastAttempt": "2026-10-16"
+  }
 };

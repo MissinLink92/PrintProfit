@@ -1,0 +1,203 @@
+{
+  "checkedAt": "2026-10-16T14:48:28.017284+00:00",
+  "warnings": [
+    "inpost: failed; last verified never",
+    "royalmail-first: failed; last verified never",
+    "royalmail-second: failed; last verified never",
+    "parcelforce: failed; last verified never",
+    "dpd: failed; last verified never",
+    "dhl: failed; last verified never",
+    "ups: failed; last verified never",
+    "fedex: failed; last verified never",
+    "etsy-transaction: failed; last verified never",
+    "etsy-regulatory: failed; last verified never",
+    "etsy-payments: failed; last verified never",
+    "depop: failed; last verified never",
+    "vinted: review-required; last verified never",
+    "tiktok: review-required; last verified never",
+    "facebook: failed; last verified never",
+    "folksy: failed; last verified never",
+    "stripe: review-required; last verified never",
+    "Amazon UK: no active listings",
+    "Prusa Research: no active listings",
+    "Ooznest: no active listings",
+    "3D FilaPrint: no active listings",
+    "No approved deals or coupon feed configured; no coupon completeness claim is possible."
+  ],
+  "retailers": [
+    {
+      "name": "3DJake UK",
+      "listed": 7,
+      "verified": 4,
+      "categories": {
+        "filament": 7
+      }
+    },
+    {
+      "name": "3D Prima UK",
+      "listed": 16,
+      "verified": 10,
+      "categories": {
+        "filament": 16
+      }
+    },
+    {
+      "name": "123-3D UK",
+      "listed": 15,
+      "verified": 13,
+      "categories": {
+        "filament": 15
+      }
+    },
+    {
+      "name": "iDig3Dprinting",
+      "listed": 4,
+      "verified": 1,
+      "categories": {
+        "printer": 4
+      }
+    },
+    {
+      "name": "3DGBIRE",
+      "listed": 443,
+      "verified": 442,
+      "categories": {
+        "filament": 352,
+        "printer": 40,
+        "resin-material": 46,
+        "equipment": 3,
+        "accessory": 2
+      }
+    },
+    {
+      "name": "Bambu Lab UK",
+      "listed": 133,
+      "verified": 133,
+      "categories": {
+        "printer": 8,
+        "filament": 125
+      }
+    },
+    {
+      "name": "Creality UK",
+      "listed": 12,
+      "verified": 8,
+      "categories": {
+        "filament": 1,
+        "printer": 11
+      }
+    },
+    {
+      "name": "ELEGOO UK",
+      "listed": 11,
+      "verified": 11,
+      "categories": {
+        "printer": 11
+      }
+    },
+    {
+      "name": "Amazon UK",
+      "listed": 0,
+      "verified": 0,
+      "categories": {}
+    },
+    {
+      "name": "Prusa Research",
+      "listed": 0,
+      "verified": 0,
+      "categories": {}
+    },
+    {
+      "name": "Subliblanks",
+      "listed": 6,
+      "verified": 6,
+      "categories": {
+        "filament": 6
+      }
+    },
+    {
+      "name": "NSE Imports",
+      "listed": 1,
+      "verified": 0,
+      "categories": {
+        "filament": 1
+      }
+    },
+    {
+      "name": "Additive-X",
+      "listed": 13,
+      "verified": 10,
+      "categories": {
+        "filament": 13
+      }
+    },
+    {
+      "name": "Ooznest",
+      "listed": 0,
+      "verified": 0,
+      "categories": {}
+    },
+    {
+      "name": "3D FilaPrint",
+      "listed": 0,
+      "verified": 0,
+      "categories": {}
+    },
+    {
+      "name": "Anycubic UK",
+      "listed": 1454,
+      "verified": 0,
+      "categories": {
+        "filament": 598,
+        "printer": 107,
+        "accessory": 483,
+        "resin-material": 226,
+        "equipment": 40
+      }
+    },
+    {
+      "name": "QIDI UK Store",
+      "listed": 36,
+      "verified": 26,
+      "categories": {
+        "filament": 34,
+        "printer": 2
+      }
+    },
+    {
+      "name": "Flashforge UK",
+      "listed": 27,
+      "verified": 27,
+      "categories": {
+        "printer": 6,
+        "filament": 21
+      }
+    },
+    {
+      "name": "Sovol UK",
+      "listed": 3,
+      "verified": 3,
+      "categories": {
+        "printer": 3
+      }
+    },
+    {
+      "name": "Snapmaker UK",
+      "listed": 1,
+      "verified": 0,
+      "categories": {
+        "printer": 1
+      }
+    }
+  ],
+  "exchangeRates": {
+    "date": "2026-10-16",
+    "status": "verified",
+    "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
+  },
+  "offers": {
+    "configured": 0,
+    "activeApproved": 0,
+    "checkoutVerified": false
+  }
+}

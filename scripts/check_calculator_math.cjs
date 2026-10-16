@@ -1,0 +1,12 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const html=fs.readFileSync('legacy-index.html','utf8');
+const calc=html.match(/  function calc\(\)\{[^\r\n]+/)[0];
+const batch=html.match(/  function renderBatch\([^]*?\n  \}/)[0];
+const values={qty:3,discount:10,printHours:2,materialPack:1000,materialPackCost:20,materialUsed:100,electricityRate:.3,labourRate:10,labourHours:.5,pack:1,other:.5,delivery:3,sell:20,platform:8,pay:2,fixedFee:.5,deliveryCharge:2};
+const output={},ctx={Math,Number,state:{},n:id=>values[id]||0,printerData:()=>({watts:100,price:300,lifetime:3000}),document:{getElementById:()=>null},$:()=>null,setValue:()=>{},setText:(id,v)=>output[id]=v,setProfitClass:()=>{},money:n=>Number(n),renderSingle:(...args)=>ctx.single=args,current:{}};
+vm.createContext(ctx);vm.runInContext(batch+'\n'+calc+'\ncalc();',ctx);
+const near=(v,w)=>assert.ok(Math.abs(v-w)<1e-8,`${v} != ${w}`);
+near(ctx.single[0],11.76);near(ctx.single[2],2.5);near(ctx.single[3],7.74);near(output.batchCost,29.28);near(output.batchSales,54);near(output.batchProfit,20.82);
+values.sell=0;values.fixedFee=0;values.deliveryCharge=0;vm.runInContext('calc()',ctx);near(ctx.single[3],-11.76);near(ctx.single[4],0);
+values.materialPack=0;vm.runInContext('calc()',ctx);near(ctx.current.materialCost,0);assert.ok(Number.isFinite(output.batchProfit));
+console.log('PASS: material, power, depreciation, labour, shipping, percentage/fixed fees, batch discount and zero-price cases.');

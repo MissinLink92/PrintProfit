@@ -5,6 +5,9 @@ on:
     - cron: '15 1 * * *'
       timezone: Europe/London
   workflow_dispatch:
+  workflow_run:
+    workflows: ["PrintProfit midnight UK update"]
+    types: [completed]
   pull_request:
     paths: ['scripts/audit_site.cjs', '.github/workflows/nightly-site-audit.yml']
 
@@ -35,6 +38,16 @@ jobs:
       - name: Serve proposed website for pull request checks
         if: github.event_name == 'pull_request'
         run: python -m http.server 8766 --bind 127.0.0.1 &
+      - name: Check calculations and feature integrations
+        run: |
+          node scripts/check_calculator_math.cjs
+          node scripts/check_currency_labels.cjs
+          node scripts/check_i18n.cjs
+          node scripts/check_market_prices.cjs
+          node scripts/check_workshop_printers.cjs
+          node scripts/check_workspace_modals.cjs
+      - name: Check source health and approved coupons
+        run: python scripts/check_data_health.py
       - name: Check site on desktop and phone sizes
         run: node scripts/audit_site.cjs
         env:
@@ -44,7 +57,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: printprofit-site-audit-${{ github.run_id }}
-          path: .audit-output/
+          path: |
+            .audit-output/
+            reports/data-health.json
+            reports/data-health.md
           include-hidden-files: true
           retention-days: 30
       - name: Publish audit summary
