@@ -39,6 +39,15 @@ class FeedChecks(unittest.TestCase):
         for title in ['Resin tank 1kg','PLA Filament dryer','PETG nozzle replacement']:
             self.assertFalse(relevant(title))
 
+    def test_material_for_3d_printers_is_not_a_printer(self):
+        candidate = {}
+        automatic_details(candidate, {'name':'PLA 3D Printer Filament 1kg','variantTitle':'Red','type':'Filament','options':[],'variantOptions':[]})
+        self.assertEqual(candidate['category'],'filament')
+        self.assertEqual(candidate['weightGrams'],1000)
+        bundled = {}
+        automatic_details(bundled, {'name':'Neptune 4 3D Printer with PLA Filament','variantTitle':'Black','type':'3D Printers','options':[],'variantOptions':[]})
+        self.assertEqual(bundled['category'],'printer')
+
     def test_known_pack_sizes_precede_ambiguous_bundles(self):
         entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':n}}
                    for n in ['Clearance Resin Bundle','PLA Black 1kg']]

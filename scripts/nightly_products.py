@@ -135,6 +135,12 @@ def refresh_item(item, config, reader, root, today, queue, report):
             if record['currency'] != 'GBP':
                 raise ValueError('Retailer did not return GBP for this exact variant')
             price, availability = record['price'], record['available']
+            if str(item['id']).startswith('candidate-') and config.get('newProducts') == 'automatic-verified':
+                details = copy.deepcopy(item)
+                automatic_details(details, record)
+                for field in ('name', 'category', 'type', 'brand', 'colour', 'weightGrams', 'pack'):
+                    if field in details:
+                        item[field] = details[field]
             photo = record.get('image')
             price_url = record['url']
             locator['priceUrl'] = price_url
@@ -349,7 +355,10 @@ def automatic_details(candidate, record):
     if re.search(ACCESSORY_PATTERN, title + ' ' + str(record.get('type') or ''), re.I):
         raise ValueError('Accessories and spare parts are not printers or printing materials')
     material = re.search(MATERIAL_PATTERN, title, re.I)
-    printer = re.search(r'3d.?printer', title + ' ' + str(record.get('type') or ''), re.I)
+    kind = str(record.get('type') or '')
+    explicit_material = bool(re.search(r'\b(?:filaments?|resins?)\b', title + ' ' + kind, re.I))
+    explicit_printer = bool(re.search(r'3d.?printers?', kind, re.I))
+    printer = explicit_printer or (not explicit_material and bool(re.search(r'3d.?printer', title, re.I)))
     if not material and re.search(r'\bfilaments?\b', str(record.get('type') or ''), re.I):
         material = re.search(r'filament', 'filament', re.I)
     if not material and not printer:
