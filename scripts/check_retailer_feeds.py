@@ -4,6 +4,8 @@ import urllib.error
 from unittest.mock import patch
 from pathlib import Path
 import nightly_catalogues as catalogues
+from nightly_html import Page
+from nightly_references import folksy_commission, stripe_standard_uk
 from nightly_products import shopify, refresh_item, offer_price, add_approved, discovery, fair_discovery_entries
 from nightly_update import ReviewQueue
 
@@ -22,6 +24,15 @@ class FakeReader:
 
 
 class FeedChecks(unittest.TestCase):
+    def test_official_fee_scope_and_ambiguity(self):
+        self.assertEqual(folksy_commission(Page('<p>We charge 6% + VAT sales commission on the selling price.</p>')), 6)
+        self.assertEqual(stripe_standard_uk(Page('<p>1.5% + 20p for standard UK cards</p><p>2.8% + 20p for premium UK cards</p>')), (1.5, .2))
+        for text in ['2.8% + 20p for premium UK cards', '1.5% + 20p for standard UK cards; 2% + 20p for standard UK cards']:
+            with self.assertRaises(ValueError):
+                stripe_standard_uk(Page(text))
+        with self.assertRaises(ValueError):
+            folksy_commission(Page('<p>Example: 6% commission. VAT may apply.</p>'))
+
     def test_discovery_checks_missing_variants_on_known_product_url(self):
         url = 'https://retailer.example/products/pla'
         source = {'id':'test', 'name':'Test'}

@@ -115,6 +115,17 @@ def starting_rates(page, source):
              'note': 'Published starting price only; get a quote for parcel size, weight, destination, VAT and account discounts.'}
             for label, pattern in specs]
 
+def folksy_commission(page):
+    # Require the official sentence, not an example total or a payment-provider rate.
+    return single_number(r'We charge\s+([\d.]+)\s*%\s*\+\s*VAT\s+sales commission', page.text)
+
+def stripe_standard_uk(page):
+    pattern = r'([\d.]+)\s*%\s*\+\s*(\d+)p\s+for standard UK\s+cards'
+    rates = {(float(percent), float(pence)/100) for percent, pence in re.findall(pattern, page.text, re.I)}
+    if len(rates) != 1:
+        raise ValueError('Stripe standard UK card rate is missing or ambiguous')
+    return rates.pop()
+
 def refresh(ref, config, reader, report, queue):
     pages = {}
     today = report['checkedAt'][:10]
@@ -231,11 +242,8 @@ def refresh(ref, config, reader, report, queue):
     verified(['depop'], depop)
 
     def folksy():
-        row = ' '.join(table_row(pages['folksy'], 'Commission on sales')[1:])
-        commission = single_number(r'([\d.]+)\s*%\s*\+\s*VAT', row)
-        stripe = pages['stripe'].text
-        pay = single_number(r'([\d.]+)\s*%\s*\+\s*\d+p\s+for standard UK cards', stripe)
-        fixed = single_number(r'[\d.]+\s*%\s*\+\s*(\d+)p\s+for standard UK cards', stripe)/100
+        commission = folksy_commission(pages['folksy'])
+        pay, fixed = stripe_standard_uk(pages['stripe'])
         platform('folksy', ['folksy', 'stripe'], {'platform': round(commission*config['vatMultiplier'], 2), 'pay': pay, 'fixed': fixed})
     verified(['folksy', 'stripe'], folksy)
 
