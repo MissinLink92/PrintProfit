@@ -36,21 +36,24 @@ function installStyles(){
   const style=document.createElement('style');
   style.id='ppHeroSloganLayoutStyles';
   style.textContent=`
-#ppVisualMaster .pvm-copy h1{font-weight:850!important;line-height:1.08!important;letter-spacing:-.045em!important}
+#ppVisualMaster .pvm-hero{height:auto!important;min-height:590px!important}
+#ppVisualMaster .pvm-copy{max-width:680px!important;padding-top:36px!important;padding-bottom:32px!important;min-width:0}
+#ppVisualMaster .pvm-copy h1{font-size:clamp(32px,4vw,56px)!important;font-weight:800!important;line-height:1.12!important;letter-spacing:-.035em!important;margin-bottom:18px!important}
+#ppVisualMaster .pvm-copy>p{max-width:520px;line-height:1.65!important;font-size:15px!important}
+#ppVisualMaster .pvm-copy>p br{display:none}
 #ppVisualMaster .pvm-copy h1 strong{color:inherit!important;font-weight:inherit}
 #ppVisualMaster .pvm-copy h1 em{font-style:normal}
 #ppVisualMaster .pvm-copy h1 .pvm-cost-accent{color:#ffb65c!important}
 #ppVisualMaster .pvm-copy h1 .pvm-charge-accent{color:#54deef!important}
 #ppVisualMaster .pvm-copy>.pvm-kicker{color:#79dfeb!important;letter-spacing:.16em;font-weight:800}
-#ppVisualMaster .pvm-action-stack{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:640px!important;max-width:100%!important;gap:22px!important;margin-top:22px!important}
+#ppVisualMaster .pvm-action-stack{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:610px!important;max-width:100%!important;gap:26px!important;margin-top:20px!important}
 #ppVisualMaster .pvm-action-stack>.pvm-actions{display:block!important;width:100%!important;max-width:100%!important;margin:0!important}
-#ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{position:static!important;inset:auto!important;display:flex!important;flex-wrap:wrap!important;gap:8px 18px!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;margin:0!important;text-align:left!important;transform:none!important;font-style:normal!important;font-size:clamp(17px,1.6vw,22px)!important;font-weight:750!important;line-height:1.4!important;letter-spacing:-.015em!important;color:#f3f8fb!important;text-shadow:0 2px 8px #0008!important}
-#ppVisualMaster .pvm-hero-tagline>span{white-space:nowrap;padding-bottom:6px;border-bottom:2px solid #41d4e7}
-#ppVisualMaster .pvm-hero-tagline>span:nth-child(2){border-color:#ffb65c}
-#ppVisualMaster .pvm-hero-tagline>span:nth-child(3){border-color:#86d9aa}
-#ppVisualMaster .pvm-workspace-spotlight{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:20px 0 0;border:0;border-top:1px solid #8ab4c340;border-radius:0;background:transparent;box-shadow:none;min-width:0}
+#ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{position:static!important;inset:auto!important;display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;align-items:baseline!important;gap:8px 16px!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;margin:0!important;text-align:left!important;transform:none!important;font-style:normal!important;font-size:clamp(16px,1.5vw,19px)!important;font-weight:650!important;line-height:1.4!important;letter-spacing:-.015em!important;color:#f3f8fb!important;text-shadow:0 2px 8px #0008!important}
+#ppVisualMaster .pvm-hero-tagline>span{white-space:nowrap;border:0;padding:0}
+#ppVisualMaster .pvm-hero-tagline>span+span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#54deef;margin:0 14px 4px 0}
+#ppVisualMaster .pvm-workspace-spotlight{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px;padding:24px 0 0;border:0;border-top:1px solid #8ab4c340;border-radius:0;background:transparent;box-shadow:none;min-width:0}
 #ppVisualMaster .pvm-workspace-kicker{display:block;font-size:10px;font-weight:800;letter-spacing:.15em;color:#79dfeb;margin-bottom:6px}
-#ppVisualMaster .pvm-workspace-copy h2{margin:0 0 7px;font-size:28px;line-height:1.15;color:#f5f9fb;letter-spacing:-.025em}
+#ppVisualMaster .pvm-workspace-copy h2{margin:0 0 7px;font-size:30px;line-height:1.15;color:#f5f9fb;letter-spacing:-.025em}
 #ppVisualMaster .pvm-workspace-copy p{margin:0;max-width:420px;font-size:14px;line-height:1.5;color:#cadce5}
 #ppVisualMaster .pvm-workspace-spotlight .pvm-workspace-cta{height:auto!important;min-height:48px;padding:12px 22px!important;background:linear-gradient(120deg,#7ceaf6,#32c7e3)!important;color:#05212d!important;border:1px solid #a1efff!important;border-radius:10px!important;box-shadow:0 5px 20px #19d8ff20;font-size:14px!important;font-weight:800;white-space:normal;justify-content:center}
 #ppVisualMaster .pvm-workspace-spotlight .pvm-workspace-cta svg{stroke:#05212d!important}
@@ -65,7 +68,7 @@ body[data-pp-theme="light"] #ppVisualMaster .pvm-workspace-copy p{color:#385563}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-workspace-kicker,body[data-pp-theme="light"] #ppVisualMaster .pvm-copy>.pvm-kicker{color:#006c86!important}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{color:#18323f!important;text-shadow:none!important}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-workspace-cta:focus-visible{outline-color:#006d87}
-@media(max-width:650px){#ppVisualMaster .pvm-workspace-cta{width:100%}#ppVisualMaster .pvm-action-stack{gap:18px!important}#ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{gap:7px 12px!important;font-size:17px!important}#ppVisualMaster .pvm-workspace-copy h2{font-size:25px}}
+@media(max-width:650px){#ppVisualMaster .pvm-copy{padding-top:20px!important;padding-bottom:20px!important}#ppVisualMaster .pvm-workspace-spotlight{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:20px}#ppVisualMaster .pvm-workspace-copy p{max-width:100%}#ppVisualMaster .pvm-hero-tagline>span+span::before{display:none}#ppVisualMaster .pvm-workspace-cta{width:100%}#ppVisualMaster .pvm-action-stack{gap:18px!important}#ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{gap:7px 12px!important;font-size:17px!important}#ppVisualMaster .pvm-workspace-copy h2{font-size:25px}}
 `;
   (document.head||document.documentElement).appendChild(style);
 }
