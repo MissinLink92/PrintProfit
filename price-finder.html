@@ -330,6 +330,17 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <meta name="apple-mobile-web-app-title" content="PrintProfit">
 <link rel="apple-touch-icon" href="/assets/app-symbol-192-v2.png">
 <script defer src="/pwa-install.js?v=1"></script>
+<style id="ppRetailerNoticeLayout">
+.compare-overview{margin:10px 0 16px}
+.retailer-notice{padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:var(--panel2);color:var(--text);min-width:0}
+.retailer-notice h2{margin:0 0 8px;font-size:16px;line-height:1.35}
+.retailer-notice p{margin:8px 0 0;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.catalogue-coverage{margin:0 0 10px;line-height:1.6}
+@media(min-width:1101px){
+ .compare-overview{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,1fr);gap:20px;align-items:start}
+ body .compare-overview .insight{margin:0!important;max-width:none!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+</style>
 </head>
 <body data-pp-standalone-i18n="1">
 <div id="ppSiteHeader"></div><script src="./site-header.js?v=20261013-language1"></script>
@@ -377,13 +388,20 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 
 <div class="meta">
 <span id="count">0 listings</span>
-<span id="coverage">Loading comparison data…</span>
+
 </div>
 
+<div class="compare-overview">
 <div class="insight" id="insight" hidden>
 <div class="insight-card"><div class="eyebrow">Current filtered set</div><strong id="insightSummary">—</strong><span id="insightSummarySub">—</span></div>
 <div class="insight-card"><div class="eyebrow">Lowest current price</div><strong id="insightPrice">—</strong><span id="insightPriceSub">—</span></div>
 <div class="insight-card"><div class="eyebrow">Lowest unit cost</div><strong id="insightUnit">—</strong><span id="insightUnitSub">—</span></div>
+</div>
+<aside class="retailer-notice" aria-labelledby="retailerNoticeTitle">
+<h2 id="retailerNoticeTitle">Buying from a retailer</h2>
+<p>PrintProfit helps you compare products and links you to independent retailers. Your purchase is made directly with the retailer, who handles payment, delivery, returns, refunds, damaged items and product complaints. Please contact them about any order issues.</p>
+<p>Some links are affiliate links, meaning we may earn a commission at no extra cost to you. Check the retailer’s final price, availability and terms before purchasing.</p>
+</aside>
 </div>
 
 <div class="results-toolbar">
@@ -475,7 +493,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <button class="compare-btn secondary coverage-toggle" id="toggleBrands" type="button" hidden></button>
 </section>
 
-<div class="footer">PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
+<div class="footer"><p id="coverage" class="catalogue-coverage">Loading comparison data…</p>PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
 <script defer src="./data/price-finder-lite.js?v=20261012-compact2"></script>
