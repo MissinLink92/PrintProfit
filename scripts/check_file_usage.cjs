@@ -1,0 +1,36 @@
+/* Exercise the real upload handler and G-code parser against calculator fields. */
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const path=require('node:path'),root=path.resolve(__dirname,'..');
+let recalculations=0;
+const elements=Object.fromEntries(['file','materialUsed','printHours','materialDensity','materialType','material','printer','status','materialStatus'].map(id=>[id,{id,value:id==='materialDensity'?'1.24':id==='materialType'?'filament':'',options:[],dataset:{},dispatchEvent(){},addEventListener(){},closest(){return null;}}]));
+elements.calc={click(){recalculations++;}};
+const window={__ppRefreshModelHub(){},__printProfitPersistDraft(){}};
+const context={window,document:{getElementById:id=>elements[id]||null,querySelector:()=>null,addEventListener(){}},TextDecoder,Uint8Array,Uint32Array,DataView,URL,Event,console:{warn(){},error:console.error},setInterval:()=>1,clearInterval(){},indexedDB:{open(){throw Error('Storage unavailable in fixture');}}};
+vm.createContext(context);
+for(const file of ['slicer-file-parser.js','file-type-support.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
+const file=(name,text)=>({name,size:text.length,text:async()=>text});
+(async()=>{
+ await window.__ppInspectSlicerFile(file('orca.gcode','; total filament used [g] = 42.75\n; estimated printing time (normal mode) = 1h 30m\n'));
+ assert.equal(elements.materialUsed.value,'42.75');assert.equal(elements.printHours.value,'1.5');assert.match(elements.materialStatus.textContent,/Used per print \(g\) filled with 42.75 g/);
+ await window.__ppInspectSlicerFile(file('prusa.gcode','; filament used [g] = 10.5, 4.25\n; estimated printing time (normal mode) = 30m\n'));
+ assert.equal(elements.materialUsed.value,'14.75');
+ await window.__ppInspectSlicerFile(file('cura.gcode',';Filament used: 1m\n;TIME:3600\n'));
+ const converted=1000*Math.PI*(1.75/2)**2*1.24/1000;
+ assert.equal(elements.materialUsed.value,converted.toFixed(2));
+ await window.__ppInspectSlicerFile(file('no-estimates.gcode','G28\nG1 X10'));
+ assert.equal(elements.materialUsed.value,'');assert.equal(elements.printHours.value,'');assert.match(elements.materialStatus.textContent,/No print time or material usage stored/);
+ const parse=window.PrintProfitSlicerFile.parse;
+ window.PrintProfitSlicerFile.parse=async uploaded=>({fileName:uploaded.name,fileSize:100,format:'3MF project',images:[],warnings:[],plates:[{id:1,name:'Plate 1',grams:25,seconds:3600,technology:'FFF',materials:[]},{id:2,name:'Plate 2',grams:60,seconds:7200,technology:'FFF',materials:[]}]});
+ await window.__ppInspectSlicerFile(file('plates.3mf','fixture'));
+ assert.equal(elements.materialUsed.value,'25.00');assert.equal(window.__ppFileData.selectedPlate,1);
+ elements.materialUsed.value='19';window.__ppRestoringFile=true;window.__ppRestoringPlate=2;
+ await window.__ppInspectSlicerFile(file('plates.3mf','fixture'));
+ assert.equal(elements.materialUsed.value,'19');assert.equal(window.__ppFileData.selectedPlate,2);
+ window.__ppApplyFileData();assert.equal(elements.materialUsed.value,'60.00');
+ window.PrintProfitSlicerFile.parse=async uploaded=>({fileName:uploaded.name,fileSize:100,format:'STL model',images:[],warnings:[],plates:[{id:1,name:'Model',grams:null,seconds:null,details:[],materials:[]}]});
+ await window.__ppInspectSlicerFile(file('model.stl','fixture'));assert.equal(elements.materialUsed.value,'');
+ elements.materialType.value='resin';window.__ppFileData={resinVolume:12.5,seconds:3600};window.__ppApplyFileData();assert.equal(elements.materialUsed.value,'12.50');assert.match(elements.materialStatus.textContent,/\(ml\) filled with 12.50 ml/);
+ window.PrintProfitSlicerFile.parse=parse;
+ assert.ok(recalculations>=6);
+ console.log('PASS: upload fills grams from slicer mass or length, sums materials, clears absent usage, preserves restored edits and applies selected plate data; resin stays in ml.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

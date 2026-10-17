@@ -24,6 +24,8 @@ jobs:
           node-version: '22'
       - name: Check business exports and material barcodes
         run: node scripts/check_business_tools.cjs
+      - name: Check uploaded material usage
+        run: node scripts/check_file_usage.cjs
       - name: Check print-farm production runs
         run: node scripts/check_print_farm.cjs
       - name: Check labour hours and minutes

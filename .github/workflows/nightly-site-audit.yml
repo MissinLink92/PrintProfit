@@ -44,6 +44,7 @@ jobs:
       - name: Check calculations and feature integrations
         run: |
           node scripts/check_business_tools.cjs
+          node scripts/check_file_usage.cjs
           node scripts/check_print_farm.cjs
           node scripts/check_calculator_math.cjs
           node scripts/check_currency_labels.cjs

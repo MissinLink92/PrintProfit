@@ -26,7 +26,9 @@
     const imported=[],missing=[];
     (Number.isFinite(data.seconds)?imported:missing).push('print time');
     (hasUsage?imported:missing).push('material usage');
-    el.textContent=(imported.length?'Automatically filled '+imported.join(' and ')+' from your file. You can edit these values. ':'')+
+    const usage=isResin?(Number.isFinite(data.resinVolume)?data.resinVolume:Number.isFinite(data.grams)&&density>0?data.grams/density:null):data.grams;
+    const amount=hasUsage&&Number.isFinite(usage)?'Used per print ('+(isResin?'ml':'g')+') filled with '+usage.toFixed(2)+' '+(isResin?'ml':'g')+'. ':'';
+    el.textContent=amount+(imported.length?'Automatically filled '+imported.join(' and ')+' from your file. You can edit these values. ':'')+
       (missing.length?'No '+missing.join(' or ')+' stored in this file; enter '+(missing.length>1?'them':'it')+' below.':'');
   }
   function apply(data,usageOnly=false){
