@@ -1,6 +1,6 @@
-# PrintProfit subscription integration — prepared, not launched
+# PrintProfit subscription integration — Stripe catalogue configured, checkout not launched
 
-Status: server foundation only. No Stripe account is connected, no checkout is enabled, and all existing Pro previews remain available. The browser UI does not enforce subscriptions yet. This is not an end-to-end payment launch.
+Status (17 October 2026): live Stripe catalogue and customer portal configured via the connected Printprofit account. The server foundation remains undeployed by this setup; checkout is not enabled and all existing Pro previews remain available. The browser UI does not enforce subscriptions yet. This is not an end-to-end payment launch.
 
 ## Proposed plans
 
@@ -54,3 +54,16 @@ Access policy: only an active subscription with the configured price, one seat, 
 - Stripe subscription states: https://docs.stripe.com/api/subscriptions/object
 - Stripe customer portal: https://docs.stripe.com/customer-management
 - Stripe webhook signatures: https://docs.stripe.com/webhooks/signature
+
+## Verified Stripe setup — 17 October 2026
+
+- Live account: `acct_1URIY1V05QYif292` (Printprofit). Payments and payouts enabled; no currently due or past-due requirements at inspection. An eventually-due company tax/registration requirement remains; do not interpret enabled payments as a tax-status determination.
+- Product: `printprofit_pro`, PrintProfit Pro.
+- Monthly price: `price_1URXC0V05QYif292e4PfFIMc`, GBP 250 pence per month.
+- Annual price: `price_1URXCEV05QYif292TF3wmWyX`, GBP 2400 pence per year upfront.
+- Prices use inclusive tax behaviour to preserve the advertised total; automatic tax collection has NOT been configured or enabled.
+- Default live portal configuration: `bpc_1URXCUV05QYif2923U6pDfnG`. Invoice history and payment-method changes enabled; cancellation at period end. Plan switching and public portal login are disabled pending integration testing. Return URL: https://printprofit.co.uk/.
+- No live webhook endpoints existed at inspection. None created: first deploy the actual handler and securely configure its signing secret.
+- Only the live Stripe account is currently connected to the assistant. A sandbox/test context must be connected before real integration testing. Do not reuse these live prices for test mode.
+- No Firebase CLI/cloud deployment authentication was available in this session. Firebase project billing, deployment, secure secrets, frontend billing flow, purchase terms, deletion protection and end-to-end tests remain outstanding.
+- These IDs are configuration references, not credentials. No secret keys belong in this document or in public browser code.
