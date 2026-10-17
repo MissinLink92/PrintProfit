@@ -9,8 +9,8 @@
     "test": "node --test billing-core.test.js billing-handlers.test.js"
   },
   "dependencies": {
-    "firebase-admin": "^13.0.0",
-    "firebase-functions": "^6.0.0",
+    "firebase-admin": "14.5.0",
+    "firebase-functions": "7.4.0",
     "stripe": "^18.0.0"
   }
 }
