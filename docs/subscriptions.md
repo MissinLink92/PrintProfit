@@ -29,11 +29,11 @@ Access policy: only an active subscription with the configured price, one seat, 
 ## Required setup before launch
 
 1. Connor creates/finishes a Stripe business account and payout/identity setup directly with Stripe. Never paste secret keys into chat or GitHub.
-2. Enable Firebase's supported billing plan for Cloud Functions, confirm project costs and set budget alerts. Deploy to the existing `printprofit-fd30f` project only after reviewing the configuration. No backend has been deployed by this change.
+2. Enable Firebase's supported billing plan for Cloud Functions, confirm project costs and set budget alerts. Use a separate Firebase test project for sandbox deployment. Reserve `printprofit-fd30f` for the reviewed live integration. No backend has been deployed by this change.
 3. Install dependencies in `functions/`, generate and review a package lock, run dependency/security checks, then run `npm test`. The policy tests and mocked handler tests currently run without external dependencies; Firebase/Stripe integration and emulator tests are still required.
 4. Create TEST-mode GBP recurring prices: 250 pence every month and 2400 pence every year, quantity one, licensed, tax behavior inclusive. Confirm the actual tax/business setup before live billing. Set `STRIPE_PRO_MONTHLY_PRICE` and `STRIPE_PRO_ANNUAL_PRICE` to those price IDs. Do not accept arbitrary prices from the browser.
 5. Put `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` in Firebase Secret Manager. Leave `PRINTPROFIT_BILLING_ENABLED=false` until integration tests are finished.
-6. Deploy using the explicit config: `firebase deploy --config firebase.billing.json --project printprofit-fd30f --only functions:printprofit-billing`. This does not deploy Firestore rules or replace other codebases.
+6. For sandbox testing, deploy using the explicit config and the verified separate test project ID: `firebase deploy --config firebase.billing.json --project <TEST_PROJECT_ID> --only functions:printprofit-billing`. Do not run sandbox billing against `printprofit-fd30f`. This command does not deploy Firestore rules; the test project's rules and authentication must also be configured and verified.
 7. Register the HTTPS webhook URL from deployment in Stripe. Select customer.subscription.created, updated, deleted, paused and resumed. The signing secret is unique to this endpoint/mode.
 8. Enable the Stripe customer portal for invoices, payment method changes, cancellation, and the two allowed plan prices. Review proration policy before allowing plan switching.
 9. Add the authenticated browser subscription panel. Use the Firebase Functions SDK with the existing app and europe-west2 region. Query `getProAccess` after sign-in and returning from Stripe. Handle unavailable/offline access without deleting data. Only show checkout after deployment/configuration tests pass.
@@ -64,6 +64,24 @@ Access policy: only an active subscription with the configured price, one seat, 
 - Prices use inclusive tax behaviour to preserve the advertised total; automatic tax collection has NOT been configured or enabled.
 - Default live portal configuration: `bpc_1URXCUV05QYif2923U6pDfnG`. Invoice history and payment-method changes enabled; cancellation at period end. Plan switching and public portal login are disabled pending integration testing. Return URL: https://printprofit.co.uk/.
 - No live webhook endpoints existed at inspection. None created: first deploy the actual handler and securely configure its signing secret.
-- Only the live Stripe account is currently connected to the assistant. A sandbox/test context must be connected before real integration testing. Do not reuse these live prices for test mode.
+- Live and sandbox Stripe accounts are now connected. Sandbox configuration is listed below; do not reuse live prices for test mode.
 - No Firebase CLI/cloud deployment authentication was available in this session. Firebase project billing, deployment, secure secrets, frontend billing flow, purchase terms, deletion protection and end-to-end tests remain outstanding.
 - These IDs are configuration references, not credentials. No secret keys belong in this document or in public browser code.
+
+## Sandbox setup — 17 October 2026, evening
+
+- Account: `acct_1URIYGV054u1E901` (Printprofit sandbox), confirmed livemode false.
+- Product: `prod_VSDdmCCDaSuCdT` (existing PrintProfit Pro).
+- Monthly price: `price_1URJCAV054u1E901uBTn2U1J`, GBP 250 pence/month, licensed. Existing amount retained; tax behaviour aligned to inclusive.
+- Annual price: `price_1URcRuV054u1E901FcHEWMqw`, GBP 2400 pence/year upfront, licensed, inclusive.
+- Default portal: `bpc_1URcS7V054u1E901ezQ5Kzql`. Invoice history, payment method updates and period-end cancellation enabled. Plan switching and public login disabled. Return URL https://printprofit.co.uk/ must be changed to the verified test frontend before end-to-end sandbox testing.
+- No automatic tax setting was enabled. Inclusive price behaviour is not a claim of tax registration or tax collection.
+- This is catalogue/portal configuration only: no completed Checkout, renewal, cancellation or entitlement integration tests yet.
+
+### Test deployment blocker
+
+The current backend uses unnamespaced billing collections and does not enforce an expected Stripe mode. Do not deploy it with sandbox credentials into the production Firebase project. Use a separate Firebase project with its own Auth users, Firestore, secrets and test frontend. Its project ID and deployment access are not yet available here. Keep live checkout disabled.
+
+Before testing: configure test-only secrets securely, complete webhook event handling and mode validation, deploy the handler, register its actual endpoint, and point the test frontend and portal return URL at the test environment. Never use a key previously pasted into chat; rotate it in Stripe first. No credentials should be added to this document.
+
+Dependency update `1369600f26afe06474b7e7b090bba82dfb846d61` retains the supplied npm lockfile. The earlier Cloud Shell run showed nine passing policy/mocked-handler tests and zero npm audit vulnerabilities; these are not end-to-end Stripe test results.
