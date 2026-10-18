@@ -78,10 +78,24 @@ Access policy: only an active subscription with the configured price, one seat, 
 - No automatic tax setting was enabled. Inclusive price behaviour is not a claim of tax registration or tax collection.
 - This is catalogue/portal configuration only: no completed Checkout, renewal, cancellation or entitlement integration tests yet.
 
-### Test deployment blocker
+### Environment isolation
 
-The current backend uses unnamespaced billing collections and does not enforce an expected Stripe mode. Do not deploy it with sandbox credentials into the production Firebase project. Use a separate Firebase project with its own Auth users, Firestore, secrets and test frontend. Its project ID and deployment access are not yet available here. Keep live checkout disabled.
+The billing collections are server-only and separated by Firebase project. The backend now permits only `printprofit-test` with sandbox credentials and `printprofit-fd30f` with live credentials; unknown projects, wrong-mode keys, prices, subscriptions and webhook events fail closed. Do not deploy sandbox billing into production. Keep live checkout disabled.
 
 Before testing: configure test-only secrets securely, complete webhook event handling and mode validation, deploy the handler, register its actual endpoint, and point the test frontend and portal return URL at the test environment. Never use a key previously pasted into chat; rotate it in Stripe first. No credentials should be added to this document.
 
 Dependency update `1369600f26afe06474b7e7b090bba82dfb846d61` retains the supplied npm lockfile. The earlier Cloud Shell run showed nine passing policy/mocked-handler tests and zero npm audit vulnerabilities; these are not end-to-end Stripe test results.
+
+## Test preparation — 18 October 2026
+
+Screenshot-confirmed: `printprofit-test` exists, Email/Password Auth was enabled, its default Firestore database is in `europe-west2`, Blaze billing is enabled, and Cloud Functions/Cloud Run/Cloud Build/Artifact Registry APIs are enabled. A secret version named `STRIPE_SECRET_KEY` was created in the test project; its value and rotation status have not been inspected by this code review. No backend functions were deployed at the last successful list check. The selected budget alert amount was not independently verified.
+
+Prepared changes (not a deployment): test Checkout and Portal return to `https://printprofit-test.web.app/`; production returns remain `https://printprofit.co.uk/`. Auth tokens and billing records remain in their own Firebase project. Test origins are allowed by CORS, which does not grant Auth or Firestore access. Copy `functions/.env.printprofit-test.example` to `functions/.env.printprofit-test` for the public test price IDs and disabled checkout flag. Secrets stay exclusively in Secret Manager.
+
+Stripe SDK is pinned to 23.0.0 with API `2026-09-30.endive`, verified against the npm package and Stripe API versioning documentation on 18 October. The existing integration had no explicit API override and used SDK 18.x. This changes the backend client only; no Stripe account default API version or existing webhook endpoint was changed. Register the new sandbox endpoint with matching API version. Sources: https://docs.stripe.com/api-versions and https://github.com/stripe/stripe-node/blob/v23.0.0/CHANGELOG.md.
+
+The webhook now refreshes current subscription state for paid Checkout completion and asynchronous success, `invoice.paid`, `invoice.payment_failed`, and existing subscription lifecycle events. Unpaid Checkout completions are acknowledged without entitlement writes. This remains a mirror of fresh server-side Stripe reads; no return page grants access.
+
+Validation: 19 policy/mocked-handler tests pass, syntax and real dependency module loading pass, npm audit reports zero vulnerabilities. These are not real Checkout, renewal, cancellation or Firebase emulator tests. Test frontend hosting, authorized Auth domains, subscription purchase consent, account deletion protection, webhook endpoint/signing secret, customer portal return settings and end-to-end testing remain blockers. The test host is a fixed intended destination, not a claim that Hosting is already deployed. Checkout remains false.
+
+Before live launch, confirm tax registrations and customer jurisdictions; automatic tax is still disabled. Prefer a restricted key scoped to the required customer, price, subscription, Checkout and portal calls once permissions have been exercised in the sandbox.

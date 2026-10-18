@@ -5,6 +5,7 @@ const {initializeApp}=require('firebase-admin/app');
 const {getFirestore,FieldValue}=require('firebase-admin/firestore');
 const Stripe=require('stripe');
 const core=require('./billing-core');
+const billingEnvironment=require('./billing-environment');
 initializeApp();
 const db=getFirestore();
 const stripeKey=defineSecret('STRIPE_SECRET_KEY');
@@ -12,9 +13,10 @@ const webhookKey=defineSecret('STRIPE_WEBHOOK_SECRET');
 const enabled=defineBoolean('PRINTPROFIT_BILLING_ENABLED',{default:false});
 const month=defineString('STRIPE_PRO_MONTHLY_PRICE',{default:''});
 const year=defineString('STRIPE_PRO_ANNUAL_PRICE',{default:''});
-const callable={region:'europe-west2',secrets:[stripeKey],maxInstances:3,cors:['https://printprofit.co.uk','https://www.printprofit.co.uk']};
+const callable={region:'europe-west2',secrets:[stripeKey],maxInstances:3,cors:['https://printprofit.co.uk','https://www.printprofit.co.uk','https://printprofit-test.web.app','https://printprofit-test.firebaseapp.com']};
 const ids=()=>({monthly:month.value(),annual:year.value()});
-const stripe=()=>new Stripe(stripeKey.value());
+const environment=()=>billingEnvironment.environmentForProject(process.env.GCLOUD_PROJECT||process.env.GCP_PROJECT);
+const stripe=()=>{const env=environment(),key=stripeKey.value();billingEnvironment.validateKey(key,env);return new Stripe(key,{apiVersion:billingEnvironment.API_VERSION});};
 function user(request){
  if(!request.auth)throw new HttpsError('unauthenticated','Sign in before managing a subscription.');
  if(request.auth.token.email_verified!==true)throw new HttpsError('failed-precondition','Verify your email before managing a subscription.');
@@ -37,7 +39,7 @@ exports.getProAccess=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
  if(!customer)return {tier:'basic',plan:null,until:null,cancelAtPeriodEnd:false};
  // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
- return core.accessFromSubscriptions(await subscriptions(client,customer),ids());
+ return core.accessFromSubscriptions(await subscriptions(client,customer),ids(),undefined,environment().livemode);
 });
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
@@ -47,7 +49,7 @@ exports.createProCheckout=onCall(callable,async request=>{
  const acceptance=await db.doc('users/'+auth.uid+'/legal/acceptance-2026-10-12-v2').get();
  if(!acceptance.exists)throw new HttpsError('failed-precondition','Accept the current account terms first.');
  const client=stripe();
- try{core.validatePrice(await client.prices.retrieve(priceId),plan)}catch{throw new HttpsError('failed-precondition','This plan is not configured correctly. No payment was taken.');}
+ try{core.validatePrice(await client.prices.retrieve(priceId),plan,true,environment().livemode)}catch{throw new HttpsError('failed-precondition','This plan is not configured correctly. No payment was taken.');}
  const customer=await customerFor(auth,client,true);
  const current=await subscriptions(client,customer);
  if(current.some(s=>!['canceled','incomplete_expired'].includes(s.status)))throw new HttpsError('already-exists','Manage your existing subscription instead of starting another.');
@@ -60,7 +62,7 @@ exports.createProCheckout=onCall(callable,async request=>{
  });
  if(existing)return {url:existing};
  try{
-  const session=await client.checkout.sessions.create(core.checkoutParameters(customer,auth.uid,priceId),{idempotencyKey:'pp-checkout-'+auth.uid+'-'+now});
+  const session=await client.checkout.sessions.create(core.checkoutParameters(customer,auth.uid,priceId,environment().site),{idempotencyKey:'pp-checkout-'+auth.uid+'-'+now});
   await ref.set({url:session.url,priceId,expiresAt:session.expires_at*1000,lockedAt:0});
   return {url:session.url};
  }catch(error){await ref.delete();throw new HttpsError('unavailable','Checkout could not be prepared. Please try again.');}
@@ -68,21 +70,28 @@ exports.createProCheckout=onCall(callable,async request=>{
 exports.createBillingPortal=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
  if(!customer)throw new HttpsError('not-found','No billing account exists yet.');
- const session=await client.billingPortal.sessions.create({customer,return_url:core.SITE});
+ const session=await client.billingPortal.sessions.create({customer,return_url:environment().site});
  return {url:session.url};
 });
 exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey,webhookKey],maxInstances:3},async(req,res)=>{
  if(req.method!=='POST'){res.status(405).send('POST required');return;}
  const client=stripe();let event;
  try{event=client.webhooks.constructEvent(req.rawBody,req.headers['stripe-signature'],webhookKey.value());}catch{res.status(400).send('Invalid signature');return;}
- if(!['customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','customer.subscription.paused','customer.subscription.resumed'].includes(event.type)){res.status(200).send('Ignored');return;}
+ try{billingEnvironment.assertMode(event,environment());}catch{res.status(400).send('Wrong Stripe mode');return;}
+ if(!['checkout.session.completed','checkout.session.async_payment_succeeded','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','customer.subscription.paused','customer.subscription.resumed'].includes(event.type)){res.status(200).send('Ignored');return;}
  try{
-  const object=event.data.object,customerId=typeof object.customer==='string'?object.customer:object.customer.id;
-  const customer=await client.customers.retrieve(customerId),uid=customer.metadata?.printprofitUid;
+  const object=event.data.object;
+  billingEnvironment.assertMode(object,environment());
+  if(event.type.startsWith('checkout.session.')&&(object.mode!=='subscription'||object.payment_status!=='paid')){res.status(200).send('Awaiting paid subscription');return;}
+  const customerId=typeof object.customer==='string'?object.customer:object.customer?.id;
+  if(!customerId){res.status(200).send('No customer');return;}
+  const customer=await client.customers.retrieve(customerId);
+  billingEnvironment.assertMode(customer,environment());
+  const uid=customer.metadata?.printprofitUid;
   if(!uid){res.status(200).send('Unlinked customer');return;}
   const mapping=await db.collection('billingCustomers').doc(uid).get();
   if(mapping.data()?.customerId!==customerId){res.status(200).send('Unlinked customer');return;}
-  const access=core.accessFromSubscriptions(await subscriptions(client,customerId),ids());
+  const access=core.accessFromSubscriptions(await subscriptions(client,customerId),ids(),undefined,environment().livemode);
   const state=db.collection('billingEntitlements').doc(uid),seen=db.collection('billingWebhookEvents').doc(event.id);
   await db.runTransaction(async tx=>{
    const prior=await tx.get(seen),previous=await tx.get(state);
