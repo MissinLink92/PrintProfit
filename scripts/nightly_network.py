@@ -59,7 +59,7 @@ class Reader:
                         raise ValueError('Source exceeds the download size limit')
                     return body, response.headers.get_content_charset() or 'utf-8', response.geturl()
             except urllib.error.HTTPError as exc:
-                if exc.code not in (429, 503) or attempt == 2:
+                if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
                     if exc.code == 429:
                         self.rate_limited.add(host)
                     raise
@@ -70,7 +70,7 @@ class Reader:
                     try:
                         pause = (parsedate_to_datetime(retry)-datetime.now(timezone.utc)).total_seconds()
                     except (ValueError, TypeError):
-                        pause = 5 * (attempt + 1)
+                        pause = 5 * (2 ** attempt)
                 pause = max(delay, pause)
                 if pause > 60 or time.monotonic() + pause >= self.deadline:
                     if exc.code == 429:

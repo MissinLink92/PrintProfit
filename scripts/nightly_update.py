@@ -16,6 +16,7 @@ import nightly_references
 import nightly_products
 import nightly_catalogues
 import nightly_fx
+import nightly_manual_references
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -133,6 +134,7 @@ def main():
     reader = Reader(config['maxRunSeconds'])
     nightly_fx.refresh(ref, reader, report)
     nightly_references.refresh(ref, config, reader, report, queue)
+    nightly_manual_references.apply(ref, root, now[:10])
     nightly_catalogues.prepare(config, reader, report)
     for index, item in enumerate(data['products'], 1):
         print('Checking product', index, 'of', len(data['products']), item['id'], flush=True)

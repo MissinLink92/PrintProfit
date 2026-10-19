@@ -812,6 +812,13 @@ function refreshFilters(){
  const colours=[...new Set(visible.map(x=>x.colour).filter(Boolean))];
  populateSelect('colour',colours,'All colours');
 }
+function priceCheckLabel(product){
+ const verified=product.lastCheckStatus==='ok';
+ const last=product.lastVerified||product.updated;
+ return '<div class="fresh '+(verified?'live':'reference')+'">'+(verified?'● Price verified':'● Price not verified this run')+'</div>'+
+  (!verified&&last?'<small>'+(product.lastVerified?'Last successful check: ':'Stored price date: ')+esc(formatDate(last))+'</small>':'')+
+  (!verified&&product.lastAttempt?'<small>Attempted: '+esc(formatDate(product.lastAttempt))+'</small>':'');
+}
 function stockLabel(v){
  const s=String(v??'').toLowerCase();
  if(s.includes('out'))return '<span class="stock out">Out of stock</span>';
@@ -858,7 +865,7 @@ function renderCards(rows){
  grid.innerHTML=rows.map(x=>'<article class="product-card">'+
   '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
   '<div class="product-card-top">'+productImage(x)+'<div><h3 translate="no">'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
-  '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(formatDate(x.updated))+'</strong></div></div>'+
+  '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(formatDate(x.updated))+'</strong>'+priceCheckLabel(x)+'</div></div>'+
   '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
   '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div>'+
  '</article>').join('');
@@ -887,7 +894,7 @@ function render(resetPage=true){
   '<td class="price">'+money(x.price)+rowPriceTrend(x)+'</td>'+
   '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
-  '<td class="checked">'+esc(formatDate(x.updated))+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
+  '<td class="checked">'+esc(formatDate(x.updated))+priceCheckLabel(x)+'</td>'+
   '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div></td>'+
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
@@ -904,13 +911,20 @@ function render(resetPage=true){
  if(next)next.disabled=currentListingPage>=pageCount-1;
  renderInsights(rows);
 }
+function sourceCoverageNote(source){
+ const listed=db.products.filter(product=>product.retailer===source.name).length;
+ const emptyNotes={"Amazon UK":"Product feed or API access is required before verified Amazon UK prices can be listed.","Prusa Research":"No verified GBP offers yet. Product pages are being reviewed for UK currency and exact variants.","Ooznest":"No verified GBP offers yet. A supported catalogue or exact product mapping is needed.","3D FilaPrint":"The recorded source has no usable product feed. Check the retailer's current trading website before enabling.","Polymaker UK":"The recorded catalogue does not confirm native GBP prices. UK stockists remain available in other retailer listings.","eSUN UK":"No verified GBP offers yet. The discovered products need exact pack, colour and GBP offer validation.","3DQF UK":"No verified GBP offers yet. Discovered product pages need exact offer and pack validation."};
+ if(!listed)return emptyNotes[source.name]||'No verified GBP listings are available from this source yet.';
+ if(source.lastPriceCheck&&Number(source.lastPriceCheck.verified)===0)return 'This source could not verify prices in the latest refresh. Check the retailer before buying.';
+ return '';
+}
 function renderCoverage(){
  const p=db.products||[],s=db.sources||[],b=db.brandDirectory||[];
  const d=$('coverage');if(d)d.textContent=(db.lastRefreshSummary?.checkedAt?'Last update attempt '+formatDate(db.lastRefreshSummary.checkedAt)+' • '+(db.lastRefreshSummary.verifiedProducts||0)+' prices verified • ':'')+p.length+' listings • '+s.length+' sources • '+b.length+' brands';
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.lastDiscoveryStatus==='monitor-only'?'Automatic GBP feed unavailable.':x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p>'+(x.lastPriceCheck?'<p>Price verified: '+Number(x.lastPriceCheck.verified)+' / '+Number(x.lastPriceCheck.listed)+'.</p>':'')+retailerLink(x.url,'Open source ↗','link')+'</article>').join('');
+ $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(sourceCoverageNote(x)?esc(sourceCoverageNote(x)):x.lastDiscoveryStatus==='monitor-only'?'Automatic GBP feed unavailable.':x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p>'+(x.lastPriceCheck?'<p>Price verified: '+Number(x.lastPriceCheck.verified)+' / '+Number(x.lastPriceCheck.listed)+'.</p>':'')+retailerLink(x.url,'Open source ↗','link')+'</article>').join('');
  $('brandCloud').innerHTML=b.slice(0,expandBrands?b.length:36).map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
  const sourceToggle=$('toggleSources');if(sourceToggle){sourceToggle.hidden=s.length<=8;sourceToggle.textContent=expandSources?'Show fewer sources':'Show all '+s.length+' sources';}
  const brandToggle=$('toggleBrands');if(brandToggle){brandToggle.hidden=b.length<=36;brandToggle.textContent=expandBrands?'Show fewer brands':'Show all '+b.length+' brands';}

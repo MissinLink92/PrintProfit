@@ -9,10 +9,10 @@ on:
       timezone: Europe/London
   workflow_dispatch:
   workflow_run:
-    workflows: ["PrintProfit midnight UK update"]
+    workflows: ["PrintProfit midnight UK update", "Build compact comparison catalogue"]
     types: [completed]
   pull_request:
-    paths: ['scripts/audit_site.cjs', '.github/workflows/nightly-site-audit.yml']
+    paths: ['scripts/audit_site.cjs', 'scripts/build_pages.py', 'config/firebase-config.js', 'config/analytics-config.js', '.github/workflows/nightly-site-audit.yml']
 
 permissions:
   contents: read
@@ -40,7 +40,9 @@ jobs:
           python-version: '3.12'
       - name: Serve proposed website for pull request checks
         if: github.event_name == 'pull_request'
-        run: python -m http.server 8766 --bind 127.0.0.1 &
+        run: |
+          python scripts/build_pages.py
+          python -m http.server 8766 --bind 127.0.0.1 --directory _site &
       - name: Check calculations and feature integrations
         run: |
           node scripts/check_business_tools.cjs

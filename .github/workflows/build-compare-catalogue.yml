@@ -14,6 +14,8 @@ on:
       - 'scripts/build_pages.py'
       - 'scripts/build_compare_catalogue.py'
       - 'scripts/catalogue_brands.py'
+      - 'config/firebase-config.js'
+      - 'config/analytics-config.js'
       - 'config/brand-aliases.json'
       - '.github/workflows/*.yml'
 
@@ -23,10 +25,15 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,3 +55,14 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Package and validate public website
+        run: python scripts/build_pages.py
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy verified website package
+        id: deployment
+        uses: actions/deploy-pages@v4

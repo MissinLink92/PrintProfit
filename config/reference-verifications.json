@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "group": "platformProfiles",
+      "id": "etsy",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "etsy-transaction",
+        "etsy-regulatory",
+        "etsy-payments"
+      ],
+      "sourceUrls": [
+        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+      ],
+      "value": {
+        "platform": 6.98,
+        "pay": 4,
+        "fixed": 0.2,
+        "note": "UK Etsy Payments: 6.5% transaction plus 0.48% regulatory fee; processing 4% + £0.20. Applies to postage as well as item price. Listing fees, adverts, conversion and VAT on seller fees are additional where applicable."
+      }
+    },
+    {
+      "group": "platformProfiles",
+      "id": "depop",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "depop"
+      ],
+      "sourceUrls": [
+        "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges"
+      ],
+      "value": {
+        "platform": 0,
+        "pay": 2.9,
+        "fixed": 0.3,
+        "note": "UK sellers: no standard selling fee; payment processing 2.9% + £0.30 on item price, postage and applicable taxes. Optional Boosted Listing fees excluded."
+      }
+    },
+    {
+      "group": "platformProfiles",
+      "id": "vinted",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "vinted"
+      ],
+      "sourceUrls": [
+        "https://www.vinted.co.uk/how_it_works"
+      ],
+      "value": {
+        "platform": 0,
+        "pay": 0,
+        "fixed": 0,
+        "note": "Standard Vinted UK selling has zero selling fees. Buyer charges and optional paid promotions excluded; check product eligibility and business seller rules."
+      }
+    },
+    {
+      "group": "platformProfiles",
+      "id": "tiktok",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "tiktok"
+      ],
+      "sourceUrls": [
+        "https://seller-uk.tiktok.com/university/essay?knowledge_id=7753824408913665&lang=en-GB"
+      ],
+      "value": {
+        "platform": 9,
+        "pay": 0,
+        "fixed": 0,
+        "note": "TikTok Shop UK standard commission 9%, including applicable taxes. Commission also applies to customer-paid shipping; category and incentive reductions and optional charges may differ."
+      }
+    },
+    {
+      "group": "deliveryProfiles",
+      "id": "inpost",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "inpost"
+      ],
+      "sourceUrls": [
+        "https://inpost.co.uk/send/parcel-prices"
+      ],
+      "value": {
+        "source": "InPost official UK reference — manually checked 2026-10-19",
+        "rates": [
+          {
+            "label": "Locker / Shop — Small",
+            "price": 1.99,
+            "note": "Up to 15kg. Maximum 8 × 38 × 64cm. Packaging and service eligibility apply."
+          },
+          {
+            "label": "Locker / Shop — Medium",
+            "price": 2.59,
+            "note": "Up to 15kg. Maximum 19 × 38 × 64cm. Packaging and service eligibility apply."
+          },
+          {
+            "label": "Locker / Shop — Large",
+            "price": 3.99,
+            "note": "Up to 15kg. Maximum 41 × 38 × 64cm. Packaging and service eligibility apply."
+          },
+          {
+            "label": "Home address — Small",
+            "price": 2.89,
+            "note": "Up to 15kg. Maximum 8 × 38 × 64cm. Packaging and service eligibility apply."
+          },
+          {
+            "label": "Home address — Medium",
+            "price": 3.99,
+            "note": "Up to 15kg. Maximum 19 × 38 × 64cm. Packaging and service eligibility apply."
+          },
+          {
+            "label": "Home address — Large",
+            "price": 5.99,
+            "note": "Up to 15kg. Maximum 41 × 38 × 64cm. Packaging and service eligibility apply."
+          }
+        ]
+      }
+    },
+    {
+      "group": "deliveryProfiles",
+      "id": "royalmail",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "royalmail-first",
+        "royalmail-second"
+      ],
+      "sourceUrls": [
+        "https://www.royalmail.com/sending/uk/1st-class",
+        "https://www.royalmail.com/sending/uk/2nd-class"
+      ],
+      "value": {
+        "source": "Royal Mail online UK reference — manually checked 2026-10-19",
+        "rates": [
+          {
+            "label": "1st Class — Letter up to 100g",
+            "price": 1.8,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Large letter up to 100g",
+            "price": 3.2,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Large letter 101–250g",
+            "price": 3.3,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Large letter 251–500g",
+            "price": 3.3,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Large letter 501–750g",
+            "price": 3.3,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Small parcel up to 2kg",
+            "price": 5.7,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Medium parcel up to 2kg",
+            "price": 8.2,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Medium parcel over 2–10kg",
+            "price": 10.4,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "1st Class — Medium parcel over 10–20kg",
+            "price": 16.4,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Letter up to 100g",
+            "price": 0.91,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Large letter up to 100g",
+            "price": 1.55,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Large letter 101–250g",
+            "price": 1.9,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Large letter 251–500g",
+            "price": 2.4,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Large letter 501–750g",
+            "price": 2.7,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Small parcel up to 2kg",
+            "price": 4.4,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Medium parcel up to 2kg",
+            "price": 7,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Medium parcel over 2–10kg",
+            "price": 9,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          },
+          {
+            "label": "2nd Class — Medium parcel over 10–20kg",
+            "price": 13.7,
+            "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+          }
+        ]
+      }
+    },
+    {
+      "group": "deliveryProfiles",
+      "id": "dpd",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "dpd"
+      ],
+      "sourceUrls": [
+        "https://send.dpd.co.uk/"
+      ],
+      "value": {
+        "source": "DPD advertised starting price — quote required",
+        "quoteRequired": true,
+        "rates": [
+          {
+            "label": "UK advertised starting price — quote required",
+            "price": 2.99,
+            "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+          }
+        ]
+      }
+    },
+    {
+      "group": "deliveryProfiles",
+      "id": "dhl",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "sourceIds": [
+        "dhl"
+      ],
+      "sourceUrls": [
+        "https://send.dhlparcel.co.uk/parcel-delivery"
+      ],
+      "value": {
+        "source": "DHL advertised starting price — quote required",
+        "quoteRequired": true,
+        "rates": [
+          {
+            "label": "UK advertised starting price — quote required",
+            "price": 3.78,
+            "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+          }
+        ]
+      }
+    }
+  ]
+}

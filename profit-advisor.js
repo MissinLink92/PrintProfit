@@ -486,6 +486,8 @@ function cheapestDelivery(){
     if(!profiles)return null;
     let best=null;
     Object.entries(profiles).forEach(([key,p])=>{
+      if(p?.quoteRequired)return;
+      if(p?.reviewAfter&&new Date(p.reviewAfter+'T23:59:59Z')<new Date())return;
       (p?.rates||[]).forEach(r=>{
         const price=Number(r?.price);
         if(!(price>0))return;

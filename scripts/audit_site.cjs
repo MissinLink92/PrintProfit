@@ -80,14 +80,21 @@ async function auditPage(browser, name, viewport) {
   check(await scope.locator('#pvmLanguage option').count() === 6, 'Language menu must have six choices');
   check(await scope.locator('.pvm-dark input').count() === 1, 'Shared theme switch missing');
   if (name === 'index.html') {
+   const reject = page.getByRole('button', {name:'Reject analytics', exact:true});
+   if (await reject.isVisible()) await reject.click();
    await scope.locator('.pvm-nav button[data-a="account"]').waitFor({ state: 'visible', timeout: 5000 });
    await scope.locator('.pvm-nav button[data-a="account"]').click();
+   await scope.locator('#ppWorkshopAccount').waitFor({ state: 'visible', timeout: 15000 });
+   check(!await scope.locator('#ppAccountNotConfigured').isVisible(), 'Account form unavailable: public Firebase configuration did not load');
    await scope.locator('#ppAccountEmail').waitFor({ state: 'visible', timeout: 15000 });
    await scope.locator('#ppMaterialsPanel button[data-material-close]').click();
   }
   if (name === 'price-finder.html') {
    const count = await page.locator('#rows > tr').count();
    check(count > 0 && count <= 20, `Compare rendered ${count} rows; expected 1–20`);
+   await page.locator('#resultsPage').selectOption('1');
+   check((await page.locator('#resultsShown').innerText()).includes('21'), 'Direct results page selection failed');
+   await page.locator('#previousResults').click();
    await page.locator('#nextResults').click();
    check(await page.locator('#rows > tr').count() <= 20, 'Compare pagination exceeded 20 rows');
   }
