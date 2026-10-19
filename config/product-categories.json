@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "groups": [
     {
       "id": "filament",
@@ -12,6 +12,13 @@
       "id": "resin-material",
       "label": "Printing resin",
       "badge": "Printing resin",
+      "icon": "filament",
+      "allLabel": "All printing resin"
+    },
+    {
+      "id": "raw-material",
+      "label": "Pellets & raw materials",
+      "badge": "Raw material",
       "icon": "filament"
     },
     {
@@ -34,9 +41,168 @@
       "allLabel": "All parts & accessories",
       "badge": "Spare parts",
       "icon": "package"
+    },
+    {
+      "id": "computer",
+      "label": "Computer accessories",
+      "allLabel": "All computer accessories",
+      "badge": "Computer accessory",
+      "icon": "package"
     }
   ],
   "categories": [
+    {
+      "id": "dtf-equipment",
+      "label": "DTF printers, ovens & heat presses",
+      "group": "equipment",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:dtf|dtg|garment printer|heat press)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resin-cleaning",
+      "label": "Resin detergents & cleaning",
+      "group": "accessory",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:resin detergent|resin cleaner|isopropyl alcohol)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creative-kits",
+      "label": "Creative & project kits",
+      "group": "accessory",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "type",
+              "pattern": "creative kits"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bcreative kit\\b|\\b(?:painting|paint) kit\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game-controllers",
+      "label": "Game controllers & gamepads",
+      "group": "computer",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:gamepad|gaming controller|8bitdo|iine)\\b|\\bcontroller\\b.*\\b(?:switch|steam|android|windows|pc)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "computer-peripherals",
+      "label": "Computer peripherals & adapters",
+      "group": "computer",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:hdmi|video capture|usb hub|keyboard|webcam|card reader|docking station|wireless mouse)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material-pellets",
+      "label": "Plastic pellets & granules",
+      "group": "raw-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:pellets|granules)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "printer-enclosures",
+      "label": "Printer enclosures",
+      "group": "equipment",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:printer enclosure|3d print(?:er)? enclosure|enclosure for|3d big enclosure)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scanners",
+      "label": "3D scanners",
+      "group": "equipment",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b3d scanner\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "printer-fans",
+      "label": "Fans & cooling",
+      "group": "accessory",
+      "material": false,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:cooling fan|blower fan|axial fan|fan assembly|fan for)\\b"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "forming-equipment",
       "label": "Vacuum & pressure forming",
@@ -63,7 +229,7 @@
           "all": [
             {
               "field": "nameBase",
-              "pattern": "^(?:anycubic\\s+)?wash\\s*(?:&|and)\\s*cure(?:\\s+(?:plus|max|\\d)|$)|\\bwashing and curing (?:machine|station)\\b"
+              "pattern": "^(?:anycubic\\s+)?wash\\s*(?:&|and)\\s*cure(?:\\s+(?:plus|max|\\d)|$)|\\bwashing and curing (?:machine|station)\\b|\\b(?:resin curing box|wash.*cure station)\\b"
             }
           ]
         }
@@ -79,7 +245,7 @@
           "all": [
             {
               "field": "nameBase",
-              "pattern": "\\b(?:filament|spool)\\s*(?:dryer|drying|storage)|\\bdry(?:ing)? box\\b"
+              "pattern": "\\b(?:filament|spool)\\s*(?:dryer|drying|storage)|\\bdry(?:ing)? box\\b|\\bfila\\s*dryer\\b|\\bfiladryer\\b"
             }
           ]
         }
@@ -96,30 +262,6 @@
             {
               "field": "nameBase",
               "pattern": "\\bairpure\\b|\\bair\\s*(?:heat|filter|purifier)|\\bactivated carbon filter\\b"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "creative-kits",
-      "label": "Creative & project kits",
-      "group": "accessory",
-      "material": false,
-      "rules": [
-        {
-          "all": [
-            {
-              "field": "type",
-              "pattern": "creative kits"
-            }
-          ]
-        },
-        {
-          "all": [
-            {
-              "field": "nameBase",
-              "pattern": "\\bcreative kit\\b|\\b(?:painting|paint) kit\\b"
             }
           ]
         }
@@ -207,7 +349,7 @@
           "all": [
             {
               "field": "nameBase",
-              "pattern": "\\b(?:hotbed|build plate|spring steel|magnetic platform|printing adhesive)\\b"
+              "pattern": "\\b(?:hotbed|build plate|spring steel|magnetic platform|printing adhesive)\\b|\\b(?:magnetic )?print bed\\b"
             }
           ]
         },
@@ -310,8 +452,8 @@
       ]
     },
     {
-      "id": "printing-resin",
-      "label": "Printing resin",
+      "id": "water-washable-resin",
+      "label": "Water-washable resin",
       "group": "resin-material",
       "material": true,
       "rules": [
@@ -323,7 +465,11 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bresin\\b"
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "water[ -]wash"
             }
           ]
         },
@@ -335,7 +481,203 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bresin\\b"
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "water[ -]wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tough-resin",
+      "label": "Tough & ABS-like resin",
+      "group": "resin-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "abs[ -]like|\\btough\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "abs[ -]like|\\btough\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flexible-resin",
+      "label": "Flexible resin",
+      "group": "resin-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bflex(?:ible)?\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bflex(?:ible)?\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "castable-resin",
+      "label": "Castable resin",
+      "group": "resin-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bcastable\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bcastable\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant-resin",
+      "label": "Plant-based resin",
+      "group": "resin-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "plant[ -]based|\\beco\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "plant[ -]based|\\beco\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "printing-resin",
+      "label": "Standard & other printing resin",
+      "group": "resin-material",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bresin\\b|\\babs[ -]like\\b"
             }
           ]
         }
@@ -355,7 +697,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:cf|gf)\\b|carbon\\s*(?:fibre|fiber)|glass\\s*(?:fibre|fiber)"
+              "pattern": "\\b(?:cf|gf)\\d*\\b|carbon\\s*(?:fibre|fiber)|glass\\s*(?:fibre|fiber)"
             }
           ]
         },
@@ -367,7 +709,163 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:cf|gf)\\b|carbon\\s*(?:fibre|fiber)|glass\\s*(?:fibre|fiber)"
+              "pattern": "\\b(?:cf|gf)\\d*\\b|carbon\\s*(?:fibre|fiber)|glass\\s*(?:fibre|fiber)"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:cf|gf)\\d*\\b|carbon\\s*(?:fibre|fiber)|glass\\s*(?:fibre|fiber)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silk-pla",
+      "label": "Silk PLA filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pla|filament)\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bsilk\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pla|filament)\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bsilk\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matte-pla",
+      "label": "Matte PLA filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?pla\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bmatte?\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?pla\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bmatte?\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wood-pla",
+      "label": "Wood-filled PLA filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pla|filament)\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bwood(?:fill|[ -]filled)?\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pla|filament)\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\bwood(?:fill|[ -]filled)?\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pla-plus",
+      "label": "PLA+ / PLA Pro filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?pla\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "pla\\s*\\+|pla[ -]?(?:plus|pro|tough)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?pla\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "pla\\s*\\+|pla[ -]?(?:plus|pro|tough)\\b"
             }
           ]
         }
@@ -375,7 +873,7 @@
     },
     {
       "id": "pla-filament",
-      "label": "PLA, PLA+ & decorative PLA",
+      "label": "Standard & other PLA filament",
       "group": "filament",
       "material": true,
       "rules": [
@@ -387,7 +885,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bpla(?:\\+)?\\b"
+              "pattern": "\\b(?:e|r)?pla(?:\\+)?\\b"
             }
           ]
         },
@@ -399,7 +897,19 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bpla(?:\\+)?\\b"
+              "pattern": "\\b(?:e|r)?pla(?:\\+)?\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?pla(?:\\+)?\\b"
             }
           ]
         }
@@ -419,7 +929,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bpetg?\\b"
+              "pattern": "\\b(?:e|r)?petg?\\b"
             }
           ]
         },
@@ -431,15 +941,27 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\bpetg?\\b"
+              "pattern": "\\b(?:e|r)?petg?\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e|r)?petg?\\b"
             }
           ]
         }
       ]
     },
     {
-      "id": "abs-asa-filament",
-      "label": "ABS & ASA filament",
+      "id": "abs-filament",
+      "label": "ABS filament",
       "group": "filament",
       "material": true,
       "rules": [
@@ -451,7 +973,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:abs|asa)\\b"
+              "pattern": "\\be?abs\\b"
             }
           ]
         },
@@ -463,7 +985,63 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:abs|asa)\\b"
+              "pattern": "\\be?abs\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\be?abs\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asa-filament",
+      "label": "ASA filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\basa\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\basa\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\basa\\b"
             }
           ]
         }
@@ -483,7 +1061,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:tpu|tpe)\\b"
+              "pattern": "\\b(?:tpu\\d*\\w*|tpe|tpc|tps|e?flex)\\b"
             }
           ]
         },
@@ -495,15 +1073,27 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:tpu|tpe)\\b"
+              "pattern": "\\b(?:tpu\\d*\\w*|tpe|tpc|tps|e?flex)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:tpu\\d*\\w*|tpe|tpc|tps|e?flex)\\b"
             }
           ]
         }
       ]
     },
     {
-      "id": "engineering-filament",
-      "label": "Nylon, PC & engineering filament",
+      "id": "nylon-filament",
+      "label": "Nylon / PA filament",
       "group": "filament",
       "material": true,
       "rules": [
@@ -515,7 +1105,7 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:nylon|pa6?|pa12|pc|polycarbonate|pva|hips|peek|pei)\\b"
+              "pattern": "\\b(?:nylon|pa(?:6|12|66)?)\\b"
             }
           ]
         },
@@ -527,7 +1117,151 @@
             },
             {
               "field": "materialText",
-              "pattern": "\\b(?:nylon|pa6?|pa12|pc|polycarbonate|pva|hips|peek|pei)\\b"
+              "pattern": "\\b(?:nylon|pa(?:6|12|66)?)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:nylon|pa(?:6|12|66)?)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pc-filament",
+      "label": "Polycarbonate / PC filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e?pc|biopc|polycarbonate)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e?pc|biopc|polycarbonate)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:e?pc|biopc|polycarbonate)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support-filament",
+      "label": "Support / PVA / HIPS filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pva|hips|bvoh|support)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pva|hips|bvoh|support)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:pva|hips|bvoh|support)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering-filament",
+      "label": "High-temperature engineering filament",
+      "group": "filament",
+      "material": true,
+      "rules": [
+        {
+          "all": [
+            {
+              "field": "legacyCategory",
+              "pattern": "^filament$"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:peek|pekk|pei|pps|psu|pp|ultem)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\bfilament\\b"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:peek|pekk|pei|pps|psu|pp|ultem)\\b"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\b(?:printer|machine|kit|bundle)\\b).*(?:\\bfilament\\b|\\b\\d+(?:\\.\\d+)?\\s*(?:kg|g)\\b)"
+            },
+            {
+              "field": "materialText",
+              "pattern": "\\b(?:peek|pekk|pei|pps|psu|pp|ultem)\\b"
             }
           ]
         }
@@ -578,6 +1312,14 @@
               "pattern": "\\bresin\\b.{0,30}\\b3d\\s*printers?\\b"
             }
           ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:photon|mars \\d|saturn \\d|jupiter|sonic (?:mini|mighty|mega)|uniformation|halot|sl1s)\\b"
+            }
+          ]
         }
       ]
     },
@@ -592,6 +1334,14 @@
             {
               "field": "type",
               "pattern": "^(?:fdm|fff|x1e|x1c|p1p)(?:\\b|$)"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "field": "nameBase",
+              "pattern": "\\b(?:ender|kobra|neptune|centauri|ultimaker|qidi|sovol|bcn3d|voron|makerbot|flsun|dremel|prusa|adventurer|orangestorm|easythreed)\\b"
             }
           ]
         }

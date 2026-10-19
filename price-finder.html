@@ -365,7 +365,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
 <div class="tool"><label for="category"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Material / type</label><select id="type"><option value="all">All types</option></select></div>
+<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Subcategory</label><select id="type"><option value="all">All subcategories</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-package"></use></svg>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
 </div>
@@ -424,7 +424,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 </div>
 <div class="card-grid" id="cardGrid"></div>
-<div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><nav class="results-pagination" aria-label="Product result pages"><button class="compare-btn secondary" id="previousResults" type="button" disabled>Previous</button><span id="resultsPage" aria-live="polite"></span><button class="compare-btn secondary" id="nextResults" type="button">Next</button></nav></div>
+<div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><nav class="results-pagination" aria-label="Product result pages"><button class="compare-btn secondary" id="previousResults" type="button" disabled>Previous</button><label class="page-picker" for="resultsPage">Page <select id="resultsPage" aria-label="Go to results page"></select> <span id="resultsPageTotal"></span></label><button class="compare-btn secondary" id="nextResults" type="button">Next</button></nav></div>
 
 <div class="compare-bar" id="compareBar" hidden>
   <div class="compare-summary">
@@ -501,7 +501,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <link rel="stylesheet" href="./product-offers.css?v=1">
 <script defer src="./data/product-offers.js?v=1"></script>
 <script defer src="./product-offers.js?v=1"></script>
-<script defer src="./product-categories.js?v=20261004-categories1"></script>
+<script defer src="./product-categories.js?v=20261019-categories2"></script>
 <script>
 window.addEventListener('DOMContentLoaded',()=>{
 (()=>{
@@ -529,6 +529,7 @@ const priceHistoryPageCache=new Map(),priceHistoryPageRequests=new Map();
 let detailsGeneration=0;
 const catalogue=window.PRINTPROFIT_CATEGORIES;
 const categoryCache=new WeakMap();
+const offerAliases=new Map();
 function categoryInfo(product){
  if(!categoryCache.has(product))categoryCache.set(product,catalogue.classify(product));
  return categoryCache.get(product);
@@ -541,12 +542,9 @@ function categoryUnit(product){return categoryInfo(product).material?'kg':'unit'
 function categoryClass(product){const group=categoryInfo(product).group;return group==='filament'?'filament':group==='resin-material'?'resin':group==='printer'?'printer':group==='equipment'?'equipment':'accessory';}
 function populateCategories(){
  const select=$('category'),current=select.value;
- const counts=new Map(),totals=new Map();
- db.products.forEach(product=>{const category=categoryInfo(product);counts.set(category.id,(counts.get(category.id)||0)+1);totals.set(category.group,(totals.get(category.group)||0)+1);});
- select.innerHTML='<option value="all">All products ('+db.products.length+')</option>'+catalogue.groups.filter(group=>totals.has(group.id)).map(group=>{
-  const children=catalogue.categories.filter(category=>category.group===group.id&&counts.has(category.id));
-  return '<optgroup label="'+esc(group.label)+'">'+(group.allLabel?'<option value="'+esc(group.id)+'">'+esc(group.allLabel)+' ('+totals.get(group.id)+')</option>':'')+children.map(category=>'<option value="'+esc(category.id)+'">'+esc(category.label)+' ('+counts.get(category.id)+')</option>').join('')+'</optgroup>';
- }).join('');
+ const totals=new Map();
+ db.products.forEach(product=>{const group=categoryInfo(product).group;totals.set(group,(totals.get(group)||0)+1);});
+ select.innerHTML='<option value="all">All products ('+db.products.length+')</option>'+catalogue.groups.filter(group=>totals.has(group.id)).map(group=>'<option value="'+esc(group.id)+'">'+esc(group.label)+' ('+totals.get(group.id)+')</option>').join('');
  if([...select.options].some(option=>option.value===current))select.value=current;
 }
 const compareStorageKey='printprofit_compare_selection_v1';
@@ -561,7 +559,7 @@ function loadCompareSelection(){
   if(Array.isArray(raw))selectedIds=new Set(raw.map(String));
  }catch(e){selectedIds=new Set();}
 }
-function productById(id){return db.products.find(x=>String(x.id)===String(id));}
+function productById(id){return db.products.find(x=>String(x.id)===(offerAliases.get(String(id))||String(id)));}
 function updateCompareBar(){
  const items=[...selectedIds].map(productById).filter(Boolean);
  const bar=$('compareBar');if(!bar)return;
@@ -753,7 +751,7 @@ function saveCurrentComparison(){
 function loadSelectedSaved(){
  const index=Number($('savedComparisons').value);if(!Number.isInteger(index))return;
  const item=savedComparisons()[index];if(!item)return;
- selectedIds=new Set(item.ids.map(String).filter(id=>productById(id)));
+ selectedIds=new Set(item.ids.map(id=>offerAliases.get(String(id))||String(id)).filter(id=>productById(id)));
  saveCompareSelection();updateCompareBar();render();
 }
 function deleteSelectedSaved(){
@@ -804,8 +802,13 @@ function refreshFilters(){
  populateSelect('brand',[...new Set(visible.map(x=>x.brand).filter(Boolean))],'All brands');
  const retailers=[...new Set(visible.map(x=>x.retailer).filter(Boolean))];
  populateSelect('retailer',retailers,'All retailers');
- const types=[...new Set(visible.map(x=>x.type).filter(Boolean))];
- populateSelect('type',types,'All types');
+ const typeSelect=$('type'),currentType=typeSelect.value,counts=new Map();
+ visible.forEach(product=>{const id=categoryInfo(product).id;counts.set(id,(counts.get(id)||0)+1);});
+ typeSelect.innerHTML='<option value="all">All subcategories</option>'+catalogue.groups.map(group=>{
+  const children=catalogue.categories.filter(category=>category.group===group.id&&counts.has(category.id));
+  return children.length?'<optgroup label="'+esc(group.label)+'">'+children.map(category=>'<option value="'+esc(category.id)+'">'+esc(category.label)+' ('+counts.get(category.id)+')</option>').join('')+'</optgroup>':'';
+ }).join('');
+ if(counts.has(currentType))typeSelect.value=currentType;
  const colours=[...new Set(visible.map(x=>x.colour).filter(Boolean))];
  populateSelect('colour',colours,'All colours');
 }
@@ -833,7 +836,7 @@ function filtered(){
   (!q||searchText(x).includes(q)) &&
   matchesCategory(x,cat) &&
   (brand==='all'||x.brand===brand) &&
-  (type==='all'||x.type===type) &&
+  (type==='all'||categoryInfo(x).id===type) &&
   (colour==='all'||x.colour===colour) &&
   (retailer==='all'||x.retailer===retailer) &&
   Number(x.price||0)>=min && Number(x.price||0)<=max &&
@@ -873,7 +876,7 @@ function render(resetPage=true){
  const current=$('category').value,leaf=catalogue.categories.find(category=>category.id===current);
  document.querySelectorAll('[data-quick]').forEach(button=>{
   const mode=button.dataset.quick;
-  const active=mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===mode||leaf?.group===mode;
+  const active=mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===(mode==='printing-resin'?'resin-material':mode)||leaf?.group===mode;
   button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
  });
  $('rows').innerHTML=visibleRows.map(x=>'<tr>'+
@@ -894,7 +897,8 @@ function render(resetPage=true){
  const more=$('resultsMore'),shown=$('resultsShown'),pageLabel=$('resultsPage');
  const previous=$('previousResults'),next=$('nextResults');
  if(shown)shown.textContent=rows.length?'Showing '+(firstIndex+1)+'–'+Math.min(firstIndex+visibleRows.length,rows.length)+' of '+rows.length+' matching listings':'No matching listings';
- if(pageLabel)pageLabel.textContent='Page '+(currentListingPage+1)+' of '+pageCount;
+ if(pageLabel){pageLabel.innerHTML=Array.from({length:pageCount},(_,i)=>'<option value="'+i+'">'+(i+1)+'</option>').join('');pageLabel.value=String(currentListingPage);}
+ $('resultsPageTotal').textContent='of '+pageCount;
  if(more)more.hidden=pageCount<=1;
  if(previous)previous.disabled=currentListingPage<=0;
  if(next)next.disabled=currentListingPage>=pageCount-1;
@@ -915,7 +919,21 @@ function loadData(){
  try{
   const payload=window.PRINTPROFIT_PRICE_DATA;
   if(!payload||!Array.isArray(payload.products))throw new Error('Static comparison dataset missing');
-  db={...payload,products:payload.products.filter(product=>!product.sourceUnavailable)};
+  const seenOffers=new Map(),aliases=offerAliases;
+  aliases.clear();
+  const normalise=value=>String(value||'').trim().toLowerCase().replace(/\s+/g,' ');
+  const products=[];
+  for(const original of payload.products.filter(product=>!product.sourceUnavailable)){
+   const product={...original};
+   let url=product.url;
+   try{const u=new URL(url);u.hash='';for(const key of [...u.searchParams.keys()])if(/^utm_|^(ref|aff|affiliate)$/i.test(key))u.searchParams.delete(key);u.searchParams.sort();url=u.href;}catch(e){}
+   const key=[product.retailer,url,product.name,product.colour,product.pack].map(normalise).join('|');
+   if(seenOffers.has(key)){aliases.set(String(product.id),String(seenOffers.get(key).id));continue;}
+   seenOffers.set(key,product);products.push(product);
+   if(!categoryInfo(product).material){product.unit=null;if(/^\d+(?:\.\d+)? kg$/.test(product.pack||''))product.pack='See retailer options';}
+  }
+  selectedIds=new Set([...selectedIds].map(id=>aliases.get(id)||id));
+  db={...payload,products};
   const loading=$('compareLoading');if(loading)loading.hidden=true;
   populateCategories();
   refreshFilters();renderCoverage();render();
@@ -958,7 +976,7 @@ $('savedComparisons').addEventListener('change',loadSelectedSaved);
 $('quickTools').addEventListener('click',e=>{
  const btn=e.target.closest('[data-quick]');if(!btn)return;
  const mode=btn.dataset.quick;
- if(['filament','printing-resin','printer','accessory'].includes(mode)){$('category').value=mode;refreshFilters();}
+ if(['filament','printing-resin','printer','accessory'].includes(mode)){$('category').value=mode==='printing-resin'?'resin-material':mode;$('type').value='all';refreshFilters();}
  else if(mode==='in')$('availability').value='in';
  else if(mode==='under20')$('maxPrice').value='20';
  else if(mode==='clear'){
@@ -968,7 +986,7 @@ $('quickTools').addEventListener('click',e=>{
  }
  render();
 });
-$('category').addEventListener('change',()=>{refreshFilters();render();});
+$('category').addEventListener('change',()=>{$('type').value='all';refreshFilters();render();});
 ['brand','type','colour','retailer','minPrice','maxPrice','availability','view','sort'].forEach(id=>{
  const el=$(id);if(!el)return;
  el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>render());
@@ -1022,6 +1040,7 @@ $('cardGrid').addEventListener('click',e=>{
  if(btn)return;
 });
 loadCompareSelection();
+$('resultsPage').addEventListener('change',()=>{currentListingPage=Number($('resultsPage').value)||0;render(false);});
 $('previousResults').addEventListener('click',()=>{if(currentListingPage>0){currentListingPage--;render(false)}});
 $('nextResults').addEventListener('click',()=>{const rows=filtered(),pages=Math.ceil(rows.length/LISTING_PAGE_SIZE);if(currentListingPage+1<pages){currentListingPage++;render(false)}});
 $('toggleSources').addEventListener('click',()=>{expandSources=!expandSources;renderCoverage();});
@@ -1059,7 +1078,7 @@ body #tableViewWrap .product-actions{display:flex;align-items:center;gap:6px;fle
 body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wrap:anywhere}
 .results-more{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0;color:var(--muted)}.results-more[hidden],.coverage-toggle[hidden]{display:none!important}.coverage-toggle{margin-top:12px}
 
-.results-pagination{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.results-pagination>span{min-width:92px;text-align:center;font-size:13px;color:var(--text)}.results-pagination button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.page-picker{display:flex;align-items:center;gap:8px}.page-picker select{width:auto;min-width:72px;padding:9px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px}.results-pagination{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.results-pagination>span{min-width:92px;text-align:center;font-size:13px;color:var(--text)}.results-pagination button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 @media(max-width:520px){.results-more{align-items:stretch;flex-direction:column}.results-pagination{justify-content:center}.results-pagination .compare-btn{width:auto;min-width:102px}}
 </style>
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
