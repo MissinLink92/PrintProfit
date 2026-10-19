@@ -20,8 +20,8 @@ on:
       - '.github/workflows/*.yml'
 
 concurrency:
-  group: printprofit-refresh-and-pages
-  cancel-in-progress: false
+  group: printprofit-web-build
+  cancel-in-progress: true
 
 permissions:
   contents: write
