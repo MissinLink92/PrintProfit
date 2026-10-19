@@ -193,7 +193,7 @@ def refresh(ref, config, reader, report, queue):
         if not rates or any(not 0 < r['price'] < 1000 for r in rates):
             raise ValueError('Invalid courier table')
         ref['deliveryProfiles'][key] = {'source': key.title() + ' official UK reference — checked ' + today,
-                                       'rates': rates, 'checkedAt': today, 'sourceUrls': [config['referenceSources'][i] for i in ids]}
+                                       'rates': rates, 'quoteRequired': key in ('dpd', 'dhl', 'parcelforce'), 'checkedAt': today, 'sourceUrls': [config['referenceSources'][i] for i in ids]}
     for key, parser in [('evri', lambda: evri(pages['evri'])), ('inpost', lambda: inpost(pages['inpost']))]:
         verified([key], lambda key=key, parser=parser: courier(key, [key], parser))
     verified(['royalmail-first', 'royalmail-second'], lambda: courier('royalmail', ['royalmail-first', 'royalmail-second'],

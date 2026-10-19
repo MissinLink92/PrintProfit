@@ -56,6 +56,8 @@ jobs:
           node scripts/check_workspace_modals.cjs
       - name: Check source health and approved coupons
         run: python scripts/check_data_health.py
+      - name: Check current Bambu feed availability
+        run: python scripts/probe_bambu_feed.py
       - name: Check site on desktop and phone sizes
         run: node scripts/audit_site.cjs
         env:
