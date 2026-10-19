@@ -355,6 +355,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <aside class="pp-affiliate-notice" aria-label="Affiliate disclosure">
 <p>We may earn a commission if you buy through links marked <strong>Affiliate</strong>, at no extra cost to you. <a href="./guide.html#affiliate-links">About affiliate links</a></p>
 <a class="pp-affiliate-shop" href="https://elegoo.sjv.io/9VPWqE" target="_blank" rel="sponsored noopener">Shop ELEGOO UK <span class="pp-affiliate-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"/></svg> Affiliate</span><span class="sr-only"> (opens in a new tab)</span></a>
+<a class="pp-affiliate-shop" href="https://uk.anycubic3d.com/?ref=CONNORJONES" target="_blank" rel="sponsored noopener">Shop Anycubic UK <span class="pp-affiliate-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"/></svg> Affiliate</span><span class="sr-only"> (opens in a new tab)</span></a>
 </aside>
 <style>
 .pp-affiliate-notice{margin:0 0 20px;padding:16px;border:1px solid var(--line);border-radius:12px;color:var(--text);background:var(--panel,transparent);font-size:14px;line-height:1.6}.pp-affiliate-notice p{margin:0 0 12px}.pp-affiliate-notice a{color:inherit;text-decoration:underline;text-underline-offset:3px}.pp-affiliate-shop{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid currentColor;border-radius:8px;font-weight:700}.pp-affiliate-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px}.pp-affiliate-shop:focus-visible{outline:3px solid #009fef;outline-offset:4px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -507,6 +508,20 @@ window.addEventListener('DOMContentLoaded',()=>{
 'use strict';
 const $=id=>document.getElementById(id);
 const money=v=>'£'+Number(v).toFixed(2);
+
+// Apply referral tracking at render time so nightly catalogue refreshes retain it.
+function retailerLink(value,label,className='link'){
+ let href=value||'#',affiliate=false;
+ try{
+  const url=new URL(value);
+  if(url.protocol==='https:'&&url.hostname==='uk.anycubic3d.com'){
+   url.searchParams.set('ref','CONNORJONES');
+   href=url.href;affiliate=true;
+  }
+ }catch(e){}
+ return '<a class="'+className+'" href="'+esc(href)+'" target="_blank" rel="'+(affiliate?'sponsored noopener':'noopener')+'">'+label+(affiliate?' <span class="pp-affiliate-badge">&#128279; Affiliate</span>':'')+'</a>';
+}
+
 let db={products:[],sources:[],brandDirectory:[],updatedAt:''};
 const LISTING_PAGE_SIZE=20;
 let currentListingPage=0,expandSources=false,expandBrands=false;
@@ -570,7 +585,7 @@ function compareValue(x,label){
  if(label==='Unit cost')return x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—';
  if(label==='Availability')return String(x.availability||'Check retailer');
  if(label==='Checked')return '<span class="checked-date">'+esc(formatDate(x.updated))+'</span>';
- if(label==='Live listing')return '<a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a>';
+ if(label==='Live listing')return retailerLink(x.url,'Check live ↗');
  return '—';
 }
 function openCompareModal(){
@@ -696,7 +711,7 @@ function openDetailsModal(id){
  '<div class="detail-item"><small>Availability</small><strong>'+esc(x.availability||'Not tracked')+'</strong></div>'+
  '</div><h3 class="history-title">Price history <span class="price-change '+change.cls+'">'+esc(change.text)+'</span></h3>'+
  '<div class="history-wrap">'+(Array.isArray(x.priceHistory)?priceHistoryMarkup(x):x.priceHistoryPage==null?'<span class="muted">No recorded history yet.</span>':'<span class="muted" role="status">Loading price history…</span>')+'</div>'+
- '<div class="detail-actions"><button class="compare-btn" type="button" data-details-compare="'+esc(x.id)+'">'+(selectedIds.has(String(x.id))?'Remove from compare':'Add to compare')+'</button><a class="detail-link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Open retailer ↗</a></div></div>';
+ '<div class="detail-actions"><button class="compare-btn" type="button" data-details-compare="'+esc(x.id)+'">'+(selectedIds.has(String(x.id))?'Remove from compare':'Add to compare')+'</button>'+retailerLink(x.url,'Open retailer ↗','detail-link')+'</div></div>';
  $('detailsModal').classList.add('open');document.body.style.overflow='hidden';
  if(!Array.isArray(x.priceHistory)&&x.priceHistoryPage!=null){
   loadPriceHistoryPage(Number(x.priceHistoryPage)).then(page=>{
@@ -842,7 +857,7 @@ function renderCards(rows){
   '<div class="product-card-top">'+productImage(x)+'<div><h3 translate="no">'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
   '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(formatDate(x.updated))+'</strong></div></div>'+
   '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
-  '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div>'+
+  '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div>'+
  '</article>').join('');
 }
 function setResultView(mode){
@@ -870,7 +885,7 @@ function render(resetPage=true){
   '<td class="unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'—')+'</td>'+
   '<td>'+stockLabel(x.availability)+'</td>'+
   '<td class="checked">'+esc(formatDate(x.updated))+'<div class="fresh '+(x.lastCheckStatus==='ok'?'live':'reference')+'">'+(x.lastCheckStatus==='ok'?'● Price verified':x.lastCheckStatus==='price-change-review'?'● Price under review':x.lastCheckStatus==='retained-unverified'?'● Previous reference':'● Reference')+'</div></td>'+
-  '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button><a class="link" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Check live ↗</a></div></td>'+
+  '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div></td>'+
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
@@ -891,7 +906,7 @@ function renderCoverage(){
  const a=$('sourceCount');if(a)a.textContent=s.length+' tracked sources';
  const bc=$('brandCount');if(bc)bc.textContent=b.length+' brands in directory';
  const lc=$('listingCount');if(lc)lc.textContent=p.length+' listings in database';
- $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.lastDiscoveryStatus==='monitor-only'?'Automatic GBP feed unavailable.':x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p>'+(x.lastPriceCheck?'<p>Price verified: '+Number(x.lastPriceCheck.verified)+' / '+Number(x.lastPriceCheck.listed)+'.</p>':'')+'<a class="link" href="'+esc(x.url)+'" target="_blank" rel="noopener">Open source ↗</a></article>').join('');
+ $('sourceCards').innerHTML=s.slice(0,expandSources?s.length:8).map(x=>'<article class="card"><h3 translate="no">'+esc(x.name)+'</h3><p>'+esc(x.kind||'Source')+' • '+(x.lastDiscoveryStatus==='monitor-only'?'Automatic GBP feed unavailable.':x.refreshPolicy?'Nightly UK checks. '+(x.lastDiscoveryStatus||'Verified new products are added automatically.'):(x.autoRefresh?'Product checks where exact mapping allows.':'Reference source; exact product mapping required.'))+'</p>'+(x.lastPriceCheck?'<p>Price verified: '+Number(x.lastPriceCheck.verified)+' / '+Number(x.lastPriceCheck.listed)+'.</p>':'')+retailerLink(x.url,'Open source ↗','link')+'</article>').join('');
  $('brandCloud').innerHTML=b.slice(0,expandBrands?b.length:36).map(x=>'<span class="brand-pill">'+esc(x)+'</span>').join('');
  const sourceToggle=$('toggleSources');if(sourceToggle){sourceToggle.hidden=s.length<=8;sourceToggle.textContent=expandSources?'Show fewer sources':'Show all '+s.length+' sources';}
  const brandToggle=$('toggleBrands');if(brandToggle){brandToggle.hidden=b.length<=36;brandToggle.textContent=expandBrands?'Show fewer brands':'Show all '+b.length+' brands';}
