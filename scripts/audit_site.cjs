@@ -92,8 +92,10 @@ async function auditPage(browser, name, viewport) {
   if (name === 'price-finder.html') {
    const count = await page.locator('#rows > tr').count();
    check(count > 0 && count <= 20, `Compare rendered ${count} rows; expected 1–20`);
+   const firstListing = await page.locator('#rows [data-details-id]').first().getAttribute('data-details-id');
    await page.locator('#resultsPage').selectOption('1');
-   check((await page.locator('#resultsShown').innerText()).includes('21'), 'Direct results page selection failed');
+   await page.waitForFunction(previous => document.querySelector('#resultsPage').value === '1' && document.querySelector('#rows [data-details-id]')?.dataset.detailsId !== previous, firstListing, {timeout:5000});
+   check((await page.locator('#resultsShown').innerText()).includes('21'), 'Direct results page selection failed: '+await page.locator('#resultsShown').innerText());
    await page.locator('#previousResults').click();
    await page.locator('#nextResults').click();
    check(await page.locator('#rows > tr').count() <= 20, 'Compare pagination exceeded 20 rows');

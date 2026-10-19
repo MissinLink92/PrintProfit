@@ -904,7 +904,7 @@ function render(resetPage=true){
  const more=$('resultsMore'),shown=$('resultsShown'),pageLabel=$('resultsPage');
  const previous=$('previousResults'),next=$('nextResults');
  if(shown)shown.textContent=rows.length?'Showing '+(firstIndex+1)+'–'+Math.min(firstIndex+visibleRows.length,rows.length)+' of '+rows.length+' matching listings':'No matching listings';
- if(pageLabel){pageLabel.innerHTML=Array.from({length:pageCount},(_,i)=>'<option value="'+i+'">'+(i+1)+'</option>').join('');pageLabel.value=String(currentListingPage);}
+ if(pageLabel){if(pageLabel.options.length!==pageCount)pageLabel.innerHTML=Array.from({length:pageCount},(_,i)=>'<option value="'+i+'">'+(i+1)+'</option>').join('');pageLabel.value=String(currentListingPage);}
  $('resultsPageTotal').textContent='of '+pageCount;
  if(more)more.hidden=pageCount<=1;
  if(previous)previous.disabled=currentListingPage<=0;
