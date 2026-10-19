@@ -12,7 +12,7 @@ HISTORY_PAGE_SIZE = 100
 PRODUCT_FIELDS = frozenset({
     "id", "name", "brand", "retailer", "url", "type", "colour", "colourHex",
     "image", "imageNote", "price", "shippingPrice", "pack", "unit",
-    "availability", "updated", "lastCheckStatus", "category", "weightGrams",
+    "availability", "updated", "lastVerified", "lastAttempt", "lastCheckError", "lastCheckStatus", "category", "weightGrams",
 })
 SUMMARY_FIELDS = ("currency", "updatedAt", "refreshPolicy", "lastRefreshSummary", "sources", "brandDirectory")
 

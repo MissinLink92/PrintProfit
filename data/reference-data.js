@@ -13,7 +13,15 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 6.98,
       "pay": 4,
       "fixed": 0.2,
-      "note": "Etsy UK: 6.5% transaction + 0.48% UK regulatory fee; Etsy Payments 4% + £0.20. Reference value; not yet checked by the nightly updater."
+      "note": "UK Etsy Payments: 6.5% transaction plus 0.48% regulatory fee; processing 4% + £0.20. Applies to postage as well as item price. Listing fees, adverts, conversion and VAT on seller fees are additional where applicable. Manually checked 2026-10-19; review by 2026-10-26.",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+      ]
     },
     "ebay": {
       "platform": 12.25,
@@ -39,19 +47,37 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 0,
       "pay": 2.9,
       "fixed": 0.3,
-      "note": "Depop UK: no selling fee; Depop Payments 2.9% + £0.30. Boosted Listings are not included. Reference value; not yet checked by the nightly updater."
+      "note": "UK sellers: no standard selling fee; payment processing 2.9% + £0.30 on item price, postage and applicable taxes. Optional Boosted Listing fees excluded. Manually checked 2026-10-19; review by 2026-10-26.",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges"
+      ]
     },
     "vinted": {
       "platform": 0,
       "pay": 0,
       "fixed": 0,
-      "note": "Vinted UK: standard seller transaction fee is £0; buyer protection is charged to the buyer. Reference value; not yet checked by the nightly updater."
+      "note": "Standard Vinted UK selling has zero selling fees. Buyer charges and optional paid promotions excluded; check product eligibility and business seller rules. Manually checked 2026-10-19; review by 2026-10-26.",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://www.vinted.co.uk/how_it_works"
+      ]
     },
     "tiktok": {
       "platform": 9,
       "pay": 0,
       "fixed": 0,
-      "note": "TikTok Shop UK: standard commission 9%; category/programme reductions or extra fees may apply. Reference value; not yet checked by the nightly updater."
+      "note": "TikTok Shop UK standard commission 9%, including applicable taxes. Commission also applies to customer-paid shipping; category and incentive reductions and optional charges may differ. Manually checked 2026-10-19; review by 2026-10-26.",
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://seller-uk.tiktok.com/university/essay?knowledge_id=7753824408913665&lang=en-GB"
+      ]
     },
     "facebook": {
       "platform": 0,
@@ -82,7 +108,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "shopify": {
       "platform": 0,
-      "pay": 2.0,
+      "pay": 2,
       "fixed": 0.25,
       "note": "Shopify Payments Basic standard online UK cards. Monthly plan costs are not allocated per sale. Platform 0%; payments 2.0% + £0.25. Checked 2026-10-19.",
       "checkedAt": "2026-10-19",
@@ -99,48 +125,105 @@ window.PRINTPROFIT_REFERENCE_DATA={
   },
   "deliveryProfiles": {
     "royalmail": {
-      "source": "Royal Mail published UK consumer reference rates — existing reference; not yet checked by the nightly updater",
+      "source": "Royal Mail online UK reference — manually checked 2026-10-19",
       "rates": [
         {
-          "label": "2nd Class Letter — £1.55",
+          "label": "1st Class — Letter up to 100g",
+          "price": 1.8,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Large letter up to 100g",
+          "price": 3.2,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Large letter 101–250g",
+          "price": 3.3,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Large letter 251–500g",
+          "price": 3.3,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Large letter 501–750g",
+          "price": 3.3,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Small parcel up to 2kg",
+          "price": 5.7,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Medium parcel up to 2kg",
+          "price": 8.2,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Medium parcel over 2–10kg",
+          "price": 10.4,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "1st Class — Medium parcel over 10–20kg",
+          "price": 16.4,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "2nd Class — Letter up to 100g",
+          "price": 0.91,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
+        },
+        {
+          "label": "2nd Class — Large letter up to 100g",
           "price": 1.55,
-          "note": "Up to 100g."
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "2nd Class Large Letter — £2.80",
-          "price": 2.8,
-          "note": "Up to 750g."
+          "label": "2nd Class — Large letter 101–250g",
+          "price": 1.9,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "2nd Class Small Parcel — £3.95",
-          "price": 3.95,
-          "note": "Up to 2kg."
+          "label": "2nd Class — Large letter 251–500g",
+          "price": 2.4,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "2nd Class Medium Parcel — £6.25",
-          "price": 6.25,
-          "note": "Up to 20kg."
+          "label": "2nd Class — Large letter 501–750g",
+          "price": 2.7,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "1st Class Letter — £3.05",
-          "price": 3.05,
-          "note": "Up to 100g."
+          "label": "2nd Class — Small parcel up to 2kg",
+          "price": 4.4,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "1st Class Large Letter — £3.70",
-          "price": 3.7,
-          "note": "Up to 750g."
+          "label": "2nd Class — Medium parcel up to 2kg",
+          "price": 7,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "1st Class Small Parcel — £5.05",
-          "price": 5.05,
-          "note": "Up to 2kg."
+          "label": "2nd Class — Medium parcel over 2–10kg",
+          "price": 9,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         },
         {
-          "label": "1st Class Medium Parcel — £8.95",
-          "price": 8.95,
-          "note": "Up to 20kg."
+          "label": "2nd Class — Medium parcel over 10–20kg",
+          "price": 13.7,
+          "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         }
+      ],
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://www.royalmail.com/sending/uk/1st-class",
+        "https://www.royalmail.com/sending/uk/2nd-class"
       ]
     },
     "evri": {
@@ -348,114 +431,132 @@ window.PRINTPROFIT_REFERENCE_DATA={
       ]
     },
     "inpost": {
-      "source": "InPost parcel price list (current) — existing reference; not yet checked by the nightly updater",
+      "source": "InPost official UK reference — manually checked 2026-10-19",
       "rates": [
         {
-          "label": "Locker / Shop — Small — £1.99",
+          "label": "Locker / Shop — Small",
           "price": 1.99,
-          "note": "Up to 15kg; 8 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 8 × 38 × 64cm. Packaging and service eligibility apply."
         },
         {
-          "label": "Locker / Shop — Medium — £2.59",
+          "label": "Locker / Shop — Medium",
           "price": 2.59,
-          "note": "Up to 15kg; 19 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 19 × 38 × 64cm. Packaging and service eligibility apply."
         },
         {
-          "label": "Locker / Shop — Large — £3.99",
+          "label": "Locker / Shop — Large",
           "price": 3.99,
-          "note": "Up to 15kg; 41 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 41 × 38 × 64cm. Packaging and service eligibility apply."
         },
         {
-          "label": "Home address — Small — £2.89",
+          "label": "Home address — Small",
           "price": 2.89,
-          "note": "Up to 15kg; 8 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 8 × 38 × 64cm. Packaging and service eligibility apply."
         },
         {
-          "label": "Home address — Medium — £3.99",
+          "label": "Home address — Medium",
           "price": 3.99,
-          "note": "Up to 15kg; 19 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 19 × 38 × 64cm. Packaging and service eligibility apply."
         },
         {
-          "label": "Home address — Large — £5.99",
+          "label": "Home address — Large",
           "price": 5.99,
-          "note": "Up to 15kg; 41 × 38 × 64cm."
+          "note": "Up to 15kg. Maximum 41 × 38 × 64cm. Packaging and service eligibility apply."
         }
+      ],
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://inpost.co.uk/send/parcel-prices"
       ]
     },
     "dpd": {
-      "source": "DPD Online published UK starting prices — existing reference; not yet checked by the nightly updater",
+      "source": "DPD advertised starting price — quote required",
       "rates": [
         {
-          "label": "UK drop-off — from £2.99",
+          "label": "UK advertised starting price — quote required",
           "price": 2.99,
-          "note": "Starting price; exact quote depends on parcel details."
-        },
-        {
-          "label": "UK collection — from £5.81",
-          "price": 5.81,
-          "note": "Starting price; exact quote depends on parcel details."
+          "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
         }
+      ],
+      "quoteRequired": true,
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://send.dpd.co.uk/"
       ]
     },
     "dhl": {
-      "source": "DHL eCommerce UK published price — existing reference; not yet checked by the nightly updater",
+      "source": "DHL advertised starting price — quote required",
       "rates": [
         {
-          "label": "UK delivery — from £2.79",
-          "price": 2.79,
-          "note": "Includes VAT; mainland depot drop-off/collection basis."
+          "label": "UK advertised starting price — quote required",
+          "price": 3.78,
+          "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
         }
+      ],
+      "quoteRequired": true,
+      "checkedAt": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://send.dhlparcel.co.uk/parcel-delivery"
       ]
     },
     "parcelforce": {
-      "source": "Parcelforce UK retail prices from 7 April 2026 — existing reference; not yet checked by the nightly updater",
+      "source": "Parcelforce UK retail prices from 7 April 2026 — existing reference; not yet checked by the nightly updater — unverified estimate; obtain a parcel quote",
       "rates": [
         {
           "label": "express48 — from £11.95",
           "price": 11.95,
-          "note": "Up to 30kg; tracked."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Up to 30kg; tracked."
         },
         {
           "label": "express24 — from £12.50",
           "price": 12.5,
-          "note": "Up to 30kg; tracked."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Up to 30kg; tracked."
         },
         {
           "label": "expressAM — from £16.50",
           "price": 16.5,
-          "note": "Up to 30kg; next working day by noon."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Up to 30kg; next working day by noon."
         },
         {
           "label": "express10 — from £28.10",
           "price": 28.1,
-          "note": "Up to 30kg; next working day by 10am."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Up to 30kg; next working day by 10am."
         },
         {
           "label": "express48large — from £51.65",
           "price": 51.65,
-          "note": "Large parcel service."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Large parcel service."
         }
-      ]
+      ],
+      "quoteRequired": true
     },
     "ups": {
-      "source": "UPS UK public rate guidance — existing reference; not yet checked by the nightly updater",
+      "source": "UPS UK public rate guidance — existing reference; not yet checked by the nightly updater — unverified estimate; obtain a parcel quote",
       "rates": [
         {
           "label": "Domestic UK — quote required",
           "price": 0,
-          "note": "Enter your quoted UPS rate in Cost to you."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Enter your quoted UPS rate in Cost to you."
         }
-      ]
+      ],
+      "quoteRequired": true
     },
     "fedex": {
-      "source": "FedEx UK rates effective 5 January 2026 — existing reference; not yet checked by the nightly updater",
+      "source": "FedEx UK rates effective 5 January 2026 — existing reference; not yet checked by the nightly updater — unverified estimate; obtain a parcel quote",
       "rates": [
         {
           "label": "Domestic UK — quote required",
           "price": 0,
-          "note": "Enter your quoted FedEx rate in Cost to you."
+          "note": "Unverified estimate. Obtain a quote for the actual parcel before setting your selling price. Enter your quoted FedEx rate in Cost to you."
         }
-      ]
+      ],
+      "quoteRequired": true
     },
     "custom": {
       "source": "Manual entry",
@@ -897,8 +998,15 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "inpost": {
       "url": "https://inpost.co.uk/send/parcel-prices",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "Cannot read robots.txt: HTTP 403"
+      "status": "manual-verified",
+      "error": "Cannot read robots.txt: HTTP 403",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://inpost.co.uk/send/parcel-prices"
+      ]
     },
     "evri": {
       "url": "https://www.evri.com/our-services/our-prices",
@@ -910,14 +1018,30 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "royalmail-first": {
       "url": "https://www.royalmail.com/sending/uk/1st-class",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "Cannot read robots.txt: HTTP 403"
+      "status": "manual-verified",
+      "error": "Cannot read robots.txt: HTTP 403",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://www.royalmail.com/sending/uk/1st-class",
+        "https://www.royalmail.com/sending/uk/2nd-class"
+      ]
     },
     "royalmail-second": {
       "url": "https://www.royalmail.com/sending/uk/2nd-class",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "Cannot read robots.txt: HTTP 403"
+      "status": "manual-verified",
+      "error": "Cannot read robots.txt: HTTP 403",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://www.royalmail.com/sending/uk/1st-class",
+        "https://www.royalmail.com/sending/uk/2nd-class"
+      ]
     },
     "parcelforce": {
       "url": "https://www.parcelforce.com/sending-parcel/uk-parcel-delivery",
@@ -928,14 +1052,28 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "dpd": {
       "url": "https://send.dpd.co.uk/",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "Source did not provide readable pricing guidance"
+      "status": "manual-verified",
+      "error": "Source did not provide readable pricing guidance",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://send.dpd.co.uk/"
+      ]
     },
     "dhl": {
       "url": "https://send.dhlparcel.co.uk/parcel-delivery",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "Source did not provide readable pricing guidance"
+      "status": "manual-verified",
+      "error": "Source did not provide readable pricing guidance",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://send.dhlparcel.co.uk/parcel-delivery"
+      ]
     },
     "ups": {
       "url": "https://www.ups.com/gb/en/support/shipping-support/shipping-costs-rates",
@@ -952,20 +1090,47 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "etsy-transaction": {
       "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "manual-verified",
+      "error": "HTTP Error 403: Forbidden",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+      ]
     },
     "etsy-regulatory": {
       "url": "https://help.etsy.com/hc/en-us/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "manual-verified",
+      "error": "HTTP Error 403: Forbidden",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+      ]
     },
     "etsy-payments": {
       "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "manual-verified",
+      "error": "HTTP Error 403: Forbidden",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+      ]
     },
     "ebay": {
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
@@ -984,22 +1149,43 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "depop": {
       "url": "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges",
       "lastAttempt": "2026-10-19",
-      "status": "failed",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "manual-verified",
+      "error": "HTTP Error 403: Forbidden",
+      "automaticStatus": "failed",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges"
+      ]
     },
     "vinted": {
       "url": "https://www.vinted.co.uk/pricelist",
       "lastAttempt": "2026-10-19",
-      "status": "review-required",
+      "status": "manual-verified",
       "contentHash": "0c79a2c304acac03175d734abf2e609d98f62573f57b614dde7a83504d78ff07",
-      "error": "Zero seller fee guidance changed; keep the previous value for review"
+      "error": "Zero seller fee guidance changed; keep the previous value for review",
+      "automaticStatus": "review-required",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://www.vinted.co.uk/how_it_works"
+      ]
     },
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-19",
-      "status": "review-required",
+      "status": "manual-verified",
       "contentHash": "4b9bf57a12cf71085323f2eab6655b85146a4859a605efea4ab0b5f75bfa65ee",
-      "error": "Expected one unambiguous rate; found 0"
+      "error": "Expected one unambiguous rate; found 0",
+      "automaticStatus": "review-required",
+      "lastVerified": "2026-10-19",
+      "reviewAfter": "2026-10-26",
+      "verificationMethod": "manual",
+      "sourceUrls": [
+        "https://seller-uk.tiktok.com/university/essay?knowledge_id=7753824408913665&lang=en-GB"
+      ]
     },
     "facebook": {
       "url": "https://www.facebook.com/help/1159837417996719",
@@ -1042,7 +1228,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     "date": "2026-10-16",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
     "rates": {
-      "GBP": 1.0,
+      "GBP": 1,
       "EUR": 1.18504474,
       "USD": 1.33353084,
       "PLN": 5.17864549,

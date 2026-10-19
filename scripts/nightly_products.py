@@ -173,8 +173,9 @@ def refresh_item(item, config, reader, root, today, queue, report):
                 history.append({'date': today, 'price': round(price, 2)})
                 item['priceHistory'] = history[-90:]
             stock = 'In stock' if availability is True or str(availability).endswith('/InStock') else 'Out of stock' if availability is False or str(availability).endswith('/OutOfStock') else 'Check retailer'
-            item.update(price=round(price, 2), updated=today, lastCheckStatus='ok', priceSourceUrl=price_url,
+            item.update(price=round(price, 2), updated=today, lastVerified=today, lastCheckStatus='ok', priceSourceUrl=price_url,
                         availability=stock, url=price_url)
+            item.pop('lastCheckError', None)
             item.pop('sourceUnavailable', None)
             item.pop('unavailableChecked', None)
             if item.get('weightGrams'):
@@ -187,6 +188,7 @@ def refresh_item(item, config, reader, root, today, queue, report):
             locator['imageSourceUrl'] = price_url
     except Exception as exc:
         item['lastCheckStatus'] = 'retained-unverified'
+        item['lastCheckError'] = str(exc)
         if isinstance(exc, nightly_catalogues.VariantMissing):
             # VariantMissing is raised only after a complete, native-GBP scan.
             # The parent product may still exist with other colours/packs; its
