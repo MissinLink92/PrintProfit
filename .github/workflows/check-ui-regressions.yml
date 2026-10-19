@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check product categories
+        run: node scripts/check_product_categories.cjs
       - name: Check business exports and material barcodes
         run: node scripts/check_business_tools.cjs
       - name: Check uploaded material usage
