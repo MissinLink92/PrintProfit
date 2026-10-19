@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-18T01:13:37.403996+00:00",
+  "checkedAt": "2026-10-19T01:22:15.233401+00:00",
   "warnings": [
     "inpost: failed; last verified never",
     "royalmail-first: failed; last verified never",
@@ -14,7 +14,7 @@
     "etsy-payments: failed; last verified never",
     "depop: failed; last verified never",
     "vinted: review-required; last verified never",
-    "tiktok: failed; last verified never",
+    "tiktok: review-required; last verified never",
     "facebook: failed; last verified never",
     "Amazon UK: no active listings",
     "Prusa Research: no active listings",
@@ -44,13 +44,13 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 860,
-      "verified": 854,
+      "listed": 1036,
+      "verified": 1030,
       "categories": {
-        "filament": 731,
+        "filament": 897,
         "accessory": 3,
-        "printer": 70,
-        "resin-material": 56
+        "printer": 73,
+        "resin-material": 63
       }
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 783,
-      "verified": 783,
+      "listed": 995,
+      "verified": 995,
       "categories": {
-        "printer": 249,
-        "filament": 334,
-        "resin-material": 175,
-        "accessory": 20,
+        "printer": 310,
+        "filament": 439,
+        "resin-material": 217,
+        "accessory": 24,
         "equipment": 5
       }
     },
@@ -125,10 +125,10 @@
     },
     {
       "name": "NSE Imports",
-      "listed": 464,
-      "verified": 459,
+      "listed": 467,
+      "verified": 462,
       "categories": {
-        "filament": 425,
+        "filament": 428,
         "printer": 38,
         "accessory": 1
       }
@@ -155,13 +155,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 369,
-      "verified": 366,
+      "listed": 458,
+      "verified": 455,
       "categories": {
-        "filament": 203,
-        "printer": 60,
-        "resin-material": 86,
-        "accessory": 20
+        "filament": 248,
+        "printer": 81,
+        "resin-material": 105,
+        "accessory": 24
       }
     },
     {
@@ -201,13 +201,13 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 988,
-      "verified": 980,
+      "listed": 1341,
+      "verified": 1333,
       "categories": {
-        "filament": 759,
-        "resin-material": 130,
-        "printer": 82,
-        "accessory": 17
+        "filament": 1056,
+        "resin-material": 154,
+        "printer": 90,
+        "accessory": 41
       }
     },
     {
