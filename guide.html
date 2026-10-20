@@ -46,17 +46,18 @@ body.pp-light .footer{color:#536671!important;border-top-color:#c4d1d7!important
 body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!important;color:#304650!important}
 </style>
 <link rel="stylesheet" href="./site-header.css?v=20261013-language1">
+<link rel="stylesheet" href="./site-unified.css?v=1">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="PrintProfit">
 <link rel="apple-touch-icon" href="/assets/app-symbol-192-v2.png">
 <script defer src="/pwa-install.js?v=1"></script>
 </head>
-<body data-pp-standalone-i18n="1">
+<body data-pp-standalone-i18n="1" class="pp-guide-page">
 <div id="ppSiteHeader"></div><script src="./site-header.js?v=20261013-language1"></script>
 <div class="wrap">
 
-<section class="hero">
+<section class="hero" data-pp-icon="book">
 <div class="kicker">PRINTPROFIT • INFORMATION CENTRE</div>
 <h1>Guide &amp; <strong>Help.</strong></h1>
 <p class="lead">A practical guide to the current PrintProfit workflow, pricing calculations, saving, file analysis, materials, delivery, selling fees, Profit Toolkit and Compare Products.</p>
@@ -76,10 +77,10 @@ body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!impor
 <div class="section" id="workflow">
 <div class="section-title">Start here</div>
 <div class="grid">
-<article class="card"><div class="num">1</div><h2>Your Model</h2><p>Upload a supported model or print file. Where useful information is available, PrintProfit analyses it and shows what it found. You can also enter print time and material usage yourself.</p></article>
-<article class="card"><div class="num">2</div><h2>Print Setup</h2><p>Select the printer and material used for the print. Printer profiles provide the figures needed for power and depreciation; resin profiles switch the material workflow to resin.</p></article>
-<article class="card"><div class="num">3</div><h2>Costs &amp; Fees</h2><p>Enter the costs involved in making and selling the print: labour, packaging, other costs, electricity, marketplace fees, payment fees, fixed fees and delivery.</p></article>
-<article class="card"><div class="num">4</div><h2>Calculate &amp; Results</h2><p>Set your selling price and quantity, then use Calculate Costs &amp; Price. The Results area shows single-print or batch economics, profit, margin and pricing options.</p></article>
+<article class="card" data-pp-icon="cube"><div class="num">1</div><h2>Your Model</h2><p>Upload a supported model or print file. Where useful information is available, PrintProfit analyses it and shows what it found. You can also enter print time and material usage yourself.</p></article>
+<article class="card" data-pp-icon="printer-settings"><div class="num">2</div><h2>Print Setup</h2><p>Select the printer and material used for the print. Printer profiles provide the figures needed for power and depreciation; resin profiles switch the material workflow to resin.</p></article>
+<article class="card" data-pp-icon="wrench"><div class="num">3</div><h2>Costs &amp; Fees</h2><p>Enter the costs involved in making and selling the print: labour, packaging, other costs, electricity, marketplace fees, payment fees, fixed fees and delivery.</p></article>
+<article class="card" data-pp-icon="profit"><div class="num">4</div><h2>Calculate &amp; Results</h2><p>Set your selling price and quantity, then use Calculate Costs &amp; Price. The Results area shows single-print or batch economics, profit, margin and pricing options.</p></article>
 </div>
 <div class="note">You do not need to fill every field. Blank cost fields are treated as zero for a basic estimate, but your result is only as useful as the figures you provide.</div>
 </div>
@@ -87,137 +88,137 @@ body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!impor
 <div class="section">
 <div class="section-title">Your Model &amp; file intelligence</div>
 <div class="grid">
-<article class="card"><h3>G-code and supported files</h3><p>PrintProfit recognises G-code and several common 3D-printing formats, including G-code variants, 3MF, Lychee, CHITUBOX, resin slice formats and common model formats such as STL, OBJ, AMF, PLY and STEP/STP. What PrintProfit can calculate automatically depends on what information the file contains.</p></article>
-<article class="card"><h3>Automatic print data</h3><p>Readable sliced data can provide print time and material usage. G-code metadata may supply time, filament grams, filament length or volume. 3MF projects can also expose slicer, printer, profile, nozzle, layer height, infill, supports and bed information where stored.</p></article>
-<article class="card"><h3>File analysis status</h3><p>The Print Information area tells you whether the file analysis is detailed, basic, limited or still waiting. Missing data is not guessed; enter it manually when necessary.</p></article>
-<article class="card"><h3>Apply detected settings</h3><p>When file metadata includes useful printer or material information, use Apply detected settings to transfer the detected values into the calculator. Check the values against your slicer before relying on the final result.</p></article>
+<article class="card" data-pp-icon="file"><h3>G-code and supported files</h3><p>PrintProfit recognises G-code and several common 3D-printing formats, including G-code variants, 3MF, Lychee, CHITUBOX, resin slice formats and common model formats such as STL, OBJ, AMF, PLY and STEP/STP. What PrintProfit can calculate automatically depends on what information the file contains.</p></article>
+<article class="card" data-pp-icon="chart"><h3>Automatic print data</h3><p>Readable sliced data can provide print time and material usage. G-code metadata may supply time, filament grams, filament length or volume. 3MF projects can also expose slicer, printer, profile, nozzle, layer height, infill, supports and bed information where stored.</p></article>
+<article class="card" data-pp-icon="search"><h3>File analysis status</h3><p>The Print Information area tells you whether the file analysis is detailed, basic, limited or still waiting. Missing data is not guessed; enter it manually when necessary.</p></article>
+<article class="card" data-pp-icon="settings"><h3>Apply detected settings</h3><p>When file metadata includes useful printer or material information, use Apply detected settings to transfer the detected values into the calculator. Check the values against your slicer before relying on the final result.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Print Setup</div>
-<article class="card" id="print-farm"><h2>Print farm / production run</h2><p>Enable this optional setting in Print Setup when using several printers or several products on a build plate. Set the total product quantity in Costs &amp; Fees. Add one group for each printer model or cycle setup, then enter the number of printers, products per cycle, actual slicer time per cycle, average power, purchase cost and lifetime. Profile values are editable estimates.</p><p>One print cycle is one print job on one printer. Cycles can run simultaneously on different printers. The summary shows total cycles, cycles per printer, full cycles, any final partial cycle, combined printer time, estimated completion time and energy. For example, 500 products at 30 per cycle need 17 cycles; three identical printers complete these in six rounds.</p><p>Material usage, labour, packaging and other costs remain <strong>per product</strong>. Electricity uses your existing unit rate. Depreciation and electricity include every full or partially filled cycle, then feed an average cost per product into Results and the pricing tools. Delivery and fixed order fees retain the calculator’s existing batch rules.</p><p>Products are allocated by group order and plate capacity. This is a planning estimate, not a fastest-machine scheduler. Printers start together; elapsed time excludes cooldown, unloading, changeovers and downtime. Use the same material and units throughout a run; calculate resin and filament separately. Save Project includes the production-run setup. Turn the option off to return to normal single-printer costing.</p></article>
-<article class="card" id="business-tools"><h2>Business tools — Pro previews</h2><p>In Results, save up to three calculation snapshots to compare quantities, revenue, costs, fees, profit, cycles and energy. Name each scenario, change the calculator and save the next. Snapshots are saved with your project; removing a snapshot does not change the calculation. Comparisons use your current display currency.</p><p>Customer quotation: enter your seller name, customer (optional), description, reference and tax/delivery notes. Print or choose Save as PDF. This draft includes selling prices, discounts, delivery charges and the customer total; internal costs and profit are excluded. Confirm the details and tax treatment yourself before sending. Customer details entered in the quotation form are not saved in projects.</p><p>Internal costing CSV includes material, electricity, depreciation, labour, packaging, fees, profit and farm details. It is intended for your records, not for customers.</p><p>Production allowances: expected failures add full planned attempts and associated material and per-product labour. Changeover minutes add hands-on labour and elapsed time between cycles. Downtime extends elapsed time only, with no assumed idle electricity or depreciation. Packaging and order delivery remain tied to requested good products. These are estimates; actual failures and stock use can differ. Logging a completed print deducts the normal successful-product material amount, not estimated failures.</p></article>
-<article class="card" id="material-scanning"><h2>Material scanning — Pro preview</h2><p>Open My Workspace → Materials → Scan material. Start the camera on a supported HTTPS browser, or type an EAN/UPC code. Camera images are processed on your device and are not uploaded. Stop scanning, close the workspace or leave the page to stop the camera.</p><p>The scanner recognises barcodes, not printed label text or RFID chips. A new barcode needs manual product details and a purchase price. Save it once; later scans can prefill matching workspace details. Review the type, brand, colour, package amount, price and remaining stock, then Save to add a new package. Scanning alone never changes stock. Unrecognised or conflicting codes use manual entry. Saved barcode metadata follows your normal workspace sync choice.</p><p>These business and scanning tools are previews. Subscription billing and paid access have not been enabled; ordinary manual material entry remains available.</p></article>
+<article class="card" id="print-farm" data-pp-icon="printer"><h2>Print farm / production run</h2><p>Enable this optional setting in Print Setup when using several printers or several products on a build plate. Set the total product quantity in Costs &amp; Fees. Add one group for each printer model or cycle setup, then enter the number of printers, products per cycle, actual slicer time per cycle, average power, purchase cost and lifetime. Profile values are editable estimates.</p><p>One print cycle is one print job on one printer. Cycles can run simultaneously on different printers. The summary shows total cycles, cycles per printer, full cycles, any final partial cycle, combined printer time, estimated completion time and energy. For example, 500 products at 30 per cycle need 17 cycles; three identical printers complete these in six rounds.</p><p>Material usage, labour, packaging and other costs remain <strong>per product</strong>. Electricity uses your existing unit rate. Depreciation and electricity include every full or partially filled cycle, then feed an average cost per product into Results and the pricing tools. Delivery and fixed order fees retain the calculator’s existing batch rules.</p><p>Products are allocated by group order and plate capacity. This is a planning estimate, not a fastest-machine scheduler. Printers start together; elapsed time excludes cooldown, unloading, changeovers and downtime. Use the same material and units throughout a run; calculate resin and filament separately. Save Project includes the production-run setup. Turn the option off to return to normal single-printer costing.</p></article>
+<article class="card" id="business-tools" data-pp-icon="chart"><h2>Business tools — Pro previews</h2><p>In Results, save up to three calculation snapshots to compare quantities, revenue, costs, fees, profit, cycles and energy. Name each scenario, change the calculator and save the next. Snapshots are saved with your project; removing a snapshot does not change the calculation. Comparisons use your current display currency.</p><p>Customer quotation: enter your seller name, customer (optional), description, reference and tax/delivery notes. Print or choose Save as PDF. This draft includes selling prices, discounts, delivery charges and the customer total; internal costs and profit are excluded. Confirm the details and tax treatment yourself before sending. Customer details entered in the quotation form are not saved in projects.</p><p>Internal costing CSV includes material, electricity, depreciation, labour, packaging, fees, profit and farm details. It is intended for your records, not for customers.</p><p>Production allowances: expected failures add full planned attempts and associated material and per-product labour. Changeover minutes add hands-on labour and elapsed time between cycles. Downtime extends elapsed time only, with no assumed idle electricity or depreciation. Packaging and order delivery remain tied to requested good products. These are estimates; actual failures and stock use can differ. Logging a completed print deducts the normal successful-product material amount, not estimated failures.</p></article>
+<article class="card" id="material-scanning" data-pp-icon="filament"><h2>Material scanning — Pro preview</h2><p>Open My Workspace → Workshop → My Materials → Scan material. Start the camera on a supported HTTPS browser, or type an EAN/UPC code. Camera images are processed on your device and are not uploaded. Stop scanning, close the workspace or leave the page to stop the camera.</p><p>The scanner recognises barcodes, not printed label text or RFID chips. A new barcode needs manual product details and a purchase price. Save it once; later scans can prefill matching workspace details. Review the type, brand, colour, package amount, price and remaining stock, then Save to add a new package. Scanning alone never changes stock. Unrecognised or conflicting codes use manual entry. Saved barcode metadata follows your normal workspace sync choice.</p><p>These business and scanning tools are previews. Subscription billing and paid access have not been enabled; ordinary manual material entry remains available.</p></article>
 <div class="grid">
-<article class="card"><h3>Printer</h3><p>Select a supported printer profile or choose Custom. A printer profile supplies estimated power and a printer price/lifetime figure used for electricity and depreciation calculations. Printer prices are reference values and can change.</p></article>
-<article class="card"><h3>Material type</h3><p>Choose Filament (FDM) or Resin (SLA / MSLA / DLP). Resin printer profiles can automatically move the calculator into resin mode.</p></article>
-<article class="card"><h3>Material cost</h3><p>Enter package size and package cost, then enter how much material is used per print. PrintProfit calculates the material cost from the amount used rather than charging the whole spool or bottle to one print.</p></article>
-<article class="card"><h3>Print time</h3><p>Use the detected print time where available, or enter it manually. Print time affects electricity and printer depreciation and therefore changes the total cost to make.</p></article>
+<article class="card" data-pp-icon="printer"><h3>Printer</h3><p>Select a supported printer profile or choose Custom. A printer profile supplies estimated power and a printer price/lifetime figure used for electricity and depreciation calculations. Printer prices are reference values and can change.</p></article>
+<article class="card" data-pp-icon="filament"><h3>Material type</h3><p>Choose Filament (FDM) or Resin (SLA / MSLA / DLP). Resin printer profiles can automatically move the calculator into resin mode.</p></article>
+<article class="card" data-pp-icon="coins"><h3>Material cost</h3><p>Enter package size and package cost, then enter how much material is used per print. PrintProfit calculates the material cost from the amount used rather than charging the whole spool or bottle to one print.</p></article>
+<article class="card" data-pp-icon="time"><h3>Print time</h3><p>Use the detected print time where available, or enter it manually. Print time affects electricity and printer depreciation and therefore changes the total cost to make.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Operating Costs</div>
 <div class="grid">
-<article class="card"><h3>Labour</h3><p>Enter labour hours per print and your labour rate per hour. This represents your time preparing, finishing, packing or otherwise working on each print.</p></article>
-<article class="card"><h3>Packaging &amp; other</h3><p>Packaging is a per-print cost. Other is for additional costs that do not fit the main fields, such as consumables or small operating expenses.</p></article>
-<article class="card"><h3>Electricity</h3><p>Enter your unit electricity rate (£/kWh), or use an available reference benchmark as a starting point. The calculator combines the printer's estimated power draw with print time to estimate electricity usage and cost.</p></article>
-<article class="card"><h3>Actual tariff matters</h3><p>Supplier names and benchmark rates are reference information only. Your real tariff can differ because of supplier, plan, region, meter type and payment method, so use the rate from your bill whenever possible.</p></article>
+<article class="card" data-pp-icon="time"><h3>Labour</h3><p>Enter labour hours per print and your labour rate per hour. This represents your time preparing, finishing, packing or otherwise working on each print.</p></article>
+<article class="card" data-pp-icon="package"><h3>Packaging &amp; other</h3><p>Packaging is a per-print cost. Other is for additional costs that do not fit the main fields, such as consumables or small operating expenses.</p></article>
+<article class="card" data-pp-icon="power"><h3>Electricity</h3><p>Enter your unit electricity rate (£/kWh), or use an available reference benchmark as a starting point. The calculator combines the printer's estimated power draw with print time to estimate electricity usage and cost.</p></article>
+<article class="card" data-pp-icon="power"><h3>Actual tariff matters</h3><p>Supplier names and benchmark rates are reference information only. Your real tariff can differ because of supplier, plan, region, meter type and payment method, so use the rate from your bill whenever possible.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Selling &amp; Fulfilment</div>
 <div class="grid">
-<article class="card"><h3>Platform fees</h3><p>Select your selling platform to preload its configured platform fee, payment fee and fixed fee assumptions. You can edit those fields when your own account charges differ.</p></article>
-<article class="card"><h3>Delivery</h3><p>Select a courier and service to load a reference rate. The automatic rate can still be overridden in the Cost to you field when your actual shipping cost is different.</p></article>
-<article class="card"><h3>Customer delivery charge</h3><p>Cost to you is the amount you pay the courier. Charged to customer is the amount you collect from the customer. The calculator keeps these values separate when calculating profit.</p></article>
-<article class="card"><h3>Reference rates</h3><p>Courier and platform figures are estimates/reference data. Parcel size, dimensions, destination, account type, surcharges, promotions and fee changes can alter the final amount.</p></article>
+<article class="card" data-pp-icon="coins"><h3>Platform fees</h3><p>Select your selling platform to preload its configured platform fee, payment fee and fixed fee assumptions. You can edit those fields when your own account charges differ.</p></article>
+<article class="card" data-pp-icon="truck"><h3>Delivery</h3><p>Select a courier and service to load a reference rate. The automatic rate can still be overridden in the Cost to you field when your actual shipping cost is different.</p></article>
+<article class="card" data-pp-icon="truck"><h3>Customer delivery charge</h3><p>Cost to you is the amount you pay the courier. Charged to customer is the amount you collect from the customer. The calculator keeps these values separate when calculating profit.</p></article>
+<article class="card" data-pp-icon="chart"><h3>Reference rates</h3><p>Courier and platform figures are estimates/reference data. Parcel size, dimensions, destination, account type, surcharges, promotions and fee changes can alter the final amount.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Quantity &amp; Batch Pricing</div>
 <div class="grid">
-<article class="card"><h3>Quantity</h3><p>Set how many identical items you are pricing. Quantity of one represents a single print; a quantity greater than one automatically switches the results view to Batch Pricing.</p></article>
-<article class="card"><h3>Batch discount</h3><p>Enter the percentage discount applied to the selling price per item for the batch. This changes batch sales and therefore batch profit and margin.</p></article>
-<article class="card"><h3>Selling price per item</h3><p>Enter the price you intend to charge for one item. The calculator then uses the quantity, discount, fees and delivery inputs to calculate the batch outcome.</p></article>
-<article class="card"><h3>Single vs Batch result</h3><p>Single Print shows per-print cost, selling price, profit and margin. Batch Pricing shows the cost, sales and profit for the full quantity using the current batch discount and fee assumptions.</p></article>
+<article class="card" data-pp-icon="cube"><h3>Quantity</h3><p>Set how many identical items you are pricing. Quantity of one represents a single print; a quantity greater than one automatically switches the results view to Batch Pricing.</p></article>
+<article class="card" data-pp-icon="tag"><h3>Batch discount</h3><p>Enter the percentage discount applied to the selling price per item for the batch. This changes batch sales and therefore batch profit and margin.</p></article>
+<article class="card" data-pp-icon="coins"><h3>Selling price per item</h3><p>Enter the price you intend to charge for one item. The calculator then uses the quantity, discount, fees and delivery inputs to calculate the batch outcome.</p></article>
+<article class="card" data-pp-icon="compare"><h3>Single vs Batch result</h3><p>Single Print shows per-print cost, selling price, profit and margin. Batch Pricing shows the cost, sales and profit for the full quantity using the current batch discount and fee assumptions.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Results &amp; target pricing</div>
 <div class="grid">
-<article class="card"><h3>Total Cost to Make</h3><p>This combines the applicable material, electricity, printer depreciation, labour, packaging, other costs and delivery cost for the selected result.</p></article>
-<article class="card"><h3>Selling Price, Profit &amp; Margin</h3><p>Selling Price is what you charge. Profit is the amount left after the included costs and applicable selling fees. Margin is profit expressed as a percentage of selling price.</p></article>
-<article class="card"><h3>Quick price buttons</h3><p>The 30%, 50% and 60% buttons set a target margin using the current costs and fees. Clicking an active quick button again can undo it and restore the previous selling price.</p></article>
-<article class="card"><h3>Custom target margin</h3><p>Enter your own target margin, such as 42.5%, to calculate a price from the current cost and fee assumptions. Batch target pricing also uses the current quantity, discount and delivery charge.</p></article>
+<article class="card" data-pp-icon="calculator"><h3>Total Cost to Make</h3><p>This combines the applicable material, electricity, printer depreciation, labour, packaging, other costs and delivery cost for the selected result.</p></article>
+<article class="card" data-pp-icon="profit"><h3>Selling Price, Profit &amp; Margin</h3><p>Selling Price is what you charge. Profit is the amount left after the included costs and applicable selling fees. Margin is profit expressed as a percentage of selling price.</p></article>
+<article class="card" data-pp-icon="tag"><h3>Quick price buttons</h3><p>The 30%, 50% and 60% buttons set a target margin using the current costs and fees. Clicking an active quick button again can undo it and restore the previous selling price.</p></article>
+<article class="card" data-pp-icon="profit"><h3>Custom target margin</h3><p>Enter your own target margin, such as 42.5%, to calculate a price from the current cost and fee assumptions. Batch target pricing also uses the current quantity, discount and delivery charge.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Profit Toolkit</div>
 <div class="grid">
-<article class="card"><h3>What If?</h3><p>Test changes without permanently changing the main calculation. Explore lower material usage, less print time, labour savings, packaging or delivery savings, or a different selling platform.</p></article>
-<article class="card"><h3>Cost Breakdown</h3><p>See how the current cost to make is divided between material, electricity, printer depreciation, labour, packaging/other costs and delivery. This helps identify which inputs are contributing most to cost.</p></article>
-<article class="card"><h3>Price Ladder</h3><p>See the selling price needed for break-even and a range of target margins using the current selling channel, fixed fee and delivery charge.</p></article>
-<article class="card"><h3>Bulk Buy</h3><p>Compare a bulk material or packaging purchase against your current price and estimate saving per pack, total saving and saving per print.</p></article>
-<article class="card"><h3>Sell Where?</h3><p>Compare fee impact across available selling channels at your current selling price. Platform assumptions may not include every monthly, promotional or optional charge.</p></article>
-<article class="card"><h3>Profit status</h3><p>The Results area gives a quick status such as Profit, Break-even or Loss together with the current margin so you can read the outcome quickly.</p></article>
+<article class="card" data-pp-icon="compare"><h3>What If?</h3><p>Test changes without permanently changing the main calculation. Explore lower material usage, less print time, labour savings, packaging or delivery savings, or a different selling platform.</p></article>
+<article class="card" data-pp-icon="chart"><h3>Cost Breakdown</h3><p>See how the current cost to make is divided between material, electricity, printer depreciation, labour, packaging/other costs and delivery. This helps identify which inputs are contributing most to cost.</p></article>
+<article class="card" data-pp-icon="chart"><h3>Price Ladder</h3><p>See the selling price needed for break-even and a range of target margins using the current selling channel, fixed fee and delivery charge.</p></article>
+<article class="card" data-pp-icon="package"><h3>Bulk Buy</h3><p>Compare a bulk material or packaging purchase against your current price and estimate saving per pack, total saving and saving per print.</p></article>
+<article class="card" data-pp-icon="truck"><h3>Sell Where?</h3><p>Compare fee impact across available selling channels at your current selling price. Platform assumptions may not include every monthly, promotional or optional charge.</p></article>
+<article class="card" data-pp-icon="profit"><h3>Profit status</h3><p>The Results area gives a quick status such as Profit, Break-even or Loss together with the current margin so you can read the outcome quickly.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">My Workspace</div>
 <div class="grid">
-<article class="card"><h3>Projects</h3><p>Save and manage named calculator setups from the Projects section. Projects save on this device by default. If you sign in and choose account sync, project settings can also appear on your other devices. Uploaded 3D model files stay on the device where you added them.</p></article>
-<article class="card"><h3>Workshop</h3><p>Keep printer profiles and material stock ready for your next print. Sign in with a verified email address to sync these profiles across devices.</p></article>
-<article class="card"><h3>Profile &amp; Account</h3><p>Manage sign-in, verification, password recovery and account deletion. Creating an account is optional; the calculator and local projects remain available without one.</p></article>
+<article class="card" data-pp-icon="folder"><h3>Projects</h3><p>Save and manage named calculator setups from the Projects section. Projects save on this device by default. If you sign in and choose account sync, project settings can also appear on your other devices. Uploaded 3D model files stay on the device where you added them.</p></article>
+<article class="card" data-pp-icon="printer"><h3>Workshop</h3><p>Keep printer profiles and material stock ready for your next print. Sign in with a verified email address to sync these profiles across devices.</p></article>
+<article class="card" data-pp-icon="settings"><h3>Profile &amp; Account</h3><p>Manage sign-in, verification, password recovery and account deletion. Creating an account is optional; the calculator and local projects remain available without one.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Workshop: materials &amp; printers</div>
 <div class="grid">
-<article class="card"><h3>Save regular materials</h3><p>The Workshop section of My Workspace lets you keep reusable filament and resin profiles with a name, type, brand, colour, package amount and cost.</p></article>
-<article class="card"><h3>Use a saved material</h3><p>Select Use on a saved material to apply its details to the calculator instead of entering the same package information repeatedly.</p></article>
-<article class="card"><h3>Edit or delete</h3><p>Saved material profiles can be edited or deleted. They are separate from saved calculator projects.</p></article>
-<article class="card"><h3>Currency</h3><p>Material library values are stored for reuse and displayed using your selected calculator currency and conversion settings.</p></article>
+<article class="card" data-pp-icon="filament"><h3>Save regular materials</h3><p>The Workshop section of My Workspace lets you keep reusable filament and resin profiles with a name, type, brand, colour, package amount and cost.</p></article>
+<article class="card" data-pp-icon="filament"><h3>Use a saved material</h3><p>Select Use on a saved material to apply its details to the calculator instead of entering the same package information repeatedly.</p></article>
+<article class="card" data-pp-icon="settings"><h3>Edit or delete</h3><p>Saved material profiles can be edited or deleted. They are separate from saved calculator projects.</p></article>
+<article class="card" data-pp-icon="coins"><h3>Currency</h3><p>Material library values are stored for reuse and displayed using your selected calculator currency and conversion settings.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Projects: saved calculator setups</div>
 <div class="grid">
-<article class="card"><h3>Temporary working draft</h3><p>PrintProfit keeps a temporary working draft on the current device while you work and when you deliberately move between calculator areas such as Compare Products or Profit Advisor. This prevents ordinary section changes from losing your inputs.</p></article>
-<article class="card"><h3>Save Project</h3><p>Save Project creates a named project containing the current calculator setup. After loading a project, Save becomes Update so changes can be saved back to that same project.</p></article>
-<article class="card"><h3>Manage saved projects</h3><p>The Projects section of My Workspace lets you Load, Update, Rename, Duplicate and Delete saved projects. Reset clears the current working state but does not delete separately saved projects.</p></article>
-<article class="card"><h3>Where saved projects live</h3><p>Projects save in this browser. If you enable account sync, a copy of your saved project settings and slicer-analysis details can sync to your other devices. Uploaded print files stay on the device where you added them.</p></article>
+<article class="card" data-pp-icon="file"><h3>Temporary working draft</h3><p>PrintProfit keeps a temporary working draft on the current device while you work and when you deliberately move between calculator areas such as Compare Products or Profit Advisor. This prevents ordinary section changes from losing your inputs.</p></article>
+<article class="card" data-pp-icon="save"><h3>Save Project</h3><p>Save Project creates a named project containing the current calculator setup. After loading a project, Save becomes Update so changes can be saved back to that same project.</p></article>
+<article class="card" data-pp-icon="folder"><h3>Manage saved projects</h3><p>The Projects section of My Workspace lets you Load, Update, Rename, Duplicate and Delete saved projects. Reset clears the current working state but does not delete separately saved projects.</p></article>
+<article class="card" data-pp-icon="folder"><h3>Where saved projects live</h3><p>Projects save in this browser. If you enable account sync, a copy of your saved project settings and slicer-analysis details can sync to your other devices. Uploaded print files stay on the device where you added them.</p></article>
 </div>
 </div>
 
 <div class="section">
 <div class="section-title">Compare Products</div>
 <div class="grid">
-<article class="card"><h3>Search &amp; filter</h3><p>Search product names, retailers, brands, colours, pack/build details or material type. Filter by category, brand, material, colour, retailer, price range and availability.</p></article>
-<article class="card"><h3>Smart search &amp; quick filters</h3><p>Common aliases such as Bambu/Bambu Lab, PLA Plus/PLA+ and FFF/FDM are recognised. Quick filters let you jump to Filament, 3D printers, In stock or Under £20.</p></article>
-<article class="card"><h3>Select &amp; compare</h3><p>Tick the box beside a product and keep selecting while changing filters or brands. The comparison tray keeps your selections for the current browser session.</p></article>
-<article class="card"><h3>Product details</h3><p>Use Details to see the product image, category, brand, material/technology, colour, retailer, pack/build volume, price, unit cost, availability and any recorded price history.</p></article>
-<article class="card"><h3>Saved comparisons</h3><p>Save a selected group as a named comparison. Saved lists are stored locally on this device and can be loaded or deleted later.</p></article>
-<article class="card"><h3>Prices, images &amp; freshness</h3><p>Reference listings show checked dates and a live/reference status. Price history builds as future refreshes record changes. Missing product photos use a safe fallback; the refresh job can discover exact retailer images where supported.</p></article>
-<article class="card"><h3>Delivery &amp; final checkout</h3><p>Delivered-price information is shown only when shipping data is available. Final retailer checkout remains the source of truth for delivery, VAT, coupons, bundles, account pricing and stock.</p></article>
-<article class="card"><h3>Check live before buying</h3><p>Compare Products is a comparison aid, not a guarantee of checkout price. Open the live retailer listing before purchasing.</p></article>
+<article class="card" data-pp-icon="search"><h3>Search &amp; filter</h3><p>Search product names, retailers, brands, colours, pack/build details or material type. Filter by category, brand, material, colour, retailer, price range and availability.</p></article>
+<article class="card" data-pp-icon="search"><h3>Smart search &amp; quick filters</h3><p>Common aliases such as Bambu/Bambu Lab, PLA Plus/PLA+ and FFF/FDM are recognised. Quick filters let you jump to Filament, 3D printers, In stock or Under £20.</p></article>
+<article class="card" data-pp-icon="compare"><h3>Select &amp; compare</h3><p>Tick the box beside a product and keep selecting while changing filters or brands. The comparison tray keeps your selections for the current browser session.</p></article>
+<article class="card" data-pp-icon="file"><h3>Product details</h3><p>Use Details to see the product image, category, brand, material/technology, colour, retailer, pack/build volume, price, unit cost, availability and any recorded price history.</p></article>
+<article class="card" data-pp-icon="save"><h3>Saved comparisons</h3><p>Save a selected group as a named comparison. Saved lists are stored locally on this device and can be loaded or deleted later.</p></article>
+<article class="card" data-pp-icon="time"><h3>Prices, images &amp; freshness</h3><p>Reference listings show checked dates and a live/reference status. Price history builds as future refreshes record changes. Missing product photos use a safe fallback; the refresh job can discover exact retailer images where supported.</p></article>
+<article class="card" data-pp-icon="truck"><h3>Delivery &amp; final checkout</h3><p>Delivered-price information is shown only when shipping data is available. Final retailer checkout remains the source of truth for delivery, VAT, coupons, bundles, account pricing and stock.</p></article>
+<article class="card" data-pp-icon="search"><h3>Check live before buying</h3><p>Compare Products is a comparison aid, not a guarantee of checkout price. Open the live retailer listing before purchasing.</p></article>
 </div>
 </div>
 
 <div class="section" id="affiliate-links">
 <div class="section-title">Affiliate links</div>
-<article class="card"><h3>Coupons &amp; deals</h3><p>When an approved offer is available for a product and retailer, its card or table row shows a Coupons &amp; deals button. Open it to see available codes, no-code deals, expiry dates, exclusions and the last checked date. Copy code only copies the visible code; Visit retailer is a separate action. Expired offers and offers not checked within seven days are hidden automatically. Eligibility and checkout prices can vary, so check the retailer’s terms. Affiliate retailer links are clearly labelled.</p></article>
-<article class="card"><h3>What does the chain-link symbol and Affiliate label mean?</h3><p>Links marked with a chain-link symbol and the word <strong>Affiliate</strong> are advertising links. If you follow one and make a qualifying purchase, PrintProfit may earn a commission at no extra cost to you. This helps support the site.</p><p>The label appears beside the relevant link so you can identify it before clicking. Other retailer links may not earn commission. The Shop ELEGOO UK and Shop Anycubic UK affiliate buttons open their UK shops. Links to Anycubic’s UK store include our referral code and keep the selected product and variant. Individual retailer links are only marked Affiliate when affiliate tracking is connected to them.</p><p>An affiliate relationship does not mean PrintProfit is the retailer’s official website. Check the retailer’s current price, delivery charges and terms before buying.</p></article>
+<article class="card" data-pp-icon="tag"><h3>Coupons &amp; deals</h3><p>When an approved offer is available for a product and retailer, its card or table row shows a Coupons &amp; deals button. Open it to see available codes, no-code deals, expiry dates, exclusions and the last checked date. Copy code only copies the visible code; Visit retailer is a separate action. Expired offers and offers not checked within seven days are hidden automatically. Eligibility and checkout prices can vary, so check the retailer’s terms. Affiliate retailer links are clearly labelled.</p></article>
+<article class="card" data-pp-icon="file"><h3>What does the chain-link symbol and Affiliate label mean?</h3><p>Links marked with a chain-link symbol and the word <strong>Affiliate</strong> are advertising links. If you follow one and make a qualifying purchase, PrintProfit may earn a commission at no extra cost to you. This helps support the site.</p><p>The label appears beside the relevant link so you can identify it before clicking. Other retailer links may not earn commission. The Shop ELEGOO UK and Shop Anycubic UK affiliate buttons open their UK shops. Links to Anycubic’s UK store include our referral code and keep the selected product and variant. Individual retailer links are only marked Affiliate when affiliate tracking is connected to them.</p><p>An affiliate relationship does not mean PrintProfit is the retailer’s official website. Check the retailer’s current price, delivery charges and terms before buying.</p></article>
 </div>
 
-<div class="section" id="install-app"><div class="section-title">Install PrintProfit</div><article class="card"><h3>Your home-screen app</h3><p>Use Install PrintProfit when offered, or your browser’s Add to Home screen option. On iPhone and iPad, open PrintProfit in Safari and use Share → Add to Home Screen. Installation keeps the website’s features and opens it in its own window where supported.</p><p>This first app version requires an internet connection. It does not store prices, coupons or account data for offline browsing. Local projects belong to the browser/device storage: use the same browser profile and export a backup before switching browsers, devices or clearing site data. Account sync remains optional. Website updates are fetched online; close and reopen the app if an update is not visible.</p></article></div>
+<div class="section" id="install-app"><div class="section-title">Install PrintProfit</div><article class="card" data-pp-icon="home"><h3>Your home-screen app</h3><p>Use Install PrintProfit when offered, or your browser’s Add to Home screen option. On iPhone and iPad, open PrintProfit in Safari and use Share → Add to Home Screen. Installation keeps the website’s features and opens it in its own window where supported.</p><p>This first app version requires an internet connection. It does not store prices, coupons or account data for offline browsing. Local projects belong to the browser/device storage: use the same browser profile and export a backup before switching browsers, devices or clearing site data. Account sync remains optional. Website updates are fetched online; close and reopen the app if an update is not visible.</p></article></div>
 <div class="section" id="settings">
 <div class="section-title">Settings explained</div>
 <div class="grid">
-<article class="card"><h3>Dark mode</h3><p>Switch between the standard dark PrintProfit interface and the lighter display.</p></article>
-<article class="card"><h3>Language</h3><p>Choose from English, Polski, Deutsch, Français, Español or Italiano. Your language choice is saved on this device.</p></article>
-<article class="card"><h3>Units</h3><p>Choose metric or imperial measurements. Material measurements change to suit the selected unit system.</p></article>
-<article class="card"><h3>Currency</h3><p>Choose the currency used to display costs and prices. The exchange-rate field controls non-GBP conversion and can be adjusted when you have a more appropriate rate.</p></article>
-<article class="card"><h3>Apply Changes</h3><p>Use Apply Changes after changing settings so the calculator refreshes its display and calculations using the selected preferences.</p></article>
-<article class="card"><h3>Reset Calculator</h3><p>Reset clears the current calculator inputs and temporary working state. It does not delete the separately saved projects or saved materials.</p></article>
+<article class="card" data-pp-icon="settings"><h3>Dark mode</h3><p>Switch between the standard dark PrintProfit interface and the lighter display.</p></article>
+<article class="card" data-pp-icon="book"><h3>Language</h3><p>Choose from English, Polski, Deutsch, Français, Español or Italiano. Your language choice is saved on this device.</p></article>
+<article class="card" data-pp-icon="calculator"><h3>Units</h3><p>Choose metric or imperial measurements. Material measurements change to suit the selected unit system.</p></article>
+<article class="card" data-pp-icon="coins"><h3>Currency</h3><p>Choose the currency used to display costs and prices. The exchange-rate field controls non-GBP conversion and can be adjusted when you have a more appropriate rate.</p></article>
+<article class="card" data-pp-icon="save"><h3>Apply Changes</h3><p>Use Apply Changes after changing settings so the calculator refreshes its display and calculations using the selected preferences.</p></article>
+<article class="card" data-pp-icon="undo"><h3>Reset Calculator</h3><p>Reset clears the current calculator inputs and temporary working state. It does not delete the separately saved projects or saved materials.</p></article>
 </div>
 </div>
 
@@ -225,10 +226,10 @@ body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!impor
 <div class="section-title">Account data &amp; privacy</div>
 <div class="note">You can use PrintProfit without an account. With your consent, account sync can include printer and material profiles plus saved project settings and slicer-analysis details. Existing local profiles and Projects are copied only if you choose “Import profiles &amp; projects”. Uploaded 3D model files stay on this device. Read the full <a href="./privacy.html">Privacy Notice</a> and <a href="./terms.html">Terms of Use</a>.</div>
 <div class="grid">
-<article class="card"><h3>Who operates PrintProfit?</h3><p>PrintProfit is operated by <strong>Mr Connor Steven Jones</strong>. For account or privacy questions, email <a href="mailto:Printprofit26@outlook.com">Printprofit26@outlook.com</a>.</p></article>
-<article class="card"><h3>What is stored in an account?</h3><p>Firebase Authentication handles your email address, account ID, verification and password recovery. PrintProfit does not store your password. With your choice to sync, your printer and material profiles, saved project settings, slicer-analysis details and the small records needed to keep devices in sync are stored in your own Firebase account area. Uploaded 3D model file contents stay on the device where they were added. Profiles and Projects already saved in a browser are copied only if you choose “Import profiles &amp; projects”; you can keep them on that device instead.</p></article>
-<article class="card"><h3>What stays on my device?</h3><p>Calculator inputs and supported print files stay in your browser. If you enable account sync, a copy of saved project settings and slicer-analysis details is sent to your account; the original model files are not uploaded. Deleting your account does not remove local Projects, files or browser data from your other devices.</p></article>
-<article class="card"><h3>Where is account data stored?</h3><p>Firebase Authentication processes authentication information in the United States. This project's Firestore database is in London, United Kingdom. Optional Google Analytics runs only after you accept it. Read the <a href="./privacy.html">full Privacy Notice</a> for providers, lawful bases, retention and your rights.</p></article>
+<article class="card" data-pp-icon="home"><h3>Who operates PrintProfit?</h3><p>PrintProfit is operated by <strong>Mr Connor Steven Jones</strong>. For account or privacy questions, email <a href="mailto:Printprofit26@outlook.com">Printprofit26@outlook.com</a>.</p></article>
+<article class="card" data-pp-icon="folder"><h3>What is stored in an account?</h3><p>Firebase Authentication handles your email address, account ID, verification and password recovery. PrintProfit does not store your password. With your choice to sync, your printer and material profiles, saved project settings, slicer-analysis details and the small records needed to keep devices in sync are stored in your own Firebase account area. Uploaded 3D model file contents stay on the device where they were added. Profiles and Projects already saved in a browser are copied only if you choose “Import profiles &amp; projects”; you can keep them on that device instead.</p></article>
+<article class="card" data-pp-icon="file"><h3>What stays on my device?</h3><p>Calculator inputs and supported print files stay in your browser. If you enable account sync, a copy of saved project settings and slicer-analysis details is sent to your account; the original model files are not uploaded. Deleting your account does not remove local Projects, files or browser data from your other devices.</p></article>
+<article class="card" data-pp-icon="folder"><h3>Where is account data stored?</h3><p>Firebase Authentication processes authentication information in the United States. This project's Firestore database is in London, United Kingdom. Optional Google Analytics runs only after you accept it. Read the <a href="./privacy.html">full Privacy Notice</a> for providers, lawful bases, retention and your rights.</p></article>
 </div>
 </div>
 <div class="section">
@@ -248,5 +249,7 @@ body.pp-light .secondary{background:#f5f8f9!important;border-color:#b8c8d0!impor
 <script src="./i18n-extra.js?v=20261013-feeds1"></script>
 
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
+<script defer src="./site-unified.js?v=1"></script>
 </body>
 </html>
+

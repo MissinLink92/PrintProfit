@@ -173,10 +173,10 @@ window.__ppCloseWorkspaceProjects=()=>close();
 function render(){
  const list=document.getElementById('ppProjectsList');if(!list)return;
  const projects=read().sort((a,b)=>b.updated-a.updated);
- if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon">▣</div><h3>No saved projects yet</h3><p>Use <strong>Save Project</strong> on the calculator to store a setup here.</p></div>';return;}
+ if(!projects.length){list.innerHTML='<div class="pp-projects-empty"><div class="pp-projects-empty-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-folder"></use></svg></div><h3>No saved projects yet</h3><p>Use <strong>Save Project</strong> on the calculator to store a setup here.</p></div>';return;}
  list.innerHTML=projects.map(p=>`<article class="pp-project-card" data-project-id="${esc(p.id)}">
    <div class="pp-project-card-main">
-    <div class="pp-project-icon">▣</div>
+    <div class="pp-project-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-folder"></use></svg></div>
     <div><h3 translate="no">${esc(p.name)}</h3><p>${esc(p.material)} · ${esc(p.hours)} h · ${esc(p.used)} used</p><small>Saved ${new Date(p.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}</small></div>
    </div>
    <div class="pp-project-actions"><button type="button" data-load-project="${esc(p.id)}">Load</button><button type="button" data-rename-project="${esc(p.id)}">Rename</button><button type="button" data-duplicate-project="${esc(p.id)}">Duplicate</button><button type="button" class="danger" data-delete-project="${esc(p.id)}">Delete</button></div>
@@ -190,7 +190,7 @@ function open(){
   panel.innerHTML=`<div class="pp-projects-backdrop" data-project-close></div>
   <section class="pp-projects-dialog" role="dialog" aria-modal="true" aria-labelledby="ppProjectsTitle">
    <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Workspace</h2><p>Your saved calculator projects, workshop profiles and account settings in one place.</p><small class="pp-projects-local-note">Sign in and enable sync to carry saved project settings between devices. Uploaded 3D model files stay on this device.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
-   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page">Projects</button><button type="button" data-workspace-section="workshop">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
+   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-folder"></use></svg>Projects</button><button type="button" data-workspace-section="workshop"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-printer"></use></svg>Workshop</button><button type="button" data-workspace-section="pro"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-profit"></use></svg>Pro tools</button><button type="button" data-workspace-section="account"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="./assets/printprofit-icon-master.svg#pp-settings"></use></svg>Profile &amp; Account</button></nav>
    <div class="pp-projects-toolbar"><span class="pp-project-count" id="ppProjectCount"></span></div>
    <div id="ppProjectsList"></div>
   </section>`;
@@ -332,3 +332,4 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 setSaveMode(false);
 })();
+

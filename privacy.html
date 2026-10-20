@@ -17,14 +17,15 @@ main{padding-top:28px}h1{font-size:clamp(34px,7vw,52px);line-height:1.08;letter-
 @media(max-width:620px){header{align-items:flex-start;flex-direction:column}.wrap{width:min(100% - 24px,900px)}th,td{padding:11px}}
 </style>
 <link rel="stylesheet" href="./site-header.css?v=20261013-language1">
+<link rel="stylesheet" href="./site-unified.css?v=1">
 </head>
 <body data-pp-standalone-i18n="1" class="pp-policy-page">
 <div id="ppSiteHeader"></div><script src="./site-header.js?v=20261013-language1"></script>
 <div class="wrap">
-<main>
+<main data-pp-icon="file">
 <div class="kicker">Your information, explained plainly</div>
 <h1>Privacy Notice</h1>
-<p class="lead"><strong>Last updated: 12 October 2026.</strong> This notice explains what happens to information when you use PrintProfit, create an account or choose optional analytics.</p>
+<p class="lead"><strong>Last updated: 20 October 2026.</strong> This notice explains what happens to information when you use PrintProfit, create an account, choose Pro or choose optional analytics.</p>
 <div class="card"><p><strong>In short:</strong> You can use the calculator without an account. Saved projects and uploaded 3D model files stay in your browser unless you choose account sync. With your consent, printer and material profiles plus saved project settings and slicer-analysis details sync through Firebase. Uploaded model file contents stay on the device where you added them. Existing profiles and Projects on a browser remain separate until you choose whether to import them. Optional Google Analytics stays off unless you choose “Accept analytics”.</p></div>
 
 <h2>1. Who is responsible?</h2>
@@ -33,6 +34,7 @@ main{padding-top:28px}h1{font-size:clamp(34px,7vw,52px);line-height:1.08;letter-
 <h2>2. What information is handled?</h2>
 <ul>
 <li><strong>Account details:</strong> your email address, Firebase user ID, email verification status and account security information. Firebase Authentication handles your password; PrintProfit does not receive or store your password in its own database.</li>
+<li><strong>Pro billing:</strong> if you subscribe, Stripe handles your payment details, subscription, invoices and billing portal. PrintProfit stores a Stripe customer reference, plan, trial and entitlement status, webhook event identifiers and your purchase-term acceptance record in server-only Firebase records. PrintProfit does not store your card number.</li>
 <li><strong>Synced workshop profiles:</strong> printer and material profile details you choose to save, identifiers and timestamps used to merge changes, and deletion markers needed to stop removed profiles returning on another device. These are stored in your own Firebase account area.</li>
 <li><strong>Synced project details:</strong> when you enable account sync, saved project names, calculator and printer settings, timestamps, basic uploaded-file metadata (such as its name and type) and slicer-analysis details saved with the project. These details are stored in your own Firebase account area so your Projects can appear on your other signed-in devices. The uploaded 3D model file contents themselves are not sent to Firebase; they remain in the browser where you uploaded them.</li>
 <li><strong>Local calculator data:</strong> calculator settings and inputs, saved Projects and printer/material profiles when you are not syncing, plus uploaded 3D model files, remain in browser storage on that device. Profiles and Projects already saved in this browser are not copied into the account until you choose “Import profiles &amp; projects”; you can instead keep them on this device.</li>
@@ -47,19 +49,21 @@ main{padding-top:28px}h1{font-size:clamp(34px,7vw,52px);line-height:1.08;letter-
 <thead><tr><th>Purpose</th><th>Information</th><th>Lawful basis</th></tr></thead>
 <tbody>
 <tr><td>Provide account sign-in, verification, password recovery and profile and project sync requested by you.</td><td>Email address, account ID, account status, printer/material profiles and saved project settings and analysis details you choose to sync.</td><td>Necessary to provide the account and sync service you ask for (contract).</td></tr>
+<tr><td>Provide and manage an optional Pro subscription, trial and payment support.</td><td>Account ID, Stripe customer reference, plan, subscription status and purchase acceptance. Stripe handles payment details and invoices.</td><td>Necessary to provide the subscription you choose (contract), and to keep records required by applicable law.</td></tr>
 <tr><td>Protect accounts, prevent misuse and keep the service working.</td><td>Authentication and security signals handled by Firebase; technical request logs handled by service providers.</td><td>Our legitimate interests in securing and operating PrintProfit, balanced against your privacy. We use these signals for security and service operation, not advertising.</td></tr>
 <tr><td>Understand how visitors use PrintProfit and improve it.</td><td>Limited usage events and browser identifiers handled by Google Analytics.</td><td>Your consent. Analytics is optional; choose Reject analytics or change your choice at any time using Analytics settings.</td></tr>
 <tr><td>Keep your calculator settings, projects and uploaded files available on your device.</td><td>Data stored in your browser's local storage and IndexedDB, including the uploaded 3D model file contents.</td><td>Necessary to provide the local features you choose to use. Uploaded model file contents are not automatically uploaded to cloud account storage.</td></tr>
 </tbody></table></div>
 
 <h2>4. Where information is stored and who provides services</h2>
-<p>PrintProfit's public website is hosted by GitHub Pages. GitHub says that visitor IP addresses are logged for security. Google Firebase provides sign-in and optional cloud sync. The Firestore database for this project is in London, United Kingdom (<code>europe-west2</code>). Firebase Authentication processes authentication information in the United States. Google Analytics is used only after your consent.</p>
+<p>PrintProfit's public website is hosted by GitHub Pages. GitHub says that visitor IP addresses are logged for security. Google Firebase provides sign-in and optional cloud sync. The Firestore database for this project is in London, United Kingdom (<code>europe-west2</code>). Firebase Authentication processes authentication information in the United States. Stripe processes optional Pro subscription payments and invoices under its own privacy information. Google Analytics is used only after your consent.</p>
 <p>Google acts under its Firebase data-processing terms for Firebase services. Google states that Firebase Authentication keeps logged IP addresses for a few weeks and removes other authentication information from live and backup systems within 180 days after the account is deleted. For a UK transfer, Google's data-processing terms identify the transfer safeguards it uses; see the <a href="https://firebase.google.com/terms/data-processing-terms" target="_blank" rel="noopener noreferrer">Firebase Data Processing and Security Terms</a> and Google's <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy and security information</a>.</p>
 <p>GitHub and Google may process information in other countries under their own service and privacy terms. GitHub's <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Statement</a> and Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> explain their handling. We do not control their independent security logs.</p>
 
 <h2>5. How long information is kept</h2>
 <ul>
 <li>Synced profiles, project details and the record that you accepted the current Terms and sync notice stay in Firebase while your account is active. They are deleted when you delete your account. Uploaded 3D model file contents are not stored in Firebase by PrintProfit. Firebase says deletion from its live and backup systems completes within 180 days; Firebase Authentication's logged IP addresses are kept for a few weeks.</li>
+<li>Pro billing references and purchase acceptance are kept while needed to administer the subscription and meet accounting or legal obligations. Stripe retains payment and invoice records under its own policies. Cancelling Pro does not erase your saved projects or inventory.</li>
 <li>Google Analytics event/user-level information is retained for the period selected in the Analytics property. Before analytics is enabled for general use, the operator must set the Analytics property retention to two months for event- and user-level data and confirm that no BigQuery export is enabled. Google says this setting does not delete standard aggregated reports, which may remain available longer. The website code itself does not export analytics data to BigQuery.</li>
 <li>GitHub Pages security logs are held by GitHub for its security purposes. GitHub does not give the site operator control over a fixed log-retention period; see GitHub's Privacy Statement for details.</li>
 <li>Local information and the per-device profile-import choice stay in your browser until you delete them or clear this website's stored data. Clearing it on one device does not clear data saved on another device.</li>
@@ -78,9 +82,11 @@ main{padding-top:28px}h1{font-size:clamp(34px,7vw,52px);line-height:1.08;letter-
 <h2>9. Changes to this notice</h2>
 <p>If the way information is used changes, this notice will be updated and the date above will change. If a change affects account sync terms, the site may ask you to review and accept the updated terms before syncing again.</p>
 </main>
-<footer><span>PrintProfit · Privacy Notice v2 (12 October 2026)</span><nav class="nav" aria-label="Policy links"><a href="./terms.html">Terms of Use</a><a href="./guide.html#account-privacy">Guide &amp; Help</a></nav></footer>
+<footer><span>PrintProfit · Privacy Notice (20 October 2026)</span><nav class="nav" aria-label="Policy links"><a href="./terms.html">Terms of Use</a><a href="./guide.html#account-privacy">Guide &amp; Help</a></nav></footer>
 </div>
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
 <script src="./i18n-extra.js?v=20261013-feeds1"></script>
+<script defer src="./site-unified.js?v=1"></script>
 </body>
 </html>
+

@@ -120,6 +120,7 @@ function updateAccountUI(){
  else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles and projects into your account.');
  else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles and saved projects sync with your account. Uploaded 3D model files stay on this device.');
  else setStatus('Saved in this browser','Create an account or sign in to sync your profiles and projects between devices.');
+ document.dispatchEvent(new CustomEvent('pp-account-state-changed',{detail:{uid:activeUser?.uid||null,verified:Boolean(activeUser?.emailVerified),legalAccepted}}));
 }
 function setBusy(value){
  document.querySelectorAll('#ppWorkshopAccount [data-pp-account-action]').forEach(button=>{button.disabled=Boolean(value)});
@@ -127,6 +128,7 @@ function setBusy(value){
 function errorText(error){
  const code=String(error?.code||'');
  if(String(error?.message||'').startsWith('Project “'))return error.message;
+ if(String(error?.message||'').startsWith('Cancel your subscription')||String(error?.message||'').startsWith('Billing status could not be checked'))return error.message;
  if(code.includes('email-already-in-use'))return'That email already has an account. Sign in to request another verification email if needed.';
  if(code.includes('invalid-credential')||code.includes('user-not-found')||code.includes('wrong-password'))return'Email or password was not recognised.';
  if(code.includes('invalid-email'))return'Enter a valid email address.';
@@ -580,6 +582,10 @@ async function handleAction(action){
    if(!password){setMessage('Enter your password to continue.',true);return}
    const credential=sdk.auth.EmailAuthProvider.credential(user.email,password);
    await sdk.auth.reauthenticateWithCredential(user,credential);
+   if(window.PRINTPROFIT_BILLING_CONFIG?.enabled){
+    if(typeof window.__ppCheckBillingDeletion!=='function')throw new Error('Billing status could not be checked. Your account has not been deleted. Please try again later.');
+    await window.__ppCheckBillingDeletion();
+   }
    deletingAccount=true;
    while(activeSyncCount>0)await new Promise(resolve=>setTimeout(resolve,40));
    const cloudProjects=await sdk.firestore.getDocs(sdk.firestore.collection(db,'users',user.uid,'projects'));
@@ -628,6 +634,10 @@ async function handleAction(action){
  }finally{setBusy(false);updateAccountUI()}
 }
 window.__ppRefreshWorkshopAccountUI=()=>{ensureAccountUI();updateAccountUI();};
+window.__ppBillingAccountContext=async()=>{
+ const initialized=await initializeFirebase();
+ return {...initialized,user:activeUser,legalAccepted};
+};
 // Hydrate a Workspace opened before this script finished downloading.
 window.__ppRefreshWorkshopAccountUI();
 document.addEventListener('pp-workshop-open',()=>{
