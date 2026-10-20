@@ -10,6 +10,7 @@ function harness(options={}){
   if(name==='firebase-functions/v2/identity')return{onUserDeleted:(options,handler)=>handler};
   if(name==='firebase-functions/params')return{defineSecret:()=>({value:()=>options.key||'sk_test_fixture_only'}),defineString:(name,value)=>({value:()=>options.params?.[name]??value.default}),defineBoolean:(name,value)=>({value:()=>options.enabled??value.default})};
   if(name==='firebase-admin/app')return{initializeApp:()=>{}};
+  if(name==='firebase-admin/auth')return{getAuth:()=>({getUser:async()=>{calls.push('auth-read');return options.authRecord??{email:'pro-owner@example.com',emailVerified:true,disabled:false};}})};
   if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0}};
   if(name==='stripe')return function(){return client;};
   if(name==='./billing-core')return core;
@@ -30,10 +31,13 @@ test('verified configured owner receives Pro without Stripe and cannot buy a sub
  const auth={uid:'owner',token:{email_verified:true,email:'pro-owner@example.com'}};
  const access=await h.handlers.getProAccess({auth});
  assert.equal(access.tier,'pro');assert.equal(access.status,'owner');assert.equal(access.until,null);assert.equal(access.hasBillingAccount,true);
+ assert.equal(h.calls.includes('auth-read'),true);
  assert.equal(h.calls.some(call=>call==='subscriptions'||call==='customer-read'),false);
  await assert.rejects(h.handlers.createProCheckout({auth,data:{plan:'monthly',purchaseAccepted:true}}),e=>e.code==='failed-precondition');
  assert.equal(h.calls.some(call=>call.checkout),false);
  await assert.rejects(h.handlers.getProAccess({auth:{uid:'owner',token:{email_verified:false,email:'pro-owner@example.com'}}}),e=>e.code==='failed-precondition');
+ const stale=harness({key:'sk_live_wrong_mode',params:{PRINTPROFIT_OWNER_EMAIL:'pro-owner@example.com'},authRecord:{email:'different@example.com',emailVerified:true,disabled:false}});
+ await assert.rejects(stale.handlers.getProAccess({auth}));
  const outsider=harness({key:'sk_live_wrong_mode',params:{PRINTPROFIT_OWNER_EMAIL:'pro-owner@example.com'}});
  await assert.rejects(outsider.handlers.getProAccess({auth:{uid:'other',token:{email_verified:true,email:'someone-else@example.com'}}}));
 });
