@@ -1,5 +1,6 @@
 'use strict';
 const {onCall,onRequest,HttpsError}=require('firebase-functions/v2/https');
+const {onUserDeleted}=require('firebase-functions/v2/identity');
 const {defineSecret,defineString,defineBoolean}=require('firebase-functions/params');
 const {initializeApp}=require('firebase-admin/app');
 const {getFirestore,FieldValue}=require('firebase-admin/firestore');
@@ -74,7 +75,7 @@ exports.createProCheckout=onCall(callable,async request=>{
 exports.createBillingPortal=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
  if(!customer)throw new HttpsError('not-found','No billing account exists yet.');
- const session=await client.billingPortal.sessions.create({customer,return_url:environment().site});
+ const session=await client.billingPortal.sessions.create({customer,return_url:environment().site+'?open=account'});
  return {url:session.url};
 });
 exports.checkAccountDeletion=onCall(callable,async request=>{
@@ -83,6 +84,20 @@ exports.checkAccountDeletion=onCall(callable,async request=>{
  const history=await subscriptions(client,customer);
  if(history.some(s=>!['canceled','incomplete_expired'].includes(s.status)))return {allowed:false,reason:'Cancel your subscription in the billing portal and wait until it ends before deleting your account.'};
  return {allowed:true};
+});
+// Safety net for accounts removed outside the normal in-app deletion flow.
+exports.reconcileDeletedBillingUser=onUserDeleted({region:'europe-west2',secrets:[stripeKey],maxInstances:3,retry:true},async event=>{
+ const uid=event.data?.uid;if(!uid)return;
+ const ref=db.collection('billingCustomers').doc(uid),mapping=await ref.get();
+ const customerId=mapping.data()?.customerId;if(!customerId)return;
+ const client=stripe(),history=await subscriptions(client,customerId);
+ for(const subscription of history){
+  billingEnvironment.assertMode(subscription,environment());
+  if(['canceled','incomplete_expired'].includes(subscription.status))continue;
+  await client.subscriptions.cancel(subscription.id,{invoice_now:false,prorate:false},{idempotencyKey:'pp-deleted-'+uid+'-'+subscription.id});
+ }
+ await db.collection('billingEntitlements').doc(uid).delete();
+ await ref.delete();
 });
 exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey,webhookKey],maxInstances:3},async(req,res)=>{
  if(req.method!=='POST'){res.status(405).send('POST required');return;}

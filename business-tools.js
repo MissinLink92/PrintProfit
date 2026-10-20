@@ -8,7 +8,7 @@ const current=()=>{if(!window.__ppBusinessSnapshot)throw new Error('Calculator i
 const currency=()=>{let p={};try{p=JSON.parse(localStorage.getItem('printprofit.preferences.v3')||'{}')}catch(e){}return{code:p.currency||'GBP',rate:Number(p.rate)>0?Number(p.rate):1};};
 const money=n=>{const p=currency();return new Intl.NumberFormat(undefined,{style:'currency',currency:p.code}).format(n*p.rate);};
 const error=message=>{$('ppBusinessStatus').textContent=message;};
-const button=(text,action)=>{const n=el('button',text);n.type='button';n.addEventListener('click',()=>{try{action();}catch(e){error(e.message);}});return n;};
+const button=(text,action)=>{const n=el('button',text);n.type='button';if(['Save current scenario','Print / save draft quotation PDF','Download internal costing CSV'].includes(text))n.dataset.ppProAction=text.startsWith('Print /')?'quote':'tool';n.addEventListener('click',()=>{try{action();}catch(e){error(e.message);}});return n;};
 const field=(parent,label,value='',type='text')=>{const wrap=el('label',label),input=el(type==='textarea'?'textarea':'input');if(type!=='textarea')input.type=type;input.value=value;wrap.append(input);parent.append(wrap);return input;};
 function persist(){const n=$('ppScenarioConfiguration');if(n)n.value=JSON.stringify({version:1,scenarios});}
 function renderScenarios(){
@@ -35,7 +35,7 @@ function exportCSV(){
 }
 function mount(){
  const result=document.querySelector('.result');if(!result||!M)return;
- const panel=el('section',undefined,'pp-business-tools');panel.id='ppBusinessTools';panel.append(el('h3','Business tools — preview'),el('p','Compare production options and prepare a customer quotation. These tools are planned for Pro; subscription access is not enabled yet.'));
+ const panel=el('section',undefined,'pp-business-tools');panel.id='ppBusinessTools';panel.append(el('h3','Business tools — preview'),el('p',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Compare production options and prepare a customer quotation with an active Pro trial or subscription. Saved scenarios remain visible if Pro ends.':'Compare production options and prepare a customer quotation. These tools are planned for Pro; subscription access is not enabled yet.'));
  const status=el('p');status.id='ppBusinessStatus';status.setAttribute('role','status');panel.append(status);
  const hidden=el('input');hidden.type='hidden';hidden.id='ppScenarioConfiguration';panel.append(hidden);
  const compare=el('details'),summary=el('summary','Compare production scenarios');compare.dataset.ppProTool='scenario';compare.append(summary);

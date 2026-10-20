@@ -28,8 +28,8 @@ function accessFromSubscriptions(subscriptions,ids,now=Math.floor(Date.now()/100
 }
 function eligibleForTrial(subscriptions){return subscriptions.length===0;}
 function checkoutParameters(customer,uid,price,site=SITE,trial=false){
- return {integration_identifier:'printprofit_pro_'+Array.from(randomBytes(8),n=>String.fromCharCode(97+n%26)).join(''),mode:'subscription',customer,client_reference_id:uid,line_items:[{price,quantity:1}],
-  success_url:site+'?billing=returned',cancel_url:site+'?billing=cancelled',
+ return {integration_identifier:'printprofit_pro_'+Array.from(randomBytes(8),n=>String.fromCharCode(97+n%26)).join(''),mode:'subscription',customer,client_reference_id:uid,payment_method_collection:'always',line_items:[{price,quantity:1}],
+  success_url:site+'?open=account&billing=returned',cancel_url:site+'?open=account&billing=cancelled',
   subscription_data:{metadata:{printprofitUid:uid},...(trial?{trial_period_days:TRIAL_DAYS}: {})},metadata:{printprofitUid:uid},
   allow_promotion_codes:false,expires_at:Math.floor(Date.now()/1000)+1800};
 }

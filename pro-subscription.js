@@ -2,10 +2,11 @@
 'use strict';
 if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
 const FIREBASE_VERSION='12.19.0';
-let callable=null,owner='',generation=0,loading=false;
+let callable=null,owner='',generation=0;
 const $=id=>document.getElementById(id);
 const date=seconds=>new Date(seconds*1000).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
 const text=(id,value)=>{const node=$(id);if(node)node.textContent=value;};
+const accessChanged=tier=>{window.__ppProTier=tier;window.__ppProVerifiedAt=tier==='pro'?Date.now():0;document.dispatchEvent(new CustomEvent('pp-pro-access-changed',{detail:{tier}}));if(tier!=='pro')window.__ppCloseMaterialScanner?.();};
 function panel(){
  const card=document.querySelector('#ppWorkshopAccount .pp-account-card');
  if(!card)return null;
@@ -32,15 +33,16 @@ async function refresh(force=false){
  if(token!==generation)return;
  const user=context?.user,ready=Boolean(user?.emailVerified&&context.legalAccepted);
  $('ppProPlans').hidden=true;$('ppProManage').hidden=true;
- if(!ready){owner='';text('ppProStatus',user?'Accept the current account terms to manage Pro.':'Sign in with a verified account to see your plan.');return;}
- if(!force&&loading)return;
- owner=user.uid;loading=true;text('ppProStatus','Checking subscription with Stripe…');
+ if(!ready){owner='';accessChanged('basic');text('ppProStatus',user?'Verify your email and accept the current account terms to manage Pro.':'Sign in with a verified account to see your plan.');return;}
+ owner=user.uid;text('ppProStatus','Checking subscription with Stripe…');
  try{
   const access=await invoke('getProAccess');
   if(token!==generation||owner!==user.uid)return;
+  accessChanged(access.tier);
   if(access.tier==='pro'){
-   const period=access.trialEnd?'Free trial ends':'Pro access continues until';
-   text('ppProStatus',period+' '+date(access.until)+(access.cancelAtPeriodEnd?' · cancellation scheduled.':' · '+(access.plan==='annual'?'£24/year':'£2.50/month')+' afterward.'));
+   const price=access.plan==='annual'?'£24/year':'£2.50/month';
+   const message=access.trialEnd?'Free trial ends '+date(access.until)+(access.cancelAtPeriodEnd?' · cancellation scheduled.':' · '+price+' afterward.'):(access.cancelAtPeriodEnd?'Pro access ends '+date(access.until)+' · cancellation scheduled.':'Pro '+access.plan+' plan renews '+date(access.until)+' at '+price+'.');
+   text('ppProStatus',message);
    $('ppProManage').hidden=false;
   }else{
    text('ppProStatus',access.eligibleForTrial?'Your first subscription includes a seven day free trial. Add payment details in Stripe Checkout; cancel before the trial ends to avoid the first charge.':'Your trial has been used. The selected plan starts charging when Checkout completes.');
@@ -48,9 +50,47 @@ async function refresh(force=false){
    $('ppProPlans').hidden=false;
    const consent=$('ppProConsent');if(consent)consent.checked=false;
   }
- }catch{if(token===generation)text('ppProStatus','Subscription status is unavailable. Please try again when connected.');}
- finally{loading=false;}
+ }catch{if(token===generation){accessChanged('basic');text('ppProStatus','Subscription status is unavailable. Please try again when connected.');}}
 }
+async function requirePro(){
+ if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return true;
+ try{
+  const context=await window.__ppBillingAccountContext();
+  if(!context?.user?.emailVerified||!context.legalAccepted){
+   window.__ppOpenWorkspaceWorkshop?.('account');
+   text('ppProStatus','Sign in, verify your email and accept the account terms to choose Pro.');
+   return false;
+  }
+  const access=await invoke('getProAccess');
+  const latest=await window.__ppBillingAccountContext();
+  if(latest?.user?.uid!==context.user.uid||!latest.legalAccepted)return false;
+  accessChanged(access.tier);
+  if(access.tier==='pro')return true;
+  window.__ppOpenWorkspaceWorkshop?.('account');
+  refresh(true);
+  return false;
+ }catch{
+  window.__ppOpenWorkspaceWorkshop?.('account');
+  text('ppProStatus','Pro access could not be checked. Please try again when connected.');
+  return false;
+ }
+}
+window.__ppRequirePro=requirePro;
+const approved=new WeakSet(),checking=new WeakSet();
+document.addEventListener('click',async event=>{
+ const target=event.target.closest('#ppWorkspacePro [data-pp-pro-tool]:not([data-pp-pro-tool="subscription"]),#ppFarmEnabled,[data-pp-material-scanner-toggle],#ppBusinessTools [data-pp-pro-action],#ppMaterialScan [data-pp-pro-action]');
+ if(!target||approved.has(target)||checking.has(target))return;
+ // Opening a print window needs a fresh user gesture; verify first, then let the next click print.
+ if(target.dataset.ppProAction==='quote'&&window.__ppProTier==='pro'&&Date.now()-window.__ppProVerifiedAt<5000)return;
+ event.preventDefault();event.stopImmediatePropagation();checking.add(target);
+ try{
+  if(await requirePro()){
+   if(target.dataset.ppProAction==='quote'){text('ppBusinessStatus','Pro access confirmed. Click Print / save draft quotation PDF again.');return;}
+   approved.add(target);
+   try{target.click()}finally{approved.delete(target)}
+  }
+ }finally{checking.delete(target)}
+},true);
 window.__ppCheckBillingDeletion=async()=>{
  const result=await invoke('checkAccountDeletion');
  if(!result.allowed)throw new Error(result.reason||'Cancel your subscription before deleting your account.');

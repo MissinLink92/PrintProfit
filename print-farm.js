@@ -22,6 +22,12 @@ function field(row,g,name,label,step,min,max){
  const wrap=el('label',label),input=el('input');input.type='number';input.value=g[name];input.step=step;input.min=min;if(max!==undefined)input.max=max;input.dataset.farmField=name;
  input.addEventListener('input',()=>{g[name]=input.value===''?'':Number(input.value);changed();});wrap.append(input);row.append(wrap);
 }
+function syncPremiumInputs(){
+ if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
+ const locked=window.__ppProTier!=='pro';
+ document.querySelectorAll('#ppFarmDetails input,#ppFarmDetails select,#ppFarmDetails button').forEach(control=>{control.disabled=locked||(control.id==='ppFarmAdd'&&groups.length>=MAX);});
+}
+document.addEventListener('pp-pro-access-changed',syncPremiumInputs);
 function render(){
  const list=$('ppFarmGroups');if(!list)return;list.replaceChildren();
  groups.forEach((g,index)=>{
@@ -42,7 +48,7 @@ function render(){
   if(groups.length>1){const remove=el('button','Remove group','pp-farm-remove');remove.type='button';remove.addEventListener('click',()=>{groups=groups.filter(r=>r!==g);render();changed();});card.append(remove);}
   list.append(card);
  });
- $('ppFarmAdd').disabled=groups.length>=MAX;persist();
+ $('ppFarmAdd').disabled=groups.length>=MAX;syncPremiumInputs();persist();
 }
 function updateVisibility(){const enabled=!!$('ppFarmEnabled')?.checked;$('ppFarmDetails').hidden=!enabled;if(!enabled)delete document.body.dataset.ppFarmInvalid;}
 function showSummary(result,error){
@@ -91,7 +97,7 @@ function mount(){
  const setup=document.querySelector('.print-setup-panel');if(!setup||!$('printer')||!window.PrintProfitFarmMath)return;
  const css=el('style');css.textContent=`.pp-farm{margin:12px 0;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);color:var(--text)}.pp-farm-toggle{display:flex!important;align-items:center;gap:10px;font-size:15px!important;font-weight:700}.pp-farm-toggle input{width:20px!important;height:20px!important;flex:0 0 20px}.pp-farm p{font-size:13px;line-height:1.5;white-space:normal}.pp-farm [hidden]{display:none!important}.pp-farm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pp-farm-grid label{display:block!important;font-size:13px!important;min-width:0}.pp-farm-grid input,.pp-farm-grid select{display:block;width:100%;box-sizing:border-box;margin-top:5px}.pp-farm-group{min-width:0;border:1px solid var(--line);border-radius:9px;margin:12px 0;padding:12px}.pp-farm-group legend{font-weight:700;padding:0 5px}.pp-farm button{margin-top:10px;padding:9px 12px;cursor:pointer;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text)}.pp-farm-summary{overflow-wrap:anywhere}.pp-farm-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:10px 0}.pp-farm-stats>div{min-width:0;padding:9px;border:1px solid var(--line);border-radius:7px}.pp-farm-stats dt{font-size:12px;color:var(--muted);margin-bottom:5px}.pp-farm-stats dd{margin:0;font-size:14px;font-weight:600}.pp-farm-allocation{padding-top:10px;margin-top:12px;border-top:1px solid var(--line)}.pp-farm-allocation h3{font-size:15px;line-height:1.4}.pp-farm table{width:100%;border-collapse:collapse;font-size:13px}.pp-farm th,.pp-farm td{padding:7px;text-align:left;border-bottom:1px solid var(--line)}.pp-farm-result-status{padding:12px;margin:10px 0;border:1px solid var(--line);border-radius:8px;font-size:13px;line-height:1.5}body[data-pp-farm-invalid] #singleResultView,body[data-pp-farm-invalid] #batchResultView,body[data-pp-farm-invalid] #ppProfitAdvisor,body[data-pp-farm-invalid] #ppProfitTools{display:none!important}@media(max-width:600px){.pp-farm-grid{grid-template-columns:1fr}}`;
  document.head.append(css);
- const panel=el('section',undefined,'pp-farm');panel.id='ppPrintFarm';const toggle=el('label',undefined,'pp-farm-toggle'),check=el('input');check.id='ppFarmEnabled';check.type='checkbox';toggle.append(check,document.createTextNode('Print farm / production run'));panel.append(toggle,el('p','Optional: use several printers or print multiple products on each build plate. Your normal single-printer settings stay available.'));
+ const panel=el('section',undefined,'pp-farm');panel.id='ppPrintFarm';const toggle=el('label',undefined,'pp-farm-toggle'),check=el('input');check.id='ppFarmEnabled';check.type='checkbox';toggle.append(check,document.createTextNode('Print farm / production run'));panel.append(toggle,el('p',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Pro: plan several printers or multiple products per plate. Existing saved runs remain readable if Pro ends.':'Optional: use several printers or print multiple products on each build plate. Your normal single-printer settings stay available.'));
  const config=el('input');config.type='hidden';config.id='ppFarmConfiguration';panel.append(config);
  const details=el('div');details.id='ppFarmDetails';details.hidden=true;
  details.append(el('p','Use Quantity in Costs & Fees for the total number of products. Material usage, hands-on labour, packaging and other costs remain per product. Enter actual slicer time for a full plate (one print cycle) in each group. All groups use your existing electricity rate.'));

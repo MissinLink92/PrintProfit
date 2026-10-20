@@ -2,7 +2,7 @@
 
 ## Current source status — 20 October 2026
 
-The £2.50 monthly and £24 annual prices and Customer Portal were configured previously. Source now prepares an authenticated Pro panel, a seven day trial for a customer with no subscription history, server-verified trial access, signed webhook refreshes, explicit purchase acknowledgement and a normal-flow account-deletion check. **Both the backend checkout switch and the browser panel remain disabled.** No Firebase billing deployment, signed webhook registration or end-to-end sandbox payment/trial test is evidenced. Existing Pro previews remain available; do not advertise them as paid-only yet.
+The £2.50 monthly and £24 annual prices and Customer Portal were configured previously. Source now prepares an authenticated Pro panel, a seven day trial for a customer with no subscription history, server-verified trial access, signed webhook refreshes, explicit purchase acknowledgement, Pro UI gates, and an Auth deletion reconciliation trigger. **Both the backend checkout switch and the browser panel remain disabled.** No Firebase billing deployment, signed webhook registration or end-to-end sandbox payment/trial test is evidenced. Existing Pro previews remain available on the live site; do not advertise them as paid-only until the full test flow passes.
 
 ### Feature decision
 
@@ -25,14 +25,14 @@ The Workspace navigation now has a Pro tools section. It routes directly to the 
 
 - First Stripe subscription for the mapped customer: seven day trial with a payment method collected in Checkout; then £2.50/month or £24/year paid upfront unless cancelled before the trial ends. A returning subscriber starts the chosen paid plan without another trial. The annual plan saves £6 against twelve monthly payments.
 - Access comes only from current Stripe subscriptions: `trialing` through the verified `trial_end`, or `active` through the paid period, using configured prices and one seat. Failed, expired and paused subscriptions lose Pro. A scheduled cancellation retains access through the current trial or paid period.
-- Stripe Checkout trial completion can be `no_payment_required`. Signed `checkout.session.completed`, `customer.subscription.*` and invoice webhooks refresh the subscription instead of trusting a browser return URL.
+- Checkout explicitly collects a payment method for a seven day trial. Both Checkout and Portal return to the account panel, which re-reads current Stripe state. Stripe Checkout trial completion can be `no_payment_required`. Signed `checkout.session.completed`, `customer.subscription.*` and invoice webhooks refresh the subscription instead of trusting a browser return URL.
 - Configure a trial-ending reminder in Stripe and test `customer.subscription.trial_will_end` (typically three days before the end), first charge, payment failure and cancellation messages. The handler currently mirrors status but does not send an email itself.
-- The browser panel is behind `config/billing-config.js` (`enabled:false`). The Firebase callable checkout is behind `PRINTPROFIT_BILLING_ENABLED=false`. Both remain off until a separate test frontend, secrets, signed webhook, tax review, legal copy, account deletion reconciliation, premium gates and payment/renewal/cancellation tests are complete.
-- The normal account deletion flow checks for an open subscription before removing cloud data. Direct deletion of Firebase Auth outside that flow still needs a reconciliation plan before live payments. `billingPurchaseConsents` is a server-only Firestore collection alongside the existing billing collections.
+- The browser panel and Pro UI gates are behind `config/billing-config.js` (`enabled:false`). The Firebase callable checkout is behind `PRINTPROFIT_BILLING_ENABLED=false`. Both remain off until a separate test frontend, secrets, signed webhook, tax review, legal copy, account deletion reconciliation, premium gates and payment/renewal/cancellation tests are complete.
+- The normal account deletion flow checks for an open subscription before removing cloud data. A second-generation Auth deletion trigger now cancels any subscription for an account removed outside that flow. Deploy and verify this trigger and its retry behavior in the test project before relying on it. `billingPurchaseConsents` is a server-only Firestore collection alongside the existing billing collections.
 
 ### Historical setup and work still required
 
-Status (17 October 2026): live Stripe catalogue and customer portal configured via the connected Printprofit account. The server foundation remains undeployed by this setup; checkout is not enabled and all existing Pro previews remain available. The browser UI does not enforce subscriptions yet. This is not an end-to-end payment launch.
+Status (17 October 2026): live Stripe catalogue and customer portal configured via the connected Printprofit account. The server foundation remains undeployed by this setup; checkout is not enabled and all existing Pro previews remain available. The draft browser UI gates are prepared but disabled on the live site; client-side controls can be bypassed, so avoid promising a tamper-proof paywall for calculations. This is not an end-to-end payment launch.
 
 ## Proposed plans
 
@@ -46,7 +46,7 @@ Status (17 October 2026): live Stripe catalogue and customer portal configured v
 | Farm groups and production allowances | Existing preview retained for now | Planned |
 | Scenario comparison and business exports | Existing preview retained for now | Planned |
 
-Annual billing is £24 upfront, equivalent to £2/month; saving £6 against twelve monthly payments. Do not remove or hide existing user projects, inventory or exports on downgrade. Existing data must remain readable/exportable. Product details for the final paid tiers still need to be agreed before gating.
+Annual billing is £24 upfront, equivalent to £2/month; saving £6 against twelve monthly payments. Do not remove or hide existing user projects, inventory or exports on downgrade. Existing data must remain readable/exportable. The UI gates allow existing saved scenarios to be viewed after a downgrade, while new scenario saves, quotations, costing CSV and barcode-assisted entry require a current server-checked entitlement once billing is enabled. These browser gates cannot secure downloadable calculator code against modification. Product details for the final paid tiers still need to be agreed before gating.
 
 ## Architecture and implemented files
 
@@ -54,7 +54,7 @@ Existing Firebase Authentication identifies customers. `functions/index.js` adds
 
 Prices and customer IDs are selected on the server. Checkout return parameters never grant access. The portal uses the authenticated user's customer mapping, never a client-supplied customer ID. Concurrent checkout preparation is locked in Firestore. Webhooks verify the raw Stripe signature, ignore duplicate events and do not overwrite a newer event record with an older one. Access checks query Stripe afresh, independently of the webhook mirror.
 
-Access policy: only an active subscription with the configured price, one seat, an unexpired period and no paused collection grants Pro. Scheduled cancellation retains access until the paid period ends. Past-due, unpaid, incomplete, trialing, paused and canceled subscriptions do not grant Pro. There is no free trial or promotion-code field configured.
+Access policy: only an active subscription with the configured price, one seat, an unexpired period and no paused collection grants Pro. Scheduled cancellation retains access until the paid period ends. Past-due, unpaid, incomplete, paused and canceled subscriptions do not grant Pro. A valid `trialing` subscription grants Pro only through its verified trial end. Only the first Stripe subscription receives seven free days, and promotion codes remain disabled.
 
 `billingCustomers`, `billingCheckoutLocks`, `billingEntitlements` and `billingWebhookEvents` are server-only Firestore collections. The existing rules' final default deny must remain in force; do not add browser write access. Admin SDK writes bypass rules. No secret belongs in the public repository or browser config. Server source is excluded from the Pages package.
 
@@ -68,8 +68,8 @@ Access policy: only an active subscription with the configured price, one seat, 
 6. For sandbox testing, deploy using the explicit config and the verified separate test project ID: `firebase deploy --config firebase.billing.json --project <TEST_PROJECT_ID> --only functions:printprofit-billing`. Do not run sandbox billing against `printprofit-fd30f`. This command does not deploy Firestore rules; the test project's rules and authentication must also be configured and verified.
 7. Register the HTTPS webhook URL from deployment in Stripe. Select customer.subscription.created, updated, deleted, paused and resumed. The signing secret is unique to this endpoint/mode.
 8. Enable the Stripe customer portal for invoices, payment method changes, cancellation, and the two allowed plan prices. Review proration policy before allowing plan switching.
-9. Add the authenticated browser subscription panel. Use the Firebase Functions SDK with the existing app and europe-west2 region. Query `getProAccess` after sign-in and returning from Stripe. Handle unavailable/offline access without deleting data. Only show checkout after deployment/configuration tests pass.
-10. Integrate account deletion: an account with a billable subscription must be directed through cancellation/confirmation before deletion. Do not leave a Stripe subscription charging after Firebase account deletion. Current account deletion is unchanged; this is a launch blocker.
+9. Deploy the prepared authenticated browser panel to the test frontend. It queries `getProAccess` after sign-in and on return from Stripe; Pro actions recheck server state. Confirm fail-closed offline behavior and preserved local data. Enable the test flag only after backend and webhook configuration are verified.
+10. Verify both deletion paths in the test project: the normal page flow blocks while a subscription is open, and `reconcileDeletedBillingUser` cancels an open subscription after an out-of-band Auth deletion. Check retry and cancellation timing. Do not claim this is complete from mocked tests alone.
 11. Add subscription-specific purchase terms, renewal frequency, total upfront annual price, cancellation and refund information. Record explicit acceptance for purchase; the existing account terms acceptance alone is not a complete paid-purchase consent flow.
 12. Test successful/failed/3DS payments; duplicate clicks and simultaneous devices; replayed/invalid/delayed webhooks; renewal failure and recovery; immediate and end-of-period cancellation; monthly/annual switching; account switching; deletion; and restored access on another device. Test mode must not unlock live accounts.
 13. Add server checks to any future premium server operations. Client-only calculator tools can be bypassed by modifying downloaded code; hiding controls alone is not a secure entitlement boundary. No existing feature is claimed to be securely paywalled by this change.
@@ -106,7 +106,7 @@ Access policy: only an active subscription with the configured price, one seat, 
 - Product: `prod_VSDdmCCDaSuCdT` (existing PrintProfit Pro).
 - Monthly price: `price_1URJCAV054u1E901uBTn2U1J`, GBP 250 pence/month, licensed. Existing amount retained; tax behaviour aligned to inclusive.
 - Annual price: `price_1URcRuV054u1E901FcHEWMqw`, GBP 2400 pence/year upfront, licensed, inclusive.
-- Default portal: `bpc_1URcS7V054u1E901ezQ5Kzql`. Invoice history, payment method updates and period-end cancellation enabled. Plan switching and public login disabled. Return URL https://printprofit.co.uk/ must be changed to the verified test frontend before end-to-end sandbox testing.
+- Default portal: `bpc_1URcS7V054u1E901ezQ5Kzql`. Invoice history, payment method updates and period-end cancellation enabled. Plan switching and public login disabled. Its default return URL was updated on 20 October to https://printprofit-test.web.app/?open=account; verify the test frontend exists before a user enters Checkout.
 - No automatic tax setting was enabled. Inclusive price behaviour is not a claim of tax registration or tax collection.
 - This is catalogue/portal configuration only: no completed Checkout, renewal, cancellation or entitlement integration tests yet.
 
@@ -128,7 +128,15 @@ Stripe SDK is pinned to 23.0.0 with API `2026-09-30.endive`, verified against th
 
 The webhook now refreshes current subscription state for paid Checkout completion and asynchronous success, `invoice.paid`, `invoice.payment_failed`, and existing subscription lifecycle events. Unpaid Checkout completions are acknowledged without entitlement writes. This remains a mirror of fresh server-side Stripe reads; no return page grants access.
 
-Validation: 19 policy/mocked-handler tests pass, syntax and real dependency module loading pass, npm audit reports zero vulnerabilities. These are not real Checkout, renewal, cancellation or Firebase emulator tests. Test frontend hosting, authorized Auth domains, subscription purchase consent, account deletion protection, webhook endpoint/signing secret, customer portal return settings and end-to-end testing remain blockers. The test host is a fixed intended destination, not a claim that Hosting is already deployed. Checkout remains false.
+Validation: 19 policy/mocked-handler tests pass, syntax and real dependency module loading pass, npm audit reports zero vulnerabilities. These are not real Checkout, renewal, cancellation or Firebase emulator tests. Test frontend hosting, authorized Auth domains, deployment of the deletion trigger, webhook endpoint/signing secret, real test checkout, renewal/cancellation and tax review remain blockers. The test host is a fixed intended destination, not a claim that Hosting is already deployed. Checkout remains false.
 
 Before live launch, confirm tax registrations and customer jurisdictions; automatic tax is still disabled. Prefer a restricted key scoped to the required customer, price, subscription, Checkout and portal calls once permissions have been exercised in the sandbox.
 
+
+## Draft follow-up — 20 October 2026
+
+- The test-mode Customer Portal now defaults to the test account panel on return. The live Portal was not changed.
+- Checkout requests a payment method during the trial. Checkout and Portal return to `?open=account`, where the panel checks Stripe again.
+- The Pro UI gate is fail-closed when billing is enabled: it checks the callable before launching a premium tool. The current live flag stays false, preserving all previews. Saved scenarios remain viewable after a downgrade; manual materials and saved projects remain free. This is an interface gate for client-side tools, not a tamper-resistant server paywall.
+- A Firebase Auth deletion trigger is in source to cancel mapped subscriptions after an out-of-band deletion. It must be deployed and exercised in `printprofit-test` before live checkout.
+- No real payment, trial transition, webhook delivery, test hosting, or Firebase deployment is claimed by this draft. Rotate the earlier sandbox key that was pasted into chat before setting new test secrets.

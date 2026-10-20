@@ -18,7 +18,7 @@ test('only a first subscription receives the trial in Checkout',()=>{
  assert.equal(c.checkoutParameters('cus_owner','uid-owner','price_month',c.SITE,true).subscription_data.trial_period_days,7);
  assert.equal(c.checkoutParameters('cus_owner','uid-owner','price_month',c.SITE,false).subscription_data.trial_period_days,undefined);
 });
-test('checkout fixes customer identity, quantity and return destinations on the server',()=>{const value=c.checkoutParameters('cus_owner','uid-owner','price_month');assert.equal(value.customer,'cus_owner');assert.equal(value.line_items[0].quantity,1);assert.equal(value.success_url,'https://printprofit.co.uk/?billing=returned');assert.equal(value.subscription_data.metadata.printprofitUid,'uid-owner');assert.equal(value.allow_promotion_codes,false);});
+test('checkout fixes customer identity, quantity and return destinations on the server',()=>{const value=c.checkoutParameters('cus_owner','uid-owner','price_month');assert.equal(value.customer,'cus_owner');assert.equal(value.line_items[0].quantity,1);assert.equal(value.success_url,'https://printprofit.co.uk/?open=account&billing=returned');assert.equal(value.subscription_data.metadata.printprofitUid,'uid-owner');assert.equal(value.payment_method_collection,'always');assert.equal(value.allow_promotion_codes,false);});
 
 test('archiving a price stops new checkouts but preserves an existing paid subscription',()=>{const archived={...price,active:false};assert.throws(()=>c.validatePrice(archived,'monthly'));const current={...subscription,items:{data:[{price:archived,quantity:1,current_period_end:2000}]}};assert.equal(c.accessFromSubscriptions([current],ids,1000).tier,'pro');});
 
@@ -26,7 +26,7 @@ const env=require('./billing-environment');
 test('unknown projects fail closed and test checkout stays on its test host',()=>{
  assert.throws(()=>env.environmentForProject('another-project'));
  const settings=env.environmentForProject('printprofit-test'),value=c.checkoutParameters('cus_owner','owner','price_month',settings.site);
- assert.equal(value.success_url,'https://printprofit-test.web.app/?billing=returned');assert.equal(value.cancel_url,'https://printprofit-test.web.app/?billing=cancelled');assert.match(value.integration_identifier,/^printprofit_pro_[a-z]{8}$/);
+ assert.equal(value.success_url,'https://printprofit-test.web.app/?open=account&billing=returned');assert.equal(value.cancel_url,'https://printprofit-test.web.app/?open=account&billing=cancelled');assert.match(value.integration_identifier,/^printprofit_pro_[a-z]{8}$/);
 });
 test('mixed Stripe modes cannot grant access even when a price ID matches',()=>{
  const current={...subscription,livemode:false,items:{data:[{...subscription.items.data[0],price:{...price,livemode:false}}]}};

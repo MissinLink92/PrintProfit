@@ -4,6 +4,7 @@ if(window.__ppMaterialScanner)return;window.__ppMaterialScanner=true;
 let stream=null,timer=null,token=0,video,stopButton,status,codeInput;
 const el=(tag,text)=>{const n=document.createElement(tag);if(tag==='button')n.className='pp-material-new';if(text!==undefined)n.textContent=text;return n;};
 function stop(){token++;if(timer)clearTimeout(timer);timer=null;if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;if(video){video.pause();video.srcObject=null;video.hidden=true;}if(stopButton)stopButton.hidden=true;}
+window.__ppCloseMaterialScanner=()=>{stop();const box=document.getElementById('ppMaterialScan');if(box)box.hidden=true;};
 function review(raw){
  const code=window.PrintProfitBusinessMath?.barcode(raw);if(!code){status.textContent='That is not a valid EAN/UPC product barcode. Check the digits or enter the material manually.';return;}
  stop();codeInput.value=code;
@@ -31,13 +32,13 @@ async function start(){
 }
 function install(){
  const panel=document.getElementById('ppMaterialsPanel'),toolbar=panel?.querySelector('#ppWorkshopMaterialsView .pp-materials-toolbar');if(!toolbar||document.getElementById('ppMaterialScan'))return;
- const toggle=el('button','Scan material — preview');toggle.type='button';toggle.dataset.ppMaterialScannerToggle='';toolbar.append(toggle);
+ const toggle=el('button',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Scan material · Pro':'Scan material — preview');toggle.type='button';toggle.dataset.ppMaterialScannerToggle='';toolbar.append(toggle);
  const box=el('section');box.id='ppMaterialScan';box.hidden=true;box.style.cssText='padding:14px;margin:12px 0;border:1px solid var(--line,#355363);border-radius:10px;color:inherit';
  box.append(el('h3','Scan a material barcode'),el('p','Recognises product barcodes, not full label text or RFID tags. Matches details you previously saved with the barcode in this workspace. Unknown codes need manual details. Always review before saving.'));
  video=el('video');video.muted=true;video.playsInline=true;video.hidden=true;video.style.cssText='width:100%;max-height:250px;object-fit:contain;background:#000';box.append(video);
- const startButton=el('button','Start camera');startButton.type='button';startButton.addEventListener('click',start);stopButton=el('button','Stop camera');stopButton.type='button';stopButton.hidden=true;stopButton.addEventListener('click',()=>{stop();status.textContent='Camera stopped.';});
+ const startButton=el('button','Start camera');startButton.type='button';startButton.dataset.ppProAction='';startButton.addEventListener('click',start);stopButton=el('button','Stop camera');stopButton.type='button';stopButton.hidden=true;stopButton.addEventListener('click',()=>{stop();status.textContent='Camera stopped.';});
  box.append(startButton,stopButton);const label=el('label','EAN / UPC barcode');codeInput=el('input');codeInput.type='text';codeInput.inputMode='numeric';codeInput.maxLength=25;codeInput.style.cssText='display:block;width:100%;box-sizing:border-box;padding:10px;margin:6px 0';label.append(codeInput);box.append(label);
- const use=el('button','Find / prepare material');use.type='button';use.addEventListener('click',()=>review(codeInput.value));const close=el('button','Close scanner');close.type='button';close.addEventListener('click',()=>{stop();box.hidden=true;});box.append(use,close);
+ const use=el('button','Find / prepare material');use.type='button';use.dataset.ppProAction='';use.addEventListener('click',()=>review(codeInput.value));const close=el('button','Close scanner');close.type='button';close.addEventListener('click',()=>{stop();box.hidden=true;});box.append(use,close);
  status=el('p');status.setAttribute('role','status');box.append(status);toolbar.after(box);
  toggle.addEventListener('click',()=>{box.hidden=!box.hidden;if(box.hidden)stop();});
  const observer=new MutationObserver(()=>{if(!panel.classList.contains('open'))stop();});observer.observe(panel,{attributes:true,attributeFilter:['class']});
