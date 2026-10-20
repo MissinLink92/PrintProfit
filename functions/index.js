@@ -14,10 +14,15 @@ const webhookKey=defineSecret('STRIPE_WEBHOOK_SECRET');
 const enabled=defineBoolean('PRINTPROFIT_BILLING_ENABLED',{default:false});
 const month=defineString('STRIPE_PRO_MONTHLY_PRICE',{default:''});
 const year=defineString('STRIPE_PRO_ANNUAL_PRICE',{default:''});
+const ownerEmail=defineString('PRINTPROFIT_OWNER_EMAIL',{default:''});
 const callable={region:'europe-west2',secrets:[stripeKey],maxInstances:3,cors:['https://printprofit.co.uk','https://www.printprofit.co.uk','https://printprofit-test.web.app','https://printprofit-test.firebaseapp.com']};
 const ids=()=>({monthly:month.value(),annual:year.value()});
 const environment=()=>billingEnvironment.environmentForProject(process.env.GCLOUD_PROJECT||process.env.GCP_PROJECT);
 const stripe=()=>{const env=environment(),key=stripeKey.value();billingEnvironment.validateKey(key,env);return new Stripe(key,{apiVersion:billingEnvironment.API_VERSION});};
+function isOwner(auth){
+ const configured=ownerEmail.value().trim().toLowerCase();
+ return Boolean(configured&&String(auth.token.email||'').trim().toLowerCase()===configured);
+}
 function user(request){
  if(!request.auth)throw new HttpsError('unauthenticated','Sign in before managing a subscription.');
  if(request.auth.token.email_verified!==true)throw new HttpsError('failed-precondition','Verify your email before managing a subscription.');
@@ -37,7 +42,12 @@ async function subscriptions(client,customer){
  return result;
 }
 exports.getProAccess=onCall(callable,async request=>{
- const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
+ const auth=user(request);
+ if(isOwner(auth)){
+  const mapping=await db.collection('billingCustomers').doc(auth.uid).get();
+  return {tier:'pro',plan:null,until:null,trialEnd:null,status:'owner',cancelAtPeriodEnd:false,eligibleForTrial:false,hasBillingAccount:mapping.exists};
+ }
+ const client=stripe(),customer=await customerFor(auth,client);
  if(!customer)return {...core.accessFromSubscriptions([],ids()),eligibleForTrial:true};
  // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
  const history=await subscriptions(client,customer);
@@ -45,6 +55,7 @@ exports.getProAccess=onCall(callable,async request=>{
 });
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
+ if(isOwner(auth))throw new HttpsError('failed-precondition','Your owner account already has Pro. No subscription is needed.');
  if(!enabled.value())throw new HttpsError('failed-precondition','Subscriptions are not available yet.');
  const plan=request.data?.plan;
  let priceId;try{priceId=core.planPrice(plan,ids())}catch{throw new HttpsError('invalid-argument','Choose monthly or annual.');}
