@@ -25,6 +25,18 @@ test('signed-out and unverified callers cannot use billing endpoints',async()=>{
   await assert.rejects(h.handlers[name]({auth:{uid:'owner',token:{email_verified:false}}}),e=>e.code==='failed-precondition');assert.equal(h.calls.length,0);
  }
 });
+test('verified configured owner receives Pro without Stripe and cannot buy a subscription',async()=>{
+ const h=harness({key:'sk_live_wrong_mode',enabled:true,params:{PRINTPROFIT_OWNER_EMAIL:' Pro-Owner@Example.com '}});
+ const auth={uid:'owner',token:{email_verified:true,email:'pro-owner@example.com'}};
+ const access=await h.handlers.getProAccess({auth});
+ assert.equal(access.tier,'pro');assert.equal(access.status,'owner');assert.equal(access.until,null);assert.equal(access.hasBillingAccount,true);
+ assert.equal(h.calls.some(call=>call==='subscriptions'||call==='customer-read'),false);
+ await assert.rejects(h.handlers.createProCheckout({auth,data:{plan:'monthly',purchaseAccepted:true}}),e=>e.code==='failed-precondition');
+ assert.equal(h.calls.some(call=>call.checkout),false);
+ await assert.rejects(h.handlers.getProAccess({auth:{uid:'owner',token:{email_verified:false,email:'pro-owner@example.com'}}}),e=>e.code==='failed-precondition');
+ const outsider=harness({key:'sk_live_wrong_mode',params:{PRINTPROFIT_OWNER_EMAIL:'pro-owner@example.com'}});
+ await assert.rejects(outsider.handlers.getProAccess({auth:{uid:'other',token:{email_verified:true,email:'someone-else@example.com'}}}));
+});
 test('checkout stays disabled without explicitly enabled server configuration',async()=>{
  const h=harness();await assert.rejects(h.handlers.createProCheckout({auth:{uid:'owner',token:{email_verified:true}},data:{plan:'monthly'}}),e=>e.code==='failed-precondition');assert.equal(h.calls.length,0);
 });
