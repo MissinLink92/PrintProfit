@@ -12,6 +12,13 @@ test('a verified Stripe trial grants access only until its seven day end',()=>{
  assert.equal(c.accessFromSubscriptions([trial],ids,1600).tier,'basic');
  assert.equal(c.accessFromSubscriptions([{...trial,trial_end:null}],ids,1000).tier,'basic');
 });
+test('Stripe portal cancellation during a trial remains active and shows the scheduled end',()=>{
+ const trial={...subscription,status:'trialing',trial_end:1600,cancel_at:1600,cancel_at_period_end:false};
+ const access=c.accessFromSubscriptions([trial],ids,1000);
+ assert.equal(access.tier,'pro');assert.equal(access.cancelAtPeriodEnd,true);assert.equal(access.until,1600);
+ assert.equal(c.accessFromSubscriptions([trial],ids,1600).tier,'basic');
+ assert.equal(c.accessFromSubscriptions([{...trial,cancel_at:1800}],ids,1000).cancelAtPeriodEnd,false);
+});
 test('only a first subscription receives the trial in Checkout',()=>{
  assert.equal(c.eligibleForTrial([]),true);
  assert.equal(c.eligibleForTrial([{...subscription,status:'canceled'}]),false);
