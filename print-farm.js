@@ -27,7 +27,7 @@ function syncPremiumInputs(){
  const locked=window.__ppProTier!=='pro';
  document.querySelectorAll('#ppFarmDetails input,#ppFarmDetails select,#ppFarmDetails button').forEach(control=>{control.disabled=locked||(control.id==='ppFarmAdd'&&groups.length>=MAX);});
 }
-document.addEventListener('pp-pro-access-changed',syncPremiumInputs);
+document.addEventListener?.('pp-pro-access-changed',syncPremiumInputs);
 function render(){
  const list=$('ppFarmGroups');if(!list)return;list.replaceChildren();
  groups.forEach((g,index)=>{
