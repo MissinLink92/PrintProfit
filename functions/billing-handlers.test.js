@@ -2,12 +2,12 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const core=require('./billing-core');
 function harness(options={}){
- const calls=[],client={customers:{retrieve:async()=>{calls.push('customer-read');return{livemode:false,metadata:{printprofitUid:'owner'}};}},subscriptions:{list:()=>{calls.push('subscriptions');return(async function*(){yield*(options.subscriptions||[]);})();}},billingPortal:{sessions:{create:async value=>{calls.push(value);return{url:'https://billing.stripe.com/session'};}}},webhooks:{constructEvent:()=>{if(options.event)return options.event;throw Error('bad signature');}}};
- const db={collection:name=>({doc:uid=>({name,uid,get:async()=>{calls.push({collection:name,uid});return{exists:name==='billingCustomers',data:()=>name==='billingCustomers'?{customerId:'cus_authenticated_owner'}:{}};}})}),runTransaction:async fn=>fn({get:ref=>ref.get(),create:(ref,data)=>calls.push({operation:'create',collection:ref.name,data}),set:(ref,data)=>calls.push({operation:'set',collection:ref.name,data})})};
+ const calls=[],client={customers:{retrieve:async()=>{calls.push('customer-read');return{livemode:false,metadata:{printprofitUid:'owner'}};}},prices:{retrieve:async()=>({id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}})},checkout:{sessions:{create:async value=>{calls.push({checkout:value});return{id:'cs_fixture',url:'https://checkout.stripe.com/session',expires_at:Math.floor(Date.now()/1000)+1800};}}},subscriptions:{list:()=>{calls.push('subscriptions');return(async function*(){yield*(options.subscriptions||[]);})();}},billingPortal:{sessions:{create:async value=>{calls.push(value);return{url:'https://billing.stripe.com/session'};}}},webhooks:{constructEvent:()=>{if(options.event)return options.event;throw Error('bad signature');}}};
+ const db={doc:()=>({get:async()=>({exists:true})}),collection:name=>({doc:uid=>({name,uid,get:async()=>{calls.push({collection:name,uid});return{exists:name==='billingCustomers',data:()=>name==='billingCustomers'?{customerId:'cus_authenticated_owner'}:{}};},set:async data=>{calls.push({operation:'set',collection:name,data});},delete:async()=>{}})}),runTransaction:async fn=>fn({get:ref=>ref.get(),create:(ref,data)=>calls.push({operation:'create',collection:ref.name,data}),set:(ref,data)=>calls.push({operation:'set',collection:ref.name,data})})};
  class HttpsError extends Error{constructor(code,message){super(message);this.code=code;}}
  const exported={},sandbox={process:{env:{GCLOUD_PROJECT:options.project||'printprofit-test'}},exports:exported,require:name=>{
   if(name==='firebase-functions/v2/https')return{onCall:(options,handler)=>handler,onRequest:(options,handler)=>handler,HttpsError};
-  if(name==='firebase-functions/params')return{defineSecret:()=>({value:()=>options.key||'sk_test_fixture_only'}),defineString:(name,value)=>({value:()=>options.params?.[name]??value.default}),defineBoolean:(name,value)=>({value:()=>value.default})};
+  if(name==='firebase-functions/params')return{defineSecret:()=>({value:()=>options.key||'sk_test_fixture_only'}),defineString:(name,value)=>({value:()=>options.params?.[name]??value.default}),defineBoolean:(name,value)=>({value:()=>options.enabled??value.default})};
   if(name==='firebase-admin/app')return{initializeApp:()=>{}};
   if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0}};
   if(name==='stripe')return function(){return client;};
@@ -19,13 +19,21 @@ function harness(options={}){
  return{handlers:exported,calls,client};
 }
 test('signed-out and unverified callers cannot use billing endpoints',async()=>{
- for(const name of ['createProCheckout','createBillingPortal','getProAccess']){
+ for(const name of ['createProCheckout','createBillingPortal','getProAccess','checkAccountDeletion']){
   const h=harness();await assert.rejects(h.handlers[name]({data:{customer:'cus_other'}}),e=>e.code==='unauthenticated');
   await assert.rejects(h.handlers[name]({auth:{uid:'owner',token:{email_verified:false}}}),e=>e.code==='failed-precondition');assert.equal(h.calls.length,0);
  }
 });
 test('checkout stays disabled without explicitly enabled server configuration',async()=>{
  const h=harness();await assert.rejects(h.handlers.createProCheckout({auth:{uid:'owner',token:{email_verified:true}},data:{plan:'monthly'}}),e=>e.code==='failed-precondition');assert.equal(h.calls.length,0);
+});
+test('enabled first checkout requires purchase acknowledgement and includes the trial',async()=>{
+ const h=harness({enabled:true,params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'}}),auth={uid:'owner',token:{email_verified:true}};
+ await assert.rejects(h.handlers.createProCheckout({auth,data:{plan:'monthly'}}),e=>e.code==='failed-precondition');
+ const result=await h.handlers.createProCheckout({auth,data:{plan:'monthly',purchaseAccepted:true}});
+ assert.equal(result.url,'https://checkout.stripe.com/session');
+ assert.equal(h.calls.find(x=>x.checkout).checkout.subscription_data.trial_period_days,7);
+ assert.equal(h.calls.find(x=>x.collection==='billingPurchaseConsents'&&x.operation==='set').data.plan,'monthly');
 });
 test('portal ignores client customer and return URL and uses the authenticated mapping',async()=>{
  const h=harness();await h.handlers.createBillingPortal({auth:{uid:'owner',token:{email_verified:true}},data:{customer:'cus_victim',return_url:'https://evil.example/'}});
@@ -52,6 +60,19 @@ test('unpaid checkout completion cannot update entitlements',async()=>{
  const h=harness();h.client.webhooks.constructEvent=()=>({livemode:false,type:'checkout.session.completed',data:{object:{livemode:false,mode:'subscription',payment_status:'unpaid'}}});
  const res={status(code){this.code=code;return this;},send(){}};
  await h.handlers.stripeBillingWebhook({method:'POST',rawBody:Buffer.from('{}'),headers:{}},res);assert.equal(res.code,200);assert.equal(h.calls.length,0);
+});
+test('trial Checkout without an immediate payment refreshes trial access',async()=>{
+ const trial={livemode:false,status:'trialing',trial_end:Math.floor(Date.now()/1000)+7*86400,items:{data:[{quantity:1,price:{id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}}}]}};
+ const event={id:'evt_trial',created:11,livemode:false,type:'checkout.session.completed',data:{object:{livemode:false,customer:'cus_authenticated_owner',mode:'subscription',payment_status:'no_payment_required'}}};
+ const h=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[trial],event});
+ const res={status(code){this.code=code;return this;},send(){}};
+ await h.handlers.stripeBillingWebhook({method:'POST',rawBody:Buffer.from('{}'),headers:{}},res);
+ assert.equal(res.code,200);assert.equal(h.calls.find(x=>x.operation==='set'&&x.collection==='billingEntitlements').data.status,'trialing');
+});
+test('active or trialing subscriptions block account deletion',async()=>{
+ const h=harness({subscriptions:[{status:'trialing'}]});
+ const result=await h.handlers.checkAccountDeletion({auth:{uid:'owner',token:{email_verified:true}}});
+ assert.equal(result.allowed,false);
 });
 
 for(const eventType of ['invoice.paid','invoice.payment_failed','checkout.session.completed','checkout.session.async_payment_succeeded']){

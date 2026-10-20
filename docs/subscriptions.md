@@ -1,4 +1,32 @@
-# PrintProfit subscription integration — Stripe catalogue configured, checkout not launched
+# PrintProfit Pro subscription and trial
+
+## Current source status — 20 October 2026
+
+The £2.50 monthly and £24 annual prices and Customer Portal were configured previously. Source now prepares an authenticated Pro panel, a seven day trial for a customer with no subscription history, server-verified trial access, signed webhook refreshes, explicit purchase acknowledgement and a normal-flow account-deletion check. **Both the backend checkout switch and the browser panel remain disabled.** No Firebase billing deployment, signed webhook registration or end-to-end sandbox payment/trial test is evidenced. Existing Pro previews remain available; do not advertise them as paid-only yet.
+
+### Feature decision
+
+| Feature | Basic | Pro |
+|---|---|---|
+| Full calculator, print-file analysis, single/batch costs, fees, margins and pricing | Included | Included |
+| Compare Products, saved projects and account sync | Included | Included |
+| Manual printer/material profiles, remaining-weight entry and stock updates | Included | Included |
+| Printer groups, production runs, downtime and failure allowances | Preview available until launch | Included at launch |
+| What-if scenario comparison and customer quotations | Preview available until launch | Included at launch |
+| Internal costing CSV/PDF exports and barcode-assisted material entry | Preview available until launch | Included at launch |
+
+Later candidates: photo/label-assisted entry for materials without a barcode, job/sales records, useful low-stock alerts and business reports. Implement and validate each before advertising it. Preserve viewing and exporting existing data when a subscription ends. Existing tools must stay available during this preparation; only apply feature gates after the full Pro experience and downgrade path are reviewed.
+
+### Trial and launch path
+
+- First Stripe subscription for the mapped customer: seven day trial with a payment method collected in Checkout; then £2.50/month or £24/year paid upfront unless cancelled before the trial ends. A returning subscriber starts the chosen paid plan without another trial. The annual plan saves £6 against twelve monthly payments.
+- Access comes only from current Stripe subscriptions: `trialing` through the verified `trial_end`, or `active` through the paid period, using configured prices and one seat. Failed, expired and paused subscriptions lose Pro. A scheduled cancellation retains access through the current trial or paid period.
+- Stripe Checkout trial completion can be `no_payment_required`. Signed `checkout.session.completed`, `customer.subscription.*` and invoice webhooks refresh the subscription instead of trusting a browser return URL.
+- Configure a trial-ending reminder in Stripe and test `customer.subscription.trial_will_end` (typically three days before the end), first charge, payment failure and cancellation messages. The handler currently mirrors status but does not send an email itself.
+- The browser panel is behind `config/billing-config.js` (`enabled:false`). The Firebase callable checkout is behind `PRINTPROFIT_BILLING_ENABLED=false`. Both remain off until a separate test frontend, secrets, signed webhook, tax review, legal copy, account deletion reconciliation, premium gates and payment/renewal/cancellation tests are complete.
+- The normal account deletion flow checks for an open subscription before removing cloud data. Direct deletion of Firebase Auth outside that flow still needs a reconciliation plan before live payments. `billingPurchaseConsents` is a server-only Firestore collection alongside the existing billing collections.
+
+### Historical setup and work still required
 
 Status (17 October 2026): live Stripe catalogue and customer portal configured via the connected Printprofit account. The server foundation remains undeployed by this setup; checkout is not enabled and all existing Pro previews remain available. The browser UI does not enforce subscriptions yet. This is not an end-to-end payment launch.
 

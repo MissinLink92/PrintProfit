@@ -37,9 +37,10 @@ async function subscriptions(client,customer){
 }
 exports.getProAccess=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
- if(!customer)return {tier:'basic',plan:null,until:null,cancelAtPeriodEnd:false};
+ if(!customer)return {...core.accessFromSubscriptions([],ids()),eligibleForTrial:true};
  // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
- return core.accessFromSubscriptions(await subscriptions(client,customer),ids(),undefined,environment().livemode);
+ const history=await subscriptions(client,customer);
+ return {...core.accessFromSubscriptions(history,ids(),undefined,environment().livemode),eligibleForTrial:core.eligibleForTrial(history)};
 });
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
@@ -48,6 +49,7 @@ exports.createProCheckout=onCall(callable,async request=>{
  let priceId;try{priceId=core.planPrice(plan,ids())}catch{throw new HttpsError('invalid-argument','Choose monthly or annual.');}
  const acceptance=await db.doc('users/'+auth.uid+'/legal/acceptance-2026-10-12-v2').get();
  if(!acceptance.exists)throw new HttpsError('failed-precondition','Accept the current account terms first.');
+ if(request.data?.purchaseAccepted!==true)throw new HttpsError('failed-precondition','Confirm the trial, price and renewal terms before continuing.');
  const client=stripe();
  try{core.validatePrice(await client.prices.retrieve(priceId),plan,true,environment().livemode)}catch{throw new HttpsError('failed-precondition','This plan is not configured correctly. No payment was taken.');}
  const customer=await customerFor(auth,client,true);
@@ -62,7 +64,9 @@ exports.createProCheckout=onCall(callable,async request=>{
  });
  if(existing)return {url:existing};
  try{
-  const session=await client.checkout.sessions.create(core.checkoutParameters(customer,auth.uid,priceId,environment().site),{idempotencyKey:'pp-checkout-'+auth.uid+'-'+now});
+  const trial=core.eligibleForTrial(current);
+  const session=await client.checkout.sessions.create(core.checkoutParameters(customer,auth.uid,priceId,environment().site,trial),{idempotencyKey:'pp-checkout-'+auth.uid+'-'+now});
+  await db.collection('billingPurchaseConsents').doc(session.id).set({uid:auth.uid,plan,priceId,trialDays:trial?core.TRIAL_DAYS:0,acceptedAt:FieldValue.serverTimestamp(),termsVersion:'2026-10-20-v1'});
   await ref.set({url:session.url,priceId,expiresAt:session.expires_at*1000,lockedAt:0});
   return {url:session.url};
  }catch(error){await ref.delete();throw new HttpsError('unavailable','Checkout could not be prepared. Please try again.');}
@@ -73,16 +77,23 @@ exports.createBillingPortal=onCall(callable,async request=>{
  const session=await client.billingPortal.sessions.create({customer,return_url:environment().site});
  return {url:session.url};
 });
+exports.checkAccountDeletion=onCall(callable,async request=>{
+ const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
+ if(!customer)return {allowed:true};
+ const history=await subscriptions(client,customer);
+ if(history.some(s=>!['canceled','incomplete_expired'].includes(s.status)))return {allowed:false,reason:'Cancel your subscription in the billing portal and wait until it ends before deleting your account.'};
+ return {allowed:true};
+});
 exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey,webhookKey],maxInstances:3},async(req,res)=>{
  if(req.method!=='POST'){res.status(405).send('POST required');return;}
  const client=stripe();let event;
  try{event=client.webhooks.constructEvent(req.rawBody,req.headers['stripe-signature'],webhookKey.value());}catch{res.status(400).send('Invalid signature');return;}
  try{billingEnvironment.assertMode(event,environment());}catch{res.status(400).send('Wrong Stripe mode');return;}
- if(!['checkout.session.completed','checkout.session.async_payment_succeeded','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','customer.subscription.paused','customer.subscription.resumed'].includes(event.type)){res.status(200).send('Ignored');return;}
+ if(!['checkout.session.completed','checkout.session.async_payment_succeeded','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','customer.subscription.paused','customer.subscription.resumed','customer.subscription.trial_will_end'].includes(event.type)){res.status(200).send('Ignored');return;}
  try{
   const object=event.data.object;
   billingEnvironment.assertMode(object,environment());
-  if(event.type.startsWith('checkout.session.')&&(object.mode!=='subscription'||object.payment_status!=='paid')){res.status(200).send('Awaiting paid subscription');return;}
+  if(event.type.startsWith('checkout.session.')&&(object.mode!=='subscription'||!['paid','no_payment_required'].includes(object.payment_status))){res.status(200).send('Awaiting completed subscription');return;}
   const customerId=typeof object.customer==='string'?object.customer:object.customer?.id;
   if(!customerId){res.status(200).send('No customer');return;}
   const customer=await client.customers.retrieve(customerId);
