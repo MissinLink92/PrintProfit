@@ -44,3 +44,6 @@ jobs:
         run: node scripts/check_workshop_printers.cjs
       - name: Check Workspace popup placement and scroll restoration
         run: node scripts/check_workspace_modals.cjs
+      - name: Check Pro Workspace routing
+        run: node scripts/check_pro_workspace.cjs
+

@@ -13,9 +13,13 @@ The £2.50 monthly and £24 annual prices and Customer Portal were configured pr
 | Manual printer/material profiles, remaining-weight entry and stock updates | Included | Included |
 | Printer groups, production runs, downtime and failure allowances | Preview available until launch | Included at launch |
 | What-if scenario comparison and customer quotations | Preview available until launch | Included at launch |
-| Internal costing CSV/PDF exports and barcode-assisted material entry | Preview available until launch | Included at launch |
+| Internal costing CSV export, printable quotation PDF and barcode-assisted material entry | Preview available until launch | Included at launch |
 
-Later candidates: photo/label-assisted entry for materials without a barcode, job/sales records, useful low-stock alerts and business reports. Implement and validate each before advertising it. Preserve viewing and exporting existing data when a subscription ends. Existing tools must stay available during this preparation; only apply feature gates after the full Pro experience and downgrade path are reviewed.
+Later candidates: photo/label-assisted entry for materials without a barcode, job/sales records and business reports. Workshop already has low-stock threshold alerts. Implement and validate each later feature before advertising it. Preserve viewing and exporting existing data when a subscription ends. Existing tools must stay available during this preparation; only apply feature gates after the full Pro experience and downgrade path are reviewed.
+
+### Pro page in My Workspace
+
+The Workspace navigation now has a Pro tools section. It routes directly to the production planner in Print Setup, scenario comparison and customer quotation in Results, internal costing CSV export, and the barcode scanner in Workshop. These remain previews without a paywall. The page distinguishes future ideas from working tools and links to Profile & Account for plan management when billing is enabled. `?open=pro` opens the section directly from the site shell.
 
 ### Trial and launch path
 
@@ -127,3 +131,4 @@ The webhook now refreshes current subscription state for paid Checkout completio
 Validation: 19 policy/mocked-handler tests pass, syntax and real dependency module loading pass, npm audit reports zero vulnerabilities. These are not real Checkout, renewal, cancellation or Firebase emulator tests. Test frontend hosting, authorized Auth domains, subscription purchase consent, account deletion protection, webhook endpoint/signing secret, customer portal return settings and end-to-end testing remain blockers. The test host is a fixed intended destination, not a claim that Hosting is already deployed. Checkout remains false.
 
 Before live launch, confirm tax registrations and customer jurisdictions; automatic tax is still disabled. Prefer a restricted key scoped to the required customer, price, subscription, Checkout and portal calls once permissions have been exercised in the sandbox.
+

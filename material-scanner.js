@@ -31,7 +31,7 @@ async function start(){
 }
 function install(){
  const panel=document.getElementById('ppMaterialsPanel'),toolbar=panel?.querySelector('#ppWorkshopMaterialsView .pp-materials-toolbar');if(!toolbar||document.getElementById('ppMaterialScan'))return;
- const toggle=el('button','Scan material — preview');toggle.type='button';toolbar.append(toggle);
+ const toggle=el('button','Scan material — preview');toggle.type='button';toggle.dataset.ppMaterialScannerToggle='';toolbar.append(toggle);
  const box=el('section');box.id='ppMaterialScan';box.hidden=true;box.style.cssText='padding:14px;margin:12px 0;border:1px solid var(--line,#355363);border-radius:10px;color:inherit';
  box.append(el('h3','Scan a material barcode'),el('p','Recognises product barcodes, not full label text or RFID tags. Matches details you previously saved with the barcode in this workspace. Unknown codes need manual details. Always review before saving.'));
  video=el('video');video.muted=true;video.playsInline=true;video.hidden=true;video.style.cssText='width:100%;max-height:250px;object-fit:contain;background:#000';box.append(video);
@@ -46,3 +46,4 @@ install();const mountObserver=new MutationObserver(install);mountObserver.observ
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});window.addEventListener('pagehide',stop);document.addEventListener('keydown',e=>{if(e.key==='Escape')stop();});
 document.addEventListener('click',e=>{if(e.target.closest('[data-workshop-tab],[data-workspace-section],[data-material-close]'))stop();},true);
 })();
+

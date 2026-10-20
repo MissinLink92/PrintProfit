@@ -112,9 +112,9 @@ const scripts=[
 'i18n-extra.js?v=20261013-feeds1',
 'settings-preferences.js?v=20261016-fx1',
 'business-tools-math.js?v=20261016-business1',
-'my-projects.js?v=20261016-business1',
-'my-materials.js?v=20261016-workspace1',
-'material-scanner.js?v=20261016-business2',
+'my-projects.js?v=20261020-pro1',
+'my-materials.js?v=20261020-pro1',
+'material-scanner.js?v=20261020-pro1',
 'config/firebase-config.js?v=4',
 'config/billing-config.js?v=1',
 'workshop-account-sync.js?v=20261013-language1',
@@ -126,7 +126,7 @@ const scripts=[
 'print-farm.js?v=20261016-business1',
 'profit-advisor.js?v=20261016-business2',
 'profit-tools.js?v=20261016-business2',
-'business-tools.js?v=20261016-business1',
+'business-tools.js?v=20261020-pro1',
 'printer-price-data.js?v=20261004-nightly1',
 'printer-price-sync.js?v=1',
 'market-price-sync.js?v=20261013-feeds1',
@@ -175,6 +175,7 @@ function openRequestedPanel(){
  let opened=false;
  if(requested==='account'&&typeof child.__ppOpenWorkspaceWorkshop==='function'){child.__ppOpenWorkspaceWorkshop('account');opened=true}
  else if(requested==='workspace'&&typeof child.__ppOpenWorkspaceProjects==='function'){child.__ppOpenWorkspaceProjects();opened=true}
+ else if(requested==='pro'&&typeof child.__ppOpenWorkspaceWorkshop==='function'){child.__ppOpenWorkspaceWorkshop('pro');opened=true}
  else if(requested==='settings'&&typeof child.__openPrintProfitSettings==='function'){child.__openPrintProfitSettings();opened=true}
  if(opened){const url=new URL(location.href);url.searchParams.delete('open');history.replaceState(null,'',url.pathname+url.search+url.hash)}
 }
@@ -224,3 +225,4 @@ frame.addEventListener('load',async()=>{
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
 </body>
 </html>
+

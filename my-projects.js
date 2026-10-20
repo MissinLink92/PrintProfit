@@ -190,7 +190,7 @@ function open(){
   panel.innerHTML=`<div class="pp-projects-backdrop" data-project-close></div>
   <section class="pp-projects-dialog" role="dialog" aria-modal="true" aria-labelledby="ppProjectsTitle">
    <header class="pp-projects-head"><div><div class="pp-projects-kicker">PRINTPROFIT</div><h2 id="ppProjectsTitle">My Workspace</h2><p>Your saved calculator projects, workshop profiles and account settings in one place.</p><small class="pp-projects-local-note">Sign in and enable sync to carry saved project settings between devices. Uploaded 3D model files stay on this device.</small></div><button type="button" class="pp-projects-close" data-project-close aria-label="Close">×</button></header>
-   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page">Projects</button><button type="button" data-workspace-section="workshop">Workshop</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
+   <nav class="pp-workspace-nav" aria-label="My Workspace sections"><button type="button" data-workspace-section="projects" aria-current="page">Projects</button><button type="button" data-workspace-section="workshop">Workshop</button><button type="button" data-workspace-section="pro">Pro tools</button><button type="button" data-workspace-section="account">Profile &amp; Account</button></nav>
    <div class="pp-projects-toolbar"><span class="pp-project-count" id="ppProjectCount"></span></div>
    <div id="ppProjectsList"></div>
   </section>`;
@@ -332,3 +332,4 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 setSaveMode(false);
 })();
+
