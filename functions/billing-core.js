@@ -22,7 +22,9 @@ function accessFromSubscriptions(subscriptions,ids,now=Math.floor(Date.now()/100
   try{validatePrice(price,plan,false,livemode)}catch{return null}
   const trial=s.status==='trialing';
   const until=Number(trial?s.trial_end:(item.current_period_end||s.current_period_end));
-  return Number.isFinite(until)&&until>now?{tier:'pro',plan,until,trialEnd:trial?until:null,status:s.status,cancelAtPeriodEnd:Boolean(s.cancel_at_period_end)}:null;
+  const cancelAt=Number(s.cancel_at);
+  const cancellationScheduled=Boolean(s.cancel_at_period_end||(s.cancel_at!=null&&Number.isFinite(cancelAt)&&cancelAt>now&&cancelAt<=until));
+  return Number.isFinite(until)&&until>now?{tier:'pro',plan,until,trialEnd:trial?until:null,status:s.status,cancelAtPeriodEnd:cancellationScheduled}:null;
  }).filter(Boolean).sort((a,b)=>b.until-a.until);
  return matches[0]||{tier:'basic',plan:null,until:null,trialEnd:null,status:null,cancelAtPeriodEnd:false};
 }
