@@ -2,6 +2,7 @@
 'use strict';
 if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
 const FIREBASE_VERSION='12.19.0';
+const standardOffer='Seven days free for a new subscriber, then £2.50/month or £24/year (paid upfront). Cancel through Stripe’s billing portal. Your projects and inventory remain yours if Pro ends.';
 let callable=null,owner='',generation=0;
 const $=id=>document.getElementById(id);
 const date=seconds=>new Date(seconds*1000).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
@@ -12,7 +13,7 @@ function panel(){
  if(!card)return null;
  if($('ppProSubscription'))return $('ppProSubscription');
  const section=document.createElement('section');section.id='ppProSubscription';section.setAttribute('aria-labelledby','ppProTitle');
- section.innerHTML='<h3 id="ppProTitle">PrintProfit Pro</h3><p>Seven days free for a new subscriber, then £2.50/month or £24/year (paid upfront). Cancel through Stripe’s billing portal. Your projects and inventory remain yours if Pro ends.</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProPlans" hidden><label><input id="ppProConsent" type="checkbox"><span><span id="ppProConsentText"></span> I have read the <a href="./terms.html" target="_top">subscription terms</a>.</span></label><div><button type="button" data-pp-billing="monthly">Choose monthly · £2.50/month</button><button type="button" data-pp-billing="annual">Choose annual · £24/year</button></div></div><button type="button" id="ppProManage" data-pp-billing="portal" hidden>Manage or cancel subscription</button>';
+ section.innerHTML='<h3 id="ppProTitle">PrintProfit Pro</h3><p id="ppProDescription">'+standardOffer+'</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProPlans" hidden><label><input id="ppProConsent" type="checkbox"><span><span id="ppProConsentText"></span> I have read the <a href="./terms.html" target="_top">subscription terms</a>.</span></label><div><button type="button" data-pp-billing="monthly">Choose monthly · £2.50/month</button><button type="button" data-pp-billing="annual">Choose annual · £24/year</button></div></div><button type="button" id="ppProManage" data-pp-billing="portal" hidden>Manage or cancel subscription</button>';
  const style=document.createElement('style');style.textContent='#ppProSubscription{width:100%;margin-top:14px;padding:15px;border:1px solid #517180;border-radius:10px;background:#0c222d;color:#eaf4f7}#ppProSubscription h3{margin:0 0 5px;font-size:16px}#ppProSubscription p{font-size:12px;line-height:1.5}#ppProPlans label{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.5}#ppProPlans input{flex:none;margin-top:3px}#ppProPlans div{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}#ppProSubscription button{padding:9px 12px;border:1px solid #ff7800;border-radius:8px;background:#ff7800;color:white;font-weight:700;cursor:pointer}#ppProSubscription button:disabled{opacity:.5;cursor:wait}#ppProSubscription a{color:#75d8f2}#ppProPlans[hidden],#ppProManage[hidden]{display:none!important}body[data-pp-theme="light"] #ppProSubscription{background:#fff;color:#19252d}';
  document.head.appendChild(style);card.append(section);return section;
 }
@@ -34,12 +35,16 @@ async function refresh(force=false){
  const user=context?.user,ready=Boolean(user?.emailVerified&&context.legalAccepted);
  $('ppProPlans').hidden=true;$('ppProManage').hidden=true;
  if(!ready){owner='';accessChanged('basic');text('ppProStatus',user?'Verify your email and accept the current account terms to manage Pro.':'Sign in with a verified account to see your plan.');return;}
- owner=user.uid;text('ppProStatus','Checking subscription with Stripe…');
+ owner=user.uid;text('ppProStatus','Checking PrintProfit Pro access…');
  try{
   const access=await invoke('getProAccess');
   if(token!==generation||owner!==user.uid)return;
   accessChanged(access.tier);
-  if(access.tier==='pro'){
+  text('ppProDescription',access.status==='owner'?'All Pro tools are included with your verified owner account. No trial or subscription is needed.':standardOffer);
+  if(access.status==='owner'){
+   text('ppProStatus',access.hasBillingAccount?'Owner access is active without a payment requirement. Manage any existing Stripe subscription below to avoid future charges.':'Owner access is active. No subscription or payment is needed.');
+   $('ppProManage').hidden=!access.hasBillingAccount;
+  }else if(access.tier==='pro'){
    const price=access.plan==='annual'?'£24/year':'£2.50/month';
    const message=access.trialEnd?'Free trial ends '+date(access.until)+(access.cancelAtPeriodEnd?' · cancellation scheduled.':' · '+price+' afterward.'):(access.cancelAtPeriodEnd?'Pro access ends '+date(access.until)+' · cancellation scheduled.':'Pro '+access.plan+' plan renews '+date(access.until)+' at '+price+'.');
    text('ppProStatus',message);
