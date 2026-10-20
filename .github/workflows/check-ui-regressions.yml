@@ -24,6 +24,8 @@ jobs:
           node-version: '22'
       - name: Check product categories
         run: node scripts/check_product_categories.cjs
+      - name: Check approved Awin link routing
+        run: node scripts/check_awin_links.cjs
       - name: Check business exports and material barcodes
         run: node scripts/check_business_tools.cjs
       - name: Check uploaded material usage
