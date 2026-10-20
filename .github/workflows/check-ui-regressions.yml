@@ -46,4 +46,6 @@ jobs:
         run: node scripts/check_workspace_modals.cjs
       - name: Check Pro Workspace routing
         run: node scripts/check_pro_workspace.cjs
+      - name: Check shared site icons
+        run: node scripts/check_site_icons.cjs
 

@@ -325,6 +325,7 @@ body.pp-light .kind.equipment .pp-shared-icon{color:#238b59!important}
 body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
 <link rel="stylesheet" href="./site-header.css?v=20261013-language1">
+<link rel="stylesheet" href="./site-unified.css?v=1">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="PrintProfit">
@@ -342,11 +343,11 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 }
 </style>
 </head>
-<body data-pp-standalone-i18n="1">
+<body data-pp-standalone-i18n="1" class="pp-compare-page">
 <div id="ppSiteHeader"></div><script src="./site-header.js?v=20261013-language1"></script>
 <div class="wrap">
 
-<section class="hero">
+<section class="hero" data-pp-icon="compare">
 <div class="kicker">PRINTPROFIT • COMPARE PRODUCTS</div>
 <h1>Find it <strong>cheaper.</strong></h1>
 <p class="lead">Compare tracked UK listings for 3D printers and printing materials across multiple retailers. Search by product or brand, filter by material and retailer, tick the products you want, then switch brands without losing your selections.</p>
@@ -394,9 +395,9 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 
 <div class="compare-overview">
 <div class="insight" id="insight" hidden>
-<div class="insight-card"><div class="eyebrow">Current filtered set</div><strong id="insightSummary">—</strong><span id="insightSummarySub">—</span></div>
-<div class="insight-card"><div class="eyebrow">Lowest current price</div><strong id="insightPrice">—</strong><span id="insightPriceSub">—</span></div>
-<div class="insight-card"><div class="eyebrow">Lowest unit cost</div><strong id="insightUnit">—</strong><span id="insightUnitSub">—</span></div>
+<div class="insight-card" data-pp-icon="search"><div class="eyebrow">Current filtered set</div><strong id="insightSummary">—</strong><span id="insightSummarySub">—</span></div>
+<div class="insight-card" data-pp-icon="tag"><div class="eyebrow">Lowest current price</div><strong id="insightPrice">—</strong><span id="insightPriceSub">—</span></div>
+<div class="insight-card" data-pp-icon="chart"><div class="eyebrow">Lowest unit cost</div><strong id="insightUnit">—</strong><span id="insightUnitSub">—</span></div>
 </div>
 <aside class="retailer-notice" aria-labelledby="retailerNoticeTitle">
 <h2 id="retailerNoticeTitle">Buying from a retailer</h2>
@@ -467,18 +468,18 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <section class="section">
 <h2>How PrintProfit compares prices</h2>
 <div class="cards">
-<article class="card"><h3>Material comparison</h3><p>Filament is normalised to a comparable price per kilogram when the package weight is known. This makes different pack sizes easier to compare without treating a 500g or 750g spool as if it were a full kilogram.</p></article>
-<article class="card"><h3>Printer comparison</h3><p>Printers are compared by headline price and shown with build volume where available. Unit-cost sorting is only meaningful for materials, not complete machines.</p></article>
-<article class="card"><h3>Source &amp; freshness</h3><p>Each listing carries a checked date. Prices are reference snapshots, and the live retailer page remains the source of truth for the final checkout price.</p></article>
+<article class="card" data-pp-icon="filament"><h3>Material comparison</h3><p>Filament is normalised to a comparable price per kilogram when the package weight is known. This makes different pack sizes easier to compare without treating a 500g or 750g spool as if it were a full kilogram.</p></article>
+<article class="card" data-pp-icon="printer"><h3>Printer comparison</h3><p>Printers are compared by headline price and shown with build volume where available. Unit-cost sorting is only meaningful for materials, not complete machines.</p></article>
+<article class="card" data-pp-icon="time"><h3>Source &amp; freshness</h3><p>Each listing carries a checked date. Prices are reference snapshots, and the live retailer page remains the source of truth for the final checkout price.</p></article>
 </div>
 </section>
 
 <section class="section">
 <h2>Coverage</h2>
 <div class="cards">
-<article class="card"><h3 id="sourceCount">10 sources</h3><p>Retailers and manufacturers are tracked in the central comparison database. Additional specialist sources can be added without redesigning the page.</p></article>
-<article class="card"><h3 id="brandCount">32 brands</h3><p>Brand coverage spans major printer and material manufacturers, with more brands ready to be added as product feeds are mapped.</p></article>
-<article class="card"><h3 id="listingCount">50 listings</h3><p>Prices and photos are checked nightly where the source allows. Verified new products are added automatically.</p></article>
+<article class="card" data-pp-icon="folder"><h3 id="sourceCount">10 sources</h3><p>Retailers and manufacturers are tracked in the central comparison database. Additional specialist sources can be added without redesigning the page.</p></article>
+<article class="card" data-pp-icon="tag"><h3 id="brandCount">32 brands</h3><p>Brand coverage spans major printer and material manufacturers, with more brands ready to be added as product feeds are mapped.</p></article>
+<article class="card" data-pp-icon="package"><h3 id="listingCount">50 listings</h3><p>Prices and photos are checked nightly where the source allows. Verified new products are added automatically.</p></article>
 </div>
 </section>
 
@@ -1110,5 +1111,7 @@ body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wr
 
 }
 </style>
+<script defer src="./site-unified.js?v=1"></script>
 </body>
 </html>
+

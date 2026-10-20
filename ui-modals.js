@@ -47,12 +47,14 @@ function openSettings(){
       <div class="pp-settings-body">
         <div class="pp-settings-section-title">Appearance</div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-settings"></use></svg></span>
           <div><strong>Dark mode</strong><span>Use the dark PrintProfit interface.</span></div>
           <label class="pp-settings-switch"><input id="ppSettingsDark" type="checkbox" role="switch" checked><span></span></label>
         </div>
 
         <div class="pp-settings-section-title">Language &amp; region</div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-book"></use></svg></span>
           <div><strong>Language</strong><span>Choose the language used across the page.</span></div>
           <select id="ppSettingsLanguage" class="pp-settings-select" aria-label="Language">
             <option value="en">English</option>
@@ -64,6 +66,7 @@ function openSettings(){
           </select>
         </div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-calculator"></use></svg></span>
           <div><strong>Units</strong><span>Choose metric or imperial measurements.</span></div>
           <select id="ppSettingsUnits" class="pp-settings-select" aria-label="Units">
             <option value="metric">Metric (g / ml)</option>
@@ -71,6 +74,7 @@ function openSettings(){
           </select>
         </div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-coins"></use></svg></span>
           <div><strong>Currency</strong><span>Choose the currency used for costs and prices.</span></div>
           <select id="ppSettingsCurrency" class="pp-settings-select" aria-label="Currency">
             <option value="GBP">GBP (£) — British Pound</option>
@@ -95,12 +99,14 @@ function openSettings(){
           </select>
         </div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg></span>
           <div><strong>Exchange rate</strong><span>Update the conversion used when displaying non-GBP currencies.</span></div>
           <div class="pp-settings-rate"><span>1 GBP =</span><input id="ppSettingsRate" type="number" min="0.000001" step="0.0001" value="1"></div>
         </div>
 
         <div class="pp-settings-section-title">Calculator</div>
         <div class="pp-settings-card">
+          <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-undo"></use></svg></span>
           <div><strong>Calculator reset</strong><span>Clear the current calculator inputs and return pricing to £0.</span></div>
           <button type="button" class="pp-settings-action" id="ppSettingsReset">Reset Calculator</button>
         </div>
@@ -292,3 +298,4 @@ function openGuide(){
 
 
 })();
+

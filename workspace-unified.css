@@ -1,0 +1,51 @@
+/* Workspace and modal polish using the same shapes and icon set as the main calculator. */
+#ppMaterialsPanel .pp-materials-head,#ppProjectsPanel .pp-projects-head{background:radial-gradient(circle at 83% 48%,#009fef27,transparent 30%),linear-gradient(135deg,#0d2a38,#071720);border-bottom-color:#315767}
+#ppMaterialsPanel .pp-workspace-nav,#ppProjectsPanel .pp-workspace-nav{gap:9px;padding-bottom:13px;border-bottom:1px solid #264552}
+#ppMaterialsPanel .pp-workspace-nav button,#ppProjectsPanel .pp-workspace-nav button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:8px 14px;border-radius:11px;transition:background .18s,border-color .18s,transform .18s}
+#ppMaterialsPanel .pp-workspace-nav button:hover,#ppProjectsPanel .pp-workspace-nav button:hover{border-color:#5c94a7;transform:translateY(-1px)}
+#ppMaterialsPanel .pp-workspace-nav button svg,#ppProjectsPanel .pp-workspace-nav button svg{width:24px;height:24px;flex:0 0 24px;fill:none;stroke:#19c8ff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+#ppMaterialsPanel .pp-workspace-nav button[aria-current="page"],#ppProjectsPanel .pp-workspace-nav button[aria-current="page"]{background:linear-gradient(135deg,#ff9b48,#ff7800);border-color:#ffaf67;color:#17100a;box-shadow:0 6px 18px #ff780030}
+#ppMaterialsPanel .pp-workspace-nav button[aria-current="page"] svg,#ppProjectsPanel .pp-workspace-nav button[aria-current="page"] svg{stroke:#18313d}
+#ppMaterialsPanel .pp-workspace-pro{padding:22px 28px 32px}
+#ppMaterialsPanel .pp-pro-intro{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;gap:18px;min-height:220px;padding:25px 30px;border:1px solid #3c6676;border-left:5px solid #ff8a24;border-radius:17px;background:radial-gradient(circle at 84% 45%,#009fef32,transparent 32%),linear-gradient(120deg,#143444,#0a202d 75%);box-shadow:0 12px 35px #0004}
+#ppMaterialsPanel .pp-pro-intro-copy{position:relative;z-index:1;max-width:760px}
+#ppMaterialsPanel .pp-pro-intro h3{max-width:760px;font-size:clamp(24px,3vw,34px);line-height:1.12;letter-spacing:-.025em}
+#ppMaterialsPanel .pp-pro-intro h3 em{font-style:normal;color:#2ad8ff}
+#ppMaterialsPanel .pp-pro-intro p{font-size:13px;max-width:730px}
+#ppMaterialsPanel .pp-pro-hero-icon{width:118px;height:118px;flex:0 0 118px;margin-left:auto;display:grid;place-items:center;border:1px solid #4b8498;border-radius:24px;background:linear-gradient(145deg,#19465a,#071c29);color:#2ad8ff;box-shadow:0 15px 28px #0005,0 0 38px #009fef33}
+#ppMaterialsPanel .pp-pro-hero-icon svg{width:76px;height:76px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+#ppMaterialsPanel .pp-pro-intro button,#ppMaterialsPanel .pp-pro-card button{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;background:linear-gradient(135deg,#ffab62,#ff8a24);border-color:#ffad66;color:#17100a;box-shadow:0 5px 16px #ff78002a}
+#ppMaterialsPanel .pp-pro-intro button:hover,#ppMaterialsPanel .pp-pro-card button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+#ppMaterialsPanel .pp-pro-intro button span,#ppMaterialsPanel .pp-pro-card button span{font-size:20px;line-height:12px}
+#ppMaterialsPanel .pp-pro-grid{gap:14px;margin-top:16px}
+#ppMaterialsPanel .pp-pro-card{--pro-accent:#19c8ff;display:flex;flex-direction:column;min-height:250px;padding:19px 20px 20px;border:1px solid #315767;border-top:3px solid var(--pro-accent);border-radius:15px;background:linear-gradient(145deg,#102e3d,#0b202b 75%);box-shadow:0 10px 24px #0003;transition:border-color .18s,transform .18s}
+#ppMaterialsPanel .pp-pro-card:hover{border-color:var(--pro-accent);transform:translateY(-2px)}
+#ppMaterialsPanel .pp-pro-production{--pro-accent:#a07aff}#ppMaterialsPanel .pp-pro-scenarios{--pro-accent:#19c8ff}#ppMaterialsPanel .pp-pro-quote{--pro-accent:#10b981}#ppMaterialsPanel .pp-pro-export{--pro-accent:#52b8f5}#ppMaterialsPanel .pp-pro-materials{--pro-accent:#ff9b48}
+#ppMaterialsPanel .pp-pro-card-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:11px}
+#ppMaterialsPanel .pp-pro-card-icon{width:60px;height:60px;display:grid;place-items:center;border:1px solid var(--pro-accent);border-radius:15px;background:radial-gradient(circle at 50% 38%,color-mix(in srgb,var(--pro-accent) 19%,transparent),#0a1d28 80%);color:var(--pro-accent);box-shadow:0 8px 18px #0004,0 0 22px color-mix(in srgb,var(--pro-accent) 20%,transparent)}
+#ppMaterialsPanel .pp-pro-card-icon svg{width:37px;height:37px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#ppMaterialsPanel .pp-pro-card-number{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--pro-accent);border-radius:50%;background:#071b26;color:var(--pro-accent);font-size:11px;font-weight:900}
+#ppMaterialsPanel .pp-pro-card-kicker{display:block;color:var(--pro-accent);font-size:10px;letter-spacing:.16em;font-weight:900}
+#ppMaterialsPanel .pp-pro-card h4{font-size:19px;margin:5px 0 6px}
+#ppMaterialsPanel .pp-pro-card p{min-height:0;margin:0 0 14px;font-size:13px;line-height:1.55;flex:1;color:#bdd0d9}
+#ppMaterialsPanel .pp-pro-card button{align-self:flex-start;margin-top:auto}
+#ppMaterialsPanel .pp-pro-later{border-style:dashed;background:#0c222f}
+#ppProjectsPanel .pp-project-card,#ppMaterialsPanel .pp-material-card{border-color:#315767;background:linear-gradient(145deg,#102a39,#0b202b);box-shadow:0 7px 18px #0002}
+#ppProjectsPanel .pp-project-icon,#ppMaterialsPanel .pp-material-dot,#ppMaterialsPanel .pp-printer-dot{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border:1px solid #4d85a0;border-radius:12px;background:#0e2a39;color:#19c8ff;box-shadow:0 0 18px #009fef20}
+#ppMaterialsPanel .pp-material-dot{color:#ff9b48;border-color:#ab683f;background:#332215}#ppMaterialsPanel .pp-printer-dot{color:#19c8ff}
+#ppProjectsPanel .pp-project-icon svg,#ppMaterialsPanel .pp-material-dot svg,#ppMaterialsPanel .pp-printer-dot svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#ppProjectsPanel .pp-projects-empty-icon,#ppMaterialsPanel .pp-materials-empty-icon{width:64px;height:64px;margin:0 auto 14px;display:grid;place-items:center;border:1px solid #4d85a0;border-radius:16px;background:#0e2a39;color:#19c8ff;box-shadow:0 0 22px #009fef25}
+#ppMaterialsPanel .pp-materials-empty-icon{color:#ff9b48;border-color:#ab683f;background:#332215}
+#ppProjectsPanel .pp-projects-empty-icon svg,#ppMaterialsPanel .pp-materials-empty-icon svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#ppMaterialsPanel .pp-workspace-intro,#ppSettingsPanel .pp-settings-card,#ppGuidePanel .pp-guide-card{border-color:#315767;background:linear-gradient(145deg,#102a39,#0b202b)}
+#ppSettingsPanel .pp-settings-card:hover,#ppGuidePanel .pp-guide-card:hover{border-color:#4d85a0}
+#ppSettingsPanel .pp-settings-card>div{min-width:0;flex:1}
+#ppSettingsPanel .pp-settings-card>.pp-settings-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;margin:0;border:1px solid #4d85a0;border-radius:11px;background:#0e2a39;color:#19c8ff}
+#ppSettingsPanel .pp-settings-card>.pp-settings-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){#ppMaterialsPanel .pp-workspace-pro{padding:16px}#ppMaterialsPanel .pp-pro-intro{padding:20px;min-height:0}#ppMaterialsPanel .pp-pro-hero-icon{width:65px;height:65px;flex-basis:65px;border-radius:14px}#ppMaterialsPanel .pp-pro-hero-icon svg{width:37px;height:37px}#ppMaterialsPanel .pp-pro-grid{grid-template-columns:1fr}#ppMaterialsPanel .pp-pro-card{min-height:0}#ppMaterialsPanel .pp-workspace-nav button,#ppProjectsPanel .pp-workspace-nav button{padding:8px 10px}#ppMaterialsPanel .pp-workspace-nav button svg,#ppProjectsPanel .pp-workspace-nav button svg{width:20px;height:20px;flex-basis:20px}}
+@media(max-width:460px){#ppMaterialsPanel .pp-pro-hero-icon{display:none}#ppMaterialsPanel .pp-workspace-nav,#ppProjectsPanel .pp-workspace-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#ppMaterialsPanel .pp-workspace-nav button,#ppProjectsPanel .pp-workspace-nav button{justify-content:flex-start;font-size:12px}}
+@media(max-width:760px){#ppSettingsPanel .pp-settings-card>.pp-settings-icon{width:42px;height:42px;flex-basis:42px}}
+body.pp-light #ppMaterialsPanel .pp-pro-intro,body[data-pp-theme="light"] #ppMaterialsPanel .pp-pro-intro,body.pp-light #ppMaterialsPanel .pp-pro-card,body[data-pp-theme="light"] #ppMaterialsPanel .pp-pro-card{background:linear-gradient(145deg,#fff,#ecf5f8);color:#19252d}
+body.pp-light #ppMaterialsPanel .pp-pro-card p,body[data-pp-theme="light"] #ppMaterialsPanel .pp-pro-card p,body.pp-light #ppMaterialsPanel .pp-pro-intro p,body[data-pp-theme="light"] #ppMaterialsPanel .pp-pro-intro p{color:#405965}
+body.pp-light #ppMaterialsPanel .pp-pro-card-number,body[data-pp-theme="light"] #ppMaterialsPanel .pp-pro-card-number{background:#edf5f8}
+body.pp-light #ppSettingsPanel .pp-settings-card,body[data-pp-theme="light"] #ppSettingsPanel .pp-settings-card{background:#fff;color:#19252d}
