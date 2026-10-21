@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T02:07:39.517656+00:00",
+  "checkedAt": "2026-10-21T01:47:53.188347+00:00",
   "warnings": [
     "parcelforce: failed; last verified never",
     "ups: failed; last verified never",
@@ -32,14 +32,14 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1103,
-      "verified": 1097,
+      "listed": 1390,
+      "verified": 1384,
       "categories": {
-        "filament": 942,
+        "filament": 1210,
         "accessory": 4,
-        "printer": 66,
-        "resin-material": 70,
-        "raw-material": 14,
+        "printer": 71,
+        "resin-material": 83,
+        "raw-material": 15,
         "equipment": 7
       }
     },
@@ -83,13 +83,13 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1043,
-      "verified": 1043,
+      "listed": 1272,
+      "verified": 1272,
       "categories": {
-        "printer": 238,
-        "filament": 548,
-        "resin-material": 227,
-        "accessory": 25,
+        "printer": 295,
+        "filament": 674,
+        "resin-material": 267,
+        "accessory": 31,
         "equipment": 5
       }
     },
@@ -147,13 +147,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 481,
-      "verified": 478,
+      "listed": 550,
+      "verified": 547,
       "categories": {
-        "filament": 260,
-        "printer": 89,
-        "resin-material": 107,
-        "accessory": 25
+        "filament": 294,
+        "printer": 112,
+        "resin-material": 114,
+        "accessory": 30
       }
     },
     {
@@ -193,10 +193,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1386,
-      "verified": 1378,
+      "listed": 1713,
+      "verified": 1705,
       "categories": {
-        "filament": 1117,
+        "filament": 1444,
         "resin-material": 154,
         "printer": 60,
         "accessory": 49,
@@ -302,7 +302,7 @@
     }
   ],
   "exchangeRates": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
