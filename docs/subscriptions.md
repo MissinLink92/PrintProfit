@@ -1,5 +1,7 @@
 # PrintProfit Pro subscription and trial
 
+**Current launch status (21 October 2026):** See [the live rollout record](live-pro-rollout.md). The dated sections below are an implementation history and some earlier statements about the sandbox being undeployed are superseded by the newer record.
+
 ## Current source status — 20 October 2026
 
 The £2.50 monthly and £24 annual prices and Customer Portal were configured previously. Source now prepares an authenticated Pro panel, a seven day trial for a customer with no subscription history, server-verified trial access, signed webhook refreshes, explicit purchase acknowledgement, Pro UI gates, and an Auth deletion reconciliation trigger. **Both the backend checkout switch and the browser panel remain disabled.** No Firebase billing deployment, signed webhook registration or end-to-end sandbox payment/trial test is evidenced. Existing Pro previews remain available on the live site; do not advertise them as paid-only until the full test flow passes.
