@@ -3,7 +3,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const core=require('./billing-core');
 function harness(options={}){
  const calls=[],client={customers:{retrieve:async()=>{calls.push('customer-read');return{livemode:false,metadata:{printprofitUid:'owner'}};}},prices:{retrieve:async()=>({id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}})},checkout:{sessions:{create:async value=>{calls.push({checkout:value});return{id:'cs_fixture',url:'https://checkout.stripe.com/session',expires_at:Math.floor(Date.now()/1000)+1800};}}},subscriptions:{list:()=>{calls.push('subscriptions');return(async function*(){yield*(options.subscriptions||[]);})();},cancel:async(id,params)=>{calls.push({cancel:id,params});return{id,status:'canceled'};}},billingPortal:{sessions:{create:async value=>{calls.push(value);return{url:'https://billing.stripe.com/session'};}}},webhooks:{constructEvent:()=>{if(options.event)return options.event;throw Error('bad signature');}}};
- const db={doc:()=>({get:async()=>({exists:true})}),collection:name=>({doc:uid=>({name,uid,get:async()=>{calls.push({collection:name,uid});return{exists:name==='billingCustomers',data:()=>name==='billingCustomers'?{customerId:'cus_authenticated_owner'}:{}};},set:async data=>{calls.push({operation:'set',collection:name,data});},delete:async()=>{}})}),runTransaction:async fn=>fn({get:ref=>ref.get(),create:(ref,data)=>calls.push({operation:'create',collection:ref.name,data}),set:(ref,data)=>calls.push({operation:'set',collection:ref.name,data})})};
+ const db={doc:()=>({get:async()=>({exists:true})}),collection:name=>({doc:uid=>({name,uid,get:async()=>{calls.push({collection:name,uid});return{exists:name==='billingCustomers',data:()=>name==='billingCustomers'?{customerId:'cus_authenticated_owner'}:name==='adminGrants'?(options.grant||{}):{}};},set:async data=>{calls.push({operation:'set',collection:name,data});},delete:async()=>{}})}),runTransaction:async fn=>fn({get:ref=>ref.get(),create:(ref,data)=>calls.push({operation:'create',collection:ref.name,data}),set:(ref,data)=>calls.push({operation:'set',collection:ref.name,data})})};
  class HttpsError extends Error{constructor(code,message){super(message);this.code=code;}}
  const exported={},sandbox={process:{env:{GCLOUD_PROJECT:options.project||'printprofit-test'}},exports:exported,require:name=>{
   if(name==='firebase-functions/v2/https')return{onCall:(options,handler)=>handler,onRequest:(options,handler)=>handler,HttpsError};
@@ -13,6 +13,8 @@ function harness(options={}){
   if(name==='firebase-admin/auth')return{getAuth:()=>({getUser:async()=>{calls.push('auth-read');return options.authRecord??{email:'pro-owner@example.com',emailVerified:true,disabled:false};}})};
   if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0}};
   if(name==='stripe')return function(){return client;};
+  if(name==='./admin-core')return require('./admin-core');
+  if(name==='./admin')return require('./admin');
   if(name==='./billing-core')return core;
   if(name==='./billing-environment')return require('./billing-environment');
   throw Error(name);
@@ -112,4 +114,14 @@ test('deleted-user reconciliation rejects wrong Stripe mode before cancelling',a
  const h=harness({subscriptions:[{id:'sub_live',status:'active',livemode:true}]});
  await assert.rejects(h.handlers.reconcileDeletedBillingUser({data:{uid:'owner'}}));
  assert.equal(h.calls.some(call=>call.cancel),false);
+});
+
+test('complimentary access has no price, retains billing portal and prevents new checkout',async()=>{
+ const h=harness({enabled:true,grant:{active:true,until:null}}),auth={uid:'member',token:{email_verified:true}};
+ const result=await h.handlers.getProAccess({auth});assert.equal(result.status,'complimentary');assert.equal(result.until,null);assert.equal(result.hasBillingAccount,true);assert.equal(h.calls.includes('subscriptions'),false);
+ await assert.rejects(h.handlers.createProCheckout({auth,data:{plan:'monthly',purchaseAccepted:true}}),e=>e.code==='failed-precondition');
+});
+test('revoked complimentary access falls back to paid subscription without modifying it',async()=>{
+ const h=harness({grant:{active:false,until:null},params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[{livemode:false,status:'active',items:{data:[{quantity:1,current_period_end:Math.floor(Date.now()/1000)+86400,price:{id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}}}]}}]});
+ const result=await h.handlers.getProAccess({auth:{uid:'member',token:{email_verified:true}}});assert.equal(result.tier,'pro');assert.equal(result.status,'active');assert.equal(h.calls.some(x=>x.cancel),false);
 });

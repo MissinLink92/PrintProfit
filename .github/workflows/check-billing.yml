@@ -2,9 +2,9 @@ name: Check subscription foundation
 on:
   push:
     branches: [main]
-    paths: ['functions/**', 'firebase.billing.json', 'pro-subscription.js', 'workshop-account-sync.js', 'my-materials.js', 'material-scanner.js', 'print-farm.js', 'business-tools.js', 'index.html', 'config/billing-config.js', '.github/workflows/check-billing.yml']
+    paths: ['functions/**', 'admin/**', 'firebase.billing.json', 'pro-subscription.js', 'workshop-account-sync.js', 'my-materials.js', 'material-scanner.js', 'print-farm.js', 'business-tools.js', 'index.html', 'config/billing-config.js', '.github/workflows/check-billing.yml']
   pull_request:
-    paths: ['functions/**', 'firebase.billing.json', 'pro-subscription.js', 'workshop-account-sync.js', 'my-materials.js', 'material-scanner.js', 'print-farm.js', 'business-tools.js', 'index.html', 'config/billing-config.js', '.github/workflows/check-billing.yml']
+    paths: ['functions/**', 'admin/**', 'firebase.billing.json', 'pro-subscription.js', 'workshop-account-sync.js', 'my-materials.js', 'material-scanner.js', 'print-farm.js', 'business-tools.js', 'index.html', 'config/billing-config.js', '.github/workflows/check-billing.yml']
 permissions:
   contents: read
 jobs:
@@ -25,4 +25,5 @@ jobs:
           node --check print-farm.js
           node --check business-tools.js
           node scripts/check_pro_workspace.cjs
-          node --test functions/billing-core.test.js functions/billing-handlers.test.js
+          node --check admin/admin.js
+          node --test functions/*.test.js

@@ -8,6 +8,7 @@ const {getFirestore,FieldValue}=require('firebase-admin/firestore');
 const Stripe=require('stripe');
 const core=require('./billing-core');
 const billingEnvironment=require('./billing-environment');
+const adminPolicy=require('./admin-core');
 initializeApp();
 const db=getFirestore();
 const stripeKey=defineSecret('STRIPE_SECRET_KEY');
@@ -50,7 +51,13 @@ exports.getProAccess=onCall(callable,async request=>{
   const mapping=await db.collection('billingCustomers').doc(auth.uid).get();
   return {tier:'pro',plan:null,until:null,trialEnd:null,status:'owner',cancelAtPeriodEnd:false,eligibleForTrial:false,hasBillingAccount:mapping.exists};
  }
- const client=stripe(),customer=await customerFor(auth,client);
+ const client=stripe();
+ const grant=(await db.collection('adminGrants').doc(auth.uid).get()).data();
+ if(adminPolicy.grantActive(grant)){
+  const mapping=await db.collection('billingCustomers').doc(auth.uid).get();
+  return {tier:'pro',plan:null,until:grant.until,trialEnd:null,status:'complimentary',cancelAtPeriodEnd:false,eligibleForTrial:false,hasBillingAccount:mapping.exists};
+ }
+ const customer=await customerFor(auth,client);
  if(!customer)return {...core.accessFromSubscriptions([],ids()),eligibleForTrial:true};
  // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
  const history=await subscriptions(client,customer);
@@ -60,6 +67,7 @@ exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
  if(await isOwner(auth))throw new HttpsError('failed-precondition','Your owner account already has Pro. No subscription is needed.');
  if(!enabled.value())throw new HttpsError('failed-precondition','Subscriptions are not available yet.');
+ if(adminPolicy.grantActive((await db.collection('adminGrants').doc(auth.uid).get()).data()))throw new HttpsError('failed-precondition','Complimentary Pro is already active.');
  const plan=request.data?.plan;
  let priceId;try{priceId=core.planPrice(plan,ids())}catch{throw new HttpsError('invalid-argument','Choose monthly or annual.');}
  const acceptance=await db.doc('users/'+auth.uid+'/legal/acceptance-2026-10-12-v2').get();
@@ -102,6 +110,7 @@ exports.checkAccountDeletion=onCall(callable,async request=>{
 // Safety net for accounts removed outside the normal in-app deletion flow.
 exports.reconcileDeletedBillingUser=onUserDeleted({region:'europe-west2',secrets:[stripeKey],maxInstances:3,retry:true},async event=>{
  const uid=event.data?.uid;if(!uid)return;
+ await db.collection('adminGrants').doc(uid).delete();
  const ref=db.collection('billingCustomers').doc(uid),mapping=await ref.get();
  const customerId=mapping.data()?.customerId;if(!customerId)return;
  const client=stripe(),history=await subscriptions(client,customerId);
@@ -143,3 +152,9 @@ exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey
   res.status(200).send('Received');
  }catch{res.status(500).send('Please retry');}
 });
+
+// Admin functions do not require a Stripe secret or enable public checkout.
+const adminUid=defineString('PRINTPROFIT_ADMIN_UID',{default:''});
+const gaProperty=defineString('PRINTPROFIT_GA_PROPERTY_ID',{default:''});
+const adminHandlers=require('./admin')({db,auth:getAuth(),HttpsError,ownerUid:()=>adminUid.value(),ownerEmail:()=>ownerEmail.value(),gaProperty:()=>gaProperty.value(),FieldValue});
+for(const [name,handler] of Object.entries(adminHandlers))exports[name]=onCall({region:callable.region,cors:callable.cors,maxInstances:2,timeoutSeconds:60},handler);
