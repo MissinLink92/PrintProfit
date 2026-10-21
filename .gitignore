@@ -3,3 +3,6 @@ node_modules/
 _site/
 .audit-output/
 
+# Project-specific Firebase function settings stay on the deployer's machine.
+functions/.env.*
+!functions/.env.*.example
