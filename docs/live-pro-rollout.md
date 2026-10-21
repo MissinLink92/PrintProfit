@@ -1,0 +1,27 @@
+# PrintProfit Pro live rollout
+
+Status: 21 October 2026. Production checkout is off in both the site (config/billing-config.js) and the function configuration. Keep both switches off until the live webhook and Checkout checks pass.
+
+## Verified state
+
+- Sandbox Checkout created a seven day trial with a test card; the account panel showed the trial, the Stripe portal opened, and cancellation was scheduled for the trial end. The test Firebase project has all six billing functions deployed. The verified owner account received Pro without a subscription in the test project.
+- Live Stripe account: acct_1URIY1V05QYif292. Active GBP recurring prices: monthly price_1URXC0V05QYif292e4PfFIMc (£2.50), annual price_1URXCEV05QYif292TF3wmWyX (£24 paid upfront). Both are licensed and tax-inclusive. The default live portal bpc_1URXCUV05QYif2923U6pDfnG allows payment-method updates, invoices and cancellation at period end.
+- Live Stripe has no webhook endpoint. Firebase production printprofit-fd30f lists zero functions and no Stripe secret names were printed by gcloud secrets list on 21 October. The Cloud Functions and Secret Manager APIs were enabled.
+- The live site has the Pro interface source but the browser billing flag is false. Client-only gates are a user-interface restriction, not a tamper-proof paywall.
+
+## Safe deployment order
+
+1. In Cloud Shell, pull main in ~/printprofit-pro-test and inspect git status before deployment. The local functions/.env.printprofit-test and firebase.test-rules.json belong to the sandbox. Copy functions/.env.printprofit-fd30f.example to functions/.env.printprofit-fd30f. This local production file starts with PRINTPROFIT_BILLING_ENABLED=false and contains the verified live price IDs. Set PRINTPROFIT_OWNER_EMAIL to the verified Firebase Auth email for the owner account in this local file only. Never commit project-specific .env files.
+2. Create a restricted live-mode Stripe API key with the calls required by functions/index.js (prices retrieve; customers create/retrieve; subscriptions list/cancel; Checkout sessions create; billing portal sessions create). Store it as the Firebase Secret Manager secret STRIPE_SECRET_KEY in printprofit-fd30f through a masked input. Never paste keys into GitHub, the website, screenshots or chat. The function rejects test-mode keys in production. Confirm the stored key has the expected rk_live_ or sk_live_ prefix without displaying its value.
+3. Register a live-mode Stripe webhook to https://europe-west2-printprofit-fd30f.cloudfunctions.net/stripeBillingWebhook. Subscribe to checkout.session.completed, checkout.session.async_payment_succeeded, invoice.paid, invoice.payment_failed, and customer.subscription.created, .updated, .deleted, .paused, .resumed, .trial_will_end. Store that endpoint's whsec_ signing secret as STRIPE_WEBHOOK_SECRET in the production Firebase project. Keep public checkout off during setup.
+4. Run npm ci --prefix functions and npm test --prefix functions. Deploy with npx -y firebase-tools@latest deploy --config firebase.billing.json --project printprofit-fd30f --only functions:printprofit-billing. Confirm all six functions deployed in europe-west2, including the Auth deletion reconciliation trigger. A failed or partial deployment does not satisfy this check.
+5. Review and deploy firestore.rules to production using an explicit Firestore rules configuration. The billing collections must remain server-only. Check existing account sync, live Firebase Auth authorized domains and owner email verification.
+6. Verify that live webhook deliveries receive 2xx after a Stripe test event and that invalid signatures are rejected. Check getProAccess for a signed-out user, a verified non-subscriber and the verified owner account. The owner account should show Pro with no trial or payment.
+7. With a separate non-owner account, complete a controlled live Checkout trial and confirm the return page, entitlement on another device, portal, cancellation and webhook delivery. This needs a real payment method and the user's review. Check monthly and annual price selection and the displayed renewal amount, first charge date and terms before public launch. A sandbox test does not count as a live payment test.
+8. After those checks, change the local production .env flag to PRINTPROFIT_BILLING_ENABLED=true and redeploy billing functions. Then enable config/billing-config.js on the live website and verify the public account flow. To stop new checkouts, set both flags false again without deleting accounts or subscriptions; existing customers must retain portal management.
+
+## Operational checks
+
+Confirm tax treatment and customer jurisdictions before charging; an inclusive price does not itself calculate or collect tax. Check Stripe trial-ending notifications and renewal/cancellation emails, privacy and purchase terms, live Firestore rules, account deletion behavior, billing alerts and the downgrade view of saved work. Monitor Stripe webhook failures and Firebase errors during the first subscriptions.
+
+The live API key and live webhook signing secret must be entered in the user's Stripe/Firebase session. An agent connection to Cloud Shell has not been available. No live credential value belongs in chat.
