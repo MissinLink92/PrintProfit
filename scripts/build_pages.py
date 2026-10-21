@@ -8,7 +8,7 @@ destination = root / '_site'
 if destination.exists():
     shutil.rmtree(destination)
 destination.mkdir()
-public_config = {'config/analytics-config.js', 'config/firebase-config.js'}
+public_config = {'config/analytics-config.js', 'config/firebase-config.js', 'config/billing-config.js'}
 excluded = {'scripts', 'config', 'reports', 'work', 'outputs', 'node_modules', 'functions', 'docs'}
 private_data = {'data/review-queue.json', 'data/nightly-report.json', 'firebase.billing.json'}
 for relative in subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0'):

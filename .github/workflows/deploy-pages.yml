@@ -1,0 +1,46 @@
+name: Deploy public website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_pages.py'
+      - 'config/billing-config.js'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: printprofit-refresh-and-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare the public website
+        run: python scripts/build_pages.py
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy public website
+        id: deployment
+        uses: actions/deploy-pages@v4
