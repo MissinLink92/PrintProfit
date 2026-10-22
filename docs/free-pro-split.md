@@ -25,19 +25,23 @@ Backups contain project settings and inventory, not uploaded model files. Import
 - Existing cloud data can be downloaded without a Pro entitlement, including after cancellation.
 - Existing scanner, production, comparison and quote gates are retained.
 
-## Release status and remaining blocker
+## Source implemented; live activation blocked on Firebase rollout
 
-**Prepared source, not an activated subscription launch.** `config/billing-config.js` remains disabled. Previews and current cloud access continue until the rollout is complete.
+The secure source is now prepared, but this is **not yet an activated subscription launch**. `config/billing-config.js` and the server checkout flag remain disabled.
 
-On 22 October, `firebase firestore:databases:list --project printprofit-fd30f` failed authentication in the editing session. Database edition and deployed rules could not be verified. This change does NOT modify or deploy Firestore rules. Current repository rules still permit verified consenting Basic users to write cloud records directly. Browser checks alone are not a secure cloud paywall.
+Cloud writes now require a server-minted Pro entitlement in Firestore. The callable refreshes access from Stripe and writes a server-only entitlement with a 15-minute freshness window; Firestore rules require verified identity, current account consent, an unexpired Pro period and a fresh server check for profile and project writes. Basic accounts retain read and delete access to their own cloud records for export and recovery. Client apps cannot read or write entitlement documents. Source checks cover active, expired, owner and revoked access.
 
-Before enabling the paid split:
+Production still needs the rollout recorded in [live-pro-rollout.md](live-pro-rollout.md): the live Firebase project has no billing functions or stored Stripe secrets, and its designated live webhook is disabled. The browser billing config must remain off until those services are deployed and verified. The live site currently returns 404 for `/config/billing-config.js`, so confirm the production static deployment before enabling the browser flag.
 
-1. Authenticate to the existing Firebase project and identify its database edition; inspect deployed rules.
-2. Implement and test server-enforced cloud-write entitlements, including the verified owner, paid/trial expiry, cancellation and revocation. Preserve owner reads and deletion for recovery. The current webhook entitlement mirror alone needs review for freshness and owner grants before it can be used for rule enforcement.
-3. Test Free local save/export/import; Pro cross-device sync and explicit local import; cancellation with cloud download and continued local edits; expiry during sync; offline behavior; and switching accounts.
-4. Complete the existing live checkout/webhook rollout. Update the public terms and account consent if required for the new cloud entitlement.
-5. Enable the frontend only after backend enforcement and end-to-end checks pass. Do not charge for a claimed secure cloud paywall before this is complete.
+Before activation:
+
+1. In Cloud Shell, verify the project and local status; inspect the Firestore database edition and current rules. Never overwrite unrelated local changes.
+2. Store the restricted live Stripe key and signing secret for the designated webhook in Firebase Secret Manager through masked prompts. Keep the webhook disabled until the function is deployed.
+3. Run `npm ci --prefix functions` and `npm test --prefix functions`. Deploy both the billing functions and Firestore rules with `npx -y firebase-tools@latest deploy --config firebase.billing.json --project printprofit-fd30f --only functions,firestore:rules`.
+4. Exercise the deployed rules in the test project and verify Pro sync, Basic write denial, owner access, cancellation, expiry, read/export and account deletion. Then verify the live webhook signature and a test-mode/live-mode separation.
+5. Only after those checks, enable the server checkout flag, enable the designated Stripe webhook, publish `config/billing-config.js` with the browser flag enabled, and confirm the file is served from `https://printprofit.co.uk/config/billing-config.js`.
+
+Do not claim the subscription is live until those production checks pass.
 
 ## Planned, not advertised as available
 
