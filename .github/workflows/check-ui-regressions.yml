@@ -49,3 +49,5 @@ jobs:
       - name: Check shared site icons
         run: node scripts/check_site_icons.cjs
 
+      - name: Check Free backups and cloud access gating
+        run: node scripts/check_free_pro.cjs

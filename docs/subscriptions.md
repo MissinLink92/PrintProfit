@@ -1,5 +1,7 @@
 # PrintProfit Pro subscription and trial
 
+**Feature policy update — 22 October 2026:** [The agreed Free/Pro split](free-pro-split.md) supersedes the historical feature tables below. Local saves and backups stay free; cloud sync, confirmed-print deduction and low-stock alerts join Pro. Activation is pending server-side cloud-write enforcement and live rollout verification.
+
 **Current launch status (21 October 2026):** See [the live rollout record](live-pro-rollout.md). The dated sections below are an implementation history and some earlier statements about the sandbox being undeployed are superseded by the newer record.
 
 ## Current source status — 20 October 2026

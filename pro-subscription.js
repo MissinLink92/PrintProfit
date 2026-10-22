@@ -13,7 +13,7 @@ function panel(){
  if(!card)return null;
  if($('ppProSubscription'))return $('ppProSubscription');
  const section=document.createElement('section');section.id='ppProSubscription';section.setAttribute('aria-labelledby','ppProTitle');
- section.innerHTML='<h3 id="ppProTitle">PrintProfit Pro</h3><p id="ppProDescription">'+standardOffer+'</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProPlans" hidden><label><input id="ppProConsent" type="checkbox"><span><span id="ppProConsentText"></span> I have read the <a href="./terms.html" target="_top">subscription terms</a>.</span></label><div><button type="button" data-pp-billing="monthly">Choose monthly · £2.50/month</button><button type="button" data-pp-billing="annual">Choose annual · £24/year</button></div></div><button type="button" id="ppProManage" data-pp-billing="portal" hidden>Manage or cancel subscription</button>';
+ section.innerHTML='<h3 id="ppProTitle">PrintProfit Pro</h3><p>Keep your prints, printers and materials organised. Cloud saving, scanning and stock tracking wherever you print. Local saves and backup files stay free.</p><p id="ppProDescription">'+standardOffer+'</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProPlans" hidden><label><input id="ppProConsent" type="checkbox"><span><span id="ppProConsentText"></span> I have read the <a href="./terms.html" target="_top">subscription terms</a>.</span></label><div><button type="button" data-pp-billing="monthly">Choose monthly · £2.50/month</button><button type="button" data-pp-billing="annual">Choose annual · £24/year</button></div></div><button type="button" id="ppProManage" data-pp-billing="portal" hidden>Manage or cancel subscription</button>';
  const style=document.createElement('style');style.textContent='#ppProSubscription{width:100%;margin-top:14px;padding:15px;border:1px solid #517180;border-radius:10px;background:#0c222d;color:#eaf4f7}#ppProSubscription h3{margin:0 0 5px;font-size:16px}#ppProSubscription p{font-size:12px;line-height:1.5}#ppProPlans label{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.5}#ppProPlans input{flex:none;margin-top:3px}#ppProPlans div{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}#ppProSubscription button{padding:9px 12px;border:1px solid #ff7800;border-radius:8px;background:#ff7800;color:white;font-weight:700;cursor:pointer}#ppProSubscription button:disabled{opacity:.5;cursor:wait}#ppProSubscription a{color:#75d8f2}#ppProPlans[hidden],#ppProManage[hidden]{display:none!important}body[data-pp-theme="light"] #ppProSubscription{background:#fff;color:#19252d}';
  document.head.appendChild(style);card.append(section);return section;
 }
@@ -80,10 +80,20 @@ async function requirePro(){
   return false;
  }
 }
+// Background sync must never open a paywall or trust a cached browser tier.
+window.__ppCheckCloudAccess=async()=>{
+ const context=await window.__ppBillingAccountContext();
+ if(!context?.user?.emailVerified||!context.legalAccepted)return false;
+ const access=await invoke('getProAccess');
+ const latest=await window.__ppBillingAccountContext();
+ if(latest?.user?.uid!==context.user.uid||!latest.legalAccepted)return false;
+ accessChanged(access.tier);
+ return access.tier==='pro';
+};
 window.__ppRequirePro=requirePro;
 const approved=new WeakSet(),checking=new WeakSet();
 document.addEventListener('click',async event=>{
- const target=event.target.closest('#ppWorkspacePro [data-pp-pro-tool]:not([data-pp-pro-tool="subscription"]),#ppFarmEnabled,[data-pp-material-scanner-toggle],#ppBusinessTools [data-pp-pro-action],#ppMaterialScan [data-pp-pro-action]');
+ const target=event.target.closest('#ppWorkspacePro [data-pp-pro-tool]:not([data-pp-pro-tool="subscription"]),#ppFarmEnabled,[data-mark-printed],[data-pp-material-scanner-toggle],#ppBusinessTools [data-pp-pro-action],#ppMaterialScan [data-pp-pro-action]');
  if(!target||approved.has(target)||checking.has(target))return;
  // Opening a print window needs a fresh user gesture; verify first, then let the next click print.
  if(target.dataset.ppProAction==='quote'&&window.__ppProTier==='pro'&&Date.now()-window.__ppProVerifiedAt<5000)return;
