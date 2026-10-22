@@ -46,7 +46,7 @@ async function subscriptions(client,customer){
 }
 function entitlementRecord(access,ownerAccess=false,eventCreated=null){
  const validUntil=Number(access.until);
- return {...access,ownerAccess:Boolean(ownerAccess),validUntil:!ownerAccess&&access.tier==='pro'&&Number.isFinite(validUntil)&&validUntil>0?Timestamp.fromMillis(validUntil*1000):null,checkedAt:FieldValue.serverTimestamp(),...(eventCreated===null?{}:{eventCreated})};
+ return {...access,ownerAccess:Boolean(ownerAccess),validUntil:!ownerAccess&&access.tier==='pro'&&Number.isFinite(validUntil)&&validUntil>0?Timestamp.fromMillis(validUntil*1000):null,checkedAt:FieldValue.serverTimestamp(),checkedUntil:Timestamp.fromMillis(Date.now()+15*60*1000),...(eventCreated===null?{}:{eventCreated})};
 }
 async function saveEntitlement(uid,access,ownerAccess=false){
  await db.collection('billingEntitlements').doc(uid).set(entitlementRecord(access,ownerAccess));
