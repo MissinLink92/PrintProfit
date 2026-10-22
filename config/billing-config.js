@@ -1,4 +1,11 @@
-// Refresh the public site bundle on 22 October 2026. Keep this false until the
-// live Firebase functions, server-only Firestore rules, Stripe webhook secret,
-// customer portal and production account checks are all verified.
-window.PRINTPROFIT_BILLING_CONFIG={enabled:false};
+// Temporary account-check preview while production checkout stays disabled.
+// The normal public URL keeps billing hidden. Remove this switch after canary checks.
+let printProfitBillingPreview = false;
+try {
+  printProfitBillingPreview =
+    window.top.location.origin === window.location.origin &&
+    new URLSearchParams(window.top.location.search).get('ppBillingPreview') === '1';
+} catch (_) {
+  printProfitBillingPreview = false;
+}
+window.PRINTPROFIT_BILLING_CONFIG = { enabled: printProfitBillingPreview };
