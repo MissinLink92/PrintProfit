@@ -104,10 +104,11 @@ test('getProAccess writes short-lived server entitlements and revokes non-Pro cl
 });
 test('Firestore rules require fresh server Pro entitlements for profile and project writes',()=>{
  const rules=fs.readFileSync(__dirname+'/../firestore.rules','utf8');
- assert.equal((rules.match(/&& hasFreshProEntitlement\\(\\)/g)||[]).length,2);
- assert.match(rules,/match \\/billingEntitlements\\/\\{userId\\}\\s*\\{\\s*allow read, write: if false;/);
- assert.match(rules,/allow get, list: if isVerifiedOwner\\(\\);/);
- assert.match(rules,/allow delete: if isOwner\\(\\);/);
+ assert.equal(rules.split('&& hasFreshProEntitlement()').length-1,2);
+ assert.ok(rules.includes('match /billingEntitlements/{userId}'));
+ assert.ok(rules.includes('allow read, write: if false;'));
+ assert.ok(rules.includes('allow get, list: if isVerifiedOwner();'));
+ assert.ok(rules.includes('allow delete: if isOwner();'));
 });
 test('active or trialing subscriptions block account deletion',async()=>{
  const h=harness({subscriptions:[{status:'trialing'}]});
