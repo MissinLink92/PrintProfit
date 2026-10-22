@@ -4,7 +4,7 @@ const {onUserDeleted}=require('firebase-functions/v2/identity');
 const {defineSecret,defineString,defineBoolean}=require('firebase-functions/params');
 const {initializeApp}=require('firebase-admin/app');
 const {getAuth}=require('firebase-admin/auth');
-const {getFirestore,FieldValue}=require('firebase-admin/firestore');
+const {getFirestore,FieldValue,Timestamp}=require('firebase-admin/firestore');
 const Stripe=require('stripe');
 const core=require('./billing-core');
 const billingEnvironment=require('./billing-environment');
@@ -44,17 +44,32 @@ async function subscriptions(client,customer){
  for await(const subscription of client.subscriptions.list({customer,status:'all',limit:100}))result.push(subscription);
  return result;
 }
+function entitlementRecord(access,ownerAccess=false,eventCreated=null){
+ const validUntil=Number(access.until);
+ return {...access,ownerAccess:Boolean(ownerAccess),validUntil:!ownerAccess&&access.tier==='pro'&&Number.isFinite(validUntil)&&validUntil>0?Timestamp.fromMillis(validUntil*1000):null,checkedAt:FieldValue.serverTimestamp(),...(eventCreated===null?{}:{eventCreated})};
+}
+async function saveEntitlement(uid,access,ownerAccess=false){
+ await db.collection('billingEntitlements').doc(uid).set(entitlementRecord(access,ownerAccess));
+}
 exports.getProAccess=onCall(callable,async request=>{
  const auth=user(request);
  if(await isOwner(auth)){
   const mapping=await db.collection('billingCustomers').doc(auth.uid).get();
-  return {tier:'pro',plan:null,until:null,trialEnd:null,status:'owner',cancelAtPeriodEnd:false,eligibleForTrial:false,hasBillingAccount:mapping.exists};
+  const access={tier:'pro',plan:null,until:null,trialEnd:null,status:'owner',cancelAtPeriodEnd:false};
+  await saveEntitlement(auth.uid,access,true);
+  return {...access,eligibleForTrial:false,hasBillingAccount:mapping.exists};
  }
  const client=stripe(),customer=await customerFor(auth,client);
- if(!customer)return {...core.accessFromSubscriptions([],ids()),eligibleForTrial:true};
+ if(!customer){
+  const access=core.accessFromSubscriptions([],ids());
+  await saveEntitlement(auth.uid,access,false);
+  return {...access,eligibleForTrial:true};
+ }
  // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
  const history=await subscriptions(client,customer);
- return {...core.accessFromSubscriptions(history,ids(),undefined,environment().livemode),eligibleForTrial:core.eligibleForTrial(history)};
+ const access=core.accessFromSubscriptions(history,ids(),undefined,environment().livemode);
+ await saveEntitlement(auth.uid,access,false);
+ return {...access,eligibleForTrial:core.eligibleForTrial(history)};
 });
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
@@ -138,7 +153,7 @@ exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey
    if(prior.exists)return;
    tx.create(seen,{eventCreated:event.created,processedAt:FieldValue.serverTimestamp()});
    if((previous.data()?.eventCreated||0)>event.created)return;
-   tx.set(state,{...access,eventCreated:event.created,checkedAt:FieldValue.serverTimestamp()});
+   tx.set(state,entitlementRecord(access,false,event.created));
   });
   res.status(200).send('Received');
  }catch{res.status(500).send('Please retry');}
