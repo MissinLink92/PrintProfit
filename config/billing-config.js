@@ -1,4 +1,4 @@
-// Temporary account-check preview while production checkout stays disabled.
+// Temporary account-check preview during the production subscription canary.
 // The normal public URL keeps billing hidden. Remove this switch after canary checks.
 let printProfitBillingPreview = false;
 try {
