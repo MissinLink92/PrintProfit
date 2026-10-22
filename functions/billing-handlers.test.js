@@ -11,7 +11,7 @@ function harness(options={}){
   if(name==='firebase-functions/params')return{defineSecret:()=>({value:()=>options.key||'sk_test_fixture_only'}),defineString:(name,value)=>({value:()=>options.params?.[name]??value.default}),defineBoolean:(name,value)=>({value:()=>options.enabled??value.default})};
   if(name==='firebase-admin/app')return{initializeApp:()=>{}};
   if(name==='firebase-admin/auth')return{getAuth:()=>({getUser:async()=>{calls.push('auth-read');return options.authRecord??{email:'pro-owner@example.com',emailVerified:true,disabled:false};}})};
-  if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0}};
+  if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0},Timestamp:{fromMillis:millis=>({millis})}};
   if(name==='stripe')return function(){return client;};
   if(name==='./billing-core')return core;
   if(name==='./billing-environment')return require('./billing-environment');
@@ -32,6 +32,8 @@ test('verified configured owner receives Pro without Stripe and cannot buy a sub
  const access=await h.handlers.getProAccess({auth});
  assert.equal(access.tier,'pro');assert.equal(access.status,'owner');assert.equal(access.until,null);assert.equal(access.hasBillingAccount,true);
  assert.equal(h.calls.includes('auth-read'),true);
+ const ownerGrant=h.calls.find(call=>call.operation==='set'&&call.collection==='billingEntitlements');
+ assert.equal(ownerGrant.data.ownerAccess,true);assert.equal(ownerGrant.data.validUntil,null);assert.ok(ownerGrant.data.checkedUntil.millis>Date.now());
  assert.equal(h.calls.some(call=>call==='subscriptions'||call==='customer-read'),false);
  await assert.rejects(h.handlers.createProCheckout({auth,data:{plan:'monthly',purchaseAccepted:true}}),e=>e.code==='failed-precondition');
  assert.equal(h.calls.some(call=>call.checkout),false);
@@ -85,6 +87,27 @@ test('trial Checkout without an immediate payment refreshes trial access',async(
  const res={status(code){this.code=code;return this;},send(){}};
  await h.handlers.stripeBillingWebhook({method:'POST',rawBody:Buffer.from('{}'),headers:{}},res);
  assert.equal(res.code,200);assert.equal(h.calls.find(x=>x.operation==='set'&&x.collection==='billingEntitlements').data.status,'trialing');
+});
+test('getProAccess writes short-lived server entitlements and revokes non-Pro cloud writes',async()=>{
+ const future=Math.floor(Date.now()/1000)+3600;
+ const active={livemode:false,status:'active',items:{data:[{quantity:1,current_period_end:future,price:{id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}}}]}};
+ const auth={uid:'owner',token:{email_verified:true,email:'subscriber@example.com'}};
+ const pro=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[active]});
+ const access=await pro.handlers.getProAccess({auth});
+ const grant=pro.calls.find(call=>call.operation==='set'&&call.collection==='billingEntitlements');
+ assert.equal(access.tier,'pro');assert.equal(grant.data.tier,'pro');assert.equal(grant.data.ownerAccess,false);
+ assert.equal(grant.data.validUntil.millis,future*1000);assert.ok(grant.data.checkedUntil.millis>Date.now());
+ const pastDue=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[{...active,status:'past_due'}]});
+ const denied=await pastDue.handlers.getProAccess({auth});
+ const revoked=pastDue.calls.find(call=>call.operation==='set'&&call.collection==='billingEntitlements');
+ assert.equal(denied.tier,'basic');assert.equal(revoked.data.tier,'basic');assert.equal(revoked.data.validUntil,null);
+});
+test('Firestore rules require fresh server Pro entitlements for profile and project writes',()=>{
+ const rules=fs.readFileSync(__dirname+'/../firestore.rules','utf8');
+ assert.equal((rules.match(/&& hasFreshProEntitlement\\(\\)/g)||[]).length,2);
+ assert.match(rules,/match \\/billingEntitlements\\/\\{userId\\}\\s*\\{\\s*allow read, write: if false;/);
+ assert.match(rules,/allow get, list: if isVerifiedOwner\\(\\);/);
+ assert.match(rules,/allow delete: if isOwner\\(\\);/);
 });
 test('active or trialing subscriptions block account deletion',async()=>{
  const h=harness({subscriptions:[{status:'trialing'}]});
