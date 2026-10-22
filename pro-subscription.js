@@ -1,6 +1,5 @@
 (()=>{
 'use strict';
-if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
 const FIREBASE_VERSION='12.19.0';
 const standardOffer='Seven days free for a new subscriber, then £2.50/month or £24/year (paid upfront). Cancel through Stripe’s billing portal. Your projects and inventory remain yours if Pro ends.';
 let callable=null,owner='',generation=0;
@@ -90,6 +89,11 @@ window.__ppCheckCloudAccess=async()=>{
  accessChanged(access.tier);
  return access.tier==='pro';
 };
+window.__ppCheckBillingDeletion=async()=>{
+ const result=await invoke('checkAccountDeletion');
+ if(!result.allowed)throw new Error(result.reason||'Cancel your subscription before deleting your account.');
+};
+if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
 window.__ppRequirePro=requirePro;
 const approved=new WeakSet(),checking=new WeakSet();
 document.addEventListener('click',async event=>{
@@ -106,10 +110,6 @@ document.addEventListener('click',async event=>{
   }
  }finally{checking.delete(target)}
 },true);
-window.__ppCheckBillingDeletion=async()=>{
- const result=await invoke('checkAccountDeletion');
- if(!result.allowed)throw new Error(result.reason||'Cancel your subscription before deleting your account.');
-};
 document.addEventListener('pp-workshop-open',()=>refresh(true));
 document.addEventListener('pp-account-state-changed',event=>{
  const uid=event.detail?.uid||'';
