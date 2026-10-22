@@ -161,6 +161,22 @@ async function writeCurrentLegalAcceptance(user){
   acceptedAt:sdk.firestore.serverTimestamp()
  });
 }
+async function resolveAuthenticator(error){
+ if(error.code!=='auth/multi-factor-auth-required')throw error;
+ const resolver=sdk.auth.getMultiFactorResolver(auth,error);
+ const factors=resolver.hints.filter(item=>item.factorId===sdk.auth.TotpMultiFactorGenerator.FACTOR_ID);
+ if(!factors.length)throw new Error('An authenticator factor is required for this account.');
+ const code=await new Promise(resolve=>{
+  const dialog=document.createElement('dialog');
+  dialog.style.cssText='max-width:420px;width:90%;padding:24px;border-radius:14px;border:1px solid #517180;background:#10232e;color:#f1f7fa';
+  dialog.innerHTML='<form method="dialog"><h2>Authenticator verification</h2><p>Enter your current six-digit code.</p><label>Authenticator <select name="factor"></select></label><label style="display:block;margin:16px 0">Code <input name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></label><button value="verify">Verify</button> <button value="cancel" formnovalidate>Cancel</button></form>';
+  for(const factor of factors){const option=document.createElement('option');option.value=factor.uid;option.textContent=factor.displayName||'Authenticator';dialog.querySelector('select').append(option)}
+  dialog.addEventListener('close',()=>{const value=dialog.returnValue==='verify'?{code:dialog.querySelector('input').value,factor:dialog.querySelector('select').value}:null;dialog.remove();resolve(value)},{once:true});
+  document.body.append(dialog);dialog.showModal();dialog.querySelector('input').focus();
+ });
+ if(!code)throw new Error('Authenticator verification was cancelled.');
+ return resolver.resolveSignIn(sdk.auth.TotpMultiFactorGenerator.assertionForSignIn(code.factor,code.code));
+}
 async function initializeFirebase(){
  if(initPromise)return initPromise;
  initPromise=(async()=>{
@@ -552,7 +568,7 @@ async function handleAction(action){
    await syncWorkshop(user);
   }else if(action==='sign-in'){
    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
-   const credential=await sdk.auth.signInWithEmailAndPassword(auth,email,password);
+   const credential=await sdk.auth.signInWithEmailAndPassword(auth,email,password).catch(resolveAuthenticator);
    await sdk.auth.reload(credential.user);
    if(!credential.user.emailVerified){
     let verificationSent=false;
@@ -581,7 +597,7 @@ async function handleAction(action){
    const password=String(document.getElementById('ppAccountDeletePassword')?.value||'');
    if(!password){setMessage('Enter your password to continue.',true);return}
    const credential=sdk.auth.EmailAuthProvider.credential(user.email,password);
-   await sdk.auth.reauthenticateWithCredential(user,credential);
+   await sdk.auth.reauthenticateWithCredential(user,credential).catch(resolveAuthenticator);
    if(window.PRINTPROFIT_BILLING_CONFIG?.enabled){
     if(typeof window.__ppCheckBillingDeletion!=='function')throw new Error('Billing status could not be checked. Your account has not been deleted. Please try again later.');
     await window.__ppCheckBillingDeletion();
@@ -627,7 +643,7 @@ async function handleAction(action){
    await syncWorkshop(user);
   }
  }catch(error){
-  console.warn('PrintProfit account action failed:',error);
+  console.warn('PrintProfit account action failed:',error.code||'account-error');
   if(action==='confirm-delete-account')deletingAccount=false;
   if(action==='confirm-delete-account'&&!legalAccepted&&auth.currentUser){setMessage('Your cloud data was removed, but Firebase could not finish deleting the login. Sign in again and retry, or contact Printprofit26@outlook.com.',true)}
   else setMessage(errorText(error),true);

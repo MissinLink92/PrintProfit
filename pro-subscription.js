@@ -44,6 +44,11 @@ async function refresh(force=false){
   if(access.status==='owner'){
    text('ppProStatus',access.hasBillingAccount?'Owner access is active without a payment requirement. Manage any existing Stripe subscription below to avoid future charges.':'Owner access is active. No subscription or payment is needed.');
    $('ppProManage').hidden=!access.hasBillingAccount;
+  }else if(access.status==='complimentary'){
+   text('ppProDescription','Complimentary access granted by PrintProfit.');
+   text('ppProStatus',access.until?'Complimentary Pro is active until '+date(access.until)+'.':'Lifetime complimentary Pro is active.');
+   $('ppProManage').hidden=!access.hasBillingAccount;
+   if(access.hasBillingAccount)text('ppProStatus',$('ppProStatus').textContent+' Any existing paid subscription continues until you cancel it in the billing portal.');
   }else if(access.tier==='pro'){
    const price=access.plan==='annual'?'£24/year':'£2.50/month';
    const message=access.trialEnd?'Free trial ends '+date(access.until)+(access.cancelAtPeriodEnd?' · cancellation scheduled.':' · '+price+' afterward.'):(access.cancelAtPeriodEnd?'Pro access ends '+date(access.until)+' · cancellation scheduled.':'Pro '+access.plan+' plan renews '+date(access.until)+' at '+price+'.');
