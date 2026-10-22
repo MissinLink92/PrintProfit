@@ -118,7 +118,7 @@ function updateAccountUI(){
  if(!configured)setStatus('Saved on this device','Add the Firebase project settings to enable secure account sync.');
  else if(activeUser&&!legalAccepted)setStatus('Review the current terms','Accept the Terms and choose whether to sync profiles and projects before cloud sync is enabled.');
  else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles and projects into your account.');
- else if(activeUser&&window.PRINTPROFIT_BILLING_CONFIG?.enabled&&window.__ppProTier!=='pro')setStatus('Saved on this device','Cloud saving requires Pro. Downloadable backups and local saving stay free.');
+ else if(activeUser&&(window.PRINTPROFIT_BILLING_CONFIG?.enabled||CONFIG.projectId==='printprofit-fd30f')&&window.__ppProTier!=='pro')setStatus('Saved on this device','Cloud saving requires Pro. Downloadable backups and local saving stay free.');
  else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles and saved projects sync with your account. Uploaded 3D model files stay on this device.');
  else setStatus('Saved in this browser','Local saving is free. Pro adds cloud saving across devices; cloud sync is available as a preview until subscriptions launch.');
  document.dispatchEvent(new CustomEvent('pp-account-state-changed',{detail:{uid:activeUser?.uid||null,verified:Boolean(activeUser?.emailVerified),legalAccepted}}));
@@ -141,7 +141,7 @@ function errorText(error){
  if(code.includes('too-many-requests'))return'Too many attempts. Please wait a little and try again.';
  if(code.includes('requires-recent-login'))return'For security, sign out and sign back in before deleting this account.';
  if(code.includes('network-request-failed'))return'Network connection failed. Check your connection and try again.';
- if(code.includes('permission-denied')||code.includes('unauthorized'))return'Your account is signed in, but cloud sync is not allowed. Check the Firestore rules and verify your email.';
+ if(code.includes('permission-denied')||code.includes('unauthorized'))return'Cloud saving could not be completed. Check your Pro status and email verification; your local data is still saved on this device.';
  return'We could not complete that step. Please try again.';
  }
 function configReady(){
@@ -391,7 +391,7 @@ async function syncProjects(user,deletedIds,importGuest){
  }
 }
 async function syncWorkshop(user){
- if(window.PRINTPROFIT_BILLING_CONFIG?.enabled){
+ if(window.PRINTPROFIT_BILLING_CONFIG?.enabled||CONFIG.projectId==='printprofit-fd30f'){
   let allowed=false;
   try{allowed=Boolean(await window.__ppCheckCloudAccess?.())}catch(e){}
   if(!allowed){
