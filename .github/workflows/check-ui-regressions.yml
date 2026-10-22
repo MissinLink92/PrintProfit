@@ -9,6 +9,9 @@ on:
       - '*.js'
       - 'locales/**'
       - 'scripts/check_*.cjs'
+      - 'functions/**'
+      - 'firestore.rules'
+      - 'firebase.billing.json'
       - '.github/workflows/check-ui-regressions.yml'
 
 permissions:
@@ -49,5 +52,7 @@ jobs:
       - name: Check shared site icons
         run: node scripts/check_site_icons.cjs
 
+      - name: Test billing backend and Firestore rule contract
+        run: node --test functions/billing-core.test.js functions/billing-handlers.test.js
       - name: Check Free backups and cloud access gating
         run: node scripts/check_free_pro.cjs
