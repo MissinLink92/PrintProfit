@@ -118,8 +118,9 @@ function updateAccountUI(){
  if(!configured)setStatus('Saved on this device','Add the Firebase project settings to enable secure account sync.');
  else if(activeUser&&!legalAccepted)setStatus('Review the current terms','Accept the Terms and choose whether to sync profiles and projects before cloud sync is enabled.');
  else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles and projects into your account.');
+ else if(activeUser&&window.PRINTPROFIT_BILLING_CONFIG?.enabled&&window.__ppProTier!=='pro')setStatus('Saved on this device','Cloud saving requires Pro. Downloadable backups and local saving stay free.');
  else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles and saved projects sync with your account. Uploaded 3D model files stay on this device.');
- else setStatus('Saved in this browser','Create an account or sign in to sync your profiles and projects between devices.');
+ else setStatus('Saved in this browser','Local saving is free. Pro adds cloud saving across devices; cloud sync is available as a preview until subscriptions launch.');
  document.dispatchEvent(new CustomEvent('pp-account-state-changed',{detail:{uid:activeUser?.uid||null,verified:Boolean(activeUser?.emailVerified),legalAccepted}}));
 }
 function setBusy(value){
@@ -253,7 +254,7 @@ function handleLocalChange(event){
   setStatus('Saving workshop','Sending your latest changes to your account.');
   queueSync();
  }else{
-  setStatus('Saved on this device','Sign in whenever you want to sync your profiles and projects.');
+  setStatus('Saved on this device','Local saving is free. Pro adds cloud saving across devices.');
  }
 }
 const emptyWorkshop=()=>({materials:[],printers:[]});
@@ -390,6 +391,16 @@ async function syncProjects(user,deletedIds,importGuest){
  }
 }
 async function syncWorkshop(user){
+ if(window.PRINTPROFIT_BILLING_CONFIG?.enabled){
+  let allowed=false;
+  try{allowed=Boolean(await window.__ppCheckCloudAccess?.())}catch(e){}
+  if(!allowed){
+   setStatus('Saved on this device','Cloud saving is a Pro feature. Local saving and backup export/import stay free.');
+   setMessage('Cloud sync is paused. Your local changes are safe; existing cloud data remains available to download.',false);
+   return;
+  }
+  if(auth.currentUser?.uid!==user?.uid||activeUser?.uid!==user?.uid)return;
+ }
  if(!user||!user.emailVerified||!legalAccepted||localImportPending||deletingAccount)return;
  activeSyncCount++;
  try{return await syncWorkshopImpl(user)}finally{activeSyncCount--}
@@ -633,6 +644,16 @@ async function handleAction(action){
   else setMessage(errorText(error),true);
  }finally{setBusy(false);updateAccountUI()}
 }
+window.__ppDownloadCloudBackup=async()=>{
+ await initializeFirebase();
+ const user=activeUser;
+ if(!user?.emailVerified||!legalAccepted)throw new Error('Sign in with your verified account and accept the account terms to download your cloud data.');
+ const profiles=await sdk.firestore.getDoc(sdk.firestore.doc(db,'users',user.uid,'workshop','profiles'));
+ const projects=await sdk.firestore.getDocs(sdk.firestore.collection(db,'users',user.uid,'projects'));
+ if(activeUser?.uid!==user.uid||auth.currentUser?.uid!==user.uid)throw new Error('Your account changed. Please try again.');
+ const workshop=profiles.exists()?cloudWorkshop(profiles.data()):emptyWorkshop();
+ return {...workshop,projects:projects.docs.map(doc=>doc.data()).filter(data=>!data.deleted&&data.project).map(data=>data.project)};
+};
 window.__ppRefreshWorkshopAccountUI=()=>{ensureAccountUI();updateAccountUI();};
 window.__ppBillingAccountContext=async()=>{
  const initialized=await initializeFirebase();
@@ -648,7 +669,7 @@ document.addEventListener('pp-workshop-open',()=>{
  }
  setStatus('Checking account','Connecting securely to your workshop account.');
  initializeFirebase().then(()=>{
-  if(!activeUser)setStatus('Saved in this browser','Create an account or sign in to sync your profiles and projects between devices.');
+  if(!activeUser)setStatus('Saved in this browser','Local saving is free. Pro adds cloud saving across devices; cloud sync is available as a preview until subscriptions launch.');
  }).catch(error=>{
   console.warn('PrintProfit Firebase initialization failed:',error);
   setStatus('Account service unavailable','Your local profiles and projects remain available.');

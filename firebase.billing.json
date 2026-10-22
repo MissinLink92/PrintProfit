@@ -1,3 +1,10 @@
 {
-  "functions": [{"source": "functions", "codebase": "printprofit-billing", "ignore": ["node_modules", "*.test.js"]}]
+  "firestore": { "rules": "firestore.rules" },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "printprofit-billing",
+      "ignore": ["node_modules", "*.test.js"]
+    }
+  ]
 }

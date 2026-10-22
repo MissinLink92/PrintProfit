@@ -64,8 +64,20 @@ service cloud.firestore {
 
       allow get: if isVerifiedOwner() && hasCurrentAcceptance();
       allow list: if false;
+      function hasFreshProEntitlement() {
+        let entitlementPath = /databases/$(database)/documents/billingEntitlements/$(userId);
+        return exists(entitlementPath)
+          && get(entitlementPath).data.tier == 'pro'
+          && get(entitlementPath).data.checkedUntil is timestamp
+          && get(entitlementPath).data.checkedUntil > request.time
+          && (get(entitlementPath).data.ownerAccess == true
+            || (get(entitlementPath).data.validUntil is timestamp
+              && get(entitlementPath).data.validUntil > request.time));
+      }
+
       allow create, update: if isVerifiedOwner()
         && hasCurrentAcceptance()
+        && hasFreshProEntitlement()
         && request.resource.data.keys().hasOnly([
           'materials',
           'printers',
@@ -165,11 +177,28 @@ service cloud.firestore {
 
       // Owners can retrieve their records for sync or account deletion.
       allow get, list: if isVerifiedOwner();
+      function hasFreshProEntitlement() {
+        let entitlementPath = /databases/$(database)/documents/billingEntitlements/$(userId);
+        return exists(entitlementPath)
+          && get(entitlementPath).data.tier == 'pro'
+          && get(entitlementPath).data.checkedUntil is timestamp
+          && get(entitlementPath).data.checkedUntil > request.time
+          && (get(entitlementPath).data.ownerAccess == true
+            || (get(entitlementPath).data.validUntil is timestamp
+              && get(entitlementPath).data.validUntil > request.time));
+      }
+
       allow create, update: if isVerifiedOwner()
         && hasCurrentAcceptance()
+        && hasFreshProEntitlement()
         && validProjectDocument();
       // Owners can remove their project records when deleting an account.
       allow delete: if isOwner();
+    }
+
+    // Entitlements are written only by trusted Cloud Functions (Admin SDK bypasses rules).
+    match /billingEntitlements/{userId} {
+      allow read, write: if false;
     }
 
     // Deny access to all other documents unless another explicit rule is added.
