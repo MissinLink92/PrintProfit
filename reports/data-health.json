@@ -1,11 +1,10 @@
 {
-  "checkedAt": "2026-10-22T01:49:08.767441+00:00",
+  "checkedAt": "2026-10-23T01:49:03.065281+00:00",
   "warnings": [
     "parcelforce: failed; last verified never",
     "ups: failed; last verified never",
     "fedex: failed; last verified never",
     "facebook: failed; last verified never",
-    "gumtree: failed; last verified 2026-10-21",
     "Amazon UK: no active listings",
     "Prusa Research: no active listings",
     "Ooznest: no active listings",
@@ -33,12 +32,12 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1526,
-      "verified": 1520,
+      "listed": 1550,
+      "verified": 1544,
       "categories": {
-        "filament": 1338,
+        "filament": 1363,
         "accessory": 4,
-        "printer": 72,
+        "printer": 71,
         "resin-material": 90,
         "raw-material": 15,
         "equipment": 7
@@ -84,12 +83,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1414,
-      "verified": 1409,
+      "listed": 1441,
+      "verified": 1436,
       "categories": {
-        "printer": 346,
-        "filament": 740,
-        "resin-material": 288,
+        "printer": 352,
+        "filament": 757,
+        "resin-material": 292,
         "accessory": 35,
         "equipment": 5
       }
@@ -148,12 +147,12 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 594,
-      "verified": 591,
+      "listed": 605,
+      "verified": 602,
       "categories": {
-        "filament": 313,
-        "printer": 127,
-        "resin-material": 120,
+        "filament": 321,
+        "printer": 129,
+        "resin-material": 121,
         "accessory": 34
       }
     },
@@ -194,10 +193,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1713,
-      "verified": 1669,
+      "listed": 1728,
+      "verified": 1652,
       "categories": {
-        "filament": 1444,
+        "filament": 1459,
         "resin-material": 154,
         "printer": 60,
         "accessory": 49,
@@ -277,8 +276,8 @@
       "source": "etsy-payments",
       "checkedAt": "2026-10-19",
       "reviewAfter": "2026-10-26",
-      "automaticStatus": "review-required",
-      "automaticError": "Official source could not be read: etsy-transaction"
+      "automaticStatus": "failed",
+      "automaticError": "HTTP Error 403: Forbidden"
     },
     {
       "source": "depop",
@@ -303,7 +302,7 @@
     }
   ],
   "exchangeRates": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
