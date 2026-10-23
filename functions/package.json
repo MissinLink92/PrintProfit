@@ -6,7 +6,7 @@
     "node": "22"
   },
   "scripts": {
-    "test": "node --test billing-core.test.js billing-handlers.test.js admin-dashboard-core.test.js"
+    "test": "node --test billing-core.test.js billing-handlers.test.js admin-dashboard-core.test.js owner-access.test.js"
   },
   "dependencies": {
     "firebase-admin": "14.5.0",
