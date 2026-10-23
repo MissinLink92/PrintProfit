@@ -33,6 +33,8 @@ For website traffic, set `PRINTPROFIT_GA4_PROPERTY_ID` to the numeric GA4 proper
 
 Complimentary Pro is managed by exact existing-account email lookup. The target must be an enabled, email-verified Firebase Auth account. The owner can grant 30-day, 90-day, 365-day or no-expiry access, attach a private note, view active grants and revoke access. Every grant/revoke action creates a server-side audit entry. Granting or revoking complimentary access does **not** cancel, pause or alter an existing Stripe subscription.
 
+The System Health section reports the state of the connections the current dashboard actually depends on. Stripe becomes Connected only after the protected billing snapshot succeeds; GA4 reports Connected or Needs setup from the Analytics result; complimentary access reports Connected only after its protected overview callable succeeds. Affiliate reporting stays Not connected until an official reporting source is added. These indicators are operational hints, not a replacement for Cloud Functions/Firebase monitoring.
+
 Affiliate earnings remain explicitly unconnected. Add each partner's official reporting feed or verified export before displaying a total.
 
 ## Checks after deploy
@@ -43,6 +45,7 @@ Affiliate earnings remain explicitly unconnected. Add each partner's official re
 - Revoke that grant and confirm the next fresh Pro access check falls back to the user's real Stripe/basic state.
 - Confirm a paid test account's Stripe subscription is unchanged by grant/revoke actions.
 - Confirm the main site's enrolled owner can still sign in and manage Pro. Confirm Stripe counts against dashboard totals and the correct live account.
+- Confirm the System Health cards reflect deliberately disabled GA4/affiliate connections rather than showing false Connected states.
 - Check `curl -I https://admin.printprofit.co.uk/` for HTTPS, `X-Robots-Tag`, CSP and no-store; check `robots.txt`.
 - Confirm no admin app files appear in the public GitHub Pages `_site` artifact.
 
