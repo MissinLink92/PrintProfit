@@ -7,6 +7,7 @@ const call=async(name,data={})=>{if(!functions)functions=getFunctions(getApp(),'
 const when=seconds=>seconds?new Date(seconds*1000).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'No expiry';
 const at=millis=>millis?new Date(millis).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}):'—';
 function status(value,error=false){const node=$('access-status');if(!node)return;node.textContent=value;node.dataset.error=error?'1':'0';}
+function health(label,state){const node=$('health-access');if(!node)return;node.textContent=label;node.className='health-state '+state;}
 function esc(value){return String(value??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 async function refreshAccess(){
  try{
@@ -14,7 +15,8 @@ async function refreshAccess(){
   $('complimentary-count').textContent=data.activeCount.toLocaleString('en-GB');
   $('grant-list').innerHTML=data.active.length?data.active.map(item=>`<tr><td>${esc(item.email||'Account')}</td><td>${item.until?esc(when(item.until)):'Lifetime'}</td><td>${esc(item.note||'—')}</td></tr>`).join(''):'<tr><td colspan="3">No complimentary Pro users yet.</td></tr>';
   $('audit-list').innerHTML=data.audit.length?data.audit.map(item=>`<li><strong>${esc(item.action)}</strong><span>${esc(item.target||'')}</span><small>${esc(at(item.at))}</small></li>`).join(''):'<li>No admin access changes recorded yet.</li>';
- }catch(error){status('Complimentary access data could not be loaded. Sign in again if your session has expired.',true);}
+  health('Connected','ok');
+ }catch(error){health('Unavailable','bad');status('Complimentary access data could not be loaded. Sign in again if your session has expired.',true);}
 }
 window.addEventListener('pp-owner-dashboard-loaded',refreshAccess);
 $('find-access')?.addEventListener('submit',async event=>{
