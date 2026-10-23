@@ -9,6 +9,7 @@ const Stripe=require('stripe');
 const core=require('./billing-core');
 const billingEnvironment=require('./billing-environment');
 const dashboard=require('./admin-dashboard-core');
+const ownerAccess=require('./owner-access');
 initializeApp();
 const db=getFirestore();
 const stripeKey=defineSecret('STRIPE_SECRET_KEY');
@@ -19,6 +20,7 @@ const year=defineString('STRIPE_PRO_ANNUAL_PRICE',{default:''});
 const ownerEmail=defineString('PRINTPROFIT_OWNER_EMAIL',{default:''});
 const analyticsProperty=defineString('PRINTPROFIT_GA4_PROPERTY_ID',{default:''});
 const callable={region:'europe-west2',secrets:[stripeKey],maxInstances:3,cors:['https://printprofit.co.uk','https://www.printprofit.co.uk','https://printprofit-test.web.app','https://printprofit-test.firebaseapp.com']};
+const adminCors=['https://admin.printprofit.co.uk','https://printprofit-admin-fd30f.web.app','https://printprofit-admin-fd30f.firebaseapp.com'];
 const ids=()=>({monthly:month.value(),annual:year.value()});
 const environment=()=>billingEnvironment.environmentForProject(process.env.GCLOUD_PROJECT||process.env.GCP_PROJECT);
 const stripe=()=>{const env=environment(),key=stripeKey.value();billingEnvironment.validateKey(key,env);return new Stripe(key,{apiVersion:billingEnvironment.API_VERSION});};
@@ -33,11 +35,16 @@ function user(request){
  if(request.auth.token.email_verified!==true)throw new HttpsError('failed-precondition','Verify your email before managing a subscription.');
  return request.auth;
 }
+async function ownerGuard(request){
+ if(!request.auth)throw new HttpsError('unauthenticated','Sign in to the owner dashboard.');
+ if(!dashboard.requireOwnerMfa(request.auth,ownerEmail.value())||!await isOwner(request.auth))
+  throw new HttpsError('permission-denied','Owner sign-in with an authenticator code is required.');
+ return request.auth;
+}
 async function customerFor(auth,client,create=false){
  const ref=db.collection('billingCustomers').doc(auth.uid),saved=await ref.get();
  if(saved.exists)return saved.data().customerId;
  if(!create)return null;
- // Stripe idempotency plus a Firestore transaction prevents parallel customer creation.
  const customer=await client.customers.create({email:auth.token.email,metadata:{printprofitUid:auth.uid}},{idempotencyKey:'pp-customer-'+auth.uid});
  return db.runTransaction(async tx=>{const snapshot=await tx.get(ref);if(snapshot.exists)return snapshot.data().customerId;tx.set(ref,{customerId:customer.id,createdAt:FieldValue.serverTimestamp()});return customer.id;});
 }
@@ -48,10 +55,16 @@ async function subscriptions(client,customer){
 }
 function entitlementRecord(access,ownerAccess=false,eventCreated=null){
  const validUntil=Number(access.until);
- return {...access,ownerAccess:Boolean(ownerAccess),validUntil:!ownerAccess&&access.tier==='pro'&&Number.isFinite(validUntil)&&validUntil>0?Timestamp.fromMillis(validUntil*1000):null,checkedAt:FieldValue.serverTimestamp(),checkedUntil:Timestamp.fromMillis(Date.now()+15*60*1000),...(eventCreated===null?{}:{eventCreated})};
+ const lifetimeComplimentary=access.tier==='pro'&&access.status==='complimentary'&&access.until===null;
+ const checkedUntilMillis=Date.now()+15*60*1000;
+ return {...access,ownerAccess:Boolean(ownerAccess),validUntil:!ownerAccess&&access.tier==='pro'?(lifetimeComplimentary?Timestamp.fromMillis(checkedUntilMillis):(Number.isFinite(validUntil)&&validUntil>0?Timestamp.fromMillis(validUntil*1000):null)):null,checkedAt:FieldValue.serverTimestamp(),checkedUntil:Timestamp.fromMillis(checkedUntilMillis),...(eventCreated===null?{}:{eventCreated})};
 }
 async function saveEntitlement(uid,access,ownerAccess=false){
  await db.collection('billingEntitlements').doc(uid).set(entitlementRecord(access,ownerAccess));
+}
+async function complimentaryGrant(uid){
+ const grant=(await db.collection('adminGrants').doc(uid).get()).data();
+ return ownerAccess.grantActive(grant)?grant:null;
 }
 exports.getProAccess=onCall(callable,async request=>{
  const auth=user(request);
@@ -61,13 +74,19 @@ exports.getProAccess=onCall(callable,async request=>{
   await saveEntitlement(auth.uid,access,true);
   return {...access,eligibleForTrial:false,hasBillingAccount:mapping.exists};
  }
+ const grant=await complimentaryGrant(auth.uid);
+ if(grant){
+  const mapping=await db.collection('billingCustomers').doc(auth.uid).get();
+  const access={tier:'pro',plan:null,until:grant.until??null,trialEnd:null,status:'complimentary',cancelAtPeriodEnd:false};
+  await saveEntitlement(auth.uid,access,false);
+  return {...access,eligibleForTrial:false,hasBillingAccount:mapping.exists};
+ }
  const client=stripe(),customer=await customerFor(auth,client);
  if(!customer){
   const access=core.accessFromSubscriptions([],ids());
   await saveEntitlement(auth.uid,access,false);
   return {...access,eligibleForTrial:true};
  }
- // Always check Stripe on the server. Neither localStorage nor a return URL grants Pro.
  const history=await subscriptions(client,customer);
  const access=core.accessFromSubscriptions(history,ids(),undefined,environment().livemode);
  await saveEntitlement(auth.uid,access,false);
@@ -76,6 +95,7 @@ exports.getProAccess=onCall(callable,async request=>{
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
  if(await isOwner(auth))throw new HttpsError('failed-precondition','Your owner account already has Pro. No subscription is needed.');
+ if(await complimentaryGrant(auth.uid))throw new HttpsError('failed-precondition','Complimentary Pro is already active on this account.');
  if(!enabled.value())throw new HttpsError('failed-precondition','Subscriptions are not available yet.');
  const plan=request.data?.plan;
  let priceId;try{priceId=core.planPrice(plan,ids())}catch{throw new HttpsError('invalid-argument','Choose monthly or annual.');}
@@ -116,9 +136,10 @@ exports.checkAccountDeletion=onCall(callable,async request=>{
  if(history.some(s=>!['canceled','incomplete_expired'].includes(s.status)))return {allowed:false,reason:'Cancel your subscription in the billing portal and wait until it ends before deleting your account.'};
  return {allowed:true};
 });
-// Safety net for accounts removed outside the normal in-app deletion flow.
 exports.reconcileDeletedBillingUser=onUserDeleted({region:'europe-west2',secrets:[stripeKey],maxInstances:3,retry:true},async event=>{
  const uid=event.data?.uid;if(!uid)return;
+ await db.collection('adminGrants').doc(uid).delete();
+ await db.collection('billingEntitlements').doc(uid).delete();
  const ref=db.collection('billingCustomers').doc(uid),mapping=await ref.get();
  const customerId=mapping.data()?.customerId;if(!customerId)return;
  const client=stripe(),history=await subscriptions(client,customerId);
@@ -127,7 +148,6 @@ exports.reconcileDeletedBillingUser=onUserDeleted({region:'europe-west2',secrets
   if(['canceled','incomplete_expired'].includes(subscription.status))continue;
   await client.subscriptions.cancel(subscription.id,{invoice_now:false,prorate:false},{idempotencyKey:'pp-deleted-'+uid+'-'+subscription.id});
  }
- await db.collection('billingEntitlements').doc(uid).delete();
  await ref.delete();
 });
 exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey,webhookKey],maxInstances:3},async(req,res)=>{
@@ -161,38 +181,37 @@ exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey
  }catch{res.status(500).send('Please retry');}
 });
 
-// Owner-only snapshot. No customer records, emails, tokens or raw Stripe objects leave the function.
-exports.getOwnerDashboard=onCall({...callable,cors:['https://admin.printprofit.co.uk','https://printprofit-admin-fd30f.web.app','https://printprofit-admin-fd30f.firebaseapp.com']},async request=>{
- if(!request.auth)throw new HttpsError('unauthenticated','Sign in to the owner dashboard.');
- if(!dashboard.requireOwnerMfa(request.auth,ownerEmail.value())||!await isOwner(request.auth))
-  throw new HttpsError('permission-denied','Owner sign-in with an authenticator code is required.');
+exports.getOwnerDashboard=onCall({...callable,cors:adminCors},async request=>{
+ await ownerGuard(request);
  const client=stripe(),items=[];
- // A bounded snapshot avoids unbounded calls and explicitly marks incomplete counts.
  for await(const subscription of client.subscriptions.list({status:'all',limit:100,expand:['data.items.data.price']})){
   if(items.length===9999)break;
   items.push(subscription);
  }
  const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode),incomplete:items.length===9999};
+ const days=[7,30,90].includes(Number(request.data?.days))?Number(request.data.days):7;
  const property=analyticsProperty.value().trim();
- let traffic={available:false,reason:property?'GA4 report is temporarily unavailable.':'Add a GA4 property ID and grant its service account Viewer access.'};
+ let traffic={available:false,days,reason:property?'GA4 report is temporarily unavailable.':'Add a GA4 property ID and grant its service account Viewer access.'};
  if(/^\d+$/.test(property)){
   try{
    const {GoogleAuth}=require('google-auth-library');
    const access=await new GoogleAuth({scopes:['https://www.googleapis.com/auth/analytics.readonly']}).getAccessToken();
    const response=await fetch('https://analyticsdata.googleapis.com/v1beta/properties/'+property+':runReport',{
     method:'POST',signal:AbortSignal.timeout(7000),headers:{Authorization:'Bearer '+access,'Content-Type':'application/json'},
-    body:JSON.stringify({dateRanges:[{startDate:'7daysAgo',endDate:'yesterday'}],metrics:[{name:'activeUsers'},{name:'sessions'},{name:'screenPageViews'}]})
+    body:JSON.stringify({dateRanges:[{startDate:days+'daysAgo',endDate:'yesterday'}],metrics:[{name:'activeUsers'},{name:'sessions'},{name:'screenPageViews'}]})
    });
    if(!response.ok)throw Error('GA4 API status '+response.status);
    const values=(await response.json()).rows?.[0]?.metricValues||[];
-   traffic={available:true,period:'Last 7 complete days',visitors:Number(values[0]?.value||0),sessions:Number(values[1]?.value||0),pageViews:Number(values[2]?.value||0)};
+   traffic={available:true,days,period:'Last '+days+' complete days',visitors:Number(values[0]?.value||0),sessions:Number(values[1]?.value||0),pageViews:Number(values[2]?.value||0)};
   }catch(error){console.error('Owner dashboard GA4 report unavailable',{message:error?.message});}
  }
  return {asOf:new Date().toISOString(),billing,traffic,affiliate:{available:false,reason:'Affiliate partner reports are not connected yet.'}};
 });
 
-// Allows one-time TOTP enrollment only after verified owner password sign-in.
-exports.prepareOwnerEnrollment=onCall({...callable,secrets:[],cors:['https://admin.printprofit.co.uk','https://printprofit-admin-fd30f.web.app','https://printprofit-admin-fd30f.firebaseapp.com']},async request=>{
+const accessHandlers=ownerAccess.createOwnerAccessHandlers({db,auth:getAuth(),HttpsError,ownerGuard,FieldValue});
+for(const [name,handler] of Object.entries(accessHandlers))exports[name]=onCall({region:'europe-west2',secrets:[],maxInstances:2,cors:adminCors},handler);
+
+exports.prepareOwnerEnrollment=onCall({region:'europe-west2',secrets:[],maxInstances:3,cors:adminCors},async request=>{
  if(!request.auth||!await isOwner(request.auth))throw new HttpsError('permission-denied','Verified owner sign-in required.');
  const account=await getAuth().getUser(request.auth.uid);
  if(account.multiFactor?.enrolledFactors?.length)throw new HttpsError('failed-precondition','An authenticator is already enrolled. Sign in with it.');
