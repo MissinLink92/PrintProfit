@@ -1,4 +1,5 @@
 'use strict';
+const ownerAccess=require('./owner-access');
 
 function requireOwnerMfa(auth, owner, nowSeconds = Math.floor(Date.now() / 1000)) {
   const configured = String(owner || '').trim().toLowerCase();
@@ -37,4 +38,4 @@ function summarizeSubscriptions(items, prices, livemode) {
   totals.projectedMrrPence = Math.round(totals.projectedMrrPence);
   return totals;
 }
-module.exports = {requireOwnerMfa, summarizeSubscriptions};
+module.exports = {requireOwnerMfa, summarizeSubscriptions, ownerAccess};
