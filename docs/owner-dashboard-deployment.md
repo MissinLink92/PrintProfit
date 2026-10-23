@@ -17,7 +17,7 @@ Deploy the owner-dashboard callables with the existing `firebase.billing.json` c
 
 `firebase deploy --config firebase.billing.json --project printprofit-fd30f --only functions:printprofit-billing:getOwnerDashboard,functions:printprofit-billing:prepareOwnerEnrollment,functions:printprofit-billing:getComplimentaryOverview,functions:printprofit-billing:findComplimentaryUser,functions:printprofit-billing:setComplimentaryAccess`
 
-Because complimentary Pro is also recognised by the public site's access check, deploy the updated `getProAccess`, `createProCheckout` and deleted-user reconciliation function at the same time as the public-site code that displays Complimentary Pro status. The Stripe key and existing owner email must already be configured. Functions deploys read the local `functions/.env.printprofit-fd30f`; verify it first and never commit secrets.
+Because complimentary Pro is also recognised by the public site's access check, deploy the updated `getProAccess`, `createProCheckout` and `reconcileDeletedBillingUser` functions at the same time as the public-site code that displays Complimentary Pro status. The Stripe key and existing owner email must already be configured. Functions deploys read the local `functions/.env.printprofit-fd30f`; verify it first and never commit secrets.
 
 Deploy the Firestore rules with the branch so `adminGrants`, `adminAudit` and `billingEntitlements` remain explicitly client-denied. These records are read or written only by trusted Cloud Functions through the Admin SDK.
 
