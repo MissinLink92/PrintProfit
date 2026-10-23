@@ -11,6 +11,7 @@ let email='',resolver=null,secret=null,busy=false;
 const steps=['email-step','password-step','code-step','setup-step'];
 function show(id){for(const step of steps)$(step).hidden=step!==id;$('login').hidden=false;$('dashboard').hidden=true;$('message').textContent='';$(id).querySelector('input')?.focus();}
 function message(value){$('message').textContent=value;}
+function health(id,label,state){const node=$(id);if(!node)return;node.textContent=label;node.className='health-state '+state;}
 function errorMessage(error){
  if(error?.code==='auth/invalid-credential')return 'Email or password was not recognised.';
  if(error?.code==='auth/invalid-verification-code')return 'That code is invalid or has expired. Try the current code.';
@@ -27,10 +28,13 @@ async function loadDashboard(){
  $('active').textContent=b.active.toLocaleString('en-GB');$('trialing').textContent=b.trialing.toLocaleString('en-GB');$('attention').textContent=b.pastDue.toLocaleString('en-GB');
  $('mrr').textContent=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(b.projectedMrrPence/100);
  $('billing-note').textContent=(b.cancelling?`${b.cancelling} scheduled to cancel at period end. `:'')+(b.incomplete?'Subscription scan reached its safety limit; counts are incomplete.':'');
+ health('health-stripe','Connected','ok');
  const t=result.traffic,period=t.period||`Last ${t.days||days} complete days`;
  $('visitors').textContent=t.available?t.visitors.toLocaleString('en-GB'):'—';$('sessions').textContent=t.available?t.sessions.toLocaleString('en-GB'):'—';$('views').textContent=t.available?t.pageViews.toLocaleString('en-GB'):'—';
  for(const id of ['visitors-period','sessions-period','views-period'])$(id).textContent=period;
  $('traffic-note').textContent=t.available?'Consent-based GA4 reporting; excludes visitors who declined analytics.':t.reason;
+ health('health-ga4',t.available?'Connected':'Needs setup',t.available?'ok':'warn');
+ health('health-affiliate','Not connected','unavailable');
  $('dashboard-message').textContent='Affiliate earnings will appear after a trustworthy partner report is connected.';
  window.dispatchEvent(new Event('pp-owner-dashboard-loaded'));
 }
@@ -63,8 +67,8 @@ $('setup-step').addEventListener('submit',event=>{event.preventDefault();run(asy
 });});
 document.querySelector('[data-back]').addEventListener('click',()=>show('email-step'));
 $('restart').addEventListener('click',()=>run(async()=>{resolver=null;await signOut(auth);show('email-step');}));
-$('refresh').addEventListener('click',()=>run(async()=>{try{await loadDashboard();}catch(error){$('dashboard-message').textContent='Refresh failed. Sign out and sign in again if your session has expired.';}}));
-$('traffic-days').addEventListener('change',()=>run(async()=>{try{await loadDashboard();}catch{$('traffic-note').textContent='Traffic could not be refreshed.';}}));
+$('refresh').addEventListener('click',()=>run(async()=>{try{await loadDashboard();}catch(error){health('health-stripe','Unavailable','bad');$('dashboard-message').textContent='Refresh failed. Sign out and sign in again if your session has expired.';}}));
+$('traffic-days').addEventListener('change',()=>run(async()=>{try{await loadDashboard();}catch{health('health-ga4','Unavailable','bad');$('traffic-note').textContent='Traffic could not be refreshed.';}}));
 $('signout').addEventListener('click',()=>run(async()=>{await signOut(auth);show('email-step');}));
 await setPersistence(auth,inMemoryPersistence);
 await signOut(auth);
