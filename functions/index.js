@@ -9,7 +9,7 @@ const Stripe=require('stripe');
 const core=require('./billing-core');
 const billingEnvironment=require('./billing-environment');
 const dashboard=require('./admin-dashboard-core');
-const ownerAccess=require('./owner-access');
+const ownerAccess=dashboard.ownerAccess;
 initializeApp();
 const db=getFirestore();
 const stripeKey=defineSecret('STRIPE_SECRET_KEY');
@@ -95,8 +95,8 @@ exports.getProAccess=onCall(callable,async request=>{
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
  if(await isOwner(auth))throw new HttpsError('failed-precondition','Your owner account already has Pro. No subscription is needed.');
- if(await complimentaryGrant(auth.uid))throw new HttpsError('failed-precondition','Complimentary Pro is already active on this account.');
  if(!enabled.value())throw new HttpsError('failed-precondition','Subscriptions are not available yet.');
+ if(await complimentaryGrant(auth.uid))throw new HttpsError('failed-precondition','Complimentary Pro is already active on this account.');
  const plan=request.data?.plan;
  let priceId;try{priceId=core.planPrice(plan,ids())}catch{throw new HttpsError('invalid-argument','Choose monthly or annual.');}
  const acceptance=await db.doc('users/'+auth.uid+'/legal/acceptance-2026-10-12-v2').get();
