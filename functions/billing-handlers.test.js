@@ -14,6 +14,7 @@ function harness(options={}){
   if(name==='firebase-admin/firestore')return{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>0},Timestamp:{fromMillis:millis=>({millis})}};
   if(name==='stripe')return function(){return client;};
   if(name==='./billing-core')return core;
+  if(name==='./admin-dashboard-core')return require('./admin-dashboard-core');
   if(name==='./billing-environment')return require('./billing-environment');
   throw Error(name);
  }};
@@ -136,4 +137,14 @@ test('deleted-user reconciliation rejects wrong Stripe mode before cancelling',a
  const h=harness({subscriptions:[{id:'sub_live',status:'active',livemode:true}]});
  await assert.rejects(h.handlers.reconcileDeletedBillingUser({data:{uid:'owner'}}));
  assert.equal(h.calls.some(call=>call.cancel),false);
+});
+
+test('dashboard refuses non-owner and owner without a recent TOTP token before Stripe',async()=>{
+ const h=harness({params:{PRINTPROFIT_OWNER_EMAIL:'pro-owner@example.com'}});
+ const token={email_verified:true,email:'pro-owner@example.com',auth_time:Math.floor(Date.now()/1000),firebase:{sign_in_second_factor:'totp'}};
+ await assert.rejects(h.handlers.getOwnerDashboard({auth:{uid:'other',token:{...token,email:'other@example.com'}}}),e=>e.code==='permission-denied');
+ await assert.rejects(h.handlers.getOwnerDashboard({auth:{uid:'owner',token:{...token,firebase:{}}}}),e=>e.code==='permission-denied');
+ assert.equal(h.calls.includes('subscriptions'),false);
+ const snapshot=await h.handlers.getOwnerDashboard({auth:{uid:'owner',token}});
+ assert.equal(snapshot.billing.active,0);assert.equal(snapshot.traffic.available,false);assert.equal(snapshot.affiliate.available,false);
 });

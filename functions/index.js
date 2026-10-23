@@ -8,6 +8,7 @@ const {getFirestore,FieldValue,Timestamp}=require('firebase-admin/firestore');
 const Stripe=require('stripe');
 const core=require('./billing-core');
 const billingEnvironment=require('./billing-environment');
+const dashboard=require('./admin-dashboard-core');
 initializeApp();
 const db=getFirestore();
 const stripeKey=defineSecret('STRIPE_SECRET_KEY');
@@ -16,6 +17,7 @@ const enabled=defineBoolean('PRINTPROFIT_BILLING_ENABLED',{default:false});
 const month=defineString('STRIPE_PRO_MONTHLY_PRICE',{default:''});
 const year=defineString('STRIPE_PRO_ANNUAL_PRICE',{default:''});
 const ownerEmail=defineString('PRINTPROFIT_OWNER_EMAIL',{default:''});
+const analyticsProperty=defineString('PRINTPROFIT_GA4_PROPERTY_ID',{default:''});
 const callable={region:'europe-west2',secrets:[stripeKey],maxInstances:3,cors:['https://printprofit.co.uk','https://www.printprofit.co.uk','https://printprofit-test.web.app','https://printprofit-test.firebaseapp.com']};
 const ids=()=>({monthly:month.value(),annual:year.value()});
 const environment=()=>billingEnvironment.environmentForProject(process.env.GCLOUD_PROJECT||process.env.GCP_PROJECT);
@@ -157,4 +159,42 @@ exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey
   });
   res.status(200).send('Received');
  }catch{res.status(500).send('Please retry');}
+});
+
+// Owner-only snapshot. No customer records, emails, tokens or raw Stripe objects leave the function.
+exports.getOwnerDashboard=onCall({...callable,cors:['https://admin.printprofit.co.uk','https://printprofit-admin-fd30f.web.app','https://printprofit-admin-fd30f.firebaseapp.com']},async request=>{
+ if(!request.auth)throw new HttpsError('unauthenticated','Sign in to the owner dashboard.');
+ if(!dashboard.requireOwnerMfa(request.auth,ownerEmail.value())||!await isOwner(request.auth))
+  throw new HttpsError('permission-denied','Owner sign-in with an authenticator code is required.');
+ const client=stripe(),items=[];
+ // A bounded snapshot avoids unbounded calls and explicitly marks incomplete counts.
+ for await(const subscription of client.subscriptions.list({status:'all',limit:100,expand:['data.items.data.price']})){
+  if(items.length===9999)break;
+  items.push(subscription);
+ }
+ const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode),incomplete:items.length===9999};
+ const property=analyticsProperty.value().trim();
+ let traffic={available:false,reason:property?'GA4 report is temporarily unavailable.':'Add a GA4 property ID and grant its service account Viewer access.'};
+ if(/^\d+$/.test(property)){
+  try{
+   const {GoogleAuth}=require('google-auth-library');
+   const access=await new GoogleAuth({scopes:['https://www.googleapis.com/auth/analytics.readonly']}).getAccessToken();
+   const response=await fetch('https://analyticsdata.googleapis.com/v1beta/properties/'+property+':runReport',{
+    method:'POST',signal:AbortSignal.timeout(7000),headers:{Authorization:'Bearer '+access,'Content-Type':'application/json'},
+    body:JSON.stringify({dateRanges:[{startDate:'7daysAgo',endDate:'yesterday'}],metrics:[{name:'activeUsers'},{name:'sessions'},{name:'screenPageViews'}]})
+   });
+   if(!response.ok)throw Error('GA4 API status '+response.status);
+   const values=(await response.json()).rows?.[0]?.metricValues||[];
+   traffic={available:true,period:'Last 7 complete days',visitors:Number(values[0]?.value||0),sessions:Number(values[1]?.value||0),pageViews:Number(values[2]?.value||0)};
+  }catch(error){console.error('Owner dashboard GA4 report unavailable',{message:error?.message});}
+ }
+ return {asOf:new Date().toISOString(),billing,traffic,affiliate:{available:false,reason:'Affiliate partner reports are not connected yet.'}};
+});
+
+// Allows one-time TOTP enrollment only after verified owner password sign-in.
+exports.prepareOwnerEnrollment=onCall({...callable,secrets:[],cors:['https://admin.printprofit.co.uk','https://printprofit-admin-fd30f.web.app','https://printprofit-admin-fd30f.firebaseapp.com']},async request=>{
+ if(!request.auth||!await isOwner(request.auth))throw new HttpsError('permission-denied','Verified owner sign-in required.');
+ const account=await getAuth().getUser(request.auth.uid);
+ if(account.multiFactor?.enrolledFactors?.length)throw new HttpsError('failed-precondition','An authenticator is already enrolled. Sign in with it.');
+ return {ready:true};
 });
