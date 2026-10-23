@@ -39,7 +39,11 @@ if(fxUsable)for(const [code,meta] of Object.entries(currencies)){
 function exchangeRateNote(){
  const input=document.getElementById('ppSettingsRate');if(!input)return;
  let note=document.getElementById('ppExchangeRateNote');
- if(!note){note=document.createElement('p');note.id='ppExchangeRateNote';note.style.cssText='font-size:12px;line-height:1.5;margin:8px 0';input.closest('.pp-settings-card')?.appendChild(note);}
+ if(!note){
+  note=document.createElement('p');note.id='ppExchangeRateNote';
+  note.style.cssText='font-size:12px;line-height:1.5;margin:0 12px 16px;color:#aebdc6';
+  input.closest('.pp-settings-card')?.insertAdjacentElement('afterend',note);
+ }
  note.textContent=fxUsable?'Default rates: ECB reference dated '+fx.date+'. Saved/manual rates are kept; reselect a currency to use its updated default. Your bank may charge a different rate.':'Daily rate unavailable or older than seven days. Preset/saved rates are estimates; enter a current rate manually.';
 }
 
