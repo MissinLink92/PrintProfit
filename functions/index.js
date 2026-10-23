@@ -63,6 +63,7 @@ async function saveEntitlement(uid,access,ownerAccess=false){
  await db.collection('billingEntitlements').doc(uid).set(entitlementRecord(access,ownerAccess));
 }
 async function complimentaryGrant(uid){
+ billingEnvironment.validateKey(stripeKey.value(),environment());
  const grant=(await db.collection('adminGrants').doc(uid).get()).data();
  return ownerAccess.grantActive(grant)?grant:null;
 }
