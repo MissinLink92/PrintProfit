@@ -39,9 +39,13 @@ async function refresh(force=false){
   const access=await invoke('getProAccess');
   if(token!==generation||owner!==user.uid)return;
   accessChanged(access.tier);
-  text('ppProDescription',access.status==='owner'?'All Pro tools are included with your verified owner account. No trial or subscription is needed.':standardOffer);
+  text('ppProDescription',access.status==='owner'?'All Pro tools are included with your verified owner account. No trial or subscription is needed.':access.status==='complimentary'?'Complimentary Pro access has been granted by PrintProfit. No payment is required for this access.':standardOffer);
   if(access.status==='owner'){
    text('ppProStatus',access.hasBillingAccount?'Owner access is active without a payment requirement. Manage any existing Stripe subscription below to avoid future charges.':'Owner access is active. No subscription or payment is needed.');
+   $('ppProManage').hidden=!access.hasBillingAccount;
+  }else if(access.status==='complimentary'){
+   const expiry=access.until?' Complimentary Pro is active until '+date(access.until)+'.':' Complimentary Pro is active with no expiry date.';
+   text('ppProStatus',expiry+(access.hasBillingAccount?' Any existing paid Stripe subscription continues separately until you cancel it in the billing portal.':''));
    $('ppProManage').hidden=!access.hasBillingAccount;
   }else if(access.tier==='pro'){
    const price=access.plan==='annual'?'£24/year':'£2.50/month';
@@ -79,7 +83,6 @@ async function requirePro(){
   return false;
  }
 }
-// Background sync must never open a paywall or trust a cached browser tier.
 window.__ppCheckCloudAccess=async()=>{
  const context=await window.__ppBillingAccountContext();
  if(!context?.user?.emailVerified||!context.legalAccepted)return false;
@@ -99,7 +102,6 @@ const approved=new WeakSet(),checking=new WeakSet();
 document.addEventListener('click',async event=>{
  const target=event.target.closest('#ppWorkspacePro [data-pp-pro-tool]:not([data-pp-pro-tool="subscription"]),#ppFarmEnabled,[data-mark-printed],[data-pp-material-scanner-toggle],#ppBusinessTools [data-pp-pro-action],#ppMaterialScan [data-pp-pro-action]');
  if(!target||approved.has(target)||checking.has(target))return;
- // Opening a print window needs a fresh user gesture; verify first, then let the next click print.
  if(target.dataset.ppProAction==='quote'&&window.__ppProTier==='pro'&&Date.now()-window.__ppProVerifiedAt<5000)return;
  event.preventDefault();event.stopImmediatePropagation();checking.add(target);
  try{

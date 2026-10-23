@@ -18,6 +18,7 @@ const TERMS_VERSION='2026-10-12-v2';
 const PRIVACY_VERSION='2026-10-12-v2';
 const ACCEPTANCE_DOCUMENT_ID='acceptance-2026-10-12-v2';
 let auth=null,db=null,sdk=null,activeUser=null,initPromise=null,accountHostReady=false,legalAccepted=false,creatingAccount=false,legalCheckGeneration=0,localImportPending=false;
+let accountMfaResolver=null;
 let handledUid='',syncTimer=null,syncRunning=false,syncAgain=false,signingOut=false,deletingAccount=false,activeSyncCount=0,localChangeVersion=0;
 
 const isConfigured=()=>Boolean(CONFIG.apiKey&&CONFIG.authDomain&&CONFIG.projectId&&CONFIG.appId);
@@ -87,6 +88,7 @@ function ensureAccountUI(){
     '<div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="sign-in">Sign in</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-up">Create account</button></div>'+
     '<div class="pp-account-links"><button type="button" data-pp-account-action="reset-password">Forgot password?</button></div>'+
    '</div>'+
+   '<div id="ppAccountMfa" class="pp-account-legal-pending" hidden><strong>Authenticator code</strong><p>Enter the code from your authenticator app to finish signing in.</p><label>Six-digit code<input id="ppAccountMfaCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6"></label><div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="verify-mfa">Verify code</button><button type="button" class="pp-account-secondary" data-pp-account-action="cancel-mfa">Cancel</button></div></div>'+
    '<div id="ppAccountSignedIn" class="pp-account-signed-in" hidden><span id="ppAccountEmailLabel"></span><div id="ppAccountLegalPending" class="pp-account-legal-pending" hidden><strong>One-time policy check</strong><p>Review the current terms and choose whether to sync your profiles and saved projects. You can delete your account without accepting.</p><label><input id="ppAccountExistingTerms" type="checkbox"><span>I agree to the <a href="./terms.html" target="_top">Terms of Use</a>.</span></label><label><input id="ppAccountExistingSync" type="checkbox"><span>I choose to sync printer and material profiles and saved project settings and analysis details using Firebase. Uploaded 3D model files stay on this device. See the <a href="./privacy.html" target="_top">Privacy Notice</a>.</span></label><button type="button" class="pp-account-primary" data-pp-account-action="accept-current-terms">Agree &amp; enable sync</button></div><div id="ppAccountLocalImportPending" class="pp-account-legal-pending" hidden><strong>Profiles and projects saved on this device</strong><p>This browser has local profiles and projects. Choose whether to copy them into your account. Only import them if they belong to you.</p><div class="pp-account-actions"><button type="button" class="pp-account-primary" data-pp-account-action="import-local-profiles">Import profiles &amp; projects</button><button type="button" class="pp-account-secondary" data-pp-account-action="skip-local-import">Keep them on this device</button></div></div><div class="pp-account-actions"><button type="button" class="pp-account-secondary" data-pp-account-action="sync">Sync now</button><button type="button" class="pp-account-secondary" data-pp-account-action="sign-out">Sign out</button></div><button type="button" class="pp-account-danger" data-pp-account-action="delete-account">Delete account…</button><div id="ppAccountDeleteConfirm" class="pp-account-delete-confirm" hidden><p>This removes your Firebase account and cloud profiles and projects. It cannot erase local copies or uploaded model files on other devices. Enter your password to continue.</p><label for="ppAccountDeletePassword">Password</label><input id="ppAccountDeletePassword" type="password" autocomplete="current-password" placeholder="Your account password"><div class="pp-account-actions"><button type="button" class="pp-account-delete-final" data-pp-account-action="confirm-delete-account">Permanently delete</button><button type="button" class="pp-account-secondary" data-pp-account-action="cancel-delete-account">Cancel</button></div></div></div>'+
    '<p id="ppAccountMessage" class="pp-account-message" role="status" aria-live="polite"></p>'+
    '<small class="pp-account-footnote">Your password is handled securely by Firebase. Synced profiles and project settings are private to your account. Uploaded 3D model files stay on this device.</small>'+
@@ -106,7 +108,8 @@ function updateAccountUI(){
  if(!ensureAccountUI())return;
  const configured=isConfigured();
  document.getElementById('ppAccountNotConfigured').hidden=configured;
- document.getElementById('ppAccountSignedOut').hidden=!configured||Boolean(activeUser);
+ document.getElementById('ppAccountSignedOut').hidden=!configured||Boolean(activeUser)||Boolean(accountMfaResolver);
+ const mfaPanel=document.getElementById('ppAccountMfa');if(mfaPanel)mfaPanel.hidden=!accountMfaResolver;
  document.getElementById('ppAccountSignedIn').hidden=!configured||!activeUser;
  const deleteConfirm=document.getElementById('ppAccountDeleteConfirm');if(deleteConfirm&&!activeUser)deleteConfirm.hidden=true;
  document.getElementById('ppAccountBadge').textContent=activeUser?(legalAccepted?'ACCOUNT':'REVIEW'):'LOCAL';
@@ -132,6 +135,7 @@ function errorText(error){
  if(String(error?.message||'').startsWith('Cancel your subscription')||String(error?.message||'').startsWith('Billing status could not be checked'))return error.message;
  if(code.includes('email-already-in-use'))return'That email already has an account. Sign in to request another verification email if needed.';
  if(code.includes('invalid-credential')||code.includes('user-not-found')||code.includes('wrong-password'))return'Email or password was not recognised.';
+ if(code.includes('invalid-verification-code')||code.includes('code-expired'))return'That authenticator code was not accepted. Enter the current six-digit code and try again.';
  if(code.includes('invalid-email'))return'Enter a valid email address.';
  if(code.includes('weak-password'))return'Choose a password with at least 8 characters.';
  if(code.includes('operation-not-allowed'))return'Email and password sign-up is disabled in Firebase Authentication. Enable the Email/Password provider for PrintProfit.';
@@ -563,7 +567,16 @@ async function handleAction(action){
    await syncWorkshop(user);
   }else if(action==='sign-in'){
    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
-   const credential=await sdk.auth.signInWithEmailAndPassword(auth,email,password);
+   let credential;
+   try{credential=await sdk.auth.signInWithEmailAndPassword(auth,email,password)}
+   catch(error){
+    if(error?.code!=='auth/multi-factor-auth-required')throw error;
+    accountMfaResolver=sdk.auth.getMultiFactorResolver(auth,error);
+    if(!accountMfaResolver.hints.some(h=>h.factorId===sdk.auth.TotpMultiFactorGenerator.FACTOR_ID))throw new Error('This account needs a supported authenticator to sign in.');
+    document.getElementById('ppAccountPassword').value='';updateAccountUI();
+    document.getElementById('ppAccountMfaCode')?.focus();
+    setMessage('Enter your authenticator code to complete sign-in.',false);return;
+   }
    await sdk.auth.reload(credential.user);
    if(!credential.user.emailVerified){
     let verificationSent=false;
@@ -573,6 +586,16 @@ async function handleAction(action){
     setMessage(verificationSent?'That address is not verified yet. We sent another verification email; check your inbox and spam folder, then sign in again.':'That address is not verified, and Firebase could not send a verification email. Wait a little and try signing in again.',true);return;
    }
    setMessage('Signed in. Syncing your profiles and projects…',false);
+  }else if(action==='verify-mfa'){
+   if(!accountMfaResolver)throw new Error('Start sign-in again to verify your code.');
+   const code=String(document.getElementById('ppAccountMfaCode')?.value||'').trim();
+   if(!/^\d{6}$/.test(code))throw new Error('Enter the six-digit code from your authenticator app.');
+   const hint=accountMfaResolver.hints.find(h=>h.factorId===sdk.auth.TotpMultiFactorGenerator.FACTOR_ID);
+   await accountMfaResolver.resolveSignIn(sdk.auth.TotpMultiFactorGenerator.assertionForSignIn(hint.uid,code));
+   accountMfaResolver=null;document.getElementById('ppAccountMfaCode').value='';
+   setMessage('Signed in. Syncing your profiles and projects…',false);
+  }else if(action==='cancel-mfa'){
+   accountMfaResolver=null;document.getElementById('ppAccountMfaCode').value='';updateAccountUI();
   }else if(action==='reset-password'){
    if(!validEmail(email))throw Object.assign(new Error('Invalid email'),{code:'auth/invalid-email'});
    await sdk.auth.sendPasswordResetEmail(auth,email,{url:window.location.origin});
