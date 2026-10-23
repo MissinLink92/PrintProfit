@@ -99,7 +99,7 @@ exports.createProCheckout=onCall(callable,async request=>{
   await db.collection('billingPurchaseConsents').doc(session.id).set({uid:auth.uid,plan,priceId,trialDays:trial?core.TRIAL_DAYS:0,acceptedAt:FieldValue.serverTimestamp(),termsVersion:'2026-10-20-v1'});
   await ref.set({url:session.url,priceId,expiresAt:session.expires_at*1000,lockedAt:0});
   return {url:session.url};
- }catch(error){await ref.delete();throw new HttpsError('unavailable','Checkout could not be prepared. Please try again.');}
+ }catch(error){console.error('Checkout preparation failed',{type:error?.type,code:error?.code,param:error?.param,statusCode:error?.statusCode});await ref.delete();throw new HttpsError('unavailable','Checkout could not be prepared. Please try again.');}
 });
 exports.createBillingPortal=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
