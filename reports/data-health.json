@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T01:49:03.065281+00:00",
+  "checkedAt": "2026-10-24T01:59:58.210440+00:00",
   "warnings": [
     "parcelforce: failed; last verified never",
     "ups: failed; last verified never",
@@ -32,13 +32,13 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1550,
-      "verified": 1544,
+      "listed": 1704,
+      "verified": 1698,
       "categories": {
-        "filament": 1363,
+        "filament": 1515,
         "accessory": 4,
         "printer": 71,
-        "resin-material": 90,
+        "resin-material": 92,
         "raw-material": 15,
         "equipment": 7
       }
@@ -83,12 +83,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1441,
-      "verified": 1436,
+      "listed": 1577,
+      "verified": 1572,
       "categories": {
-        "printer": 352,
-        "filament": 757,
-        "resin-material": 292,
+        "printer": 417,
+        "filament": 810,
+        "resin-material": 310,
         "accessory": 35,
         "equipment": 5
       }
@@ -147,13 +147,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 605,
-      "verified": 602,
+      "listed": 643,
+      "verified": 640,
       "categories": {
-        "filament": 321,
-        "printer": 129,
-        "resin-material": 121,
-        "accessory": 34
+        "filament": 342,
+        "printer": 139,
+        "resin-material": 126,
+        "accessory": 36
       }
     },
     {
@@ -193,11 +193,11 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1728,
-      "verified": 1652,
+      "listed": 1739,
+      "verified": 1659,
       "categories": {
-        "filament": 1459,
-        "resin-material": 154,
+        "filament": 1460,
+        "resin-material": 164,
         "printer": 60,
         "accessory": 49,
         "equipment": 6
@@ -302,7 +302,7 @@
     }
   ],
   "exchangeRates": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },

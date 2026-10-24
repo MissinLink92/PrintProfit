@@ -196,8 +196,17 @@ service cloud.firestore {
       allow delete: if isOwner();
     }
 
-    // Entitlements are written only by trusted Cloud Functions (Admin SDK bypasses rules).
+    // Entitlements and owner-dashboard administration records are server-only.
+    // Trusted Cloud Functions use the Admin SDK, which bypasses these client rules.
     match /billingEntitlements/{userId} {
+      allow read, write: if false;
+    }
+
+    match /adminGrants/{userId} {
+      allow read, write: if false;
+    }
+
+    match /adminAudit/{entryId} {
       allow read, write: if false;
     }
 
