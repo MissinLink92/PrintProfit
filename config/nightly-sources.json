@@ -67849,672 +67849,3141 @@
       "variantId": 58386631229704,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14074_01.jpg?v=1786077652",
       "expectedProductTitle": "Polymaker PolyLite PLA Filament",
-      "expectedVariantTitle": "White / 1 kg / 1.75 mm"
+      "expectedVariantTitle": "White / 1 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla"
     },
     "candidate-8705b7f1dc60010cc0fa": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472761835833,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Beige_b2d078d4-d8ce-4db3-a71c-d1aac64489e9.png?v=1788772934",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Beige (#D4B996) / 50KG"
+      "expectedVariantTitle": "Beige (#D4B996) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-c6b4f4603419142ae32b": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831169974591,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Yellow_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430139",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Yellow"
+      "expectedVariantTitle": "PETG 2.0 / Yellow",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-cd707d3eeba83f190ff5": {
       "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
       "variantId": 58386624053512,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20100_01.jpg?v=1786077557",
       "expectedProductTitle": "eSun PLA+ Filament 1kg",
-      "expectedVariantTitle": "Purple / 1.75 mm / Spool"
+      "expectedVariantTitle": "Purple / 1.75 mm / Spool",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/esun-pla"
     },
     "candidate-c05d75115aa4fd4f7154": {
       "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match",
       "variantId": 54509896335673,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Mia_65f01f34-4e4a-4a1c-b43f-66a0ba2d0428.png?v=1788772929",
       "expectedProductTitle": "PLA Basic Mix & Match",
-      "expectedVariantTitle": "Mia Pink (#FAD6C6) / 1KG"
+      "expectedVariantTitle": "Mia Pink (#FAD6C6) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match"
     },
     "candidate-1a3206e5542879d9bc4c": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
       "variantId": 51969165230361,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
       "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
-      "expectedVariantTitle": "White"
+      "expectedVariantTitle": "White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle"
     },
     "candidate-4fe36b4059df84c1d227": {
       "priceUrl": "https://uk.store.sunlu.com/products/high-speed-matte-petg-3d-printer-filament-1kg",
       "variantId": 67831010296127,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/HIGH_SPEED_MATTE_PETG_250G_Black_White_Grey_Red_Sky_Blue_Pink_Orange_Mint_Green_a7a416eb-1ce1-4e62-bde9-dd6604c2bd7f.png?v=1792639271",
       "expectedProductTitle": "High Speed Matte PETG 3D Printer Filament 1KG",
-      "expectedVariantTitle": "High Speed Matte PETG 250g Bundle / Black+White+Grey+Red+Sky Blue+Pink+Orange+Mint Green"
+      "expectedVariantTitle": "High Speed Matte PETG 250g Bundle / Black+White+Grey+Red+Sky Blue+Pink+Orange+Mint Green",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/high-speed-matte-petg-3d-printer-filament-1kg"
     },
     "candidate-9031263699e34bcccd3e": {
       "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
       "variantId": 58386583486728,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14501_01.jpg?v=1786076971",
       "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Muted white"
+      "expectedVariantTitle": "Muted white",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte"
     },
     "candidate-b59ea3e1fb94774ec257": {
       "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
       "variantId": 54472855290169,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PLA_Silk.jpg?v=1788773000",
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
-      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA Silk (⚡️ £11)"
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA Silk (⚡️ £11)",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer"
     },
     "candidate-dcc1eabdc8547cf2ec87": {
       "priceUrl": "https://uk.store.sunlu.com/products/moq-6kg-pla-2-0-upgraded-pla-pla-plus-3d-printer-filament-1kg",
       "variantId": 67830983360831,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_PLUS_2.0_250G_Black_White_Grey_Klein_Blue_Red_Yellow_Olive_Green_Sunny_Orange_c542d13f-fe23-4da6-a387-d4b64e457601.jpg?v=1792637923",
       "expectedProductTitle": "PLA+ 2.0, Upgraded PLA+(PLA Plus), 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PLA+2.0 250g Bundle / Black+White+Grey+Klein Blue+Red+Yellow+Olive Green+Sunny Orange"
+      "expectedVariantTitle": "PLA+2.0 250g Bundle / Black+White+Grey+Klein Blue+Red+Yellow+Olive Green+Sunny Orange",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/moq-6kg-pla-2-0-upgraded-pla-pla-plus-3d-printer-filament-1kg"
     },
     "candidate-134d2c6cd16c9f9c8f94": {
       "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
       "variantId": 58386569363720,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02291_01.jpg?v=1786076760",
       "expectedProductTitle": "REAL PLA Filament",
-      "expectedVariantTitle": "White / 5 kg / 2.85 mm"
+      "expectedVariantTitle": "White / 5 kg / 2.85 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/real-pla"
     },
     "candidate-da214627d4c4e1e24303": {
       "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
       "variantId": 54472771764537,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Mia_65f01f34-4e4a-4a1c-b43f-66a0ba2d0428.png?v=1788772929",
       "expectedProductTitle": "PLA Basic",
-      "expectedVariantTitle": "Mia Pink (#FAD6C6) / 1KG"
+      "expectedVariantTitle": "Mia Pink (#FAD6C6) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/pla-filament"
     },
     "candidate-dd386b8e516e7e5688a8": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
       "variantId": 52843235770649,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/downloaded-image.jpg?v=1772160667",
       "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
-      "expectedVariantTitle": "2 kg / #Clear Green"
+      "expectedVariantTitle": "2 kg / #Clear Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin"
     },
     "candidate-d69fc3f38e701c0289d6": {
       "priceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll",
       "variantId": 67831074816319,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/silkrb03_800x800_eb9d672b-b952-4bf7-8152-ccf3720de065.png?v=1792641403",
       "expectedProductTitle": "Silk Rainbow(Upgraded 8Meters Color Change Length) Filament 1KG",
-      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Silk Rainbow03"
+      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Silk Rainbow03",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll"
     },
     "candidate-9a7db3fe2954ed883db0": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
       "variantId": 58386666684680,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00018_01.jpg?v=1786078223",
       "expectedProductTitle": "123-3D PLA Filament",
-      "expectedVariantTitle": "Strawberry pink / 1.75 mm / 1 kg"
+      "expectedVariantTitle": "Strawberry pink / 1.75 mm / 1 kg",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla"
     },
     "candidate-6d837d8dedd00dac2fa4": {
       "priceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer",
       "variantId": 54508418695481,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/e2724757d31e1d06a62247decbb51833_7848368c-584e-4415-8b5f-50c2d95ee854.jpg?v=1790073123",
       "expectedProductTitle": "PLA High Speed 10-100kg Deals",
-      "expectedVariantTitle": "Vibrant Yellow (#FDDB27) / 10KG"
+      "expectedVariantTitle": "Vibrant Yellow (#FDDB27) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer"
     },
     "candidate-6fe224c2e0e3bd54f16c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
       "variantId": 52732002795801,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
       "expectedProductTitle": "Centauri 2 + 4 kg PLA",
-      "expectedVariantTitle": "PLA / Pink"
+      "expectedVariantTitle": "PLA / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle"
     },
     "candidate-fff9f0f34006e79089d9": {
       "priceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll",
       "variantId": 67830976020799,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_PLUS_250G_Black_White_Grey_Transparent_Klein_Blue_Green_Red_Sunny_Orange_Vivid_Yellow_ffed1500-f951-45a5-98cd-b29f28f2c102.jpg?v=1792637448",
       "expectedProductTitle": "PLA+(PLA Plus) Filament 1KG",
-      "expectedVariantTitle": "PLA+ 250g Bundle / Black+White+Grey+Klein Blue+Green+Red+Sunny Orange+Vivid Yellow"
+      "expectedVariantTitle": "PLA+ 250g Bundle / Black+White+Grey+Klein Blue+Green+Red+Sunny Orange+Vivid Yellow",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll"
     },
     "candidate-5a0b63d5e7e9c28a380f": {
       "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
       "variantId": 58386646827272,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10011_01.jpg?v=1786077889",
       "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Ivory beige"
+      "expectedVariantTitle": "Ivory beige",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium"
     },
     "candidate-7632d0757fdbc972fb11": {
       "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer",
       "variantId": 54472801354041,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/White_329dada3-3838-458c-a557-6ba8de43d8da.jpg?v=1788772974",
       "expectedProductTitle": "ABS-Like Resin 2.0 10-100KG Deals",
-      "expectedVariantTitle": "White (#EFF0F1) / 10KG"
+      "expectedVariantTitle": "White (#EFF0F1) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer"
     },
     "candidate-a5205661c1c0280ec808": {
       "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
       "variantId": 51216403202329,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_bcb04d47-be77-4334-a103-abd99547f345.jpg?v=1756798088",
       "expectedProductTitle": "PLA Basic Filament 10 kg",
-      "expectedVariantTitle": "Refill / Grey"
+      "expectedVariantTitle": "Refill / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg"
     },
     "candidate-235c27004d0dd0e5b697": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-bulk-sale-pla-matte-filament-neatly-wound-filament",
       "variantId": 67830997549375,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_MATTE_250G_Black_White_Red_Blue_Green_Pink_Grey_Clay_800x800_9cd7699c-7268-449b-8f2f-1de1bcee0bce.jpg?v=1792638421",
       "expectedProductTitle": "PLA Matte Filament 1KG",
-      "expectedVariantTitle": "PLA Matte 250g Bundle / Black+White+Red+Blue+Green+Pink+Grey+Clay"
+      "expectedVariantTitle": "PLA Matte 250g Bundle / Black+White+Red+Blue+Green+Pink+Grey+Clay",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-bulk-sale-pla-matte-filament-neatly-wound-filament"
     },
     "candidate-9a34afdbe363f6200456": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
       "variantId": 58386678710536,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_White_1.75mm_10-pack_1_kg_DHM10087c_DHM10044_m1_big.jpg?v=1787675179",
       "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
-      "expectedVariantTitle": "White"
+      "expectedVariantTitle": "White",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack"
     },
     "candidate-fb55bb797b604b6e46d4": {
       "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
       "variantId": 51235533160729,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_bcb04d47-be77-4334-a103-abd99547f345.jpg?v=1756798088",
       "expectedProductTitle": "PLA Basic Filament 5 kg",
-      "expectedVariantTitle": "Refill / Grey"
+      "expectedVariantTitle": "Refill / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg"
     },
     "candidate-2a81c99e601f6244c10b": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-pla-meta-macaron-colors-1-75mm-1kg-roll",
       "variantId": 67831000826175,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Meta_250G_Black_White_Grey_Sky_Blue_Mint_Green_Cherry_Red_Lemon_Yellow_Sakura_Pink_92377cd5-5297-4293-9eb1-d7e710cc5d92.jpg?v=1792638621",
       "expectedProductTitle": "PLA Meta Filament 1KG",
-      "expectedVariantTitle": "PLA Meta 250g Bundle / Black+White+Grey+Sky Blue+Mint Green+Cherry Red+Lemon Yellow+Sakura Pink"
+      "expectedVariantTitle": "PLA Meta 250g Bundle / Black+White+Grey+Sky Blue+Mint Green+Cherry Red+Lemon Yellow+Sakura Pink",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-pla-meta-macaron-colors-1-75mm-1kg-roll"
     },
     "candidate-2b74439126fc5da7a8fa": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
       "variantId": 58386677956872,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_White_1.75mm_5-pack_1_kg_DHM10085c_DHM10086c_DHM10087c_DHM10043_m1_big_3ba41a32-bd84-4995-8080-26f27c69e6fe.jpg?v=1787669398",
       "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
-      "expectedVariantTitle": "White"
+      "expectedVariantTitle": "White",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack"
     },
     "candidate-683ec01ed8f4d2c3c6f7": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
       "variantId": 54472658256185,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/LakeBlue_61a71904-c4d5-4072-8f7e-aaf0a304d7fc.jpg?v=1788772968",
       "expectedProductTitle": "PETG 10-100kg Deals",
-      "expectedVariantTitle": "Lake Blue (#0084D4) / 20KG"
+      "expectedVariantTitle": "Lake Blue (#0084D4) / 20KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer"
     },
     "candidate-35891ea42fc6d6bb3316": {
       "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
       "variantId": 51222962766105,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Translucent-5KG_d760a972-21cb-4858-b717-5daf7ea3bc73.jpg?v=1756798042",
       "expectedProductTitle": "TPU 95A Filament 10 kg",
-      "expectedVariantTitle": "Red / Translucent"
+      "expectedVariantTitle": "Red / Translucent",
+      "imageSourceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg"
     },
     "candidate-3ce14039021dac8b1828": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg",
       "variantId": 67830991978815,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PETG_Black_White_Red_Klein_Blue_Green_Yellow_Sunny_Orange_Lavender_Purple_9126bf11-3d92-4348-af0e-fa9375f70130.jpg?v=1792638183",
       "expectedProductTitle": "PETG 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 250g Bundle / Black+White+Red+Klein Blue+Green+Yellow+Sunny Orange+Lavender Purple"
+      "expectedVariantTitle": "PETG 250g Bundle / Black+White+Red+Klein Blue+Green+Yellow+Sunny Orange+Lavender Purple",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg"
     },
     "candidate-1d1cd430479c354ae450": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
       "variantId": 58386677203208,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_White_1.75mm_2-pack_1_kg_DHM10085c_DHM10087c_DHM10042_m1_big_9a83021c-4dc7-4e3f-b1db-2a78939811b3.jpg?v=1787670369",
       "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
-      "expectedVariantTitle": "White"
+      "expectedVariantTitle": "White",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack"
     },
     "candidate-06703487066f1fa96fad": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
       "variantId": 52136557281561,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS3.0_2kg_0e125f56-f9e0-4df3-a3d4-cbbaa6f78f15.jpg?v=1773832693",
       "expectedProductTitle": "ABS-Like Resin V3.0+",
-      "expectedVariantTitle": "2 kg / #Smoky Black"
+      "expectedVariantTitle": "2 kg / #Smoky Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus"
     },
     "candidate-3b8409f3a6bc86156e6c": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs",
       "variantId": 67831068852543,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SILK_PLA_PLUS_250G_Rainbow_01_02_03_04_05_06_Light_Gold_Sliver_139a692e-3bfc-4348-99c8-491a19060e35.jpg?v=1792641021",
       "expectedProductTitle": "SILK PLA+ Filament 1KG",
-      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Rainbow 01+Rainbow 02+Rainbow 03+Rainbow 04+Rainbow 05+Rainbow 06+Light Gold+Sliver"
+      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Rainbow 01+Rainbow 02+Rainbow 03+Rainbow 04+Rainbow 05+Rainbow 06+Light Gold+Sliver",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs"
     },
     "candidate-c779d4fc0455df9903e2": {
       "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
       "variantId": 58386650857736,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16088_01.jpg?v=1786077954",
       "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Turquoise green"
+      "expectedVariantTitle": "Turquoise green",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro"
     },
     "candidate-893ebcf9ca8925647cff": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
       "variantId": 52136305230105,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Yellow.jpg?v=1773821707",
       "expectedProductTitle": "ABS-Like Resin V3.0",
-      "expectedVariantTitle": "2 kg / #Yellow"
+      "expectedVariantTitle": "2 kg / #Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0"
     },
     "candidate-bdbaa2fb00dad591df87": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
       "variantId": 67830957867327,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Black_White_Grey_Transparent_Klein_Blue_Red_Sunny_Orange_Green_024107b2-7262-469e-8e2d-90e5278284b5.jpg?v=1792636783",
       "expectedProductTitle": "PLA Filament 1KG",
-      "expectedVariantTitle": "PLA 250g Bundle / Black+White+Grey+Transparent+Klein Blue+Red+Sunny Orange+Green"
+      "expectedVariantTitle": "PLA 250g Bundle / Black+White+Grey+Transparent+Klein Blue+Red+Sunny Orange+Green",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer"
     },
     "candidate-64b22cf2a0d7e37a753d": {
       "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla",
       "variantId": 58386634014984,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14100_01.jpg?v=1786077681",
       "expectedProductTitle": "Polymaker PolyMax Tough PLA Filament",
-      "expectedVariantTitle": "Yellow / 0.75 kg / 1.75 mm"
+      "expectedVariantTitle": "Yellow / 0.75 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla"
     },
     "candidate-5d05d216861fa9fa4d4f": {
       "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
       "variantId": 58386630148360,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14293_01.jpg?v=1786077632",
       "expectedProductTitle": "Polymaker PolyLite PETG Filament",
-      "expectedVariantTitle": "Transparent green / 1.75 mm / 1 kg"
+      "expectedVariantTitle": "Transparent green / 1.75 mm / 1 kg",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg"
     },
     "candidate-d346997fe03da04b03ca": {
       "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
       "variantId": 51543926178073,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
       "expectedProductTitle": "Resin Mystery Box | 3 kg",
-      "expectedVariantTitle": "Random Resin1 / Random Resin3"
+      "expectedVariantTitle": "Random Resin1 / Random Resin3",
+      "imageSourceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg"
     },
     "candidate-6ee0a43dfa041694eb68": {
       "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-asa",
       "variantId": 58386628903176,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14277_01.jpg?v=1786077601",
       "expectedProductTitle": "Polymaker PolyLite ASA Filament",
-      "expectedVariantTitle": "Yellow / 1 kg / 1.75 mm"
+      "expectedVariantTitle": "Yellow / 1 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-asa"
     },
     "candidate-70260ef6a64331ca0fc7": {
       "priceUrl": "https://www.123-3d.co.uk/products/esun-abs-2",
       "variantId": 58386619957512,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20030_01.jpg?v=1786077459",
       "expectedProductTitle": "eSun ABS+ Filament 1kg",
-      "expectedVariantTitle": "Silver / 1.75 mm"
+      "expectedVariantTitle": "Silver / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/esun-abs-2"
     },
     "candidate-4f9b7daf738a900b19b0": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170007359,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Vivid_Yellow_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430141",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Vivid Yellow"
+      "expectedVariantTitle": "PETG 2.0 / Vivid Yellow",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-196b77322b74957f8376": {
       "priceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll",
       "variantId": 67831076192575,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/slrb05_800x800_c7fe3e33-04be-4bfa-816b-77eeab36cf3d.png?v=1792641216",
       "expectedProductTitle": "Silk Rainbow(Upgraded 8Meters Color Change Length) Filament 1KG",
-      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Silk Rainbow05"
+      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Silk Rainbow05",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll"
     },
     "candidate-895779ae35447fd8e23c": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
       "variantId": 58386610782472,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00127_01.jpg?v=1786077310",
       "expectedProductTitle": "BASF Ultrafuse PLA Filament",
-      "expectedVariantTitle": "White / 2.5 kg / 1.75 mm"
+      "expectedVariantTitle": "White / 2.5 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament"
     },
     "candidate-dc5fe8923524bdf1ae1f": {
       "priceUrl": "https://uk.anycubic3d.com/products/photon-p1-max-best-large-resin-3d-printer",
       "variantId": 54472807055673,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/PhotonP1Max_4KGBest-SellerResin.jpg?v=1788772976",
       "expectedProductTitle": "Anycubic Photon P1 Max",
-      "expectedVariantTitle": "Single Unit / 4KG Best-Seller Resin"
+      "expectedVariantTitle": "Single Unit / 4KG Best-Seller Resin",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/photon-p1-max-best-large-resin-3d-printer"
     },
     "candidate-96c01b6e19d9b5af8b03": {
       "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
       "variantId": 50815445500185,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_76bb11fa-6a5d-4de4-aa62-08692547166f.jpg?v=1783997868",
       "expectedProductTitle": "PLA Filament 10 kg",
-      "expectedVariantTitle": "PLA (RFID) / Translucent"
+      "expectedVariantTitle": "PLA (RFID) / Translucent",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg"
     },
     "candidate-8924ef0f4208237292de": {
       "priceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll",
       "variantId": 67830978150719,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_PLUS_250G_Roasted_Chestnut_Bone_White_Grey_Klein_Blue_Red_Yellow_Coffee_Brown_Olive_Green_800x800_66a74fe6-a72a-4e43-b544-d4e7ec975d75.jpg?v=1792637651",
       "expectedProductTitle": "PLA+(PLA Plus) Filament 1KG",
-      "expectedVariantTitle": "PLA+ 250g Bundle / Roasted Chestnut+Bone White+Grey+Klein Blue+Red+Yellow+Coffee Brown+Olive Green"
+      "expectedVariantTitle": "PLA+ 250g Bundle / Roasted Chestnut+Bone White+Grey+Klein Blue+Red+Yellow+Coffee Brown+Olive Green",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll"
     },
     "candidate-7d71b18235ad34e96107": {
       "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
       "variantId": 58386609930504,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00059_01.jpg?v=1786077309",
       "expectedProductTitle": "BASF Ultrafuse PET Filament",
-      "expectedVariantTitle": "Transparent / 0.75 kg / 1.75 mm"
+      "expectedVariantTitle": "Transparent / 0.75 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet"
     },
     "candidate-83a5b612a216bfa175ef": {
       "priceUrl": "https://uk.anycubic3d.com/products/pla-plus-sale-for-filament-3d-printer",
       "variantId": 54472600060217,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/TextureGrey_ccfa6cb0-cafc-4a54-b688-736160cc4144.jpg?v=1788772970",
       "expectedProductTitle": "PLA+ 10-100kg Deals",
-      "expectedVariantTitle": "Texture Grey (#75787B) / 10KG"
+      "expectedVariantTitle": "Texture Grey (#75787B) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/pla-plus-sale-for-filament-3d-printer"
     },
     "candidate-f4a7a10c11e1b41aced8": {
       "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-5kg",
       "variantId": 51377876533529,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_5KG_420a0e47-b5ed-4e88-84c4-56bdcf68b57d.jpg?v=1758186022",
       "expectedProductTitle": "PLA Filament 5 kg",
-      "expectedVariantTitle": "PLA (RFID) / Sea Green"
+      "expectedVariantTitle": "PLA (RFID) / Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-5kg"
     },
     "candidate-dc0d8cb567d00a695aad": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs",
       "variantId": 67831071801663,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/silkrb03_800x800_0dad1a28-fa47-4682-b7f3-c4e93236197c.png?v=1792641173",
       "expectedProductTitle": "SILK PLA+ Filament 1KG",
-      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Silk Rainbow03"
+      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Silk Rainbow03",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs"
     },
     "candidate-b42024730fc0e4742e65": {
       "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
       "variantId": 58386596364552,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14455_01.jpg?v=1786077105",
       "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Red"
+      "expectedVariantTitle": "Red",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk"
     },
     "candidate-4ce2b899b887de8c1201": {
       "priceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-10kg",
       "variantId": 51856716235033,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1KG_1.75mm_50c45657-2735-41b2-b7d0-3954adb5f28e.jpg?v=1786516146",
       "expectedProductTitle": "PLA Silk Filament 10 kg",
-      "expectedVariantTitle": "Silk Black Green"
+      "expectedVariantTitle": "Silk Black Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-10kg"
     },
     "candidate-c6ae0f890543b528d37e": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
       "variantId": 67830969303359,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_250G_Roasted_Chestnut_Bone_White_Grey_Coffee_Brown_Red_Klein_Blue_Vivid_Yellow_Olive_Green_c926b639-e670-4927-9a9e-0892c5a9e65e.jpg?v=1792637165",
       "expectedProductTitle": "PLA Filament 1KG",
-      "expectedVariantTitle": "PLA 250g Bundle / Roasted Chestnut+Bone White+Grey+Coffee Brown+Red+Klein Blue+Vivid Yellow+Olive Green"
+      "expectedVariantTitle": "PLA 250g Bundle / Roasted Chestnut+Bone White+Grey+Coffee Brown+Red+Klein Blue+Vivid Yellow+Olive Green",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer"
     },
     "candidate-98a220c41c427c029a45": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170040127,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Peach_Pink_SUNLU_PETG_V2_FILAMENT_1KG_0a8b2dd4-c0e6-4aed-830f-0593dbea3ea4.jpg?v=1786430162",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Peach Pink"
+      "expectedVariantTitle": "PETG 2.0 / Peach Pink",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-27cefa00629ab2036411": {
       "priceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll",
       "variantId": 67831076815167,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SILK_PLA_PLUS_250G_Rainbow_01_02_03_04_05_06_Light_Gold_Sliver_139a692e-3bfc-4348-99c8-491a19060e35.jpg?v=1792641021",
       "expectedProductTitle": "Silk Rainbow(Upgraded 8Meters Color Change Length) Filament 1KG",
-      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Rainbow 01+Rainbow 02+Rainbow 03+Rainbow 04+Rainbow 05+Rainbow 06+Light Gold+Sliver"
+      "expectedVariantTitle": "Silk Rainbow 250g Bundle / Rainbow 01+Rainbow 02+Rainbow 03+Rainbow 04+Rainbow 05+Rainbow 06+Light Gold+Sliver",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-upgraded-silk-rainbow-8meters-color-change-3d-printer-filament-1kg-roll"
     },
     "candidate-9dfb8dd2856c99dc800a": {
       "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs",
       "variantId": 67831072457023,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/slrb05_800x800_c7fe3e33-04be-4bfa-816b-77eeab36cf3d.png?v=1792641216",
       "expectedProductTitle": "SILK PLA+ Filament 1KG",
-      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Silk Rainbow05"
+      "expectedVariantTitle": "Silk PLA+ Rainbow 250g  Bundle / Silk Rainbow05",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-sunlu-silk-pla-3d-printer-filament-1-75mm-1kg-2-2lbs"
     },
     "candidate-6394aeb1e8ee03735ce8": {
       "priceUrl": "https://www.123-3d.co.uk/products/real-pla-v1",
       "variantId": 58386641781000,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02066_01.jpg?v=1786077802",
       "expectedProductTitle": "REAL PLA",
-      "expectedVariantTitle": "White / 0.5 kg / 1.75 mm"
+      "expectedVariantTitle": "White / 0.5 kg / 1.75 mm",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/real-pla-v1"
     },
     "candidate-eab9e9b18da6cc4066f4": {
       "priceUrl": "https://uk.anycubic3d.com/products/petg-mix-match",
       "variantId": 54504926118201,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/TextureSilver.png?v=1788772935",
       "expectedProductTitle": "PETG Mix & Match",
-      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG"
+      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/petg-mix-match"
     },
     "candidate-16318ea8cde3a1273299": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-8-kg-pla",
       "variantId": 52480604340505,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2_10kgFilamentBundle.jpg?v=1789901318",
       "expectedProductTitle": "Centauri Carbon 2 + 8 kg PLA",
-      "expectedVariantTitle": "Space Grey"
+      "expectedVariantTitle": "Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-8-kg-pla"
     },
     "candidate-495cd99719f14561baf5": {
       "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-pla",
       "variantId": 58386635522312,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14158_01.jpg?v=1786077706",
       "expectedProductTitle": "Polymaker PolyTerra PLA Filament",
-      "expectedVariantTitle": "Lava red / 1.75 mm / 1 kg"
+      "expectedVariantTitle": "Lava red / 1.75 mm / 1 kg",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-pla"
     },
     "candidate-2026c0aaa7180d5c0299": {
       "priceUrl": "https://uk.anycubic3d.com/products/petg",
       "variantId": 54472654684473,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/TextureSilver.png?v=1788772935",
       "expectedProductTitle": "PETG",
-      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG"
+      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/petg"
     },
     "candidate-95f7a13140f034e8b84f": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170072895,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Oak_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430180",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Oak"
+      "expectedVariantTitle": "PETG 2.0 / Oak",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-f1493e647c3cdf90d43e": {
       "priceUrl": "https://www.123-3d.co.uk/products/esun-esilk-pla-filament",
       "variantId": 58386621268232,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20199_01.jpg?v=1786077488",
       "expectedProductTitle": "eSun eSilk-PLA Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Lime green"
+      "expectedVariantTitle": "Lime green",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/esun-esilk-pla-filament"
     },
     "candidate-c75a58c0a250f8949abc": {
       "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-petg-economy",
       "variantId": 58386614878472,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP13084_01.png?v=1786077381",
       "expectedProductTitle": "colorFabb PETG Economy Filament",
-      "expectedVariantTitle": "Light grey / 2.85 mm / 2.2 kg"
+      "expectedVariantTitle": "Light grey / 2.85 mm / 2.2 kg",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/colorfabb-petg-economy"
     },
     "candidate-fd8cea0a36069ea1c114": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-8-kg-pla-rfid",
       "variantId": 51887354315033,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo_8kgPLARFID.jpg?v=1789897174",
       "expectedProductTitle": "Centauri Carbon 2 Combo + 8 kg PLA (RFID)",
-      "expectedVariantTitle": "Space Grey"
+      "expectedVariantTitle": "Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-8-kg-pla-rfid"
     },
     "candidate-3b0d161000c0c78012f4": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-chameleon",
       "variantId": 58386606555400,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00252_01.jpg?v=1786077259",
       "expectedProductTitle": "123-3D PLA Chameleon Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Purple / green"
+      "expectedVariantTitle": "Purple / green",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-chameleon"
     },
     "candidate-039680b7654a8a994d8c": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170105663,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Green_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430159",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Green"
+      "expectedVariantTitle": "PETG 2.0 / Green",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-8a6ed96d115917e215f9": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pctg",
       "variantId": 58386605539592,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00227_01.jpg?v=1786077241",
       "expectedProductTitle": "123-3D PCTG Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Silver"
+      "expectedVariantTitle": "Silver",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-pctg"
     },
     "candidate-6427dcef3ebf1117ed96": {
       "priceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-satin",
       "variantId": 58386603049224,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00067_01.jpg?v=1786077206",
       "expectedProductTitle": "123-3D PLA Satin Filament 1.75mm 1kg",
-      "expectedVariantTitle": "Light blue"
+      "expectedVariantTitle": "Light blue",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-satin"
     },
     "candidate-534a2fca078d3abe3fb7": {
       "priceUrl": "https://www.123-3d.co.uk/products/real-pla-matte",
       "variantId": 58386571460872,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02359_01.jpg?v=1786076779",
       "expectedProductTitle": "REAL PLA Matte Filament",
-      "expectedVariantTitle": "Purple / 1.75 mm / 1 kg"
+      "expectedVariantTitle": "Purple / 1.75 mm / 1 kg",
+      "imageSourceUrl": "https://www.123-3d.co.uk/products/real-pla-matte"
     },
     "candidate-e51a3033bda3ce454764": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170138431,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Blush_Pink_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786672276",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Blush Pink"
+      "expectedVariantTitle": "PETG 2.0 / Blush Pink",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-266663b623553fe67ec1": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170171199,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Lavender_Purple_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430165",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Lavender Purple"
+      "expectedVariantTitle": "PETG 2.0 / Lavender Purple",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-dce7b8fddda8033e1fa5": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-8-kg-pla-rfid",
       "variantId": 52588438913305,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo_8kgPLA_8fd23dae-78ea-4834-93b6-94875d5e2a63.jpg?v=1789958838",
       "expectedProductTitle": "Centauri 2 Combo + 8 kg PLA",
-      "expectedVariantTitle": "Space Grey"
+      "expectedVariantTitle": "Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-8-kg-pla-rfid"
     },
     "candidate-4792bfa1a8d61511745e": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-8-kg-pla-rfid",
       "variantId": 52588490359065,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_8kgPLA.jpg?v=1781579833",
       "expectedProductTitle": "Centauri 2 + 8 kg PLA",
-      "expectedVariantTitle": "Space Grey"
+      "expectedVariantTitle": "Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-8-kg-pla-rfid"
     },
     "candidate-d01168346279fb1da66d": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170203967,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Aqua_Blue_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430170",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Aqua Blue"
+      "expectedVariantTitle": "PETG 2.0 / Aqua Blue",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-09f45d1c60f486ef6412": {
       "priceUrl": "https://uk.elegoo.com/products/pla-rfid-emoji-filament-10-kg",
       "variantId": 52466790924569,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA-10KG-_-1.75mm-emoji_RFID_0e119a0e-47ad-43aa-b7f0-31e71ce56708.jpg?v=1780555627",
       "expectedProductTitle": "PLA (RFID) emoji® Brand Edition Filament 10 kg",
-      "expectedVariantTitle": "Wood Color"
+      "expectedVariantTitle": "Wood Color",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-rfid-emoji-filament-10-kg"
     },
     "candidate-587ad2131a311f336137": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-4-max-with-filament-starter-bundle",
       "variantId": 51969190723865,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4M10_1kg.jpg?v=1756798037",
       "expectedProductTitle": "Neptune 4 Max + 10 kg Filament",
-      "expectedVariantTitle": "Sea Green"
+      "expectedVariantTitle": "Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-max-with-filament-starter-bundle"
     },
     "candidate-6e28f475d59856668c70": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170236735,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Cyan_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430173",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Cyan"
+      "expectedVariantTitle": "PETG 2.0 / Cyan",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-b9ccb3e22cb62bc3b9df": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-4-pro-with-filament-starter-bundle",
       "variantId": 53058361164057,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4P10_1kg.jpg?v=1756798038",
       "expectedProductTitle": "Neptune 4 Pro + 10 kg Filament",
-      "expectedVariantTitle": "Sea Green"
+      "expectedVariantTitle": "Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-pro-with-filament-starter-bundle"
     },
     "candidate-c3c45515218908e233b0": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170269503,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Grey_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430175",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Grey"
+      "expectedVariantTitle": "PETG 2.0 / Grey",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-093aeeb2d105a9173ae3": {
       "priceUrl": "https://uk.elegoo.com/products/abs-filament-1-75-mm-colored-10-kg",
       "variantId": 52974278377753,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS_-10KG_4547bb3c-4016-4029-a790-e648a7a3bd3c.jpg?v=1786435130",
       "expectedProductTitle": "ABS Filament 10 kg",
-      "expectedVariantTitle": "Sky Blue"
+      "expectedVariantTitle": "Sky Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/abs-filament-1-75-mm-colored-10-kg"
     },
     "candidate-74aac14f26c9925efece": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170302271,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Black_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786603214",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Black"
+      "expectedVariantTitle": "PETG 2.0 / Black",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-16b3d1019bfd611f199a": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170335039,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Bone_White_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430187",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Bone White"
+      "expectedVariantTitle": "PETG 2.0 / Bone White",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-3b66fbb6eebff4b45fe8": {
       "priceUrl": "https://uk.elegoo.com/products/pc-filament-1-75-mm-colored-10-kg",
       "variantId": 51386461028633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PC5KG_1.75mm_4a266588-cbea-44f0-84f2-537c26e3ac12.jpg?v=1758267139",
       "expectedProductTitle": "PC Filament 10 kg",
-      "expectedVariantTitle": "Clear Black / Transparent"
+      "expectedVariantTitle": "Clear Black / Transparent",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pc-filament-1-75-mm-colored-10-kg"
     },
     "candidate-7bfc212918fdb2b4b35a": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170367807,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Red_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430189",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Red"
+      "expectedVariantTitle": "PETG 2.0 / Red",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-fb1f64ff99b6a5f48cf1": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-ultra-resin",
       "variantId": 52820811186457,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0482-Like-Ultra-Beige-1KG-_1.jpg?v=1783932250",
       "expectedProductTitle": "ABS-Like Ultra Resin",
-      "expectedVariantTitle": "1 kg / #Beige"
+      "expectedVariantTitle": "1 kg / #Beige",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-ultra-resin"
     },
     "candidate-72d1aaafbddcd1837053": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170400575,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Beige_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430193",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Beige"
+      "expectedVariantTitle": "PETG 2.0 / Beige",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-b5e5a7c0841219ab9dc6": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170433343,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Coffee_Brown_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430205",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Coffee Brown"
+      "expectedVariantTitle": "PETG 2.0 / Coffee Brown",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-7ae7dc55132ebcacb9ca": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170466111,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Magenta_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430209",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Magenta"
+      "expectedVariantTitle": "PETG 2.0 / Magenta",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-4241548d534d81abc239": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170498879,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/White_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430135",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / White"
+      "expectedVariantTitle": "PETG 2.0 / White",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-85d69b7cbe1510e557e2": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle",
       "variantId": 53190654787865,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P-ALLINONEBundle.png?v=1789458637",
       "expectedProductTitle": "Neptune 3 Pro All-in-One Premium Bundle",
-      "expectedVariantTitle": "Megenta"
+      "expectedVariantTitle": "Megenta",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle"
     },
     "candidate-3fcae726f3d6d8bd373f": {
       "priceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg",
       "variantId": 67831170531647,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Sunny_Orange_SUNLU_PETG_V2_FILAMENT_1KG.jpg?v=1786430136",
       "expectedProductTitle": "[New Arrival] PETG 2.0 3D Printer Filament 1KG",
-      "expectedVariantTitle": "PETG 2.0 / Sunny Orange"
+      "expectedVariantTitle": "PETG 2.0 / Sunny Orange",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/petg-v2-3d-printer-filament-1kg"
     },
     "candidate-5711942ed5a873cf33f3": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976328048921,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Sea Green / Yellow / Red"
+      "expectedVariantTitle": "Sea Green / Yellow / Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-ac8b584a60f5ea6a3c8d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974453129497,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Black / White"
+      "expectedVariantTitle": "Grey / Black / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-c7b5d939fd555648d071": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973708935449,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Silver Grey / Silk Gold / White"
+      "expectedVariantTitle": "Silk Silver Grey / Silk Gold / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-82dd2dfac821855bc67d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581404953,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Purple"
+      "expectedVariantTitle": "Black / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
+    },
+    "candidate-3fd0f8a2c8325c81ab21": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54498526495033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Orange_8693822c-70c9-489e-ae63-f882d8d58366.png?v=1788772932",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Orange (#FF7F32) / 50KG"
+    },
+    "candidate-34228e7617693c741355": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327095615,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SUNLU_Standard_Resin_transparent.jpg?v=1785571786",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Resin 1000g | Transparent"
+    },
+    "candidate-89a768f4e8f6ce3e455b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631262472,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14083_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "White / 1 kg / 2.85 mm"
+    },
+    "candidate-70311096a2a800a4aca6": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match",
+      "variantId": 54509896466745,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_8fb98592-838c-4698-803e-6500e3035dba.png?v=1788772927",
+      "expectedProductTitle": "PLA Basic Mix & Match",
+      "expectedVariantTitle": "Grey (#B1B3B3) / 1KG"
+    },
+    "candidate-42d6f8f37cf0d1419511": {
+      "priceUrl": "https://uk.store.sunlu.com/products/1-75mm-sunlu-high-speed-pla-3d-printer-filament-1kg-roll",
+      "variantId": 67839029838143,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/orange_high_speed_pla.webp?v=1792733939",
+      "expectedProductTitle": "High Speed PLA, HSPLA Filament 1KG",
+      "expectedVariantTitle": "Sunny Orange"
+    },
+    "candidate-cc5271fa3194b33e329e": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
+      "variantId": 54472771830073,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_8fb98592-838c-4698-803e-6500e3035dba.png?v=1788772927",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Grey (#B1B3B3) / 1KG"
+    },
+    "candidate-b71c2896a5db57eef849": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583519496,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14502_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel banana"
+    },
+    "candidate-b1413ceb0dd81ca6a996": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472659304761,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/LimeGreen_6ff73798-f02f-42bc-839b-6ebff667ab77.jpg?v=1788772967",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Lime Green (#78D64B) / 20KG"
+    },
+    "candidate-e345f6321a80e0249779": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52732003057945,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA / Beige"
+    },
+    "candidate-a0bcc1d46f5f1d934e2d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569396488,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02252_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Yellow / 1 kg / 2.85 mm"
+    },
+    "candidate-0530e4804740a6eee56f": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51216403857689,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_892699d1-5b46-4bc1-b135-4c095fdc25a0.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Green"
+    },
+    "candidate-cac7ffb381cea1867460": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678743304,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Yellow_1.75mm_10-pack_1_kg_DHM10084c_DHM10008_m1_big.jpg?v=1787675200",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-59bcf37fbad513807ca7": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 51235533291801,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_892699d1-5b46-4bc1-b135-4c095fdc25a0.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Green"
+    },
+    "candidate-1e23901a4c0a7a68852c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677989640,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Yellow_1.75mm_5-pack_1_kg_DHM10082c_DHM10083c_DHM10084c_DHM10007_m1_big_b2550df7-01ea-437f-a047-e37c2e9213fb.jpg?v=1787669429",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-35cea87c0f186553a2b5": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer",
+      "variantId": 54472801747257,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/ABS_2.0_2be172dd-ce8c-468a-88d7-4ad32e622d30.jpg?v=1789717113",
+      "expectedProductTitle": "ABS-Like Resin 2.0 10-100KG Deals",
+      "expectedVariantTitle": "Gray (#7E93A7) / 50KG"
+    },
+    "candidate-43b9fafe4a5994641c42": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962995481,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Red-5KG_e3b3172c-3c5d-4448-9f97-3740c5f7a81d.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / Red"
+    },
+    "candidate-dcfae82e3c7b44872d30": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386677235976,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Yellow_1.75mm_2-pack_1_kg_DHM10082c_DHM10084c_DHM10006_m1_big_f67be497-03c4-4685-8cdd-eef3ea5ed022.jpg?v=1787670383",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-ded3ccfe5646c9b7ffaa": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838595498303,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SUNLU_Standard_Resin_DARK_GREY.jpg?v=1785571732",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Resin 1000g | Dark Grey"
+    },
+    "candidate-2ca822c362c9d2e1bc10": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650890504,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16085_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Ultra navy blue"
+    },
+    "candidate-4f08a406360ef5ad2989": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52034243756313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/downloaded-image.jpg?v=1772160667",
+      "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "2 kg / #Blue"
+    },
+    "candidate-6dff03edae10a8a1b8d2": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386647122184,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10020_01.jpg?v=1786077889",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Polar white"
+    },
+    "candidate-4332fa42e57df21c2229": {
+      "priceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer",
+      "variantId": 54472582431033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/a3457ad0e7c475c0f9a2dcb90cccaf64_331c7341-a76d-410f-9f20-43d7f5d12fad.jpg?v=1790073111",
+      "expectedProductTitle": "PLA High Speed 10-100kg Deals",
+      "expectedVariantTitle": "Texture Grey (#75787B) / 10KG"
+    },
+    "candidate-3702448bb086f7c8f744": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386630181128,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14291_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Transparent red / 1.75 mm / 1 kg"
+    },
+    "candidate-4e6b7d800e186254b957": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-abs-2",
+      "variantId": 58386619990280,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20035_01.jpg?v=1786077459",
+      "expectedProductTitle": "eSun ABS+ Filament 1kg",
+      "expectedVariantTitle": "White / 2.85 mm"
+    },
+    "candidate-a5032845bf0ca5dc5b80": {
+      "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
+      "variantId": 51745150140697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
+      "expectedProductTitle": "Resin Mystery Box | 3 kg",
+      "expectedVariantTitle": "Random Resin5 / Random Resin4"
+    },
+    "candidate-5f36b3c491726799df21": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
+      "variantId": 54472854733113,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_ACE_2_Pro_4KG_PLA_High_Speed.jpg?v=1788772997",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
+      "expectedVariantTitle": "Kobra 3 Max V2 Combo + ACE 2 Pro (8 colors) / 4KG PLA High Speed (⚡️ £11)"
+    },
+    "candidate-87f5cf5cfffbd5cd1f96": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838568595775,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SUNLU_Standard_Resin_transparent.jpg?v=1785571786",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Resin 1000g | White"
+    },
+    "candidate-94a42325cc5f98a95e2b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610815240,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00162_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "White / 2.5 kg / 2.85 mm"
+    },
+    "candidate-4cae6415b059be74cced": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
+      "variantId": 52136557248793,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS3.0_2kg_56c7c0c3-4093-4339-8ece-fc1602abeb83.jpg?v=1773832694",
+      "expectedProductTitle": "ABS-Like Resin V3.0+",
+      "expectedVariantTitle": "2 kg / #Mint Green"
+    },
+    "candidate-19183d525a3cb4ac3fb2": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386609963272,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00082_01.jpg?v=1786077309",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Transparent / 0.75 kg / 2.85 mm"
+    },
+    "candidate-6e128cb0cbb5d59479ce": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
+      "variantId": 52136300970265,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Green_487f14a0-53fb-4af0-a1dc-20489708d5ad.jpg?v=1773821688",
+      "expectedProductTitle": "ABS-Like Resin V3.0",
+      "expectedVariantTitle": "2 kg / #Green"
+    },
+    "candidate-7a60341f47d784b23bc6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596397320,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14456_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Rose"
+    },
+    "candidate-53d01b747e303fdda4df": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-pro-2-sale-for-resin-3d-printer",
+      "variantId": 54472648786233,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/abs-like-resin-pro-2-model-black.jpg?v=1788772547",
+      "expectedProductTitle": "ABS-Like Resin Pro 2 10-100kg Deals",
+      "expectedVariantTitle": "Black (#212721) / 50KG"
+    },
+    "candidate-ce1108d0cc544d30d7ba": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838590648639,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/10x1000g-of-sunlu-standard-3d-resin-lcd-uv-curing-405nm-standard-photopolymer-resin-627272.webp?v=1792113146",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Resin 1000g | Black"
+    },
+    "candidate-9dbb581b5e0b8fe288ea": {
+      "priceUrl": "https://uk.anycubic3d.com/products/photon-p1-max-best-large-resin-3d-printer",
+      "variantId": 54472807317817,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/PhotonP1Max_Wash_Cure3Max_4KGStandardResin.jpg?v=1788772977",
+      "expectedProductTitle": "Anycubic Photon P1 Max",
+      "expectedVariantTitle": "Wash & Cure 3 Max (🔥 Save £299 Each) / 4KG Standard Resin"
+    },
+    "candidate-5584fc780c952187f79a": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-plus-sale-for-filament-3d-printer",
+      "variantId": 54508461982009,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/767a031dd2428390b81cb56d17a413dc_436388d4-b512-4c37-a13c-c8251a9177ba.jpg?v=1789869946",
+      "expectedProductTitle": "PLA+ 10-100kg Deals",
+      "expectedVariantTitle": "Beige (#D4B996) / 10KG"
+    },
+    "candidate-8fe47f8c64cd579058d7": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-8-kg-pla",
+      "variantId": 52480604373273,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2_10kgFilamentBundle.jpg?v=1789901318",
+      "expectedProductTitle": "Centauri Carbon 2 + 8 kg PLA",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-0d789f046ede8f48b64e": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838593171775,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SUNLU_Standard_Resin_GREY.jpg?v=1785571729",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Resin 1000g | Grey"
+    },
+    "candidate-d3e061d7c18c1b6476c5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-8-kg-pla-rfid",
+      "variantId": 51887354347801,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo_8kgPLARFID.jpg?v=1789897174",
+      "expectedProductTitle": "Centauri Carbon 2 Combo + 8 kg PLA (RFID)",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-dcd623aaa9451f415ee4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-pla",
+      "variantId": 58386635555080,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14355_01.jpg?v=1786077706",
+      "expectedProductTitle": "Polymaker PolyTerra PLA Filament",
+      "expectedVariantTitle": "Lava red / 1.75 mm / 3 kg"
+    },
+    "candidate-6930c58b0c82803b7314": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla",
+      "variantId": 58386633654536,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14218_01.jpg?v=1786077681",
+      "expectedProductTitle": "Polymaker PolyMax Tough PLA Filament",
+      "expectedVariantTitle": "Grey / 3 kg / 1.75 mm"
+    },
+    "candidate-9e0fec6a4e9038203cec": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327161151,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/plus_dark_grey_e394439f-6087-430e-b6d1-44efb2d185a6.webp?v=1792114284",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Plus Resin 1000g | Dark Grey"
+    },
+    "candidate-24123fe404edbc55b087": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-esilk-pla-filament",
+      "variantId": 58386621301000,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20200_01.jpg?v=1786077488",
+      "expectedProductTitle": "eSun eSilk-PLA Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pink"
+    },
+    "candidate-e0612f8df9b4a91c5409": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-petg-economy",
+      "variantId": 58386614911240,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP13086_01.png?v=1786077381",
+      "expectedProductTitle": "colorFabb PETG Economy Filament",
+      "expectedVariantTitle": "Red / 1.75 mm / 2.2 kg"
+    },
+    "candidate-d9dc9b67fb660cddb23f": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327193919,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/plus_GY_89552a28-e816-4a67-8615-c58e9d012abf.webp?v=1792114218",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Standard Plus Resin 1000g | Grey"
+    },
+    "candidate-699098388a3478fe8007": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-chameleon",
+      "variantId": 58386606588168,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00254_01.jpg?v=1786077259",
+      "expectedProductTitle": "123-3D PLA Chameleon Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Purple / pink"
+    },
+    "candidate-62c3b8395ecad49301f7": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pctg",
+      "variantId": 58386605572360,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00230_01.jpg?v=1786077241",
+      "expectedProductTitle": "123-3D PCTG Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Sky blue"
+    },
+    "candidate-b76dfb21fbea1e940981": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-filament-pla-satin",
+      "variantId": 58386603081992,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00075_01.jpg?v=1786077205",
+      "expectedProductTitle": "123-3D PLA Satin Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Lime green"
+    },
+    "candidate-048a92f711de1e8091d7": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327456063,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/water-wash_black.png?v=1792113468",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Water Wash Standard Resin 1000g | Black"
+    },
+    "candidate-032d58a314edd35a8a52": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-8-kg-pla-rfid",
+      "variantId": 52588438946073,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo_8kgPLA_8fd23dae-78ea-4834-93b6-94875d5e2a63.jpg?v=1789958838",
+      "expectedProductTitle": "Centauri 2 Combo + 8 kg PLA",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-bba2746b5cdcf349bba2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-8-kg-pla-rfid",
+      "variantId": 52588490391833,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_8kgPLA.jpg?v=1781579833",
+      "expectedProductTitle": "Centauri 2 + 8 kg PLA",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-c271078ef4373431ca49": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-rfid-emoji-filament-10-kg",
+      "variantId": 52466790957337,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA-10KG-_-1.75mm-emoji_RFID_2972f00e-d00a-4432-baef-6a4de6b127d4.jpg?v=1780555627",
+      "expectedProductTitle": "PLA (RFID) emoji® Brand Edition Filament 10 kg",
+      "expectedVariantTitle": "Brown"
+    },
+    "candidate-b1b857bd6e6946a179a0": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327488831,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/5_d7357181-15b6-40fa-b6b9-a9a61ad459d1.webp?v=1792113299",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / Water Wash Standard Resin 1000g | White"
+    },
+    "candidate-bd1480063565226f9814": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-max-with-filament-starter-bundle",
+      "variantId": 51969190756633,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4M10_1kg.jpg?v=1756798037",
+      "expectedProductTitle": "Neptune 4 Max + 10 kg Filament",
+      "expectedVariantTitle": "Space Grey"
+    },
+    "candidate-6af825ca82b96bf90a30": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-special-sale-for-filament-3d-printer",
+      "variantId": 54472616378681,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_5dd82476-2d66-451d-ac40-bf440e28a1c8.jpg?v=1789635699",
+      "expectedProductTitle": "PLA Special 10-100kg Deals",
+      "expectedVariantTitle": "Peach Pink / 52KG"
+    },
+    "candidate-c4acd180cee5e067a775": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 50711096688921,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_79151042-2bb8-4186-924f-653042d9b3df.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / Sea Green"
+    },
+    "candidate-06eb34cbad5c61a1f160": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-4-3d-printer",
+      "variantId": 54472856338745,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K4_4KG_PLA_1aa5ece5-0846-4562-82d6-69a34416d426.jpg?v=1788772903",
+      "expectedProductTitle": "Anycubic Kobra 4",
+      "expectedVariantTitle": "Kobra 4 / 4KG PLA Silk"
+    },
+    "candidate-d15422eed933142f9995": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-5kg",
+      "variantId": 51377876402457,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA5KGOrange.jpg?v=1758186022",
+      "expectedProductTitle": "PLA Filament 5 kg",
+      "expectedVariantTitle": "PLA (RFID) / Orange"
+    },
+    "candidate-0d299a7fd1f176b48b7c": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-resin-last-chance-deal",
+      "variantId": 67838327554367,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/14KStandardresin-DG.jpg?v=1716285640",
+      "expectedProductTitle": "SUNLU Resin Last Chance Deal",
+      "expectedVariantTitle": "Resin / 14K Standard Resin 1000g | Dark Grey"
+    },
+    "candidate-328d3d09f982d6727b83": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-pro-with-filament-starter-bundle",
+      "variantId": 53058361196825,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4P10_1kg.jpg?v=1756798038",
+      "expectedProductTitle": "Neptune 4 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Space Grey"
+    },
+    "candidate-93471d4bcbd54d50bc8e": {
+      "priceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-10kg",
+      "variantId": 50757070749977,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/SilkPLA10KGBlueGreenOrange_3731b462-df62-4619-9b2b-390bd9314085.jpg?v=1779258206",
+      "expectedProductTitle": "PLA Silk Filament 10 kg",
+      "expectedVariantTitle": "Silk Blue Green Orange"
+    },
+    "candidate-962c8cd0084c66869101": {
+      "priceUrl": "https://uk.elegoo.com/products/pc-filament-1-75-mm-colored-10-kg",
+      "variantId": 51029920252185,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PC5KG_1.75mm_17b79fe2-aa5e-4e42-a89b-f416a81509a0.jpg?v=1758267139",
+      "expectedProductTitle": "PC Filament 10 kg",
+      "expectedVariantTitle": "Transparent / Black"
+    },
+    "candidate-d3e20f7de9da2af8509a": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-ultra-resin",
+      "variantId": 52820811251993,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0486-ABS-Like-Ultra-clearBlue-1KG-_1.jpg?v=1783932250",
+      "expectedProductTitle": "ABS-Like Ultra Resin",
+      "expectedVariantTitle": "1 kg / #Clear Blue"
+    },
+    "candidate-d27bea5a8cfb024e34dc": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976415670553,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Wood Color / Red / Red"
+    },
+    "candidate-ffd2755b8933466b23a5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974453358873,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Grey / Black / Sea Green"
+    },
+    "candidate-69285d4ec6d39ae394a7": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973709230361,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Silver Grey / Silk Silver Grey / Black"
+    },
+    "candidate-fffa01eb0e746cf2e362": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581601561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Purple"
+    },
+    "candidate-1df3ce06126e73d3d4a6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666717448,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00024_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Sulphur yellow / 1.75 mm / 1 kg"
+    },
+    "candidate-de895e014fb39aff9beb": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082340633,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Space Grey"
+    },
+    "candidate-502a5ac7ebb22442a2a2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950133529,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Purple"
+    },
+    "candidate-91c01ce0db98791914b4": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588482101529,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Green"
+    },
+    "candidate-d25eeebaf2ef298c30cd": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005871897,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Green"
+    },
+    "candidate-19ba01424e5db84e2637": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-dual-matte",
+      "variantId": 58386573000968,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14520_01.jpg?v=1786076801",
+      "expectedProductTitle": "Panchroma PLA Dual Matte",
+      "expectedVariantTitle": "Glacier blue / ice"
+    },
+    "candidate-27f8bf40c80993b58046": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg-mix-match",
+      "variantId": 54504926150969,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Orange_65679f4e-dacf-4866-ae33-87bce296160b.png?v=1788772934",
+      "expectedProductTitle": "PETG Mix & Match",
+      "expectedVariantTitle": "Orange (#FF7F32) / 1KG"
+    },
+    "candidate-ae4d7e24a17b87ac600f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg",
+      "variantId": 54472602157369,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Orange_65679f4e-dacf-4866-ae33-87bce296160b.png?v=1788772934",
+      "expectedProductTitle": "PETG",
+      "expectedVariantTitle": "Orange (#FF7F32) / 1KG"
+    },
+    "candidate-88c3c74179a36030c652": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle",
+      "variantId": 53190654460185,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P-ALLINONEBundle.png?v=1789458637",
+      "expectedProductTitle": "Neptune 3 Pro All-in-One Premium Bundle",
+      "expectedVariantTitle": "Turquoise Green"
+    },
+    "candidate-3e63557c4cd839baed15": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+      "variantId": 50339177529625,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1KG_99244def-c0af-4ea2-ba6b-81042e674a5b.jpg?v=1756798268",
+      "expectedProductTitle": "PLA Silk",
+      "expectedVariantTitle": "Silk Black Purple"
+    },
+    "candidate-c00da62ff6a268f9a3d5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-frequently-bought-together-bundle",
+      "variantId": 51887264334105,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2ComboFrequentlyBoughtTogetherBundle-Global.jpg?v=1792404401",
+      "expectedProductTitle": "Centauri Carbon 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Dark Blue"
+    },
+    "candidate-e5a2515706e67aad8b05": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-pro-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52449424933145,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/JPT2_MPV3_2kg.jpg?v=1780049834",
+      "expectedProductTitle": "Jupiter 2 Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "#Yellow"
+    },
+    "candidate-7c58a315512d40a9e968": {
+      "priceUrl": "https://uk.elegoo.com/products/mars-5-ultra-starter-bundle-mercury-x-resin",
+      "variantId": 52843227119897,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M5U_MXB.jpg?v=1768989907",
+      "expectedProductTitle": "Mars 5 Ultra Starter Bundle – Mercury X & Resin",
+      "expectedVariantTitle": "#Clear Red"
+    },
+    "candidate-8d04d792e386edc96bbf": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-complete-bundle-mercury-xs-resin",
+      "variantId": 52750597456153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/JPT2_MXS_2kg.jpg?v=1782808312",
+      "expectedProductTitle": "Jupiter 2 Pro Bundle – Mercury XS & Resin",
+      "expectedVariantTitle": "#Clear Blue"
+    },
+    "candidate-700b265387d97d52f68f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472808497465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1MC_16_PLA_Metal_4_-50_Free_PLA_2_be7e864e-1c8a-42d2-b704-97d13af069ca.jpg?v=1788772808",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max Combo + ACE 2 Pro*3 (16 Colors) / +PLA Metal*4"
+    },
+    "candidate-1e186318d91a77cdf4c0": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-frequently-bought-together-bundle",
+      "variantId": 52580054237465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboFrequentlyBoughtTogetherBundle_f64eb3d4-b0fb-4273-b265-91fb0ed88a1c.jpg?v=1789901876",
+      "expectedProductTitle": "Centauri 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Dark Blue"
+    },
+    "candidate-10b782465bcef44f524c": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-frequently-bought-together-bundle",
+      "variantId": 52588447400217,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2FrequentlyBoughtTogetherBundle_22a95317-ba46-4fe3-9eb7-533a6158dc0d.jpg?v=1781577797",
+      "expectedProductTitle": "Centauri 2 Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Dark Blue"
+    },
+    "candidate-ba1789eb09dc015ec647": {
+      "priceUrl": "https://uk.anycubic3d.com/products/ace-2-pro",
+      "variantId": 54472809972025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/ACE_2_Pro_PLA_Metal_4.jpg?v=1788772777",
+      "expectedProductTitle": "Anycubic ACE 2 Pro",
+      "expectedVariantTitle": "ACE 2 Profor Kobra 3 Max V2 / Kobra 4 / Kobra 3 Max / Kobra 3 V2 / Kobra 3 / +PLA Metal*4 (-50%)"
+    },
+    "candidate-f9825db536c409241f7c": {
+      "priceUrl": "https://uk.elegoo.com/products/rapid-petg-filament-1-75mm-colored-1kg",
+      "variantId": 48135919501593,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/RAPIDPETG1KG_Orange.jpg?v=1757496256",
+      "expectedProductTitle": "Rapid PETG",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-aeb6481c313d8076fec0": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg",
+      "variantId": 51519466307865,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PETGPRO_f026ea9f-25e0-47a3-99f2-50d2be722336.jpg?v=1760342684",
+      "expectedProductTitle": "PETG Pro",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-fb14b7616a4173c3de9b": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-pro-filament-1-75mm-colored-1kg",
+      "variantId": 51772793258265,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.0791-PLA-PRO-1KG_-1.75mm_34888585-0770-4c0d-bd59-137fe416389f.jpg?v=1768966557",
+      "expectedProductTitle": "PLA Pro",
+      "expectedVariantTitle": "Hot Pink"
+    },
+    "candidate-8e7da08b480f01dec3a7": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "variantId": 51969165623577,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
+      "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
+      "expectedVariantTitle": "Space Grey"
+    },
+    "candidate-eac7ead452e8f863d068": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52732003090713,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA / Copper Filled"
+    },
+    "candidate-e2f07dc5c678f46c1217": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51914548412697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_fb728ea6-c2a0-49f1-b671-1fd8ad524581.jpg?v=1786695521",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Green"
+    },
+    "candidate-67d474450a8f2ac04fcf": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347158297,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_fb728ea6-c2a0-49f1-b671-1fd8ad524581.jpg?v=1786695521",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Green"
+    },
+    "candidate-54b51a68bbce85ce33d3": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963028249,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Blue-5KG_f349d47c-9ca6-4215-8aba-e025e4144ef2.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / Blue"
+    },
+    "candidate-cc20bacafd997134319f": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52353364951321,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4Ultra_MPV3_x2_b517be55-a653-4c83-93a8-501f218bd444.jpg?v=1756798095",
+      "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "1 kg / #Beige"
+    },
+    "candidate-60d6d41a6f665e7f0730": {
+      "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
+      "variantId": 51745150173465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
+      "expectedProductTitle": "Resin Mystery Box | 3 kg",
+      "expectedVariantTitle": "Random Resin5 / Random Resin5"
+    },
+    "candidate-04f90fec6219f80658c9": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
+      "variantId": 51600499179801,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS3.0_1000g_cfe593bb-81d8-4df4-a5a5-cff623925ffd.jpg?v=1765525939",
+      "expectedProductTitle": "ABS-Like Resin V3.0+",
+      "expectedVariantTitle": "1 kg / #Smoky Black"
+    },
+    "candidate-4892fd900d3103bee7de": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
+      "variantId": 48135932838169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS-LikeResinV3.0-1KG-ClearGreen.jpg?v=1784516902",
+      "expectedProductTitle": "ABS-Like Resin V3.0",
+      "expectedVariantTitle": "1 kg / #Clear Green"
+    },
+    "candidate-9e4eb2c7fd0c8f4bdb91": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-max-with-filament-starter-bundle",
+      "variantId": 51969190789401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4M10_1kg.jpg?v=1756798037",
+      "expectedProductTitle": "Neptune 4 Max + 10 kg Filament",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-53d092c2a0d4969b0086": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 50766697890073,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_43622a33-5ac8-402e-aeea-3a5ee10dfe12.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / White"
+    },
+    "candidate-17d7519cd321be5d1bfb": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match",
+      "variantId": 54509896499513,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_7cbaa321-af83-46f8-9449-cfb53820ac4d.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic Mix & Match",
+      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG"
+    },
+    "candidate-eee5c63f9b9299c3847c": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-5kg",
+      "variantId": 51377876467993,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_5KG_4f251eca-8ccd-486d-ace3-e9f746c8568e.jpg?v=1758186022",
+      "expectedProductTitle": "PLA Filament 5 kg",
+      "expectedVariantTitle": "PLA (RFID) / Purple"
+    },
+    "candidate-f3db3b5188c2f2f3a15c": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
+      "variantId": 54472644100409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_7cbaa321-af83-46f8-9449-cfb53820ac4d.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Texture Silver (#8A8D8F) / 1KG"
+    },
+    "candidate-569b24addf5b9c150771": {
+      "priceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-10kg",
+      "variantId": 51856715579673,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/SilkPLA10KGBronze_5c1ee01c-abb8-4e19-aeb4-df0f402398ca.jpg?v=1779258222",
+      "expectedProductTitle": "PLA Silk Filament 10 kg",
+      "expectedVariantTitle": "Silk Copper"
+    },
+    "candidate-c62e3df10ea98ce5525a": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472658485561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Green.jpg?v=1788772966",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Green (#009639) / 10KG"
+    },
+    "candidate-bc11fcf8b1498b87d5a0": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-ultra-resin",
+      "variantId": 52820811284761,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.103.0488-ABS-Like-Ultra-clearGreen-1KG-_1.jpg?v=1783932250",
+      "expectedProductTitle": "ABS-Like Ultra Resin",
+      "expectedVariantTitle": "1 kg / #Clear Green"
+    },
+    "candidate-7b29549f5d7a3cb306bb": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-pro",
+      "variantId": 52136542667033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Yellow_fdec0841-033a-42bd-963e-9fa501aee9c9.jpg?v=1773832105",
+      "expectedProductTitle": "ABS-Like Resin V3.0 Pro",
+      "expectedVariantTitle": "2 kg / #Yellow"
+    },
+    "candidate-89d1376f11bcfa75b28d": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
+      "variantId": 54472854831417,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_ACE_2_Pro_4KG_PLA_Silk.jpg?v=1788772998",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
+      "expectedVariantTitle": "Kobra 3 Max V2 Combo + ACE 2 Pro (8 colors) / 4KG PLA Silk (⚡️ £11)"
+    },
+    "candidate-472813dce08385cb1082": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976415703321,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Wood Color / Yellow / Red"
+    },
+    "candidate-3680fc2dc901ed48baa1": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52973849248025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "White / Grey / Black"
+    },
+    "candidate-a362bc180045866a352f": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631295240,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14084_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "White / 3 kg / 1.75 mm"
+    },
+    "candidate-7f44ad53f143844130b1": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973711393049,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Copper / Silk Gold / Grey"
+    },
+    "candidate-28feecb8f514d3d0cd14": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624119048,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20116_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Red / 1.75 mm / Re-fill"
+    },
+    "candidate-8fb3853a4f2c04a12682": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583552264,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14503_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel candy"
+    },
+    "candidate-99cec418ed617bfd6259": {
+      "priceUrl": "https://uk.anycubic3d.com/products/photon-p1-max-best-large-resin-3d-printer",
+      "variantId": 54472807350585,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/PhotonP1Max_Wash_Cure3Max_4KG16KStandardResin.jpg?v=1788772976",
+      "expectedProductTitle": "Anycubic Photon P1 Max",
+      "expectedVariantTitle": "Wash & Cure 3 Max (🔥 Save £299 Each) / [NEW] 4KG 16K Resin"
+    },
+    "candidate-8ae8c997fc869bfc32a8": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581634329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Brown"
+    },
+    "candidate-8545bf4be9ccf4db6dd7": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569036040,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02263_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Nuclear green / 0.5 kg / 1.75 mm"
+    },
+    "candidate-f347fb596022ea84318c": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 51969435631897,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA / Space Grey"
+    },
+    "candidate-51b6b2dac985a8c0e115": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678350088,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Lime_Green_1.75_mm_10-pack_1_kg_DHM10072_m1_big.jpg?v=1787675040",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Lime green"
+    },
+    "candidate-ef0ef89494750af73e36": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677596424,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Lime_Green_1.75_mm_5-pack_1_kg_DHM10071_m1_big_965c0bfa-05f0-4a35-9f8a-f815ddb219aa.jpg?v=1787669201",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Lime green"
+    },
+    "candidate-698a632f14e5ff6312a2": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676842760,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Lime_Green_1.75_mm_2-pack_1_kg_DHM10070_m1_big_aff4d764-a636-49ff-8339-d6d82f6deafd.jpg?v=1787669809",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Lime green"
+    },
+    "candidate-0a8e7b0594a0157e4a3d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950166297,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Brown"
+    },
+    "candidate-452e9dccb858dc5f3767": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650923272,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16089_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Yellow green"
+    },
+    "candidate-52773370d4600f2de51f": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588482134297,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Purple"
+    },
+    "candidate-8eef7f77effde43cf165": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386647154952,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10021_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Royal blue"
+    },
+    "candidate-7c48843d67327236e7e8": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005904665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Purple"
+    },
+    "candidate-8454c80e6554802e35b0": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386630213896,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14208_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Turquoise / 1.75 mm / 1 kg"
+    },
+    "candidate-cb3402fa6c6ee2fb6935": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-abs-2",
+      "variantId": 58386619662600,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20022_01.jpg?v=1786077458",
+      "expectedProductTitle": "eSun ABS+ Filament 1kg",
+      "expectedVariantTitle": "Magenta / 1.75 mm"
+    },
+    "candidate-c607aea9867d955467eb": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-pha-filament",
+      "variantId": 58386617008392,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP13115_01.png?v=1786077415",
+      "expectedProductTitle": "colorFabb PLA/PHA Filament 0.75kg",
+      "expectedVariantTitle": "Transparent violet / 2.85 mm"
+    },
+    "candidate-16a6f8eaca78eb8c2ff4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610848008,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00131_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "White / 4.5 kg / 1.75 mm"
+    },
+    "candidate-2ee1a8169129259ff995": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596430088,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14457_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Rose gold"
+    },
+    "candidate-6c9f0237a0c9335cf42a": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle",
+      "variantId": 53190654689561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P-ALLINONEBundle.png?v=1789458637",
+      "expectedProductTitle": "Neptune 3 Pro All-in-One Premium Bundle",
+      "expectedVariantTitle": "Misty Blue"
+    },
+    "candidate-77c2f83acbe9e78bf344": {
+      "priceUrl": "https://www.123-3d.co.uk/products/elegoo-standard-resin",
+      "variantId": 58386654920968,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ05039_01.jpg?v=1786077995",
+      "expectedProductTitle": "Elegoo Standard Resin",
+      "expectedVariantTitle": "Grey / 1 kg"
+    },
+    "candidate-300706471356df2e283a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-abs",
+      "variantId": 58386627952904,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14273_01.jpg?v=1786077596",
+      "expectedProductTitle": "Polymaker PolyLite ABS Filament",
+      "expectedVariantTitle": "Light blue / 1.75 mm / 1 kg"
+    },
+    "candidate-3007986919ed3bb45c39": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-petg-filament",
+      "variantId": 58386622120200,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20044_01.jpg?v=1786077494",
+      "expectedProductTitle": "eSun PETG Filament 1kg",
+      "expectedVariantTitle": "Solid black / 1.75 mm / Spool"
+    },
+    "candidate-749bed9d06d9e699d0f3": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+      "variantId": 51678817419545,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1KG_1.75mm_89a98bcb-12f6-4ec4-b497-bcbae0201d6e.jpg?v=1768381954",
+      "expectedProductTitle": "PLA Silk",
+      "expectedVariantTitle": "Silk True Red"
+    },
+    "candidate-e9b8cd482ef5bb5aab14": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla",
+      "variantId": 58386633687304,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14106_01.jpg?v=1786077681",
+      "expectedProductTitle": "Polymaker PolyMax Tough PLA Filament",
+      "expectedVariantTitle": "Orange / 0.75 kg / 1.75 mm"
+    },
+    "candidate-4a7f5c419534464ef4d7": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-asa",
+      "variantId": 58386628608264,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14283_01.jpg?v=1786077601",
+      "expectedProductTitle": "Polymaker PolyLite ASA Filament",
+      "expectedVariantTitle": "Grey / 3 kg / 1.75 mm"
+    },
+    "candidate-a7ccfd90c86fc95a7999": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-esilk-pla-filament",
+      "variantId": 58386621202696,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20197_01.jpg?v=1786077488",
+      "expectedProductTitle": "eSun eSilk-PLA Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-2c6d35f7c863c57450f2": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-petg-economy",
+      "variantId": 58386614812936,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP13263_01.jpg?v=1786077380",
+      "expectedProductTitle": "colorFabb PETG Economy Filament",
+      "expectedVariantTitle": "Light grey / 1.75 mm / 0.75 kg"
+    },
+    "candidate-5b8bf1f8274bf52f1e4e": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pctg",
+      "variantId": 58386605474056,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00229_01.jpg?v=1786077241",
+      "expectedProductTitle": "123-3D PCTG Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-f1c63ebc5f3f1b42398b": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-frequently-bought-together-bundle",
+      "variantId": 51887264432409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2ComboFrequentlyBoughtTogetherBundle-Global.jpg?v=1792404401",
+      "expectedProductTitle": "Centauri Carbon 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-080b6b43f5732f3c6b8d": {
+      "priceUrl": "https://uk.elegoo.com/products/mars-5-ultra-starter-bundle-mercury-x-resin",
+      "variantId": 52843227152665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M5U_MXB.jpg?v=1768989907",
+      "expectedProductTitle": "Mars 5 Ultra Starter Bundle – Mercury X & Resin",
+      "expectedVariantTitle": "#Clear Green"
+    },
+    "candidate-10ea3c0ecbcf36ba7838": {
+      "priceUrl": "https://uk.elegoo.com/products/jupiter-2-complete-bundle-mercury-xs-resin",
+      "variantId": 52750597488921,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/JPT2_MXS_2kg.jpg?v=1782808312",
+      "expectedProductTitle": "Jupiter 2 Pro Bundle – Mercury XS & Resin",
+      "expectedVariantTitle": "#Yellow"
+    },
+    "candidate-0f29fccf743420acb4df": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-frequently-bought-together-bundle",
+      "variantId": 52580054303001,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboFrequentlyBoughtTogetherBundle_f64eb3d4-b0fb-4273-b265-91fb0ed88a1c.jpg?v=1789901876",
+      "expectedProductTitle": "Centauri 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-7a0ba03f97ee81767510": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-frequently-bought-together-bundle",
+      "variantId": 52588447465753,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2FrequentlyBoughtTogetherBundle_22a95317-ba46-4fe3-9eb7-533a6158dc0d.jpg?v=1781577797",
+      "expectedProductTitle": "Centauri 2 Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-891b988b4c61e9ae2f78": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666782984,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00181_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "White / 1.75 mm / 3 kg"
+    },
+    "candidate-c764e65bf34f97dbcd5d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-dual-matte",
+      "variantId": 58386573033736,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14522_01.jpg?v=1786076801",
+      "expectedProductTitle": "Panchroma PLA Dual Matte",
+      "expectedVariantTitle": "Shadow black"
+    },
+    "candidate-21d1658d5aa6a9cad8bf": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg-mix-match",
+      "variantId": 54504926052665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Grey_b4f4c085-dce8-458d-8a51-6de79b3fc8cc.png?v=1788772934",
+      "expectedProductTitle": "PETG Mix & Match",
+      "expectedVariantTitle": "Grey (#97999B) / 1KG"
+    },
+    "candidate-7eff0746e0a2fd58d2b5": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg",
+      "variantId": 54472654553401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Grey_b4f4c085-dce8-458d-8a51-6de79b3fc8cc.png?v=1788772934",
+      "expectedProductTitle": "PETG",
+      "expectedVariantTitle": "Grey (#97999B) / 1KG"
+    },
+    "candidate-370569681555907a441c": {
+      "priceUrl": "https://uk.elegoo.com/products/rapid-petg-filament-1-75mm-colored-1kg",
+      "variantId": 49461008990489,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/RAPIDPETG1KG_Transparent.jpg?v=1757496259",
+      "expectedProductTitle": "Rapid PETG",
+      "expectedVariantTitle": "Transparent"
+    },
+    "candidate-4b6f8cc758a65e45cd42": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg",
+      "variantId": 51519466340633,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PETGPRO_566bb600-3fdf-44a9-9f71-d85ab026fbcf.jpg?v=1760343137",
+      "expectedProductTitle": "PETG Pro",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-2ccd322f960995aa1226": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "variantId": 51969165656345,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
+      "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
+      "expectedVariantTitle": "Wood Color"
+    },
+    "candidate-cea9e2f49ee46ae0c984": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52588497633561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA (RFID) / Black"
+    },
+    "candidate-947a2ef943b3af6c7252": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472807678265,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1M_Free_PLA_2_PLA_High_Speed_4_0c4b6179-89cc-4e71-b9a9-86b20cef6324.jpg?v=1788772803",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max / +PLA High Speed*4"
+    },
+    "candidate-00f554a6789d87395843": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51796658848025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic1KG_475e6247-2fea-47c6-aaed-d238962471b8.jpg?v=1766458818",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Misty Blue"
+    },
+    "candidate-14b48a49112251096885": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631328008,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14085_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "White / 3 kg / 2.85 mm"
+    },
+    "candidate-e086ca2788cf5433957b": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 51796658192665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic1KG_475e6247-2fea-47c6-aaed-d238962471b8.jpg?v=1766458818",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Misty Blue"
+    },
+    "candidate-e35643616b73aafa8de5": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624151816,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20101_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Red / 1.75 mm / Spool"
+    },
+    "candidate-18cf5a3e6d345e86795a": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963061017,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Green-5KG_4193f9a0-bb2e-4a8f-b478-fefe1b68de46.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / Green"
+    },
+    "candidate-2ffad346b1273a683a63": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583585032,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14504_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel ice"
+    },
+    "candidate-676e967c79b3ce9c9a33": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569068808,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02265_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Orange / 0.5 kg / 1.75 mm"
+    },
+    "candidate-9f2fc0e9b14fb5942111": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52843235672345,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4Ultra_MPV3_x2_b517be55-a653-4c83-93a8-501f218bd444.jpg?v=1756798095",
+      "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "1 kg / #Clear Red"
+    },
+    "candidate-94e92a52b0ca20bf766e": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678382856,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Magenta_1.75_mm_10-pack_1_kg_DHM10069_m1_big.jpg?v=1787675052",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Magenta"
+    },
+    "candidate-f9d194f15ac5a4a5bedf": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677629192,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Magenta_1.75_mm_5-pack_1_kg_DHM10068_m1_big_d2d16910-b4eb-400a-8893-e9181380535c.jpg?v=1787669213",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Magenta"
+    },
+    "candidate-f9ecd02721f271bce685": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676875528,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Magenta_1.75_mm_2-pack_1_kg_DHM10067_m1_big_7da35f2c-cc0e-4400-9a11-15e347e91952.jpg?v=1787669822",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Magenta"
+    },
+    "candidate-3754573201774b673ae0": {
+      "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
+      "variantId": 51543926309145,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
+      "expectedProductTitle": "Resin Mystery Box | 3 kg",
+      "expectedVariantTitle": "Random Resin2 / Random Resin2"
+    },
+    "candidate-e633916dd3c711abc40c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650497288,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16078_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Natural"
+    },
+    "candidate-3d760f4230b382ac800b": {
+      "priceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-5kg",
+      "variantId": 51254248898841,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA5KGSilkBluePurpleBlack_698d8311-bc09-4503-ac79-8575e399a0fb.jpg?v=1757069334",
+      "expectedProductTitle": "PLA Silk Filament 5 kg",
+      "expectedVariantTitle": "Silk Blue Purple Black"
+    },
+    "candidate-b420117734f3a9f6c67b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386647187720,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10022_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Rust copper"
+    },
+    "candidate-baf8bf18d638699f4cf3": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
+      "variantId": 51009153433881,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS3.0_-Translucent-1KG_2705ab3d-cdaf-4140-bce2-255c2cbce37b.jpg?v=1789889902",
+      "expectedProductTitle": "ABS-Like Resin V3.0+",
+      "expectedVariantTitle": "1 kg / #Translucent"
+    },
+    "candidate-cd6188c986d376434528": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386630246664,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14212_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "White / 1.75 mm / 1 kg"
+    },
+    "candidate-b0783552ba6848bf78ce": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
+      "variantId": 48135932903705,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/abs-like-resinv3.0-model-1kg-mint-green.jpg?v=1756798243",
+      "expectedProductTitle": "ABS-Like Resin V3.0",
+      "expectedVariantTitle": "1 kg / #Mint Green"
+    },
+    "candidate-047ff0ce23f61dbd46db": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-abs-2",
+      "variantId": 58386619695368,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20023_01.jpg?v=1786077458",
+      "expectedProductTitle": "eSun ABS+ Filament 1kg",
+      "expectedVariantTitle": "Neutral / 1.75 mm"
+    },
+    "candidate-684bd89dd4da93910b60": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610880776,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00105_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "Yellow / 0.75 kg / 1.75 mm"
+    },
+    "candidate-e39e5cbda92e7844c74d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386610028808,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00084_01.jpg?v=1786077309",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Transparent yellow / 0.75 kg / 2.85 mm"
+    },
+    "candidate-dd309d1f36223fe0308b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596462856,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14458_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Silver"
+    },
+    "candidate-265cd46163ce7d04a604": {
+      "priceUrl": "https://www.123-3d.co.uk/products/elegoo-standard-resin",
+      "variantId": 58386654953736,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DLQ05048_01.jpg?v=1786077995",
+      "expectedProductTitle": "Elegoo Standard Resin",
+      "expectedVariantTitle": "Transparent / 0.5 kg"
+    },
+    "candidate-f881b8c43028d51d86ed": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-abs",
+      "variantId": 58386627985672,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14042_01.jpg?v=1786077596",
+      "expectedProductTitle": "Polymaker PolyLite ABS Filament",
+      "expectedVariantTitle": "Orange / 1.75 mm / 1 kg"
+    },
+    "candidate-1241c4eaf7e93b1d93ab": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-petg-filament",
+      "variantId": 58386622152968,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20212_01.jpg?v=1786077494",
+      "expectedProductTitle": "eSun PETG Filament 1kg",
+      "expectedVariantTitle": "Transparent / 1.75 mm / Re-fill"
+    },
+    "candidate-c87d0ceb65008a330702": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polyterra-pla",
+      "variantId": 58386635456776,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14354_01.jpg?v=1786077707",
+      "expectedProductTitle": "Polymaker PolyTerra PLA Filament",
+      "expectedVariantTitle": "Fossil grey / 1.75 mm / 3 kg"
+    },
+    "candidate-132ca9786077b7ad1f78": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-asa",
+      "variantId": 58386628509960,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14279_01.jpg?v=1786077601",
+      "expectedProductTitle": "Polymaker PolyLite ASA Filament",
+      "expectedVariantTitle": "Green / 1 kg / 1.75 mm"
+    },
+    "candidate-a8a8814659a5567cf318": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 50815445467417,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_a23df27d-86e9-465a-bdd1-17757cfd2e12.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / Red"
+    },
+    "candidate-e8eb1dae7f0f27c7f547": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pctg",
+      "variantId": 58386605408520,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00228_01.jpg?v=1786077241",
+      "expectedProductTitle": "123-3D PCTG Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-2ff88d359db321c0d108": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-5kg",
+      "variantId": 51377876500761,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_5KG_0bd99b59-0569-453c-861a-d1307ad84d1f.jpg?v=1758186022",
+      "expectedProductTitle": "PLA Filament 5 kg",
+      "expectedVariantTitle": "PLA (RFID) / Sky Blue"
+    },
+    "candidate-7ceee74f3618c00d220e": {
+      "priceUrl": "https://uk.elegoo.com/products/silk-pla-filament-1-75mm-colored-10kg",
+      "variantId": 51856715907353,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/SilkPLA10KGSilkBluePurple.jpg?v=1779258248",
+      "expectedProductTitle": "PLA Silk Filament 10 kg",
+      "expectedVariantTitle": "Silk Blue Purple"
+    },
+    "candidate-bb57b1f69ac21663b2c4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666815752,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00026_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "White / 2.85 mm / 1 kg"
+    },
+    "candidate-a75329d856399fffa292": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976415736089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Black / Dark Blue / Red"
+    },
+    "candidate-b8fce85ee2b57de926a9": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974453391641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "White / Grey / White"
+    },
+    "candidate-cd2ba687b6b116af86a3": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973711425817,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Copper / Silk Gold / White"
+    },
+    "candidate-b54d885cae9a2dabff74": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 51887313649945,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Black"
+    },
+    "candidate-ed174bd1968a691bac41": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082373401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Wood Color"
+    },
+    "candidate-51c94f3b6b5cf3589390": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950199065,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Black"
+    },
+    "candidate-bca88502bf3e056a0701": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588482167065,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Brown"
+    },
+    "candidate-98dae273bd1fecdd113d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631360776,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14315_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "White / 5 kg / 1.75 mm"
+    },
+    "candidate-5dad5a4ca973bfacd8da": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005937433,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Brown"
+    },
+    "candidate-5667d3323277420f04c9": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624184584,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20215_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Silver / 1.75 mm / Re-fill"
+    },
+    "candidate-c150e023b557a36024b1": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583617800,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14505_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel mint"
+    },
+    "candidate-0fa1c0eb9eb6b0588ea1": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569101576,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02267_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Pink / 1 kg / 1.75 mm"
+    },
+    "candidate-0406ad58f689aba1955c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678415624,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Neutral_1.75mm_10-pack_1_kg_DHM10111c_DHM10029_m1_big.jpg?v=1787675072",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Neutral"
+    },
+    "candidate-1f6d43373be0b2be54a8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677661960,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Neutral_1.75mm_5-pack_1_kg_DHM10109c_DHM10110c_DHM10111c_DHM10028_m1_big_26e6da44-f0f3-4a99-8fd1-58feb6f09cbf.jpg?v=1787669230",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Neutral"
+    },
+    "candidate-b56c46087ae29304d425": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle",
+      "variantId": 53190654722329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P-ALLINONEBundle.png?v=1789458637",
+      "expectedProductTitle": "Neptune 3 Pro All-in-One Premium Bundle",
+      "expectedVariantTitle": "Deep Grey"
+    },
+    "candidate-21548b2e058fada92a42": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676908296,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Neutral_1.75mm_2-pack_1_kg_DHM10109c_DHM10111c_DHM10027_m1_big_cbcb1d5d-8a9f-4d68-a36c-6ab91c1543a4.jpg?v=1787669838",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Neutral"
+    },
+    "candidate-6acb18917abd54b546b4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650530056,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16086_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel blue"
+    },
+    "candidate-5ce8a8937c674cc17e69": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386647220488,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10023_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Silver star"
+    },
+    "candidate-f7549c2bda53cc3912a5": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+      "variantId": 51678828921113,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1KG_1.75mm_763f3bd4-13c5-4623-a309-78eb58528360.jpg?v=1768381943",
+      "expectedProductTitle": "PLA Silk",
+      "expectedVariantTitle": "Silk Sky Blue"
+    },
+    "candidate-1dcd212d96db9378f9c3": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386630279432,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14214_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Yellow / 1.75 mm / 1 kg"
+    },
+    "candidate-bf5fb7d2cb017c63ab2b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610487560,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00112_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "Light blue / 0.75 kg / 1.75 mm"
+    },
+    "candidate-1c5a6a205c9af7ddeee8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596495624,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14459_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Teal"
+    },
+    "candidate-de942763e0605f0363d7": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-abs",
+      "variantId": 58386627887368,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14275_01.jpg?v=1786077596",
+      "expectedProductTitle": "Polymaker PolyLite ABS Filament",
+      "expectedVariantTitle": "Grey / 1.75 mm / 3 kg"
+    },
+    "candidate-be4a913aaaf064fcc9dd": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-petg-filament",
+      "variantId": 58386622054664,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20273_01.jpg?v=1786077494",
+      "expectedProductTitle": "eSun PETG Filament 1kg",
+      "expectedVariantTitle": "Grey / 1.75 mm / Spool"
+    },
+    "candidate-4cd87e5108c7b078b789": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-pro1",
+      "variantId": 58386611175688,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00185_01.jpg?v=1786077297",
+      "expectedProductTitle": "BASF Ultrafuse PLA Pro1 Filament",
+      "expectedVariantTitle": "Grey / 8.5 kg / 1.75 mm"
+    },
+    "candidate-43459c3491144a18a718": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-frequently-bought-together-bundle",
+      "variantId": 51887264465177,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2ComboFrequentlyBoughtTogetherBundle-Global.jpg?v=1792404401",
+      "expectedProductTitle": "Centauri Carbon 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Pink"
+    },
+    "candidate-d4946a4083d2ae408480": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla",
+      "variantId": 58386633589000,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14102_01.jpg?v=1786077681",
+      "expectedProductTitle": "Polymaker PolyMax Tough PLA Filament",
+      "expectedVariantTitle": "Grey / 0.75 kg / 1.75 mm"
+    },
+    "candidate-724a17c78b59d4ba7f00": {
+      "priceUrl": "https://uk.elegoo.com/products/mars-5-ultra-starter-bundle-mercury-x-resin",
+      "variantId": 52843227185433,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M5U_MXB.jpg?v=1768989907",
+      "expectedProductTitle": "Mars 5 Ultra Starter Bundle – Mercury X & Resin",
+      "expectedVariantTitle": "#Beige"
+    },
+    "candidate-d544d30c75547e9d1bf6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-asa",
+      "variantId": 58386628411656,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14180_01.jpg?v=1786077601",
+      "expectedProductTitle": "Polymaker PolyLite ASA Filament",
+      "expectedVariantTitle": "Black / 3 kg / 1.75 mm"
+    },
+    "candidate-291b0c02f97f8765eada": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666881288,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00030_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Yellow / 2.85 mm / 1 kg"
+    },
+    "candidate-e38408efd64f76cc4b6a": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-frequently-bought-together-bundle",
+      "variantId": 52580054335769,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboFrequentlyBoughtTogetherBundle_f64eb3d4-b0fb-4273-b265-91fb0ed88a1c.jpg?v=1789901876",
+      "expectedProductTitle": "Centauri 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-63f5f4515e9d03261da2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-frequently-bought-together-bundle",
+      "variantId": 52588447498521,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2FrequentlyBoughtTogetherBundle_22a95317-ba46-4fe3-9eb7-533a6158dc0d.jpg?v=1781577797",
+      "expectedProductTitle": "Centauri 2 Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-477527748b612568173c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631393544,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14062_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Yellow / 1 kg / 1.75 mm"
+    },
+    "candidate-376799c71d8240fda979": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624217352,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20103_01.jpg?v=1786077558",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Silver / 1.75 mm / Spool"
+    },
+    "candidate-e3a2e9906811189d7463": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583650568,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14506_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel peach"
+    },
+    "candidate-75af4dfe0b2f0d514739": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569134344,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02334_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Purple / 0.5 kg / 1.75 mm"
+    },
+    "candidate-43387c7a25f1c73e7821": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678284552,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Khaki_Grey_1.75_mm_10-pack_1_kg_DHM10063_m1_big.jpg?v=1787675009",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Khaki grey"
+    },
+    "candidate-a86f2b93d22290df3f50": {
+      "priceUrl": "https://uk.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg",
+      "variantId": 51519466373401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PETGPRO_497428a4-7865-4929-9765-5851513ea061.jpg?v=1760342688",
+      "expectedProductTitle": "PETG Pro",
+      "expectedVariantTitle": "Purple"
+    },
+    "candidate-96860edffd1f2eba42c6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677530888,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Khaki_Grey_1.75_mm_5-pack_1_kg_DHM10062_m1_big_d15e4120-dcdd-4e25-b213-adb36e5703a1.jpg?v=1787669171",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Khaki grey"
+    },
+    "candidate-b3a68eafb515fdb2dcf4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676777224,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Khaki_Grey_1.75_mm_2-pack_1_kg_DHM10061_m1_big_893d3c16-27ec-4015-9940-6a5462b76ce5.jpg?v=1787669786",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Khaki grey"
+    },
+    "candidate-9aa90288f3b1d0514d12": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650562824,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16075_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pearl dark grey"
+    },
+    "candidate-d7b0b96b8c2a311d98b8": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "variantId": 51969165689113,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
+      "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
+      "expectedVariantTitle": "Brown"
+    },
+    "candidate-3ca183b2404f7594e62a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386629820680,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14201_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Grey / 1.75 mm / 1 kg"
+    },
+    "candidate-49f2a75c83cbdf27909c": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52732002074905,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA (RFID) / Dark Blue"
+    },
+    "candidate-3dc8fbbff88f49560685": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-abs-2",
+      "variantId": 58386619531528,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20019_01.jpg?v=1786077458",
+      "expectedProductTitle": "eSun ABS+ Filament 1kg",
+      "expectedVariantTitle": "Green / 1.75 mm"
+    },
+    "candidate-2e0ade048b8e0c949bc2": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51914548445465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_e25f8f8f-ff02-48d2-aafc-b9178d8dbc5e.jpg?v=1766458893",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Misty Blue"
+    },
+    "candidate-ad77b75a316552ef1bae": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347191065,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_68b7aa0e-77ec-419a-9ebc-a8d0371f3254.jpg?v=1786695521",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Misty Blue"
+    },
+    "candidate-660d8f05afb84176f68d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610520328,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00113_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "Magenta / 0.75 kg / 1.75 mm"
+    },
+    "candidate-b6129c753cc4afcd5745": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963093785,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Grey-5KG_063780e3-02c7-4e54-9fbe-59aa2d063909.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / Grey"
+    },
+    "candidate-2b62bf051c5bd42cfee6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386609635592,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00074_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Black / 8.5 kg / 1.75 mm"
+    },
+    "candidate-d02855ab1bf03cc8c7d6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596528392,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14460_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "White"
+    },
+    "candidate-7e146a7b75680ade596c": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52843235705113,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4Ultra_MPV3_x2_b517be55-a653-4c83-93a8-501f218bd444.jpg?v=1756798095",
+      "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "1 kg / #Clear Green"
+    },
+    "candidate-b7b8523ffb38ce74839d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polymax-tough-pla",
+      "variantId": 58386633490696,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14099_01.jpg?v=1786077680",
+      "expectedProductTitle": "Polymaker PolyMax Tough PLA Filament",
+      "expectedVariantTitle": "Blue / 0.75 kg / 2.85 mm"
+    },
+    "candidate-21912ec0a2559db6fc41": {
+      "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
+      "variantId": 51543926472985,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
+      "expectedProductTitle": "Resin Mystery Box | 3 kg",
+      "expectedVariantTitle": "Random Resin3 / Random Resin2"
+    },
+    "candidate-1e57ef2107fb0ddbd773": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
+      "variantId": 51009153466649,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/1KG_ca3eb7bc-5644-4478-80e9-1d497593fe0b.jpg?v=1756798205",
+      "expectedProductTitle": "ABS-Like Resin V3.0+",
+      "expectedVariantTitle": "1 kg / #Beige"
+    },
+    "candidate-a0819d0cdac1a3c598ca": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58976786743560,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Dark_Blue_2.85_mm_3_kg_DHM00188_m1_big.jpg?v=1791199809",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Dark blue / 2.85 mm / 3 kg"
+    },
+    "candidate-b897ae95cc0bcab34b69": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
+      "variantId": 52136275738905,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/abs-like-resinv3.0-model-1kg-beige_c7e7864e-d8bd-4f49-90f9-78f154841cd7.jpg?v=1773820812",
+      "expectedProductTitle": "ABS-Like Resin V3.0",
+      "expectedVariantTitle": "1 kg / #Beige"
+    },
+    "candidate-6c205b2de5a9daade683": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472762556729,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/6a87bd581150f6182875a69e0dd13d9d.jpg?v=1788772767",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Tropical Turquoise (#009CBD) / 10KG"
+    },
+    "candidate-d7dbb9513411a8892094": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match",
+      "variantId": 54509895680313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_4cd07a4f-feaa-41b3-a40a-483854bbfb69.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic Mix & Match",
+      "expectedVariantTitle": "Texture Grey (#75787B) / 1KG"
+    },
+    "candidate-30b0bf0f97a395f07561": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
+      "variantId": 54472582791481,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_4cd07a4f-feaa-41b3-a40a-483854bbfb69.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Texture Grey (#75787B) / 1KG"
+    },
+    "candidate-b5bf49774f6ee5fb08bc": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472658518329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Green_5be25455-ddf5-460e-95e7-21bef89995e1.jpg?v=1788772967",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Green (#009639) / 20KG"
+    },
+    "candidate-a95fe05e6287586234a6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631426312,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14063_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Yellow / 1 kg / 2.85 mm"
+    },
+    "candidate-0db028aaa8fadddecc15": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer",
+      "variantId": 54472801452345,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Clear.jpg?v=1788772973",
+      "expectedProductTitle": "ABS-Like Resin 2.0 10-100KG Deals",
+      "expectedVariantTitle": "Clear / 10KG"
+    },
+    "candidate-b82f5972d07dafbb8fc3": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624250120,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20281_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Very Peri / 1.75 mm / Spool"
+    },
+    "candidate-8287cc22523ebd6fcec8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583683336,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14507_01.jpg?v=1786076972",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel peanut"
+    },
+    "candidate-e735e74325c04e38e2ee": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569167112,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02256_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Red / 1 kg / 2.85 mm"
+    },
+    "candidate-fe5f072abfef3601982d": {
+      "priceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer",
+      "variantId": 54472760688953,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/65f4cd9761062cc2968e66b95ead7475_91cf015b-5fe3-49c3-bbf8-b1ad37ac3a82.jpg?v=1790073139",
+      "expectedProductTitle": "PLA High Speed 10-100kg Deals",
+      "expectedVariantTitle": "Bright Red (#E10600) / 20KG"
+    },
+    "candidate-5eb7b9e4e620cd1c8abc": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678186248,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Gold_1.75mm_10-pack_1_kg_DHM10102c_DHM10011_m1_big.jpg?v=1787674959",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Gold"
+    },
+    "candidate-9837ac6268d7e86c02d5": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677432584,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Gold_1.75mm_5-pack_1_kg_DHM10100c_DHM10101c_DHM10102c_DHM10010_m1_big_e6bfc85c-255c-4dba-bbe2-6cc3feb25af9.jpg?v=1787669128",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Gold"
+    },
+    "candidate-fdbb575c5c2fb9f73910": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676678920,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Gold_1.75mm_2-pack_1_kg_DHM10100c_DHM10102c_DHM10009_m1_big_ecff82b7-00ea-4c2a-93be-f870f861f277.jpg?v=1787669745",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Gold"
+    },
+    "candidate-8cb35a9b0d47f429b528": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
+      "variantId": 54472854929721,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_K4C_4KG_PETG.jpg?v=1788772998",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
+      "expectedVariantTitle": "Large + Standard Bundle ($50 OFF) / 4KG PETG (⚡️ £11)"
+    },
+    "candidate-4744e54dcf2e40772a05": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650431752,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16094_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Light grey"
+    },
+    "candidate-1f9ca3fcbc8959969866": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386646761736,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10009_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Flip-flop green"
+    },
+    "candidate-622c7220504227dfbffb": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386629853448,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14200_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Grey / 2.85 mm / 1 kg"
+    },
+    "candidate-40537bca2ab3d4e70017": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-pro-2-sale-for-resin-3d-printer",
+      "variantId": 54508609962297,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/ABS_Pro2_e4979546-bb29-49ff-8ddc-ca3d5a3947aa.jpg?v=1789719300",
+      "expectedProductTitle": "ABS-Like Resin Pro 2 10-100kg Deals",
+      "expectedVariantTitle": "Smoky Black (#688197) / 10KG"
+    },
+    "candidate-6b09481109ec7766b519": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976415768857,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Black / Pink / Red"
+    },
+    "candidate-fd892d738a6b351309a0": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-pha-filament",
+      "variantId": 58386616746248,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP13146_01.png?v=1786077415",
+      "expectedProductTitle": "colorFabb PLA/PHA Filament 0.75kg",
+      "expectedVariantTitle": "Navy blue / 1.75 mm"
+    },
+    "candidate-858f766245111c441908": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974453424409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "White / Grey / Grey"
+    },
+    "candidate-aa657f44a3d3600be373": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610422024,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00138_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "Bronze / 0.75 kg / 2.85 mm"
+    },
+    "candidate-f7d59e9670162e7cadff": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973711458585,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Copper / Silk Gold / Black"
+    },
+    "candidate-873eb9d9d5ac67ad54b2": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386609668360,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00052_01.jpg?v=1786077309",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Blue / 0.75 kg / 1.75 mm"
+    },
+    "candidate-31d375dff4b4933b6c75": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596561160,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14461_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-fa0ffe4234f4c064e637": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581667097,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Grey"
+    },
+    "candidate-77636b44f29126b2f5b5": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-petg-filament",
+      "variantId": 58386621956360,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20272_01.jpg?v=1786077494",
+      "expectedProductTitle": "eSun PETG Filament 1kg",
+      "expectedVariantTitle": "Green / 1.75 mm / Re-fill"
+    },
+    "candidate-eae2c01def06788def8a": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 51969435664665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA / Wood Color"
+    },
+    "candidate-31a100161323327e91b5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950231833,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Grey"
+    },
+    "candidate-eedf0a40eafe0e536b55": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58976786776328,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_White_2.85_mm_3_kg_DHM00182_m1_big.jpg?v=1791199829",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "White / 2.85 mm / 3 kg"
+    },
+    "candidate-7d432ef2c035d8535eab": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588482199833,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Black"
+    },
+    "candidate-c8eda7e99ccbda096d10": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52440138055961,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Black"
+    },
+    "candidate-698a9229b3fd1b724ae7": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386630934792,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14080_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Purple / 1 kg / 1.75 mm"
+    },
+    "candidate-80574a5c528a9e81de42": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-all-in-one-premium-bundle",
+      "variantId": 53190654755097,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P-ALLINONEBundle.png?v=1789458637",
+      "expectedProductTitle": "Neptune 3 Pro All-in-One Premium Bundle",
+      "expectedVariantTitle": "Light Cyan"
+    },
+    "candidate-c9eb92576606f8a26483": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624282888,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20217_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "White / 1.75 mm / Re-fill"
+    },
+    "candidate-84e61261f9e386087f1a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583716104,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14509_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel periwinkle"
+    },
+    "candidate-148d2b9c88a011dade58": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569199880,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02299_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Silver / 0.5 kg / 1.75 mm"
+    },
+    "candidate-e4b08cd04e0f1ea8e905": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+      "variantId": 49394092278041,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA1.75mm_1kg_096783ec-8ef9-4a07-8fd6-a79e5e43bffd.jpg?v=1756798269",
+      "expectedProductTitle": "PLA Silk",
+      "expectedVariantTitle": "Silk Copper"
+    },
+    "candidate-f4d8721a0ec80af2b96a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-10-pack",
+      "variantId": 58386678120712,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Cream_White_1.75_mm_10-pack_1_kg_DHM10075_m1_big.jpg?v=1787674933",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (10-pack)",
+      "expectedVariantTitle": "Cream white"
+    },
+    "candidate-a1644c2e416086c94e9b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-5-pack",
+      "variantId": 58386677367048,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Cream_White_1.75_mm_5-pack_1_kg_DHM10074_m1_big_147bccd4-66c2-4a3f-8267-e670d905d082.jpg?v=1787669048",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (5-pack)",
+      "expectedVariantTitle": "Cream white"
+    },
+    "candidate-f32f336959d7df8ad71c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla-2-pack",
+      "variantId": 58386676613384,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Cream_White_1.75_mm_2-pack_1_kg_DHM10073_m1_big_58906f9d-ac91-445d-8158-e23c15ef2660.jpg?v=1787669718",
+      "expectedProductTitle": "123-3D PLA Filament 1.75mm 1kg (2-pack)",
+      "expectedVariantTitle": "Cream white"
+    },
+    "candidate-d59c439923a59aee92ca": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650333448,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16084_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Grey blue"
+    },
+    "candidate-d0d4204fc15098621f1a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386646794504,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10010_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Forest green"
+    },
+    "candidate-cb85083d7421ab39364d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386629755144,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14296_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Gold / 1.75 mm / 1 kg"
+    },
+    "candidate-cc5c16dcaec85bcc306a": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pla-filament",
+      "variantId": 58386610356488,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00128_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PLA Filament",
+      "expectedVariantTitle": "Black / 2.5 kg / 1.75 mm"
+    },
+    "candidate-10d462b1ada50c123f49": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386609570056,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00071_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Black / 4.5 kg / 1.75 mm"
+    },
+    "candidate-7b5dfb06e33b2a63280d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-frequently-bought-together-bundle",
+      "variantId": 51887264497945,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2ComboFrequentlyBoughtTogetherBundle-Global.jpg?v=1792404401",
+      "expectedProductTitle": "Centauri Carbon 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Purple"
+    },
+    "candidate-b85af288679f79cab24e": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596069640,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14472_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Gunmetal grey"
+    },
+    "candidate-405b0fb3cf5dba8234c9": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58976786809096,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/123-3D_Filament_PLA_Black_2.85_mm_3_kg_DHM00186_m1_big.jpg?v=1791199767",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Black / 2.85 mm / 3 kg"
+    },
+    "candidate-52a9de47d40ed7e7ebe0": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-frequently-bought-together-bundle",
+      "variantId": 52580054368537,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboFrequentlyBoughtTogetherBundle_f64eb3d4-b0fb-4273-b265-91fb0ed88a1c.jpg?v=1789901876",
+      "expectedProductTitle": "Centauri 2 Combo Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Pink"
+    },
+    "candidate-3355964e990aad7b79e7": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-frequently-bought-together-bundle",
+      "variantId": 52588447531289,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2FrequentlyBoughtTogetherBundle_22a95317-ba46-4fe3-9eb7-533a6158dc0d.jpg?v=1781577797",
+      "expectedProductTitle": "Centauri 2 Frequently Bought Together Bundle",
+      "expectedVariantTitle": "Pink"
+    },
+    "candidate-d729bc087b1b88975380": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624315656,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20102_01.jpg?v=1786077558",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "White / 1.75 mm / Spool"
+    },
+    "candidate-f23d7d554354d53b414d": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583748872,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14508_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Pastel watermelon"
+    },
+    "candidate-433a3c1b3f98291b0f12": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569232648,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02301_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "Silver / 1 kg / 2.85 mm"
+    },
+    "candidate-23bf8f5f20de8a8aee68": {
+      "priceUrl": "https://www.123-3d.co.uk/products/colorfabb-pla-high-speed-pro",
+      "variantId": 58386650267912,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP16083_01.jpg?v=1786077954",
+      "expectedProductTitle": "colorFabb PLA High Speed Pro Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Azure blue"
+    },
+    "candidate-545aed6507dc464ddccd": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg-mix-match",
+      "variantId": 54504925954361,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/DarkGrey.png?v=1788772936",
+      "expectedProductTitle": "PETG Mix & Match",
+      "expectedVariantTitle": "Dark Grey (#7E868A) / 1KG"
+    },
+    "candidate-9e31b10007629bd30fb8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386646696200,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10007_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Deep black"
+    },
+    "candidate-cfab0eb09bd3afee11ac": {
+      "priceUrl": "https://uk.anycubic3d.com/products/petg",
+      "variantId": 54472654618937,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/DarkGrey.png?v=1788772936",
+      "expectedProductTitle": "PETG",
+      "expectedVariantTitle": "Dark Grey (#7E868A) / 1KG"
+    },
+    "candidate-96f4826092fa659c5f38": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-petg",
+      "variantId": 58386629656840,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14197_01.jpg?v=1786077632",
+      "expectedProductTitle": "Polymaker PolyLite PETG Filament",
+      "expectedVariantTitle": "Blue / 2.85 mm / 1 kg"
+    },
+    "candidate-36d0cfc2f382406a56f0": {
+      "priceUrl": "https://www.123-3d.co.uk/products/basf-ultrafuse-pet",
+      "variantId": 58386609504520,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFB00068_01.jpg?v=1786077310",
+      "expectedProductTitle": "BASF Ultrafuse PET Filament",
+      "expectedVariantTitle": "Black / 2.5 kg / 1.75 mm"
+    },
+    "candidate-d28ad3a6c5519b8eaaa8": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "variantId": 51969165721881,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
+      "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
+      "expectedVariantTitle": "Beige"
+    },
+    "candidate-b8aeb36d74b412b12d8b": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596102408,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14448_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Light blue"
+    },
+    "candidate-2feb7d8982e430c2cc66": {
+      "priceUrl": "https://uk.anycubic3d.com/products/water-wash-resin-sale-for-resin-3d-printer",
+      "variantId": 54472652783929,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/2.0.jpg?v=1789718083",
+      "expectedProductTitle": "Water-Wash Resin 2.0 10-100kg Deals",
+      "expectedVariantTitle": "Gray (#7E93A7) / 50KG"
+    },
+    "candidate-15c36d25b28e1eac78f2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52732002173209,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA (RFID) / Orange"
+    },
+    "candidate-467b8e4446674f29c79f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/photon-mono-4",
+      "variantId": 54472764457273,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/M4_3_2KG.jpg?v=1788772597",
+      "expectedProductTitle": "Anycubic Photon Mono 4",
+      "expectedVariantTitle": "🔥Wash & Cure 3 / 2KG Resin"
+    },
+    "candidate-db4d207657d775212ccb": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993350730009,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1109_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Deep Grey"
+    },
+    "candidate-3a739170f3ab5d3503f8": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666258696,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00031_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Orange / 2.85 mm / 1 kg"
+    },
+    "candidate-e71b5b69c09af224a067": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-ace-2-pro-combo-3d-printer",
+      "variantId": 54472850047289,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/en_30bbf587-f21b-47a1-aa8d-06b0975cf1bb.jpg?v=1788772973",
+      "expectedProductTitle": "Anycubic Kobra S1 ACE 2 Pro Combo",
+      "expectedVariantTitle": "Kobra S1 ACE 2 Pro Combo (4 colors) / None"
+    },
+    "candidate-94deadd22e83477ae13d": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347223833,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1109_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Deep Grey"
+    },
+    "candidate-119388153771017d8dc9": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51217175216409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Black-5KG_c4ce0cb4-388d-494d-b73c-af6f08c65fcb.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Green / Black"
+    },
+    "candidate-2d137b4f2296261f3c79": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-complete-bundle-mercury-plus-v3-0-resin",
+      "variantId": 52843235737881,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/downloaded-image.jpg?v=1772160667",
+      "expectedProductTitle": "Saturn 4 Ultra Pro Bundle – Mercury Plus V3.0 & Resin",
+      "expectedVariantTitle": "2 kg / #Clear Red"
+    },
+    "candidate-f260d5693416894a0612": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472807776569,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1M_PLA_Silk_Dual-Color_4_dd30d16f-6a29-4117-9a21-26640660a855.jpg?v=1788772804",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max / +PLA Silk Dual-Color*4"
+    },
+    "candidate-3522dc37073a02a31020": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631000328,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14072_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Red / 1 kg / 1.75 mm"
+    },
+    "candidate-e4e0ee5985894348f07c": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624348424,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20218_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Yellow / 1.75 mm / Re-fill"
+    },
+    "candidate-3d072a603282a140ae7d": {
+      "priceUrl": "https://uk.elegoo.com/products/resin-custom-bundle-3kg",
+      "variantId": 51745149714713,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/resinluckybox-1.jpg?v=1761185409",
+      "expectedProductTitle": "Resin Mystery Box | 3 kg",
+      "expectedVariantTitle": "Random Resin4 / Random Resin2"
+    },
+    "candidate-b7398bd79512bce16a57": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583781640,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14510_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Sakura pink"
+    },
+    "candidate-e432881885f5ba6bb481": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569265416,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02290_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "White / 1 kg / 2.85 mm"
+    },
+    "candidate-cf57458413a42f306dc7": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0-plus",
+      "variantId": 52136557052185,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/ABS-LikeResinV3.0_-2KG-ClearRed.jpg?v=1784516995",
+      "expectedProductTitle": "ABS-Like Resin V3.0+",
+      "expectedVariantTitle": "2 kg / #Clear Red"
+    },
+    "candidate-51f9cf8cbc0f38ef8052": {
+      "priceUrl": "https://www.123-3d.co.uk/products/spectrum-filament-pla-premium",
+      "variantId": 58386646597896,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFS10004_01.jpg?v=1786077890",
+      "expectedProductTitle": "Spectrum PLA Premium Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Blood red"
+    },
+    "candidate-965f0a08e066292ac93b": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-abs-like-resin-v-3-0",
+      "variantId": 53067361976601,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/img_v3_0215h_e728fe17-c8dd-4a57-830c-587f2470b66g.jpg?v=1792034963",
+      "expectedProductTitle": "ABS-Like Resin V3.0",
+      "expectedVariantTitle": "1 kg / #Clear"
+    },
+    "candidate-16da798e054a8d4fdf7e": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
+      "variantId": 58386596004104,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14446_01.jpg?v=1786077105",
+      "expectedProductTitle": "Polymaker Panchroma PLA Silk Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Gold"
+    },
+    "candidate-6dc2eba65790ad5166a6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666291464,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00015_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Purple / 1.75 mm / 1 kg"
+    },
+    "candidate-590b920b45b7af83d28f": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631033096,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14312_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Red / 3 kg / 1.75 mm"
+    },
+    "candidate-51eaf4d87f2f7d1964f6": {
+      "priceUrl": "https://www.123-3d.co.uk/products/esun-pla",
+      "variantId": 58386624381192,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFE20207_01.jpg?v=1786077557",
+      "expectedProductTitle": "eSun PLA+ Filament 1kg",
+      "expectedVariantTitle": "Yellow / 1.75 mm / Spool"
+    },
+    "candidate-62528c7e45e44b48af04": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583814408,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14511_01.jpg?v=1786076971",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Sapphire blue"
+    },
+    "candidate-391ee9d2c3c78fe79958": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569298184,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02288_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "White / 3 kg / 1.75 mm"
+    },
+    "candidate-85e54d964fde797bc11b": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976415801625,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Dark Blue / Red"
+    },
+    "candidate-62861e3c246269defd93": {
+      "priceUrl": "https://www.123-3d.co.uk/products/123-3d-pla",
+      "variantId": 58386666324232,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DHM00034_01.jpg?v=1786078223",
+      "expectedProductTitle": "123-3D PLA Filament",
+      "expectedVariantTitle": "Purple / 2.85 mm / 1 kg"
+    },
+    "candidate-d480e59811fcf5735be2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974453457177,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "White / Grey / Blue"
+    },
+    "candidate-d903237c3d097ffdc858": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973711524121,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Copper / Silk White / Grey"
+    },
+    "candidate-12cbdc5979de83e3dc46": {
+      "priceUrl": "https://www.123-3d.co.uk/products/polymaker-polylite-pla",
+      "variantId": 58386631065864,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14305_01.jpg?v=1786077652",
+      "expectedProductTitle": "Polymaker PolyLite PLA Filament",
+      "expectedVariantTitle": "Sky blue / 1 kg / 1.75 mm"
+    },
+    "candidate-6131045138e4318565bf": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581699865,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Red"
+    },
+    "candidate-f8dce1ece9285b7ba9e5": {
+      "priceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-matte",
+      "variantId": 58386583847176,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP14512_01.jpg?v=1786076972",
+      "expectedProductTitle": "Polymaker Panchroma PLA Matte Filament 1.75mm 1kg",
+      "expectedVariantTitle": "Savannah yellow"
+    },
+    "candidate-f0562236a30dedb54182": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082406169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Brown"
+    },
+    "candidate-f1864946e0a18e74d0a4": {
+      "priceUrl": "https://www.123-3d.co.uk/products/real-pla",
+      "variantId": 58386569330952,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1031/6939/2904/files/DFP02289_01.jpg?v=1786076760",
+      "expectedProductTitle": "REAL PLA Filament",
+      "expectedVariantTitle": "White / 5 kg / 1.75 mm"
+    },
+    "candidate-fa2df6e1c79b9f4645ca": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950264601,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Dark Blue / Carbon Fiber Red"
     }
   },
   "approvedProductDetails": {},
