@@ -4,6 +4,8 @@ if(window.__ppLabourTimeInput)return;window.__ppLabourTimeInput=true;
 const source=document.getElementById('labourHours');if(!source)return;
 const container=source.parentElement;
 const title=container.querySelector('label');if(title)title.textContent='Labour time (per product)';
+const rateContainer=document.getElementById('labourRate')?.parentElement;
+if(rateContainer)rateContainer.classList.add('pp-labour-rate');
 source.type='hidden';source.setAttribute('aria-hidden','true');
 const group=document.createElement('div');group.className='pp-labour-time';group.setAttribute('role','group');group.setAttribute('aria-label','Labour time per product');
 function field(text,aria,max){
@@ -29,5 +31,5 @@ function update(){
 }
 for(const input of [hours,minutes]){input.addEventListener('input',update);input.addEventListener('change',update);}
 source.addEventListener('input',sync);source.addEventListener('change',sync);sync();
-const style=document.createElement('style');style.textContent='.pp-labour-time{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}.pp-labour-time label{min-width:0;display:block}.pp-labour-time input{display:block;width:100%;box-sizing:border-box;margin-top:4px}';document.head.appendChild(style);
+const style=document.createElement('style');style.textContent='.pp-labour-time{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}.pp-labour-time label{min-width:0;display:block}.pp-labour-time input{display:block;width:100%;box-sizing:border-box;margin-top:4px}.pp-labour-rate{align-self:end}';document.head.appendChild(style);
 })();
