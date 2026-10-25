@@ -91,7 +91,7 @@ exports.getProAccess=onCall(callable,async request=>{
  const history=await subscriptions(client,customer);
  const access=core.accessFromSubscriptions(history,ids(),undefined,environment().livemode);
  await saveEntitlement(auth.uid,access,false);
- return {...access,eligibleForTrial:core.eligibleForTrial(history)};
+ return {...access,eligibleForTrial:core.eligibleForTrial(history),hasOpenSubscription:history.some(subscription=>subscription.livemode===environment().livemode&&!['canceled','incomplete_expired'].includes(subscription.status))};
 });
 exports.createProCheckout=onCall(callable,async request=>{
  const auth=user(request);
@@ -127,7 +127,17 @@ exports.createProCheckout=onCall(callable,async request=>{
 exports.createBillingPortal=onCall(callable,async request=>{
  const auth=user(request),client=stripe(),customer=await customerFor(auth,client);
  if(!customer)throw new HttpsError('not-found','No billing account exists yet.');
- const session=await client.billingPortal.sessions.create({customer,return_url:environment().site+'?open=account'});
+ const params={customer,return_url:environment().site+'?open=account'};
+ if(request.data?.flow==='cancel'){
+  const history=await subscriptions(client,customer);
+  const current=history.find(subscription=>subscription.id&&(()=>{
+   const access=core.accessFromSubscriptions([subscription],ids(),undefined,environment().livemode);
+   return access.tier==='pro'&&!access.cancelAtPeriodEnd;
+  })());
+  if(!current)throw new HttpsError('failed-precondition','There is no active subscription to cancel. Refresh your account status.');
+  params.flow_data={type:'subscription_cancel',subscription_cancel:{subscription:current.id},after_completion:{type:'redirect',redirect:{return_url:environment().site+'?open=account&billing=returned'}}};
+ }
+ const session=await client.billingPortal.sessions.create(params);
  return {url:session.url};
 });
 exports.checkAccountDeletion=onCall(callable,async request=>{
