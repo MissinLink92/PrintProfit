@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-24T01:59:58.210440+00:00",
+  "checkedAt": "2026-10-25T01:24:12.602287+00:00",
   "warnings": [
     "parcelforce: failed; last verified never",
     "ups: failed; last verified never",
@@ -32,10 +32,10 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1704,
-      "verified": 1698,
+      "listed": 1753,
+      "verified": 1747,
       "categories": {
-        "filament": 1515,
+        "filament": 1564,
         "accessory": 4,
         "printer": 71,
         "resin-material": 92,
@@ -83,12 +83,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1577,
-      "verified": 1572,
+      "listed": 1652,
+      "verified": 1647,
       "categories": {
-        "printer": 417,
-        "filament": 810,
-        "resin-material": 310,
+        "printer": 462,
+        "filament": 829,
+        "resin-material": 321,
         "accessory": 35,
         "equipment": 5
       }
@@ -147,12 +147,12 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 643,
-      "verified": 640,
+      "listed": 667,
+      "verified": 664,
       "categories": {
-        "filament": 342,
-        "printer": 139,
-        "resin-material": 126,
+        "filament": 356,
+        "printer": 146,
+        "resin-material": 129,
         "accessory": 36
       }
     },
@@ -297,8 +297,8 @@
       "source": "tiktok",
       "checkedAt": "2026-10-19",
       "reviewAfter": "2026-10-26",
-      "automaticStatus": "review-required",
-      "automaticError": "Expected one unambiguous rate; found 0"
+      "automaticStatus": "failed",
+      "automaticError": "Source did not provide readable pricing guidance"
     }
   ],
   "exchangeRates": {

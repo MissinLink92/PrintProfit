@@ -27,8 +27,8 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 12.25,
       "pay": 0,
       "fixed": 0.4,
-      "note": "eBay UK business Home/Furniture & DIY, up to £500; order fee shown for orders over £10. Other categories, tiers, VAT and listing fees may differ. Platform 12.25%; payments 0% + £0.40. Checked 2026-10-24.",
-      "checkedAt": "2026-10-24",
+      "note": "eBay UK business Home/Furniture & DIY, up to £500; order fee shown for orders over £10. Other categories, tiers, VAT and listing fees may differ. Platform 12.25%; payments 0% + £0.40. Checked 2026-10-25.",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809"
       ]
@@ -37,8 +37,8 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 12.24,
       "pay": 0,
       "fixed": 0,
-      "note": "Amazon Handmade UK. Monthly plan costs are not allocated per sale. Platform 12.24%; payments 0% + £0.00. Checked 2026-10-24.",
-      "checkedAt": "2026-10-24",
+      "note": "Amazon Handmade UK. Monthly plan costs are not allocated per sale. Platform 12.24%; payments 0% + £0.00. Checked 2026-10-25.",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://sell.amazon.co.uk/programmes/handmade"
       ]
@@ -89,8 +89,8 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 0,
       "pay": 0,
       "fixed": 0,
-      "note": "Gumtree UK seller payment fees; paid business listings and promotions excluded. Platform 0%; payments 0% + £0.00. Checked 2026-10-24.",
-      "checkedAt": "2026-10-24",
+      "note": "Gumtree UK seller payment fees; paid business listings and promotions excluded. Platform 0%; payments 0% + £0.00. Checked 2026-10-25.",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://www.gumtree.com/info/safety/p/payments/how-fees-and-selling-costs-are-charged/"
       ]
@@ -99,8 +99,8 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 7.2,
       "pay": 1.5,
       "fixed": 0.2,
-      "note": "Folksy Basic including commission VAT; Stripe standard UK cards. Listing fees excluded. Platform 7.2%; payments 1.5% + £0.20. Checked 2026-10-24.",
-      "checkedAt": "2026-10-24",
+      "note": "Folksy Basic including commission VAT; Stripe standard UK cards. Listing fees excluded. Platform 7.2%; payments 1.5% + £0.20. Checked 2026-10-25.",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://folksy.uservoice.com/knowledgebase/articles/58077-how-much-does-it-cost-to-sell-on-folksy",
         "https://stripe.com/gb/pricing"
@@ -110,8 +110,8 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "platform": 0,
       "pay": 2.0,
       "fixed": 0.25,
-      "note": "Shopify Payments Basic standard online UK cards. Monthly plan costs are not allocated per sale. Platform 0%; payments 2.0% + £0.25. Checked 2026-10-24.",
-      "checkedAt": "2026-10-24",
+      "note": "Shopify Payments Basic standard online UK cards. Monthly plan costs are not allocated per sale. Platform 0%; payments 2.0% + £0.25. Checked 2026-10-25.",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://www.shopify.com/uk/pricing"
       ]
@@ -227,7 +227,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       ]
     },
     "evri": {
-      "source": "Evri official UK reference — checked 2026-10-24",
+      "source": "Evri official UK reference — checked 2026-10-25",
       "rates": [
         {
           "label": "Home/work — Postable (Under 1kg) — Standard drop off",
@@ -426,7 +426,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
         }
       ],
       "quoteRequired": false,
-      "checkedAt": "2026-10-24",
+      "checkedAt": "2026-10-25",
       "sourceUrls": [
         "https://www.evri.com/our-services/our-prices"
       ]
@@ -958,7 +958,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
         "rate": 0.2611,
         "standing": 0.5719,
         "sourceUrl": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-        "checkedAt": "2026-10-24"
+        "checkedAt": "2026-10-25"
       },
       {
         "id": "ofgem-2026-10-01",
@@ -968,13 +968,13 @@ window.PRINTPROFIT_REFERENCE_DATA={
         "rate": 0.2632,
         "standing": 0.5483,
         "sourceUrl": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-        "checkedAt": "2026-10-24"
+        "checkedAt": "2026-10-25"
       }
     ],
     "note": "Great Britain average direct debit reference, including VAT. Supplier tariffs need a postcode, meter and payment method. Northern Ireland is outside the Ofgem price cap.",
     "supplierAudit": {
       "sourceUrl": "https://www.ofgem.gov.uk/sites/default/files/2026-06/List%20of%20all%20electricity%20licensees%20including%20suppliers.pdf",
-      "checkedAt": "2026-10-24",
+      "checkedAt": "2026-10-25",
       "legalNamesNeedingReview": [
         "Jellyfish Energy Ltd"
       ],
@@ -984,21 +984,21 @@ window.PRINTPROFIT_REFERENCE_DATA={
   "sourceStatus": {
     "ofgem": {
       "url": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "a7133ec2cbecc87e07d491343ae585274b47ff19698ab1c1aee63502e89a9f9e",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     },
     "ofgem-suppliers": {
       "url": "https://www.ofgem.gov.uk/data/list-all-electricity-licensees-including-suppliers",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "c452880d55a17069f75feab2f6f5771167f533b0bc1852920122623db821b4ba",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     },
     "inpost": {
       "url": "https://inpost.co.uk/send/parcel-prices",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
@@ -1011,14 +1011,14 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "evri": {
       "url": "https://www.evri.com/our-services/our-prices",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "14ce2260b0573581336a8ccb6b0d1a553e40d317ad4ba279f4738fccfd472f99",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     },
     "royalmail-first": {
       "url": "https://www.royalmail.com/sending/uk/1st-class",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
@@ -1032,7 +1032,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "royalmail-second": {
       "url": "https://www.royalmail.com/sending/uk/2nd-class",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
@@ -1046,13 +1046,13 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "parcelforce": {
       "url": "https://www.parcelforce.com/sending-parcel/uk-parcel-delivery",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "failed",
       "error": "Cannot read robots.txt: HTTP 403"
     },
     "dpd": {
       "url": "https://send.dpd.co.uk/",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "Source did not provide readable pricing guidance",
       "automaticStatus": "failed",
@@ -1065,7 +1065,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "dhl": {
       "url": "https://send.dhlparcel.co.uk/parcel-delivery",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "Source did not provide readable pricing guidance",
       "automaticStatus": "failed",
@@ -1078,19 +1078,19 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "ups": {
       "url": "https://www.ups.com/gb/en/support/shipping-support/shipping-costs-rates",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "fedex": {
       "url": "https://www.fedex.com/en-gb/shipping/rates.html",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "failed",
       "error": "Source did not provide readable pricing guidance"
     },
     "etsy-transaction": {
       "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "HTTP Error 403: Forbidden",
       "automaticStatus": "failed",
@@ -1105,7 +1105,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "etsy-regulatory": {
       "url": "https://help.etsy.com/hc/en-us/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "HTTP Error 403: Forbidden",
       "automaticStatus": "failed",
@@ -1120,7 +1120,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "etsy-payments": {
       "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "HTTP Error 403: Forbidden",
       "automaticStatus": "failed",
@@ -1136,21 +1136,21 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "ebay": {
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
-      "contentHash": "616b7c1ca2a9f2e5f499ed0f468629a58d30faf0a4503556399647efb0cc7a19",
-      "lastVerified": "2026-10-24"
+      "contentHash": "e18e94d786c956a7c792af178ec05902a60cc527c203c10a8124f386cf42ed83",
+      "lastVerified": "2026-10-25"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
-      "contentHash": "d5958e1e6e25574dda15a55684b67186c295c83a40b043208b8b0b04c787e85c",
-      "lastVerified": "2026-10-24"
+      "contentHash": "1f2269e822808c9de60a2c6a959a31643c1c94f727020780dc25b23bbad1adc4",
+      "lastVerified": "2026-10-25"
     },
     "depop": {
       "url": "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "error": "HTTP Error 403: Forbidden",
       "automaticStatus": "failed",
@@ -1163,7 +1163,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "vinted": {
       "url": "https://www.vinted.co.uk/pricelist",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "contentHash": "c633f181f1ed31f190025910f2593800b096e9b0c035f7b7b26bea94a8694987",
       "error": "Zero seller fee guidance changed; keep the previous value for review",
@@ -1177,11 +1177,11 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "manual-verified",
       "contentHash": "7653a6064980ab68af10b7389f568c9f7ce6d8ed3061f90cfeff07aa242116bd",
-      "error": "Expected one unambiguous rate; found 0",
-      "automaticStatus": "review-required",
+      "error": "Source did not provide readable pricing guidance",
+      "automaticStatus": "failed",
       "lastVerified": "2026-10-19",
       "reviewAfter": "2026-10-26",
       "verificationMethod": "manual",
@@ -1191,40 +1191,40 @@ window.PRINTPROFIT_REFERENCE_DATA={
     },
     "facebook": {
       "url": "https://www.facebook.com/help/1159837417996719",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "failed",
       "error": "Source robots.txt disallows this URL"
     },
     "gumtree": {
       "url": "https://www.gumtree.com/info/safety/p/payments/how-fees-and-selling-costs-are-charged/",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "1984c40f4af772ca3598b749e333d005d33f689678bfbfc2d088bb89f8fe4546",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     },
     "folksy": {
       "url": "https://folksy.uservoice.com/knowledgebase/articles/58077-how-much-does-it-cost-to-sell-on-folksy",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "9b2455d30cb2ae0c0991a949a4f5876fba542136c962cdc363092f1da957956a",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     },
     "stripe": {
       "url": "https://stripe.com/gb/pricing",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
-      "contentHash": "8141294581e80716d9f4a82bcb1c230af8986717dcc0ca14612a49cacc6a60dd",
-      "lastVerified": "2026-10-24"
+      "contentHash": "200b436e02b7811ac9ba31ca879903d727751b8b902c34053be4d3da024a9266",
+      "lastVerified": "2026-10-25"
     },
     "shopify": {
       "url": "https://www.shopify.com/uk/pricing",
-      "lastAttempt": "2026-10-24",
+      "lastAttempt": "2026-10-25",
       "status": "verified",
       "contentHash": "d84df09370272d91978194eb6b6ba84dd3c19d18dfcec146efe7f191f53092b7",
-      "lastVerified": "2026-10-24"
+      "lastVerified": "2026-10-25"
     }
   },
-  "lastAttempt": "2026-10-24T02:19:53+01:00",
+  "lastAttempt": "2026-10-25T01:44:06+01:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-23",
@@ -1251,7 +1251,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "ZAR": 22.18815689
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-24T02:19:53+01:00",
+    "lastAttempt": "2026-10-25T01:44:06+01:00",
     "status": "verified"
   }
 };
