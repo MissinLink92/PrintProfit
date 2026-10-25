@@ -59,6 +59,22 @@ test('portal ignores client customer and return URL and uses the authenticated m
  const h=harness();await h.handlers.createBillingPortal({auth:{uid:'owner',token:{email_verified:true}},data:{customer:'cus_victim',return_url:'https://evil.example/'}});
  assert.equal(h.calls[0].uid,'owner');assert.equal(h.calls[1].customer,'cus_authenticated_owner');assert.equal(h.calls[1].return_url,'https://printprofit-test.web.app/?open=account');
 });
+test('cancel button opens the authenticated subscription cancellation flow',async()=>{
+ const price={id:'price_month',livemode:false,active:true,currency:'gbp',unit_amount:250,type:'recurring',tax_behavior:'inclusive',recurring:{interval:'month',interval_count:1,usage_type:'licensed'}};
+ const current={id:'sub_own',livemode:false,status:'trialing',trial_end:Math.floor(Date.now()/1000)+7*86400,items:{data:[{quantity:1,price}]}};
+ const auth={uid:'owner',token:{email_verified:true}};
+ const h=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[{...current,id:'sub_wrong_mode',livemode:true},current]});
+ await h.handlers.createBillingPortal({auth,data:{flow:'cancel',subscription:'sub_victim',return_url:'https://evil.example/'}});
+ const session=h.calls.find(call=>call.flow_data);
+ assert.equal(session.customer,'cus_authenticated_owner');
+ assert.equal(session.flow_data.type,'subscription_cancel');
+ assert.equal(session.flow_data.subscription_cancel.subscription,'sub_own');
+ assert.equal(session.flow_data.after_completion.redirect.return_url,'https://printprofit-test.web.app/?open=account&billing=returned');
+ assert.equal(h.calls.some(call=>call.cancel),false);
+ const scheduled=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[{...current,cancel_at_period_end:true}]});
+ await assert.rejects(scheduled.handlers.createBillingPortal({auth,data:{flow:'cancel'}}),error=>error.code==='failed-precondition');
+ assert.equal(scheduled.calls.some(call=>call.flow_data),false);
+});
 test('invalid webhook signature cannot write or grant an entitlement',async()=>{
  const h=harness(),response={status(code){this.code=code;return this;},send(text){this.text=text;}};
  await h.handlers.stripeBillingWebhook({method:'POST',rawBody:Buffer.from('{}'),headers:{'stripe-signature':'invalid'}},response);
@@ -101,7 +117,7 @@ test('getProAccess writes short-lived server entitlements and revokes non-Pro cl
  const pastDue=harness({params:{STRIPE_PRO_MONTHLY_PRICE:'price_month'},subscriptions:[{...active,status:'past_due'}]});
  const denied=await pastDue.handlers.getProAccess({auth});
  const revoked=pastDue.calls.find(call=>call.operation==='set'&&call.collection==='billingEntitlements');
- assert.equal(denied.tier,'basic');assert.equal(revoked.data.tier,'basic');assert.equal(revoked.data.validUntil,null);
+ assert.equal(denied.tier,'basic');assert.equal(denied.hasOpenSubscription,true);assert.equal(revoked.data.tier,'basic');assert.equal(revoked.data.validUntil,null);
 });
 test('Firestore rules require fresh server Pro entitlements for profile and project writes',()=>{
  const rules=fs.readFileSync(__dirname+'/../firestore.rules','utf8');
