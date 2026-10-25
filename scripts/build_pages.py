@@ -10,7 +10,14 @@ if destination.exists():
 destination.mkdir()
 public_config = {'config/analytics-config.js', 'config/firebase-config.js', 'config/billing-config.js'}
 excluded = {'scripts', 'config', 'reports', 'work', 'outputs', 'node_modules', 'functions', 'docs', 'admin'}
-private_data = {'data/review-queue.json', 'data/nightly-report.json', 'firebase.billing.json', 'firebase.admin.json'}
+private_data = {
+    'data/review-queue.json',
+    'data/nightly-report.json',
+    'firebase.billing.json',
+    'firebase.admin.json',
+    'firebase.firestore.json',
+    'firestore.rules',
+}
 for relative in subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0'):
     if not relative:
         continue
