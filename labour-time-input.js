@@ -31,5 +31,5 @@ function update(){
 }
 for(const input of [hours,minutes]){input.addEventListener('input',update);input.addEventListener('change',update);}
 source.addEventListener('input',sync);source.addEventListener('change',sync);sync();
-const style=document.createElement('style');style.textContent='.pp-labour-time{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}.pp-labour-time label{min-width:0;display:block}.pp-labour-time input{display:block;width:100%;box-sizing:border-box;margin-top:4px}.pp-labour-rate{align-self:end}';document.head.appendChild(style);
+const style=document.createElement('style');style.textContent='.pp-labour-time{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}.pp-labour-time label{min-width:0;display:block}.pp-labour-time input{display:block;width:100%;box-sizing:border-box;margin-top:8px}.pp-labour-rate{align-self:end}';document.head.appendChild(style);
 })();
