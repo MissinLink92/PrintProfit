@@ -1,14 +1,14 @@
 # PrintProfit nightly update
 
-Checked: 2026-10-25T01:44:06+01:00
+Checked: 2026-10-26T02:45:19+00:00
 
-- Existing prices verified: 7236 / 7367
-- Existing prices retained without verification: 131
-- Changed existing prices: 0
-- Refreshed image files: 2
-- Verified products added: 148
-- Unresolved source notices: 236
-- Failed or incomplete checks: 5684
+- Existing prices verified: 7349 / 7486
+- Existing prices retained without verification: 137
+- Changed existing prices: 10
+- Refreshed image files: 6
+- Verified products added: 125
+- Unresolved source notices: 209
+- Failed or incomplete checks: 5718
 
 ## Source checks
 
@@ -16,12 +16,12 @@ Checked: 2026-10-25T01:44:06+01:00
 |---|---|---|---|
 | 3DJake UK | 4 / 7 | url-discovery-only | 4279 |
 | 3D Prima UK | 11 / 17 | url-discovery-only | 59 |
-| 123-3D UK | 1747 / 1753 | discovered | 256 |
+| 123-3D UK | 1747 / 1753 | discovered | 207 |
 | iDig3Dprinting | 1 / 4 | url-discovery-only | 223 |
 | 3DGBIRE | 629 / 632 | discovered | 252 |
 | Bambu Lab UK | 234 / 234 | discovered | 9 |
-| Creality UK | 8 / 12 | url-discovery-only | 198 |
-| ELEGOO UK | 1647 / 1652 | discovered | 1666 |
+| Creality UK | 7 / 12 | url-discovery-only | 198 |
+| ELEGOO UK | 1744 / 1749 | discovered | 1591 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
 | Prusa Research | 0 / 0 | url-discovery-only | 7 |
 | Subliblanks | 6 / 6 | discovered | 30 |
@@ -29,12 +29,12 @@ Checked: 2026-10-25T01:44:06+01:00
 | Additive-X | 10 / 13 | url-discovery-only | 7 |
 | Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
-| Anycubic UK | 664 / 667 | discovered | 448 |
+| Anycubic UK | 692 / 695 | discovered | 424 |
 | QIDI UK Store | 107 / 116 | discovered | 35 |
 | Flashforge UK | 27 / 27 | discovered | 128 |
 | Sovol UK | 20 / 20 | discovered | 23 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
-| SUNLU UK | 1659 / 1739 | discovered | 27 |
+| SUNLU UK | 1648 / 1733 | discovered | 27 |
 | Polymaker UK | 0 / 0 | failed | 0 |
 | eSUN UK | 0 / 0 | url-discovery-only | 29 |
 | 3DQF UK | 0 / 0 | url-discovery-only | 94 |
@@ -53,7 +53,6 @@ Checked: 2026-10-25T01:44:06+01:00
 - reference / etsy-regulatory: HTTP Error 403: Forbidden
 - reference / etsy-payments: HTTP Error 403: Forbidden
 - reference / depop: HTTP Error 403: Forbidden
-- reference / tiktok: Source did not provide readable pricing guidance
 - reference / facebook: Source robots.txt disallows this URL
 - reference-parser / inpost: Official source could not be read: inpost
 - reference-parser / royalmail-first, royalmail-second: Official source could not be read: royalmail-first
@@ -62,7 +61,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - reference-parser / parcelforce: Official source could not be read: parcelforce
 - reference-parser / etsy-transaction, etsy-regulatory, etsy-payments: Official source could not be read: etsy-transaction
 - reference-parser / depop: Official source could not be read: depop
-- reference-parser / tiktok: Official source could not be read: tiktok
+- reference-parser / tiktok: Expected one unambiguous rate; found 0
 - reference-parser / vinted: Zero seller fee guidance changed; keep the previous value for review
 - catalogue / polymaker-uk: Public catalogue does not quote native GBP prices
 - product / elegoo-pla-black: Price URL does not belong to the recorded UK retailer
@@ -162,6 +161,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / elegoo-centauri-carbon-2-combo: Exact variant no longer appears in the retailer catalogue
 - product / creality-k2-pro: Exact model/colour/pack product offer unavailable on the recorded page
 - product / creality-k2-se: No single GBP offer for the exact product
+- product / creality-halot-r6: Exact model/colour/pack product offer unavailable on the recorded page
 - product / sovol-sv06-ace: Exact variant no longer appears in the retailer catalogue
 - product / snapmaker-u1: Exact model/colour/pack product offer unavailable on the recorded page
 - product / xyz-da-vinci-mini-w-plus: Exact model/colour/pack product offer unavailable on the recorded page
@@ -1736,6 +1736,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-86c68a08ce54016aac77: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-b1338361d553c8c42bde: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-4a178c1f761e859411d6: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-ac42613e8f246eec52b6: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-a02683391649fc7febd5: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-7deba48a77356d4456b6: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-b8a74b6344408120d0ac: Recorded variant title changed; review the colour/pack before updating
@@ -1748,6 +1749,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-b7c07dd93a7a77f55877: Recorded model title changed; product identity needs review
 - product / candidate-b7d4e25abf44973d3286: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-21299c1b580ecd7f8afd: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-2e52d6d1912eb6959e03: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-00836fa24dbca8e00e70: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-1bc2f176e6532b748ad0: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-0d37c491cab39c926aee: Recorded variant title changed; review the colour/pack before updating
@@ -1766,6 +1768,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-e3d6a33594ac26e9a816: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-d8c6ad3072fd3e63af61: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-f8b136544cabd160b8d0: Exact variant no longer appears in the retailer catalogue
+- product / candidate-1e9aebd3fa3d6fb28669: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-9303fbf700723e284a17: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-411fb9fbdb8003705ddf: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-acb6e198ed61b0d46829: Recorded variant title changed; review the colour/pack before updating
@@ -1778,6 +1781,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-eeeeb640e99c46cea6f3: Recorded model title changed; product identity needs review
 - product / candidate-0f59bf6fcb90718ba42a: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-a5cf1d546baffc74b5d6: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-a9c32a34d9fa27228b38: Exact variant no longer appears in the retailer catalogue
 - product / candidate-254099e22f2074b68248: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-4737a8848d67d36cd071: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-6970d3db60dcc08d3a35: Recorded variant title changed; review the colour/pack before updating
@@ -1793,6 +1797,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-432670d57bf8ad69d134: Exact variant no longer appears in the retailer catalogue
 - product / candidate-90be60793633bee73111: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-bdb64ddc148fd4decd46: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-736c474e857cfb1a78d6: Exact variant no longer appears in the retailer catalogue
 - product / candidate-b00f6235ddb54dbaa47a: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-e56c62e7650a72c8e6c3: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-f4bcdb7b006bde79ee6c: Recorded variant title changed; review the colour/pack before updating
@@ -1804,6 +1809,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-71d8139910c9bed05536: Recorded model title changed; product identity needs review
 - product / candidate-abb2cdd9b6f73c5fe673: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-4a9cf52faa2f39e70adf: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-ad852c09f9a0914f419b: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-d1f5bf346162439ec711: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-0d9ea14acbf840182779: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-0fc9506448f602bfc9de: Exact variant no longer appears in the retailer catalogue
@@ -1812,6 +1818,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-b8e26f3a4dba31c27efe: Recorded model title changed; product identity needs review
 - product / candidate-dd1bec74611ff8a9d7db: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-c61791aa88067d2d25d5: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-6541795f30bce5adde38: Exact variant no longer appears in the retailer catalogue
 - product / candidate-0131c1314b38668e9132: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-4b1e314921f834d2bdd1: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-0433d38cdedee3e4b793: Recorded variant title changed; review the colour/pack before updating
@@ -1819,6 +1826,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-2f8a7e0405ce4a12b1ab: Recorded model title changed; product identity needs review
 - product / candidate-bd97cadeabd22c76244b: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-6c3f6c64d4c8c169ad65: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-22111e833e46b874db57: Exact variant no longer appears in the retailer catalogue
 - product / candidate-0ca9f95eb535bfc7c3b7: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-982f914ba20e32bf9108: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-6bfad978409b1bdf10c1: Recorded variant title changed; review the colour/pack before updating
@@ -1829,12 +1837,14 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-3b95d3a173898359a366: Recorded model title changed; product identity needs review
 - product / candidate-30c4b06cf3ca440e69a7: Exact variant no longer appears in the retailer catalogue
 - product / candidate-e558cd4a3e983f687878: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-e5c9738fdced7b97bdd7: Exact variant no longer appears in the retailer catalogue
 - product / candidate-bef644e0a8bbac45814b: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-e755311de432ea54ce36: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-fe57185570e648d90504: Exact variant no longer appears in the retailer catalogue
 - product / candidate-aec8caa1e7f0a5caddb1: Exact variant no longer appears in the retailer catalogue
 - product / candidate-b36f4626822123be2045: Recorded model title changed; product identity needs review
 - product / candidate-cedfd58ead51746b7e8c: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-edd53d24a4f7e5a2a6f0: Exact variant no longer appears in the retailer catalogue
 - product / candidate-cbd1062b1c64671cbc6f: Exact variant no longer appears in the retailer catalogue
 - product / candidate-d8244f92e5c2d5e450bb: Exact variant no longer appears in the retailer catalogue
 - product / candidate-09914f7b3c03d894d4ca: Exact variant no longer appears in the retailer catalogue
@@ -1843,6 +1853,7 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-780c03445c54665e6429: Exact variant no longer appears in the retailer catalogue
 - product / candidate-d6eca76ae4530a3c48ec: Recorded model title changed; product identity needs review
 - product / candidate-d4a20df23878c7d68db5: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-c408c779ef3f10212ea0: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-0e7cabb94a7018806417: Exact variant no longer appears in the retailer catalogue
 - product / candidate-66625cb21d3371b26725: Exact variant no longer appears in the retailer catalogue
 - product / candidate-6b1d1ea47d52186e7211: Recorded model title changed; product identity needs review
@@ -1873,8 +1884,6 @@ Checked: 2026-10-25T01:44:06+01:00
 - product / candidate-2a8f34de79a429b8b837: Exact variant no longer appears in the retailer catalogue
 - product / candidate-78204b4cc3aca821a7bd: Recorded variant title changed; review the colour/pack before updating
 - discovery / polymaker-uk: Public catalogue does not quote native GBP prices
-- new-product / candidate-7708ae87299cbe64f301: Pack weight outside the supported range
-- new-product / candidate-a2b05c64a07100f1dc64: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-09082425bb1cb7089087: Cannot confirm that the product is a material or printer
 - new-product / candidate-c63cc1a9ce9516a8f607: Cannot confirm that the product is a material or printer
 - new-product / candidate-6c558d66fc27c9ddb595: No single GBP offer for the exact product
@@ -1884,13 +1893,14 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-edc89c939b77a6f2f869: No verified product image URL
 - new-product / candidate-3cdcf3c9a3610b9f14b6: Cannot confirm one product on the discovered URL
 - new-product / candidate-f50bd537cb319a30c3e0: Cannot confirm one product on the discovered URL
-- new-product / candidate-5809c2cc90cf6a660ff6: Cannot confirm one product on the discovered URL
+- new-product / candidate-46053780982690f8d50c: Cannot confirm one product on the discovered URL
 - new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
 - new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
 - new-product / candidate-5c9bad509369a8abeb6f: HTTP Error 403: Forbidden
 - new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c5b502c05fb8cd80fefb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-61cdee26834eb0d32c84: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f13017ad519157a2786e: No verified product image URL
 - new-product / candidate-2de219742ffe920749ff: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-751c1133dfd24ae2a3ef: Cannot confirm that the product is a material or printer
@@ -1898,16 +1908,17 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-29414b136ce243ef1fc2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
+- new-product / candidate-bedaff93aa8ff28d45b3: No verified product image URL
 - new-product / candidate-ed398141cf9889704f77: Cannot confirm one product on the discovered URL
 - new-product / candidate-8caa010446f0e7ef4255: Cannot confirm one product on the discovered URL
-- new-product / candidate-5c96a9ec6d6187d81d0f: Cannot confirm one product on the discovered URL
+- new-product / candidate-e64ce23f53c60fa4661e: Cannot confirm one product on the discovered URL
 - new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
 - new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
 - new-product / candidate-626f6ffb4ad79ca74fb4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bf164e921b9d29ef65f8: HTTP Error 403: Forbidden
 - new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3a2c8203e56e4caa5865: Cannot confirm one product on the discovered URL
-- new-product / candidate-2d49e95ec667d3649d1a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
 - new-product / candidate-0dfc22adcebe23c1d513: No verified product image URL
 - new-product / candidate-2221aba97ffead630514: Cannot confirm that the product is a material or printer
 - new-product / candidate-c671fa478b7fe142c392: Cannot confirm that the product is a material or printer
@@ -1915,17 +1926,17 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-24be338c072df31bce81: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
-- new-product / candidate-bedaff93aa8ff28d45b3: No verified product image URL
+- new-product / candidate-e63e0098888983f06d63: No verified product image URL
 - new-product / candidate-8a144ce0fd1e775f869e: Cannot confirm one product on the discovered URL
 - new-product / candidate-a83530ea1ef297bbf6b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-898a4664c0bf5337926f: Cannot confirm one product on the discovered URL
+- new-product / candidate-b0f94c51966816b43a00: Cannot confirm one product on the discovered URL
 - new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
 - new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
 - new-product / candidate-acf1a16df1e82233f96f: Pack weight is ambiguous; listing skipped
 - new-product / candidate-00d691390547fac947ad: HTTP Error 403: Forbidden
 - new-product / candidate-08840d77d7bacf07edde: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6a6fa77fd4be78d17565: Pack weight is ambiguous; listing skipped
-- new-product / candidate-01aebceaf093418d9efa: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-148393c27baff142f0cf: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-837740bde275395aeae4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-ab2dda6617b9216e8abe: Cannot confirm that the product is a material or printer
 - new-product / candidate-ba9bebde0ef572eff3a2: No verified product image URL
@@ -1933,18 +1944,17 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-a54d0dc9a769b0dc955e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cabe9bad84fec81dd94f: No verified product image URL
-- new-product / candidate-e63e0098888983f06d63: No verified product image URL
+- new-product / candidate-09be5675d5e797a59520: No verified product image URL
 - new-product / candidate-dbf9de0175401ebdfb7a: Cannot confirm one product on the discovered URL
 - new-product / candidate-9ff5ee235ebff7197e3e: Cannot confirm one product on the discovered URL
-- new-product / candidate-09d1645aa5ef4a0edf2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-7e9963714a8b5d38717e: Cannot confirm one product on the discovered URL
 - new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
 - new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4bbea4f5c5b29a2f96d0: Pack weight is ambiguous; listing skipped
 - new-product / candidate-b11e4c94364add54ebec: HTTP Error 403: Forbidden
 - new-product / candidate-268efc0b49d232698da0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-16fd16d1b7e78514073e: HTTP Error 404: Not Found
-- new-product / candidate-4a8264e493543ff617f5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c26aeca937d3d6e3e4a3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bc14f6a0c19f8ded0036: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-06383d4b14e0c1eae2b4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1f3084e8b8d1d97bb651: Cannot confirm that the product is a material or printer
 - new-product / candidate-37b35ddb47116992a67c: Cannot confirm that the product is a material or printer
@@ -1952,33 +1962,34 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-2c53f5f1b31e55d97483: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b3f5dbbb915e26792697: No verified product image URL
-- new-product / candidate-09be5675d5e797a59520: No verified product image URL
+- new-product / candidate-fae3139425de9710538d: No verified product image URL
 - new-product / candidate-61bc3ac8fbc3175d4930: Cannot confirm one product on the discovered URL
 - new-product / candidate-62bee27d999998dc1975: Cannot confirm one product on the discovered URL
-- new-product / candidate-8f05754cd35a38cb3b40: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f61178c8107241eb297: Cannot confirm one product on the discovered URL
 - new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
 - new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-48e6426ee65e3c26e2b8: Pack weight is ambiguous; listing skipped
 - new-product / candidate-1c26615eb28cb254a26b: HTTP Error 403: Forbidden
 - new-product / candidate-0619b53c9ecf35136174: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0161c4068eaf541f2f19: Cannot confirm one product on the discovered URL
-- new-product / candidate-1ddf72e2a5e55bbadbb9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b4e74572ad39b1f0022b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-5b720cca83b8ed7351da: Cannot confirm that the product is a material or printer
 - new-product / candidate-437f3179d085d4b713fe: Cannot confirm that the product is a material or printer
 - new-product / candidate-326de91957426dcbbf23: No single GBP offer for the exact product
 - new-product / candidate-c4535611d3695eebe57b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1bdc4e1ee898615397c0: No verified product image URL
-- new-product / candidate-fae3139425de9710538d: No verified product image URL
+- new-product / candidate-cd8e6d249e1f13e34be0: No verified product image URL
 - new-product / candidate-ac7c3fb3c7c4bc32f1ac: Cannot confirm one product on the discovered URL
 - new-product / candidate-f06f55d11daeb8c1c5ab: Cannot confirm one product on the discovered URL
-- new-product / candidate-ea423241900504cfb003: Cannot confirm one product on the discovered URL
+- new-product / candidate-c597e84419d49d0d39ca: Cannot confirm one product on the discovered URL
 - new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
 - new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
 - new-product / candidate-525ae27b0c863fdfa280: Pack weight is ambiguous; listing skipped
 - new-product / candidate-1e2f0cf5c1ee67d431e6: HTTP Error 403: Forbidden
 - new-product / candidate-5bff1c7a7951a0b8ff9d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cf631a7d86143107098b: No single GBP offer for the exact product
-- new-product / candidate-92174ba939d0d064a1ae: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6be3c34d8cc79a759a58: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-22a18d54f8b6154dde0d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6ed6e12a49a216e7a31c: No verified product image URL
 - new-product / candidate-7ad80c9f5cff5b72b023: Cannot confirm that the product is a material or printer
 - new-product / candidate-496655b483325e12f7ab: Cannot confirm that the product is a material or printer
@@ -1986,17 +1997,18 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-9a234a37549588abdd8f: Pack weight is ambiguous; listing skipped
 - new-product / candidate-5a097889d4f50e8a3470: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cd8e6d249e1f13e34be0: No verified product image URL
+- new-product / candidate-cbd3827b7276fd03ec30: No verified product image URL
 - new-product / candidate-5ac4a2eab95510bf56a3: Cannot confirm one product on the discovered URL
 - new-product / candidate-0cfb397fdf6356ade524: Cannot confirm one product on the discovered URL
-- new-product / candidate-a142de66d90b63237fd2: Cannot confirm one product on the discovered URL
+- new-product / candidate-60004b1bb032a8b0bc61: Cannot confirm one product on the discovered URL
 - new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
 - new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
 - new-product / candidate-59b3e60c98a700bea704: Pack weight is ambiguous; listing skipped
 - new-product / candidate-c2e3b4a5104fbd579850: HTTP Error 403: Forbidden
 - new-product / candidate-b67ad0f4a99416be5af1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2c63f6eb0588c173087d: No single GBP offer for the exact product
-- new-product / candidate-c91f950453daf968daa0: No verified product image URL
+- new-product / candidate-f858b3e6189781ae46dc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d8eb2a0ac9889d5e3041: Pack weight is ambiguous; listing skipped
 - new-product / candidate-b41a9a24fa78cd18f50e: No verified product image URL
 - new-product / candidate-900d31c49adb33b84ab5: Cannot confirm that the product is a material or printer
 - new-product / candidate-825d8d47aa33bae36bb3: Source does not state the material pack weight; listing skipped
@@ -2004,15 +2016,15 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-7310de001890d9ebceb9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bde6337dae90f04c359e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cbd3827b7276fd03ec30: No verified product image URL
+- new-product / candidate-26e02c12a791d6e16e9f: No verified product image URL
 - new-product / candidate-d35a546f9ec5bad8cf6c: Cannot confirm one product on the discovered URL
 - new-product / candidate-077e05f7011ba673d296: Cannot confirm one product on the discovered URL
-- new-product / candidate-41fb92c3bb52b8eb69ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b02dddebaa39c2838f6: Cannot confirm one product on the discovered URL
 - new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1af75270a2b170829c9b: Pack weight is ambiguous; listing skipped
 - new-product / candidate-324adf3504461e59faae: HTTP Error 403: Forbidden
 - new-product / candidate-6eae80c562ad8c61ae60: No single GBP offer for the exact product
-- new-product / candidate-f6f5272de9e92939651e: No verified product image URL
+- new-product / candidate-5f4c5706c8501871873e: No verified product image URL
 - new-product / candidate-0614b0647aa7b9aed99b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8f1a513dd1fc9de9ed3f: Cannot confirm that the product is a material or printer
 - new-product / candidate-6bb556c8025616a8f32f: Accessories and spare parts are not printers or printing materials
@@ -2020,30 +2032,32 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-a448d0343b0f150f0446: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fce6ae87375878b35f14: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fa23e2883cfbbf45a75d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-26e02c12a791d6e16e9f: No verified product image URL
+- new-product / candidate-92fdc3ee3e24896faffe: No verified product image URL
 - new-product / candidate-f1b8c14898a242654934: Cannot confirm one product on the discovered URL
 - new-product / candidate-5346b795711ca8a883bd: Cannot confirm one product on the discovered URL
-- new-product / candidate-cb0e8a95954be286e3e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f0733a8860ddfd512b4: Cannot confirm one product on the discovered URL
 - new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c9ac2b7fa5af248a85eb: Pack weight is ambiguous; listing skipped
 - new-product / candidate-d358eee9e37ae321b507: HTTP Error 403: Forbidden
 - new-product / candidate-2bdc8a8fc2e3dfee6731: No single GBP offer for the exact product
-- new-product / candidate-79ef534c6eca2fc8edf9: No verified product image URL
+- new-product / candidate-28a4f6bfbd284b0df991: No verified product image URL
+- new-product / candidate-8533d1e1b49e569ef7a1: No verified product image URL
 - new-product / candidate-835c012af67ede7d41bd: Cannot confirm that the product is a material or printer
 - new-product / candidate-b1de0aedf6ba53c27154: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-31a1d44d92216663d9e4: No single GBP offer for the exact product
 - new-product / candidate-67f1670f748995592c44: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fce1ba3929b340c5c680: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f19670188d1b9018c9f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-92fdc3ee3e24896faffe: No verified product image URL
+- new-product / candidate-41f39aa40b3bb38b9cd8: No verified product image URL
 - new-product / candidate-3efb3718ce2e0e84930c: Cannot confirm one product on the discovered URL
 - new-product / candidate-dde82a73c19cf94510f9: Cannot confirm one product on the discovered URL
-- new-product / candidate-cfcb81dca086f479ca92: Cannot confirm one product on the discovered URL
+- new-product / candidate-8b0dc035a4f1206d105a: Cannot confirm one product on the discovered URL
 - new-product / candidate-caa4f8846bbaac144058: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0ac6fe9208deb2c07b20: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e34d6ca000ecbb9ee12c: HTTP Error 403: Forbidden
 - new-product / candidate-90625358fcf8e1d310ef: No single GBP offer for the exact product
-- new-product / candidate-fa96312432ce4db7b4a1: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7513158773154e149013: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc0c5c9f3391a76af80b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0e24e05e66beb8655d03: No verified product image URL
 - new-product / candidate-661a92e6429dcf056a2c: Cannot confirm that the product is a material or printer
 - new-product / candidate-20628a23ff0a0b728090: Accessories and spare parts are not printers or printing materials
@@ -2051,14 +2065,16 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-0a8b63972b7c088ec124: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-556b938b9c7e5faf1cc4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-be75f2ccb7d3e9ecd1f3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-41f39aa40b3bb38b9cd8: No verified product image URL
+- new-product / candidate-078bad6932c618de225b: No verified product image URL
 - new-product / candidate-1775bf9d0c4a440fa3df: Cannot confirm one product on the discovered URL
 - new-product / candidate-15f9cd8e3353419264dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-39989b5b8108c454bc2d: Cannot confirm one product on the discovered URL
+- new-product / candidate-233ccc6f83855dc1b132: Cannot confirm one product on the discovered URL
 - new-product / candidate-95321f6e741327174404: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2ce2c42994331522a268: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4506b5d58c28e91e5236: HTTP Error 403: Forbidden
 - new-product / candidate-dc12685e1df40d28f34b: No single GBP offer for the exact product
+- new-product / candidate-8031d964aac2081b63f4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d9c4173ff745dda144c1: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-2d860c67d0043dbb6bb3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-381f6644b102998c72cc: Cannot confirm that the product is a material or printer
 - new-product / candidate-92a6c620c08556fcf02f: Accessories and spare parts are not printers or printing materials
@@ -2066,31 +2082,31 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-baa23f3ccd045c416182: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-23dad5918cc695b4f16d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-49e1bcfdf0a5c9cdd076: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-078bad6932c618de225b: No verified product image URL
+- new-product / candidate-11ad2408487febe3e620: No verified product image URL
 - new-product / candidate-2b08eecc5afd0dc9be0c: Cannot confirm one product on the discovered URL
 - new-product / candidate-21c4150122e28b73a0a8: Cannot confirm one product on the discovered URL
-- new-product / candidate-817ab08bbb7a4d38c5b5: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6d4e26558258df368f2: Cannot confirm one product on the discovered URL
 - new-product / candidate-4072bc25500cf2a92cb1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6dc942ebc1e112b3d2d3: Pack weight is ambiguous; listing skipped
 - new-product / candidate-cd9c9f2fdf6d6dabaf9d: HTTP Error 403: Forbidden
 - new-product / candidate-0fa0450970bea0651163: No single GBP offer for the exact product
-- new-product / candidate-2b6b7dac57e389947fee: Pack weight outside the supported range
-- new-product / candidate-6e1ecce341e24eb7ebcd: No verified product image URL
+- new-product / candidate-04e0ccec136c65792794: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-92e556163edc57cda79f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-7d990452a1abdb9e084f: No verified product image URL
 - new-product / candidate-27405e3b3d32cc7d66b9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b1d8504aadb279343fed: No single GBP offer for the exact product
 - new-product / candidate-66110c2261688f5cb360: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-97b566f69692ce3f6282: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
-- new-product / candidate-11ad2408487febe3e620: No verified product image URL
+- new-product / candidate-a99630ea9ccba11f3e5d: No verified product image URL
 - new-product / candidate-ad30c385b9c0bb5f98d3: Cannot confirm one product on the discovered URL
 - new-product / candidate-0ba7b6398ecb974b8033: Cannot confirm one product on the discovered URL
-- new-product / candidate-f84931b268eff6669881: Cannot confirm one product on the discovered URL
+- new-product / candidate-28a951990ff4c4ca6d52: Cannot confirm one product on the discovered URL
 - new-product / candidate-07eb17435d2dd31410a3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-57d45be50af66f522f8d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ed1b11db30ff15b5b299: HTTP Error 403: Forbidden
 - new-product / candidate-3c3026fff52bf2d91f78: No single GBP offer for the exact product
-- new-product / candidate-977e582013f20aa587ca: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-71617d1a7fa90731f2d3: No verified product image URL
 - new-product / candidate-b049d81465fb04358060: No verified product image URL
 - new-product / candidate-193682a94843b6794723: No verified product image URL
 - new-product / candidate-7fd89bc10762210295c7: Accessories and spare parts are not printers or printing materials
@@ -2098,16 +2114,15 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-d048ed7dcb892c4a46bf: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
 - new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
-- new-product / candidate-a99630ea9ccba11f3e5d: No verified product image URL
+- new-product / candidate-22bc79134290ed41546c: No verified product image URL
 - new-product / candidate-f21d1cfefe8ee4d87f9e: Cannot confirm one product on the discovered URL
 - new-product / candidate-3f8e67d003cdc49c75dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e60750f31afc9936db0: Cannot confirm one product on the discovered URL
+- new-product / candidate-67072f0a689f9b69cc01: Cannot confirm one product on the discovered URL
 - new-product / candidate-37e2b83a0dca3ad0de5c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ebd76b7fbf1bf40ab032: Source does not state the material pack weight; listing skipped
 - new-product / candidate-624cc97d4e8dfee48cc5: HTTP Error 403: Forbidden
 - new-product / candidate-921589079216f695fd02: No single GBP offer for the exact product
-- new-product / candidate-479881a60d086895fd57: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a6fa22808a9df5d1e37: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebb1e0fb52275f48ed25: No verified product image URL
 - new-product / candidate-2014b6be7d1fb85155ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-736398479bba7752fb64: No verified product image URL
 - new-product / candidate-2ae5b5a2e8a6b1ef98a6: Accessories and spare parts are not printers or printing materials
@@ -2115,32 +2130,31 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-0c96d4337de2dcbcebfb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c3b624367c7b15ca166e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e57b252921bf0ee24b3d: No verified product image URL
-- new-product / candidate-22bc79134290ed41546c: No verified product image URL
+- new-product / candidate-77c70e13437c0ad9c6b3: No verified product image URL
 - new-product / candidate-5b6e063c94689a56a98f: Cannot confirm one product on the discovered URL
 - new-product / candidate-40d6a9195fbac907af29: Cannot confirm one product on the discovered URL
-- new-product / candidate-61a8b6b31288f2f888c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a5376c6e4950e584996: Cannot confirm one product on the discovered URL
 - new-product / candidate-db39e822975c775f9f66: Source does not state the material pack weight; listing skipped
 - new-product / candidate-90277e946144dba5b0ef: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b4a960faab8357701e01: HTTP Error 403: Forbidden
 - new-product / candidate-27b0d2e92d84850a6ffa: Pack weight is ambiguous; listing skipped
-- new-product / candidate-ef1fe0d11e7955bf92ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d9c4173ff745dda144c1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c1727000b90adf613e40: No verified product image URL
 - new-product / candidate-a6eb5b78550c5280e115: No verified product image URL
 - new-product / candidate-85aab4697386ea3cba38: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-93f8f0a00b1db83fc209: No single GBP offer for the exact product
 - new-product / candidate-bd0c2beaf5bb8fcc734c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-eb9450ba72bfd8fd2e3c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dcf5b21469a8b49f13a2: No verified product image URL
-- new-product / candidate-77c70e13437c0ad9c6b3: No verified product image URL
+- new-product / candidate-7511d735bbec6f64f050: No verified product image URL
 - new-product / candidate-3fc2135e9b9b2dc23f83: Cannot confirm one product on the discovered URL
 - new-product / candidate-083e6e1c0c891cc89033: Cannot confirm one product on the discovered URL
-- new-product / candidate-594f903cf9efd142298e: Cannot confirm one product on the discovered URL
+- new-product / candidate-40f4edd8a570fff62418: Cannot confirm one product on the discovered URL
 - new-product / candidate-294dee3df540b150933b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-00ee6ccffc7473b96cd1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f5560708283601091dc8: HTTP Error 403: Forbidden
 - new-product / candidate-07a27d5c210e46dd680e: Cannot confirm one product on the discovered URL
-- new-product / candidate-98faf927374a914803f5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-92e556163edc57cda79f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86793f88506691c9f255: No verified product image URL
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
 - new-product / candidate-8494be143ca77b5976e3: No verified product image URL
 - new-product / candidate-3d5d0ff48d73527ffee8: Catalogue GBP price outside supported range
 - new-product / candidate-54a4e7a8d593fc621527: Cannot confirm that the product is a material or printer
@@ -2148,16 +2162,16 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-d726671c3995b31af7f3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ed982d7a12e73498937d: No verified product image URL
-- new-product / candidate-7511d735bbec6f64f050: No verified product image URL
+- new-product / candidate-ad0afe76c25bea3c6c56: Cannot confirm that the product is a material or printer
 - new-product / candidate-009129cabb1d6437b71f: Cannot confirm one product on the discovered URL
 - new-product / candidate-ffe871292d74f7a28edf: Cannot confirm one product on the discovered URL
-- new-product / candidate-8552010276ce73398353: Cannot confirm one product on the discovered URL
+- new-product / candidate-320b66b982bf5ffe61b2: Cannot confirm one product on the discovered URL
 - new-product / candidate-5ff0f37526ec50e3ca9f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f42a53d531596ec9458a: Pack weight is ambiguous; listing skipped
 - new-product / candidate-b5c1a36216e1369da4f8: HTTP Error 403: Forbidden
 - new-product / candidate-b7098398be756088d725: No single GBP offer for the exact product
-- new-product / candidate-36adf1311b3f79c38ef7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-71617d1a7fa90731f2d3: No verified product image URL
+- new-product / candidate-a4bee4da1967d5788220: Pack weight outside the supported range
+- new-product / candidate-65a65fe425ef78feda62: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-aedb2e6cc3fea73e2845: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a5e8f46c712fc2ae8322: No verified product image URL
 - new-product / candidate-1c35248400fb89878d68: Accessories and spare parts are not printers or printing materials
@@ -2165,3563 +2179,3583 @@ Checked: 2026-10-25T01:44:06+01:00
 - new-product / candidate-36c8ff0eb8c3e5a07af1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5e100c7706994e9acea9: No verified product image URL
+- new-product / candidate-51db7c4c5a74090c9cf1: No verified product image URL
 - new-product / candidate-a303e9859d2d496d4ad2: Cannot confirm one product on the discovered URL
 - new-product / candidate-299307c345b07888caa1: Cannot confirm one product on the discovered URL
-- new-product / candidate-7e4df27e6a1f5f75bfd2: Cannot confirm one product on the discovered URL
+- new-product / candidate-84374c58f87ec5f4cbe3: Cannot confirm one product on the discovered URL
 - new-product / candidate-92fcce8d9db164b60fb2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c5d16cbc55e1e862cfb4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-00e111c00285ef98a0f1: HTTP Error 403: Forbidden
 - new-product / candidate-8ad88b1278e1e2303ef7: Pack weight is ambiguous; listing skipped
-- new-product / candidate-47750fd49c8f9d952607: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ebb1e0fb52275f48ed25: No verified product image URL
+- new-product / candidate-e714adc18f0acb9bb3b2: No verified product image URL
 - new-product / candidate-21969bf73671339efc23: No verified product image URL
 - new-product / candidate-2c96fa3baf3f9a6e5cd9: No single GBP offer for the exact product
 - new-product / candidate-9a05667089e22b748bd1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
-- new-product / candidate-ad0afe76c25bea3c6c56: Cannot confirm that the product is a material or printer
+- new-product / candidate-2fd4b658256200526a43: No verified product image URL
 - new-product / candidate-e7dd6ebd48cd07f3b0d7: Cannot confirm one product on the discovered URL
 - new-product / candidate-71cbc633f00f9bd8fbd4: Cannot confirm one product on the discovered URL
-- new-product / candidate-00a6068d057e416aed3d: Cannot confirm one product on the discovered URL
+- new-product / candidate-36f7e23bb55ca61eea32: Cannot confirm one product on the discovered URL
 - new-product / candidate-d431efdfeac6e1250860: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e6b8ac373bc66b2b007: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e6b3d73f8c19cb8c67c6: HTTP Error 403: Forbidden
 - new-product / candidate-03adeeb4ac9dea431419: HTTP Error 404: Not Found
-- new-product / candidate-c1727000b90adf613e40: No verified product image URL
+- new-product / candidate-72ff504d0dd052d962dc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-02afc5a6bbdadfe9fe97: No verified product image URL
 - new-product / candidate-93ba787b8fd934b316c7: No verified product image URL
 - new-product / candidate-1d944edb4f0263f7131a: No verified product image URL
 - new-product / candidate-3fff308800379a2b107a: No single GBP offer for the exact product
 - new-product / candidate-635d248e76e27cc86e2a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ba8e3bc516bb64c77020: No verified product image URL
-- new-product / candidate-51db7c4c5a74090c9cf1: No verified product image URL
+- new-product / candidate-9add7b1024399183e64a: No verified product image URL
 - new-product / candidate-aaebe9d8f89c2a6dd746: Cannot confirm one product on the discovered URL
 - new-product / candidate-40868c72c9d180ceba9f: Cannot confirm one product on the discovered URL
-- new-product / candidate-5e5e7b0bf395414ff636: Cannot confirm one product on the discovered URL
+- new-product / candidate-48845549d6960083ecb3: Cannot confirm one product on the discovered URL
 - new-product / candidate-f7746a373c29bf17e25c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-abe8ee8f0e9e44bc3a38: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-93c9f5813de91534e838: HTTP Error 403: Forbidden
 - new-product / candidate-095409d82aa7be401065: No single GBP offer for the exact product
-- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-e1305888c90b7b13e5b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0d1c2bc525111af551ee: No verified product image URL
 - new-product / candidate-67d4a490f7e02a35d56b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7db081cefbede08bc618: No verified product image URL
 - new-product / candidate-4de019b4aa884a5ddbee: No single GBP offer for the exact product
 - new-product / candidate-69ed49856fc923212e7a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e6eeb0b823a81e07c628: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eb86ff5a04a3ad55b383: No verified product image URL
-- new-product / candidate-2fd4b658256200526a43: No verified product image URL
+- new-product / candidate-25aeb30dc4fa9a26834e: No verified product image URL
 - new-product / candidate-95e70755b23fb7626620: Cannot confirm one product on the discovered URL
 - new-product / candidate-c2a23c5db3b5f484a4d8: Cannot confirm one product on the discovered URL
-- new-product / candidate-5b0a5fa9fb13ac64cc1d: Cannot confirm one product on the discovered URL
+- new-product / candidate-23b945bc9ceb45172f93: Cannot confirm one product on the discovered URL
 - new-product / candidate-b8b61754d606f4c9c882: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6084b1cc9ee03a3cf671: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-159b1b90eb1b958d682f: Cannot confirm one product on the discovered URL
 - new-product / candidate-673bdf38bb3a589c654e: Pack weight is ambiguous; listing skipped
-- new-product / candidate-65a65fe425ef78feda62: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d84ef37c7aef34d763a2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e75ec4ea9f550a9ce989: No verified product image URL
 - new-product / candidate-d8fd0bd09dbb0992b89d: No single GBP offer for the exact product
 - new-product / candidate-a034d0d9e7efacb01887: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c7d74e513829760a7c12: No verified product image URL
-- new-product / candidate-9add7b1024399183e64a: No verified product image URL
+- new-product / candidate-908ea9469be03b92552a: No verified product image URL
 - new-product / candidate-27fbc7a159e0431c1904: Cannot confirm one product on the discovered URL
 - new-product / candidate-452c41feedb96e26a816: Cannot confirm one product on the discovered URL
-- new-product / candidate-cf5c8739d1b6cc57b7d1: Cannot confirm one product on the discovered URL
+- new-product / candidate-a36b0b3e37668eba6fb4: Cannot confirm one product on the discovered URL
 - new-product / candidate-399af7be52483532dc59: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f9e798658a1467f2c3bd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e4d7dbcefd97e034ec28: Cannot confirm one product on the discovered URL
 - new-product / candidate-c39e5d221f2d4f2cb7cf: No single GBP offer for the exact product
-- new-product / candidate-0c04baeded29aa282516: No verified product image URL
-- new-product / candidate-e714adc18f0acb9bb3b2: No verified product image URL
+- new-product / candidate-168211b647173585677b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0c8923fd3a15c27679c0: No verified product image URL
 - new-product / candidate-9b67a3fd22754c4495f8: No verified product image URL
 - new-product / candidate-5ec931c2a6a0fadad468: No verified product image URL
 - new-product / candidate-f90cd7ef53124d3efbc9: No single GBP offer for the exact product
 - new-product / candidate-470aeb37e5d42d218d1a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-84ed230726e3c799d3c1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5ab8dd60421722d143f5: No verified product image URL
-- new-product / candidate-25aeb30dc4fa9a26834e: No verified product image URL
+- new-product / candidate-909973039a064126f13a: No verified product image URL
 - new-product / candidate-6d3f388557c8036e4f03: Cannot confirm one product on the discovered URL
 - new-product / candidate-1b2d301aeff0e2993238: Cannot confirm one product on the discovered URL
-- new-product / candidate-9e0749aadb2fd4324df7: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb7c1479fbe7621ac7e9: Cannot confirm one product on the discovered URL
 - new-product / candidate-4878cc835e450e6e15c4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-abb88f5fc4e9f1eb8094: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cc3ca6b7c0ed9d79e95c: Cannot confirm one product on the discovered URL
 - new-product / candidate-e3887902ddc079053dad: No single GBP offer for the exact product
-- new-product / candidate-0adb0dbee1c1019fe2cf: No verified product image URL
-- new-product / candidate-02afc5a6bbdadfe9fe97: No verified product image URL
+- new-product / candidate-e89e29e3a40f11e916ca: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-424091d36c7726b29c65: No verified product image URL
 - new-product / candidate-d5f791c056a7a03049a1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9ccd5f79892bbf133faa: No verified product image URL
 - new-product / candidate-81709ddcaa352def44e2: No single GBP offer for the exact product
 - new-product / candidate-88b5e48fddea6a2b32a8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e414cf540eecb13721ac: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5ac06a8507fa7e18b63e: No verified product image URL
-- new-product / candidate-908ea9469be03b92552a: No verified product image URL
+- new-product / candidate-2afc6313a7044840f2ca: No verified product image URL
 - new-product / candidate-0a022d845784673faf7c: Cannot confirm one product on the discovered URL
 - new-product / candidate-d2609f543c666e57119b: Cannot confirm one product on the discovered URL
-- new-product / candidate-175ecc26eabc782733f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-8b0a442414247d73fe7d: Cannot confirm one product on the discovered URL
 - new-product / candidate-95f92af283a3943925e0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dc0305cc333dce8ebc0f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bd5329aa205a7dc9875c: HTTP Error 403: Forbidden
 - new-product / candidate-951f898a912f64c6baeb: Pack weight is ambiguous; listing skipped
-- new-product / candidate-0234a874fc6e75cf7ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0d1c2bc525111af551ee: No verified product image URL
+- new-product / candidate-8b0be41bd295f8653eab: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a4f4f3dc9d6bdb26f472: No verified product image URL
 - new-product / candidate-c7e40e00f7fef8765e56: No verified product image URL
 - new-product / candidate-a38513b3c6313eab8a5d: No single GBP offer for the exact product
 - new-product / candidate-7db6f0ffdb417caf7591: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bd21c88a39fb0a28d8d4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-52aca3d5213af404e941: No verified product image URL
-- new-product / candidate-909973039a064126f13a: No verified product image URL
+- new-product / candidate-81b468c793fc1b06083d: No verified product image URL
 - new-product / candidate-2c71d98db51ee59bc39a: Cannot confirm one product on the discovered URL
 - new-product / candidate-35cd3a1d6c92dea44d42: Cannot confirm one product on the discovered URL
-- new-product / candidate-64bcb1969bf6890274a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-41daf7e39a7139aa988f: Cannot confirm one product on the discovered URL
 - new-product / candidate-e2504394ef9721b5f55e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-51b27933da2049153abc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7fe87725357a22b2ada2: HTTP Error 403: Forbidden
 - new-product / candidate-45504fbb292ee42f0a09: No single GBP offer for the exact product
-- new-product / candidate-1e9929e3aefcbf552f29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0c8923fd3a15c27679c0: No verified product image URL
+- new-product / candidate-2df06a2570a305b6cc45: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b543cda9c4fe1513fc67: No verified product image URL
 - new-product / candidate-0333040b89a3686ed2e8: No verified product image URL
 - new-product / candidate-b11b267dcb7484dbf43a: No verified product image URL
 - new-product / candidate-3f9fb06b43ef81d14b5a: No single GBP offer for the exact product
 - new-product / candidate-81d0de81f9b493c310a2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0cf4bd1423c8ab4e7e66: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2ff77bd921da4fbebb4e: No verified product image URL
-- new-product / candidate-2afc6313a7044840f2ca: No verified product image URL
+- new-product / candidate-daa8752bc4795f3bc14b: No verified product image URL
 - new-product / candidate-a9b381cabe038e709b56: Cannot confirm one product on the discovered URL
 - new-product / candidate-5d186a478dddb53456ff: Cannot confirm one product on the discovered URL
-- new-product / candidate-b7d2a7e44cd8446c64d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-ec7841adc5f5cb5b9c17: Cannot confirm one product on the discovered URL
 - new-product / candidate-0f2b9a9533562214765d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bd87af530f1f5f51e889: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e77c5eea463b15be4691: HTTP Error 403: Forbidden
 - new-product / candidate-e1a937ebf1814e06be9c: No single GBP offer for the exact product
-- new-product / candidate-394cbae7c1b77f43c6e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-424091d36c7726b29c65: No verified product image URL
+- new-product / candidate-12f8076a301250f69d27: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3aa17a08e403f30f0e42: No verified product image URL
 - new-product / candidate-90bec97cc59b8ebe4f74: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9d435f361c6f0de820c8: No verified product image URL
 - new-product / candidate-9a3abf1ed90d4a79b33e: No single GBP offer for the exact product
 - new-product / candidate-d012b1f9d655cd8e34c3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
 - new-product / candidate-555881b52e83091d08da: No verified product image URL
-- new-product / candidate-81b468c793fc1b06083d: No verified product image URL
+- new-product / candidate-e161e7437998ca8c5255: No verified product image URL
 - new-product / candidate-20bc87e871380b33bc4a: Cannot confirm one product on the discovered URL
 - new-product / candidate-9bda0f8dbb151527e868: Cannot confirm one product on the discovered URL
-- new-product / candidate-81ca98b696051f4b555c: Cannot confirm one product on the discovered URL
+- new-product / candidate-c843b835d6aab7851521: Cannot confirm one product on the discovered URL
 - new-product / candidate-033ba17a0018581b32b1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
 - new-product / candidate-9b95d3ec8ce37e98c936: HTTP Error 403: Forbidden
 - new-product / candidate-bd0dd649388a8e708989: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2319b4be81d888c3f990: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a4f4f3dc9d6bdb26f472: No verified product image URL
+- new-product / candidate-fcf3cdfa0dc6bd02dde3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-de4b281ef61b1efac204: Pack weight is ambiguous; listing skipped
 - new-product / candidate-750ef36bc3b1dc80365d: No verified product image URL
 - new-product / candidate-d941ab314d281718e263: No verified product image URL
 - new-product / candidate-c7db91fecc741c30ae91: No single GBP offer for the exact product
 - new-product / candidate-9327bc5a5a2d1701ca8f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
 - new-product / candidate-91449d06ebfde09fcaa4: No verified product image URL
-- new-product / candidate-daa8752bc4795f3bc14b: No verified product image URL
+- new-product / candidate-05559f286d3926ab500c: No verified product image URL
 - new-product / candidate-1ed06f8e8463d125882d: Cannot confirm one product on the discovered URL
 - new-product / candidate-aafc320f9f8f338687f7: Cannot confirm one product on the discovered URL
-- new-product / candidate-a03836cd3bedbc83727b: Cannot confirm one product on the discovered URL
+- new-product / candidate-4b0217c00ee494e3c46d: Cannot confirm one product on the discovered URL
 - new-product / candidate-09013d9cd328b94fcd1d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-15394f6200fc7d286749: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b8fa307af32efab5999f: HTTP Error 403: Forbidden
 - new-product / candidate-65e4c5760856b7da8280: Pack weight is ambiguous; listing skipped
-- new-product / candidate-eadcd7a067161d6ec25a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b543cda9c4fe1513fc67: No verified product image URL
+- new-product / candidate-702610c24a8f9d58bb19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8b38ae933e1252060806: No verified product image URL
 - new-product / candidate-9efac8b7d40acdef002d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-819e340b085c3176db82: No verified product image URL
 - new-product / candidate-64463eb674588b7a052e: No single GBP offer for the exact product
 - new-product / candidate-d93979ce977c24761e41: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e161e7437998ca8c5255: No verified product image URL
+- new-product / candidate-ada87eda3278543e698e: No verified product image URL
 - new-product / candidate-25c4866b3cdac7544c9b: Cannot confirm one product on the discovered URL
 - new-product / candidate-a2f824ee6130df33a990: Cannot confirm one product on the discovered URL
-- new-product / candidate-0091069966de792a01fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-8fd421c210958e07c31c: Cannot confirm one product on the discovered URL
 - new-product / candidate-1870d1e856ad274a2e72: Source does not state the material pack weight; listing skipped
 - new-product / candidate-813dfa262bbca094df53: Pack weight is ambiguous; listing skipped
 - new-product / candidate-4e537e7b385a186c2d47: HTTP Error 403: Forbidden
 - new-product / candidate-725b5a579199274e9e92: Cannot confirm one product on the discovered URL
-- new-product / candidate-720e31d1c717e75d3c4c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3aa17a08e403f30f0e42: No verified product image URL
+- new-product / candidate-70367aa5e53315b126d6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bd177b830d57adafae76: No verified product image URL
 - new-product / candidate-5eea94348bc639751e0a: No verified product image URL
 - new-product / candidate-258eea905bd59c4a3e61: No verified product image URL
 - new-product / candidate-f912209637b948108a1f: No single GBP offer for the exact product
 - new-product / candidate-6fdd114cc7bc304fd1a6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
-- new-product / candidate-05559f286d3926ab500c: No verified product image URL
+- new-product / candidate-2cb84dde443111ce637e: No verified product image URL
 - new-product / candidate-a3f02426ef1961d08e3a: Cannot confirm one product on the discovered URL
 - new-product / candidate-94cbd377a3890a7213dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-2f8a29fa1424f473e7e8: Cannot confirm one product on the discovered URL
+- new-product / candidate-0fd34cf2baa99b44ee8c: Cannot confirm one product on the discovered URL
 - new-product / candidate-d7b9ee625f5eb20de570: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b4edf60055082839664d: Pack weight is ambiguous; listing skipped
 - new-product / candidate-1114b7ce2fb25afb8e0e: HTTP Error 403: Forbidden
-- new-product / candidate-5e0d03a54c205b4f80d0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-de4b281ef61b1efac204: Pack weight is ambiguous; listing skipped
+- new-product / candidate-904e4fd8e6a6ab35766c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f7003de617f6fe15153e: No verified product image URL
 - new-product / candidate-d659681029c9444050e1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9d31fe7206a06fad3ee1: Cannot confirm that the product is a material or printer
 - new-product / candidate-96246cab40d13107106b: Cannot confirm that the product is a material or printer
 - new-product / candidate-3f7cdd425668ccc07aa0: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0920d071fad4e3f8fe7e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ada87eda3278543e698e: No verified product image URL
+- new-product / candidate-0c035c6847d937e28954: No verified product image URL
 - new-product / candidate-273cebb30275df93d74d: Cannot confirm one product on the discovered URL
 - new-product / candidate-d0692f1e665ab9a37637: Cannot confirm one product on the discovered URL
-- new-product / candidate-9dc592a33db3d6509021: Cannot confirm one product on the discovered URL
+- new-product / candidate-08da25946fadb943856f: Cannot confirm one product on the discovered URL
 - new-product / candidate-8bd628979d63ab4bcdfe: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ba900546153d2ed37464: Pack weight is ambiguous; listing skipped
 - new-product / candidate-3c17f7fd10543185dc08: HTTP Error 403: Forbidden
-- new-product / candidate-f8c2353f962e5fcbfa4f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bd177b830d57adafae76: No verified product image URL
+- new-product / candidate-16822d8563de06153302: No verified product image URL
 - new-product / candidate-a83c075c11ae47fefa4d: No verified product image URL
 - new-product / candidate-eaca298e049fd967999c: Cannot confirm that the product is a material or printer
 - new-product / candidate-09262837ba0c3e4028c7: No single GBP offer for the exact product
 - new-product / candidate-756f5d9f2dae0fce677f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2cb84dde443111ce637e: No verified product image URL
+- new-product / candidate-30126c2bf20589cf5d95: No verified product image URL
 - new-product / candidate-1a93adc4d90a9ed61131: Cannot confirm one product on the discovered URL
 - new-product / candidate-a1bdb3341aee223267a0: Cannot confirm one product on the discovered URL
-- new-product / candidate-32ac01e341c6008cf285: Cannot confirm one product on the discovered URL
+- new-product / candidate-277f705a04e8415f2b16: Cannot confirm one product on the discovered URL
 - new-product / candidate-746bce8c93b96ec2f672: Pack weight is ambiguous; listing skipped
 - new-product / candidate-90f8cda33d9c0d8c0fc8: HTTP Error 403: Forbidden
-- new-product / candidate-e03ec3f5867183c9d545: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f7003de617f6fe15153e: No verified product image URL
+- new-product / candidate-e85c29e002a299811653: No verified product image URL
+- new-product / candidate-5e562ba73e9e568bb6bc: No verified product image URL
 - new-product / candidate-d62d91f76f85f414b534: Source does not state the material pack weight; listing skipped
 - new-product / candidate-98138a0fe6340db9d7dd: Cannot confirm that the product is a material or printer
 - new-product / candidate-2c1218d77746a522e82d: No single GBP offer for the exact product
 - new-product / candidate-1df1c5ec970663346e7b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5fe35d1d214f8d4a8455: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0c035c6847d937e28954: No verified product image URL
+- new-product / candidate-d10ba21c4e0dd3a42dfb: No verified product image URL
 - new-product / candidate-da9fe41d67e540d7fedc: Cannot confirm one product on the discovered URL
 - new-product / candidate-9758bde5c8a10dee6931: Cannot confirm one product on the discovered URL
-- new-product / candidate-5dcfb551d850691ab0e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-6235cb4e4528822f60f9: Cannot confirm one product on the discovered URL
 - new-product / candidate-5dabe7f16b0aeca0af21: Source does not state the material pack weight; listing skipped
 - new-product / candidate-164aee7f4a3f69435198: HTTP Error 403: Forbidden
-- new-product / candidate-afd1af4380bd2f92a11e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-16822d8563de06153302: No verified product image URL
+- new-product / candidate-5164eb8f2a6240c24df2: Pack weight outside the supported range
+- new-product / candidate-d9e1d0cc9f83dce71b20: No verified product image URL
 - new-product / candidate-6c4446cd516cb835b586: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6ee867765e22a109d9de: Cannot confirm that the product is a material or printer
 - new-product / candidate-a5b7aaa45ee8883c1fa6: No single GBP offer for the exact product
 - new-product / candidate-ceddcd4ba4f8591f1bf8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6c2fceea4c1d272bab1a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-30126c2bf20589cf5d95: No verified product image URL
+- new-product / candidate-5cc17b97e743a8fd8b4e: No verified product image URL
 - new-product / candidate-73c2e2198fed47c73a54: Cannot confirm one product on the discovered URL
 - new-product / candidate-d03d09c3684310ae8f24: Cannot confirm one product on the discovered URL
-- new-product / candidate-0fb2a20e5bf143c997a3: Cannot confirm one product on the discovered URL
+- new-product / candidate-d810252f89d87ca0eec5: Cannot confirm one product on the discovered URL
 - new-product / candidate-2582519367f803e8ea94: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0ca5738b13ac10e126dd: HTTP Error 403: Forbidden
-- new-product / candidate-0991882b948dd2b1962e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5e562ba73e9e568bb6bc: No verified product image URL
+- new-product / candidate-e9d0f73a72945c482faa: No verified product image URL
 - new-product / candidate-c7d2dd94f0b3ab04a3e2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
 - new-product / candidate-137583788860fc1ac12c: No single GBP offer for the exact product
 - new-product / candidate-aaf1efbfc440d2aae7fe: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-aa3b4952092fe697fe45: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d10ba21c4e0dd3a42dfb: No verified product image URL
+- new-product / candidate-fc05010aab8b48051a60: No verified product image URL
 - new-product / candidate-6315b90b350227c8a4b8: Cannot confirm one product on the discovered URL
 - new-product / candidate-2f2718941b08f14bafb9: Cannot confirm one product on the discovered URL
-- new-product / candidate-bd495ba25ae0dd8b50ed: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f75582f4fe53c2696b6: Cannot confirm one product on the discovered URL
 - new-product / candidate-3cc56fa193a5f92291ad: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f93a93f4c5152bf775f7: HTTP Error 403: Forbidden
-- new-product / candidate-c7916d8c0ec9f102f424: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d9e1d0cc9f83dce71b20: No verified product image URL
+- new-product / candidate-5b42d16f8f4171ecc690: No verified product image URL
 - new-product / candidate-b579d6e3a90c013ba4a2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
 - new-product / candidate-370c8f5c03439bcbbf8b: No single GBP offer for the exact product
 - new-product / candidate-ac218eb3aa1352f0178f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9f86351d29e1bd77c22a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5cc17b97e743a8fd8b4e: No verified product image URL
+- new-product / candidate-441bef19368d4eaa3945: No verified product image URL
 - new-product / candidate-b6ee28dfd5c45bbb3529: Cannot confirm one product on the discovered URL
 - new-product / candidate-bc6a921afa8af6a38f17: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee80c225ed3537802e42: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f65ea09374c8fa30709: Cannot confirm one product on the discovered URL
 - new-product / candidate-e55117457ca224ad0cd6: Pack weight is ambiguous; listing skipped
 - new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
-- new-product / candidate-c900123fcd13260398a2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e9d0f73a72945c482faa: No verified product image URL
+- new-product / candidate-c96aa8ca39a0ff995e31: No verified product image URL
+- new-product / candidate-dab16e86f64aeccbc2b5: No verified product image URL
 - new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
 - new-product / candidate-ac15ae29fa2956cc3f9d: No single GBP offer for the exact product
 - new-product / candidate-82ecb1068733b4437bc2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fc05010aab8b48051a60: No verified product image URL
+- new-product / candidate-903b679418dd3042b115: No verified product image URL
 - new-product / candidate-458036134888499b9e79: Cannot confirm one product on the discovered URL
 - new-product / candidate-65ae18b5000187d458de: Cannot confirm one product on the discovered URL
-- new-product / candidate-e16443313b1a222d0d29: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ab4ea7973fb29183616: Cannot confirm one product on the discovered URL
 - new-product / candidate-436a9aa2256d5cc18ccf: Pack weight is ambiguous; listing skipped
 - new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
-- new-product / candidate-abc71a9063b38fea28d4: Pack weight outside the supported range
-- new-product / candidate-5b42d16f8f4171ecc690: No verified product image URL
+- new-product / candidate-bb0eed017e0dea658012: No verified product image URL
 - new-product / candidate-abb54c825dc19f220070: Cannot confirm that the product is a material or printer
 - new-product / candidate-284a7a027e19f8c14426: No single GBP offer for the exact product
 - new-product / candidate-a29fe03f2a413932a3d0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
-- new-product / candidate-441bef19368d4eaa3945: No verified product image URL
+- new-product / candidate-91f835b8b5348d7395bb: No verified product image URL
 - new-product / candidate-bb11e9cdc01fde1bd193: Cannot confirm one product on the discovered URL
 - new-product / candidate-3fd5e24f1715bb9c52b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-dd504e6ac8e6b9a92325: Cannot confirm one product on the discovered URL
+- new-product / candidate-18dc7c4735ff9f18b0dc: Cannot confirm one product on the discovered URL
 - new-product / candidate-4339ddc12734c72eacf0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
-- new-product / candidate-74fe631e433221246e04: Pack weight outside the supported range
+- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
 - new-product / candidate-62c0d8112a546de2a059: No single GBP offer for the exact product
 - new-product / candidate-d3076bd6917d56e03f41: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-3807cb538a56c2dfc4bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-903b679418dd3042b115: No verified product image URL
+- new-product / candidate-10ac4d683e7719bd50a4: No verified product image URL
 - new-product / candidate-6b609c7c2718db2477ce: Cannot confirm one product on the discovered URL
 - new-product / candidate-a2935246b4865228ca1a: Cannot confirm one product on the discovered URL
-- new-product / candidate-7ff120536cadb4fa6cc7: Cannot confirm one product on the discovered URL
+- new-product / candidate-76771439ae192192db1a: Cannot confirm one product on the discovered URL
 - new-product / candidate-5eb9780304b302bcd4d9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden
-- new-product / candidate-3f4391ff9aea1f92d259: No verified product image URL
-- new-product / candidate-dab16e86f64aeccbc2b5: No verified product image URL
+- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-2caba5ff7ffd331f1a52: No verified product image URL
 - new-product / candidate-72fe38228f86f750aaea: No single GBP offer for the exact product
 - new-product / candidate-716eeb23b8ec9bd8d4d2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
-- new-product / candidate-91f835b8b5348d7395bb: No verified product image URL
+- new-product / candidate-e57552ef2ff34e2ea24d: No verified product image URL
 - new-product / candidate-b3de3f1d4fd565526c8f: Cannot confirm one product on the discovered URL
 - new-product / candidate-cca93de1bf2f3da4228e: Cannot confirm one product on the discovered URL
-- new-product / candidate-b01aff7b5d951e47ce2b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d854db7e0f741916404: Cannot confirm one product on the discovered URL
 - new-product / candidate-c483a428eed1863c0dd3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8a85edad57fe4002d6df: HTTP Error 403: Forbidden
-- new-product / candidate-03d0494d30d03806970a: No verified product image URL
+- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1788b919e73f291462be: No verified product image URL
 - new-product / candidate-7790dc56f0a01a9c23d6: Cannot confirm that the product is a material or printer
 - new-product / candidate-1f987c2e139b372de93e: No single GBP offer for the exact product
 - new-product / candidate-adb36fffe3d5fec6be8e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f6ac4c6c2299c3af0c10: Source does not state the material pack weight; listing skipped
-- new-product / candidate-10ac4d683e7719bd50a4: No verified product image URL
+- new-product / candidate-1c68bf8f963dbe8a2611: No verified product image URL
 - new-product / candidate-3f4e33d744748a4ef445: Cannot confirm one product on the discovered URL
 - new-product / candidate-5bcd4ac840945b0c85e2: Cannot confirm one product on the discovered URL
-- new-product / candidate-25d064267c39f05b60e6: Cannot confirm one product on the discovered URL
+- new-product / candidate-dd28afa963c3fb324a7d: Cannot confirm one product on the discovered URL
 - new-product / candidate-ea5bb7fccc89d35f49a9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b1b47eb93a0cb8ac601e: HTTP Error 403: Forbidden
-- new-product / candidate-0c546a8ed0bee1a6fb03: No verified product image URL
+- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-39a4172c9973d006fdec: Cannot confirm that the product is a material or printer
 - new-product / candidate-9958140a52d57dc731e3: Pack weight is ambiguous; listing skipped
 - new-product / candidate-6b2ee274dc84249e680c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e57552ef2ff34e2ea24d: No verified product image URL
+- new-product / candidate-6771fd9416f034a59381: No verified product image URL
 - new-product / candidate-07a37a1a00c9293bab8b: Cannot confirm one product on the discovered URL
 - new-product / candidate-9aa5fa12061c1663a244: Cannot confirm one product on the discovered URL
-- new-product / candidate-b4e8d5d5a717323a926a: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff4bbb82dc7c70af147e: Cannot confirm one product on the discovered URL
 - new-product / candidate-33a7cd1d5aa5c3d6f4c4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ae932a133bdf248b9954: HTTP Error 403: Forbidden
-- new-product / candidate-b936314ee2db99e213b6: No verified product image URL
+- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-156cf18d6d1ac48eb738: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-23fefb69d2647271c416: Cannot confirm that the product is a material or printer
 - new-product / candidate-2cffa41862674f0673ab: No single GBP offer for the exact product
 - new-product / candidate-5ee5d6328f5c0d63b8b5: Pack weight is ambiguous; listing skipped
 - new-product / candidate-b34746f9658827378f18: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1c68bf8f963dbe8a2611: No verified product image URL
+- new-product / candidate-962a98fba02bfb33f44b: No verified product image URL
 - new-product / candidate-88df8eeb3f328fda41e0: Cannot confirm one product on the discovered URL
 - new-product / candidate-b2507fcb38b158e9afe6: Cannot confirm one product on the discovered URL
-- new-product / candidate-6d34ce335f56ac7bda46: Cannot confirm one product on the discovered URL
+- new-product / candidate-f530d1150532f1be4131: Cannot confirm one product on the discovered URL
 - new-product / candidate-abf86553f7cd3bef3112: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ad00c2fc017a8342ad56: HTTP Error 403: Forbidden
-- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5dd16158e992c246081b: No verified product image URL
+- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-39d44324ac423af10468: Cannot confirm that the product is a material or printer
 - new-product / candidate-ec943efa0308db2a2bdf: No single GBP offer for the exact product
 - new-product / candidate-7e34006d807868683524: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2cbf2eec2b91d7db383d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6771fd9416f034a59381: No verified product image URL
+- new-product / candidate-14b83ee0f3c93557d8e9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d65e6d73e1e34c45aaad: Cannot confirm one product on the discovered URL
 - new-product / candidate-0b69e35794d2a3421519: Cannot confirm one product on the discovered URL
-- new-product / candidate-0e2075fbeb47580d8976: Cannot confirm one product on the discovered URL
+- new-product / candidate-2a925a5975e2f7b0d008: Cannot confirm one product on the discovered URL
 - new-product / candidate-2301fb3e762bc599d3a7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7913be9603ae3822b3b4: HTTP Error 403: Forbidden
-- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f84ac361de1a73ccf4be: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a0eefa3ccee684a79fb0: No single GBP offer for the exact product
 - new-product / candidate-8a5a3dd30db7ebeab3f0: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-962a98fba02bfb33f44b: No verified product image URL
+- new-product / candidate-ce53b9f30d9a01dea2b3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-990d39bd4862018e61e3: Cannot confirm one product on the discovered URL
 - new-product / candidate-4a055b363e3e2c9babff: Cannot confirm one product on the discovered URL
-- new-product / candidate-1f7fb1b0a3106e8cc1a6: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a2152fe61ba6480709a: Cannot confirm one product on the discovered URL
 - new-product / candidate-a57fb41375b1befaffe8: HTTP Error 403: Forbidden
-- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c1bde86a8ab12b064b43: Cannot confirm that the product is a material or printer
 - new-product / candidate-ab40fdb3623aabb1c85e: No single GBP offer for the exact product
 - new-product / candidate-7791a6b5e4dd8a8f7825: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-eb99300a87ed5e284755: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e1768b7d773b6f552881: Cannot confirm one product on the discovered URL
 - new-product / candidate-1dd845c4caa572604f93: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d6429ca16dc79871e9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-361f1afb3c1d307539e1: Cannot confirm one product on the discovered URL
 - new-product / candidate-a3212209da92d9dbe768: HTTP Error 403: Forbidden
-- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-21791b1cfa4d2d511680: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f52fcf784821059e6372: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1df8864c7679e603bb44: Cannot confirm that the product is a material or printer
 - new-product / candidate-eb2c0da088e0e9ff37a9: No single GBP offer for the exact product
 - new-product / candidate-a9b541b83db749f22019: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
-- new-product / candidate-14b83ee0f3c93557d8e9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb34af3f71e91b85c91a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d6a507068e55e4bf140c: Cannot confirm one product on the discovered URL
 - new-product / candidate-99803b685466cb2844b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-b415486a7dd60f6ca58d: Cannot confirm one product on the discovered URL
+- new-product / candidate-4329c7aafb13f80fb189: Cannot confirm one product on the discovered URL
 - new-product / candidate-739e00d2dbd8d7890afa: HTTP Error 403: Forbidden
-- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7002453cb4743d08e29d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-319476547da8c0d0ef4f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-15236f53a693da024973: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-ae995c1124f163e21ebc: Cannot confirm that the product is a material or printer
 - new-product / candidate-2eeb697f0961303ed58c: No single GBP offer for the exact product
 - new-product / candidate-7469b05aa64fd81b9f33: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f73e832fa925c7740a05: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ce53b9f30d9a01dea2b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f84cb02c41ec69d00aa9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b7bf7d1c77eb4fa6d7f5: Cannot confirm one product on the discovered URL
 - new-product / candidate-94ecd96573ab9027e3fb: Cannot confirm one product on the discovered URL
-- new-product / candidate-014dff89d9758adc4bff: Cannot confirm one product on the discovered URL
+- new-product / candidate-3aed11577561919684c8: Cannot confirm one product on the discovered URL
 - new-product / candidate-84edd4e05ef1bc10565a: HTTP Error 403: Forbidden
-- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d1452990603eb9a6221: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-61316cca0dc8fe56a182: Source does not state the material pack weight; listing skipped
 - new-product / candidate-647e5467e771969127b1: Cannot confirm that the product is a material or printer
 - new-product / candidate-1a7abcfe2b3a7287e17d: No single GBP offer for the exact product
 - new-product / candidate-5d95ef33c7a8fc2f36fb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c06232c1944928431f65: Source does not state the material pack weight; listing skipped
-- new-product / candidate-eb99300a87ed5e284755: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8e8a8b82f3014d2425c0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-840ef9cd0ec50c69312a: Cannot confirm one product on the discovered URL
 - new-product / candidate-fd3de0857780b1c4ae09: Cannot confirm one product on the discovered URL
-- new-product / candidate-f2709d297c0e03fdc925: Cannot confirm one product on the discovered URL
+- new-product / candidate-8cedc2a9aac1f4771a68: Cannot confirm one product on the discovered URL
 - new-product / candidate-21fd2ef28e75902d28ed: HTTP Error 403: Forbidden
-- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-39b1819bf076a0452a10: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a71a867b91b7fa8ed60c: Cannot confirm that the product is a material or printer
 - new-product / candidate-5dfc8aa03598dd8b09b4: No single GBP offer for the exact product
 - new-product / candidate-b8e96a436bba06d81fde: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ad538daf1ae8072eac24: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cb34af3f71e91b85c91a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0e1a32cb727558e50657: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e1a6af88b7d55136c407: Cannot confirm one product on the discovered URL
 - new-product / candidate-4c171e6be8f017c98cda: Cannot confirm one product on the discovered URL
-- new-product / candidate-a42cba09d1847ab09952: Cannot confirm one product on the discovered URL
+- new-product / candidate-4bab9669a8e2f7c8cac5: Cannot confirm one product on the discovered URL
 - new-product / candidate-e0da2d5f90c28882091a: HTTP Error 403: Forbidden
-- new-product / candidate-319476547da8c0d0ef4f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cb1e5e1b463c9d85e3c5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-01aa948e6767a7ee2112: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-be98f196540dbad253a0: Cannot confirm that the product is a material or printer
 - new-product / candidate-ac81a9709385de26bb64: No single GBP offer for the exact product
 - new-product / candidate-ba2fd85787389c15bb5f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7621e62c1f2f9e526237: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f84cb02c41ec69d00aa9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2531b262a46d5cddb53a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0b9bea1971c95c96d082: Cannot confirm one product on the discovered URL
 - new-product / candidate-878b23c53a3104deb095: Cannot confirm one product on the discovered URL
-- new-product / candidate-bac1a43603d288563404: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb35265d7c5062908c52: Cannot confirm one product on the discovered URL
 - new-product / candidate-2402dabe3d76dbe00b49: HTTP Error 403: Forbidden
-- new-product / candidate-9d1452990603eb9a6221: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b32c4431cac9e4f85bc9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6366c1ad3bec65ca9d33: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0444530e0cc769dba71: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d95f1aafd7daf44818cd: Cannot confirm that the product is a material or printer
 - new-product / candidate-d0d26372c4ae14ff202a: No single GBP offer for the exact product
 - new-product / candidate-1631cfbc45042ed112bd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8e8a8b82f3014d2425c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b655d4d13a9ebe86b6c3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cfa05cbc5df5a3ac5ee4: Cannot confirm one product on the discovered URL
 - new-product / candidate-fd76c4082b7a9710260b: Cannot confirm one product on the discovered URL
-- new-product / candidate-ca32946e91b44916d7c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac63060946449afda0b1: Cannot confirm one product on the discovered URL
 - new-product / candidate-a7be4477e86baffd7cef: HTTP Error 403: Forbidden
-- new-product / candidate-39b1819bf076a0452a10: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2f9e17b1ab4d40d9170f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-686411c706e6460cd188: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bf70c6199a7d623bc9ec: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bfa66ce5a947b879393e: Cannot confirm that the product is a material or printer
 - new-product / candidate-396a914b291fb74c42c6: No single GBP offer for the exact product
 - new-product / candidate-fbbb0342156f2562dc1e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0e1a32cb727558e50657: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e0cb0728bcf196881cd8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4b43a325d74110353321: Cannot confirm one product on the discovered URL
 - new-product / candidate-0a0d9a89f2e82e78d33b: Cannot confirm one product on the discovered URL
-- new-product / candidate-3f556a0a1b0dce2c9628: Cannot confirm one product on the discovered URL
+- new-product / candidate-641633fdbd134634dd68: Cannot confirm one product on the discovered URL
 - new-product / candidate-d182f933fcb0d0a66a0c: HTTP Error 403: Forbidden
-- new-product / candidate-cb1e5e1b463c9d85e3c5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9d5eb9632af2217bdda8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f5475268cbc66122392: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a7a128cf8f684c7e1f9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8cfb6810a6ed2243427a: Cannot confirm that the product is a material or printer
 - new-product / candidate-252a0787c168d3be02fb: No single GBP offer for the exact product
 - new-product / candidate-87835166201722e262c6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2531b262a46d5cddb53a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-89d7b43d70300132e926: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b14f2d26668562e03ec3: Cannot confirm one product on the discovered URL
 - new-product / candidate-79b65259032d54dc8ca3: Cannot confirm one product on the discovered URL
-- new-product / candidate-c8bf6a329a528eb8e1cd: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd46a3d5b64c8c3c1651: Cannot confirm one product on the discovered URL
 - new-product / candidate-46013cd1019a9a816087: HTTP Error 403: Forbidden
-- new-product / candidate-6366c1ad3bec65ca9d33: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-907a9694d1dbcea6b1b1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fee9cdb947f094624108: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2e60483896c781886ece: No verified product image URL
 - new-product / candidate-53a67fd9a808aae8eb4e: Cannot confirm that the product is a material or printer
 - new-product / candidate-de9ea372a6bd38550ad1: No single GBP offer for the exact product
 - new-product / candidate-dcf824aaf677582471bd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6647e5c0fd4f181770af: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b655d4d13a9ebe86b6c3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e9ca94665d4d62f4d380: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c4653396d301a3be279c: Cannot confirm one product on the discovered URL
 - new-product / candidate-8d8e9732c8febcee12ad: Cannot confirm one product on the discovered URL
-- new-product / candidate-93c344b885746e4bc283: Cannot confirm one product on the discovered URL
+- new-product / candidate-d6ce21540ddc625c6ecf: Cannot confirm one product on the discovered URL
 - new-product / candidate-32be3ab618b807d9ec6b: HTTP Error 403: Forbidden
-- new-product / candidate-686411c706e6460cd188: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-27f5ca4e7df2aa27bb47: No verified product image URL
+- new-product / candidate-416962af11e05f8bebd0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2bf63c9d781a598a2e4d: No verified product image URL
 - new-product / candidate-188eb4605cdd8e1c8cd2: Cannot confirm that the product is a material or printer
 - new-product / candidate-54048055d3bedd5a1fe6: No single GBP offer for the exact product
 - new-product / candidate-b32209e89c1fed06e0ee: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-08fed14fa311e7f5eb98: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e0cb0728bcf196881cd8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-65b053ed3229307636f8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ffd96c3db79047fbf779: Cannot confirm one product on the discovered URL
 - new-product / candidate-80755e3343fff8f99ecd: Cannot confirm one product on the discovered URL
-- new-product / candidate-f5f58c02fb2bed3eaf15: Cannot confirm one product on the discovered URL
+- new-product / candidate-d96633b69f8e2d89a72d: Cannot confirm one product on the discovered URL
 - new-product / candidate-07ee66bc33d01cbdb5b5: HTTP Error 403: Forbidden
-- new-product / candidate-1f5475268cbc66122392: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-94408db9038d974039b8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-955cbe4f82b6709abcb6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5bf6a6a391a78cf2f15d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7a1834e19add25aa5891: Cannot confirm that the product is a material or printer
 - new-product / candidate-9902baf82e0019dc6d67: Cannot confirm that the product is a material or printer
 - new-product / candidate-f57e11cf40a3db2d718a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1811e587c1dd83edf013: Source does not state the material pack weight; listing skipped
-- new-product / candidate-89d7b43d70300132e926: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d76065eb13a52baa2b29: Source does not state the material pack weight; listing skipped
 - new-product / candidate-04d11c482daafdd44c7e: Cannot confirm one product on the discovered URL
 - new-product / candidate-53fcd3f1fa1d97fa8c26: Cannot confirm one product on the discovered URL
-- new-product / candidate-354165e54edca318ada1: Cannot confirm one product on the discovered URL
+- new-product / candidate-6533e71e92d4588d3e5b: Cannot confirm one product on the discovered URL
 - new-product / candidate-9bb2a792799339e75324: HTTP Error 403: Forbidden
-- new-product / candidate-fee9cdb947f094624108: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-06ae694c593710cc2089: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e6459cf41755eb76c644: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1bc30a6e2f506c3bfe61: Source does not state the material pack weight; listing skipped
 - new-product / candidate-62c1e50f77638ceedbba: Cannot confirm that the product is a material or printer
 - new-product / candidate-c766c07813937a587b00: No single GBP offer for the exact product
 - new-product / candidate-7de209a95cb97f8a3e44: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a3952daa88a3473e1c84: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e9ca94665d4d62f4d380: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0c3d1a0ec250a3165249: Source does not state the material pack weight; listing skipped
 - new-product / candidate-69af04803ee2df38072c: Cannot confirm one product on the discovered URL
 - new-product / candidate-985492b60dcdcb52b871: Cannot confirm one product on the discovered URL
-- new-product / candidate-947b4c10c4dc4b71299c: Cannot confirm one product on the discovered URL
+- new-product / candidate-15a606de596ecd91a9fb: Cannot confirm one product on the discovered URL
 - new-product / candidate-67238c0c76f47e624efd: HTTP Error 403: Forbidden
-- new-product / candidate-416962af11e05f8bebd0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-aae102a1deac47864e6b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-94aa8b73ff4bc9fa5799: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-488002b6bccfb6564ef3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-056e6659925158b2aeab: Cannot confirm that the product is a material or printer
 - new-product / candidate-4219ff311bd014290891: No single GBP offer for the exact product
 - new-product / candidate-9b69fe67182eb4348c3b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-65b053ed3229307636f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3061c32491a83fe9951b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-02eaea3c4ea84fbde144: Cannot confirm one product on the discovered URL
 - new-product / candidate-9b444085e026a3da4ada: Cannot confirm one product on the discovered URL
-- new-product / candidate-1136d661b52624b2368e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f52d3e44557bef5935c9: Cannot confirm one product on the discovered URL
 - new-product / candidate-c9800c6e94897c3714e5: HTTP Error 403: Forbidden
-- new-product / candidate-955cbe4f82b6709abcb6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-41c5aea0d2c52e839869: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b9bd048c43af23a5dc77: Cannot confirm that the product is a material or printer
 - new-product / candidate-4f9a6841003255a06151: No single GBP offer for the exact product
 - new-product / candidate-2e1f51ff3b22160c8a76: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d76065eb13a52baa2b29: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bac14d787f31a5f6daf2: No verified product image URL
 - new-product / candidate-340d266053479b88be6f: Cannot confirm one product on the discovered URL
 - new-product / candidate-4fca466945d8b78bdff7: Cannot confirm one product on the discovered URL
-- new-product / candidate-964efec766d49154c76e: Cannot confirm one product on the discovered URL
+- new-product / candidate-69354515d99320020dd8: Cannot confirm one product on the discovered URL
 - new-product / candidate-01344e6fd219e3a5202c: HTTP Error 403: Forbidden
-- new-product / candidate-e6459cf41755eb76c644: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-773891648e0351b28856: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2dda42a651129e1718e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2c25ac61e215bedbb479: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5f9d666ec4b78b94943a: Cannot confirm that the product is a material or printer
 - new-product / candidate-948498430d01eb44ae97: No single GBP offer for the exact product
 - new-product / candidate-53802a9fa924322f4015: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-72e9ac6e3bffa59b71b0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0c3d1a0ec250a3165249: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1f5cdc9fcc66660cb6ac: Cannot confirm that the product is a material or printer
 - new-product / candidate-f979735d67064f419f19: Cannot confirm one product on the discovered URL
 - new-product / candidate-5ed11ab9e69b8391a9f2: Cannot confirm one product on the discovered URL
-- new-product / candidate-ff4dfec70a445d215244: Cannot confirm one product on the discovered URL
+- new-product / candidate-3376cfe42d6ee5324b59: Cannot confirm one product on the discovered URL
 - new-product / candidate-ae1ad541ec71c1b3b202: HTTP Error 403: Forbidden
-- new-product / candidate-94aa8b73ff4bc9fa5799: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-108ea4df2dc5ef33add2: No verified product image URL
+- new-product / candidate-d4ab6319bb249c820ee5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-54c92b0e56ce9ba63200: Cannot confirm that the product is a material or printer
 - new-product / candidate-dc2b55403c5399027de2: No single GBP offer for the exact product
 - new-product / candidate-a7b245437aa0b6da5974: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a07376580d15cc4173d2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3061c32491a83fe9951b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-17c085d78454a1a98d2d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-35a512e37f4fe57b0344: Cannot confirm one product on the discovered URL
 - new-product / candidate-a06980288c33c8b8fc6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-ddb458aa549866ef0688: Cannot confirm one product on the discovered URL
+- new-product / candidate-8db9e39b8f72e1638fd7: Cannot confirm one product on the discovered URL
 - new-product / candidate-567b6b7f77ba73383692: HTTP Error 403: Forbidden
-- new-product / candidate-41c5aea0d2c52e839869: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0d9aed750e18c20317f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c003b0067281866b9b2a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a4bec37f2fa8de1c8a65: Source does not state the material pack weight; listing skipped
 - new-product / candidate-68d66e28993096c3f125: Cannot confirm that the product is a material or printer
 - new-product / candidate-5701b1119aa9249d3bc7: No single GBP offer for the exact product
 - new-product / candidate-f984c07c2a68facd3d85: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e9eb2543f049230dbd2e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bac14d787f31a5f6daf2: No verified product image URL
+- new-product / candidate-6be83cdcaa56a0f3e147: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c8b036463212974c05ca: Cannot confirm one product on the discovered URL
 - new-product / candidate-45f7e5d9edb419e4d70a: Cannot confirm one product on the discovered URL
-- new-product / candidate-55fa7890cba69081e76d: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ed3ed87ab710ed817ff: Cannot confirm one product on the discovered URL
 - new-product / candidate-3ce02cba0e2f8c373c65: HTTP Error 403: Forbidden
-- new-product / candidate-2dda42a651129e1718e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4e6199bd67eb0f8c5291: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c3db83d2ac00e82ddeea: No verified product image URL
 - new-product / candidate-cea84124b106efbe871a: Cannot confirm that the product is a material or printer
 - new-product / candidate-59af1176e4bff47f1d80: No single GBP offer for the exact product
 - new-product / candidate-36bd015e77daf586b0c9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b60db6b50f8578dd4a70: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1f5cdc9fcc66660cb6ac: Cannot confirm that the product is a material or printer
+- new-product / candidate-c63cf4ad05dda0b69694: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d080a6f010b1fd4dd207: Cannot confirm one product on the discovered URL
 - new-product / candidate-e2158be4290b439140de: Cannot confirm one product on the discovered URL
-- new-product / candidate-c72a48d913782ca8795e: Cannot confirm one product on the discovered URL
+- new-product / candidate-c2f9954949825a3667f8: Cannot confirm one product on the discovered URL
 - new-product / candidate-0cd9591216d4ea549559: Cannot confirm one product on the discovered URL
-- new-product / candidate-d4ab6319bb249c820ee5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e1018ed7789958ed6ff5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7775779ada4026695ca3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5cca341eda1ee615977a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bc33b2e61f9a3e4b0e1b: Cannot confirm that the product is a material or printer
 - new-product / candidate-4abde21ecad8c74e1d96: No single GBP offer for the exact product
 - new-product / candidate-96bcabe53c27ad5fbc04: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-17c085d78454a1a98d2d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-67378ba963b868af2324: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0798fd9918a71efc3ea1: Cannot confirm one product on the discovered URL
 - new-product / candidate-d1e318ee0f10f1eb4059: Cannot confirm one product on the discovered URL
-- new-product / candidate-0fc3e3ec66934f538f78: Cannot confirm one product on the discovered URL
+- new-product / candidate-c2611f7d3f33e8525bb5: Cannot confirm one product on the discovered URL
 - new-product / candidate-f6b20ef0e411873553a1: Cannot confirm one product on the discovered URL
-- new-product / candidate-c003b0067281866b9b2a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6596f3720470f6765ab5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cf9f267f06e078a5383d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ce0fda9bc50fa317e342: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-2fe11fbd01c6852810b4: Cannot confirm that the product is a material or printer
 - new-product / candidate-d6480e227a539b3cd9d6: No single GBP offer for the exact product
 - new-product / candidate-38a034d371ad03282707: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6be83cdcaa56a0f3e147: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c35fb5528312bd17e8ce: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-738baa6f8b32f700c57c: Cannot confirm one product on the discovered URL
 - new-product / candidate-3fb202f8a56e2aa226eb: Cannot confirm one product on the discovered URL
-- new-product / candidate-3cbfa3c904e25f8aa1b5: Cannot confirm one product on the discovered URL
+- new-product / candidate-0718f7d1a564e4e7f72d: Cannot confirm one product on the discovered URL
 - new-product / candidate-b0fc3d73c88b04b390b1: HTTP Error 403: Forbidden
-- new-product / candidate-7775779ada4026695ca3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6a394e0b85b1aef8f60b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c48606cb12400492453d: Cannot confirm that the product is a material or printer
 - new-product / candidate-c1e051af16bd7542fe67: No single GBP offer for the exact product
 - new-product / candidate-cdab35d9337a2c8556c0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f9db6b62635e2e3b3269: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c63cf4ad05dda0b69694: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-42a39e4a6ba22c5906c1: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-147d55d32c3328fb7b76: Cannot confirm one product on the discovered URL
 - new-product / candidate-76f9bced2b2b5e7c679e: Cannot confirm one product on the discovered URL
-- new-product / candidate-9fa7ea4138a36295df20: Cannot confirm one product on the discovered URL
+- new-product / candidate-7554c9449a86dbb7e8be: Cannot confirm one product on the discovered URL
 - new-product / candidate-dc63550d353e282ba7e9: HTTP Error 403: Forbidden
-- new-product / candidate-cf9f267f06e078a5383d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2c25ac61e215bedbb479: Source does not state the material pack weight; listing skipped
+- new-product / candidate-63bc853075ae1c7d65f4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d4b73213219f2d8cc282: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-65557a0341dc558c322b: Cannot confirm that the product is a material or printer
 - new-product / candidate-d014c38701f89ff5d55c: No single GBP offer for the exact product
 - new-product / candidate-a2f77cf5911096c04949: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-39fc57fbe97576e57434: Source does not state the material pack weight; listing skipped
-- new-product / candidate-67378ba963b868af2324: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1e459534d5106da8d796: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-246da19df756708948d4: Cannot confirm one product on the discovered URL
 - new-product / candidate-56c68ff60bdb308abf03: Cannot confirm one product on the discovered URL
-- new-product / candidate-e295b2b47567e7ce94f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fa14222ce8bd499917d: Cannot confirm one product on the discovered URL
 - new-product / candidate-044ab3eb6511eba80b0a: HTTP Error 403: Forbidden
-- new-product / candidate-63bc853075ae1c7d65f4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a4bec37f2fa8de1c8a65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b03f7841092f54e0b0a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-64379db6d7a4b002f87d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3e5541b8f46d5c563289: Cannot confirm that the product is a material or printer
 - new-product / candidate-e750e7e6145869445be1: No single GBP offer for the exact product
 - new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c35fb5528312bd17e8ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2243ffac94e959f00302: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-632e17eb5df20de5924e: Cannot confirm one product on the discovered URL
 - new-product / candidate-fc78ac00775b778cd11b: Cannot confirm one product on the discovered URL
-- new-product / candidate-c69badac3ba6529a197d: Cannot confirm one product on the discovered URL
-- new-product / candidate-b03f7841092f54e0b0a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4669a9ca09fab5e3f7b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-f121cd421113b0b3c638: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-378f4c930e9428e4925b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dedb65a7d25eb3c6a7b2: Cannot confirm that the product is a material or printer
 - new-product / candidate-f3173a980527e73f7aad: No single GBP offer for the exact product
 - new-product / candidate-4f5bf219f37e355b5d5d: Pack weight is ambiguous; listing skipped
 - new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-42a39e4a6ba22c5906c1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ae41b808f43b4cff4be2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e13a82ed4ea99dfa4ab2: Cannot confirm one product on the discovered URL
 - new-product / candidate-edf9d976af8d432caecf: Cannot confirm one product on the discovered URL
-- new-product / candidate-b64d474b04b78ce003b5: Cannot confirm one product on the discovered URL
-- new-product / candidate-f121cd421113b0b3c638: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c3db83d2ac00e82ddeea: No verified product image URL
+- new-product / candidate-7438ebcdb5c82c51097b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6b67ce3ca748f907282: No verified product image URL
+- new-product / candidate-9a8db1d70556a69c975d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8e3686af8ce89426ea9a: Pack weight is ambiguous; listing skipped
 - new-product / candidate-12c9f8529277d0ae3d9a: No single GBP offer for the exact product
 - new-product / candidate-16a1ae4714da745b1223: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bc41184b3f3a474e730f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1e459534d5106da8d796: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-21b57ed384337db05fd4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-3d3039c89418a4335e29: Cannot confirm one product on the discovered URL
 - new-product / candidate-eec19f7bc812c78e4af5: Cannot confirm one product on the discovered URL
-- new-product / candidate-f10b8a472f9ad5e359b7: Cannot confirm one product on the discovered URL
-- new-product / candidate-f6b67ce3ca748f907282: No verified product image URL
-- new-product / candidate-5cca341eda1ee615977a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a6ad548da7d64ce4b871: Cannot confirm one product on the discovered URL
+- new-product / candidate-33dff9e636e2c8a9ac73: Pack weight outside the supported range
+- new-product / candidate-35d195d9e84013dc6643: Source does not state the material pack weight; listing skipped
 - new-product / candidate-545bc62594e1844762ea: Pack weight is ambiguous; listing skipped
 - new-product / candidate-8e88f4f6d34338c47eba: No single GBP offer for the exact product
 - new-product / candidate-4a83cc6a6ccb70efd254: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7f406cef624cdf525799: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2243ffac94e959f00302: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-de59df37ddeb4caf80d0: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-10d14e2c48d4be2ddb65: Cannot confirm one product on the discovered URL
 - new-product / candidate-f4c77a86bd498287c7df: Cannot confirm one product on the discovered URL
-- new-product / candidate-5089b444abab2742bfbc: Cannot confirm one product on the discovered URL
-- new-product / candidate-33dff9e636e2c8a9ac73: Pack weight outside the supported range
-- new-product / candidate-ce0fda9bc50fa317e342: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7ab4df7cc9bca6a6b503: Cannot confirm one product on the discovered URL
+- new-product / candidate-4f7f40e56e26f3d083f1: No verified product image URL
 - new-product / candidate-cad8f56f01c2b60db941: Pack weight is ambiguous; listing skipped
 - new-product / candidate-91e76434dcd985162019: No single GBP offer for the exact product
 - new-product / candidate-c3b8cfdcaac181a82686: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ae41b808f43b4cff4be2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e220f8543281ae866eb4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-17c11549f55abfc459c2: Cannot confirm one product on the discovered URL
 - new-product / candidate-96826d6603e044c1b59d: Cannot confirm one product on the discovered URL
-- new-product / candidate-347535969e83183f2dc1: Cannot confirm one product on the discovered URL
-- new-product / candidate-4f7f40e56e26f3d083f1: No verified product image URL
-- new-product / candidate-6a394e0b85b1aef8f60b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1c08f24fd9ed39ae197f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f26ef9fc9c48fbf93328: No verified product image URL
+- new-product / candidate-e8826ba22c7d34f3972e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-825844afab0db6e0070a: Pack weight is ambiguous; listing skipped
 - new-product / candidate-9a9163b08fdb77e38931: No single GBP offer for the exact product
 - new-product / candidate-5fd367120543ca631e95: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21b57ed384337db05fd4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d8bc07d54877a0aa9125: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-58168e070c140293bfbd: Cannot confirm one product on the discovered URL
 - new-product / candidate-0b9bbf3d6e72f19d0be7: Cannot confirm one product on the discovered URL
-- new-product / candidate-0d975107fca07cd392de: Cannot confirm one product on the discovered URL
-- new-product / candidate-f26ef9fc9c48fbf93328: No verified product image URL
+- new-product / candidate-4bf6c9a61d8647260e36: Cannot confirm one product on the discovered URL
+- new-product / candidate-23b0afa9e22184b6757f: Pack weight outside the supported range
+- new-product / candidate-28b0a0bf08ded4c639d8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
 - new-product / candidate-cc2dc494c9745f0d5802: No single GBP offer for the exact product
 - new-product / candidate-57f9f9d662589bfe8ac5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4218c423baad4d844f16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-de59df37ddeb4caf80d0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-851a3aca264c32b39a56: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dadcf47c581355f1c202: Cannot confirm one product on the discovered URL
 - new-product / candidate-35c9bb64a2cad4d0a0c9: Cannot confirm one product on the discovered URL
-- new-product / candidate-a862a047ce5ef6cf4acc: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f935462c912140d0de8: No verified product image URL
+- new-product / candidate-23488448a8711bbb0e69: Cannot confirm one product on the discovered URL
+- new-product / candidate-4540afa0e8a9dafbc28f: Pack weight outside the supported range
+- new-product / candidate-b3ff91830113136e840f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-72937768a06d597aecdc: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bb30eb7dffc235bb7a9a: No single GBP offer for the exact product
 - new-product / candidate-a2b2e013976dc69b6d33: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e220f8543281ae866eb4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7896e8d359f04899ebde: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-952784ed56a24352b43c: Cannot confirm one product on the discovered URL
 - new-product / candidate-9dda09be42f8a6e2930d: Cannot confirm one product on the discovered URL
-- new-product / candidate-065456f40fd77b704b43: Cannot confirm one product on the discovered URL
-- new-product / candidate-23b0afa9e22184b6757f: Pack weight outside the supported range
-- new-product / candidate-d4b73213219f2d8cc282: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f43a958b9fbcb27294b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7b2ad98289720245d30: Pack weight outside the supported range
+- new-product / candidate-34432ad47a3e291f8755: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dd7c68f71f3d60fae960: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bcc9557d668006315522: No single GBP offer for the exact product
 - new-product / candidate-414c7aa0ffb8fd65afe9: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d8bc07d54877a0aa9125: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-18dd661b244dece3b2d5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9a82f32a4e523e5b0c6a: Cannot confirm one product on the discovered URL
 - new-product / candidate-df5dba9132db32d313ff: Cannot confirm one product on the discovered URL
-- new-product / candidate-59290e57888b8e6212ff: Cannot confirm one product on the discovered URL
-- new-product / candidate-4540afa0e8a9dafbc28f: Pack weight outside the supported range
-- new-product / candidate-64379db6d7a4b002f87d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0ccdc9f603e98a62ab1c: Cannot confirm one product on the discovered URL
+- new-product / candidate-fe6fa158bb9b0dffec20: No verified product image URL
+- new-product / candidate-9abb7290bcf7cb6f3e19: Source does not state the material pack weight; listing skipped
 - new-product / candidate-97ee59f05792f8bce3e8: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d22e2c2ef601784af630: No single GBP offer for the exact product
 - new-product / candidate-41c90dd2ef457051b99d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e0e7bea197a6bbdc723d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-851a3aca264c32b39a56: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6bb9bde92e14d0387525: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c48eb3d01f61e31b1624: Cannot confirm one product on the discovered URL
 - new-product / candidate-0fc1ac44214f0f0e4375: Cannot confirm one product on the discovered URL
-- new-product / candidate-cd24d8d2606f7cf83e3b: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7b2ad98289720245d30: Pack weight outside the supported range
-- new-product / candidate-378f4c930e9428e4925b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ce1cc95f44f3ca18e128: Cannot confirm one product on the discovered URL
+- new-product / candidate-aff86bdae6756e6d5242: No verified product image URL
+- new-product / candidate-d5c55ef338ce312c7b51: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9c4e6df3d7fab7b308b6: Cannot confirm that the product is a material or printer
 - new-product / candidate-c397b7f7cdad72b01785: No single GBP offer for the exact product
 - new-product / candidate-445286ddb4de895df879: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7896e8d359f04899ebde: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4ad1608884bf22aef31f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ca7aeed7cfed9d90030e: Cannot confirm one product on the discovered URL
 - new-product / candidate-b5738353746e5302721a: Cannot confirm one product on the discovered URL
-- new-product / candidate-56f9153770c0bad71c5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-96f0dffb066987e0e859: Cannot confirm one product on the discovered URL
 - new-product / candidate-0bf61aa007aad54f110a: Pack weight outside the supported range
-- new-product / candidate-35d195d9e84013dc6643: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1157b61749dfcc4027de: Source does not state the material pack weight; listing skipped
 - new-product / candidate-13bfe85249bda8d540d9: Cannot confirm that the product is a material or printer
 - new-product / candidate-912793674106bd623bb5: No single GBP offer for the exact product
 - new-product / candidate-c316167674cd3f479fd9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-18dd661b244dece3b2d5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-55487f320882f7f42ca5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bde775aae3311d869f9d: Cannot confirm one product on the discovered URL
 - new-product / candidate-85d0e645902e8cc7b77b: Cannot confirm one product on the discovered URL
-- new-product / candidate-8fe7a7cdc52a03660572: Cannot confirm one product on the discovered URL
+- new-product / candidate-abd6f0dc0f672622f856: Cannot confirm one product on the discovered URL
 - new-product / candidate-7311634b6e7f8af0a26c: Pack weight outside the supported range
-- new-product / candidate-e8826ba22c7d34f3972e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e26a93fcdc68b409a7a0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d3fe00fe81f19ccb4db5: Cannot confirm that the product is a material or printer
 - new-product / candidate-0a036164caf904e517cb: No single GBP offer for the exact product
 - new-product / candidate-1a30766a0f3e5a5eaed0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dab3501ad59ff4029857: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6bb9bde92e14d0387525: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4ef446ec1689bb7632b7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-780bd823649861c1cc94: Cannot confirm one product on the discovered URL
 - new-product / candidate-6b3ec3cb3364dc6b5009: Cannot confirm one product on the discovered URL
-- new-product / candidate-b1c0e57ef11a69509feb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7eabe2c600f959f37811: Cannot confirm one product on the discovered URL
 - new-product / candidate-3c99d6cb25a94013a960: Pack weight outside the supported range
-- new-product / candidate-28b0a0bf08ded4c639d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7763a3e37277f80facb9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a0fa1732e60c5dd326b5: Catalogue GBP price outside supported range
 - new-product / candidate-89f69e0e0a3e40f9c74e: Cannot confirm that the product is a material or printer
 - new-product / candidate-cdecff0a2ecf2eae8548: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4ad1608884bf22aef31f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bb31d42b4c61c8ac08c5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-42af5b4f646cae1475e4: Cannot confirm one product on the discovered URL
 - new-product / candidate-fdc89fe383814f1ca781: Cannot confirm one product on the discovered URL
-- new-product / candidate-5c0e0c3d05392e8bb93b: Cannot confirm one product on the discovered URL
+- new-product / candidate-d0fca33b9d39e19b903f: Cannot confirm one product on the discovered URL
 - new-product / candidate-3d096b8b7cc8c77c7b96: Pack weight outside the supported range
-- new-product / candidate-b3ff91830113136e840f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bf6f450337e0cad253aa: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e21a4f0260265d8d05e7: Catalogue GBP price outside supported range
 - new-product / candidate-66a66dd6c271fa5a35aa: No single GBP offer for the exact product
 - new-product / candidate-c7bafe7e7ed528bf2aca: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
-- new-product / candidate-55487f320882f7f42ca5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8324b97cf68a654022cd: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6e9853502fefa6333720: Cannot confirm one product on the discovered URL
 - new-product / candidate-cc0b97017469303448d9: Cannot confirm one product on the discovered URL
-- new-product / candidate-bef6f8db083d041cff46: Cannot confirm one product on the discovered URL
+- new-product / candidate-2bb4e3fc1723a3002f9b: Cannot confirm one product on the discovered URL
 - new-product / candidate-d710bf36056fba6a2007: Pack weight outside the supported range
-- new-product / candidate-34432ad47a3e291f8755: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7bff0b51844c06eda032: Source does not state the material pack weight; listing skipped
 - new-product / candidate-29b12aec8b8d6d3a4526: Catalogue GBP price outside supported range
 - new-product / candidate-e2fb644830bba3708070: Cannot confirm that the product is a material or printer
 - new-product / candidate-9cb64730559221d6094b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-42de812451581f1897c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4ef446ec1689bb7632b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-10f074044965e3fef1a2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b3408a8c40d362c18974: Cannot confirm one product on the discovered URL
 - new-product / candidate-49ef77243b95e7a89049: Cannot confirm one product on the discovered URL
-- new-product / candidate-c79046c40d41c1267d30: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8960da917e60d8cd6a8: Cannot confirm one product on the discovered URL
 - new-product / candidate-c1cdd38ad0a5ba9c9cec: Pack weight outside the supported range
-- new-product / candidate-9abb7290bcf7cb6f3e19: Source does not state the material pack weight; listing skipped
+- new-product / candidate-48f1220cafa88d2bdc97: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1ef0f10d33c8b33f6aa7: Catalogue GBP price outside supported range
 - new-product / candidate-7079f44fd87f0f09be32: Pack weight is ambiguous; listing skipped
 - new-product / candidate-f84dcaf43dc042e4d6f5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bb31d42b4c61c8ac08c5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-268d8855ecf578435a87: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4f1ea397363aeae53505: Cannot confirm one product on the discovered URL
 - new-product / candidate-0b73c86558c54ea36ffb: Cannot confirm one product on the discovered URL
-- new-product / candidate-24892aa4d46cfd143bc7: Cannot confirm one product on the discovered URL
+- new-product / candidate-576f8ed605aad707fe40: Cannot confirm one product on the discovered URL
 - new-product / candidate-df13c6fa6473b4a566d2: No verified product image URL
-- new-product / candidate-d5c55ef338ce312c7b51: Source does not state the material pack weight; listing skipped
+- new-product / candidate-955c084116462d7d6a2e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-da52654526e61c558684: No verified product image URL
 - new-product / candidate-e4964233c48699d02e08: Pack weight is ambiguous; listing skipped
 - new-product / candidate-5c65ae68f18a06a5ef1b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8324b97cf68a654022cd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e2933d853f04c3b066fc: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7858d59926c5d7225273: Cannot confirm one product on the discovered URL
 - new-product / candidate-bbe6db5bc94ef47dc121: Cannot confirm one product on the discovered URL
-- new-product / candidate-e86323d05ba3c1df3dae: Cannot confirm one product on the discovered URL
+- new-product / candidate-9af5c4462ffcd2307889: Cannot confirm one product on the discovered URL
 - new-product / candidate-1fd08a0c237ba07c9ff0: No verified product image URL
-- new-product / candidate-1157b61749dfcc4027de: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4e84ff7599f20a3d86d2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7676becb79049bacae29: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cbb1c8b01d87b7352e02: Cannot confirm that the product is a material or printer
 - new-product / candidate-149a5160641474daa64a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b36c62ee3450cf70d8a6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-10f074044965e3fef1a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bb77d2dda2b24f42ffe6: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9459c2183c7cd65443a0: Cannot confirm one product on the discovered URL
 - new-product / candidate-652557044712835e2fba: Cannot confirm one product on the discovered URL
-- new-product / candidate-48c19234b104288d25ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-76a4c8703a08193d0fa5: Cannot confirm one product on the discovered URL
 - new-product / candidate-a315b3755130d94a7550: No verified product image URL
-- new-product / candidate-e26a93fcdc68b409a7a0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-beaedba84eff6ed8a1f0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3068a64e6d6cee05ef17: Catalogue GBP price outside supported range
 - new-product / candidate-dde32ebe6c957c177102: No single GBP offer for the exact product
 - new-product / candidate-c5c2a08fd8a9f60e5123: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-268d8855ecf578435a87: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0569f9575d006614a7fb: Source does not state the material pack weight; listing skipped
 - new-product / candidate-34d5c79cedab0ec4db3b: Cannot confirm one product on the discovered URL
 - new-product / candidate-0e234b875c62454548f7: Cannot confirm one product on the discovered URL
-- new-product / candidate-b07d4a4c65222a86d662: Cannot confirm one product on the discovered URL
+- new-product / candidate-41fd3c5c75c67caaf663: Cannot confirm one product on the discovered URL
 - new-product / candidate-16c82fdf795940196301: No verified product image URL
-- new-product / candidate-7763a3e37277f80facb9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c08d965579510cbcf0a7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-22bf7c077b82eab2329d: Catalogue GBP price outside supported range
 - new-product / candidate-96595bec4ea895bb1a7b: No single GBP offer for the exact product
 - new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e2933d853f04c3b066fc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e9aea6e19f7c3e82845f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b18b9f6fc78decc41c1b: Cannot confirm one product on the discovered URL
 - new-product / candidate-a3b08a1a513990b50fef: Cannot confirm one product on the discovered URL
-- new-product / candidate-dcbae425496f11812dff: Cannot confirm one product on the discovered URL
+- new-product / candidate-fe03788b8d965c10d84c: Cannot confirm one product on the discovered URL
 - new-product / candidate-3f4f59e4a45de8f309f8: No verified product image URL
-- new-product / candidate-bf6f450337e0cad253aa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-526a15bc94f01cc9935b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-84f3b5270612ed3ecb9e: Catalogue GBP price outside supported range
 - new-product / candidate-6f366d04c1b036e09447: No single GBP offer for the exact product
 - new-product / candidate-cf5d87c78a03a9bc184c: Pack weight is ambiguous; listing skipped
 - new-product / candidate-c052bbbba24e9ea8dbc3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bb77d2dda2b24f42ffe6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d1f6f0c2bdc11340c446: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c259c292a49009f31b01: Cannot confirm one product on the discovered URL
 - new-product / candidate-e1b29e26696caffe9031: Cannot confirm one product on the discovered URL
-- new-product / candidate-8334770bbd286a48be17: Cannot confirm one product on the discovered URL
-- new-product / candidate-7bff0b51844c06eda032: Source does not state the material pack weight; listing skipped
+- new-product / candidate-51b4625fd81483229e1f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f13af1f3e9de488fd0a5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ac61e19b19491513a6cd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e4bb3c09ebbd1fd2534e: Catalogue GBP price outside supported range
 - new-product / candidate-d82d4d263b5d635b6f70: No single GBP offer for the exact product
 - new-product / candidate-ba6dc15e28ac2bad6398: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0569f9575d006614a7fb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2aa14f1ecccfa811d6a3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-21cbd3b10056756f94aa: Cannot confirm one product on the discovered URL
 - new-product / candidate-6ddbaf672a5522edf430: Cannot confirm one product on the discovered URL
-- new-product / candidate-f82371615e7058e1556a: Cannot confirm one product on the discovered URL
-- new-product / candidate-c60920a2a9d71ddcfdd5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-955c084116462d7d6a2e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3abf6c8a44db26d71d72: Cannot confirm one product on the discovered URL
+- new-product / candidate-728761a59c2a93d4de4b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7e60972564e95a64c401: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c37aa39617358e581097: Catalogue GBP price outside supported range
 - new-product / candidate-618c511944a36fa58555: No single GBP offer for the exact product
 - new-product / candidate-a7dea7be7a0fdd5b9566: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e9aea6e19f7c3e82845f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f6a06bc4167a47297c9b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8ead40d047d0b97d171a: Cannot confirm one product on the discovered URL
 - new-product / candidate-05ebe93407b06ff30994: Cannot confirm one product on the discovered URL
-- new-product / candidate-182cef84d13732a34349: Cannot confirm one product on the discovered URL
-- new-product / candidate-8aa1c7ac02a61a2971a5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4e84ff7599f20a3d86d2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-50f74b40406ce25a6ccb: Cannot confirm one product on the discovered URL
+- new-product / candidate-8dff8ac7218778be1852: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e02b6ae5b407d1e2ddfd: Catalogue GBP price outside supported range
 - new-product / candidate-f48664da967efb2e46e1: No single GBP offer for the exact product
 - new-product / candidate-ce96227ad4adbef8c3fa: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b55373fe8e819209d6b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d1f6f0c2bdc11340c446: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7989d4a8caa21d76b439: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e76079a4e9848b329dd2: Cannot confirm one product on the discovered URL
 - new-product / candidate-648805ade8ba1754a716: Cannot confirm one product on the discovered URL
-- new-product / candidate-c784f00b1c907f426848: Cannot confirm one product on the discovered URL
-- new-product / candidate-0997eb7543eca6ec71b2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-beaedba84eff6ed8a1f0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0ae5fa42004ed7f0ad83: Cannot confirm one product on the discovered URL
+- new-product / candidate-f51fe11f2937b59085ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eaf6c32ef5ad46ea130e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e9b35c82ef3913eba0dd: Catalogue GBP price outside supported range
 - new-product / candidate-3ecc1cc021edc9592d18: No single GBP offer for the exact product
 - new-product / candidate-7b39c013ca51550de057: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2aa14f1ecccfa811d6a3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e459423b2dff3d966aa2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f2e075534dcc37855a6b: Cannot confirm one product on the discovered URL
 - new-product / candidate-6deca42ce2a90df8c29d: Cannot confirm one product on the discovered URL
-- new-product / candidate-adafb284db06fde12106: Cannot confirm one product on the discovered URL
-- new-product / candidate-2e503e165b5b5f9e37d6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c08d965579510cbcf0a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ab07636bae1e8bc9199b: Cannot confirm one product on the discovered URL
+- new-product / candidate-05683096ec330f02b974: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5b5c444f191260423c15: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
 - new-product / candidate-423b3186e5e14e4aa598: No single GBP offer for the exact product
 - new-product / candidate-429f65a76895dfec82e8: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f6a06bc4167a47297c9b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cfd9d5500ee51cd35a2d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b1cca919ae37dc007f0b: Cannot confirm one product on the discovered URL
-- new-product / candidate-53049064c546c03cb082: Cannot confirm one product on the discovered URL
-- new-product / candidate-56b3a5930637f992af55: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-526a15bc94f01cc9935b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0c019933025c8ecd38e3: Cannot confirm one product on the discovered URL
+- new-product / candidate-1ff48e5badfd8e44a92c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1539f816b6cf53d0c090: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5f103af2e4ec3a0ab6ed: No single GBP offer for the exact product
 - new-product / candidate-96fcafaae26464196563: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e75ba2b6f4e4b373bb4f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7989d4a8caa21d76b439: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7ef0afb904b16f2f54b3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7f09211b5d77d39fd4ac: Cannot confirm one product on the discovered URL
-- new-product / candidate-01a971ce241f678c1bcb: Cannot confirm one product on the discovered URL
-- new-product / candidate-22be3308632160b47954: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ac61e19b19491513a6cd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-91bcf62d9025308c153f: Cannot confirm one product on the discovered URL
+- new-product / candidate-65eecba56dbff301e74b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3a59178be3c266a32d98: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eb3f5039dbe8c4795243: No single GBP offer for the exact product
 - new-product / candidate-252693a085df59249227: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e459423b2dff3d966aa2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d4ccbd6fdecd6eb6d39b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-03e82112c50bb66ea201: Cannot confirm one product on the discovered URL
-- new-product / candidate-aa8671dc3decea47a429: Cannot confirm one product on the discovered URL
-- new-product / candidate-d48520b89076b64e3976: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7e60972564e95a64c401: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f707d4cda8c9410bde11: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae305f611bfb29661165: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-55956d556d5be8b340c6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c805686d2e2dd2dc27fc: Pack weight is ambiguous; listing skipped
 - new-product / candidate-a767a3a17df31d3c4a1f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cfd9d5500ee51cd35a2d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-feaad94339216facfc7e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-78621a35468d4a243277: Cannot confirm one product on the discovered URL
-- new-product / candidate-18ae8dc1ac67231c57fb: Cannot confirm one product on the discovered URL
-- new-product / candidate-65eecba56dbff301e74b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8dff8ac7218778be1852: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-514f87bb44b97ee4951f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9727d015d0e91ca676d9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a392f12654ccfe478d19: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-866261d14b351fa050be: Cannot confirm that the product is a material or printer
 - new-product / candidate-54e5825bb7450acd5144: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e4df3f8218cc7671a1b8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ee5a938e0de95ced3640: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7ef0afb904b16f2f54b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7b4bd82d3799ef386565: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0ecf588b09d1ac34ffa0: Cannot confirm one product on the discovered URL
-- new-product / candidate-d95c58ae47646e83a54e: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae305f611bfb29661165: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eaf6c32ef5ad46ea130e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-99c70bec943a09a343bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-4bf53bc75827a16e3c54: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6fafdf5ed83c3d0de1d2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1fa70ad88f7245e3c74f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3e977ca8eb53ffc1bef6: Approved URL is outside its recorded retailer
 - new-product / candidate-700a12d353eb0f02827d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d4ccbd6fdecd6eb6d39b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a526210c550cdcc3e525: Source does not state the material pack weight; listing skipped
 - new-product / candidate-41b77c52f39b9d6bdd2e: Cannot confirm one product on the discovered URL
-- new-product / candidate-a1d8b685fc4608443a34: Cannot confirm one product on the discovered URL
-- new-product / candidate-9727d015d0e91ca676d9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5b5c444f191260423c15: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c89336c858ab238534bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-1a30e8ab5a98259eee23: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-08c540ba8aaafd02faea: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a7f8b9014db7a73259ed: Catalogue GBP price outside supported range
 - new-product / candidate-a163efd511c73f87f9c7: No single GBP offer for the exact product
 - new-product / candidate-53679a6a9b64edeaf218: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-feaad94339216facfc7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-18d1e5904c3ddb322329: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ff1f4cf3f60aa340192a: Cannot confirm one product on the discovered URL
-- new-product / candidate-48807a0441a90666a2a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-4bf53bc75827a16e3c54: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1539f816b6cf53d0c090: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-043965b9af98b59b6502: Cannot confirm one product on the discovered URL
+- new-product / candidate-578e661b7d2ac7b6607e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bb0806ded76198a00d22: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7cf9d57a580294338f27: Catalogue GBP price outside supported range
 - new-product / candidate-8d09e8a7c12897a61c12: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ab059031754b8a1f8954: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a81a5432047cdfea662b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7b4bd82d3799ef386565: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d53e99214dab14ec9b05: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2df20358c7a8e7906df8: Cannot confirm one product on the discovered URL
-- new-product / candidate-adf2faa7c354662c9487: Cannot confirm one product on the discovered URL
-- new-product / candidate-1a30e8ab5a98259eee23: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3a59178be3c266a32d98: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c1014059f94e270d0396: Cannot confirm one product on the discovered URL
+- new-product / candidate-26e39b3a3ad198821f84: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d700f8791721e3f4caf: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a28c1cfe50e4aa37b1a4: Catalogue GBP price outside supported range
 - new-product / candidate-006e0d5f5068ef06fe67: No single GBP offer for the exact product
 - new-product / candidate-d424e8b45f21fdb99e7f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a526210c550cdcc3e525: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ecb6113c6ba4adbbbfd4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2014ed157433e6776476: Cannot confirm one product on the discovered URL
-- new-product / candidate-ffd992e200ae37192402: Cannot confirm one product on the discovered URL
-- new-product / candidate-578e661b7d2ac7b6607e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-55956d556d5be8b340c6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e4df853c6ca05445a22f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f301a995d74c088498ec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fbd2ed3aed8c72ef7bb7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-649e63e9829c6b47cf39: Catalogue GBP price outside supported range
 - new-product / candidate-29fd4ac47ca2ba476f7e: No single GBP offer for the exact product
 - new-product / candidate-9fe012c072d3a560493a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
-- new-product / candidate-18d1e5904c3ddb322329: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fea14ddd37629c1be86c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6623ee45b4babd24757e: Cannot confirm one product on the discovered URL
-- new-product / candidate-1323a1e2d01af1d617ea: Cannot confirm one product on the discovered URL
-- new-product / candidate-26e39b3a3ad198821f84: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a392f12654ccfe478d19: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4f06ce9a6ecbccc60207: Cannot confirm one product on the discovered URL
+- new-product / candidate-d37117cb21c2a732a57b: No verified product image URL
+- new-product / candidate-0d68175d8eebb3a612c6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-893cf38c48655139dcef: Catalogue GBP price outside supported range
 - new-product / candidate-e7ab83cbc78fca22f6dd: No single GBP offer for the exact product
 - new-product / candidate-c3513470e31598f7d3d8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-aa8a1435f8413bbb75d6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d53e99214dab14ec9b05: Source does not state the material pack weight; listing skipped
+- new-product / candidate-caea8fe88a97c0e7098d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d6956570146c7f24411e: Cannot confirm one product on the discovered URL
-- new-product / candidate-532ad5c7a7919cd59b30: Cannot confirm one product on the discovered URL
-- new-product / candidate-d37117cb21c2a732a57b: No verified product image URL
-- new-product / candidate-6fafdf5ed83c3d0de1d2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-87030a9ad84b2eb7fe7f: Cannot confirm one product on the discovered URL
+- new-product / candidate-41d6623706045a9965c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bed892868dcba1a7fb7c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a044d1a5a0cf996e2506: Catalogue GBP price outside supported range
 - new-product / candidate-44eacca675ca47c03434: No single GBP offer for the exact product
 - new-product / candidate-9dd638a6f32253f472e1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ecb6113c6ba4adbbbfd4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1c38a599eeb09ba051bf: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d0c13d356ecea44a3327: Cannot confirm one product on the discovered URL
-- new-product / candidate-2ca689e4251d103d0379: Cannot confirm one product on the discovered URL
-- new-product / candidate-41d6623706045a9965c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-08c540ba8aaafd02faea: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ed17431532cc1ae2a015: Cannot confirm one product on the discovered URL
+- new-product / candidate-3024f36c0b0ff940b4bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dc0ec00e7c2c5f59ebef: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-20bc5c94dc33b0b85791: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6277fae9f990d7bd8cb0: No single GBP offer for the exact product
 - new-product / candidate-3715bb2c9805cfc8a142: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fea14ddd37629c1be86c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-21353203f689861dde67: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bfece126df5896a71836: Cannot confirm one product on the discovered URL
-- new-product / candidate-5b90a52c0afe0f4336b7: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8a427313f50539db0ef: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bb0806ded76198a00d22: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-110aef23e1dd5b5fd44e: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1c17621a57f11c83eba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e4f4baf97a0007a97f9f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8582be097e871d99582c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-05656b87bde4c8c9696e: No single GBP offer for the exact product
 - new-product / candidate-6e65713500fcf56a43c0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8ef71f952812e965d103: Source does not state the material pack weight; listing skipped
-- new-product / candidate-caea8fe88a97c0e7098d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-04d47a898e8eb747bab9: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-1bd41817944733985c72: Cannot confirm one product on the discovered URL
-- new-product / candidate-e0e58147416798fbae32: Cannot confirm one product on the discovered URL
-- new-product / candidate-676a480352590e864f53: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9d700f8791721e3f4caf: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ba9ebae6404ef45fb4b4: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf01b959394925c7c97a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-83ea24945b4f783da983: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0cab138e391cc5d352de: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1ff05526fd5404bdc49e: Approved URL is outside its recorded retailer
 - new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1c38a599eeb09ba051bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9d571908ae2c85386cb1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3ed511c0c316ce8cdde9: Cannot confirm one product on the discovered URL
-- new-product / candidate-7458a9d325670769ab14: Cannot confirm one product on the discovered URL
-- new-product / candidate-2f7fc37d9f17a0aa5859: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fbd2ed3aed8c72ef7bb7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8a6db99a7427244fc751: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2f7a3b5bdc2cddc022e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-da43fcf425b085dddd28: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8683a4af9d63d8f0c91f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dcca848dde0651fe0677: No single GBP offer for the exact product
 - new-product / candidate-65a8416f7b1283381777: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21353203f689861dde67: Source does not state the material pack weight; listing skipped
+- new-product / candidate-88f1640eaa22fcb84760: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3d0defab449308f90d13: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a50038bc330e66f5921: Cannot confirm one product on the discovered URL
-- new-product / candidate-ad373d788253adbe1bc6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d68175d8eebb3a612c6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-43cd19e525a96c06d0eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac0a7696a2325b16fefd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6114ddaf8a4dd3df9569: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-16daaacd9c2388fd1101: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4693f85190c302510f23: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3afcbf79b45630e905d8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7f13ac7bef9ded0f6343: Source does not state the material pack weight; listing skipped
-- new-product / candidate-04d47a898e8eb747bab9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5fdce34bfb8c632833cb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8cf5f3bff481f74837da: Cannot confirm one product on the discovered URL
-- new-product / candidate-a6136eba2cf512f01567: Cannot confirm one product on the discovered URL
-- new-product / candidate-741e15151bd45baaebe8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bed892868dcba1a7fb7c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d95f001b27ea014b0353: Cannot confirm one product on the discovered URL
+- new-product / candidate-da0f9434e66b885ea8c1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e2941f6fcd9d1b53c04: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b8fec6a19d9e0dfb0c59: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4c8bb5fc6f2dbc1a4e6b: No single GBP offer for the exact product
 - new-product / candidate-549ca665a56e8ba6e9ec: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9d571908ae2c85386cb1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d5b7a72756d56d56d81d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e1193a7030aa4a9a7847: Cannot confirm one product on the discovered URL
-- new-product / candidate-c914386734cb9a60fd07: Cannot confirm one product on the discovered URL
-- new-product / candidate-8743a41eae23b00023b7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dc0ec00e7c2c5f59ebef: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5cf730fa6f3a47cedaed: Cannot confirm one product on the discovered URL
+- new-product / candidate-f4050499d0b0d315bd94: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6512c6745b4606c44aa2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6ece0a768a869994b509: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5c80545437722ea97978: No single GBP offer for the exact product
 - new-product / candidate-772d1d747e91c6e97373: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-88f1640eaa22fcb84760: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1e87a0bc32c3eda2ddf8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c2fdc5791521b7fedc3d: Cannot confirm one product on the discovered URL
-- new-product / candidate-42624b5e052bcd44f11a: Cannot confirm one product on the discovered URL
-- new-product / candidate-a420f72e95ed47c19a64: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4f4baf97a0007a97f9f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c3484975ee48aff9d8e8: Cannot confirm one product on the discovered URL
+- new-product / candidate-9e06503465720f8770a4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-64a717dfb8609b21feb9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e730927b5ad8681a76d6: Source does not state the material pack weight; listing skipped
 - new-product / candidate-62adee1e043b3eb2eddc: No single GBP offer for the exact product
 - new-product / candidate-aea09596368afeacf9c2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6879865458fb86b4edd5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5fdce34bfb8c632833cb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-17eaec80c3a9d45dc98c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-766db322a872ae09d30d: Cannot confirm one product on the discovered URL
-- new-product / candidate-6d9b61cda41747ac921f: Cannot confirm one product on the discovered URL
-- new-product / candidate-cf364b829dad645fdae7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-83ea24945b4f783da983: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-474454ec6605a7c2e52f: Cannot confirm one product on the discovered URL
+- new-product / candidate-60219932971f5b1dec21: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1e7733f1fd633f9e0193: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-256676534225fa8c5b59: Catalogue GBP price outside supported range
 - new-product / candidate-325667f8f9ddc8b60078: No single GBP offer for the exact product
 - new-product / candidate-06d7aef1546883c9d9ad: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d5b7a72756d56d56d81d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1eed4a4d33f9ab0ed115: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6b859a0bbd0b9d77e425: Cannot confirm one product on the discovered URL
-- new-product / candidate-437e747eca3bd787e02a: Cannot confirm one product on the discovered URL
-- new-product / candidate-707c8e78f2ce4f105412: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-da43fcf425b085dddd28: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-57d3fe80ab6578f37cd3: Cannot confirm one product on the discovered URL
+- new-product / candidate-9ad829ea4028fdf855bc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ef47ea79107aef982457: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0f07d113cd94e7750971: Catalogue GBP price outside supported range
 - new-product / candidate-abde35f9dbb05cb76c9a: No single GBP offer for the exact product
 - new-product / candidate-e654d1636b245058793e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2ae039d92de08587ed2d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1e87a0bc32c3eda2ddf8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4984931d73fc339d07d6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bbfb237f43bb38e7459c: Cannot confirm one product on the discovered URL
-- new-product / candidate-a6732a4c84e575c615fe: Cannot confirm one product on the discovered URL
-- new-product / candidate-235f983b8fd3d658aafc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6114ddaf8a4dd3df9569: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cdec783ec3efd0f4bc40: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a5ce3c3cf7fa461c9c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b7703027d71a2cbe592b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b1e9fa8e37d4d46fe05e: Catalogue GBP price outside supported range
 - new-product / candidate-82a09b97e4d980bfac43: Cannot confirm that the product is a material or printer
 - new-product / candidate-947fd67f6563876ded70: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-550d547cd9da64b58dfe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-17eaec80c3a9d45dc98c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-131214c18b0b9ba5d4b9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-66f2aa1895bfdbda6e9c: Cannot confirm one product on the discovered URL
-- new-product / candidate-2c25c6b2dc576413b24e: Cannot confirm one product on the discovered URL
-- new-product / candidate-5f3bf390c8a3f2d23f06: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9e2941f6fcd9d1b53c04: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49b91f949baa0b556751: Cannot confirm one product on the discovered URL
+- new-product / candidate-f42799b0387fe1a233b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1c3580849945d9792b1c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ce10787011baa6e62062: Catalogue GBP price outside supported range
 - new-product / candidate-a123a4b70ee2eae93cf5: No single GBP offer for the exact product
 - new-product / candidate-b3c345cacce507449a85: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1eed4a4d33f9ab0ed115: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6c534afaa4fdff7867bb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-da7b7ae4dc8228c36a69: Cannot confirm one product on the discovered URL
-- new-product / candidate-d0cdb399632c1d8aff27: Cannot confirm one product on the discovered URL
-- new-product / candidate-74896be4adff8180d99a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6512c6745b4606c44aa2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9615677b6ef90d700988: Cannot confirm one product on the discovered URL
+- new-product / candidate-26e3d658c3d2f86bff9d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d62ec52230116eb42f13: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f9f269596e8dddbbb42d: Catalogue GBP price outside supported range
 - new-product / candidate-bbc84edf1751dde3a275: No single GBP offer for the exact product
 - new-product / candidate-e0b02b70854d0738a08b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-71b7e8ab3acf79967ac2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4984931d73fc339d07d6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-12279c3e114d1cf1a525: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-aa9124acbb989eb015fa: Cannot confirm one product on the discovered URL
-- new-product / candidate-10a15fecc5b7679b63af: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b8f8848978c958f9962: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-64a717dfb8609b21feb9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6e8e42262483aac05544: Cannot confirm one product on the discovered URL
+- new-product / candidate-0735c6c15dd9affe1a57: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-abf6dc4d070a64b26fe0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8a8322d7b3647478d912: Catalogue GBP price outside supported range
 - new-product / candidate-25b93054cf2b3f55b870: No single GBP offer for the exact product
 - new-product / candidate-53c97ad4768a11c17d15: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-903a7f2f5c7c485d19c1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-131214c18b0b9ba5d4b9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d8cdce4d6cd77cbedacd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8ef4789175df3ef4deb6: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a2b12455a64c95fd9af: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9ae04d1467f170a7da7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1e7733f1fd633f9e0193: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-02bc734d2d9f2b33eb66: Cannot confirm one product on the discovered URL
+- new-product / candidate-31928cd70632f8de114a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f44698e6b53d8ce2f5ad: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7665fe75d2632d94c42a: Catalogue GBP price outside supported range
 - new-product / candidate-9218c5eac4af755234ec: Cannot confirm that the product is a material or printer
 - new-product / candidate-fde774eccdae7da0ec2b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6c534afaa4fdff7867bb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-297ee3bded66bc58a456: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8b0e47049d293af12f6e: Cannot confirm one product on the discovered URL
-- new-product / candidate-e28589af36e601e54416: Cannot confirm one product on the discovered URL
-- new-product / candidate-7d79e7e0f9d5708a4c70: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef47ea79107aef982457: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6c27e63d0e20df495ad5: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb4fa1216a4deef2c97f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df57254c8c1c0cd154d8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-92e7a70b1ed480e86329: Catalogue GBP price outside supported range
 - new-product / candidate-779e056cd051adbd9ba1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6e7dfa77fc04c06b8190: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3d77ec1915f8f0bda6c5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-12279c3e114d1cf1a525: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d5d2fbbd230046e0da14: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4f0a90f89e67a8f22b52: Cannot confirm one product on the discovered URL
-- new-product / candidate-cd4e187aaaf66e1e0ca4: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e8667644f6e1e78f29c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b7703027d71a2cbe592b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-07831f3d075d72a3d26e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f3c328e4e315bf50ef92: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3a2784659e3658511722: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-95bf83bdac959e6c67b3: Catalogue GBP price outside supported range
 - new-product / candidate-a869a11c7fbf4c870488: No single GBP offer for the exact product
 - new-product / candidate-59ddeb49c45cea9b1708: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e09ff4aba764d08a0598: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d8cdce4d6cd77cbedacd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5cdb9b990d370fd8c1ae: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fb269c25480c50429183: Cannot confirm one product on the discovered URL
-- new-product / candidate-9fc00278b92f81630f42: Cannot confirm one product on the discovered URL
-- new-product / candidate-28250dbd35ce05a64ad3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c3580849945d9792b1c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-97f2d9a811c2c72f7738: Cannot confirm one product on the discovered URL
+- new-product / candidate-d263ca12b164c4194600: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1732cf967dc7688e97a2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bc0e978a9cf62b49c3e3: Catalogue GBP price outside supported range
 - new-product / candidate-20f4b9b669e9227eba69: No single GBP offer for the exact product
 - new-product / candidate-5f457e146377bbe673e4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
-- new-product / candidate-297ee3bded66bc58a456: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f9d2d790c495f1eef8a9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bed08a59d7f34c5e4c97: Cannot confirm one product on the discovered URL
-- new-product / candidate-a5d73ede3f965b23eec6: Cannot confirm one product on the discovered URL
-- new-product / candidate-57a9a72c5bd9f1021b3f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d62ec52230116eb42f13: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e77f4205d6d900972c4b: Cannot confirm one product on the discovered URL
+- new-product / candidate-4799e3c0ae1037c7aa6f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a01bf82c023dc443bc69: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6348166bb4c130850abc: No verified product image URL
 - new-product / candidate-c400bf0467d3e8ecb259: No single GBP offer for the exact product
 - new-product / candidate-26570e1ba51d4af388c0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d5d2fbbd230046e0da14: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-efeb9245f5137b643c20: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e627dc8fbdcc63fe18b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-10156783617d04aab29a: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b6a6b3ca6545cd5392d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-abf6dc4d070a64b26fe0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f37cc258dac9f716f792: Cannot confirm one product on the discovered URL
+- new-product / candidate-1255996e411d85b1c90c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5277117c229a14d653f8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b891cde4b3ce85c2be36: No verified product image URL
 - new-product / candidate-c7635438e5d5287e461a: No single GBP offer for the exact product
 - new-product / candidate-0c03cc9ead400fd6f30b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5cdb9b990d370fd8c1ae: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2aacb9fc644ebffb83dd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e47960587bdc4a128526: Cannot confirm one product on the discovered URL
-- new-product / candidate-a42ce8387f8e795433fc: Cannot confirm one product on the discovered URL
-- new-product / candidate-197f75f70fb53722f65d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f44698e6b53d8ce2f5ad: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c1b3bb7b2c166ec9abca: Cannot confirm one product on the discovered URL
+- new-product / candidate-7557e41d8f21a4bceec1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1edb54cb7196a0509ba9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cf430ab29c4402e47d48: No verified product image URL
 - new-product / candidate-262826907b6b620682d1: Cannot confirm that the product is a material or printer
 - new-product / candidate-ae9cef7ededb60bb7ad6: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f9d2d790c495f1eef8a9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0944a1196d97f7fcf2b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b536388535c36a8425c9: Cannot confirm one product on the discovered URL
-- new-product / candidate-daac0d358384e1ae9393: Cannot confirm one product on the discovered URL
-- new-product / candidate-0f1dec51325c85a3e4ad: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-df57254c8c1c0cd154d8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eb10b10d5dca378fc0b4: Cannot confirm one product on the discovered URL
+- new-product / candidate-07ac566c6b802df8bf30: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cfb2a4b773a781a3fa81: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-955e13bd5da6acb4c571: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6a05b1f0bea461f18054: Source does not state the material pack weight; listing skipped
 - new-product / candidate-274c23fce132dde27d97: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-efeb9245f5137b643c20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7e61b7456e7a68554e1e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6ad76da50e68fe8029dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-c1b35dd0960c238d42eb: Cannot confirm one product on the discovered URL
-- new-product / candidate-f60b3d66903bd6aae373: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3a2784659e3658511722: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c91821b4e4bc77aedb6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f0561afad2adcaf648f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a8fb43877f633b667cd3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-13a760e9c3a7ca58cd83: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8b3218a3ed00f615d7c7: No single GBP offer for the exact product
 - new-product / candidate-7e0361554357f319b25a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e899370569ad6cfe100c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2aacb9fc644ebffb83dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-65b456dc62cb34d33d7e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7cbc72373eea6d6ebb79: Cannot confirm one product on the discovered URL
-- new-product / candidate-df02fa2446e8afe02419: Cannot confirm one product on the discovered URL
-- new-product / candidate-dd47dee76f815ec6954a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1732cf967dc7688e97a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-edc8f13e0c1ff1683529: Cannot confirm one product on the discovered URL
+- new-product / candidate-8965fa3fc4a8e4b0b8af: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-44e3e12f7407d5f8434b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-db43dfbc825e9279c21c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6c40004ef9c678a8595a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-073301e1309826641aec: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-09c34fd0cde56ce09c43: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e0944a1196d97f7fcf2b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8e1ae62dcab1dfb38474: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7be9eeda63979f3c5dd9: Cannot confirm one product on the discovered URL
-- new-product / candidate-b75f85785710c5918bb3: Cannot confirm one product on the discovered URL
-- new-product / candidate-4aee272d602fef188df4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a01bf82c023dc443bc69: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-527456efeec9065aba05: Cannot confirm one product on the discovered URL
+- new-product / candidate-97886512bc4c210e24fc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-34083374d01567b34598: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-14c00ff9088761901b87: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-70a0ec8b8380ad980b97: No single GBP offer for the exact product
 - new-product / candidate-cc93cc924014340a4122: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-feb97f885265930006f8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7e61b7456e7a68554e1e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ced71ecc4bcdfcb94fc3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1175727c9f1158a1306b: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc78894df64591438031: Cannot confirm one product on the discovered URL
-- new-product / candidate-1370a3ae3e2af5891e6c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5277117c229a14d653f8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-89682a4a45b2d8084767: Cannot confirm one product on the discovered URL
+- new-product / candidate-92b527b60b4e57c9065b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-31d6bdea9234619778c0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-68ce2d504267670ae2fc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a246afa27024aa2e30a2: No single GBP offer for the exact product
 - new-product / candidate-5d6221a27022dcff14e1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-44dd93c81b99a8df7efe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-65b456dc62cb34d33d7e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f3c6716b29caaeec3449: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0e3a45f51f197413bb0b: Cannot confirm one product on the discovered URL
-- new-product / candidate-56460e096f642b6c7b73: Cannot confirm one product on the discovered URL
-- new-product / candidate-ea77189f458f0e9ac5fb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1edb54cb7196a0509ba9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d1c24c0a6dcc18131254: Cannot confirm one product on the discovered URL
+- new-product / candidate-64abd9df351f5ed97c66: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3488a38608ca4796a3bc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0d781a54dd46a038745a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4096814af20dac146667: No single GBP offer for the exact product
 - new-product / candidate-9443940cb66db080892f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8e1ae62dcab1dfb38474: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b31debe4d60ec439a0d1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-eccf0ce0b910fa5d6beb: Cannot confirm one product on the discovered URL
-- new-product / candidate-738e1d441069177b8e75: Cannot confirm one product on the discovered URL
-- new-product / candidate-007bff64f2313f82100a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cfb2a4b773a781a3fa81: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bf099781b6ca9ade658d: Cannot confirm one product on the discovered URL
+- new-product / candidate-06dac85064895d98c49f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-aa3fdbefb71a03aaac7a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8e2e7f61cd3b8734e5dd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-20c11546c0782b4d4d88: No single GBP offer for the exact product
 - new-product / candidate-1a6cc19a680f3278370a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ced71ecc4bcdfcb94fc3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d801126d4f0044771d6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f99fe9d183930a46e8a2: Cannot confirm one product on the discovered URL
-- new-product / candidate-1be46d5fbd94bb81bd75: Cannot confirm one product on the discovered URL
-- new-product / candidate-fe67024681c9c16e548a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a8fb43877f633b667cd3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8821ad5757efaee148ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-de719882ef81870d72ce: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-25b659e0753460ce45e8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fef387b95855824c2e64: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a5302dfd53cb0ffe963a: No single GBP offer for the exact product
 - new-product / candidate-38df61c83305d5c87394: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f3c6716b29caaeec3449: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b8e51166817a659047c5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-28daac5a033e11a61e8f: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8afab0f8a8032761a6a: Cannot confirm one product on the discovered URL
-- new-product / candidate-7faa789b0ec654810dd0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-44e3e12f7407d5f8434b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c2642c64b94d60807fcd: Cannot confirm one product on the discovered URL
+- new-product / candidate-da56298cb2bff0ed729c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1bdfd8144388f651bbc4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8c29d0994fa40bbb417a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-683c04399e05ea73921f: No single GBP offer for the exact product
 - new-product / candidate-7a93ff641d042ba218f0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b31debe4d60ec439a0d1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-725f402a799ac22071d1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-735d7183112b70d1e947: Cannot confirm one product on the discovered URL
-- new-product / candidate-4fbab470a5ccb62aaa43: Cannot confirm one product on the discovered URL
-- new-product / candidate-f41e0ad6c1fb4a8198bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-34083374d01567b34598: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2ef202796d233ad1a026: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c509e2e4b3960e7180a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d7cd902b21316e14479e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-80c3ae39a177f32bdea5: Cannot confirm that the product is a material or printer
 - new-product / candidate-e5e29eb76feb68c30627: Cannot confirm that the product is a material or printer
 - new-product / candidate-e3a895cb22ec98fbb274: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5d801126d4f0044771d6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7d6a4259a9ae31d28c95: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2d6a1450d1807e5a65dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-0d179bdac8ba470979dc: Cannot confirm one product on the discovered URL
-- new-product / candidate-644adc58155a006b1d7d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31d6bdea9234619778c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c03ac7cd00b2d00fd085: Cannot confirm one product on the discovered URL
+- new-product / candidate-5cf5e0effb5953ede865: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a0c0401539b6c8508dd7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-99b0c5f1ecec73261946: Cannot confirm that the product is a material or printer
 - new-product / candidate-16d2feb0b176177bdb68: Cannot confirm that the product is a material or printer
 - new-product / candidate-e711aaa102409c80cab2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b8e51166817a659047c5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6935c712763d10c6eb2b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c08ec737ca363e086f14: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9dee04edd5f7f1a45f7: Cannot confirm one product on the discovered URL
-- new-product / candidate-50e44782ae4641241fe1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3488a38608ca4796a3bc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4728e37bb92f62c357a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-9502c785d8b5b14b9545: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-18f5c8bdc5897a19ed65: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3a76687a7f4a51f002e6: Cannot confirm that the product is a material or printer
 - new-product / candidate-db5d348e3b26ba1f0d99: No single GBP offer for the exact product
 - new-product / candidate-fd4e3a27bb7ddf7a0f29: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-725f402a799ac22071d1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-35adf4d0024d6f143306: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3cd68de01b83cb392d48: Cannot confirm one product on the discovered URL
-- new-product / candidate-f2de7e9e2a5ff0d37a4a: Cannot confirm one product on the discovered URL
-- new-product / candidate-05dec9ee9e7addab9d73: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa3fdbefb71a03aaac7a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7fd13af9a3def5dfcc8: Cannot confirm one product on the discovered URL
+- new-product / candidate-5a0397992287b58db42d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20581ffe276e86015805: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-373eedf5d26909bd52ed: No verified product image URL
 - new-product / candidate-43e40942578b83a2e538: Cannot confirm that the product is a material or printer
 - new-product / candidate-c83d9cb4cd9a24e80292: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7d6a4259a9ae31d28c95: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc8c63c5c7c22a1e6b76: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-91d6a720ed5b85017c4f: Cannot confirm one product on the discovered URL
-- new-product / candidate-280c61dd8f88501d6bc0: Cannot confirm one product on the discovered URL
-- new-product / candidate-90cbb7b907d1e56854bf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-25b659e0753460ce45e8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-97d383ee83aa7ab997c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-c0e53500afc623b1a0e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c675ce579048ca01d99a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-84a7298048a68d0cc466: No verified product image URL
 - new-product / candidate-163e6dba7eb967df7f92: No single GBP offer for the exact product
 - new-product / candidate-dd330fefa12b2872bd55: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6935c712763d10c6eb2b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-89c909c5d54cc81d7eb4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-04880b5ed74b717d8d5e: Cannot confirm one product on the discovered URL
-- new-product / candidate-4888f2e5cd4a2db34a73: Cannot confirm one product on the discovered URL
-- new-product / candidate-375e3f74347e58a32e1a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1bdfd8144388f651bbc4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6061f08c4f1992a01ffa: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ce363bb7d5845ce6286: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-506a0b52736af9d7fccd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-21ec1e1c7c29d27fa95e: No verified product image URL
 - new-product / candidate-9655ac5f83f6a9bb24cc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-35adf4d0024d6f143306: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-87c23713a053fe2fa10b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bc063062871e32a1f051: Cannot confirm one product on the discovered URL
-- new-product / candidate-64f823dffd694d4ea411: Cannot confirm one product on the discovered URL
-- new-product / candidate-1b659ef3eb2d92af3669: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d7cd902b21316e14479e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5ab0bbda233f083448bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-e835f8c1d21a1eec6361: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cf65af7c2bb7dc5a5e97: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-809f59f8cdcaacc7bcc5: No verified product image URL
 - new-product / candidate-677b24683d8c087bf02b: Cannot confirm that the product is a material or printer
 - new-product / candidate-b9dfcddd9cac89856d2f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bc8c63c5c7c22a1e6b76: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-65b5e7b825d1776cf30f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1003f6f7bb57bc6ff385: Cannot confirm one product on the discovered URL
-- new-product / candidate-dc5cb108de133f2ebe5c: Cannot confirm one product on the discovered URL
-- new-product / candidate-d7f2a311a672f93d03ef: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a0c0401539b6c8508dd7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-14f6bfb0d2f0c3c3823d: Cannot confirm one product on the discovered URL
+- new-product / candidate-9a70df6ad489587e9c56: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8816c9b69f60cb2771b5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b9598ee8fbb33a4cd786: No verified product image URL
 - new-product / candidate-8d39d4b1047f84d54df8: No single GBP offer for the exact product
 - new-product / candidate-5236929d23f3cd9ffe1c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-89c909c5d54cc81d7eb4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0d1900624f4fce6de014: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4ccb5f3c6bc2518b504a: Cannot confirm one product on the discovered URL
-- new-product / candidate-dd721b60b4512c9ad956: Cannot confirm one product on the discovered URL
-- new-product / candidate-b0cfba3d4abe8a0e5e92: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-18f5c8bdc5897a19ed65: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d15d9be93d494414ffe9: Cannot confirm one product on the discovered URL
+- new-product / candidate-16c7cdaeb86a3cf52823: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ebb2ca844b00a1b21501: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-317d6c5a53ffb783e422: No verified product image URL
 - new-product / candidate-f0553767aa4fd787fcec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0c79a14760011095f2b4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-87c23713a053fe2fa10b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5b83685872313c0820ad: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6ef3c5d5e641f683b7bb: Cannot confirm one product on the discovered URL
-- new-product / candidate-7e409c7a4b6e00d949d2: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d234c13fc29b19c03f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20581ffe276e86015805: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2502ef5091fec707d225: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c496906b17f931cdf0f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c89835a705d6a7d0f269: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-48adfb7df13e39a08d0b: No verified product image URL
 - new-product / candidate-2692474ac7c5fbae9ee8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4ddcf88fbbd162373d9b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-65b5e7b825d1776cf30f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3545e66745a1422287f8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e538622aebd085ccd45f: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a3538897309d9a1136b: Cannot confirm one product on the discovered URL
-- new-product / candidate-2e15d49336e2323f7442: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c675ce579048ca01d99a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b96e50db38a7a7b4a557: Cannot confirm one product on the discovered URL
+- new-product / candidate-be18b4b219957a37a381: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a872e5a34e38aac97ac7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fd56b528165f23108826: No verified product image URL
 - new-product / candidate-32a4b13f9287cd502d5c: No single GBP offer for the exact product
 - new-product / candidate-7a577f76451738ed6844: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0d1900624f4fce6de014: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d48cb5839778ad9ff35a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3b29bd389147939851c6: Cannot confirm one product on the discovered URL
-- new-product / candidate-30cd75ce892e28cbcaf7: Cannot confirm one product on the discovered URL
+- new-product / candidate-6d21c0958f8349a733ac: Cannot confirm one product on the discovered URL
 - new-product / candidate-e310fd27bdfc6f7a67a1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-506a0b52736af9d7fccd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ad0fedebf860f3bff331: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cf4ea5aee4a0af787835: No verified product image URL
 - new-product / candidate-e7068c867ab4c6bf3375: No single GBP offer for the exact product
 - new-product / candidate-d9ef88756e926203f389: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5b83685872313c0820ad: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bee46dcc8c75538d3cfa: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-26a8a07cc580339c06ad: Cannot confirm one product on the discovered URL
-- new-product / candidate-28d419398559bc6c6826: Cannot confirm one product on the discovered URL
+- new-product / candidate-374812bf78689d4708fb: Cannot confirm one product on the discovered URL
 - new-product / candidate-c7af276613a689d63b91: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cf65af7c2bb7dc5a5e97: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-06abdf399f8589e0e9dd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9af5524d00b512ab8991: No verified product image URL
 - new-product / candidate-fe4ad2ec1767b4e4195e: No single GBP offer for the exact product
 - new-product / candidate-7d47228befcbf431b0c9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3545e66745a1422287f8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c7577d136f447e12f542: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-04109828050e42f629fd: Cannot confirm one product on the discovered URL
-- new-product / candidate-3a92afce1ca26e4add2b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f3f35999dfdefdc5f87e: Cannot confirm one product on the discovered URL
 - new-product / candidate-dc6cd3e823e645eb0263: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8816c9b69f60cb2771b5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6bc2e7a39c6122665ef4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8f467d235b362ecc4b96: No verified product image URL
 - new-product / candidate-676ef5aee357c885f8ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-863a3f59ca17b15430f6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d48cb5839778ad9ff35a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bb304ead22744a4f9b40: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d8129461d694409e6cd3: Cannot confirm one product on the discovered URL
-- new-product / candidate-cb2ce482ecdc3ea63ba5: Cannot confirm one product on the discovered URL
+- new-product / candidate-565206e7538df0e45398: Cannot confirm one product on the discovered URL
 - new-product / candidate-f6cb860caa802dc37cba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ebb2ca844b00a1b21501: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7d04d42cd7946b6154b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-65d3b3b81776fcbc334b: No verified product image URL
 - new-product / candidate-59c83eebe6620929f903: No single GBP offer for the exact product
 - new-product / candidate-ce0c6f6ccc249f322134: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bee46dcc8c75538d3cfa: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-86ea3eca394598a9d5b4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-962229670c98befcd777: Cannot confirm one product on the discovered URL
-- new-product / candidate-7bd848a85fc036c80ae6: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f93144281e231cc4582: Cannot confirm one product on the discovered URL
 - new-product / candidate-7d2e1e13881512d33e66: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c89835a705d6a7d0f269: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bfff7496a62a2a338de0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c4fd0bb0b1489531612b: No verified product image URL
 - new-product / candidate-f3d04f0e84ef13411770: No single GBP offer for the exact product
 - new-product / candidate-866853f8c60de6a5f29b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c7577d136f447e12f542: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c73fb4862497e978e4cf: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-72326ef14958c7054a13: Cannot confirm one product on the discovered URL
-- new-product / candidate-7681e7d9622d1a759272: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1d8c0f0affd26a0f7ce: Cannot confirm one product on the discovered URL
 - new-product / candidate-332939df093844442191: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a872e5a34e38aac97ac7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2d9c70d59664ea3203a1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a52d4c4b879bac5e78c8: No verified product image URL
 - new-product / candidate-39eeec5fa7a328231940: No single GBP offer for the exact product
 - new-product / candidate-d0cff17033486042e1ff: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bb304ead22744a4f9b40: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0d17559d69374a0e0d68: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-81c16eaa001ea073cb3c: Cannot confirm one product on the discovered URL
-- new-product / candidate-a8cab31967ea89b3ac6b: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e11d586f4eda7b8f85a: Cannot confirm one product on the discovered URL
 - new-product / candidate-b046dfe8fb5476328797: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ad0fedebf860f3bff331: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7a7fe55797c99c981579: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fc9a2e48f4dc02a77faf: No verified product image URL
 - new-product / candidate-e0244c4b7721adf0586c: No single GBP offer for the exact product
 - new-product / candidate-faf4da85eeaf97a7ac51: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-86ea3eca394598a9d5b4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-12431807a6d758118e35: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bfe8cecd283f3f6e91fb: Cannot confirm one product on the discovered URL
-- new-product / candidate-4c737a3b762da2d8170c: Cannot confirm one product on the discovered URL
+- new-product / candidate-52fdde62559b052c21d6: Cannot confirm one product on the discovered URL
 - new-product / candidate-93571d7740a670c83b67: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-06abdf399f8589e0e9dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-110ad2f05ae425378118: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0017f83f407a5ad21f0b: No verified product image URL
 - new-product / candidate-4f9010eea34c56d0a27d: No single GBP offer for the exact product
 - new-product / candidate-ba25d5f49f291865ae94: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c73fb4862497e978e4cf: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d69d46d64b1ab2ef4c64: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-830fa4205828629e3b86: Cannot confirm one product on the discovered URL
-- new-product / candidate-8b603e4a202ba3d77554: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf442cc136bbcf194caa: Cannot confirm one product on the discovered URL
 - new-product / candidate-bb97cab7bdba4ad77205: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6bc2e7a39c6122665ef4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22a97f427cf8c6d170c2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d629a476338399b0eebc: No verified product image URL
 - new-product / candidate-f8fa70509e2d10dd81e7: HTTP Error 404: Not Found
 - new-product / candidate-67be2d87618689ee9115: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d17559d69374a0e0d68: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5047f4f3485f8803502b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f6429d46d4b962467385: Cannot confirm one product on the discovered URL
-- new-product / candidate-5db9978e02b745a495ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff55109976c395b95724: Cannot confirm one product on the discovered URL
 - new-product / candidate-68f030beea72f2a0586c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e7d04d42cd7946b6154b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-66e69f778fc2d4e0a08f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
 - new-product / candidate-0714f52044b947b58db9: No single GBP offer for the exact product
-- new-product / candidate-12431807a6d758118e35: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0bd1cd4f1f0cde9fb0f8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4189259ecacd0db29a37: Cannot confirm one product on the discovered URL
-- new-product / candidate-c9b82c3cceb5af43de28: Cannot confirm one product on the discovered URL
+- new-product / candidate-c52407630b564a8c8cfa: Cannot confirm one product on the discovered URL
 - new-product / candidate-c524ddec67d9b21650db: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bfff7496a62a2a338de0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1fe64e13d501520302e5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-33ed1c5e3769e31cc24b: No verified product image URL
 - new-product / candidate-a59456a903a907b535ec: No single GBP offer for the exact product
 - new-product / candidate-35d0223b23abddfd1622: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d69d46d64b1ab2ef4c64: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f1533dd155b87ccd6c1b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f80529ec58212d82343b: Cannot confirm one product on the discovered URL
-- new-product / candidate-210850592c3905177b11: Cannot confirm one product on the discovered URL
+- new-product / candidate-5570b63ca235a54f120e: Cannot confirm one product on the discovered URL
 - new-product / candidate-1ab7234329ddd83091cf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2d9c70d59664ea3203a1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-281a996be46018e2d135: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-58faddeb1d3abfaebc79: No verified product image URL
 - new-product / candidate-b46bdd1d799c90c5d417: Cannot confirm that the product is a material or printer
 - new-product / candidate-aaec959c7c6c8c61d938: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5047f4f3485f8803502b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-33c55669800c27a14366: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-651d2f4970716ccedbdf: Cannot confirm one product on the discovered URL
-- new-product / candidate-89200452d25ff3cdd450: Cannot confirm one product on the discovered URL
+- new-product / candidate-a48d3acaaa0d9e2bfab3: Cannot confirm one product on the discovered URL
 - new-product / candidate-dda1c9e219c8a2ab271c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7a7fe55797c99c981579: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f5e59439c77a5c0e0e03: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c999335b3d631a743a74: No verified product image URL
 - new-product / candidate-d4e9bc26003151ad952f: No single GBP offer for the exact product
 - new-product / candidate-1d448c6757cbc530df7c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0bd1cd4f1f0cde9fb0f8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c47fccb1b2ce57eb1728: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-317dc533fa01770964f6: Cannot confirm one product on the discovered URL
-- new-product / candidate-273baa4b3348e4036cb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-6c750243fd0f513bb73f: Cannot confirm one product on the discovered URL
 - new-product / candidate-f28721132af0f4fa9adb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-110ad2f05ae425378118: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22ad9a3b1416906ec222: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-987b55b61f5b8e284a2a: No verified product image URL
 - new-product / candidate-1a03983af58bd402fa90: Source does not state the material pack weight; listing skipped
 - new-product / candidate-77fde952dbcc0933aa5e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f1533dd155b87ccd6c1b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b04146a14e2e1789acb3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5de5500c1331ff47a789: Cannot confirm one product on the discovered URL
-- new-product / candidate-51846c2d11c6a461dcb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-ea13f25b018c7a4bdd29: Cannot confirm one product on the discovered URL
 - new-product / candidate-9c484242f1057176db80: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22a97f427cf8c6d170c2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c2f71e934fdd149f9d48: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fe895ce810a554661322: No verified product image URL
 - new-product / candidate-3c5199a4eab074681f3e: No single GBP offer for the exact product
 - new-product / candidate-cace126efb228bd979c8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-33c55669800c27a14366: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e808ed54e763b16a79ed: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-13ab6a0206c62a31e233: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee94c87aae12390d8909: Cannot confirm one product on the discovered URL
+- new-product / candidate-0bbde83ea5111c399fd6: Cannot confirm one product on the discovered URL
 - new-product / candidate-b55768d46a25a24d2a7c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-66e69f778fc2d4e0a08f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1c87c501e4d3570b75cd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ff9db50ba64f6b98e498: No verified product image URL
 - new-product / candidate-b2421ec58afd17415b02: No single GBP offer for the exact product
 - new-product / candidate-e25c489221f4a2c3083d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c47fccb1b2ce57eb1728: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-feed1c1748ee02b23c52: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c66d74795e6cd9c63d4a: Cannot confirm one product on the discovered URL
-- new-product / candidate-fc9fc535535707b589ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-ad0e87c8552340224360: Cannot confirm one product on the discovered URL
 - new-product / candidate-d25fd14ccb70a8f8a89d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1fe64e13d501520302e5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f4b8f71d66e37272b7c4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-214d4ec2957152916d9f: No verified product image URL
 - new-product / candidate-31e7bae76fb6a3ca0c4c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9b62a2b48b7e87b3d173: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b04146a14e2e1789acb3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8a4ea4afa7a3c96e72d0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f0c4f20619efdcca39e0: Cannot confirm one product on the discovered URL
-- new-product / candidate-9f9f8772074cbccd2eb9: Cannot confirm one product on the discovered URL
+- new-product / candidate-b592e8eac71faef3f366: Cannot confirm one product on the discovered URL
 - new-product / candidate-ea57ad4ef04e36eded91: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-281a996be46018e2d135: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-47593d570fbfec6d0674: No verified product image URL
 - new-product / candidate-604bdfa7a40ce110f5fe: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9ee1d76653aa215aa7d0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e808ed54e763b16a79ed: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7a36d0a6ecf9b1602bfe: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2cf4652d81c6b07546fe: Cannot confirm one product on the discovered URL
-- new-product / candidate-5bcc21b7861306dcaa5d: Cannot confirm one product on the discovered URL
+- new-product / candidate-0dd487441ff2e9a71560: Cannot confirm one product on the discovered URL
 - new-product / candidate-c693d052c0aeb6ca463b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f5e59439c77a5c0e0e03: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1f6f6fb217bf78cebb98: No verified product image URL
 - new-product / candidate-d1b7307b4e88f6a07eba: No verified product image URL
 - new-product / candidate-a7c1ae724ff4ac0615c2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-56499c0ed78e202a8de4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-feed1c1748ee02b23c52: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6a7751657a37144f1307: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-53285b641dcddf16f42d: Cannot confirm one product on the discovered URL
-- new-product / candidate-df98507ab9b2c84ec497: Cannot confirm one product on the discovered URL
+- new-product / candidate-70d1add9b7abeed56791: Cannot confirm one product on the discovered URL
 - new-product / candidate-58d68c918afae2635940: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22ad9a3b1416906ec222: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9ece5e5cd77c4c805323: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-15016709f6a9893027dd: No verified product image URL
 - new-product / candidate-4eb8d2a601d99a09146d: No single GBP offer for the exact product
 - new-product / candidate-d0f106cd6e57abba4ab2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8a4ea4afa7a3c96e72d0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ef15bb015de982b28075: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1cb740f484b1d43f5c7a: Cannot confirm one product on the discovered URL
-- new-product / candidate-b22e1d8a9a00a79b495a: Cannot confirm one product on the discovered URL
+- new-product / candidate-82440a90f97045566df4: Cannot confirm one product on the discovered URL
 - new-product / candidate-3e233d1a1c6295ff2e58: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c2f71e934fdd149f9d48: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-580c7dd1f31d8bfa6c03: No verified product image URL
 - new-product / candidate-7b26d0169b3bb96cb6c0: No single GBP offer for the exact product
 - new-product / candidate-4993e6418bb18e01bf13: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7a36d0a6ecf9b1602bfe: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4372602e64deb6c1fc94: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-974b8b9a821d97974f17: Cannot confirm one product on the discovered URL
-- new-product / candidate-2158116458c8696fcae5: Cannot confirm one product on the discovered URL
+- new-product / candidate-f101b86b88cdfbcfcca6: Cannot confirm one product on the discovered URL
 - new-product / candidate-cda082eb202185db9bc0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c87c501e4d3570b75cd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8d3b71fdfa225502fba6: No verified product image URL
 - new-product / candidate-91e59c5616fba3c457e5: No single GBP offer for the exact product
 - new-product / candidate-18c8a1acd19eb0cf36ab: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6a7751657a37144f1307: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5c4ce40904a5e4f02719: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-881d741e61b09ad6918f: Cannot confirm one product on the discovered URL
-- new-product / candidate-d4d5d590f0e7fd238578: Cannot confirm one product on the discovered URL
+- new-product / candidate-f58c8b8c16f2311d23fd: Cannot confirm one product on the discovered URL
 - new-product / candidate-77bd52a60b3ec159b472: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f4b8f71d66e37272b7c4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b55a31c4955ba9348b82: No verified product image URL
 - new-product / candidate-302e3c604287a9c6064a: No single GBP offer for the exact product
 - new-product / candidate-09a2d2a3c795cd023e9b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef15bb015de982b28075: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4603e23c2dc154d5bc2e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1e1773ef2eed1ea48cb4: Cannot confirm one product on the discovered URL
-- new-product / candidate-7c75a7f50954ab18843c: Cannot confirm one product on the discovered URL
+- new-product / candidate-7516eda2fab19a92b400: Cannot confirm one product on the discovered URL
 - new-product / candidate-2fc4808153b1061805de: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c14fe8f6e1339c5fdc9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d797c72fac8ea781261: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-adaa6ca54844fbb30b3d: No verified product image URL
 - new-product / candidate-8f23641d310ff6e4bf1a: No single GBP offer for the exact product
-- new-product / candidate-4372602e64deb6c1fc94: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-791be3c99b87fe668f0d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4c1eb24b13d4de968cbb: Cannot confirm one product on the discovered URL
-- new-product / candidate-c030b85eedcc0d648ef0: Cannot confirm one product on the discovered URL
+- new-product / candidate-c8dd35074e4e5f830d13: Cannot confirm one product on the discovered URL
 - new-product / candidate-97924c96591680c43ffc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c045a4b24e482cb5425b: Pack weight is ambiguous; listing skipped
 - new-product / candidate-234ef6860c140118470b: No verified product image URL
 - new-product / candidate-67318b2ec697a9d45205: Cannot confirm that the product is a material or printer
 - new-product / candidate-e44728c1d0879728121c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5c4ce40904a5e4f02719: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-363a403895c30def96bb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dddcd5bd2636ed8e55c4: Cannot confirm one product on the discovered URL
-- new-product / candidate-610977744671c3413db6: Cannot confirm one product on the discovered URL
+- new-product / candidate-8af489b8d275b1783593: Cannot confirm one product on the discovered URL
 - new-product / candidate-20e5c649062998a3c3fa: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-791ae4cb3c0e4a1561b9: No verified product image URL
 - new-product / candidate-15b29c1c5c6f83ba680b: No single GBP offer for the exact product
 - new-product / candidate-17c739ae2b6029c95d94: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4603e23c2dc154d5bc2e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4197fd0a369cf13a2cdc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-300bd374b3fa284c1c6c: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f88a1535205cce968ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-ca642c3d1f79e8af8eea: Cannot confirm one product on the discovered URL
 - new-product / candidate-c1278476c36c046887eb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7cc1cafb3bebb08dc731: No verified product image URL
 - new-product / candidate-dbe431a8de87311bfde0: No verified product image URL
 - new-product / candidate-aad4385e3ba369b98d51: No single GBP offer for the exact product
 - new-product / candidate-6bdba548d4759412448a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-791be3c99b87fe668f0d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d39e10b91a3435b678e8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-174e0dd61c05f38c9f8e: Cannot confirm one product on the discovered URL
-- new-product / candidate-b16fc23411051b2d68fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f49773c950c789c839b: Cannot confirm one product on the discovered URL
 - new-product / candidate-ddb19b77b041d479e488: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a3bcfb20666a59d1d93d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-08efdee71302ed32a42d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-cd9cb69caa9ad6e25b44: No verified product image URL
 - new-product / candidate-5f87bf8e74f08cbf4125: No single GBP offer for the exact product
 - new-product / candidate-738d2e7f43906112b195: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-363a403895c30def96bb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-71639ad41fdae04690ca: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d0f956716145cfad60bf: Cannot confirm one product on the discovered URL
-- new-product / candidate-720ff59fa9c496dca34b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a7a1e96fc516c1f01fc3: Cannot confirm one product on the discovered URL
 - new-product / candidate-d89ce8e0762e22833a2c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-dbc9fbb941b0bff12abb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-fcf1fc521f2e725922af: No verified product image URL
 - new-product / candidate-ba6d6b7d6e46ae7b5c7e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3f40b902b2dc8b23b433: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4197fd0a369cf13a2cdc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2b6293b8703e09b44582: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-36505c75a928e473ec7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-7ee32e50e46d1c9688b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-d6d53061d54fb6d7b79c: Cannot confirm one product on the discovered URL
 - new-product / candidate-8f2232b13c7dfd0783f7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9ece5e5cd77c4c805323: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ffcdbce94f7ddf17f249: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-13598ab75c72f9cc8425: No verified product image URL
 - new-product / candidate-d97580f15f0e0f213587: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a9be6ca5937402c8df4e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d39e10b91a3435b678e8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f3d8a47f535740ae534d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-97ec895a937582cf8d5a: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9b162dfdb4330e8a364: Cannot confirm one product on the discovered URL
+- new-product / candidate-802c9b096cd1e210dc32: Cannot confirm one product on the discovered URL
 - new-product / candidate-032985f3317d9d4c96e6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-16b2fd6f5d2fc9226161: No verified product image URL
 - new-product / candidate-804ff80fceadddddb437: No verified product image URL
 - new-product / candidate-a7c36a6e2fac59ca8f9d: No single GBP offer for the exact product
 - new-product / candidate-c0f46b499a91a2574da2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-71639ad41fdae04690ca: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b11d554ca4115841ff65: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3595dca6df48eb7ffce4: Cannot confirm one product on the discovered URL
-- new-product / candidate-2c6265b93ec7cdef2253: Cannot confirm one product on the discovered URL
+- new-product / candidate-8aa35194ed8f5a77bf0a: Cannot confirm one product on the discovered URL
 - new-product / candidate-d2a3a79e0c9c44ebacc9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3b9afd8a62f78e3c7906: No verified product image URL
+- new-product / candidate-5730d5d4ece6f6d22194: No verified product image URL
 - new-product / candidate-dc5957a5dfc2626106a8: No verified product image URL
 - new-product / candidate-5e6f5dc53ca11a6c89aa: Source does not state the material pack weight; listing skipped
 - new-product / candidate-99bd9864f2d8da860be5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2b6293b8703e09b44582: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-812cb1b53f99ec9c3ac5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7a6d08d7f98ee645a13a: Cannot confirm one product on the discovered URL
-- new-product / candidate-45025541c076987d0c63: Cannot confirm one product on the discovered URL
+- new-product / candidate-938b6f2e0688b41b5ce6: Cannot confirm one product on the discovered URL
 - new-product / candidate-76f38227fa9512e8807d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49de0ad4b1b4b5e0a28c: No verified product image URL
 - new-product / candidate-4157eb0f9d1455ccc442: No verified product image URL
 - new-product / candidate-a88ed9a3b3af8e51602a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-13bdb55bbaa2096aebdb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f3d8a47f535740ae534d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c8c97f1ca608381f3bce: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f304ddce8940b46ce724: Cannot confirm one product on the discovered URL
-- new-product / candidate-a0dbbe16ab0330ba3e8b: Cannot confirm one product on the discovered URL
+- new-product / candidate-823c0668a9cbbd0815b3: Cannot confirm one product on the discovered URL
 - new-product / candidate-f6ce473875faf985f930: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5d65120fd3f6a414f3b9: Pack weight is ambiguous; listing skipped
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
 - new-product / candidate-cffce01996eacf8cd571: No verified product image URL
 - new-product / candidate-e373499f15a7879d5c46: Source does not state the material pack weight; listing skipped
 - new-product / candidate-34e52cda09b9f90f30f5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b11d554ca4115841ff65: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-26dd6476fdc920eddae2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9c7b60c8a45a899f2cf6: Cannot confirm one product on the discovered URL
-- new-product / candidate-3fb10c73bab3d1167546: Cannot confirm one product on the discovered URL
+- new-product / candidate-db85e02737b7a0c94f17: Cannot confirm one product on the discovered URL
 - new-product / candidate-ac6198184e56972b5812: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-60ccab9ee99a42e06bc5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e799a27c08049e423668: No verified product image URL
 - new-product / candidate-c89cec79869695388e86: Source does not state the material pack weight; listing skipped
-- new-product / candidate-812cb1b53f99ec9c3ac5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-04eda8b9960ebc101b41: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bc61cedf25801d1c1a89: Cannot confirm one product on the discovered URL
-- new-product / candidate-3cf9eb183dc7137c9dfa: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b0261c539e95f9abc8e: Cannot confirm one product on the discovered URL
 - new-product / candidate-7056d558c7ab533a29f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b38ae933e1252060806: No verified product image URL
+- new-product / candidate-4f0e07ed91f9aaffd47c: No verified product image URL
 - new-product / candidate-03b34f54f4f09936cd67: No verified product image URL
 - new-product / candidate-5fc44552e4e532b81d9d: Cannot confirm that the product is a material or printer
 - new-product / candidate-7faec6d3d7fee6406bb6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c8c97f1ca608381f3bce: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-81748626b80e31d8f0f4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c245e2a05eecf35eab33: Cannot confirm one product on the discovered URL
-- new-product / candidate-95310c5d6989f0d50357: Cannot confirm one product on the discovered URL
+- new-product / candidate-bde140364aa96ab2b4aa: Cannot confirm one product on the discovered URL
 - new-product / candidate-50f553dae7a4d9e5670e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-132d50415a51c00b9857: No verified product image URL
 - new-product / candidate-be4b9f14b2075c233afd: No verified product image URL
 - new-product / candidate-e3936e1db1f0d8b3c1e7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a4e984b17fe6c5818ca6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-26dd6476fdc920eddae2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4229cba7be2bc7757f06: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-20515f60fd555e9657a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-ad4c711cf3569407c86a: Cannot confirm one product on the discovered URL
+- new-product / candidate-c67ddfb47a274004b631: Cannot confirm one product on the discovered URL
 - new-product / candidate-545792d0fb0e485b729c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e2e322e447a0ed39ce5b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-7140d31bd3e28f3399f2: No verified product image URL
 - new-product / candidate-bbb3cc2f21fb5249bdf4: Cannot confirm that the product is a material or printer
 - new-product / candidate-84e50ab57a8f2f7470e3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-04eda8b9960ebc101b41: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-182e51b6dc9f0b5770c0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-efc5bb90f54b7c6bd2c2: Cannot confirm one product on the discovered URL
-- new-product / candidate-574172b69af1d937dd60: Cannot confirm one product on the discovered URL
+- new-product / candidate-76777d62580ebde62c09: Cannot confirm one product on the discovered URL
 - new-product / candidate-4ded3933c0e5f220ff77: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dbc9fbb941b0bff12abb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-90bb41b0060fde65eebb: No verified product image URL
 - new-product / candidate-84656d78fbe42bc383e0: No verified product image URL
 - new-product / candidate-640c95584d6758a95a31: No single GBP offer for the exact product
 - new-product / candidate-1fc6e4b511ecc56f5cf2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-81748626b80e31d8f0f4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-599afcdae73e88cea15a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3ada5aa854c61302f84e: Cannot confirm one product on the discovered URL
-- new-product / candidate-030f990188a18992543d: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9ed26b7c357e35fc987: Cannot confirm one product on the discovered URL
 - new-product / candidate-9f067abb67b3e9726d91: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ffcdbce94f7ddf17f249: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ff8dd0373858adf1d70a: No verified product image URL
 - new-product / candidate-3feb1798cf88e6f8645f: No verified product image URL
 - new-product / candidate-47f109e674bd0d00778e: No single GBP offer for the exact product
 - new-product / candidate-91d762fbfdfe99fff412: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4229cba7be2bc7757f06: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-befce37ab6ae01a313f8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-54a6cdcc2edc29b27ef0: Cannot confirm one product on the discovered URL
-- new-product / candidate-34254fc526b616f3e612: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc1552822c95d671a6af: Cannot confirm one product on the discovered URL
 - new-product / candidate-047273d0f8432f313ff0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-16b2fd6f5d2fc9226161: No verified product image URL
+- new-product / candidate-0a568e8d9a73be5916aa: No verified product image URL
 - new-product / candidate-3abb781f30d8d606811f: No verified product image URL
 - new-product / candidate-c9540d70bf07e306e5dc: No single GBP offer for the exact product
 - new-product / candidate-937a590e05129e2f1f42: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-182e51b6dc9f0b5770c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4df85ef102c5acc5dfa5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ef31139ee4044bf95d67: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7d26d33edd389e83afe: Cannot confirm one product on the discovered URL
+- new-product / candidate-577614320965e89a46f6: Cannot confirm one product on the discovered URL
 - new-product / candidate-8fec6dd0334870a40000: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5730d5d4ece6f6d22194: No verified product image URL
+- new-product / candidate-005e4075135be82542e2: No verified product image URL
 - new-product / candidate-0ba5c3b5d034da231db6: No verified product image URL
 - new-product / candidate-442689fa5fc9810dfda6: No single GBP offer for the exact product
 - new-product / candidate-d9f965efeded4fa54646: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-599afcdae73e88cea15a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b8412884af54aa6bc874: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5c54d7f1932994a9b52e: Cannot confirm one product on the discovered URL
-- new-product / candidate-ed80a4bcb4d968c68015: Cannot confirm one product on the discovered URL
+- new-product / candidate-7dbf5449966c633a7a29: Cannot confirm one product on the discovered URL
 - new-product / candidate-5258b9567d68940c1de6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-49de0ad4b1b4b5e0a28c: No verified product image URL
+- new-product / candidate-5394355f4fbe38397cb7: No verified product image URL
 - new-product / candidate-da99e16e60efc731da53: No verified product image URL
 - new-product / candidate-d69ef02b1d9d41c32ce5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eb27e5799b2600efdfb1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-befce37ab6ae01a313f8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c69c34b278ef70fa5c90: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e4705c4e9c47922361c3: Cannot confirm one product on the discovered URL
-- new-product / candidate-e7b09bb3221b2a77068c: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ed045f30a82e1ee3c3d: Cannot confirm one product on the discovered URL
 - new-product / candidate-2d51cae6556dd16074c4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-c0c178e339f1108411c9: Pack weight is ambiguous; listing skipped
 - new-product / candidate-f01023d9dc66dfc629d4: No verified product image URL
 - new-product / candidate-774d75de4ed001226677: Source does not state the material pack weight; listing skipped
 - new-product / candidate-377b1148fa207b083ba7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4df85ef102c5acc5dfa5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0c203d02048d604cf1c3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f1526713b25888c9a839: Cannot confirm one product on the discovered URL
-- new-product / candidate-e9fd6126146e9aa3769e: Cannot confirm one product on the discovered URL
+- new-product / candidate-4236ead56271c7383ef0: Cannot confirm one product on the discovered URL
 - new-product / candidate-7f5e8cf5532b1d0e13c3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-60ccab9ee99a42e06bc5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f32c1331f5ae7738ff06: No verified product image URL
 - new-product / candidate-8e31a7384b0a89008595: No verified product image URL
 - new-product / candidate-2f28e267611110ae7c2c: No single GBP offer for the exact product
 - new-product / candidate-8a4e20fa5d951f1c1359: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b8412884af54aa6bc874: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a1c9f8437fa5e46d79f5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e3da88082de26130a026: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7682c8004e44dc8aff3: Cannot confirm one product on the discovered URL
+- new-product / candidate-02d62c5a0403490d7bf0: Cannot confirm one product on the discovered URL
 - new-product / candidate-398b58e0eedba7a17d09: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4f0e07ed91f9aaffd47c: No verified product image URL
+- new-product / candidate-730cc60d115be07d7848: No verified product image URL
 - new-product / candidate-c8d80d61b82a3f634863: No verified product image URL
 - new-product / candidate-9886b6ae1c7187d3bd25: Approved URL is outside its recorded retailer
-- new-product / candidate-c69c34b278ef70fa5c90: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-80796f2b2b885062c03c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cf89ad0741e7d9196ad4: Cannot confirm one product on the discovered URL
-- new-product / candidate-16869bd14f72f9e101e6: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ab08b68dcd2be4c1bfa: Cannot confirm one product on the discovered URL
 - new-product / candidate-004c80c01969edf46759: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-132d50415a51c00b9857: No verified product image URL
+- new-product / candidate-1b8bcf237a433becf78d: No verified product image URL
 - new-product / candidate-ec498ca470b727e64e4a: No verified product image URL
 - new-product / candidate-cb7b4aca369e6577277f: No single GBP offer for the exact product
 - new-product / candidate-d708922ed9259445c88a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0c203d02048d604cf1c3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c8aaeaaa6c2e3c03e4f6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8b4e79a33821657e6470: Cannot confirm one product on the discovered URL
-- new-product / candidate-12ff0fa4556f9fb5b33a: Cannot confirm one product on the discovered URL
+- new-product / candidate-febf3893ac9637d457c8: Cannot confirm one product on the discovered URL
 - new-product / candidate-5dbfdb15dc163ed58651: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-90bb41b0060fde65eebb: No verified product image URL
+- new-product / candidate-8ecba29b5c2b70919f00: No verified product image URL
 - new-product / candidate-03f86a55bb36dab03c34: No verified product image URL
 - new-product / candidate-c3ea99ff5e0fd53f6836: No single GBP offer for the exact product
 - new-product / candidate-c1c182fb6d0370d8244d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a1c9f8437fa5e46d79f5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-af0b361296e7cffcbdac: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-41fd62b6b46fa4fe9c56: Cannot confirm one product on the discovered URL
-- new-product / candidate-e9e56c8d200ce4b6a612: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6dd90da42bb5a8704ef: Cannot confirm one product on the discovered URL
 - new-product / candidate-a34d11c7eb0888addfa8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ff8dd0373858adf1d70a: No verified product image URL
+- new-product / candidate-1330633863e1a21bbf47: No verified product image URL
 - new-product / candidate-13f83022b19f2a7a18a7: No verified product image URL
 - new-product / candidate-d6cdccc24dfb9f0135d3: Cannot confirm that the product is a material or printer
 - new-product / candidate-3c83c55b565d8607c3b5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-80796f2b2b885062c03c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0221466ff8410c637ffd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-22f4fb18eebf0e57359f: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7e3e9dcf6f4d11b45d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-7668d1766c1f97504f1a: Cannot confirm one product on the discovered URL
 - new-product / candidate-b6ed4d37bfe0dda87e1b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0a568e8d9a73be5916aa: No verified product image URL
+- new-product / candidate-9a1d07903faf0ba7486c: No verified product image URL
 - new-product / candidate-3e962299821887083d15: No verified product image URL
 - new-product / candidate-30aac989e7eb1fcb24e9: No single GBP offer for the exact product
 - new-product / candidate-3e4fee6041a9c43a67df: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c8aaeaaa6c2e3c03e4f6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-caea6f0c92059f293eb3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f4b472907a3e4947ea57: Cannot confirm one product on the discovered URL
-- new-product / candidate-4c0e425ba549674d193c: Cannot confirm one product on the discovered URL
+- new-product / candidate-f29c4af959382567b604: Cannot confirm one product on the discovered URL
 - new-product / candidate-18ad9f308c5e80e76f6e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-005e4075135be82542e2: No verified product image URL
+- new-product / candidate-fee7c5f54bdd8fa05ce7: No verified product image URL
 - new-product / candidate-591b29be98c38bd6d258: No verified product image URL
 - new-product / candidate-8a2738c785c00ec420af: No single GBP offer for the exact product
 - new-product / candidate-7c9755d10ef425f6017e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-af0b361296e7cffcbdac: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-226ed4ba07db3028da97: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b29d73690d616a383d6d: Cannot confirm one product on the discovered URL
-- new-product / candidate-3bf64e3d8b5c2551af48: Cannot confirm one product on the discovered URL
+- new-product / candidate-22cf7ca3009f171719a3: Cannot confirm one product on the discovered URL
 - new-product / candidate-e31971f239be4e9649ae: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5394355f4fbe38397cb7: No verified product image URL
+- new-product / candidate-d47ab03e965e2ef369cf: No verified product image URL
 - new-product / candidate-13ba96e0c5957eb58e6c: No verified product image URL
 - new-product / candidate-09302f2ce4ae8e76339a: No single GBP offer for the exact product
 - new-product / candidate-7132556d9be11a562287: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0221466ff8410c637ffd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6a6d79f4dee1b4763883: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5d71d2c08d03af45e296: Cannot confirm one product on the discovered URL
-- new-product / candidate-c1838c3d5c2d9405a011: Cannot confirm one product on the discovered URL
+- new-product / candidate-eeeebd5fd1d1ae71de4c: Cannot confirm one product on the discovered URL
 - new-product / candidate-dc021b923561d8586293: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c0c178e339f1108411c9: Pack weight is ambiguous; listing skipped
 - new-product / candidate-6fb4e5dfebbb4a21bb37: No verified product image URL
 - new-product / candidate-6ce503402c519ed5b05f: No single GBP offer for the exact product
 - new-product / candidate-b3f329c36da4b4fd3daa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-caea6f0c92059f293eb3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-97dd299994faefc24c11: Cannot confirm one product on the discovered URL
+- new-product / candidate-6061fabe546cbca399f6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5b0b810caea79fe7af67: Cannot confirm one product on the discovered URL
 - new-product / candidate-a1155784b3ad311e1cc4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-730cc60d115be07d7848: No verified product image URL
 - new-product / candidate-6d6b82c19d795aa7ed84: No verified product image URL
 - new-product / candidate-3b7add0b1e948767c3bc: No single GBP offer for the exact product
 - new-product / candidate-5f9c69f1c2e6c625e99b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-226ed4ba07db3028da97: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c2943152da19c9b7f8c: Cannot confirm one product on the discovered URL
+- new-product / candidate-34e26e560559ea1fc647: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f629989a51105596f263: Cannot confirm one product on the discovered URL
 - new-product / candidate-5ad71ab73c1d946aca4a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1b8bcf237a433becf78d: No verified product image URL
 - new-product / candidate-d1cd842488dffaaa0358: No verified product image URL
 - new-product / candidate-dd5470e54c9c00b43aca: Source does not state the material pack weight; listing skipped
 - new-product / candidate-23c23d5aa950cf5effe5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6a6d79f4dee1b4763883: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e86ee3852b94b2252f5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-04f80d77890680d6ede8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-be7806b1d5fa2ffbcbe7: Cannot confirm one product on the discovered URL
 - new-product / candidate-9c2f126f8adf651e7e4b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8ecba29b5c2b70919f00: No verified product image URL
+- new-product / candidate-7cd0c9f569e8700bdd1d: No verified product image URL
 - new-product / candidate-97dd2e44f7fc2009846a: No verified product image URL
 - new-product / candidate-c690e00391f47e65af3e: Cannot confirm that the product is a material or printer
 - new-product / candidate-8cc281b3c76e55edc65d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6061fabe546cbca399f6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2c0dc5bebbfcb03f9231: Cannot confirm one product on the discovered URL
+- new-product / candidate-d9070b71635b53238f9c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-011efc0a51bb8634a98d: Cannot confirm one product on the discovered URL
 - new-product / candidate-c8753a3076baf7d438ee: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1330633863e1a21bbf47: No verified product image URL
 - new-product / candidate-68b6649390a135b5c932: No verified product image URL
 - new-product / candidate-c0ee2e37d3d8b392768f: No single GBP offer for the exact product
-- new-product / candidate-34e26e560559ea1fc647: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a147ef20ed13c2c8fb83: Cannot confirm one product on the discovered URL
+- new-product / candidate-859e619bbe9c2d1bb576: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a187dcbc280685f8006c: Cannot confirm one product on the discovered URL
 - new-product / candidate-a61111843620f821888e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9a1d07903faf0ba7486c: No verified product image URL
+- new-product / candidate-e89114b5a429bca6fe7a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f636821522c67fb9b86e: No verified product image URL
 - new-product / candidate-5d9f2d389691b9ae8ce9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b2cc66c85c6a11d831c6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-04f80d77890680d6ede8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-57b34546a46e3e8d0f11: Cannot confirm one product on the discovered URL
+- new-product / candidate-df744b6a9b1f41ebc606: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-86fc750a0bb3d22ec719: Cannot confirm one product on the discovered URL
 - new-product / candidate-83a15269ea5f9a05a039: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fee7c5f54bdd8fa05ce7: No verified product image URL
 - new-product / candidate-2e45cfb3b6afe25b9055: No verified product image URL
 - new-product / candidate-1e7e817f10ecc735d383: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1c074f499cab7053bac1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d9070b71635b53238f9c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a698eebcd03f4f3a1514: Cannot confirm one product on the discovered URL
+- new-product / candidate-c395fde4a85b0aeaae49: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b091029af7edc284d65d: Cannot confirm one product on the discovered URL
 - new-product / candidate-d28c822feba1fa6e9bc8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-80e519d36e2161d77e8a: No verified product image URL
 - new-product / candidate-a2146b0e600a98a68b1a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-832d2b7c360b5a332250: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-859e619bbe9c2d1bb576: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-366e45d44ab1c3cab9a7: Cannot confirm one product on the discovered URL
+- new-product / candidate-6840d88556b945b43a11: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ffdd9d6933accdcce503: Cannot confirm one product on the discovered URL
 - new-product / candidate-3c8f3924f2dc9b1b09b2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d47ab03e965e2ef369cf: No verified product image URL
 - new-product / candidate-9b25072e8eb71a073c12: No verified product image URL
 - new-product / candidate-bf44e9ef649dd8edad8e: No single GBP offer for the exact product
 - new-product / candidate-2c4850e9680bd8251e6c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-df744b6a9b1f41ebc606: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f5a9027c67fae97ae747: Cannot confirm one product on the discovered URL
+- new-product / candidate-d246c0f654fe0f4b9e87: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d4716070b8a1fc296bff: Cannot confirm one product on the discovered URL
 - new-product / candidate-4860a481c16f9bb4d548: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-828d6e04f3f9d930b428: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c1fa26efce67e4dd4325: No verified product image URL
 - new-product / candidate-6b167ee7e0f19e83f658: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d0b9365ee31dd0a39346: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c395fde4a85b0aeaae49: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b8fa29dbbfcf57833a97: Cannot confirm one product on the discovered URL
+- new-product / candidate-b318f9954cfa809b266f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ac823fcee5a98ca47f5d: Cannot confirm one product on the discovered URL
 - new-product / candidate-4f75c3b24b5fdd343d31: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e1bb100f22290c1fb957: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-916e6598eabe6c4bc8e6: No verified product image URL
 - new-product / candidate-eaa351480cf030e0a810: Cannot confirm that the product is a material or printer
 - new-product / candidate-67c28affb88232dbb894: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6840d88556b945b43a11: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-065f4ab69058bf36b2d1: Cannot confirm one product on the discovered URL
+- new-product / candidate-1f14de0df47f06472337: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d9966827757c70db2b0c: Cannot confirm one product on the discovered URL
 - new-product / candidate-4f437eac876fe56ef963: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c92ae9359f2ed0e97bfe: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d1c186cab1a5cda12296: No verified product image URL
 - new-product / candidate-77e8352f56fa74870093: No single GBP offer for the exact product
 - new-product / candidate-10ddc7a0bd2cb8bdd3b5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d246c0f654fe0f4b9e87: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-979866a33f5e4f6f2fbc: Cannot confirm one product on the discovered URL
+- new-product / candidate-613e4933b8f673442579: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ba542a81828b6ed4776f: Cannot confirm one product on the discovered URL
 - new-product / candidate-a5aea53bd4e011209b2d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-60482f8dcb793bffe717: No verified product image URL
 - new-product / candidate-a10c2e32e11f3cf803e1: No verified product image URL
 - new-product / candidate-05e9f7cae833716567d8: Cannot confirm that the product is a material or printer
 - new-product / candidate-f13a9d257f844905a75f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b318f9954cfa809b266f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4da13065708cfc4d05e9: Cannot confirm one product on the discovered URL
+- new-product / candidate-fedc5bc3b6fd5296c2d0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-04e2a1bd23ba5e43c430: Cannot confirm one product on the discovered URL
 - new-product / candidate-91e1827395e2d3cf72d4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a5f34a31f46b50bc38eb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-20c992d9adcdf142b734: No verified product image URL
 - new-product / candidate-411b24ab54d2318e9f60: No single GBP offer for the exact product
 - new-product / candidate-549e6a0431cd32e4b729: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1f14de0df47f06472337: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b44f51346bd549dd229: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b82a40626f38e363e57: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2d5605ce6fb9484451ec: Cannot confirm one product on the discovered URL
 - new-product / candidate-a92eebb6e6f83a32cc9c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b4d94119f9d5e15abd5b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dcacf92832ca0bae31db: No verified product image URL
 - new-product / candidate-cb2fa022b9551413b477: No single GBP offer for the exact product
-- new-product / candidate-613e4933b8f673442579: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3fb5a76e4f9e181edb6d: Cannot confirm one product on the discovered URL
+- new-product / candidate-2b6b06fdd59e3eda6c60: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c0cab2242fbaa595e36a: Cannot confirm one product on the discovered URL
 - new-product / candidate-1723727d1996971ba115: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8d0ebfdb7ae2d977a7ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-922db40e7d4704a480f3: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-8a188de530e84d2fa347: No verified product image URL
 - new-product / candidate-a663f77521330556ac52: No single GBP offer for the exact product
 - new-product / candidate-c24e2dbc14fc7089780d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fedc5bc3b6fd5296c2d0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-37cc9d650c93e21a9665: Cannot confirm one product on the discovered URL
+- new-product / candidate-d69811a3098d41783289: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5ca0c97c0a39bb95e81e: Cannot confirm one product on the discovered URL
 - new-product / candidate-fd53beb29f63e4c2c145: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-731ac28da9ffc51ae67f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bcc45c01a855619e62a5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-34161e132f40ec9f1cad: No verified product image URL
 - new-product / candidate-62efcc460b98d13007f1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-978054ac5ee5031820a2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7b82a40626f38e363e57: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b122e357ca764dc86ebf: Cannot confirm one product on the discovered URL
+- new-product / candidate-096539fb91e0517dcc85: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5c0e083b24e1cd333e3b: Cannot confirm one product on the discovered URL
 - new-product / candidate-bef27b60dd7ee9670fc0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7279b8e848bb964c84ee: No verified product image URL
 - new-product / candidate-6d719d11f5a8ea002927: No verified product image URL
 - new-product / candidate-929c2e44c03619eb3263: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8115d591c1a6dbd48e71: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2b6b06fdd59e3eda6c60: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a893003b9e5942fe4dc2: Cannot confirm one product on the discovered URL
+- new-product / candidate-466c52a6f8b721f9d674: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e54ab630497f65cb7a83: Cannot confirm one product on the discovered URL
+- new-product / candidate-a1789ffcb53f2c52384f: No verified product image URL
 - new-product / candidate-b7d955591dd1a49bfcd0: No verified product image URL
 - new-product / candidate-968101ab868b1a458c81: Cannot confirm that the product is a material or printer
 - new-product / candidate-9751ea973075a0228688: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d69811a3098d41783289: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-823ca0af033f292ac86b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f52aee5e833aa721cd6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-11fdbfcde906f03e8493: Cannot confirm one product on the discovered URL
+- new-product / candidate-d4893214bc6f5ae070a0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3133c36e3e527a204419: No verified product image URL
 - new-product / candidate-cf886d93a5ba1933790d: No single GBP offer for the exact product
 - new-product / candidate-03fcb258831f4c7fea4d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-096539fb91e0517dcc85: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d39b0effaef86e2ec9e2: Cannot confirm one product on the discovered URL
-- new-product / candidate-f268cf332475051feece: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a6d946acc889ea38c7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-84e73bf4231d5db14ec0: No verified product image URL
+- new-product / candidate-51e63802802a21dc7c85: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f935462c912140d0de8: No verified product image URL
+- new-product / candidate-4d8f5eb18b2e6f061700: Source does not state the material pack weight; listing skipped
 - new-product / candidate-655e8b446762a4798714: No verified product image URL
 - new-product / candidate-787703ef55122a632030: No single GBP offer for the exact product
 - new-product / candidate-0274b62a44e635685e88: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-466c52a6f8b721f9d674: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-97af9b231e0553bef137: Cannot confirm one product on the discovered URL
-- new-product / candidate-337cb8297dc51ebb6c79: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-76f4e8e125381f0262f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c0cf16647e5c7eb70070: No verified product image URL
+- new-product / candidate-b58e4804a2850c002779: Cannot confirm one product on the discovered URL
+- new-product / candidate-a9c0277731f51e4f5fce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e4fa897312e0531f8a3b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1a9e69546d1c68d320a9: No verified product image URL
 - new-product / candidate-a2d198fdb17acf231ab3: No single GBP offer for the exact product
 - new-product / candidate-7d18599a93ffd7f88f0b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7f52aee5e833aa721cd6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3ba4b227b64f95b175c7: Cannot confirm one product on the discovered URL
-- new-product / candidate-710d98f469b7b4c44085: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0afa5f93320b13c11a78: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f5d920490fce94c6470d: No verified product image URL
+- new-product / candidate-dbc0d90c3317a6238a15: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc139440d73ba242beaa: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-103c6012c574e3257cff: No verified product image URL
 - new-product / candidate-0a4c63cce667c2fcec35: No single GBP offer for the exact product
 - new-product / candidate-43c581adaaa648ecbec7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-84e73bf4231d5db14ec0: No verified product image URL
-- new-product / candidate-0b400b70a63ac7016ace: Cannot confirm one product on the discovered URL
-- new-product / candidate-11a309203b94fe5870dc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-adf858b2817d30f707e4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f878d90a928f0c2c552e: No verified product image URL
+- new-product / candidate-6041de6b834c12326085: Cannot confirm one product on the discovered URL
+- new-product / candidate-4b2d6e9d470f92d303c4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-99a1fe406e98faa6bb25: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c7f474501c93e6bc2322: No verified product image URL
 - new-product / candidate-68b41fbb54001b9934ca: No single GBP offer for the exact product
 - new-product / candidate-4a6eb628edcae9244223: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5646f471b931ffff8a86: Cannot confirm one product on the discovered URL
-- new-product / candidate-6f63a5fb930487cb0a55: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-38cfe4dd791d2aa74a63: No verified product image URL
+- new-product / candidate-fa087b5eff260c7ed8bd: No verified product image URL
+- new-product / candidate-2614b161582036328021: Cannot confirm one product on the discovered URL
+- new-product / candidate-702dfb051a0ba501b0a1: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-69112727eb23cb18fd31: No verified product image URL
 - new-product / candidate-61b78171263bada7bf01: No single GBP offer for the exact product
-- new-product / candidate-0a4b8b2a0130a1a1fd43: Cannot confirm one product on the discovered URL
-- new-product / candidate-158829ef68ad27724685: No verified product image URL
-- new-product / candidate-4ad872479d24a53a68e0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1d6c9d5457673ee8d700: No verified product image URL
+- new-product / candidate-db60371dba16ef11274e: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b14570c6671e1417272: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-039738623a740de788d3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-904bf8c0e3b160f7b305: No verified product image URL
 - new-product / candidate-d9e139afadf6ac696e1f: No single GBP offer for the exact product
 - new-product / candidate-8e526b7b0489370e33a0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f5d920490fce94c6470d: No verified product image URL
-- new-product / candidate-593760a7d0625d28f9aa: Cannot confirm one product on the discovered URL
-- new-product / candidate-6e0e1ed8c7adc8e84538: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9787a2f138fc7627ebb8: No verified product image URL
+- new-product / candidate-5892724ce9756ad71afa: Cannot confirm one product on the discovered URL
+- new-product / candidate-e659cb3110504c218e85: No verified product image URL
+- new-product / candidate-afb212a1f423b5b09efe: No verified product image URL
 - new-product / candidate-95a2d6df54444ee54ea6: No verified product image URL
 - new-product / candidate-52d78e51b4f98925ca31: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4d71d8ce5e7056c88c01: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f878d90a928f0c2c552e: No verified product image URL
-- new-product / candidate-32878f5a21cc3653c1f3: Cannot confirm one product on the discovered URL
-- new-product / candidate-fcf9f5db9356f4865563: No verified product image URL
-- new-product / candidate-c4323701e3ec78f83183: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b35b8d9b49ee99a4054c: No verified product image URL
+- new-product / candidate-3f00ccb389f78faa06ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-36d910fac35497cb2a49: No verified product image URL
+- new-product / candidate-03b3ea75109523fcd073: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dd466fc8e8ad02da5401: No verified product image URL
 - new-product / candidate-9a8583979c2abfad3cec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0de5b8e387a1871c3d30: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fa087b5eff260c7ed8bd: No verified product image URL
-- new-product / candidate-df49a95563bc23d7d5b1: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc26479b64609e951e25: Cannot confirm that the product is a material or printer
+- new-product / candidate-d930f8876e8a2842eff5: Cannot confirm one product on the discovered URL
+- new-product / candidate-e41cd2c703a4e94c7b44: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f251681775a26893549e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-000a74467fb21eea39de: No verified product image URL
 - new-product / candidate-4c5c851b44d08bb45aa3: No single GBP offer for the exact product
 - new-product / candidate-87d7f73e509f6f86a87a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1d6c9d5457673ee8d700: No verified product image URL
-- new-product / candidate-b2b9581e3447b167d2f0: Cannot confirm one product on the discovered URL
-- new-product / candidate-14c645bb9c7485aba8e9: Pack weight outside the supported range
-- new-product / candidate-e87494241b1aa1654fc2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a04f84f41b0ca735cd11: No verified product image URL
+- new-product / candidate-7adf64bfb575b10d7fe3: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b5b625e1b211b7b7d7c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0bb392b13e1e2d7768a2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6a525ff33b978af56dcd: No verified product image URL
 - new-product / candidate-91f579999c8e92e4ad78: Approved URL is outside its recorded retailer
 - new-product / candidate-1c00bb0b7d1f35e4cbbf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9787a2f138fc7627ebb8: No verified product image URL
-- new-product / candidate-a7bd57e1fcd94772bdd3: Cannot confirm one product on the discovered URL
-- new-product / candidate-5586aa997c9127245cb3: No verified product image URL
+- new-product / candidate-4e1a45f742c0451281a0: No verified product image URL
+- new-product / candidate-52a4620525cbd68885c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-6c0153b93dd31370961a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-342668b51d5f52a949cd: Source does not state the material pack weight; listing skipped
 - new-product / candidate-356ef2f264c3afc061e7: No verified product image URL
 - new-product / candidate-103fb274255f286ae1d3: No single GBP offer for the exact product
 - new-product / candidate-ac2792fe910a93fdaf56: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b35b8d9b49ee99a4054c: No verified product image URL
-- new-product / candidate-b08dba1adb9da90c5182: Cannot confirm one product on the discovered URL
-- new-product / candidate-fd50a2b1590a2805869e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9a8db1d70556a69c975d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1141cf67f4b2c98e90e6: No verified product image URL
+- new-product / candidate-aaacf110cc7334e3b1b5: Cannot confirm one product on the discovered URL
+- new-product / candidate-f8fe78ae4f7820bd26a4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d19fe43f42e069e5aef3: No verified product image URL
 - new-product / candidate-7fca3c17be29703fccb1: No single GBP offer for the exact product
 - new-product / candidate-d072d815cb4752b7d23c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e77beadbfc7d727b9f52: Cannot confirm one product on the discovered URL
-- new-product / candidate-a410baa2b1d5b26aedbd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cdd05cea962d5ff65196: No verified product image URL
+- new-product / candidate-707c27aa86b2f07612b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-78f1d32a1abe5785a543: Source does not state the material pack weight; listing skipped
 - new-product / candidate-590de692ef5c569ce167: No verified product image URL
 - new-product / candidate-1e09980934f83ca058c4: Approved URL is outside its recorded retailer
 - new-product / candidate-f890da2eea1edee809fb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dc26479b64609e951e25: Cannot confirm that the product is a material or printer
-- new-product / candidate-131d84f208aef12d5dfe: Cannot confirm one product on the discovered URL
-- new-product / candidate-ef61457858a79108956c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b962c14d0b6c193d739d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-334390e4a7d17279becb: No verified product image URL
+- new-product / candidate-66479cf8687a7dde5261: Cannot confirm one product on the discovered URL
 - new-product / candidate-84e60fcd70a8f2c03598: No verified product image URL
 - new-product / candidate-e33212c35d37153ecd80: No single GBP offer for the exact product
-- new-product / candidate-a04f84f41b0ca735cd11: No verified product image URL
-- new-product / candidate-de8d46e6fa38cea50520: Cannot confirm one product on the discovered URL
-- new-product / candidate-1173ddafec345d3af7d4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-57015646a7bbb9e22fb7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9ff5e5e54d8028c56b8d: No verified product image URL
+- new-product / candidate-9aec34d1cd9e9b39d5e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-921c52a21288223b5e56: No verified product image URL
+- new-product / candidate-ecd758d7f6f0b2480ec4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1a66b8a1f1b1fb7e0556: No verified product image URL
 - new-product / candidate-97c1246dcad0dd050314: Approved URL is outside its recorded retailer
 - new-product / candidate-eb793a976cd9538b296f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4e1a45f742c0451281a0: No verified product image URL
-- new-product / candidate-7432a6a44b12f47414b8: Cannot confirm one product on the discovered URL
-- new-product / candidate-f60bea7548fc11656519: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a882fb1263f46f1e5c24: No verified product image URL
+- new-product / candidate-4107d1ee56bcb3a242df: Cannot confirm one product on the discovered URL
+- new-product / candidate-3f98785145ed4e7c0b98: Source does not state the material pack weight; listing skipped
 - new-product / candidate-45e1288d6a7863a6c26f: No verified product image URL
 - new-product / candidate-6fd2a0be280598657192: No single GBP offer for the exact product
 - new-product / candidate-9eb70002acebf7112098: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1141cf67f4b2c98e90e6: No verified product image URL
-- new-product / candidate-a7cc41c1fcce0daa250e: Cannot confirm one product on the discovered URL
-- new-product / candidate-360ddb6770a57453861d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-99a1fe406e98faa6bb25: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f0c4086038d681afa229: No verified product image URL
+- new-product / candidate-4e869244a267b441db1b: Cannot confirm one product on the discovered URL
+- new-product / candidate-31e21cf5a43dcd2c42ad: Pack weight outside the supported range
+- new-product / candidate-a72770fb3e2ea47e40d8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-88dd720baafdd634515d: No verified product image URL
 - new-product / candidate-3c030e4a392fed2cfccc: Approved URL is outside its recorded retailer
 - new-product / candidate-99d8b59084f772f90d63: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cdd05cea962d5ff65196: No verified product image URL
-- new-product / candidate-76e49234fc0eaac24de4: Cannot confirm one product on the discovered URL
-- new-product / candidate-039738623a740de788d3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-59381d176bfc81b08092: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7aafc962292c90b0d78f: Cannot confirm one product on the discovered URL
+- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c9567da6da608db7cbfe: Source does not state the material pack weight; listing skipped
 - new-product / candidate-927658b5f057fa8a341e: No verified product image URL
 - new-product / candidate-3a0d717ec197f48a2c44: No single GBP offer for the exact product
 - new-product / candidate-1af056c09ef5ae31d148: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-334390e4a7d17279becb: No verified product image URL
-- new-product / candidate-c97e23566f0f74d2f5b8: Cannot confirm one product on the discovered URL
-- new-product / candidate-afb212a1f423b5b09efe: No verified product image URL
+- new-product / candidate-d82e35565229328f5ff5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-43b8308bc70027ad914f: Cannot confirm one product on the discovered URL
+- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-40c31bfe5b31aabaf15a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-65fc84c56cd151bb1166: No verified product image URL
 - new-product / candidate-5b47f1616bdb4cb13908: Approved URL is outside its recorded retailer
 - new-product / candidate-92ff7b385724debbe44f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9ff5e5e54d8028c56b8d: No verified product image URL
-- new-product / candidate-4298312302b8826080fd: Cannot confirm one product on the discovered URL
-- new-product / candidate-4ca76683ed61d1fc02ed: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-03b3ea75109523fcd073: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-75cdab8322f97eaedf0b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-41c84942aa0dc9adbf38: Cannot confirm one product on the discovered URL
+- new-product / candidate-3817e7c486c0c8ce3f50: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86b120a600cf22ca5770: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ace8a94b7f4211d5f230: No verified product image URL
 - new-product / candidate-7b14b33ae1d3c83a69ee: No single GBP offer for the exact product
 - new-product / candidate-5778c376f903d1159530: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a882fb1263f46f1e5c24: No verified product image URL
-- new-product / candidate-e19072b5948f13dbde7c: Cannot confirm one product on the discovered URL
-- new-product / candidate-eb13b7f93b8392b3c518: No verified product image URL
-- new-product / candidate-f251681775a26893549e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fb5c40ec1a4e1077c7cb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-139e6fbb6ca09adcadfa: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-43e258f3cceb2d1a411e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cc3c7eaf6001d41779af: No verified product image URL
 - new-product / candidate-07ff212ee54855c1d32f: No single GBP offer for the exact product
 - new-product / candidate-589573428461a546ae7f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f0c4086038d681afa229: No verified product image URL
-- new-product / candidate-71b5d5e3aa8aa4f023d7: Cannot confirm one product on the discovered URL
-- new-product / candidate-6cd81d8480fa7de771e7: No verified product image URL
-- new-product / candidate-0bb392b13e1e2d7768a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a32ca92493671cf89317: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8b4a0c44e0e7aa65d9fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f19854fd769ba4696bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-12a03513e880b0507e77: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f390b14a37be9faeec3c: No verified product image URL
 - new-product / candidate-83ddb0b4c6d69245f00a: Approved URL is outside its recorded retailer
 - new-product / candidate-795deb09de41c52e9157: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ba4ed237987be5cef729: Cannot confirm one product on the discovered URL
-- new-product / candidate-9495b557932f11ac99b3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cfa8fbb1563eda68369d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-08b876cbfd5945451377: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6e9b28d5eb418dbb4f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ac53294a972a6f2fec39: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0d40e52650b5bf195e9d: No verified product image URL
 - new-product / candidate-0bd2c0433ea748c4d25b: Approved URL is outside its recorded retailer
-- new-product / candidate-59381d176bfc81b08092: Source does not state the material pack weight; listing skipped
-- new-product / candidate-34fe103838b23a7c37c3: Cannot confirm one product on the discovered URL
-- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4404ffa74b6d72f2d045: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7ffbb236b856f4d89a98: Cannot confirm one product on the discovered URL
+- new-product / candidate-ca7c3eac5782bf0b54b4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-325e934abca8d4999d76: Source does not state the material pack weight; listing skipped
 - new-product / candidate-af06aeee8cccd9c1a9ed: No verified product image URL
 - new-product / candidate-f6f418d21e9e66887345: Source does not state the material pack weight; listing skipped
 - new-product / candidate-55fb4b62c3e7a09df1a8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d82e35565229328f5ff5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d351f7dd566ce03961a1: Cannot confirm one product on the discovered URL
-- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-342668b51d5f52a949cd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4e4674857556bcf74883: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4f8cfa46ee37063aa1d3: Cannot confirm one product on the discovered URL
+- new-product / candidate-019493ddfe723eb03083: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d86852c3f938faccd91: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d7d4d0e76e66907e6358: No verified product image URL
 - new-product / candidate-b7805bd72cc63c456d06: Source does not state the material pack weight; listing skipped
 - new-product / candidate-70ed8d7d3b0b9df0323c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-75cdab8322f97eaedf0b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2bbd44af4a3adee0ce74: Cannot confirm one product on the discovered URL
-- new-product / candidate-6c2c5838ed6c97f3a97e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-78f1d32a1abe5785a543: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bcac890cbc8cfc2e37ee: Source does not state the material pack weight; listing skipped
+- new-product / candidate-744ff437632546f48ea4: Cannot confirm one product on the discovered URL
+- new-product / candidate-e02dbefcb15a9b4c386f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0f05cbf66f04568b3c9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ae73a9d1a7710a7cdd63: No verified product image URL
 - new-product / candidate-f79bd18fd59d086e6732: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2daed4e367941f12f95e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fb5c40ec1a4e1077c7cb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5b2fbab807feee694949: Cannot confirm one product on the discovered URL
-- new-product / candidate-5761be978497cc54b18c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ecd758d7f6f0b2480ec4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-947b8bea46eb7ec0406c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fd0c92bc118eefa831d2: Cannot confirm one product on the discovered URL
+- new-product / candidate-d26cbc8b9b349baafa8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc06fa1e1c4953f57418: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9d8fc5415d54a88868ea: No verified product image URL
 - new-product / candidate-f25fe893f5112a67f221: Source does not state the material pack weight; listing skipped
 - new-product / candidate-58f07379bd87eb7f2265: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a32ca92493671cf89317: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cb965fae9884dda394f1: Cannot confirm one product on the discovered URL
-- new-product / candidate-b7ed669db7edf12b7913: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3f98785145ed4e7c0b98: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9a62fe895dfcb10ae158: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3fe4c118a671ddf12242: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c80d4aaf0849abcf08e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fb9d29176d1e95d8f8e9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-78c49c12fc47b4e4b145: No verified product image URL
 - new-product / candidate-62012260c7194f8cca38: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d984fa6dd11b5982609b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cfa8fbb1563eda68369d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-452282f36648b9367976: Cannot confirm one product on the discovered URL
-- new-product / candidate-aadb0934ee32520cef90: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a72770fb3e2ea47e40d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dc214e956c5a301f0eb9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-312ae1b60ab604d86fc8: Cannot confirm one product on the discovered URL
+- new-product / candidate-0183b09cc1771cd2b55c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-39a0579d237ac0ed6d13: No verified product image URL
 - new-product / candidate-21ffbddbbf84f7cce07a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9814f9d1d9e0daae37aa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4404ffa74b6d72f2d045: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2f379b62e627c882b310: Cannot confirm one product on the discovered URL
-- new-product / candidate-2ff7fe423e28f6e27f34: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c9567da6da608db7cbfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-efcf7922f1ac9034f349: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5696918e7b1728c6c43f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ca69ec635a29997fc5cc: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d8f80f1374aa6457f592: No verified product image URL
 - new-product / candidate-15415b92734d4ee8c2ac: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-aeea8d2f0434b6d3d268: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4e4674857556bcf74883: Source does not state the material pack weight; listing skipped
-- new-product / candidate-42866efade62a113ae5b: Cannot confirm one product on the discovered URL
-- new-product / candidate-5702be98bf84e7034db5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-40c31bfe5b31aabaf15a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f7baa2c112f02c5412cd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-597229ecedb064b58ce0: Cannot confirm one product on the discovered URL
+- new-product / candidate-29946943d6bfc823d2b8: No verified product image URL
+- new-product / candidate-8a4e8af738d0d555a9fe: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f19827c834780b528468: No verified product image URL
 - new-product / candidate-bb5ea712215ce946b6f3: No single GBP offer for the exact product
 - new-product / candidate-ed5ac68ba92470676577: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bcac890cbc8cfc2e37ee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-20f42a56aa1df44cafab: Cannot confirm one product on the discovered URL
-- new-product / candidate-f2fe8417728f7444bd8b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-86b120a600cf22ca5770: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e59e3614103ad3b7203d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-df59a29d2accf53f5247: Cannot confirm one product on the discovered URL
+- new-product / candidate-81fbde022dc9649b82ca: Pack weight outside the supported range
 - new-product / candidate-a2b3f6799104aae267c8: No verified product image URL
 - new-product / candidate-7c3912057e8e18d1f86d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-947b8bea46eb7ec0406c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a1e0b6a5ce97200be89b: Cannot confirm one product on the discovered URL
-- new-product / candidate-beb111769687433bba7e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-43e258f3cceb2d1a411e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-243e88a7f1a4a8bc4d85: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7bc008198aebeb2f1a6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-50676104cf3b4bc0cbcf: No verified product image URL
 - new-product / candidate-c674944f7ce683c5287f: No verified product image URL
 - new-product / candidate-2177f4aabd757213666e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5b85b65509017d9a1bcf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9a62fe895dfcb10ae158: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8f7b34714c29edf071cd: Cannot confirm one product on the discovered URL
-- new-product / candidate-4e6199bd67eb0f8c5291: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-12a03513e880b0507e77: Source does not state the material pack weight; listing skipped
+- new-product / candidate-df2d1d4785065f82f482: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a17bf82c217b93badd77: Cannot confirm one product on the discovered URL
+- new-product / candidate-4712ae0bd680047cf25d: Pack weight outside the supported range
 - new-product / candidate-3c0be50798e171353c7f: No verified product image URL
 - new-product / candidate-8aa5e79df4244574ef9c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8a6358f51090c8775425: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dc214e956c5a301f0eb9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b29b6873cb0eaa8903b2: Cannot confirm one product on the discovered URL
-- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ac53294a972a6f2fec39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-821412cfbd49284ef63c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9996dfd7c48695f076be: Cannot confirm one product on the discovered URL
+- new-product / candidate-26281e65c0220fe865e5: No verified product image URL
+- new-product / candidate-240ff13c7f91190e9ebe: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-200ba8a4f290c987b14c: No verified product image URL
 - new-product / candidate-a9f30c980d2a913601f2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4c33e6fd557b7c5829c1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-efcf7922f1ac9034f349: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ea492a8199d672101a2c: Cannot confirm one product on the discovered URL
-- new-product / candidate-325e934abca8d4999d76: Source does not state the material pack weight; listing skipped
+- new-product / candidate-86fd18717ec7cf25147f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e9c661d6fdda8a18b0cb: Cannot confirm one product on the discovered URL
+- new-product / candidate-590b38771d1226e55ccf: No verified product image URL
+- new-product / candidate-926b5788011e5d21eff2: Pack weight is ambiguous; listing skipped
 - new-product / candidate-8bd42abcbe33b2395f63: No verified product image URL
 - new-product / candidate-aeab6f0ffec0bcadc1be: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4dc1bf2ea2f50aba6248: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f7baa2c112f02c5412cd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2d4610014b1449a1527b: Cannot confirm one product on the discovered URL
-- new-product / candidate-3b642b714f76a825ce73: Pack weight outside the supported range
-- new-product / candidate-d0f05cbf66f04568b3c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e65c70877730cc089c2b: No verified product image URL
+- new-product / candidate-94b32782b07b9467b5c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c261253cb8a093112d6d: No verified product image URL
 - new-product / candidate-b146080ee197e23b2ae7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dc060d0f5872f997e5ed: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e59e3614103ad3b7203d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-01a877baa8a106bba068: Cannot confirm one product on the discovered URL
-- new-product / candidate-d6feb2d9b97f9bd87481: No verified product image URL
-- new-product / candidate-dc06fa1e1c4953f57418: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9b1f8aa72e9495e5f279: No verified product image URL
+- new-product / candidate-e97f3caf15a28d2a39fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cbe9e290f1db39bd4e14: No verified product image URL
 - new-product / candidate-82b59ee1fd70dc6c8b65: No verified product image URL
 - new-product / candidate-988de57f480d280f7e18: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8f9fc269acf8810b26cd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-243e88a7f1a4a8bc4d85: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c3fc02a8a6bbf8fed276: Cannot confirm one product on the discovered URL
-- new-product / candidate-87a98d5c4f46b85bd44e: No verified product image URL
-- new-product / candidate-fb9d29176d1e95d8f8e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9a262dbc77c2e2d189ba: No verified product image URL
+- new-product / candidate-8855bebe3d1c74f6234d: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-70cac257ed9e9faec920: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-24a408f9259bb3e2fd79: No verified product image URL
 - new-product / candidate-b3ca862ea855d13ea59f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b34da1134d25327fd8c4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-df2d1d4785065f82f482: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7a79dab26468dd54c1b4: Cannot confirm one product on the discovered URL
-- new-product / candidate-fe6fa158bb9b0dffec20: No verified product image URL
-- new-product / candidate-830fecb8fd0c4123e82d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-92e523e4290c7506f3c6: No verified product image URL
+- new-product / candidate-1b4fe06eefeb628791de: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6fadb43d6ca89857706e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-70efa157254481712777: No verified product image URL
 - new-product / candidate-ff3104527c622b63a320: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ec6be2f69b1139c8dc98: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-821412cfbd49284ef63c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b29eaaed8dbbbe950e7a: Cannot confirm one product on the discovered URL
-- new-product / candidate-aff86bdae6756e6d5242: No verified product image URL
+- new-product / candidate-48b4791f5c089cd3ccc3: Cannot confirm that the product is a material or printer
+- new-product / candidate-1e0bf1671445602822ba: Cannot confirm one product on the discovered URL
+- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6bb8c8d821e10facaa66: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-24c84643b24607e9fbb8: No verified product image URL
 - new-product / candidate-7a9b2e90e610a4e8a96a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-86fd18717ec7cf25147f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-74a384ee7edbca8d7030: Cannot confirm one product on the discovered URL
-- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d50d67fbd020f62e0ab2: No verified product image URL
+- new-product / candidate-45814e1664045ef395ed: Cannot confirm one product on the discovered URL
+- new-product / candidate-a54ef3eb51d7c5f0c0bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e48e5aefa88d404ec897: No verified product image URL
 - new-product / candidate-83012da9b3f958c64a68: No verified product image URL
 - new-product / candidate-31a8d516970a7712fc32: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-249368827a09e481e2b0: Cannot confirm one product on the discovered URL
-- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e23c43f6d040c12c1c2f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5c384f361ed7ba678285: Cannot confirm one product on the discovered URL
+- new-product / candidate-809159c15b2d5f3a743e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0f12bf3339b17e6bcf8: No verified product image URL
 - new-product / candidate-ecfcb89019de050923b9: No verified product image URL
 - new-product / candidate-a9167743b42cd292d4bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1fcf0f175409dda53bdd: Cannot confirm one product on the discovered URL
-- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2cac1066adafcdf11343: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc04fe92a863155dd99c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f62243e5bd28d308b0bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-14ea0889198d38d5bd3e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
 - new-product / candidate-8a76138d3f4c2444bb73: No verified product image URL
 - new-product / candidate-e5b5ec04e489292f3f6a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c0cf16647e5c7eb70070: No verified product image URL
-- new-product / candidate-b813ffd962b39cdceb5f: Cannot confirm one product on the discovered URL
-- new-product / candidate-a54ef3eb51d7c5f0c0bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a7e0c83c229f83ece71e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a445f118391d0e5df482: Cannot confirm one product on the discovered URL
+- new-product / candidate-8c82f1852c41a09cd43d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-397f3622667850737811: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0315857f9cabffac9357: No verified product image URL
 - new-product / candidate-593230ba19be477d147d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9b1f8aa72e9495e5f279: No verified product image URL
-- new-product / candidate-46c584b94c4a642fd7f7: Cannot confirm one product on the discovered URL
-- new-product / candidate-809159c15b2d5f3a743e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a4e8af738d0d555a9fe: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7f89ef9848008eea0377: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c951c50b17e407fc0171: Cannot confirm one product on the discovered URL
+- new-product / candidate-9af75bc8fd1519197427: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-291d5a8f92422711a6ec: No verified product image URL
 - new-product / candidate-f40cc007a491285d0a54: No verified product image URL
 - new-product / candidate-ddec7c53ca8419cc5615: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9a262dbc77c2e2d189ba: No verified product image URL
-- new-product / candidate-11a2b61f254d8f90f045: Cannot confirm one product on the discovered URL
-- new-product / candidate-14ea0889198d38d5bd3e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-745b71a17fdb94d8d0b4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fc4bd874dd02920c02db: Cannot confirm one product on the discovered URL
+- new-product / candidate-c4d76c91690479ed7624: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a69797916fdd5154d965: No verified product image URL
 - new-product / candidate-58804dd47840fa69052b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-92e523e4290c7506f3c6: No verified product image URL
-- new-product / candidate-5750921dea48ab1c1fbb: Cannot confirm one product on the discovered URL
-- new-product / candidate-8c82f1852c41a09cd43d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fa06ce31ca808693ac6a: No verified product image URL
+- new-product / candidate-9c6518dcb8f774c9822b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a0af96b7b60adf853844: Cannot confirm one product on the discovered URL
+- new-product / candidate-4d5ae4086401745fe83b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1bde3ac2509f33038c08: No verified product image URL
 - new-product / candidate-bc2766198c19e0efa4f0: No verified product image URL
 - new-product / candidate-c72bd9b1dbf81f373a0b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4249c0510a6ab7816fd9: Cannot confirm one product on the discovered URL
-- new-product / candidate-9af75bc8fd1519197427: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-48b4791f5c089cd3ccc3: Cannot confirm that the product is a material or printer
-- new-product / candidate-0cd6ed22652e5d5ce0ea: Cannot confirm one product on the discovered URL
-- new-product / candidate-c4d76c91690479ed7624: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-31869407aa6aaeb99c8c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-f4ea88278c3b6e03ec6a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d50d67fbd020f62e0ab2: No verified product image URL
-- new-product / candidate-0d01e910ac8e559cf531: Cannot confirm one product on the discovered URL
-- new-product / candidate-4d5ae4086401745fe83b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-40cd4f3dc85af597088e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-64d31a1aa204e67a45c1: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc3a100df0c5797a12d3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f32c1331f5ae7738ff06: No verified product image URL
-- new-product / candidate-2a557f456ab4eed3d493: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e23c43f6d040c12c1c2f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c4a80f6a5934bb36b128: Cannot confirm one product on the discovered URL
-- new-product / candidate-776068545ae934d76961: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-099c9025c93530502cd9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cc04fe92a863155dd99c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-caa02e6f2b7d674d57c5: Cannot confirm one product on the discovered URL
-- new-product / candidate-00b2f425a72a76396a29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6d8d57cad65ba6bf0221: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-03e8e0cbec149184b600: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a7e0c83c229f83ece71e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ed1ad3fd884e30ed94b: Cannot confirm one product on the discovered URL
-- new-product / candidate-eb537783c2604fe54625: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6fadb43d6ca89857706e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6ac42cbe4cf2881c0573: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7f89ef9848008eea0377: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8bbf58d5486bf286a828: Cannot confirm one product on the discovered URL
-- new-product / candidate-6b33698bf139e8451843: No verified product image URL
-- new-product / candidate-6bb8c8d821e10facaa66: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4acd0b11dee19ae0c671: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-745b71a17fdb94d8d0b4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-75323e2b1c3eaa7f4ade: Cannot confirm one product on the discovered URL
-- new-product / candidate-a69debb0647c702d8721: No verified product image URL
-- new-product / candidate-e48e5aefa88d404ec897: No verified product image URL
-- new-product / candidate-5cbdb52281b4cf26590b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9c6518dcb8f774c9822b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-31266c21e091aea4d1af: Cannot confirm one product on the discovered URL
-- new-product / candidate-7e188d72855ceef6ac6c: No verified product image URL
-- new-product / candidate-d0f12bf3339b17e6bcf8: No verified product image URL
-- new-product / candidate-66bb8f5150abef8740e3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bb1911d918836bef9be7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fe9ea3c972a469aca39b: Cannot confirm one product on the discovered URL
-- new-product / candidate-3ce3ee5590730e43e001: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
-- new-product / candidate-574dd5c964ca44662745: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e7e04c11fb600c6a26cb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-50787e3271736d9ad4b3: Cannot confirm one product on the discovered URL
-- new-product / candidate-d409ba791510007421ca: Pack weight outside the supported range
-- new-product / candidate-397f3622667850737811: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-30799b4253006e10df70: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d10e1861533de0779ed7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a2f13cd83b0b7b68b75b: Cannot confirm one product on the discovered URL
-- new-product / candidate-cc5dc61be5277f61d74c: No verified product image URL
-- new-product / candidate-291d5a8f92422711a6ec: No verified product image URL
-- new-product / candidate-0ba61256e3e7533914e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3b938f178b30755abbab: Source does not state the material pack weight; listing skipped
-- new-product / candidate-80c2c8b68f4f85994acc: Cannot confirm one product on the discovered URL
-- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
-- new-product / candidate-1bde3ac2509f33038c08: No verified product image URL
-- new-product / candidate-716b5698e5eb11144a15: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-396f6157daaeb3c5b8d6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a321bbe75b18d49ff5b9: Cannot confirm one product on the discovered URL
-- new-product / candidate-871e328ca17eb238ed70: Pack weight outside the supported range
+- new-product / candidate-598c4d078b012fd08e18: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc3a100df0c5797a12d3: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-ebafb332e81e4d6a5707: No verified product image URL
-- new-product / candidate-49568bc3ffce4106eb4f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b2d7df41cdaf71425d94: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-769ed22ce50c1bb0e102: Cannot confirm one product on the discovered URL
-- new-product / candidate-6102ad1a874597d96f05: Pack weight outside the supported range
+- new-product / candidate-e7e04c11fb600c6a26cb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-37aed836ed9a9e74a3cb: Cannot confirm one product on the discovered URL
+- new-product / candidate-776068545ae934d76961: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4da39cc9d94c906b2cb5: No verified product image URL
-- new-product / candidate-404f72a0f4d7099f41e6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-897290b68b6c7ed894e1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b395fdf6f1bbec31f067: Cannot confirm one product on the discovered URL
-- new-product / candidate-8482830aa45b7db85485: No verified product image URL
+- new-product / candidate-f4ea88278c3b6e03ec6a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d10e1861533de0779ed7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e383f4afc0be9c6f473a: Cannot confirm one product on the discovered URL
+- new-product / candidate-00b2f425a72a76396a29: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4a5fa4ce54e54ec66bdc: Pack weight is ambiguous; listing skipped
-- new-product / candidate-a54d5eeeb4b6fa0a0b2f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b5d8df64edad448c6e13: Cannot confirm one product on the discovered URL
-- new-product / candidate-7337533419a2d060f3a9: No verified product image URL
-- new-product / candidate-51b3a58880a42aa2be12: No verified product image URL
-- new-product / candidate-0589712ebf0f7a3776d4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c8e867999a3db0181b33: Cannot confirm one product on the discovered URL
-- new-product / candidate-96feca143abec9a69fe6: No verified product image URL
-- new-product / candidate-99699604b44a1bd53062: No verified product image URL
-- new-product / candidate-685ce6906121f449f5ed: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-231497cd8dbb9b30f4d3: Cannot confirm one product on the discovered URL
-- new-product / candidate-0908099e489576ef6b9e: No verified product image URL
-- new-product / candidate-d9d1e599d6eb1c40a2e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-040fbae274a46d716a20: No verified product image URL
-- new-product / candidate-df7707d2238d301c8659: Cannot confirm one product on the discovered URL
-- new-product / candidate-40df86177907f2f14ecb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a3f2892c8b04172cf21c: No verified product image URL
-- new-product / candidate-9cc44b0fce00da06036d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8490359567e80aae61f6: No verified product image URL
-- new-product / candidate-3d67f82f9ae5be2c147f: Cannot confirm one product on the discovered URL
-- new-product / candidate-9756d9b1850b2d84afa7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-04bfadb256c4801bd8ba: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5cf18f2612e2b3151fee: Cannot confirm that the product is a material or printer
-- new-product / candidate-e88133b042dbee6c3f9f: Cannot confirm one product on the discovered URL
-- new-product / candidate-0a344b29ba6e816cfa41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e66c4822f5fb03078209: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5e2c4ab5203867101c95: No verified product image URL
-- new-product / candidate-bb5579eac4fadceff06d: Cannot confirm one product on the discovered URL
-- new-product / candidate-3e3b47485cb0074e20fd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-774cd9fda4e61f8a0512: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c6c63ae9f67a59589696: Cannot confirm one product on the discovered URL
-- new-product / candidate-f301a995d74c088498ec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-693d6efd9fccd8947b20: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-28dccdb0dff381b670c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3a604e847b11f37399d3: Cannot confirm one product on the discovered URL
-- new-product / candidate-285d26be413bb754c520: Source does not state the material pack weight; listing skipped
-- new-product / candidate-10e35c8819db6627392c: No verified product image URL
-- new-product / candidate-589e6870d3cbb2a05851: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d157aad4ae8f62229be: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f9da02342de68cf16750: Cannot confirm one product on the discovered URL
-- new-product / candidate-3024f36c0b0ff940b4bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b8b4e689689ffc45abd1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dab9111025d6b42858f1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-48390387388be90e331d: Cannot confirm one product on the discovered URL
-- new-product / candidate-165657b3a050c746e97b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dcb33189eabac6bd10cb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-89d57b8522bc5bf89fba: Source does not state the material pack weight; listing skipped
-- new-product / candidate-69650f81882ab9609d53: Cannot confirm one product on the discovered URL
-- new-product / candidate-08cd8e0d89d1ce0c80d8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9a5f4eada3aab8c9d999: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-797fc29a150cd244b5e7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20d6b552abc71618c70e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-92b9d93e335ede46bb5a: Cannot confirm one product on the discovered URL
-- new-product / candidate-44f385a42af295a76730: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2c8983f68d911b153177: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5c984f0cd3fdc0cb7f31: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b4be3e7450840bef838: Source does not state the material pack weight; listing skipped
-- new-product / candidate-666b3c994c75d53e8dd2: Cannot confirm one product on the discovered URL
-- new-product / candidate-65d61d668f4f9cefaa9e: No verified product image URL
-- new-product / candidate-b0e55ca1988be03753cc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-677532f3ef735bdd05d5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f9429c20db232496edbe: Cannot confirm one product on the discovered URL
-- new-product / candidate-61ea7fda2fae2f7723ee: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa73c4b828dadf358158: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3dc09920e79d23ff0a0b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-939b498bcbe8332a5fe2: Cannot confirm one product on the discovered URL
-- new-product / candidate-3292c0dacd9b4725618b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bfe467beb2e325c3dea8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-74d40f02909dcf2362de: Cannot confirm one product on the discovered URL
-- new-product / candidate-b5e685ab8c3867109dcc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7987349b11318d5d7122: Source does not state the material pack weight; listing skipped
-- new-product / candidate-758b81986c3a5a2e66fd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c0d1b62d2f9d84684aee: Cannot confirm one product on the discovered URL
-- new-product / candidate-a1ad699d7652ed13649b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f20cab6ecc61ddd72d41: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bac5769ef22924cce639: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7429be99be37e32b0911: Cannot confirm one product on the discovered URL
-- new-product / candidate-ce6cb0b55ca8d0ae98ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dff76aa660f4bcff0b38: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-188650da393284f1ed73: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7018f92882db8555049b: No verified product image URL
-- new-product / candidate-69d7850c99cbb9f4b65d: Cannot confirm one product on the discovered URL
-- new-product / candidate-752c8bb36f51a3165eac: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0382a40137752ff77d7f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0c5a6d0c24daee89bf97: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-40389e056cb5d200fa60: No verified product image URL
-- new-product / candidate-972dcb37572c0707ec24: Cannot confirm one product on the discovered URL
-- new-product / candidate-5628e47bb86bace7dbf4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-38d37a8e52bbc00016d1: No verified product image URL
-- new-product / candidate-d645f1cd020fb1bab1c5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c3a4275960fc62d1cb7c: Cannot confirm that the product is a material or printer
-- new-product / candidate-26cb437e3cbbe13ffc31: Cannot confirm one product on the discovered URL
-- new-product / candidate-bf517785d83829b8aae0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1635b3d61136f35d92a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e1321de48293f1908ef5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-51c30e4cf42442c37030: No verified product image URL
-- new-product / candidate-40e806ae7fe277c46f3f: Cannot confirm one product on the discovered URL
-- new-product / candidate-0176c063914cf52d4165: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-633c9eb836ea423a78f4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-42ec851ee9fdce4479ba: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bf8dc660abba5261eea1: Cannot confirm one product on the discovered URL
-- new-product / candidate-cddd51a1367f11cd4402: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4bb4c509c86bf1f1bc9b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f1399cd96ae3da8c1eab: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6946bb8d44a0826124ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0b9f2edbc6c9effbc8ec: Cannot confirm one product on the discovered URL
-- new-product / candidate-57b51709361ab25f1f7e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e42c6eadc005d9cfa6e8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fa57f8625c8df5a36373: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5682ff338724a100b445: Cannot confirm one product on the discovered URL
-- new-product / candidate-e615d9b1bcf217f4343a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-287f9e321ada63a6c36e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e088199f3cc5c7b97edd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ef0220f222fa566300c9: Cannot confirm one product on the discovered URL
-- new-product / candidate-b79a3167dbbf1e9ee2ea: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-df7590df8ad58827846c: No verified product image URL
-- new-product / candidate-b7b6f1e9fb1aec99ca8a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9ed7e94787bf7155d67e: Cannot confirm one product on the discovered URL
-- new-product / candidate-067cdeebd74ef42117f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f8fe78ae4f7820bd26a4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c0c8776d44dfd7a402c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8286901831e38c53dcde: Cannot confirm one product on the discovered URL
-- new-product / candidate-bbe0638af5867569f454: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e7285980c6a70f8402ec: No verified product image URL
-- new-product / candidate-0bf55065a2517ec452b1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b053fe00b2107c34a8cc: Cannot confirm one product on the discovered URL
-- new-product / candidate-d01a99ee3ecd5ba5cf00: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-48f1220cafa88d2bdc97: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7af14e41b4a0fa1ea21e: Cannot confirm one product on the discovered URL
-- new-product / candidate-f104d8cd54aa13d6cfc0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-28eef01b021eaf0908bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-87c9cff9e629b8840e97: Cannot confirm one product on the discovered URL
-- new-product / candidate-0989ccf28d70f3abd6c4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5502c39c3852ce338033: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4fece49fc40e2dc4af94: Cannot confirm one product on the discovered URL
-- new-product / candidate-d00dd5e9e4dd8b659147: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-69e1bb131d902f291b08: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a5bc33d5d82501f717a1: No verified product image URL
-- new-product / candidate-38047a834b83cd221988: Cannot confirm one product on the discovered URL
-- new-product / candidate-d2d1d6e6728f6f26bbc2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eff4206a4d0453dbf506: No verified product image URL
-- new-product / candidate-2e05cd6040ce09589af7: No verified product image URL
-- new-product / candidate-08eaecb5a750866e205a: Cannot confirm one product on the discovered URL
-- new-product / candidate-1df6c1cc566808ee7bf9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dc870c028fcb8dc5a5df: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c36cfe410fdb7d65765f: Cannot confirm that the product is a material or printer
-- new-product / candidate-cc6eb951e2aa494123c2: Cannot confirm one product on the discovered URL
-- new-product / candidate-b482347c074986abba09: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5f02637780a36a2d1899: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b16cab0fa3f85c5919b9: No verified product image URL
-- new-product / candidate-cef5f90d80b1b19ad79f: Cannot confirm one product on the discovered URL
-- new-product / candidate-2e714c3e87668e4c83ea: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-711a27cb0e2958b0b644: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7883c70a72747a09ee28: Cannot confirm one product on the discovered URL
-- new-product / candidate-2c9ae34af933cd2afcf5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ae8c4e066fd878dc4563: Source does not state the material pack weight; listing skipped
-- new-product / candidate-27fc967c2c0a58920c37: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c06c90dcc47d811f03d2: Cannot confirm one product on the discovered URL
-- new-product / candidate-f7ce2563fb11d72839a5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a6a1eb6c445ef429dd2b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7e7e523a9196a0526ae3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2d7e9bea7442432fcf45: Cannot confirm one product on the discovered URL
-- new-product / candidate-2a506bf069c3f45696d1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-191f94ea2533b2ece370: Source does not state the material pack weight; listing skipped
-- new-product / candidate-516974d8c9c741fe26de: Source does not state the material pack weight; listing skipped
-- new-product / candidate-27daa13a93918ded2681: Cannot confirm one product on the discovered URL
-- new-product / candidate-f119ca1010ec89496cbe: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bbd095223fefe0742ee5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5da6ec5f2d2373d7b9bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-edbefb151056cc09458c: Cannot confirm one product on the discovered URL
-- new-product / candidate-60fbb3e70efbaadf65f3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0dc89928ff8a7b0533e4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-422d5fe4fc43f0e55186: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0af09c96c1334ee8e8eb: Cannot confirm one product on the discovered URL
-- new-product / candidate-71f34e185eccbc6d6593: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8a482b7450ce1025b6e2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c79253e6c326de3a84aa: Cannot confirm one product on the discovered URL
-- new-product / candidate-caf92da3d4c594c5fb5c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d3d7c590b6f3153989ef: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4f19f7e017928f91c099: Cannot confirm one product on the discovered URL
-- new-product / candidate-0fdf840ed4a935c68780: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-83361280b7fc5255a6d3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-88487e70702fb2d61697: Cannot confirm one product on the discovered URL
-- new-product / candidate-0676dcccdb8dd078fff8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2cf4fb24cfed5fbf889b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-db7543b5945362643cda: No verified product image URL
-- new-product / candidate-cabfbcb0254d9e4fad53: Cannot confirm one product on the discovered URL
-- new-product / candidate-9748d96f1c4c7d28c054: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b3d7b405c3f4af05347a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f205b27d1aaebd06c027: No verified product image URL
-- new-product / candidate-17526e94955eae9af73b: Cannot confirm one product on the discovered URL
-- new-product / candidate-50134e727c8baa407fb9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d71c9092d4303b3ec498: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e42ca32d270c3e0e5901: Cannot confirm that the product is a material or printer
-- new-product / candidate-cc48e0503521d8cfabf8: Cannot confirm one product on the discovered URL
-- new-product / candidate-e6a46026d93a4879f574: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ad714d865f6ace820b1f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e09349d92a7c8048b1ab: Cannot confirm one product on the discovered URL
-- new-product / candidate-45df341afe3758a5c5e9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-43307eb63ce7e237c4d7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-150cbc0f86310251af99: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4b891d2dafaaf9915420: Cannot confirm one product on the discovered URL
-- new-product / candidate-13debcb5e3e6325247d6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0bb074b0ae383cfad55e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-74f7f9bd6191e2c8d797: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6e914a922c0f6eb49212: Cannot confirm one product on the discovered URL
-- new-product / candidate-d00ae2a76fb4f35186b0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f3fa123099cf135ae147: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8f9ee32b99a65cb387fc: Cannot confirm one product on the discovered URL
-- new-product / candidate-857b3877986310b426a0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a9eb85694339000d306f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ccab3d1eb131f7696af5: Cannot confirm one product on the discovered URL
-- new-product / candidate-c283486bf4ee82f766ed: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7793d9701809a2b97ff8: No verified product image URL
-- new-product / candidate-20509f907c5519bc4394: Cannot confirm one product on the discovered URL
-- new-product / candidate-c7ecb0d05c98dca8b17f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8d3b31b14adc3b82ba90: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee83335c1e54b23dd57a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-41173ede1f8375dad94c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8e474d2f08c6d6c3c242: Cannot confirm one product on the discovered URL
-- new-product / candidate-c3ca0e496dce7c168819: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-117ef85b19e561b8198b: No verified product image URL
-- new-product / candidate-8d4fd5fe7ad32459c085: Cannot confirm one product on the discovered URL
-- new-product / candidate-e11f5e6441f84ac5e02f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b3ecbd0217cfbc695aa6: No verified product image URL
-- new-product / candidate-84434963cb9903b537c4: No verified product image URL
-- new-product / candidate-353de29b8cd6590ae7dd: Cannot confirm one product on the discovered URL
-- new-product / candidate-f0a4ca196d834b0cd613: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-afe136c84e0ef50cc338: Cannot confirm that the product is a material or printer
-- new-product / candidate-e429607575e042ce139b: Cannot confirm one product on the discovered URL
-- new-product / candidate-c36453033169fdadad45: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-292fc7f09cd4bb63ebca: Pack weight is ambiguous; listing skipped
-- new-product / candidate-e193ec1f0a86e389bb24: Cannot confirm one product on the discovered URL
-- new-product / candidate-045035e7e3b33fd42ef3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-18ccb23b7471af5734a4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bbc113676a0836c33b50: Cannot confirm one product on the discovered URL
-- new-product / candidate-6220f2cb7a8fd1f59f63: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-12013c7d944f1567c4b5: No verified product image URL
-- new-product / candidate-320bf3eb1697f843e18b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7f1055ded705dfc727ef: Cannot confirm one product on the discovered URL
-- new-product / candidate-6ae6884364216fb7b6f4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8522cd5647ff677f8651: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f91a1e9d334bca75fe91: Cannot confirm one product on the discovered URL
-- new-product / candidate-b4c929f64316efd0738a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fc18a1faa755683d49bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-94afede683a826e088a4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cde016025bee69d24f5a: Cannot confirm one product on the discovered URL
-- new-product / candidate-e3fb406b13d187c2f4fa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2cb5d2a86b4e692ca05c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f236ab6a8b262ba80806: Cannot confirm one product on the discovered URL
-- new-product / candidate-eab1b13172f0ae5eccd7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7574a0dad2265a52711c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-42c05ee070cd30c54716: Cannot confirm one product on the discovered URL
-- new-product / candidate-69757a5315e186a6599d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
-- new-product / candidate-169a01c76e2c9287c87a: Cannot confirm one product on the discovered URL
-- new-product / candidate-29a5fb0318a5cd2f9509: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b4a20a0d12b6942f1358: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-afcd98f9bf3847678fe2: No verified product image URL
-- new-product / candidate-d70511bed78440d959aa: Cannot confirm one product on the discovered URL
-- new-product / candidate-6f5c5a95e992223e0a2b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e0fa1d31f71d69c9129f: No verified product image URL
-- new-product / candidate-263edf7db2730c9e30bb: Cannot confirm that the product is a material or printer
-- new-product / candidate-49b0b6a755ecda57556e: Cannot confirm one product on the discovered URL
-- new-product / candidate-602958f07a3ecaf46d84: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-063dbcdc9e291aae2dd7: No verified product image URL
-- new-product / candidate-49cb4ca57927ac3c8e53: Cannot confirm one product on the discovered URL
-- new-product / candidate-92a4586f94c3a43fb004: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9e004f1c313d19769036: No verified product image URL
-- new-product / candidate-cbcdb800c4e7bc56f6b9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3fe30b7fa31dd10283ae: Cannot confirm one product on the discovered URL
-- new-product / candidate-2789d5e968b93199adf5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c3816a7b733db3388ebc: No verified product image URL
-- new-product / candidate-70f7a2ba756a94301190: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6cfcc19814b3c31507d5: Cannot confirm one product on the discovered URL
-- new-product / candidate-ae3c2e7b7e80bcb5e1e3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-44291b5c33b7afb19589: Pack weight is ambiguous; listing skipped
-- new-product / candidate-48a6194b85f9fca2f154: Source does not state the material pack weight; listing skipped
-- new-product / candidate-486a7e2e6dc411f2d9a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-d33b001aca52b9ca5cc8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef8a58728033d5ebadf6: No verified product image URL
-- new-product / candidate-34ad3c650a8b8e98e7aa: Cannot confirm one product on the discovered URL
-- new-product / candidate-7ea6cbeff5eba7e57c13: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9699e6ae48fcc2ca3e44: No verified product image URL
-- new-product / candidate-75c274802cdb8b86b280: Cannot confirm one product on the discovered URL
-- new-product / candidate-048b2e312e47ea3ccd03: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3c6950bdd47c886e0794: No verified product image URL
-- new-product / candidate-fdeefe06d7201143a475: Cannot confirm one product on the discovered URL
-- new-product / candidate-407dbf7477b3769647e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc258083ed95b2d9605e: No verified product image URL
-- new-product / candidate-4854ed193af67cd99495: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2c01dbeab81c18d32dc7: Cannot confirm one product on the discovered URL
-- new-product / candidate-589d0452fb29a61499be: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f23dc012bf344ddee154: Cannot confirm one product on the discovered URL
-- new-product / candidate-12ada28306aac061a645: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-031b54d41082a977d503: Cannot confirm one product on the discovered URL
-- new-product / candidate-de4699669cc52dd184d7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9af231ab2a46ee1e4be8: Cannot confirm one product on the discovered URL
-- new-product / candidate-39c2d2de3a263e4b2bd3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4cb19911cfd3b8b107b: No verified product image URL
-- new-product / candidate-e8300985d01646302a3b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f49df8852874c142fd46: Cannot confirm one product on the discovered URL
-- new-product / candidate-ab66179eaa5673ca737a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4358e78249cc893554ff: Cannot confirm one product on the discovered URL
-- new-product / candidate-0f9985ceba0f6ae24d23: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-28dca206f68d7b30c4f6: Cannot confirm one product on the discovered URL
-- new-product / candidate-5f95f0a26033d00ca95e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ca8a80b3a8416880517b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4a4d12d2e55ca021d2ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8478f8f3e14b0079f2d7: Cannot confirm one product on the discovered URL
-- new-product / candidate-12bb361dc516d3b1e938: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f8456ae2a0f2e70a9ab2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e65c70877730cc089c2b: No verified product image URL
-- new-product / candidate-2aa11ed988d228ab71f6: Cannot confirm one product on the discovered URL
-- new-product / candidate-43de9c1eb490b86f710c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-94c6d86a693b3aafbf27: Cannot confirm one product on the discovered URL
-- new-product / candidate-c713acf427d4a560ed38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0e7c57b6dc8db6568642: Source does not state the material pack weight; listing skipped
-- new-product / candidate-219f8fc3170d49b405be: Cannot confirm one product on the discovered URL
-- new-product / candidate-b344b97f6b4f67f06797: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-04f9ce856672ce3e6402: Cannot confirm one product on the discovered URL
-- new-product / candidate-c675400a963eb010117d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9d26602430440dbec46c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4865e2054df19bd911e8: Cannot confirm one product on the discovered URL
-- new-product / candidate-51543a0b27a43759f55a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5257b819df179cddfdbc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-00a875fc6088a32710e1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a7a177d5061618a6f35d: Cannot confirm one product on the discovered URL
-- new-product / candidate-f764ed0f0634ac84ab4d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6f7cb75934b81620177c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b8e5780508d659007132: Cannot confirm one product on the discovered URL
-- new-product / candidate-3519f0b7f0ac38ba8c6e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-efae28091696448345b7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-441fb48bb80567cfa6db: Source does not state the material pack weight; listing skipped
-- new-product / candidate-caf003366e40b89dee1f: Cannot confirm one product on the discovered URL
-- new-product / candidate-ffac242f13599d1b73be: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bfed37a78275231b98c5: No verified product image URL
-- new-product / candidate-995b2cf7c0d0647ddf62: Cannot confirm one product on the discovered URL
-- new-product / candidate-fd8978fbb9d6a26705a0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ff158362b14765e673c8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-850f09239873396923c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8c8ff6af479d434c51da: Cannot confirm one product on the discovered URL
-- new-product / candidate-136f2d5dcd7ff8ae7c1a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ce2249dcdfde5ea18239: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3414625235b2da918852: Cannot confirm one product on the discovered URL
-- new-product / candidate-354136fa30e50e9a4700: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-621f2cd559d37c725d62: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ee712d20e65cd0479d16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-467872a01dee16e7c37f: Cannot confirm one product on the discovered URL
-- new-product / candidate-2cd8d60828277a820018: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4901ecad286ae7c05ebf: Cannot confirm one product on the discovered URL
-- new-product / candidate-5d696f76294ac44ee885: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6b42bed2124b6c5d8761: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d152d75d0b95bfbad458: Cannot confirm one product on the discovered URL
-- new-product / candidate-ec2fbe67697979a74da5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0add8859eddb3a16c161: No verified product image URL
-- new-product / candidate-79add83e77513618c085: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8cb23ded547e1252d5a4: Cannot confirm one product on the discovered URL
-- new-product / candidate-9cca63a7e95bcca0abda: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-60528a99dad457792948: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2e4985e14d1ecabe9a36: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0af437140aea8b5d92ce: Cannot confirm one product on the discovered URL
-- new-product / candidate-5f05806773cc76afd450: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-14c85bef7f3b5d497f9f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1f23253da9a9d367b5f1: Cannot confirm one product on the discovered URL
-- new-product / candidate-584bce8d93569dbf4536: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3d86852c3f938faccd91: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f94885149856eaacc0eb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0e5980365070dd2d9495: Cannot confirm one product on the discovered URL
-- new-product / candidate-b95c0775277dbd6dd24f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e26c76728d47bcb29680: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8891c8ac99c1c2b706d4: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9fe9b88ec53fa21eef5: No verified product image URL
-- new-product / candidate-e202d6520a6577211cd8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-422e6e6c066c21dc1e8c: Cannot confirm one product on the discovered URL
-- new-product / candidate-38e92cb1d264102063fa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d3137eabe163051f5aad: Cannot confirm one product on the discovered URL
-- new-product / candidate-daadbf0d5d8ebae62fd4: No verified product image URL
-- new-product / candidate-84c1c90423fc2ae4b6b0: No verified product image URL
-- new-product / candidate-943267cb8fa9749e963a: Cannot confirm one product on the discovered URL
-- new-product / candidate-597a6bd41f309dd8c904: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-509d53cd4c6c9a37f4cd: Cannot confirm one product on the discovered URL
-- new-product / candidate-041cd129eb9ec964f32c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4bde5bd2bb12526aa503: Cannot confirm one product on the discovered URL
-- new-product / candidate-1e96e17800019cba7353: Pack weight outside the supported range
-- new-product / candidate-4b24dbde8147c1eb7acc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-653bcd14ef9015a76fc4: Cannot confirm one product on the discovered URL
-- new-product / candidate-ee3d0574ca92381edf5e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-75c5dc91f50a869167fe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-91aa3fa3813340690c2a: Cannot confirm one product on the discovered URL
-- new-product / candidate-d5c0ee4326d4211a7ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-560a6ed04d9f9be7f444: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9e891ad42a2260b73970: Cannot confirm one product on the discovered URL
-- new-product / candidate-2588607eeed3989673c3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-673d88125378807372ad: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0a79a946115c408ee9ac: Cannot confirm one product on the discovered URL
-- new-product / candidate-4f219c447c6d1d80ba44: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-311b322c422b6ce152c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7b5bf094b0acd1ee581e: Cannot confirm one product on the discovered URL
-- new-product / candidate-91346232d1d3a76facff: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d4d7fa6c6f9de626aea1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6284532cad20370f4070: Cannot confirm one product on the discovered URL
-- new-product / candidate-661fbfaf2383e35a481d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-79b63592bfe425951087: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0049883f6ca97cc05339: Cannot confirm one product on the discovered URL
-- new-product / candidate-ed404ad6326aa363a7be: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c8ab05304b47d872bee4: Cannot confirm one product on the discovered URL
-- new-product / candidate-b9cfa36bf055056981c9: Pack weight outside the supported range
-- new-product / candidate-c12d239a57df3c838b12: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0dfbda2f23bcc4ff50e7: Cannot confirm one product on the discovered URL
-- new-product / candidate-2e8d67ff5d86707e3142: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2ef422fc5a42cb8e96c3: Cannot confirm one product on the discovered URL
-- new-product / candidate-c7aa46e31ae26ea14118: No verified product image URL
-- new-product / candidate-8b65b60365b9b33b9037: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-afa03ce2a4813917523b: Nightly time budget reached; remaining values retained
-- new-product / candidate-07823d9f55d8a30d4855: No verified product image URL
-- new-product / candidate-0b6800a2b8d300503779: Nightly time budget reached; remaining values retained
-- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0412b51fa24a17ddff4f: Nightly time budget reached; remaining values retained
-- new-product / candidate-6de2ae043c42181bdd35: Nightly time budget reached; remaining values retained
-- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4e44b8323f5532bedb58: Nightly time budget reached; remaining values retained
-- new-product / candidate-0579ead8905a5cdad703: Nightly time budget reached; remaining values retained
-- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b979b179328d2b8d1fd4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-56136db7f7c55f68fe25: Nightly time budget reached; remaining values retained
-- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-402ce4db61e9d76b4d69: Nightly time budget reached; remaining values retained
-- new-product / candidate-feef7b55a01befa66b82: Nightly time budget reached; remaining values retained
-- new-product / candidate-be247ee3bf0ea7d87719: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d4d99025d81c3fa4a7e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-83ca1e22a37148fb8656: Nightly time budget reached; remaining values retained
-- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d88882970b45a37215c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-8bde32d2d8eccadf00d0: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f19854fd769ba4696bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-288e3071f4eacc6c638c: No verified product image URL
-- new-product / candidate-229cf8d89480c09bad7e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6e9b28d5eb418dbb4f9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bbc2bc9d7e869520e56d: Nightly time budget reached; remaining values retained
-- new-product / candidate-de8b70b466d4c1e9e7cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-8a2d43dc4086f86841bf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7f033ffe03adf9c799a8: Pack weight is ambiguous; listing skipped
-- new-product / candidate-0beb7ba8c03c2f0365cd: Nightly time budget reached; remaining values retained
-- new-product / candidate-d26cbc8b9b349baafa8c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7731a9043ff7f8990fb3: No verified product image URL
-- new-product / candidate-2193fc246c00248131ea: Nightly time budget reached; remaining values retained
-- new-product / candidate-0183b09cc1771cd2b55c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f0ca27274fb11bb8c03f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-70e2fdebcbf237e64233: Nightly time budget reached; remaining values retained
+- new-product / candidate-40cd4f3dc85af597088e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3b938f178b30755abbab: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6aacb08af47113842246: Cannot confirm one product on the discovered URL
 - new-product / candidate-3872da13a8dafa98c77e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7f05cedbd3edf04dd11e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d3202e045ba1fa650b97: Nightly time budget reached; remaining values retained
+- new-product / candidate-12013c7d944f1567c4b5: No verified product image URL
+- new-product / candidate-2a557f456ab4eed3d493: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-396f6157daaeb3c5b8d6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8312c01b790d6b294c15: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb537783c2604fe54625: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-51b3a58880a42aa2be12: No verified product image URL
+- new-product / candidate-099c9025c93530502cd9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b2d7df41cdaf71425d94: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-275de8b0dff80bf2e08e: Cannot confirm one product on the discovered URL
 - new-product / candidate-356f948f5fa5eadf12ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4230f713b30e301f872f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0d506df4fc3c05ef770d: Nightly time budget reached; remaining values retained
-- new-product / candidate-279563180ed064294f7a: Nightly time budget reached; remaining values retained
-- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
-- new-product / candidate-37dafe21c10aff5ae845: Nightly time budget reached; remaining values retained
-- new-product / candidate-99d0744fa14c4268d23e: Nightly time budget reached; remaining values retained
-- new-product / candidate-39b158624b6890f8a399: No verified product image URL
-- new-product / candidate-f4bd292e2529a9c46ff3: Nightly time budget reached; remaining values retained
-- new-product / candidate-51bdde145c0f6046edcd: No verified product image URL
-- new-product / candidate-4e9257764cb5c87d34e1: No verified product image URL
-- new-product / candidate-3048b9f2758153066ec2: Nightly time budget reached; remaining values retained
-- new-product / candidate-26281e65c0220fe865e5: No verified product image URL
-- new-product / candidate-a8dd2a3658540931d8d4: No verified product image URL
-- new-product / candidate-83f4e326358170f00a41: Nightly time budget reached; remaining values retained
+- new-product / candidate-99699604b44a1bd53062: No verified product image URL
+- new-product / candidate-03e8e0cbec149184b600: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-897290b68b6c7ed894e1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8584d82995ede6bf665e: Cannot confirm one product on the discovered URL
+- new-product / candidate-6b33698bf139e8451843: No verified product image URL
+- new-product / candidate-0908099e489576ef6b9e: No verified product image URL
+- new-product / candidate-6ac42cbe4cf2881c0573: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-040fbae274a46d716a20: No verified product image URL
+- new-product / candidate-8561deb024c02f15ee67: Cannot confirm one product on the discovered URL
+- new-product / candidate-a69debb0647c702d8721: No verified product image URL
+- new-product / candidate-a3f2892c8b04172cf21c: No verified product image URL
+- new-product / candidate-4acd0b11dee19ae0c671: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8490359567e80aae61f6: No verified product image URL
+- new-product / candidate-b2f28af3fcde60842354: Cannot confirm one product on the discovered URL
+- new-product / candidate-7e188d72855ceef6ac6c: No verified product image URL
+- new-product / candidate-5cbdb52281b4cf26590b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5cf18f2612e2b3151fee: Cannot confirm that the product is a material or printer
+- new-product / candidate-04f119249c363802ad51: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ce3ee5590730e43e001: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-66bb8f5150abef8740e3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5e2c4ab5203867101c95: No verified product image URL
+- new-product / candidate-6d1ca01ecc228b61a31a: Cannot confirm one product on the discovered URL
+- new-product / candidate-d409ba791510007421ca: Pack weight outside the supported range
+- new-product / candidate-574dd5c964ca44662745: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-28dccdb0dff381b670c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9cb0cae572e9d57ca0f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc5dc61be5277f61d74c: No verified product image URL
+- new-product / candidate-1bc9ef1035ac98511396: No verified product image URL
+- new-product / candidate-30799b4253006e10df70: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0d157aad4ae8f62229be: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0d7e230946dcff104983: Cannot confirm one product on the discovered URL
+- new-product / candidate-871e328ca17eb238ed70: Pack weight outside the supported range
+- new-product / candidate-0ba61256e3e7533914e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-dab9111025d6b42858f1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-14c46b0df0ee61c84357: Cannot confirm one product on the discovered URL
+- new-product / candidate-6102ad1a874597d96f05: Pack weight outside the supported range
+- new-product / candidate-02556755f1bcea4c88bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-716b5698e5eb11144a15: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-89d57b8522bc5bf89fba: Source does not state the material pack weight; listing skipped
+- new-product / candidate-744faa15d07d4e094f19: Cannot confirm one product on the discovered URL
 - new-product / candidate-d692b6bad9161551aa4b: No verified product image URL
-- new-product / candidate-d57775a7ea933c321bb8: No verified product image URL
-- new-product / candidate-a0e399eaa35a0f143e5d: Nightly time budget reached; remaining values retained
+- new-product / candidate-49568bc3ffce4106eb4f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20d6b552abc71618c70e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1dd41ce6df1d06634c41: Cannot confirm one product on the discovered URL
 - new-product / candidate-6a22f7e3ef3ec4cc9304: No verified product image URL
-- new-product / candidate-b29fddc9440819c396e2: No verified product image URL
-- new-product / candidate-91b8683209f970fcb13c: Nightly time budget reached; remaining values retained
-- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a502959040b876a9afdd: No verified product image URL
-- new-product / candidate-8d535f0291586a3e5c6b: Nightly time budget reached; remaining values retained
-- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-715c789bf3faaf7296b9: No verified product image URL
-- new-product / candidate-e401dd2b894c94fea332: Nightly time budget reached; remaining values retained
-- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-acb0f0dcc45ae29f8ca0: Nightly time budget reached; remaining values retained
-- new-product / candidate-246a11aa1d53331d3492: Nightly time budget reached; remaining values retained
-- new-product / candidate-b58d44c815900cb5f9fc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-44f2621a078a9f281bc3: Nightly time budget reached; remaining values retained
-- new-product / candidate-6cfee9f664df9be41ac1: Nightly time budget reached; remaining values retained
-- new-product / candidate-11cc37ce91c77266c6ab: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c326801a66e45ea385eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-d7345b6396f25df0b78f: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2a73ec04aa77177f383: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9b14265408505b4370c5: No verified product image URL
-- new-product / candidate-107da0f9232925c5b253: Nightly time budget reached; remaining values retained
-- new-product / candidate-dabf077837e92424522f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a901926bc252b1a59e9: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6dada6ea57b0caf4c7f: Nightly time budget reached; remaining values retained
-- new-product / candidate-fb015bbca405e7fe6f45: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-03049fd89bc9d05876d4: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2e1cbac3d557fb33eea: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2f3e2505c110024e546: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6812953db3c0656eb243: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9c93a843572e60d3ec65: Nightly time budget reached; remaining values retained
-- new-product / candidate-46dcdf53e33a4809194b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d6c66b329e8729799f54: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5416ac65168b7bdff1d8: Nightly time budget reached; remaining values retained
-- new-product / candidate-4672ef27412b01ace58f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3f6c772ff419eeea0ad2: Nightly time budget reached; remaining values retained
-- new-product / candidate-45aaac5ae699bb5b5eed: Nightly time budget reached; remaining values retained
-- new-product / candidate-f156615ba1989a94552e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7352bed50eccac3741c0: Nightly time budget reached; remaining values retained
-- new-product / candidate-aea3d1170b42bb06889e: Nightly time budget reached; remaining values retained
-- new-product / candidate-434e8e5937db89d18d45: No verified product image URL
-- new-product / candidate-4ddf654c4c884fb10ec3: Nightly time budget reached; remaining values retained
-- new-product / candidate-6035f0ca90efea784018: Nightly time budget reached; remaining values retained
-- new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
-- new-product / candidate-7db67dad28b40d6801f0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7bd3b3eb95069d190a36: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c2c78386f8cd6b0e666: No verified product image URL
-- new-product / candidate-2d7aca74f0f94346a438: Source does not state the material pack weight; listing skipped
-- new-product / candidate-75ac9449a990f75be80d: Nightly time budget reached; remaining values retained
-- new-product / candidate-2b03e707d0e4de80cc21: No verified product image URL
-- new-product / candidate-8685ae813cbdb26cda3e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-05a9972a57eaf333e0f0: Nightly time budget reached; remaining values retained
-- new-product / candidate-c58be09870e7a2c9263d: No verified product image URL
-- new-product / candidate-1dab6a6a341f70d0119c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c03f09ef20c8642fd509: Nightly time budget reached; remaining values retained
-- new-product / candidate-5061982d5783e29bf709: Nightly time budget reached; remaining values retained
-- new-product / candidate-27c4f2dcdb0e8222a33e: No verified product image URL
-- new-product / candidate-965f10f5a756b136d5b4: Nightly time budget reached; remaining values retained
-- new-product / candidate-3ae6e9e1e2e26f610bb9: No verified product image URL
-- new-product / candidate-2edca41b0293d2b93485: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d122f044dfa8c4450aea: Nightly time budget reached; remaining values retained
-- new-product / candidate-55f5e7d12814c741b256: No verified product image URL
-- new-product / candidate-3bea745fc35b2df853a3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-31b040da223a24f4f62b: Nightly time budget reached; remaining values retained
-- new-product / candidate-677ae4a4d0538a87333d: No verified product image URL
-- new-product / candidate-1cff3f67e95da1afe9e8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-59b30b4dee90d1c5af74: Nightly time budget reached; remaining values retained
-- new-product / candidate-80a9b482e4ec7f697ab9: Nightly time budget reached; remaining values retained
-- new-product / candidate-d0607644a86ab99c1cfa: Nightly time budget reached; remaining values retained
-- new-product / candidate-6228d470c4deda500c00: Nightly time budget reached; remaining values retained
-- new-product / candidate-04b3ea25b9d26b69c5b1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ba737588e74d98d321d8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a00eb358599dc6e66620: Nightly time budget reached; remaining values retained
-- new-product / candidate-f098396d8a5bb58cfed5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-60baa3eb48d5bd28e09e: No verified product image URL
-- new-product / candidate-76b89474eab82dbb2e63: Nightly time budget reached; remaining values retained
+- new-product / candidate-404f72a0f4d7099f41e6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8b4be3e7450840bef838: Source does not state the material pack weight; listing skipped
+- new-product / candidate-71899220a8e59ccc8558: Cannot confirm one product on the discovered URL
+- new-product / candidate-8482830aa45b7db85485: No verified product image URL
+- new-product / candidate-a54d5eeeb4b6fa0a0b2f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-677532f3ef735bdd05d5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fd117a270a26fba86f6b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7337533419a2d060f3a9: No verified product image URL
+- new-product / candidate-0df35bd996f9527afdde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0589712ebf0f7a3776d4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3dc09920e79d23ff0a0b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d9c0e3ca9ee0b0326229: Cannot confirm one product on the discovered URL
+- new-product / candidate-96feca143abec9a69fe6: No verified product image URL
+- new-product / candidate-8bb5d6d2f0ffefc306c4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-685ce6906121f449f5ed: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7018f92882db8555049b: No verified product image URL
+- new-product / candidate-959af344333d6bf42d4d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f09ecea14803528210a3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eefe9e642346c3b6116b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d9d1e599d6eb1c40a2e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-40389e056cb5d200fa60: No verified product image URL
+- new-product / candidate-728cb9cee8adf1162b07: Cannot confirm one product on the discovered URL
+- new-product / candidate-78a6235760369b13d1b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9cc44b0fce00da06036d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c3a4275960fc62d1cb7c: Cannot confirm that the product is a material or printer
+- new-product / candidate-b0629be5c4ef4fcd5a12: Cannot confirm one product on the discovered URL
+- new-product / candidate-bea7da5363290b40fc8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-04bfadb256c4801bd8ba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-51c30e4cf42442c37030: No verified product image URL
+- new-product / candidate-d0bf5a41904812584555: Cannot confirm one product on the discovered URL
 - new-product / candidate-0fec11d1d04a822d857c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d0b02d2b392def03a8c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bf9fc3816e5ced355507: Nightly time budget reached; remaining values retained
-- new-product / candidate-b5784ab169e5a102c3c0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-15b026aa0c3af27da567: Nightly time budget reached; remaining values retained
-- new-product / candidate-8c6a13058995e6331afa: Nightly time budget reached; remaining values retained
-- new-product / candidate-a14a2d450d2503bc37cd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ddca876013bebc2eb018: Source does not state the material pack weight; listing skipped
-- new-product / candidate-24473b98e6cbf2f43366: Nightly time budget reached; remaining values retained
-- new-product / candidate-489eccaa4bc33a18ff56: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4c5a958cd1ea5a42d782: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c279b02c50e0b9cddd5a: Nightly time budget reached; remaining values retained
-- new-product / candidate-876e2db13a6ce54359c7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f2041e1a239e97598bc5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-486a2fe4639655ac678e: Nightly time budget reached; remaining values retained
-- new-product / candidate-2fca4dd1dd1c0d2c858e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e3749e6622328db3eb35: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b40bb34403661d7c0756: Nightly time budget reached; remaining values retained
-- new-product / candidate-2bd66a5c466585a12a37: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-13629718ae0358645928: No verified product image URL
-- new-product / candidate-9bf04c0742d60c66de7a: Nightly time budget reached; remaining values retained
-- new-product / candidate-5604a35c460b480d71b8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5623e8af3194eb899c43: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0f59b539ac940571f3be: Nightly time budget reached; remaining values retained
-- new-product / candidate-5b7a305b516340c4aab5: No verified product image URL
-- new-product / candidate-a6c9f104fc382e9d1bd7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4ac8399fb1caf0379c59: Nightly time budget reached; remaining values retained
-- new-product / candidate-6b86e5c60a28424e0e3b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-47ae18411c6eb8970f65: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ecefdab4d1ba4bbb808d: Nightly time budget reached; remaining values retained
-- new-product / candidate-9d2b5e551cb2c34e2228: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-45721675cb87d3facc68: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e678290a864ce215139b: Nightly time budget reached; remaining values retained
-- new-product / candidate-888c0cfa491f47b2d67c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cac0412a108315b86209: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6721b49123cf482bc207: Nightly time budget reached; remaining values retained
-- new-product / candidate-9dbce9b2ac7494ef3316: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0da334e429eef7442292: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a3c614cda04baa1691a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-1f3265335beaa2b272f6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-145b2a91993f82587d1f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-09f898413bf6d4ea4eda: Nightly time budget reached; remaining values retained
-- new-product / candidate-d9c860bc0760c66fc7a7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b5ecf911faee80efa386: Source does not state the material pack weight; listing skipped
-- new-product / candidate-73de8a8e947df166702d: Nightly time budget reached; remaining values retained
-- new-product / candidate-a8dc73a5e7bbf0cef67b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bac0d259e0cceafe9787: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2609462f8204277c20cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-7a007a1cf470a311fc61: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fb7b1b563b5c53cbea09: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-65e020d4794ec73584e2: Nightly time budget reached; remaining values retained
-- new-product / candidate-c6afadb31fde60286c0d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ce441164ef7d7a9f8be6: Nightly time budget reached; remaining values retained
-- new-product / candidate-d514a47b8cf95e176221: Nightly time budget reached; remaining values retained
-- new-product / candidate-760d9e194473c3edf584: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1345d1d843ae10721b5a: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c419ffb6fef3916a1ca: Nightly time budget reached; remaining values retained
-- new-product / candidate-82446972dc45500e0954: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ca5848b778f4f41ab93c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b6586f0b2d6ff8353a29: Nightly time budget reached; remaining values retained
-- new-product / candidate-04d615b215910e514d5a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f48cf785bd19f276e98c: Nightly time budget reached; remaining values retained
-- new-product / candidate-db4b5b4841bdb412f0db: Nightly time budget reached; remaining values retained
-- new-product / candidate-87ba231e0f16665d4083: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-73c7c227f8d1a7caab67: Nightly time budget reached; remaining values retained
-- new-product / candidate-bbeb44721a6d17d8f080: Nightly time budget reached; remaining values retained
-- new-product / candidate-884129afbf58d1901a2a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2009c3c5e0dd02b1f3e1: No verified product image URL
-- new-product / candidate-e88128ef01744eb39ae1: Nightly time budget reached; remaining values retained
-- new-product / candidate-8e80f9fcda4adae52c33: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-25adc21d9bc891ebb105: Nightly time budget reached; remaining values retained
-- new-product / candidate-26afa223894596c298e8: Nightly time budget reached; remaining values retained
-- new-product / candidate-aac598c7f135b5168f07: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8f6d5acb86e5a6351b70: Pack weight is ambiguous; listing skipped
-- new-product / candidate-5bb82d9da28bc66dfb23: Nightly time budget reached; remaining values retained
-- new-product / candidate-4c950c268480074b2f99: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-71703c930ecf2feccda6: No verified product image URL
-- new-product / candidate-88b8e0396075d672d494: Nightly time budget reached; remaining values retained
-- new-product / candidate-22d4958aa4ea186bed0c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d7d2edc50ad51a9f9ac1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-239b0c152d872c3b62cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c4e75358ee026195366: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-128b101e444b6b2eaa53: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f62d8c8b507be69f549f: Nightly time budget reached; remaining values retained
-- new-product / candidate-b5ff7e21c4adb312af02: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6e230ff507b7f2627067: No verified product image URL
-- new-product / candidate-8c108100e3c5065c84ef: Nightly time budget reached; remaining values retained
-- new-product / candidate-41f0677249f046946c26: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9588575c86d98f7b1f56: No verified product image URL
-- new-product / candidate-94f02fb8a709e1396aaf: Nightly time budget reached; remaining values retained
-- new-product / candidate-485d128f33da98482522: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b10b59c18db828754b64: No verified product image URL
-- new-product / candidate-463af0979a2bbd76e9d3: Nightly time budget reached; remaining values retained
-- new-product / candidate-31fd9b395897cdbbaf80: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-be9d7950ddc740f3d2c5: No verified product image URL
-- new-product / candidate-8850c5b951103e8883d4: Nightly time budget reached; remaining values retained
-- new-product / candidate-72c004a9f3d051d8bb7b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-839d79fc21f4d5217797: No verified product image URL
-- new-product / candidate-df382ab764a029be2dfb: Nightly time budget reached; remaining values retained
-- new-product / candidate-65e6f19a083b31441ac3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5727caaebb156f6085df: No verified product image URL
-- new-product / candidate-1b45bedff6cc56d94733: Nightly time budget reached; remaining values retained
-- new-product / candidate-10fc6cadb34b177d616f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-df2a646e7539f00af824: No verified product image URL
-- new-product / candidate-209799976ed06515ce48: Nightly time budget reached; remaining values retained
-- new-product / candidate-62b28781388c3ccdf315: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-85eabf3d07464f910a77: Nightly time budget reached; remaining values retained
-- new-product / candidate-0203a369c26114d105bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-90456e949439ac4ce09a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3dcf0d0f7c63a38bdb80: Nightly time budget reached; remaining values retained
-- new-product / candidate-b83db0b8d3d66b22ebc5: Nightly time budget reached; remaining values retained
-- new-product / candidate-555802b9d6320be815f4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-86ee7901ac1684281882: Nightly time budget reached; remaining values retained
-- new-product / candidate-1a6226b660bb9b269c6a: Nightly time budget reached; remaining values retained
-- new-product / candidate-adf66d00594cdcc36057: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cd99d8c0a9f070a28c6a: No verified product image URL
-- new-product / candidate-bb6af45960f9fbbfc2cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-f18eb964a10b5b2feb0b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-904d94413f539840697e: Nightly time budget reached; remaining values retained
-- new-product / candidate-10d9be42259cdcd52785: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc227547cbdd79f10a80: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d950f45f0d8fa76254f3: Nightly time budget reached; remaining values retained
-- new-product / candidate-3bf00419061016b1c420: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e76299c849658201f00: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4e3bc7d880b6672df02d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d6d37f56ff5138cd6d26: Nightly time budget reached; remaining values retained
-- new-product / candidate-02e2e9d4f2295e17a96d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-65e62cea7a491f492745: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-660a344c2751f6022493: Nightly time budget reached; remaining values retained
-- new-product / candidate-e3a9e3830828ffd9ebe1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d0f473d0390d4594415d: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f8578631e8883a61c8d: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2af858bfbf6a9e416f1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-783f37d8cc1c2fba8536: Nightly time budget reached; remaining values retained
-- new-product / candidate-c0f46ae61023cd0834eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-561a49dd2ba89d5c3f57: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3305572ab8a6fdd7b0eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-866d080217040d571b89: Nightly time budget reached; remaining values retained
-- new-product / candidate-f723b333f952fac237a2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-57d82f510cd13730b768: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4297e446f4a3fb59329a: Nightly time budget reached; remaining values retained
-- new-product / candidate-45f51f66f0b0a8743bfd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-013099e971da1e804311: Source does not state the material pack weight; listing skipped
-- new-product / candidate-636d3852f9cf0acf7a69: Nightly time budget reached; remaining values retained
-- new-product / candidate-90e6a0d4b554684deccc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d37b2ed627f8c1fde46: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fd69c4f1c84cde7a9c98: Nightly time budget reached; remaining values retained
-- new-product / candidate-1c51362ea4baf097ec42: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-29ca89dedc7aa5d3830f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2a45cf3ccb07c13db1c8: Nightly time budget reached; remaining values retained
-- new-product / candidate-2c13fd9ec3a082456637: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-911ed296d1e0706b5e53: No verified product image URL
-- new-product / candidate-e1992394ceaa0b533c8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-12a34970292b027d7336: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8fd413ee8711e32aa42c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2c82504385a01e29e88c: Nightly time budget reached; remaining values retained
-- new-product / candidate-04917eb1f6b278e2e99e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0929aeeaa4018af60ad4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ff8ca310eeb5b815a2b: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1979a4a91c19adb30e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-131e3d9f0f313e69bd63: Source does not state the material pack weight; listing skipped
-- new-product / candidate-868cbb4f243ea130189e: Nightly time budget reached; remaining values retained
-- new-product / candidate-ed1449e689953baa758b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6218cbc4894a15a399d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-825bb416351642ca1de6: Nightly time budget reached; remaining values retained
-- new-product / candidate-5afee14736454d88fc60: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bcc45c01a855619e62a5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3a691723757951dbb194: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc78f6edbe02fc40e1f7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a1789ffcb53f2c52384f: No verified product image URL
-- new-product / candidate-f1108bd9196262d83f33: Nightly time budget reached; remaining values retained
-- new-product / candidate-6822006f55a9798d645b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f5e8a1457fed78d5283e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f474f4c3ee5842bd52cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e14911085f0e6f34583: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-541d3adfa75d48ea3d49: Nightly time budget reached; remaining values retained
-- new-product / candidate-311cf2f505127d7fc86c: Nightly time budget reached; remaining values retained
-- new-product / candidate-f74ed033086093348128: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7b6cca37f5975f2617fd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-010282f92b2ed0e6be54: Nightly time budget reached; remaining values retained
-- new-product / candidate-996e4bc5849cde77a140: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6cf12ecca6d44ed8aa14: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3462d1176de35cbb22bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-586f98236ab9c9055895: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b215ae86a892dabf3fda: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fbda37d9548217ac910d: Nightly time budget reached; remaining values retained
-- new-product / candidate-da7e23e0a9e8eb10a4f3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c1eefd073d0374ad8d16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c95d9150372b83f0363d: Nightly time budget reached; remaining values retained
-- new-product / candidate-3cb41463e53b59802e2c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-19fc14ffc3ff0cb7a86b: No verified product image URL
-- new-product / candidate-e96fea4edaa91f5ae620: Nightly time budget reached; remaining values retained
-- new-product / candidate-7539feb6f8c680f41c19: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-218088aa5bc071c0915f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a12502111d1629293add: Nightly time budget reached; remaining values retained
-- new-product / candidate-bf1f1be3aadcd229b530: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0f56bd5008e06cced2f1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bde189905be0a9fee23a: Nightly time budget reached; remaining values retained
-- new-product / candidate-901becf30900f431b126: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a442a751bb2a7381c2c9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fbb2f73452416a8a1c3c: Nightly time budget reached; remaining values retained
-- new-product / candidate-310bd2417a8d666ccc7d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6fa02e44a372d4e50480: Source does not state the material pack weight; listing skipped
-- new-product / candidate-84b2474e57ff448b9be7: Nightly time budget reached; remaining values retained
-- new-product / candidate-b90bb2aceedd36d36f06: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4dce5cec9058f5fd89fe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-17d4b7fd9384d01cc425: Nightly time budget reached; remaining values retained
-- new-product / candidate-883edb054edd018f8bb0: Nightly time budget reached; remaining values retained
-- new-product / candidate-82acc0fddd07d1043366: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7a02ad806c9a9c0f22de: Nightly time budget reached; remaining values retained
-- new-product / candidate-800b450f2110df2ba4f1: Nightly time budget reached; remaining values retained
-- new-product / candidate-bb8c7bd9d2abe874bd38: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6f6006ac2ea5a957cc2b: Nightly time budget reached; remaining values retained
-- new-product / candidate-2885cd6eb626861cebcf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-86740f0b5e4fb5b70a3a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eb486dfb4ded2010c13d: Nightly time budget reached; remaining values retained
-- new-product / candidate-28bc9323e329ba9e61bb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9f852553975fb6b36844: Nightly time budget reached; remaining values retained
-- new-product / candidate-210425b4634e77ef7f62: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a29cbf44cfc8a8c2ee20: Nightly time budget reached; remaining values retained
-- new-product / candidate-8b514c448ddca0ecd3c8: Nightly time budget reached; remaining values retained
-- new-product / candidate-0d032569cf52f77fa753: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f5ef88c42a35ef13ac98: Nightly time budget reached; remaining values retained
-- new-product / candidate-72578327b20146289990: Nightly time budget reached; remaining values retained
-- new-product / candidate-dba0d3998043b9bb8300: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1a5081c1f86b6efcd3be: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c93be00843576c00b008: Nightly time budget reached; remaining values retained
-- new-product / candidate-0507e68604918058eaee: No verified product image URL
-- new-product / candidate-334356baf5d90431dd43: Nightly time budget reached; remaining values retained
-- new-product / candidate-854c97dc7de053b4a952: Nightly time budget reached; remaining values retained
-- new-product / candidate-06b64ce2aedb7a163ac0: Nightly time budget reached; remaining values retained
-- new-product / candidate-bb0afa888ceef13453f6: Nightly time budget reached; remaining values retained
-- new-product / candidate-c5cfa20b035ca095da28: Nightly time budget reached; remaining values retained
-- new-product / candidate-6cee7964e6ee3f77148b: No verified product image URL
-- new-product / candidate-affef3204a0c8037df74: No verified product image URL
-- new-product / candidate-2f1e8456564999eba60e: Nightly time budget reached; remaining values retained
-- new-product / candidate-6941eba65900adc36542: Nightly time budget reached; remaining values retained
-- new-product / candidate-706e041ce5fca0c790b8: Nightly time budget reached; remaining values retained
-- new-product / candidate-5df76f3b6a4b2fcdb098: Nightly time budget reached; remaining values retained
-- new-product / candidate-5801865bea096bf422d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-926b5788011e5d21eff2: Pack weight is ambiguous; listing skipped
-- new-product / candidate-f5c4c3d48c5cb0e768f8: Nightly time budget reached; remaining values retained
-- new-product / candidate-4e040fa502ac1be8f545: Nightly time budget reached; remaining values retained
-- new-product / candidate-8c42a036a9372f134bfc: No verified product image URL
-- new-product / candidate-31eb32cf0ec2ec21f44c: Nightly time budget reached; remaining values retained
-- new-product / candidate-c0dd904aaa7c4a346b41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-70cac257ed9e9faec920: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-526392d77490652afc66: Nightly time budget reached; remaining values retained
-- new-product / candidate-ec83c3847838565db5d1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-49f39ed207cee461ac2b: No verified product image URL
-- new-product / candidate-ee22e98f6bb33b3260fc: Nightly time budget reached; remaining values retained
-- new-product / candidate-cfe11be06521ccb2abf3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-65419b7f4f83d183280c: No verified product image URL
-- new-product / candidate-e9cf9838eab06ba2a4d2: Nightly time budget reached; remaining values retained
-- new-product / candidate-64a352756f7c9edc525a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-87e4f098927a5d528e7c: No verified product image URL
-- new-product / candidate-e7cc4c7bdc0af73ffadf: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f899fea9ae195b38ced: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e8086193b0d8572da4cc: Nightly time budget reached; remaining values retained
-- new-product / candidate-187f6d2d0f1ef651275f: Nightly time budget reached; remaining values retained
-- new-product / candidate-f7ffee6e62ecaef674ee: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-31439be5889c6603906b: Nightly time budget reached; remaining values retained
-- new-product / candidate-85499e987442886746ce: Nightly time budget reached; remaining values retained
-- new-product / candidate-380bfae02348b7a0e393: Nightly time budget reached; remaining values retained
-- new-product / candidate-22f0e844eec0c55ad21b: Nightly time budget reached; remaining values retained
-- new-product / candidate-9d729d612153c8c7bedc: Nightly time budget reached; remaining values retained
-- new-product / candidate-31a95ee7eaf353646489: Pack weight outside the supported range
-- new-product / candidate-5ce694db1b1e4184a6ed: No verified product image URL
-- new-product / candidate-62482d2399668448f1a6: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e9781d56f6c71868dfd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bcd2246ebacaaa83b4cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-0756a08d6043e923ec41: Nightly time budget reached; remaining values retained
-- new-product / candidate-ee3ddf63ef4b15d3848f: No verified product image URL
-- new-product / candidate-361f7a05859739dfde04: Nightly time budget reached; remaining values retained
-- new-product / candidate-4b6c0fc9d7411d28e862: Nightly time budget reached; remaining values retained
-- new-product / candidate-a571f10187af72f6588f: Nightly time budget reached; remaining values retained
-- new-product / candidate-1d3f5751a7387fc3df34: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-59d8c32f6eb8b885023b: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b4362e98a79d90dd834: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f93594bb407eb83ff3b2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1acbcc4ce93285a8ee9d: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-208413f05c62a25f212f: Nightly time budget reached; remaining values retained
-- new-product / candidate-9a3933bbc24f54b64cd4: Nightly time budget reached; remaining values retained
-- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2f2f2bad78de031577a5: Nightly time budget reached; remaining values retained
-- new-product / candidate-ff25987d6ea467e33a30: Nightly time budget reached; remaining values retained
-- new-product / candidate-0e9630f081027e1957c4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ab03c61457f6d968b6f8: Nightly time budget reached; remaining values retained
-- new-product / candidate-9e1e4b022b9113c89ffb: Nightly time budget reached; remaining values retained
-- new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8abba208974d5b85ee19: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ff61ed6369068c5f182: Nightly time budget reached; remaining values retained
-- new-product / candidate-7aa684bc0262dd122f19: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-624b0b8ef9d99f1b9c45: Source does not state the material pack weight; listing skipped
-- new-product / candidate-71af3e9a5a65963e10c0: Nightly time budget reached; remaining values retained
-- new-product / candidate-04f467e2abaf271bca5a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-177480d7c2b951a5415c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cd0250aecaac980476e9: Nightly time budget reached; remaining values retained
-- new-product / candidate-e0e620db44ab3b12ad11: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-63e34b8ceb41c310e429: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4dedb36984571fbbdd2b: Nightly time budget reached; remaining values retained
-- new-product / candidate-3454f64836a3295a0a86: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bb223be74b046f09b4d3: No verified product image URL
-- new-product / candidate-d94ce37af4084d6e18eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-de6333c720e502c59b2b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-97d78d83285eeac360a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f7f70f77bcbec1ca7f1a: Nightly time budget reached; remaining values retained
-- new-product / candidate-edefc3a49cf8604d8ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-35e18b38e9c22a973f4d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-85ac6b0ee40d6bd01f4c: Nightly time budget reached; remaining values retained
-- new-product / candidate-36ce8d38cec5e657808d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-355e0b75c82c51b337c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f7535b52a889206277ca: Nightly time budget reached; remaining values retained
-- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4e19c7ba5ea4db4ad641: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e66c4822f5fb03078209: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6946bb8d44a0826124ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5b43333056acdef69f47: Cannot confirm one product on the discovered URL
+- new-product / candidate-34f19a2f520c35f22476: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee1c57c3c02d2a042a1f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-774cd9fda4e61f8a0512: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fa57f8625c8df5a36373: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c7a413b84ac0dd3b0ced: Cannot confirm one product on the discovered URL
+- new-product / candidate-972cba4fa698a5128af9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-22abe44587f438ac79f2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b2538a2ad66c2b94a523: Nightly time budget reached; remaining values retained
-- new-product / candidate-81fbde022dc9649b82ca: Pack weight outside the supported range
+- new-product / candidate-693d6efd9fccd8947b20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e088199f3cc5c7b97edd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d23383eca95083b9a007: Cannot confirm one product on the discovered URL
+- new-product / candidate-165657b3a050c746e97b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-284f4f7fb242a5b445a7: No verified product image URL
+- new-product / candidate-589e6870d3cbb2a05851: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b7b6f1e9fb1aec99ca8a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c49d0550e961f3a5273e: Cannot confirm one product on the discovered URL
+- new-product / candidate-08cd8e0d89d1ce0c80d8: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-683091ec8441ccf9e0be: No verified product image URL
-- new-product / candidate-308d7235ab7cd59c36c7: Nightly time budget reached; remaining values retained
-- new-product / candidate-4712ae0bd680047cf25d: Pack weight outside the supported range
-- new-product / candidate-190dd0386d9a61b960c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cb89c6370a268789d2f0: Nightly time budget reached; remaining values retained
-- new-product / candidate-590b38771d1226e55ccf: No verified product image URL
-- new-product / candidate-fe0bb71e2cad9df304aa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5b2ff9f745e83cc4dcf2: Nightly time budget reached; remaining values retained
-- new-product / candidate-d21313e607a7a2dd2722: No verified product image URL
+- new-product / candidate-b8b4e689689ffc45abd1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c0c8776d44dfd7a402c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6f8c7201c324baaa7713: Cannot confirm one product on the discovered URL
+- new-product / candidate-44f385a42af295a76730: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c70644f9a54cf8060353: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dcb33189eabac6bd10cb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0bf55065a2517ec452b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4fde949f399f1938bc64: Cannot confirm one product on the discovered URL
+- new-product / candidate-a14a2d450d2503bc37cd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0a097e7a2219147416a6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-797fc29a150cd244b5e7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a5bc33d5d82501f717a1: No verified product image URL
+- new-product / candidate-a7059578c59273479c9e: Cannot confirm one product on the discovered URL
+- new-product / candidate-65d61d668f4f9cefaa9e: No verified product image URL
 - new-product / candidate-ad7ab3aac149cb245686: Source does not state the material pack weight; listing skipped
-- new-product / candidate-363da4503fa578da9acc: Nightly time budget reached; remaining values retained
-- new-product / candidate-79eff769d78f1522af1a: No verified product image URL
-- new-product / candidate-01a3a6229640e1c16d2e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-68d95ff68a3dadc0bc4f: Nightly time budget reached; remaining values retained
-- new-product / candidate-c73ac6100a7028f21186: No verified product image URL
-- new-product / candidate-511351e39ed99471b8b7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e0f554dea6ea5007c212: Nightly time budget reached; remaining values retained
-- new-product / candidate-e6d1b7b4a7b3c1be7169: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c4bbb190ee77f6b38f1b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-73460a6959a6b26627d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-c6800d36db5ebaf7d7e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-75a4b56301e25645073a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-53db6d2073ac41a86f72: Nightly time budget reached; remaining values retained
-- new-product / candidate-a29cff698e526d1c1db6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8254bdf28c8839325d25: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6c89019f92a59386371e: Nightly time budget reached; remaining values retained
-- new-product / candidate-5bb21d6b104dc11a2657: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-072efe9fd16ee5c055ec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e54953112435f7851f7d: Nightly time budget reached; remaining values retained
-- new-product / candidate-2727035069b99f595386: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9cdc577fe86f4637dc45: Nightly time budget reached; remaining values retained
-- new-product / candidate-3843af17cf677da2ce92: Nightly time budget reached; remaining values retained
-- new-product / candidate-b67b1bcdbeb650b2235a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f7beeed55802e94a16c8: Nightly time budget reached; remaining values retained
-- new-product / candidate-fea8cb52897bf7880c08: Nightly time budget reached; remaining values retained
-- new-product / candidate-7340287f0470bc253fb8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-aa72700a7b1b59d64718: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4f4ae5e11437352fddd1: Nightly time budget reached; remaining values retained
-- new-product / candidate-140f71a614395b750438: Nightly time budget reached; remaining values retained
-- new-product / candidate-2031ed12aec0a8c4e588: Nightly time budget reached; remaining values retained
-- new-product / candidate-0f404e6632e5d71fa28d: Nightly time budget reached; remaining values retained
-- new-product / candidate-57bc6265d48291e30be4: Nightly time budget reached; remaining values retained
-- new-product / candidate-27b233ba12f0c66117d5: Nightly time budget reached; remaining values retained
-- new-product / candidate-424760994a8d0ccf9013: Nightly time budget reached; remaining values retained
-- new-product / candidate-37bfc95cc79a17c071cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-8df3003f8e493ad5c49b: No verified product image URL
-- new-product / candidate-a76af1168e4e3d57e53e: Nightly time budget reached; remaining values retained
-- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
+- new-product / candidate-5c984f0cd3fdc0cb7f31: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2e05cd6040ce09589af7: No verified product image URL
+- new-product / candidate-a52638f090d44f2456bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-876e2db13a6ce54359c7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5502c39c3852ce338033: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b0e55ca1988be03753cc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c36cfe410fdb7d65765f: Cannot confirm that the product is a material or printer
+- new-product / candidate-9e920d14fd56ae2b2b32: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2d21ad373ffcbed3c1d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-69e1bb131d902f291b08: Source does not state the material pack weight; listing skipped
+- new-product / candidate-aa73c4b828dadf358158: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b16cab0fa3f85c5919b9: No verified product image URL
+- new-product / candidate-e9441f49a002a579e069: Cannot confirm one product on the discovered URL
+- new-product / candidate-68b1674372bb86e7968d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eff4206a4d0453dbf506: No verified product image URL
+- new-product / candidate-bfe467beb2e325c3dea8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-27fc967c2c0a58920c37: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9aa72f7231cc4d97660d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f83070099af79ff3fe00: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc870c028fcb8dc5a5df: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-758b81986c3a5a2e66fd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7e7e523a9196a0526ae3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d098444b75dee51d056f: Cannot confirm one product on the discovered URL
+- new-product / candidate-1603e77aa6a14cb2da14: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5f02637780a36a2d1899: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bac5769ef22924cce639: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-516974d8c9c741fe26de: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4a766f02429879641f0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b0fe92ca399ea91a80b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-711a27cb0e2958b0b644: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-188650da393284f1ed73: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5da6ec5f2d2373d7b9bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-166a4f86777ad5f266fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-416268e835f4fb078b27: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ae8c4e066fd878dc4563: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0c5a6d0c24daee89bf97: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-422d5fe4fc43f0e55186: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1eedfa6df8c98aa0c057: Cannot confirm one product on the discovered URL
+- new-product / candidate-9da74ccd517c5c2a80c1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-60528a99dad457792948: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d645f1cd020fb1bab1c5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-db7543b5945362643cda: No verified product image URL
+- new-product / candidate-0863f4c4f965352ce49a: Cannot confirm one product on the discovered URL
+- new-product / candidate-7ed120f4097bd28074c1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7285980c6a70f8402ec: No verified product image URL
+- new-product / candidate-e1321de48293f1908ef5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f205b27d1aaebd06c027: No verified product image URL
+- new-product / candidate-fa5be47369661bdcc8cd: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ae3efeaedc3a94574b7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a6a1eb6c445ef429dd2b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-42ec851ee9fdce4479ba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e42ca32d270c3e0e5901: Cannot confirm that the product is a material or printer
+- new-product / candidate-a3f1523e86c6f4c2e30d: Cannot confirm one product on the discovered URL
+- new-product / candidate-b3f5ba0470465b7f86e5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-191f94ea2533b2ece370: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f1399cd96ae3da8c1eab: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-150cbc0f86310251af99: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5e726ae301ef95a71470: Cannot confirm one product on the discovered URL
+- new-product / candidate-5e5774255f47930811de: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bbd095223fefe0742ee5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e42c6eadc005d9cfa6e8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-74f7f9bd6191e2c8d797: Source does not state the material pack weight; listing skipped
+- new-product / candidate-50e15c08829d541f8e11: Cannot confirm one product on the discovered URL
+- new-product / candidate-2a66cfb484773d559d13: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0dc89928ff8a7b0533e4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f3fa123099cf135ae147: Source does not state the material pack weight; listing skipped
+- new-product / candidate-93c229bed0afb8075fbc: Cannot confirm one product on the discovered URL
+- new-product / candidate-9dcc930eefaa4cc035fd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8a482b7450ce1025b6e2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a9eb85694339000d306f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c51656521e03a523f576: Cannot confirm one product on the discovered URL
+- new-product / candidate-291d631cb95400885c7f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d3d7c590b6f3153989ef: Source does not state the material pack weight; listing skipped
+- new-product / candidate-117ef85b19e561b8198b: No verified product image URL
+- new-product / candidate-5cd88dbf5c6f20678a91: Cannot confirm one product on the discovered URL
+- new-product / candidate-07c56997d80320bfa71d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-83361280b7fc5255a6d3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-84434963cb9903b537c4: No verified product image URL
+- new-product / candidate-a97c99fde432d8f9d90b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7519f1eeba1f1ed6f9f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2cf4fb24cfed5fbf889b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-afe136c84e0ef50cc338: Cannot confirm that the product is a material or printer
+- new-product / candidate-83c806ffd127c1c189ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-dbfb5095224afe76312f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b3d7b405c3f4af05347a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-18ccb23b7471af5734a4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e83778e8fa46801add6d: Cannot confirm one product on the discovered URL
+- new-product / candidate-7bd631c24f63e4265133: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d71c9092d4303b3ec498: Source does not state the material pack weight; listing skipped
+- new-product / candidate-320bf3eb1697f843e18b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-96f367810489f9f71464: Cannot confirm one product on the discovered URL
+- new-product / candidate-45996a925535bd1b5bf1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ddca876013bebc2eb018: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8522cd5647ff677f8651: Source does not state the material pack weight; listing skipped
+- new-product / candidate-13492360b09a2d9b6477: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8307e3ce6bfee5fa63c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ad714d865f6ace820b1f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-94afede683a826e088a4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-da646f4f3f6f217c4d1c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e34cfaa03383593d0fb5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-afcd98f9bf3847678fe2: No verified product image URL
+- new-product / candidate-3fa665c6a42dd7181fa0: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e193fb6420fee8a693a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-96637a2f552b3adfaad6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-263edf7db2730c9e30bb: Cannot confirm that the product is a material or printer
+- new-product / candidate-45897eeee6342dd65f0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c9ae34af933cd2afcf5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-41173ede1f8375dad94c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cbcdb800c4e7bc56f6b9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-845bd91a6de27391f895: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c140576c4c9693ff27a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-70f7a2ba756a94301190: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7761d2f2f487e477f9d9: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac6f51416cd88d8c7e24: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-48a6194b85f9fca2f154: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a74fbec8e9b54585f6df: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b4d13850ef799894aba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4854ed193af67cd99495: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1584bbac56dae468d0dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d68dfb0920527febb84f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-12a08c85ca9353956648: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e8300985d01646302a3b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cbd02371d3c35ad77e6f: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b70cb65876929237af3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c7c37e567127625545b7: Pack weight is ambiguous; listing skipped
-- new-product / candidate-2881a70d246139a2ff78: Nightly time budget reached; remaining values retained
-- new-product / candidate-80d6a69201ff05ca259b: Nightly time budget reached; remaining values retained
-- new-product / candidate-93e068de4a0df62c9511: No verified product image URL
-- new-product / candidate-85e42f31fd4715967639: Nightly time budget reached; remaining values retained
-- new-product / candidate-7407402cdd71257c18b7: Nightly time budget reached; remaining values retained
+- new-product / candidate-4a4d12d2e55ca021d2ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fc1a4a16083ce265a0de: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2f9489d93b745f83e12: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0e7c57b6dc8db6568642: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d11dc2295d633a4ceff8: Cannot confirm one product on the discovered URL
+- new-product / candidate-8e991832e5afade9fa99: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-448c7f2f227940cc3a89: No verified product image URL
+- new-product / candidate-00a875fc6088a32710e1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3f2f76a2bcb085b31e05: Cannot confirm one product on the discovered URL
+- new-product / candidate-28be037bbb21086c8d4c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7c792f3e999c7f23cd9d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7a318a7d88fce19fcd88: Nightly time budget reached; remaining values retained
-- new-product / candidate-e89b60a01e9dc09b2a61: Nightly time budget reached; remaining values retained
-- new-product / candidate-251413f9f365cde49ec1: Nightly time budget reached; remaining values retained
-- new-product / candidate-13c4c3f1eab5d8b2f7af: Nightly time budget reached; remaining values retained
-- new-product / candidate-8fe5853f5e117445fdc0: No verified product image URL
-- new-product / candidate-881374b2f2ff45e020c2: Nightly time budget reached; remaining values retained
-- new-product / candidate-f33bfbf79c55caa97b7f: Nightly time budget reached; remaining values retained
-- new-product / candidate-8ca258edf8a2e322fc9a: Nightly time budget reached; remaining values retained
-- new-product / candidate-c86b2d1360f0840dec87: Nightly time budget reached; remaining values retained
-- new-product / candidate-c68f29fc3473f0ebdf78: Nightly time budget reached; remaining values retained
-- new-product / candidate-d00060f5186184f06c4a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-644de258a6e8c2a8a4e6: No verified product image URL
-- new-product / candidate-0ec4abeebdf82398b988: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2a02425b2f23d0eb143: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c1970c21230a3ea8be4e: Nightly time budget reached; remaining values retained
-- new-product / candidate-3dc5e919bd2356103db7: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e57ee4aeda7b7866fa2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-454ac54763246f98e4b8: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ea61073dd743e730a0b: Nightly time budget reached; remaining values retained
-- new-product / candidate-e44293644f88d8c76ff1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-491ca55c61897821510f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1d9561f28c352983e204: Nightly time budget reached; remaining values retained
-- new-product / candidate-87ae66d70c32fe1a9264: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b4c9337cac06be500428: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-528f6f8237d2308f0eb3: Nightly time budget reached; remaining values retained
-- new-product / candidate-280b6a389a5d88475a39: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4b3b47eb8a3c22349c94: Nightly time budget reached; remaining values retained
-- new-product / candidate-b13e22c5b6c221732ca7: Nightly time budget reached; remaining values retained
-- new-product / candidate-3a2fa3a0a7c37d6cb567: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c535ad73f73875ad36bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-50b94fb09565585d81ea: Nightly time budget reached; remaining values retained
-- new-product / candidate-777f76d4b3bc677652fc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5c90a51d0c463414436d: Nightly time budget reached; remaining values retained
-- new-product / candidate-983796725c7366d2a299: Nightly time budget reached; remaining values retained
-- new-product / candidate-521c9adc52945ca6f412: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7ecc5c74e358990659ba: Source does not state the material pack weight; listing skipped
-- new-product / candidate-40a2c3936a893f64e5f2: Nightly time budget reached; remaining values retained
-- new-product / candidate-fad828cbcc887da63a33: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-58cd9aa090dd746c2e0d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6fdcf760befbbd0188b0: Nightly time budget reached; remaining values retained
-- new-product / candidate-670f1ecb6ff0d787adb4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ec35b22d30ae012b17d0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b913de33b4fa406f6c4a: Nightly time budget reached; remaining values retained
-- new-product / candidate-d67f063d1b1756de0ef4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3fcf49ca4a9fed4fcf70: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2268f8e61f69e43dbecf: Nightly time budget reached; remaining values retained
-- new-product / candidate-47f9747d8445f92071ad: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e7e9679b35697227a80b: No verified product image URL
-- new-product / candidate-2951a610177af48a6be2: Nightly time budget reached; remaining values retained
-- new-product / candidate-8baa28107059d070d5de: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1d09b5d94a4aa78db580: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bd9f3670a362b0815332: Nightly time budget reached; remaining values retained
-- new-product / candidate-5bddd41eae5fdcf7598e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22036b7e32910ac14036: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6f04b04ed294321d93e4: Nightly time budget reached; remaining values retained
-- new-product / candidate-5df913f18005fa061fd8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-16c80c8729f964c79ee4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-32d4fbbc5061cf178126: Nightly time budget reached; remaining values retained
-- new-product / candidate-985d9df80c3ed6e97adb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-441fb48bb80567cfa6db: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0edca10f9e8c522dd792: Cannot confirm one product on the discovered URL
+- new-product / candidate-1d7a2baca3cee42ca482: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2cb5d2a86b4e692ca05c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-850f09239873396923c6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-90c6d21ae61c4b094087: Cannot confirm one product on the discovered URL
+- new-product / candidate-1468879f9ea9d015ad3b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7574a0dad2265a52711c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee712d20e65cd0479d16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e34a95ea30ec37079d7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-07fac990f08fd01f05f3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
+- new-product / candidate-2cd8d60828277a820018: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f25dd2eb380c3f69eb94: Cannot confirm one product on the discovered URL
+- new-product / candidate-d18711ca1254592a74a7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b4a20a0d12b6942f1358: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6b42bed2124b6c5d8761: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cda9eb46fe42343af7e5: Cannot confirm one product on the discovered URL
+- new-product / candidate-824da648687635c49e09: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0fa1d31f71d69c9129f: No verified product image URL
+- new-product / candidate-79add83e77513618c085: Source does not state the material pack weight; listing skipped
+- new-product / candidate-01724366b35d5d737630: Cannot confirm one product on the discovered URL
+- new-product / candidate-d00ae2a76fb4f35186b0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-063dbcdc9e291aae2dd7: No verified product image URL
+- new-product / candidate-2e4985e14d1ecabe9a36: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8afd2dcfdc61afdc1179: Cannot confirm one product on the discovered URL
+- new-product / candidate-857b3877986310b426a0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e004f1c313d19769036: No verified product image URL
+- new-product / candidate-14c85bef7f3b5d497f9f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-21bdf213c06e9406a4c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-c283486bf4ee82f766ed: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c3816a7b733db3388ebc: No verified product image URL
+- new-product / candidate-f94885149856eaacc0eb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-867e3fd9b2de566bd8ff: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6a46026d93a4879f574: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44291b5c33b7afb19589: Pack weight is ambiguous; listing skipped
+- new-product / candidate-56532a07364edde95afd: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7ecb0d05c98dca8b17f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7731a9043ff7f8990fb3: No verified product image URL
+- new-product / candidate-267ed447c348ec00f62c: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee83335c1e54b23dd57a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ef8a58728033d5ebadf6: No verified product image URL
+- new-product / candidate-92dbf82cfb655510ba43: Cannot confirm one product on the discovered URL
+- new-product / candidate-c3ca0e496dce7c168819: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9699e6ae48fcc2ca3e44: No verified product image URL
+- new-product / candidate-1bb28b9bc8364d01b2de: Cannot confirm one product on the discovered URL
+- new-product / candidate-e11f5e6441f84ac5e02f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3c6950bdd47c886e0794: No verified product image URL
+- new-product / candidate-c17e2a7839d8b0283d46: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0a4ca196d834b0cd613: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bc258083ed95b2d9605e: No verified product image URL
+- new-product / candidate-6d7886c1a308e836f63b: Cannot confirm one product on the discovered URL
+- new-product / candidate-c36453033169fdadad45: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-30c12a0d75de06a14809: Cannot confirm one product on the discovered URL
+- new-product / candidate-045035e7e3b33fd42ef3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3713d3db76c870c37182: Cannot confirm one product on the discovered URL
+- new-product / candidate-6220f2cb7a8fd1f59f63: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d91d3a2da0d440efc711: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ae6884364216fb7b6f4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a9c0ae0d99554d68f7f9: No verified product image URL
+- new-product / candidate-4d4e6d53e2356904a882: Cannot confirm one product on the discovered URL
+- new-product / candidate-b4c929f64316efd0738a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fb731ca1fe43dcf6da51: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3fb406b13d187c2f4fa: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7ff9bd9ceb6d6f7c9ac7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-148a8a4dfb8f392d676f: Cannot confirm one product on the discovered URL
+- new-product / candidate-eab1b13172f0ae5eccd7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9925f10c7c4c9696aa43: Cannot confirm one product on the discovered URL
+- new-product / candidate-69757a5315e186a6599d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bd28c868e2818c5593bd: Cannot confirm one product on the discovered URL
+- new-product / candidate-29a5fb0318a5cd2f9509: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7c7b1634dfa76a8aa9a: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f5c5a95e992223e0a2b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eb48d283c9a6db608ab7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e51bada0562c084212f0: Cannot confirm one product on the discovered URL
+- new-product / candidate-602958f07a3ecaf46d84: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2592c592206b419a8268: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b78a61ae1a588d29713e: Cannot confirm one product on the discovered URL
+- new-product / candidate-92a4586f94c3a43fb004: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-01422a14af670c303334: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f2ecc23faef6bbf05c1d: Cannot confirm one product on the discovered URL
+- new-product / candidate-2789d5e968b93199adf5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b3ee011b1f1834ce350e: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae3c2e7b7e80bcb5e1e3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-75a2426554394fb4599c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ca8669f09def7f58fffc: Cannot confirm one product on the discovered URL
+- new-product / candidate-d33b001aca52b9ca5cc8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-14478100128b651f96b6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a1efe9cbfd55752306cd: Cannot confirm one product on the discovered URL
+- new-product / candidate-7ea6cbeff5eba7e57c13: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-414abea4ed87c5bd3ce4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3f777643b54266da6913: Cannot confirm one product on the discovered URL
+- new-product / candidate-048b2e312e47ea3ccd03: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ff6539216748bccfda06: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2d9cc70fdc1bd091d246: Nightly time budget reached; remaining values retained
-- new-product / candidate-7e88dd1b9e40f3979028: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-207b477672b09f235448: Cannot confirm one product on the discovered URL
+- new-product / candidate-407dbf7477b3769647e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-31c77bf42788714e530c: No verified product image URL
+- new-product / candidate-df25a0859de6fba99742: Cannot confirm one product on the discovered URL
+- new-product / candidate-589d0452fb29a61499be: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2d52ddec45ea55d1d80b: No verified product image URL
-- new-product / candidate-3d1c1fe1b4190f8ffaeb: Nightly time budget reached; remaining values retained
-- new-product / candidate-e6b232f5fd1423391295: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9698e0ac5c964708c259: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3974d98ab11984e8952d: Nightly time budget reached; remaining values retained
-- new-product / candidate-0cb4b39a7b3b664b4753: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cf09e39db656682aaa04: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ff13ec30bbb0ddb2e24f: Nightly time budget reached; remaining values retained
-- new-product / candidate-19115da25f9cc78d0d01: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4131619f8fd6e8e238e2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c36722c4a5ab32e5f153: Nightly time budget reached; remaining values retained
-- new-product / candidate-ef6ea85a2e5e5b2ec92c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-946da20c7b32a5df84e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-739f6eb6eaacd4db6165: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a3517498225ff75afad: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d4e29be71af4716c22d8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bc7be09f9f6811d9f721: Nightly time budget reached; remaining values retained
-- new-product / candidate-865f96b5e585a998f1bb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-14bbcd15bd6aceab7fc7: Nightly time budget reached; remaining values retained
-- new-product / candidate-21903210fe284801af29: Nightly time budget reached; remaining values retained
-- new-product / candidate-d040db12d6e922d926b1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f28fb44e16abb1c67ecf: Nightly time budget reached; remaining values retained
-- new-product / candidate-39c69bd70676532a468e: Nightly time budget reached; remaining values retained
-- new-product / candidate-1dc2a59a37b5d8199a20: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1a82e1bde3b33e495acb: No verified product image URL
-- new-product / candidate-013cfc7c768e26ee7da5: Nightly time budget reached; remaining values retained
-- new-product / candidate-28bd66b426ab04b9c2f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2cf27276f03697dbd2d8: Nightly time budget reached; remaining values retained
-- new-product / candidate-0599f27851f5b7782e8f: Nightly time budget reached; remaining values retained
-- new-product / candidate-e5adec06823c7bb17e02: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ae563f77842073e040cd: Nightly time budget reached; remaining values retained
-- new-product / candidate-97d91f192cdb9f1dcd4c: Nightly time budget reached; remaining values retained
-- new-product / candidate-c26870f56874ac2f6889: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3c2de2e3056a7aea4744: No verified product image URL
-- new-product / candidate-dff89f90b226b6022031: Nightly time budget reached; remaining values retained
-- new-product / candidate-7f1ef34e7373e31048dd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-abdeaa25795247f2d3c4: Pack weight is ambiguous; listing skipped
-- new-product / candidate-70aefd91079518340357: Nightly time budget reached; remaining values retained
-- new-product / candidate-777e7ff01ce281c7fc7c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-83c36ff4f8d1a57608e9: Cannot confirm one product on the discovered URL
+- new-product / candidate-12ada28306aac061a645: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-aa8b6f33ff9f1b53d556: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c18e6b1f0deb4934fc18: Cannot confirm one product on the discovered URL
+- new-product / candidate-de4699669cc52dd184d7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8e747389b807c3f805dd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f5e47749bc1e4a235d4f: Cannot confirm one product on the discovered URL
+- new-product / candidate-39c2d2de3a263e4b2bd3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6596f3720470f6765ab5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-72b6a372afa7898e9b41: Cannot confirm one product on the discovered URL
+- new-product / candidate-ab66179eaa5673ca737a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e202d6520a6577211cd8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5e77d4ec482820299bce: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f9985ceba0f6ae24d23: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-38e92cb1d264102063fa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-97a5e4368c6eb1ad227d: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f95f0a26033d00ca95e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-84c1c90423fc2ae4b6b0: No verified product image URL
+- new-product / candidate-75547e005cd1be8dd1c8: Cannot confirm one product on the discovered URL
+- new-product / candidate-12bb361dc516d3b1e938: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-597a6bd41f309dd8c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-202399b9794660471d68: Cannot confirm one product on the discovered URL
+- new-product / candidate-43de9c1eb490b86f710c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-041cd129eb9ec964f32c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a06a283a91017a2436a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-c713acf427d4a560ed38: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4b24dbde8147c1eb7acc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5aeb7b14145d759a48d0: Cannot confirm one product on the discovered URL
+- new-product / candidate-b344b97f6b4f67f06797: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-75c5dc91f50a869167fe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-87a543cc45dd6a679114: Cannot confirm one product on the discovered URL
+- new-product / candidate-c675400a963eb010117d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d0b02d2b392def03a8c6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-361339aceb8a4940dab5: Cannot confirm one product on the discovered URL
+- new-product / candidate-51543a0b27a43759f55a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-560a6ed04d9f9be7f444: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d4be7206cb110a2f97b7: Cannot confirm one product on the discovered URL
+- new-product / candidate-f764ed0f0634ac84ab4d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-673d88125378807372ad: Source does not state the material pack weight; listing skipped
+- new-product / candidate-98f5759b4384cc60c66c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3519f0b7f0ac38ba8c6e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-311b322c422b6ce152c6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b5bf404ae630a5acd0d9: Cannot confirm one product on the discovered URL
+- new-product / candidate-ffac242f13599d1b73be: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d4d7fa6c6f9de626aea1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fc4378a7f179fe05c717: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd8978fbb9d6a26705a0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-79b63592bfe425951087: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b2ab067982b47ab65948: Cannot confirm one product on the discovered URL
+- new-product / candidate-136f2d5dcd7ff8ae7c1a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ed404ad6326aa363a7be: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8f420db7cc1228d70156: Cannot confirm one product on the discovered URL
+- new-product / candidate-354136fa30e50e9a4700: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c12d239a57df3c838b12: Source does not state the material pack weight; listing skipped
+- new-product / candidate-38b9b54ee5233f09b9b7: Cannot confirm one product on the discovered URL
+- new-product / candidate-7b6cca37f5975f2617fd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-80c800d50eeeae92a098: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e8d67ff5d86707e3142: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-85d23ee389d3d3d779eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f935462c912140d0de8: No verified product image URL
+- new-product / candidate-5869191702150e54e62a: Cannot confirm one product on the discovered URL
+- new-product / candidate-beb29a47bd1a42dd2c1c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-af694ff788dcdff9d176: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7b665d24df93250d1ec2: Cannot confirm one product on the discovered URL
+- new-product / candidate-a355ad91838d7c29f9f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d4d99025d81c3fa4a7e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-51f70c5eff23da236b5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-b36d078e84d6a7a2a56e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-27061bca9b4d0c921a78: Cannot confirm one product on the discovered URL
+- new-product / candidate-14ba8d51544ba8b0a9ba: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f2511d733b22eff830f2: Cannot confirm one product on the discovered URL
+- new-product / candidate-5e7b6547c3693620e7e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2473dcb4ca0ffab9829a: Cannot confirm one product on the discovered URL
+- new-product / candidate-aeb0960ef3765d585e49: No verified product image URL
+- new-product / candidate-a7a891c42296ba1f349a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ab1bcf8b6cf9cfaedea4: Cannot confirm one product on the discovered URL
+- new-product / candidate-714f1d8730daa1edc04a: No verified product image URL
+- new-product / candidate-fa96312432ce4db7b4a1: Pack weight is ambiguous; listing skipped
+- new-product / candidate-8ade1ab69bb38496f779: Cannot confirm one product on the discovered URL
+- new-product / candidate-b93c5d6c4c9c4c04e960: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4fbf7eadc08673a82eab: Cannot confirm one product on the discovered URL
+- new-product / candidate-861b77fd981ee3bf13df: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9677bf52abd6af390ed4: No verified product image URL
+- new-product / candidate-520a252ad383f0ce6f33: Cannot confirm one product on the discovered URL
+- new-product / candidate-dd9153bd1675ef91ff96: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a18b9ec716e3ef1e32b3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8bac00622e764436c7cd: Nightly time budget reached; remaining values retained
-- new-product / candidate-d2260559bbb0b99229cf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f91abab400ed3deddb45: Nightly time budget reached; remaining values retained
-- new-product / candidate-5e8998d60bf89e7d570d: Nightly time budget reached; remaining values retained
-- new-product / candidate-42e3addaa44d6520d6fd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cc9bbad5e69ac381fe37: Nightly time budget reached; remaining values retained
-- new-product / candidate-7de07f4ca6bede8786cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-d2db8c6642c6ed6b3289: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6f3a8104f68691174233: Nightly time budget reached; remaining values retained
-- new-product / candidate-05eb63297b6e3eb4b49d: Nightly time budget reached; remaining values retained
-- new-product / candidate-575aec58452292dcd7d5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-92724fa598ae156ca9e2: No verified product image URL
-- new-product / candidate-7f67693740c5aaa2a77c: Nightly time budget reached; remaining values retained
-- new-product / candidate-a662ac6ce3ae79bb9dca: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7fbd7095454d68185fe4: Nightly time budget reached; remaining values retained
-- new-product / candidate-032fd049683c8d3893fb: Nightly time budget reached; remaining values retained
-- new-product / candidate-3cce4a0d29789edb0a68: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9d9acc3244cb60cfdb9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-aba29810d8b659b1c16c: Nightly time budget reached; remaining values retained
-- new-product / candidate-298663a97dfaf195336b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-16e532d222a6b37267ab: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dafd08b182a6c053da50: Nightly time budget reached; remaining values retained
-- new-product / candidate-84612e6df55d63d920da: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f9cc51861420b3767181: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c401f009aaad294acab9: Nightly time budget reached; remaining values retained
-- new-product / candidate-494ba60c2aea2f73c28e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4fc96ec636573da967c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-6623ac85a614509ce251: Nightly time budget reached; remaining values retained
-- new-product / candidate-5ba9b308837cfd4d0816: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-12cf83fa9e52b48c1f6c: Nightly time budget reached; remaining values retained
-- new-product / candidate-d458d88a4e173868f5ec: Nightly time budget reached; remaining values retained
-- new-product / candidate-dd2a45ac7c9ac316b2f3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2ecf666325691d6e5178: Nightly time budget reached; remaining values retained
-- new-product / candidate-b080618630e6519eaebc: Nightly time budget reached; remaining values retained
-- new-product / candidate-e81dbebccf99cb2da4d7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-59055c02f0c4d8627b07: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5e24228527521a5f788d: Nightly time budget reached; remaining values retained
-- new-product / candidate-33e5ebf1047ecd216c79: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-018757773cfc07af5ffb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-63e3d8697aa0f8a696fe: Nightly time budget reached; remaining values retained
-- new-product / candidate-92323e9f8286c40473a7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d6c2ca4a9a688bcc79d6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2c176e22502ab7fbc8cd: Nightly time budget reached; remaining values retained
-- new-product / candidate-71971d53204fa303e61e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-905bb0e835edb185b66b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cc47675a191ed9a64dfc: Nightly time budget reached; remaining values retained
-- new-product / candidate-a7a57bb0f0c5016858e5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-711595e94450f8c00d08: No verified product image URL
-- new-product / candidate-8d137acbed5cf716df96: Nightly time budget reached; remaining values retained
-- new-product / candidate-5a4ff0aae40fd79d9ab4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7615f3ee3212bd8b95bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7dcdd575c3b9ad260d2a: Nightly time budget reached; remaining values retained
-- new-product / candidate-9c8c0e35ddf932b10964: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-048155a99f4fce11441f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-edaef95192226117b8a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-005812f1e9559d038380: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-98211a321d7076507513: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9df63dfebe80b7078e75: Nightly time budget reached; remaining values retained
-- new-product / candidate-826e185d6413ca41efde: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6062869a029bf5a2a506: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f05cedbd3edf04dd11e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fbb52b57109be7f19fcc: Cannot confirm one product on the discovered URL
+- new-product / candidate-4230f713b30e301f872f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fdd6b2abf07315702e58: Cannot confirm one product on the discovered URL
+- new-product / candidate-5950a706ab28ea74ed18: Pack weight outside the supported range
+- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
+- new-product / candidate-556cf1c420fc3a0c2657: Cannot confirm one product on the discovered URL
+- new-product / candidate-5453e9eb0b7f236e65a2: No verified product image URL
+- new-product / candidate-39b158624b6890f8a399: No verified product image URL
+- new-product / candidate-7cbac451f166333d5ad0: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a7f5ba18e0064cf8d42: Pack weight outside the supported range
+- new-product / candidate-4e9257764cb5c87d34e1: No verified product image URL
+- new-product / candidate-688e60121cc41f77b705: Cannot confirm one product on the discovered URL
+- new-product / candidate-a8dd2a3658540931d8d4: No verified product image URL
+- new-product / candidate-ee7f4b63ef6fa19a78ed: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b4362e98a79d90dd834: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d57775a7ea933c321bb8: No verified product image URL
+- new-product / candidate-7df2a2c2b814f4e95bae: Cannot confirm one product on the discovered URL
+- new-product / candidate-0e9630f081027e1957c4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-71703c930ecf2feccda6: No verified product image URL
+- new-product / candidate-b4cb0b203393ad2a8418: Cannot confirm one product on the discovered URL
+- new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b29fddc9440819c396e2: No verified product image URL
+- new-product / candidate-868eefb5d5a6b4c4e05e: Cannot confirm one product on the discovered URL
+- new-product / candidate-7aa684bc0262dd122f19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a502959040b876a9afdd: No verified product image URL
+- new-product / candidate-c0752383035afe7cbbaa: Cannot confirm one product on the discovered URL
+- new-product / candidate-04f467e2abaf271bca5a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-715c789bf3faaf7296b9: No verified product image URL
+- new-product / candidate-223af51dacdb975ce051: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0e620db44ab3b12ad11: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-05cf9519272713d477a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-e487bfc7c64b51889ec9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-132ebe0c347a9ea88968: Cannot confirm one product on the discovered URL
+- new-product / candidate-3454f64836a3295a0a86: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8bc1dd4d2ef1df0bc0fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-35f4ceaa3c19f6fc66e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-437cbf6a649282a2afed: No verified product image URL
+- new-product / candidate-b2117fa876f7bb8a7eb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-de6333c720e502c59b2b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6f58c5dc2d76c05d9ead: Cannot confirm one product on the discovered URL
+- new-product / candidate-c18fd94bbde8eba100d9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b8ef25adda0c49b70713: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e23550a6f7ca8912fdd6: Cannot confirm one product on the discovered URL
+- new-product / candidate-edefc3a49cf8604d8ceb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2c4ace86fd77b03cee25: Cannot confirm one product on the discovered URL
+- new-product / candidate-a38df451fb9becfba82b: Cannot confirm one product on the discovered URL
+- new-product / candidate-cd52606d7d38055e871d: No verified product image URL
+- new-product / candidate-c4d61ec52bacf647233e: Cannot confirm one product on the discovered URL
+- new-product / candidate-abc71a9063b38fea28d4: Pack weight outside the supported range
+- new-product / candidate-a9779f0e6354e50caea5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9def2ad5ac70a50e3c3b: Cannot confirm one product on the discovered URL
+- new-product / candidate-6cd81d8480fa7de771e7: No verified product image URL
+- new-product / candidate-68630d8e9c51216e8b04: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-98b3b42a5cd930e26ee4: Cannot confirm one product on the discovered URL
+- new-product / candidate-74fe631e433221246e04: Pack weight outside the supported range
+- new-product / candidate-dd11e85e9f9504b50bee: Source does not state the material pack weight; listing skipped
+- new-product / candidate-86acabba21561bd0c577: Cannot confirm one product on the discovered URL
+- new-product / candidate-d21313e607a7a2dd2722: No verified product image URL
+- new-product / candidate-c6d9e75446edcd2e6206: Cannot confirm one product on the discovered URL
+- new-product / candidate-3f4391ff9aea1f92d259: No verified product image URL
+- new-product / candidate-c4e5d2a28b7fd05beb94: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-74b821ceb5d285eb5773: Cannot confirm one product on the discovered URL
+- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d7dc42671e7dbc45125: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9c4af779caaa8f24b9ef: Cannot confirm one product on the discovered URL
+- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-48945ec2160edfb3d1fd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-71be30285977331c88cc: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e1304460f444a6cb82e9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4b020e8430cdffed4745: Nightly time budget reached; remaining values retained
-- new-product / candidate-7af7eb1bce91cbdcf85c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22f0d3a8e5997786947e: No verified product image URL
-- new-product / candidate-b57db526c8ace25e7cb5: Nightly time budget reached; remaining values retained
-- new-product / candidate-855fb8562fd03578fa6c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6bc3c37bd3471536e2c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-70d047199ad6a94ed49d: Nightly time budget reached; remaining values retained
-- new-product / candidate-068d3a0c74126fd1d016: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-587cc0b24ba5ee2c49f3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2b17dfd1c1c8a75bb898: Nightly time budget reached; remaining values retained
-- new-product / candidate-a5d99b0f51fdc0bfcc47: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-50204ace7ef5854fe995: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f553e1490640a8efb727: Nightly time budget reached; remaining values retained
-- new-product / candidate-f94929effa7a300103c9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-55c5443acd14fef89242: Nightly time budget reached; remaining values retained
-- new-product / candidate-986672534d394a25feda: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-29881368916ceef1a602: Nightly time budget reached; remaining values retained
-- new-product / candidate-69d41c2288fdcd5316c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-ab0785344baaf481ebe7: Pack weight outside the supported range
-- new-product / candidate-a53aa1a4380a6316fee6: Nightly time budget reached; remaining values retained
-- new-product / candidate-3274b4f8d767286aaecd: Nightly time budget reached; remaining values retained
-- new-product / candidate-4788ff91d3a73366853b: Nightly time budget reached; remaining values retained
-- new-product / candidate-bdb5d92e17c4a7aee78a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0654ae1f24b32b225234: Nightly time budget reached; remaining values retained
-- new-product / candidate-b528aa52b405f41b3d76: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5922bd27e13de91638b1: Nightly time budget reached; remaining values retained
-- new-product / candidate-833f31704523a3bf257c: Nightly time budget reached; remaining values retained
-- new-product / candidate-b4baf7fb5e570bdb11e2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7339aa5a0330bb3b5fe9: Nightly time budget reached; remaining values retained
-- new-product / candidate-2becf30d7adfd40d11c5: Nightly time budget reached; remaining values retained
-- new-product / candidate-526e53b865747c47a39c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-818dbba01490c54429df: No verified product image URL
-- new-product / candidate-c6f2f96e1237c091cb02: Nightly time budget reached; remaining values retained
-- new-product / candidate-7c832d915b92bac3e109: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-10a4c2ba156f96ee184b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-f4b052dfe50e3cdb8583: Nightly time budget reached; remaining values retained
-- new-product / candidate-1a67d346c81ff7aa932e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c7220e5762ea909a0d29: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-32345bfd2e75627672a5: No verified product image URL
+- new-product / candidate-1b43d7088570caa12162: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-108ea4df2dc5ef33add2: No verified product image URL
+- new-product / candidate-d3f0cc8e11677ec22344: Cannot confirm one product on the discovered URL
+- new-product / candidate-b58d44c815900cb5f9fc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-09c1126dcd0ab4097bc3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8433ca28c87da2062eb7: Cannot confirm one product on the discovered URL
+- new-product / candidate-11cc37ce91c77266c6ab: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-98211a321d7076507513: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2a072c6277f36b2c3be1: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2a73ec04aa77177f383: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-57015646a7bbb9e22fb7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-79d83d13a4c0047cc9c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-dabf077837e92424522f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f2041e1a239e97598bc5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1a1019a1dcdbfe318bc5: Cannot confirm one product on the discovered URL
+- new-product / candidate-fb015bbca405e7fe6f45: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e3749e6622328db3eb35: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4f12e4d55137c27e642c: Cannot confirm one product on the discovered URL
+- new-product / candidate-a2f3e2505c110024e546: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-13629718ae0358645928: No verified product image URL
+- new-product / candidate-8ea0e6fda4480ff50528: Cannot confirm one product on the discovered URL
+- new-product / candidate-46dcdf53e33a4809194b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5623e8af3194eb899c43: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5952b13c946605f6dabf: Cannot confirm one product on the discovered URL
+- new-product / candidate-4672ef27412b01ace58f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a6c9f104fc382e9d1bd7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9c98451c27a3f5f6cebd: Cannot confirm one product on the discovered URL
+- new-product / candidate-36ce8d38cec5e657808d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-47ae18411c6eb8970f65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f7923df2037def2448d0: Cannot confirm one product on the discovered URL
+- new-product / candidate-f156615ba1989a94552e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f5e8a1457fed78d5283e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb741efa7811c34d1532: Cannot confirm one product on the discovered URL
+- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-45721675cb87d3facc68: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b5c2d0440da1f7fbb7fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-434e8e5937db89d18d45: No verified product image URL
+- new-product / candidate-cac0412a108315b86209: Source does not state the material pack weight; listing skipped
+- new-product / candidate-708860f0f2150b551f2b: Cannot confirm one product on the discovered URL
+- new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
+- new-product / candidate-0da334e429eef7442292: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f9c21f569c8de112fe54: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c2c78386f8cd6b0e666: No verified product image URL
+- new-product / candidate-145b2a91993f82587d1f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-01ecdd8a3448a0ca9da4: Cannot confirm one product on the discovered URL
+- new-product / candidate-2b03e707d0e4de80cc21: No verified product image URL
+- new-product / candidate-b5ecf911faee80efa386: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b03811116f3d8e4ce31c: Cannot confirm one product on the discovered URL
+- new-product / candidate-c58be09870e7a2c9263d: No verified product image URL
+- new-product / candidate-fe0bb71e2cad9df304aa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-867ce6976481c28e4e17: Cannot confirm one product on the discovered URL
+- new-product / candidate-79eff769d78f1522af1a: No verified product image URL
+- new-product / candidate-43d4a54d53b9b02e44ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-c73ac6100a7028f21186: No verified product image URL
+- new-product / candidate-e61a4627afacfb32ef0f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1db27877fc15b894efc5: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ae6e9e1e2e26f610bb9: No verified product image URL
+- new-product / candidate-62f9af26e0ec4f6d5917: Cannot confirm one product on the discovered URL
+- new-product / candidate-55f5e7d12814c741b256: No verified product image URL
+- new-product / candidate-45379094a78fc2585526: Cannot confirm one product on the discovered URL
+- new-product / candidate-677ae4a4d0538a87333d: No verified product image URL
+- new-product / candidate-2fda7af103c790c302f8: Cannot confirm one product on the discovered URL
+- new-product / candidate-17a9d5911f457a8d2122: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-95fe56717b2fa14bf400: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9cc1bbba4a312204e0f6: Cannot confirm one product on the discovered URL
+- new-product / candidate-24b8e3c8a6f610a76a08: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5d65120fd3f6a414f3b9: Pack weight is ambiguous; listing skipped
+- new-product / candidate-883ba1191f9d36e4b545: Cannot confirm one product on the discovered URL
+- new-product / candidate-a19bb0f282e2ff383347: Cannot confirm one product on the discovered URL
+- new-product / candidate-6e57ee4aeda7b7866fa2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3b9afd8a62f78e3c7906: No verified product image URL
+- new-product / candidate-760dc5a0c6747a780f36: Cannot confirm one product on the discovered URL
+- new-product / candidate-e44293644f88d8c76ff1: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-2895d1ef6a21ffabac57: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-08ae1fd64db605c8cdf3: Nightly time budget reached; remaining values retained
-- new-product / candidate-9c9a5b9a527af6460aa1: No verified product image URL
-- new-product / candidate-d6cc1ef54dece988109e: Nightly time budget reached; remaining values retained
-- new-product / candidate-723bcd0fd5eb3334c992: Nightly time budget reached; remaining values retained
-- new-product / candidate-24ff3e020ea41ddf488f: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a8b7f0e9365646d0a17: Nightly time budget reached; remaining values retained
-- new-product / candidate-6192ee1f6a972c8fb749: Nightly time budget reached; remaining values retained
-- new-product / candidate-c95aee85ef81c211c5c7: No verified product image URL
-- new-product / candidate-e5e9a5c09e5699d54172: Nightly time budget reached; remaining values retained
-- new-product / candidate-2d2d8520de8865949491: Nightly time budget reached; remaining values retained
-- new-product / candidate-cfc57ab5374c2974de01: Nightly time budget reached; remaining values retained
-- new-product / candidate-7b7b67d8e99734d8ed93: No verified product image URL
-- new-product / candidate-c6c6e197a28ddcbaff92: Nightly time budget reached; remaining values retained
-- new-product / candidate-b5e15a762c39aa8b15e2: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d39d5b1f5ade18c4d02: Nightly time budget reached; remaining values retained
-- new-product / candidate-38035b4b0f34ca14e8cc: Nightly time budget reached; remaining values retained
-- new-product / candidate-d7bc47c15f245f1c9c7f: Pack weight outside the supported range
-- new-product / candidate-2fff91b80c6eedece62f: Nightly time budget reached; remaining values retained
-- new-product / candidate-a225ef7b4ee09f5767dc: Nightly time budget reached; remaining values retained
-- new-product / candidate-e80a4bc98f22cd813cb8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0038465a07d067b22ea2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c783da60f03062174cbe: Nightly time budget reached; remaining values retained
-- new-product / candidate-037c05896107c410f796: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fc0b379a26737ba6e7d1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-76e83af2f48fbde257c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-0f892904cb0562a9073d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2d20a2907aacba027a84: Nightly time budget reached; remaining values retained
-- new-product / candidate-05323f906da7c7bf35bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-88ed1e06e987181659fe: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a5212e25b0eab7e6aa46: Nightly time budget reached; remaining values retained
-- new-product / candidate-22aba0fb8faff72cc5ac: Nightly time budget reached; remaining values retained
-- new-product / candidate-e6a904a2928cd714a3bb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-279935557efa462efc9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-7015d14d656ab7265b00: Nightly time budget reached; remaining values retained
-- new-product / candidate-0d8521aaddd562776c1b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7646ea5163a5274238fc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d6a9f362ed2090066bb1: Nightly time budget reached; remaining values retained
-- new-product / candidate-ffa3d30657f9241eb29f: Nightly time budget reached; remaining values retained
-- new-product / candidate-1f10ed13a26cb6ae742d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e7c2f7abba2216f655eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-e69567b26517cadf0cac: Nightly time budget reached; remaining values retained
-- new-product / candidate-d4cb88348a4fbc0a3c80: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-60c867201fca91225e9d: Nightly time budget reached; remaining values retained
-- new-product / candidate-29d74fbbf0864ea4c82e: No verified product image URL
-- new-product / candidate-fd4911b312a77d9bb190: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4a0a562d85c302cc5a7a: Nightly time budget reached; remaining values retained
-- new-product / candidate-0936aa81d696a31f8182: No verified product image URL
-- new-product / candidate-0f13da661de063027162: No verified product image URL
-- new-product / candidate-c97e053cba1fef56d5f2: Nightly time budget reached; remaining values retained
-- new-product / candidate-50676104cf3b4bc0cbcf: No verified product image URL
-- new-product / candidate-1e955ccf6baabd111047: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3c6f4da26e5072c8c5fe: Nightly time budget reached; remaining values retained
-- new-product / candidate-26210dd79274f0ddefed: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-418fb9a9cf6db0008bee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-62c52075f08c6f257411: Nightly time budget reached; remaining values retained
-- new-product / candidate-797d433de58d580eedad: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-245307d6a03a730d8a30: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ea82bdeed654527b95b: Nightly time budget reached; remaining values retained
-- new-product / candidate-9cc14bbfd90eb87d64c9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a706b7c2f1c477e62479: Cannot confirm one product on the discovered URL
+- new-product / candidate-280b6a389a5d88475a39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-128b101e444b6b2eaa53: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9575933473a5fa44e71c: Cannot confirm one product on the discovered URL
+- new-product / candidate-2fca4dd1dd1c0d2c858e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6e230ff507b7f2627067: No verified product image URL
+- new-product / candidate-cf6c407b43016ec1127a: Cannot confirm one product on the discovered URL
+- new-product / candidate-2bd66a5c466585a12a37: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9588575c86d98f7b1f56: No verified product image URL
+- new-product / candidate-a8bdfcee1b1eb8055caf: Cannot confirm one product on the discovered URL
+- new-product / candidate-5604a35c460b480d71b8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b10b59c18db828754b64: No verified product image URL
+- new-product / candidate-fd9de88e0b93c5e8b478: Cannot confirm one product on the discovered URL
+- new-product / candidate-87ae66d70c32fe1a9264: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-be9d7950ddc740f3d2c5: No verified product image URL
+- new-product / candidate-8f11b8964321c2a77d07: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b7a305b516340c4aab5: No verified product image URL
+- new-product / candidate-8c42a036a9372f134bfc: No verified product image URL
+- new-product / candidate-8a8d127d9f4ffa7cd987: Cannot confirm one product on the discovered URL
+- new-product / candidate-3a2fa3a0a7c37d6cb567: Source does not state the material pack weight; listing skipped
+- new-product / candidate-839d79fc21f4d5217797: No verified product image URL
+- new-product / candidate-f49fc219c5c821dedafb: Cannot confirm one product on the discovered URL
+- new-product / candidate-06f78cd7baec8689a4e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5727caaebb156f6085df: No verified product image URL
+- new-product / candidate-2aad4aaa079fa5151721: Cannot confirm one product on the discovered URL
+- new-product / candidate-35113115ea887342b9b0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df2a646e7539f00af824: No verified product image URL
+- new-product / candidate-8673610a15c0b0ce2db1: Cannot confirm one product on the discovered URL
+- new-product / candidate-7a5f3b702a72f4191840: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d31e556a82a7d3cc4d69: Cannot confirm one product on the discovered URL
+- new-product / candidate-cee40d14ec42ebb0d2d0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-23a9a2b39a348cbd6f3a: Cannot confirm one product on the discovered URL
+- new-product / candidate-06d440a13417e58ab5e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3d29a30c6448b0463066: Cannot confirm one product on the discovered URL
+- new-product / candidate-e95c5e4eb946940ab789: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1a60a632b2dde82118f2: No verified product image URL
+- new-product / candidate-b0dcbf810d0812b34b23: Cannot confirm one product on the discovered URL
+- new-product / candidate-3429ae55d58c91e274c4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e3c48ca7202e13e1c519: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b0bda7c1d2fd67c5525: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c25b647691f1469cc97c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f461245915837cd90e8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f0631f161a92e97af53: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cf3fd6fe5db6f3bf4c07: Cannot confirm one product on the discovered URL
+- new-product / candidate-88e0e33780113509aa20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-be192507b7c05aab00c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-cb48a3c1ba1c141f6915: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7e3ff31e185d7efdd122: Cannot confirm one product on the discovered URL
+- new-product / candidate-960e927e8f91b64e6e7e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97e2e73aff684a2426b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8c776e4f4ca61271201e: Cannot confirm one product on the discovered URL
+- new-product / candidate-040ee27ca28d2943a0f2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b0af7d8a2c369f5b60f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc483701aaab2f90510f: Cannot confirm one product on the discovered URL
+- new-product / candidate-63b9f5e142ad3b91f092: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b1e37676dcc4e41b6dc2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8433ef319b095cb17465: Cannot confirm one product on the discovered URL
+- new-product / candidate-82d844f3ef88200ad93e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-91e40610db6399bdb5d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9388f658df0ccc19238: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b7b30ed4357c40327b71: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4079ccd3800ad7505d48: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc7b91a4a15e47c1e9a3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3d3968e4a57e1cbadb29: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-630c83843e3c704a506b: Cannot confirm one product on the discovered URL
+- new-product / candidate-ca9410b358869b1e3dda: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fc0f220f75469acdbe21: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-98514828028faa624c5c: Cannot confirm one product on the discovered URL
+- new-product / candidate-0110191e39fbb3e2ba9f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-851dc4127bed6369adee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4e233b6091c316b1b449: Nightly time budget reached; remaining values retained
-- new-product / candidate-9769c409bd4f02454db3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-01687b011525f354a7a4: No verified product image URL
-- new-product / candidate-dbb7ab464d11efdb35a1: Nightly time budget reached; remaining values retained
-- new-product / candidate-16c602f6396e9362ad96: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f7d93b556fa9c8afe4ef: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c1d962abb72c62a90150: Nightly time budget reached; remaining values retained
-- new-product / candidate-5470c37cfe057b82fd58: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3d79dcb5a20d129b2e15: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ad4ec2e7ba93efb36b1e: Nightly time budget reached; remaining values retained
-- new-product / candidate-610ee3a9302644d02251: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c6ef35628d7e4cf94ad4: Nightly time budget reached; remaining values retained
-- new-product / candidate-ba3e954f1e4b40aa5979: Nightly time budget reached; remaining values retained
-- new-product / candidate-ac73372b960b6a1c8579: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-942a8b5c31510fcc4941: Nightly time budget reached; remaining values retained
-- new-product / candidate-bd35c6e88a3a7f26da68: Nightly time budget reached; remaining values retained
-- new-product / candidate-ce51b3abc6c03fef1830: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-755d30ccb291698b33d9: Nightly time budget reached; remaining values retained
-- new-product / candidate-9778245d9c0a18801bdd: Nightly time budget reached; remaining values retained
-- new-product / candidate-dac914fcaa7748843e6c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-da2d33090b1b9863abde: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e49d6ce9aaae73625600: Nightly time budget reached; remaining values retained
-- new-product / candidate-3d43b696677f08907e0c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-57b3ecf903bc44ae2028: Nightly time budget reached; remaining values retained
-- new-product / candidate-1391e6a8f988ffe47a67: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d69620c0b039a255fa4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7b15cdbf2a7e663f2fa6: Nightly time budget reached; remaining values retained
-- new-product / candidate-3fd4f1866483df2d0222: Nightly time budget reached; remaining values retained
-- new-product / candidate-865d683b6f17bc55ed88: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b3213602aa2773ca9d32: No verified product image URL
-- new-product / candidate-7f11ef7ebac825280774: Nightly time budget reached; remaining values retained
-- new-product / candidate-999cd002046a0f0a106f: Pack weight outside the supported range
-- new-product / candidate-1f46194391eaa53ba53b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-0b8c1eb707126f048f58: Nightly time budget reached; remaining values retained
-- new-product / candidate-0264bc7afc19bf0f5e65: Pack weight outside the supported range
+- new-product / candidate-8536967a6064d3ba2988: Cannot confirm one product on the discovered URL
+- new-product / candidate-fb9cb87edb6bb0c33271: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-269bd92d9b5c78e39e22: No verified product image URL
+- new-product / candidate-d25fae8f65435b0174db: Cannot confirm one product on the discovered URL
+- new-product / candidate-856714b8cefb1dddcfdb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5586aa997c9127245cb3: No verified product image URL
+- new-product / candidate-0ee10e65f4d136c8a41b: Cannot confirm one product on the discovered URL
+- new-product / candidate-2d64408ff7578f3fa334: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8583b73d0f4f610cb829: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba5f0c1b49c50bd849f0: Cannot confirm one product on the discovered URL
+- new-product / candidate-72c004a9f3d051d8bb7b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-245307d6a03a730d8a30: Source does not state the material pack weight; listing skipped
+- new-product / candidate-51682632e630030ffcb8: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ab237e861dee9b829bc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-28eef01b021eaf0908bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ac9d305fa25fd8bf9f84: Cannot confirm one product on the discovered URL
+- new-product / candidate-65e6f19a083b31441ac3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b215ae86a892dabf3fda: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fec81eff5d56ce10bd7f: Cannot confirm one product on the discovered URL
+- new-product / candidate-54b24049f564579c248a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c1eefd073d0374ad8d16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-af9f88f536cb192d29ee: Cannot confirm one product on the discovered URL
+- new-product / candidate-392058d18379d314b779: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-19fc14ffc3ff0cb7a86b: No verified product image URL
+- new-product / candidate-a1d753d15d52cb18c686: Cannot confirm one product on the discovered URL
+- new-product / candidate-53990cfb72cab53042c5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-218088aa5bc071c0915f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2752a221b23598d52cf1: Cannot confirm one product on the discovered URL
+- new-product / candidate-3cb7a2e3428d087347a3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0f56bd5008e06cced2f1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dd520031fe44fd49f23f: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7249a7acb731a559919: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-190dd0386d9a61b960c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9893db399fabcc64b7d0: Cannot confirm one product on the discovered URL
+- new-product / candidate-9eef1b9febec0f338e2f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a442a751bb2a7381c2c9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5068e8bf3f69a9bfa301: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2af858bfbf6a9e416f1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6fa02e44a372d4e50480: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f685f2f1358ad6e726c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-561a49dd2ba89d5c3f57: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4dce5cec9058f5fd89fe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-57341a06c322965d3b25: Cannot confirm one product on the discovered URL
+- new-product / candidate-a345473f7a1760177441: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-82acc0fddd07d1043366: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3a7986a1f2634e395c93: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc227547cbdd79f10a80: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bb8c7bd9d2abe874bd38: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9f0dcfc194fdf3436d57: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e76299c849658201f00: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e1018ed7789958ed6ff5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b38163a1b3de594df274: Cannot confirm one product on the discovered URL
+- new-product / candidate-f723b333f952fac237a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b3ad5ab0a15bfc93dd5c: Cannot confirm one product on the discovered URL
+- new-product / candidate-45f51f66f0b0a8743bfd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ebd5042993c121b91745: No verified product image URL
+- new-product / candidate-d2da72148609c9893223: Cannot confirm one product on the discovered URL
+- new-product / candidate-90e6a0d4b554684deccc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-03a765039bd02c558204: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3a9e3830828ffd9ebe1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d11a8c8c3b19aa28fc96: Cannot confirm one product on the discovered URL
+- new-product / candidate-1c51362ea4baf097ec42: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-83b2bf5aba1433eb6db9: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c13fd9ec3a082456637: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c19d90b72fe28d3d0b8e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4c9b7a1fd326fb33cfda: Cannot confirm one product on the discovered URL
+- new-product / candidate-12a34970292b027d7336: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-31869407aa6aaeb99c8c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0cc3252583a7e12c3523: Cannot confirm one product on the discovered URL
+- new-product / candidate-04917eb1f6b278e2e99e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bdca3360073ee83f4b63: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1979a4a91c19adb30e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-818dbba01490c54429df: No verified product image URL
+- new-product / candidate-4126eb4ab75e07fd8747: Cannot confirm one product on the discovered URL
+- new-product / candidate-ed1449e689953baa758b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-efc7e28f7c698bb46946: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f0107a1c7de53aaac323: Nightly time budget reached; remaining values retained
-- new-product / candidate-874077d8385b3f9fbeb8: No verified product image URL
-- new-product / candidate-be3afeea24e8b4132235: Nightly time budget reached; remaining values retained
-- new-product / candidate-714f1bba842fdf22ab5d: Nightly time budget reached; remaining values retained
-- new-product / candidate-15f580458911fce9ca3b: No verified product image URL
-- new-product / candidate-62394e1584e5fde7aa8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-80746d7eb08d057dd03c: Nightly time budget reached; remaining values retained
-- new-product / candidate-a7f313cb947ed1418f69: No verified product image URL
-- new-product / candidate-07f8d2aec717e4ee9308: Nightly time budget reached; remaining values retained
-- new-product / candidate-07062a3d224b6fea88a7: Nightly time budget reached; remaining values retained
-- new-product / candidate-ea499154b1663be3a451: No verified product image URL
-- new-product / candidate-ff1a3cdf79873499d520: No verified product image URL
-- new-product / candidate-baff5986ca44dc4f9171: Nightly time budget reached; remaining values retained
-- new-product / candidate-aa32db1b70ab3b95e76c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6a5c0ccbc72bc2dd1538: Nightly time budget reached; remaining values retained
-- new-product / candidate-9b1ca1a3b733e9b76c62: Nightly time budget reached; remaining values retained
-- new-product / candidate-41011e154ed611452272: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-aec938783c6105e89c9b: Nightly time budget reached; remaining values retained
-- new-product / candidate-458ec0f40d83da41c6df: Nightly time budget reached; remaining values retained
-- new-product / candidate-1c86e0c89e4fb102c88c: Nightly time budget reached; remaining values retained
-- new-product / candidate-21022fc94bde9c5f8333: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0fb3e76f4612358e3934: Nightly time budget reached; remaining values retained
-- new-product / candidate-910242786a489483c573: Nightly time budget reached; remaining values retained
-- new-product / candidate-a15702565d0583420e5e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7b67c66dccbdddae7696: Nightly time budget reached; remaining values retained
-- new-product / candidate-b022d6acad2895b1b85b: Nightly time budget reached; remaining values retained
-- new-product / candidate-9ce0676a3b0b469ab0ae: Nightly time budget reached; remaining values retained
-- new-product / candidate-2ac87905953be6dbab32: Nightly time budget reached; remaining values retained
-- new-product / candidate-05546a7365dc66a839a1: Nightly time budget reached; remaining values retained
-- new-product / candidate-10b7c91aa82c66564648: Nightly time budget reached; remaining values retained
-- new-product / candidate-09ce1129d0b026cef7b8: Nightly time budget reached; remaining values retained
-- new-product / candidate-5a2f9a172de2e47e83a9: Nightly time budget reached; remaining values retained
-- new-product / candidate-56e1101fb99bc1e56df5: Nightly time budget reached; remaining values retained
-- new-product / candidate-df6e24c66560c7b68c3f: Nightly time budget reached; remaining values retained
-- new-product / candidate-62000fb692e2b77ebcca: Nightly time budget reached; remaining values retained
-- new-product / candidate-73907d8dfa12797ef207: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4107623d1442484bc84a: Nightly time budget reached; remaining values retained
-- new-product / candidate-34d9ba6b1450a6864164: Nightly time budget reached; remaining values retained
-- new-product / candidate-944c16cfb134d3b81373: Source does not state the material pack weight; listing skipped
-- new-product / candidate-404709142e74ad6211fe: Nightly time budget reached; remaining values retained
-- new-product / candidate-ff7d2a09edb5186e5091: Nightly time budget reached; remaining values retained
-- new-product / candidate-bb8de21a19982705a3f2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3347ce3039eee77f2c71: Nightly time budget reached; remaining values retained
-- new-product / candidate-06e6ef5eee300b868be8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a37ed11c047cc0f834da: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4c2238b8f8dd5183350d: Nightly time budget reached; remaining values retained
-- new-product / candidate-f0d5d57b3f393aae52a0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0365a71211559e11c2cb: No verified product image URL
-- new-product / candidate-86588ffc584d474b7719: Nightly time budget reached; remaining values retained
-- new-product / candidate-096d7d6279698586e5b3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f94d609e6c5072de25a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e7d3c7d6c85c7bcf98dc: Nightly time budget reached; remaining values retained
-- new-product / candidate-c4ee0c480bc3d4fc0e9f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-abb62607bf55e95abe03: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9e529abdf2c93a85e315: Nightly time budget reached; remaining values retained
-- new-product / candidate-66f1d00bb3ed784c2df5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8512b041a2ecc6543e8d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e257a241c4312ce89cc4: Nightly time budget reached; remaining values retained
-- new-product / candidate-86e4aa4293f3c9a8460c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8dd295effd64d997f9ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-5afee14736454d88fc60: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49f39ed207cee461ac2b: No verified product image URL
+- new-product / candidate-ab34e7825845f4008cbc: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc78f6edbe02fc40e1f7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-93e068de4a0df62c9511: No verified product image URL
+- new-product / candidate-07c6f61c4409ba61b190: Cannot confirm one product on the discovered URL
+- new-product / candidate-6822006f55a9798d645b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-65419b7f4f83d183280c: No verified product image URL
+- new-product / candidate-ba86ad1a7d5430c12158: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e14911085f0e6f34583: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-87e4f098927a5d528e7c: No verified product image URL
+- new-product / candidate-0059af47369ff007b0fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-f74ed033086093348128: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-68546027c574030abda7: Cannot confirm one product on the discovered URL
+- new-product / candidate-996e4bc5849cde77a140: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-579f81751955174b95bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-586f98236ab9c9055895: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1e879b58549fb94a2d54: Cannot confirm one product on the discovered URL
+- new-product / candidate-da7e23e0a9e8eb10a4f3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e8a2db26a12f1d937e3a: No verified product image URL
+- new-product / candidate-94dfd3c74aa6e49dfb0e: Cannot confirm one product on the discovered URL
+- new-product / candidate-3cb41463e53b59802e2c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4dfa143075adeb3b76e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-7539feb6f8c680f41c19: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7894cf12ad268f53c6cd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b2603156e36ba01cf1fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf1f1be3aadcd229b530: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d416314768290dc881c: Cannot confirm one product on the discovered URL
+- new-product / candidate-901becf30900f431b126: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-140c7b1aa1130f409714: Cannot confirm one product on the discovered URL
+- new-product / candidate-310bd2417a8d666ccc7d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-09873c3e0cbe8108decd: Cannot confirm one product on the discovered URL
+- new-product / candidate-b90bb2aceedd36d36f06: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df99df715dfb9a8092c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-98f99d79095fa8cf8cdf: Cannot confirm one product on the discovered URL
+- new-product / candidate-01ea03e20ef7a97a24c7: Pack weight outside the supported range
+- new-product / candidate-953e5181b6426dfd5065: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebb8ead3638b2c106d9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-fe47ed697c1831977d18: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1bfb3471f1515a0f556a: Cannot confirm one product on the discovered URL
+- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
+- new-product / candidate-152268702376933f00c3: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae7308bb7c1d041b01e7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7a9200b1f10e0ce06e09: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b8ce0e13dea703319a45: Cannot confirm one product on the discovered URL
+- new-product / candidate-5663ca3eab2a4101c918: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4ed383a22287ebfe05ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc843a85fb15d046b226: Cannot confirm one product on the discovered URL
+- new-product / candidate-9fadf5cc7eef5d887cc1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-596995e107d9c516cb19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-05aa8c814087d9de3b02: Cannot confirm one product on the discovered URL
+- new-product / candidate-77ab8106fdb17e17a3e4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dce69ac64ef314ebd831: Source does not state the material pack weight; listing skipped
-- new-product / candidate-557faf077f8f4c145551: Nightly time budget reached; remaining values retained
-- new-product / candidate-c7e1a546f2f1a0ecf2c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8df8022e8f11787fc851: No verified product image URL
-- new-product / candidate-103a665d50f789bd6db7: Nightly time budget reached; remaining values retained
-- new-product / candidate-ca777d8ba67b83850315: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e428205b7de6779ce969: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ca4689af86b8c1de2d5c: Nightly time budget reached; remaining values retained
-- new-product / candidate-4b9daf4d2dd94ae789fb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6b7bbc01fce744638cdf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a8d43393bc1be570ef29: Nightly time budget reached; remaining values retained
-- new-product / candidate-7ba58993e0a4ec93a75a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a4bc67a1ce5104ba9561: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0f2c0490a72893d4a04b: Nightly time budget reached; remaining values retained
-- new-product / candidate-93e678e2197a8cff7c95: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9601707d4ce9e697ea83: Nightly time budget reached; remaining values retained
-- new-product / candidate-24e311cf6a099dcd6bb2: Nightly time budget reached; remaining values retained
-- new-product / candidate-d9bf2f17e1703c021f73: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0001b56c67650c8842e3: Nightly time budget reached; remaining values retained
-- new-product / candidate-0d9798f9f1a32db54ce2: Nightly time budget reached; remaining values retained
-- new-product / candidate-c3fd8aeeb4621f458c1b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d8796bf678aa9b3e4ae0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0ca62a40152fb899c827: Nightly time budget reached; remaining values retained
-- new-product / candidate-eeed94b708cd7689792e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-282743ff2ec6b1c99cb7: Nightly time budget reached; remaining values retained
-- new-product / candidate-8cf995f573633c3ef3e9: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc6fde485da17154eccc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5c3ffbc234955349a37a: Nightly time budget reached; remaining values retained
-- new-product / candidate-a3f0704dc168671053ec: Nightly time budget reached; remaining values retained
-- new-product / candidate-f633aed88faa6aa03e38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-78aedc8b9b2e18ef121a: No verified product image URL
-- new-product / candidate-63d1ef68f4547bf9de4c: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fd0875d1fadce3c733c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-752e897630bfc7230c5c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-32d62fdca5d71296b60f: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a4711d217cc9d14fbae: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5f8313300293ebd3668f: Cannot confirm one product on the discovered URL
+- new-product / candidate-7751df47bbee7b30222b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0365a71211559e11c2cb: No verified product image URL
+- new-product / candidate-2248736861e2a106e36e: Cannot confirm one product on the discovered URL
+- new-product / candidate-910088aacaf675814936: No verified product image URL
+- new-product / candidate-df7590df8ad58827846c: No verified product image URL
+- new-product / candidate-ab1cdbde67bc786fa318: Cannot confirm one product on the discovered URL
+- new-product / candidate-992db49097dd65b73d97: No verified product image URL
+- new-product / candidate-abb62607bf55e95abe03: Source does not state the material pack weight; listing skipped
+- new-product / candidate-59140b732ff4393575ae: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdcab36f46531ee410a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c4323701e3ec78f83183: Source does not state the material pack weight; listing skipped
+- new-product / candidate-69de9560ff4d5258f46d: Cannot confirm one product on the discovered URL
+- new-product / candidate-8bea018fa6265534e84d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e26c76728d47bcb29680: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5d718bc33fe87da5b570: Cannot confirm one product on the discovered URL
+- new-product / candidate-cd00f6988046adf110a7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-01a3a6229640e1c16d2e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-74d4ce9d5bb5a634d804: Cannot confirm one product on the discovered URL
+- new-product / candidate-0d9aed750e18c20317f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-845a6c93b981729113db: Cannot confirm one product on the discovered URL
+- new-product / candidate-511351e39ed99471b8b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9f945266cd85fa60ceb1: Cannot confirm one product on the discovered URL
+- new-product / candidate-dcb5907a097c639f8c90: Pack weight outside the supported range
+- new-product / candidate-c4bbb190ee77f6b38f1b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2b156b2d7685a4de5a25: Cannot confirm one product on the discovered URL
+- new-product / candidate-87cdbbf89b15adebafd5: No verified product image URL
+- new-product / candidate-75a4b56301e25645073a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d17b0644eb4f11f88bfd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d46dd3712e2986488c7b: Pack weight outside the supported range
+- new-product / candidate-cf09e39db656682aaa04: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4b63e84e1ee8e6aee769: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9cfa36bf055056981c9: Pack weight outside the supported range
+- new-product / candidate-20336d530e14be679500: Cannot confirm one product on the discovered URL
+- new-product / candidate-0234a874fc6e75cf7ceb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b52f9cfcae134fb2643b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1de814b3e76c07111ed6: Cannot confirm one product on the discovered URL
+- new-product / candidate-2319b4be81d888c3f990: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f3eeedbf1acb9a196045: Cannot confirm one product on the discovered URL
+- new-product / candidate-eadcd7a067161d6ec25a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-15269130ee6a1e5c85f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-5470c37cfe057b82fd58: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1095eb8e8055cca73cfa: Cannot confirm one product on the discovered URL
+- new-product / candidate-5e0d03a54c205b4f80d0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7d16677297e308f431e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-69cc2eaa0bcfc8f0ed4d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f8c2353f962e5fcbfa4f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-abdeaa25795247f2d3c4: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0880f957c6c3ee91f16d: Cannot confirm one product on the discovered URL
+- new-product / candidate-487b5f030bfe10394483: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebf7ebca886333830901: Cannot confirm one product on the discovered URL
+- new-product / candidate-e03ec3f5867183c9d545: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b3213602aa2773ca9d32: No verified product image URL
+- new-product / candidate-343e13550a69de78b8b1: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c429694c9db80cada35: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-cdb3767d138d2d7c6180: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c7ad655748a1fbd1de40: Nightly time budget reached; remaining values retained
-- new-product / candidate-d6d6810f2b9020ab439f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a25fd5fb918d15cb2b88: Nightly time budget reached; remaining values retained
-- new-product / candidate-cec1db6f141b8ce9728b: Nightly time budget reached; remaining values retained
-- new-product / candidate-19b3a7d4310a8e067d32: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4bd96c26c5ee283300bd: Nightly time budget reached; remaining values retained
-- new-product / candidate-eeae41a7d3457b9894c4: Nightly time budget reached; remaining values retained
-- new-product / candidate-12f59ea7d5b5bc914245: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2960964a82bb0a527dd0: Nightly time budget reached; remaining values retained
-- new-product / candidate-f8c7955fa4005b578032: Nightly time budget reached; remaining values retained
-- new-product / candidate-efa0aebd15797290ff57: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2030c27720cd967facec: Cannot confirm one product on the discovered URL
+- new-product / candidate-afd1af4380bd2f92a11e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6e1ecce341e24eb7ebcd: No verified product image URL
+- new-product / candidate-24ceb02bf740bb14f9ea: Cannot confirm one product on the discovered URL
+- new-product / candidate-1eddf2a616f7f77c9f57: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d66a551eeea422737dd1: Nightly time budget reached; remaining values retained
+- new-product / candidate-c87ce6af9e258a56d0fa: Nightly time budget reached; remaining values retained
+- new-product / candidate-0991882b948dd2b1962e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-69104bd111cb1ab7bf8f: Nightly time budget reached; remaining values retained
+- new-product / candidate-17589518ff2b22f698e5: Nightly time budget reached; remaining values retained
+- new-product / candidate-666dfb15304b6e76463c: Nightly time budget reached; remaining values retained
+- new-product / candidate-25e7e4aa8890b81d382a: Nightly time budget reached; remaining values retained
+- new-product / candidate-440d9967e88862b82ed1: Nightly time budget reached; remaining values retained
+- new-product / candidate-710f40be91a3449cda6e: No verified product image URL
+- new-product / candidate-15e62098f738d86499f4: No verified product image URL
+- new-product / candidate-818ccf10169907b2c5cb: Nightly time budget reached; remaining values retained
+- new-product / candidate-279563180ed064294f7a: Nightly time budget reached; remaining values retained
+- new-product / candidate-a49064cdd49ccc08ea32: Nightly time budget reached; remaining values retained
+- new-product / candidate-93cb65a9b014c5fac40b: Nightly time budget reached; remaining values retained
+- new-product / candidate-07823d9f55d8a30d4855: No verified product image URL
+- new-product / candidate-1dc387a3e0742199eaed: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d6f9b282cfdf556389b8: Nightly time budget reached; remaining values retained
+- new-product / candidate-3b642b714f76a825ce73: Pack weight outside the supported range
+- new-product / candidate-cdf2ac3ad3b4dcf6ee82: Nightly time budget reached; remaining values retained
+- new-product / candidate-de9486bbc3b5ba706f12: Nightly time budget reached; remaining values retained
+- new-product / candidate-03d0494d30d03806970a: No verified product image URL
+- new-product / candidate-5e8dc4c9ca61eba74632: Nightly time budget reached; remaining values retained
+- new-product / candidate-c95091ab5e27b07da18f: Nightly time budget reached; remaining values retained
+- new-product / candidate-d6feb2d9b97f9bd87481: No verified product image URL
+- new-product / candidate-f54360c44fba851f41d0: Nightly time budget reached; remaining values retained
+- new-product / candidate-7bb398b4ca140758ff82: Nightly time budget reached; remaining values retained
+- new-product / candidate-797d433de58d580eedad: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1d9e794ab690cedf7452: Source does not state the material pack weight; listing skipped
+- new-product / candidate-026aec3d4271343d9280: Nightly time budget reached; remaining values retained
+- new-product / candidate-9cc14bbfd90eb87d64c9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8dc7f8420da0c1a2b707: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e2817c120aa77ab5dc6a: Nightly time budget reached; remaining values retained
+- new-product / candidate-e6d1b7b4a7b3c1be7169: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ef2bfdc79c34a7034716: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e76da35ac7f6780a6500: Nightly time budget reached; remaining values retained
+- new-product / candidate-c6800d36db5ebaf7d7e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-03049fd89bc9d05876d4: Nightly time budget reached; remaining values retained
+- new-product / candidate-7d6589a6134deb839d43: Nightly time budget reached; remaining values retained
+- new-product / candidate-a29cff698e526d1c1db6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fb8086d4e4dd08cc4297: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-11ad33a2c8f9e259461e: Nightly time budget reached; remaining values retained
+- new-product / candidate-5bb21d6b104dc11a2657: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b11c3d3ef2146e0271a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b23b1fd250fe01a1b5bd: Nightly time budget reached; remaining values retained
+- new-product / candidate-2727035069b99f595386: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ce0c1af6746bd9a02a9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-feffa5329c89e818a2d1: Nightly time budget reached; remaining values retained
+- new-product / candidate-b67b1bcdbeb650b2235a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-773891648e0351b28856: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a925191747a0dfb04028: Nightly time budget reached; remaining values retained
+- new-product / candidate-7d69620c0b039a255fa4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bfed37a78275231b98c5: No verified product image URL
+- new-product / candidate-05724fe8705438ceb548: Nightly time budget reached; remaining values retained
+- new-product / candidate-eda9f575918075335532: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0add8859eddb3a16c161: No verified product image URL
+- new-product / candidate-b9deeb28bc579496759a: Nightly time budget reached; remaining values retained
+- new-product / candidate-865d683b6f17bc55ed88: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ce2249dcdfde5ea18239: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cecb0511b192d20e4654: Nightly time budget reached; remaining values retained
+- new-product / candidate-1b6aaf84fe8bdc6ce343: Nightly time budget reached; remaining values retained
+- new-product / candidate-4bb4c509c86bf1f1bc9b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6f578b6f67989a4a0480: Nightly time budget reached; remaining values retained
+- new-product / candidate-3d79e1439c5f7da73dff: Nightly time budget reached; remaining values retained
+- new-product / candidate-4c5a958cd1ea5a42d782: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3e7c93f6b15ab6f1bccc: Nightly time budget reached; remaining values retained
+- new-product / candidate-e5e662dd24e313f67bea: Nightly time budget reached; remaining values retained
+- new-product / candidate-9698e0ac5c964708c259: Source does not state the material pack weight; listing skipped
+- new-product / candidate-12ad97854148d7d0c294: Nightly time budget reached; remaining values retained
+- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
+- new-product / candidate-6bc3c37bd3471536e2c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c5f4e0d01659c75227b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-5327c7e89765dabbf922: Nightly time budget reached; remaining values retained
+- new-product / candidate-97c657282e94ac9b32a5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3856eda45cff34e33b20: Nightly time budget reached; remaining values retained
+- new-product / candidate-0c546a8ed0bee1a6fb03: No verified product image URL
+- new-product / candidate-8dcd082702b8b15bca08: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c24051e8efe769f1bdd9: Nightly time budget reached; remaining values retained
+- new-product / candidate-b936314ee2db99e213b6: No verified product image URL
+- new-product / candidate-a09d7a5254ca509aa213: Nightly time budget reached; remaining values retained
+- new-product / candidate-8a74943eeac7ecbeb34a: Nightly time budget reached; remaining values retained
+- new-product / candidate-6b36ee763e3f7e21415e: Nightly time budget reached; remaining values retained
+- new-product / candidate-a9c8c3fd0dff2b610eab: Nightly time budget reached; remaining values retained
+- new-product / candidate-1358d529848b3e3f9bea: Nightly time budget reached; remaining values retained
+- new-product / candidate-9981d456a7d3d176995f: Nightly time budget reached; remaining values retained
+- new-product / candidate-b9cb813ef187eb615402: Nightly time budget reached; remaining values retained
+- new-product / candidate-452f2fe1c4468019282a: Nightly time budget reached; remaining values retained
+- new-product / candidate-8fe5853f5e117445fdc0: No verified product image URL
+- new-product / candidate-bbae4482ea8839af27a9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ca6a288c31ef995aae8d: Nightly time budget reached; remaining values retained
+- new-product / candidate-82c4cdad5ceff68125ae: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-10a4c2ba156f96ee184b: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7b49b0224537ab60cdb4: Nightly time budget reached; remaining values retained
+- new-product / candidate-e1496a24e2128542bfef: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7339aa5a0330bb3b5fe9: Nightly time budget reached; remaining values retained
+- new-product / candidate-da91ae2dd1a87bae32a4: Nightly time budget reached; remaining values retained
+- new-product / candidate-b51a51187db1b4844a35: Nightly time budget reached; remaining values retained
+- new-product / candidate-78aedc8b9b2e18ef121a: No verified product image URL
+- new-product / candidate-0ba2a3e969d8c507e525: Nightly time budget reached; remaining values retained
+- new-product / candidate-0997eb7543eca6ec71b2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a6fa22808a9df5d1e37: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bb2bd1473c35be090f0e: Nightly time budget reached; remaining values retained
+- new-product / candidate-2e503e165b5b5f9e37d6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9bec863c5205f2f08f0b: Nightly time budget reached; remaining values retained
+- new-product / candidate-e802e03323f24a8bcf8c: Nightly time budget reached; remaining values retained
+- new-product / candidate-22be3308632160b47954: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0f0836289e88dc0cda9e: Nightly time budget reached; remaining values retained
+- new-product / candidate-8fbf2bd3ace4958abdf0: Nightly time budget reached; remaining values retained
+- new-product / candidate-777f76d4b3bc677652fc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-834346aa9cd99df4d5f3: Nightly time budget reached; remaining values retained
+- new-product / candidate-e6fa4d59af60cb2f7287: Nightly time budget reached; remaining values retained
+- new-product / candidate-56b3a5930637f992af55: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6833a6ebf0f92ce33b86: No verified product image URL
+- new-product / candidate-3389b95231b5f386bbb0: Nightly time budget reached; remaining values retained
+- new-product / candidate-d48520b89076b64e3976: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ba22abdaceb1db226207: Nightly time budget reached; remaining values retained
+- new-product / candidate-e6bbbb52838006855ec7: Nightly time budget reached; remaining values retained
+- new-product / candidate-c35295387c0ab58938be: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-81f2c5343233fef6cab7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a041d96ead31900a9d54: Nightly time budget reached; remaining values retained
+- new-product / candidate-c9cdfe5717ae8347b7d8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-435a72958cc3eadaa602: Nightly time budget reached; remaining values retained
+- new-product / candidate-0a9709b57b8426ecbc89: Nightly time budget reached; remaining values retained
+- new-product / candidate-74ea227e1190a6949004: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1a459d78110d5c03773a: Nightly time budget reached; remaining values retained
+- new-product / candidate-2ed340a8082cf507c655: Nightly time budget reached; remaining values retained
+- new-product / candidate-4f86ce332192a3fe306e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a4d5e6ed5b28da95ca76: Nightly time budget reached; remaining values retained
+- new-product / candidate-8c481201612f90752f94: Nightly time budget reached; remaining values retained
+- new-product / candidate-19cf0f99a20516299535: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9f6913e7a2aedc38a061: Source does not state the material pack weight; listing skipped
+- new-product / candidate-215150564674312258e2: Nightly time budget reached; remaining values retained
+- new-product / candidate-efb39afd4ed5fa7b3176: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3818454c9152b46d8ca9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f67a3c40c94c043d54b8: Nightly time budget reached; remaining values retained
+- new-product / candidate-4b7cea4f8a9de8d486a9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3ac6682e6ee7a4ff6af8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-690465dbfdc0eb67c4e0: Nightly time budget reached; remaining values retained
+- new-product / candidate-a154946bd3cd7f789f65: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d950f45f0d8fa76254f3: Nightly time budget reached; remaining values retained
+- new-product / candidate-a538641bff52e5fa6b11: Nightly time budget reached; remaining values retained
+- new-product / candidate-0591c21ab45278252a10: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-873cd3c3d723f2e905a1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-beffe5f174aeff82db5d: Nightly time budget reached; remaining values retained
+- new-product / candidate-c5f37b3fa43b2ea8b72d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2df43d0a597833139927: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-da463911dab1b1f32d18: Nightly time budget reached; remaining values retained
+- new-product / candidate-1ea4fdff2f4a43addfc2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-53afafba08e1af8827ad: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9123359270f48c30173c: Nightly time budget reached; remaining values retained
+- new-product / candidate-a95329584a95ff430ced: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e87494241b1aa1654fc2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-107aba470d6339738ba9: Nightly time budget reached; remaining values retained
+- new-product / candidate-8fccc92d29d131812e19: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-27c4f2dcdb0e8222a33e: No verified product image URL
+- new-product / candidate-b50d928217acac486dc6: Nightly time budget reached; remaining values retained
+- new-product / candidate-4e59d9f7e58630b66d2a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-60baa3eb48d5bd28e09e: No verified product image URL
+- new-product / candidate-b8e51a0f7047e522c8a8: Nightly time budget reached; remaining values retained
+- new-product / candidate-c1b0e8812f9b015b3b22: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3bea745fc35b2df853a3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4cf34e1e36389d51eeb9: Nightly time budget reached; remaining values retained
+- new-product / candidate-ecacba1143d9a88dbd9f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-621f2cd559d37c725d62: Source does not state the material pack weight; listing skipped
+- new-product / candidate-859c65b1b9475cd85de4: Nightly time budget reached; remaining values retained
+- new-product / candidate-b17b92ac8e660fc9b28d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6cf12ecca6d44ed8aa14: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2e7602cb33ef3ea7118a: Nightly time budget reached; remaining values retained
+- new-product / candidate-fdd64775217c670fe619: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b962c14d0b6c193d739d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a73f4ec974e6839c8e25: Nightly time budget reached; remaining values retained
+- new-product / candidate-4ec29cad1745fb3176e7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e8425f65ad83598cf24: Nightly time budget reached; remaining values retained
+- new-product / candidate-0d1255e5aa8b5258ce7b: Nightly time budget reached; remaining values retained
+- new-product / candidate-f2f0c352b04e92958ed4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c4492289b008e886cf9f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f60cec5aedf0f94c7c28: Nightly time budget reached; remaining values retained
+- new-product / candidate-8e396e1e902e4ba24e08: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9719c67c7a93e63f4e47: Nightly time budget reached; remaining values retained
+- new-product / candidate-8e49d81314c95fe571fd: Nightly time budget reached; remaining values retained
+- new-product / candidate-a5aa2cb92cd80f803a4a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e322fba2c3701d8c2e33: No verified product image URL
+- new-product / candidate-244a129a8c9458d11850: Nightly time budget reached; remaining values retained
+- new-product / candidate-d2260559bbb0b99229cf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f30854b9a827857f5f6b: Nightly time budget reached; remaining values retained
+- new-product / candidate-bf73c3efb17131856d88: Nightly time budget reached; remaining values retained
+- new-product / candidate-99440aac98d5b3eaff0f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bc87857e971c1fd46363: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ef2d3e77c245b9b107c7: Nightly time budget reached; remaining values retained
+- new-product / candidate-42e3addaa44d6520d6fd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f46194391eaa53ba53b: Pack weight is ambiguous; listing skipped
+- new-product / candidate-45b033a6039d676b5562: Nightly time budget reached; remaining values retained
+- new-product / candidate-858318d82c2ec0a65eb1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7b15cdbf2a7e663f2fa6: Nightly time budget reached; remaining values retained
+- new-product / candidate-d652f054b03e9025f385: Nightly time budget reached; remaining values retained
+- new-product / candidate-4ae0fbfca545f9fbf5e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f6f5272de9e92939651e: No verified product image URL
+- new-product / candidate-d8c3c0ea52087ba182ce: Nightly time budget reached; remaining values retained
+- new-product / candidate-bbba60d66bfb16c33073: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e2e322e447a0ed39ce5b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0a1ce5314cd36d036a6: Nightly time budget reached; remaining values retained
+- new-product / candidate-d2db8c6642c6ed6b3289: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f19bd960a2b9dffaf5dc: Nightly time budget reached; remaining values retained
+- new-product / candidate-672e75254afadb2d7287: Nightly time budget reached; remaining values retained
+- new-product / candidate-575aec58452292dcd7d5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ddfb9c46306de3cc851f: Nightly time budget reached; remaining values retained
+- new-product / candidate-345aeb98bebbd220b73e: Nightly time budget reached; remaining values retained
+- new-product / candidate-298663a97dfaf195336b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-797191ddcbaf991f7dec: Nightly time budget reached; remaining values retained
+- new-product / candidate-a70422f9480cf72848a9: Nightly time budget reached; remaining values retained
+- new-product / candidate-33e5ebf1047ecd216c79: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4c654ceb5dc411bf2c7e: No verified product image URL
+- new-product / candidate-e204b41864fb3fdbbe32: Nightly time budget reached; remaining values retained
+- new-product / candidate-92323e9f8286c40473a7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-10e8af60f2ec3b4c4163: Nightly time budget reached; remaining values retained
+- new-product / candidate-821c96f18acc53756d2d: Nightly time budget reached; remaining values retained
+- new-product / candidate-84612e6df55d63d920da: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-99619c5e65df55b6fe4a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5880b0e904a88fad9f7e: Nightly time budget reached; remaining values retained
+- new-product / candidate-494ba60c2aea2f73c28e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-994cc29304d526198f6f: Nightly time budget reached; remaining values retained
+- new-product / candidate-eb09d022524989fa23ef: Nightly time budget reached; remaining values retained
+- new-product / candidate-5ba9b308837cfd4d0816: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bd6d50d264506634110f: Nightly time budget reached; remaining values retained
+- new-product / candidate-2a0f6ca96c599999b231: Nightly time budget reached; remaining values retained
+- new-product / candidate-71971d53204fa303e61e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bbd18e049c5870255396: Nightly time budget reached; remaining values retained
+- new-product / candidate-0e6203a165b298ab1a10: Nightly time budget reached; remaining values retained
+- new-product / candidate-a7a57bb0f0c5016858e5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-724e54df09e63228daca: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ea78c3fdc3efafe52c43: Nightly time budget reached; remaining values retained
+- new-product / candidate-5a4ff0aae40fd79d9ab4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9842f3f19768abb0b531: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6c5f42ac13f397bc08d7: Nightly time budget reached; remaining values retained
+- new-product / candidate-e81dbebccf99cb2da4d7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-95bb45c2beaabcd3dd50: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a71b26483c8746258cbd: Nightly time budget reached; remaining values retained
+- new-product / candidate-9c8c0e35ddf932b10964: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-361f7a05859739dfde04: Nightly time budget reached; remaining values retained
+- new-product / candidate-d89453197183c096b49f: Nightly time budget reached; remaining values retained
+- new-product / candidate-005812f1e9559d038380: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8fd413ee8711e32aa42c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b3d9117c7fa36520aee1: Nightly time budget reached; remaining values retained
+- new-product / candidate-826e185d6413ca41efde: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-07b1ac6855823719f928: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e6156166314306864625: Nightly time budget reached; remaining values retained
+- new-product / candidate-7af7eb1bce91cbdcf85c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ee7962ccab363f7b8ed2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-47e9a2dbb90759899d85: Nightly time budget reached; remaining values retained
+- new-product / candidate-855fb8562fd03578fa6c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-287f9e321ada63a6c36e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f6e52eba89bd316bf0f4: Nightly time budget reached; remaining values retained
+- new-product / candidate-068d3a0c74126fd1d016: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-911ed296d1e0706b5e53: No verified product image URL
+- new-product / candidate-236c5c63a891b09e680d: Nightly time budget reached; remaining values retained
+- new-product / candidate-a5d99b0f51fdc0bfcc47: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22f0d3a8e5997786947e: No verified product image URL
+- new-product / candidate-53a0b0006fb4492091b2: Nightly time budget reached; remaining values retained
+- new-product / candidate-f94929effa7a300103c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0929aeeaa4018af60ad4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-123534f52c339eefcf10: Nightly time budget reached; remaining values retained
+- new-product / candidate-986672534d394a25feda: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1cff3f67e95da1afe9e8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-00c2a3b33e550602ad2e: Nightly time budget reached; remaining values retained
+- new-product / candidate-0162dfb8b4eaadf407b9: Nightly time budget reached; remaining values retained
+- new-product / candidate-4131619f8fd6e8e238e2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ffbc62b407bdb87ddf4c: Nightly time budget reached; remaining values retained
+- new-product / candidate-83bde37745867965dd0a: Nightly time budget reached; remaining values retained
+- new-product / candidate-50156d8533a8117ea782: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a773dc6ea6a841280b50: Nightly time budget reached; remaining values retained
+- new-product / candidate-5061982d5783e29bf709: Nightly time budget reached; remaining values retained
+- new-product / candidate-b15a0045f602cfcef056: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d8d4385a935e52580d86: Nightly time budget reached; remaining values retained
+- new-product / candidate-759350363df071283761: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b1abbf86921b9082fad9: Nightly time budget reached; remaining values retained
+- new-product / candidate-df619dc3ea38c38aacf6: Nightly time budget reached; remaining values retained
+- new-product / candidate-fe09ff9a131767223b34: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-91cde10234a74dfd658a: Nightly time budget reached; remaining values retained
+- new-product / candidate-b3b249103e7bb3538dde: Nightly time budget reached; remaining values retained
+- new-product / candidate-de52e959b51252936fba: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8537040ba5f0c66b2fc3: Nightly time budget reached; remaining values retained
+- new-product / candidate-06b23200c5feaa9608af: Nightly time budget reached; remaining values retained
+- new-product / candidate-09a88c47756e0b87b9b0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ac95a9ad32325639ef9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-93fd750f87235fbc9f0e: Nightly time budget reached; remaining values retained
+- new-product / candidate-9f94224ad377fe34d8cb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-752e897630bfc7230c5c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-896a43c6303ca0cc524a: Nightly time budget reached; remaining values retained
+- new-product / candidate-0339174426068aad44f6: No verified product image URL
+- new-product / candidate-fa06ce31ca808693ac6a: No verified product image URL
+- new-product / candidate-f063014dd5c0632409d7: Nightly time budget reached; remaining values retained
+- new-product / candidate-d175c27e04162fcac30e: No verified product image URL
+- new-product / candidate-6d8d57cad65ba6bf0221: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8affc0bdb5f3a091c358: Nightly time budget reached; remaining values retained
+- new-product / candidate-e7cdd785715f09a16428: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-566fb62455e62b50ec6f: Nightly time budget reached; remaining values retained
+- new-product / candidate-b9a6909d2748aacfb533: Nightly time budget reached; remaining values retained
+- new-product / candidate-4a9c2eb5b9c30b8b9ff9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86737619bb884b6816ed: Nightly time budget reached; remaining values retained
+- new-product / candidate-9088f17f35399a87a9e1: Nightly time budget reached; remaining values retained
+- new-product / candidate-528cf08aec941f19eb90: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3cca54f004e07d67d36d: Nightly time budget reached; remaining values retained
+- new-product / candidate-6bdcbcc2f793de8a20e5: Nightly time budget reached; remaining values retained
+- new-product / candidate-cfc57ab5374c2974de01: Nightly time budget reached; remaining values retained
+- new-product / candidate-cbc2833ddd75cc024afa: No verified product image URL
+- new-product / candidate-4b207ddc7f42540c941d: Nightly time budget reached; remaining values retained
+- new-product / candidate-2801ec3c436876145c77: Nightly time budget reached; remaining values retained
+- new-product / candidate-407efda6e3d4de843423: Nightly time budget reached; remaining values retained
+- new-product / candidate-47a997a2e9cb99ddcb30: Nightly time budget reached; remaining values retained
+- new-product / candidate-f3e15c07cd284226fbed: Nightly time budget reached; remaining values retained
+- new-product / candidate-3a3b8b4dbd7abce11f42: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1212be291d24af1b64ed: Nightly time budget reached; remaining values retained
+- new-product / candidate-f59be60f03df71f55f26: No verified product image URL
+- new-product / candidate-dfb502bf3dba2153dfac: Nightly time budget reached; remaining values retained
+- new-product / candidate-7555828e9dba63e0d7c7: Nightly time budget reached; remaining values retained
+- new-product / candidate-b5e15a762c39aa8b15e2: Nightly time budget reached; remaining values retained
+- new-product / candidate-95fe17a1739e86318ffc: Nightly time budget reached; remaining values retained
+- new-product / candidate-4fe6e9c78f57aafd4e4f: Nightly time budget reached; remaining values retained
+- new-product / candidate-31a95ee7eaf353646489: Pack weight outside the supported range
+- new-product / candidate-082510520cb3117d0051: Nightly time budget reached; remaining values retained
+- new-product / candidate-07c7ee52429ec37ec590: Nightly time budget reached; remaining values retained
+- new-product / candidate-9495b557932f11ac99b3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1bce5b0b40ea7e86a71a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0b5e0ff5cf50289ebd91: Nightly time budget reached; remaining values retained
+- new-product / candidate-6c2c5838ed6c97f3a97e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-039f33fb4de040b4650f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-db63dd7a4192acd7bc8f: Nightly time budget reached; remaining values retained
+- new-product / candidate-5761be978497cc54b18c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-07deda5d451d6349b6b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-96f3049c81de462779a2: Nightly time budget reached; remaining values retained
+- new-product / candidate-720e31d1c717e75d3c4c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-454ac54763246f98e4b8: Nightly time budget reached; remaining values retained
+- new-product / candidate-029593eb647cc8c96709: Nightly time budget reached; remaining values retained
+- new-product / candidate-aadb0934ee32520cef90: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97d78d83285eeac360a9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-39788008c8bb6d850630: Nightly time budget reached; remaining values retained
+- new-product / candidate-2ff7fe423e28f6e27f34: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9b2f8fd9c3347acf35e0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2f9cf1cb6821622dc135: Nightly time budget reached; remaining values retained
+- new-product / candidate-1173ddafec345d3af7d4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-244e71fd3238a1f05288: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6d622b72b77d67d98112: Nightly time budget reached; remaining values retained
+- new-product / candidate-5702be98bf84e7034db5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5d696f76294ac44ee885: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6fb5f05885fd47991aec: Nightly time budget reached; remaining values retained
+- new-product / candidate-f60bea7548fc11656519: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bb223be74b046f09b4d3: No verified product image URL
+- new-product / candidate-40ec9c93d8e346db1481: Nightly time budget reached; remaining values retained
+- new-product / candidate-f2fe8417728f7444bd8b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-01687b011525f354a7a4: No verified product image URL
+- new-product / candidate-07344f880b4eb18318e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-360ddb6770a57453861d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-35e18b38e9c22a973f4d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a2c48c8abbb856d31e5b: Nightly time budget reached; remaining values retained
+- new-product / candidate-beb111769687433bba7e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-131e3d9f0f313e69bd63: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3637f5893709271346cd: Nightly time budget reached; remaining values retained
+- new-product / candidate-1b147af64a8bc8d2449f: Nightly time budget reached; remaining values retained
+- new-product / candidate-587cc0b24ba5ee2c49f3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a275f34e234e3dc1163d: Nightly time budget reached; remaining values retained
+- new-product / candidate-eb13b7f93b8392b3c518: No verified product image URL
+- new-product / candidate-ffc878e8bf3bc4ec20b9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a8dd56fb2df5a0186db4: Nightly time budget reached; remaining values retained
+- new-product / candidate-999cd002046a0f0a106f: Pack weight outside the supported range
+- new-product / candidate-f3db4c06a57f89d4c75e: No verified product image URL
+- new-product / candidate-0304e7478b2803537612: Nightly time budget reached; remaining values retained
+- new-product / candidate-a571f10187af72f6588f: Nightly time budget reached; remaining values retained
+- new-product / candidate-406a5d61bf62d063ad71: Nightly time budget reached; remaining values retained
+- new-product / candidate-3d60a8ab357e64a6428a: Nightly time budget reached; remaining values retained
+- new-product / candidate-99d0744fa14c4268d23e: Nightly time budget reached; remaining values retained
+- new-product / candidate-7e5b5f30e4e4160e7eed: Nightly time budget reached; remaining values retained
+- new-product / candidate-473e3e4ec1fc0113871e: Nightly time budget reached; remaining values retained
+- new-product / candidate-15f580458911fce9ca3b: No verified product image URL
+- new-product / candidate-bf384f88e28e71178368: Nightly time budget reached; remaining values retained
+- new-product / candidate-ceefb41c4ff14a81e10c: Nightly time budget reached; remaining values retained
+- new-product / candidate-51bdde145c0f6046edcd: No verified product image URL
+- new-product / candidate-88dd7c124254eb1e419e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-adaa92533c2ff1024198: Nightly time budget reached; remaining values retained
+- new-product / candidate-1e9929e3aefcbf552f29: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-292fc7f09cd4bb63ebca: Pack weight is ambiguous; listing skipped
+- new-product / candidate-9c0ff22d455e5fe914c9: Nightly time budget reached; remaining values retained
+- new-product / candidate-394cbae7c1b77f43c6e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b3ecbd0217cfbc695aa6: No verified product image URL
+- new-product / candidate-b0cbaf361e958a68f918: Nightly time budget reached; remaining values retained
+- new-product / candidate-aa32db1b70ab3b95e76c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fc18a1faa755683d49bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7d0610814d29771d374f: Nightly time budget reached; remaining values retained
+- new-product / candidate-c7916d8c0ec9f102f424: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-214f11b74c99ceb0fdb9: Nightly time budget reached; remaining values retained
+- new-product / candidate-9b83afce18bc5c081efd: Nightly time budget reached; remaining values retained
+- new-product / candidate-9c2269b711963d59cf21: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-726f1dee4350cd103ed8: Nightly time budget reached; remaining values retained
+- new-product / candidate-057945d7208374013d33: Nightly time budget reached; remaining values retained
+- new-product / candidate-c900123fcd13260398a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f9f77f64a960a4de41c4: Nightly time budget reached; remaining values retained
+- new-product / candidate-be7b31dee6a898033b44: Nightly time budget reached; remaining values retained
+- new-product / candidate-140f71a614395b750438: Nightly time budget reached; remaining values retained
+- new-product / candidate-c3972efcfd48dad91c21: No verified product image URL
+- new-product / candidate-e29bb5dd115ce7ee39b6: Nightly time budget reached; remaining values retained
+- new-product / candidate-57bc6265d48291e30be4: Nightly time budget reached; remaining values retained
+- new-product / candidate-1743acc78038deef5da9: Nightly time budget reached; remaining values retained
+- new-product / candidate-e3c8be54499c5ee1d460: Nightly time budget reached; remaining values retained
+- new-product / candidate-37bfc95cc79a17c071cb: Nightly time budget reached; remaining values retained
+- new-product / candidate-5f517cccae040f663e44: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c29888182122a6d10d86: Nightly time budget reached; remaining values retained
+- new-product / candidate-222e7b18114de4f54ca0: Nightly time budget reached; remaining values retained
+- new-product / candidate-fd4a775ec80d25a91409: Nightly time budget reached; remaining values retained
+- new-product / candidate-c2d39aa2d3dab920c400: Nightly time budget reached; remaining values retained
+- new-product / candidate-80d6a69201ff05ca259b: Nightly time budget reached; remaining values retained
+- new-product / candidate-cb8a729b5804925c6512: Nightly time budget reached; remaining values retained
+- new-product / candidate-ce84c7da82444cd7375f: Nightly time budget reached; remaining values retained
+- new-product / candidate-a7f313cb947ed1418f69: No verified product image URL
+- new-product / candidate-a9db4d79e8b0def93dde: Nightly time budget reached; remaining values retained
+- new-product / candidate-0b9f1481c69afeb2b233: Nightly time budget reached; remaining values retained
+- new-product / candidate-ea499154b1663be3a451: No verified product image URL
+- new-product / candidate-3449a1f63751b90b2b3a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-22f1598d89ce2137191c: Nightly time budget reached; remaining values retained
+- new-product / candidate-162ea1d6cb79e7ad339b: Nightly time budget reached; remaining values retained
+- new-product / candidate-32f5730369dee718db45: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-43d6a2f3ac1ce9cf1723: Nightly time budget reached; remaining values retained
+- new-product / candidate-a99ded6c0e8eafd37ec8: Nightly time budget reached; remaining values retained
+- new-product / candidate-58931033c6eda04a9e20: Source does not state the material pack weight; listing skipped
+- new-product / candidate-714061cc7608553c0adb: Nightly time budget reached; remaining values retained
+- new-product / candidate-bae4195fe76da3e21b85: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d9acc3244cb60cfdb9c: Nightly time budget reached; remaining values retained
+- new-product / candidate-2c42c91c6171c8b860a9: Nightly time budget reached; remaining values retained
+- new-product / candidate-172a031e44f899aa3a83: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1d09b5d94a4aa78db580: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-41ff73b5f74dc6a92681: Nightly time budget reached; remaining values retained
+- new-product / candidate-a2b94fc8848ec9815488: Nightly time budget reached; remaining values retained
+- new-product / candidate-c3a30bf561031d5b5ad6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-89a760e7e2c416418b84: Nightly time budget reached; remaining values retained
+- new-product / candidate-096d7d6279698586e5b3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-762f2a43f2b832920454: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8e65f8b7bc0f27a2f72e: Nightly time budget reached; remaining values retained
+- new-product / candidate-c4ee0c480bc3d4fc0e9f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ba737588e74d98d321d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1af15a8c9698f1e26d56: Nightly time budget reached; remaining values retained
+- new-product / candidate-285d26be413bb754c520: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e7e9679b35697227a80b: No verified product image URL
+- new-product / candidate-3215168b70fefd7ace84: Nightly time budget reached; remaining values retained
+- new-product / candidate-66f1d00bb3ed784c2df5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8df8022e8f11787fc851: No verified product image URL
+- new-product / candidate-1f0474afcd5220f5363b: Nightly time budget reached; remaining values retained
+- new-product / candidate-c7e1a546f2f1a0ecf2c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-22036b7e32910ac14036: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7850725dd3f00f80e7ef: Nightly time budget reached; remaining values retained
+- new-product / candidate-5eb2e1a7530ae6a8de4a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-355e0b75c82c51b337c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-66f852f23752ed67b6fb: Nightly time budget reached; remaining values retained
+- new-product / candidate-af5476a3f85423d751b6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f7d93b556fa9c8afe4ef: Source does not state the material pack weight; listing skipped
+- new-product / candidate-36036483e2f1489bbc36: Nightly time budget reached; remaining values retained
+- new-product / candidate-6c84720369071f853e1c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-238bd98fd44e01fd19de: Nightly time budget reached; remaining values retained
+- new-product / candidate-65be23411baf2a34108e: Nightly time budget reached; remaining values retained
+- new-product / candidate-9e89508ad386b90a5ce2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6b7780150f8b087e7c64: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fea830abb11149daae57: Nightly time budget reached; remaining values retained
+- new-product / candidate-940286a0803f1f612c8a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-97c896d9bffb94475c4c: Nightly time budget reached; remaining values retained
+- new-product / candidate-948462cc5373f2728dbd: Nightly time budget reached; remaining values retained
+- new-product / candidate-df4604c6e03e32ed6ea7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-122d3100aa026ef1ffda: Nightly time budget reached; remaining values retained
+- new-product / candidate-8ffa1e32da4ac6d2fc2e: Nightly time budget reached; remaining values retained
+- new-product / candidate-809279eacdaac88669fc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ed32eef3237afee1c045: Nightly time budget reached; remaining values retained
+- new-product / candidate-b7466104d30bc6973712: Nightly time budget reached; remaining values retained
+- new-product / candidate-ad0ef2ed7ebddde51464: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6e353a4e8ca8ef016ea6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-583cd65f2ae777e17278: Nightly time budget reached; remaining values retained
+- new-product / candidate-be8c45bb6c4e65db5e27: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7f033ffe03adf9c799a8: Pack weight is ambiguous; listing skipped
+- new-product / candidate-e3e835898e04134535d8: Nightly time budget reached; remaining values retained
+- new-product / candidate-fb67affc6efc5fc9c483: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-288e3071f4eacc6c638c: No verified product image URL
+- new-product / candidate-60db9da5d8cb7ca3b1ea: Nightly time budget reached; remaining values retained
+- new-product / candidate-1f22f45f155c17e83b41: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f0ca27274fb11bb8c03f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2c8bdfe353933a43ca99: Nightly time budget reached; remaining values retained
+- new-product / candidate-133b384d1de63868808e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3eaf643f6ed515dc4061: Nightly time budget reached; remaining values retained
+- new-product / candidate-150857d1a70f75eb0a60: Nightly time budget reached; remaining values retained
+- new-product / candidate-1beafc80d6b1d3d15e6a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a5a79eb43c25ecf99d32: Nightly time budget reached; remaining values retained
+- new-product / candidate-af2d558e69812906e99a: Nightly time budget reached; remaining values retained
+- new-product / candidate-231b13d920440fbfef48: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7b3df74d9ca87a01ca2f: Nightly time budget reached; remaining values retained
+- new-product / candidate-b72dfb6b7b89655f78f9: Nightly time budget reached; remaining values retained
+- new-product / candidate-6cdafb1bfe0affbf1f62: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-945ee2e9408a2065bc1e: No verified product image URL
+- new-product / candidate-c1ee23865c71f4136817: Nightly time budget reached; remaining values retained
+- new-product / candidate-55206a75ecc17cf45b9a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-54544fef6902f2c8adb4: Nightly time budget reached; remaining values retained
+- new-product / candidate-b8dc74a146ce14af60c4: Nightly time budget reached; remaining values retained
+- new-product / candidate-8b0acff91b0e05b12111: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49df135a8c51dcaf22bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-99b7547ceca69b547dff: Nightly time budget reached; remaining values retained
+- new-product / candidate-5edb3d3086380c613f85: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-dfd193f6d36b1da953cf: Nightly time budget reached; remaining values retained
+- new-product / candidate-27f8dc2f3d134f45e674: Nightly time budget reached; remaining values retained
+- new-product / candidate-9cce5a05459806ad0fcb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e6eb8dbf97f725b5cb4: Nightly time budget reached; remaining values retained
+- new-product / candidate-d0ab25cb1dcc5c66c7a6: Nightly time budget reached; remaining values retained
+- new-product / candidate-d94531fc26499cabfcfb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-54c23562c78b0dd66f94: Nightly time budget reached; remaining values retained
+- new-product / candidate-a411bb7f328340f07024: Nightly time budget reached; remaining values retained
+- new-product / candidate-9b69d23b21640a508b44: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-902ce122102e7af6011d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f267dc72063496ef05f8: Nightly time budget reached; remaining values retained
+- new-product / candidate-ace613e2ef15c0d1740a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-19d63fe05316829f33f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e724d50b3ac504481613: Nightly time budget reached; remaining values retained
+- new-product / candidate-4aee272d602fef188df4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d9e1587259a092803bbb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-897ff3d55f1ee886c470: Nightly time budget reached; remaining values retained
+- new-product / candidate-57b51709361ab25f1f7e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2fff91b80c6eedece62f: Nightly time budget reached; remaining values retained
+- new-product / candidate-a7650d2365c065f5d1d8: Nightly time budget reached; remaining values retained
+- new-product / candidate-1370a3ae3e2af5891e6c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7615f3ee3212bd8b95bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1b4a896a8685f012f951: Nightly time budget reached; remaining values retained
+- new-product / candidate-90cbb7b907d1e56854bf: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b20dd87b27341199906a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7fafbb4264f094db13de: Nightly time budget reached; remaining values retained
+- new-product / candidate-fe67024681c9c16e548a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b81caa5efdb417ffb7bf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-606489d214a768b19169: Nightly time budget reached; remaining values retained
+- new-product / candidate-7faa789b0ec654810dd0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-711595e94450f8c00d08: No verified product image URL
+- new-product / candidate-4c7d1cf8eb01520c8dc9: Nightly time budget reached; remaining values retained
+- new-product / candidate-ea77189f458f0e9ac5fb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-048155a99f4fce11441f: Source does not state the material pack weight; listing skipped
