@@ -166,7 +166,6 @@ service cloud.firestore {
                 'currency',
                 'data',
                 'file',
-                'fileData',
                 'fileStatus'
               ])
               && request.resource.data.project.id == projectId
