@@ -72,7 +72,7 @@ function openSettings(){
         <div class="pp-settings-card">
           <span class="pp-settings-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="./assets/printprofit-icon-master.svg#pp-settings"></use></svg></span>
           <div><strong>Dark mode</strong><span>Use the dark PrintProfit interface.</span></div>
-          <label class="pp-settings-switch"><input id="ppSettingsDark" type="checkbox" role="switch" checked><span></span></label>
+          <label class="pp-settings-switch"><input id="ppSettingsDark" type="checkbox" role="switch" aria-label="Dark mode" checked><span></span></label>
         </div>
 
         <div class="pp-settings-section-title">Language &amp; region</div>
@@ -140,7 +140,7 @@ function openSettings(){
   document.body.appendChild(panel);
   if(!document.getElementById('reset')){
     const reset=panel.querySelector('#ppSettingsReset');reset.disabled=true;
-    reset.closest('.pp-settings-card').querySelector('div span').textContent='Open Settings in the calculator to reset its inputs.';
+    reset.closest('.pp-settings-card').querySelector('strong').nextElementSibling.textContent='Open Settings in the calculator to reset its inputs.';
     panel.querySelector('.pp-settings-head p').textContent='Manage your PrintProfit display and preferences.';
     panel.querySelector('.pp-settings-note').textContent='Dark mode updates immediately. Apply Changes saves your preferences across PrintProfit. Compare listings remain in GBP to match UK retailers.';
   }

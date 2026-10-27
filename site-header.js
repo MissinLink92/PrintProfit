@@ -55,7 +55,7 @@ const loadPanelScript=src=>new Promise((resolve,reject)=>{const script=document.
 function ensurePanels(){
  if(!panelAssets)panelAssets=(async()=>{
   if(!window.PRINTPROFIT_REFERENCE_DATA)await loadPanelScript('./data/reference-data.js');
-  if(!window.__printProfitUIModals)await loadPanelScript('./ui-modals.js?v=20261027-panels1');
+  if(!window.__printProfitUIModals)await loadPanelScript('./ui-modals.js?v=20261027-panels2');
   if(!window.__printProfitPreferencesV3)await loadPanelScript('./settings-preferences.js?v=20261027-panels1');
  })().catch(error=>{panelAssets=null;throw error});
  return panelAssets;
