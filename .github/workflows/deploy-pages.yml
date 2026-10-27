@@ -53,6 +53,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      - name: Allow any prior Pages deployment to finish
+        run: sleep 75
       - name: Deploy public website
         id: deployment
         uses: actions/deploy-pages@v4
