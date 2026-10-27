@@ -49,7 +49,7 @@ let machine=walk(body,n=>n.dataset?.farmField==='machines'),perBuild=walk(body,n
 machine.value='2';machine.dispatchEvent({type:'input'});perBuild.value='5';perBuild.dispatchEvent({type:'input'});
 near(ui.window.__ppFarmCosts(11).plan.kWh,.6);
 const saved=doc.getElementById('ppFarmConfiguration').value;
-const power=walk(body,n=>n.dataset?.farmField==='watts');power.value='0';power.dispatchEvent({type:'input'});assert.equal(ui.window.__ppFarmCosts(11).valid,false);assert.equal(body.dataset.ppFarmInvalid,'true');
+const power=walk(body,n=>n.dataset?.farmField==='watts');power.value='0';power.dispatchEvent({type:'input'});assert.equal(ui.window.__ppFarmCosts(11),null);assert.equal(body.dataset.ppFarmInvalid,'true');
 ui.window.__ppRestoreFarm({ppFarmEnabled:{checked:true},ppFarmConfiguration:{value:saved}});near(ui.window.__ppFarmCosts(11).plan.kWh,.6);
 assert.equal(doc.getElementById('ppFarmDetails').hidden,false);doc.getElementById('ppFarmAdd').click();assert.equal(JSON.parse(doc.getElementById('ppFarmConfiguration').value).groups.length,2);
 ui.window.__ppRestoreFarm({});assert.equal(enabled.checked,false);assert.equal(doc.getElementById('ppFarmDetails').hidden,true);assert.equal(ui.window.__ppFarmCosts(11),null);
