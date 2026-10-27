@@ -850,3 +850,10 @@ section.panel.result>.head>.pp-master-circular{border-color:#ff8a24!important;co
   .shell{width:calc(100% - clamp(24px,3vw,64px))!important;max-width:none!important;margin-inline:auto!important}
   .shell .main{width:100%!important;max-width:none!important;padding-inline:clamp(16px,2vw,38px)!important}
 }
+
+/* Align Workspace tabs and show the correct master tile in each. */
+#ppMaterialsPanel .pp-workspace-nav button,#ppProjectsPanel .pp-workspace-nav button{justify-content:center!important;text-align:center!important}
+#ppMaterialsPanel .pp-workspace-nav [data-workspace-section="projects"] svg,#ppProjectsPanel .pp-workspace-nav [data-workspace-section="projects"] svg{background-position:25% center!important}
+#ppMaterialsPanel .pp-workspace-nav [data-workspace-section="workshop"] svg,#ppProjectsPanel .pp-workspace-nav [data-workspace-section="workshop"] svg{background-position:0% center!important}
+#ppMaterialsPanel .pp-workspace-nav [data-workspace-section="pro"] svg,#ppProjectsPanel .pp-workspace-nav [data-workspace-section="pro"] svg{background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:92.308% center!important}
+#ppMaterialsPanel .pp-workspace-nav [data-workspace-section="account"] svg,#ppProjectsPanel .pp-workspace-nav [data-workspace-section="account"] svg{background-position:100% center!important}
