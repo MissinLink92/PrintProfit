@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/build_pages.py'
       - 'index.html'
+      - 'legacy-index.html'
       - 'print-farm.js'
       - 'config/billing-config.js'
       - '.github/workflows/deploy-pages.yml'
