@@ -844,3 +844,9 @@ section.panel.result>.head>.pp-master-circular{border-color:#ff8a24!important;co
 #ppMaterialsPanel .pp-material-dot svg,#ppMaterialsPanel .pp-printer-icon svg{visibility:hidden!important}
 #ppMaterialsPanel .pp-pro-hero-icon{background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:92.308% center!important;background-repeat:no-repeat!important}
 #ppMaterialsPanel .pp-pro-hero-icon svg{visibility:hidden!important}
+
+/* Wide screens use the viewport with safe gutters. */
+@media(min-width:801px){
+  .shell{width:calc(100% - clamp(24px,3vw,64px))!important;max-width:none!important;margin-inline:auto!important}
+  .shell .main{width:100%!important;max-width:none!important;padding-inline:clamp(16px,2vw,38px)!important}
+}
