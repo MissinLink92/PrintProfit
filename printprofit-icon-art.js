@@ -3,7 +3,7 @@ if(window.__printProfitReferenceIconArt)return;window.__printProfitReferenceIcon
 const style=document.createElement('style');
 style.id='ppReferenceIconArtStyles';
 style.textContent=[
-'#ppVisualMaster .pvm-journey{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:min(1280px,calc(100% - 36px))!important;gap:14px!important;align-items:stretch!important;margin:10px auto 24px!important}',
+'#ppVisualMaster .pvm-journey{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:calc(100% - clamp(24px,3vw,64px))!important;gap:14px!important;align-items:stretch!important;margin:10px auto 24px!important}',
 '#ppVisualMaster .pvm-journey>em{display:none!important}',
 '#ppVisualMaster .pvm-journey>button{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;width:auto!important;min-width:0!important;min-height:220px!important;gap:8px!important;padding:10px!important;border-radius:18px!important;overflow:hidden!important;text-align:center!important}',
 '#ppVisualMaster .pvm-journey .jicon{display:block!important;width:100%!important;min-width:0!important;height:auto!important;aspect-ratio:360/246!important;flex:0 0 auto!important;border:0!important;border-radius:13px!important;overflow:hidden!important;box-shadow:0 8px 24px rgba(0,0,0,.28)!important}',
