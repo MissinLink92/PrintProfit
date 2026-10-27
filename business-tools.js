@@ -35,7 +35,7 @@ function exportCSV(){
 }
 function mount(){
  const result=document.querySelector('.result');if(!result||!M)return;
- const panel=el('section',undefined,'pp-business-tools');panel.id='ppBusinessTools';panel.append(el('h3','Business tools — preview'),el('p',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Compare production options and prepare a customer quotation with an active Pro trial or subscription. Saved scenarios remain visible if Pro ends.':'Compare production options and prepare a customer quotation. These tools are planned for Pro; subscription access is not enabled yet.'));
+ const panel=el('section',undefined,'pp-business-tools');panel.id='ppBusinessTools';panel.append(el('h3',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Business tools — Pro':'Business tools — preview'),el('p',window.PRINTPROFIT_BILLING_CONFIG?.enabled?'Compare production options and prepare a customer quotation with an active Pro trial or subscription. Saved scenarios remain visible if Pro ends.':'Compare production options and prepare a customer quotation. These tools are planned for Pro; subscription access is not enabled yet.'));
  const status=el('p');status.id='ppBusinessStatus';status.setAttribute('role','status');panel.append(status);
  const hidden=el('input');hidden.type='hidden';hidden.id='ppScenarioConfiguration';panel.append(hidden);
  const compare=el('details'),summary=el('summary','Compare production scenarios');compare.dataset.ppProTool='scenario';compare.append(summary);
