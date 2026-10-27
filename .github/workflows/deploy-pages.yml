@@ -16,6 +16,7 @@ on:
       - 'site-header.css'
       - 'site-unified.js'
       - 'site-unified.css'
+      - 'pp-design-system.css'
       - 'config/billing-config.js'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
