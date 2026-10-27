@@ -49,3 +49,7 @@ body.pp-light.pp-policy-page a{color:#006d88}
 .pp-page-icon.pp-art-icon svg{display:none}
 body.pp-compare-page .wrap{width:calc(100% - clamp(24px,4vw,80px))!important;max-width:none!important}
 @media(max-width:650px){body.pp-compare-page .wrap{width:calc(100% - 20px)!important}}
+
+@media(min-width:761px){
+  body.pp-guide-page .wrap,body.pp-policy-page .wrap{width:calc(100% - clamp(24px,4vw,80px))!important;max-width:none!important}
+}
