@@ -808,3 +808,39 @@ section.panel.result>.head>.pp-master-circular{border-color:#ff8a24!important;co
 @media(max-width:900px){
   #pp-master-quickcards button{padding-left:28px!important}
 }
+
+/* Master artwork for the remaining Workspace, Pro and Settings controls. */
+#ppProjectsPanel .pp-workspace-nav button svg,#ppMaterialsPanel .pp-workspace-nav button svg,
+#ppProjectsPanel .pp-project-icon svg,#ppProjectsPanel .pp-projects-empty-icon svg,
+#ppMaterialsPanel .pp-materials-empty-icon svg,#ppMaterialsPanel .pp-pro-card-icon svg,
+#ppSettingsPanel .pp-settings-icon svg{visibility:hidden!important}
+#ppProjectsPanel .pp-workspace-nav button svg,#ppMaterialsPanel .pp-workspace-nav button svg{
+ background-image:url("./assets/printprofit-nav-icons.webp?v=1")!important;background-size:500% 100%!important;background-repeat:no-repeat!important;visibility:visible!important}
+#ppProjectsPanel .pp-workspace-nav button svg use,#ppMaterialsPanel .pp-workspace-nav button svg use{visibility:hidden!important}
+.pp-workspace-nav [data-workspace-section="projects"] svg{background-position:25% center!important}
+.pp-workspace-nav [data-workspace-section="workshop"] svg{background-position:0% center!important}
+.pp-workspace-nav [data-workspace-section="pro"] svg{background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:92.308% center!important}
+.pp-workspace-nav [data-workspace-section="account"] svg{background-position:100% center!important}
+#ppProjectsPanel .pp-project-icon,#ppProjectsPanel .pp-projects-empty-icon,
+#ppMaterialsPanel .pp-materials-empty-icon{background-image:url("./assets/printprofit-nav-icons.webp?v=1")!important;background-size:500% 100%!important;background-repeat:no-repeat!important;background-position:25% center!important;border:0!important}
+#ppMaterialsPanel .pp-materials-empty-icon{background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:15.385% center!important}
+#ppMaterialsPanel .pp-pro-card-icon,#ppSettingsPanel .pp-settings-icon{
+ background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-repeat:no-repeat!important;border:0!important;box-shadow:none!important}
+#ppMaterialsPanel .pp-pro-production .pp-pro-card-icon{background-position:7.692% center!important}
+#ppMaterialsPanel .pp-pro-scenarios .pp-pro-card-icon{background-position:92.308% center!important}
+#ppMaterialsPanel .pp-pro-quote .pp-pro-card-icon{background-position:69.231% center!important}
+#ppMaterialsPanel .pp-pro-export .pp-pro-card-icon{background-image:url("./assets/printprofit-action-icons.webp?v=1")!important;background-size:600% 100%!important;background-position:20% center!important}
+#ppMaterialsPanel .pp-pro-materials .pp-pro-card-icon{background-position:15.385% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsDark) .pp-settings-icon{background-position:7.692% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsLanguage) .pp-settings-icon{background-image:url("./assets/printprofit-nav-icons.webp?v=1")!important;background-size:500% 100%!important;background-position:75% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsUnits) .pp-settings-icon{background-position:0% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsCurrency) .pp-settings-icon{background-position:46.154% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsRate) .pp-settings-icon{background-position:92.308% center!important}
+#ppSettingsPanel .pp-settings-card:has(#ppSettingsReset) .pp-settings-icon{background-image:url("./assets/printprofit-action-icons.webp?v=1")!important;background-size:600% 100%!important;background-position:60% center!important}
+
+#ppMaterialsPanel .pp-materials-empty-icon:has(use[href$="pp-printer"]){background-position:0% center!important}
+#ppMaterialsPanel .pp-material-dot,#ppMaterialsPanel .pp-printer-icon{
+ background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:15.385% center!important;background-repeat:no-repeat!important;border:0!important}
+#ppMaterialsPanel .pp-material-dot svg,#ppMaterialsPanel .pp-printer-icon svg{visibility:hidden!important}
+#ppMaterialsPanel .pp-pro-hero-icon{background-image:url("./assets/printprofit-calculator-icons.webp?v=1")!important;background-size:1400% 100%!important;background-position:92.308% center!important;background-repeat:no-repeat!important}
+#ppMaterialsPanel .pp-pro-hero-icon svg{visibility:hidden!important}
