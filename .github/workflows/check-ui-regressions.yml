@@ -47,6 +47,8 @@ jobs:
         run: node scripts/check_workshop_printers.cjs
       - name: Check Workspace popup placement and scroll restoration
         run: node scripts/check_workspace_modals.cjs
+      - name: Check shared Guide and Settings panels
+        run: node scripts/check_shared_panels.cjs
       - name: Check Pro Workspace routing
         run: node scripts/check_pro_workspace.cjs
       - name: Check shared site icons
@@ -56,3 +58,4 @@ jobs:
         run: node --test functions/billing-core.test.js functions/billing-handlers.test.js
       - name: Check Free backups and cloud access gating
         run: node scripts/check_free_pro.cjs
+

@@ -344,13 +344,13 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
 </head>
 <body data-pp-standalone-i18n="1" class="pp-compare-page">
-<div id="ppSiteHeader"></div><script src="./site-header.js?v=20261027-master1"></script>
+<div id="ppSiteHeader"></div><script src="./site-header.js?v=20261027-panels1"></script>
 <div class="wrap">
 
-<section class="hero" data-pp-icon="compare">
-<div class="kicker">PRINTPROFIT • COMPARE PRODUCTS</div>
+<section class="hero" id="ppCompareHero">
+<div class="kicker" data-pp-icon="compare">PRINTPROFIT • COMPARE PRODUCTS</div>
 <h1>Find it <strong>cheaper.</strong></h1>
-<p class="lead">Compare tracked UK listings for 3D printers and printing materials across multiple retailers. Search by product or brand, filter by material and retailer, tick the products you want, then switch brands without losing your selections.</p>
+<p class="lead">Compare printers, filament and resin from UK retailers.<br>Find the right supplies for your next print.</p>
 </section>
 
 <aside class="pp-affiliate-notice" aria-label="Affiliate disclosure">
@@ -1128,6 +1128,28 @@ body .product-card .card-kind{margin-top:6px;color:var(--muted);font-size:11px;l
 }
 </style>
 <script defer src="./site-unified.js?v=20261027-master1"></script>
+<style id="ppCompareWorkshopHeader">
+body.pp-compare-page #ppCompareHero{
+ display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+ min-height:clamp(320px,30vw,460px)!important;
+ margin:22px 0 24px!important;padding:38px clamp(24px,4vw,64px)!important;
+ background:linear-gradient(90deg,rgba(3,15,25,.3),transparent 75%),url('./assets/compare-workshop-v1.webp') center center/cover no-repeat!important;
+ border:1px solid #386679!important;border-radius:20px!important;color:#f5f9fb!important;
+}
+body #ppCompareHero::before,body #ppCompareHero::after{display:none!important}
+body #ppCompareHero .kicker{display:flex;align-items:center;gap:12px;margin:0 0 18px!important;color:#ff982f!important;font:800 12px/1.4 Inter,Segoe UI,system-ui,sans-serif!important;letter-spacing:.12em}
+body #ppCompareHero .kicker .pp-page-icon{position:static!important;transform:none!important;inset:auto!important;width:36px!important;height:36px!important;min-width:36px;flex:0 0 36px;margin:0!important;border-radius:9px!important;opacity:1!important;box-shadow:none!important}
+body #ppCompareHero h1{max-width:65%!important;font-size:clamp(40px,4.8vw,72px)!important;line-height:1.08!important;margin:0 0 18px!important;color:#f5f9fb!important;text-shadow:0 2px 12px #0005!important}
+body #ppCompareHero h1 strong{color:#ff922b!important}
+body #ppCompareHero .lead{max-width:58%!important;margin:0!important;color:#e0e9ef!important;font-size:clamp(15px,1.45vw,20px)!important;line-height:1.65!important;text-shadow:0 1px 6px #0008}
+@media(max-width:900px){
+ body.pp-compare-page #ppCompareHero{min-height:300px!important;background:linear-gradient(90deg,rgba(3,15,25,.94),rgba(3,15,25,.55)),url('./assets/compare-workshop-v1.webp') 70% center/cover no-repeat!important;padding:30px 24px!important}
+ body #ppCompareHero h1,body #ppCompareHero .lead{max-width:100%!important}
+ body #ppCompareHero .kicker{font-size:10px!important;gap:8px;letter-spacing:.07em}
+}
+@media(max-width:480px){body.pp-compare-page #ppCompareHero{min-height:270px!important;padding:25px 18px!important}body #ppCompareHero h1{font-size:40px!important}body #ppCompareHero .lead{font-size:15px!important}}
+</style>
 </body>
 </html>
+
 

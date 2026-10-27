@@ -41,10 +41,39 @@ const initial=prefs();
 if(lang)lang.value=['en','pl','de','fr','es','it'].includes(initial.language)?initial.language:'en';
 const updateFlag=()=>{if(!flag)return;const code=String(lang?.value||'en').toLowerCase();flag.innerHTML=flags[code]||flags.en;flag.dataset.language=code};
 if(dark)dark.checked=initial.dark!==false;
-const applyTheme=()=>{document.body.classList.toggle('pp-light',!dark?.checked);const label=document.getElementById('themeLabel');if(label)label.textContent=dark?.checked?'Dark mode':'Light mode'};
+const applyTheme=()=>{document.body.classList.toggle('pp-light',!dark?.checked);document.body.dataset.ppTheme=dark?.checked?'dark':'light';const label=document.getElementById('themeLabel');if(label)label.textContent=dark?.checked?'Dark mode':'Light mode'};
 applyTheme();updateFlag();
 const brandImage=mount.querySelector('.pvm-brand img');if(brandImage)brandImage.addEventListener('error',()=>{brandImage.style.display='none';const fallback=mount.querySelector('.pvm-brand-fallback');if(fallback)fallback.style.display='block'});
-if(!page.endsWith('/price-finder.html'))dark?.addEventListener('change',()=>{save({dark:dark.checked});applyTheme()});
-lang?.addEventListener('change',()=>{const code=String(lang.value||'en');save({language:code});updateFlag();window.__ppApplyStandaloneI18n?.()});
+dark?.addEventListener('change',()=>{if(window.__setPrintProfitDarkMode)window.__setPrintProfitDarkMode(dark.checked);else save({dark:dark.checked});applyTheme()});
+lang?.addEventListener('change',()=>{const code=String(lang.value||'en');if(window.__setPrintProfitLanguage)window.__setPrintProfitLanguage(code);else save({language:code});updateFlag();window.__ppApplyStandaloneI18n?.()});
+document.addEventListener('printprofit-settings-changed',()=>{const latest=prefs();if(dark)dark.checked=latest.dark!==false;if(lang)lang.value=latest.language||'en';applyTheme();updateFlag();window.__ppApplyStandaloneI18n?.()});
 window.addEventListener('storage',()=>{const latest=prefs();if(dark)dark.checked=latest.dark!==false;if(lang)lang.value=latest.language||'en';applyTheme();updateFlag();window.__ppApplyStandaloneI18n?.()});
+
+// Share the calculator's dialogs without navigating away from the current page.
+let panelAssets;
+const loadPanelScript=src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=()=>{script.remove();reject(new Error('Unable to load '+src))};document.body.appendChild(script)});
+function ensurePanels(){
+ if(!panelAssets)panelAssets=(async()=>{
+  if(!window.PRINTPROFIT_REFERENCE_DATA)await loadPanelScript('./data/reference-data.js');
+  if(!window.__printProfitUIModals)await loadPanelScript('./ui-modals.js?v=20261027-panels1');
+  if(!window.__printProfitPreferencesV3)await loadPanelScript('./settings-preferences.js?v=20261027-panels1');
+ })().catch(error=>{panelAssets=null;throw error});
+ return panelAssets;
+}
+mount.querySelectorAll('a').forEach(link=>{
+ const url=new URL(link.href,location.href);
+ const kind=url.pathname.endsWith('/guide.html')?'guide':url.searchParams.get('open')==='settings'?'settings':null;
+ if(!kind)return;
+ link.setAttribute('aria-haspopup','dialog');
+ link.addEventListener('click',async event=>{
+  if(event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();
+  if(link.getAttribute('aria-busy')==='true')return;
+  link.setAttribute('aria-busy','true');
+  try{await ensurePanels();link.focus({preventScroll:true});if(kind==='guide')window.__openPrintProfitGuide();else window.__openPrintProfitSettings();}
+  catch(error){console.error('PrintProfit panel could not load',error);let note=mount.querySelector('[data-panel-error]');if(!note){note=document.createElement('p');note.dataset.panelError='';note.setAttribute('role','alert');mount.appendChild(note)}note.textContent='This panel could not load. Please try again.';}
+  finally{link.removeAttribute('aria-busy');}
+ });
+});
 })();
+

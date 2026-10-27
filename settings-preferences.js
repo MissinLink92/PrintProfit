@@ -83,7 +83,8 @@ function watchTranslations(){window.__ppWatchI18n?.(()=>pref.language);}
 
 function setTheme(){
  document.body.dataset.ppTheme=pref.dark?'dark':'light';
- document.querySelectorAll('#ppSettingsDark,#pvmDarkMode,#dark').forEach(toggle=>{toggle.checked=pref.dark;});
+ if(document.getElementById('ppSiteHeader'))document.body.classList.toggle('pp-light',!pref.dark);
+ document.querySelectorAll('#ppSettingsDark,#pvmDarkMode,#dark,#darkModeToggle').forEach(toggle=>{toggle.checked=pref.dark;});
  try{if(window.parent!==window){window.parent.document.body.dataset.ppTheme=pref.dark?'dark':'light';window.parent.document.body.style.background=pref.dark?'#071018':'#eef2f5';window.parent.document.documentElement.style.background=pref.dark?'#071018':'#eef2f5';}}catch(e){}
  let s=document.getElementById('ppPreferenceTheme');
  if(!s){s=document.createElement('style');s.id='ppPreferenceTheme';document.head.appendChild(s);}
@@ -821,6 +822,8 @@ function applyUnits(){
 }
 
 function currency(){
+ // Standalone retailer comparisons use native GBP prices, not calculator totals.
+ if(document.getElementById('ppSiteHeader'))return;
  const meta=currencies[pref.currency]||currencies.GBP;
  const rate=Number(pref.rate)>0?Number(pref.rate):1;
  moneyFields.forEach(id=>{
@@ -978,6 +981,7 @@ function boot(){
   currency();
 
   document.addEventListener('printprofit-settings-open',()=>{
+    pref=load();
     draft=Object.assign({},pref);
     refreshDraftControls();
     bind();
@@ -985,3 +989,4 @@ function boot(){
   window.addEventListener('storage',event=>{if(event.key===KEY){pref=load();draft=Object.assign({},pref);setTheme();translatePage();}});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();})();
+

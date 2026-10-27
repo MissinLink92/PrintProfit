@@ -1,31 +1,54 @@
 (()=>{'use strict';
 if(window.__printProfitUIModals)return;window.__printProfitUIModals=true;
-let parentOverflow;
-function showPanel(panel){
-  closePanel(panel.id==='ppGuidePanel'?'ppSettingsPanel':'ppGuidePanel');
+let parentOverflow,bodyOverflow;
+const panelOpeners=new Map();
+function positionPanel(panel){
   let height=window.innerHeight;
+  let top=0;
   try{
     const host=window.parent;
     if(host!==window){
-      host.scrollTo({top:0,left:0,behavior:'instant'});
       height=host.innerHeight;
-      if(parentOverflow===undefined)parentOverflow=host.document.body.style.overflow;
-      host.document.body.style.overflow='hidden';
-      host.document.body.dataset.ppModalOpen='true';
+      top=Math.max(0,-(window.frameElement?.getBoundingClientRect().top||0));
     }
   }catch(e){}
-  window.scrollTo({top:0,left:0,behavior:'instant'});
-  panel.style.top='0';panel.style.bottom='auto';panel.style.height=height+'px';
+  panel.style.top=top+'px';panel.style.bottom='auto';panel.style.height=height+'px';
   const dialog=panel.querySelector('[role="dialog"]');
   if(dialog){
     dialog.style.top='16px';dialog.style.maxHeight=Math.max(160,height-32)+'px';
     if(panel.id==='ppGuidePanel')dialog.style.transform='translateX(-50%)';
   }
+}
+function showPanel(panel){
+  const opener=document.activeElement;
+  closePanel(panel.id==='ppGuidePanel'?'ppSettingsPanel':'ppGuidePanel');
+  panelOpeners.set(panel.id,opener);
+  if(bodyOverflow===undefined)bodyOverflow=document.body.style.overflow;
+  try{if(window.parent!==window){
+    if(parentOverflow===undefined)parentOverflow=window.parent.document.body.style.overflow;
+    window.parent.document.body.style.overflow='hidden';
+    window.parent.document.body.dataset.ppModalOpen='true';
+  }}catch(e){}
+  positionPanel(panel);
   panel.classList.add('open');
   document.body.style.overflow='hidden';
+  const dialog=panel.querySelector('[role="dialog"]');
   if(dialog)dialog.scrollTop=0;
-  requestAnimationFrame(()=>{if(dialog)dialog.scrollTop=0;});
+  panel.querySelector('button')?.focus({preventScroll:true});
+  requestAnimationFrame(()=>{positionPanel(panel);if(dialog)dialog.scrollTop=0;});
 }
+const positionOpenPanels=()=>document.querySelectorAll('#ppSettingsPanel.open,#ppGuidePanel.open').forEach(positionPanel);
+window.addEventListener('resize',positionOpenPanels);
+try{if(window.parent!==window){window.parent.addEventListener('resize',positionOpenPanels);window.parent.addEventListener('scroll',positionOpenPanels,{passive:true});}}catch(e){}
+document.addEventListener('keydown',event=>{
+  const panel=document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open');if(!panel)return;
+  if(event.key==='Escape'){event.preventDefault();closePanel(panel.id);return;}
+  if(event.key!=='Tab')return;
+  const items=[...panel.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),[tabindex="0"]')].filter(el=>el.getClientRects().length);
+  const first=items[0],last=items[items.length-1];
+  if(event.shiftKey&&(document.activeElement===first||!panel.contains(document.activeElement))){event.preventDefault();last?.focus({preventScroll:true});}
+  else if(!event.shiftKey&&(document.activeElement===last||!panel.contains(document.activeElement))){event.preventDefault();first?.focus({preventScroll:true});}
+});
 function openSettings(){
   if(document.getElementById('ppSettingsPanel')){
     showPanel(document.getElementById('ppSettingsPanel'));
@@ -115,6 +138,12 @@ function openSettings(){
       </div>
     </section>`;
   document.body.appendChild(panel);
+  if(!document.getElementById('reset')){
+    const reset=panel.querySelector('#ppSettingsReset');reset.disabled=true;
+    reset.closest('.pp-settings-card').querySelector('div span').textContent='Open Settings in the calculator to reset its inputs.';
+    panel.querySelector('.pp-settings-head p').textContent='Manage your PrintProfit display and preferences.';
+    panel.querySelector('.pp-settings-note').textContent='Dark mode updates immediately. Apply Changes saves your preferences across PrintProfit. Compare listings remain in GBP to match UK retailers.';
+  }
   const applyBtn=document.getElementById('ppSettingsApply');
   if(applyBtn){
     applyBtn.addEventListener('click',(event)=>{
@@ -141,9 +170,6 @@ function openSettings(){
     closePanel('ppSettingsPanel');
   });
   panel.querySelectorAll('[data-close-settings]').forEach(el=>el.addEventListener('click',()=>closePanel('ppSettingsPanel')));
-  document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'){closePanel('ppSettingsPanel');closePanel('ppGuidePanel');}
-  });
   const style=document.createElement('style');
   style.id='ppSettingsStyles';
   style.textContent=`
@@ -198,14 +224,56 @@ function openSettings(){
 window.__openPrintProfitSettings=openSettings;
 window.__openPrintProfitGuide=openGuide;
 
+const panelStyle=document.createElement('style');
+panelStyle.id='ppSharedPanelPolish';
+panelStyle.textContent=`
+#ppSettingsPanel,#ppGuidePanel{font-family:Inter,Segoe UI,system-ui,sans-serif;line-height:1.5}
+#ppSettingsPanel .pp-settings-dialog{left:50%;right:auto;transform:translateX(-50%);width:min(620px,calc(100vw - 24px));overscroll-behavior:contain}
+#ppGuidePanel .pp-guide-dialog{width:min(960px,calc(100vw - 24px));overscroll-behavior:contain}
+#ppSettingsPanel .pp-settings-head h2,#ppGuidePanel .pp-guide-head h2{font-size:24px}
+#ppSettingsPanel .pp-settings-head p,#ppGuidePanel .pp-guide-head p{font-size:13px;color:#b6c7d1}
+#ppSettingsPanel .pp-settings-card{display:grid;grid-template-columns:36px minmax(0,1fr) 180px;gap:12px;align-items:center}
+#ppSettingsPanel .pp-settings-icon{display:block;width:36px;height:36px;margin:0}
+#ppSettingsPanel .pp-settings-icon svg{width:36px;height:36px;fill:none;stroke:#53c9ed;stroke-width:2}
+#ppSettingsPanel .pp-settings-card strong{font-size:14px}
+#ppSettingsPanel .pp-settings-card span{font-size:12px;color:#b6c7d1}
+#ppSettingsPanel .pp-settings-select{width:180px!important;min-width:0!important;font-size:13px!important;max-width:100%}
+#ppSettingsPanel .pp-settings-switch{justify-self:end;margin:0}
+#ppSettingsPanel .pp-settings-action:disabled{opacity:.5;cursor:not-allowed}
+#ppSettingsPanel .pp-settings-note{font-size:12px;color:#b6c7d1}
+#ppSettingsPanel .pp-settings-section-title,#ppGuidePanel .pp-guide-section-title{font-size:11px;letter-spacing:.06em}
+#ppGuidePanel .pp-guide-intro{margin-top:14px}
+#ppGuidePanel .pp-guide-intro strong,#ppGuidePanel .pp-guide-grid h3{font-size:15px}
+#ppGuidePanel .pp-guide-intro span,#ppGuidePanel .pp-guide-grid p,#ppGuidePanel .pp-guide-section p,#ppGuidePanel .pp-guide-note{font-size:14px;line-height:1.65;color:#bdcdd6}
+#ppGuidePanel .pp-guide-section p+p{margin-top:10px}
+#ppSettingsPanel .pp-settings-close,#ppGuidePanel .pp-guide-close{min-width:40px;min-height:40px}
+body:is(.pp-light,[data-pp-theme="light"]) :is(.pp-settings-dialog,.pp-guide-dialog){background:#f7fafc!important;color:#172b35!important}
+body:is(.pp-light,[data-pp-theme="light"]) :is(.pp-settings-head,.pp-guide-head,.pp-settings-card,.pp-guide-grid article,.pp-guide-section,.pp-guide-intro,.pp-guide-note){background:#fff!important;border-color:#b8cbd4!important;color:#172b35!important}
+body:is(.pp-light,[data-pp-theme="light"]) :is(#ppSettingsPanel,#ppGuidePanel) :is(p,span,.pp-settings-note,.pp-guide-note){color:#435e6d!important}
+body:is(.pp-light,[data-pp-theme="light"]) :is(#ppSettingsPanel,#ppGuidePanel) :is(strong,h2,h3){color:#172b35!important}
+body:is(.pp-light,[data-pp-theme="light"]) #ppSettingsPanel :is(select,input[type="number"]){background:#fff!important;color:#172b35!important;border-color:#9eb6c3!important}
+@media(max-width:600px){
+ #ppSettingsPanel .pp-settings-card{grid-template-columns:36px minmax(0,1fr);gap:8px 12px}
+ #ppSettingsPanel .pp-settings-icon{grid-column:1;grid-row:1 / span 2}
+ #ppSettingsPanel .pp-settings-card>div:not(.pp-settings-rate){grid-column:2}
+ #ppSettingsPanel .pp-settings-card>:last-child{grid-column:2;justify-self:stretch;width:100%!important}
+ #ppSettingsPanel .pp-settings-card>.pp-settings-switch{width:48px!important;justify-self:start}
+ #ppSettingsPanel .pp-settings-select{width:100%!important}
+ #ppSettingsPanel .pp-settings-rate input{min-width:0;max-width:100%}
+}
+`;
+document.head.appendChild(panelStyle);
+
 function closePanel(id){
   const panel=document.getElementById(id);
-  if(!panel)return;
+  if(!panel||!panel.classList.contains('open'))return;
   panel.classList.remove('open');
   if(!document.querySelector('#ppSettingsPanel.open,#ppGuidePanel.open')){
-    document.body.style.overflow='';
+    document.body.style.overflow=bodyOverflow||'';bodyOverflow=undefined;
     try{if(window.parent!==window&&parentOverflow!==undefined){window.parent.document.body.style.overflow=parentOverflow;delete window.parent.document.body.dataset.ppModalOpen;parentOverflow=undefined;}}catch(e){}
   }
+  panelOpeners.get(id)?.focus?.({preventScroll:true});
+  panelOpeners.delete(id);
 }
 
 function openGuide(){
@@ -219,17 +287,22 @@ function openGuide(){
         <div class="pp-guide-head">
           <div class="pp-guide-brand">
             <img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit">
-            <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Everything you need to understand and use the current calculator.</p></div>
+            <div><div class="pp-guide-kicker">PRINTPROFIT</div><h2 id="ppGuideTitle">Guide &amp; Help</h2><p>Help with the calculator, your workspace and product comparisons.</p></div>
           </div>
           <button type="button" class="pp-guide-close" aria-label="Close guide" data-close-guide>×</button>
         </div>
         <div class="pp-guide-body">
+          <div class="pp-guide-section" id="ppGuideCompare">
+            <div class="pp-guide-section-title">Compare Products</div>
+            <p>Search for a product, filter by category, brand or retailer, and sort the matching listings. Tick products to keep them selected while you change filters, then choose <strong>Compare selected</strong>. <strong>Save list</strong> stores your selection on this device. Narrow screens start in <strong>Cards</strong>; you can switch between Table and Cards at any time.</p>
+            <p>Prices and stock are snapshots in GBP. Check the retailer for its final price, delivery and availability. Purchases, payments, returns and refunds are handled by that retailer. Some links earn PrintProfit an affiliate commission at no extra cost to you.</p>
+          </div>
           <div class="pp-guide-intro">
             <strong>PrintProfit turns your real printing costs into a practical selling price.</strong>
             <span>Work through Your Model, Print Setup and Costs &amp; Fees from top to bottom. Optional fields can remain at zero when they do not apply.</span>
           </div>
           <div class="pp-guide-grid">
-            <article><div class="pp-guide-num">1</div><div><h3>Your Model</h3><p>Upload your sliced G-code file. Available metadata can fill in print time and material usage, while the live Print Information area shows the model details detected by PrintProfit.</p></div></article>
+            <article><div class="pp-guide-num">1</div><div><h3>Your Model</h3><p>Upload a supported model or print file. Available metadata can fill in print time and material usage. You can also enter those values yourself.</p></div></article>
             <article><div class="pp-guide-num">2</div><div><h3>Print Setup</h3><p>Choose your printer and material together. Supported resin printers automatically switch the calculator to resin mode; custom printers keep the material-type choice available.</p></div></article>
             <article><div class="pp-guide-num">3</div><div><h3>Costs &amp; Fees</h3><p>Add operating costs, selling and fulfilment details, quantity and any batch discount. Quantity above one automatically switches the results view to Batch Pricing.</p></div></article>
             <article><div class="pp-guide-num">4</div><div><h3>Results</h3><p>Review cost to make, selling price, fees, profit and margin. Target-pricing options can calculate a selling price from the margin you want to achieve.</p></div></article>
@@ -237,6 +310,10 @@ function openGuide(){
           <div class="pp-guide-section">
             <div class="pp-guide-section-title">My Projects &amp; My Materials</div>
             <p><strong>My Projects</strong> saves complete calculator setups so they can be loaded, duplicated or deleted. <strong>My Materials</strong> stores reusable filament and resin profiles and can populate the calculator when a saved material is used.</p>
+          </div>
+          <div class="pp-guide-section">
+            <div class="pp-guide-section-title">Basic &amp; Pro</div>
+            <p>The calculator, file analysis, comparison tools, manual inventory, local project saves and backup files are free. Pro adds cloud saving across devices, scanning, stock alerts, confirmed-print deductions, multi-printer runs and business tools. Pro is £2.50/month or £24/year, with a seven-day trial on your first subscription. Uploaded model files stay on their original device.</p>
           </div>
           <div class="pp-guide-section">
             <div class="pp-guide-section-title">Understanding the result</div>
@@ -298,4 +375,5 @@ function openGuide(){
 
 
 })();
+
 
