@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/build_pages.py'
+      - 'index.html'
+      - 'print-farm.js'
       - 'config/billing-config.js'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
