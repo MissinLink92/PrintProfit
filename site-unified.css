@@ -43,3 +43,9 @@ body.pp-light .pp-page-icon{background:#e8f5fa;border-color:#a3cad8;color:#087ea
 body.pp-light.pp-compare-page .insight-card strong{color:#19252d}
 body.pp-light.pp-policy-page a{color:#006d88}
 @media(max-width:760px){body.pp-guide-page .hero,body.pp-compare-page .hero{padding:25px 20px!important}body.pp-guide-page .hero .pp-page-icon,body.pp-compare-page .hero .pp-page-icon{position:static;transform:none;width:56px;height:56px;margin-bottom:16px}body.pp-guide-page .hero .pp-page-icon svg,body.pp-compare-page .hero .pp-page-icon svg{width:32px;height:32px}body.pp-policy-page main>.pp-page-icon{position:static;width:48px;height:48px;margin-bottom:15px}body.pp-policy-page main>.pp-page-icon svg{width:27px;height:27px}body.pp-policy-page main .kicker,body.pp-policy-page main>h1,body.pp-policy-page main>.lead{max-width:100%}}
+
+/* Use the supplied illustrated icon family throughout standalone pages. */
+.pp-page-icon.pp-art-icon{border:0;background-color:transparent;background-repeat:no-repeat;box-shadow:none;overflow:hidden}
+.pp-page-icon.pp-art-icon svg{display:none}
+body.pp-compare-page .wrap{width:calc(100% - clamp(24px,4vw,80px))!important;max-width:none!important}
+@media(max-width:650px){body.pp-compare-page .wrap{width:calc(100% - 20px)!important}}
