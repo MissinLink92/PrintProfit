@@ -67,3 +67,7 @@ body.pp-policy-page.pp-light code{color:#34505c}
  #ppSiteHeader .pvm-brand{width:132px;flex-basis:132px}
  #ppSiteHeader .pvm-header{padding-inline:9px}
 }
+
+/* Keep standalone navigation artwork aligned with the calculator's master icons. */
+#ppSiteHeader .pvm-icon[style*="printprofit-nav-icons"]{background-color:transparent;background-repeat:no-repeat;background-size:500% 100%;border:0;box-shadow:none;border-radius:9px}
+#ppSiteHeader .pvm-nav a[aria-current=page] .pvm-icon[style*="printprofit-nav-icons"]{color:inherit}
