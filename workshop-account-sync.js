@@ -123,7 +123,7 @@ function updateAccountUI(){
  else if(activeUser&&localImportPending)setStatus('Choose what to sync','Decide whether to copy this browser’s profiles and projects into your account.');
  else if(activeUser&&(window.PRINTPROFIT_BILLING_CONFIG?.enabled||CONFIG.projectId==='printprofit-fd30f')&&window.__ppProTier!=='pro')setStatus('Saved on this device','Cloud saving requires Pro. Downloadable backups and local saving stay free.');
  else if(activeUser)setStatus('Signed in as '+(activeUser.email||'your account'),'Your printer and material profiles and saved projects sync with your account. Uploaded 3D model files stay on this device.');
- else setStatus('Saved in this browser','Local saving is free. Pro adds cloud saving across devices; cloud sync is available as a preview until subscriptions launch.');
+ else setStatus('Saved in this browser','Local saving is free. Cloud saving across devices requires an active Pro trial or subscription.');
  document.dispatchEvent(new CustomEvent('pp-account-state-changed',{detail:{uid:activeUser?.uid||null,verified:Boolean(activeUser?.emailVerified),legalAccepted}}));
 }
 function setBusy(value){
@@ -692,7 +692,7 @@ document.addEventListener('pp-workshop-open',()=>{
  }
  setStatus('Checking account','Connecting securely to your workshop account.');
  initializeFirebase().then(()=>{
-  if(!activeUser)setStatus('Saved in this browser','Local saving is free. Pro adds cloud saving across devices; cloud sync is available as a preview until subscriptions launch.');
+  if(!activeUser)setStatus('Saved in this browser','Local saving is free. Cloud saving across devices requires an active Pro trial or subscription.');
  }).catch(error=>{
   console.warn('PrintProfit Firebase initialization failed:',error);
   setStatus('Account service unavailable','Your local profiles and projects remain available.');
