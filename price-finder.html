@@ -865,16 +865,20 @@ function renderCards(rows){
  const grid=$('cardGrid');if(!grid)return;
  grid.innerHTML=rows.map(x=>'<article class="product-card">'+
   '<input class="compare-check card-select" type="checkbox" data-compare-id="'+esc(x.id)+'" aria-label="Compare '+esc(x.name)+'" '+(selectedIds.has(String(x.id))?'checked':'')+'>'+
-  '<div class="product-card-top">'+productImage(x)+'<div><h3 translate="no">'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div></div></div>'+
+  '<div class="product-card-top">'+productImage(x)+'<div><h3 translate="no">'+esc(x.name)+'</h3><div class="card-brand">'+esc(x.brand||'')+'</div><div class="card-colour">'+colourChip(x)+'</div><div class="card-kind">'+esc(categoryInfo(x).label)+'</div></div></div>'+
   '<div class="card-meta"><div class="mini"><small>Retailer</small><strong>'+esc(x.retailer||'—')+'</strong></div><div class="mini"><small>Pack / build</small><strong>'+esc(x.pack||'—')+'</strong></div><div class="mini"><small>Availability</small><strong>'+esc(x.availability||'Check retailer')+'</strong></div><div class="mini"><small>Checked</small><strong>'+esc(formatDate(x.updated))+'</strong>'+priceCheckLabel(x)+'</div></div>'+
   '<div class="card-price"><div><strong>'+money(x.price)+'</strong><div class="card-unit">'+(x.unit!=null?money(x.unit)+'/'+categoryUnit(x):'Unit cost not tracked')+'</div></div>'+rowPriceTrend(x)+'</div>'+
   '<div class="card-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div>'+
  '</article>').join('');
 }
-function setResultView(mode){
+function setResultView(mode,savePreference=true){
  const table=$('tableViewWrap'),grid=$('cardGrid'),tb=$('tableView'),cb=$('cardView');
  const cards=mode==='cards';table.style.display=cards?'none':'';grid.classList.toggle('active',cards);tb.classList.toggle('active',!cards);cb.classList.toggle('active',cards);
- try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
+ tb.setAttribute('aria-pressed',String(!cards));cb.setAttribute('aria-pressed',String(cards));
+ // A phone's temporary Table choice must not replace the desktop preference.
+ if(savePreference && !mobileCompareView.matches){
+  try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
+ }
 }
 function render(resetPage=true){
  if(resetPage)currentListingPage=0;
@@ -1039,8 +1043,10 @@ document.addEventListener('keydown',e=>{
  if($('compareModal').classList.contains('open'))closeCompareModal();
 });
 try{window.__compareSelectedOnly=localStorage.getItem('printprofit_compare_selected_only')==='1';}catch(e){window.__compareSelectedOnly=false;}
-const savedView=(()=>{try{return localStorage.getItem('printprofit_compare_view')||'table';}catch(e){return 'table';}})();
-setResultView(savedView);
+const mobileCompareView=window.matchMedia('(max-width: 900px)');
+const savedView=(()=>{try{return localStorage.getItem('printprofit_compare_view')==='cards'?'cards':'table';}catch(e){return 'table';}})();
+setResultView(mobileCompareView.matches?'cards':savedView,false);
+mobileCompareView.addEventListener('change',event=>setResultView(event.matches?'cards':savedView,false));
 $('tableView').addEventListener('click',()=>setResultView('table'));
 $('cardView').addEventListener('click',()=>setResultView('cards'));
 $('selectedOnly').addEventListener('click',()=>{
@@ -1095,6 +1101,15 @@ body .product-card-top>div:last-child{min-width:0;padding-right:18px;overflow-wr
 
 .page-picker{display:flex;align-items:center;gap:8px}.page-picker select{width:auto;min-width:72px;padding:9px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px}.results-pagination{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.results-pagination>span{min-width:92px;text-align:center;font-size:13px;color:var(--text)}.results-pagination button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 @media(max-width:520px){.results-more{align-items:stretch;flex-direction:column}.results-pagination{justify-content:center}.results-pagination .compare-btn{width:auto;min-width:102px}}
+/* Keep every listing readable on phones and narrow installed app windows. */
+@media(max-width:900px){
+ body .card-grid.active{grid-template-columns:minmax(0,1fr)!important}
+ body .product-card{min-width:0}
+ body .product-card .mini strong{white-space:normal;overflow-wrap:anywhere}
+ body .product-card .card-actions{flex-wrap:wrap}
+ body .product-card .card-actions .link{min-width:120px}
+}
+body .product-card .card-kind{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.35}
 </style>
 <link rel="stylesheet" href="./readability.css?v=20261013-language1">
 <style id="ppDesktopCompareWidth">
