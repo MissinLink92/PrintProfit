@@ -1,10 +1,32 @@
 {
-  "checkedAt": "2026-10-26T03:25:23.694274+00:00",
+  "checkedAt": "2026-10-27T03:59:58.249288+00:00",
   "warnings": [
+    "inpost: failed; last verified 2026-10-19",
+    "royalmail-first: failed; last verified 2026-10-19",
+    "royalmail-second: failed; last verified 2026-10-19",
     "parcelforce: failed; last verified never",
+    "dpd: failed; last verified 2026-10-19",
+    "dhl: failed; last verified 2026-10-19",
     "ups: failed; last verified never",
     "fedex: failed; last verified never",
+    "etsy-transaction: failed; last verified 2026-10-19",
+    "etsy-regulatory: failed; last verified 2026-10-19",
+    "etsy-payments: failed; last verified 2026-10-19",
+    "depop: failed; last verified 2026-10-19",
+    "vinted: review-required; last verified 2026-10-19",
+    "tiktok: review-required; last verified 2026-10-19",
     "facebook: failed; last verified never",
+    "inpost: verification is older than seven days",
+    "royalmail-first: verification is older than seven days",
+    "royalmail-second: verification is older than seven days",
+    "dpd: verification is older than seven days",
+    "dhl: verification is older than seven days",
+    "etsy-transaction: verification is older than seven days",
+    "etsy-regulatory: verification is older than seven days",
+    "etsy-payments: verification is older than seven days",
+    "depop: verification is older than seven days",
+    "vinted: verification is older than seven days",
+    "tiktok: verification is older than seven days",
     "Amazon UK: no active listings",
     "Prusa Research: no active listings",
     "Ooznest: no active listings",
@@ -32,10 +54,10 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1753,
-      "verified": 1747,
+      "listed": 1740,
+      "verified": 1734,
       "categories": {
-        "filament": 1564,
+        "filament": 1551,
         "accessory": 4,
         "printer": 71,
         "resin-material": 92,
@@ -83,11 +105,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1749,
-      "verified": 1744,
+      "listed": 1762,
+      "verified": 1757,
       "categories": {
-        "printer": 523,
-        "filament": 865,
+        "printer": 531,
+        "filament": 870,
         "resin-material": 321,
         "accessory": 35,
         "equipment": 5
@@ -147,12 +169,12 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 695,
-      "verified": 692,
+      "listed": 699,
+      "verified": 676,
       "categories": {
-        "filament": 373,
-        "printer": 153,
-        "resin-material": 133,
+        "filament": 374,
+        "printer": 155,
+        "resin-material": 134,
         "accessory": 36
       }
     },
@@ -193,10 +215,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1733,
-      "verified": 1648,
+      "listed": 1737,
+      "verified": 1652,
       "categories": {
-        "filament": 1454,
+        "filament": 1458,
         "resin-material": 164,
         "printer": 60,
         "accessory": 49,
@@ -222,87 +244,9 @@
       "categories": {}
     }
   ],
-  "manualVerifications": [
-    {
-      "source": "inpost",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "royalmail-first",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "royalmail-second",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "dpd",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "Source did not provide readable pricing guidance"
-    },
-    {
-      "source": "dhl",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "Source did not provide readable pricing guidance"
-    },
-    {
-      "source": "etsy-transaction",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "etsy-regulatory",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "etsy-payments",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "depop",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "failed",
-      "automaticError": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vinted",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "review-required",
-      "automaticError": "Zero seller fee guidance changed; keep the previous value for review"
-    },
-    {
-      "source": "tiktok",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
-      "automaticStatus": "review-required",
-      "automaticError": "Expected one unambiguous rate; found 0"
-    }
-  ],
+  "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-10-23",
+    "date": "2026-10-26",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
