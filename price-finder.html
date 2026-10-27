@@ -877,6 +877,7 @@ function setResultView(mode,savePreference=true){
  tb.setAttribute('aria-pressed',String(!cards));cb.setAttribute('aria-pressed',String(cards));
  // A phone's temporary Table choice must not replace the desktop preference.
  if(savePreference && !mobileCompareView.matches){
+  savedView=mode;
   try{localStorage.setItem('printprofit_compare_view',mode);}catch(e){}
  }
 }
@@ -1044,7 +1045,7 @@ document.addEventListener('keydown',e=>{
 });
 try{window.__compareSelectedOnly=localStorage.getItem('printprofit_compare_selected_only')==='1';}catch(e){window.__compareSelectedOnly=false;}
 const mobileCompareView=window.matchMedia('(max-width: 900px)');
-const savedView=(()=>{try{return localStorage.getItem('printprofit_compare_view')==='cards'?'cards':'table';}catch(e){return 'table';}})();
+let savedView=(()=>{try{return localStorage.getItem('printprofit_compare_view')==='cards'?'cards':'table';}catch(e){return 'table';}})();
 setResultView(mobileCompareView.matches?'cards':savedView,false);
 mobileCompareView.addEventListener('change',event=>setResultView(event.matches?'cards':savedView,false));
 $('tableView').addEventListener('click',()=>setResultView('table'));
