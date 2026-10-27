@@ -13,10 +13,13 @@ const links=[
 ];
 const page=location.pathname.toLowerCase();
 const active=page.endsWith('/price-finder.html')?'compare':(page.endsWith('/guide.html')||page.endsWith('/privacy.html')||page.endsWith('/terms.html'))?'guide':(page==='/'||page.endsWith('/index.html'))?'home':'';
+const navArt={home:0,workspace:1,compare:2,guide:3,settings:4};
 const nav=links.map(item=>{
  const current=item.key===active;
- const graphic=item.icon==='account'?signInIcon:icon(item.icon);
- return '<a href="'+item.href+'" '+(current?'aria-current="page"':'')+(item.key==='account'?' class="pvm-sign-in"':'')+'><span class="pvm-icon">'+graphic+'</span><span>'+item.label+'</span></a>';
+ const graphic=item.icon==='account'?signInIcon:'';
+ const artIndex=navArt[item.key];
+ const artStyle=Number.isInteger(artIndex)?' style="background-image:url(\'./assets/printprofit-nav-icons.webp?v=1\');background-position:'+((artIndex/4)*100)+'% center"':'';
+ return '<a href="'+item.href+'" '+(current?'aria-current="page"':'')+(item.key==='account'?' class="pvm-sign-in"':'')+'><span class="pvm-icon"'+artStyle+'>'+graphic+'</span><span>'+item.label+'</span></a>';
 }).join('');
 mount.innerHTML='<header class="pvm-header">'+
  '<a class="pvm-brand" href="./index.html" aria-label="PrintProfit home"><img src="./assets/printprofit-logo-orange.svg?v=5" alt="PrintProfit"><span class="pvm-brand-fallback">PrintProfit</span></a>'+
