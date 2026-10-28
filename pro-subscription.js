@@ -12,7 +12,7 @@ function panel(){
  if(!card)return null;
  if($('ppProSubscription'))return $('ppProSubscription');
  const section=document.createElement('section');section.id='ppProSubscription';section.setAttribute('aria-labelledby','ppProTitle');
- section.innerHTML='<div class="pp-pro-heading"><h3 id="ppProTitle">PrintProfit Pro</h3><strong id="ppProBadge" class="pp-pro-badge" hidden></strong></div><p>Keep your prints, printers and materials organised. Cloud saving, scanning and stock tracking wherever you print. Local saves and backup files stay free.</p><p id="ppProDescription">'+standardOffer+'</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProPlans" hidden><h4>Choose your Pro plan</h4><p id="ppProConsentText"></p><p class="pp-pro-terms">Read the <a href="./terms.html" target="_top">subscription terms</a> before choosing a plan.</p><div class="pp-pro-options"><div class="pp-pro-option"><strong>Monthly · £2.50/month</strong><label><input type="checkbox" data-pp-consent="monthly"><span>I agree to the monthly plan and terms</span></label><button type="button" data-pp-billing="monthly">Start monthly Pro</button></div><div class="pp-pro-option"><strong>Annual · £24/year</strong><label><input type="checkbox" data-pp-consent="annual"><span>I agree to the annual plan and terms</span></label><button type="button" data-pp-billing="annual">Start annual Pro</button></div></div></div><div id="ppProActions" hidden><button type="button" id="ppProManage" data-pp-billing="portal">Cancel subscription</button><p id="ppProCancelHelp">Opens Stripe’s secure billing page, where you can confirm cancellation.</p></div>';
+ section.innerHTML='<div class="pp-pro-heading"><h3 id="ppProTitle">PrintProfit Pro</h3><strong id="ppProBadge" class="pp-pro-badge" hidden></strong></div><p>Keep your prints, printers and materials organised. Cloud saving, scanning and stock tracking wherever you print. Local saves and backup files stay free.</p><p id="ppProDescription">'+standardOffer+'</p><p id="ppProStatus" role="status" aria-live="polite">Sign in with a verified account to see your plan.</p><div id="ppProEntry" class="pp-pro-entry" hidden><button type="button" data-pp-pro-entry="create">Create account to start Pro</button><button type="button" data-pp-pro-entry="sign-in">Already have an account? Sign in</button></div><div id="ppProPlans" hidden><h4>Choose your Pro plan</h4><p id="ppProConsentText"></p><p class="pp-pro-terms">Read the <a href="./terms.html" target="_top">subscription terms</a> before choosing a plan.</p><div class="pp-pro-options"><div class="pp-pro-option"><strong>Monthly · £2.50/month</strong><label><input type="checkbox" data-pp-consent="monthly"><span>I agree to the monthly plan and terms</span></label><button type="button" data-pp-billing="monthly">Start monthly Pro</button></div><div class="pp-pro-option"><strong>Annual · £24/year</strong><label><input type="checkbox" data-pp-consent="annual"><span>I agree to the annual plan and terms</span></label><button type="button" data-pp-billing="annual">Start annual Pro</button></div></div></div><div id="ppProActions" hidden><button type="button" id="ppProManage" data-pp-billing="portal">Cancel subscription</button><p id="ppProCancelHelp">Opens Stripe’s secure billing page, where you can confirm cancellation.</p></div>';
  const style=document.createElement('style');style.textContent=`
  #ppProSubscription{width:100%;margin-top:14px;padding:20px;border:1px solid #517180;border-radius:10px;background:#0c222d;color:#eaf4f7}
  #ppProSubscription .pp-pro-heading{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
@@ -30,12 +30,15 @@ function panel(){
  #ppProPlans .pp-pro-option label{display:inline-flex!important;width:auto!important;max-width:100%;align-items:flex-start;gap:8px;font-size:13px;line-height:1.5;cursor:pointer}
  #ppProPlans input[type="checkbox"]{appearance:auto!important;position:static!important;display:inline-block!important;flex:0 0 16px!important;width:16px!important;min-width:16px!important;max-width:16px!important;height:16px!important;min-height:16px!important;max-height:16px!important;margin:2px 0 0!important;padding:0!important;transform:none!important;box-shadow:none!important;accent-color:#ff7800}
  #ppProSubscription button{padding:11px 15px;border:1px solid #ff7800;border-radius:8px;background:#ff7800;color:white;font-weight:700;cursor:pointer}
+ #ppProEntry{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+ #ppProEntry [data-pp-pro-entry="sign-in"]{background:transparent;color:#ffd0a2}
  #ppProSubscription button:disabled{opacity:.5;cursor:wait}
  #ppProActions{margin-top:18px;padding-top:16px;border-top:1px solid #517180}
  #ppProActions p{margin:8px 0 0;font-size:12px}
  #ppProSubscription a{color:#75d8f2}
- #ppProBadge[hidden],#ppProPlans[hidden],#ppProActions[hidden]{display:none!important}
+ #ppProBadge[hidden],#ppProEntry[hidden],#ppProPlans[hidden],#ppProActions[hidden]{display:none!important}
  body[data-pp-theme="light"] #ppProSubscription{background:#fff;color:#19252d}
+ body[data-pp-theme="light"] #ppProEntry [data-pp-pro-entry="sign-in"]{color:#874200}
  body[data-pp-theme="light"] #ppProPlans .pp-pro-option{border-color:#b1c9d1}
  `;
  document.head.appendChild(style);card.append(section);return section;
@@ -57,8 +60,8 @@ async function refresh(force=false){
  try{context=await window.__ppBillingAccountContext()}catch{context=null;}
  if(token!==generation)return;
  const user=context?.user,ready=Boolean(user?.emailVerified&&context.legalAccepted);
- $('ppProPlans').hidden=true;$('ppProActions').hidden=true;$('ppProBadge').hidden=true;
- if(!ready){owner='';accessChanged('basic');text('ppProDescription',standardOffer);text('ppProStatus',user?'Verify your email and accept the current account terms to start Pro.':'Sign in with a verified account to start Pro.');badge('7 days free','offer');return;}
+ $('ppProEntry').hidden=true;$('ppProPlans').hidden=true;$('ppProActions').hidden=true;$('ppProBadge').hidden=true;
+ if(!ready){owner='';accessChanged('basic');text('ppProDescription',standardOffer);text('ppProStatus',user?'Verify your email and accept the current account terms to start Pro.':'Create an account or sign in to start Pro.');$('ppProEntry').hidden=Boolean(user);badge('7 days free','offer');return;}
  owner=user.uid;text('ppProStatus','Checking PrintProfit Pro access…');
  try{
   const access=await invoke('getProAccess');
@@ -164,6 +167,15 @@ document.addEventListener('pp-account-state-changed',event=>{
  const uid=event.detail?.uid||'';
  if(uid!==owner||!event.detail?.legalAccepted)refresh(true);
 });
+document.addEventListener('click',event=>{
+ const button=event.target.closest('#ppProEntry [data-pp-pro-entry]');if(!button)return;
+ event.preventDefault();
+ const email=$('ppAccountEmail');
+ if(!email)return;
+ email.scrollIntoView({behavior:'smooth',block:'center'});
+ email.focus({preventScroll:true});
+ text('ppProStatus',button.dataset.ppProEntry==='create'?'Enter your email and password above, accept both account boxes, then choose Create account. Verify your email before starting Pro.':'Enter your account email and password above, then choose Sign in.');
+});
 document.addEventListener('click',async event=>{
  const button=event.target.closest('#ppProSubscription [data-pp-billing]');if(!button)return;
  event.preventDefault();
@@ -179,3 +191,4 @@ document.addEventListener('click',async event=>{
 });
 if(document.querySelector('#ppMaterialsPanel.open'))refresh(true);
 })();
+
