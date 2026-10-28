@@ -76,6 +76,39 @@ body[data-pp-theme="light"] #ppVisualMaster .pvm-workspace-kicker,body[data-pp-t
 body[data-pp-theme="light"] #ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{color:#18323f!important;text-shadow:none!important}
 body[data-pp-theme="light"] #ppVisualMaster .pvm-workspace-cta:focus-visible{outline-color:#006d87}
 @media(max-width:650px){#ppVisualMaster .pvm-copy{padding-top:20px!important;padding-bottom:20px!important}#ppVisualMaster .pvm-workspace-spotlight{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:20px}#ppVisualMaster .pvm-workspace-copy p{max-width:100%}#ppVisualMaster .pvm-hero-tagline>span+span::before{display:none}#ppVisualMaster .pvm-workspace-cta{width:100%}#ppVisualMaster .pvm-action-stack{gap:18px!important}#ppVisualMaster .pvm-action-stack>.pvm-hero-tagline{gap:7px 12px!important;font-size:17px!important}#ppVisualMaster .pvm-workspace-copy h2{font-size:25px}}
+/* Photographic header: keep real, translatable text and the existing Workspace action. */
+body #ppVisualMaster .pvm-hero{height:auto!important;min-height:620px!important;padding:48px clamp(24px,4vw,68px)!important;display:flex!important;align-items:center!important;background:#031725!important}
+body #ppVisualMaster .pvm-hero .pvm-bg{filter:none!important;object-position:center!important}
+body #ppVisualMaster .pvm-hero .pvm-overlay{background:linear-gradient(90deg,#03172520,transparent 70%)!important}
+body #ppVisualMaster .pvm-hero .pvm-copy{width:52%!important;max-width:760px!important;padding:0!important}
+body #ppVisualMaster .pvm-hero .pvm-copy h1{font-size:clamp(32px,3.5vw,64px)!important;line-height:1.14!important;color:#ffe1ab!important;text-shadow:none!important}
+body #ppVisualMaster .pvm-hero .pvm-copy h1 strong{color:#b0f4ff!important}
+body #ppVisualMaster .pvm-hero .pvm-copy h1 .pvm-cost-accent{color:#ffb65c!important}
+body #ppVisualMaster .pvm-hero .pvm-copy h1 .pvm-charge-accent{color:#54deef!important}
+body #ppVisualMaster .pvm-hero .pvm-copy>p{color:#cadce5!important;max-width:590px!important;font-size:clamp(15px,1.2vw,19px)!important}
+body #ppVisualMaster .pvm-hero .pvm-copy>.pvm-kicker,body #ppVisualMaster .pvm-hero .pvm-workspace-kicker{color:#79dfeb!important}
+body #ppVisualMaster .pvm-hero .pvm-hero-tagline>span:nth-child(1){color:#ffbd6b!important}
+body #ppVisualMaster .pvm-hero .pvm-hero-tagline>span:nth-child(2){color:#6be4f4!important}
+body #ppVisualMaster .pvm-hero .pvm-hero-tagline>span:nth-child(3){color:#8ee3ac!important}
+body #ppVisualMaster .pvm-hero .pvm-workspace-spotlight{grid-template-columns:1fr!important;gap:18px!important;border-color:#8ab4c340!important}
+body #ppVisualMaster .pvm-hero .pvm-workspace-copy h2{color:#f5f9fb!important}
+body #ppVisualMaster .pvm-hero .pvm-workspace-copy p{color:#cadce5!important;max-width:100%!important}
+body #ppVisualMaster .pvm-hero .pvm-workspace-spotlight .pvm-workspace-cta{justify-self:start!important;width:auto!important;background:#031925d9!important;color:#54deef!important;border:2px solid #36d9ed!important;box-shadow:none!important}
+body #ppVisualMaster .pvm-hero .pvm-workspace-spotlight .pvm-workspace-cta svg{stroke:#54deef!important}
+@media(min-width:1800px){body #ppVisualMaster .pvm-hero{min-height:720px!important}}
+@media(max-width:900px){
+body #ppVisualMaster .pvm-hero{min-height:600px!important;padding:32px 24px!important}
+body #ppVisualMaster .pvm-hero .pvm-copy{width:70%!important}
+body #ppVisualMaster .pvm-hero .pvm-overlay{background:linear-gradient(90deg,#031725ed 0%,#031725b8 55%,#03172520 100%)!important}
+}
+@media(max-width:600px){
+body #ppVisualMaster .pvm-hero{min-height:0!important;padding:32px 20px 210px!important;align-items:flex-start!important}
+body #ppVisualMaster .pvm-hero .pvm-copy{width:100%!important}
+body #ppVisualMaster .pvm-hero .pvm-bg{object-position:72% bottom!important}
+body #ppVisualMaster .pvm-hero .pvm-overlay{background:linear-gradient(180deg,#031725fa 0%,#031725ed 55%,#031725ad 73%,#03172500 100%)!important}
+body #ppVisualMaster .pvm-hero .pvm-copy h1{font-size:clamp(29px,7vw,40px)!important}
+}
+
 `;
   (document.head||document.documentElement).appendChild(style);
 }
