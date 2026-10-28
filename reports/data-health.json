@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T03:59:58.249288+00:00",
+  "checkedAt": "2026-10-28T04:02:29.272915+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-19",
     "royalmail-first: failed; last verified 2026-10-19",
@@ -9,12 +9,12 @@
     "dhl: failed; last verified 2026-10-19",
     "ups: failed; last verified never",
     "fedex: failed; last verified never",
-    "etsy-transaction: failed; last verified 2026-10-19",
-    "etsy-regulatory: failed; last verified 2026-10-19",
-    "etsy-payments: failed; last verified 2026-10-19",
+    "etsy-transaction: review-required; last verified 2026-10-19",
+    "etsy-regulatory: review-required; last verified 2026-10-19",
+    "etsy-payments: review-required; last verified 2026-10-19",
     "depop: failed; last verified 2026-10-19",
     "vinted: review-required; last verified 2026-10-19",
-    "tiktok: review-required; last verified 2026-10-19",
+    "tiktok: failed; last verified 2026-10-19",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -75,10 +75,10 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 632,
-      "verified": 629,
+      "listed": 631,
+      "verified": 628,
       "categories": {
-        "filament": 541,
+        "filament": 540,
         "printer": 40,
         "resin-material": 46,
         "equipment": 3,
@@ -105,11 +105,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1762,
-      "verified": 1757,
+      "listed": 1911,
+      "verified": 1906,
       "categories": {
-        "printer": 531,
-        "filament": 870,
+        "printer": 628,
+        "filament": 922,
         "resin-material": 321,
         "accessory": 35,
         "equipment": 5
@@ -169,13 +169,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 699,
-      "verified": 676,
+      "listed": 717,
+      "verified": 686,
       "categories": {
-        "filament": 374,
+        "filament": 385,
         "printer": 155,
-        "resin-material": 134,
-        "accessory": 36
+        "resin-material": 136,
+        "accessory": 41
       }
     },
     {
@@ -215,13 +215,13 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1737,
-      "verified": 1652,
+      "listed": 1752,
+      "verified": 1622,
       "categories": {
-        "filament": 1458,
+        "filament": 1459,
         "resin-material": 164,
         "printer": 60,
-        "accessory": 49,
+        "accessory": 63,
         "equipment": 6
       }
     },
@@ -246,7 +246,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },

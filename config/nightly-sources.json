@@ -73510,161 +73510,184 @@
       "variantId": 54472762327353,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/f0de2b1553405595f6e535a3099d19fb_89895f01-44c3-4cfa-92ab-06adde8a7f41.jpg?v=1788772769",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Peach Pink (#FFC196) / 20KG"
+      "expectedVariantTitle": "Peach Pink (#FFC196) / 20KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-dbb55eca9c67d403e312": {
       "priceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo",
       "variantId": 67864308416831,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/7_71fefac5-f554-4248-b5ef-a8e8d4cd915f.png?v=1792994821",
       "expectedProductTitle": "Multi-Color SILK 5KG Filament Bundle, 1KG per Roll, 5 Packs Bundle",
-      "expectedVariantTitle": "Black+Blue*1+Black+Gold+Purple*1+Orange+Blue+green*1+Blue+Green+Purple*1+Red+Yellow+Green+Black*1"
+      "expectedVariantTitle": "Black+Blue*1+Black+Gold+Purple*1+Orange+Blue+green*1+Blue+Green+Purple*1+Red+Yellow+Green+Black*1",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo"
     },
     "candidate-afe15afab5c55ffcda1b": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
       "variantId": 54472658616633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Cream.jpg?v=1788772966",
       "expectedProductTitle": "PETG 10-100kg Deals",
-      "expectedVariantTitle": "Cream (#F9DFB9) / 10KG"
+      "expectedVariantTitle": "Cream (#F9DFB9) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer"
     },
     "candidate-f4e8b991c039cc338549": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
       "variantId": 67944809693465,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
       "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
-      "expectedVariantTitle": "Black"
+      "expectedVariantTitle": "Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament"
     },
     "candidate-e341cb60fef133005d1d": {
       "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
       "variantId": 51222962962713,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Translucent-5KG_d760a972-21cb-4858-b717-5daf7ea3bc73.jpg?v=1756798042",
       "expectedProductTitle": "TPU 95A Filament 10 kg",
-      "expectedVariantTitle": "Blue / Translucent"
+      "expectedVariantTitle": "Blue / Translucent",
+      "imageSourceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg"
     },
     "candidate-0e74b6002af40fed1845": {
       "priceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo",
       "variantId": 67864312152383,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/7_71fefac5-f554-4248-b5ef-a8e8d4cd915f.png?v=1792994821",
       "expectedProductTitle": "Multi-Color SILK 5KG Filament Bundle, 1KG per Roll, 5 Packs Bundle",
-      "expectedVariantTitle": "Black+Blue*1+Blue+Green+Purple*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1"
+      "expectedVariantTitle": "Black+Blue*1+Blue+Green+Purple*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo"
     },
     "candidate-a29cbf44cfc8a8c2ee20": {
       "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
       "variantId": 51216401367321,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_01363f28-7b62-4334-8811-2e87e67f09d5.jpg?v=1756798089",
       "expectedProductTitle": "PLA Basic Filament 10 kg",
-      "expectedVariantTitle": "Refill / Red"
+      "expectedVariantTitle": "Refill / Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg"
     },
     "candidate-f5ef88c42a35ef13ac98": {
       "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
       "variantId": 51235532800281,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_01363f28-7b62-4334-8811-2e87e67f09d5.jpg?v=1756798089",
       "expectedProductTitle": "PLA Basic Filament 5 kg",
-      "expectedVariantTitle": "Refill / Red"
+      "expectedVariantTitle": "Refill / Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg"
     },
     "candidate-e2152fbc851c9019fea6": {
       "priceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo",
       "variantId": 67864313626943,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/9_fb449a9d-fda4-468a-a4f7-01436e73dcf9.png?v=1792999781",
       "expectedProductTitle": "Multi-Color SILK 5KG Filament Bundle, 1KG per Roll, 5 Packs Bundle",
-      "expectedVariantTitle": "Black+Gold+Purple*1+Blue+Green+Purple*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1"
+      "expectedVariantTitle": "Black+Gold+Purple*1+Blue+Green+Purple*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo"
     },
     "candidate-292c29d535e154709183": {
       "priceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo",
       "variantId": 67864314446143,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/10_bd70489d-aa24-4583-9eb0-7307ae209ede.png?v=1792999781",
       "expectedProductTitle": "Multi-Color SILK 5KG Filament Bundle, 1KG per Roll, 5 Packs Bundle",
-      "expectedVariantTitle": "Black+Gold*1+Black+Blue*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1"
+      "expectedVariantTitle": "Black+Gold*1+Black+Blue*1+Orange+Blue+Green*1+Black+Grey+Red+Yellow*1+Red+Yellow+Green+Black*1",
+      "imageSourceUrl": "https://uk.store.sunlu.com/products/multi-color-silk-filamentdual-color-tri-color-1kg-5-combo"
     },
     "candidate-7339aa5a0330bb3b5fe9": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
       "variantId": 52732002992409,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
       "expectedProductTitle": "Centauri 2 + 4 kg PLA",
-      "expectedVariantTitle": "PLA / Wood Color"
+      "expectedVariantTitle": "PLA / Wood Color",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle"
     },
     "candidate-06b64ce2aedb7a163ac0": {
       "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
       "variantId": 54472771895609,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/dcf787fa890f16bdb39c6a41c3665602.png?v=1788772929",
       "expectedProductTitle": "PLA Basic",
-      "expectedVariantTitle": "Light Grey (#DAD9DB) / 1KG"
+      "expectedVariantTitle": "Light Grey (#DAD9DB) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/pla-filament"
     },
     "candidate-5801865bea096bf422d7": {
       "priceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer",
       "variantId": 54505232630073,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/42e32d759200ac8fb1c1ef3213e11418_4c3f4334-093a-4a3d-94c8-8449c02b1ab3.jpg?v=1790073149",
       "expectedProductTitle": "PLA High Speed 10-100kg Deals",
-      "expectedVariantTitle": "Dazzling Blue (#3E55AB) / 20KG"
+      "expectedVariantTitle": "Dazzling Blue (#3E55AB) / 20KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer"
     },
     "candidate-eb54495077e19fa6fe53": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976416751897,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Black / Yellow / Yellow"
+      "expectedVariantTitle": "Black / Yellow / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-e69567b26517cadf0cac": {
       "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-pro-2-sale-for-resin-3d-printer",
       "variantId": 54472584888633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Clear_edc0fe0f-fa60-4bf4-bd94-fbfac511fd90.jpg?v=1788772963",
       "expectedProductTitle": "ABS-Like Resin Pro 2 10-100kg Deals",
-      "expectedVariantTitle": "Clear / 10KG"
+      "expectedVariantTitle": "Clear / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-pro-2-sale-for-resin-3d-printer"
     },
     "candidate-d1ec2ea3faf847a2d8ce": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974454309145,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Black / Grey / Orange"
+      "expectedVariantTitle": "Black / Grey / Orange",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-772a6a4127caefdcd6c9": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973719060761,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Green Red / Silk White / Black"
+      "expectedVariantTitle": "Silk Green Red / Silk White / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-2f24a965596b5ca50770": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876582486297,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Pink / Carbon Fiber Red"
+      "expectedVariantTitle": "Pink / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-b4338abf83818df20926": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579951182105,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Pink / Carbon Fiber Red"
+      "expectedVariantTitle": "Pink / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-f5480f0f8a281215ac65": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588483150105,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Pink / Carbon Fiber Grey"
+      "expectedVariantTitle": "Pink / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-ff92671276d3334255e3": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580006756633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Pink / Carbon Fiber Grey"
+      "expectedVariantTitle": "Pink / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-aec938783c6105e89c9b": {
       "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
       "variantId": 51969435533593,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
       "expectedProductTitle": "Neptune 4 All-in-One Bundle",
-      "expectedVariantTitle": "PLA / Translucent"
+      "expectedVariantTitle": "PLA / Translucent",
+      "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle"
     },
     "candidate-cfc57ab5374c2974de01": {
       "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match",
       "variantId": 54509896401209,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/30a61a5879357eaa7e46fbcc54b10287.png?v=1788772929",
       "expectedProductTitle": "PLA Basic Mix & Match",
-      "expectedVariantTitle": "Gold (#FFB81C) / 1KG"
+      "expectedVariantTitle": "Gold (#FFB81C) / 1KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/pla-basic-mix-match"
     },
     "candidate-1c4aae59d7851c60edde": {
       "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
@@ -73678,7 +73701,1380 @@
       "variantId": 54472808268089,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1MC_PLA_Metal_4_-50_Free_PLA_2_dc6c9372-d086-4124-812c-1fc611970e60.jpg?v=1788772807",
       "expectedProductTitle": "Anycubic Kobra S1 Max",
-      "expectedVariantTitle": "Kobra S1 Max Combo + ACE 2 Pro*1 (8 Colors) / +PLA Metal*4"
+      "expectedVariantTitle": "Kobra S1 Max Combo + ACE 2 Pro*1 (8 Colors) / +PLA Metal*4",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max"
+    },
+    "candidate-c7c3ae111ae562400486": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472762097977,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Clear_c46f4505-a5a2-4999-8543-6fd94748400b.png?v=1788772935",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Clear / 50KG"
+    },
+    "candidate-ceb2efa69d25acfc0b34": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877488329023,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Ceramic_White_07618488-c90d-4d54-87c4-7eab721d1d1b.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Ceremic White"
+    },
+    "candidate-ebc2e5a3cd40efeb8b5c": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "variantId": 67850972922169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PETG.jpg?v=1788773000",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2",
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PETG"
+    },
+    "candidate-ad55140d9e4991acd8db": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944810152217,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Chestnut Black"
+    },
+    "candidate-f13017ad519157a2786e": {
+      "priceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll",
+      "variantId": 50149803884863,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_PLUS_Magenta.jpg?v=1778231365",
+      "expectedProductTitle": "PLA+(PLA Plus) Filament 1KG",
+      "expectedVariantTitle": "PLA+ FIlament with Spool 1KG / PLA+ Magenta"
+    },
+    "candidate-80420869e446a7356fe2": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "variantId": 67857501880633,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C-4_Colors_4KG_PLA_High_Speed_940395e3-36f6-4d48-8b03-34cbd1d7ae33.jpg?v=1788773010",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
+      "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 4KG PLA High Speed"
+    },
+    "candidate-b1abbf86921b9082fad9": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962897177,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Grey-5KG_063780e3-02c7-4e54-9fbe-59aa2d063909.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Red / Grey"
+    },
+    "candidate-4ac4cd0bc117f657da95": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877526208831,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Midnight_Black_1fda7b8e-f794-4952-a883-51f01fcaa7aa.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Midnight"
+    },
+    "candidate-842c753270e50cb437d9": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877536235839,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Roasted_Chestnut_be4b3551-4b3b-4746-9fee-44958b335c59.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Roasted Chestnut Black"
+    },
+    "candidate-4e1c4695f2d3c90f9185": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877541249343,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Vivid_Yellow_8c833c96-b7f8-4db7-bee8-c2b6d5e08002.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Vivid Yellow"
+    },
+    "candidate-861d9d726a8b4360a8f1": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877549605183,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Lavender_Purple_983a1a3b-65ea-4b4f-bf10-b88865b19ab0.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Lavender Purple"
+    },
+    "candidate-7b15cdbf2a7e663f2fa6": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-4-kg-basic-colors-filament-bundle",
+      "variantId": 52732003025177,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2_4kgPLA-CF_c0118100-b2ee-49a0-b623-3e0e5c35f2b9.jpg?v=1789959108",
+      "expectedProductTitle": "Centauri 2 + 4 kg PLA",
+      "expectedVariantTitle": "PLA / Brown"
+    },
+    "candidate-093ddd0fa2673e9904e3": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877555667263,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Magenta_cdad7f5e-6aa1-4220-8083-7435c2bcd900.jpg?v=1793095243",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Magenta"
+    },
+    "candidate-eb9185e6f09c5cc252a0": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877566579007,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Olive_Green_d8d0cd54-b73d-44ca-85df-04ef1841ebd4.jpg?v=1793095527",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Olive Green"
+    },
+    "candidate-9cdc577fe86f4637dc45": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51216401531161,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_9a53897f-6191-4b9e-813f-5c2cf571e51f.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Yellow"
+    },
+    "candidate-f7beeed55802e94a16c8": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 51235532833049,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_9a53897f-6191-4b9e-813f-5c2cf571e51f.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Yellow"
+    },
+    "candidate-62542492502d568e6955": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877577294143,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Coffee_Brown_b372abe6-782e-45ec-8f5f-a36d7487b7f1.jpg?v=1793095242",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Coffee Brown"
+    },
+    "candidate-a8ddaf2aac58b7518c9f": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877664162111,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Strawberry_Jam_New_Transparent_PLA_2a3b6a54-b880-4c8a-bd27-256516c74a66.jpg?v=1793095639",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Strawberry Jam"
+    },
+    "candidate-8352b0be89f426862d48": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417177881,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Yellow / Dark Blue"
+    },
+    "candidate-d8aff2e9a196cd5a4dd6": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52973849837849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Black"
+    },
+    "candidate-9929ef38ab6f91cda35d": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877665931583,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Orange_Juice_New_Transparent_PLA_0056f66b-cb39-4fa8-8e3a-59fa86229947.jpg?v=1793095639",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Orange Juice"
+    },
+    "candidate-34c20ecb0dd3dae613da": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973723844889,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Gold / Grey"
+    },
+    "candidate-ab4ce36f8eb0a5981b0f": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582846745,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Grey"
+    },
+    "candidate-2dfaae5489c72edd07d7": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877667406143,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Grape_Jelly_New_Transparent_PLA_56896071-a591-4443-8b81-435829155ed8.jpg?v=1793095639",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Grape Jelly"
+    },
+    "candidate-0da960604972b00583d5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951608089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Grey"
+    },
+    "candidate-a9d52ffd24efa427f4d2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483576089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Black"
+    },
+    "candidate-c0c6b5fdfe0de00ba96c": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877669241151,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Mint_IceNew_Transparent_PLA_7a0fe047-69a4-4e46-9108-5687f581ef0d.jpg?v=1793095639",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Mint Ice Transparent"
+    },
+    "candidate-62b6c2b302e190f803f2": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52440138252569,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Black"
+    },
+    "candidate-257ef37e7a2254209d00": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877671633215,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Ocean_Haze_New_Transparent_PLA_94546252-4966-432a-9728-e9dca036c4c0.jpg?v=1793095639",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Ocean Haze"
+    },
+    "candidate-c8f3e89cf47f99d95049": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-pla-pla-2-0-refill-filament-compatible-with-sunlu-third-generation-reusable-spool-bambu-lab-reusable-spool",
+      "variantId": 67877678678335,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Mist_Black_New_Transparent_PLA_81780044-d8a6-4395-aec7-d1d078e1da04.jpg?v=1793096210",
+      "expectedProductTitle": "SUNLU Refill Filament 1KG, Refill Freely, No Spool Waste, Compatible with 2026 SUNLU Third-Generation Reusable Spool & Bambu Lab Reusable Spool",
+      "expectedVariantTitle": "PLA / Mist Black Transparent"
+    },
+    "candidate-03049fd89bc9d05876d4": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 51969435336985,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA / Dark Blue"
+    },
+    "candidate-24ff3e020ea41ddf488f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
+      "variantId": 54472771928377,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/990568209ebd2db0fc21589181cb3d4a.png?v=1788772929",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Texture Red (#EF3340) / 1KG"
+    },
+    "candidate-b51a51187db1b4844a35": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472808464697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1MC_16_PLA_Silk_Dual-Color_4_-50_Free_PLA_2_ceff3456-e083-4dbb-8965-3c41102f61a8.jpg?v=1788772807",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max Combo + ACE 2 Pro*3 (16 Colors) / +PLA Silk Dual-Color*4"
+    },
+    "candidate-3513c5d034311d7325f4": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944810184985,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Midnight Black"
+    },
+    "candidate-406a5d61bf62d063ad71": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51217175183641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Black-5KG_c4ce0cb4-388d-494d-b73c-af6f08c65fcb.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / Black"
+    },
+    "candidate-14bbcd15bd6aceab7fc7": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51914548019481,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_cf91643b-e9e8-4ae8-b3db-aea8ec2dde32.jpg?v=1786695520",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Purple"
+    },
+    "candidate-f28fb44e16abb1c67ecf": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993346765081,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_cf91643b-e9e8-4ae8-b3db-aea8ec2dde32.jpg?v=1786695520",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Purple"
+    },
+    "candidate-96b206d61c871f991f46": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417210649,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Yellow / Pink"
+    },
+    "candidate-6e24b8fcf0f9cd4b1346": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454702361,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / White"
+    },
+    "candidate-b24c7228456450877180": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973723877657,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Gold / White"
+    },
+    "candidate-82cb51ed855ba48c0e62": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582879513,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Red"
+    },
+    "candidate-9885812f496ff465d489": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951640857,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Red"
+    },
+    "candidate-ba4d93857b926b42a676": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483608857,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Grey"
+    },
+    "candidate-4af2212a90bd5949c371": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007149849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Grey"
+    },
+    "candidate-0dca0434dada8032514a": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "variantId": 67850972954937,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PLA_High_Speed_72fd8111-c4d2-472e-b821-d5699eefbeb3.jpg?v=1788773000",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2",
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA High Speed"
+    },
+    "candidate-d950f45f0d8fa76254f3": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082176793,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Pink"
+    },
+    "candidate-bf8a0b30e1a05919cd12": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "variantId": 67857501913401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C-4_Colors_4KG_PLA.jpg?v=1788773010",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
+      "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 4KG PLA Special"
+    },
+    "candidate-be8f8851d604f06d3974": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472659042617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/ForestGreen_2e6848bf-f297-462c-bbc0-d995cc9ccedf.jpg?v=1788772967",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Forest Green (#43523B) / 20KG"
+    },
+    "candidate-a4e0048aa86aef608fd0": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809726233,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "White"
+    },
+    "candidate-b5e15a762c39aa8b15e2": {
+      "priceUrl": "https://uk.anycubic3d.com/products/high-speed-pla-sale-for-filament-3d-printer",
+      "variantId": 54508418728249,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/e2724757d31e1d06a62247decbb51833_3732e5eb-0555-4bb8-b8be-95e413157c86.jpg?v=1790073155",
+      "expectedProductTitle": "PLA High Speed 10-100kg Deals",
+      "expectedVariantTitle": "Vibrant Yellow (#FDDB27) / 20KG"
+    },
+    "candidate-97c896d9bffb94475c4c": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962929945,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-White-5KG_7aa8fd75-7561-4872-8f85-94338207e523.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Blue / White"
+    },
+    "candidate-29881368916ceef1a602": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51914548052249,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_03dd58e0-6ac3-4946-bb92-2e4bd19950d7.jpg?v=1786695520",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Cocoa Brown"
+    },
+    "candidate-a53aa1a4380a6316fee6": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993346797849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_03dd58e0-6ac3-4946-bb92-2e4bd19950d7.jpg?v=1786695520",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Cocoa Brown"
+    },
+    "candidate-1b686aa1f6731a725109": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417243417,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Dark Blue / Yellow"
+    },
+    "candidate-dc90a057cc78be217002": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454735129,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Grey"
+    },
+    "candidate-ed88d20ba52c2ced8ba0": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973723910425,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Gold / Black"
+    },
+    "candidate-b94a18fb9764920b1e54": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582912281,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Blue"
+    },
+    "candidate-2801ec3c436876145c77": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-filament",
+      "variantId": 54472644067641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/a607d88492630a4fc0e1169570fcd150.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic",
+      "expectedVariantTitle": "Red (#CE3845) / 1KG"
+    },
+    "candidate-99b1d1d949f02d5e9d8e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951673625,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Blue"
+    },
+    "candidate-b6935e91bf4e74a153bb": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483641625,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Red"
+    },
+    "candidate-0128e68c197e8ec01120": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007182617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Red"
+    },
+    "candidate-361f7a05859739dfde04": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 51969435468057,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA / Pink"
+    },
+    "candidate-666dfb15304b6e76463c": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
+      "variantId": 54472854438201,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Kobra_3_Max_V2_Combo_4_colors.jpg?v=1788773010",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
+      "expectedVariantTitle": "Kobra 3 Max V2 Combo (4 colors) / None"
+    },
+    "candidate-ff7d2a09edb5186e5091": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472808300857,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1MC_16_Free_PLA_2_87f4063b-1a5d-4e70-a84a-c6bebeaa70dc.jpg?v=1788772807",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max Combo + ACE 2 Pro*3 (16 Colors) / None"
+    },
+    "candidate-2ca5260558d370b03d69": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809759001,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Grey"
+    },
+    "candidate-57b3ecf903bc44ae2028": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962176281,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Translucent-5KG_d760a972-21cb-4858-b717-5daf7ea3bc73.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Black / Translucent"
+    },
+    "candidate-942a8b5c31510fcc4941": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51216402219289,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLA_Basic_1KG_c6fbe483-8e09-424c-a351-2253cd4f6e74.jpg?v=1756798088",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Hot Pink"
+    },
+    "candidate-755d30ccb291698b33d9": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 51235532964121,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1111_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Hot Pink"
+    },
+    "candidate-b107de039a76e039b038": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417276185,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Dark Blue / Dark Blue"
+    },
+    "candidate-c18637407fc3ea423789": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454767897,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Blue"
+    },
+    "candidate-174da96b49a4b275a80e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973723975961,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk White / Grey"
+    },
+    "candidate-c1c1bf3b863c7f65a0f1": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582945049,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Green"
+    },
+    "candidate-4c5dcaa10703a3ea67bf": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951706393,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Green"
+    },
+    "candidate-f36a59f09987e639b345": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483674393,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Blue"
+    },
+    "candidate-f89bcae29f0bb0597ad7": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007215385,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Blue"
+    },
+    "candidate-454ac54763246f98e4b8": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082209561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Purple"
+    },
+    "candidate-d91634ee167498c262a2": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809791769,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Green"
+    },
+    "candidate-20151d6f70d4d17dec36": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763212089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/3980447df4f7e8b9a2bed5704ee6ef83_7e9185de-45b9-43e0-b446-f77931651f2c.jpg?v=1788772766",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Magenta (#CF4F80) / 10KG"
+    },
+    "candidate-282743ff2ec6b1c99cb7": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962241817,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Blue-5KG_f349d47c-9ca6-4215-8aba-e025e4144ef2.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Black / Blue"
+    },
+    "candidate-0578d20306c4f8b1a839": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "variantId": 67850972987705,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PLA.jpg?v=1788773000",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2",
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA+"
+    },
+    "candidate-06e4c638c527283e9f60": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "variantId": 67857501946169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_8KG_Filament.jpg?v=1788773001",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
+      "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 8KG Filaments"
+    },
+    "candidate-9601707d4ce9e697ea83": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51914548085017,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_bde3b998-947e-4767-8d99-41f775d20f67.jpg?v=1766458893",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Hot Pink"
+    },
+    "candidate-0001b56c67650c8842e3": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993346830617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_9ba028a7-8b7e-42d2-8b0c-465913957e9d.jpg?v=1786695521",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Hot Pink"
+    },
+    "candidate-2a1699acf19f47141f20": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417308953,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Dark Blue / Pink"
+    },
+    "candidate-4f5bb31dd766a1e60285": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454800665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Red"
+    },
+    "candidate-4be1f700bafc4062e116": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973724008729,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk White / White"
+    },
+    "candidate-91fad168bcaf4ceb9f46": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582977817,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Purple"
+    },
+    "candidate-ddb097f71059b6066777": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951739161,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Purple"
+    },
+    "candidate-b9c7c379e54be01a5c35": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483707161,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Green"
+    },
+    "candidate-a16e777e632f0bdba1cf": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007248153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Green"
+    },
+    "candidate-f3e15c07cd284226fbed": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer",
+      "variantId": 54472801616185,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Black_1017fcda-98f9-4be2-9548-1195dcb82f9e.jpg?v=1788772975",
+      "expectedProductTitle": "ABS-Like Resin 2.0 10-100KG Deals",
+      "expectedVariantTitle": "Black (#212721) / 20KG"
+    },
+    "candidate-9d9acc3244cb60cfdb9c": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 51969435500825,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA / Purple"
+    },
+    "candidate-062da04b7eecff4ea2c2": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809824537,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Red"
+    },
+    "candidate-279563180ed064294f7a": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-special-sale-for-filament-3d-printer",
+      "variantId": 54472616214841,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/1fbb3a145ad69c5c59662f3d436f8873_c8842925-4c37-4967-ad77-acb7c91209f5.jpg?v=1789810687",
+      "expectedProductTitle": "PLA Special 10-100kg Deals",
+      "expectedVariantTitle": "Interstellar Violet / 20KG"
+    },
+    "candidate-a09d7a5254ca509aa213": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962831641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Blue-5KG_f349d47c-9ca6-4215-8aba-e025e4144ef2.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Red / Blue"
+    },
+    "candidate-a9c8c3fd0dff2b610eab": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 51216403693849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic1KG.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Translucent"
+    },
+    "candidate-b9cb813ef187eb615402": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 51235533259033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic1KG.jpg?v=1756798089",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Translucent"
+    },
+    "candidate-c348e84f624bbc68c58d": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417341721,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Pink / Yellow"
+    },
+    "candidate-0c35c71d5d2ccfda6ae8": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454833433,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Orange"
+    },
+    "candidate-1b147af64a8bc8d2449f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-combo-3d-printer",
+      "variantId": 54472854667577,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_ACE_2_Pro.jpg?v=1788772997",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 Combo",
+      "expectedVariantTitle": "Kobra 3 Max V2 Combo + ACE 2 Pro (8 colors) / None"
+    },
+    "candidate-f436264d5f52e52bd020": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973724041497,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk White / Black"
+    },
+    "candidate-80a9b482e4ec7f697ab9": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472808038713,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/2_S1_Max_Combo_PLA_Metal_4_c33aa804-0b91-4e1c-8a41-71abadfc59dd.jpg?v=1788772805",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max Combo (4 Colors) / +PLA Metal*4"
+    },
+    "candidate-ced4b91a6d9fc8e6d087": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583010585,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Brown"
+    },
+    "candidate-25aaee3ac576509fb6b9": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951771929,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Brown"
+    },
+    "candidate-1e506a6331565d957443": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483739929,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Purple"
+    },
+    "candidate-fa84d334bad8491f3197": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007280921,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Purple"
+    },
+    "candidate-2fff91b80c6eedece62f": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle",
+      "variantId": 52911082242329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4_Bundle_7fa55674-ff23-4371-9183-aca09598c930.jpg?v=1785315466",
+      "expectedProductTitle": "Neptune 4 All-in-One Bundle",
+      "expectedVariantTitle": "PLA (RFID) / Translucent"
+    },
+    "candidate-7c0ec4b829d8b6eb79a7": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809857305,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Yellow"
+    },
+    "candidate-9719c67c7a93e63f4e47": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222962864409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Green-5KG_4193f9a0-bb2e-4a8f-b478-fefe1b68de46.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Red / Green"
+    },
+    "candidate-f30854b9a827857f5f6b": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347125529,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLABasic-_-_-MOX_610ec4d5-6df5-4ff3-b995-2d385341bb09.jpg?v=1786695521",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Translucent"
+    },
+    "candidate-01dc4a112024ac74e76e": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417374489,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Pink / Dark Blue"
+    },
+    "candidate-25a8e4c6398731a3027b": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454866201,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Sky Blue"
+    },
+    "candidate-2466c09ea15fb60db68f": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973724107033,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Silver Grey / Grey"
+    },
+    "candidate-c05694df7243e671d3e8": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 51887313879321,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Black"
+    },
+    "candidate-0956c53a01a5baa95e6e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951804697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Black"
+    },
+    "candidate-84b76daaa52234f839c3": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483772697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Translucent / Carbon Fiber Brown"
+    },
+    "candidate-32ce6d6b7532f40ab969": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007313689,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Brown"
+    },
+    "candidate-7bb986e88d867c72a27e": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763244857,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/3980447df4f7e8b9a2bed5704ee6ef83_90334840-e592-4153-9c33-9e291b5a1195.jpg?v=1788772769",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Magenta (#CF4F80) / 20KG"
+    },
+    "candidate-eddc33d48d9acb99bce5": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "variantId": 67850973020473,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PLA_Special.jpg?v=1788773000",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2",
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA Special"
+    },
+    "candidate-2d026f0f0fc2fe4b0ff8": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "variantId": 67857501847865,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Kobra_3_Max_V2_Combo_4_colors.jpg?v=1788773010",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
+      "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / Single Unit"
+    },
+    "candidate-4eadd16b0568f6fdf119": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472606056761,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/TextureGrey.jpg?v=1788772964",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Texture Grey (#75787B) / 10KG"
+    },
+    "candidate-67b6e933bc3edb7e9554": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809890073,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Orange"
+    },
+    "candidate-96aff43a5d8f63a3fc75": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963126553,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-White-5KG_7aa8fd75-7561-4872-8f85-94338207e523.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Green / White"
+    },
+    "candidate-91cde10234a74dfd658a": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993350762777,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1110_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Light Cyan"
+    },
+    "candidate-8537040ba5f0c66b2fc3": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347256601,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1110_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Light Cyan"
+    },
+    "candidate-4f260ff398d1c77223a6": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417407257,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Pink / Pink"
+    },
+    "candidate-8f462ef40fb4a4a33da4": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454898969,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Space Grey"
+    },
+    "candidate-f38d95f15fcd7769cf11": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973724139801,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Silver Grey / White"
+    },
+    "candidate-1539dd62d0ab89ef0523": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583043353,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Grey"
+    },
+    "candidate-ca9f9644fa14e9997921": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951837465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Grey"
+    },
+    "candidate-f1620d596cfdb20fb7aa": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483805465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Black"
+    },
+    "candidate-4e040fa502ac1be8f545": {
+      "priceUrl": "https://uk.anycubic3d.com/products/abs-like-resin-2-sale-for-resin-3d-printer",
+      "variantId": 54472801780025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/ABS_2.0_3504813c-fd6e-4186-beb3-022bfeed2981.jpg?v=1789717112",
+      "expectedProductTitle": "ABS-Like Resin 2.0 10-100KG Deals",
+      "expectedVariantTitle": "HD Gray (#768692) / 50KG"
+    },
+    "candidate-b224f339aa376d5d0f2e": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52440138285337,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Black"
+    },
+    "candidate-a571f10187af72f6588f": {
+      "priceUrl": "https://uk.anycubic3d.com/products/photon-p1-max-best-large-resin-3d-printer",
+      "variantId": 54472807153977,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/PhotonP1Max_Wash_Cure3Plus_4KGStandardResin.jpg?v=1788772977",
+      "expectedProductTitle": "Anycubic Photon P1 Max",
+      "expectedVariantTitle": "Wash & Cure 3 Plus / 4KG Standard Resin"
+    },
+    "candidate-466cf48123c1d7ce199c": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809922841,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Ocean Blue"
+    },
+    "candidate-e6369c4a9e673fab15a2": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963159321,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Translucent-5KG_d760a972-21cb-4858-b717-5daf7ea3bc73.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Green / Translucent"
+    },
+    "candidate-99d0744fa14c4268d23e": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-plus-sale-for-filament-3d-printer",
+      "variantId": 54472599699769,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/White_9a933df9-c0e3-4f91-9915-0b33410fb918.jpg?v=1788772970",
+      "expectedProductTitle": "PLA+ 10-100kg Deals",
+      "expectedVariantTitle": "White (#EFF0F1) / 20KG"
+    },
+    "candidate-7e5b5f30e4e4160e7eed": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993350795545,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1111_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Megenta"
+    },
+    "candidate-bf384f88e28e71178368": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347289369,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1111_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Megenta"
+    },
+    "candidate-64edf4444f32d5d8df13": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417440025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Grey / Red / Yellow"
+    },
+    "candidate-d0a64c0229c57940c012": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454931737,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Black / Sea Green"
+    },
+    "candidate-f6caee4fd64d318fe5cc": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "variantId": 54472790081849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_2_11_4KGPLA-CF_bb2754be-3df6-4be8-bfce-0f39d16725c0.jpg?v=1789717576",
+      "expectedProductTitle": "Anycubic Kobra X Combo",
+      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +PLA*4"
+    },
+    "candidate-0efd6fd2359a7605f042": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973724172569,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Black Purple / Silk Silver Grey / Black"
+    },
+    "candidate-f576f06cd8fcffe2a705": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583076121,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Red"
+    },
+    "candidate-72293c33ca991d5eeeda": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951870233,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Red"
+    },
+    "candidate-d9c9e1c17a2a9c5d97c2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483838233,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Grey"
+    },
+    "candidate-563759e51cfd33d7c01c": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007346457,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Grey"
+    },
+    "candidate-a2b94fc8848ec9815488": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-max",
+      "variantId": 54472807842105,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1MC_9c1dcb65-c8b6-4afb-b758-9639a019b9c1.jpg?v=1788772808",
+      "expectedProductTitle": "Anycubic Kobra S1 Max",
+      "expectedVariantTitle": "Kobra S1 Max Combo (4 Colors) / None"
+    },
+    "candidate-6e3bc4dfe6386f249f65": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809955609,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Mango Yellow"
+    },
+    "candidate-1beba932f2cf60fdab89": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963192089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Red-5KG_e3b3172c-3c5d-4448-9f97-3740c5f7a81d.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Green / Red"
+    },
+    "candidate-122d3100aa026ef1ffda": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993350828313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1112_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Refill / Cream Yellow"
+    },
+    "candidate-ed32eef3237afee1c045": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347322137,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1112_PLA_Basic_1KG_1.75mm.jpg?v=1786694411",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Refill / Cream Yellow"
+    },
+    "candidate-86394fe43fce8badf7a5": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417472793,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Grey / Red / Dark Blue"
+    },
+    "candidate-383bf85a17b240025a32": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454964505,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Brown / Grey / Black"
+    },
+    "candidate-341854605589922d68e9": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973726335257,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple / Silk Gold / Grey"
+    },
+    "candidate-b86e89f5a8b84e3dd4b8": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583108889,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Blue"
+    },
+    "candidate-1b394b6d9a5feb798766": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951903001,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Blue"
+    },
+    "candidate-9f4c5eb4a163acf43027": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483871001,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Red"
+    },
+    "candidate-d465fb98c81da8290035": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007379225,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Red"
+    },
+    "candidate-c6ef35628d7e4cf94ad4": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "variantId": 51969165263129,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N4PL10_1kg.jpg?v=1756798084",
+      "expectedProductTitle": "Neptune 4 Plus + 10 kg Filament",
+      "expectedVariantTitle": "Black"
+    },
+    "candidate-4c18b46c5c181543991e": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944809988377,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Teal Green"
+    },
+    "candidate-402ce4db61e9d76b4d69": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963323161,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-White-5KG_7aa8fd75-7561-4872-8f85-94338207e523.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Grey / White"
+    },
+    "candidate-0412b51fa24a17ddff4f": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993350992153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1117_PLA_Basic_1KG_1.75mm.jpg?v=1786694401",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Cream Yellow"
+    },
+    "candidate-9e9af40c669fd0049955": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763277625,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Magenta_37e7f040-5330-4ccb-ad51-3c17bd72931f.png?v=1788772932",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Magenta (#CF4F80) / 50KG"
+    },
+    "candidate-4e44b8323f5532bedb58": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347485977,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1117_PLA_Basic_1KG_1.75mm.jpg?v=1786694401",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Cream Yellow"
+    },
+    "candidate-8a8a3cd58bcc3e392031": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "variantId": 67850973053241,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_4KG_PLA_Silk.jpg?v=1788773000",
+      "expectedProductTitle": "Anycubic Kobra 3 Max V2",
+      "expectedVariantTitle": "Kobra 3 Max V2 (without ACE 2 Pro) / 4KG PLA Silk"
+    },
+    "candidate-185d2f6a1de6aa1de67d": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417505561,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Grey / Red / Pink"
+    },
+    "candidate-a59227f2419c0108582e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974454997273,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Brown / Grey / White"
+    },
+    "candidate-697541f4e29d7acd0c3b": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973726368025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple / Silk Gold / White"
+    },
+    "candidate-0662c67d0c6b5c626d38": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583141657,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Green"
+    },
+    "candidate-f75d2c4caacefe9ca6f4": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951935769,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Green"
+    },
+    "candidate-326dc0bb6039fa30a8e9": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483903769,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Blue"
+    },
+    "candidate-2086ed7a70b4ba78e564": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007411993,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Blue"
+    },
+    "candidate-d2ea50b5f60667f2235f": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944810021145,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "True Green"
+    },
+    "candidate-f48cf785bd19f276e98c": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963355929,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Translucent-5KG_d760a972-21cb-4858-b717-5daf7ea3bc73.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Grey / Translucent"
+    },
+    "candidate-ce441164ef7d7a9f8be6": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
+      "variantId": 52993351024921,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1118_PLA_Basic_1KG_1.75mm.jpg?v=1786694401",
+      "expectedProductTitle": "PLA Basic Filament 10 kg",
+      "expectedVariantTitle": "Filament with Spool / Dark Green"
+    },
+    "candidate-1345d1d843ae10721b5a": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-5-kg",
+      "variantId": 52993347518745,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1118_PLA_Basic_1KG_1.75mm.jpg?v=1786694401",
+      "expectedProductTitle": "PLA Basic Filament 5 kg",
+      "expectedVariantTitle": "Filament with Spool / Dark Green"
+    },
+    "candidate-bff267e3528aecb7e0f4": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417538329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Grey / Yellow / Yellow"
+    },
+    "candidate-c077bbd209cde2eeaf07": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974455030041,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Brown / Grey / Grey"
+    },
+    "candidate-cf175deae201823c5265": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973726400793,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple / Silk Gold / Black"
+    },
+    "candidate-1c5550c58bee35657699": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583174425,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Purple"
+    },
+    "candidate-49e704de6d3166d0db48": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579951968537,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Purple"
+    },
+    "candidate-00d14a8b31530596767d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483936537,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Green"
+    },
+    "candidate-5fc0c4426423b686d1c6": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007444761,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Green"
+    },
+    "candidate-5061982d5783e29bf709": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-s1-ace-2-pro-combo-3d-printer",
+      "variantId": 54472850276665,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/S1CV2_ACE_2_Pro_50b7efef-72a3-42b2-81f3-eb686fc32b12.jpg?v=1788772809",
+      "expectedProductTitle": "Anycubic Kobra S1 ACE 2 Pro Combo",
+      "expectedVariantTitle": "Kobra S1 ACE 2 Pro Combo + ACE 2 Pro (8 colors) / None"
+    },
+    "candidate-245260ccbacdb2648acb": {
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "variantId": 54472790114617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_2_11_4KGPETG_c9e86a1f-d6f1-4dc3-b38c-5def75970b5e.jpg?v=1789717576",
+      "expectedProductTitle": "Anycubic Kobra X Combo",
+      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +PETG*4"
+    },
+    "candidate-d656b2ea1d39bdbed45e": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944810053913,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Sakura Pink"
+    },
+    "candidate-334356baf5d90431dd43": {
+      "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
+      "variantId": 51222963388697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/TPU95A-Red-5KG_e3b3172c-3c5d-4448-9f97-3740c5f7a81d.jpg?v=1756798042",
+      "expectedProductTitle": "TPU 95A Filament 10 kg",
+      "expectedVariantTitle": "Grey / Red"
+    },
+    "candidate-5665cf462dcac2065845": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417571097,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Grey / Yellow / Dark Blue"
+    },
+    "candidate-b5e4ce46893aafe50e67": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974455062809,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Brown / Grey / Blue"
+    },
+    "candidate-e1859a2c80aea66c6ce3": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973726466329,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple / Silk White / Grey"
+    },
+    "candidate-86fa0446e0570e65749e": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876583207193,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Brown"
+    },
+    "candidate-6819aa1fa00101ded199": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579952001305,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Brown"
+    },
+    "candidate-f2c79dfefe32b8374479": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588483969305,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "Sky Blue / Carbon Fiber Purple"
+    },
+    "candidate-56b909adc3d800c390fb": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580007477529,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Sea Green / Carbon Fiber Purple"
+    },
+    "candidate-eb7365c8b98fee253c64": {
+      "priceUrl": "https://uk.elegoo.com/products/neptune-3-pro-10-kg-filament",
+      "variantId": 67944810086681,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/N3P_10KGfilaments.jpg?v=1793065603",
+      "expectedProductTitle": "Neptune 3 Pro + 10 kg Filament",
+      "expectedVariantTitle": "Chocolate Brown"
     }
   },
   "approvedProductDetails": {},
