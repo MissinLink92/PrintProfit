@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T04:02:29.272915+00:00",
+  "checkedAt": "2026-10-29T04:36:26.799112+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-19",
     "royalmail-first: failed; last verified 2026-10-19",
@@ -14,7 +14,7 @@
     "etsy-payments: review-required; last verified 2026-10-19",
     "depop: failed; last verified 2026-10-19",
     "vinted: review-required; last verified 2026-10-19",
-    "tiktok: failed; last verified 2026-10-19",
+    "tiktok: review-required; last verified 2026-10-19",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -54,12 +54,12 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1740,
+      "listed": 1742,
       "verified": 1734,
       "categories": {
         "filament": 1551,
         "accessory": 4,
-        "printer": 71,
+        "printer": 73,
         "resin-material": 92,
         "raw-material": 15,
         "equipment": 7
@@ -75,10 +75,10 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 631,
-      "verified": 628,
+      "listed": 632,
+      "verified": 629,
       "categories": {
-        "filament": 540,
+        "filament": 541,
         "printer": 40,
         "resin-material": 46,
         "equipment": 3,
@@ -105,11 +105,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 1911,
-      "verified": 1906,
+      "listed": 2000,
+      "verified": 1995,
       "categories": {
-        "printer": 628,
-        "filament": 922,
+        "printer": 712,
+        "filament": 927,
         "resin-material": 321,
         "accessory": 35,
         "equipment": 5
@@ -169,11 +169,11 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 717,
-      "verified": 686,
+      "listed": 731,
+      "verified": 695,
       "categories": {
-        "filament": 385,
-        "printer": 155,
+        "filament": 393,
+        "printer": 161,
         "resin-material": 136,
         "accessory": 41
       }
@@ -246,7 +246,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-10-27",
+    "date": "2026-10-28",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
