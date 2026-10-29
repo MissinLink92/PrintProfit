@@ -10,14 +10,27 @@ function requireOwnerMfa(auth, owner, nowSeconds = Math.floor(Date.now() / 1000)
     Number.isFinite(signedInAt) && signedInAt <= nowSeconds && signedInAt > nowSeconds - 12 * 3600);
 }
 
-function summarizeSubscriptions(items, prices, livemode) {
+function trialCoveredByComplimentaryAccess(subscription, grants, nowSeconds) {
+  if (subscription.status !== 'trialing') return false;
+  const uid = subscription.customer?.metadata?.printprofitUid;
+  const grant = typeof uid === 'string' ? grants.get(uid) : null;
+  const trialEnd = Number(subscription.trial_end);
+  const cancelAt = Number(subscription.cancel_at);
+  return ownerAccess.grantActive(grant, nowSeconds) &&
+    Number.isSafeInteger(trialEnd) && trialEnd > nowSeconds &&
+    (grant.until === null || grant.until >= trialEnd) &&
+    Number.isSafeInteger(cancelAt) && cancelAt > 0 && cancelAt <= trialEnd;
+}
+
+function summarizeSubscriptions(items, prices, livemode, grants = new Map(), nowSeconds = Math.floor(Date.now()/1000)) {
   const allowed = new Set([prices.monthly, prices.annual].filter(Boolean));
-  const totals = {active:0, trialing:0, cancelling:0, pastDue:0, projectedMrrPence:0};
+  const totals = {active:0, trialing:0, cancelling:0, pastDue:0, projectedMrrPence:0, coveredTrials:0};
   for (const subscription of items) {
     if (subscription.livemode !== livemode) continue;
     const proItems = (subscription.items?.data || []).filter(item => allowed.has(item.price?.id) && item.price?.currency === 'gbp');
     if (!proItems.length) continue;
     const status = subscription.status;
+    if (trialCoveredByComplimentaryAccess(subscription, grants, nowSeconds)) { totals.coveredTrials++; continue; }
     if (status === 'active') totals.active++;
     else if (status === 'trialing') totals.trialing++;
     else if (status === 'past_due') totals.pastDue++;
@@ -38,11 +51,12 @@ function summarizeSubscriptions(items, prices, livemode) {
   totals.projectedMrrPence = Math.round(totals.projectedMrrPence);
   return totals;
 }
-function listTrialAccounts(items, prices, livemode) {
+function listTrialAccounts(items, prices, livemode, grants = new Map(), nowSeconds = Math.floor(Date.now()/1000)) {
   const allowed = new Set([prices.monthly, prices.annual].filter(Boolean));
   return items.filter(subscription =>
     subscription.livemode === livemode &&
     subscription.status === 'trialing' &&
+    !trialCoveredByComplimentaryAccess(subscription, grants, nowSeconds) &&
     (subscription.items?.data || []).some(item => allowed.has(item.price?.id) && item.price?.currency === 'gbp')
   ).map(subscription => ({
     email: typeof subscription.customer?.email === 'string' ? subscription.customer.email.trim() || null : null,
