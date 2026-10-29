@@ -28,8 +28,8 @@ function start(){
     catch{dialog.querySelector('.pp-offers-status').textContent='Copy unavailable. Select and copy the visible code manually.';}
    };row.append(copy);card.append(row);}else card.append(make('p','No code needed.'));
    card.append(make('p','Expires: '+new Date(o.expiresAt).toLocaleString('en-GB')+' • Last checked: '+o.lastChecked));
-   if(o.affiliate)card.append(make('p','Affiliate link: we may earn commission if you buy, at no extra cost to you.'));
-   const link=make('a','Visit retailer ↗'+(o.affiliate?' · 🔗 Affiliate':''));link.href=safeUrl(o.url);link.target='_blank';link.rel=o.affiliate?'sponsored noopener':'noopener';card.append(link);list.append(card);
+   if(o.affiliate)card.append(make('p','Ad: we may earn commission if you buy through this link, at no extra cost to you.'));
+   const link=make('a',(o.affiliate?'Ad · ':'')+'Visit retailer ↗');link.href=safeUrl(o.url);link.target='_blank';link.rel=o.affiliate?'sponsored noopener':'noopener';card.append(link);list.append(card);
   });
  }
  function refresh(){
