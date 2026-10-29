@@ -195,11 +195,11 @@ exports.stripeBillingWebhook=onRequest({region:'europe-west2',secrets:[stripeKey
 exports.getOwnerDashboard=onCall({...callable,cors:adminCors},async request=>{
  await ownerGuard(request);
  const client=stripe(),items=[];
- for await(const subscription of client.subscriptions.list({status:'all',limit:100,expand:['data.items.data.price']})){
+ for await(const subscription of client.subscriptions.list({status:'all',limit:100,expand:['data.items.data.price','data.customer']})){
   if(items.length===9999)break;
   items.push(subscription);
  }
- const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode),incomplete:items.length===9999};
+ const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode),trials:dashboard.listTrialAccounts(items,ids(),environment().livemode),incomplete:items.length===9999};
  const days=[7,30,90].includes(Number(request.data?.days))?Number(request.data.days):7;
  const property=analyticsProperty.value().trim();
  let traffic={available:false,days,reason:property?'GA4 report is temporarily unavailable.':'Add a GA4 property ID and grant its service account Viewer access.'};
