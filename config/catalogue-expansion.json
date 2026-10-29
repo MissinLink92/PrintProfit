@@ -40,6 +40,16 @@
         "3dqf.co.uk"
       ],
       "sitemap": "https://www.3dqf.co.uk/sitemap.xml"
+    },
+    "3d-printz": {
+      "name": "3D Printz",
+      "url": "https://3dprintz.co.uk/",
+      "allowedHosts": [
+        "3dprintz.co.uk",
+        "www.3dprintz.co.uk"
+      ],
+      "productBase": "https://3dprintz.co.uk/",
+      "catalogUrl": "https://3dprintz.co.uk/products.json"
     }
   }
 }
