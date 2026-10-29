@@ -13,7 +13,7 @@ test('owner gate requires verified email, recent real TOTP sign-in and configure
 test('subscription summary includes only matching live GBP Pro prices and recurring active revenue',()=>{
  const sub=(status,id,amount,interval,other={})=>({livemode:true,status,items:{data:[{quantity:2,price:{id,currency:'gbp',unit_amount:amount,recurring:{interval,interval_count:1}}}]},...other});
  const totals=summarizeSubscriptions([sub('active','month',250,'month'),sub('active','year',2400,'year',{cancel_at_period_end:true}),sub('trialing','month',250,'month'),sub('past_due','month',250,'month'),sub('active','unrelated',900,'month'),{...sub('active','month',250,'month'),livemode:false}],{monthly:'month',annual:'year'},true);
- assert.deepEqual(totals,{active:2,trialing:1,cancelling:1,pastDue:1,projectedMrrPence:900});
+ assert.deepEqual(totals,{active:2,trialing:1,cancelling:1,pastDue:1,projectedMrrPence:900,coveredTrials:0});
 });
 
 test('trial account list includes only live matching Pro trials, with missing emails handled safely',()=>{
@@ -31,4 +31,20 @@ test('trial account list includes only live matching Pro trials, with missing em
   {email:'later@example.com',trialEnd:now+700},
   {email:null,trialEnd:null}
  ]);
+});
+
+test('complimentary Pro replaces a trial in the dashboard only when Stripe is set to end by trial end',()=>{
+ const trialEnd=now+7*86400;
+ const sub={livemode:true,status:'trialing',customer:{email:'site@example.com',metadata:{printprofitUid:'site-uid'}},trial_end:trialEnd,cancel_at:trialEnd,items:{data:[{price:{id:'month',currency:'gbp'}}]}};
+ const prices={monthly:'month',annual:'year'};
+ const grants=new Map([['site-uid',{active:true,until:null}]]);
+ assert.equal(summarizeSubscriptions([sub],prices,true,grants,now).trialing,0);
+ assert.equal(summarizeSubscriptions([sub],prices,true,grants,now).coveredTrials,1);
+ assert.deepEqual(listTrialAccounts([sub],prices,true,grants,now),[]);
+ for(const other of [{...sub,cancel_at:null},{...sub,customer:{...sub.customer,metadata:{printprofitUid:'different'}}}]){
+  assert.equal(summarizeSubscriptions([other],prices,true,grants,now).trialing,1);
+  assert.equal(listTrialAccounts([other],prices,true,grants,now).length,1);
+ }
+ const shortGrant=new Map([['site-uid',{active:true,until:now+86400}]]);
+ assert.equal(summarizeSubscriptions([sub],prices,true,shortGrant,now).trialing,1);
 });
