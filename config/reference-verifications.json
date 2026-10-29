@@ -127,18 +127,17 @@
     {
       "group": "deliveryProfiles",
       "id": "royalmail",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "royalmail-first",
         "royalmail-second"
       ],
       "sourceUrls": [
-        "https://www.royalmail.com/sending/uk/1st-class",
-        "https://www.royalmail.com/sending/uk/2nd-class"
+        "https://www.royalmail.com/sites/royalmail.com/files/2026-09/online-price-guide-october-2026-v1-ta.pdf"
       ],
       "value": {
-        "source": "Royal Mail online UK reference — manually checked 2026-10-19",
+        "source": "Royal Mail online UK price guide effective 5 October 2026 — manually checked 2026-10-29",
         "rates": [
           {
             "label": "1st Class — Letter up to 100g",
