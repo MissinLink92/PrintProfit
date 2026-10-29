@@ -28,6 +28,19 @@ async function loadDashboard(){
  $('active').textContent=b.active.toLocaleString('en-GB');$('trialing').textContent=b.trialing.toLocaleString('en-GB');$('attention').textContent=b.pastDue.toLocaleString('en-GB');
  $('mrr').textContent=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(b.projectedMrrPence/100);
  $('billing-note').textContent=(b.cancelling?`${b.cancelling} scheduled to cancel at period end. `:'')+(b.incomplete?'Subscription scan reached its safety limit; counts are incomplete.':'');
+ const trialList=$('trial-list');
+ trialList.replaceChildren();
+ const trials=Array.isArray(b.trials)?b.trials:null;
+ if(!trials||!trials.length){
+  const row=document.createElement('tr'),cell=document.createElement('td');
+  cell.colSpan=2;cell.textContent=trials?'No Pro accounts are currently in a free trial.':'Trial email list is temporarily unavailable.';
+  row.append(cell);trialList.append(row);
+ }else for(const trial of trials){
+  const row=document.createElement('tr'),emailCell=document.createElement('td'),endCell=document.createElement('td');
+  emailCell.textContent=trial.email||'Email unavailable';
+  endCell.textContent=Number.isFinite(trial.trialEnd)?new Date(trial.trialEnd*1000).toLocaleDateString('en-GB',{dateStyle:'medium'}):'Date unavailable';
+  row.append(emailCell,endCell);trialList.append(row);
+ }
  health('health-stripe','Connected','ok');
  const t=result.traffic,period=t.period||`Last ${t.days||days} complete days`;
  $('visitors').textContent=t.available?t.visitors.toLocaleString('en-GB'):'—';$('sessions').textContent=t.available?t.sessions.toLocaleString('en-GB'):'—';$('views').textContent=t.available?t.pageViews.toLocaleString('en-GB'):'—';

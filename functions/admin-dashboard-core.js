@@ -38,4 +38,16 @@ function summarizeSubscriptions(items, prices, livemode) {
   totals.projectedMrrPence = Math.round(totals.projectedMrrPence);
   return totals;
 }
-module.exports = {requireOwnerMfa, summarizeSubscriptions, ownerAccess};
+function listTrialAccounts(items, prices, livemode) {
+  const allowed = new Set([prices.monthly, prices.annual].filter(Boolean));
+  return items.filter(subscription =>
+    subscription.livemode === livemode &&
+    subscription.status === 'trialing' &&
+    (subscription.items?.data || []).some(item => allowed.has(item.price?.id) && item.price?.currency === 'gbp')
+  ).map(subscription => ({
+    email: typeof subscription.customer?.email === 'string' ? subscription.customer.email.trim() || null : null,
+    trialEnd: Number.isFinite(subscription.trial_end) && subscription.trial_end > 0 ? subscription.trial_end : null
+  })).sort((a, b) => (a.trialEnd ?? Infinity) - (b.trialEnd ?? Infinity) || (a.email || '').localeCompare(b.email || ''));
+}
+
+module.exports = {requireOwnerMfa, summarizeSubscriptions, listTrialAccounts, ownerAccess};
