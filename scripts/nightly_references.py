@@ -221,7 +221,9 @@ def refresh(ref, config, reader, report, queue):
         ref['platformProfiles'][key] = {**previous, **values, 'checkedAt': today, 'sourceUrls': [config['referenceSources'][i] for i in ids],
                                        'note': clean_note + ' Platform ' + str(updated['platform']) + '%; payments ' + str(updated['pay']) + '% + £' + format(updated['fixed'], '.2f') + '. Checked ' + today + '.'}
     def etsy():
-        trans = single_number(r'Transaction fees?\s*(\d+(?:\.\d+)?)\s*%', pages['etsy-transaction'].text)
+        # Etsy presents the fee in a named table row, not after the heading.
+        transaction = ' '.join(table_row(pages['etsy-transaction'], 'Transaction')[1:])
+        trans = single_number(r'(\d+(?:\.\d+)?)\s*%\s+of the total order amount', transaction)
         regulatory = single_number(r'([\d.]+)\s*%', ' '.join(table_row(pages['etsy-regulatory'], 'United Kingdom')[1:]))
         pay = ' '.join(table_row(pages['etsy-payments'], 'United Kingdom')[1:])
         percent = single_number(r'([\d.]+)\s*%', pay)
