@@ -199,7 +199,10 @@ exports.getOwnerDashboard=onCall({...callable,cors:adminCors},async request=>{
   if(items.length===9999)break;
   items.push(subscription);
  }
- const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode),trials:dashboard.listTrialAccounts(items,ids(),environment().livemode),incomplete:items.length===9999};
+ const activeGrants=items.some(item=>item.status==='trialing')
+  ? await db.collection('adminGrants').where('active','==',true).get() : {docs:[]};
+ const grants=new Map(activeGrants.docs.map(doc=>[doc.id,doc.data()]));
+ const billing={...dashboard.summarizeSubscriptions(items,ids(),environment().livemode,grants),trials:dashboard.listTrialAccounts(items,ids(),environment().livemode,grants),incomplete:items.length===9999};
  const days=[7,30,90].includes(Number(request.data?.days))?Number(request.data.days):7;
  const property=analyticsProperty.value().trim();
  let traffic={available:false,days,reason:property?'GA4 report is temporarily unavailable.':'Add a GA4 property ID and grant its service account Viewer access.'};
