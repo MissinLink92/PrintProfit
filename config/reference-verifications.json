@@ -26,8 +26,8 @@
     {
       "group": "platformProfiles",
       "id": "depop",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "depop"
       ],
@@ -44,8 +44,8 @@
     {
       "group": "platformProfiles",
       "id": "vinted",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "vinted"
       ],
@@ -62,8 +62,8 @@
     {
       "group": "platformProfiles",
       "id": "tiktok",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "tiktok"
       ],
@@ -80,8 +80,8 @@
     {
       "group": "deliveryProfiles",
       "id": "inpost",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "inpost"
       ],
@@ -89,7 +89,7 @@
         "https://inpost.co.uk/send/parcel-prices"
       ],
       "value": {
-        "source": "InPost official UK reference — manually checked 2026-10-19",
+        "source": "InPost official UK reference — manually checked 2026-10-29",
         "rates": [
           {
             "label": "Locker / Shop — Small",
@@ -235,13 +235,13 @@
     {
       "group": "deliveryProfiles",
       "id": "dpd",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "dpd"
       ],
       "sourceUrls": [
-        "https://send.dpd.co.uk/"
+        "https://send.dpd.co.uk/products-and-services/"
       ],
       "value": {
         "source": "DPD advertised starting price — quote required",
@@ -250,7 +250,7 @@
           {
             "label": "UK advertised starting price — quote required",
             "price": 2.99,
-            "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+            "note": "Advertised UK starting price including VAT. Enter a quote for the actual weight, dimensions, destination, surcharges and service."
           }
         ]
       }
@@ -258,13 +258,13 @@
     {
       "group": "deliveryProfiles",
       "id": "dhl",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "sourceIds": [
         "dhl"
       ],
       "sourceUrls": [
-        "https://send.dhlparcel.co.uk/parcel-delivery"
+        "https://send.dhlparcel.co.uk/parcel-services/small-parcel-delivery"
       ],
       "value": {
         "source": "DHL advertised starting price — quote required",
@@ -273,7 +273,7 @@
           {
             "label": "UK advertised starting price — quote required",
             "price": 3.78,
-            "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+            "note": "Advertised small parcel starting price for depot-to-depot delivery, up to 5kg and 35cm each side; VAT included. Enter a quote for the actual route, parcel and service."
           }
         ]
       }
