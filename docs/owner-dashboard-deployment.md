@@ -27,7 +27,7 @@ The host sends `X-Robots-Tag: noindex, nofollow, noarchive` and serves a disallo
 
 ## Dashboard data
 
-The subscription cards read Stripe live subscriptions on the server, filtered to the configured monthly/annual GBP prices. Run rate is an estimate from active recurring line items; it excludes trials, taxes, discounts and payment failures. The scan stops at 9,999 records and marks counts incomplete at that limit. Complimentary Pro users are deliberately counted separately and never inflate paid-subscriber or MRR figures. No customer emails or payment details from Stripe are sent to the browser.
+The subscription cards read Stripe live subscriptions on the server, filtered to the configured monthly/annual GBP prices. Run rate is an estimate from active recurring line items; it excludes trials, taxes, discounts and payment failures. The scan stops at 9,999 records and marks counts incomplete at that limit. Complimentary Pro users are deliberately counted separately and never inflate paid-subscriber or MRR figures. The owner-only trial table receives the email address and trial end date of each matching live Pro trial from Stripe. It does not receive payment details or Stripe customer IDs.
 
 For website traffic, set `PRINTPROFIT_GA4_PROPERTY_ID` to the numeric GA4 property ID (the `G-…` measurement ID is different). Enable the Google Analytics Data API in the project and grant the Cloud Function runtime service account Viewer access to that GA4 property, then redeploy `getOwnerDashboard`. The dashboard can request the last 7, 30 or 90 complete days for visitors who granted analytics consent; it shows an unavailable state until the connection works.
 
@@ -45,6 +45,7 @@ Affiliate earnings remain explicitly unconnected. Add each partner's official re
 - Revoke that grant and confirm the next fresh Pro access check falls back to the user's real Stripe/basic state.
 - Confirm a paid test account's Stripe subscription is unchanged by grant/revoke actions.
 - Confirm the main site's enrolled owner can still sign in and manage Pro. Confirm Stripe counts against dashboard totals and the correct live account.
+- Confirm the private trial table shows only current live Pro trials, with matching email addresses and end dates. Check that a nonowner cannot request the list.
 - Confirm the System Health cards reflect deliberately disabled GA4/affiliate connections rather than showing false Connected states.
 - Check `curl -I https://admin.printprofit.co.uk/` for HTTPS, `X-Robots-Tag`, CSP and no-store; check `robots.txt`.
 - Confirm no admin app files appear in the public GitHub Pages `_site` artifact.
