@@ -27,7 +27,7 @@ async function loadDashboard(){
  const b=result.billing;
  $('active').textContent=b.active.toLocaleString('en-GB');$('trialing').textContent=b.trialing.toLocaleString('en-GB');$('attention').textContent=b.pastDue.toLocaleString('en-GB');
  $('mrr').textContent=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(b.projectedMrrPence/100);
- $('billing-note').textContent=(b.cancelling?`${b.cancelling} scheduled to cancel at period end. `:'')+(b.incomplete?'Subscription scan reached its safety limit; counts are incomplete.':'');
+ $('billing-note').textContent=(b.coveredTrials?`${b.coveredTrials} Stripe trial account${b.coveredTrials===1?' is':'s are'} covered by complimentary Pro and scheduled to end. `:'')+(b.cancelling?`${b.cancelling} scheduled to cancel at period end. `:'')+(b.incomplete?'Subscription scan reached its safety limit; counts are incomplete.':'');
  const trialList=$('trial-list');
  trialList.replaceChildren();
  const trials=Array.isArray(b.trials)?b.trials:null;
