@@ -123,8 +123,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "refreshPolicy": "nightly; verified exact offers only",
       "lastDiscoveryStatus": "discovered",
       "lastPriceCheck": {
-        "listed": 2114,
-        "verified": 2109,
+        "listed": 2219,
+        "verified": 2214,
         "retained": 5
       },
       "checkMessage": ""
@@ -243,8 +243,8 @@ window.PRINTPROFIT_PRICE_DATA={
       "refreshPolicy": "nightly; verified exact offers only",
       "lastDiscoveryStatus": "discovered",
       "lastPriceCheck": {
-        "listed": 746,
-        "verified": 710,
+        "listed": 755,
+        "verified": 719,
         "retained": 36
       },
       "checkMessage": ""
@@ -241541,7 +241541,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "pla-plus",
       "priceSourceUrl": "https://nseimports.co.uk/products/sunlu-pla-3d-printer-filament-new-pollution-free-material-1-75mm-1kg-2-2lbs",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -259789,7 +259789,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "abs-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/jayo-abs-5x650g",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -301835,7 +301835,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "abs-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/jayo-abs-5x650g",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -319183,7 +319183,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "pc-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/datafrog-y5a-arcade-stick-for-pc-android-switch",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -338052,7 +338052,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "weightGrams": null,
       "pack": "Grey / ABS Filament",
       "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
-      "price": 42.95,
+      "price": 41.95,
       "updated": "2026-10-29",
       "autoRefresh": true,
       "lastCheckStatus": "ok",
@@ -338113,6 +338113,10 @@ window.PRINTPROFIT_PRICE_DATA={
         {
           "date": "2026-10-29",
           "price": 42.95
+        },
+        {
+          "date": "2026-10-29",
+          "price": 41.95
         }
       ],
       "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0294/6803/3098/files/S99e66bf20e8442ec88d996cdfcc910c6p.jpg?v=1708013295",
@@ -342918,7 +342922,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "pla-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/eryone-pla-filament-1kg-1-75mm-3d-printer",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -394988,7 +394992,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "pla-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/eryone-pla-filament-1kg-1-75mm-3d-printer",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-24",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -554319,7 +554323,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productGroup": "filament",
       "productCategory": "pla-filament",
       "priceSourceUrl": "https://nseimports.co.uk/products/eryone-pla-filament-1kg-1-75mm-3d-printer",
-      "availability": "Out of stock",
+      "availability": "In stock",
       "imageChecked": "2026-10-26",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok",
@@ -743792,7 +743796,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productCategory": "other-filament",
       "lastVerified": "2026-10-29",
       "priceSourceUrl": "https://uk.elegoo.com/products/multi-color-250-g-filament-bundle",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-23",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok"
@@ -779068,7 +779072,7 @@ window.PRINTPROFIT_PRICE_DATA={
       "productCategory": "silk-pla",
       "lastVerified": "2026-10-29",
       "priceSourceUrl": "https://www.123-3d.co.uk/products/panchroma-pla-silk",
-      "availability": "In stock",
+      "availability": "Out of stock",
       "imageChecked": "2026-10-25",
       "imageSearchStatus": "matched",
       "lastImageCheckStatus": "ok"
@@ -820276,7 +820280,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-669f3e2f9d4bda6be41f",
@@ -820314,7 +820324,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-silver",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4539487069dd142c6420",
@@ -820351,7 +820367,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-809484fcdbb692b19e54",
@@ -820389,7 +820411,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-yellow",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-33cc300cdf71849fd668",
@@ -820427,7 +820455,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f43bdad5f67af015366d",
@@ -820465,7 +820499,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-marble",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c466e275d6cc4d156b67",
@@ -820503,7 +820543,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e8b9f6f8e090197a0659",
@@ -820541,7 +820587,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-2-85mm-black",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-6cc7df901503a1e17e99",
@@ -820579,7 +820631,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "matte-pla"
+      "productCategory": "matte-pla",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-matt-black",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d26ea0ebf2e50f47fff8",
@@ -820617,7 +820675,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/petg-filament-1-75mm-yellow",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d289b7d6cc14f9ef6b04",
@@ -820655,7 +820719,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/petg-filament-1-75mm-orange",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-0c8f3ea207e05a69aec3",
@@ -820693,7 +820763,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-red",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d17d0590db94f243ce03",
@@ -820731,7 +820807,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-yellow",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b8ff3190a6d4aa2ff00d",
@@ -820769,7 +820851,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-grey",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d2a73a58d1e6852dc612",
@@ -820807,7 +820895,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-black",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ac4b99b7868f21a24da0",
@@ -820845,7 +820939,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-white-2-85mm",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d38c46587506da691106",
@@ -820883,7 +820983,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/hd-pla-red-lustre-1-75mm-1kg-3d-printer-filament",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c63eabb5ea959c9d689c",
@@ -820921,7 +821027,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/hd-pla-hide-1-75mm-1kg-copy",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-655d971bb7dba7693d81",
@@ -820959,7 +821071,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-red",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a1e24f2fc86f7fcbd3cd",
@@ -820997,7 +821115,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-blue",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ee3da367be0f54ae08f4",
@@ -821035,7 +821159,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-black",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-27942bd5da9a218bcffa",
@@ -821073,7 +821203,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/petg-1-75mm-3d-printing-filament-red",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-612b8f35a95160fac6ad",
@@ -821111,7 +821247,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-abs-1-75mm-3d-printing-filament-black-850g-refill",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-492a0f5ab62d46706fde",
@@ -821149,7 +821291,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g-refill",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-9490543d4034dff139bf",
@@ -821187,7 +821335,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a4db16c0a20473ef6b1c",
@@ -821225,7 +821379,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b7023c15914f21203c32",
@@ -821263,7 +821423,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-3d-printing-filament-orange",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4ea49d6d88bd2d4c56ef",
@@ -821301,7 +821467,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-3d-printing-filament-white",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c40a01c07013426aa37f",
@@ -821339,7 +821511,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "abs-filament"
+      "productCategory": "abs-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/abs-1-75mm-3d-printing-filament-blue",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-31be44affed5552083bf",
@@ -821377,7 +821555,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-green",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e5759160f22b07910cc1",
@@ -821415,7 +821599,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-blue-grey",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f29b73cc1e2e1c911dc5",
@@ -821453,7 +821643,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/sunlu-resin-for-3d-printers",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-32116a767c39ed582d6f",
@@ -821490,7 +821686,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b2bf93c225839068fadb",
@@ -821528,7 +821730,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-white",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e1a2104916fa68dca06e",
@@ -821565,7 +821773,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-0b0f35bf40c4d11ff1bd",
@@ -821603,7 +821817,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/pla-1-75mm-3d-printing-filament-black",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-5ec7225a9ea761056927",
@@ -821640,7 +821860,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-850da189b79c7eda306a",
@@ -821678,7 +821904,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g-refill",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-7605d70f729f7161d895",
@@ -821716,7 +821948,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-71d27fd51b034ed436ae",
@@ -821753,7 +821991,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-8605c8e6a0af4cc5127f",
@@ -821791,7 +822035,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-fcf93c43195be79857f1",
@@ -821828,7 +822078,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-55bdd626e35678b89246",
@@ -821866,7 +822122,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/sunlu-resin-for-3d-printers",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-75c2506f87fab661ec33",
@@ -821903,7 +822165,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f5fc250adab8d37c9e19",
@@ -821940,7 +822208,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-048ee4c56eda3f3eeded",
@@ -821978,7 +822252,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g-refill",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-7ce094ff6eea87d47457",
@@ -822016,7 +822296,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-176b32ad946d49444145",
@@ -822054,7 +822340,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4e442813ec22c134246c",
@@ -822092,7 +822384,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g-refill",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e99b79f1bb2674eff165",
@@ -822130,7 +822428,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-21558f60e629d708d6dd",
@@ -822168,7 +822472,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-cd25f79cdb95f8e036cf",
@@ -822206,7 +822516,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-bdeadd5777229b286355",
@@ -822244,7 +822560,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a81765e60371a59e4511",
@@ -822282,7 +822604,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-172db4624479e648d0cb",
@@ -822320,7 +822648,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pet-g-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a2dca3334ae2415292e4",
@@ -822358,7 +822692,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-5516acb796bc0ed9e35f",
@@ -822396,7 +822736,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-3a1e8ff1150c7d28f606",
@@ -822434,7 +822780,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-34d327486f08e09a1c66",
@@ -822472,7 +822824,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-2e093da4720eba7cfb51",
@@ -822510,7 +822868,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-122ae4df2e611847e522",
@@ -822548,7 +822912,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-1b9f035420080a1bfea1",
@@ -822586,7 +822956,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://3dprintz.co.uk/products/fiberlogy-easy-pla-1-75mm-printing-filament-850g",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d290e077cb0ecbf9b4b3",
@@ -822624,7 +823000,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-1eefa3e26045646e663d",
@@ -822661,7 +823043,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e52ff7c2eb2c70769172",
@@ -822698,7 +823086,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-8e3a66e4282efbb5eb44",
@@ -822735,7 +823129,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-db967001ba0e0cfb5bbd",
@@ -822772,7 +823172,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a8f889783b097bc9a66c",
@@ -822809,7 +823215,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-287b2f29fc50041dc82f",
@@ -822846,7 +823258,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-20136fb6c0f3e3576135",
@@ -822883,7 +823301,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-aa95d41ff61683d94032",
@@ -822921,7 +823345,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-25fa3393649b729989ed",
@@ -822958,7 +823388,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-800b450f2110df2ba4f1",
@@ -822996,7 +823432,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-6f9eb5eccadd930131fe",
@@ -823034,7 +823476,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c8ef708c45e048dae132",
@@ -823071,7 +823519,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-eab8dc7d8f2d278269c9",
@@ -823108,7 +823562,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-289edb24aceaba877970",
@@ -823145,7 +823605,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-2f71355b99d98dcba114",
@@ -823182,7 +823648,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c54a668d62536d41b820",
@@ -823219,7 +823691,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-45fe7ad1f4d2ffeca013",
@@ -823256,7 +823734,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c0976bd70cdd6e6f310c",
@@ -823293,7 +823777,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-07f58b59ff7564537ac2",
@@ -823331,7 +823821,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-acc998c0ba6c574ffabf",
@@ -823368,7 +823864,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-9a1707c4091cc222ce43",
@@ -823405,7 +823907,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-93409f322f171da72c1c",
@@ -823442,7 +823950,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b43442e45573469bed5a",
@@ -823479,7 +823993,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-087206a495b5dc90535e",
@@ -823516,7 +824036,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-2ce1872269bf9cff1cca",
@@ -823553,7 +824079,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-85c158181d66951385df",
@@ -823590,7 +824122,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ce3814e497aebf7465d6",
@@ -823628,7 +824166,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d5f6efc0cfd4053e1b8b",
@@ -823665,7 +824209,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4788ff91d3a73366853b",
@@ -823703,7 +824253,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-80177dce7cf1c8cddd13",
@@ -823740,7 +824296,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4b7b375cbb691cc2560e",
@@ -823777,7 +824339,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-0e3398c82883df4376ba",
@@ -823814,7 +824382,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e8927c8e7377763c2dbb",
@@ -823851,7 +824425,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-5b54e73b5f8561d7fda9",
@@ -823888,7 +824468,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d7de9ba4cb040db09beb",
@@ -823925,7 +824511,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-33a85bc7b895476f58bd",
@@ -823962,7 +824554,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f56f853e573660d248ab",
@@ -824000,7 +824598,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-af35fddd9af2f0b1b23c",
@@ -824037,7 +824641,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-83174de9abf24d98602d",
@@ -824074,7 +824684,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-0e9024a91470b2fc8dfc",
@@ -824111,7 +824727,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b393f8054f197ef6ff1a",
@@ -824148,7 +824770,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-440e31a6907e084906c6",
@@ -824185,7 +824813,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e8e8919863013c8ededc",
@@ -824222,7 +824856,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d8689720d41dd1237db5",
@@ -824259,7 +824899,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c9775bb2fbb25ff60051",
@@ -824297,7 +824943,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-4747b54347e156e1b605",
@@ -824334,7 +824986,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f97547d3640b231ab561",
@@ -824371,7 +825029,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-55647af636190eb64fb1",
@@ -824408,7 +825072,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-251ee2f850c44b36c8af",
@@ -824445,7 +825115,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-fce0680c269d525dd19a",
@@ -824482,7 +825158,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-969cd109c26ffd10d905",
@@ -824519,7 +825201,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-819102797438b2dcf098",
@@ -824556,7 +825244,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-9a6336677aebf7e3e72f",
@@ -824594,7 +825288,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-2096a554d0a30d5e6c93",
@@ -824631,7 +825331,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-35349cde862160179dad",
@@ -824669,7 +825375,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-83bde37745867965dd0a",
@@ -824707,7 +825419,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-7dec1effbf6a473ce20f",
@@ -824744,7 +825462,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b2cc4e87cdffa6b4fcef",
@@ -824781,7 +825505,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-08e4d86d5ecec0ee73c6",
@@ -824818,7 +825548,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-2a59aed58fccccc205cb",
@@ -824855,7 +825591,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ed78ba1caf076438bdc7",
@@ -824892,7 +825634,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-7425c21c502f1fe1ae71",
@@ -824929,7 +825677,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-64754861e389e3e4a888",
@@ -824966,7 +825720,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e9521a4541546bdf277d",
@@ -825003,7 +825763,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "other-filament"
+      "productCategory": "other-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-fadb82976615c43d89bc",
@@ -825041,7 +825807,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b248cf67403e1da6fc93",
@@ -825078,7 +825850,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-6586dc05ea89540dbb02",
@@ -825115,7 +825893,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f7ae8173ea3a525f66bd",
@@ -825152,7 +825936,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a5ac976344ed06d33572",
@@ -825189,7 +825979,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-df0f795007d4ac3e4542",
@@ -825226,7 +826022,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-354ac54e414ee74da876",
@@ -825263,7 +826065,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-eaf31a7918cf7de3349e",
@@ -825300,7 +826108,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c6c6fcf4db751ea93eed",
@@ -825337,7 +826151,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ade707ab7211ede8ac41",
@@ -825375,7 +826195,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b481ba976baae6df62af",
@@ -825412,7 +826238,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d1aa3e8d383ff0c2c43a",
@@ -825449,7 +826281,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-819f9fbb24240604e02a",
@@ -825486,7 +826324,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ae1bfeab2474c971a61e",
@@ -825523,7 +826367,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d0d62395ea54a34bbea2",
@@ -825560,7 +826410,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e53d8014b5c2db570746",
@@ -825597,7 +826453,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-8564264c6bf1b3be2f36",
@@ -825634,7 +826496,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-bd826c03eac69bd7e007",
@@ -825672,7 +826540,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-cafa9c7781d2a2438d9d",
@@ -825709,7 +826583,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-ab0b09eb24333948c9d9",
@@ -825746,7 +826626,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-88d323e0c2b1a17da86b",
@@ -825783,7 +826669,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-988332ee2938e6c10525",
@@ -825820,7 +826712,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f4ff173ba7f82c1b0bb4",
@@ -825857,7 +826755,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-43ac29bff2846dc672f7",
@@ -825894,7 +826798,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-51d464b64043b757da7b",
@@ -825931,7 +826841,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-140ec1db7586425ce754",
@@ -825969,7 +826885,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "pla-filament"
+      "productCategory": "pla-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-37d03a4d9ec1187df2a7",
@@ -826007,7 +826929,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "petg-filament"
+      "productCategory": "petg-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-238bd98fd44e01fd19de",
@@ -826044,7 +826972,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "filament",
-      "productCategory": "other-filament"
+      "productCategory": "other-filament",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/neptune-4-plus-with-10kg-filament-starter-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-70e5c9e3c045b6b05f6f",
@@ -826082,7 +827016,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-3b648d1a4a3e38bd3930",
@@ -826119,7 +827059,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-28dd6bc2e708926eb63d",
@@ -826156,7 +827102,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d87c70503b7c30dc1dfb",
@@ -826193,7 +827145,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-9a925fd7f70fdf2ef506",
@@ -826230,7 +827188,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-63ebc18b373ebd6f90be",
@@ -826267,7 +827231,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a1622f778e9cb612e163",
@@ -826304,7 +827274,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d02d9e60c74cafff5e41",
@@ -826341,7 +827317,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-22e4c0da944627797037",
@@ -826379,7 +827361,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-36d498503f26e2c0fdb6",
@@ -826416,7 +827404,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-e6e85ba768695731138e",
@@ -826453,7 +827447,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-140e548fe6c0e804ebd3",
@@ -826490,7 +827490,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-8c29596fa744304380a7",
@@ -826527,7 +827533,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-8769e9b04db9af7afc3a",
@@ -826564,7 +827576,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-733ed3ff40e9127d9509",
@@ -826601,7 +827619,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-a1fcb92c443909566489",
@@ -826638,7 +827662,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-68f60ebd9e69ed580be5",
@@ -826675,7 +827705,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-de9efcff85ad5d65e9aa",
@@ -826713,7 +827749,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "resin-material",
-      "productCategory": "printing-resin"
+      "productCategory": "printing-resin",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-m1-ultra-2-kg-resin",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-97b9b42ae51fcb03d26a",
@@ -826750,7 +827792,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "availability": "Out of stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-d02fe8049d4ea311f33d",
@@ -826787,7 +827835,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-5de1599a4a57847ca713",
@@ -826824,7 +827878,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-f3c1644948b61c868d23",
@@ -826861,7 +827921,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-c7d9eac57a7efe8ff42e",
@@ -826898,7 +827964,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-67d8f57d37730cd53c2c",
@@ -826935,7 +828007,13 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
-      "productCategory": "fdm-printers"
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
     },
     {
       "id": "candidate-b197c9e63a8c2993473b",
@@ -826972,7 +828050,4238 @@ window.PRINTPROFIT_PRICE_DATA={
       "imageStatus": "available",
       "imageAutoRefresh": false,
       "productGroup": "printer",
+      "productCategory": "fdm-printers",
+      "lastVerified": "2026-10-29",
+      "priceSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "availability": "In stock",
+      "imageChecked": "2026-10-29",
+      "imageSearchStatus": "matched",
+      "lastImageCheckStatus": "ok"
+    },
+    {
+      "id": "candidate-6832dc38deded23e00e5",
+      "sourceId": "anycubic-uk",
+      "name": "PLA Basic 10-100KG Deals — Cyan (#23A3C7) / 50KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763146553,
+      "category": "filament",
+      "type": "PLA",
+      "colour": "Cyan (#23A3C7)",
+      "image": "assets/products/candidate-6832dc38deded23e00e5-644a27819ad4.webp",
+      "catalogPrice": "474.73",
+      "currency": "GBP",
+      "shippingWeightGrams": 20000,
+      "weightGrams": 50000.0,
+      "pack": "50 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 413.75,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 413.75
+        }
+      ],
+      "unit": 8.28,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Cyan_a0fadaab-e98c-4343-99de-8e1e4beb2104.png?v=1788772935",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "imageSha256": "644a27819ad4758a00aeec80792b3073640781201d155820818b2c360b48504e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "pla-filament"
+    },
+    {
+      "id": "candidate-6e66e4a2e0e3a88dd1c8",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Yellow / Pink / Pink",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418586905,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Yellow",
+      "image": "assets/products/candidate-6e66e4a2e0e3a88dd1c8-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Yellow / Pink / Pink",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
       "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-b3d3cff7b34c713a6157",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Neon Green / Space Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456078617,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-b3d3cff7b34c713a6157-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Neon Green / Space Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-6316d634a4562649c8d8",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Blue Green Orange / Silk Silver Grey / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973734101273,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Blue Green Orange",
+      "image": "assets/products/candidate-6316d634a4562649c8d8-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Blue Green Orange / Silk Silver Grey / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-fedc3e17a4bdff75da8f",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Beige / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876584059161,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-fedc3e17a4bdff75da8f-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-313d041ef0681804e443",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Beige / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579953017113,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-313d041ef0681804e443-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-0abf4bfde206b1ef8d1c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588484985113,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-0abf4bfde206b1ef8d1c-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-fa5c3c707a440221824f",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008329497,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-fa5c3c707a440221824f-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-26f9bdecab978815d145",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Red / Yellow",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418619673,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-26f9bdecab978815d145-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Red / Yellow",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9ee0e417c4bb6630255c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Neon Green / Sea Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456111385,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-9ee0e417c4bb6630255c-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Neon Green / Sea Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-fe2f4eadd73d150c35cc",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Blue Green Orange / Silk Silver Grey / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973734134041,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Blue Green Orange",
+      "image": "assets/products/candidate-fe2f4eadd73d150c35cc-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Blue Green Orange / Silk Silver Grey / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-4485135f74e0beaf19bb",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Beige / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876584091929,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-4485135f74e0beaf19bb-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-cd2c8d92768ee85a8b43",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Beige / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579953049881,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-cd2c8d92768ee85a8b43-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8bd72692cf3f225b1144",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485017881,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-8bd72692cf3f225b1144-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8a469c2d938d0ebf4ce8",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008362265,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-8a469c2d938d0ebf4ce8-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-d14106d6d62c2cddc542",
+      "sourceId": "anycubic-uk",
+      "name": "PLA Basic 10-100KG Deals — Light Grey (#DAD9DB) / 10KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763834681,
+      "category": "filament",
+      "type": "PLA",
+      "colour": "Light Grey (#DAD9DB)",
+      "image": "assets/products/candidate-d14106d6d62c2cddc542-374cdbbaf000.webp",
+      "catalogPrice": "99.99",
+      "currency": "GBP",
+      "shippingWeightGrams": 20000,
+      "weightGrams": 10000.0,
+      "pack": "10 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 85.49,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 85.49
+        }
+      ],
+      "unit": 8.55,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/8b5d2cef13646d8c51a0045811edf481_2cabd82c-30d5-46b0-aea1-380f1dc5db43.jpg?v=1788772768",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "imageSha256": "374cdbbaf000c4c3232efa85fe2bd3d47a2a5bab1c2bc12aa44573c93d97747c",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "pla-filament"
+    },
+    {
+      "id": "candidate-83b78204051145a2c925",
+      "sourceId": "anycubic-uk",
+      "name": "PETG 10-100kg Deals — White (#EFF0F1) / 10KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472606187833,
+      "category": "filament",
+      "type": "PETG",
+      "colour": "White (#EFF0F1)",
+      "image": "assets/products/candidate-83b78204051145a2c925-2d9611477a5b.webp",
+      "catalogPrice": "97.99",
+      "currency": "GBP",
+      "shippingWeightGrams": 10000,
+      "weightGrams": 10000.0,
+      "pack": "10 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 83.69,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 83.69
+        }
+      ],
+      "unit": 8.37,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/White.jpg?v=1788772965",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "imageSha256": "2d9611477a5ba71385a5f4615cf95f69cabb27e2cd13a910ce4e0b78ebbf838c",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "petg-filament"
+    },
+    {
+      "id": "candidate-05c9867b1a1997881fbd",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Red / Dark Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418652441,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-05c9867b1a1997881fbd-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Red / Dark Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-2707f81cbdbb3ba9a3b3",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456144153,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-2707f81cbdbb3ba9a3b3-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-4807501c047056c982d4",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Gold / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743767833,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-4807501c047056c982d4-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Gold / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-1834bc0f5721f0e2a22b",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Beige / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876584124697,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-1834bc0f5721f0e2a22b-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-23ee3520dcbac24c5c6c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Beige / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579953082649,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-23ee3520dcbac24c5c6c-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-27b00a946da9f68a85ef",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485050649,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-27b00a946da9f68a85ef-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-b1312d84e0331918655d",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008395033,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-b1312d84e0331918655d-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9e110549170b11653fee",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Red / Pink",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418685209,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-9e110549170b11653fee-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Red / Pink",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-7c142adac88999ddbceb",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456176921,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-7c142adac88999ddbceb-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-192c82e4eaffeb8e6265",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Gold / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743800601,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-192c82e4eaffeb8e6265-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Gold / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-05c0776a9038ef3ed8f2",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Beige / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876584157465,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-05c0776a9038ef3ed8f2-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-97535b13e0c41b17f512",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Beige / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579953115417,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-97535b13e0c41b17f512-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-16c11fde8155c9ff4b62",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485083417,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-16c11fde8155c9ff4b62-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-d565222c1fb0acd22294",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008427801,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-d565222c1fb0acd22294-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-dce10f90d8b6ec31961f",
+      "sourceId": "anycubic-uk",
+      "name": "PLA Basic 10-100KG Deals — Light Grey (#DAD9DB) / 20KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763867449,
+      "category": "filament",
+      "type": "PLA",
+      "colour": "Light Grey (#DAD9DB)",
+      "image": "assets/products/candidate-dce10f90d8b6ec31961f-cfcfbd3de831.webp",
+      "catalogPrice": "189.89",
+      "currency": "GBP",
+      "shippingWeightGrams": 20000,
+      "weightGrams": 20000.0,
+      "pack": "20 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 167.3,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 167.3
+        }
+      ],
+      "unit": 8.37,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/8b5d2cef13646d8c51a0045811edf481_210a9b89-1339-478a-ad6e-bb24dafef4a2.jpg?v=1788772770",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "imageSha256": "cfcfbd3de83138c8525bd8524272ad2cb8d56e392f6a853ba53b305f9ca1cea5",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "pla-filament"
+    },
+    {
+      "id": "candidate-6167f0cefa6987c146e8",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Yellow / Yellow",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418717977,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-6167f0cefa6987c146e8-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Yellow / Yellow",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-12c0483ac006146698c7",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456209689,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-12c0483ac006146698c7-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-2756002f931205b94616",
+      "sourceId": "anycubic-uk",
+      "name": "PETG 10-100kg Deals — Black (#212721) / 50KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472606384441,
+      "category": "filament",
+      "type": "PETG",
+      "colour": "Black (#212721)",
+      "image": "assets/products/candidate-2756002f931205b94616-b9838f2c91cf.webp",
+      "catalogPrice": "432.50",
+      "currency": "GBP",
+      "shippingWeightGrams": 50000,
+      "weightGrams": 50000.0,
+      "pack": "50 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 377.98,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 377.98
+        }
+      ],
+      "unit": 7.56,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Black_f91a8e53-1072-45c1-860c-9b7211ad3566.png?v=1788772939",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "imageSha256": "b9838f2c91cfe798129d567946c0a1fade253d7dc1533903a45d8201b8596f99",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "petg-filament"
+    },
+    {
+      "id": "candidate-3929a218bebc6d8b2ec6",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Gold / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743833369,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-3929a218bebc6d8b2ec6-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Gold / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ad26414694a6040b8513",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Beige / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876584190233,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-ad26414694a6040b8513-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-269ddbe2ac1209e1bb40",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Beige / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579953148185,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-269ddbe2ac1209e1bb40-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9e42c3104ce602a6dc04",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485116185,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-9e42c3104ce602a6dc04-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-972a243cfc44a4aed839",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008460569,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-972a243cfc44a4aed839-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-158fe0d333d723c27eee",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Yellow / Dark Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418750745,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-158fe0d333d723c27eee-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Yellow / Dark Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-0ec8afc0feb17e10873c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456242457,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-0ec8afc0feb17e10873c-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-88fa3d6e97361107b077",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk White / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743898905,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-88fa3d6e97361107b077-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk White / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-c752618620b80d36f324",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Grey / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876580978969,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-c752618620b80d36f324-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-1f9d7a6c350d8ea764b6",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Grey / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949412633,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-1f9d7a6c350d8ea764b6-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-bb7f5cbcef7920763bc4",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Beige / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485148953,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Beige",
+      "image": "assets/products/candidate-bb7f5cbcef7920763bc4-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Beige / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-b8303bc11cef473a54fb",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Translucent / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580008493337,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Translucent",
+      "image": "assets/products/candidate-b8303bc11cef473a54fb-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Translucent / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-312280740bcf3af93b2a",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Yellow / Pink",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418783513,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-312280740bcf3af93b2a-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Yellow / Pink",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-087c26ef7bcdc780db98",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456275225,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-087c26ef7bcdc780db98-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-022897196840935005f9",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk White / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743931673,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-022897196840935005f9-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk White / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-1b24d9d93827f6185846",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 51887313551641,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-1b24d9d93827f6185846-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ca0fbc942d807ec4a89f",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Grey / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949478169,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-ca0fbc942d807ec4a89f-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-aa0d2266b8a7599239f3",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485181721,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-aa0d2266b8a7599239f3-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-fcb51d68ee90411322bc",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005282073,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-fcb51d68ee90411322bc-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-5974fa93592eb5e87b1f",
+      "sourceId": "anycubic-uk",
+      "name": "PLA Basic 10-100KG Deals — Light Grey (#DAD9DB) / 50KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763900217,
+      "category": "filament",
+      "type": "PLA",
+      "colour": "Light Grey (#DAD9DB)",
+      "image": "assets/products/candidate-5974fa93592eb5e87b1f-e236879b3c50.webp",
+      "catalogPrice": "474.73",
+      "currency": "GBP",
+      "shippingWeightGrams": 20000,
+      "weightGrams": 50000.0,
+      "pack": "50 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 413.75,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 413.75
+        }
+      ],
+      "unit": 8.28,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/LightGrey_770fe5f9-098a-4161-8d3a-2ba340656a5e.png?v=1788772932",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "imageSha256": "e236879b3c505363e8b7f30b57ff3004e0c102265e63555c706ea71f04411a71",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "pla-filament"
+    },
+    {
+      "id": "candidate-36c7e3b9e428c092d422",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Dark Blue / Yellow",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418816281,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-36c7e3b9e428c092d422-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Dark Blue / Yellow",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-4daac2ac3c1d68c9feed",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Orange",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456307993,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-4daac2ac3c1d68c9feed-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Orange",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-dc1de0a6b9f6a9bce558",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk White / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973743964441,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-dc1de0a6b9f6a9bce558-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk White / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-49817adf515d275e3cb5",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581077273,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-49817adf515d275e3cb5-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-98139a4cc95866232a4d",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — White / Carbon Fiber Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949510937,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-98139a4cc95866232a4d-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-55787949cddd568b3138",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485214489,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-55787949cddd568b3138-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-6eeab9e0d74fd9ba6d6a",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005347609,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-6eeab9e0d74fd9ba6d6a-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-02cf6b311a2462c31ddc",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Dark Blue / Dark Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418849049,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-02cf6b311a2462c31ddc-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Dark Blue / Dark Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ded124b3eb6de8c00d20",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Sky Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456340761,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-ded124b3eb6de8c00d20-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Sky Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-b8e5a4de6c87a3e9de9c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Silver Grey / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973744029977,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-b8e5a4de6c87a3e9de9c-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Silver Grey / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9eb36a2ef87aa29a1bef",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581110041,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-9eb36a2ef87aa29a1bef-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ae311189ca6255fb16b0",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — White / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949543705,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-ae311189ca6255fb16b0-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-0f1acfb7c41548d4766c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485247257,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-0f1acfb7c41548d4766c-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-2ea1c9472d199b2cccba",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52440137957657,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-2ea1c9472d199b2cccba-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-1b8877290356db3c808d",
+      "sourceId": "anycubic-uk",
+      "name": "Anycubic Kobra X Combo — Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +TPU*4",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "variantId": 54472790311225,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Kobra X Combo + ACE 2 Pro*1 (11 Colors)",
+      "image": "assets/products/candidate-1b8877290356db3c808d-d60bd876cec3.webp",
+      "catalogPrice": "789.00",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +TPU*4",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 679.0,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 679.0
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_2_11_4KGTPU_2b6a9a31-7473-47f3-8b0a-e8a48051e84c.jpg?v=1789717576",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "imageSha256": "d60bd876cec308db2cb0b95564fb5d1aa6e90e1ec4ba051568f18a7c3b62b786",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ced1fa5f8b84e28f591a",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Dark Blue / Pink",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418881817,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-ced1fa5f8b84e28f591a-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Dark Blue / Pink",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9b64ecadb43b5813fc9f",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Space Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456373529,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-9b64ecadb43b5813fc9f-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Space Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-7dfcd986e2fe40dd2c15",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Silver Grey / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973744062745,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-7dfcd986e2fe40dd2c15-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Silver Grey / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-cfb37bb4d33913d87025",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581306649,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-cfb37bb4d33913d87025-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-d6580104108a39f162d3",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — White / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949576473,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-d6580104108a39f162d3-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-57791df82ac8fb72b8b2",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485280025,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-57791df82ac8fb72b8b2-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9ff7ecee7a7b698d09ea",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005380377,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-9ff7ecee7a7b698d09ea-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f63984beea2e310e4750",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Pink / Yellow",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418914585,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-f63984beea2e310e4750-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Pink / Yellow",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-94d6918f9b9e5d1a51a6",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Dark Blue / Sea Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456406297,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-94d6918f9b9e5d1a51a6-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Dark Blue / Sea Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f16e03c4a61d4da90d7d",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Silver Grey / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973744095513,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Sky Blue",
+      "image": "assets/products/candidate-f16e03c4a61d4da90d7d-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Sky Blue / Silk Silver Grey / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-fe5d48f9f2f927c18ec9",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581339417,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-fe5d48f9f2f927c18ec9-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-19d3ba4668c6f2cb2699",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Black / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949805849,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-19d3ba4668c6f2cb2699-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9bac6607174f977927b5",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485312793,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-9bac6607174f977927b5-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-d05504d125d340cf12d1",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — White / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005413145,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "White",
+      "image": "assets/products/candidate-d05504d125d340cf12d1-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "White / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f3c2ba2feed37d4f2258",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Pink / Dark Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418947353,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-f3c2ba2feed37d4f2258-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Pink / Dark Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-87c7934a9c07285e8f36",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Red / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456439065,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-87c7934a9c07285e8f36-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Red / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-5eeb1841ae4e3ad4eb5d",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk Gold / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973746258201,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Bluish Purple",
+      "image": "assets/products/candidate-5eeb1841ae4e3ad4eb5d-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Bluish Purple / Silk Gold / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-0beb85bb82b82c2f3b2d",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581372185,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-0beb85bb82b82c2f3b2d-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-e59c896c91984a56754a",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Black / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949838617,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-e59c896c91984a56754a-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ead3644fef556ec54910",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485345561,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-ead3644fef556ec54910-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8f2ad926f3cce694fe84",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Grey / Carbon Fiber Red",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005609753,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-8f2ad926f3cce694fe84-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Red",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-66816f4d4853f469f998",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Orange / Pink / Pink",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418980121,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Orange",
+      "image": "assets/products/candidate-66816f4d4853f469f998-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Orange / Pink / Pink",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f4d7352db8fb7ce1cc8d",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Red / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456471833,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-f4d7352db8fb7ce1cc8d-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Red / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-51162d9074b607596a58",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk Gold / White",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973746290969,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Bluish Purple",
+      "image": "assets/products/candidate-51162d9074b607596a58-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Bluish Purple / Silk Gold / White",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-83631890d2922933c70c",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Black / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581437721,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-83631890d2922933c70c-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-c7d08997f621d6772a18",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Black / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949871385,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-c7d08997f621d6772a18-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ccc5212875037352c1ef",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Copper Filled / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588485378329,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Copper Filled",
+      "image": "assets/products/candidate-ccc5212875037352c1ef-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Copper Filled / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-581fc731966d6333fc3d",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Grey / Carbon Fiber Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005642521,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-581fc731966d6333fc3d-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-1954f68f75e2dc064ce5",
+      "sourceId": "anycubic-uk",
+      "name": "Anycubic Kobra X Combo — Kobra X Combo + ACE 2 Pro*3 (19 Colors) / None",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "variantId": 54472790343993,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Kobra X Combo + ACE 2 Pro*3 (19 Colors)",
+      "image": "assets/products/candidate-1954f68f75e2dc064ce5-819f10466185.webp",
+      "catalogPrice": "1097.00",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Kobra X Combo + ACE 2 Pro*3 (19 Colors) / None",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 987.0,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 987.0
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_4_19_09f93534-f3f1-46fc-8561-6395956821c4.jpg?v=1789717699",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
+      "imageSha256": "819f104661851ad5d6e26e92876e8c53aa00b358cd8951292868b44f57fb15fe",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-e525e58debf750329ca9",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Dark Blue / Red / Yellow",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419012889,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Dark Blue",
+      "image": "assets/products/candidate-e525e58debf750329ca9-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Dark Blue / Red / Yellow",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-7e5c624247fa357da7d1",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Red / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456504601,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-7e5c624247fa357da7d1-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Red / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-92c6791caf5030e6a927",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk Gold / Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973746323737,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Bluish Purple",
+      "image": "assets/products/candidate-92c6791caf5030e6a927-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Bluish Purple / Silk Gold / Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-ee7779811443d6e4841e",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Neon Green / Carbon Fiber Black",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 51887313617177,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Neon Green",
+      "image": "assets/products/candidate-ee7779811443d6e4841e-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Neon Green / Carbon Fiber Black",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-9b9ae56e8d02374312ea",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Black / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949904153,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-9b9ae56e8d02374312ea-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8e29c4f9375575f570fd",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Grey / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588481413401,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-8e29c4f9375575f570fd-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-3fe144c23b851bbc727e",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Grey / Carbon Fiber Green",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005675289,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-3fe144c23b851bbc727e-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Green",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-d73b653eb5b5da7d3f3e",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Dark Blue / Red / Dark Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419045657,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Dark Blue",
+      "image": "assets/products/candidate-d73b653eb5b5da7d3f3e-17a7133d9fb2.webp",
+      "catalogPrice": "425.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Dark Blue / Red / Dark Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 425.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 425.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "imageSha256": "17a7133d9fb26732e9ea531ee084b3425515fce04770ca3de5b5a8d7c14ea1af",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-2d669764e39d29f75796",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo: Precision Study Tools Bundle — Grey / Red / Blue",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974456537369,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-2d669764e39d29f75796-51d8943afc62.webp",
+      "catalogPrice": "323.95",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Red / Blue",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 323.95,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 323.95
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "imageSha256": "51d8943afc6288d42df3fd6a4347a15f6ad1190d6ffa4e3dedb3fe44537619ab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f629d95c8a4c5016e9d5",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk White / Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52973746389273,
+      "category": "printer",
+      "type": "3D Printers",
+      "colour": "Silk Bluish Purple",
+      "image": "assets/products/candidate-f629d95c8a4c5016e9d5-a1d2220f6c79.webp",
+      "catalogPrice": "394.96",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Silk Bluish Purple / Silk White / Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 394.96,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 394.96
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "imageSha256": "a1d2220f6c79fd1858097330d72ba9f52812318a7d9b3915cb38699570ea1bab",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8e14db0af351d9b25592",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri Carbon 2 Combo All-in-One Bundle — Neon Green / Carbon Fiber Grey",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876581470489,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Neon Green",
+      "image": "assets/products/candidate-8e14db0af351d9b25592-2ac1df384ae6.webp",
+      "catalogPrice": "494.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Neon Green / Carbon Fiber Grey",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 497.91,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 497.91
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "2ac1df384ae63666c3ac6dd39f444839e06788b656cacf114964e2f0a2ae53b7",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-f329dcf754cc9d8fafa3",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 Combo All-in-One Bundle — Black / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579949936921,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Black",
+      "image": "assets/products/candidate-f329dcf754cc9d8fafa3-197842338617.webp",
+      "catalogPrice": "414.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Black / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 410.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 410.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "imageSha256": "197842338617667bc8589ba79026f3fc89a51fd35cd5308d1cf1fde69946ce84",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-8dc8b507f9eed82f2737",
+      "sourceId": "elegoo-uk",
+      "name": "Centauri 2 All-in-One Bundle — Grey / Carbon Fiber Brown",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588481478937,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-8dc8b507f9eed82f2737-a5f483aea949.webp",
+      "catalogPrice": "359.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Brown",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 359.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 359.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "imageSha256": "a5f483aea94943f8d086ae0c56d2cb025d3285420d0e1e3a0a19f85e98f9a491",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-6317a924ced2bbdb41e6",
+      "sourceId": "elegoo-uk",
+      "name": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle — Grey / Carbon Fiber Purple",
+      "brand": "ELEGOO UK",
+      "retailer": "ELEGOO UK",
+      "url": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580005708057,
+      "category": "printer",
+      "type": "FDM 3D Printers",
+      "colour": "Grey",
+      "image": "assets/products/candidate-6317a924ced2bbdb41e6-58071ce2398b.webp",
+      "catalogPrice": "519.92",
+      "currency": "GBP",
+      "shippingWeightGrams": 0,
+      "weightGrams": null,
+      "pack": "Grey / Carbon Fiber Purple",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 506.92,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 506.92
+        }
+      ],
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "imageSha256": "58071ce2398b7c4c6aa9d3455c36ca0f558bbbe10b9e7f0d0e430e3f4e99688e",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "printer",
+      "productCategory": "fdm-printers"
+    },
+    {
+      "id": "candidate-638fd9ad912d56e88418",
+      "sourceId": "anycubic-uk",
+      "name": "PLA Basic 10-100KG Deals — Texture Red (#EF3340) / 10KG",
+      "brand": "ANYCUBIC",
+      "retailer": "Anycubic UK",
+      "url": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472763965753,
+      "category": "filament",
+      "type": "PLA",
+      "colour": "Texture Red (#EF3340)",
+      "image": "assets/products/candidate-638fd9ad912d56e88418-3f124830215c.webp",
+      "catalogPrice": "99.99",
+      "currency": "GBP",
+      "shippingWeightGrams": 20000,
+      "weightGrams": 10000.0,
+      "pack": "10 kg",
+      "note": "Review model, pack size, colour and relevance. Price must be confirmed in GBP before publication.",
+      "price": 85.49,
+      "updated": "2026-10-29",
+      "autoRefresh": true,
+      "lastCheckStatus": "ok",
+      "lastAttempt": "2026-10-29",
+      "priceHistory": [
+        {
+          "date": "2026-10-29",
+          "price": 85.49
+        }
+      ],
+      "unit": 8.55,
+      "imageOriginalUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/2532a50ed06130a1e3a25dcb047af662_92bb96db-dfa6-4159-ab3f-2787ee1bc190.jpg?v=1788772768",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "imageSha256": "3f124830215cccd27ae7649e727cf2c9fe5997f140ff0b0d77eb82cc8c0c6825",
+      "imageStatus": "available",
+      "imageAutoRefresh": false,
+      "productGroup": "filament",
+      "productCategory": "pla-filament"
     }
   ],
   "sourceCoverage": [
@@ -827082,12 +832391,12 @@ window.PRINTPROFIT_PRICE_DATA={
     "maxPoints": 90
   },
   "lastRefreshSummary": {
-    "checkedAt": "2026-10-29T10:14:53+00:00",
-    "changedProducts": 26,
+    "checkedAt": "2026-10-29T10:39:47+00:00",
+    "changedProducts": 1,
     "changedImages": 0,
-    "warnings": 5774,
-    "verifiedProducts": 7742,
-    "pendingReview": 175
+    "warnings": 5839,
+    "verifiedProducts": 7856,
+    "pendingReview": 164
   },
   "imageCoverage": {
     "checkedAt": "2026-10-03",

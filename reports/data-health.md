@@ -1,34 +1,12 @@
 # PrintProfit data health
 
-2026-10-29T10:38:10.792268+00:00
+2026-10-29T11:02:46.311008+00:00
 
 ## Attention needed
-- inpost: failed; last verified 2026-10-19
-- royalmail-first: failed; last verified 2026-10-19
-- royalmail-second: failed; last verified 2026-10-19
 - parcelforce: failed; last verified never
-- dpd: failed; last verified 2026-10-19
-- dhl: failed; last verified 2026-10-19
 - ups: failed; last verified never
 - fedex: failed; last verified never
-- etsy-transaction: review-required; last verified 2026-10-19
-- etsy-regulatory: review-required; last verified 2026-10-19
-- etsy-payments: review-required; last verified 2026-10-19
-- depop: failed; last verified 2026-10-19
-- vinted: review-required; last verified 2026-10-19
-- tiktok: review-required; last verified 2026-10-19
 - facebook: failed; last verified never
-- inpost: verification is older than seven days
-- royalmail-first: verification is older than seven days
-- royalmail-second: verification is older than seven days
-- dpd: verification is older than seven days
-- dhl: verification is older than seven days
-- etsy-transaction: verification is older than seven days
-- etsy-regulatory: verification is older than seven days
-- etsy-payments: verification is older than seven days
-- depop: verification is older than seven days
-- vinted: verification is older than seven days
-- tiktok: verification is older than seven days
 - Amazon UK: no active listings
 - Prusa Research: no active listings
 - Ooznest: no active listings
@@ -48,7 +26,7 @@
 | 3DGBIRE | 632 | 629 |
 | Bambu Lab UK | 234 | 234 |
 | Creality UK | 12 | 6 |
-| ELEGOO UK | 2114 | 2109 |
+| ELEGOO UK | 2219 | 2214 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
@@ -56,7 +34,7 @@
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 746 | 710 |
+| Anycubic UK | 755 | 719 |
 | QIDI UK Store | 116 | 107 |
 | Flashforge UK | 27 | 27 |
 | Sovol UK | 20 | 20 |

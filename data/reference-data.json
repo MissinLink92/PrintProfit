@@ -11,16 +11,16 @@
     },
     "etsy": {
       "platform": 6.98,
-      "pay": 4,
+      "pay": 4.0,
       "fixed": 0.2,
-      "note": "UK Etsy Payments: 6.5% transaction plus 0.48% regulatory fee; processing 4% + £0.20. Applies to postage as well as item price. Listing fees, adverts, conversion and VAT on seller fees are additional where applicable. Manually checked 2026-10-19; review by 2026-10-26.",
-      "checkedAt": "2026-10-19",
+      "note": "Etsy UK. Optional ads, listing fees, VAT on seller fees and currency conversion are not included. Platform 6.98%; payments 4.0% + £0.20. Checked 2026-10-29.",
+      "checkedAt": "2026-10-29",
       "reviewAfter": "2026-10-26",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://help.etsy.com/hc/en-gb/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
-        "https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
-        "https://help.etsy.com/hc/en-gb/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
+        "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+        "https://help.etsy.com/hc/en-us/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
+        "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy"
       ]
     },
     "ebay": {
@@ -47,9 +47,9 @@
       "platform": 0,
       "pay": 2.9,
       "fixed": 0.3,
-      "note": "UK sellers: no standard selling fee; payment processing 2.9% + £0.30 on item price, postage and applicable taxes. Optional Boosted Listing fees excluded. Manually checked 2026-10-19; review by 2026-10-26.",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "note": "UK sellers: no standard selling fee; payment processing 2.9% + £0.30 on item price, postage and applicable taxes. Optional Boosted Listing fees excluded. Manually checked 2026-10-29; review by 2026-11-05.",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges"
@@ -59,9 +59,9 @@
       "platform": 0,
       "pay": 0,
       "fixed": 0,
-      "note": "Standard Vinted UK selling has zero selling fees. Buyer charges and optional paid promotions excluded; check product eligibility and business seller rules. Manually checked 2026-10-19; review by 2026-10-26.",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "note": "Standard Vinted UK selling has zero selling fees. Buyer charges and optional paid promotions excluded; check product eligibility and business seller rules. Manually checked 2026-10-29; review by 2026-11-05.",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://www.vinted.co.uk/how_it_works"
@@ -71,9 +71,9 @@
       "platform": 9,
       "pay": 0,
       "fixed": 0,
-      "note": "TikTok Shop UK standard commission 9%, including applicable taxes. Commission also applies to customer-paid shipping; category and incentive reductions and optional charges may differ. Manually checked 2026-10-19; review by 2026-10-26.",
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "note": "TikTok Shop UK standard commission 9%, including applicable taxes. Commission also applies to customer-paid shipping; category and incentive reductions and optional charges may differ. Manually checked 2026-10-29; review by 2026-11-05.",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://seller-uk.tiktok.com/university/essay?knowledge_id=7753824408913665&lang=en-GB"
@@ -125,7 +125,7 @@
   },
   "deliveryProfiles": {
     "royalmail": {
-      "source": "Royal Mail online UK reference — manually checked 2026-10-19",
+      "source": "Royal Mail online UK price guide effective 5 October 2026 — manually checked 2026-10-29",
       "rates": [
         {
           "label": "1st Class — Letter up to 100g",
@@ -218,12 +218,11 @@
           "note": "Online price; VAT exempt. Maximum: letter 24×16.5×0.5cm; large letter 35.3×25×2.5cm; small parcel 45×35×16cm; medium parcel 61×46×46cm. Compensation conditions apply."
         }
       ],
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://www.royalmail.com/sending/uk/1st-class",
-        "https://www.royalmail.com/sending/uk/2nd-class"
+        "https://www.royalmail.com/sites/royalmail.com/files/2026-09/online-price-guide-october-2026-v1-ta.pdf"
       ]
     },
     "evri": {
@@ -432,7 +431,7 @@
       ]
     },
     "inpost": {
-      "source": "InPost official UK reference — manually checked 2026-10-19",
+      "source": "InPost official UK reference — manually checked 2026-10-29",
       "rates": [
         {
           "label": "Locker / Shop — Small",
@@ -465,8 +464,8 @@
           "note": "Up to 15kg. Maximum 41 × 38 × 64cm. Packaging and service eligibility apply."
         }
       ],
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://inpost.co.uk/send/parcel-prices"
@@ -478,15 +477,15 @@
         {
           "label": "UK advertised starting price — quote required",
           "price": 2.99,
-          "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+          "note": "Advertised UK starting price including VAT. Enter a quote for the actual weight, dimensions, destination, surcharges and service."
         }
       ],
       "quoteRequired": true,
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://send.dpd.co.uk/"
+        "https://send.dpd.co.uk/products-and-services/"
       ]
     },
     "dhl": {
@@ -495,15 +494,15 @@
         {
           "label": "UK advertised starting price — quote required",
           "price": 3.78,
-          "note": "Starting price only. Enter the carrier quote for the actual weight, dimensions, destination, VAT, surcharges and account terms."
+          "note": "Advertised small parcel starting price for depot-to-depot delivery, up to 5kg and 35cm each side; VAT included. Enter a quote for the actual route, parcel and service."
         }
       ],
       "quoteRequired": true,
-      "checkedAt": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "checkedAt": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://send.dhlparcel.co.uk/parcel-delivery"
+        "https://send.dhlparcel.co.uk/parcel-services/small-parcel-delivery"
       ]
     },
     "parcelforce": {
@@ -999,11 +998,11 @@
     "inpost": {
       "url": "https://inpost.co.uk/send/parcel-prices",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://inpost.co.uk/send/parcel-prices"
@@ -1019,29 +1018,27 @@
     "royalmail-first": {
       "url": "https://www.royalmail.com/sending/uk/1st-class",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://www.royalmail.com/sending/uk/1st-class",
-        "https://www.royalmail.com/sending/uk/2nd-class"
+        "https://www.royalmail.com/sites/royalmail.com/files/2026-09/online-price-guide-october-2026-v1-ta.pdf"
       ]
     },
     "royalmail-second": {
       "url": "https://www.royalmail.com/sending/uk/2nd-class",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "Cannot read robots.txt: HTTP 403",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://www.royalmail.com/sending/uk/1st-class",
-        "https://www.royalmail.com/sending/uk/2nd-class"
+        "https://www.royalmail.com/sites/royalmail.com/files/2026-09/online-price-guide-october-2026-v1-ta.pdf"
       ]
     },
     "parcelforce": {
@@ -1053,27 +1050,27 @@
     "dpd": {
       "url": "https://send.dpd.co.uk/",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "Source did not provide readable pricing guidance",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://send.dpd.co.uk/"
+        "https://send.dpd.co.uk/products-and-services/"
       ]
     },
     "dhl": {
       "url": "https://send.dhlparcel.co.uk/parcel-delivery",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "Source did not provide readable pricing guidance",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
-        "https://send.dhlparcel.co.uk/parcel-delivery"
+        "https://send.dhlparcel.co.uk/parcel-services/small-parcel-delivery"
       ]
     },
     "ups": {
@@ -1091,10 +1088,9 @@
     "etsy-transaction": {
       "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
       "lastAttempt": "2026-10-29",
-      "status": "review-required",
-      "error": "Expected one unambiguous rate; found 0",
+      "status": "verified",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
+      "lastVerified": "2026-10-29",
       "reviewAfter": "2026-10-26",
       "verificationMethod": "manual",
       "sourceUrls": [
@@ -1107,10 +1103,9 @@
     "etsy-regulatory": {
       "url": "https://help.etsy.com/hc/en-us/articles/1500011073202-What-is-a-Regulatory-Operating-Fee",
       "lastAttempt": "2026-10-29",
-      "status": "review-required",
-      "error": "Expected one unambiguous rate; found 0",
+      "status": "verified",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
+      "lastVerified": "2026-10-29",
       "reviewAfter": "2026-10-26",
       "verificationMethod": "manual",
       "sourceUrls": [
@@ -1123,10 +1118,9 @@
     "etsy-payments": {
       "url": "https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy",
       "lastAttempt": "2026-10-29",
-      "status": "review-required",
-      "error": "Expected one unambiguous rate; found 0",
+      "status": "verified",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
+      "lastVerified": "2026-10-29",
       "reviewAfter": "2026-10-26",
       "verificationMethod": "manual",
       "sourceUrls": [
@@ -1140,7 +1134,7 @@
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-29",
       "status": "verified",
-      "contentHash": "6f7b759e5aaab314db9cbf37256e3f8c8a0f70f6e00c4e4fbdc56d8021028d22",
+      "contentHash": "7c2bb6e7cbce5e5180b2f0ae8d901adb3c42b07c9aebfea80ed5e6500a489587",
       "lastVerified": "2026-10-29"
     },
     "amazon": {
@@ -1153,11 +1147,11 @@
     "depop": {
       "url": "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges",
       "lastAttempt": "2026-10-29",
-      "status": "failed",
+      "status": "manual-verified",
       "error": "HTTP Error 403: Forbidden",
       "automaticStatus": "failed",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://depophelp.zendesk.com/hc/en-gb/articles/360001791127-Seller-fees-and-charges"
@@ -1166,12 +1160,12 @@
     "vinted": {
       "url": "https://www.vinted.co.uk/pricelist",
       "lastAttempt": "2026-10-29",
-      "status": "review-required",
+      "status": "manual-verified",
       "contentHash": "c633f181f1ed31f190025910f2593800b096e9b0c035f7b7b26bea94a8694987",
       "error": "Zero seller fee guidance changed; keep the previous value for review",
       "automaticStatus": "review-required",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://www.vinted.co.uk/how_it_works"
@@ -1180,12 +1174,12 @@
     "tiktok": {
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-29",
-      "status": "review-required",
-      "contentHash": "65b404a872e254ab2e327b8f3576f9b5c2d6aa7fbc8228c0f85d54908f281f3b",
+      "status": "manual-verified",
+      "contentHash": "84c72b172e0c307cc501f571a000ac7854df5a0605d8ec8254d64e1bd3d4eff0",
       "error": "Expected one unambiguous rate; found 0",
       "automaticStatus": "review-required",
-      "lastVerified": "2026-10-19",
-      "reviewAfter": "2026-10-26",
+      "lastVerified": "2026-10-29",
+      "reviewAfter": "2026-11-05",
       "verificationMethod": "manual",
       "sourceUrls": [
         "https://seller-uk.tiktok.com/university/essay?knowledge_id=7753824408913665&lang=en-GB"
@@ -1226,7 +1220,7 @@
       "lastVerified": "2026-10-29"
     }
   },
-  "lastAttempt": "2026-10-29T10:14:53+00:00",
+  "lastAttempt": "2026-10-29T10:39:47+00:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-28",
@@ -1253,7 +1247,7 @@
       "ZAR": 22.12078534
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-29T10:14:53+00:00",
+    "lastAttempt": "2026-10-29T10:39:47+00:00",
     "status": "verified"
   }
 }
