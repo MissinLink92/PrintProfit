@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T04:36:26.799112+00:00",
+  "checkedAt": "2026-10-29T10:38:10.792268+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-19",
     "royalmail-first: failed; last verified 2026-10-19",
@@ -97,7 +97,7 @@
     {
       "name": "Creality UK",
       "listed": 12,
-      "verified": 7,
+      "verified": 6,
       "categories": {
         "filament": 1,
         "printer": 11
@@ -105,12 +105,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2000,
-      "verified": 1995,
+      "listed": 2114,
+      "verified": 2109,
       "categories": {
-        "printer": 712,
-        "filament": 927,
-        "resin-material": 321,
+        "printer": 810,
+        "filament": 929,
+        "resin-material": 335,
         "accessory": 35,
         "equipment": 5
       }
@@ -169,11 +169,11 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 731,
-      "verified": 695,
+      "listed": 746,
+      "verified": 710,
       "categories": {
-        "filament": 393,
-        "printer": 161,
+        "filament": 402,
+        "printer": 167,
         "resin-material": 136,
         "accessory": 41
       }
@@ -215,10 +215,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1752,
-      "verified": 1622,
+      "listed": 1751,
+      "verified": 1621,
       "categories": {
-        "filament": 1459,
+        "filament": 1458,
         "resin-material": 164,
         "printer": 60,
         "accessory": 63,
@@ -242,6 +242,15 @@
       "listed": 0,
       "verified": 0,
       "categories": {}
+    },
+    {
+      "name": "3D Printz",
+      "listed": 51,
+      "verified": 51,
+      "categories": {
+        "filament": 49,
+        "resin-material": 2
+      }
     }
   ],
   "manualVerifications": [],

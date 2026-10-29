@@ -1140,14 +1140,14 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-10-29",
       "status": "verified",
-      "contentHash": "672da9c0599dcbe258f881adb37af0ca38adf3ef23f835fac245f55199e2e09e",
+      "contentHash": "6f7b759e5aaab314db9cbf37256e3f8c8a0f70f6e00c4e4fbdc56d8021028d22",
       "lastVerified": "2026-10-29"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
       "lastAttempt": "2026-10-29",
       "status": "verified",
-      "contentHash": "f2d072149e8f0f48069009f905feac54d57205ca5eab8a9a5a20ca107c1db4c9",
+      "contentHash": "66945cf753e3d0554c5d5c8449057f41a44c362147d9192d439b52a974c23b07",
       "lastVerified": "2026-10-29"
     },
     "depop": {
@@ -1181,7 +1181,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://seller-uk.tiktok.com/university/essay?knowledge_id=10010004&lang=en-GB",
       "lastAttempt": "2026-10-29",
       "status": "review-required",
-      "contentHash": "a75a33f8776b91b50b6b4227db4a76d3c0840998b36da63fe610430889611d12",
+      "contentHash": "65b404a872e254ab2e327b8f3576f9b5c2d6aa7fbc8228c0f85d54908f281f3b",
       "error": "Expected one unambiguous rate; found 0",
       "automaticStatus": "review-required",
       "lastVerified": "2026-10-19",
@@ -1226,7 +1226,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "lastVerified": "2026-10-29"
     }
   },
-  "lastAttempt": "2026-10-29T03:56:19+00:00",
+  "lastAttempt": "2026-10-29T10:14:53+00:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-10-28",
@@ -1253,7 +1253,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "ZAR": 22.12078534
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-10-29T03:56:19+00:00",
+    "lastAttempt": "2026-10-29T10:14:53+00:00",
     "status": "verified"
   }
 };
