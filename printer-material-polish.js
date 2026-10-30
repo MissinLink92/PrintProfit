@@ -84,7 +84,7 @@ function install(){
    const parts=workshop?[workshop.dataset.watts,workshop.dataset.price,workshop.dataset.lifetime]:String(printer.value||'').split('|');
    const power=Number(parts[0])||0,price=Number(parts[1])||0,life=Number(parts[2])||0;
    const hint=$('ppPrinterDetailsHint');
-   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Values used by PrintProfit for this printer.';
+   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Illustrative preset values. Check your power draw and purchase price; use Custom printer for your own figures.';
    const set=(id,val)=>{const e=$(id);if(e)e.textContent=val;};
    if(price>0){
     set('ppPrinterPrice',money(price));

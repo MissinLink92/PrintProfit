@@ -389,6 +389,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <button class="quick-btn" type="button" data-quick="filament">Filament</button>
 <button class="quick-btn" type="button" data-quick="printing-resin">Resin</button>
 <button class="quick-btn" type="button" data-quick="printer">3D printers</button>
+<button class="quick-btn" type="button" data-quick="elegoo-printers" aria-pressed="false">ELEGOO printers</button>
 <button class="quick-btn" type="button" data-quick="accessory">Parts & accessories</button>
 <button class="quick-btn" type="button" data-quick="in">In stock</button>
 <button class="quick-btn" type="button" data-quick="under20">Under £20</button>
@@ -843,6 +844,11 @@ function searchText(x){
  return s;
 }
 function isInStock(x){return String(x.availability??'').toLowerCase().includes('in');}
+let elegooModelsOnly=false;
+function isStandalonePrinter(x){
+ const name=String(x.name||'');
+ return !/\b(bundle|with|upgrade kit|accessory|accessories)\b|\s\+\s|:\s/i.test(name);
+}
 function filtered(){
  const q=$('search').value.trim().toLowerCase(),cat=$('category').value,brand=$('brand').value,type=$('type').value,colour=$('colour').value,retailer=$('retailer').value,availability=$('availability').value;
  const min=Number($('minPrice').value)||0,max=$('maxPrice').value===''?Infinity:Number($('maxPrice').value);
@@ -857,6 +863,7 @@ function filtered(){
   Number(x.price||0)>=min && Number(x.price||0)<=max &&
   (availability==='all'||(availability==='in'?isInStock(x):String(x.availability||'').toLowerCase().includes('out')))
  );
+ if(elegooModelsOnly)rows=rows.filter(x=>categoryInfo(x).group==='printer'&&x.brand==='ELEGOO'&&isStandalonePrinter(x));
  if(window.__compareSelectedOnly)rows=rows.filter(x=>selectedIds.has(String(x.id)));
  const mode=view==='all'?sort:view;
  rows.sort((a,b)=>{
@@ -896,7 +903,7 @@ function render(resetPage=true){
  const current=$('category').value,leaf=catalogue.categories.find(category=>category.id===current);
  document.querySelectorAll('[data-quick]').forEach(button=>{
   const mode=button.dataset.quick;
-  const active=mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===(mode==='printing-resin'?'resin-material':mode)||leaf?.group===mode;
+  const active=mode==='elegoo-printers'?elegooModelsOnly:mode==='in'?$('availability').value==='in':mode==='under20'?$('maxPrice').value!==''&&Number($('maxPrice').value)<=20:mode==='clear'?false:current===(mode==='printing-resin'?'resin-material':mode)||leaf?.group===mode;
   button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
  });
  $('rows').innerHTML=visibleRows.map(x=>'<tr>'+
@@ -1003,6 +1010,12 @@ $('savedComparisons').addEventListener('change',loadSelectedSaved);
 $('quickTools').addEventListener('click',e=>{
  const btn=e.target.closest('[data-quick]');if(!btn)return;
  const mode=btn.dataset.quick;
+ if(mode==='elegoo-printers'){
+  elegooModelsOnly=!elegooModelsOnly;
+  if(elegooModelsOnly){$('search').value='';$('category').value='printer';$('type').value='all';refreshFilters();$('brand').value='ELEGOO';$('retailer').value='all';$('colour').value='all';$('minPrice').value='';$('maxPrice').value='';$('availability').value='all';$('view').value='all';$('sort').value='name';}
+  render();return;
+ }
+ elegooModelsOnly=false;
  if(['filament','printing-resin','printer','accessory'].includes(mode)){$('category').value=mode==='printing-resin'?'resin-material':mode;$('type').value='all';refreshFilters();}
  else if(mode==='in')$('availability').value='in';
  else if(mode==='under20')$('maxPrice').value='20';
