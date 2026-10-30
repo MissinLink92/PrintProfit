@@ -9,6 +9,7 @@ on:
       - 'legacy-index.html'
       - 'print-farm.js'
       - 'price-finder.html'
+      - 'product-categories.js'
       - 'guide.html'
       - 'privacy.html'
       - 'terms.html'
