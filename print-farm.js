@@ -10,7 +10,7 @@ const materialType=()=>$('materialType')?.value||'filament';
 const money=value=>window.__ppMoney?window.__ppMoney(value):new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}).format(value);
 function profile(value){
  const option=[...($('printer')?.options||[])].find(o=>o.value===value);
- if(value==='custom')return{watts:number('customPrinterPower'),price:number('customPrinterPrice'),lifetime:number('customPrinterLife'),materialType:materialType()};
+ if(value==='custom'||value.startsWith('custom|'))return{watts:number('customPrinterPower'),price:number('customPrinterPrice'),lifetime:number('customPrinterLife'),materialType:materialType()};
  if(value.startsWith('workshop:'))return{watts:Number(option?.dataset.watts)||0,price:Number(option?.dataset.price)||0,lifetime:Number(option?.dataset.lifetime)||0,materialType:option?.dataset.materialType||'filament'};
  const p=value.split(/[|,]/);return{watts:Number(p[0])||0,price:Number(p[1])||0,lifetime:Number(p[2])||0,materialType:option?.dataset.materialType||'filament'};
 }

@@ -46,13 +46,14 @@ function install(){
      '<div><span>Expected life</span><b id="ppPrinterLife">—</b></div>'+
      '<div><span>Depreciation</span><b id="ppPrinterDep">—</b></div>'+
    '</div>'+
-   '<div id="ppCustomPrinterFields" class="pp-custom-printer-fields" hidden>'+
+     '<div id="ppCustomPrinterFields" class="pp-custom-printer-fields" hidden>'+
      '<div><label for="customPrinterPrice">Purchase price (£)</label><input id="customPrinterPrice" type="number" min="0" step="0.01" placeholder="e.g. 250"></div>'+
      '<div><label for="customPrinterPower">Power draw (W)</label><input id="customPrinterPower" type="number" min="0" step="1" placeholder="e.g. 150"></div>'+
      '<div><label for="customPrinterLife">Expected life (hours)</label><input id="customPrinterLife" type="number" min="0" step="1" placeholder="e.g. 4000"></div>'+
-     '<div class="pp-custom-printer-note">Enter your printer details here. PrintProfit will use these values for electricity and depreciation.</div>'+
+     '<div class="pp-custom-printer-note">Enter the average printing power you measured or estimated, what you paid, and the lifetime you expect. A manufacturer’s maximum power rating is not an average print draw.</div>'+
    '</div>';
   printer.closest('section.panel')?.insertAdjacentElement('afterend',card);
+  const warning=document.createElement('p');warning.id='ppPrinterValuesWarning';warning.hidden=true;warning.setAttribute('role','status');warning.style.cssText='margin:10px 0;padding:12px;border:1px solid #ff922e;border-radius:9px;background:#4a280d;color:#fff0dd;font-weight:700;line-height:1.5';card.appendChild(warning);
  }
 
  const materialBlock=material.closest('.merge-block');
@@ -63,7 +64,8 @@ function install(){
  }
 
  function update(){
-  const custom=printer.value==='custom';
+  const named=printer.value.startsWith('custom|');
+  const custom=printer.value==='custom'||named;
   const fields=$('ppCustomPrinterFields');
   if(fields)fields.hidden=!custom;
 
@@ -72,19 +74,23 @@ function install(){
    const power=Number($('customPrinterPower')?.value)||0;
    const life=Number($('customPrinterLife')?.value)||0;
    const hint=$('ppPrinterDetailsHint');
-   if(hint)hint.textContent='Enter the values for your own printer profile.';
+   if(hint)hint.textContent=named?'Enter your own figures for '+printer.options[printer.selectedIndex].textContent.replace(/ — enter your values$/,'')+'. No cost figures are assumed.':'Enter the values for your own printer profile.';
    const set=(id,val)=>{const e=$(id);if(e)e.textContent=val;};
    set('ppPrinterPrice',price>0?money(price):'Not entered');
    set('ppPrinterPower',power>0?Math.round(power)+' W':'Not entered');
    set('ppPrinterLife',life>0?Math.round(life).toLocaleString()+' h':'Not entered');
    set('ppPrinterDep',price>0&&life>0?money(price/life)+'/h':'Enter price + life');
+   const warning=$('ppPrinterValuesWarning');
+   if(warning){warning.hidden=!named||power>0&&price>0&&life>0;warning.textContent=warning.hidden?'':'Enter purchase price, average power draw and expected life before using this result as a quote. Missing figures would be counted as £0.';}
   }else{
+   const warning=$('ppPrinterValuesWarning');if(warning)warning.hidden=true;
    const selected=printer.options[printer.selectedIndex];
    const workshop=String(printer.value||'').startsWith('workshop:')?selected:null;
    const parts=workshop?[workshop.dataset.watts,workshop.dataset.price,workshop.dataset.lifetime]:String(printer.value||'').split('|');
    const power=Number(parts[0])||0,price=Number(parts[1])||0,life=Number(parts[2])||0;
    const hint=$('ppPrinterDetailsHint');
-   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Illustrative preset values. Check your power draw and purchase price; use Custom printer for your own figures.';
+   const retail=Number(selected?.dataset.retailPrice);
+   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Illustrative preset values. Use Custom printer for your actual figures.'+(retail>0?' Tracked retail reference: '+money(retail)+'; this does not change your calculation.':'');
    const set=(id,val)=>{const e=$(id);if(e)e.textContent=val;};
    if(price>0){
     set('ppPrinterPrice',money(price));
@@ -111,7 +117,11 @@ function install(){
   el.addEventListener('input',update);
   el.addEventListener('change',update);
  };
- printer.addEventListener('change',()=>{update();setTimeout(()=>window.__printProfitReady&&document.getElementById('calc')?.click(),20);});
+ printer.addEventListener('change',event=>{
+  if(event.isTrusted&&printer.value.startsWith('custom|'))['customPrinterPrice','customPrinterPower','customPrinterLife'].forEach(id=>{const input=$(id);if(input)input.value='';});
+  update();setTimeout(()=>window.__printProfitReady&&document.getElementById('calc')?.click(),20);
+ });
+ printer.addEventListener('printer-retail-prices-ready',update);
  material.addEventListener('change',update);
  ['materialPack','materialPackCost','materialType','customPrinterPrice','customPrinterPower','customPrinterLife'].forEach(wire);
  update();

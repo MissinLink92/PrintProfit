@@ -45,6 +45,8 @@ jobs:
         run: node scripts/check_market_prices.cjs
       - name: Check saved printer options and metadata
         run: node scripts/check_workshop_printers.cjs
+      - name: Check printer model profiles and retail references
+        run: node scripts/check_printer_presets.cjs
       - name: Check Workspace popup placement and scroll restoration
         run: node scripts/check_workspace_modals.cjs
       - name: Check shared Guide and Settings panels

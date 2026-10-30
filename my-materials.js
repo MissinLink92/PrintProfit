@@ -218,7 +218,7 @@ function markPrinted(){
 }
 function populatePrinterPresets(preferred){
  const target=document.getElementById('ppWorkshopPrinterPreset'),source=document.getElementById('printer');if(!target)return;
- const options=source?[...source.options].filter(option=>option.value&&option.value!=='custom'):[];
+ const options=source?[...source.options].filter(option=>option.value&&option.value!=='custom'&&!option.value.startsWith('custom|')):[];
  target.innerHTML='<option value="">Custom printer details</option>'+options.map(option=>{const group=option.parentElement?.tagName==='OPTGROUP'?option.parentElement.label:'';return '<option value="'+esc(option.value)+'">'+esc(group?group+' · '+option.textContent.trim():option.textContent.trim())+'</option>'}).join('');
  if(preferred&&options.some(option=>option.value===preferred))target.value=preferred;
 }
@@ -233,7 +233,7 @@ function fillPrinterFromPreset(){
 }
 function openPrinterForm(existing){
  const wrap=document.getElementById('ppWorkshopPrinterForm'),form=wrap;if(!wrap||!form)return;
- const source=document.getElementById('printer'),current=source?.value||'',preset=current&&current!=='custom'?current:'';
+ const source=document.getElementById('printer'),current=source?.value||'',preset=current&&current!=='custom'&&!current.startsWith('custom|')?current:'';
  form.dataset.editId=existing?.id||'';
  populatePrinterPresets(existing?.presetValue||preset);
  document.getElementById('ppWorkshopPrinterName').value=existing?.name||'';
@@ -242,7 +242,7 @@ function openPrinterForm(existing){
  document.getElementById('ppWorkshopPrinterLife').value=existing?.lifetime??0;
  document.getElementById('ppWorkshopPrinterType').value=existing?.materialType||(document.getElementById('materialType')?.value==='resin'?'Resin':'Filament');
  if(!existing&&preset)fillPrinterFromPreset();
- else if(!existing&&current==='custom'){
+ else if(!existing&&(current==='custom'||current.startsWith('custom|'))){
   document.getElementById('ppWorkshopPrinterWatts').value=Number(val('customPrinterPower'))||0;
   document.getElementById('ppWorkshopPrinterPrice').value=Number(val('customPrinterPrice'))||0;
   document.getElementById('ppWorkshopPrinterLife').value=Number(val('customPrinterLife'))||0;
