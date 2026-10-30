@@ -22,6 +22,8 @@ const samples = [
  ['123-3D PETG Pellets 1kg', 'PETG', 'filament', 'material-pellets'],
  ['PTFE Tube', 'Accessories', 'printer', 'filament-handling'],
  ['Wireless Mouse Creative Kit', 'Creative Kits', 'printer', 'creative-kits'],
+ ['SUNLU New Arrivals: Empower Your Creative Workspace — PLA Matte Dual Color / Orange Red', '3D Printer Filaments', 'printer', 'other-filament'],
+ ['SUNLU Easter Mystery Box Collection - Unlock The Creativity with Easter', '3D Printers', 'printer', 'other-accessories'],
  ['SUNLU 3D Printer Enclosure', 'Filament', 'printer', 'printer-enclosures'],
  ['Creality Ender 3 V3 SE', '3D Printer', 'printer', 'fdm-printers'],
 ];
