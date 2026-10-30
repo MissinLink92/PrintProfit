@@ -1288,6 +1288,14 @@
               "pattern": "\\bfilament\\b"
             }
           ]
+        },
+        {
+          "all": [
+            {
+              "field": "type",
+              "pattern": "^(?:3d printer\\s+)?filaments?\\b"
+            }
+          ]
         }
       ]
     },
@@ -1358,6 +1366,10 @@
             {
               "field": "legacyCategory",
               "pattern": "^printer$"
+            },
+            {
+              "field": "nameBase",
+              "pattern": "^(?!.*\\bmystery\\s+box\\b)"
             }
           ]
         }
