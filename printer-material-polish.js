@@ -89,7 +89,8 @@ function install(){
    const parts=workshop?[workshop.dataset.watts,workshop.dataset.price,workshop.dataset.lifetime]:String(printer.value||'').split('|');
    const power=Number(parts[0])||0,price=Number(parts[1])||0,life=Number(parts[2])||0;
    const hint=$('ppPrinterDetailsHint');
-   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Illustrative preset values. Check your power draw and purchase price; use Custom printer for your own figures.';
+   const retail=Number(selected?.dataset.retailPrice);
+   if(hint)hint.textContent=workshop?'Using My Workshop profile: '+(workshop.dataset.profileName||workshop.textContent.replace(/^My Workshop · /,''))+'.':'Illustrative preset values. Use Custom printer for your actual figures.'+(retail>0?' Tracked retail reference: '+money(retail)+'; this does not change your calculation.':'');
    const set=(id,val)=>{const e=$(id);if(e)e.textContent=val;};
    if(price>0){
     set('ppPrinterPrice',money(price));
@@ -120,6 +121,7 @@ function install(){
   if(event.isTrusted&&printer.value.startsWith('custom|'))['customPrinterPrice','customPrinterPower','customPrinterLife'].forEach(id=>{const input=$(id);if(input)input.value='';});
   update();setTimeout(()=>window.__printProfitReady&&document.getElementById('calc')?.click(),20);
  });
+ printer.addEventListener('printer-retail-prices-ready',update);
  material.addEventListener('change',update);
  ['materialPack','materialPackCost','materialType','customPrinterPrice','customPrinterPower','customPrinterLife'].forEach(wire);
  update();
