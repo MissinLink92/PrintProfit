@@ -7,6 +7,9 @@ on:
       - 'scripts/nightly_*.py'
       - 'config/nightly-sources.json'
       - 'config/catalogue-expansion.json'
+      - 'data/product-offers.js'
+      - 'scripts/check_data_health.py'
+      - '.github/workflows/update-price-finder.yml'
   schedule:
     - cron: '0 0 * * *'
       timezone: Europe/London
@@ -68,7 +71,10 @@ jobs:
         if: always()
         run: |
           if [ -f reports/nightly-report.md ]; then
-            cat reports/nightly-report.md >> "$GITHUB_STEP_SUMMARY"
+            head -c 900000 reports/nightly-report.md >> "$GITHUB_STEP_SUMMARY"
+            if [ "$(wc -c < reports/nightly-report.md)" -gt 900000 ]; then
+              printf '\n\nSummary truncated. Download the nightly-report artifact for the complete report.\n' >> "$GITHUB_STEP_SUMMARY"
+            fi
           fi
       - name: Save refreshed data
         run: |
