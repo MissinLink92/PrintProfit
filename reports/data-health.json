@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T11:02:46.311008+00:00",
+  "checkedAt": "2026-11-05T05:23:58.609730+00:00",
   "warnings": [
     "parcelforce: failed; last verified never",
     "ups: failed; last verified never",
@@ -53,10 +53,10 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 632,
-      "verified": 629,
+      "listed": 631,
+      "verified": 628,
       "categories": {
-        "filament": 541,
+        "filament": 540,
         "printer": 40,
         "resin-material": 46,
         "equipment": 3,
@@ -83,11 +83,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2219,
-      "verified": 2214,
+      "listed": 2200,
+      "verified": 2195,
       "categories": {
-        "printer": 915,
-        "filament": 929,
+        "printer": 914,
+        "filament": 911,
         "resin-material": 335,
         "accessory": 35,
         "equipment": 5
@@ -193,13 +193,12 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1751,
-      "verified": 1621,
+      "listed": 1736,
+      "verified": 912,
       "categories": {
-        "filament": 1458,
+        "filament": 1500,
         "resin-material": 164,
-        "printer": 60,
-        "accessory": 63,
+        "accessory": 66,
         "equipment": 6
       }
     },
@@ -290,14 +289,13 @@
     }
   ],
   "exchangeRates": {
-    "date": "2026-10-28",
+    "date": "2026-11-04",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
   "offers": {
-    "configured": 0,
+    "configured": 2,
     "activeApproved": 0,
-    "checkoutVerified": false,
-    "note": "No approved offers configured. Coupon coverage is not advertised."
+    "checkoutVerified": false
   }
 }

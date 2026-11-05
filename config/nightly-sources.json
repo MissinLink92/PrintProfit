@@ -1488,7 +1488,7 @@
     },
     "elegoo-centauri-2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261026154309_52_876.jpg?v=1793000735",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2-_-260811.jpg?v=1786704718",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2",
       "variantId": 52496229105945,
       "expectedVariantTitle": "Default Title",
@@ -1512,7 +1512,7 @@
     },
     "elegoo-saturn-4-ultra-16k": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U16k-halloweensale.jpg?v=1793184732",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U16.jpg?v=1793706425",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 50003946733849,
       "variantId": 50003946733849,
@@ -1521,7 +1521,7 @@
     },
     "elegoo-saturn-4-ultra": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261028185101_62_876.jpg?v=1793184777",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U_028d09f8-0071-4597-8239-312242831000.jpg?v=1756798234",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 48897881669913,
       "variantId": 48897881669913,
@@ -1530,7 +1530,7 @@
     },
     "elegoo-saturn-4": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261026154313_55_876.jpg?v=1793000685",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4frontview.jpg?v=1756798232",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 48897886978329,
       "variantId": 48897886978329,
@@ -1557,7 +1557,7 @@
     },
     "elegoo-mars-5-ultra": {
       "priceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261026154314_56_876.jpg?v=1793000651",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/f91c887f39b07095c6453b328b4b84cd_5640e508-b340-4706-8f45-2c5c4285c1f2.jpg?v=1756798213",
       "imageSourceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 49138509775129,
       "variantId": 49138509775129,
@@ -4452,7 +4452,7 @@
     "candidate-558ddf3973f9101828c0": {
       "priceUrl": "https://3dgbire.com/products/abs-fusion-natural-white-filament-2-85mm",
       "variantId": 6887245348917,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/18ea4d7d-aa77-491a-82b8-47aeb7645f3f.jpg?v=1782733899",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/18ea4d7d-aa77-491a-82b8-47aeb7645f3f.jpg?v=1793282166",
       "expectedProductTitle": "Forward AM Ultrafuse ABS Fusion+ Natural White Filament | 2.85mm | 750g",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://3dgbire.com/products/abs-fusion-natural-white-filament-2-85mm"
@@ -42128,7 +42128,7 @@
     "candidate-f2ad360985da24e17777": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-mars-4-ultra-msla-resin-3d-printer-with-9k-mono-lcd",
       "variantId": 49137539940633,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261026154309_53_876.jpg?v=1793000710",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/products/elegoo-mars-4-ultra-3d-printer-2.jpg?v=1756798330",
       "expectedProductTitle": "Mars 4 Ultra",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-mars-4-ultra-msla-resin-3d-printer-with-9k-mono-lcd"
@@ -73755,12 +73755,12 @@
       "imageSourceUrl": "https://uk.store.sunlu.com/products/3kg-pla-plus-matte-pla-filament-bundle-buying-1kg-roll"
     },
     "candidate-80420869e446a7356fe2": {
-      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo",
       "variantId": 67857501880633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C-4_Colors_4KG_PLA_High_Speed_940395e3-36f6-4d48-8b03-34cbd1d7ae33.jpg?v=1788773010",
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
       "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 4KG PLA High Speed",
-      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo"
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo"
     },
     "candidate-b1abbf86921b9082fad9": {
       "priceUrl": "https://uk.elegoo.com/products/tpu-95a-filament-1-75-mm-colored-10-kg",
@@ -74083,12 +74083,12 @@
       "imageSourceUrl": "https://uk.elegoo.com/products/neptune-4-all-in-one-premium-bundle"
     },
     "candidate-bf8a0b30e1a05919cd12": {
-      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo",
       "variantId": 67857501913401,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C-4_Colors_4KG_PLA.jpg?v=1788773010",
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
       "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 4KG PLA Special",
-      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo"
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo"
     },
     "candidate-be8f8851d604f06d3974": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
@@ -74355,12 +74355,12 @@
       "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer"
     },
     "candidate-06e4c638c527283e9f60": {
-      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo",
       "variantId": 67857501946169,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/K3MV2C_4_colors_8KG_Filament.jpg?v=1788773001",
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
       "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / 8KG Filaments",
-      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo"
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo"
     },
     "candidate-9601707d4ce9e697ea83": {
       "priceUrl": "https://uk.elegoo.com/products/pla-basic-filament-1-75-mm-colored-10kg",
@@ -74667,12 +74667,12 @@
       "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-3d-printer"
     },
     "candidate-2d026f0f0fc2fe4b0ff8": {
-      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo",
+      "priceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo",
       "variantId": 67857501847865,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Kobra_3_Max_V2_Combo_4_colors.jpg?v=1788773010",
       "expectedProductTitle": "Anycubic Kobra 3 Max V2 + ACE 2 Pro",
       "expectedVariantTitle": "Kobra 3 Max V2 + ACE 2 Pro / Single Unit",
-      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-combo"
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-3-max-v2-ace-2-pro-combo"
     },
     "candidate-4eadd16b0568f6fdf119": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
@@ -77575,798 +77575,912 @@
       "variantId": 54472763146553,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Cyan_a0fadaab-e98c-4343-99de-8e1e4beb2104.png?v=1788772935",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Cyan (#23A3C7) / 50KG"
+      "expectedVariantTitle": "Cyan (#23A3C7) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-6e66e4a2e0e3a88dd1c8": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418586905,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Yellow / Pink / Pink"
+      "expectedVariantTitle": "Yellow / Pink / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-b3d3cff7b34c713a6157": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456078617,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Neon Green / Space Grey"
+      "expectedVariantTitle": "Grey / Neon Green / Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-6316d634a4562649c8d8": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973734101273,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Blue Green Orange / Silk Silver Grey / White"
+      "expectedVariantTitle": "Silk Blue Green Orange / Silk Silver Grey / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-fedc3e17a4bdff75da8f": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876584059161,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Red"
+      "expectedVariantTitle": "Beige / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-313d041ef0681804e443": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579953017113,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Red"
+      "expectedVariantTitle": "Beige / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-0abf4bfde206b1ef8d1c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588484985113,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Grey"
+      "expectedVariantTitle": "Beige / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-fa5c3c707a440221824f": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008329497,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Grey"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-26f9bdecab978815d145": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418619673,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Red / Yellow"
+      "expectedVariantTitle": "Orange / Red / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-9ee0e417c4bb6630255c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456111385,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Neon Green / Sea Green"
+      "expectedVariantTitle": "Grey / Neon Green / Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-fe2f4eadd73d150c35cc": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973734134041,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Blue Green Orange / Silk Silver Grey / Black"
+      "expectedVariantTitle": "Silk Blue Green Orange / Silk Silver Grey / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-4485135f74e0beaf19bb": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876584091929,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Blue"
+      "expectedVariantTitle": "Beige / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-cd2c8d92768ee85a8b43": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579953049881,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Blue"
+      "expectedVariantTitle": "Beige / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-8bd72692cf3f225b1144": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485017881,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Red"
+      "expectedVariantTitle": "Beige / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-8a469c2d938d0ebf4ce8": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008362265,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Red"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-d14106d6d62c2cddc542": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763834681,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/8b5d2cef13646d8c51a0045811edf481_2cabd82c-30d5-46b0-aea1-380f1dc5db43.jpg?v=1788772768",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Light Grey (#DAD9DB) / 10KG"
+      "expectedVariantTitle": "Light Grey (#DAD9DB) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-83b78204051145a2c925": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
       "variantId": 54472606187833,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/White.jpg?v=1788772965",
       "expectedProductTitle": "PETG 10-100kg Deals",
-      "expectedVariantTitle": "White (#EFF0F1) / 10KG"
+      "expectedVariantTitle": "White (#EFF0F1) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer"
     },
     "candidate-05c9867b1a1997881fbd": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418652441,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Red / Dark Blue"
+      "expectedVariantTitle": "Orange / Red / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-2707f81cbdbb3ba9a3b3": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456144153,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Black"
+      "expectedVariantTitle": "Grey / Dark Blue / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-4807501c047056c982d4": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743767833,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / Grey"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-1834bc0f5721f0e2a22b": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876584124697,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Green"
+      "expectedVariantTitle": "Beige / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-23ee3520dcbac24c5c6c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579953082649,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Green"
+      "expectedVariantTitle": "Beige / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-27b00a946da9f68a85ef": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485050649,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Blue"
+      "expectedVariantTitle": "Beige / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-b1312d84e0331918655d": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008395033,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Blue"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-9e110549170b11653fee": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418685209,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Red / Pink"
+      "expectedVariantTitle": "Orange / Red / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-7c142adac88999ddbceb": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456176921,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / White"
+      "expectedVariantTitle": "Grey / Dark Blue / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-192c82e4eaffeb8e6265": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743800601,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / White"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-05c0776a9038ef3ed8f2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876584157465,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Purple"
+      "expectedVariantTitle": "Beige / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-97535b13e0c41b17f512": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579953115417,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Purple"
+      "expectedVariantTitle": "Beige / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-16c11fde8155c9ff4b62": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485083417,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Green"
+      "expectedVariantTitle": "Beige / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-d565222c1fb0acd22294": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008427801,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Green"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-dce10f90d8b6ec31961f": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763867449,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/8b5d2cef13646d8c51a0045811edf481_210a9b89-1339-478a-ad6e-bb24dafef4a2.jpg?v=1788772770",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Light Grey (#DAD9DB) / 20KG"
+      "expectedVariantTitle": "Light Grey (#DAD9DB) / 20KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-6167f0cefa6987c146e8": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418717977,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Yellow / Yellow"
+      "expectedVariantTitle": "Orange / Yellow / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-12c0483ac006146698c7": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456209689,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Grey"
+      "expectedVariantTitle": "Grey / Dark Blue / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-2756002f931205b94616": {
       "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
       "variantId": 54472606384441,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Black_f91a8e53-1072-45c1-860c-9b7211ad3566.png?v=1788772939",
       "expectedProductTitle": "PETG 10-100kg Deals",
-      "expectedVariantTitle": "Black (#212721) / 50KG"
+      "expectedVariantTitle": "Black (#212721) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer"
     },
     "candidate-3929a218bebc6d8b2ec6": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743833369,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / Black"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Gold / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-ad26414694a6040b8513": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876584190233,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Brown"
+      "expectedVariantTitle": "Beige / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-269ddbe2ac1209e1bb40": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579953148185,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Brown"
+      "expectedVariantTitle": "Beige / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-9e42c3104ce602a6dc04": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485116185,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Purple"
+      "expectedVariantTitle": "Beige / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-972a243cfc44a4aed839": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008460569,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Purple"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-158fe0d333d723c27eee": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418750745,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Yellow / Dark Blue"
+      "expectedVariantTitle": "Orange / Yellow / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-0ec8afc0feb17e10873c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456242457,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Blue"
+      "expectedVariantTitle": "Grey / Dark Blue / Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-88fa3d6e97361107b077": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743898905,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk White / Grey"
+      "expectedVariantTitle": "Silk Sky Blue / Silk White / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-c752618620b80d36f324": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876580978969,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Green"
+      "expectedVariantTitle": "Grey / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-1f9d7a6c350d8ea764b6": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949412633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Green"
+      "expectedVariantTitle": "Grey / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-bb7f5cbcef7920763bc4": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485148953,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Beige / Carbon Fiber Brown"
+      "expectedVariantTitle": "Beige / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-b8303bc11cef473a54fb": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580008493337,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Translucent / Carbon Fiber Brown"
+      "expectedVariantTitle": "Translucent / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-312280740bcf3af93b2a": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418783513,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Yellow / Pink"
+      "expectedVariantTitle": "Orange / Yellow / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-087c26ef7bcdc780db98": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456275225,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Red"
+      "expectedVariantTitle": "Grey / Dark Blue / Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-022897196840935005f9": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743931673,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk White / White"
+      "expectedVariantTitle": "Silk Sky Blue / Silk White / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-1b24d9d93827f6185846": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 51887313551641,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Black"
+      "expectedVariantTitle": "White / Carbon Fiber Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-ca0fbc942d807ec4a89f": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949478169,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Brown"
+      "expectedVariantTitle": "Grey / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-aa0d2266b8a7599239f3": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485181721,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Black"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-fcb51d68ee90411322bc": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005282073,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Green"
+      "expectedVariantTitle": "Black / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-5974fa93592eb5e87b1f": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763900217,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/LightGrey_770fe5f9-098a-4161-8d3a-2ba340656a5e.png?v=1788772932",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Light Grey (#DAD9DB) / 50KG"
+      "expectedVariantTitle": "Light Grey (#DAD9DB) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-36c7e3b9e428c092d422": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418816281,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Dark Blue / Yellow"
+      "expectedVariantTitle": "Orange / Dark Blue / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-4daac2ac3c1d68c9feed": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456307993,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Orange"
+      "expectedVariantTitle": "Grey / Dark Blue / Orange",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-dc1de0a6b9f6a9bce558": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973743964441,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk White / Black"
+      "expectedVariantTitle": "Silk Sky Blue / Silk White / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-49817adf515d275e3cb5": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581077273,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Grey"
+      "expectedVariantTitle": "White / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-98139a4cc95866232a4d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949510937,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Black"
+      "expectedVariantTitle": "White / Carbon Fiber Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-55787949cddd568b3138": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485214489,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Grey"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-6eeab9e0d74fd9ba6d6a": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005347609,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Brown"
+      "expectedVariantTitle": "Black / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-02cf6b311a2462c31ddc": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418849049,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Dark Blue / Dark Blue"
+      "expectedVariantTitle": "Orange / Dark Blue / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-ded124b3eb6de8c00d20": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456340761,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Sky Blue"
+      "expectedVariantTitle": "Grey / Dark Blue / Sky Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-b8e5a4de6c87a3e9de9c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973744029977,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / Grey"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-9eb36a2ef87aa29a1bef": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581110041,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Red"
+      "expectedVariantTitle": "White / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-ae311189ca6255fb16b0": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949543705,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Grey"
+      "expectedVariantTitle": "White / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-0f1acfb7c41548d4766c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485247257,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Red"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-2ea1c9472d199b2cccba": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52440137957657,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Black"
+      "expectedVariantTitle": "White / Carbon Fiber Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-1b8877290356db3c808d": {
       "priceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
       "variantId": 54472790311225,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_2_11_4KGTPU_2b6a9a31-7473-47f3-8b0a-e8a48051e84c.jpg?v=1789717576",
       "expectedProductTitle": "Anycubic Kobra X Combo",
-      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +TPU*4"
+      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*1 (11 Colors) / +TPU*4",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer"
     },
     "candidate-ced1fa5f8b84e28f591a": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418881817,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Dark Blue / Pink"
+      "expectedVariantTitle": "Orange / Dark Blue / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-9b64ecadb43b5813fc9f": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456373529,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Space Grey"
+      "expectedVariantTitle": "Grey / Dark Blue / Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-7dfcd986e2fe40dd2c15": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973744062745,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / White"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-cfb37bb4d33913d87025": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581306649,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Red"
+      "expectedVariantTitle": "Black / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-d6580104108a39f162d3": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949576473,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Red"
+      "expectedVariantTitle": "White / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-57791df82ac8fb72b8b2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485280025,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Blue"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-9ff7ecee7a7b698d09ea": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005380377,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Grey"
+      "expectedVariantTitle": "White / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-f63984beea2e310e4750": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418914585,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Pink / Yellow"
+      "expectedVariantTitle": "Orange / Pink / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-94d6918f9b9e5d1a51a6": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456406297,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Dark Blue / Sea Green"
+      "expectedVariantTitle": "Grey / Dark Blue / Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-f16e03c4a61d4da90d7d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973744095513,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / Black"
+      "expectedVariantTitle": "Silk Sky Blue / Silk Silver Grey / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-fe5d48f9f2f927c18ec9": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581339417,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Blue"
+      "expectedVariantTitle": "Black / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-19d3ba4668c6f2cb2699": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949805849,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Red"
+      "expectedVariantTitle": "Black / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-9bac6607174f977927b5": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485312793,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Green"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-d05504d125d340cf12d1": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005413145,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "White / Carbon Fiber Red"
+      "expectedVariantTitle": "White / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-f3c2ba2feed37d4f2258": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418947353,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Pink / Dark Blue"
+      "expectedVariantTitle": "Orange / Pink / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-87c7934a9c07285e8f36": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456439065,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Red / Black"
+      "expectedVariantTitle": "Grey / Red / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-5eeb1841ae4e3ad4eb5d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973746258201,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / Grey"
+      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-0beb85bb82b82c2f3b2d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581372185,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Green"
+      "expectedVariantTitle": "Black / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-e59c896c91984a56754a": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949838617,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Blue"
+      "expectedVariantTitle": "Black / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-ead3644fef556ec54910": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485345561,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Purple"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-8f2ad926f3cce694fe84": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005609753,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Red"
+      "expectedVariantTitle": "Grey / Carbon Fiber Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-66816f4d4853f469f998": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976418980121,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Orange / Pink / Pink"
+      "expectedVariantTitle": "Orange / Pink / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-f4d7352db8fb7ce1cc8d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456471833,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Red / White"
+      "expectedVariantTitle": "Grey / Red / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-51162d9074b607596a58": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973746290969,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / White"
+      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-83631890d2922933c70c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581437721,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Brown"
+      "expectedVariantTitle": "Black / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-c7d08997f621d6772a18": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949871385,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Green"
+      "expectedVariantTitle": "Black / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-ccc5212875037352c1ef": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588485378329,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Copper Filled / Carbon Fiber Brown"
+      "expectedVariantTitle": "Copper Filled / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-581fc731966d6333fc3d": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005642521,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Blue"
+      "expectedVariantTitle": "Grey / Carbon Fiber Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-1954f68f75e2dc064ce5": {
       "priceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer",
       "variantId": 54472790343993,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/KX_ACE2Pro_4_19_09f93534-f3f1-46fc-8561-6395956821c4.jpg?v=1789717699",
       "expectedProductTitle": "Anycubic Kobra X Combo",
-      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*3 (19 Colors) / None"
+      "expectedVariantTitle": "Kobra X Combo + ACE 2 Pro*3 (19 Colors) / None",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/kobra-x-combo-3d-printer"
     },
     "candidate-e525e58debf750329ca9": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419012889,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Red / Yellow"
+      "expectedVariantTitle": "Dark Blue / Red / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-7e5c624247fa357da7d1": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456504601,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Red / Grey"
+      "expectedVariantTitle": "Grey / Red / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-92c6791caf5030e6a927": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973746323737,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / Black"
+      "expectedVariantTitle": "Silk Bluish Purple / Silk Gold / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-ee7779811443d6e4841e": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 51887313617177,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Neon Green / Carbon Fiber Black"
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-9b9ae56e8d02374312ea": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949904153,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Purple"
+      "expectedVariantTitle": "Black / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-8e29c4f9375575f570fd": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588481413401,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Green"
+      "expectedVariantTitle": "Grey / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-3fe144c23b851bbc727e": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005675289,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Green"
+      "expectedVariantTitle": "Grey / Carbon Fiber Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-d73b653eb5b5da7d3f3e": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419045657,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Red / Dark Blue"
+      "expectedVariantTitle": "Dark Blue / Red / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-2d669764e39d29f75796": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974456537369,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Grey / Red / Blue"
+      "expectedVariantTitle": "Grey / Red / Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-f629d95c8a4c5016e9d5": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
       "variantId": 52973746389273,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
       "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
-      "expectedVariantTitle": "Silk Bluish Purple / Silk White / Grey"
+      "expectedVariantTitle": "Silk Bluish Purple / Silk White / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator"
     },
     "candidate-8e14db0af351d9b25592": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52876581470489,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
       "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Neon Green / Carbon Fiber Grey"
+      "expectedVariantTitle": "Neon Green / Carbon Fiber Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-f329dcf754cc9d8fafa3": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
       "variantId": 52579949936921,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
       "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Black / Carbon Fiber Brown"
+      "expectedVariantTitle": "Black / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle"
     },
     "candidate-8dc8b507f9eed82f2737": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
       "variantId": 52588481478937,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
       "expectedProductTitle": "Centauri 2 All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Brown"
+      "expectedVariantTitle": "Grey / Carbon Fiber Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle"
     },
     "candidate-6317a924ced2bbdb41e6": {
       "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
       "variantId": 52580005708057,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
-      "expectedVariantTitle": "Grey / Carbon Fiber Purple"
+      "expectedVariantTitle": "Grey / Carbon Fiber Purple",
+      "imageSourceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle"
     },
     "candidate-638fd9ad912d56e88418": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763965753,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/2532a50ed06130a1e3a25dcb047af662_92bb96db-dfa6-4159-ab3f-2787ee1bc190.jpg?v=1788772768",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Texture Red (#EF3340) / 10KG"
+      "expectedVariantTitle": "Texture Red (#EF3340) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     }
   },
   "approvedProductDetails": {},
