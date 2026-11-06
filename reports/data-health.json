@@ -1,17 +1,35 @@
 {
-  "checkedAt": "2026-11-05T05:23:58.609730+00:00",
+  "checkedAt": "2026-11-06T05:23:26.848860+00:00",
   "warnings": [
+    "inpost: failed; last verified 2026-10-29",
+    "royalmail-first: failed; last verified 2026-10-29",
+    "royalmail-second: failed; last verified 2026-10-29",
     "parcelforce: failed; last verified never",
+    "dpd: failed; last verified 2026-10-29",
+    "dhl: failed; last verified 2026-10-29",
     "ups: failed; last verified never",
     "fedex: failed; last verified never",
+    "depop: failed; last verified 2026-10-29",
+    "vinted: review-required; last verified 2026-10-29",
+    "tiktok: review-required; last verified 2026-10-29",
     "facebook: failed; last verified never",
+    "inpost: verification is older than seven days",
+    "royalmail-first: verification is older than seven days",
+    "royalmail-second: verification is older than seven days",
+    "dpd: verification is older than seven days",
+    "dhl: verification is older than seven days",
+    "depop: verification is older than seven days",
+    "vinted: verification is older than seven days",
+    "tiktok: verification is older than seven days",
     "Amazon UK: no active listings",
     "Prusa Research: no active listings",
     "Ooznest: no active listings",
     "3D FilaPrint: no active listings",
     "Polymaker UK: no active listings",
     "eSUN UK: no active listings",
-    "3DQF UK: no active listings"
+    "3DQF UK: no active listings",
+    "Offer 0: last checked over seven days ago; retailer confirmation needed",
+    "Offer 1: last checked over seven days ago; retailer confirmation needed"
   ],
   "retailers": [
     {
@@ -53,10 +71,10 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 631,
-      "verified": 628,
+      "listed": 628,
+      "verified": 625,
       "categories": {
-        "filament": 540,
+        "filament": 537,
         "printer": 40,
         "resin-material": 46,
         "equipment": 3,
@@ -83,10 +101,10 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2200,
-      "verified": 2195,
+      "listed": 2199,
+      "verified": 2194,
       "categories": {
-        "printer": 914,
+        "printer": 913,
         "filament": 911,
         "resin-material": 335,
         "accessory": 35,
@@ -193,12 +211,12 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1736,
-      "verified": 912,
+      "listed": 1734,
+      "verified": 910,
       "categories": {
         "filament": 1500,
         "resin-material": 164,
-        "accessory": 66,
+        "accessory": 64,
         "equipment": 6
       }
     },
@@ -230,66 +248,9 @@
       }
     }
   ],
-  "manualVerifications": [
-    {
-      "source": "inpost",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "royalmail-first",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "royalmail-second",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "Cannot read robots.txt: HTTP 403"
-    },
-    {
-      "source": "dpd",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "Source did not provide readable pricing guidance"
-    },
-    {
-      "source": "dhl",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "Source did not provide readable pricing guidance"
-    },
-    {
-      "source": "depop",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "failed",
-      "automaticError": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vinted",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "review-required",
-      "automaticError": "Zero seller fee guidance changed; keep the previous value for review"
-    },
-    {
-      "source": "tiktok",
-      "checkedAt": "2026-10-29",
-      "reviewAfter": "2026-11-05",
-      "automaticStatus": "review-required",
-      "automaticError": "Expected one unambiguous rate; found 0"
-    }
-  ],
+  "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
