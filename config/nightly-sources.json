@@ -78481,6 +78481,594 @@
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
       "expectedVariantTitle": "Texture Red (#EF3340) / 10KG",
       "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
+    },
+    "candidate-d132a12a94ce963b0285": {
+      "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
+      "variantId": 54472761966905,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Yellow_1dc3e441-592b-444e-a155-fe1fe48846f1.png?v=1788772934",
+      "expectedProductTitle": "PLA Basic 10-100KG Deals",
+      "expectedVariantTitle": "Yellow (#F3E500) / 50KG"
+    },
+    "candidate-2f85a0b72dbb91ecfeff": {
+      "priceUrl": "https://uk.store.sunlu.com/products/moq-3-rolls-sunlu-pla-new-color-collection-neon-transparent-series-1-75mm-1kg",
+      "variantId": 67945331491135,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Pistachio_Green_PLA_Pastel_1KG.jpg?v=1789036737",
+      "expectedProductTitle": "SUNLU PLA New Color Collection, Neon (Fluorescent) & Transparent Series 1.75mm 1KG",
+      "expectedVariantTitle": "PLA New Color / PLA Pastel 1KG / Pistachio Green"
+    },
+    "candidate-1f00404acdeaeaab8fc9": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635287084,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2 Combo / Standard / Pre-Sale"
+    },
+    "candidate-c124874441a51bb80790": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pc-bulk-sale-1",
+      "variantId": 67957486420281,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/8b9cc7c9808a81fc8db0eaf67a4d79d7_01db8764-39a0-46e5-ae34-d62d43f65752.jpg?v=1788773009",
+      "expectedProductTitle": "PC Bulk: B4G1",
+      "expectedVariantTitle": "Black (#212322) / 1KG"
+    },
+    "candidate-f37c507ec440b40097aa": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-abs-filament-1kg-roll",
+      "variantId": 67946366304575,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Green_aafae740-b16a-42c2-ad59-38ccc05ea5dc.jpg?v=1793699317",
+      "expectedProductTitle": "ABS 3D Printer Filament 1KG",
+      "expectedVariantTitle": "ABS / ABS Green"
+    },
+    "candidate-0cca1100699d384f17f8": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-marble-bulk-sale-1",
+      "variantId": 67957485666617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/dafcbf7aed709cf0324bb2d9b1231a16.jpg?v=1788773008",
+      "expectedProductTitle": "PLA Marble: B4G1",
+      "expectedVariantTitle": "Brick Red (#9D4815) / 1KG"
+    },
+    "candidate-203fae3fe4d18257395a": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 68196006756633,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_43622a33-5ac8-402e-aeea-3a5ee10dfe12.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / White"
+    },
+    "candidate-b890cff2394ad0fda2b2": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904257229119,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Black_2b1a26f9-058e-46b0-8c9e-d1cae84d5511.jpg?v=1778230638",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Black"
+    },
+    "candidate-9d22e48254def05a8b23": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-bulk-sale",
+      "variantId": 67884939280697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_114fa9ec-404b-4e6b-8be3-504d47cd96bd.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic: B4G1",
+      "expectedVariantTitle": "Beige (#D4B996) / 1KG"
+    },
+    "candidate-eeda3683075ad0cb8b61": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-silk-bulk-sale",
+      "variantId": 67884925387065,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Green_0bcc52fe-f5f3-4a8d-846f-7301295665d5.png?v=1788772936",
+      "expectedProductTitle": "PLA Silk: B4G1",
+      "expectedVariantTitle": "Green (#52D2BC) / 1KG"
+    },
+    "candidate-be355dfe1ace864e64a4": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-special-bulk-sale",
+      "variantId": 67884899828025,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_bc223b7d-05ae-48be-9b52-330c5a6c770e.jpg?v=1789635703",
+      "expectedProductTitle": "PLA Special: B4G1",
+      "expectedVariantTitle": "Tropical Turquoise / 1KG"
+    },
+    "candidate-a3cacae94f45741d7658": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-bfcm-mystery-box-collection-unlock-the-creativity-with-black-friday",
+      "variantId": 67953803919679,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/1-2_0e7fe8a8-79b2-4579-b30b-1f49e682560a.jpg?v=1793949469",
+      "expectedProductTitle": "SUNLU Black Friday Mystery Box Collection -  Chance to Win FilaDryer",
+      "expectedVariantTitle": "General Filament Box (5 Rolls)"
+    },
+    "candidate-803c9640d1f445e6130d": {
+      "priceUrl": "https://uk.store.sunlu.com/products/moq-3-rolls-sunlu-pla-new-color-collection-neon-transparent-series-1-75mm-1kg",
+      "variantId": 67945341190463,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Pastel_Blue_PLA_Pastel_1KG.jpg?v=1789036736",
+      "expectedProductTitle": "SUNLU PLA New Color Collection, Neon (Fluorescent) & Transparent Series 1.75mm 1KG",
+      "expectedVariantTitle": "PLA New Color / PLA Pastel 1KG / Pastel Blue"
+    },
+    "candidate-ff4c50a138df357eaa32": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-bundle-sale-abs-filament-1kg-roll",
+      "variantId": 67946367025471,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Yellow_be548458-bcb3-478a-83c7-a3eb3aba799a.jpg?v=1793699274",
+      "expectedProductTitle": "ABS 3D Printer Filament 1KG",
+      "expectedVariantTitle": "ABS / ABS Yellow"
+    },
+    "candidate-919b382fe2d5ee2691b3": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904275087679,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Grey_7a05e543-04d8-45e8-936b-2bfff888e3f4.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Grey"
+    },
+    "candidate-dddba4efb2c177293bea": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-bfcm-mystery-box-collection-unlock-the-creativity-with-black-friday",
+      "variantId": 67953804706111,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/1-1_3068295a-ffc7-452b-a964-9616efd3630d.jpg?v=1793949471",
+      "expectedProductTitle": "SUNLU Black Friday Mystery Box Collection -  Chance to Win FilaDryer",
+      "expectedVariantTitle": "Aesthetic Filament Box (5 Rolls)"
+    },
+    "candidate-4506e4b674481753039e": {
+      "priceUrl": "https://uk.store.sunlu.com/products/moq-3-rolls-sunlu-pla-new-color-collection-neon-transparent-series-1-75mm-1kg",
+      "variantId": 67945346531647,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Peach_Pink_PLA_Pastel_1KG.jpg?v=1789036737",
+      "expectedProductTitle": "SUNLU PLA New Color Collection, Neon (Fluorescent) & Transparent Series 1.75mm 1KG",
+      "expectedVariantTitle": "PLA New Color / PLA Pastel 1KG / Peach Pink"
+    },
+    "candidate-391d991edc79801a9e7f": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904341934399,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Roasted_Chestnut.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Roasted Chestnut Black"
+    },
+    "candidate-84d0aa9e4e999c1c3852": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-bfcm-mystery-box-collection-unlock-the-creativity-with-black-friday",
+      "variantId": 67953806180671,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/1-2_0e7fe8a8-79b2-4579-b30b-1f49e682560a.jpg?v=1793949469",
+      "expectedProductTitle": "SUNLU Black Friday Mystery Box Collection -  Chance to Win FilaDryer",
+      "expectedVariantTitle": "High-Speed Filament Box (5 Rolls)"
+    },
+    "candidate-36de55002bae8aa92cab": {
+      "priceUrl": "https://uk.store.sunlu.com/products/moq-3-rolls-sunlu-pla-new-color-collection-neon-transparent-series-1-75mm-1kg",
+      "variantId": 67945350201663,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Sage_Green_PLA_Pastel_1KG.jpg?v=1789036736",
+      "expectedProductTitle": "SUNLU PLA New Color Collection, Neon (Fluorescent) & Transparent Series 1.75mm 1KG",
+      "expectedVariantTitle": "PLA New Color / PLA Pastel 1KG / Sage Green"
+    },
+    "candidate-e42b99e89e2864a58041": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904306577727,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Bone_White_fc065c90-ef4f-4a9c-9236-b2fc801c23d2.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Bone White"
+    },
+    "candidate-f64b00d0d6a0efe8662e": {
+      "priceUrl": "https://uk.store.sunlu.com/products/sunlu-bfcm-mystery-box-collection-unlock-the-creativity-with-black-friday",
+      "variantId": 67967460573503,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/1-1.jpg?v=1793949470",
+      "expectedProductTitle": "SUNLU Black Friday Mystery Box Collection -  Chance to Win FilaDryer",
+      "expectedVariantTitle": "Engineering Filament Box (4 Rolls)"
+    },
+    "candidate-f9e910711584d5ae406a": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635319852,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2 Combo / Polar Cooler Bundle / Pre-Sale"
+    },
+    "candidate-5f944832c0d416b14beb": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904288457023,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Red_7584d884-a133-4139-8e55-6f38c7eb2660.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Red"
+    },
+    "candidate-bc830e50a09b875c7b09": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904319422783,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Coffee_Brown_0809e1ac-11f9-4717-aa9a-f22a14285e97.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Coffee Brown"
+    },
+    "candidate-09f2efbb12784f21a807": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976420552985,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Sea Green / Pink / Pink"
+    },
+    "candidate-1b6998b8d38274c5d0e4": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904315883839,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Yellow_94e2a390-9b74-4f3c-9533-ca732f9a87bd.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Yellow"
+    },
+    "candidate-31a8d25a212469af76e8": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974458044697,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Dark Blue / Red"
+    },
+    "candidate-c60ce354a90da068d7c4": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635385388,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2 / Standard / Pre-Sale"
+    },
+    "candidate-4d4d65e7f4c9a506ca43": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52974449262873,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Green / Silk White / Brown"
+    },
+    "candidate-ddbe1f093b663a982003": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-1",
+      "variantId": 68465471717657,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2-_-260811.jpg?v=1786704718",
+      "expectedProductTitle": "Centauri 2",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-8e41a6f8f775a48211ef": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-1",
+      "variantId": 68462718288153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._2545a4c8-cb92-4043-97c3-0a6c97ac507c.png?v=1789961419",
+      "expectedProductTitle": "Centauri Carbon 2 Combo",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-bfeba07f4519d9c4d3fc": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904352780607,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Vivid_Yellow_890c1736-21e1-438d-9053-5d5c81baf970.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Vivid Yellow"
+    },
+    "candidate-d4f27ea514d2a7e19524": {
+      "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer-1",
+      "variantId": 52992413237529,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/01._faa5e571-80e2-4694-95d3-ee7c955f9fbf.png?v=1786675698",
+      "expectedProductTitle": "Saturn 4 Ultra 16K",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-9454e1d14e043178da83": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635418156,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2 / Polar Cooler Bundle / Pre-Sale"
+    },
+    "candidate-3d18d2d9965c305b04a9": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904297369919,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Grass_Green_aae3c934-10c4-47d7-b8e9-b14680b2a18e.jpg?v=1778230645",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Grass Green"
+    },
+    "candidate-39d368ab5c25493dc552": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635483692,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2c_Combo_e7beae82-f59e-420f-822f-677488454656.png?v=1791192851",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2C Combo / Standard / Pre-Sale"
+    },
+    "candidate-7fbd7095454d68185fe4": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 51887313715481,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Black"
+    },
+    "candidate-100eb21f98b30c9f7378": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904328401215,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Sunny_Orange_c3c114b7-09bb-46e8-a204-ba0c85d4a0c7.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Sunny Orange"
+    },
+    "candidate-3f6c772ff419eeea0ad2": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950526745,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Blue"
+    },
+    "candidate-60b7b6b72e5326be7775": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635516460,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2c_Combo_e7beae82-f59e-420f-822f-677488454656.png?v=1791192851",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2C Combo / Polar Cooler Bundle / Pre-Sale"
+    },
+    "candidate-ec8c666f2b0f7a0060fb": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588481511705,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "White / Carbon Fiber Black"
+    },
+    "candidate-5428c217cbab491f6018": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580006035737,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Blue"
+    },
+    "candidate-ee68377545351ba00803": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904388530495,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Olive_Green_dfce698f-b784-411f-a994-28f7a2f39cde.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Olive Green"
+    },
+    "candidate-561beb46b717d70966e4": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635581996,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2C_78a7a603-7a9d-4119-8227-c1dbce78c9ec.png?v=1791192835",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2C / Standard / Pre-Sale"
+    },
+    "candidate-4d918c7bf7895cdf394e": {
+      "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
+      "variantId": 46593635614764,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2C_78a7a603-7a9d-4119-8227-c1dbce78c9ec.png?v=1791192835",
+      "expectedProductTitle": "QIDI Q2 3D Printer",
+      "expectedVariantTitle": "Q2C / Polar Cooler Bundle / Pre-Sale"
+    },
+    "candidate-bf41cf10a72ab9486154": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904296616255,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Klein_Blue_fba80aac-cdbf-4316-8c10-70a757446b4e.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Klein Blue"
+    },
+    "candidate-77d28a173ab3fb077c6c": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904309952831,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Oak_Wood.jpg?v=1778230639",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Oak"
+    },
+    "candidate-4368fedff445b917650d": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904327876927,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Lavender_Purple_Previous_Version.jpg?v=1778230645",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Lavender Purple"
+    },
+    "candidate-5497a2ce5f56dc8d62e7": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904338624831,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Ceramic_White.jpg?v=1778230638",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Ceremic White"
+    },
+    "candidate-6b6df4b23ba88975ffc8": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904358678847,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/PLA_Magenta_cdad7f5e-6aa1-4220-8083-7435c2bcd900.jpg?v=1793095243",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Magenta"
+    },
+    "candidate-fa96f511d971213d2cff": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904399868223,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Strawberry_Jam_New_Transparent_PLA.jpg?v=1779934963",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Strawberry Jam"
+    },
+    "candidate-ea534d45e114252f28b1": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904400851263,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Grape_Jelly_New_Transparent_PLA.jpg?v=1779934962",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Grape Jelly"
+    },
+    "candidate-67273ab4800c596855d9": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904405930303,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Mint_IceNew_Transparent_PLA.jpg?v=1779934963",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Mint Ice Transparent"
+    },
+    "candidate-23eb6359949d26c067ea": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904407142719,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Ocean_Haze_New_Transparent_PLA.jpg?v=1779934963",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Ocean Haze"
+    },
+    "candidate-63f6b6017315ff440e44": {
+      "priceUrl": "https://uk.store.sunlu.com/products/over-3kg-of-pla-pla-plus-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
+      "variantId": 67904408191295,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/Mist_Black_New_Transparent_PLA.jpg?v=1779934963",
+      "expectedProductTitle": "PLA Filament 1KG",
+      "expectedVariantTitle": "PLA / PLA Refill Filament / PLA Mist Black Transparent"
+    },
+    "candidate-9273d71dfdc387705730": {
+      "priceUrl": "https://uk.anycubic3d.com/products/filament-petg-sale-for-filament-3d-printer",
+      "variantId": 54472659403065,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/PeanutBrow.jpg?v=1788772964",
+      "expectedProductTitle": "PETG 10-100kg Deals",
+      "expectedVariantTitle": "Peanut Brown (#A9754F) / 10KG"
+    },
+    "candidate-29b12aec8b8d6d3a4526": {
+      "priceUrl": "https://3dgbire.com/products/raise3d-rms220-3d-printer",
+      "variantId": 56931282649470,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0765/4369/files/612fa0b4-e295-40a9-9eb8-6ba2d20dec2b.jpg?v=1793961843",
+      "expectedProductTitle": "Raise3D RMS220 3D Printer",
+      "expectedVariantTitle": "Default Title"
+    },
+    "candidate-4bddea86531eed1fa95d": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 68196006789401,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_5c8ee25c-8018-4ce7-ad4c-c36c89af7873.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / Black"
+    },
+    "candidate-3addd7a8ec216b1e45fc": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976420585753,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Brown / Red / Yellow"
+    },
+    "candidate-1cfb10f6ab83c690a095": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974458077465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Dark Blue / Orange"
+    },
+    "candidate-020080422162c8a2fd83": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52974449295641,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Green / Silk Silver Grey / Brown"
+    },
+    "candidate-7d39d5b1f5ade18c4d02": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582060313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Grey"
+    },
+    "candidate-d0f473d0390d4594415d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950559513,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Green"
+    },
+    "candidate-2daa5dfccaaefc272972": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588481544473,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "White / Carbon Fiber Grey"
+    },
+    "candidate-3f690102e5ad196c07fb": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580006068505,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Green"
+    },
+    "candidate-ca5ccfcac830b91ae881": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pc-bulk-sale-1",
+      "variantId": 67957486453049,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/d92e076f69cb1a6f81c9bab8cd8f57a2_b246e91e-042a-464c-9af0-240d1e5001a4.jpg?v=1788773009",
+      "expectedProductTitle": "PC Bulk: B4G1",
+      "expectedVariantTitle": "White (#FFFFFF) / 1KG"
+    },
+    "candidate-6b55daad2da4a7eeca0c": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-basic-bulk-sale",
+      "variantId": 67884939313465,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/pla_b4a3fe3d-375f-4b85-a60e-4b89083d3b81.png?v=1788772928",
+      "expectedProductTitle": "PLA Basic: B4G1",
+      "expectedVariantTitle": "Clear / 1KG"
+    },
+    "candidate-a5028657d71b1d97878c": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-silk-bulk-sale",
+      "variantId": 67884925452601,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Copper.png?v=1788772936",
+      "expectedProductTitle": "PLA Silk: B4G1",
+      "expectedVariantTitle": "Copper (#AF5C37) / 1KG"
+    },
+    "candidate-9acb1ee033a3f64ad669": {
+      "priceUrl": "https://uk.anycubic3d.com/products/pla-special-bulk-sale",
+      "variantId": 67884899860793,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/33000ca3e8f7f90381537ae94f21911d_6239cae2-87bc-4e2d-a940-904ad62bf5cf.jpg?v=1789635714",
+      "expectedProductTitle": "PLA Special: B4G1",
+      "expectedVariantTitle": "Interstellar Violet / 1KG"
+    },
+    "candidate-dfcd14275df1039db7e6": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 68196006822169,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_acdd3430-1130-490a-bd2d-11ede6c28cc9.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / Neon Green"
+    },
+    "candidate-5143e9881b7c33a49e90": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976420618521,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Brown / Red / Dark Blue"
+    },
+    "candidate-4c37cf8a48abb16b7055": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974458110233,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Dark Blue / Sky Blue"
+    },
+    "candidate-0b99f886d824940591f5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52974449328409,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple Black / Silk Gold / Brown"
+    },
+    "candidate-6a5c0ccbc72bc2dd1538": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582093081,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Yellow / Carbon Fiber Red"
+    },
+    "candidate-208413f05c62a25f212f": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950592281,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Purple"
+    },
+    "candidate-037a3ceeff428e5b56a1": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-all-in-one-bundle",
+      "variantId": 52588481577241,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2All-in-OneBundle_18550c67-d25c-40a5-a5cd-bba846db3d7b.jpg?v=1781579569",
+      "expectedProductTitle": "Centauri 2 All-in-One Bundle",
+      "expectedVariantTitle": "White / Carbon Fiber Red"
+    },
+    "candidate-4ddf654c4c884fb10ec3": {
+      "priceUrl": "https://uk.elegoo.com/products/emoji-centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52580006199577,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emojiall-in-onebundle.jpg?v=1792401893",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Orange / Carbon Fiber Red"
+    },
+    "candidate-e5142b9896ad5e4cae2d": {
+      "priceUrl": "https://uk.elegoo.com/products/pla-filament-1-75mm-colored-10kg",
+      "variantId": 68196006854937,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/PLARFID10kgbundle_4fe47fd3-3ada-413d-ba5e-14dab142ac75.jpg?v=1783997868",
+      "expectedProductTitle": "PLA Filament 10 kg",
+      "expectedVariantTitle": "PLA (RFID) / Dark Blue"
+    },
+    "candidate-3337b86a0464496a787b": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976420651289,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Brown / Red / Pink"
+    },
+    "candidate-8654f7ead1ebf8465593": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 52974458143001,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Black / Dark Blue / Space Grey"
+    },
+    "candidate-2655d8a92c6f83ca3ec0": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-desktop-creator",
+      "variantId": 52974449361177,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo-bundle.jpg?v=1786416671",
+      "expectedProductTitle": "Centauri Carbon 2 Combo: Desktop Creator Bundle",
+      "expectedVariantTitle": "Silk Blue Purple Black / Silk White / Brown"
+    },
+    "candidate-a49064cdd49ccc08ea32": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-all-in-one-bundle",
+      "variantId": 52876582322457,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-all-in-one.jpg?v=1792149594",
+      "expectedProductTitle": "Centauri Carbon 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Orange / Carbon Fiber Blue"
+    },
+    "candidate-4b3b47eb8a3c22349c94": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-all-in-one-bundle",
+      "variantId": 52579950625049,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2ComboAll-in-OneBundle_997fbb61-afb2-4426-a6b8-34a2f631b8c1.jpg?v=1789901821",
+      "expectedProductTitle": "Centauri 2 Combo All-in-One Bundle",
+      "expectedVariantTitle": "Red / Carbon Fiber Brown"
     }
   },
   "approvedProductDetails": {},

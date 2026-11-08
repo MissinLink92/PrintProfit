@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-07T04:51:00.927945+00:00",
+  "checkedAt": "2026-11-08T04:34:06.878683+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -71,11 +71,11 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 628,
-      "verified": 625,
+      "listed": 629,
+      "verified": 626,
       "categories": {
         "filament": 537,
-        "printer": 40,
+        "printer": 41,
         "resin-material": 46,
         "equipment": 3,
         "accessory": 2
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2199,
-      "verified": 2194,
+      "listed": 2232,
+      "verified": 2227,
       "categories": {
-        "printer": 913,
-        "filament": 911,
+        "printer": 942,
+        "filament": 915,
         "resin-material": 335,
         "accessory": 35,
         "equipment": 5
@@ -165,10 +165,10 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 753,
-      "verified": 713,
+      "listed": 764,
+      "verified": 724,
       "categories": {
-        "filament": 407,
+        "filament": 418,
         "printer": 169,
         "resin-material": 136,
         "accessory": 41
@@ -176,11 +176,11 @@
     },
     {
       "name": "QIDI UK Store",
-      "listed": 116,
-      "verified": 99,
+      "listed": 124,
+      "verified": 107,
       "categories": {
         "filament": 94,
-        "printer": 22
+        "printer": 30
       }
     },
     {
@@ -211,13 +211,13 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1733,
-      "verified": 874,
+      "listed": 1764,
+      "verified": 905,
       "categories": {
-        "filament": 1500,
+        "filament": 1527,
         "resin-material": 164,
         "accessory": 63,
-        "equipment": 6
+        "equipment": 10
       }
     },
     {

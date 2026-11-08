@@ -1,44 +1,44 @@
 # PrintProfit nightly update
 
-Checked: 2026-11-07T04:10:53+00:00
+Checked: 2026-11-08T03:53:59+00:00
 
-- Existing prices verified: 7071 / 8030
+- Existing prices verified: 7155 / 8114
 - Existing prices retained without verification: 959
-- Changed existing prices: 93
-- Refreshed image files: 2
-- Verified products added: 0
-- Unresolved source notices: 140
-- Failed or incomplete checks: 8581
+- Changed existing prices: 0
+- Refreshed image files: 0
+- Verified products added: 84
+- Unresolved source notices: 155
+- Failed or incomplete checks: 6654
 
 ## Source checks
 
 | Retailer | Price checks | Discovery | Candidates |
 |---|---|---|---|
-| 3DJake UK | 4 / 7 | failed | 0 |
-| 3D Prima UK | 11 / 17 | failed | 0 |
-| 123-3D UK | 1734 / 1742 | failed | 0 |
-| iDig3Dprinting | 1 / 4 | failed | 0 |
-| 3DGBIRE | 625 / 628 | failed | 0 |
-| Bambu Lab UK | 234 / 234 | failed | 0 |
-| Creality UK | 6 / 12 | failed | 0 |
-| ELEGOO UK | 2194 / 2199 | failed | 0 |
+| 3DJake UK | 4 / 7 | url-discovery-only | 4364 |
+| 3D Prima UK | 11 / 17 | url-discovery-only | 60 |
+| 123-3D UK | 1734 / 1742 | discovered | 206 |
+| iDig3Dprinting | 1 / 4 | url-discovery-only | 223 |
+| 3DGBIRE | 626 / 629 | discovered | 252 |
+| Bambu Lab UK | 234 / 234 | discovered | 9 |
+| Creality UK | 6 / 12 | url-discovery-only | 203 |
+| ELEGOO UK | 2227 / 2232 | discovered | 1110 |
 | Amazon UK | 0 / 0 | monitor-only | 0 |
-| Prusa Research | 0 / 0 | failed | 0 |
-| Subliblanks | 6 / 6 | failed | 0 |
-| NSE Imports | 462 / 467 | failed | 0 |
-| Additive-X | 10 / 13 | failed | 0 |
-| Ooznest | 0 / 0 | failed | 0 |
+| Prusa Research | 0 / 0 | url-discovery-only | 7 |
+| Subliblanks | 6 / 6 | discovered | 30 |
+| NSE Imports | 462 / 467 | discovered | 8 |
+| Additive-X | 10 / 13 | url-discovery-only | 7 |
+| Ooznest | 0 / 0 | url-discovery-only | 0 |
 | 3D FilaPrint | 0 / 0 | monitor-only | 0 |
-| Anycubic UK | 713 / 753 | failed | 0 |
-| QIDI UK Store | 99 / 116 | failed | 0 |
-| Flashforge UK | 27 / 27 | failed | 0 |
-| Sovol UK | 20 / 20 | failed | 0 |
+| Anycubic UK | 724 / 764 | discovered | 347 |
+| QIDI UK Store | 107 / 124 | discovered | 43 |
+| Flashforge UK | 27 / 27 | discovered | 135 |
+| Sovol UK | 20 / 20 | discovered | 23 |
 | Snapmaker UK | 0 / 1 | monitor-only | 0 |
-| SUNLU UK | 874 / 1733 | failed | 0 |
+| SUNLU UK | 905 / 1764 | discovered | 56 |
 | Polymaker UK | 0 / 0 | failed | 0 |
-| eSUN UK | 0 / 0 | failed | 0 |
-| 3DQF UK | 0 / 0 | failed | 0 |
-| 3D Printz | 51 / 51 | failed | 0 |
+| eSUN UK | 0 / 0 | url-discovery-only | 29 |
+| 3DQF UK | 0 / 0 | url-discovery-only | 94 |
+| 3D Printz | 51 / 51 | discovered | 11 |
 
 ## Items needing attention
 
@@ -1722,7 +1722,7 @@ Checked: 2026-11-07T04:10:53+00:00
 - product / candidate-412f90bfa82841773bf2: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-19b169a3343f9d089358: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-a0210d085e505d85205c: Accessories and spare parts are not printers or printing materials
-- product / candidate-5de1b604fae365f6993e: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-5de1b604fae365f6993e: Exact variant no longer appears in the retailer catalogue
 - product / candidate-068e339e9e82f168ee1d: Exact variant no longer appears in the retailer catalogue
 - product / candidate-c86c58e6ba8685fe8571: Exact variant no longer appears in the retailer catalogue
 - product / candidate-87b9f79dc783f7da3176: Exact variant no longer appears in the retailer catalogue
@@ -1736,7 +1736,7 @@ Checked: 2026-11-07T04:10:53+00:00
 - product / candidate-97157236c674ccad1df8: Exact variant no longer appears in the retailer catalogue
 - product / candidate-00a422bb75608dae9488: Recorded model title changed; product identity needs review
 - product / candidate-84e3b852de78d005ed91: Recorded variant title changed; review the colour/pack before updating
-- product / candidate-ef2291e9a58c44a87263: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-ef2291e9a58c44a87263: Exact variant no longer appears in the retailer catalogue
 - product / candidate-fad881cab0dc2c9c017d: Exact variant no longer appears in the retailer catalogue
 - product / candidate-7b387c70416be4df7a7e: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-e2cd5e8a4cb046e84033: Recorded variant title changed; review the colour/pack before updating
@@ -1746,7 +1746,7 @@ Checked: 2026-11-07T04:10:53+00:00
 - product / candidate-242b92f8e87926ab60f5: Exact variant no longer appears in the retailer catalogue
 - product / candidate-25f51330c19f359a602e: Exact variant no longer appears in the retailer catalogue
 - product / candidate-43f0b94b535bee1334b1: Exact variant no longer appears in the retailer catalogue
-- product / candidate-789ebde828e29ba7d98a: Recorded variant title changed; review the colour/pack before updating
+- product / candidate-789ebde828e29ba7d98a: Exact variant no longer appears in the retailer catalogue
 - product / candidate-1be83ead5e92720e2b2e: Exact variant no longer appears in the retailer catalogue
 - product / candidate-3413af4cd330821ad982: Recorded variant title changed; review the colour/pack before updating
 - product / candidate-ba83125d45ad3199e603: Recorded model title changed; product identity needs review
@@ -2721,5905 +2721,3978 @@ Checked: 2026-11-07T04:10:53+00:00
 - product / candidate-2a8f34de79a429b8b837: Exact variant no longer appears in the retailer catalogue
 - product / candidate-25c3deef8136b3d88c13: Exact variant no longer appears in the retailer catalogue
 - product / candidate-70343c242a1103425627: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-2f3e48b973bfe1ee3045: Nightly time budget reached; remaining values retained
-- image / candidate-54f749c20122fff0c562: Nightly time budget reached; remaining values retained
-- image / candidate-6cd1d82823ef82c80d1f: Nightly time budget reached; remaining values retained
-- image / candidate-321deec220cfd1a43f1a: Nightly time budget reached; remaining values retained
-- image / candidate-8113ff6e58d27d937864: Nightly time budget reached; remaining values retained
-- image / candidate-07a82c946eef1a831a94: Nightly time budget reached; remaining values retained
-- image / candidate-6a5aac141bc500983bef: Nightly time budget reached; remaining values retained
-- image / candidate-63d5271d0ec91df7cac0: Nightly time budget reached; remaining values retained
-- image / candidate-9d6997426c32e73492c1: Nightly time budget reached; remaining values retained
-- image / candidate-bbe9179c677dedf99422: Nightly time budget reached; remaining values retained
-- image / candidate-6d1cdef2315c8f466adf: Nightly time budget reached; remaining values retained
-- image / candidate-6497d924447c07f1f02b: Nightly time budget reached; remaining values retained
-- image / candidate-33d287f465d415e2a099: Nightly time budget reached; remaining values retained
-- image / candidate-414cccd6ec11714e4898: Nightly time budget reached; remaining values retained
-- image / candidate-d702fc8c198766ed3205: Nightly time budget reached; remaining values retained
-- image / candidate-7600b607b4885edfad3c: Nightly time budget reached; remaining values retained
-- image / candidate-0675718a48796033cd5a: Nightly time budget reached; remaining values retained
-- image / candidate-999e5dc218b0a815c264: Nightly time budget reached; remaining values retained
-- image / candidate-33a555d88ee75e2cbdec: Nightly time budget reached; remaining values retained
-- image / candidate-2054dbd4ee66d96e1bf7: Nightly time budget reached; remaining values retained
-- image / candidate-74e9dcd37ad90e7eb575: Nightly time budget reached; remaining values retained
-- image / candidate-d9aa8e08423838fbf791: Nightly time budget reached; remaining values retained
-- image / candidate-29ebb88ef29b57ac2467: Nightly time budget reached; remaining values retained
-- image / candidate-18963b1efd3be9f8bc65: Nightly time budget reached; remaining values retained
-- image / candidate-219b4c0f891886cf4d0b: Nightly time budget reached; remaining values retained
-- image / candidate-19b591ced0998211d5b5: Nightly time budget reached; remaining values retained
-- image / candidate-e064b1e2e35d4232aadc: Nightly time budget reached; remaining values retained
-- image / candidate-2048c49b4f57b51f3d5d: Nightly time budget reached; remaining values retained
-- image / candidate-c87a480b4001bd17e16d: Nightly time budget reached; remaining values retained
-- image / candidate-0817ac38b7cad8546622: Nightly time budget reached; remaining values retained
-- image / candidate-e6eb2cc1f8eb28152061: Nightly time budget reached; remaining values retained
-- image / candidate-07adf53f2e83f21b1548: Nightly time budget reached; remaining values retained
-- image / candidate-27738f77a9aaf3b47f9c: Nightly time budget reached; remaining values retained
-- image / candidate-d1955d44e24586889f46: Nightly time budget reached; remaining values retained
-- image / candidate-be9b6d508ce771d4a1a7: Nightly time budget reached; remaining values retained
-- image / candidate-0864db40b12f76901564: Nightly time budget reached; remaining values retained
-- image / candidate-892b91ddc79f3e316089: Nightly time budget reached; remaining values retained
-- image / candidate-502da313f65a124c965a: Nightly time budget reached; remaining values retained
-- image / candidate-2304900eb768d1427108: Nightly time budget reached; remaining values retained
-- image / candidate-c0993d127f95a8c9df72: Nightly time budget reached; remaining values retained
-- image / candidate-c148259a8a684fd072bf: Nightly time budget reached; remaining values retained
-- image / candidate-2b60729d9485f5b99ab7: Nightly time budget reached; remaining values retained
-- image / candidate-f6eb5be7bc08b09c2d63: Nightly time budget reached; remaining values retained
-- image / candidate-da469030c872effb362f: Nightly time budget reached; remaining values retained
-- image / candidate-ab3d0fd1d506bd8c5081: Nightly time budget reached; remaining values retained
-- image / candidate-6ab1cab3b6c58be87164: Nightly time budget reached; remaining values retained
-- image / candidate-546ddc8bbd0b7c24f2fb: Nightly time budget reached; remaining values retained
-- image / candidate-c5708e1d8e8a24609c8f: Nightly time budget reached; remaining values retained
-- image / candidate-43ca2153e5deb6a31aed: Nightly time budget reached; remaining values retained
-- image / candidate-470b94a37ab83918d6c4: Nightly time budget reached; remaining values retained
-- image / candidate-a9b8bac073dd767e0b44: Nightly time budget reached; remaining values retained
-- image / candidate-c4ca6a6ce44238b0b914: Nightly time budget reached; remaining values retained
-- image / candidate-2d1430e3fe4e3b9335aa: Nightly time budget reached; remaining values retained
-- image / candidate-ccbd7e55af13e3a64be0: Nightly time budget reached; remaining values retained
-- image / candidate-8d13f43bdea0854f0ef6: Nightly time budget reached; remaining values retained
-- image / candidate-3ec8e146d029b2a2b3f1: Nightly time budget reached; remaining values retained
-- image / candidate-6e7a13f8543440f49b16: Nightly time budget reached; remaining values retained
-- image / candidate-283c8188c29b01548231: Nightly time budget reached; remaining values retained
-- image / candidate-be00c190d23a1268f9a0: Nightly time budget reached; remaining values retained
-- image / candidate-7897a0980d136c207480: Nightly time budget reached; remaining values retained
-- image / candidate-0c03ca0dcdfdf30e1604: Nightly time budget reached; remaining values retained
-- image / candidate-59daed530f97cc14b1a4: Nightly time budget reached; remaining values retained
-- image / candidate-c133ec5914321d1b4839: Nightly time budget reached; remaining values retained
-- image / candidate-e32408574f395ba46688: Nightly time budget reached; remaining values retained
-- image / candidate-c3cc9fec97e05eb9458f: Nightly time budget reached; remaining values retained
-- image / candidate-ee7c0d3b63a76fcb7fd2: Nightly time budget reached; remaining values retained
-- image / candidate-2152b39f3ba49fa625d9: Nightly time budget reached; remaining values retained
-- image / candidate-60dc4e60378aa1e4f380: Nightly time budget reached; remaining values retained
-- image / candidate-f365ad69cf568ac1d7fe: Nightly time budget reached; remaining values retained
-- image / candidate-7de2ceba935371c651d1: Nightly time budget reached; remaining values retained
-- image / candidate-40d40b02e71b9eea561c: Nightly time budget reached; remaining values retained
-- image / candidate-b10531ae935ed1b593c2: Nightly time budget reached; remaining values retained
-- image / candidate-9ed4c38ab901febe25ce: Nightly time budget reached; remaining values retained
-- image / candidate-2ce8ac949aa650f9c00d: Nightly time budget reached; remaining values retained
-- image / candidate-c86224ce4a1a0ba5834f: Nightly time budget reached; remaining values retained
-- image / candidate-9e6e71b72e97789adc49: Nightly time budget reached; remaining values retained
-- image / candidate-1060629f9d5d1c4fa319: Nightly time budget reached; remaining values retained
-- image / candidate-befe8f21699f39135dbb: Nightly time budget reached; remaining values retained
-- image / candidate-9131eb2948cd663f41b7: Nightly time budget reached; remaining values retained
-- image / candidate-ccd8dc6dcea185aed1aa: Nightly time budget reached; remaining values retained
-- image / candidate-f229b342f4c9ac27999f: Nightly time budget reached; remaining values retained
-- image / candidate-f20240d9607fc5e7f83f: Nightly time budget reached; remaining values retained
-- image / candidate-91e2e3064ed1a032c46f: Nightly time budget reached; remaining values retained
-- image / candidate-a45aee412c6892d43623: Nightly time budget reached; remaining values retained
-- image / candidate-1f044b9d127ee022fa6d: Nightly time budget reached; remaining values retained
-- image / candidate-9bc6459d17935f172fc5: Nightly time budget reached; remaining values retained
-- image / candidate-b6aa55b710592433b144: Nightly time budget reached; remaining values retained
-- image / candidate-3b7e85cc0a728a10a673: Nightly time budget reached; remaining values retained
-- image / candidate-210d9debaa41c708cb4b: Nightly time budget reached; remaining values retained
-- image / candidate-abda5e1919a7527f5864: Nightly time budget reached; remaining values retained
-- image / candidate-be47d9423c30a0c6397a: Nightly time budget reached; remaining values retained
-- image / candidate-1a8c298e63e0b2791db5: Nightly time budget reached; remaining values retained
-- image / candidate-1696a431e6e66dd72685: Nightly time budget reached; remaining values retained
-- image / candidate-ed1820fb9d29e5521083: Nightly time budget reached; remaining values retained
-- image / candidate-91f014f4da8f48b7c268: Nightly time budget reached; remaining values retained
-- image / candidate-6eb1aea71424e1987cee: Nightly time budget reached; remaining values retained
-- image / candidate-6074f6802efda35499b3: Nightly time budget reached; remaining values retained
-- image / candidate-a2a29124f3630fdf87eb: Nightly time budget reached; remaining values retained
-- image / candidate-fe9c3e557772779accbe: Nightly time budget reached; remaining values retained
-- image / candidate-8a7c6ac1b976b1c1e012: Nightly time budget reached; remaining values retained
-- image / candidate-059fc2f7c49b9380a76c: Nightly time budget reached; remaining values retained
-- image / candidate-d25e9b7e946ca2f9cb52: Nightly time budget reached; remaining values retained
-- image / candidate-992592349996090f5251: Nightly time budget reached; remaining values retained
-- image / candidate-007a4846b43103f5f03a: Nightly time budget reached; remaining values retained
-- image / candidate-1526e0a1bdad265c08b3: Nightly time budget reached; remaining values retained
 - product / candidate-b1a61ec049049ec16b4f: Exact variant no longer appears in the retailer catalogue
-- image / candidate-aee9ade88c4712adb52b: Nightly time budget reached; remaining values retained
-- image / candidate-20199241d73202d2ef5f: Nightly time budget reached; remaining values retained
-- image / candidate-2ba33d4c97d7c5abf81d: Nightly time budget reached; remaining values retained
-- image / candidate-78912f533681149ee102: Nightly time budget reached; remaining values retained
-- image / candidate-ae033f33470254402e24: Nightly time budget reached; remaining values retained
 - product / candidate-78204b4cc3aca821a7bd: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-78204b4cc3aca821a7bd: Nightly time budget reached; remaining values retained
-- image / candidate-fbced472a80f06b9639f: Nightly time budget reached; remaining values retained
-- image / candidate-004022a61e6595bd3673: Nightly time budget reached; remaining values retained
-- image / candidate-404c897c56e3f589105b: Nightly time budget reached; remaining values retained
 - product / candidate-41c75007d8e08b93d090: Exact variant no longer appears in the retailer catalogue
-- image / candidate-d45e289dc0a6c6098256: Nightly time budget reached; remaining values retained
-- image / candidate-2dd9c26f77a0e7b2abba: Nightly time budget reached; remaining values retained
-- image / candidate-6c9006c0de38bc56b721: Nightly time budget reached; remaining values retained
-- image / candidate-0326b62c74e77a91c5cd: Nightly time budget reached; remaining values retained
-- image / candidate-f590d04da2bc51ea4509: Nightly time budget reached; remaining values retained
-- image / candidate-7752daee7c55769daf5c: Nightly time budget reached; remaining values retained
-- image / candidate-fb0b7e06c410078856a8: Nightly time budget reached; remaining values retained
-- image / candidate-4aaeb3e86c2c41eb291d: Nightly time budget reached; remaining values retained
-- image / candidate-1a851d606d85b52f15db: Nightly time budget reached; remaining values retained
-- image / candidate-3b5fa15c871701689a26: Nightly time budget reached; remaining values retained
-- image / candidate-87ee4f6e1b773f23dbbc: Nightly time budget reached; remaining values retained
-- image / candidate-6c6675c98f0df3328861: Nightly time budget reached; remaining values retained
-- image / candidate-b08c2bc396365bd25246: Nightly time budget reached; remaining values retained
-- image / candidate-f74ce0dc8aa264440623: Nightly time budget reached; remaining values retained
-- image / candidate-537c793873b1e277a33e: Nightly time budget reached; remaining values retained
-- image / candidate-71de164d67643a2b372b: Nightly time budget reached; remaining values retained
-- image / candidate-36c4280180367e5c1e1d: Nightly time budget reached; remaining values retained
-- image / candidate-1a573828d7a4d8f36ed8: Nightly time budget reached; remaining values retained
-- image / candidate-6ece2ca321ffa935a71b: Nightly time budget reached; remaining values retained
-- image / candidate-f4cc74b16bc4298c5af3: Nightly time budget reached; remaining values retained
-- image / candidate-c85832c3602cd11b6850: Nightly time budget reached; remaining values retained
-- image / candidate-1340cf4524dc07c68dc2: Nightly time budget reached; remaining values retained
-- image / candidate-71c316c693f2ac54d931: Nightly time budget reached; remaining values retained
-- image / candidate-26e9b52dfe71e07575e3: Nightly time budget reached; remaining values retained
-- image / candidate-ad30c8a3eac197ea13d3: Nightly time budget reached; remaining values retained
-- image / candidate-b81e0aaad7b70e0f6b55: Nightly time budget reached; remaining values retained
-- image / candidate-fa03777273c87fdf9339: Nightly time budget reached; remaining values retained
-- image / candidate-bed883db8dc1e1055d05: Nightly time budget reached; remaining values retained
-- image / candidate-0271b957eea5d9c6326e: Nightly time budget reached; remaining values retained
-- image / candidate-8f273eb68cee612c7a16: Nightly time budget reached; remaining values retained
-- image / candidate-72793e7339493ba5e34b: Nightly time budget reached; remaining values retained
-- image / candidate-6313480f6c5d373dd595: Nightly time budget reached; remaining values retained
-- image / candidate-47104d53deef042c9be2: Nightly time budget reached; remaining values retained
-- image / candidate-e39fc29cf939f4cd7325: Nightly time budget reached; remaining values retained
-- image / candidate-c0f3c33e85b150222e56: Nightly time budget reached; remaining values retained
-- image / candidate-d45d81a000f22e960ea2: Nightly time budget reached; remaining values retained
-- image / candidate-a34e139cf3b3dd18585d: Nightly time budget reached; remaining values retained
-- image / candidate-b415900bfaddce38f73d: Nightly time budget reached; remaining values retained
-- image / candidate-6ccb04148bd1a1ea33ad: Nightly time budget reached; remaining values retained
-- image / candidate-cf9fcf3aaa622038c0b5: Nightly time budget reached; remaining values retained
-- image / candidate-c13ecfe9300fb909725a: Nightly time budget reached; remaining values retained
-- image / candidate-6fb2738ed4a02918b586: Nightly time budget reached; remaining values retained
-- image / candidate-395d8ecd192a48edbd53: Nightly time budget reached; remaining values retained
-- image / candidate-1f278d09273f689a3be9: Nightly time budget reached; remaining values retained
-- image / candidate-b8233ff4b24889d77e46: Nightly time budget reached; remaining values retained
-- image / candidate-acb50dc12fd97db47b65: Nightly time budget reached; remaining values retained
-- image / candidate-312f4f4668f295f79654: Nightly time budget reached; remaining values retained
-- image / candidate-5497c9e34dbdf7705c7d: Nightly time budget reached; remaining values retained
-- image / candidate-6e139d1214cfb2db9881: Nightly time budget reached; remaining values retained
-- image / candidate-5709b0707c6ea2ec3823: Nightly time budget reached; remaining values retained
-- image / candidate-47d36947b27c5d8b33bb: Nightly time budget reached; remaining values retained
-- image / candidate-efdbddde23d2ccbf4c69: Nightly time budget reached; remaining values retained
-- image / candidate-1410745050009b953a3a: Nightly time budget reached; remaining values retained
-- image / candidate-01d92db1321e703ee7bf: Nightly time budget reached; remaining values retained
-- image / candidate-f8aed0865a92843760e9: Nightly time budget reached; remaining values retained
-- image / candidate-9c7c5f150815c7beee53: Nightly time budget reached; remaining values retained
-- image / candidate-0eb262e281c44ced71eb: Nightly time budget reached; remaining values retained
-- image / candidate-7d046e2427b226c2cb10: Nightly time budget reached; remaining values retained
-- image / candidate-0eb0e7c759d7f3bd4443: Nightly time budget reached; remaining values retained
-- image / candidate-093827442ed101309dca: Nightly time budget reached; remaining values retained
 - product / candidate-d4a47bdb5b62cb08c20b: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-d4a47bdb5b62cb08c20b: Nightly time budget reached; remaining values retained
-- image / candidate-df965f65fc61699d5e46: Nightly time budget reached; remaining values retained
-- image / candidate-1aa221c4ef7c10ee0a4e: Nightly time budget reached; remaining values retained
-- image / candidate-69c27542b873704191bd: Nightly time budget reached; remaining values retained
-- image / candidate-370f6fde090b8f9dd2ef: Nightly time budget reached; remaining values retained
-- image / candidate-96e71a1f347e55357445: Nightly time budget reached; remaining values retained
-- image / candidate-e3591720a7ab2b4197de: Nightly time budget reached; remaining values retained
-- image / candidate-201d3a90ed0520de5916: Nightly time budget reached; remaining values retained
-- image / candidate-44842104082d51fe3777: Nightly time budget reached; remaining values retained
-- image / candidate-a23caccc82cf1786df23: Nightly time budget reached; remaining values retained
-- image / candidate-211648cf1d67edb062d2: Nightly time budget reached; remaining values retained
-- image / candidate-af2fd688924d6cd3b26a: Nightly time budget reached; remaining values retained
-- image / candidate-05e1a696d6593c69a561: Nightly time budget reached; remaining values retained
-- image / candidate-e9ab133b76874fa33e28: Nightly time budget reached; remaining values retained
-- image / candidate-30777242d1781a47ff53: Nightly time budget reached; remaining values retained
-- image / candidate-fe7d9ba7d734b788b3f3: Nightly time budget reached; remaining values retained
-- image / candidate-011f5868df2026cdaaf0: Nightly time budget reached; remaining values retained
-- image / candidate-e351be27ab89c8777c60: Nightly time budget reached; remaining values retained
 - product / candidate-4ade2dc0dd07b2eaa3fe: Exact variant no longer appears in the retailer catalogue
-- image / candidate-85bd1d86ae306847e545: Nightly time budget reached; remaining values retained
-- image / candidate-ed6be7f8be5f5d9077ad: Nightly time budget reached; remaining values retained
-- image / candidate-ee88a36e6a5d1885c2b5: Nightly time budget reached; remaining values retained
-- image / candidate-9814c0b9a471f3482f75: Nightly time budget reached; remaining values retained
-- image / candidate-94f040d36dd66061d5f5: Nightly time budget reached; remaining values retained
-- image / candidate-20e1cfe76c2f8f8eaa02: Nightly time budget reached; remaining values retained
-- image / candidate-d60e9664752161ae6ff4: Nightly time budget reached; remaining values retained
-- image / candidate-9e6db6c453d87d5886cd: Nightly time budget reached; remaining values retained
-- image / candidate-5338bd5546bdd67031de: Nightly time budget reached; remaining values retained
-- image / candidate-a31058eb0fa39089c760: Nightly time budget reached; remaining values retained
-- image / candidate-7637e9ddbb2173cd6cf7: Nightly time budget reached; remaining values retained
-- image / candidate-d00a5645394ffbf873a8: Nightly time budget reached; remaining values retained
-- image / candidate-38ec3970993853637024: Nightly time budget reached; remaining values retained
-- image / candidate-0ccbac1449d04dc9bf60: Nightly time budget reached; remaining values retained
-- image / candidate-23ff4370ee478edd4c54: Nightly time budget reached; remaining values retained
-- image / candidate-26d6eb4a4e3a6c4a1862: Nightly time budget reached; remaining values retained
-- image / candidate-b6e134429b2c43faac80: Nightly time budget reached; remaining values retained
-- image / candidate-b09c1b4142ecce7feaa4: Nightly time budget reached; remaining values retained
-- image / candidate-eccc2ba4e86c9164fbd1: Nightly time budget reached; remaining values retained
-- image / candidate-f4e7772bf75d46b97023: Nightly time budget reached; remaining values retained
-- image / candidate-dcd56b9946a3018f379c: Nightly time budget reached; remaining values retained
-- image / candidate-8a82b9ca38338d9ca4a9: Nightly time budget reached; remaining values retained
-- image / candidate-8003daba59f8577661cb: Nightly time budget reached; remaining values retained
-- image / candidate-b8d9f3bd24674e9eadbd: Nightly time budget reached; remaining values retained
-- image / candidate-bae772d79f3227a94ebd: Nightly time budget reached; remaining values retained
-- image / candidate-5e0fcc6e6267144a89c4: Nightly time budget reached; remaining values retained
 - product / candidate-40b9effb1a6767f44ded: Exact variant no longer appears in the retailer catalogue
-- image / candidate-c2b89796458abb878704: Nightly time budget reached; remaining values retained
-- image / candidate-e9e4a9cd26e583a2b3b5: Nightly time budget reached; remaining values retained
-- image / candidate-0e55aa0a1c73606b86c8: Nightly time budget reached; remaining values retained
-- image / candidate-26c072effeb40a1975ba: Nightly time budget reached; remaining values retained
-- image / candidate-ae75b75a9b78a554018e: Nightly time budget reached; remaining values retained
-- image / candidate-fe160daa14794781876f: Nightly time budget reached; remaining values retained
-- image / candidate-a2ccd4e6c84438f2d399: Nightly time budget reached; remaining values retained
-- image / candidate-bfaad61538d617eaacaf: Nightly time budget reached; remaining values retained
-- image / candidate-acb5d85e2b85b5953534: Nightly time budget reached; remaining values retained
-- image / candidate-e0dee50b4a9723d8962b: Nightly time budget reached; remaining values retained
-- image / candidate-b32d8d384262cb57ad37: Nightly time budget reached; remaining values retained
-- image / candidate-82dc5546d8173ba9bf4a: Nightly time budget reached; remaining values retained
-- image / candidate-334a4571f2c075e93701: Nightly time budget reached; remaining values retained
-- image / candidate-5427f10b3547ba9d3ab8: Nightly time budget reached; remaining values retained
-- image / candidate-4c02cf970397d010461a: Nightly time budget reached; remaining values retained
-- image / candidate-99b1dc94398f45edcc7b: Nightly time budget reached; remaining values retained
-- image / candidate-bf533036d33c9ce7c151: Nightly time budget reached; remaining values retained
-- image / candidate-988dc800e6f9bf851536: Nightly time budget reached; remaining values retained
-- image / candidate-00c23a370c2fdd28aca4: Nightly time budget reached; remaining values retained
-- image / candidate-669dc6fb0c4234f7dc0e: Nightly time budget reached; remaining values retained
-- image / candidate-0cdadce1083479048616: Nightly time budget reached; remaining values retained
-- image / candidate-8946113309639077e60a: Nightly time budget reached; remaining values retained
-- image / candidate-62b1b3f77767f600ee5a: Nightly time budget reached; remaining values retained
-- image / candidate-80e91bc49b8865c441a4: Nightly time budget reached; remaining values retained
-- image / candidate-4e6eeac1bed0228dbb31: Nightly time budget reached; remaining values retained
 - product / candidate-0b5c7ef4365fef0192de: Exact variant no longer appears in the retailer catalogue
-- image / candidate-49bd3fef682b67cdf075: Nightly time budget reached; remaining values retained
-- image / candidate-ef7dc0b3538e01ad6402: Nightly time budget reached; remaining values retained
-- image / candidate-b171506c1afab9da3c62: Nightly time budget reached; remaining values retained
-- image / candidate-17244f7b5ad9db185e06: Nightly time budget reached; remaining values retained
-- image / candidate-a1550171e12b72d4a3a6: Nightly time budget reached; remaining values retained
-- image / candidate-519aaa852df0ceb187a2: Nightly time budget reached; remaining values retained
-- image / candidate-3bf3aac4f2818e2f2f26: Nightly time budget reached; remaining values retained
-- image / candidate-d4707474536a37047543: Nightly time budget reached; remaining values retained
-- image / candidate-5fd656b66c5a827fb0d4: Nightly time budget reached; remaining values retained
-- image / candidate-f57f254ba6714065731d: Nightly time budget reached; remaining values retained
-- image / candidate-1106334c983651d7edbd: Nightly time budget reached; remaining values retained
-- image / candidate-0a1363a8c3d7aaa37aef: Nightly time budget reached; remaining values retained
-- image / candidate-534f51ae18afe7292d6c: Nightly time budget reached; remaining values retained
-- image / candidate-cc7a47d7fdaad29e6ea1: Nightly time budget reached; remaining values retained
-- image / candidate-5bc9d7b0800da756e9a6: Nightly time budget reached; remaining values retained
-- image / candidate-feadc9b6f147ab7d1377: Nightly time budget reached; remaining values retained
-- image / candidate-f5782d8f0d04f5c5374d: Nightly time budget reached; remaining values retained
-- image / candidate-05886225f97693aa06bf: Nightly time budget reached; remaining values retained
-- image / candidate-8f26756e3958f46c4110: Nightly time budget reached; remaining values retained
-- image / candidate-37b38c2dc3ac3aba5015: Nightly time budget reached; remaining values retained
-- image / candidate-cbfa0a96c3aef630f393: Nightly time budget reached; remaining values retained
-- image / candidate-14b52a96af2e1e9085d8: Nightly time budget reached; remaining values retained
-- image / candidate-b7b7ebed4bbb04cc28a6: Nightly time budget reached; remaining values retained
-- image / candidate-a73dc51486f63c088dc9: Nightly time budget reached; remaining values retained
-- image / candidate-50d754f3177b4ea43a82: Nightly time budget reached; remaining values retained
-- image / candidate-11262c84361bf54c13a1: Nightly time budget reached; remaining values retained
-- image / candidate-0ae0227f2f6690d6447f: Nightly time budget reached; remaining values retained
-- image / candidate-d25695a4d6eebfa33886: Nightly time budget reached; remaining values retained
-- image / candidate-6cbc8277373ebaf47dad: Nightly time budget reached; remaining values retained
-- image / candidate-dc4e7952fd2209ab4bbb: Nightly time budget reached; remaining values retained
-- image / candidate-8116384453c82b7ec31a: Nightly time budget reached; remaining values retained
-- image / candidate-1d6a500d71710528eabb: Nightly time budget reached; remaining values retained
-- image / candidate-8ada9b180de56654114f: Nightly time budget reached; remaining values retained
-- image / candidate-af633ad95ec8116d0a11: Nightly time budget reached; remaining values retained
-- image / candidate-87895fd6e3d6d59feaf0: Nightly time budget reached; remaining values retained
-- image / candidate-67b8c20de50e40208364: Nightly time budget reached; remaining values retained
-- image / candidate-fb9c09aca5851861e50b: Nightly time budget reached; remaining values retained
-- image / candidate-302e29e207d9e217af20: Nightly time budget reached; remaining values retained
-- image / candidate-6f3dd5d978461e3624e6: Nightly time budget reached; remaining values retained
-- image / candidate-de0a2d5a33274bd20fd0: Nightly time budget reached; remaining values retained
-- image / candidate-3dc177a8f9e5d4c91941: Nightly time budget reached; remaining values retained
-- image / candidate-57670350f14c4ac562ba: Nightly time budget reached; remaining values retained
-- image / candidate-bf58cd6df59da5bdff48: Nightly time budget reached; remaining values retained
-- image / candidate-434e8d0cdbe30a4ca28c: Nightly time budget reached; remaining values retained
-- image / candidate-3a28b936fa62fc145ea5: Nightly time budget reached; remaining values retained
-- image / candidate-04e84ad905f149ea95b7: Nightly time budget reached; remaining values retained
-- image / candidate-9fa61a3f2619a90ec9ac: Nightly time budget reached; remaining values retained
-- image / candidate-0aad980075b29cec7f46: Nightly time budget reached; remaining values retained
 - product / candidate-5aef8749aa361131aa25: Exact variant no longer appears in the retailer catalogue
-- image / candidate-0ff71c508546116dc6b0: Nightly time budget reached; remaining values retained
-- image / candidate-31308d5ca044b1b49f84: Nightly time budget reached; remaining values retained
-- image / candidate-3f6fbf48290cf2d7b2ae: Nightly time budget reached; remaining values retained
-- image / candidate-d411a23ce20e03616e43: Nightly time budget reached; remaining values retained
-- image / candidate-05fdff5ade7de31148c2: Nightly time budget reached; remaining values retained
-- image / candidate-368a4e0e98b571e44fc7: Nightly time budget reached; remaining values retained
-- image / candidate-814ed100294dce13b7c1: Nightly time budget reached; remaining values retained
-- image / candidate-d7f78274acf182e93c4d: Nightly time budget reached; remaining values retained
-- image / candidate-4facf39547a666841681: Nightly time budget reached; remaining values retained
-- image / candidate-81cd0bb30d2d7016fc26: Nightly time budget reached; remaining values retained
-- image / candidate-0f8c7bd41e6a99280c0f: Nightly time budget reached; remaining values retained
-- image / candidate-c49600e51eb8dad896fb: Nightly time budget reached; remaining values retained
-- image / candidate-039bdae0d2d84141148e: Nightly time budget reached; remaining values retained
-- image / candidate-82af19b01cfc6ea77fce: Nightly time budget reached; remaining values retained
-- image / candidate-553131ef652aa02e053c: Nightly time budget reached; remaining values retained
-- image / candidate-669f88bb3327991aa69c: Nightly time budget reached; remaining values retained
-- image / candidate-8ab751e1ccac14b4a8fc: Nightly time budget reached; remaining values retained
-- image / candidate-c3752002cd76f5f6ecc1: Nightly time budget reached; remaining values retained
-- image / candidate-129e4dbeb32372a2c822: Nightly time budget reached; remaining values retained
-- image / candidate-5c2b5de1dbefa8252223: Nightly time budget reached; remaining values retained
-- image / candidate-e491afee001ba133f812: Nightly time budget reached; remaining values retained
-- image / candidate-b6a4c4f2318155e4cbfe: Nightly time budget reached; remaining values retained
-- image / candidate-67ee754def135ca7261a: Nightly time budget reached; remaining values retained
-- image / candidate-411238f3f6527b830177: Nightly time budget reached; remaining values retained
-- image / candidate-5b889e0f7e543f341a0e: Nightly time budget reached; remaining values retained
-- image / candidate-962d140a420c35456d01: Nightly time budget reached; remaining values retained
-- image / candidate-2b5bc5dc57ecc9187fa0: Nightly time budget reached; remaining values retained
 - product / candidate-d828a5b72fb74598dd58: Exact variant no longer appears in the retailer catalogue
-- image / candidate-7a870bad5616c0b05536: Nightly time budget reached; remaining values retained
-- image / candidate-7d48ae942db3cf1d6146: Nightly time budget reached; remaining values retained
-- image / candidate-35e4be4f5490465f2aa3: Nightly time budget reached; remaining values retained
-- image / candidate-6df50a81e0c8401ad55c: Nightly time budget reached; remaining values retained
-- image / candidate-9607cf71f023f36a0d40: Nightly time budget reached; remaining values retained
-- image / candidate-9ba377eb828f988d1ce6: Nightly time budget reached; remaining values retained
-- image / candidate-4e51d1256ffe5a06d9fb: Nightly time budget reached; remaining values retained
-- image / candidate-d724dcc851e41c2daa79: Nightly time budget reached; remaining values retained
-- image / candidate-cbc1a1c4460958c76a6b: Nightly time budget reached; remaining values retained
-- image / candidate-8bdc49ff76536be40490: Nightly time budget reached; remaining values retained
 - product / candidate-ea74d0f83cba772a3eb3: Exact variant no longer appears in the retailer catalogue
-- image / candidate-229a99313e1c202dec6c: Nightly time budget reached; remaining values retained
-- image / candidate-5c59673f4479893b1aa5: Nightly time budget reached; remaining values retained
-- image / candidate-26fe1c15777af6184547: Nightly time budget reached; remaining values retained
-- image / candidate-56f5b69fc8f72aa3a76e: Nightly time budget reached; remaining values retained
-- image / candidate-2a9395a944268733eb2a: Nightly time budget reached; remaining values retained
-- image / candidate-1770e9ab8567cc71037a: Nightly time budget reached; remaining values retained
-- image / candidate-1ea2fb54599244570bea: Nightly time budget reached; remaining values retained
-- image / candidate-251033fef887a2a04408: Nightly time budget reached; remaining values retained
-- image / candidate-ce4a9bd7ca985cb8d86d: Nightly time budget reached; remaining values retained
-- image / candidate-534948a66a7b490e6780: Nightly time budget reached; remaining values retained
-- image / candidate-f98a716d9d6fbaa56ebf: Nightly time budget reached; remaining values retained
-- image / candidate-de9800b4f484605f0d2a: Nightly time budget reached; remaining values retained
-- image / candidate-e9da65bce61a040050ae: Nightly time budget reached; remaining values retained
-- image / candidate-2e8dfb85f808d2c4b6ea: Nightly time budget reached; remaining values retained
-- image / candidate-cb052cbd01dd92655e10: Nightly time budget reached; remaining values retained
-- image / candidate-2b37263a09635710a5d9: Nightly time budget reached; remaining values retained
-- image / candidate-16b5944c336d49562a24: Nightly time budget reached; remaining values retained
-- image / candidate-f4aa5715117362682fbd: Nightly time budget reached; remaining values retained
-- image / candidate-6d66bcc2634a3198991d: Nightly time budget reached; remaining values retained
-- image / candidate-3d4945d365d95bcca4bf: Nightly time budget reached; remaining values retained
-- image / candidate-ee45cbd90ea9e7dd096c: Nightly time budget reached; remaining values retained
-- image / candidate-3999990e141128c6b617: Nightly time budget reached; remaining values retained
-- image / candidate-4052f1b6c8f63bd20fb4: Nightly time budget reached; remaining values retained
-- image / candidate-178716c8b7c082d9c34b: Nightly time budget reached; remaining values retained
-- image / candidate-bbd7c0076c81a6f64a71: Nightly time budget reached; remaining values retained
-- image / candidate-27e2c18e9aa2ee995e09: Nightly time budget reached; remaining values retained
-- image / candidate-1ea7192221d7f46b8f57: Nightly time budget reached; remaining values retained
-- image / candidate-12786b19e69bf07352e2: Nightly time budget reached; remaining values retained
-- image / candidate-0707dcb16b4efdb93386: Nightly time budget reached; remaining values retained
-- image / candidate-54ba390f18915393c9e3: Nightly time budget reached; remaining values retained
-- image / candidate-7c59497353c78d53e5b4: Nightly time budget reached; remaining values retained
-- image / candidate-501af8098087f54a6cab: Nightly time budget reached; remaining values retained
-- image / candidate-1260e13f89eb000eb3c1: Nightly time budget reached; remaining values retained
-- image / candidate-3253b8cbdc548a0d5afc: Nightly time budget reached; remaining values retained
-- image / candidate-18985d65f11e072f8804: Nightly time budget reached; remaining values retained
-- image / candidate-c31cc3ba6f6428e92802: Nightly time budget reached; remaining values retained
-- image / candidate-9a2afc44a6bb69c2ecbc: Nightly time budget reached; remaining values retained
-- image / candidate-caffbb6f6c9c74b2ac9e: Nightly time budget reached; remaining values retained
-- image / candidate-cc550474742a9b78b0e3: Nightly time budget reached; remaining values retained
-- image / candidate-2b5a972ff698dfcf244e: Nightly time budget reached; remaining values retained
-- image / candidate-0ee938975af7de7d5113: Nightly time budget reached; remaining values retained
-- image / candidate-aa357c54577f112d07ca: Nightly time budget reached; remaining values retained
-- image / candidate-502cf8a60bb09073104c: Nightly time budget reached; remaining values retained
-- image / candidate-4cd8e5e9e36220436d52: Nightly time budget reached; remaining values retained
-- image / candidate-ca9f1ca9fbe6d4534d85: Nightly time budget reached; remaining values retained
-- image / candidate-c03c9fa03e1d0a1e3ad3: Nightly time budget reached; remaining values retained
-- image / candidate-78d9e66270cbf6049934: Nightly time budget reached; remaining values retained
-- image / candidate-73bfe25a397dc393e7bc: Nightly time budget reached; remaining values retained
-- image / candidate-f433d60f2b9a5472e427: Nightly time budget reached; remaining values retained
-- image / candidate-f2f19468b16804e1f050: Nightly time budget reached; remaining values retained
-- image / candidate-ac016b1cd24d7df8a082: Nightly time budget reached; remaining values retained
-- image / candidate-59f9b96941a72c0d364a: Nightly time budget reached; remaining values retained
-- image / candidate-de1e6bc7c54ccf40567b: Nightly time budget reached; remaining values retained
-- image / candidate-d8b5d291f097de6cfce0: Nightly time budget reached; remaining values retained
-- image / candidate-404c53770ab63468ab3b: Nightly time budget reached; remaining values retained
-- image / candidate-9bd3e30db5852d79a145: Nightly time budget reached; remaining values retained
-- image / candidate-31dfb8d079fa88cdf74a: Nightly time budget reached; remaining values retained
-- image / candidate-2211b9b803b61dc8bf1f: Nightly time budget reached; remaining values retained
-- image / candidate-eef2811f2ee469847c1a: Nightly time budget reached; remaining values retained
-- image / candidate-2873a35aab415ac23ac7: Nightly time budget reached; remaining values retained
-- image / candidate-9517597064704f768adb: Nightly time budget reached; remaining values retained
-- image / candidate-ee94382a8a269b6100b5: Nightly time budget reached; remaining values retained
-- image / candidate-2575460b00432c604892: Nightly time budget reached; remaining values retained
-- image / candidate-e67f4c1e17027fac14ce: Nightly time budget reached; remaining values retained
-- image / candidate-f9a5bd8a80ec243a246f: Nightly time budget reached; remaining values retained
-- image / candidate-486e34f353e5692a318d: Nightly time budget reached; remaining values retained
-- image / candidate-eb6ae28476d005f58c05: Nightly time budget reached; remaining values retained
-- image / candidate-df737c8ef89f215e92f1: Nightly time budget reached; remaining values retained
-- image / candidate-f1d31709e379e0f6959e: Nightly time budget reached; remaining values retained
-- image / candidate-000ef548614de0045a25: Nightly time budget reached; remaining values retained
 - product / candidate-6cf254807b268f8711a2: Exact variant no longer appears in the retailer catalogue
-- image / candidate-d51ff06147e468368435: Nightly time budget reached; remaining values retained
-- image / candidate-b48eca076cccb1beb98b: Nightly time budget reached; remaining values retained
-- image / candidate-e2588ed9c8fbe1941310: Nightly time budget reached; remaining values retained
-- image / candidate-ba92e3a56b9acebe04f7: Nightly time budget reached; remaining values retained
-- image / candidate-7de6b461470e92468755: Nightly time budget reached; remaining values retained
-- image / candidate-4928801fd12664f6b584: Nightly time budget reached; remaining values retained
-- image / candidate-1de659cae5a5738139bb: Nightly time budget reached; remaining values retained
-- image / candidate-95bc530ab28722dfc248: Nightly time budget reached; remaining values retained
-- image / candidate-a8055a5a13aa771d9d59: Nightly time budget reached; remaining values retained
-- image / candidate-b7e1f3fca84696503991: Nightly time budget reached; remaining values retained
-- image / candidate-7988802edc13726b8608: Nightly time budget reached; remaining values retained
-- image / candidate-db3e54c18170124573ce: Nightly time budget reached; remaining values retained
-- image / candidate-3dbdb5b7f25dffdfe45c: Nightly time budget reached; remaining values retained
-- image / candidate-3dab5f6f779c56cdcdb5: Nightly time budget reached; remaining values retained
-- image / candidate-d42a38819ea58d179125: Nightly time budget reached; remaining values retained
-- image / candidate-034025f4eeeadb3304e8: Nightly time budget reached; remaining values retained
-- image / candidate-21141856bc451308221f: Nightly time budget reached; remaining values retained
-- image / candidate-04fb2dfd23c7eec3f0df: Nightly time budget reached; remaining values retained
-- image / candidate-b7be0fe28ebeae3d43d6: Nightly time budget reached; remaining values retained
-- image / candidate-870879a9dca4d8d6d55c: Nightly time budget reached; remaining values retained
-- image / candidate-545ffbb68d59e54c5e96: Nightly time budget reached; remaining values retained
-- image / candidate-d9610f977763cb849524: Nightly time budget reached; remaining values retained
-- image / candidate-248d2535f4dfc22e3e0f: Nightly time budget reached; remaining values retained
-- image / candidate-af6638c2f6c8c9ecccfe: Nightly time budget reached; remaining values retained
-- image / candidate-e2c05158cba350b80767: Nightly time budget reached; remaining values retained
-- image / candidate-54259f42afec278a9463: Nightly time budget reached; remaining values retained
-- image / candidate-4994dc1c5ac067d97ea5: Nightly time budget reached; remaining values retained
-- image / candidate-0ca8e8c463a5033e791b: Nightly time budget reached; remaining values retained
-- image / candidate-f95d455ee34e669b3bd7: Nightly time budget reached; remaining values retained
-- image / candidate-9420d0a4408011b34a76: Nightly time budget reached; remaining values retained
-- image / candidate-ea1de3e084e4db90d9c4: Nightly time budget reached; remaining values retained
-- image / candidate-056e1d7aee6d7118e856: Nightly time budget reached; remaining values retained
-- image / candidate-2eaa4583d32760ff9abb: Nightly time budget reached; remaining values retained
-- image / candidate-43b0a25239fd59ccf6a6: Nightly time budget reached; remaining values retained
-- image / candidate-71f8ee03f6422949bf00: Nightly time budget reached; remaining values retained
-- image / candidate-5393c1a613c15d99a3bf: Nightly time budget reached; remaining values retained
-- image / candidate-7b571b61fe4c6e7b7b65: Nightly time budget reached; remaining values retained
-- image / candidate-d29be27010f2133938f7: Nightly time budget reached; remaining values retained
-- image / candidate-cc8ae642075f1acccaa2: Nightly time budget reached; remaining values retained
-- image / candidate-5fbeb32929a7c7a7424e: Nightly time budget reached; remaining values retained
-- image / candidate-f49bb83cae5a413a49ac: Nightly time budget reached; remaining values retained
 - product / candidate-7683c22c611316fa2d11: Exact variant no longer appears in the retailer catalogue
-- image / candidate-ff386a3ab20345f22db9: Nightly time budget reached; remaining values retained
-- image / candidate-23280acd65ac3cbc5bd7: Nightly time budget reached; remaining values retained
-- image / candidate-ee7ddeeaf1e261d485f2: Nightly time budget reached; remaining values retained
-- image / candidate-c2128c5cf8548242881b: Nightly time budget reached; remaining values retained
-- image / candidate-33c22b822f98d13e55d7: Nightly time budget reached; remaining values retained
-- image / candidate-79906f2e16b0ac287d57: Nightly time budget reached; remaining values retained
-- image / candidate-f40cc9366f4072e56c00: Nightly time budget reached; remaining values retained
-- image / candidate-98baf21cc328f6a697ab: Nightly time budget reached; remaining values retained
-- image / candidate-b8e842337c9127675969: Nightly time budget reached; remaining values retained
-- image / candidate-4baef7f6a1aac9d6cb35: Nightly time budget reached; remaining values retained
-- image / candidate-56eaa203ec3f76f03dba: Nightly time budget reached; remaining values retained
-- image / candidate-715e61aa7202ede46d61: Nightly time budget reached; remaining values retained
-- image / candidate-93591411eadaaf57eb8e: Nightly time budget reached; remaining values retained
-- image / candidate-cbe8fba997ae1f077953: Nightly time budget reached; remaining values retained
-- image / candidate-0e29fae26d02fb90299c: Nightly time budget reached; remaining values retained
-- image / candidate-e232f57213af3e9f2b94: Nightly time budget reached; remaining values retained
-- image / candidate-a9f6657a182ee0ab17e1: Nightly time budget reached; remaining values retained
-- image / candidate-aeac96b7cc6b3351527c: Nightly time budget reached; remaining values retained
-- image / candidate-2e4586cb94586ff83031: Nightly time budget reached; remaining values retained
-- image / candidate-9b999ed23e1e0bb626b1: Nightly time budget reached; remaining values retained
-- image / candidate-3762df6b03cb820cbdfa: Nightly time budget reached; remaining values retained
-- image / candidate-f2fe53fb005f2f764912: Nightly time budget reached; remaining values retained
-- image / candidate-fdc202ba4575cdf5dfef: Nightly time budget reached; remaining values retained
-- image / candidate-1d2b741ca68993bd9edb: Nightly time budget reached; remaining values retained
-- image / candidate-4ab0facb6c1ea32226c6: Nightly time budget reached; remaining values retained
-- image / candidate-8ff8c11a78d45f28e5f9: Nightly time budget reached; remaining values retained
-- image / candidate-d868615e7ec38d57c3ac: Nightly time budget reached; remaining values retained
-- image / candidate-01726695ee6acbdc9afa: Nightly time budget reached; remaining values retained
-- image / candidate-909eca8fd50122e3471b: Nightly time budget reached; remaining values retained
-- image / candidate-2359f3d6b1cf2f1fd296: Nightly time budget reached; remaining values retained
-- image / candidate-484a22f0b8ce0ac0fd03: Nightly time budget reached; remaining values retained
 - product / candidate-db9a826727211e3535d0: Exact variant no longer appears in the retailer catalogue
-- image / candidate-6b18f143597d9c7a9310: Nightly time budget reached; remaining values retained
-- image / candidate-bc0a51be940f04fc8fa1: Nightly time budget reached; remaining values retained
-- image / candidate-f1786e80b3376f4d7fc0: Nightly time budget reached; remaining values retained
-- image / candidate-5965cea5838e58fa7875: Nightly time budget reached; remaining values retained
-- image / candidate-992dc4c024863329b640: Nightly time budget reached; remaining values retained
-- image / candidate-4599b385821cae91ee81: Nightly time budget reached; remaining values retained
-- image / candidate-394295978e8011573ca8: Nightly time budget reached; remaining values retained
-- image / candidate-3412161e043977d25ee7: Nightly time budget reached; remaining values retained
-- image / candidate-5ab4c0923c808dfb944a: Nightly time budget reached; remaining values retained
-- image / candidate-4065ddcff0c87829bdfd: Nightly time budget reached; remaining values retained
-- image / candidate-1fce8fb30be6679d72e7: Nightly time budget reached; remaining values retained
-- image / candidate-078740765c61a059aced: Nightly time budget reached; remaining values retained
-- image / candidate-49ed89f545874ba674ce: Nightly time budget reached; remaining values retained
-- image / candidate-d37bbcb8565250f519a2: Nightly time budget reached; remaining values retained
-- image / candidate-db33c3a0277c5c7746bd: Nightly time budget reached; remaining values retained
-- image / candidate-be9380d71e0e7f68684d: Nightly time budget reached; remaining values retained
-- image / candidate-41f0d2b53c9213f789a7: Nightly time budget reached; remaining values retained
-- image / candidate-b0b8dde18a0cdd4bd9f7: Nightly time budget reached; remaining values retained
-- image / candidate-5df9ae5da3e9f39bbd13: Nightly time budget reached; remaining values retained
-- image / candidate-c0b0553e7bac1399d0cb: Nightly time budget reached; remaining values retained
-- image / candidate-eaa058b39111d36cb820: Nightly time budget reached; remaining values retained
-- image / candidate-7b94110d0400fac9345a: Nightly time budget reached; remaining values retained
-- image / candidate-83772c8c511fa983329f: Nightly time budget reached; remaining values retained
-- image / candidate-103aaf0dca8a0cb68210: Nightly time budget reached; remaining values retained
-- image / candidate-c62a81e7c9e6f4acc882: Nightly time budget reached; remaining values retained
-- image / candidate-0c4ba4d702b9c7246245: Nightly time budget reached; remaining values retained
-- image / candidate-98e115f6c2f722fdebcd: Nightly time budget reached; remaining values retained
-- image / candidate-09d5918dd14766cfb025: Nightly time budget reached; remaining values retained
-- image / candidate-1964e993f7f8fca2186c: Nightly time budget reached; remaining values retained
-- image / candidate-019aad07afdf701b165e: Nightly time budget reached; remaining values retained
-- image / candidate-2617aa5e6e94cd6a2a0b: Nightly time budget reached; remaining values retained
-- image / candidate-4279272b2d5f8fec3116: Nightly time budget reached; remaining values retained
-- image / candidate-c59f7c26b2997f129bf6: Nightly time budget reached; remaining values retained
-- image / candidate-8705b7f1dc60010cc0fa: Nightly time budget reached; remaining values retained
-- image / candidate-c6b4f4603419142ae32b: Nightly time budget reached; remaining values retained
-- image / candidate-cd707d3eeba83f190ff5: Nightly time budget reached; remaining values retained
-- image / candidate-c05d75115aa4fd4f7154: Nightly time budget reached; remaining values retained
-- image / candidate-1a3206e5542879d9bc4c: Nightly time budget reached; remaining values retained
 - product / candidate-4fe36b4059df84c1d227: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-4fe36b4059df84c1d227: Nightly time budget reached; remaining values retained
-- image / candidate-9031263699e34bcccd3e: Nightly time budget reached; remaining values retained
 - product / candidate-b59ea3e1fb94774ec257: Exact variant no longer appears in the retailer catalogue
 - product / candidate-dcc1eabdc8547cf2ec87: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-dcc1eabdc8547cf2ec87: Nightly time budget reached; remaining values retained
-- image / candidate-134d2c6cd16c9f9c8f94: Nightly time budget reached; remaining values retained
-- image / candidate-da214627d4c4e1e24303: Nightly time budget reached; remaining values retained
-- image / candidate-dd386b8e516e7e5688a8: Nightly time budget reached; remaining values retained
-- image / candidate-d69fc3f38e701c0289d6: Nightly time budget reached; remaining values retained
-- image / candidate-9a7db3fe2954ed883db0: Nightly time budget reached; remaining values retained
-- image / candidate-6d837d8dedd00dac2fa4: Nightly time budget reached; remaining values retained
-- image / candidate-6fe224c2e0e3bd54f16c: Nightly time budget reached; remaining values retained
 - product / candidate-fff9f0f34006e79089d9: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-fff9f0f34006e79089d9: Nightly time budget reached; remaining values retained
-- image / candidate-5a0b63d5e7e9c28a380f: Nightly time budget reached; remaining values retained
-- image / candidate-7632d0757fdbc972fb11: Nightly time budget reached; remaining values retained
-- image / candidate-a5205661c1c0280ec808: Nightly time budget reached; remaining values retained
 - product / candidate-235c27004d0dd0e5b697: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-235c27004d0dd0e5b697: Nightly time budget reached; remaining values retained
-- image / candidate-9a34afdbe363f6200456: Nightly time budget reached; remaining values retained
-- image / candidate-fb55bb797b604b6e46d4: Nightly time budget reached; remaining values retained
 - product / candidate-2a81c99e601f6244c10b: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-2a81c99e601f6244c10b: Nightly time budget reached; remaining values retained
-- image / candidate-2b74439126fc5da7a8fa: Nightly time budget reached; remaining values retained
-- image / candidate-683ec01ed8f4d2c3c6f7: Nightly time budget reached; remaining values retained
-- image / candidate-35891ea42fc6d6bb3316: Nightly time budget reached; remaining values retained
 - product / candidate-3ce14039021dac8b1828: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-3ce14039021dac8b1828: Nightly time budget reached; remaining values retained
-- image / candidate-1d1cd430479c354ae450: Nightly time budget reached; remaining values retained
-- image / candidate-06703487066f1fa96fad: Nightly time budget reached; remaining values retained
-- image / candidate-3b8409f3a6bc86156e6c: Nightly time budget reached; remaining values retained
-- image / candidate-c779d4fc0455df9903e2: Nightly time budget reached; remaining values retained
-- image / candidate-893ebcf9ca8925647cff: Nightly time budget reached; remaining values retained
 - product / candidate-bdbaa2fb00dad591df87: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-bdbaa2fb00dad591df87: Nightly time budget reached; remaining values retained
-- image / candidate-64b22cf2a0d7e37a753d: Nightly time budget reached; remaining values retained
-- image / candidate-5d05d216861fa9fa4d4f: Nightly time budget reached; remaining values retained
-- image / candidate-d346997fe03da04b03ca: Nightly time budget reached; remaining values retained
-- image / candidate-6ee0a43dfa041694eb68: Nightly time budget reached; remaining values retained
-- image / candidate-70260ef6a64331ca0fc7: Nightly time budget reached; remaining values retained
-- image / candidate-4f9b7daf738a900b19b0: Nightly time budget reached; remaining values retained
-- image / candidate-196b77322b74957f8376: Nightly time budget reached; remaining values retained
-- image / candidate-895779ae35447fd8e23c: Nightly time budget reached; remaining values retained
-- image / candidate-dc5fe8923524bdf1ae1f: Nightly time budget reached; remaining values retained
 - product / candidate-96c01b6e19d9b5af8b03: Exact variant no longer appears in the retailer catalogue
 - product / candidate-8924ef0f4208237292de: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-8924ef0f4208237292de: Nightly time budget reached; remaining values retained
-- image / candidate-7d71b18235ad34e96107: Nightly time budget reached; remaining values retained
-- image / candidate-83a5b612a216bfa175ef: Nightly time budget reached; remaining values retained
-- image / candidate-f4a7a10c11e1b41aced8: Nightly time budget reached; remaining values retained
-- image / candidate-dc0d8cb567d00a695aad: Nightly time budget reached; remaining values retained
-- image / candidate-b42024730fc0e4742e65: Nightly time budget reached; remaining values retained
-- image / candidate-4ce2b899b887de8c1201: Nightly time budget reached; remaining values retained
 - product / candidate-c6ae0f890543b528d37e: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-c6ae0f890543b528d37e: Nightly time budget reached; remaining values retained
-- image / candidate-98a220c41c427c029a45: Nightly time budget reached; remaining values retained
-- image / candidate-27cefa00629ab2036411: Nightly time budget reached; remaining values retained
-- image / candidate-9dfb8dd2856c99dc800a: Nightly time budget reached; remaining values retained
 - product / candidate-6394aeb1e8ee03735ce8: Exact variant no longer appears in the retailer catalogue
-- image / candidate-eab9e9b18da6cc4066f4: Nightly time budget reached; remaining values retained
-- image / candidate-16318ea8cde3a1273299: Nightly time budget reached; remaining values retained
-- image / candidate-495cd99719f14561baf5: Nightly time budget reached; remaining values retained
-- image / candidate-2026c0aaa7180d5c0299: Nightly time budget reached; remaining values retained
-- image / candidate-95f7a13140f034e8b84f: Nightly time budget reached; remaining values retained
-- image / candidate-f1493e647c3cdf90d43e: Nightly time budget reached; remaining values retained
-- image / candidate-c75a58c0a250f8949abc: Nightly time budget reached; remaining values retained
-- image / candidate-fd8cea0a36069ea1c114: Nightly time budget reached; remaining values retained
-- image / candidate-3b0d161000c0c78012f4: Nightly time budget reached; remaining values retained
-- image / candidate-039680b7654a8a994d8c: Nightly time budget reached; remaining values retained
-- image / candidate-8a6ed96d115917e215f9: Nightly time budget reached; remaining values retained
-- image / candidate-6427dcef3ebf1117ed96: Nightly time budget reached; remaining values retained
-- image / candidate-534a2fca078d3abe3fb7: Nightly time budget reached; remaining values retained
-- image / candidate-e51a3033bda3ce454764: Nightly time budget reached; remaining values retained
-- image / candidate-266663b623553fe67ec1: Nightly time budget reached; remaining values retained
-- image / candidate-dce7b8fddda8033e1fa5: Nightly time budget reached; remaining values retained
-- image / candidate-4792bfa1a8d61511745e: Nightly time budget reached; remaining values retained
-- image / candidate-d01168346279fb1da66d: Nightly time budget reached; remaining values retained
-- image / candidate-09f45d1c60f486ef6412: Nightly time budget reached; remaining values retained
-- image / candidate-587ad2131a311f336137: Nightly time budget reached; remaining values retained
-- image / candidate-6e28f475d59856668c70: Nightly time budget reached; remaining values retained
-- image / candidate-b9ccb3e22cb62bc3b9df: Nightly time budget reached; remaining values retained
-- image / candidate-c3c45515218908e233b0: Nightly time budget reached; remaining values retained
-- image / candidate-093aeeb2d105a9173ae3: Nightly time budget reached; remaining values retained
-- image / candidate-74aac14f26c9925efece: Nightly time budget reached; remaining values retained
-- image / candidate-16b3d1019bfd611f199a: Nightly time budget reached; remaining values retained
-- image / candidate-3b66fbb6eebff4b45fe8: Nightly time budget reached; remaining values retained
-- image / candidate-7bfc212918fdb2b4b35a: Nightly time budget reached; remaining values retained
-- image / candidate-fb1f64ff99b6a5f48cf1: Nightly time budget reached; remaining values retained
-- image / candidate-72d1aaafbddcd1837053: Nightly time budget reached; remaining values retained
-- image / candidate-b5e5a7c0841219ab9dc6: Nightly time budget reached; remaining values retained
-- image / candidate-7ae7dc55132ebcacb9ca: Nightly time budget reached; remaining values retained
-- image / candidate-4241548d534d81abc239: Nightly time budget reached; remaining values retained
-- image / candidate-85d69b7cbe1510e557e2: Nightly time budget reached; remaining values retained
-- image / candidate-3fcae726f3d6d8bd373f: Nightly time budget reached; remaining values retained
-- image / candidate-5711942ed5a873cf33f3: Nightly time budget reached; remaining values retained
-- image / candidate-ac8b584a60f5ea6a3c8d: Nightly time budget reached; remaining values retained
-- image / candidate-c7b5d939fd555648d071: Nightly time budget reached; remaining values retained
-- image / candidate-82dd2dfac821855bc67d: Nightly time budget reached; remaining values retained
-- image / candidate-3fd0f8a2c8325c81ab21: Nightly time budget reached; remaining values retained
-- image / candidate-34228e7617693c741355: Nightly time budget reached; remaining values retained
-- image / candidate-89a768f4e8f6ce3e455b: Nightly time budget reached; remaining values retained
-- image / candidate-70311096a2a800a4aca6: Nightly time budget reached; remaining values retained
 - product / candidate-42d6f8f37cf0d1419511: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-42d6f8f37cf0d1419511: Nightly time budget reached; remaining values retained
-- image / candidate-cc5271fa3194b33e329e: Nightly time budget reached; remaining values retained
-- image / candidate-b71c2896a5db57eef849: Nightly time budget reached; remaining values retained
-- image / candidate-b1413ceb0dd81ca6a996: Nightly time budget reached; remaining values retained
-- image / candidate-e345f6321a80e0249779: Nightly time budget reached; remaining values retained
-- image / candidate-a0bcc1d46f5f1d934e2d: Nightly time budget reached; remaining values retained
-- image / candidate-0530e4804740a6eee56f: Nightly time budget reached; remaining values retained
-- image / candidate-cac7ffb381cea1867460: Nightly time budget reached; remaining values retained
-- image / candidate-59bcf37fbad513807ca7: Nightly time budget reached; remaining values retained
-- image / candidate-1e23901a4c0a7a68852c: Nightly time budget reached; remaining values retained
-- image / candidate-35cea87c0f186553a2b5: Nightly time budget reached; remaining values retained
-- image / candidate-43b9fafe4a5994641c42: Nightly time budget reached; remaining values retained
-- image / candidate-dcfae82e3c7b44872d30: Nightly time budget reached; remaining values retained
-- image / candidate-ded3ccfe5646c9b7ffaa: Nightly time budget reached; remaining values retained
-- image / candidate-2ca822c362c9d2e1bc10: Nightly time budget reached; remaining values retained
-- image / candidate-4f08a406360ef5ad2989: Nightly time budget reached; remaining values retained
-- image / candidate-6dff03edae10a8a1b8d2: Nightly time budget reached; remaining values retained
-- image / candidate-4332fa42e57df21c2229: Nightly time budget reached; remaining values retained
-- image / candidate-3702448bb086f7c8f744: Nightly time budget reached; remaining values retained
-- image / candidate-4e6b7d800e186254b957: Nightly time budget reached; remaining values retained
-- image / candidate-a5032845bf0ca5dc5b80: Nightly time budget reached; remaining values retained
 - product / candidate-5f36b3c491726799df21: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-5f36b3c491726799df21: Nightly time budget reached; remaining values retained
-- image / candidate-87f5cf5cfffbd5cd1f96: Nightly time budget reached; remaining values retained
-- image / candidate-94a42325cc5f98a95e2b: Nightly time budget reached; remaining values retained
-- image / candidate-4cae6415b059be74cced: Nightly time budget reached; remaining values retained
-- image / candidate-19183d525a3cb4ac3fb2: Nightly time budget reached; remaining values retained
-- image / candidate-6e128cb0cbb5d59479ce: Nightly time budget reached; remaining values retained
-- image / candidate-7a60341f47d784b23bc6: Nightly time budget reached; remaining values retained
-- image / candidate-53d01b747e303fdda4df: Nightly time budget reached; remaining values retained
-- image / candidate-ce1108d0cc544d30d7ba: Nightly time budget reached; remaining values retained
-- image / candidate-9dbb581b5e0b8fe288ea: Nightly time budget reached; remaining values retained
-- image / candidate-5584fc780c952187f79a: Nightly time budget reached; remaining values retained
-- image / candidate-8fe47f8c64cd579058d7: Nightly time budget reached; remaining values retained
-- image / candidate-0d789f046ede8f48b64e: Nightly time budget reached; remaining values retained
-- image / candidate-d3e061d7c18c1b6476c5: Nightly time budget reached; remaining values retained
-- image / candidate-dcd623aaa9451f415ee4: Nightly time budget reached; remaining values retained
-- image / candidate-6930c58b0c82803b7314: Nightly time budget reached; remaining values retained
-- image / candidate-9e0fec6a4e9038203cec: Nightly time budget reached; remaining values retained
-- image / candidate-24123fe404edbc55b087: Nightly time budget reached; remaining values retained
-- image / candidate-e0612f8df9b4a91c5409: Nightly time budget reached; remaining values retained
-- image / candidate-d9dc9b67fb660cddb23f: Nightly time budget reached; remaining values retained
-- image / candidate-699098388a3478fe8007: Nightly time budget reached; remaining values retained
-- image / candidate-62c3b8395ecad49301f7: Nightly time budget reached; remaining values retained
-- image / candidate-b76dfb21fbea1e940981: Nightly time budget reached; remaining values retained
-- image / candidate-048a92f711de1e8091d7: Nightly time budget reached; remaining values retained
-- image / candidate-032d58a314edd35a8a52: Nightly time budget reached; remaining values retained
-- image / candidate-bba2746b5cdcf349bba2: Nightly time budget reached; remaining values retained
-- image / candidate-c271078ef4373431ca49: Nightly time budget reached; remaining values retained
-- image / candidate-b1b857bd6e6946a179a0: Nightly time budget reached; remaining values retained
-- image / candidate-bd1480063565226f9814: Nightly time budget reached; remaining values retained
-- image / candidate-6af825ca82b96bf90a30: Nightly time budget reached; remaining values retained
 - product / candidate-c4acd180cee5e067a775: Exact variant no longer appears in the retailer catalogue
-- image / candidate-06eb34cbad5c61a1f160: Nightly time budget reached; remaining values retained
-- image / candidate-d15422eed933142f9995: Nightly time budget reached; remaining values retained
-- image / candidate-0d299a7fd1f176b48b7c: Nightly time budget reached; remaining values retained
-- image / candidate-328d3d09f982d6727b83: Nightly time budget reached; remaining values retained
-- image / candidate-93471d4bcbd54d50bc8e: Nightly time budget reached; remaining values retained
-- image / candidate-962c8cd0084c66869101: Nightly time budget reached; remaining values retained
-- image / candidate-d3e20f7de9da2af8509a: Nightly time budget reached; remaining values retained
-- image / candidate-d27bea5a8cfb024e34dc: Nightly time budget reached; remaining values retained
-- image / candidate-ffd2755b8933466b23a5: Nightly time budget reached; remaining values retained
-- image / candidate-69285d4ec6d39ae394a7: Nightly time budget reached; remaining values retained
-- image / candidate-fffa01eb0e746cf2e362: Nightly time budget reached; remaining values retained
-- image / candidate-1df3ce06126e73d3d4a6: Nightly time budget reached; remaining values retained
-- image / candidate-de895e014fb39aff9beb: Nightly time budget reached; remaining values retained
-- image / candidate-502a5ac7ebb22442a2a2: Nightly time budget reached; remaining values retained
-- image / candidate-91c01ce0db98791914b4: Nightly time budget reached; remaining values retained
-- image / candidate-d25eeebaf2ef298c30cd: Nightly time budget reached; remaining values retained
-- image / candidate-19ba01424e5db84e2637: Nightly time budget reached; remaining values retained
-- image / candidate-27f8bf40c80993b58046: Nightly time budget reached; remaining values retained
-- image / candidate-ae4d7e24a17b87ac600f: Nightly time budget reached; remaining values retained
-- image / candidate-88c3c74179a36030c652: Nightly time budget reached; remaining values retained
-- image / candidate-3e63557c4cd839baed15: Nightly time budget reached; remaining values retained
-- image / candidate-c00da62ff6a268f9a3d5: Nightly time budget reached; remaining values retained
-- image / candidate-e5a2515706e67aad8b05: Nightly time budget reached; remaining values retained
-- image / candidate-7c58a315512d40a9e968: Nightly time budget reached; remaining values retained
-- image / candidate-8d04d792e386edc96bbf: Nightly time budget reached; remaining values retained
-- image / candidate-700b265387d97d52f68f: Nightly time budget reached; remaining values retained
-- image / candidate-1e186318d91a77cdf4c0: Nightly time budget reached; remaining values retained
-- image / candidate-10b782465bcef44f524c: Nightly time budget reached; remaining values retained
-- image / candidate-ba1789eb09dc015ec647: Nightly time budget reached; remaining values retained
-- image / candidate-f9825db536c409241f7c: Nightly time budget reached; remaining values retained
-- image / candidate-aeb6481c313d8076fec0: Nightly time budget reached; remaining values retained
-- image / candidate-fb14b7616a4173c3de9b: Nightly time budget reached; remaining values retained
-- image / candidate-8e7da08b480f01dec3a7: Nightly time budget reached; remaining values retained
-- image / candidate-eac7ead452e8f863d068: Nightly time budget reached; remaining values retained
-- image / candidate-e2f07dc5c678f46c1217: Nightly time budget reached; remaining values retained
-- image / candidate-67d474450a8f2ac04fcf: Nightly time budget reached; remaining values retained
-- image / candidate-54b51a68bbce85ce33d3: Nightly time budget reached; remaining values retained
-- image / candidate-cc20bacafd997134319f: Nightly time budget reached; remaining values retained
-- image / candidate-60d6d41a6f665e7f0730: Nightly time budget reached; remaining values retained
-- image / candidate-04f90fec6219f80658c9: Nightly time budget reached; remaining values retained
-- image / candidate-4892fd900d3103bee7de: Nightly time budget reached; remaining values retained
-- image / candidate-9e4eb2c7fd0c8f4bdb91: Nightly time budget reached; remaining values retained
 - product / candidate-53d092c2a0d4969b0086: Exact variant no longer appears in the retailer catalogue
-- image / candidate-17d7519cd321be5d1bfb: Nightly time budget reached; remaining values retained
-- image / candidate-eee5c63f9b9299c3847c: Nightly time budget reached; remaining values retained
-- image / candidate-f3db3b5188c2f2f3a15c: Nightly time budget reached; remaining values retained
-- image / candidate-569b24addf5b9c150771: Nightly time budget reached; remaining values retained
-- image / candidate-c62e3df10ea98ce5525a: Nightly time budget reached; remaining values retained
-- image / candidate-bc11fcf8b1498b87d5a0: Nightly time budget reached; remaining values retained
-- image / candidate-7b29549f5d7a3cb306bb: Nightly time budget reached; remaining values retained
 - product / candidate-89d1376f11bcfa75b28d: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-89d1376f11bcfa75b28d: Nightly time budget reached; remaining values retained
-- image / candidate-472813dce08385cb1082: Nightly time budget reached; remaining values retained
-- image / candidate-3680fc2dc901ed48baa1: Nightly time budget reached; remaining values retained
-- image / candidate-a362bc180045866a352f: Nightly time budget reached; remaining values retained
-- image / candidate-7f44ad53f143844130b1: Nightly time budget reached; remaining values retained
-- image / candidate-28feecb8f514d3d0cd14: Nightly time budget reached; remaining values retained
-- image / candidate-8fb3853a4f2c04a12682: Nightly time budget reached; remaining values retained
-- image / candidate-99cec418ed617bfd6259: Nightly time budget reached; remaining values retained
-- image / candidate-8ae8c997fc869bfc32a8: Nightly time budget reached; remaining values retained
-- image / candidate-8545bf4be9ccf4db6dd7: Nightly time budget reached; remaining values retained
-- image / candidate-f347fb596022ea84318c: Nightly time budget reached; remaining values retained
-- image / candidate-51b6b2dac985a8c0e115: Nightly time budget reached; remaining values retained
-- image / candidate-ef0ef89494750af73e36: Nightly time budget reached; remaining values retained
-- image / candidate-698a632f14e5ff6312a2: Nightly time budget reached; remaining values retained
-- image / candidate-0a8e7b0594a0157e4a3d: Nightly time budget reached; remaining values retained
-- image / candidate-452e9dccb858dc5f3767: Nightly time budget reached; remaining values retained
-- image / candidate-52773370d4600f2de51f: Nightly time budget reached; remaining values retained
-- image / candidate-8eef7f77effde43cf165: Nightly time budget reached; remaining values retained
-- image / candidate-7c48843d67327236e7e8: Nightly time budget reached; remaining values retained
-- image / candidate-8454c80e6554802e35b0: Nightly time budget reached; remaining values retained
-- image / candidate-cb3402fa6c6ee2fb6935: Nightly time budget reached; remaining values retained
-- image / candidate-c607aea9867d955467eb: Nightly time budget reached; remaining values retained
-- image / candidate-16a6f8eaca78eb8c2ff4: Nightly time budget reached; remaining values retained
-- image / candidate-2ee1a8169129259ff995: Nightly time budget reached; remaining values retained
-- image / candidate-6c9f0237a0c9335cf42a: Nightly time budget reached; remaining values retained
-- image / candidate-77c2f83acbe9e78bf344: Nightly time budget reached; remaining values retained
-- image / candidate-300706471356df2e283a: Nightly time budget reached; remaining values retained
-- image / candidate-3007986919ed3bb45c39: Nightly time budget reached; remaining values retained
-- image / candidate-749bed9d06d9e699d0f3: Nightly time budget reached; remaining values retained
-- image / candidate-e9b8cd482ef5bb5aab14: Nightly time budget reached; remaining values retained
-- image / candidate-4a7f5c419534464ef4d7: Nightly time budget reached; remaining values retained
-- image / candidate-a7ccfd90c86fc95a7999: Nightly time budget reached; remaining values retained
-- image / candidate-2c6d35f7c863c57450f2: Nightly time budget reached; remaining values retained
-- image / candidate-5b8bf1f8274bf52f1e4e: Nightly time budget reached; remaining values retained
-- image / candidate-f1c63ebc5f3f1b42398b: Nightly time budget reached; remaining values retained
-- image / candidate-080b6b43f5732f3c6b8d: Nightly time budget reached; remaining values retained
-- image / candidate-10ea3c0ecbcf36ba7838: Nightly time budget reached; remaining values retained
-- image / candidate-0f29fccf743420acb4df: Nightly time budget reached; remaining values retained
-- image / candidate-7a0ba03f97ee81767510: Nightly time budget reached; remaining values retained
-- image / candidate-891b988b4c61e9ae2f78: Nightly time budget reached; remaining values retained
-- image / candidate-c764e65bf34f97dbcd5d: Nightly time budget reached; remaining values retained
-- image / candidate-21d1658d5aa6a9cad8bf: Nightly time budget reached; remaining values retained
-- image / candidate-7eff0746e0a2fd58d2b5: Nightly time budget reached; remaining values retained
-- image / candidate-370569681555907a441c: Nightly time budget reached; remaining values retained
-- image / candidate-4b6f8cc758a65e45cd42: Nightly time budget reached; remaining values retained
-- image / candidate-2ccd322f960995aa1226: Nightly time budget reached; remaining values retained
-- image / candidate-cea9e2f49ee46ae0c984: Nightly time budget reached; remaining values retained
-- image / candidate-947a2ef943b3af6c7252: Nightly time budget reached; remaining values retained
-- image / candidate-00f554a6789d87395843: Nightly time budget reached; remaining values retained
-- image / candidate-14b48a49112251096885: Nightly time budget reached; remaining values retained
-- image / candidate-e086ca2788cf5433957b: Nightly time budget reached; remaining values retained
-- image / candidate-e35643616b73aafa8de5: Nightly time budget reached; remaining values retained
-- image / candidate-18cf5a3e6d345e86795a: Nightly time budget reached; remaining values retained
-- image / candidate-2ffad346b1273a683a63: Nightly time budget reached; remaining values retained
-- image / candidate-676e967c79b3ce9c9a33: Nightly time budget reached; remaining values retained
-- image / candidate-9f2fc0e9b14fb5942111: Nightly time budget reached; remaining values retained
-- image / candidate-94e92a52b0ca20bf766e: Nightly time budget reached; remaining values retained
-- image / candidate-f9d194f15ac5a4a5bedf: Nightly time budget reached; remaining values retained
-- image / candidate-f9ecd02721f271bce685: Nightly time budget reached; remaining values retained
-- image / candidate-3754573201774b673ae0: Nightly time budget reached; remaining values retained
-- image / candidate-e633916dd3c711abc40c: Nightly time budget reached; remaining values retained
-- image / candidate-3d760f4230b382ac800b: Nightly time budget reached; remaining values retained
-- image / candidate-b420117734f3a9f6c67b: Nightly time budget reached; remaining values retained
-- image / candidate-baf8bf18d638699f4cf3: Nightly time budget reached; remaining values retained
-- image / candidate-cd6188c986d376434528: Nightly time budget reached; remaining values retained
-- image / candidate-b0783552ba6848bf78ce: Nightly time budget reached; remaining values retained
-- image / candidate-047ff0ce23f61dbd46db: Nightly time budget reached; remaining values retained
-- image / candidate-684bd89dd4da93910b60: Nightly time budget reached; remaining values retained
-- image / candidate-e39e5cbda92e7844c74d: Nightly time budget reached; remaining values retained
-- image / candidate-dd309d1f36223fe0308b: Nightly time budget reached; remaining values retained
-- image / candidate-265cd46163ce7d04a604: Nightly time budget reached; remaining values retained
-- image / candidate-f881b8c43028d51d86ed: Nightly time budget reached; remaining values retained
-- image / candidate-1241c4eaf7e93b1d93ab: Nightly time budget reached; remaining values retained
-- image / candidate-c87d0ceb65008a330702: Nightly time budget reached; remaining values retained
-- image / candidate-132ca9786077b7ad1f78: Nightly time budget reached; remaining values retained
 - product / candidate-a8a8814659a5567cf318: Exact variant no longer appears in the retailer catalogue
-- image / candidate-e8eb1dae7f0f27c7f547: Nightly time budget reached; remaining values retained
-- image / candidate-2ff88d359db321c0d108: Nightly time budget reached; remaining values retained
-- image / candidate-7ceee74f3618c00d220e: Nightly time budget reached; remaining values retained
-- image / candidate-bb57b1f69ac21663b2c4: Nightly time budget reached; remaining values retained
-- image / candidate-a75329d856399fffa292: Nightly time budget reached; remaining values retained
-- image / candidate-b8fce85ee2b57de926a9: Nightly time budget reached; remaining values retained
-- image / candidate-cd2ba687b6b116af86a3: Nightly time budget reached; remaining values retained
-- image / candidate-b54d885cae9a2dabff74: Nightly time budget reached; remaining values retained
-- image / candidate-ed174bd1968a691bac41: Nightly time budget reached; remaining values retained
-- image / candidate-51c94f3b6b5cf3589390: Nightly time budget reached; remaining values retained
-- image / candidate-bca88502bf3e056a0701: Nightly time budget reached; remaining values retained
-- image / candidate-98dae273bd1fecdd113d: Nightly time budget reached; remaining values retained
-- image / candidate-5dad5a4ca973bfacd8da: Nightly time budget reached; remaining values retained
-- image / candidate-5667d3323277420f04c9: Nightly time budget reached; remaining values retained
-- image / candidate-c150e023b557a36024b1: Nightly time budget reached; remaining values retained
-- image / candidate-0fa1c0eb9eb6b0588ea1: Nightly time budget reached; remaining values retained
-- image / candidate-0406ad58f689aba1955c: Nightly time budget reached; remaining values retained
-- image / candidate-1f6d43373be0b2be54a8: Nightly time budget reached; remaining values retained
-- image / candidate-b56c46087ae29304d425: Nightly time budget reached; remaining values retained
-- image / candidate-21548b2e058fada92a42: Nightly time budget reached; remaining values retained
-- image / candidate-6acb18917abd54b546b4: Nightly time budget reached; remaining values retained
-- image / candidate-5ce8a8937c674cc17e69: Nightly time budget reached; remaining values retained
-- image / candidate-f7549c2bda53cc3912a5: Nightly time budget reached; remaining values retained
-- image / candidate-1dcd212d96db9378f9c3: Nightly time budget reached; remaining values retained
-- image / candidate-bf5fb7d2cb017c63ab2b: Nightly time budget reached; remaining values retained
-- image / candidate-1c5a6a205c9af7ddeee8: Nightly time budget reached; remaining values retained
-- image / candidate-de942763e0605f0363d7: Nightly time budget reached; remaining values retained
-- image / candidate-be4a913aaaf064fcc9dd: Nightly time budget reached; remaining values retained
-- image / candidate-4cd87e5108c7b078b789: Nightly time budget reached; remaining values retained
-- image / candidate-43459c3491144a18a718: Nightly time budget reached; remaining values retained
-- image / candidate-d4946a4083d2ae408480: Nightly time budget reached; remaining values retained
-- image / candidate-724a17c78b59d4ba7f00: Nightly time budget reached; remaining values retained
-- image / candidate-d544d30c75547e9d1bf6: Nightly time budget reached; remaining values retained
-- image / candidate-291b0c02f97f8765eada: Nightly time budget reached; remaining values retained
-- image / candidate-e38408efd64f76cc4b6a: Nightly time budget reached; remaining values retained
-- image / candidate-63f5f4515e9d03261da2: Nightly time budget reached; remaining values retained
-- image / candidate-477527748b612568173c: Nightly time budget reached; remaining values retained
-- image / candidate-376799c71d8240fda979: Nightly time budget reached; remaining values retained
-- image / candidate-e3a2e9906811189d7463: Nightly time budget reached; remaining values retained
-- image / candidate-75af4dfe0b2f0d514739: Nightly time budget reached; remaining values retained
-- image / candidate-43387c7a25f1c73e7821: Nightly time budget reached; remaining values retained
-- image / candidate-a86f2b93d22290df3f50: Nightly time budget reached; remaining values retained
-- image / candidate-96860edffd1f2eba42c6: Nightly time budget reached; remaining values retained
-- image / candidate-b3a68eafb515fdb2dcf4: Nightly time budget reached; remaining values retained
-- image / candidate-9aa90288f3b1d0514d12: Nightly time budget reached; remaining values retained
-- image / candidate-d7b0b96b8c2a311d98b8: Nightly time budget reached; remaining values retained
-- image / candidate-3ca183b2404f7594e62a: Nightly time budget reached; remaining values retained
-- image / candidate-49f2a75c83cbdf27909c: Nightly time budget reached; remaining values retained
-- image / candidate-3dc8fbbff88f49560685: Nightly time budget reached; remaining values retained
-- image / candidate-2e0ade048b8e0c949bc2: Nightly time budget reached; remaining values retained
-- image / candidate-ad77b75a316552ef1bae: Nightly time budget reached; remaining values retained
-- image / candidate-660d8f05afb84176f68d: Nightly time budget reached; remaining values retained
-- image / candidate-b6129c753cc4afcd5745: Nightly time budget reached; remaining values retained
-- image / candidate-2b62bf051c5bd42cfee6: Nightly time budget reached; remaining values retained
-- image / candidate-d02855ab1bf03cc8c7d6: Nightly time budget reached; remaining values retained
-- image / candidate-7e146a7b75680ade596c: Nightly time budget reached; remaining values retained
-- image / candidate-b7b8523ffb38ce74839d: Nightly time budget reached; remaining values retained
-- image / candidate-21912ec0a2559db6fc41: Nightly time budget reached; remaining values retained
-- image / candidate-1e57ef2107fb0ddbd773: Nightly time budget reached; remaining values retained
-- image / candidate-a0819d0cdac1a3c598ca: Nightly time budget reached; remaining values retained
-- image / candidate-b897ae95cc0bcab34b69: Nightly time budget reached; remaining values retained
-- image / candidate-6c205b2de5a9daade683: Nightly time budget reached; remaining values retained
-- image / candidate-d7dbb9513411a8892094: Nightly time budget reached; remaining values retained
-- image / candidate-30b0bf0f97a395f07561: Nightly time budget reached; remaining values retained
-- image / candidate-b5bf49774f6ee5fb08bc: Nightly time budget reached; remaining values retained
-- image / candidate-a95fe05e6287586234a6: Nightly time budget reached; remaining values retained
-- image / candidate-0db028aaa8fadddecc15: Nightly time budget reached; remaining values retained
-- image / candidate-b82f5972d07dafbb8fc3: Nightly time budget reached; remaining values retained
-- image / candidate-8287cc22523ebd6fcec8: Nightly time budget reached; remaining values retained
-- image / candidate-e735e74325c04e38e2ee: Nightly time budget reached; remaining values retained
-- image / candidate-fe5f072abfef3601982d: Nightly time budget reached; remaining values retained
-- image / candidate-5eb7b9e4e620cd1c8abc: Nightly time budget reached; remaining values retained
-- image / candidate-9837ac6268d7e86c02d5: Nightly time budget reached; remaining values retained
-- image / candidate-fdbb575c5c2fb9f73910: Nightly time budget reached; remaining values retained
 - product / candidate-8cb35a9b0d47f429b528: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-8cb35a9b0d47f429b528: Nightly time budget reached; remaining values retained
-- image / candidate-4744e54dcf2e40772a05: Nightly time budget reached; remaining values retained
-- image / candidate-1f9ca3fcbc8959969866: Nightly time budget reached; remaining values retained
-- image / candidate-622c7220504227dfbffb: Nightly time budget reached; remaining values retained
-- image / candidate-40537bca2ab3d4e70017: Nightly time budget reached; remaining values retained
-- image / candidate-6b09481109ec7766b519: Nightly time budget reached; remaining values retained
-- image / candidate-fd892d738a6b351309a0: Nightly time budget reached; remaining values retained
-- image / candidate-858f766245111c441908: Nightly time budget reached; remaining values retained
-- image / candidate-aa657f44a3d3600be373: Nightly time budget reached; remaining values retained
-- image / candidate-f7d59e9670162e7cadff: Nightly time budget reached; remaining values retained
-- image / candidate-873eb9d9d5ac67ad54b2: Nightly time budget reached; remaining values retained
-- image / candidate-31d375dff4b4933b6c75: Nightly time budget reached; remaining values retained
-- image / candidate-fa0ffe4234f4c064e637: Nightly time budget reached; remaining values retained
-- image / candidate-77636b44f29126b2f5b5: Nightly time budget reached; remaining values retained
-- image / candidate-eae2c01def06788def8a: Nightly time budget reached; remaining values retained
-- image / candidate-31a100161323327e91b5: Nightly time budget reached; remaining values retained
-- image / candidate-eedf0a40eafe0e536b55: Nightly time budget reached; remaining values retained
-- image / candidate-7d432ef2c035d8535eab: Nightly time budget reached; remaining values retained
-- image / candidate-c8eda7e99ccbda096d10: Nightly time budget reached; remaining values retained
-- image / candidate-698a9229b3fd1b724ae7: Nightly time budget reached; remaining values retained
-- image / candidate-80574a5c528a9e81de42: Nightly time budget reached; remaining values retained
-- image / candidate-c9eb92576606f8a26483: Nightly time budget reached; remaining values retained
-- image / candidate-84e61261f9e386087f1a: Nightly time budget reached; remaining values retained
-- image / candidate-148d2b9c88a011dade58: Nightly time budget reached; remaining values retained
-- image / candidate-e4b08cd04e0f1ea8e905: Nightly time budget reached; remaining values retained
-- image / candidate-f4d8721a0ec80af2b96a: Nightly time budget reached; remaining values retained
-- image / candidate-a1644c2e416086c94e9b: Nightly time budget reached; remaining values retained
-- image / candidate-f32f336959d7df8ad71c: Nightly time budget reached; remaining values retained
-- image / candidate-d59c439923a59aee92ca: Nightly time budget reached; remaining values retained
-- image / candidate-d0d4204fc15098621f1a: Nightly time budget reached; remaining values retained
-- image / candidate-cb85083d7421ab39364d: Nightly time budget reached; remaining values retained
-- image / candidate-cc5c16dcaec85bcc306a: Nightly time budget reached; remaining values retained
-- image / candidate-10d462b1ada50c123f49: Nightly time budget reached; remaining values retained
-- image / candidate-7b5dfb06e33b2a63280d: Nightly time budget reached; remaining values retained
-- image / candidate-b85af288679f79cab24e: Nightly time budget reached; remaining values retained
-- image / candidate-405b0fb3cf5dba8234c9: Nightly time budget reached; remaining values retained
-- image / candidate-52a9de47d40ed7e7ebe0: Nightly time budget reached; remaining values retained
-- image / candidate-3355964e990aad7b79e7: Nightly time budget reached; remaining values retained
-- image / candidate-d729bc087b1b88975380: Nightly time budget reached; remaining values retained
-- image / candidate-f23d7d554354d53b414d: Nightly time budget reached; remaining values retained
-- image / candidate-433a3c1b3f98291b0f12: Nightly time budget reached; remaining values retained
-- image / candidate-23bf8f5f20de8a8aee68: Nightly time budget reached; remaining values retained
-- image / candidate-545aed6507dc464ddccd: Nightly time budget reached; remaining values retained
-- image / candidate-9e31b10007629bd30fb8: Nightly time budget reached; remaining values retained
-- image / candidate-cfab0eb09bd3afee11ac: Nightly time budget reached; remaining values retained
-- image / candidate-96f4826092fa659c5f38: Nightly time budget reached; remaining values retained
-- image / candidate-36d0cfc2f382406a56f0: Nightly time budget reached; remaining values retained
-- image / candidate-d28ad3a6c5519b8eaaa8: Nightly time budget reached; remaining values retained
-- image / candidate-b8aeb36d74b412b12d8b: Nightly time budget reached; remaining values retained
-- image / candidate-2feb7d8982e430c2cc66: Nightly time budget reached; remaining values retained
-- image / candidate-15c36d25b28e1eac78f2: Nightly time budget reached; remaining values retained
-- image / candidate-467b8e4446674f29c79f: Nightly time budget reached; remaining values retained
-- image / candidate-db4d207657d775212ccb: Nightly time budget reached; remaining values retained
-- image / candidate-3a739170f3ab5d3503f8: Nightly time budget reached; remaining values retained
-- image / candidate-e71b5b69c09af224a067: Nightly time budget reached; remaining values retained
-- image / candidate-94deadd22e83477ae13d: Nightly time budget reached; remaining values retained
-- image / candidate-119388153771017d8dc9: Nightly time budget reached; remaining values retained
-- image / candidate-2d137b4f2296261f3c79: Nightly time budget reached; remaining values retained
-- image / candidate-f260d5693416894a0612: Nightly time budget reached; remaining values retained
-- image / candidate-3522dc37073a02a31020: Nightly time budget reached; remaining values retained
-- image / candidate-e4e0ee5985894348f07c: Nightly time budget reached; remaining values retained
-- image / candidate-3d072a603282a140ae7d: Nightly time budget reached; remaining values retained
-- image / candidate-b7398bd79512bce16a57: Nightly time budget reached; remaining values retained
-- image / candidate-e432881885f5ba6bb481: Nightly time budget reached; remaining values retained
-- image / candidate-cf57458413a42f306dc7: Nightly time budget reached; remaining values retained
-- image / candidate-51f9cf8cbc0f38ef8052: Nightly time budget reached; remaining values retained
-- image / candidate-965f0a08e066292ac93b: Nightly time budget reached; remaining values retained
-- image / candidate-16da798e054a8d4fdf7e: Nightly time budget reached; remaining values retained
-- image / candidate-6dc2eba65790ad5166a6: Nightly time budget reached; remaining values retained
-- image / candidate-590b920b45b7af83d28f: Nightly time budget reached; remaining values retained
-- image / candidate-51eaf4d87f2f7d1964f6: Nightly time budget reached; remaining values retained
-- image / candidate-62528c7e45e44b48af04: Nightly time budget reached; remaining values retained
-- image / candidate-391ee9d2c3c78fe79958: Nightly time budget reached; remaining values retained
-- image / candidate-85e54d964fde797bc11b: Nightly time budget reached; remaining values retained
-- image / candidate-62861e3c246269defd93: Nightly time budget reached; remaining values retained
-- image / candidate-d480e59811fcf5735be2: Nightly time budget reached; remaining values retained
-- image / candidate-d903237c3d097ffdc858: Nightly time budget reached; remaining values retained
-- image / candidate-12cbdc5979de83e3dc46: Nightly time budget reached; remaining values retained
-- image / candidate-6131045138e4318565bf: Nightly time budget reached; remaining values retained
-- image / candidate-f8dce1ece9285b7ba9e5: Nightly time budget reached; remaining values retained
-- image / candidate-f0562236a30dedb54182: Nightly time budget reached; remaining values retained
-- image / candidate-f1864946e0a18e74d0a4: Nightly time budget reached; remaining values retained
-- image / candidate-fa2df6e1c79b9f4645ca: Nightly time budget reached; remaining values retained
-- image / candidate-fcb30ea385cfbabc1ad8: Nightly time budget reached; remaining values retained
-- image / candidate-33866063a6f5df672605: Nightly time budget reached; remaining values retained
-- image / candidate-dfddeb0c87c53e07f8db: Nightly time budget reached; remaining values retained
-- image / candidate-672e76c4fba72d0b4414: Nightly time budget reached; remaining values retained
-- image / candidate-4a37895356c6314d405f: Nightly time budget reached; remaining values retained
-- image / candidate-f98cec2cac8ab9d0ec25: Nightly time budget reached; remaining values retained
-- image / candidate-4da056194c0826f0accf: Nightly time budget reached; remaining values retained
-- image / candidate-1cc6781a30356216fb0a: Nightly time budget reached; remaining values retained
-- image / candidate-5fc87d9d86ea2150dbcc: Nightly time budget reached; remaining values retained
-- image / candidate-cf3af3d6b3640175190f: Nightly time budget reached; remaining values retained
-- image / candidate-1ada39485133cc52c225: Nightly time budget reached; remaining values retained
-- image / candidate-460f8b92dc6fde273bbe: Nightly time budget reached; remaining values retained
-- image / candidate-657a201dea7d67667474: Nightly time budget reached; remaining values retained
 - product / candidate-97aab3cbfed33c952166: Exact variant no longer appears in the retailer catalogue
-- image / candidate-6d71670ac8c2689acf84: Nightly time budget reached; remaining values retained
-- image / candidate-aebbd682156d2e7d1c90: Nightly time budget reached; remaining values retained
-- image / candidate-922228c88b690b16ff2e: Nightly time budget reached; remaining values retained
-- image / candidate-078dd1cd8a54bb5f6f84: Nightly time budget reached; remaining values retained
-- image / candidate-e518417e93ef86505d9e: Nightly time budget reached; remaining values retained
-- image / candidate-f9a5ec29bebdc7773cd8: Nightly time budget reached; remaining values retained
-- image / candidate-7252de1d3a22d6c8202e: Nightly time budget reached; remaining values retained
-- image / candidate-63157a1b48dda4d183e4: Nightly time budget reached; remaining values retained
-- image / candidate-a66c5547a8a00e92057c: Nightly time budget reached; remaining values retained
-- image / candidate-fda5f1f01242d2a54c44: Nightly time budget reached; remaining values retained
-- image / candidate-02a0063e57f06b538f8f: Nightly time budget reached; remaining values retained
-- image / candidate-8d8aa8fac97ac14ad541: Nightly time budget reached; remaining values retained
-- image / candidate-1f687e12683c74570362: Nightly time budget reached; remaining values retained
-- image / candidate-aef95ca13320080ea14d: Nightly time budget reached; remaining values retained
-- image / candidate-b179900ba471066c755d: Nightly time budget reached; remaining values retained
-- image / candidate-f736ec2b2487c4410e26: Nightly time budget reached; remaining values retained
-- image / candidate-b0ed987cf448d7625eab: Nightly time budget reached; remaining values retained
-- image / candidate-788102fe5cedaedc41a1: Nightly time budget reached; remaining values retained
-- image / candidate-d37c4c483ab460dffd71: Nightly time budget reached; remaining values retained
-- image / candidate-c23b491727a06b5885b6: Nightly time budget reached; remaining values retained
-- image / candidate-64715745955ecc0d9444: Nightly time budget reached; remaining values retained
-- image / candidate-4c50af7940e9fe726144: Nightly time budget reached; remaining values retained
-- image / candidate-b0fc359cfc8ccf7c8d4a: Nightly time budget reached; remaining values retained
-- image / candidate-9b968c91c08d315e6f2d: Nightly time budget reached; remaining values retained
-- image / candidate-48ac4fe137b7fd6b37cb: Nightly time budget reached; remaining values retained
-- image / candidate-1f43b2b78fd5d524efc7: Nightly time budget reached; remaining values retained
-- image / candidate-ff8af320a6cc7c2fc4c0: Nightly time budget reached; remaining values retained
-- image / candidate-ffe89b7d2711d09df5b2: Nightly time budget reached; remaining values retained
-- image / candidate-349e32eccbd88dfc7f55: Nightly time budget reached; remaining values retained
-- image / candidate-64d3da0368d25e095120: Nightly time budget reached; remaining values retained
-- image / candidate-08d42253175970f6bb5b: Nightly time budget reached; remaining values retained
-- image / candidate-8ab43717be9de6a5323b: Nightly time budget reached; remaining values retained
-- image / candidate-341668b9866361798bd8: Nightly time budget reached; remaining values retained
-- image / candidate-51e6d03ec2b3f1512116: Nightly time budget reached; remaining values retained
-- image / candidate-a7bdfd8407afd6040384: Nightly time budget reached; remaining values retained
-- image / candidate-ac4f459855891c484238: Nightly time budget reached; remaining values retained
-- image / candidate-15cfda6d6fd61f22f88f: Nightly time budget reached; remaining values retained
-- image / candidate-afe4a139ddbdbb8e5e1e: Nightly time budget reached; remaining values retained
-- image / candidate-920662b1ce5f3eefaa6e: Nightly time budget reached; remaining values retained
-- image / candidate-9d0c8e6c84fa6c981676: Nightly time budget reached; remaining values retained
-- image / candidate-0ca88a650b8030182bd6: Nightly time budget reached; remaining values retained
-- image / candidate-bb674d7869dfd922cb8b: Nightly time budget reached; remaining values retained
-- image / candidate-f05566b750b5fe59bd35: Nightly time budget reached; remaining values retained
-- image / candidate-33270665bf1d0806d64a: Nightly time budget reached; remaining values retained
 - product / candidate-18157105e940943cd7f0: Exact variant no longer appears in the retailer catalogue
-- image / candidate-f6084cb37b845ecf029a: Nightly time budget reached; remaining values retained
-- image / candidate-3a633571a0cb92eef164: Nightly time budget reached; remaining values retained
-- image / candidate-1b073afec776780cc1b9: Nightly time budget reached; remaining values retained
-- image / candidate-526b33351c2b339ed689: Nightly time budget reached; remaining values retained
-- image / candidate-e87f6c52e7a1581f9221: Nightly time budget reached; remaining values retained
-- image / candidate-a5ecb68adc7ef1a58f7a: Nightly time budget reached; remaining values retained
-- image / candidate-b1c18328710a7b56d754: Nightly time budget reached; remaining values retained
-- image / candidate-1957196fbf7634461526: Nightly time budget reached; remaining values retained
-- image / candidate-72d8f43da638092dd9e3: Nightly time budget reached; remaining values retained
-- image / candidate-4231bf9665c76dc39dd8: Nightly time budget reached; remaining values retained
-- image / candidate-6da8512e4830f9480a53: Nightly time budget reached; remaining values retained
-- image / candidate-376168575ea4b9227514: Nightly time budget reached; remaining values retained
-- image / candidate-e67d5da6facb15a4080d: Nightly time budget reached; remaining values retained
-- image / candidate-9b857c7147532088f53b: Nightly time budget reached; remaining values retained
-- image / candidate-c22a8c43b833c4655186: Nightly time budget reached; remaining values retained
-- image / candidate-88170feefcd8e2abff85: Nightly time budget reached; remaining values retained
-- image / candidate-0f0204b9a9b849fb1149: Nightly time budget reached; remaining values retained
-- image / candidate-a4bc9ef13962e5796c81: Nightly time budget reached; remaining values retained
-- image / candidate-1574d69fff6aba5766fe: Nightly time budget reached; remaining values retained
-- image / candidate-54f478c49ca67cfb5fa7: Nightly time budget reached; remaining values retained
-- image / candidate-0d55c48baee2c53e3300: Nightly time budget reached; remaining values retained
-- image / candidate-e2a9fb1bb9141c435b70: Nightly time budget reached; remaining values retained
-- image / candidate-7b441b0a50c51b1189f8: Nightly time budget reached; remaining values retained
-- image / candidate-5c6b5c8d764f8f7b2008: Nightly time budget reached; remaining values retained
-- image / candidate-3c91ee4de28b5f08495e: Nightly time budget reached; remaining values retained
-- image / candidate-ce9cc472c65dbbd088f3: Nightly time budget reached; remaining values retained
-- image / candidate-11204f771ec110f169db: Nightly time budget reached; remaining values retained
-- image / candidate-6357a33ffd3df692b45e: Nightly time budget reached; remaining values retained
-- image / candidate-2f930c43fa5be1d3da5a: Nightly time budget reached; remaining values retained
-- image / candidate-71527b3c9f8e1d99913a: Nightly time budget reached; remaining values retained
-- image / candidate-787c0815bfd9eb482d3c: Nightly time budget reached; remaining values retained
-- image / candidate-5318642d0ae5d8c5b0bd: Nightly time budget reached; remaining values retained
-- image / candidate-e0728f4436ae5b472d48: Nightly time budget reached; remaining values retained
-- image / candidate-a402188c281c72fbad70: Nightly time budget reached; remaining values retained
-- image / candidate-3457bb2f45b99d318931: Nightly time budget reached; remaining values retained
-- image / candidate-348a5128dc7d47b39e8a: Nightly time budget reached; remaining values retained
-- image / candidate-3b7f28d66e97d5abf53e: Nightly time budget reached; remaining values retained
-- image / candidate-20495255435382a98623: Nightly time budget reached; remaining values retained
-- image / candidate-3bf43ae83dc34f194185: Nightly time budget reached; remaining values retained
-- image / candidate-92f51df54ea35d453bb6: Nightly time budget reached; remaining values retained
-- image / candidate-24f429224e2865f179fb: Nightly time budget reached; remaining values retained
-- image / candidate-643536351ed53a7f6d06: Nightly time budget reached; remaining values retained
-- image / candidate-0b7ee31c56f0a703bb0a: Nightly time budget reached; remaining values retained
-- image / candidate-cb38f5ac438574fcc645: Nightly time budget reached; remaining values retained
-- image / candidate-fdb914f428cd30eff100: Nightly time budget reached; remaining values retained
-- image / candidate-5c3b9395ba044cb7de4c: Nightly time budget reached; remaining values retained
-- image / candidate-83938b7a4f586bbbdcf0: Nightly time budget reached; remaining values retained
-- image / candidate-4e27dc74b276919af04e: Nightly time budget reached; remaining values retained
-- image / candidate-53d78f6b662f23c65294: Nightly time budget reached; remaining values retained
-- image / candidate-337a74661f2ea542e742: Nightly time budget reached; remaining values retained
-- image / candidate-173daeee313b0cc65305: Nightly time budget reached; remaining values retained
-- image / candidate-350b8324f44b2e695353: Nightly time budget reached; remaining values retained
-- image / candidate-9556b4024c7d16cc0ee5: Nightly time budget reached; remaining values retained
-- image / candidate-561b79abcd2dc221fbfc: Nightly time budget reached; remaining values retained
-- image / candidate-9b5d842d6d7dd84d1a00: Nightly time budget reached; remaining values retained
-- image / candidate-72896fa19c4549ced248: Nightly time budget reached; remaining values retained
-- image / candidate-b783c06338167f9311f4: Nightly time budget reached; remaining values retained
-- image / candidate-a82d1321f5ad628c543b: Nightly time budget reached; remaining values retained
-- image / candidate-a300f9319bfc0245a2cc: Nightly time budget reached; remaining values retained
-- image / candidate-33e37549352277d4dd4f: Nightly time budget reached; remaining values retained
-- image / candidate-4514fc261f9d003309b8: Nightly time budget reached; remaining values retained
-- image / candidate-78b0be73ee6b08d43c04: Nightly time budget reached; remaining values retained
-- image / candidate-604a582584dffc741e42: Nightly time budget reached; remaining values retained
-- image / candidate-f413362efa43906c8c10: Nightly time budget reached; remaining values retained
-- image / candidate-2be158781aa32332cbbe: Nightly time budget reached; remaining values retained
-- image / candidate-48fb6b8088056e78426c: Nightly time budget reached; remaining values retained
-- image / candidate-3788d68e81cece57e1b7: Nightly time budget reached; remaining values retained
-- image / candidate-fe1a0005da1719f992c7: Nightly time budget reached; remaining values retained
-- image / candidate-989aec899accecfd68f1: Nightly time budget reached; remaining values retained
-- image / candidate-03c4dd9526cc8cb376a6: Nightly time budget reached; remaining values retained
-- image / candidate-b8a5841e97a58da5d244: Nightly time budget reached; remaining values retained
-- image / candidate-a21ab61f01d6c02627c3: Nightly time budget reached; remaining values retained
-- image / candidate-0ab8712a2d1388ea07d4: Nightly time budget reached; remaining values retained
-- image / candidate-45dfda152848a2b09c65: Nightly time budget reached; remaining values retained
-- image / candidate-04ff47db924e8521b471: Nightly time budget reached; remaining values retained
-- image / candidate-9ccc54e72bd2f0a69635: Nightly time budget reached; remaining values retained
-- image / candidate-9164efbf1090ae8ad162: Nightly time budget reached; remaining values retained
-- image / candidate-f97163938474f0d91dba: Nightly time budget reached; remaining values retained
-- image / candidate-de365287b5e6767b90ea: Nightly time budget reached; remaining values retained
-- image / candidate-13b597559af2acd7be03: Nightly time budget reached; remaining values retained
-- image / candidate-8a3799c6e961936cce19: Nightly time budget reached; remaining values retained
-- image / candidate-ec73b4544c0b027408a1: Nightly time budget reached; remaining values retained
-- image / candidate-d4d1f21cd4d8c35938f8: Nightly time budget reached; remaining values retained
-- image / candidate-f1fc0485726a21973907: Nightly time budget reached; remaining values retained
-- image / candidate-7edc835f8f20d4b94822: Nightly time budget reached; remaining values retained
-- image / candidate-f0e01128428f8df97d9e: Nightly time budget reached; remaining values retained
-- image / candidate-b1b2fa7c22418b9c3999: Nightly time budget reached; remaining values retained
 - product / candidate-b6d852e6f4f96eb3bb17: Exact variant no longer appears in the retailer catalogue
-- image / candidate-d8dfd2b3c252d00c10f4: Nightly time budget reached; remaining values retained
-- image / candidate-774c2f507bbfb38d2e37: Nightly time budget reached; remaining values retained
-- image / candidate-9ecc9fe5fcc9ce4532e4: Nightly time budget reached; remaining values retained
-- image / candidate-75e3a5c5ea6c2de78065: Nightly time budget reached; remaining values retained
-- image / candidate-b133a9f8673a5dbfba0b: Nightly time budget reached; remaining values retained
-- image / candidate-e1db47bba9111e8c78bd: Nightly time budget reached; remaining values retained
-- image / candidate-dedb1a60e4332df45316: Nightly time budget reached; remaining values retained
-- image / candidate-ff633b2694541df26aa7: Nightly time budget reached; remaining values retained
-- image / candidate-857659b7ce3116011806: Nightly time budget reached; remaining values retained
-- image / candidate-27c63ae0adf7a5297d01: Nightly time budget reached; remaining values retained
-- image / candidate-bf43236211bc3a7862c7: Nightly time budget reached; remaining values retained
-- image / candidate-bbc2bc9d7e869520e56d: Nightly time budget reached; remaining values retained
 - product / candidate-0ec1c60c942d2f1cf745: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-0ec1c60c942d2f1cf745: Nightly time budget reached; remaining values retained
-- image / candidate-1531ea0910d85d47d6be: Nightly time budget reached; remaining values retained
-- image / candidate-e104adca2b41b541ca33: Nightly time budget reached; remaining values retained
-- image / candidate-ad78b0aacb1a0a31b0b2: Nightly time budget reached; remaining values retained
-- image / candidate-2ce523f5357e16ce410e: Nightly time budget reached; remaining values retained
-- image / candidate-828890e1c3d417c63726: Nightly time budget reached; remaining values retained
-- image / candidate-895d2121157a88a02b5c: Nightly time budget reached; remaining values retained
-- image / candidate-def68d0de5fdf851d4f2: Nightly time budget reached; remaining values retained
-- image / candidate-579a33f04d29fbcae700: Nightly time budget reached; remaining values retained
-- image / candidate-b4c7048bdaa88c880492: Nightly time budget reached; remaining values retained
-- image / candidate-af2d7f60491571c08b0b: Nightly time budget reached; remaining values retained
-- image / candidate-d0607644a86ab99c1cfa: Nightly time budget reached; remaining values retained
-- image / candidate-15b026aa0c3af27da567: Nightly time budget reached; remaining values retained
-- image / candidate-5aa68732ec6719aebd14: Nightly time budget reached; remaining values retained
-- image / candidate-751ebffd267562368648: Nightly time budget reached; remaining values retained
-- image / candidate-87f0eadd25cf5a3ab7fd: Nightly time budget reached; remaining values retained
-- image / candidate-b44ee21ffb8c9f255e88: Nightly time budget reached; remaining values retained
-- image / candidate-0a39e3026b13ca7b57ca: Nightly time budget reached; remaining values retained
-- image / candidate-25adc21d9bc891ebb105: Nightly time budget reached; remaining values retained
-- image / candidate-c8842eeceded2c575230: Nightly time budget reached; remaining values retained
-- image / candidate-563bb90f815a38bd294d: Nightly time budget reached; remaining values retained
-- image / candidate-11c8c8658b0f9e02d5ab: Nightly time budget reached; remaining values retained
-- image / candidate-6b82f22d319bf468e8cc: Nightly time budget reached; remaining values retained
-- image / candidate-3421efc1bcd34d25aac9: Nightly time budget reached; remaining values retained
-- image / candidate-abcc81f6fd5f731c59ba: Nightly time budget reached; remaining values retained
-- image / candidate-7f54bab547f75162675d: Nightly time budget reached; remaining values retained
-- image / candidate-a883e3ed62d89a4b7582: Nightly time budget reached; remaining values retained
-- image / candidate-6d231cd21b7ccd928fe9: Nightly time budget reached; remaining values retained
-- image / candidate-23933fe575b74d5d5992: Nightly time budget reached; remaining values retained
-- image / candidate-6218cbc4894a15a399d7: Nightly time budget reached; remaining values retained
-- image / candidate-cc771b69f1dc97c7251f: Nightly time budget reached; remaining values retained
-- image / candidate-c18b1b272a28123c1cdd: Nightly time budget reached; remaining values retained
-- image / candidate-e86924e28061e0833aff: Nightly time budget reached; remaining values retained
-- image / candidate-541d3adfa75d48ea3d49: Nightly time budget reached; remaining values retained
-- image / candidate-951a1b2249e95cc442fe: Nightly time budget reached; remaining values retained
 - product / candidate-380bfae02348b7a0e393: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-380bfae02348b7a0e393: Nightly time budget reached; remaining values retained
-- image / candidate-16c0985369b058239fdf: Nightly time budget reached; remaining values retained
-- image / candidate-d5869e33ee10b48e8327: Nightly time budget reached; remaining values retained
-- image / candidate-915f466ecc0bff42f8a6: Nightly time budget reached; remaining values retained
-- image / candidate-5c3ffbc234955349a37a: Nightly time budget reached; remaining values retained
-- image / candidate-706e041ce5fca0c790b8: Nightly time budget reached; remaining values retained
-- image / candidate-f11d5309d1d26862d558: Nightly time budget reached; remaining values retained
-- image / candidate-74cf8f0afdc915fb25ef: Nightly time budget reached; remaining values retained
-- image / candidate-0a581e9aca1b83984666: Nightly time budget reached; remaining values retained
-- image / candidate-2bc4a17f84928ac6889b: Nightly time budget reached; remaining values retained
-- image / candidate-c07e9f36eb8259307c17: Nightly time budget reached; remaining values retained
-- image / candidate-22d2b6fcc93caf6f69c5: Nightly time budget reached; remaining values retained
-- image / candidate-88e8186c224ce1bbea8e: Nightly time budget reached; remaining values retained
-- image / candidate-8ac5933eaabef8d4b3db: Nightly time budget reached; remaining values retained
-- image / candidate-2eb2a3c0af4d6088f1e2: Nightly time budget reached; remaining values retained
-- image / candidate-1ee29d7d3d0b6b47e8cf: Nightly time budget reached; remaining values retained
-- image / candidate-4535280eaaf3ffed2aeb: Nightly time budget reached; remaining values retained
-- image / candidate-53d5ecdb47304e40f390: Nightly time budget reached; remaining values retained
-- image / candidate-d88882970b45a37215c9: Nightly time budget reached; remaining values retained
-- image / candidate-ded52d917a95b198d199: Nightly time budget reached; remaining values retained
-- image / candidate-14a4ccbf464f6f58dc87: Nightly time budget reached; remaining values retained
-- image / candidate-c69f4be165db77cfa217: Nightly time budget reached; remaining values retained
-- image / candidate-779b18cced640e4397d1: Nightly time budget reached; remaining values retained
-- image / candidate-94d32043d9e79bb94fa1: Nightly time budget reached; remaining values retained
-- image / candidate-950202fae497991f54f5: Nightly time budget reached; remaining values retained
-- image / candidate-c986e76d94adf7e16297: Nightly time budget reached; remaining values retained
-- image / candidate-d08491391f036d563fb9: Nightly time budget reached; remaining values retained
-- image / candidate-61a6956b57e37b96f135: Nightly time budget reached; remaining values retained
-- image / candidate-199814cd2bc459975be1: Nightly time budget reached; remaining values retained
-- image / candidate-b17b8c206f7326353017: Nightly time budget reached; remaining values retained
-- image / candidate-513753f6a6eb1cd8e109: Nightly time budget reached; remaining values retained
-- image / candidate-1b6b307656d0c2b4f0c5: Nightly time budget reached; remaining values retained
-- image / candidate-73c7c227f8d1a7caab67: Nightly time budget reached; remaining values retained
-- image / candidate-02181642c0f06f7b7c9c: Nightly time budget reached; remaining values retained
-- image / candidate-b4fc472d2463d21b5262: Nightly time budget reached; remaining values retained
-- image / candidate-408c122b8d689f446e07: Nightly time budget reached; remaining values retained
-- image / candidate-9cd0b0f90b8df02f63e0: Nightly time budget reached; remaining values retained
-- image / candidate-7d5dd6c91de7033eb494: Nightly time budget reached; remaining values retained
-- image / candidate-796cbebf5b3a44da32a5: Nightly time budget reached; remaining values retained
-- image / candidate-a0395d225a7f06f57b53: Nightly time budget reached; remaining values retained
-- image / candidate-9eff5c70d368acf17896: Nightly time budget reached; remaining values retained
 - product / candidate-ffa3d30657f9241eb29f: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-ffa3d30657f9241eb29f: Nightly time budget reached; remaining values retained
-- image / candidate-a3a377778420b3f3e451: Nightly time budget reached; remaining values retained
-- image / candidate-4c486c0f09e3cd819cc3: Nightly time budget reached; remaining values retained
-- image / candidate-a490f0c55debfc872aad: Nightly time budget reached; remaining values retained
-- image / candidate-e282d1ca628ffa51a5b5: Nightly time budget reached; remaining values retained
-- image / candidate-e7a94442d644e7570222: Nightly time budget reached; remaining values retained
-- image / candidate-fddfc851c3f7e590af3d: Nightly time budget reached; remaining values retained
-- image / candidate-a438d6054ecb1a446cfb: Nightly time budget reached; remaining values retained
-- image / candidate-bb0afa888ceef13453f6: Nightly time budget reached; remaining values retained
-- image / candidate-3ff113d62a5c32123620: Nightly time budget reached; remaining values retained
-- image / candidate-96ff5e34fc434cf51ad6: Nightly time budget reached; remaining values retained
-- image / candidate-46ed72a1f778c6bc24ae: Nightly time budget reached; remaining values retained
-- image / candidate-0f8dfc3875d422e89192: Nightly time budget reached; remaining values retained
-- image / candidate-7debd0b497fc7308ea8b: Nightly time budget reached; remaining values retained
-- image / candidate-5c499305cf470ebe91f8: Nightly time budget reached; remaining values retained
-- image / candidate-56d382ff5f4f5c67acea: Nightly time budget reached; remaining values retained
-- image / candidate-543e7de7f8f26d8218d9: Nightly time budget reached; remaining values retained
-- image / candidate-fb17232410fe5edc941f: Nightly time budget reached; remaining values retained
-- image / candidate-0dcc92c14b06ed292dfa: Nightly time budget reached; remaining values retained
-- image / candidate-ead6648d0a993b3d98e5: Nightly time budget reached; remaining values retained
-- image / candidate-d7d519585c6c9d5d90e8: Nightly time budget reached; remaining values retained
-- image / candidate-27b233ba12f0c66117d5: Nightly time budget reached; remaining values retained
-- image / candidate-e1b4854235617696eb81: Nightly time budget reached; remaining values retained
-- image / candidate-cfc004790b1f56a5eb0c: Nightly time budget reached; remaining values retained
-- image / candidate-0e2c75fa91164b82f677: Nightly time budget reached; remaining values retained
-- image / candidate-698255e0164f81af0f22: Nightly time budget reached; remaining values retained
-- image / candidate-6d5c60a53010f91d607e: Nightly time budget reached; remaining values retained
-- image / candidate-91341488733ebb08c8f5: Nightly time budget reached; remaining values retained
-- image / candidate-3f94f7673d2d4128b268: Nightly time budget reached; remaining values retained
-- image / candidate-dc3d37ac996f4de32b3e: Nightly time budget reached; remaining values retained
-- image / candidate-37a31525fe17527674fa: Nightly time budget reached; remaining values retained
-- image / candidate-6941eba65900adc36542: Nightly time budget reached; remaining values retained
-- image / candidate-9ad0dd06f1b271fa0190: Nightly time budget reached; remaining values retained
-- image / candidate-2347b1a7b8e5c4b095b8: Nightly time budget reached; remaining values retained
-- image / candidate-54e108d25d392a45179f: Nightly time budget reached; remaining values retained
-- image / candidate-7e07f307047525520c1b: Nightly time budget reached; remaining values retained
-- image / candidate-0426457da4dd9e60c4af: Nightly time budget reached; remaining values retained
-- image / candidate-ae563f77842073e040cd: Nightly time budget reached; remaining values retained
-- image / candidate-ef552cfefae258b5ee88: Nightly time budget reached; remaining values retained
-- image / candidate-dbb55eca9c67d403e312: Nightly time budget reached; remaining values retained
-- image / candidate-afe15afab5c55ffcda1b: Nightly time budget reached; remaining values retained
-- image / candidate-f4e8b991c039cc338549: Nightly time budget reached; remaining values retained
-- image / candidate-e341cb60fef133005d1d: Nightly time budget reached; remaining values retained
-- image / candidate-0e74b6002af40fed1845: Nightly time budget reached; remaining values retained
-- image / candidate-a29cbf44cfc8a8c2ee20: Nightly time budget reached; remaining values retained
-- image / candidate-f5ef88c42a35ef13ac98: Nightly time budget reached; remaining values retained
-- image / candidate-e2152fbc851c9019fea6: Nightly time budget reached; remaining values retained
-- image / candidate-292c29d535e154709183: Nightly time budget reached; remaining values retained
-- image / candidate-7339aa5a0330bb3b5fe9: Nightly time budget reached; remaining values retained
-- image / candidate-06b64ce2aedb7a163ac0: Nightly time budget reached; remaining values retained
-- image / candidate-5801865bea096bf422d7: Nightly time budget reached; remaining values retained
-- image / candidate-eb54495077e19fa6fe53: Nightly time budget reached; remaining values retained
-- image / candidate-e69567b26517cadf0cac: Nightly time budget reached; remaining values retained
-- image / candidate-d1ec2ea3faf847a2d8ce: Nightly time budget reached; remaining values retained
-- image / candidate-772a6a4127caefdcd6c9: Nightly time budget reached; remaining values retained
-- image / candidate-2f24a965596b5ca50770: Nightly time budget reached; remaining values retained
-- image / candidate-b4338abf83818df20926: Nightly time budget reached; remaining values retained
-- image / candidate-f5480f0f8a281215ac65: Nightly time budget reached; remaining values retained
-- image / candidate-ff92671276d3334255e3: Nightly time budget reached; remaining values retained
-- image / candidate-aec938783c6105e89c9b: Nightly time budget reached; remaining values retained
-- image / candidate-cfc57ab5374c2974de01: Nightly time budget reached; remaining values retained
 - product / candidate-1c4aae59d7851c60edde: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-1c4aae59d7851c60edde: Nightly time budget reached; remaining values retained
-- image / candidate-8ca258edf8a2e322fc9a: Nightly time budget reached; remaining values retained
-- image / candidate-c7c3ae111ae562400486: Nightly time budget reached; remaining values retained
 - product / candidate-ceb2efa69d25acfc0b34: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-ceb2efa69d25acfc0b34: Nightly time budget reached; remaining values retained
-- image / candidate-ebc2e5a3cd40efeb8b5c: Nightly time budget reached; remaining values retained
-- image / candidate-ad55140d9e4991acd8db: Nightly time budget reached; remaining values retained
 - product / candidate-f13017ad519157a2786e: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-f13017ad519157a2786e: Nightly time budget reached; remaining values retained
 - product / candidate-80420869e446a7356fe2: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-80420869e446a7356fe2: Nightly time budget reached; remaining values retained
-- image / candidate-b1abbf86921b9082fad9: Nightly time budget reached; remaining values retained
 - product / candidate-4ac4cd0bc117f657da95: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-4ac4cd0bc117f657da95: Nightly time budget reached; remaining values retained
 - product / candidate-842c753270e50cb437d9: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-842c753270e50cb437d9: Nightly time budget reached; remaining values retained
 - product / candidate-4e1c4695f2d3c90f9185: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-4e1c4695f2d3c90f9185: Nightly time budget reached; remaining values retained
 - product / candidate-861d9d726a8b4360a8f1: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-861d9d726a8b4360a8f1: Nightly time budget reached; remaining values retained
-- image / candidate-7b15cdbf2a7e663f2fa6: Nightly time budget reached; remaining values retained
 - product / candidate-093ddd0fa2673e9904e3: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-093ddd0fa2673e9904e3: Nightly time budget reached; remaining values retained
 - product / candidate-eb9185e6f09c5cc252a0: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-eb9185e6f09c5cc252a0: Nightly time budget reached; remaining values retained
-- image / candidate-9cdc577fe86f4637dc45: Nightly time budget reached; remaining values retained
-- image / candidate-f7beeed55802e94a16c8: Nightly time budget reached; remaining values retained
 - product / candidate-62542492502d568e6955: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-62542492502d568e6955: Nightly time budget reached; remaining values retained
 - product / candidate-a8ddaf2aac58b7518c9f: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-a8ddaf2aac58b7518c9f: Nightly time budget reached; remaining values retained
-- image / candidate-8352b0be89f426862d48: Nightly time budget reached; remaining values retained
-- image / candidate-d8aff2e9a196cd5a4dd6: Nightly time budget reached; remaining values retained
 - product / candidate-9929ef38ab6f91cda35d: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-9929ef38ab6f91cda35d: Nightly time budget reached; remaining values retained
-- image / candidate-34c20ecb0dd3dae613da: Nightly time budget reached; remaining values retained
-- image / candidate-ab4ce36f8eb0a5981b0f: Nightly time budget reached; remaining values retained
 - product / candidate-2dfaae5489c72edd07d7: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-2dfaae5489c72edd07d7: Nightly time budget reached; remaining values retained
-- image / candidate-0da960604972b00583d5: Nightly time budget reached; remaining values retained
-- image / candidate-a9d52ffd24efa427f4d2: Nightly time budget reached; remaining values retained
 - product / candidate-c0c6b5fdfe0de00ba96c: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-c0c6b5fdfe0de00ba96c: Nightly time budget reached; remaining values retained
-- image / candidate-62b6c2b302e190f803f2: Nightly time budget reached; remaining values retained
 - product / candidate-257ef37e7a2254209d00: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-257ef37e7a2254209d00: Nightly time budget reached; remaining values retained
 - product / candidate-c8f3e89cf47f99d95049: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-c8f3e89cf47f99d95049: Nightly time budget reached; remaining values retained
-- image / candidate-03049fd89bc9d05876d4: Nightly time budget reached; remaining values retained
-- image / candidate-24ff3e020ea41ddf488f: Nightly time budget reached; remaining values retained
-- image / candidate-b51a51187db1b4844a35: Nightly time budget reached; remaining values retained
-- image / candidate-3513c5d034311d7325f4: Nightly time budget reached; remaining values retained
-- image / candidate-406a5d61bf62d063ad71: Nightly time budget reached; remaining values retained
-- image / candidate-14bbcd15bd6aceab7fc7: Nightly time budget reached; remaining values retained
-- image / candidate-f28fb44e16abb1c67ecf: Nightly time budget reached; remaining values retained
-- image / candidate-96b206d61c871f991f46: Nightly time budget reached; remaining values retained
-- image / candidate-6e24b8fcf0f9cd4b1346: Nightly time budget reached; remaining values retained
-- image / candidate-b24c7228456450877180: Nightly time budget reached; remaining values retained
-- image / candidate-82cb51ed855ba48c0e62: Nightly time budget reached; remaining values retained
-- image / candidate-9885812f496ff465d489: Nightly time budget reached; remaining values retained
-- image / candidate-ba4d93857b926b42a676: Nightly time budget reached; remaining values retained
-- image / candidate-4af2212a90bd5949c371: Nightly time budget reached; remaining values retained
-- image / candidate-0dca0434dada8032514a: Nightly time budget reached; remaining values retained
-- image / candidate-d950f45f0d8fa76254f3: Nightly time budget reached; remaining values retained
 - product / candidate-bf8a0b30e1a05919cd12: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-bf8a0b30e1a05919cd12: Nightly time budget reached; remaining values retained
-- image / candidate-be8f8851d604f06d3974: Nightly time budget reached; remaining values retained
-- image / candidate-a4e0048aa86aef608fd0: Nightly time budget reached; remaining values retained
-- image / candidate-b5e15a762c39aa8b15e2: Nightly time budget reached; remaining values retained
-- image / candidate-97c896d9bffb94475c4c: Nightly time budget reached; remaining values retained
-- image / candidate-29881368916ceef1a602: Nightly time budget reached; remaining values retained
-- image / candidate-a53aa1a4380a6316fee6: Nightly time budget reached; remaining values retained
-- image / candidate-1b686aa1f6731a725109: Nightly time budget reached; remaining values retained
-- image / candidate-dc90a057cc78be217002: Nightly time budget reached; remaining values retained
-- image / candidate-ed88d20ba52c2ced8ba0: Nightly time budget reached; remaining values retained
-- image / candidate-b94a18fb9764920b1e54: Nightly time budget reached; remaining values retained
-- image / candidate-2801ec3c436876145c77: Nightly time budget reached; remaining values retained
-- image / candidate-99b1d1d949f02d5e9d8e: Nightly time budget reached; remaining values retained
-- image / candidate-b6935e91bf4e74a153bb: Nightly time budget reached; remaining values retained
-- image / candidate-0128e68c197e8ec01120: Nightly time budget reached; remaining values retained
-- image / candidate-361f7a05859739dfde04: Nightly time budget reached; remaining values retained
-- image / candidate-666dfb15304b6e76463c: Nightly time budget reached; remaining values retained
-- image / candidate-ff7d2a09edb5186e5091: Nightly time budget reached; remaining values retained
-- image / candidate-2ca5260558d370b03d69: Nightly time budget reached; remaining values retained
-- image / candidate-57b3ecf903bc44ae2028: Nightly time budget reached; remaining values retained
-- image / candidate-942a8b5c31510fcc4941: Nightly time budget reached; remaining values retained
-- image / candidate-755d30ccb291698b33d9: Nightly time budget reached; remaining values retained
-- image / candidate-b107de039a76e039b038: Nightly time budget reached; remaining values retained
-- image / candidate-c18637407fc3ea423789: Nightly time budget reached; remaining values retained
-- image / candidate-174da96b49a4b275a80e: Nightly time budget reached; remaining values retained
-- image / candidate-c1c1bf3b863c7f65a0f1: Nightly time budget reached; remaining values retained
-- image / candidate-4c5dcaa10703a3ea67bf: Nightly time budget reached; remaining values retained
-- image / candidate-f36a59f09987e639b345: Nightly time budget reached; remaining values retained
-- image / candidate-f89bcae29f0bb0597ad7: Nightly time budget reached; remaining values retained
-- image / candidate-454ac54763246f98e4b8: Nightly time budget reached; remaining values retained
-- image / candidate-d91634ee167498c262a2: Nightly time budget reached; remaining values retained
-- image / candidate-20151d6f70d4d17dec36: Nightly time budget reached; remaining values retained
-- image / candidate-282743ff2ec6b1c99cb7: Nightly time budget reached; remaining values retained
-- image / candidate-0578d20306c4f8b1a839: Nightly time budget reached; remaining values retained
 - product / candidate-06e4c638c527283e9f60: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-06e4c638c527283e9f60: Nightly time budget reached; remaining values retained
-- image / candidate-9601707d4ce9e697ea83: Nightly time budget reached; remaining values retained
-- image / candidate-0001b56c67650c8842e3: Nightly time budget reached; remaining values retained
-- image / candidate-2a1699acf19f47141f20: Nightly time budget reached; remaining values retained
-- image / candidate-4f5bb31dd766a1e60285: Nightly time budget reached; remaining values retained
-- image / candidate-4be1f700bafc4062e116: Nightly time budget reached; remaining values retained
-- image / candidate-91fad168bcaf4ceb9f46: Nightly time budget reached; remaining values retained
-- image / candidate-ddb097f71059b6066777: Nightly time budget reached; remaining values retained
-- image / candidate-b9c7c379e54be01a5c35: Nightly time budget reached; remaining values retained
-- image / candidate-a16e777e632f0bdba1cf: Nightly time budget reached; remaining values retained
-- image / candidate-f3e15c07cd284226fbed: Nightly time budget reached; remaining values retained
-- image / candidate-9d9acc3244cb60cfdb9c: Nightly time budget reached; remaining values retained
-- image / candidate-062da04b7eecff4ea2c2: Nightly time budget reached; remaining values retained
-- image / candidate-279563180ed064294f7a: Nightly time budget reached; remaining values retained
-- image / candidate-a09d7a5254ca509aa213: Nightly time budget reached; remaining values retained
-- image / candidate-a9c8c3fd0dff2b610eab: Nightly time budget reached; remaining values retained
-- image / candidate-b9cb813ef187eb615402: Nightly time budget reached; remaining values retained
-- image / candidate-c348e84f624bbc68c58d: Nightly time budget reached; remaining values retained
-- image / candidate-0c35c71d5d2ccfda6ae8: Nightly time budget reached; remaining values retained
-- image / candidate-1b147af64a8bc8d2449f: Nightly time budget reached; remaining values retained
-- image / candidate-f436264d5f52e52bd020: Nightly time budget reached; remaining values retained
-- image / candidate-80a9b482e4ec7f697ab9: Nightly time budget reached; remaining values retained
-- image / candidate-ced4b91a6d9fc8e6d087: Nightly time budget reached; remaining values retained
-- image / candidate-25aaee3ac576509fb6b9: Nightly time budget reached; remaining values retained
-- image / candidate-1e506a6331565d957443: Nightly time budget reached; remaining values retained
-- image / candidate-fa84d334bad8491f3197: Nightly time budget reached; remaining values retained
-- image / candidate-2fff91b80c6eedece62f: Nightly time budget reached; remaining values retained
-- image / candidate-7c0ec4b829d8b6eb79a7: Nightly time budget reached; remaining values retained
-- image / candidate-9719c67c7a93e63f4e47: Nightly time budget reached; remaining values retained
-- image / candidate-f30854b9a827857f5f6b: Nightly time budget reached; remaining values retained
-- image / candidate-01dc4a112024ac74e76e: Nightly time budget reached; remaining values retained
-- image / candidate-25a8e4c6398731a3027b: Nightly time budget reached; remaining values retained
-- image / candidate-2466c09ea15fb60db68f: Nightly time budget reached; remaining values retained
-- image / candidate-c05694df7243e671d3e8: Nightly time budget reached; remaining values retained
-- image / candidate-0956c53a01a5baa95e6e: Nightly time budget reached; remaining values retained
-- image / candidate-84b76daaa52234f839c3: Nightly time budget reached; remaining values retained
-- image / candidate-32ce6d6b7532f40ab969: Nightly time budget reached; remaining values retained
-- image / candidate-7bb986e88d867c72a27e: Nightly time budget reached; remaining values retained
-- image / candidate-eddc33d48d9acb99bce5: Nightly time budget reached; remaining values retained
 - product / candidate-2d026f0f0fc2fe4b0ff8: Recorded variant title changed; review the colour/pack before updating
-- image / candidate-2d026f0f0fc2fe4b0ff8: Nightly time budget reached; remaining values retained
-- image / candidate-4eadd16b0568f6fdf119: Nightly time budget reached; remaining values retained
-- image / candidate-67b6e933bc3edb7e9554: Nightly time budget reached; remaining values retained
-- image / candidate-96aff43a5d8f63a3fc75: Nightly time budget reached; remaining values retained
-- image / candidate-91cde10234a74dfd658a: Nightly time budget reached; remaining values retained
-- image / candidate-8537040ba5f0c66b2fc3: Nightly time budget reached; remaining values retained
-- image / candidate-4f260ff398d1c77223a6: Nightly time budget reached; remaining values retained
-- image / candidate-8f462ef40fb4a4a33da4: Nightly time budget reached; remaining values retained
-- image / candidate-f38d95f15fcd7769cf11: Nightly time budget reached; remaining values retained
-- image / candidate-1539dd62d0ab89ef0523: Nightly time budget reached; remaining values retained
-- image / candidate-ca9f9644fa14e9997921: Nightly time budget reached; remaining values retained
-- image / candidate-f1620d596cfdb20fb7aa: Nightly time budget reached; remaining values retained
-- image / candidate-4e040fa502ac1be8f545: Nightly time budget reached; remaining values retained
-- image / candidate-b224f339aa376d5d0f2e: Nightly time budget reached; remaining values retained
-- image / candidate-a571f10187af72f6588f: Nightly time budget reached; remaining values retained
-- image / candidate-466cf48123c1d7ce199c: Nightly time budget reached; remaining values retained
-- image / candidate-e6369c4a9e673fab15a2: Nightly time budget reached; remaining values retained
-- image / candidate-99d0744fa14c4268d23e: Nightly time budget reached; remaining values retained
-- image / candidate-7e5b5f30e4e4160e7eed: Nightly time budget reached; remaining values retained
-- image / candidate-bf384f88e28e71178368: Nightly time budget reached; remaining values retained
-- image / candidate-64edf4444f32d5d8df13: Nightly time budget reached; remaining values retained
-- image / candidate-d0a64c0229c57940c012: Nightly time budget reached; remaining values retained
-- image / candidate-f6caee4fd64d318fe5cc: Nightly time budget reached; remaining values retained
-- image / candidate-0efd6fd2359a7605f042: Nightly time budget reached; remaining values retained
-- image / candidate-f576f06cd8fcffe2a705: Nightly time budget reached; remaining values retained
-- image / candidate-72293c33ca991d5eeeda: Nightly time budget reached; remaining values retained
-- image / candidate-d9c9e1c17a2a9c5d97c2: Nightly time budget reached; remaining values retained
-- image / candidate-563759e51cfd33d7c01c: Nightly time budget reached; remaining values retained
-- image / candidate-a2b94fc8848ec9815488: Nightly time budget reached; remaining values retained
-- image / candidate-6e3bc4dfe6386f249f65: Nightly time budget reached; remaining values retained
-- image / candidate-1beba932f2cf60fdab89: Nightly time budget reached; remaining values retained
-- image / candidate-122d3100aa026ef1ffda: Nightly time budget reached; remaining values retained
-- image / candidate-ed32eef3237afee1c045: Nightly time budget reached; remaining values retained
-- image / candidate-86394fe43fce8badf7a5: Nightly time budget reached; remaining values retained
-- image / candidate-383bf85a17b240025a32: Nightly time budget reached; remaining values retained
-- image / candidate-341854605589922d68e9: Nightly time budget reached; remaining values retained
-- image / candidate-b86e89f5a8b84e3dd4b8: Nightly time budget reached; remaining values retained
-- image / candidate-1b394b6d9a5feb798766: Nightly time budget reached; remaining values retained
-- image / candidate-9f4c5eb4a163acf43027: Nightly time budget reached; remaining values retained
-- image / candidate-d465fb98c81da8290035: Nightly time budget reached; remaining values retained
-- image / candidate-c6ef35628d7e4cf94ad4: Nightly time budget reached; remaining values retained
-- image / candidate-4c18b46c5c181543991e: Nightly time budget reached; remaining values retained
-- image / candidate-402ce4db61e9d76b4d69: Nightly time budget reached; remaining values retained
-- image / candidate-0412b51fa24a17ddff4f: Nightly time budget reached; remaining values retained
-- image / candidate-9e9af40c669fd0049955: Nightly time budget reached; remaining values retained
-- image / candidate-4e44b8323f5532bedb58: Nightly time budget reached; remaining values retained
-- image / candidate-8a8a3cd58bcc3e392031: Nightly time budget reached; remaining values retained
-- image / candidate-185d2f6a1de6aa1de67d: Nightly time budget reached; remaining values retained
-- image / candidate-a59227f2419c0108582e: Nightly time budget reached; remaining values retained
-- image / candidate-697541f4e29d7acd0c3b: Nightly time budget reached; remaining values retained
-- image / candidate-0662c67d0c6b5c626d38: Nightly time budget reached; remaining values retained
-- image / candidate-f75d2c4caacefe9ca6f4: Nightly time budget reached; remaining values retained
-- image / candidate-326dc0bb6039fa30a8e9: Nightly time budget reached; remaining values retained
-- image / candidate-2086ed7a70b4ba78e564: Nightly time budget reached; remaining values retained
-- image / candidate-d2ea50b5f60667f2235f: Nightly time budget reached; remaining values retained
-- image / candidate-f48cf785bd19f276e98c: Nightly time budget reached; remaining values retained
-- image / candidate-ce441164ef7d7a9f8be6: Nightly time budget reached; remaining values retained
-- image / candidate-1345d1d843ae10721b5a: Nightly time budget reached; remaining values retained
-- image / candidate-bff267e3528aecb7e0f4: Nightly time budget reached; remaining values retained
-- image / candidate-c077bbd209cde2eeaf07: Nightly time budget reached; remaining values retained
-- image / candidate-cf175deae201823c5265: Nightly time budget reached; remaining values retained
-- image / candidate-1c5550c58bee35657699: Nightly time budget reached; remaining values retained
-- image / candidate-49e704de6d3166d0db48: Nightly time budget reached; remaining values retained
-- image / candidate-00d14a8b31530596767d: Nightly time budget reached; remaining values retained
-- image / candidate-5fc0c4426423b686d1c6: Nightly time budget reached; remaining values retained
-- image / candidate-5061982d5783e29bf709: Nightly time budget reached; remaining values retained
-- image / candidate-245260ccbacdb2648acb: Nightly time budget reached; remaining values retained
-- image / candidate-d656b2ea1d39bdbed45e: Nightly time budget reached; remaining values retained
-- image / candidate-334356baf5d90431dd43: Nightly time budget reached; remaining values retained
-- image / candidate-5665cf462dcac2065845: Nightly time budget reached; remaining values retained
-- image / candidate-b5e4ce46893aafe50e67: Nightly time budget reached; remaining values retained
-- image / candidate-e1859a2c80aea66c6ce3: Nightly time budget reached; remaining values retained
-- image / candidate-86fa0446e0570e65749e: Nightly time budget reached; remaining values retained
-- image / candidate-6819aa1fa00101ded199: Nightly time budget reached; remaining values retained
-- image / candidate-f2c79dfefe32b8374479: Nightly time budget reached; remaining values retained
-- image / candidate-56b909adc3d800c390fb: Nightly time budget reached; remaining values retained
-- image / candidate-eb7365c8b98fee253c64: Nightly time budget reached; remaining values retained
-- image / candidate-41c72e2179f3fe001b6b: Nightly time budget reached; remaining values retained
-- image / candidate-34fe59cc17b369378b58: Nightly time budget reached; remaining values retained
-- image / candidate-6acb398ca8d405c22a8d: Nightly time budget reached; remaining values retained
-- image / candidate-2031ed12aec0a8c4e588: Nightly time budget reached; remaining values retained
-- image / candidate-a4432fc9abd93befedbe: Nightly time budget reached; remaining values retained
-- image / candidate-1ce687cca51f1587f3d5: Nightly time budget reached; remaining values retained
-- image / candidate-3f8efdbac245c38be771: Nightly time budget reached; remaining values retained
-- image / candidate-27db8e7bb9fc61c9b5f2: Nightly time budget reached; remaining values retained
-- image / candidate-4e1c47cb165bab27b145: Nightly time budget reached; remaining values retained
-- image / candidate-ea9aebac12933649510e: Nightly time budget reached; remaining values retained
-- image / candidate-3cd42fd2c4ab159fee1f: Nightly time budget reached; remaining values retained
-- image / candidate-ccb22169b0850b301c91: Nightly time budget reached; remaining values retained
-- image / candidate-f8f84b486d80cba2c490: Nightly time budget reached; remaining values retained
-- image / candidate-2cf27276f03697dbd2d8: Nightly time budget reached; remaining values retained
-- image / candidate-70dea7b85bd9e1916558: Nightly time budget reached; remaining values retained
-- image / candidate-af4b782645984d70f11e: Nightly time budget reached; remaining values retained
-- image / candidate-ab4a93f326850d082676: Nightly time budget reached; remaining values retained
-- image / candidate-2a443fe5638c28aaa8c4: Nightly time budget reached; remaining values retained
-- image / candidate-9ca165f3f997a19ad4b0: Nightly time budget reached; remaining values retained
-- image / candidate-5fa74943ef23b7786581: Nightly time budget reached; remaining values retained
-- image / candidate-a766053a5c22761bf8ce: Nightly time budget reached; remaining values retained
-- image / candidate-1909924116844f269309: Nightly time budget reached; remaining values retained
-- image / candidate-f583766b3d8026817774: Nightly time budget reached; remaining values retained
-- image / candidate-aaca4df66af42ad82027: Nightly time budget reached; remaining values retained
-- image / candidate-89a426606ae115302624: Nightly time budget reached; remaining values retained
-- image / candidate-5922bd27e13de91638b1: Nightly time budget reached; remaining values retained
-- image / candidate-77863c6b7af8620dd2f2: Nightly time budget reached; remaining values retained
-- image / candidate-72687a5e8a934ab6e7b3: Nightly time budget reached; remaining values retained
-- image / candidate-a0aebc4d42a08320a093: Nightly time budget reached; remaining values retained
-- image / candidate-bc50ef15d7b532ba7104: Nightly time budget reached; remaining values retained
-- image / candidate-6eae914bc06fbf513895: Nightly time budget reached; remaining values retained
-- image / candidate-582da6fb2edc560a66dd: Nightly time budget reached; remaining values retained
-- image / candidate-618c6cf79c19c49e4ab4: Nightly time budget reached; remaining values retained
-- image / candidate-5f1cbc5c1e8d13f55bdc: Nightly time budget reached; remaining values retained
-- image / candidate-ded219f5eacf3511c161: Nightly time budget reached; remaining values retained
-- image / candidate-0782bea7aa05b08dad60: Nightly time budget reached; remaining values retained
-- image / candidate-dcf485def957bc4335a1: Nightly time budget reached; remaining values retained
-- image / candidate-da1b4432902fc7226253: Nightly time budget reached; remaining values retained
-- image / candidate-7091aca7d7b9193f9718: Nightly time budget reached; remaining values retained
-- image / candidate-394760c78d75c246eaae: Nightly time budget reached; remaining values retained
-- image / candidate-9877403544c59d72f7ab: Nightly time budget reached; remaining values retained
-- image / candidate-a32eefa58be3d649908c: Nightly time budget reached; remaining values retained
-- image / candidate-67b5988a65c2dbeb5dba: Nightly time budget reached; remaining values retained
-- image / candidate-de4f81849d22005e3e00: Nightly time budget reached; remaining values retained
-- image / candidate-efe3ea086815aaac0c14: Nightly time budget reached; remaining values retained
-- image / candidate-6ab9f88e4ef85e9972b1: Nightly time budget reached; remaining values retained
-- image / candidate-7d5aa7f6faf6fe9838dd: Nightly time budget reached; remaining values retained
-- image / candidate-4497e2bb3b3fc3d6de36: Nightly time budget reached; remaining values retained
-- image / candidate-986341b14a0069b65a39: Nightly time budget reached; remaining values retained
-- image / candidate-dd856b130271fc1ac0c4: Nightly time budget reached; remaining values retained
-- image / candidate-abe6f910726048cb4eab: Nightly time budget reached; remaining values retained
-- image / candidate-142eac33c6397523a44b: Nightly time budget reached; remaining values retained
-- image / candidate-091664ac3474a252e58c: Nightly time budget reached; remaining values retained
-- image / candidate-19ee096b6ba5df26243c: Nightly time budget reached; remaining values retained
-- image / candidate-0f9e7b119b8dc5a481f6: Nightly time budget reached; remaining values retained
-- image / candidate-2294a2f6fa9b9f004c80: Nightly time budget reached; remaining values retained
-- image / candidate-efd762e5509934749451: Nightly time budget reached; remaining values retained
-- image / candidate-18e2f09bfcd281eab8e9: Nightly time budget reached; remaining values retained
-- image / candidate-7724851b89a2f36ba6ff: Nightly time budget reached; remaining values retained
-- image / candidate-af720593080c192e00e9: Nightly time budget reached; remaining values retained
-- image / candidate-e64294e5ab209a04e1dd: Nightly time budget reached; remaining values retained
-- image / candidate-2b62a4e7eae00a151857: Nightly time budget reached; remaining values retained
-- image / candidate-c606511b9524b0e55d64: Nightly time budget reached; remaining values retained
-- image / candidate-3eaf10d8d85c4b22ea07: Nightly time budget reached; remaining values retained
-- image / candidate-3d789e673a23c537eaf6: Nightly time budget reached; remaining values retained
-- image / candidate-c91fff5dc112f87c5f24: Nightly time budget reached; remaining values retained
-- image / candidate-43b0766ae0aa24018ded: Nightly time budget reached; remaining values retained
-- image / candidate-4aa6a6efa3d89b783038: Nightly time budget reached; remaining values retained
-- image / candidate-d6986aefb90e6329237d: Nightly time budget reached; remaining values retained
-- image / candidate-a8b977e76dad5b36acdd: Nightly time budget reached; remaining values retained
-- image / candidate-25742baad7cbb1b9665d: Nightly time budget reached; remaining values retained
-- image / candidate-7c6b2a588be524f8424b: Nightly time budget reached; remaining values retained
-- image / candidate-11f2f88eaa0d4ef15a1a: Nightly time budget reached; remaining values retained
-- image / candidate-c99484de896a2b8a08a9: Nightly time budget reached; remaining values retained
-- image / candidate-55618ac7431a13112bdc: Nightly time budget reached; remaining values retained
-- image / candidate-049db2d3161b7f31fe42: Nightly time budget reached; remaining values retained
-- image / candidate-53c4cb0be3a2f6fb57a9: Nightly time budget reached; remaining values retained
-- image / candidate-58c5fa9516dc3f932868: Nightly time budget reached; remaining values retained
-- image / candidate-9e24dfb582d5feae88ad: Nightly time budget reached; remaining values retained
-- image / candidate-840395362b9c649f369c: Nightly time budget reached; remaining values retained
-- image / candidate-3f5297b8a04422d0802f: Nightly time budget reached; remaining values retained
-- image / candidate-70a965b88586667ccfdb: Nightly time budget reached; remaining values retained
-- image / candidate-cd5786658adfeed6d214: Nightly time budget reached; remaining values retained
-- image / candidate-b382659950f2a1166b5d: Nightly time budget reached; remaining values retained
-- image / candidate-7ffd1e0e9c79f1db8541: Nightly time budget reached; remaining values retained
-- image / candidate-946b35828fc56b5cd2cb: Nightly time budget reached; remaining values retained
-- image / candidate-1beb1088a2491159a4bb: Nightly time budget reached; remaining values retained
-- image / candidate-0723f4d9f0eeaf78c57c: Nightly time budget reached; remaining values retained
-- image / candidate-6eb75fa553045a2cf346: Nightly time budget reached; remaining values retained
-- image / candidate-a8feca076b875940b0a7: Nightly time budget reached; remaining values retained
-- image / candidate-eff90dc399cdcd54a575: Nightly time budget reached; remaining values retained
-- image / candidate-5937f051006e2b7affd8: Nightly time budget reached; remaining values retained
-- image / candidate-fe5797f9e85e5f85df11: Nightly time budget reached; remaining values retained
-- image / candidate-57be7625f0aaa60d3ba0: Nightly time budget reached; remaining values retained
-- image / candidate-89300c6456c4f3d16dd5: Nightly time budget reached; remaining values retained
-- image / candidate-48f1b860eacd4d30f178: Nightly time budget reached; remaining values retained
-- image / candidate-9e8425f65ad83598cf24: Nightly time budget reached; remaining values retained
-- image / candidate-fbe7b68d9b2f137a5848: Nightly time budget reached; remaining values retained
-- image / candidate-37c35fb0712fb2faa48f: Nightly time budget reached; remaining values retained
-- image / candidate-838ae85ecaefdc76f34f: Nightly time budget reached; remaining values retained
-- image / candidate-7b64290b488eaaa67146: Nightly time budget reached; remaining values retained
-- image / candidate-5c9543d217f44ac6d478: Nightly time budget reached; remaining values retained
-- image / candidate-f8fb00faf4e875f62549: Nightly time budget reached; remaining values retained
-- image / candidate-e2be5a0d402887dbaad3: Nightly time budget reached; remaining values retained
-- image / candidate-adb086b1f0e1faf4da3d: Nightly time budget reached; remaining values retained
-- image / candidate-8727cc269217c03e4b5f: Nightly time budget reached; remaining values retained
-- image / candidate-6100640bc2a970edd91c: Nightly time budget reached; remaining values retained
-- image / candidate-669f3e2f9d4bda6be41f: Nightly time budget reached; remaining values retained
-- image / candidate-4539487069dd142c6420: Nightly time budget reached; remaining values retained
-- image / candidate-809484fcdbb692b19e54: Nightly time budget reached; remaining values retained
-- image / candidate-33cc300cdf71849fd668: Nightly time budget reached; remaining values retained
-- image / candidate-f43bdad5f67af015366d: Nightly time budget reached; remaining values retained
-- image / candidate-c466e275d6cc4d156b67: Nightly time budget reached; remaining values retained
-- image / candidate-e8b9f6f8e090197a0659: Nightly time budget reached; remaining values retained
-- image / candidate-6cc7df901503a1e17e99: Nightly time budget reached; remaining values retained
-- image / candidate-d26ea0ebf2e50f47fff8: Nightly time budget reached; remaining values retained
-- image / candidate-d289b7d6cc14f9ef6b04: Nightly time budget reached; remaining values retained
-- image / candidate-0c8f3ea207e05a69aec3: Nightly time budget reached; remaining values retained
-- image / candidate-d17d0590db94f243ce03: Nightly time budget reached; remaining values retained
-- image / candidate-b8ff3190a6d4aa2ff00d: Nightly time budget reached; remaining values retained
-- image / candidate-d2a73a58d1e6852dc612: Nightly time budget reached; remaining values retained
-- image / candidate-ac4b99b7868f21a24da0: Nightly time budget reached; remaining values retained
-- image / candidate-d38c46587506da691106: Nightly time budget reached; remaining values retained
-- image / candidate-c63eabb5ea959c9d689c: Nightly time budget reached; remaining values retained
-- image / candidate-655d971bb7dba7693d81: Nightly time budget reached; remaining values retained
-- image / candidate-a1e24f2fc86f7fcbd3cd: Nightly time budget reached; remaining values retained
-- image / candidate-ee3da367be0f54ae08f4: Nightly time budget reached; remaining values retained
-- image / candidate-27942bd5da9a218bcffa: Nightly time budget reached; remaining values retained
-- image / candidate-612b8f35a95160fac6ad: Nightly time budget reached; remaining values retained
-- image / candidate-492a0f5ab62d46706fde: Nightly time budget reached; remaining values retained
-- image / candidate-9490543d4034dff139bf: Nightly time budget reached; remaining values retained
-- image / candidate-a4db16c0a20473ef6b1c: Nightly time budget reached; remaining values retained
-- image / candidate-b7023c15914f21203c32: Nightly time budget reached; remaining values retained
-- image / candidate-4ea49d6d88bd2d4c56ef: Nightly time budget reached; remaining values retained
-- image / candidate-c40a01c07013426aa37f: Nightly time budget reached; remaining values retained
-- image / candidate-31be44affed5552083bf: Nightly time budget reached; remaining values retained
-- image / candidate-e5759160f22b07910cc1: Nightly time budget reached; remaining values retained
-- image / candidate-f29b73cc1e2e1c911dc5: Nightly time budget reached; remaining values retained
-- image / candidate-32116a767c39ed582d6f: Nightly time budget reached; remaining values retained
-- image / candidate-b2bf93c225839068fadb: Nightly time budget reached; remaining values retained
-- image / candidate-e1a2104916fa68dca06e: Nightly time budget reached; remaining values retained
-- image / candidate-0b0f35bf40c4d11ff1bd: Nightly time budget reached; remaining values retained
-- image / candidate-5ec7225a9ea761056927: Nightly time budget reached; remaining values retained
-- image / candidate-850da189b79c7eda306a: Nightly time budget reached; remaining values retained
-- image / candidate-7605d70f729f7161d895: Nightly time budget reached; remaining values retained
-- image / candidate-71d27fd51b034ed436ae: Nightly time budget reached; remaining values retained
-- image / candidate-8605c8e6a0af4cc5127f: Nightly time budget reached; remaining values retained
-- image / candidate-fcf93c43195be79857f1: Nightly time budget reached; remaining values retained
-- image / candidate-55bdd626e35678b89246: Nightly time budget reached; remaining values retained
-- image / candidate-75c2506f87fab661ec33: Nightly time budget reached; remaining values retained
-- image / candidate-f5fc250adab8d37c9e19: Nightly time budget reached; remaining values retained
-- image / candidate-048ee4c56eda3f3eeded: Nightly time budget reached; remaining values retained
-- image / candidate-7ce094ff6eea87d47457: Nightly time budget reached; remaining values retained
-- image / candidate-176b32ad946d49444145: Nightly time budget reached; remaining values retained
-- image / candidate-4e442813ec22c134246c: Nightly time budget reached; remaining values retained
-- image / candidate-e99b79f1bb2674eff165: Nightly time budget reached; remaining values retained
-- image / candidate-21558f60e629d708d6dd: Nightly time budget reached; remaining values retained
-- image / candidate-cd25f79cdb95f8e036cf: Nightly time budget reached; remaining values retained
-- image / candidate-bdeadd5777229b286355: Nightly time budget reached; remaining values retained
-- image / candidate-a81765e60371a59e4511: Nightly time budget reached; remaining values retained
-- image / candidate-172db4624479e648d0cb: Nightly time budget reached; remaining values retained
-- image / candidate-a2dca3334ae2415292e4: Nightly time budget reached; remaining values retained
-- image / candidate-5516acb796bc0ed9e35f: Nightly time budget reached; remaining values retained
-- image / candidate-3a1e8ff1150c7d28f606: Nightly time budget reached; remaining values retained
-- image / candidate-34d327486f08e09a1c66: Nightly time budget reached; remaining values retained
-- image / candidate-2e093da4720eba7cfb51: Nightly time budget reached; remaining values retained
-- image / candidate-122ae4df2e611847e522: Nightly time budget reached; remaining values retained
-- image / candidate-1b9f035420080a1bfea1: Nightly time budget reached; remaining values retained
-- image / candidate-d290e077cb0ecbf9b4b3: Nightly time budget reached; remaining values retained
-- image / candidate-1eefa3e26045646e663d: Nightly time budget reached; remaining values retained
-- image / candidate-e52ff7c2eb2c70769172: Nightly time budget reached; remaining values retained
-- image / candidate-8e3a66e4282efbb5eb44: Nightly time budget reached; remaining values retained
-- image / candidate-db967001ba0e0cfb5bbd: Nightly time budget reached; remaining values retained
-- image / candidate-a8f889783b097bc9a66c: Nightly time budget reached; remaining values retained
-- image / candidate-287b2f29fc50041dc82f: Nightly time budget reached; remaining values retained
-- image / candidate-20136fb6c0f3e3576135: Nightly time budget reached; remaining values retained
-- image / candidate-aa95d41ff61683d94032: Nightly time budget reached; remaining values retained
-- image / candidate-25fa3393649b729989ed: Nightly time budget reached; remaining values retained
-- image / candidate-800b450f2110df2ba4f1: Nightly time budget reached; remaining values retained
-- image / candidate-6f9eb5eccadd930131fe: Nightly time budget reached; remaining values retained
-- image / candidate-c8ef708c45e048dae132: Nightly time budget reached; remaining values retained
-- image / candidate-eab8dc7d8f2d278269c9: Nightly time budget reached; remaining values retained
-- image / candidate-289edb24aceaba877970: Nightly time budget reached; remaining values retained
-- image / candidate-2f71355b99d98dcba114: Nightly time budget reached; remaining values retained
-- image / candidate-c54a668d62536d41b820: Nightly time budget reached; remaining values retained
-- image / candidate-45fe7ad1f4d2ffeca013: Nightly time budget reached; remaining values retained
-- image / candidate-c0976bd70cdd6e6f310c: Nightly time budget reached; remaining values retained
-- image / candidate-07f58b59ff7564537ac2: Nightly time budget reached; remaining values retained
-- image / candidate-acc998c0ba6c574ffabf: Nightly time budget reached; remaining values retained
-- image / candidate-9a1707c4091cc222ce43: Nightly time budget reached; remaining values retained
-- image / candidate-93409f322f171da72c1c: Nightly time budget reached; remaining values retained
-- image / candidate-b43442e45573469bed5a: Nightly time budget reached; remaining values retained
-- image / candidate-087206a495b5dc90535e: Nightly time budget reached; remaining values retained
-- image / candidate-2ce1872269bf9cff1cca: Nightly time budget reached; remaining values retained
-- image / candidate-85c158181d66951385df: Nightly time budget reached; remaining values retained
-- image / candidate-ce3814e497aebf7465d6: Nightly time budget reached; remaining values retained
-- image / candidate-d5f6efc0cfd4053e1b8b: Nightly time budget reached; remaining values retained
-- image / candidate-4788ff91d3a73366853b: Nightly time budget reached; remaining values retained
-- image / candidate-80177dce7cf1c8cddd13: Nightly time budget reached; remaining values retained
-- image / candidate-4b7b375cbb691cc2560e: Nightly time budget reached; remaining values retained
-- image / candidate-0e3398c82883df4376ba: Nightly time budget reached; remaining values retained
-- image / candidate-e8927c8e7377763c2dbb: Nightly time budget reached; remaining values retained
-- image / candidate-5b54e73b5f8561d7fda9: Nightly time budget reached; remaining values retained
-- image / candidate-d7de9ba4cb040db09beb: Nightly time budget reached; remaining values retained
-- image / candidate-33a85bc7b895476f58bd: Nightly time budget reached; remaining values retained
-- image / candidate-f56f853e573660d248ab: Nightly time budget reached; remaining values retained
-- image / candidate-af35fddd9af2f0b1b23c: Nightly time budget reached; remaining values retained
-- image / candidate-83174de9abf24d98602d: Nightly time budget reached; remaining values retained
-- image / candidate-0e9024a91470b2fc8dfc: Nightly time budget reached; remaining values retained
-- image / candidate-b393f8054f197ef6ff1a: Nightly time budget reached; remaining values retained
-- image / candidate-440e31a6907e084906c6: Nightly time budget reached; remaining values retained
-- image / candidate-e8e8919863013c8ededc: Nightly time budget reached; remaining values retained
-- image / candidate-d8689720d41dd1237db5: Nightly time budget reached; remaining values retained
-- image / candidate-c9775bb2fbb25ff60051: Nightly time budget reached; remaining values retained
-- image / candidate-4747b54347e156e1b605: Nightly time budget reached; remaining values retained
-- image / candidate-f97547d3640b231ab561: Nightly time budget reached; remaining values retained
-- image / candidate-55647af636190eb64fb1: Nightly time budget reached; remaining values retained
-- image / candidate-251ee2f850c44b36c8af: Nightly time budget reached; remaining values retained
-- image / candidate-fce0680c269d525dd19a: Nightly time budget reached; remaining values retained
-- image / candidate-969cd109c26ffd10d905: Nightly time budget reached; remaining values retained
-- image / candidate-819102797438b2dcf098: Nightly time budget reached; remaining values retained
-- image / candidate-9a6336677aebf7e3e72f: Nightly time budget reached; remaining values retained
-- image / candidate-2096a554d0a30d5e6c93: Nightly time budget reached; remaining values retained
-- image / candidate-35349cde862160179dad: Nightly time budget reached; remaining values retained
-- image / candidate-83bde37745867965dd0a: Nightly time budget reached; remaining values retained
-- image / candidate-7dec1effbf6a473ce20f: Nightly time budget reached; remaining values retained
-- image / candidate-b2cc4e87cdffa6b4fcef: Nightly time budget reached; remaining values retained
-- image / candidate-08e4d86d5ecec0ee73c6: Nightly time budget reached; remaining values retained
-- image / candidate-2a59aed58fccccc205cb: Nightly time budget reached; remaining values retained
-- image / candidate-ed78ba1caf076438bdc7: Nightly time budget reached; remaining values retained
-- image / candidate-7425c21c502f1fe1ae71: Nightly time budget reached; remaining values retained
-- image / candidate-64754861e389e3e4a888: Nightly time budget reached; remaining values retained
-- image / candidate-e9521a4541546bdf277d: Nightly time budget reached; remaining values retained
-- image / candidate-fadb82976615c43d89bc: Nightly time budget reached; remaining values retained
-- image / candidate-b248cf67403e1da6fc93: Nightly time budget reached; remaining values retained
-- image / candidate-6586dc05ea89540dbb02: Nightly time budget reached; remaining values retained
-- image / candidate-f7ae8173ea3a525f66bd: Nightly time budget reached; remaining values retained
-- image / candidate-a5ac976344ed06d33572: Nightly time budget reached; remaining values retained
-- image / candidate-df0f795007d4ac3e4542: Nightly time budget reached; remaining values retained
-- image / candidate-354ac54e414ee74da876: Nightly time budget reached; remaining values retained
-- image / candidate-eaf31a7918cf7de3349e: Nightly time budget reached; remaining values retained
-- image / candidate-c6c6fcf4db751ea93eed: Nightly time budget reached; remaining values retained
-- image / candidate-ade707ab7211ede8ac41: Nightly time budget reached; remaining values retained
-- image / candidate-b481ba976baae6df62af: Nightly time budget reached; remaining values retained
-- image / candidate-d1aa3e8d383ff0c2c43a: Nightly time budget reached; remaining values retained
-- image / candidate-819f9fbb24240604e02a: Nightly time budget reached; remaining values retained
-- image / candidate-ae1bfeab2474c971a61e: Nightly time budget reached; remaining values retained
-- image / candidate-d0d62395ea54a34bbea2: Nightly time budget reached; remaining values retained
-- image / candidate-e53d8014b5c2db570746: Nightly time budget reached; remaining values retained
-- image / candidate-8564264c6bf1b3be2f36: Nightly time budget reached; remaining values retained
-- image / candidate-bd826c03eac69bd7e007: Nightly time budget reached; remaining values retained
-- image / candidate-cafa9c7781d2a2438d9d: Nightly time budget reached; remaining values retained
-- image / candidate-ab0b09eb24333948c9d9: Nightly time budget reached; remaining values retained
-- image / candidate-88d323e0c2b1a17da86b: Nightly time budget reached; remaining values retained
-- image / candidate-988332ee2938e6c10525: Nightly time budget reached; remaining values retained
-- image / candidate-f4ff173ba7f82c1b0bb4: Nightly time budget reached; remaining values retained
-- image / candidate-43ac29bff2846dc672f7: Nightly time budget reached; remaining values retained
-- image / candidate-51d464b64043b757da7b: Nightly time budget reached; remaining values retained
-- image / candidate-140ec1db7586425ce754: Nightly time budget reached; remaining values retained
-- image / candidate-37d03a4d9ec1187df2a7: Nightly time budget reached; remaining values retained
-- image / candidate-238bd98fd44e01fd19de: Nightly time budget reached; remaining values retained
-- image / candidate-70e5c9e3c045b6b05f6f: Nightly time budget reached; remaining values retained
-- image / candidate-3b648d1a4a3e38bd3930: Nightly time budget reached; remaining values retained
-- image / candidate-28dd6bc2e708926eb63d: Nightly time budget reached; remaining values retained
-- image / candidate-d87c70503b7c30dc1dfb: Nightly time budget reached; remaining values retained
-- image / candidate-9a925fd7f70fdf2ef506: Nightly time budget reached; remaining values retained
-- image / candidate-63ebc18b373ebd6f90be: Nightly time budget reached; remaining values retained
-- image / candidate-a1622f778e9cb612e163: Nightly time budget reached; remaining values retained
-- image / candidate-d02d9e60c74cafff5e41: Nightly time budget reached; remaining values retained
-- image / candidate-22e4c0da944627797037: Nightly time budget reached; remaining values retained
-- image / candidate-36d498503f26e2c0fdb6: Nightly time budget reached; remaining values retained
-- image / candidate-e6e85ba768695731138e: Nightly time budget reached; remaining values retained
-- image / candidate-140e548fe6c0e804ebd3: Nightly time budget reached; remaining values retained
-- image / candidate-8c29596fa744304380a7: Nightly time budget reached; remaining values retained
-- image / candidate-8769e9b04db9af7afc3a: Nightly time budget reached; remaining values retained
-- image / candidate-733ed3ff40e9127d9509: Nightly time budget reached; remaining values retained
-- image / candidate-a1fcb92c443909566489: Nightly time budget reached; remaining values retained
-- image / candidate-68f60ebd9e69ed580be5: Nightly time budget reached; remaining values retained
-- image / candidate-de9efcff85ad5d65e9aa: Nightly time budget reached; remaining values retained
-- image / candidate-97b9b42ae51fcb03d26a: Nightly time budget reached; remaining values retained
-- image / candidate-d02fe8049d4ea311f33d: Nightly time budget reached; remaining values retained
-- image / candidate-5de1599a4a57847ca713: Nightly time budget reached; remaining values retained
-- image / candidate-f3c1644948b61c868d23: Nightly time budget reached; remaining values retained
-- image / candidate-c7d9eac57a7efe8ff42e: Nightly time budget reached; remaining values retained
-- image / candidate-67d8f57d37730cd53c2c: Nightly time budget reached; remaining values retained
-- image / candidate-b197c9e63a8c2993473b: Nightly time budget reached; remaining values retained
-- image / candidate-6832dc38deded23e00e5: Nightly time budget reached; remaining values retained
-- image / candidate-6e66e4a2e0e3a88dd1c8: Nightly time budget reached; remaining values retained
-- image / candidate-b3d3cff7b34c713a6157: Nightly time budget reached; remaining values retained
-- image / candidate-6316d634a4562649c8d8: Nightly time budget reached; remaining values retained
-- image / candidate-fedc3e17a4bdff75da8f: Nightly time budget reached; remaining values retained
-- image / candidate-313d041ef0681804e443: Nightly time budget reached; remaining values retained
-- image / candidate-0abf4bfde206b1ef8d1c: Nightly time budget reached; remaining values retained
-- image / candidate-fa5c3c707a440221824f: Nightly time budget reached; remaining values retained
-- image / candidate-26f9bdecab978815d145: Nightly time budget reached; remaining values retained
-- image / candidate-9ee0e417c4bb6630255c: Nightly time budget reached; remaining values retained
-- image / candidate-fe2f4eadd73d150c35cc: Nightly time budget reached; remaining values retained
-- image / candidate-4485135f74e0beaf19bb: Nightly time budget reached; remaining values retained
-- image / candidate-cd2c8d92768ee85a8b43: Nightly time budget reached; remaining values retained
-- image / candidate-8bd72692cf3f225b1144: Nightly time budget reached; remaining values retained
-- image / candidate-8a469c2d938d0ebf4ce8: Nightly time budget reached; remaining values retained
-- image / candidate-d14106d6d62c2cddc542: Nightly time budget reached; remaining values retained
-- image / candidate-83b78204051145a2c925: Nightly time budget reached; remaining values retained
-- image / candidate-05c9867b1a1997881fbd: Nightly time budget reached; remaining values retained
-- image / candidate-2707f81cbdbb3ba9a3b3: Nightly time budget reached; remaining values retained
-- image / candidate-4807501c047056c982d4: Nightly time budget reached; remaining values retained
-- image / candidate-1834bc0f5721f0e2a22b: Nightly time budget reached; remaining values retained
-- image / candidate-23ee3520dcbac24c5c6c: Nightly time budget reached; remaining values retained
-- image / candidate-27b00a946da9f68a85ef: Nightly time budget reached; remaining values retained
-- image / candidate-b1312d84e0331918655d: Nightly time budget reached; remaining values retained
-- image / candidate-9e110549170b11653fee: Nightly time budget reached; remaining values retained
-- image / candidate-7c142adac88999ddbceb: Nightly time budget reached; remaining values retained
-- image / candidate-192c82e4eaffeb8e6265: Nightly time budget reached; remaining values retained
-- image / candidate-05c0776a9038ef3ed8f2: Nightly time budget reached; remaining values retained
-- image / candidate-97535b13e0c41b17f512: Nightly time budget reached; remaining values retained
-- image / candidate-16c11fde8155c9ff4b62: Nightly time budget reached; remaining values retained
-- image / candidate-d565222c1fb0acd22294: Nightly time budget reached; remaining values retained
-- image / candidate-dce10f90d8b6ec31961f: Nightly time budget reached; remaining values retained
-- image / candidate-6167f0cefa6987c146e8: Nightly time budget reached; remaining values retained
-- image / candidate-12c0483ac006146698c7: Nightly time budget reached; remaining values retained
-- image / candidate-2756002f931205b94616: Nightly time budget reached; remaining values retained
-- image / candidate-3929a218bebc6d8b2ec6: Nightly time budget reached; remaining values retained
-- image / candidate-ad26414694a6040b8513: Nightly time budget reached; remaining values retained
-- image / candidate-269ddbe2ac1209e1bb40: Nightly time budget reached; remaining values retained
-- image / candidate-9e42c3104ce602a6dc04: Nightly time budget reached; remaining values retained
-- image / candidate-972a243cfc44a4aed839: Nightly time budget reached; remaining values retained
-- image / candidate-158fe0d333d723c27eee: Nightly time budget reached; remaining values retained
-- image / candidate-0ec8afc0feb17e10873c: Nightly time budget reached; remaining values retained
-- image / candidate-88fa3d6e97361107b077: Nightly time budget reached; remaining values retained
-- image / candidate-c752618620b80d36f324: Nightly time budget reached; remaining values retained
-- image / candidate-1f9d7a6c350d8ea764b6: Nightly time budget reached; remaining values retained
-- image / candidate-bb7f5cbcef7920763bc4: Nightly time budget reached; remaining values retained
-- image / candidate-b8303bc11cef473a54fb: Nightly time budget reached; remaining values retained
-- image / candidate-312280740bcf3af93b2a: Nightly time budget reached; remaining values retained
-- image / candidate-087c26ef7bcdc780db98: Nightly time budget reached; remaining values retained
-- image / candidate-022897196840935005f9: Nightly time budget reached; remaining values retained
-- image / candidate-1b24d9d93827f6185846: Nightly time budget reached; remaining values retained
-- image / candidate-ca0fbc942d807ec4a89f: Nightly time budget reached; remaining values retained
-- image / candidate-aa0d2266b8a7599239f3: Nightly time budget reached; remaining values retained
-- image / candidate-fcb51d68ee90411322bc: Nightly time budget reached; remaining values retained
-- image / candidate-5974fa93592eb5e87b1f: Nightly time budget reached; remaining values retained
-- image / candidate-36c7e3b9e428c092d422: Nightly time budget reached; remaining values retained
-- image / candidate-4daac2ac3c1d68c9feed: Nightly time budget reached; remaining values retained
-- image / candidate-dc1de0a6b9f6a9bce558: Nightly time budget reached; remaining values retained
-- image / candidate-49817adf515d275e3cb5: Nightly time budget reached; remaining values retained
-- image / candidate-98139a4cc95866232a4d: Nightly time budget reached; remaining values retained
-- image / candidate-55787949cddd568b3138: Nightly time budget reached; remaining values retained
-- image / candidate-6eeab9e0d74fd9ba6d6a: Nightly time budget reached; remaining values retained
-- image / candidate-02cf6b311a2462c31ddc: Nightly time budget reached; remaining values retained
-- image / candidate-ded124b3eb6de8c00d20: Nightly time budget reached; remaining values retained
-- image / candidate-b8e5a4de6c87a3e9de9c: Nightly time budget reached; remaining values retained
-- image / candidate-9eb36a2ef87aa29a1bef: Nightly time budget reached; remaining values retained
-- image / candidate-ae311189ca6255fb16b0: Nightly time budget reached; remaining values retained
-- image / candidate-0f1acfb7c41548d4766c: Nightly time budget reached; remaining values retained
-- image / candidate-2ea1c9472d199b2cccba: Nightly time budget reached; remaining values retained
-- image / candidate-1b8877290356db3c808d: Nightly time budget reached; remaining values retained
-- image / candidate-ced1fa5f8b84e28f591a: Nightly time budget reached; remaining values retained
-- image / candidate-9b64ecadb43b5813fc9f: Nightly time budget reached; remaining values retained
-- image / candidate-7dfcd986e2fe40dd2c15: Nightly time budget reached; remaining values retained
-- image / candidate-cfb37bb4d33913d87025: Nightly time budget reached; remaining values retained
-- image / candidate-d6580104108a39f162d3: Nightly time budget reached; remaining values retained
-- image / candidate-57791df82ac8fb72b8b2: Nightly time budget reached; remaining values retained
-- image / candidate-9ff7ecee7a7b698d09ea: Nightly time budget reached; remaining values retained
-- image / candidate-f63984beea2e310e4750: Nightly time budget reached; remaining values retained
-- image / candidate-94d6918f9b9e5d1a51a6: Nightly time budget reached; remaining values retained
-- image / candidate-f16e03c4a61d4da90d7d: Nightly time budget reached; remaining values retained
-- image / candidate-fe5d48f9f2f927c18ec9: Nightly time budget reached; remaining values retained
-- image / candidate-19d3ba4668c6f2cb2699: Nightly time budget reached; remaining values retained
-- image / candidate-9bac6607174f977927b5: Nightly time budget reached; remaining values retained
-- image / candidate-d05504d125d340cf12d1: Nightly time budget reached; remaining values retained
-- image / candidate-f3c2ba2feed37d4f2258: Nightly time budget reached; remaining values retained
-- image / candidate-87c7934a9c07285e8f36: Nightly time budget reached; remaining values retained
-- image / candidate-5eeb1841ae4e3ad4eb5d: Nightly time budget reached; remaining values retained
-- image / candidate-0beb85bb82b82c2f3b2d: Nightly time budget reached; remaining values retained
-- image / candidate-e59c896c91984a56754a: Nightly time budget reached; remaining values retained
-- image / candidate-ead3644fef556ec54910: Nightly time budget reached; remaining values retained
-- image / candidate-8f2ad926f3cce694fe84: Nightly time budget reached; remaining values retained
-- image / candidate-66816f4d4853f469f998: Nightly time budget reached; remaining values retained
-- image / candidate-f4d7352db8fb7ce1cc8d: Nightly time budget reached; remaining values retained
-- image / candidate-51162d9074b607596a58: Nightly time budget reached; remaining values retained
-- image / candidate-83631890d2922933c70c: Nightly time budget reached; remaining values retained
-- image / candidate-c7d08997f621d6772a18: Nightly time budget reached; remaining values retained
-- image / candidate-ccc5212875037352c1ef: Nightly time budget reached; remaining values retained
-- image / candidate-581fc731966d6333fc3d: Nightly time budget reached; remaining values retained
-- image / candidate-1954f68f75e2dc064ce5: Nightly time budget reached; remaining values retained
-- image / candidate-e525e58debf750329ca9: Nightly time budget reached; remaining values retained
-- image / candidate-7e5c624247fa357da7d1: Nightly time budget reached; remaining values retained
-- image / candidate-92c6791caf5030e6a927: Nightly time budget reached; remaining values retained
-- image / candidate-ee7779811443d6e4841e: Nightly time budget reached; remaining values retained
-- image / candidate-9b9ae56e8d02374312ea: Nightly time budget reached; remaining values retained
-- image / candidate-8e29c4f9375575f570fd: Nightly time budget reached; remaining values retained
-- image / candidate-3fe144c23b851bbc727e: Nightly time budget reached; remaining values retained
-- image / candidate-d73b653eb5b5da7d3f3e: Nightly time budget reached; remaining values retained
-- image / candidate-2d669764e39d29f75796: Nightly time budget reached; remaining values retained
-- image / candidate-f629d95c8a4c5016e9d5: Nightly time budget reached; remaining values retained
-- image / candidate-8e14db0af351d9b25592: Nightly time budget reached; remaining values retained
-- image / candidate-f329dcf754cc9d8fafa3: Nightly time budget reached; remaining values retained
-- image / candidate-8dc8b507f9eed82f2737: Nightly time budget reached; remaining values retained
-- image / candidate-6317a924ced2bbdb41e6: Nightly time budget reached; remaining values retained
-- image / candidate-638fd9ad912d56e88418: Nightly time budget reached; remaining values retained
-- discovery / 3djake-uk: Nightly time budget reached; remaining values retained
-- discovery / 3dprima-uk: Nightly time budget reached; remaining values retained
-- discovery / 123-3d-uk: Nightly time budget reached; remaining values retained
-- discovery / idig3dprinting: Nightly time budget reached; remaining values retained
-- discovery / 3dgbire: Nightly time budget reached; remaining values retained
-- discovery / bambu-uk: Nightly time budget reached; remaining values retained
-- discovery / creality-uk: Nightly time budget reached; remaining values retained
-- discovery / elegoo-uk: Nightly time budget reached; remaining values retained
-- discovery / prusa: Nightly time budget reached; remaining values retained
-- discovery / subliblanks: Nightly time budget reached; remaining values retained
-- discovery / nse-imports: Nightly time budget reached; remaining values retained
-- discovery / additive-x: Nightly time budget reached; remaining values retained
-- discovery / ooznest: Nightly time budget reached; remaining values retained
-- discovery / anycubic-uk: Nightly time budget reached; remaining values retained
-- discovery / qidi-uk: Nightly time budget reached; remaining values retained
-- discovery / flashforge-uk: Nightly time budget reached; remaining values retained
-- discovery / sovol-uk: Nightly time budget reached; remaining values retained
-- discovery / sunlu-uk: Nightly time budget reached; remaining values retained
 - discovery / polymaker-uk: Public catalogue does not quote native GBP prices
-- discovery / esun-uk: Nightly time budget reached; remaining values retained
-- discovery / 3dqf-uk: Nightly time budget reached; remaining values retained
-- discovery / 3d-printz: Nightly time budget reached; remaining values retained
-- new-product / candidate-99cf8e8aa20d814b4c54: Nightly time budget reached; remaining values retained
+- new-product / candidate-4134d4f1c32a32a16699: No single GBP offer for the exact product
 - new-product / candidate-09082425bb1cb7089087: Cannot confirm that the product is a material or printer
 - new-product / candidate-c63cc1a9ce9516a8f607: Cannot confirm that the product is a material or printer
-- new-product / candidate-6c558d66fc27c9ddb595: Nightly time budget reached; remaining values retained
 - new-product / candidate-0050db4aff002bd7d0dd: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-54a2c46e236b5ca1a761: Pack weight is ambiguous; listing skipped
 - new-product / candidate-35279a23076451181e10: No verified product image URL
 - new-product / candidate-edc89c939b77a6f2f869: No verified product image URL
-- new-product / candidate-3cdcf3c9a3610b9f14b6: Nightly time budget reached; remaining values retained
-- new-product / candidate-f50bd537cb319a30c3e0: Nightly time budget reached; remaining values retained
+- new-product / candidate-3cdcf3c9a3610b9f14b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-f50bd537cb319a30c3e0: Cannot confirm one product on the discovered URL
 - new-product / candidate-7269a2b1e64f09784422: No verified product image URL
-- new-product / candidate-8a30fc25e5f538bec0e1: Nightly time budget reached; remaining values retained
-- new-product / candidate-19b2add6caca11311855: Nightly time budget reached; remaining values retained
+- new-product / candidate-06d08b1bee70d1737837: Cannot confirm one product on the discovered URL
+- new-product / candidate-19b2add6caca11311855: Cannot confirm one product on the discovered URL
 - new-product / candidate-d38ef1e6e2b02d4e0cf9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
-- new-product / candidate-5c9bad509369a8abeb6f: Nightly time budget reached; remaining values retained
-- new-product / candidate-0f7c7041a3528dd3f7d5: Nightly time budget reached; remaining values retained
-- new-product / candidate-c5b502c05fb8cd80fefb: Nightly time budget reached; remaining values retained
-- new-product / candidate-de52e959b51252936fba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6ed6e12a49a216e7a31c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5c9bad509369a8abeb6f: HTTP Error 403: Forbidden
+- new-product / candidate-0f7c7041a3528dd3f7d5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c5b502c05fb8cd80fefb: No single GBP offer for the exact product
+- new-product / candidate-6c558d66fc27c9ddb595: No single GBP offer for the exact product
 - new-product / candidate-2de219742ffe920749ff: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-751c1133dfd24ae2a3ef: Cannot confirm that the product is a material or printer
-- new-product / candidate-cdef1de6d1730d03c279: Nightly time budget reached; remaining values retained
 - new-product / candidate-29414b136ce243ef1fc2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
 - new-product / candidate-dc5eda7e8cf13b5fbe7f: No verified product image URL
 - new-product / candidate-bedaff93aa8ff28d45b3: No verified product image URL
-- new-product / candidate-ed398141cf9889704f77: Nightly time budget reached; remaining values retained
-- new-product / candidate-8caa010446f0e7ef4255: Nightly time budget reached; remaining values retained
+- new-product / candidate-ed398141cf9889704f77: Cannot confirm one product on the discovered URL
+- new-product / candidate-8caa010446f0e7ef4255: Cannot confirm one product on the discovered URL
 - new-product / candidate-2fbf10455172358cc8cd: Cannot confirm that the product is a material or printer
-- new-product / candidate-99a8db5843b01ba1a50b: Nightly time budget reached; remaining values retained
-- new-product / candidate-3382073bb0021ee0aa2f: Nightly time budget reached; remaining values retained
+- new-product / candidate-6a8467b7ae9a0521bc33: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e96ddba614ea5e31167: Pack weight is ambiguous; listing skipped
+- new-product / candidate-3382073bb0021ee0aa2f: Cannot confirm one product on the discovered URL
 - new-product / candidate-7b4c238f26c30a9b9690: Source does not state the material pack weight; listing skipped
-- new-product / candidate-626f6ffb4ad79ca74fb4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bf164e921b9d29ef65f8: Nightly time budget reached; remaining values retained
-- new-product / candidate-c64641a9b6f3391f5155: Nightly time budget reached; remaining values retained
-- new-product / candidate-3a2c8203e56e4caa5865: Nightly time budget reached; remaining values retained
-- new-product / candidate-14ba8d51544ba8b0a9ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-654e82e01c86de8ccc05: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0dfc22adcebe23c1d513: No verified product image URL
+- new-product / candidate-bf164e921b9d29ef65f8: HTTP Error 403: Forbidden
+- new-product / candidate-c64641a9b6f3391f5155: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3a2c8203e56e4caa5865: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdef1de6d1730d03c279: No single GBP offer for the exact product
 - new-product / candidate-2221aba97ffead630514: Cannot confirm that the product is a material or printer
 - new-product / candidate-c671fa478b7fe142c392: Cannot confirm that the product is a material or printer
-- new-product / candidate-4245bb7df03baf4777d3: Nightly time budget reached; remaining values retained
 - new-product / candidate-24be338c072df31bce81: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d6265f19d947d1695fca: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e2dabe13ed36b61c9cb: No verified product image URL
 - new-product / candidate-e63e0098888983f06d63: No verified product image URL
-- new-product / candidate-8a144ce0fd1e775f869e: Nightly time budget reached; remaining values retained
-- new-product / candidate-a83530ea1ef297bbf6b2: Nightly time budget reached; remaining values retained
+- new-product / candidate-8a144ce0fd1e775f869e: Cannot confirm one product on the discovered URL
+- new-product / candidate-a83530ea1ef297bbf6b2: Cannot confirm one product on the discovered URL
 - new-product / candidate-7af2a9ac7bffa63715f6: Cannot confirm that the product is a material or printer
-- new-product / candidate-20c89bd28387355c4b85: Nightly time budget reached; remaining values retained
-- new-product / candidate-7895ac55754f90a43c59: Nightly time budget reached; remaining values retained
+- new-product / candidate-0091ecefdd82eb1aecaa: Cannot confirm one product on the discovered URL
+- new-product / candidate-626f6ffb4ad79ca74fb4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7895ac55754f90a43c59: Cannot confirm one product on the discovered URL
 - new-product / candidate-f30fc7ab4115d53e3551: Source does not state the material pack weight; listing skipped
-- new-product / candidate-acf1a16df1e82233f96f: Pack weight is ambiguous; listing skipped
-- new-product / candidate-00d691390547fac947ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-08840d77d7bacf07edde: Nightly time budget reached; remaining values retained
-- new-product / candidate-6a6fa77fd4be78d17565: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f94224ad377fe34d8cb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8df3003f8e493ad5c49b: No verified product image URL
-- new-product / candidate-837740bde275395aeae4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-00d691390547fac947ad: HTTP Error 403: Forbidden
+- new-product / candidate-08840d77d7bacf07edde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6a6fa77fd4be78d17565: Pack weight is ambiguous; listing skipped
+- new-product / candidate-c22170a6c9ce3ed94e43: No verified product image URL
+- new-product / candidate-4245bb7df03baf4777d3: No single GBP offer for the exact product
 - new-product / candidate-ab2dda6617b9216e8abe: Cannot confirm that the product is a material or printer
 - new-product / candidate-ba9bebde0ef572eff3a2: No verified product image URL
-- new-product / candidate-ab9a05d1b1533b08a4b3: Nightly time budget reached; remaining values retained
 - new-product / candidate-a54d0dc9a769b0dc955e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb1aafe8767a5fda67a1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cabe9bad84fec81dd94f: No verified product image URL
 - new-product / candidate-09be5675d5e797a59520: No verified product image URL
-- new-product / candidate-dbf9de0175401ebdfb7a: Nightly time budget reached; remaining values retained
-- new-product / candidate-9ff5ee235ebff7197e3e: Nightly time budget reached; remaining values retained
+- new-product / candidate-dbf9de0175401ebdfb7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-9ff5ee235ebff7197e3e: Cannot confirm one product on the discovered URL
 - new-product / candidate-3e6fd1e349d4a5b69754: Cannot confirm that the product is a material or printer
-- new-product / candidate-8d55aac0c245d97ae87e: Nightly time budget reached; remaining values retained
-- new-product / candidate-8a4dcec7abd6d63a9948: Nightly time budget reached; remaining values retained
+- new-product / candidate-1990f3983bfba1f4c732: Cannot confirm one product on the discovered URL
+- new-product / candidate-acf1a16df1e82233f96f: Pack weight is ambiguous; listing skipped
+- new-product / candidate-8a4dcec7abd6d63a9948: Cannot confirm one product on the discovered URL
 - new-product / candidate-20811143d4c8d331c827: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4bbea4f5c5b29a2f96d0: Pack weight is ambiguous; listing skipped
-- new-product / candidate-b11e4c94364add54ebec: Nightly time budget reached; remaining values retained
-- new-product / candidate-268efc0b49d232698da0: Nightly time budget reached; remaining values retained
-- new-product / candidate-16fd16d1b7e78514073e: Nightly time budget reached; remaining values retained
-- new-product / candidate-148393c27baff142f0cf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bc87857e971c1fd46363: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-06383d4b14e0c1eae2b4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b11e4c94364add54ebec: HTTP Error 403: Forbidden
+- new-product / candidate-268efc0b49d232698da0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-16fd16d1b7e78514073e: HTTP Error 404: Not Found
+- new-product / candidate-a89ebf6b08f60897adad: No verified product image URL
+- new-product / candidate-ab9a05d1b1533b08a4b3: No single GBP offer for the exact product
+- new-product / candidate-6ed6e12a49a216e7a31c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-1f3084e8b8d1d97bb651: Cannot confirm that the product is a material or printer
 - new-product / candidate-37b35ddb47116992a67c: Cannot confirm that the product is a material or printer
-- new-product / candidate-8110e594e4fa6f916d7e: Nightly time budget reached; remaining values retained
 - new-product / candidate-2c53f5f1b31e55d97483: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d67474d9fd5638f2add4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b3f5dbbb915e26792697: No verified product image URL
 - new-product / candidate-fae3139425de9710538d: No verified product image URL
-- new-product / candidate-61bc3ac8fbc3175d4930: Nightly time budget reached; remaining values retained
-- new-product / candidate-62bee27d999998dc1975: Nightly time budget reached; remaining values retained
+- new-product / candidate-61bc3ac8fbc3175d4930: Cannot confirm one product on the discovered URL
+- new-product / candidate-62bee27d999998dc1975: Cannot confirm one product on the discovered URL
 - new-product / candidate-6ad1d41a066ae3a92c71: Cannot confirm that the product is a material or printer
-- new-product / candidate-2ed871469855f5b0ae03: Nightly time budget reached; remaining values retained
-- new-product / candidate-550c023853126dd6b38a: Nightly time budget reached; remaining values retained
+- new-product / candidate-4e2cf184357f4a3b6429: Cannot confirm one product on the discovered URL
+- new-product / candidate-4bbea4f5c5b29a2f96d0: Pack weight is ambiguous; listing skipped
+- new-product / candidate-550c023853126dd6b38a: Cannot confirm one product on the discovered URL
 - new-product / candidate-e3b951e190310be5cc1d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-48e6426ee65e3c26e2b8: Pack weight is ambiguous; listing skipped
-- new-product / candidate-1c26615eb28cb254a26b: Nightly time budget reached; remaining values retained
-- new-product / candidate-0619b53c9ecf35136174: Nightly time budget reached; remaining values retained
-- new-product / candidate-0161c4068eaf541f2f19: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc14f6a0c19f8ded0036: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2e052c7f03d6f82bdbde: Cannot confirm that the product is a material or printer
+- new-product / candidate-1c26615eb28cb254a26b: HTTP Error 403: Forbidden
+- new-product / candidate-0619b53c9ecf35136174: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0161c4068eaf541f2f19: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c2de2e3056a7aea4744: No verified product image URL
+- new-product / candidate-8110e594e4fa6f916d7e: No single GBP offer for the exact product
 - new-product / candidate-5b720cca83b8ed7351da: Cannot confirm that the product is a material or printer
 - new-product / candidate-437f3179d085d4b713fe: Cannot confirm that the product is a material or printer
-- new-product / candidate-326de91957426dcbbf23: Nightly time budget reached; remaining values retained
-- new-product / candidate-c4535611d3695eebe57b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-93eb9048fce2e661876e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1bdc4e1ee898615397c0: No verified product image URL
 - new-product / candidate-cd8e6d249e1f13e34be0: No verified product image URL
-- new-product / candidate-ac7c3fb3c7c4bc32f1ac: Nightly time budget reached; remaining values retained
-- new-product / candidate-f06f55d11daeb8c1c5ab: Nightly time budget reached; remaining values retained
+- new-product / candidate-ac7c3fb3c7c4bc32f1ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-f06f55d11daeb8c1c5ab: Cannot confirm one product on the discovered URL
 - new-product / candidate-8f2e292e8d8c8a8c910c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c5ed9b9660186e46e117: Nightly time budget reached; remaining values retained
-- new-product / candidate-d03f088ee05818addedd: Nightly time budget reached; remaining values retained
+- new-product / candidate-a978bd86f6c2d44131e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-48e6426ee65e3c26e2b8: Pack weight is ambiguous; listing skipped
+- new-product / candidate-d03f088ee05818addedd: Cannot confirm one product on the discovered URL
 - new-product / candidate-8323ff41725696e16acb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-525ae27b0c863fdfa280: Pack weight is ambiguous; listing skipped
-- new-product / candidate-1e2f0cf5c1ee67d431e6: Nightly time budget reached; remaining values retained
-- new-product / candidate-5bff1c7a7951a0b8ff9d: Nightly time budget reached; remaining values retained
-- new-product / candidate-cf631a7d86143107098b: Nightly time budget reached; remaining values retained
-- new-product / candidate-5f4c5706c8501871873e: No verified product image URL
-- new-product / candidate-d9c4173ff745dda144c1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b41a9a24fa78cd18f50e: No verified product image URL
+- new-product / candidate-1e2f0cf5c1ee67d431e6: HTTP Error 403: Forbidden
+- new-product / candidate-5bff1c7a7951a0b8ff9d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cf631a7d86143107098b: No single GBP offer for the exact product
+- new-product / candidate-0a0e0c3c6a5804f60436: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6a3c1276aae9244f4776: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-326de91957426dcbbf23: No single GBP offer for the exact product
+- new-product / candidate-0dfc22adcebe23c1d513: No verified product image URL
 - new-product / candidate-7ad80c9f5cff5b72b023: Cannot confirm that the product is a material or printer
 - new-product / candidate-496655b483325e12f7ab: Cannot confirm that the product is a material or printer
-- new-product / candidate-5ca5b584be2228ca4bf1: Nightly time budget reached; remaining values retained
 - new-product / candidate-9a234a37549588abdd8f: Pack weight is ambiguous; listing skipped
-- new-product / candidate-5a097889d4f50e8a3470: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c4535611d3695eebe57b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9625f61c9f426195e05f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cbd3827b7276fd03ec30: No verified product image URL
-- new-product / candidate-5ac4a2eab95510bf56a3: Nightly time budget reached; remaining values retained
-- new-product / candidate-0cfb397fdf6356ade524: Nightly time budget reached; remaining values retained
+- new-product / candidate-5ac4a2eab95510bf56a3: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cfb397fdf6356ade524: Cannot confirm one product on the discovered URL
 - new-product / candidate-dfd288081ba7fe209054: Source does not state the material pack weight; listing skipped
-- new-product / candidate-519c2210c00920327c27: Nightly time budget reached; remaining values retained
-- new-product / candidate-21a5c88dcb9cedbca6dd: Nightly time budget reached; remaining values retained
+- new-product / candidate-8c595a50ede78209773a: Cannot confirm one product on the discovered URL
+- new-product / candidate-525ae27b0c863fdfa280: Pack weight is ambiguous; listing skipped
+- new-product / candidate-21a5c88dcb9cedbca6dd: Cannot confirm one product on the discovered URL
 - new-product / candidate-29474a34e170d309ae78: Source does not state the material pack weight; listing skipped
-- new-product / candidate-59b3e60c98a700bea704: Pack weight is ambiguous; listing skipped
-- new-product / candidate-c2e3b4a5104fbd579850: Nightly time budget reached; remaining values retained
-- new-product / candidate-b67ad0f4a99416be5af1: Nightly time budget reached; remaining values retained
-- new-product / candidate-2c63f6eb0588c173087d: Nightly time budget reached; remaining values retained
-- new-product / candidate-36d910fac35497cb2a49: No verified product image URL
-- new-product / candidate-92e556163edc57cda79f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0614b0647aa7b9aed99b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c2e3b4a5104fbd579850: HTTP Error 403: Forbidden
+- new-product / candidate-b67ad0f4a99416be5af1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2c63f6eb0588c173087d: No single GBP offer for the exact product
+- new-product / candidate-07058e356827b57a9e24: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-594007578fbb5a68fa2a: Cannot confirm that the product is a material or printer
+- new-product / candidate-5ca5b584be2228ca4bf1: HTTP Error 404: Not Found
+- new-product / candidate-837740bde275395aeae4: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-900d31c49adb33b84ab5: Cannot confirm that the product is a material or printer
 - new-product / candidate-825d8d47aa33bae36bb3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d83134d0478c6c3c6552: Nightly time budget reached; remaining values retained
 - new-product / candidate-7310de001890d9ebceb9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5a097889d4f50e8a3470: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bde6337dae90f04c359e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-26e02c12a791d6e16e9f: No verified product image URL
-- new-product / candidate-d35a546f9ec5bad8cf6c: Nightly time budget reached; remaining values retained
-- new-product / candidate-077e05f7011ba673d296: Nightly time budget reached; remaining values retained
+- new-product / candidate-d35a546f9ec5bad8cf6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-077e05f7011ba673d296: Cannot confirm one product on the discovered URL
 - new-product / candidate-5394af0330aebb766ff5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9fae9fff602fe6a304c6: Nightly time budget reached; remaining values retained
+- new-product / candidate-284587c265fa37d9505d: Cannot confirm one product on the discovered URL
+- new-product / candidate-59b3e60c98a700bea704: Pack weight is ambiguous; listing skipped
 - new-product / candidate-b39835f77dd810f43de6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1af75270a2b170829c9b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-324adf3504461e59faae: Nightly time budget reached; remaining values retained
-- new-product / candidate-6eae80c562ad8c61ae60: Nightly time budget reached; remaining values retained
-- new-product / candidate-977e582013f20aa587ca: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-71617d1a7fa90731f2d3: No verified product image URL
+- new-product / candidate-324adf3504461e59faae: HTTP Error 403: Forbidden
+- new-product / candidate-6eae80c562ad8c61ae60: No single GBP offer for the exact product
+- new-product / candidate-3db48c113202ca166ab2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d9c4173ff745dda144c1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d83134d0478c6c3c6552: No single GBP offer for the exact product
+- new-product / candidate-06383d4b14e0c1eae2b4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8f1a513dd1fc9de9ed3f: Cannot confirm that the product is a material or printer
 - new-product / candidate-6bb556c8025616a8f32f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-30ee9779e728afaf49f9: Nightly time budget reached; remaining values retained
 - new-product / candidate-a448d0343b0f150f0446: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fce6ae87375878b35f14: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb2c34405705f5ace895: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fa23e2883cfbbf45a75d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-92fdc3ee3e24896faffe: No verified product image URL
-- new-product / candidate-f1b8c14898a242654934: Nightly time budget reached; remaining values retained
-- new-product / candidate-5346b795711ca8a883bd: Nightly time budget reached; remaining values retained
+- new-product / candidate-f1b8c14898a242654934: Cannot confirm one product on the discovered URL
+- new-product / candidate-5346b795711ca8a883bd: Cannot confirm one product on the discovered URL
 - new-product / candidate-50f8d58ae7467565c0d8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5dd9adca78d181f7dee1: Nightly time budget reached; remaining values retained
+- new-product / candidate-a324760837d8e4e6d459: Cannot confirm one product on the discovered URL
+- new-product / candidate-1af75270a2b170829c9b: Pack weight is ambiguous; listing skipped
 - new-product / candidate-30ca8f8cba8afc6f19a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c9ac2b7fa5af248a85eb: Pack weight is ambiguous; listing skipped
-- new-product / candidate-d358eee9e37ae321b507: Nightly time budget reached; remaining values retained
-- new-product / candidate-2bdc8a8fc2e3dfee6731: Nightly time budget reached; remaining values retained
-- new-product / candidate-f59be60f03df71f55f26: No verified product image URL
-- new-product / candidate-ebb1e0fb52275f48ed25: No verified product image URL
-- new-product / candidate-0e24e05e66beb8655d03: No verified product image URL
+- new-product / candidate-d358eee9e37ae321b507: HTTP Error 403: Forbidden
+- new-product / candidate-2bdc8a8fc2e3dfee6731: No single GBP offer for the exact product
+- new-product / candidate-759350363df071283761: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-92e556163edc57cda79f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-30ee9779e728afaf49f9: No single GBP offer for the exact product
 - new-product / candidate-835c012af67ede7d41bd: Cannot confirm that the product is a material or printer
 - new-product / candidate-b1de0aedf6ba53c27154: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31a1d44d92216663d9e4: Nightly time budget reached; remaining values retained
 - new-product / candidate-67f1670f748995592c44: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fce1ba3929b340c5c680: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fce6ae87375878b35f14: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f19670188d1b9018c9f1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-41f39aa40b3bb38b9cd8: No verified product image URL
-- new-product / candidate-3efb3718ce2e0e84930c: Nightly time budget reached; remaining values retained
-- new-product / candidate-dde82a73c19cf94510f9: Nightly time budget reached; remaining values retained
+- new-product / candidate-3efb3718ce2e0e84930c: Cannot confirm one product on the discovered URL
+- new-product / candidate-dde82a73c19cf94510f9: Cannot confirm one product on the discovered URL
 - new-product / candidate-76560453537d20f624f9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9eec6695c6b0764f1b2d: Nightly time budget reached; remaining values retained
+- new-product / candidate-74e296886b6a068c42a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9ac2b7fa5af248a85eb: Pack weight is ambiguous; listing skipped
 - new-product / candidate-caa4f8846bbaac144058: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0ac6fe9208deb2c07b20: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e34d6ca000ecbb9ee12c: Nightly time budget reached; remaining values retained
-- new-product / candidate-90625358fcf8e1d310ef: Nightly time budget reached; remaining values retained
-- new-product / candidate-72ff504d0dd052d962dc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c1727000b90adf613e40: No verified product image URL
-- new-product / candidate-2d860c67d0043dbb6bb3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e34d6ca000ecbb9ee12c: HTTP Error 403: Forbidden
+- new-product / candidate-90625358fcf8e1d310ef: No single GBP offer for the exact product
+- new-product / candidate-fe09ff9a131767223b34: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-71617d1a7fa90731f2d3: No verified product image URL
+- new-product / candidate-31a1d44d92216663d9e4: No single GBP offer for the exact product
 - new-product / candidate-661a92e6429dcf056a2c: Cannot confirm that the product is a material or printer
 - new-product / candidate-20628a23ff0a0b728090: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a977be636e5e2acc659f: Nightly time budget reached; remaining values retained
 - new-product / candidate-0a8b63972b7c088ec124: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-556b938b9c7e5faf1cc4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fce1ba3929b340c5c680: Source does not state the material pack weight; listing skipped
 - new-product / candidate-be75f2ccb7d3e9ecd1f3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-078bad6932c618de225b: No verified product image URL
-- new-product / candidate-1775bf9d0c4a440fa3df: Nightly time budget reached; remaining values retained
-- new-product / candidate-15f9cd8e3353419264dd: Nightly time budget reached; remaining values retained
+- new-product / candidate-1775bf9d0c4a440fa3df: Cannot confirm one product on the discovered URL
+- new-product / candidate-15f9cd8e3353419264dd: Cannot confirm one product on the discovered URL
 - new-product / candidate-f08a2b51c0bdb3133a31: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1d6fbf2b52b24cb0d645: Nightly time budget reached; remaining values retained
+- new-product / candidate-2a46606263b86fc736d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ac6fe9208deb2c07b20: Source does not state the material pack weight; listing skipped
 - new-product / candidate-95321f6e741327174404: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2ce2c42994331522a268: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4506b5d58c28e91e5236: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc12685e1df40d28f34b: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1305888c90b7b13e5b5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-4506b5d58c28e91e5236: HTTP Error 403: Forbidden
+- new-product / candidate-dc12685e1df40d28f34b: No single GBP offer for the exact product
+- new-product / candidate-b3ebe6c9d58e7f947f56: No verified product image URL
+- new-product / candidate-ebb1e0fb52275f48ed25: No verified product image URL
+- new-product / candidate-a977be636e5e2acc659f: No single GBP offer for the exact product
 - new-product / candidate-381f6644b102998c72cc: Cannot confirm that the product is a material or printer
 - new-product / candidate-92a6c620c08556fcf02f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-66a8a61e68a3ea18649b: Nightly time budget reached; remaining values retained
 - new-product / candidate-baa23f3ccd045c416182: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-23dad5918cc695b4f16d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-556b938b9c7e5faf1cc4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-49e1bcfdf0a5c9cdd076: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-11ad2408487febe3e620: No verified product image URL
-- new-product / candidate-2b08eecc5afd0dc9be0c: Nightly time budget reached; remaining values retained
-- new-product / candidate-21c4150122e28b73a0a8: Nightly time budget reached; remaining values retained
-- new-product / candidate-b6bdcfb8696216c5468a: Nightly time budget reached; remaining values retained
+- new-product / candidate-2b08eecc5afd0dc9be0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-21c4150122e28b73a0a8: Cannot confirm one product on the discovered URL
+- new-product / candidate-3bfb024a16cd88f2e744: Cannot confirm one product on the discovered URL
+- new-product / candidate-2ce2c42994331522a268: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4072bc25500cf2a92cb1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6dc942ebc1e112b3d2d3: Pack weight is ambiguous; listing skipped
-- new-product / candidate-cd9c9f2fdf6d6dabaf9d: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fa0450970bea0651163: Nightly time budget reached; remaining values retained
-- new-product / candidate-d84ef37c7aef34d763a2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-65a65fe425ef78feda62: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b049d81465fb04358060: No verified product image URL
+- new-product / candidate-cd9c9f2fdf6d6dabaf9d: HTTP Error 403: Forbidden
+- new-product / candidate-0fa0450970bea0651163: No single GBP offer for the exact product
+- new-product / candidate-632b2561a8d56d8d9006: No verified product image URL
+- new-product / candidate-c1727000b90adf613e40: No verified product image URL
+- new-product / candidate-66a8a61e68a3ea18649b: Cannot confirm that the product is a material or printer
 - new-product / candidate-7d990452a1abdb9e084f: No verified product image URL
 - new-product / candidate-27405e3b3d32cc7d66b9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b1d8504aadb279343fed: Nightly time budget reached; remaining values retained
 - new-product / candidate-66110c2261688f5cb360: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-97b566f69692ce3f6282: Source does not state the material pack weight; listing skipped
+- new-product / candidate-23dad5918cc695b4f16d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b41d6089f6eae4dce5a7: No verified product image URL
 - new-product / candidate-a99630ea9ccba11f3e5d: No verified product image URL
-- new-product / candidate-ad30c385b9c0bb5f98d3: Nightly time budget reached; remaining values retained
-- new-product / candidate-0ba7b6398ecb974b8033: Nightly time budget reached; remaining values retained
-- new-product / candidate-ecefeb4d3808ed257706: Nightly time budget reached; remaining values retained
+- new-product / candidate-ad30c385b9c0bb5f98d3: Cannot confirm one product on the discovered URL
+- new-product / candidate-0ba7b6398ecb974b8033: Cannot confirm one product on the discovered URL
+- new-product / candidate-605805eb9b1aa2ab847f: Cannot confirm one product on the discovered URL
+- new-product / candidate-6dc942ebc1e112b3d2d3: Pack weight is ambiguous; listing skipped
 - new-product / candidate-07eb17435d2dd31410a3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-57d45be50af66f522f8d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ed1b11db30ff15b5b299: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c3026fff52bf2d91f78: Nightly time budget reached; remaining values retained
-- new-product / candidate-168211b647173585677b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e714adc18f0acb9bb3b2: No verified product image URL
-- new-product / candidate-2014b6be7d1fb85155ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ed1b11db30ff15b5b299: HTTP Error 403: Forbidden
+- new-product / candidate-3c3026fff52bf2d91f78: No single GBP offer for the exact product
+- new-product / candidate-861b77fd981ee3bf13df: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-b1d8504aadb279343fed: No single GBP offer for the exact product
 - new-product / candidate-193682a94843b6794723: No verified product image URL
 - new-product / candidate-7fd89bc10762210295c7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ebad08612651df174622: Nightly time budget reached; remaining values retained
 - new-product / candidate-d048ed7dcb892c4a46bf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
+- new-product / candidate-97b566f69692ce3f6282: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c971ea9f1eb2efcc551d: No verified product image URL
 - new-product / candidate-22bc79134290ed41546c: No verified product image URL
-- new-product / candidate-f21d1cfefe8ee4d87f9e: Nightly time budget reached; remaining values retained
-- new-product / candidate-3f8e67d003cdc49c75dc: Nightly time budget reached; remaining values retained
-- new-product / candidate-0c963b94ab1fcd3443a4: Nightly time budget reached; remaining values retained
+- new-product / candidate-f21d1cfefe8ee4d87f9e: Cannot confirm one product on the discovered URL
+- new-product / candidate-3f8e67d003cdc49c75dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-01ae701b59e7e730c286: Cannot confirm one product on the discovered URL
+- new-product / candidate-57d45be50af66f522f8d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-37e2b83a0dca3ad0de5c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ebd76b7fbf1bf40ab032: Source does not state the material pack weight; listing skipped
-- new-product / candidate-624cc97d4e8dfee48cc5: Nightly time budget reached; remaining values retained
-- new-product / candidate-921589079216f695fd02: Nightly time budget reached; remaining values retained
-- new-product / candidate-e89e29e3a40f11e916ca: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-02afc5a6bbdadfe9fe97: No verified product image URL
+- new-product / candidate-624cc97d4e8dfee48cc5: HTTP Error 403: Forbidden
+- new-product / candidate-921589079216f695fd02: No single GBP offer for the exact product
+- new-product / candidate-e41cd2c703a4e94c7b44: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-65a65fe425ef78feda62: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebad08612651df174622: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b41a9a24fa78cd18f50e: No verified product image URL
 - new-product / candidate-736398479bba7752fb64: No verified product image URL
 - new-product / candidate-2ae5b5a2e8a6b1ef98a6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b8926aba23d228af78ef: Nightly time budget reached; remaining values retained
 - new-product / candidate-0c96d4337de2dcbcebfb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c3b624367c7b15ca166e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e57b252921bf0ee24b3d: No verified product image URL
 - new-product / candidate-77c70e13437c0ad9c6b3: No verified product image URL
-- new-product / candidate-5b6e063c94689a56a98f: Nightly time budget reached; remaining values retained
-- new-product / candidate-40d6a9195fbac907af29: Nightly time budget reached; remaining values retained
-- new-product / candidate-28d546b2a082d712013e: Nightly time budget reached; remaining values retained
+- new-product / candidate-5b6e063c94689a56a98f: Cannot confirm one product on the discovered URL
+- new-product / candidate-40d6a9195fbac907af29: Cannot confirm one product on the discovered URL
+- new-product / candidate-e52aef8046adb8b85e61: Cannot confirm one product on the discovered URL
+- new-product / candidate-ebd76b7fbf1bf40ab032: Source does not state the material pack weight; listing skipped
 - new-product / candidate-db39e822975c775f9f66: Source does not state the material pack weight; listing skipped
-- new-product / candidate-90277e946144dba5b0ef: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b4a960faab8357701e01: Nightly time budget reached; remaining values retained
-- new-product / candidate-27b0d2e92d84850a6ffa: Nightly time budget reached; remaining values retained
-- new-product / candidate-8bea018fa6265534e84d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0d1c2bc525111af551ee: No verified product image URL
-- new-product / candidate-8494be143ca77b5976e3: No verified product image URL
+- new-product / candidate-b4a960faab8357701e01: HTTP Error 403: Forbidden
+- new-product / candidate-27b0d2e92d84850a6ffa: Pack weight is ambiguous; listing skipped
+- new-product / candidate-921c52a21288223b5e56: No verified product image URL
+- new-product / candidate-e714adc18f0acb9bb3b2: No verified product image URL
+- new-product / candidate-b8926aba23d228af78ef: No single GBP offer for the exact product
+- new-product / candidate-0614b0647aa7b9aed99b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a6eb5b78550c5280e115: No verified product image URL
 - new-product / candidate-85aab4697386ea3cba38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-93f8f0a00b1db83fc209: Nightly time budget reached; remaining values retained
 - new-product / candidate-bd0c2beaf5bb8fcc734c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-eb9450ba72bfd8fd2e3c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-dcf5b21469a8b49f13a2: No verified product image URL
 - new-product / candidate-7511d735bbec6f64f050: No verified product image URL
-- new-product / candidate-3fc2135e9b9b2dc23f83: Nightly time budget reached; remaining values retained
-- new-product / candidate-083e6e1c0c891cc89033: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2f2ccd764311c68ea16: Nightly time budget reached; remaining values retained
+- new-product / candidate-3fc2135e9b9b2dc23f83: Cannot confirm one product on the discovered URL
+- new-product / candidate-083e6e1c0c891cc89033: Cannot confirm one product on the discovered URL
+- new-product / candidate-1469a17d1737c54e0702: Cannot confirm one product on the discovered URL
+- new-product / candidate-90277e946144dba5b0ef: Source does not state the material pack weight; listing skipped
 - new-product / candidate-294dee3df540b150933b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-00ee6ccffc7473b96cd1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f5560708283601091dc8: Nightly time budget reached; remaining values retained
-- new-product / candidate-07a27d5c210e46dd680e: Nightly time budget reached; remaining values retained
-- new-product / candidate-8b0be41bd295f8653eab: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-926b5788011e5d21eff2: Pack weight is ambiguous; listing skipped
-- new-product / candidate-aedb2e6cc3fea73e2845: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f5560708283601091dc8: HTTP Error 403: Forbidden
+- new-product / candidate-07a27d5c210e46dd680e: Cannot confirm one product on the discovered URL
+- new-product / candidate-26210dd79274f0ddefed: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-02afc5a6bbdadfe9fe97: No verified product image URL
+- new-product / candidate-93f8f0a00b1db83fc209: No single GBP offer for the exact product
 - new-product / candidate-3d5d0ff48d73527ffee8: Catalogue GBP price outside supported range
 - new-product / candidate-54a4e7a8d593fc621527: Cannot confirm that the product is a material or printer
-- new-product / candidate-4897525329b9f6e69df1: Nightly time budget reached; remaining values retained
 - new-product / candidate-d726671c3995b31af7f3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e6a8047371ee094474db: Cannot confirm that the product is a material or printer
 - new-product / candidate-ed982d7a12e73498937d: No verified product image URL
 - new-product / candidate-ad0afe76c25bea3c6c56: Cannot confirm that the product is a material or printer
-- new-product / candidate-009129cabb1d6437b71f: Nightly time budget reached; remaining values retained
-- new-product / candidate-ffe871292d74f7a28edf: Nightly time budget reached; remaining values retained
-- new-product / candidate-47b838009fede826291b: Nightly time budget reached; remaining values retained
+- new-product / candidate-009129cabb1d6437b71f: Cannot confirm one product on the discovered URL
+- new-product / candidate-ffe871292d74f7a28edf: Cannot confirm one product on the discovered URL
+- new-product / candidate-a36979bc8a76edcb2e27: Cannot confirm one product on the discovered URL
+- new-product / candidate-00ee6ccffc7473b96cd1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5ff0f37526ec50e3ca9f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f42a53d531596ec9458a: Pack weight is ambiguous; listing skipped
-- new-product / candidate-b5c1a36216e1369da4f8: Nightly time budget reached; remaining values retained
-- new-product / candidate-b7098398be756088d725: Nightly time budget reached; remaining values retained
-- new-product / candidate-04e0ccec136c65792794: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0c8923fd3a15c27679c0: No verified product image URL
+- new-product / candidate-b5c1a36216e1369da4f8: HTTP Error 403: Forbidden
+- new-product / candidate-b7098398be756088d725: No single GBP offer for the exact product
+- new-product / candidate-9769c409bd4f02454db3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0d1c2bc525111af551ee: No verified product image URL
+- new-product / candidate-4897525329b9f6e69df1: No single GBP offer for the exact product
 - new-product / candidate-a5e8f46c712fc2ae8322: No verified product image URL
 - new-product / candidate-1c35248400fb89878d68: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-37082fdfa1e3cc25b50a: Nightly time budget reached; remaining values retained
 - new-product / candidate-36c8ff0eb8c3e5a07af1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-94692daf3656b01541ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5e100c7706994e9acea9: No verified product image URL
 - new-product / candidate-51db7c4c5a74090c9cf1: No verified product image URL
-- new-product / candidate-a303e9859d2d496d4ad2: Nightly time budget reached; remaining values retained
-- new-product / candidate-299307c345b07888caa1: Nightly time budget reached; remaining values retained
-- new-product / candidate-3b69068aa9c72c2f2417: Nightly time budget reached; remaining values retained
+- new-product / candidate-a303e9859d2d496d4ad2: Cannot confirm one product on the discovered URL
+- new-product / candidate-299307c345b07888caa1: Cannot confirm one product on the discovered URL
+- new-product / candidate-97d3363a7db9f43d51f2: Cannot confirm one product on the discovered URL
+- new-product / candidate-f42a53d531596ec9458a: Pack weight is ambiguous; listing skipped
 - new-product / candidate-92fcce8d9db164b60fb2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c5d16cbc55e1e862cfb4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-00e111c00285ef98a0f1: Nightly time budget reached; remaining values retained
-- new-product / candidate-8ad88b1278e1e2303ef7: Nightly time budget reached; remaining values retained
-- new-product / candidate-ca7c3eac5782bf0b54b4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-424091d36c7726b29c65: No verified product image URL
-- new-product / candidate-93ba787b8fd934b316c7: No verified product image URL
+- new-product / candidate-00e111c00285ef98a0f1: HTTP Error 403: Forbidden
+- new-product / candidate-8ad88b1278e1e2303ef7: Pack weight is ambiguous; listing skipped
+- new-product / candidate-16c602f6396e9362ad96: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-926b5788011e5d21eff2: Pack weight is ambiguous; listing skipped
+- new-product / candidate-37082fdfa1e3cc25b50a: Cannot confirm that the product is a material or printer
 - new-product / candidate-21969bf73671339efc23: No verified product image URL
-- new-product / candidate-2c96fa3baf3f9a6e5cd9: Nightly time budget reached; remaining values retained
 - new-product / candidate-9a05667089e22b748bd1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9cfc20cc6b46a512b9c4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ebd56c45a9af521cc3aa: No verified product image URL
 - new-product / candidate-2fd4b658256200526a43: No verified product image URL
-- new-product / candidate-e7dd6ebd48cd07f3b0d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-71cbc633f00f9bd8fbd4: Nightly time budget reached; remaining values retained
-- new-product / candidate-f7bdf260c97f2c60ce47: Nightly time budget reached; remaining values retained
+- new-product / candidate-e7dd6ebd48cd07f3b0d7: Cannot confirm one product on the discovered URL
+- new-product / candidate-71cbc633f00f9bd8fbd4: Cannot confirm one product on the discovered URL
+- new-product / candidate-d8d771ddbe6493a28d28: Cannot confirm one product on the discovered URL
+- new-product / candidate-c5d16cbc55e1e862cfb4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d431efdfeac6e1250860: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2e6b8ac373bc66b2b007: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e6b3d73f8c19cb8c67c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-03adeeb4ac9dea431419: Nightly time budget reached; remaining values retained
-- new-product / candidate-12f8076a301250f69d27: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a4f4f3dc9d6bdb26f472: No verified product image URL
-- new-product / candidate-67d4a490f7e02a35d56b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e6b3d73f8c19cb8c67c6: HTTP Error 403: Forbidden
+- new-product / candidate-03adeeb4ac9dea431419: HTTP Error 404: Not Found
+- new-product / candidate-b7ed669db7edf12b7913: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0c8923fd3a15c27679c0: No verified product image URL
+- new-product / candidate-2c96fa3baf3f9a6e5cd9: No single GBP offer for the exact product
 - new-product / candidate-1d944edb4f0263f7131a: No verified product image URL
-- new-product / candidate-3fff308800379a2b107a: Nightly time budget reached; remaining values retained
 - new-product / candidate-635d248e76e27cc86e2a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-81673e814f99b15dfedf: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ba8e3bc516bb64c77020: No verified product image URL
 - new-product / candidate-9add7b1024399183e64a: No verified product image URL
-- new-product / candidate-aaebe9d8f89c2a6dd746: Nightly time budget reached; remaining values retained
-- new-product / candidate-40868c72c9d180ceba9f: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b5b6a661d487cd56496: Nightly time budget reached; remaining values retained
+- new-product / candidate-aaebe9d8f89c2a6dd746: Cannot confirm one product on the discovered URL
+- new-product / candidate-40868c72c9d180ceba9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-02d06748d8d40c56dfb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e6b8ac373bc66b2b007: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f7746a373c29bf17e25c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-abe8ee8f0e9e44bc3a38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-93c9f5813de91534e838: Nightly time budget reached; remaining values retained
-- new-product / candidate-095409d82aa7be401065: Nightly time budget reached; remaining values retained
-- new-product / candidate-e02dbefcb15a9b4c386f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b543cda9c4fe1513fc67: No verified product image URL
+- new-product / candidate-93c9f5813de91534e838: HTTP Error 403: Forbidden
+- new-product / candidate-095409d82aa7be401065: No single GBP offer for the exact product
+- new-product / candidate-610ee3a9302644d02251: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-424091d36c7726b29c65: No verified product image URL
+- new-product / candidate-3fff308800379a2b107a: No single GBP offer for the exact product
+- new-product / candidate-0e24e05e66beb8655d03: No verified product image URL
 - new-product / candidate-7db081cefbede08bc618: No verified product image URL
-- new-product / candidate-4de019b4aa884a5ddbee: Nightly time budget reached; remaining values retained
 - new-product / candidate-69ed49856fc923212e7a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e6eeb0b823a81e07c628: Source does not state the material pack weight; listing skipped
+- new-product / candidate-229f77759c9f6444b16a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eb86ff5a04a3ad55b383: No verified product image URL
 - new-product / candidate-25aeb30dc4fa9a26834e: No verified product image URL
-- new-product / candidate-95e70755b23fb7626620: Nightly time budget reached; remaining values retained
-- new-product / candidate-c2a23c5db3b5f484a4d8: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc0e072945fdad9cb5b0: Nightly time budget reached; remaining values retained
+- new-product / candidate-95e70755b23fb7626620: Cannot confirm one product on the discovered URL
+- new-product / candidate-c2a23c5db3b5f484a4d8: Cannot confirm one product on the discovered URL
+- new-product / candidate-04c521b30f6dae1b6df1: Cannot confirm one product on the discovered URL
+- new-product / candidate-abe8ee8f0e9e44bc3a38: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b8b61754d606f4c9c882: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6084b1cc9ee03a3cf671: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-159b1b90eb1b958d682f: Nightly time budget reached; remaining values retained
-- new-product / candidate-673bdf38bb3a589c654e: Nightly time budget reached; remaining values retained
-- new-product / candidate-702610c24a8f9d58bb19: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3aa17a08e403f30f0e42: No verified product image URL
-- new-product / candidate-9b67a3fd22754c4495f8: No verified product image URL
+- new-product / candidate-159b1b90eb1b958d682f: Cannot confirm one product on the discovered URL
+- new-product / candidate-673bdf38bb3a589c654e: Pack weight is ambiguous; listing skipped
+- new-product / candidate-ac73372b960b6a1c8579: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a4f4f3dc9d6bdb26f472: No verified product image URL
+- new-product / candidate-4de019b4aa884a5ddbee: No single GBP offer for the exact product
+- new-product / candidate-2d860c67d0043dbb6bb3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e75ec4ea9f550a9ce989: No verified product image URL
-- new-product / candidate-d8fd0bd09dbb0992b89d: Nightly time budget reached; remaining values retained
 - new-product / candidate-a034d0d9e7efacb01887: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e6eeb0b823a81e07c628: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c7d74e513829760a7c12: No verified product image URL
 - new-product / candidate-908ea9469be03b92552a: No verified product image URL
-- new-product / candidate-27fbc7a159e0431c1904: Nightly time budget reached; remaining values retained
-- new-product / candidate-452c41feedb96e26a816: Nightly time budget reached; remaining values retained
-- new-product / candidate-ceaa86ca3aab8b24c74c: Nightly time budget reached; remaining values retained
+- new-product / candidate-27fbc7a159e0431c1904: Cannot confirm one product on the discovered URL
+- new-product / candidate-452c41feedb96e26a816: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ac9e69522b341b4b4a6: Cannot confirm one product on the discovered URL
+- new-product / candidate-6084b1cc9ee03a3cf671: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-399af7be52483532dc59: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f9e798658a1467f2c3bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4d7dbcefd97e034ec28: Nightly time budget reached; remaining values retained
-- new-product / candidate-c39e5d221f2d4f2cb7cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-1c80d4aaf0849abcf08e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-de4b281ef61b1efac204: Pack weight is ambiguous; listing skipped
-- new-product / candidate-d5f791c056a7a03049a1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4d7dbcefd97e034ec28: Cannot confirm one product on the discovered URL
+- new-product / candidate-c39e5d221f2d4f2cb7cf: No single GBP offer for the exact product
+- new-product / candidate-2588607eeed3989673c3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b543cda9c4fe1513fc67: No verified product image URL
+- new-product / candidate-d8fd0bd09dbb0992b89d: No single GBP offer for the exact product
 - new-product / candidate-5ec931c2a6a0fadad468: No verified product image URL
-- new-product / candidate-f90cd7ef53124d3efbc9: Nightly time budget reached; remaining values retained
 - new-product / candidate-470aeb37e5d42d218d1a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-84ed230726e3c799d3c1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-93b9a7b818aeb6484358: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5ab8dd60421722d143f5: No verified product image URL
 - new-product / candidate-909973039a064126f13a: No verified product image URL
-- new-product / candidate-6d3f388557c8036e4f03: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b2d301aeff0e2993238: Nightly time budget reached; remaining values retained
-- new-product / candidate-a36e1ec708ab192881b4: Nightly time budget reached; remaining values retained
+- new-product / candidate-6d3f388557c8036e4f03: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b2d301aeff0e2993238: Cannot confirm one product on the discovered URL
+- new-product / candidate-91328620578b3c5e1ba4: Cannot confirm one product on the discovered URL
+- new-product / candidate-f9e798658a1467f2c3bd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4878cc835e450e6e15c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-abb88f5fc4e9f1eb8094: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cc3ca6b7c0ed9d79e95c: Nightly time budget reached; remaining values retained
-- new-product / candidate-e3887902ddc079053dad: Nightly time budget reached; remaining values retained
-- new-product / candidate-904e4fd8e6a6ab35766c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8b38ae933e1252060806: No verified product image URL
+- new-product / candidate-cc3ca6b7c0ed9d79e95c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3887902ddc079053dad: No single GBP offer for the exact product
+- new-product / candidate-4f219c447c6d1d80ba44: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3aa17a08e403f30f0e42: No verified product image URL
+- new-product / candidate-f90cd7ef53124d3efbc9: No single GBP offer for the exact product
 - new-product / candidate-9ccd5f79892bbf133faa: No verified product image URL
-- new-product / candidate-81709ddcaa352def44e2: Nightly time budget reached; remaining values retained
 - new-product / candidate-88b5e48fddea6a2b32a8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e414cf540eecb13721ac: Source does not state the material pack weight; listing skipped
+- new-product / candidate-84ed230726e3c799d3c1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5ac06a8507fa7e18b63e: No verified product image URL
 - new-product / candidate-2afc6313a7044840f2ca: No verified product image URL
-- new-product / candidate-0a022d845784673faf7c: Nightly time budget reached; remaining values retained
-- new-product / candidate-d2609f543c666e57119b: Nightly time budget reached; remaining values retained
-- new-product / candidate-1cfe8cdc3d720da090e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-0a022d845784673faf7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2609f543c666e57119b: Cannot confirm one product on the discovered URL
+- new-product / candidate-986f331f470e15aa29b9: Cannot confirm one product on the discovered URL
+- new-product / candidate-abb88f5fc4e9f1eb8094: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-95f92af283a3943925e0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-dc0305cc333dce8ebc0f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bd5329aa205a7dc9875c: Nightly time budget reached; remaining values retained
-- new-product / candidate-951f898a912f64c6baeb: Nightly time budget reached; remaining values retained
-- new-product / candidate-e85c29e002a299811653: No verified product image URL
-- new-product / candidate-bd177b830d57adafae76: No verified product image URL
-- new-product / candidate-0333040b89a3686ed2e8: No verified product image URL
+- new-product / candidate-bd5329aa205a7dc9875c: HTTP Error 403: Forbidden
+- new-product / candidate-951f898a912f64c6baeb: Pack weight is ambiguous; listing skipped
+- new-product / candidate-ce51b3abc6c03fef1830: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-de4b281ef61b1efac204: Pack weight is ambiguous; listing skipped
+- new-product / candidate-81709ddcaa352def44e2: No single GBP offer for the exact product
 - new-product / candidate-c7e40e00f7fef8765e56: No verified product image URL
-- new-product / candidate-a38513b3c6313eab8a5d: Nightly time budget reached; remaining values retained
 - new-product / candidate-7db6f0ffdb417caf7591: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bd21c88a39fb0a28d8d4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e414cf540eecb13721ac: Source does not state the material pack weight; listing skipped
 - new-product / candidate-52aca3d5213af404e941: No verified product image URL
 - new-product / candidate-81b468c793fc1b06083d: No verified product image URL
-- new-product / candidate-2c71d98db51ee59bc39a: Nightly time budget reached; remaining values retained
-- new-product / candidate-35cd3a1d6c92dea44d42: Nightly time budget reached; remaining values retained
-- new-product / candidate-37064cfc04b19a7dddf2: Nightly time budget reached; remaining values retained
+- new-product / candidate-2c71d98db51ee59bc39a: Cannot confirm one product on the discovered URL
+- new-product / candidate-35cd3a1d6c92dea44d42: Cannot confirm one product on the discovered URL
+- new-product / candidate-358bf0b1c0abff868dd3: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc0305cc333dce8ebc0f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e2504394ef9721b5f55e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-51b27933da2049153abc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7fe87725357a22b2ada2: Nightly time budget reached; remaining values retained
-- new-product / candidate-45504fbb292ee42f0a09: Nightly time budget reached; remaining values retained
-- new-product / candidate-dcb5907a097c639f8c90: Pack weight outside the supported range
-- new-product / candidate-f7003de617f6fe15153e: No verified product image URL
-- new-product / candidate-90bec97cc59b8ebe4f74: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7fe87725357a22b2ada2: HTTP Error 403: Forbidden
+- new-product / candidate-45504fbb292ee42f0a09: No single GBP offer for the exact product
+- new-product / candidate-91346232d1d3a76facff: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8b38ae933e1252060806: No verified product image URL
+- new-product / candidate-a38513b3c6313eab8a5d: No single GBP offer for the exact product
 - new-product / candidate-b11b267dcb7484dbf43a: No verified product image URL
-- new-product / candidate-3f9fb06b43ef81d14b5a: Nightly time budget reached; remaining values retained
 - new-product / candidate-81d0de81f9b493c310a2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0cf4bd1423c8ab4e7e66: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bd21c88a39fb0a28d8d4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2ff77bd921da4fbebb4e: No verified product image URL
 - new-product / candidate-daa8752bc4795f3bc14b: No verified product image URL
-- new-product / candidate-a9b381cabe038e709b56: Nightly time budget reached; remaining values retained
-- new-product / candidate-5d186a478dddb53456ff: Nightly time budget reached; remaining values retained
-- new-product / candidate-41202b45d3dd0ff00f73: Nightly time budget reached; remaining values retained
+- new-product / candidate-a9b381cabe038e709b56: Cannot confirm one product on the discovered URL
+- new-product / candidate-5d186a478dddb53456ff: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b181216d06978f052b7: Cannot confirm one product on the discovered URL
+- new-product / candidate-51b27933da2049153abc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0f2b9a9533562214765d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bd87af530f1f5f51e889: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e77c5eea463b15be4691: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1a937ebf1814e06be9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-07823d9f55d8a30d4855: No verified product image URL
-- new-product / candidate-16822d8563de06153302: No verified product image URL
-- new-product / candidate-750ef36bc3b1dc80365d: No verified product image URL
+- new-product / candidate-e77c5eea463b15be4691: HTTP Error 403: Forbidden
+- new-product / candidate-e1a937ebf1814e06be9c: No single GBP offer for the exact product
+- new-product / candidate-dac914fcaa7748843e6c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bd177b830d57adafae76: No verified product image URL
+- new-product / candidate-3f9fb06b43ef81d14b5a: No single GBP offer for the exact product
+- new-product / candidate-b049d81465fb04358060: No verified product image URL
 - new-product / candidate-9d435f361c6f0de820c8: No verified product image URL
-- new-product / candidate-9a3abf1ed90d4a79b33e: Nightly time budget reached; remaining values retained
 - new-product / candidate-d012b1f9d655cd8e34c3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-54a2c46e236b5ca1a761: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0cf4bd1423c8ab4e7e66: Source does not state the material pack weight; listing skipped
 - new-product / candidate-555881b52e83091d08da: No verified product image URL
 - new-product / candidate-e161e7437998ca8c5255: No verified product image URL
-- new-product / candidate-20bc87e871380b33bc4a: Nightly time budget reached; remaining values retained
-- new-product / candidate-9bda0f8dbb151527e868: Nightly time budget reached; remaining values retained
-- new-product / candidate-f32bc7b8be6356aef99b: Nightly time budget reached; remaining values retained
+- new-product / candidate-20bc87e871380b33bc4a: Cannot confirm one product on the discovered URL
+- new-product / candidate-9bda0f8dbb151527e868: Cannot confirm one product on the discovered URL
+- new-product / candidate-86d101291087b3743d96: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd87af530f1f5f51e889: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-033ba17a0018581b32b1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
-- new-product / candidate-9b95d3ec8ce37e98c936: Nightly time budget reached; remaining values retained
-- new-product / candidate-bd0dd649388a8e708989: Nightly time budget reached; remaining values retained
-- new-product / candidate-c96aa8ca39a0ff995e31: No verified product image URL
-- new-product / candidate-e322fba2c3701d8c2e33: No verified product image URL
-- new-product / candidate-9efac8b7d40acdef002d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9b95d3ec8ce37e98c936: HTTP Error 403: Forbidden
+- new-product / candidate-bd0dd649388a8e708989: Source does not state the material pack weight; listing skipped
+- new-product / candidate-661fbfaf2383e35a481d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f7003de617f6fe15153e: No verified product image URL
+- new-product / candidate-9a3abf1ed90d4a79b33e: No single GBP offer for the exact product
+- new-product / candidate-2014b6be7d1fb85155ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d941ab314d281718e263: No verified product image URL
-- new-product / candidate-c7db91fecc741c30ae91: Nightly time budget reached; remaining values retained
 - new-product / candidate-9327bc5a5a2d1701ca8f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-54a2c46e236b5ca1a761: Pack weight is ambiguous; listing skipped
 - new-product / candidate-91449d06ebfde09fcaa4: No verified product image URL
 - new-product / candidate-05559f286d3926ab500c: No verified product image URL
-- new-product / candidate-1ed06f8e8463d125882d: Nightly time budget reached; remaining values retained
-- new-product / candidate-aafc320f9f8f338687f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-aaa633763b7fa66f2832: Nightly time budget reached; remaining values retained
+- new-product / candidate-1ed06f8e8463d125882d: Cannot confirm one product on the discovered URL
+- new-product / candidate-aafc320f9f8f338687f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-f77bfa2f931b4713c24e: Cannot confirm one product on the discovered URL
 - new-product / candidate-09013d9cd328b94fcd1d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-15394f6200fc7d286749: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b8fa307af32efab5999f: Nightly time budget reached; remaining values retained
-- new-product / candidate-65e4c5760856b7da8280: Nightly time budget reached; remaining values retained
-- new-product / candidate-a7f313cb947ed1418f69: No verified product image URL
-- new-product / candidate-5e562ba73e9e568bb6bc: No verified product image URL
-- new-product / candidate-5eea94348bc639751e0a: No verified product image URL
+- new-product / candidate-b8fa307af32efab5999f: HTTP Error 403: Forbidden
+- new-product / candidate-65e4c5760856b7da8280: Pack weight is ambiguous; listing skipped
+- new-product / candidate-3d43b696677f08907e0c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-16822d8563de06153302: No verified product image URL
+- new-product / candidate-c7db91fecc741c30ae91: No single GBP offer for the exact product
 - new-product / candidate-819e340b085c3176db82: No verified product image URL
-- new-product / candidate-64463eb674588b7a052e: Nightly time budget reached; remaining values retained
 - new-product / candidate-d93979ce977c24761e41: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b772fe0599e1cea968fb: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ada87eda3278543e698e: No verified product image URL
-- new-product / candidate-25c4866b3cdac7544c9b: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2f824ee6130df33a990: Nightly time budget reached; remaining values retained
-- new-product / candidate-00477f46c692d2f4cc56: Nightly time budget reached; remaining values retained
+- new-product / candidate-25c4866b3cdac7544c9b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a2f824ee6130df33a990: Cannot confirm one product on the discovered URL
+- new-product / candidate-f2c939e17b3c083fc51f: Cannot confirm one product on the discovered URL
+- new-product / candidate-b18ace904bcc8e2cfc47: Pack weight is ambiguous; listing skipped
 - new-product / candidate-1870d1e856ad274a2e72: Source does not state the material pack weight; listing skipped
-- new-product / candidate-813dfa262bbca094df53: Pack weight is ambiguous; listing skipped
-- new-product / candidate-4e537e7b385a186c2d47: Nightly time budget reached; remaining values retained
-- new-product / candidate-725b5a579199274e9e92: Nightly time budget reached; remaining values retained
-- new-product / candidate-bb0eed017e0dea658012: No verified product image URL
-- new-product / candidate-d9e1d0cc9f83dce71b20: No verified product image URL
-- new-product / candidate-d659681029c9444050e1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4e537e7b385a186c2d47: HTTP Error 403: Forbidden
+- new-product / candidate-725b5a579199274e9e92: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7aa46e31ae26ea14118: No verified product image URL
+- new-product / candidate-e322fba2c3701d8c2e33: No verified product image URL
+- new-product / candidate-64463eb674588b7a052e: No single GBP offer for the exact product
 - new-product / candidate-258eea905bd59c4a3e61: No verified product image URL
-- new-product / candidate-f912209637b948108a1f: Nightly time budget reached; remaining values retained
 - new-product / candidate-6fdd114cc7bc304fd1a6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0211b288c328c28c7238: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2cb84dde443111ce637e: No verified product image URL
-- new-product / candidate-a3f02426ef1961d08e3a: Nightly time budget reached; remaining values retained
-- new-product / candidate-94cbd377a3890a7213dd: Nightly time budget reached; remaining values retained
-- new-product / candidate-8d2da89d6a822931496f: Nightly time budget reached; remaining values retained
+- new-product / candidate-a3f02426ef1961d08e3a: Cannot confirm one product on the discovered URL
+- new-product / candidate-94cbd377a3890a7213dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-d6523d4cc25dc0a3e763: Cannot confirm one product on the discovered URL
+- new-product / candidate-15394f6200fc7d286749: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d7b9ee625f5eb20de570: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b4edf60055082839664d: Pack weight is ambiguous; listing skipped
-- new-product / candidate-1114b7ce2fb25afb8e0e: Nightly time budget reached; remaining values retained
-- new-product / candidate-df13c6fa6473b4a566d2: No verified product image URL
-- new-product / candidate-e9d0f73a72945c482faa: No verified product image URL
-- new-product / candidate-a83c075c11ae47fefa4d: No verified product image URL
+- new-product / candidate-1114b7ce2fb25afb8e0e: HTTP Error 403: Forbidden
+- new-product / candidate-52fbf00fdb68f16cc882: Pack weight outside the supported range
+- new-product / candidate-5e562ba73e9e568bb6bc: No verified product image URL
+- new-product / candidate-f912209637b948108a1f: No single GBP offer for the exact product
+- new-product / candidate-8494be143ca77b5976e3: No verified product image URL
 - new-product / candidate-9d31fe7206a06fad3ee1: Cannot confirm that the product is a material or printer
-- new-product / candidate-96246cab40d13107106b: Nightly time budget reached; remaining values retained
 - new-product / candidate-3f7cdd425668ccc07aa0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f641dff089e3be04f903: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0c035c6847d937e28954: No verified product image URL
-- new-product / candidate-273cebb30275df93d74d: Nightly time budget reached; remaining values retained
-- new-product / candidate-d0692f1e665ab9a37637: Nightly time budget reached; remaining values retained
-- new-product / candidate-28ca8aeddc2e2748fd52: Nightly time budget reached; remaining values retained
+- new-product / candidate-273cebb30275df93d74d: Cannot confirm one product on the discovered URL
+- new-product / candidate-d0692f1e665ab9a37637: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff85febb277b702c7e84: Cannot confirm one product on the discovered URL
+- new-product / candidate-813dfa262bbca094df53: Pack weight is ambiguous; listing skipped
 - new-product / candidate-8bd628979d63ab4bcdfe: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ba900546153d2ed37464: Pack weight is ambiguous; listing skipped
-- new-product / candidate-3c17f7fd10543185dc08: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc5dc61be5277f61d74c: No verified product image URL
-- new-product / candidate-5b42d16f8f4171ecc690: No verified product image URL
-- new-product / candidate-d62d91f76f85f414b534: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3c17f7fd10543185dc08: HTTP Error 403: Forbidden
+- new-product / candidate-874077d8385b3f9fbeb8: No verified product image URL
+- new-product / candidate-d9e1d0cc9f83dce71b20: No verified product image URL
+- new-product / candidate-96246cab40d13107106b: Cannot confirm that the product is a material or printer
+- new-product / candidate-aedb2e6cc3fea73e2845: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eaca298e049fd967999c: Cannot confirm that the product is a material or printer
-- new-product / candidate-09262837ba0c3e4028c7: Nightly time budget reached; remaining values retained
 - new-product / candidate-756f5d9f2dae0fce677f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0920d071fad4e3f8fe7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7169b364e32ff6231108: Source does not state the material pack weight; listing skipped
 - new-product / candidate-30126c2bf20589cf5d95: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1a93adc4d90a9ed61131: Nightly time budget reached; remaining values retained
-- new-product / candidate-a1bdb3341aee223267a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-9a3815a03e204ab96c1d: Nightly time budget reached; remaining values retained
-- new-product / candidate-746bce8c93b96ec2f672: Pack weight is ambiguous; listing skipped
-- new-product / candidate-90f8cda33d9c0d8c0fc8: Nightly time budget reached; remaining values retained
-- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
-- new-product / candidate-dab16e86f64aeccbc2b5: No verified product image URL
-- new-product / candidate-6c4446cd516cb835b586: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1a93adc4d90a9ed61131: Cannot confirm one product on the discovered URL
+- new-product / candidate-a1bdb3341aee223267a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-c44faebc2ffbe1d89a5c: Cannot confirm one product on the discovered URL
+- new-product / candidate-b4edf60055082839664d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-90f8cda33d9c0d8c0fc8: HTTP Error 403: Forbidden
+- new-product / candidate-87a98d5c4f46b85bd44e: No verified product image URL
+- new-product / candidate-e9d0f73a72945c482faa: No verified product image URL
+- new-product / candidate-09262837ba0c3e4028c7: No single GBP offer for the exact product
 - new-product / candidate-98138a0fe6340db9d7dd: Cannot confirm that the product is a material or printer
-- new-product / candidate-2c1218d77746a522e82d: Nightly time budget reached; remaining values retained
 - new-product / candidate-1df1c5ec970663346e7b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0920d071fad4e3f8fe7e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d10ba21c4e0dd3a42dfb: No verified product image URL
-- new-product / candidate-da9fe41d67e540d7fedc: Nightly time budget reached; remaining values retained
-- new-product / candidate-9758bde5c8a10dee6931: Nightly time budget reached; remaining values retained
-- new-product / candidate-afbd6136eb167d0aa560: Nightly time budget reached; remaining values retained
-- new-product / candidate-5dabe7f16b0aeca0af21: Source does not state the material pack weight; listing skipped
-- new-product / candidate-164aee7f4a3f69435198: Nightly time budget reached; remaining values retained
-- new-product / candidate-6b33698bf139e8451843: No verified product image URL
-- new-product / candidate-70cac257ed9e9faec920: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c7d2dd94f0b3ab04a3e2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-da9fe41d67e540d7fedc: Cannot confirm one product on the discovered URL
+- new-product / candidate-9758bde5c8a10dee6931: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9d65f88e395ff3ab455: Cannot confirm one product on the discovered URL
+- new-product / candidate-ba900546153d2ed37464: Pack weight is ambiguous; listing skipped
+- new-product / candidate-164aee7f4a3f69435198: HTTP Error 403: Forbidden
+- new-product / candidate-8482830aa45b7db85485: No verified product image URL
+- new-product / candidate-5b42d16f8f4171ecc690: No verified product image URL
+- new-product / candidate-2c1218d77746a522e82d: No single GBP offer for the exact product
 - new-product / candidate-6ee867765e22a109d9de: Cannot confirm that the product is a material or printer
-- new-product / candidate-a5b7aaa45ee8883c1fa6: Nightly time budget reached; remaining values retained
 - new-product / candidate-ceddcd4ba4f8591f1bf8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5fe35d1d214f8d4a8455: Source does not state the material pack weight; listing skipped
+- new-product / candidate-09ebfb3d9869df06a5e7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5cc17b97e743a8fd8b4e: No verified product image URL
-- new-product / candidate-73c2e2198fed47c73a54: Nightly time budget reached; remaining values retained
-- new-product / candidate-d03d09c3684310ae8f24: Nightly time budget reached; remaining values retained
-- new-product / candidate-d44ad6c8183a4f5113a6: Nightly time budget reached; remaining values retained
-- new-product / candidate-2582519367f803e8ea94: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0ca5738b13ac10e126dd: Nightly time budget reached; remaining values retained
-- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-59949eb415f2a80acc3e: Nightly time budget reached; remaining values retained
-- new-product / candidate-b579d6e3a90c013ba4a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-73c2e2198fed47c73a54: Cannot confirm one product on the discovered URL
+- new-product / candidate-d03d09c3684310ae8f24: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6a2f0fb1a3f670bb76d: Cannot confirm one product on the discovered URL
+- new-product / candidate-746bce8c93b96ec2f672: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0ca5738b13ac10e126dd: HTTP Error 403: Forbidden
+- new-product / candidate-f26ef9fc9c48fbf93328: No verified product image URL
+- new-product / candidate-dab16e86f64aeccbc2b5: No verified product image URL
+- new-product / candidate-a5b7aaa45ee8883c1fa6: No single GBP offer for the exact product
+- new-product / candidate-93ba787b8fd934b316c7: No verified product image URL
 - new-product / candidate-b560720aebd4741f87a4: Cannot confirm that the product is a material or printer
-- new-product / candidate-137583788860fc1ac12c: Nightly time budget reached; remaining values retained
 - new-product / candidate-aaf1efbfc440d2aae7fe: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6c2fceea4c1d272bab1a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5fe35d1d214f8d4a8455: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fc05010aab8b48051a60: No verified product image URL
-- new-product / candidate-6315b90b350227c8a4b8: Nightly time budget reached; remaining values retained
-- new-product / candidate-2f2718941b08f14bafb9: Nightly time budget reached; remaining values retained
-- new-product / candidate-791ad3f746942750a14b: Nightly time budget reached; remaining values retained
-- new-product / candidate-3cc56fa193a5f92291ad: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f93a93f4c5152bf775f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-886ce06b96eb95511d27: Nightly time budget reached; remaining values retained
+- new-product / candidate-6315b90b350227c8a4b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-2f2718941b08f14bafb9: Cannot confirm one product on the discovered URL
+- new-product / candidate-68302d2effc503281f2f: Cannot confirm one product on the discovered URL
+- new-product / candidate-5dabe7f16b0aeca0af21: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f93a93f4c5152bf775f7: HTTP Error 403: Forbidden
+- new-product / candidate-a7f313cb947ed1418f69: No verified product image URL
+- new-product / candidate-70cac257ed9e9faec920: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-137583788860fc1ac12c: No single GBP offer for the exact product
+- new-product / candidate-67d4a490f7e02a35d56b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c280ea764fec53e8e442: Cannot confirm that the product is a material or printer
-- new-product / candidate-370c8f5c03439bcbbf8b: Nightly time budget reached; remaining values retained
 - new-product / candidate-ac218eb3aa1352f0178f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-aa3b4952092fe697fe45: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6c2fceea4c1d272bab1a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-441bef19368d4eaa3945: No verified product image URL
-- new-product / candidate-b6ee28dfd5c45bbb3529: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc6a921afa8af6a38f17: Nightly time budget reached; remaining values retained
-- new-product / candidate-a93605680090c2d31520: Nightly time budget reached; remaining values retained
-- new-product / candidate-e55117457ca224ad0cd6: Pack weight is ambiguous; listing skipped
-- new-product / candidate-ff660a1488482c248633: Nightly time budget reached; remaining values retained
-- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a9eb996f2906b85bf0fa: Nightly time budget reached; remaining values retained
+- new-product / candidate-b6ee28dfd5c45bbb3529: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc6a921afa8af6a38f17: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e36729e51eeedd29287: Cannot confirm one product on the discovered URL
+- new-product / candidate-2582519367f803e8ea94: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ff660a1488482c248633: Cannot confirm one product on the discovered URL
+- new-product / candidate-07823d9f55d8a30d4855: No verified product image URL
+- new-product / candidate-370c8f5c03439bcbbf8b: No single GBP offer for the exact product
 - new-product / candidate-eb9f57efc2d17c4b87b4: Cannot confirm that the product is a material or printer
-- new-product / candidate-ac15ae29fa2956cc3f9d: Nightly time budget reached; remaining values retained
 - new-product / candidate-82ecb1068733b4437bc2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9f86351d29e1bd77c22a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-aa3b4952092fe697fe45: Source does not state the material pack weight; listing skipped
 - new-product / candidate-903b679418dd3042b115: No verified product image URL
-- new-product / candidate-458036134888499b9e79: Nightly time budget reached; remaining values retained
-- new-product / candidate-65ae18b5000187d458de: Nightly time budget reached; remaining values retained
-- new-product / candidate-4092ef0cd2474bbf8b14: Nightly time budget reached; remaining values retained
-- new-product / candidate-436a9aa2256d5cc18ccf: Pack weight is ambiguous; listing skipped
-- new-product / candidate-7b25f7429b956ad15636: Nightly time budget reached; remaining values retained
-- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5ce694db1b1e4184a6ed: No verified product image URL
+- new-product / candidate-458036134888499b9e79: Cannot confirm one product on the discovered URL
+- new-product / candidate-65ae18b5000187d458de: Cannot confirm one product on the discovered URL
+- new-product / candidate-001709b7cc537239f9fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-3cc56fa193a5f92291ad: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7b25f7429b956ad15636: HTTP Error 403: Forbidden
+- new-product / candidate-6b33698bf139e8451843: No verified product image URL
+- new-product / candidate-ac15ae29fa2956cc3f9d: No single GBP offer for the exact product
 - new-product / candidate-abb54c825dc19f220070: Cannot confirm that the product is a material or printer
-- new-product / candidate-284a7a027e19f8c14426: Nightly time budget reached; remaining values retained
 - new-product / candidate-a29fe03f2a413932a3d0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-25033ccb29cf03b3a76d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-9f86351d29e1bd77c22a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-91f835b8b5348d7395bb: No verified product image URL
-- new-product / candidate-bb11e9cdc01fde1bd193: Nightly time budget reached; remaining values retained
-- new-product / candidate-3fd5e24f1715bb9c52b2: Nightly time budget reached; remaining values retained
-- new-product / candidate-301bdf07743fbaba9c36: Nightly time budget reached; remaining values retained
-- new-product / candidate-4339ddc12734c72eacf0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9fe2d729c2bdc989bd8a: Nightly time budget reached; remaining values retained
-- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c9a6e38185b2263d49b5: Nightly time budget reached; remaining values retained
+- new-product / candidate-bb11e9cdc01fde1bd193: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fd5e24f1715bb9c52b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b4fe92b329f78940efc: Cannot confirm one product on the discovered URL
+- new-product / candidate-9fe2d729c2bdc989bd8a: HTTP Error 403: Forbidden
+- new-product / candidate-f6b67ce3ca748f907282: No verified product image URL
+- new-product / candidate-284a7a027e19f8c14426: No single GBP offer for the exact product
+- new-product / candidate-9b67a3fd22754c4495f8: No verified product image URL
 - new-product / candidate-f9a8efb3faf8e65bfdf9: Cannot confirm that the product is a material or printer
-- new-product / candidate-62c0d8112a546de2a059: Nightly time budget reached; remaining values retained
 - new-product / candidate-d3076bd6917d56e03f41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-25033ccb29cf03b3a76d: Pack weight is ambiguous; listing skipped
 - new-product / candidate-10ac4d683e7719bd50a4: No verified product image URL
-- new-product / candidate-6b609c7c2718db2477ce: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2935246b4865228ca1a: Nightly time budget reached; remaining values retained
-- new-product / candidate-5546dd82e335bd039e2a: Nightly time budget reached; remaining values retained
-- new-product / candidate-5eb9780304b302bcd4d9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6bb35849ce22c64cde85: Nightly time budget reached; remaining values retained
-- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6f3aaf664ded24ec99ff: Nightly time budget reached; remaining values retained
+- new-product / candidate-6b609c7c2718db2477ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-a2935246b4865228ca1a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e5fa56c4aedc729b1b33: Cannot confirm one product on the discovered URL
+- new-product / candidate-e55117457ca224ad0cd6: Pack weight is ambiguous; listing skipped
+- new-product / candidate-6bb35849ce22c64cde85: HTTP Error 403: Forbidden
+- new-product / candidate-ce1938023509bccd5026: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-62c0d8112a546de2a059: No single GBP offer for the exact product
+- new-product / candidate-d5f791c056a7a03049a1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2caba5ff7ffd331f1a52: No verified product image URL
-- new-product / candidate-72fe38228f86f750aaea: Nightly time budget reached; remaining values retained
 - new-product / candidate-716eeb23b8ec9bd8d4d2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
+- new-product / candidate-58bb1895fd829de4e9a7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e57552ef2ff34e2ea24d: No verified product image URL
-- new-product / candidate-b3de3f1d4fd565526c8f: Nightly time budget reached; remaining values retained
-- new-product / candidate-cca93de1bf2f3da4228e: Nightly time budget reached; remaining values retained
-- new-product / candidate-2e54b24cfccbab55de31: Nightly time budget reached; remaining values retained
-- new-product / candidate-c483a428eed1863c0dd3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8a85edad57fe4002d6df: Nightly time budget reached; remaining values retained
-- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1562e1b3b3cd0c2117b5: Nightly time budget reached; remaining values retained
+- new-product / candidate-b3de3f1d4fd565526c8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-cca93de1bf2f3da4228e: Cannot confirm one product on the discovered URL
+- new-product / candidate-8456097de8cbc8dc033a: Cannot confirm one product on the discovered URL
+- new-product / candidate-436a9aa2256d5cc18ccf: Pack weight is ambiguous; listing skipped
+- new-product / candidate-8a85edad57fe4002d6df: HTTP Error 403: Forbidden
+- new-product / candidate-d8263aab0369d3301d73: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-72fe38228f86f750aaea: No single GBP offer for the exact product
 - new-product / candidate-7790dc56f0a01a9c23d6: Cannot confirm that the product is a material or printer
-- new-product / candidate-1f987c2e139b372de93e: Nightly time budget reached; remaining values retained
 - new-product / candidate-adb36fffe3d5fec6be8e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3807cb538a56c2dfc4bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b59ea4326457301ed726: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1c68bf8f963dbe8a2611: No verified product image URL
-- new-product / candidate-3f4e33d744748a4ef445: Nightly time budget reached; remaining values retained
-- new-product / candidate-5bcd4ac840945b0c85e2: Nightly time budget reached; remaining values retained
-- new-product / candidate-3811b42395b2e935a10b: Nightly time budget reached; remaining values retained
-- new-product / candidate-ea5bb7fccc89d35f49a9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b1b47eb93a0cb8ac601e: Nightly time budget reached; remaining values retained
-- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fa26687337b8e82463d1: Nightly time budget reached; remaining values retained
+- new-product / candidate-3f4e33d744748a4ef445: Cannot confirm one product on the discovered URL
+- new-product / candidate-5bcd4ac840945b0c85e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef1b6ed682c3cd65f5b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-4339ddc12734c72eacf0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b1b47eb93a0cb8ac601e: HTTP Error 403: Forbidden
+- new-product / candidate-84b393cb82af415c62f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f987c2e139b372de93e: No single GBP offer for the exact product
 - new-product / candidate-39a4172c9973d006fdec: Cannot confirm that the product is a material or printer
-- new-product / candidate-9958140a52d57dc731e3: Nightly time budget reached; remaining values retained
-- new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3807cb538a56c2dfc4bf: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6771fd9416f034a59381: No verified product image URL
-- new-product / candidate-07a37a1a00c9293bab8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-9aa5fa12061c1663a244: Nightly time budget reached; remaining values retained
-- new-product / candidate-28d3b38c123efd63a221: Nightly time budget reached; remaining values retained
-- new-product / candidate-33a7cd1d5aa5c3d6f4c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ae932a133bdf248b9954: Nightly time budget reached; remaining values retained
-- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fb5421681002d4246b18: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-07a37a1a00c9293bab8b: Cannot confirm one product on the discovered URL
+- new-product / candidate-9aa5fa12061c1663a244: Cannot confirm one product on the discovered URL
+- new-product / candidate-e260cc805083103e0ad5: Cannot confirm one product on the discovered URL
+- new-product / candidate-5eb9780304b302bcd4d9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ae932a133bdf248b9954: HTTP Error 403: Forbidden
+- new-product / candidate-07477660a52d0c4dcce4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-35be96fd95c30ac0cfbd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9958140a52d57dc731e3: Pack weight is ambiguous; listing skipped
+- new-product / candidate-0333040b89a3686ed2e8: No verified product image URL
 - new-product / candidate-23fefb69d2647271c416: Cannot confirm that the product is a material or printer
-- new-product / candidate-2cffa41862674f0673ab: Nightly time budget reached; remaining values retained
 - new-product / candidate-5ee5d6328f5c0d63b8b5: Pack weight is ambiguous; listing skipped
-- new-product / candidate-f6ac4c6c2299c3af0c10: Source does not state the material pack weight; listing skipped
+- new-product / candidate-763c2d8e5973a1abd428: Source does not state the material pack weight; listing skipped
 - new-product / candidate-962a98fba02bfb33f44b: No verified product image URL
-- new-product / candidate-88df8eeb3f328fda41e0: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2507fcb38b158e9afe6: Nightly time budget reached; remaining values retained
-- new-product / candidate-a82ed18dfb62304aebe0: Nightly time budget reached; remaining values retained
-- new-product / candidate-abf86553f7cd3bef3112: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ad00c2fc017a8342ad56: Nightly time budget reached; remaining values retained
-- new-product / candidate-319476547da8c0d0ef4f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0df35bd996f9527afdde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-88df8eeb3f328fda41e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2507fcb38b158e9afe6: Cannot confirm one product on the discovered URL
+- new-product / candidate-6b6e7a0354b92de368a5: Cannot confirm one product on the discovered URL
+- new-product / candidate-ad00c2fc017a8342ad56: HTTP Error 403: Forbidden
+- new-product / candidate-440e81ad396b893c6738: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cbc2833ddd75cc024afa: No verified product image URL
+- new-product / candidate-2cffa41862674f0673ab: No single GBP offer for the exact product
+- new-product / candidate-90bec97cc59b8ebe4f74: Source does not state the material pack weight; listing skipped
 - new-product / candidate-39d44324ac423af10468: Cannot confirm that the product is a material or printer
-- new-product / candidate-ec943efa0308db2a2bdf: Nightly time budget reached; remaining values retained
 - new-product / candidate-7e34006d807868683524: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6b2ee274dc84249e680c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f6ac4c6c2299c3af0c10: Source does not state the material pack weight; listing skipped
 - new-product / candidate-14b83ee0f3c93557d8e9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d65e6d73e1e34c45aaad: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b69e35794d2a3421519: Nightly time budget reached; remaining values retained
-- new-product / candidate-2dbe244cdf6f83a1d7e1: Nightly time budget reached; remaining values retained
-- new-product / candidate-2301fb3e762bc599d3a7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7913be9603ae3822b3b4: Nightly time budget reached; remaining values retained
-- new-product / candidate-9d1452990603eb9a6221: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b0af7d8a2c369f5b60f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d65e6d73e1e34c45aaad: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b69e35794d2a3421519: Cannot confirm one product on the discovered URL
+- new-product / candidate-7ad9b1358fc807f7a845: Cannot confirm one product on the discovered URL
+- new-product / candidate-c483a428eed1863c0dd3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7913be9603ae3822b3b4: HTTP Error 403: Forbidden
+- new-product / candidate-54fe940afc61a909427a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5eab73e085d6b7e45f11: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ec943efa0308db2a2bdf: No single GBP offer for the exact product
 - new-product / candidate-f84ac361de1a73ccf4be: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a0eefa3ccee684a79fb0: Nightly time budget reached; remaining values retained
 - new-product / candidate-8a5a3dd30db7ebeab3f0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b34746f9658827378f18: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6b2ee274dc84249e680c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ce53b9f30d9a01dea2b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-990d39bd4862018e61e3: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a055b363e3e2c9babff: Nightly time budget reached; remaining values retained
-- new-product / candidate-da7b7122a068fe1a7bb9: Nightly time budget reached; remaining values retained
-- new-product / candidate-a57fb41375b1befaffe8: Nightly time budget reached; remaining values retained
-- new-product / candidate-39b1819bf076a0452a10: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-013099e971da1e804311: Source does not state the material pack weight; listing skipped
+- new-product / candidate-990d39bd4862018e61e3: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a055b363e3e2c9babff: Cannot confirm one product on the discovered URL
+- new-product / candidate-9c9d35dea506fabf9b5d: Cannot confirm one product on the discovered URL
+- new-product / candidate-ea5bb7fccc89d35f49a9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a57fb41375b1befaffe8: HTTP Error 403: Forbidden
+- new-product / candidate-f67f50e51ea0d0da3009: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a6d946acc889ea38c7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a0eefa3ccee684a79fb0: No single GBP offer for the exact product
+- new-product / candidate-750ef36bc3b1dc80365d: No verified product image URL
 - new-product / candidate-c1bde86a8ab12b064b43: Cannot confirm that the product is a material or printer
-- new-product / candidate-ab40fdb3623aabb1c85e: Nightly time budget reached; remaining values retained
 - new-product / candidate-7791a6b5e4dd8a8f7825: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2cbf2eec2b91d7db383d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b34746f9658827378f18: Source does not state the material pack weight; listing skipped
 - new-product / candidate-eb99300a87ed5e284755: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1768b7d773b6f552881: Nightly time budget reached; remaining values retained
-- new-product / candidate-1dd845c4caa572604f93: Nightly time budget reached; remaining values retained
-- new-product / candidate-401bc5194b6a5cf7ba3a: Nightly time budget reached; remaining values retained
-- new-product / candidate-a3212209da92d9dbe768: Nightly time budget reached; remaining values retained
-- new-product / candidate-cb1e5e1b463c9d85e3c5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-244e71fd3238a1f05288: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e1768b7d773b6f552881: Cannot confirm one product on the discovered URL
+- new-product / candidate-1dd845c4caa572604f93: Cannot confirm one product on the discovered URL
+- new-product / candidate-33b60ab3403a51f2acbc: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3212209da92d9dbe768: HTTP Error 403: Forbidden
+- new-product / candidate-fd4cc0e0d99be3a7d627: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ab40fdb3623aabb1c85e: No single GBP offer for the exact product
+- new-product / candidate-9efac8b7d40acdef002d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1df8864c7679e603bb44: Cannot confirm that the product is a material or printer
-- new-product / candidate-eb2c0da088e0e9ff37a9: Nightly time budget reached; remaining values retained
 - new-product / candidate-a9b541b83db749f22019: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fd620ff578e9d1b61f7b: Pack weight is ambiguous; listing skipped
+- new-product / candidate-2cbf2eec2b91d7db383d: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cb34af3f71e91b85c91a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d6a507068e55e4bf140c: Nightly time budget reached; remaining values retained
-- new-product / candidate-99803b685466cb2844b3: Nightly time budget reached; remaining values retained
-- new-product / candidate-74947eadcb19d9f07365: Nightly time budget reached; remaining values retained
-- new-product / candidate-739e00d2dbd8d7890afa: Nightly time budget reached; remaining values retained
-- new-product / candidate-6366c1ad3bec65ca9d33: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-269bd92d9b5c78e39e22: No verified product image URL
+- new-product / candidate-d6a507068e55e4bf140c: Cannot confirm one product on the discovered URL
+- new-product / candidate-99803b685466cb2844b3: Cannot confirm one product on the discovered URL
+- new-product / candidate-915b9251453320bf1111: Cannot confirm one product on the discovered URL
+- new-product / candidate-33a7cd1d5aa5c3d6f4c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-739e00d2dbd8d7890afa: HTTP Error 403: Forbidden
+- new-product / candidate-d573aecd44e61cc2c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1e6125ed435a3adf510a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eb2c0da088e0e9ff37a9: No single GBP offer for the exact product
 - new-product / candidate-ae995c1124f163e21ebc: Cannot confirm that the product is a material or printer
-- new-product / candidate-2eeb697f0961303ed58c: Nightly time budget reached; remaining values retained
 - new-product / candidate-7469b05aa64fd81b9f33: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fd620ff578e9d1b61f7b: Pack weight is ambiguous; listing skipped
 - new-product / candidate-f84cb02c41ec69d00aa9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b7bf7d1c77eb4fa6d7f5: Nightly time budget reached; remaining values retained
-- new-product / candidate-94ecd96573ab9027e3fb: Nightly time budget reached; remaining values retained
-- new-product / candidate-e2974878645844a144c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-84edd4e05ef1bc10565a: Nightly time budget reached; remaining values retained
-- new-product / candidate-686411c706e6460cd188: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b7b30ed4357c40327b71: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b7bf7d1c77eb4fa6d7f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-94ecd96573ab9027e3fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd8bd29354341af1340a: Cannot confirm one product on the discovered URL
+- new-product / candidate-abf86553f7cd3bef3112: Source does not state the material pack weight; listing skipped
+- new-product / candidate-84edd4e05ef1bc10565a: HTTP Error 403: Forbidden
+- new-product / candidate-319476547da8c0d0ef4f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2eeb697f0961303ed58c: No single GBP offer for the exact product
+- new-product / candidate-5eea94348bc639751e0a: No verified product image URL
 - new-product / candidate-647e5467e771969127b1: Cannot confirm that the product is a material or printer
-- new-product / candidate-1a7abcfe2b3a7287e17d: Nightly time budget reached; remaining values retained
 - new-product / candidate-5d95ef33c7a8fc2f36fb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9219825ab121c18b2efa: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8e8a8b82f3014d2425c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-840ef9cd0ec50c69312a: Nightly time budget reached; remaining values retained
-- new-product / candidate-fd3de0857780b1c4ae09: Nightly time budget reached; remaining values retained
-- new-product / candidate-d79d98ad2d0053fff59e: Nightly time budget reached; remaining values retained
-- new-product / candidate-21fd2ef28e75902d28ed: Nightly time budget reached; remaining values retained
-- new-product / candidate-1f5475268cbc66122392: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-07b1ac6855823719f928: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-840ef9cd0ec50c69312a: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd3de0857780b1c4ae09: Cannot confirm one product on the discovered URL
+- new-product / candidate-133b1c1b213c6cb222a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-21fd2ef28e75902d28ed: HTTP Error 403: Forbidden
+- new-product / candidate-9d1452990603eb9a6221: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1a7abcfe2b3a7287e17d: No single GBP offer for the exact product
+- new-product / candidate-d659681029c9444050e1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a71a867b91b7fa8ed60c: Cannot confirm that the product is a material or printer
-- new-product / candidate-5dfc8aa03598dd8b09b4: Nightly time budget reached; remaining values retained
 - new-product / candidate-b8e96a436bba06d81fde: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f5f7369baecb5e4c186f: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0e1a32cb727558e50657: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1a6af88b7d55136c407: Nightly time budget reached; remaining values retained
-- new-product / candidate-4c171e6be8f017c98cda: Nightly time budget reached; remaining values retained
-- new-product / candidate-305fcd850636c6fcb88a: Nightly time budget reached; remaining values retained
-- new-product / candidate-e0da2d5f90c28882091a: Nightly time budget reached; remaining values retained
-- new-product / candidate-fee9cdb947f094624108: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8583b73d0f4f610cb829: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e1a6af88b7d55136c407: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c171e6be8f017c98cda: Cannot confirm one product on the discovered URL
+- new-product / candidate-b11aa5ee5476be18854c: Cannot confirm one product on the discovered URL
+- new-product / candidate-2301fb3e762bc599d3a7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e0da2d5f90c28882091a: HTTP Error 403: Forbidden
+- new-product / candidate-39b1819bf076a0452a10: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5dfc8aa03598dd8b09b4: No single GBP offer for the exact product
 - new-product / candidate-be98f196540dbad253a0: Cannot confirm that the product is a material or printer
-- new-product / candidate-ac81a9709385de26bb64: Nightly time budget reached; remaining values retained
 - new-product / candidate-ba2fd85787389c15bb5f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f73e832fa925c7740a05: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4b97d8060185404d735: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2531b262a46d5cddb53a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0b9bea1971c95c96d082: Nightly time budget reached; remaining values retained
-- new-product / candidate-878b23c53a3104deb095: Nightly time budget reached; remaining values retained
-- new-product / candidate-f62912330089db89f670: Nightly time budget reached; remaining values retained
-- new-product / candidate-2402dabe3d76dbe00b49: Nightly time budget reached; remaining values retained
-- new-product / candidate-416962af11e05f8bebd0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0b9bea1971c95c96d082: Cannot confirm one product on the discovered URL
+- new-product / candidate-878b23c53a3104deb095: Cannot confirm one product on the discovered URL
+- new-product / candidate-aa93f35c61adfa7ad2c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-2402dabe3d76dbe00b49: HTTP Error 403: Forbidden
+- new-product / candidate-cb1e5e1b463c9d85e3c5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ef2bfdc79c34a7034716: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ac81a9709385de26bb64: No single GBP offer for the exact product
+- new-product / candidate-a83c075c11ae47fefa4d: No verified product image URL
 - new-product / candidate-d95f1aafd7daf44818cd: Cannot confirm that the product is a material or printer
-- new-product / candidate-d0d26372c4ae14ff202a: Nightly time budget reached; remaining values retained
 - new-product / candidate-1631cfbc45042ed112bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c06232c1944928431f65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f73e832fa925c7740a05: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b655d4d13a9ebe86b6c3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cfa05cbc5df5a3ac5ee4: Nightly time budget reached; remaining values retained
-- new-product / candidate-fd76c4082b7a9710260b: Nightly time budget reached; remaining values retained
-- new-product / candidate-2a9246b6454a0b446b61: Nightly time budget reached; remaining values retained
-- new-product / candidate-a7be4477e86baffd7cef: Nightly time budget reached; remaining values retained
-- new-product / candidate-955cbe4f82b6709abcb6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2c25ac61e215bedbb479: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cfa05cbc5df5a3ac5ee4: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd76c4082b7a9710260b: Cannot confirm one product on the discovered URL
+- new-product / candidate-1aba86fd15e3d0cff3f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-a7be4477e86baffd7cef: HTTP Error 403: Forbidden
+- new-product / candidate-6366c1ad3bec65ca9d33: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-38cfe4dd791d2aa74a63: No verified product image URL
+- new-product / candidate-d0d26372c4ae14ff202a: No single GBP offer for the exact product
+- new-product / candidate-d62d91f76f85f414b534: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bfa66ce5a947b879393e: Cannot confirm that the product is a material or printer
-- new-product / candidate-396a914b291fb74c42c6: Nightly time budget reached; remaining values retained
 - new-product / candidate-fbbb0342156f2562dc1e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ad538daf1ae8072eac24: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c06232c1944928431f65: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e0cb0728bcf196881cd8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4b43a325d74110353321: Nightly time budget reached; remaining values retained
-- new-product / candidate-0a0d9a89f2e82e78d33b: Nightly time budget reached; remaining values retained
-- new-product / candidate-b7fa89a2c1e8c0e5c18b: Nightly time budget reached; remaining values retained
-- new-product / candidate-d182f933fcb0d0a66a0c: Nightly time budget reached; remaining values retained
-- new-product / candidate-e6459cf41755eb76c644: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bcc45c01a855619e62a5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4b43a325d74110353321: Cannot confirm one product on the discovered URL
+- new-product / candidate-0a0d9a89f2e82e78d33b: Cannot confirm one product on the discovered URL
+- new-product / candidate-16857da02ad1406de787: Cannot confirm one product on the discovered URL
+- new-product / candidate-d182f933fcb0d0a66a0c: HTTP Error 403: Forbidden
+- new-product / candidate-686411c706e6460cd188: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-94408db9038d974039b8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-396a914b291fb74c42c6: No single GBP offer for the exact product
 - new-product / candidate-8cfb6810a6ed2243427a: Cannot confirm that the product is a material or printer
-- new-product / candidate-252a0787c168d3be02fb: Nightly time budget reached; remaining values retained
 - new-product / candidate-87835166201722e262c6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7621e62c1f2f9e526237: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ad538daf1ae8072eac24: Source does not state the material pack weight; listing skipped
 - new-product / candidate-89d7b43d70300132e926: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b14f2d26668562e03ec3: Nightly time budget reached; remaining values retained
-- new-product / candidate-79b65259032d54dc8ca3: Nightly time budget reached; remaining values retained
-- new-product / candidate-bf5306f82ba303b839a1: Nightly time budget reached; remaining values retained
-- new-product / candidate-46013cd1019a9a816087: Nightly time budget reached; remaining values retained
-- new-product / candidate-94aa8b73ff4bc9fa5799: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a4bec37f2fa8de1c8a65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b14f2d26668562e03ec3: Cannot confirm one product on the discovered URL
+- new-product / candidate-79b65259032d54dc8ca3: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb36d99d7db1076215c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-46013cd1019a9a816087: HTTP Error 403: Forbidden
+- new-product / candidate-1f5475268cbc66122392: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-907a9694d1dbcea6b1b1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-252a0787c168d3be02fb: No single GBP offer for the exact product
+- new-product / candidate-6c4446cd516cb835b586: Source does not state the material pack weight; listing skipped
 - new-product / candidate-53a67fd9a808aae8eb4e: Cannot confirm that the product is a material or printer
-- new-product / candidate-de9ea372a6bd38550ad1: Nightly time budget reached; remaining values retained
 - new-product / candidate-dcf824aaf677582471bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7dab09406c163ea5bf5d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7621e62c1f2f9e526237: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e9ca94665d4d62f4d380: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c4653396d301a3be279c: Nightly time budget reached; remaining values retained
-- new-product / candidate-8d8e9732c8febcee12ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-847cb91879f6a5a459ba: Nightly time budget reached; remaining values retained
-- new-product / candidate-32be3ab618b807d9ec6b: Nightly time budget reached; remaining values retained
-- new-product / candidate-41c5aea0d2c52e839869: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c3db83d2ac00e82ddeea: No verified product image URL
+- new-product / candidate-c4653396d301a3be279c: Cannot confirm one product on the discovered URL
+- new-product / candidate-8d8e9732c8febcee12ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-65fda5ccdd1502965707: Cannot confirm one product on the discovered URL
+- new-product / candidate-32be3ab618b807d9ec6b: HTTP Error 403: Forbidden
+- new-product / candidate-fee9cdb947f094624108: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6e0e1ed8c7adc8e84538: Source does not state the material pack weight; listing skipped
+- new-product / candidate-de9ea372a6bd38550ad1: No single GBP offer for the exact product
 - new-product / candidate-188eb4605cdd8e1c8cd2: Cannot confirm that the product is a material or printer
-- new-product / candidate-54048055d3bedd5a1fe6: Nightly time budget reached; remaining values retained
 - new-product / candidate-b32209e89c1fed06e0ee: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7dab09406c163ea5bf5d: Pack weight is ambiguous; listing skipped
 - new-product / candidate-65b053ed3229307636f8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ffd96c3db79047fbf779: Nightly time budget reached; remaining values retained
-- new-product / candidate-80755e3343fff8f99ecd: Nightly time budget reached; remaining values retained
-- new-product / candidate-ed8abab97b634e562795: Nightly time budget reached; remaining values retained
-- new-product / candidate-07ee66bc33d01cbdb5b5: Nightly time budget reached; remaining values retained
-- new-product / candidate-2dda42a651129e1718e1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5cca341eda1ee615977a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ffd96c3db79047fbf779: Cannot confirm one product on the discovered URL
+- new-product / candidate-80755e3343fff8f99ecd: Cannot confirm one product on the discovered URL
+- new-product / candidate-28593638c66107e10411: Cannot confirm one product on the discovered URL
+- new-product / candidate-07ee66bc33d01cbdb5b5: HTTP Error 403: Forbidden
+- new-product / candidate-416962af11e05f8bebd0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d5eb9632af2217bdda8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-54048055d3bedd5a1fe6: No single GBP offer for the exact product
+- new-product / candidate-c7d2dd94f0b3ab04a3e2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7a1834e19add25aa5891: Cannot confirm that the product is a material or printer
-- new-product / candidate-9902baf82e0019dc6d67: Nightly time budget reached; remaining values retained
 - new-product / candidate-f57e11cf40a3db2d718a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-09f37a557f1a8b02b8c3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d76065eb13a52baa2b29: Source does not state the material pack weight; listing skipped
-- new-product / candidate-04d11c482daafdd44c7e: Nightly time budget reached; remaining values retained
-- new-product / candidate-53fcd3f1fa1d97fa8c26: Nightly time budget reached; remaining values retained
-- new-product / candidate-5e5197da95fa869eb168: Nightly time budget reached; remaining values retained
-- new-product / candidate-9bb2a792799339e75324: Nightly time budget reached; remaining values retained
-- new-product / candidate-d4ab6319bb249c820ee5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ce0fda9bc50fa317e342: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-04d11c482daafdd44c7e: Cannot confirm one product on the discovered URL
+- new-product / candidate-53fcd3f1fa1d97fa8c26: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f0a05e65fe6bcbef6a7: Cannot confirm one product on the discovered URL
+- new-product / candidate-9bb2a792799339e75324: HTTP Error 403: Forbidden
+- new-product / candidate-955cbe4f82b6709abcb6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9902baf82e0019dc6d67: Cannot confirm that the product is a material or printer
 - new-product / candidate-62c1e50f77638ceedbba: Cannot confirm that the product is a material or printer
-- new-product / candidate-c766c07813937a587b00: Nightly time budget reached; remaining values retained
 - new-product / candidate-7de209a95cb97f8a3e44: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
+- new-product / candidate-12eb3a4187d1c7ee54b2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0c3d1a0ec250a3165249: Source does not state the material pack weight; listing skipped
-- new-product / candidate-69af04803ee2df38072c: Nightly time budget reached; remaining values retained
-- new-product / candidate-985492b60dcdcb52b871: Nightly time budget reached; remaining values retained
-- new-product / candidate-a8394a85dcf6cf77e51c: Nightly time budget reached; remaining values retained
-- new-product / candidate-67238c0c76f47e624efd: Nightly time budget reached; remaining values retained
-- new-product / candidate-c003b0067281866b9b2a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6a394e0b85b1aef8f60b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-69af04803ee2df38072c: Cannot confirm one product on the discovered URL
+- new-product / candidate-985492b60dcdcb52b871: Cannot confirm one product on the discovered URL
+- new-product / candidate-8820a0fa64108126698e: Cannot confirm one product on the discovered URL
+- new-product / candidate-67238c0c76f47e624efd: HTTP Error 403: Forbidden
+- new-product / candidate-e6459cf41755eb76c644: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2c25ac61e215bedbb479: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c766c07813937a587b00: No single GBP offer for the exact product
+- new-product / candidate-b579d6e3a90c013ba4a2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-056e6659925158b2aeab: Cannot confirm that the product is a material or printer
-- new-product / candidate-4219ff311bd014290891: Nightly time budget reached; remaining values retained
 - new-product / candidate-9b69fe67182eb4348c3b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6647e5c0fd4f181770af: Source does not state the material pack weight; listing skipped
+- new-product / candidate-515bf413300ca8d3a368: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3061c32491a83fe9951b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-02eaea3c4ea84fbde144: Nightly time budget reached; remaining values retained
-- new-product / candidate-9b444085e026a3da4ada: Nightly time budget reached; remaining values retained
-- new-product / candidate-1e5c7cb24a2a221f3e9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-c9800c6e94897c3714e5: Nightly time budget reached; remaining values retained
-- new-product / candidate-4e6199bd67eb0f8c5291: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d4b73213219f2d8cc282: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-02eaea3c4ea84fbde144: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b444085e026a3da4ada: Cannot confirm one product on the discovered URL
+- new-product / candidate-129aa2622835e9531d69: Cannot confirm one product on the discovered URL
+- new-product / candidate-c9800c6e94897c3714e5: HTTP Error 403: Forbidden
+- new-product / candidate-94aa8b73ff4bc9fa5799: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bcc45c01a855619e62a5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4219ff311bd014290891: No single GBP offer for the exact product
 - new-product / candidate-b9bd048c43af23a5dc77: Cannot confirm that the product is a material or printer
-- new-product / candidate-4f9a6841003255a06151: Nightly time budget reached; remaining values retained
 - new-product / candidate-2e1f51ff3b22160c8a76: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-08fed14fa311e7f5eb98: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6647e5c0fd4f181770af: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bac14d787f31a5f6daf2: No verified product image URL
-- new-product / candidate-340d266053479b88be6f: Nightly time budget reached; remaining values retained
-- new-product / candidate-4fca466945d8b78bdff7: Nightly time budget reached; remaining values retained
-- new-product / candidate-8d57ffe2df0fbacda0de: Nightly time budget reached; remaining values retained
-- new-product / candidate-01344e6fd219e3a5202c: Nightly time budget reached; remaining values retained
-- new-product / candidate-7775779ada4026695ca3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a1789ffcb53f2c52384f: No verified product image URL
+- new-product / candidate-340d266053479b88be6f: Cannot confirm one product on the discovered URL
+- new-product / candidate-4fca466945d8b78bdff7: Cannot confirm one product on the discovered URL
+- new-product / candidate-57891e2b523e99d3af7b: Cannot confirm one product on the discovered URL
+- new-product / candidate-01344e6fd219e3a5202c: HTTP Error 403: Forbidden
+- new-product / candidate-41c5aea0d2c52e839869: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a4bec37f2fa8de1c8a65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4f9a6841003255a06151: No single GBP offer for the exact product
 - new-product / candidate-5f9d666ec4b78b94943a: Cannot confirm that the product is a material or printer
-- new-product / candidate-948498430d01eb44ae97: Nightly time budget reached; remaining values retained
 - new-product / candidate-53802a9fa924322f4015: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1811e587c1dd83edf013: Source does not state the material pack weight; listing skipped
+- new-product / candidate-08fed14fa311e7f5eb98: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1f5cdc9fcc66660cb6ac: Cannot confirm that the product is a material or printer
-- new-product / candidate-f979735d67064f419f19: Nightly time budget reached; remaining values retained
-- new-product / candidate-5ed11ab9e69b8391a9f2: Nightly time budget reached; remaining values retained
-- new-product / candidate-c4ff51ee6d39638aa84e: Nightly time budget reached; remaining values retained
-- new-product / candidate-ae1ad541ec71c1b3b202: Nightly time budget reached; remaining values retained
-- new-product / candidate-cf9f267f06e078a5383d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-64379db6d7a4b002f87d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f979735d67064f419f19: Cannot confirm one product on the discovered URL
+- new-product / candidate-5ed11ab9e69b8391a9f2: Cannot confirm one product on the discovered URL
+- new-product / candidate-cf1f9b7682dd18d70228: Cannot confirm one product on the discovered URL
+- new-product / candidate-ae1ad541ec71c1b3b202: HTTP Error 403: Forbidden
+- new-product / candidate-2dda42a651129e1718e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c3db83d2ac00e82ddeea: No verified product image URL
+- new-product / candidate-948498430d01eb44ae97: No single GBP offer for the exact product
 - new-product / candidate-54c92b0e56ce9ba63200: Cannot confirm that the product is a material or printer
-- new-product / candidate-dc2b55403c5399027de2: Nightly time budget reached; remaining values retained
 - new-product / candidate-a7b245437aa0b6da5974: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a3952daa88a3473e1c84: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1811e587c1dd83edf013: Source does not state the material pack weight; listing skipped
 - new-product / candidate-17c085d78454a1a98d2d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-35a512e37f4fe57b0344: Nightly time budget reached; remaining values retained
-- new-product / candidate-a06980288c33c8b8fc6c: Nightly time budget reached; remaining values retained
-- new-product / candidate-f17079ad9a8ca40afcd4: Nightly time budget reached; remaining values retained
-- new-product / candidate-567b6b7f77ba73383692: Nightly time budget reached; remaining values retained
-- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-378f4c930e9428e4925b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-35a512e37f4fe57b0344: Cannot confirm one product on the discovered URL
+- new-product / candidate-a06980288c33c8b8fc6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b3117d58b04f92ad4ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-567b6b7f77ba73383692: HTTP Error 403: Forbidden
+- new-product / candidate-d4ab6319bb249c820ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5cca341eda1ee615977a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc2b55403c5399027de2: No single GBP offer for the exact product
 - new-product / candidate-68d66e28993096c3f125: Cannot confirm that the product is a material or printer
-- new-product / candidate-5701b1119aa9249d3bc7: Nightly time budget reached; remaining values retained
 - new-product / candidate-f984c07c2a68facd3d85: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2302cf6b2b2c65a346c3: Pack weight is ambiguous; listing skipped
+- new-product / candidate-a3952daa88a3473e1c84: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6be83cdcaa56a0f3e147: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c8b036463212974c05ca: Nightly time budget reached; remaining values retained
-- new-product / candidate-45f7e5d9edb419e4d70a: Nightly time budget reached; remaining values retained
-- new-product / candidate-274d78c913948a761a5f: Nightly time budget reached; remaining values retained
-- new-product / candidate-3ce02cba0e2f8c373c65: Nightly time budget reached; remaining values retained
-- new-product / candidate-9273d71dfdc387705730: Nightly time budget reached; remaining values retained
-- new-product / candidate-9a8db1d70556a69c975d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c8b036463212974c05ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-45f7e5d9edb419e4d70a: Cannot confirm one product on the discovered URL
+- new-product / candidate-7fefbd7a8c42689fd521: Cannot confirm one product on the discovered URL
+- new-product / candidate-3ce02cba0e2f8c373c65: HTTP Error 403: Forbidden
+- new-product / candidate-c003b0067281866b9b2a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ce0fda9bc50fa317e342: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5701b1119aa9249d3bc7: No single GBP offer for the exact product
 - new-product / candidate-cea84124b106efbe871a: Cannot confirm that the product is a material or printer
-- new-product / candidate-59af1176e4bff47f1d80: Nightly time budget reached; remaining values retained
 - new-product / candidate-36bd015e77daf586b0c9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2302cf6b2b2c65a346c3: Pack weight is ambiguous; listing skipped
 - new-product / candidate-c63cf4ad05dda0b69694: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d080a6f010b1fd4dd207: Nightly time budget reached; remaining values retained
-- new-product / candidate-e2158be4290b439140de: Nightly time budget reached; remaining values retained
-- new-product / candidate-d87f9429befc22a007bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-0cd9591216d4ea549559: Nightly time budget reached; remaining values retained
+- new-product / candidate-d080a6f010b1fd4dd207: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2158be4290b439140de: Cannot confirm one product on the discovered URL
+- new-product / candidate-9e42876f12b01df41dd0: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cd9591216d4ea549559: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e6199bd67eb0f8c5291: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6a394e0b85b1aef8f60b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-59af1176e4bff47f1d80: No single GBP offer for the exact product
+- new-product / candidate-bc33b2e61f9a3e4b0e1b: Cannot confirm that the product is a material or printer
+- new-product / candidate-96bcabe53c27ad5fbc04: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0c9eea89370335cc21b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-67378ba963b868af2324: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0798fd9918a71efc3ea1: Cannot confirm one product on the discovered URL
+- new-product / candidate-d1e318ee0f10f1eb4059: Cannot confirm one product on the discovered URL
+- new-product / candidate-263a8a45129eeb776a59: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6b20ef0e411873553a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-7775779ada4026695ca3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d4b73213219f2d8cc282: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4abde21ecad8c74e1d96: No single GBP offer for the exact product
+- new-product / candidate-2fe11fbd01c6852810b4: Cannot confirm that the product is a material or printer
+- new-product / candidate-38a034d371ad03282707: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c35fb5528312bd17e8ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-738baa6f8b32f700c57c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fb202f8a56e2aa226eb: Cannot confirm one product on the discovered URL
+- new-product / candidate-1213b20f83c54c607fac: Cannot confirm one product on the discovered URL
+- new-product / candidate-f99292211e936771bad1: HTTP Error 403: Forbidden
+- new-product / candidate-cf9f267f06e078a5383d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a1789ffcb53f2c52384f: No verified product image URL
+- new-product / candidate-d6480e227a539b3cd9d6: No single GBP offer for the exact product
+- new-product / candidate-c48606cb12400492453d: Cannot confirm that the product is a material or printer
+- new-product / candidate-cdab35d9337a2c8556c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-72e9ac6e3bffa59b71b0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-42a39e4a6ba22c5906c1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-147d55d32c3328fb7b76: Cannot confirm one product on the discovered URL
+- new-product / candidate-76f9bced2b2b5e7c679e: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6c93616305ae9795d49: Cannot confirm one product on the discovered URL
+- new-product / candidate-b0fc3d73c88b04b390b1: HTTP Error 403: Forbidden
+- new-product / candidate-cb7d08a559b65de8bc8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-64379db6d7a4b002f87d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c1e051af16bd7542fe67: No single GBP offer for the exact product
+- new-product / candidate-65557a0341dc558c322b: Cannot confirm that the product is a material or printer
+- new-product / candidate-a2f77cf5911096c04949: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a07376580d15cc4173d2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1e459534d5106da8d796: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-246da19df756708948d4: Cannot confirm one product on the discovered URL
+- new-product / candidate-56c68ff60bdb308abf03: Cannot confirm one product on the discovered URL
+- new-product / candidate-90ec15c6228aef56d26b: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc63550d353e282ba7e9: HTTP Error 403: Forbidden
+- new-product / candidate-9a8db1d70556a69c975d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d014c38701f89ff5d55c: No single GBP offer for the exact product
+- new-product / candidate-3e5541b8f46d5c563289: Cannot confirm that the product is a material or printer
+- new-product / candidate-e9eb2543f049230dbd2e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2243ffac94e959f00302: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-632e17eb5df20de5924e: Cannot confirm one product on the discovered URL
+- new-product / candidate-fc78ac00775b778cd11b: Cannot confirm one product on the discovered URL
+- new-product / candidate-46a472906362bc6031bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-044ab3eb6511eba80b0a: HTTP Error 403: Forbidden
 - new-product / candidate-b9cfa36bf055056981c9: Pack weight outside the supported range
 - new-product / candidate-35d195d9e84013dc6643: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bc33b2e61f9a3e4b0e1b: Cannot confirm that the product is a material or printer
-- new-product / candidate-4abde21ecad8c74e1d96: Nightly time budget reached; remaining values retained
-- new-product / candidate-96bcabe53c27ad5fbc04: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f1605b6cbac7776226d0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-67378ba963b868af2324: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0798fd9918a71efc3ea1: Nightly time budget reached; remaining values retained
-- new-product / candidate-d1e318ee0f10f1eb4059: Nightly time budget reached; remaining values retained
-- new-product / candidate-211e3474631238053123: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6b20ef0e411873553a1: Nightly time budget reached; remaining values retained
+- new-product / candidate-e750e7e6145869445be1: No single GBP offer for the exact product
+- new-product / candidate-dedb65a7d25eb3c6a7b2: Cannot confirm that the product is a material or printer
+- new-product / candidate-4f5bf219f37e355b5d5d: Pack weight is ambiguous; listing skipped
+- new-product / candidate-b60db6b50f8578dd4a70: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ae41b808f43b4cff4be2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e13a82ed4ea99dfa4ab2: Cannot confirm one product on the discovered URL
+- new-product / candidate-edf9d976af8d432caecf: Cannot confirm one product on the discovered URL
+- new-product / candidate-b581f27d15c3b71b9780: Cannot confirm one product on the discovered URL
 - new-product / candidate-81fbde022dc9649b82ca: Pack weight outside the supported range
 - new-product / candidate-e7285980c6a70f8402ec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2fe11fbd01c6852810b4: Cannot confirm that the product is a material or printer
-- new-product / candidate-d6480e227a539b3cd9d6: Nightly time budget reached; remaining values retained
-- new-product / candidate-38a034d371ad03282707: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-72e9ac6e3bffa59b71b0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c35fb5528312bd17e8ce: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-738baa6f8b32f700c57c: Nightly time budget reached; remaining values retained
-- new-product / candidate-3fb202f8a56e2aa226eb: Nightly time budget reached; remaining values retained
-- new-product / candidate-f24f2815608d8e580193: Nightly time budget reached; remaining values retained
-- new-product / candidate-f99292211e936771bad1: Nightly time budget reached; remaining values retained
+- new-product / candidate-f3173a980527e73f7aad: No single GBP offer for the exact product
+- new-product / candidate-8e3686af8ce89426ea9a: Pack weight is ambiguous; listing skipped
+- new-product / candidate-16a1ae4714da745b1223: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eaeeb943b25acfc79d8c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-21b57ed384337db05fd4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d3039c89418a4335e29: Cannot confirm one product on the discovered URL
+- new-product / candidate-eec19f7bc812c78e4af5: Cannot confirm one product on the discovered URL
+- new-product / candidate-1d81cac01f58fa828619: Cannot confirm one product on the discovered URL
 - new-product / candidate-14c645bb9c7485aba8e9: Pack weight outside the supported range
 - new-product / candidate-e8826ba22c7d34f3972e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c48606cb12400492453d: Cannot confirm that the product is a material or printer
-- new-product / candidate-c1e051af16bd7542fe67: Nightly time budget reached; remaining values retained
-- new-product / candidate-cdab35d9337a2c8556c0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a07376580d15cc4173d2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-42a39e4a6ba22c5906c1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-147d55d32c3328fb7b76: Nightly time budget reached; remaining values retained
-- new-product / candidate-76f9bced2b2b5e7c679e: Nightly time budget reached; remaining values retained
-- new-product / candidate-507a7a53d233e13a2ddf: Nightly time budget reached; remaining values retained
-- new-product / candidate-b0fc3d73c88b04b390b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-12c9f8529277d0ae3d9a: No single GBP offer for the exact product
+- new-product / candidate-545bc62594e1844762ea: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4a83cc6a6ccb70efd254: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-de59df37ddeb4caf80d0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-10d14e2c48d4be2ddb65: Cannot confirm one product on the discovered URL
+- new-product / candidate-f4c77a86bd498287c7df: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f9c5c0757a39eb2a4cd: Cannot confirm one product on the discovered URL
 - new-product / candidate-4712ae0bd680047cf25d: Pack weight outside the supported range
 - new-product / candidate-28b0a0bf08ded4c639d8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-65557a0341dc558c322b: Cannot confirm that the product is a material or printer
-- new-product / candidate-d014c38701f89ff5d55c: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2f77cf5911096c04949: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e9eb2543f049230dbd2e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1e459534d5106da8d796: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-246da19df756708948d4: Nightly time budget reached; remaining values retained
-- new-product / candidate-56c68ff60bdb308abf03: Nightly time budget reached; remaining values retained
-- new-product / candidate-081c196a89cef4f6bb94: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc63550d353e282ba7e9: Nightly time budget reached; remaining values retained
+- new-product / candidate-8e88f4f6d34338c47eba: No single GBP offer for the exact product
+- new-product / candidate-cad8f56f01c2b60db941: Pack weight is ambiguous; listing skipped
+- new-product / candidate-c3b8cfdcaac181a82686: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e220f8543281ae866eb4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-17c11549f55abfc459c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-96826d6603e044c1b59d: Cannot confirm one product on the discovered URL
+- new-product / candidate-c49b899bd5b590ee5f7d: Cannot confirm one product on the discovered URL
 - new-product / candidate-b03f7841092f54e0b0a6: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-b3ff91830113136e840f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3e5541b8f46d5c563289: Cannot confirm that the product is a material or printer
-- new-product / candidate-e750e7e6145869445be1: Nightly time budget reached; remaining values retained
-- new-product / candidate-b60db6b50f8578dd4a70: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2243ffac94e959f00302: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-632e17eb5df20de5924e: Nightly time budget reached; remaining values retained
-- new-product / candidate-fc78ac00775b778cd11b: Nightly time budget reached; remaining values retained
-- new-product / candidate-79f83a889a5d5484158e: Nightly time budget reached; remaining values retained
-- new-product / candidate-044ab3eb6511eba80b0a: Nightly time budget reached; remaining values retained
+- new-product / candidate-91e76434dcd985162019: No single GBP offer for the exact product
+- new-product / candidate-825844afab0db6e0070a: Pack weight is ambiguous; listing skipped
+- new-product / candidate-5fd367120543ca631e95: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f9db6b62635e2e3b3269: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d8bc07d54877a0aa9125: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-58168e070c140293bfbd: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b9bbf3d6e72f19d0be7: Cannot confirm one product on the discovered URL
+- new-product / candidate-4f64394b18a6e0749568: Cannot confirm one product on the discovered URL
 - new-product / candidate-f121cd421113b0b3c638: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-34432ad47a3e291f8755: Source does not state the material pack weight; listing skipped
-- new-product / candidate-dedb65a7d25eb3c6a7b2: Cannot confirm that the product is a material or printer
-- new-product / candidate-f3173a980527e73f7aad: Nightly time budget reached; remaining values retained
-- new-product / candidate-4f5bf219f37e355b5d5d: Pack weight is ambiguous; listing skipped
-- new-product / candidate-eaeeb943b25acfc79d8c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-ae41b808f43b4cff4be2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e13a82ed4ea99dfa4ab2: Nightly time budget reached; remaining values retained
-- new-product / candidate-edf9d976af8d432caecf: Nightly time budget reached; remaining values retained
-- new-product / candidate-4e7c0d7b2a3281ec3152: Nightly time budget reached; remaining values retained
+- new-product / candidate-9a9163b08fdb77e38931: No single GBP offer for the exact product
+- new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
+- new-product / candidate-57f9f9d662589bfe8ac5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-39fc57fbe97576e57434: Source does not state the material pack weight; listing skipped
+- new-product / candidate-851a3aca264c32b39a56: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dadcf47c581355f1c202: Cannot confirm one product on the discovered URL
+- new-product / candidate-35c9bb64a2cad4d0a0c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-6eb6d88a875d769b190a: Cannot confirm one product on the discovered URL
 - new-product / candidate-33dff9e636e2c8a9ac73: Pack weight outside the supported range
 - new-product / candidate-9abb7290bcf7cb6f3e19: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8e3686af8ce89426ea9a: Pack weight is ambiguous; listing skipped
-- new-product / candidate-12c9f8529277d0ae3d9a: Nightly time budget reached; remaining values retained
-- new-product / candidate-16a1ae4714da745b1223: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3486b970326223e6828d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21b57ed384337db05fd4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3d3039c89418a4335e29: Nightly time budget reached; remaining values retained
-- new-product / candidate-eec19f7bc812c78e4af5: Nightly time budget reached; remaining values retained
-- new-product / candidate-44069b2c45f2e68e0215: Nightly time budget reached; remaining values retained
+- new-product / candidate-cc2dc494c9745f0d5802: No single GBP offer for the exact product
+- new-product / candidate-72937768a06d597aecdc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a2b2e013976dc69b6d33: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3bcf1c17548ac18a60d0: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7896e8d359f04899ebde: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-952784ed56a24352b43c: Cannot confirm one product on the discovered URL
+- new-product / candidate-9dda09be42f8a6e2930d: Cannot confirm one product on the discovered URL
+- new-product / candidate-92ad3417c77bb48b3e52: Cannot confirm one product on the discovered URL
 - new-product / candidate-4f7f40e56e26f3d083f1: No verified product image URL
 - new-product / candidate-98211a321d7076507513: Source does not state the material pack weight; listing skipped
-- new-product / candidate-545bc62594e1844762ea: Pack weight is ambiguous; listing skipped
-- new-product / candidate-8e88f4f6d34338c47eba: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a83cc6a6ccb70efd254: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-eb349de1b41d75974501: Source does not state the material pack weight; listing skipped
-- new-product / candidate-de59df37ddeb4caf80d0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-10d14e2c48d4be2ddb65: Nightly time budget reached; remaining values retained
-- new-product / candidate-f4c77a86bd498287c7df: Nightly time budget reached; remaining values retained
-- new-product / candidate-692a58ff7194e473ccf9: Nightly time budget reached; remaining values retained
+- new-product / candidate-bb30eb7dffc235bb7a9a: No single GBP offer for the exact product
+- new-product / candidate-dd7c68f71f3d60fae960: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-414c7aa0ffb8fd65afe9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
+- new-product / candidate-18dd661b244dece3b2d5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9a82f32a4e523e5b0c6a: Cannot confirm one product on the discovered URL
+- new-product / candidate-df5dba9132db32d313ff: Cannot confirm one product on the discovered URL
+- new-product / candidate-cbdefa181f07a6775295: Cannot confirm one product on the discovered URL
 - new-product / candidate-7f935462c912140d0de8: No verified product image URL
 - new-product / candidate-d5c55ef338ce312c7b51: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cad8f56f01c2b60db941: Pack weight is ambiguous; listing skipped
-- new-product / candidate-91e76434dcd985162019: Nightly time budget reached; remaining values retained
-- new-product / candidate-c3b8cfdcaac181a82686: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f9db6b62635e2e3b3269: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e220f8543281ae866eb4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-17c11549f55abfc459c2: Nightly time budget reached; remaining values retained
-- new-product / candidate-96826d6603e044c1b59d: Nightly time budget reached; remaining values retained
-- new-product / candidate-660e43a77f75fdf00868: Nightly time budget reached; remaining values retained
+- new-product / candidate-bcc9557d668006315522: No single GBP offer for the exact product
+- new-product / candidate-97ee59f05792f8bce3e8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-41c90dd2ef457051b99d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6bb9bde92e14d0387525: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c48eb3d01f61e31b1624: Cannot confirm one product on the discovered URL
+- new-product / candidate-0fc1ac44214f0f0e4375: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a2d45cc8f578c635208: Cannot confirm one product on the discovered URL
 - new-product / candidate-23b0afa9e22184b6757f: Pack weight outside the supported range
 - new-product / candidate-1157b61749dfcc4027de: Source does not state the material pack weight; listing skipped
-- new-product / candidate-825844afab0db6e0070a: Pack weight is ambiguous; listing skipped
-- new-product / candidate-9a9163b08fdb77e38931: Nightly time budget reached; remaining values retained
-- new-product / candidate-5fd367120543ca631e95: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-39fc57fbe97576e57434: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d8bc07d54877a0aa9125: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-58168e070c140293bfbd: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b9bbf3d6e72f19d0be7: Nightly time budget reached; remaining values retained
-- new-product / candidate-c68931264cf764d0bd2e: Nightly time budget reached; remaining values retained
+- new-product / candidate-d22e2c2ef601784af630: No single GBP offer for the exact product
+- new-product / candidate-9c4e6df3d7fab7b308b6: Cannot confirm that the product is a material or printer
+- new-product / candidate-445286ddb4de895df879: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc41184b3f3a474e730f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4ad1608884bf22aef31f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ca7aeed7cfed9d90030e: Cannot confirm one product on the discovered URL
+- new-product / candidate-b5738353746e5302721a: Cannot confirm one product on the discovered URL
+- new-product / candidate-717e0ca59c266018aa9c: Cannot confirm one product on the discovered URL
 - new-product / candidate-4540afa0e8a9dafbc28f: Pack weight outside the supported range
 - new-product / candidate-e26a93fcdc68b409a7a0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
-- new-product / candidate-cc2dc494c9745f0d5802: Nightly time budget reached; remaining values retained
-- new-product / candidate-57f9f9d662589bfe8ac5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3bcf1c17548ac18a60d0: Pack weight is ambiguous; listing skipped
-- new-product / candidate-851a3aca264c32b39a56: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dadcf47c581355f1c202: Nightly time budget reached; remaining values retained
-- new-product / candidate-35c9bb64a2cad4d0a0c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-01b0482993e6e1d62e71: Nightly time budget reached; remaining values retained
+- new-product / candidate-c397b7f7cdad72b01785: No single GBP offer for the exact product
+- new-product / candidate-13bfe85249bda8d540d9: Cannot confirm that the product is a material or printer
+- new-product / candidate-c316167674cd3f479fd9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7f406cef624cdf525799: Source does not state the material pack weight; listing skipped
+- new-product / candidate-55487f320882f7f42ca5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bde775aae3311d869f9d: Cannot confirm one product on the discovered URL
+- new-product / candidate-85d0e645902e8cc7b77b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a861e117a1da952973a8: Cannot confirm one product on the discovered URL
 - new-product / candidate-f7b2ad98289720245d30: Pack weight outside the supported range
 - new-product / candidate-7763a3e37277f80facb9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-72937768a06d597aecdc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bb30eb7dffc235bb7a9a: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2b2e013976dc69b6d33: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-675547b6e3295fd86892: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7896e8d359f04899ebde: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-952784ed56a24352b43c: Nightly time budget reached; remaining values retained
-- new-product / candidate-9dda09be42f8a6e2930d: Nightly time budget reached; remaining values retained
-- new-product / candidate-a050bf7a86010e44fd1f: Nightly time budget reached; remaining values retained
+- new-product / candidate-912793674106bd623bb5: No single GBP offer for the exact product
+- new-product / candidate-d3fe00fe81f19ccb4db5: Cannot confirm that the product is a material or printer
+- new-product / candidate-1a30766a0f3e5a5eaed0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d8d79a15e6520a9225b4: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4ef446ec1689bb7632b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-780bd823649861c1cc94: Cannot confirm one product on the discovered URL
+- new-product / candidate-6b3ec3cb3364dc6b5009: Cannot confirm one product on the discovered URL
+- new-product / candidate-9ab97070b0bc6997d5b2: Cannot confirm one product on the discovered URL
 - new-product / candidate-aff86bdae6756e6d5242: No verified product image URL
 - new-product / candidate-bf6f450337e0cad253aa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-dd7c68f71f3d60fae960: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bcc9557d668006315522: Nightly time budget reached; remaining values retained
-- new-product / candidate-414c7aa0ffb8fd65afe9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1e1dabc10ae26530479d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-18dd661b244dece3b2d5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9a82f32a4e523e5b0c6a: Nightly time budget reached; remaining values retained
-- new-product / candidate-df5dba9132db32d313ff: Nightly time budget reached; remaining values retained
-- new-product / candidate-9a152a1943216881ac7a: Nightly time budget reached; remaining values retained
+- new-product / candidate-0a036164caf904e517cb: No single GBP offer for the exact product
+- new-product / candidate-a0fa1732e60c5dd326b5: Catalogue GBP price outside supported range
+- new-product / candidate-cdecff0a2ecf2eae8548: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bb31d42b4c61c8ac08c5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-42af5b4f646cae1475e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-fdc89fe383814f1ca781: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac880edb14fa646df982: Cannot confirm one product on the discovered URL
 - new-product / candidate-0bf61aa007aad54f110a: Pack weight outside the supported range
 - new-product / candidate-7bff0b51844c06eda032: Source does not state the material pack weight; listing skipped
-- new-product / candidate-97ee59f05792f8bce3e8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d22e2c2ef601784af630: Nightly time budget reached; remaining values retained
-- new-product / candidate-41c90dd2ef457051b99d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc41184b3f3a474e730f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6bb9bde92e14d0387525: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c48eb3d01f61e31b1624: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fc1ac44214f0f0e4375: Nightly time budget reached; remaining values retained
-- new-product / candidate-52348d1201cad9ba507c: Nightly time budget reached; remaining values retained
+- new-product / candidate-89f69e0e0a3e40f9c74e: Cannot confirm that the product is a material or printer
+- new-product / candidate-e21a4f0260265d8d05e7: Catalogue GBP price outside supported range
+- new-product / candidate-c7bafe7e7ed528bf2aca: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8324b97cf68a654022cd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6e9853502fefa6333720: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc0b97017469303448d9: Cannot confirm one product on the discovered URL
+- new-product / candidate-9a90b4f3a81871c4df29: Cannot confirm one product on the discovered URL
 - new-product / candidate-7311634b6e7f8af0a26c: Pack weight outside the supported range
 - new-product / candidate-48f1220cafa88d2bdc97: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9c4e6df3d7fab7b308b6: Cannot confirm that the product is a material or printer
-- new-product / candidate-c397b7f7cdad72b01785: Nightly time budget reached; remaining values retained
-- new-product / candidate-445286ddb4de895df879: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7f406cef624cdf525799: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4ad1608884bf22aef31f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ca7aeed7cfed9d90030e: Nightly time budget reached; remaining values retained
-- new-product / candidate-b5738353746e5302721a: Nightly time budget reached; remaining values retained
-- new-product / candidate-7e91bb583919e978998b: Nightly time budget reached; remaining values retained
+- new-product / candidate-66a66dd6c271fa5a35aa: No single GBP offer for the exact product
+- new-product / candidate-9cb64730559221d6094b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4218c423baad4d844f16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-10f074044965e3fef1a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b3408a8c40d362c18974: Cannot confirm one product on the discovered URL
+- new-product / candidate-49ef77243b95e7a89049: Cannot confirm one product on the discovered URL
+- new-product / candidate-55060d485e7ccd4e6a4a: Cannot confirm one product on the discovered URL
 - new-product / candidate-3c99d6cb25a94013a960: Pack weight outside the supported range
 - new-product / candidate-ad7ab3aac149cb245686: Source does not state the material pack weight; listing skipped
-- new-product / candidate-13bfe85249bda8d540d9: Cannot confirm that the product is a material or printer
-- new-product / candidate-912793674106bd623bb5: Nightly time budget reached; remaining values retained
-- new-product / candidate-c316167674cd3f479fd9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d8d79a15e6520a9225b4: Pack weight is ambiguous; listing skipped
-- new-product / candidate-55487f320882f7f42ca5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bde775aae3311d869f9d: Nightly time budget reached; remaining values retained
-- new-product / candidate-85d0e645902e8cc7b77b: Nightly time budget reached; remaining values retained
-- new-product / candidate-2958a690903c5f3635e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-e2fb644830bba3708070: Cannot confirm that the product is a material or printer
+- new-product / candidate-1ef0f10d33c8b33f6aa7: Catalogue GBP price outside supported range
+- new-product / candidate-f84dcaf43dc042e4d6f5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-268d8855ecf578435a87: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4f1ea397363aeae53505: Cannot confirm one product on the discovered URL
+- new-product / candidate-0b73c86558c54ea36ffb: Cannot confirm one product on the discovered URL
+- new-product / candidate-032e056c8c2b89916519: Cannot confirm one product on the discovered URL
 - new-product / candidate-3d096b8b7cc8c77c7b96: Pack weight outside the supported range
 - new-product / candidate-955c084116462d7d6a2e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d3fe00fe81f19ccb4db5: Cannot confirm that the product is a material or printer
-- new-product / candidate-0a036164caf904e517cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-1a30766a0f3e5a5eaed0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e1ca84426022185b5fd3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4ef446ec1689bb7632b7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-780bd823649861c1cc94: Nightly time budget reached; remaining values retained
-- new-product / candidate-6b3ec3cb3364dc6b5009: Nightly time budget reached; remaining values retained
-- new-product / candidate-86a0444634b360a634b2: Nightly time budget reached; remaining values retained
+- new-product / candidate-7079f44fd87f0f09be32: Pack weight is ambiguous; listing skipped
+- new-product / candidate-da52654526e61c558684: No verified product image URL
+- new-product / candidate-5c65ae68f18a06a5ef1b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e2933d853f04c3b066fc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7858d59926c5d7225273: Cannot confirm one product on the discovered URL
+- new-product / candidate-bbe6db5bc94ef47dc121: Cannot confirm one product on the discovered URL
+- new-product / candidate-3524dfa0412063d79dd7: Cannot confirm one product on the discovered URL
 - new-product / candidate-d710bf36056fba6a2007: Pack weight outside the supported range
 - new-product / candidate-4e84ff7599f20a3d86d2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a0fa1732e60c5dd326b5: Catalogue GBP price outside supported range
-- new-product / candidate-89f69e0e0a3e40f9c74e: Nightly time budget reached; remaining values retained
-- new-product / candidate-cdecff0a2ecf2eae8548: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e0aa2ef754fe3fd4b4b9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bb31d42b4c61c8ac08c5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-42af5b4f646cae1475e4: Nightly time budget reached; remaining values retained
-- new-product / candidate-fdc89fe383814f1ca781: Nightly time budget reached; remaining values retained
-- new-product / candidate-b83358a02945a8b5a1cc: Nightly time budget reached; remaining values retained
+- new-product / candidate-e4964233c48699d02e08: Pack weight is ambiguous; listing skipped
+- new-product / candidate-7676becb79049bacae29: Source does not state the material pack weight; listing skipped
+- new-product / candidate-149a5160641474daa64a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0e7bea197a6bbdc723d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bb77d2dda2b24f42ffe6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9459c2183c7cd65443a0: Cannot confirm one product on the discovered URL
+- new-product / candidate-652557044712835e2fba: Cannot confirm one product on the discovered URL
+- new-product / candidate-469a6680eb226d95e59f: Cannot confirm one product on the discovered URL
 - new-product / candidate-c1cdd38ad0a5ba9c9cec: Pack weight outside the supported range
 - new-product / candidate-beaedba84eff6ed8a1f0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e21a4f0260265d8d05e7: Catalogue GBP price outside supported range
-- new-product / candidate-66a66dd6c271fa5a35aa: Nightly time budget reached; remaining values retained
-- new-product / candidate-c7bafe7e7ed528bf2aca: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4218c423baad4d844f16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8324b97cf68a654022cd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6e9853502fefa6333720: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc0b97017469303448d9: Nightly time budget reached; remaining values retained
-- new-product / candidate-7a4b078969a568be2045: Nightly time budget reached; remaining values retained
+- new-product / candidate-cbb1c8b01d87b7352e02: Cannot confirm that the product is a material or printer
+- new-product / candidate-3068a64e6d6cee05ef17: Catalogue GBP price outside supported range
+- new-product / candidate-c5c2a08fd8a9f60e5123: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0569f9575d006614a7fb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-34d5c79cedab0ec4db3b: Cannot confirm one product on the discovered URL
+- new-product / candidate-0e234b875c62454548f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-e7ffec1fcde4b12dd1f3: Cannot confirm one product on the discovered URL
 - new-product / candidate-1fd08a0c237ba07c9ff0: Cannot confirm that the product is a material or printer
 - new-product / candidate-c08d965579510cbcf0a7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-29b12aec8b8d6d3a4526: Nightly time budget reached; remaining values retained
-- new-product / candidate-e2fb644830bba3708070: Nightly time budget reached; remaining values retained
-- new-product / candidate-9cb64730559221d6094b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-313620e29128cf6c70ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-10f074044965e3fef1a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b3408a8c40d362c18974: Nightly time budget reached; remaining values retained
-- new-product / candidate-49ef77243b95e7a89049: Nightly time budget reached; remaining values retained
-- new-product / candidate-ed20600c182363bc42e3: Nightly time budget reached; remaining values retained
+- new-product / candidate-dde32ebe6c957c177102: No single GBP offer for the exact product
+- new-product / candidate-22bf7c077b82eab2329d: Catalogue GBP price outside supported range
+- new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e9aea6e19f7c3e82845f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b18b9f6fc78decc41c1b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3b08a1a513990b50fef: Cannot confirm one product on the discovered URL
+- new-product / candidate-d5872dca07ffe2f67be6: Cannot confirm one product on the discovered URL
 - new-product / candidate-a315b3755130d94a7550: No verified product image URL
 - new-product / candidate-526a15bc94f01cc9935b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1ef0f10d33c8b33f6aa7: Catalogue GBP price outside supported range
-- new-product / candidate-7079f44fd87f0f09be32: Nightly time budget reached; remaining values retained
-- new-product / candidate-f84dcaf43dc042e4d6f5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9d76b618b84d8ed6bb1b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-268d8855ecf578435a87: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4f1ea397363aeae53505: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b73c86558c54ea36ffb: Nightly time budget reached; remaining values retained
-- new-product / candidate-c2554d86b7574ed94b1f: Nightly time budget reached; remaining values retained
+- new-product / candidate-96595bec4ea895bb1a7b: No single GBP offer for the exact product
+- new-product / candidate-84f3b5270612ed3ecb9e: Catalogue GBP price outside supported range
+- new-product / candidate-cf5d87c78a03a9bc184c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-dab3501ad59ff4029857: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d1f6f0c2bdc11340c446: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c259c292a49009f31b01: Cannot confirm one product on the discovered URL
+- new-product / candidate-e1b29e26696caffe9031: Cannot confirm one product on the discovered URL
+- new-product / candidate-2a9eb911aa1fde4e9377: Cannot confirm one product on the discovered URL
 - new-product / candidate-16c82fdf795940196301: No verified product image URL
 - new-product / candidate-ac61e19b19491513a6cd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-da52654526e61c558684: No verified product image URL
-- new-product / candidate-e4964233c48699d02e08: Nightly time budget reached; remaining values retained
-- new-product / candidate-5c65ae68f18a06a5ef1b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e0e7bea197a6bbdc723d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e2933d853f04c3b066fc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7858d59926c5d7225273: Nightly time budget reached; remaining values retained
-- new-product / candidate-bbe6db5bc94ef47dc121: Nightly time budget reached; remaining values retained
-- new-product / candidate-01fb654d947b268c41fc: Nightly time budget reached; remaining values retained
+- new-product / candidate-6f366d04c1b036e09447: No single GBP offer for the exact product
+- new-product / candidate-e4bb3c09ebbd1fd2534e: Catalogue GBP price outside supported range
+- new-product / candidate-ba6dc15e28ac2bad6398: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2aa14f1ecccfa811d6a3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-21cbd3b10056756f94aa: Cannot confirm one product on the discovered URL
+- new-product / candidate-6ddbaf672a5522edf430: Cannot confirm one product on the discovered URL
+- new-product / candidate-bcb3082817e5d363c86b: Cannot confirm one product on the discovered URL
 - new-product / candidate-3f4f59e4a45de8f309f8: No verified product image URL
 - new-product / candidate-7e60972564e95a64c401: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7676becb79049bacae29: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cbb1c8b01d87b7352e02: Nightly time budget reached; remaining values retained
-- new-product / candidate-149a5160641474daa64a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a161590cd013f8fafce3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bb77d2dda2b24f42ffe6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9459c2183c7cd65443a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-652557044712835e2fba: Nightly time budget reached; remaining values retained
-- new-product / candidate-0e71dbf4435fa31142e2: Nightly time budget reached; remaining values retained
-- new-product / candidate-06e6ef5eee300b868be8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8dff8ac7218778be1852: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3068a64e6d6cee05ef17: Catalogue GBP price outside supported range
-- new-product / candidate-dde32ebe6c957c177102: Nightly time budget reached; remaining values retained
-- new-product / candidate-c5c2a08fd8a9f60e5123: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ac25506f5e4a518872ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0569f9575d006614a7fb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-34d5c79cedab0ec4db3b: Nightly time budget reached; remaining values retained
-- new-product / candidate-0e234b875c62454548f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-8080453e7a230d4ff257: Nightly time budget reached; remaining values retained
-- new-product / candidate-f0d5d57b3f393aae52a0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eaf6c32ef5ad46ea130e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22bf7c077b82eab2329d: Catalogue GBP price outside supported range
-- new-product / candidate-96595bec4ea895bb1a7b: Nightly time budget reached; remaining values retained
-- new-product / candidate-dab3501ad59ff4029857: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e9aea6e19f7c3e82845f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b18b9f6fc78decc41c1b: Nightly time budget reached; remaining values retained
-- new-product / candidate-a3b08a1a513990b50fef: Nightly time budget reached; remaining values retained
-- new-product / candidate-dec9b295f6882a007b45: Nightly time budget reached; remaining values retained
-- new-product / candidate-f51fe11f2937b59085ce: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5b5c444f191260423c15: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-84f3b5270612ed3ecb9e: Catalogue GBP price outside supported range
-- new-product / candidate-6f366d04c1b036e09447: Nightly time budget reached; remaining values retained
-- new-product / candidate-cf5d87c78a03a9bc184c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-8eb2272d9fa7b0592477: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d1f6f0c2bdc11340c446: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c259c292a49009f31b01: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1b29e26696caffe9031: Nightly time budget reached; remaining values retained
-- new-product / candidate-fc84aa5853b7bd51e0f6: Nightly time budget reached; remaining values retained
-- new-product / candidate-05683096ec330f02b974: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1539f816b6cf53d0c090: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4bb3c09ebbd1fd2534e: Catalogue GBP price outside supported range
-- new-product / candidate-d82d4d263b5d635b6f70: Nightly time budget reached; remaining values retained
-- new-product / candidate-ba6dc15e28ac2bad6398: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2aa14f1ecccfa811d6a3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21cbd3b10056756f94aa: Nightly time budget reached; remaining values retained
-- new-product / candidate-6ddbaf672a5522edf430: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ef12344e0fbd9e39d2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-1ff48e5badfd8e44a92c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3a59178be3c266a32d98: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d82d4d263b5d635b6f70: No single GBP offer for the exact product
 - new-product / candidate-c37aa39617358e581097: Catalogue GBP price outside supported range
-- new-product / candidate-618c511944a36fa58555: Nightly time budget reached; remaining values retained
 - new-product / candidate-a7dea7be7a0fdd5b9566: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-42de812451581f1897c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-722a5fa4692a81bed432: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f6a06bc4167a47297c9b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8ead40d047d0b97d171a: Nightly time budget reached; remaining values retained
-- new-product / candidate-05ebe93407b06ff30994: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2eade0bc0f5b1d9b880: Nightly time budget reached; remaining values retained
+- new-product / candidate-8ead40d047d0b97d171a: Cannot confirm one product on the discovered URL
+- new-product / candidate-05ebe93407b06ff30994: Cannot confirm one product on the discovered URL
+- new-product / candidate-184a10877dd5188f4709: Cannot confirm one product on the discovered URL
+- new-product / candidate-f09ecea14803528210a3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8dff8ac7218778be1852: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-618c511944a36fa58555: No single GBP offer for the exact product
+- new-product / candidate-e02b6ae5b407d1e2ddfd: Catalogue GBP price outside supported range
+- new-product / candidate-ce96227ad4adbef8c3fa: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-42de812451581f1897c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7989d4a8caa21d76b439: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e76079a4e9848b329dd2: Cannot confirm one product on the discovered URL
+- new-product / candidate-648805ade8ba1754a716: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6bd134c6ca4e6cf5ed9: Cannot confirm one product on the discovered URL
+- new-product / candidate-78a6235760369b13d1b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eaf6c32ef5ad46ea130e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f48664da967efb2e46e1: No single GBP offer for the exact product
+- new-product / candidate-e9b35c82ef3913eba0dd: Catalogue GBP price outside supported range
+- new-product / candidate-7b39c013ca51550de057: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e459423b2dff3d966aa2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f2e075534dcc37855a6b: Cannot confirm one product on the discovered URL
+- new-product / candidate-6deca42ce2a90df8c29d: Cannot confirm one product on the discovered URL
+- new-product / candidate-28971774601cb5b8a79d: Cannot confirm one product on the discovered URL
+- new-product / candidate-0a344b29ba6e816cfa41: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5b5c444f191260423c15: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3ecc1cc021edc9592d18: No single GBP offer for the exact product
+- new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-429f65a76895dfec82e8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cfd9d5500ee51cd35a2d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b1cca919ae37dc007f0b: Cannot confirm one product on the discovered URL
+- new-product / candidate-b91efae0a2d5ffcd3138: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e3b47485cb0074e20fd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1539f816b6cf53d0c090: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-423b3186e5e14e4aa598: No single GBP offer for the exact product
+- new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
+- new-product / candidate-96fcafaae26464196563: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b36c62ee3450cf70d8a6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7ef0afb904b16f2f54b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7f09211b5d77d39fd4ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-9589e4ba243309da8073: Cannot confirm one product on the discovered URL
+- new-product / candidate-86e4aa4293f3c9a8460c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3a59178be3c266a32d98: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5f103af2e4ec3a0ab6ed: No single GBP offer for the exact product
+- new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-252693a085df59249227: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d4ccbd6fdecd6eb6d39b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-03e82112c50bb66ea201: Cannot confirm one product on the discovered URL
+- new-product / candidate-e97f9daf009a4fd8b041: Cannot confirm one product on the discovered URL
 - new-product / candidate-65eecba56dbff301e74b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-55956d556d5be8b340c6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e02b6ae5b407d1e2ddfd: Catalogue GBP price outside supported range
-- new-product / candidate-f48664da967efb2e46e1: Nightly time budget reached; remaining values retained
-- new-product / candidate-ce96227ad4adbef8c3fa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b448c8ae01ba7c98ff39: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7989d4a8caa21d76b439: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e76079a4e9848b329dd2: Nightly time budget reached; remaining values retained
-- new-product / candidate-648805ade8ba1754a716: Nightly time budget reached; remaining values retained
-- new-product / candidate-fb2cfdaccd5f53235636: Nightly time budget reached; remaining values retained
+- new-product / candidate-eb3f5039dbe8c4795243: No single GBP offer for the exact product
+- new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a767a3a17df31d3c4a1f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-feaad94339216facfc7e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-78621a35468d4a243277: Cannot confirm one product on the discovered URL
+- new-product / candidate-93ea8a01fa93a244d3cf: Cannot confirm one product on the discovered URL
 - new-product / candidate-ae305f611bfb29661165: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a392f12654ccfe478d19: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e9b35c82ef3913eba0dd: Catalogue GBP price outside supported range
-- new-product / candidate-3ecc1cc021edc9592d18: Nightly time budget reached; remaining values retained
-- new-product / candidate-7b39c013ca51550de057: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa6ab46ebd3b555f9293: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e459423b2dff3d966aa2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f2e075534dcc37855a6b: Nightly time budget reached; remaining values retained
-- new-product / candidate-6deca42ce2a90df8c29d: Nightly time budget reached; remaining values retained
-- new-product / candidate-c626e63376abe72c72f6: Nightly time budget reached; remaining values retained
+- new-product / candidate-c805686d2e2dd2dc27fc: HTTP Error 404: Not Found
+- new-product / candidate-866261d14b351fa050be: Cannot confirm that the product is a material or printer
+- new-product / candidate-e4df3f8218cc7671a1b8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c052bbbba24e9ea8dbc3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7b4bd82d3799ef386565: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0ecf588b09d1ac34ffa0: Cannot confirm one product on the discovered URL
+- new-product / candidate-c0c8799f13ecfda7bac1: Cannot confirm one product on the discovered URL
 - new-product / candidate-9727d015d0e91ca676d9: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6fafdf5ed83c3d0de1d2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f1cadfbb4ca0dc665bbc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-423b3186e5e14e4aa598: Nightly time budget reached; remaining values retained
-- new-product / candidate-429f65a76895dfec82e8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b36c62ee3450cf70d8a6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cfd9d5500ee51cd35a2d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b1cca919ae37dc007f0b: Nightly time budget reached; remaining values retained
-- new-product / candidate-ade638e57c5c7e3c6fff: Nightly time budget reached; remaining values retained
+- new-product / candidate-ef3449480f486b040a2a: No single GBP offer for the exact product
+- new-product / candidate-1fa70ad88f7245e3c74f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-700a12d353eb0f02827d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a526210c550cdcc3e525: Source does not state the material pack weight; listing skipped
+- new-product / candidate-41b77c52f39b9d6bdd2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff3c9f7fade4264fdc3f: Cannot confirm one product on the discovered URL
 - new-product / candidate-4bf53bc75827a16e3c54: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-08c540ba8aaafd02faea: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ffa073f40b05533615ae: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5f103af2e4ec3a0ab6ed: Nightly time budget reached; remaining values retained
-- new-product / candidate-96fcafaae26464196563: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f9e3d163287d120a250f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7ef0afb904b16f2f54b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7f09211b5d77d39fd4ac: Nightly time budget reached; remaining values retained
-- new-product / candidate-a00b4ebf3d2a77e0cbdc: Nightly time budget reached; remaining values retained
+- new-product / candidate-057ac1489b03f450fcc5: Cannot confirm that the product is a material or printer
+- new-product / candidate-a7f8b9014db7a73259ed: Catalogue GBP price outside supported range
+- new-product / candidate-53679a6a9b64edeaf218: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
+- new-product / candidate-18d1e5904c3ddb322329: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ff1f4cf3f60aa340192a: Cannot confirm one product on the discovered URL
+- new-product / candidate-f28af1112fab23ccdacb: Cannot confirm one product on the discovered URL
 - new-product / candidate-1a30e8ab5a98259eee23: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bb0806ded76198a00d22: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-24332587e60afb11c8bc: Source does not state the material pack weight; listing skipped
-- new-product / candidate-eb3f5039dbe8c4795243: Nightly time budget reached; remaining values retained
-- new-product / candidate-252693a085df59249227: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-132e8547fc5f73c6906d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d4ccbd6fdecd6eb6d39b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-03e82112c50bb66ea201: Nightly time budget reached; remaining values retained
-- new-product / candidate-9e75c9081a57fdfc4dc5: Nightly time budget reached; remaining values retained
+- new-product / candidate-e96d2b2454e8416c6181: No single GBP offer for the exact product
+- new-product / candidate-7cf9d57a580294338f27: Catalogue GBP price outside supported range
+- new-product / candidate-ab059031754b8a1f8954: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b55373fe8e819209d6b3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d53e99214dab14ec9b05: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2df20358c7a8e7906df8: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff80e649cd24caa81250: Cannot confirm one product on the discovered URL
 - new-product / candidate-578e661b7d2ac7b6607e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9d700f8791721e3f4caf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f084d8b34541e30b9f06: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c805686d2e2dd2dc27fc: Nightly time budget reached; remaining values retained
-- new-product / candidate-a767a3a17df31d3c4a1f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c052bbbba24e9ea8dbc3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-feaad94339216facfc7e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-78621a35468d4a243277: Nightly time budget reached; remaining values retained
-- new-product / candidate-b417f37ab2a81206fe1e: Nightly time budget reached; remaining values retained
+- new-product / candidate-54e5825bb7450acd5144: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a28c1cfe50e4aa37b1a4: Catalogue GBP price outside supported range
+- new-product / candidate-d424e8b45f21fdb99e7f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ecb6113c6ba4adbbbfd4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2014ed157433e6776476: Cannot confirm one product on the discovered URL
+- new-product / candidate-654878f60193675af1ea: Cannot confirm one product on the discovered URL
 - new-product / candidate-26e39b3a3ad198821f84: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-fbd2ed3aed8c72ef7bb7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-866261d14b351fa050be: Cannot confirm that the product is a material or printer
-- new-product / candidate-54e5825bb7450acd5144: Nightly time budget reached; remaining values retained
-- new-product / candidate-e4df3f8218cc7671a1b8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e36a699c3a3327c51c9a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7b4bd82d3799ef386565: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0ecf588b09d1ac34ffa0: Nightly time budget reached; remaining values retained
-- new-product / candidate-7dc38716fa905f805b39: Nightly time budget reached; remaining values retained
+- new-product / candidate-3e977ca8eb53ffc1bef6: Approved URL is outside its recorded retailer
+- new-product / candidate-649e63e9829c6b47cf39: Catalogue GBP price outside supported range
+- new-product / candidate-9fe012c072d3a560493a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
+- new-product / candidate-fea14ddd37629c1be86c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6623ee45b4babd24757e: Cannot confirm one product on the discovered URL
+- new-product / candidate-e92a4018c3368296e077: Cannot confirm one product on the discovered URL
 - new-product / candidate-f301a995d74c088498ec: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0d68175d8eebb3a612c6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1fa70ad88f7245e3c74f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3e977ca8eb53ffc1bef6: Approved URL is outside its recorded retailer
-- new-product / candidate-700a12d353eb0f02827d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-82caddda129b4339a191: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a526210c550cdcc3e525: Source does not state the material pack weight; listing skipped
-- new-product / candidate-41b77c52f39b9d6bdd2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-0478b401f0ddffb81b5f: Nightly time budget reached; remaining values retained
+- new-product / candidate-a163efd511c73f87f9c7: No single GBP offer for the exact product
+- new-product / candidate-893cf38c48655139dcef: Catalogue GBP price outside supported range
+- new-product / candidate-c3513470e31598f7d3d8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e75ba2b6f4e4b373bb4f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-caea8fe88a97c0e7098d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d6956570146c7f24411e: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac35c87ad11dd7a82aa5: Cannot confirm one product on the discovered URL
 - new-product / candidate-b9ac478058e6e5e4db73: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bed892868dcba1a7fb7c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a7f8b9014db7a73259ed: Catalogue GBP price outside supported range
-- new-product / candidate-a163efd511c73f87f9c7: Nightly time budget reached; remaining values retained
-- new-product / candidate-53679a6a9b64edeaf218: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b55373fe8e819209d6b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-18d1e5904c3ddb322329: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ff1f4cf3f60aa340192a: Nightly time budget reached; remaining values retained
-- new-product / candidate-147bc42cd3de9e6426d9: Nightly time budget reached; remaining values retained
+- new-product / candidate-8d09e8a7c12897a61c12: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a044d1a5a0cf996e2506: Catalogue GBP price outside supported range
+- new-product / candidate-9dd638a6f32253f472e1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1c38a599eeb09ba051bf: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d0c13d356ecea44a3327: Cannot confirm one product on the discovered URL
+- new-product / candidate-14733c24e0b7a1954e76: Cannot confirm one product on the discovered URL
 - new-product / candidate-d37117cb21c2a732a57b: No verified product image URL
 - new-product / candidate-dc0ec00e7c2c5f59ebef: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7cf9d57a580294338f27: Catalogue GBP price outside supported range
-- new-product / candidate-8d09e8a7c12897a61c12: Nightly time budget reached; remaining values retained
-- new-product / candidate-ab059031754b8a1f8954: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-61f21a99509b9702ffde: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d53e99214dab14ec9b05: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2df20358c7a8e7906df8: Nightly time budget reached; remaining values retained
-- new-product / candidate-b3a07cec6fb1f5019c2e: Nightly time budget reached; remaining values retained
+- new-product / candidate-006e0d5f5068ef06fe67: No single GBP offer for the exact product
+- new-product / candidate-20bc5c94dc33b0b85791: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3715bb2c9805cfc8a142: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-21353203f689861dde67: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bfece126df5896a71836: Cannot confirm one product on the discovered URL
+- new-product / candidate-a3422a8e9ca192863984: Cannot confirm one product on the discovered URL
 - new-product / candidate-41d6623706045a9965c4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e4f4baf97a0007a97f9f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a28c1cfe50e4aa37b1a4: Catalogue GBP price outside supported range
-- new-product / candidate-006e0d5f5068ef06fe67: Nightly time budget reached; remaining values retained
-- new-product / candidate-d424e8b45f21fdb99e7f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b85107cac3f236c02733: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ecb6113c6ba4adbbbfd4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2014ed157433e6776476: Nightly time budget reached; remaining values retained
-- new-product / candidate-70349614d6a8ebb3022a: Nightly time budget reached; remaining values retained
+- new-product / candidate-29fd4ac47ca2ba476f7e: No single GBP offer for the exact product
+- new-product / candidate-8582be097e871d99582c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6e65713500fcf56a43c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ee5a938e0de95ced3640: Source does not state the material pack weight; listing skipped
+- new-product / candidate-04d47a898e8eb747bab9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1bd41817944733985c72: Cannot confirm one product on the discovered URL
+- new-product / candidate-60f32bd113f54560c37b: Cannot confirm one product on the discovered URL
 - new-product / candidate-3024f36c0b0ff940b4bf: Source does not state the material pack weight; listing skipped
 - new-product / candidate-83ea24945b4f783da983: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-649e63e9829c6b47cf39: Catalogue GBP price outside supported range
-- new-product / candidate-29fd4ac47ca2ba476f7e: Nightly time budget reached; remaining values retained
-- new-product / candidate-9fe012c072d3a560493a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e75ba2b6f4e4b373bb4f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fea14ddd37629c1be86c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6623ee45b4babd24757e: Nightly time budget reached; remaining values retained
-- new-product / candidate-121fe88709c2e6a6cda1: Nightly time budget reached; remaining values retained
-- new-product / candidate-50e7b1c44a837b68ca76: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-da43fcf425b085dddd28: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-893cf38c48655139dcef: Catalogue GBP price outside supported range
-- new-product / candidate-e7ab83cbc78fca22f6dd: Nightly time budget reached; remaining values retained
-- new-product / candidate-c3513470e31598f7d3d8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f4c6647598fa2eb49891: Source does not state the material pack weight; listing skipped
-- new-product / candidate-caea8fe88a97c0e7098d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d6956570146c7f24411e: Nightly time budget reached; remaining values retained
-- new-product / candidate-71e48986d77058dbbfc3: Nightly time budget reached; remaining values retained
-- new-product / candidate-61ea7fda2fae2f7723ee: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6114ddaf8a4dd3df9569: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a044d1a5a0cf996e2506: Catalogue GBP price outside supported range
-- new-product / candidate-44eacca675ca47c03434: Nightly time budget reached; remaining values retained
-- new-product / candidate-9dd638a6f32253f472e1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1ed9624ac0565cc295a2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1c38a599eeb09ba051bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d0c13d356ecea44a3327: Nightly time budget reached; remaining values retained
-- new-product / candidate-1ae7133a34e988229e4d: Nightly time budget reached; remaining values retained
-- new-product / candidate-1eaf5e55cfd594901f7a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9e2941f6fcd9d1b53c04: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20bc5c94dc33b0b85791: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6277fae9f990d7bd8cb0: Nightly time budget reached; remaining values retained
-- new-product / candidate-3715bb2c9805cfc8a142: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ee5a938e0de95ced3640: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21353203f689861dde67: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bfece126df5896a71836: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c0530cb6db2241e83bd: Nightly time budget reached; remaining values retained
-- new-product / candidate-5a41354688b31bb73273: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6512c6745b4606c44aa2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8582be097e871d99582c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-05656b87bde4c8c9696e: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e65713500fcf56a43c0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
-- new-product / candidate-04d47a898e8eb747bab9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1bd41817944733985c72: Nightly time budget reached; remaining values retained
-- new-product / candidate-369f07e34832f3168658: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b04edd7a4d3eb99cb23: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-64a717dfb8609b21feb9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7ab83cbc78fca22f6dd: No single GBP offer for the exact product
 - new-product / candidate-0cab138e391cc5d352de: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1ff05526fd5404bdc49e: Approved URL is outside its recorded retailer
-- new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-283aa419122444500e45: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9d571908ae2c85386cb1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3ed511c0c316ce8cdde9: Nightly time budget reached; remaining values retained
-- new-product / candidate-5860444edcd12ea9249b: Nightly time budget reached; remaining values retained
-- new-product / candidate-de05643e05d6bbf1fda0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1e7733f1fd633f9e0193: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3ed511c0c316ce8cdde9: Cannot confirm one product on the discovered URL
+- new-product / candidate-35defdcc29a3a474cb03: Cannot confirm one product on the discovered URL
+- new-product / candidate-818b38723950e7ddf0ae: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-da43fcf425b085dddd28: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44eacca675ca47c03434: No single GBP offer for the exact product
 - new-product / candidate-8683a4af9d63d8f0c91f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-dcca848dde0651fe0677: Nightly time budget reached; remaining values retained
 - new-product / candidate-65a8416f7b1283381777: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a81a5432047cdfea662b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-34560e45eda2bf0060f8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-88f1640eaa22fcb84760: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3d0defab449308f90d13: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc1e942321c121fdb90f: Nightly time budget reached; remaining values retained
-- new-product / candidate-d56085a9c8481b903ead: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef47ea79107aef982457: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3d0defab449308f90d13: Cannot confirm one product on the discovered URL
+- new-product / candidate-6380cccf17f217a3d944: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2d21ad373ffcbed3c1d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6114ddaf8a4dd3df9569: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6277fae9f990d7bd8cb0: No single GBP offer for the exact product
 - new-product / candidate-16daaacd9c2388fd1101: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4693f85190c302510f23: Nightly time budget reached; remaining values retained
 - new-product / candidate-3afcbf79b45630e905d8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a81a5432047cdfea662b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5fdce34bfb8c632833cb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8cf5f3bff481f74837da: Nightly time budget reached; remaining values retained
-- new-product / candidate-595ce11b0e9fe736db03: Nightly time budget reached; remaining values retained
-- new-product / candidate-ad0ef2ed7ebddde51464: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b7703027d71a2cbe592b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8cf5f3bff481f74837da: Cannot confirm one product on the discovered URL
+- new-product / candidate-3601184c2a2a95249385: Cannot confirm one product on the discovered URL
+- new-product / candidate-13fd8f386ebe97182680: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e2941f6fcd9d1b53c04: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-05656b87bde4c8c9696e: No single GBP offer for the exact product
 - new-product / candidate-b8fec6a19d9e0dfb0c59: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4c8bb5fc6f2dbc1a4e6b: Nightly time budget reached; remaining values retained
 - new-product / candidate-549ca665a56e8ba6e9ec: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c2f75b7e0a6a4ed08b57: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d5b7a72756d56d56d81d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e1193a7030aa4a9a7847: Nightly time budget reached; remaining values retained
-- new-product / candidate-2894aa68ebeb0f9d8e70: Nightly time budget reached; remaining values retained
-- new-product / candidate-88e0e33780113509aa20: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c3580849945d9792b1c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e1193a7030aa4a9a7847: Cannot confirm one product on the discovered URL
+- new-product / candidate-ddf0d97095fc3f760704: Cannot confirm one product on the discovered URL
+- new-product / candidate-456330094c05f63984cb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6512c6745b4606c44aa2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1ff05526fd5404bdc49e: Approved URL is outside its recorded retailer
 - new-product / candidate-6ece0a768a869994b509: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5c80545437722ea97978: Nightly time budget reached; remaining values retained
 - new-product / candidate-772d1d747e91c6e97373: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa8a1435f8413bbb75d6: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6589249695f4925420ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1e87a0bc32c3eda2ddf8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c2fdc5791521b7fedc3d: Nightly time budget reached; remaining values retained
-- new-product / candidate-2a044cdf8d86c8b2661d: Nightly time budget reached; remaining values retained
-- new-product / candidate-235f983b8fd3d658aafc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d62ec52230116eb42f13: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c2fdc5791521b7fedc3d: Cannot confirm one product on the discovered URL
+- new-product / candidate-ff373bc37f170426fda7: Cannot confirm one product on the discovered URL
+- new-product / candidate-28c9498e7c71b5a8a34f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-64a717dfb8609b21feb9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-dcca848dde0651fe0677: No single GBP offer for the exact product
 - new-product / candidate-e730927b5ad8681a76d6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-62adee1e043b3eb2eddc: Nightly time budget reached; remaining values retained
 - new-product / candidate-aea09596368afeacf9c2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-aa8a1435f8413bbb75d6: Source does not state the material pack weight; listing skipped
 - new-product / candidate-17eaec80c3a9d45dc98c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-766db322a872ae09d30d: Nightly time budget reached; remaining values retained
-- new-product / candidate-e47069e056ec05a35b60: Nightly time budget reached; remaining values retained
-- new-product / candidate-8e80f9fcda4adae52c33: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-abf6dc4d070a64b26fe0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-766db322a872ae09d30d: Cannot confirm one product on the discovered URL
+- new-product / candidate-7674a3b22d0be962288e: Cannot confirm one product on the discovered URL
+- new-product / candidate-bf9b5796aa5692ba1236: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1e7733f1fd633f9e0193: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4693f85190c302510f23: Source does not state the material pack weight; listing skipped
 - new-product / candidate-256676534225fa8c5b59: Catalogue GBP price outside supported range
-- new-product / candidate-325667f8f9ddc8b60078: Nightly time budget reached; remaining values retained
 - new-product / candidate-06d7aef1546883c9d9ad: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b13626a8e0ce04c88fb0: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1eed4a4d33f9ab0ed115: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6b859a0bbd0b9d77e425: Nightly time budget reached; remaining values retained
-- new-product / candidate-8a1ebd600bac7a45f339: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c4e75358ee026195366: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f44698e6b53d8ce2f5ad: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6b859a0bbd0b9d77e425: Cannot confirm one product on the discovered URL
+- new-product / candidate-31e5f15d9e169dcd17c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-a420f72e95ed47c19a64: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ef47ea79107aef982457: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4c8bb5fc6f2dbc1a4e6b: No single GBP offer for the exact product
 - new-product / candidate-0f07d113cd94e7750971: Catalogue GBP price outside supported range
-- new-product / candidate-abde35f9dbb05cb76c9a: Nightly time budget reached; remaining values retained
 - new-product / candidate-e654d1636b245058793e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8ef71f952812e965d103: Source does not state the material pack weight; listing skipped
+- new-product / candidate-236826e0327869b08fa1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4984931d73fc339d07d6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bbfb237f43bb38e7459c: Nightly time budget reached; remaining values retained
-- new-product / candidate-2c7e3f4e6ddc3c7cb35b: Nightly time budget reached; remaining values retained
-- new-product / candidate-41f0677249f046946c26: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-df57254c8c1c0cd154d8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bbfb237f43bb38e7459c: Cannot confirm one product on the discovered URL
+- new-product / candidate-55ce92e89e8b034d8e79: Cannot confirm one product on the discovered URL
+- new-product / candidate-1b45ce0a58b555718e1e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b7703027d71a2cbe592b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5c80545437722ea97978: No single GBP offer for the exact product
 - new-product / candidate-b1e9fa8e37d4d46fe05e: Catalogue GBP price outside supported range
-- new-product / candidate-82a09b97e4d980bfac43: Nightly time budget reached; remaining values retained
 - new-product / candidate-947fd67f6563876ded70: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8ef71f952812e965d103: Source does not state the material pack weight; listing skipped
 - new-product / candidate-131214c18b0b9ba5d4b9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-66f2aa1895bfdbda6e9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-f9c18c0a377b1b73d079: Nightly time budget reached; remaining values retained
-- new-product / candidate-485d128f33da98482522: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3a2784659e3658511722: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-66f2aa1895bfdbda6e9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-084cdcdca490639303e9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1ba9fd775870107bb8b7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1c3580849945d9792b1c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-62adee1e043b3eb2eddc: No single GBP offer for the exact product
 - new-product / candidate-ce10787011baa6e62062: Catalogue GBP price outside supported range
-- new-product / candidate-a123a4b70ee2eae93cf5: Nightly time budget reached; remaining values retained
 - new-product / candidate-b3c345cacce507449a85: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6822ab142b5e4d533347: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6c534afaa4fdff7867bb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-da7b7ae4dc8228c36a69: Nightly time budget reached; remaining values retained
-- new-product / candidate-ae7fd9ac759af1094d65: Nightly time budget reached; remaining values retained
-- new-product / candidate-8263e9352680cf73472b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1732cf967dc7688e97a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-da7b7ae4dc8228c36a69: Cannot confirm one product on the discovered URL
+- new-product / candidate-6f60a5ff0b672ab89d05: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f0631f161a92e97af53: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d62ec52230116eb42f13: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-325667f8f9ddc8b60078: No single GBP offer for the exact product
 - new-product / candidate-f9f269596e8dddbbb42d: Catalogue GBP price outside supported range
-- new-product / candidate-bbc84edf1751dde3a275: Nightly time budget reached; remaining values retained
 - new-product / candidate-e0b02b70854d0738a08b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7f13ac7bef9ded0f6343: Source does not state the material pack weight; listing skipped
-- new-product / candidate-12279c3e114d1cf1a525: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa9124acbb989eb015fa: Nightly time budget reached; remaining values retained
-- new-product / candidate-21c83f53a2539454a184: Nightly time budget reached; remaining values retained
-- new-product / candidate-57b51709361ab25f1f7e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a01bf82c023dc443bc69: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8a8322d7b3647478d912: Catalogue GBP price outside supported range
-- new-product / candidate-25b93054cf2b3f55b870: Nightly time budget reached; remaining values retained
-- new-product / candidate-53c97ad4768a11c17d15: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d8cdce4d6cd77cbedacd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8ef4789175df3ef4deb6: Nightly time budget reached; remaining values retained
-- new-product / candidate-ea5fc5159ddb3e2d186b: Nightly time budget reached; remaining values retained
-- new-product / candidate-5e5774255f47930811de: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5277117c229a14d653f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7665fe75d2632d94c42a: Catalogue GBP price outside supported range
-- new-product / candidate-9218c5eac4af755234ec: Nightly time budget reached; remaining values retained
-- new-product / candidate-fde774eccdae7da0ec2b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-297ee3bded66bc58a456: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b0e47049d293af12f6e: Nightly time budget reached; remaining values retained
-- new-product / candidate-b42d42afde10a5c6ba15: Nightly time budget reached; remaining values retained
-- new-product / candidate-1370a3ae3e2af5891e6c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1edb54cb7196a0509ba9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-92e7a70b1ed480e86329: Catalogue GBP price outside supported range
-- new-product / candidate-779e056cd051adbd9ba1: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e7dfa77fc04c06b8190: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6879865458fb86b4edd5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d5d2fbbd230046e0da14: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4f0a90f89e67a8f22b52: Nightly time budget reached; remaining values retained
-- new-product / candidate-63d556b93b11a5169429: Nightly time budget reached; remaining values retained
-- new-product / candidate-2a66cfb484773d559d13: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cfb2a4b773a781a3fa81: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-95bf83bdac959e6c67b3: Catalogue GBP price outside supported range
-- new-product / candidate-a869a11c7fbf4c870488: Nightly time budget reached; remaining values retained
-- new-product / candidate-59ddeb49c45cea9b1708: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5cdb9b990d370fd8c1ae: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fb269c25480c50429183: Nightly time budget reached; remaining values retained
-- new-product / candidate-d52745981d86978c9ffb: Nightly time budget reached; remaining values retained
-- new-product / candidate-e34cfaa03383593d0fb5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a8fb43877f633b667cd3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc0e978a9cf62b49c3e3: Catalogue GBP price outside supported range
-- new-product / candidate-20f4b9b669e9227eba69: Nightly time budget reached; remaining values retained
-- new-product / candidate-5f457e146377bbe673e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2ae039d92de08587ed2d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f9d2d790c495f1eef8a9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bed08a59d7f34c5e4c97: Nightly time budget reached; remaining values retained
-- new-product / candidate-51b7a2a6fa4022658322: Nightly time budget reached; remaining values retained
-- new-product / candidate-2d64408ff7578f3fa334: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-44e3e12f7407d5f8434b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6348166bb4c130850abc: No verified product image URL
-- new-product / candidate-c400bf0467d3e8ecb259: Nightly time budget reached; remaining values retained
-- new-product / candidate-26570e1ba51d4af388c0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-550d547cd9da64b58dfe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-efeb9245f5137b643c20: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e627dc8fbdcc63fe18b2: Nightly time budget reached; remaining values retained
-- new-product / candidate-0aa0905d8c5c3e172a8f: Nightly time budget reached; remaining values retained
-- new-product / candidate-ca9410b358869b1e3dda: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-34083374d01567b34598: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b891cde4b3ce85c2be36: No verified product image URL
-- new-product / candidate-c7635438e5d5287e461a: Nightly time budget reached; remaining values retained
-- new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2aacb9fc644ebffb83dd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e47960587bdc4a128526: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fbdd2de6a73f4d3f612: Nightly time budget reached; remaining values retained
-- new-product / candidate-0110191e39fbb3e2ba9f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31d6bdea9234619778c0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cf430ab29c4402e47d48: No verified product image URL
-- new-product / candidate-262826907b6b620682d1: Nightly time budget reached; remaining values retained
-- new-product / candidate-ae9cef7ededb60bb7ad6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-71b7e8ab3acf79967ac2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e0944a1196d97f7fcf2b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b536388535c36a8425c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-7a768c0ca20e79c551d3: Nightly time budget reached; remaining values retained
-- new-product / candidate-fb9cb87edb6bb0c33271: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3488a38608ca4796a3bc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-955e13bd5da6acb4c571: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6a05b1f0bea461f18054: Nightly time budget reached; remaining values retained
-- new-product / candidate-274c23fce132dde27d97: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-903a7f2f5c7c485d19c1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7e61b7456e7a68554e1e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6ad76da50e68fe8029dc: Nightly time budget reached; remaining values retained
-- new-product / candidate-06be6965f25694194a2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-54b24049f564579c248a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa3fdbefb71a03aaac7a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-13a760e9c3a7ca58cd83: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b3218a3ed00f615d7c7: Nightly time budget reached; remaining values retained
-- new-product / candidate-7e0361554357f319b25a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
-- new-product / candidate-65b456dc62cb34d33d7e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7cbc72373eea6d6ebb79: Nightly time budget reached; remaining values retained
-- new-product / candidate-a63173fddc04bcfb01bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-d68dfb0920527febb84f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-25b659e0753460ce45e8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-db43dfbc825e9279c21c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6c40004ef9c678a8595a: Nightly time budget reached; remaining values retained
-- new-product / candidate-073301e1309826641aec: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3d77ec1915f8f0bda6c5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8e1ae62dcab1dfb38474: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7be9eeda63979f3c5dd9: Nightly time budget reached; remaining values retained
-- new-product / candidate-e5d67a83acd63a9e3e1f: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b70cb65876929237af3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1bdfd8144388f651bbc4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-14c00ff9088761901b87: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-70a0ec8b8380ad980b97: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc93cc924014340a4122: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e09ff4aba764d08a0598: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ced71ecc4bcdfcb94fc3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1175727c9f1158a1306b: Nightly time budget reached; remaining values retained
-- new-product / candidate-d363c84db1f10977887e: Nightly time budget reached; remaining values retained
-- new-product / candidate-d18711ca1254592a74a7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d7cd902b21316e14479e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-68ce2d504267670ae2fc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a246afa27024aa2e30a2: Nightly time budget reached; remaining values retained
-- new-product / candidate-5d6221a27022dcff14e1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f3c6716b29caaeec3449: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0e3a45f51f197413bb0b: Nightly time budget reached; remaining values retained
-- new-product / candidate-52cafeaf06945b9bed47: Nightly time budget reached; remaining values retained
-- new-product / candidate-824da648687635c49e09: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a0c0401539b6c8508dd7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d781a54dd46a038745a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4096814af20dac146667: Nightly time budget reached; remaining values retained
-- new-product / candidate-9443940cb66db080892f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b31debe4d60ec439a0d1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-eccf0ce0b910fa5d6beb: Nightly time budget reached; remaining values retained
-- new-product / candidate-188f7d0da0a81295f9de: Nightly time budget reached; remaining values retained
-- new-product / candidate-e2f9489d93b745f83e12: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-18f5c8bdc5897a19ed65: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8e2e7f61cd3b8734e5dd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20c11546c0782b4d4d88: Nightly time budget reached; remaining values retained
-- new-product / candidate-1a6cc19a680f3278370a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0c03cc9ead400fd6f30b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5d801126d4f0044771d6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f99fe9d183930a46e8a2: Nightly time budget reached; remaining values retained
-- new-product / candidate-47b25f2ac2cee19ca270: Nightly time budget reached; remaining values retained
-- new-product / candidate-8e991832e5afade9fa99: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20581ffe276e86015805: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fef387b95855824c2e64: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a5302dfd53cb0ffe963a: Nightly time budget reached; remaining values retained
-- new-product / candidate-38df61c83305d5c87394: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b8e51166817a659047c5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-28daac5a033e11a61e8f: Nightly time budget reached; remaining values retained
-- new-product / candidate-6218f74aaab6a35ad6fd: Nightly time budget reached; remaining values retained
-- new-product / candidate-28be037bbb21086c8d4c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c675ce579048ca01d99a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8c29d0994fa40bbb417a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-683c04399e05ea73921f: Nightly time budget reached; remaining values retained
-- new-product / candidate-7a93ff641d042ba218f0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-12279c3e114d1cf1a525: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-aa9124acbb989eb015fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-57fc2bfaded87ea66a50: Cannot confirm one product on the discovered URL
+- new-product / candidate-ecacba1143d9a88dbd9f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-abf6dc4d070a64b26fe0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-abde35f9dbb05cb76c9a: No single GBP offer for the exact product
+- new-product / candidate-8a8322d7b3647478d912: Catalogue GBP price outside supported range
+- new-product / candidate-53c97ad4768a11c17d15: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7f13ac7bef9ded0f6343: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d8cdce4d6cd77cbedacd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8ef4789175df3ef4deb6: Cannot confirm one product on the discovered URL
+- new-product / candidate-2341abebc211808efd80: Cannot confirm one product on the discovered URL
+- new-product / candidate-b17b92ac8e660fc9b28d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f44698e6b53d8ce2f5ad: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-82a09b97e4d980bfac43: Cannot confirm that the product is a material or printer
+- new-product / candidate-7665fe75d2632d94c42a: Catalogue GBP price outside supported range
+- new-product / candidate-fde774eccdae7da0ec2b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f3afa60054e53f468bb4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-297ee3bded66bc58a456: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8b0e47049d293af12f6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-79d1540292ec43243877: Cannot confirm one product on the discovered URL
+- new-product / candidate-bbe0638af5867569f454: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df57254c8c1c0cd154d8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a123a4b70ee2eae93cf5: No single GBP offer for the exact product
+- new-product / candidate-92e7a70b1ed480e86329: Catalogue GBP price outside supported range
+- new-product / candidate-6e7dfa77fc04c06b8190: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d5d2fbbd230046e0da14: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4f0a90f89e67a8f22b52: Cannot confirm one product on the discovered URL
+- new-product / candidate-da67bf424141c497d505: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b6a6b3ca6545cd5392d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3a2784659e3658511722: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bbc84edf1751dde3a275: No single GBP offer for the exact product
+- new-product / candidate-95bf83bdac959e6c67b3: Catalogue GBP price outside supported range
+- new-product / candidate-59ddeb49c45cea9b1708: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6879865458fb86b4edd5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5cdb9b990d370fd8c1ae: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fb269c25480c50429183: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6187b4f9b8a97a15428: Cannot confirm one product on the discovered URL
+- new-product / candidate-63b9f5e142ad3b91f092: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1732cf967dc7688e97a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-25b93054cf2b3f55b870: No single GBP offer for the exact product
+- new-product / candidate-bc0e978a9cf62b49c3e3: Catalogue GBP price outside supported range
+- new-product / candidate-5f457e146377bbe673e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-51b18a97e9ac38c38c71: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f9d2d790c495f1eef8a9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bed08a59d7f34c5e4c97: Cannot confirm one product on the discovered URL
+- new-product / candidate-a60f4449c43bcb1bc69c: Cannot confirm one product on the discovered URL
+- new-product / candidate-82446972dc45500e0954: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a01bf82c023dc443bc69: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9218c5eac4af755234ec: Cannot confirm that the product is a material or printer
+- new-product / candidate-6348166bb4c130850abc: No verified product image URL
+- new-product / candidate-26570e1ba51d4af388c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2ae039d92de08587ed2d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-efeb9245f5137b643c20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e627dc8fbdcc63fe18b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-39445b97d06589794546: Cannot confirm one product on the discovered URL
+- new-product / candidate-04d615b215910e514d5a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5277117c229a14d653f8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-779e056cd051adbd9ba1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b891cde4b3ce85c2be36: No verified product image URL
+- new-product / candidate-550d547cd9da64b58dfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-2aacb9fc644ebffb83dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e47960587bdc4a128526: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9cc7b7d7e30d5fa6f3d: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7ce2563fb11d72839a5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1edb54cb7196a0509ba9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a869a11c7fbf4c870488: No single GBP offer for the exact product
+- new-product / candidate-cf430ab29c4402e47d48: No verified product image URL
+- new-product / candidate-ae9cef7ededb60bb7ad6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c90988f372dbb565de16: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e0944a1196d97f7fcf2b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b536388535c36a8425c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-99cc77c8bde44b1bc0b9: Cannot confirm one product on the discovered URL
+- new-product / candidate-87ba231e0f16665d4083: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cfb2a4b773a781a3fa81: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20f4b9b669e9227eba69: No single GBP offer for the exact product
+- new-product / candidate-955e13bd5da6acb4c571: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-274c23fce132dde27d97: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-71b7e8ab3acf79967ac2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7e61b7456e7a68554e1e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6ad76da50e68fe8029dc: Cannot confirm one product on the discovered URL
+- new-product / candidate-bd468dfa0cb5549f7bc3: Cannot confirm one product on the discovered URL
+- new-product / candidate-884129afbf58d1901a2a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a8fb43877f633b667cd3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c400bf0467d3e8ecb259: No single GBP offer for the exact product
+- new-product / candidate-13a760e9c3a7ca58cd83: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7e0361554357f319b25a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-903a7f2f5c7c485d19c1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-65b456dc62cb34d33d7e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7cbc72373eea6d6ebb79: Cannot confirm one product on the discovered URL
+- new-product / candidate-7796ec27898d68f58505: Cannot confirm one product on the discovered URL
+- new-product / candidate-4c950c268480074b2f99: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44e3e12f7407d5f8434b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c7635438e5d5287e461a: No single GBP offer for the exact product
+- new-product / candidate-db43dfbc825e9279c21c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-073301e1309826641aec: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-042cba03383d3b751a81: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8e1ae62dcab1dfb38474: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7be9eeda63979f3c5dd9: Cannot confirm one product on the discovered URL
+- new-product / candidate-dfc8e151e13a6abfd5fc: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2d1d6e6728f6f26bbc2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-34083374d01567b34598: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-262826907b6b620682d1: Cannot confirm that the product is a material or printer
+- new-product / candidate-14c00ff9088761901b87: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cc93cc924014340a4122: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d77ec1915f8f0bda6c5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ced71ecc4bcdfcb94fc3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1175727c9f1158a1306b: Cannot confirm one product on the discovered URL
+- new-product / candidate-607d4236f4b0acab15bc: Cannot confirm one product on the discovered URL
+- new-product / candidate-2e714c3e87668e4c83ea: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-31d6bdea9234619778c0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6a05b1f0bea461f18054: Source does not state the material pack weight; listing skipped
+- new-product / candidate-68ce2d504267670ae2fc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d6221a27022dcff14e1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e09ff4aba764d08a0598: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f3c6716b29caaeec3449: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0e3a45f51f197413bb0b: Cannot confirm one product on the discovered URL
+- new-product / candidate-d4f4224c335eb56e1450: Cannot confirm one product on the discovered URL
+- new-product / candidate-60fbb3e70efbaadf65f3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3488a38608ca4796a3bc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8b3218a3ed00f615d7c7: No single GBP offer for the exact product
+- new-product / candidate-0d781a54dd46a038745a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9443940cb66db080892f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a66a79f91345618e7633: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b31debe4d60ec439a0d1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eccf0ce0b910fa5d6beb: Cannot confirm one product on the discovered URL
+- new-product / candidate-24698e831921e6c1b436: Cannot confirm one product on the discovered URL
+- new-product / candidate-71f34e185eccbc6d6593: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-aa3fdbefb71a03aaac7a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6c40004ef9c678a8595a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8e2e7f61cd3b8734e5dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1a6cc19a680f3278370a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-425c1bb6f76876f9abcb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5d801126d4f0044771d6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f99fe9d183930a46e8a2: Cannot confirm one product on the discovered URL
+- new-product / candidate-16774781b794c7d1a1fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-0989ccf28d70f3abd6c4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-25b659e0753460ce45e8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-70a0ec8b8380ad980b97: No single GBP offer for the exact product
+- new-product / candidate-fef387b95855824c2e64: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-38df61c83305d5c87394: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0c03cc9ead400fd6f30b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b8e51166817a659047c5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-28daac5a033e11a61e8f: Cannot confirm one product on the discovered URL
+- new-product / candidate-cf26e503bbcc9b4f1515: Cannot confirm one product on the discovered URL
+- new-product / candidate-50134e727c8baa407fb9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1bdfd8144388f651bbc4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a246afa27024aa2e30a2: No single GBP offer for the exact product
+- new-product / candidate-8c29d0994fa40bbb417a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7a93ff641d042ba218f0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cab70202a7d6a07d9bce: Source does not state the material pack weight; listing skipped
 - new-product / candidate-725f402a799ac22071d1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-735d7183112b70d1e947: Nightly time budget reached; remaining values retained
-- new-product / candidate-ae2a6ca7390c45ef0b36: Nightly time budget reached; remaining values retained
-- new-product / candidate-1b659ef3eb2d92af3669: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-506a0b52736af9d7fccd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-735d7183112b70d1e947: Cannot confirm one product on the discovered URL
+- new-product / candidate-e2644e661a839d20f2e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-da56298cb2bff0ed729c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d7cd902b21316e14479e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4096814af20dac146667: No single GBP offer for the exact product
 - new-product / candidate-80c3ae39a177f32bdea5: Cannot confirm that the product is a material or printer
-- new-product / candidate-e5e29eb76feb68c30627: Nightly time budget reached; remaining values retained
 - new-product / candidate-e3a895cb22ec98fbb274: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e899370569ad6cfe100c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4773bea6b50fb1ea3e71: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7d6a4259a9ae31d28c95: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2d6a1450d1807e5a65dd: Nightly time budget reached; remaining values retained
-- new-product / candidate-568b4971f0c5521262bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-d7f2a311a672f93d03ef: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cf65af7c2bb7dc5a5e97: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2d6a1450d1807e5a65dd: Cannot confirm one product on the discovered URL
+- new-product / candidate-eff66e49df16a57f52ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c509e2e4b3960e7180a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a0c0401539b6c8508dd7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20c11546c0782b4d4d88: No single GBP offer for the exact product
 - new-product / candidate-99b0c5f1ecec73261946: Cannot confirm that the product is a material or printer
-- new-product / candidate-16d2feb0b176177bdb68: Nightly time budget reached; remaining values retained
 - new-product / candidate-e711aaa102409c80cab2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-09c34fd0cde56ce09c43: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e899370569ad6cfe100c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6935c712763d10c6eb2b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c08ec737ca363e086f14: Nightly time budget reached; remaining values retained
-- new-product / candidate-50dbaae5072709d1610b: Nightly time budget reached; remaining values retained
-- new-product / candidate-07fac990f08fd01f05f3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8816c9b69f60cb2771b5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c08ec737ca363e086f14: Cannot confirm one product on the discovered URL
+- new-product / candidate-4dd889e5569a090b4979: Cannot confirm one product on the discovered URL
+- new-product / candidate-5cf5e0effb5953ede865: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-18f5c8bdc5897a19ed65: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a5302dfd53cb0ffe963a: No single GBP offer for the exact product
 - new-product / candidate-3a76687a7f4a51f002e6: Cannot confirm that the product is a material or printer
-- new-product / candidate-db5d348e3b26ba1f0d99: Nightly time budget reached; remaining values retained
 - new-product / candidate-fd4e3a27bb7ddf7a0f29: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-feb97f885265930006f8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-09c34fd0cde56ce09c43: Source does not state the material pack weight; listing skipped
 - new-product / candidate-35adf4d0024d6f143306: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3cd68de01b83cb392d48: Nightly time budget reached; remaining values retained
-- new-product / candidate-943c7bee62c5f8c1d5a9: Nightly time budget reached; remaining values retained
-- new-product / candidate-e310fd27bdfc6f7a67a1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ebb2ca844b00a1b21501: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3cd68de01b83cb392d48: Cannot confirm one product on the discovered URL
+- new-product / candidate-535c89a976211a98aca5: Cannot confirm one product on the discovered URL
+- new-product / candidate-f18eb964a10b5b2feb0b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-20581ffe276e86015805: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-683c04399e05ea73921f: No single GBP offer for the exact product
 - new-product / candidate-373eedf5d26909bd52ed: No verified product image URL
-- new-product / candidate-43e40942578b83a2e538: Nightly time budget reached; remaining values retained
 - new-product / candidate-c83d9cb4cd9a24e80292: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-44dd93c81b99a8df7efe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-feb97f885265930006f8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bc8c63c5c7c22a1e6b76: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-91d6a720ed5b85017c4f: Nightly time budget reached; remaining values retained
-- new-product / candidate-6dcbfb1e792e9727cbf4: Nightly time budget reached; remaining values retained
-- new-product / candidate-c7af276613a689d63b91: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c89835a705d6a7d0f269: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-91d6a720ed5b85017c4f: Cannot confirm one product on the discovered URL
+- new-product / candidate-104b0f9502e9f4ea92fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-13debcb5e3e6325247d6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c675ce579048ca01d99a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e5e29eb76feb68c30627: Cannot confirm that the product is a material or printer
 - new-product / candidate-84a7298048a68d0cc466: No verified product image URL
-- new-product / candidate-163e6dba7eb967df7f92: Nightly time budget reached; remaining values retained
 - new-product / candidate-dd330fefa12b2872bd55: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44dd93c81b99a8df7efe: Source does not state the material pack weight; listing skipped
 - new-product / candidate-89c909c5d54cc81d7eb4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-04880b5ed74b717d8d5e: Nightly time budget reached; remaining values retained
-- new-product / candidate-4d579d537deeb150dc2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc6cd3e823e645eb0263: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a872e5a34e38aac97ac7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-04880b5ed74b717d8d5e: Cannot confirm one product on the discovered URL
+- new-product / candidate-1cce8ec5d1a4886936ac: Cannot confirm one product on the discovered URL
+- new-product / candidate-0676dcccdb8dd078fff8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-506a0b52736af9d7fccd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-16d2feb0b176177bdb68: Cannot confirm that the product is a material or printer
 - new-product / candidate-21ec1e1c7c29d27fa95e: No verified product image URL
-- new-product / candidate-9655ac5f83f6a9bb24cc: Nightly time budget reached; remaining values retained
 - new-product / candidate-87c23713a053fe2fa10b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc063062871e32a1f051: Nightly time budget reached; remaining values retained
-- new-product / candidate-562e89ec07a336b44781: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6cb860caa802dc37cba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ad0fedebf860f3bff331: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc063062871e32a1f051: Cannot confirm one product on the discovered URL
+- new-product / candidate-0463d265b211881a8f39: Cannot confirm one product on the discovered URL
+- new-product / candidate-9748d96f1c4c7d28c054: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cf65af7c2bb7dc5a5e97: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-db5d348e3b26ba1f0d99: No single GBP offer for the exact product
 - new-product / candidate-809f59f8cdcaacc7bcc5: No verified product image URL
-- new-product / candidate-677b24683d8c087bf02b: Nightly time budget reached; remaining values retained
 - new-product / candidate-b9dfcddd9cac89856d2f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-65b5e7b825d1776cf30f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1003f6f7bb57bc6ff385: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e64da034d21c795b108: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d2e1e13881512d33e66: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-06abdf399f8589e0e9dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1003f6f7bb57bc6ff385: Cannot confirm one product on the discovered URL
+- new-product / candidate-c95ffd473e014c1c4114: Cannot confirm one product on the discovered URL
+- new-product / candidate-45df341afe3758a5c5e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8816c9b69f60cb2771b5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-43e40942578b83a2e538: Cannot confirm that the product is a material or printer
 - new-product / candidate-b9598ee8fbb33a4cd786: No verified product image URL
-- new-product / candidate-8d39d4b1047f84d54df8: Nightly time budget reached; remaining values retained
 - new-product / candidate-5236929d23f3cd9ffe1c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0d1900624f4fce6de014: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4ccb5f3c6bc2518b504a: Nightly time budget reached; remaining values retained
-- new-product / candidate-67639d51f6e85fb3a575: Nightly time budget reached; remaining values retained
-- new-product / candidate-332939df093844442191: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6bc2e7a39c6122665ef4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4ccb5f3c6bc2518b504a: Cannot confirm one product on the discovered URL
+- new-product / candidate-3812dc0aeedc298c078f: Cannot confirm one product on the discovered URL
+- new-product / candidate-e310fd27bdfc6f7a67a1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebb2ca844b00a1b21501: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-163e6dba7eb967df7f92: No single GBP offer for the exact product
 - new-product / candidate-317d6c5a53ffb783e422: No verified product image URL
-- new-product / candidate-f0553767aa4fd787fcec: Nightly time budget reached; remaining values retained
 - new-product / candidate-0c79a14760011095f2b4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5b83685872313c0820ad: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6ef3c5d5e641f683b7bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e8b4093b55042fac19c: Nightly time budget reached; remaining values retained
-- new-product / candidate-2c9ae34af933cd2afcf5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e7d04d42cd7946b6154b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6ef3c5d5e641f683b7bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-af87680c071518f503a8: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7af276613a689d63b91: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c89835a705d6a7d0f269: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9655ac5f83f6a9bb24cc: Source does not state the material pack weight; listing skipped
 - new-product / candidate-48adfb7df13e39a08d0b: No verified product image URL
-- new-product / candidate-2692474ac7c5fbae9ee8: Nightly time budget reached; remaining values retained
 - new-product / candidate-4ddcf88fbbd162373d9b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3545e66745a1422287f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e538622aebd085ccd45f: Nightly time budget reached; remaining values retained
-- new-product / candidate-9287939ab08ee8ad71d5: Nightly time budget reached; remaining values retained
-- new-product / candidate-b046dfe8fb5476328797: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bfff7496a62a2a338de0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e538622aebd085ccd45f: Cannot confirm one product on the discovered URL
+- new-product / candidate-39741d6b4ab0242e8034: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc6cd3e823e645eb0263: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a872e5a34e38aac97ac7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-677b24683d8c087bf02b: Cannot confirm that the product is a material or printer
 - new-product / candidate-fd56b528165f23108826: No verified product image URL
-- new-product / candidate-32a4b13f9287cd502d5c: Nightly time budget reached; remaining values retained
 - new-product / candidate-7a577f76451738ed6844: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d48cb5839778ad9ff35a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3b29bd389147939851c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-0a10018d39159ad8a24f: Nightly time budget reached; remaining values retained
-- new-product / candidate-93571d7740a670c83b67: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2d9c70d59664ea3203a1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3b29bd389147939851c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-27e2ec27f265e1678b91: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6cb860caa802dc37cba: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ad0fedebf860f3bff331: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8d39d4b1047f84d54df8: No single GBP offer for the exact product
 - new-product / candidate-cf4ea5aee4a0af787835: No verified product image URL
-- new-product / candidate-e7068c867ab4c6bf3375: Nightly time budget reached; remaining values retained
 - new-product / candidate-d9ef88756e926203f389: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bee46dcc8c75538d3cfa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-26a8a07cc580339c06ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-e0bc3838ae62d8980e21: Nightly time budget reached; remaining values retained
-- new-product / candidate-bb97cab7bdba4ad77205: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7a7fe55797c99c981579: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-26a8a07cc580339c06ad: Cannot confirm one product on the discovered URL
+- new-product / candidate-b8a5880920f71c63e613: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d2e1e13881512d33e66: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-06abdf399f8589e0e9dd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f0553767aa4fd787fcec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9af5524d00b512ab8991: No verified product image URL
-- new-product / candidate-fe4ad2ec1767b4e4195e: Nightly time budget reached; remaining values retained
 - new-product / candidate-7d47228befcbf431b0c9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c7577d136f447e12f542: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-04109828050e42f629fd: Nightly time budget reached; remaining values retained
-- new-product / candidate-7b9d03076bdfaf7b0d44: Nightly time budget reached; remaining values retained
-- new-product / candidate-68f030beea72f2a0586c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-110ad2f05ae425378118: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-04109828050e42f629fd: Cannot confirm one product on the discovered URL
+- new-product / candidate-12e49c2e6d492b53f90a: Cannot confirm one product on the discovered URL
+- new-product / candidate-332939df093844442191: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6bc2e7a39c6122665ef4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2692474ac7c5fbae9ee8: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8f467d235b362ecc4b96: No verified product image URL
-- new-product / candidate-676ef5aee357c885f8ec: Nightly time budget reached; remaining values retained
 - new-product / candidate-863a3f59ca17b15430f6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bb304ead22744a4f9b40: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d8129461d694409e6cd3: Nightly time budget reached; remaining values retained
-- new-product / candidate-c6ca4fcb56c2cc0dbe33: Nightly time budget reached; remaining values retained
-- new-product / candidate-c524ddec67d9b21650db: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-22a97f427cf8c6d170c2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d8129461d694409e6cd3: Cannot confirm one product on the discovered URL
+- new-product / candidate-4e0e17a1bb02b9d7cc56: Cannot confirm one product on the discovered URL
+- new-product / candidate-2c9ae34af933cd2afcf5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e7d04d42cd7946b6154b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-32a4b13f9287cd502d5c: No single GBP offer for the exact product
 - new-product / candidate-65d3b3b81776fcbc334b: No verified product image URL
-- new-product / candidate-59c83eebe6620929f903: Nightly time budget reached; remaining values retained
 - new-product / candidate-ce0c6f6ccc249f322134: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-86ea3eca394598a9d5b4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-962229670c98befcd777: Nightly time budget reached; remaining values retained
-- new-product / candidate-6c3290d48111897e0e69: Nightly time budget reached; remaining values retained
-- new-product / candidate-1ab7234329ddd83091cf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-66e69f778fc2d4e0a08f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-962229670c98befcd777: Cannot confirm one product on the discovered URL
+- new-product / candidate-0582e229436938cfbc55: Cannot confirm one product on the discovered URL
+- new-product / candidate-b046dfe8fb5476328797: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bfff7496a62a2a338de0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e7068c867ab4c6bf3375: No single GBP offer for the exact product
 - new-product / candidate-c4fd0bb0b1489531612b: No verified product image URL
-- new-product / candidate-f3d04f0e84ef13411770: Nightly time budget reached; remaining values retained
 - new-product / candidate-866853f8c60de6a5f29b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c73fb4862497e978e4cf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-72326ef14958c7054a13: Nightly time budget reached; remaining values retained
-- new-product / candidate-ab2687c18991ff61c21e: Nightly time budget reached; remaining values retained
-- new-product / candidate-dda1c9e219c8a2ab271c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1fe64e13d501520302e5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-72326ef14958c7054a13: Cannot confirm one product on the discovered URL
+- new-product / candidate-4b428ba776530ce2fc4d: Cannot confirm one product on the discovered URL
+- new-product / candidate-93571d7740a670c83b67: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2d9c70d59664ea3203a1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fe4ad2ec1767b4e4195e: No single GBP offer for the exact product
 - new-product / candidate-a52d4c4b879bac5e78c8: No verified product image URL
-- new-product / candidate-39eeec5fa7a328231940: Nightly time budget reached; remaining values retained
 - new-product / candidate-d0cff17033486042e1ff: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0d17559d69374a0e0d68: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-81c16eaa001ea073cb3c: Nightly time budget reached; remaining values retained
-- new-product / candidate-c656f7d5f864cd7ff30e: Nightly time budget reached; remaining values retained
-- new-product / candidate-d00ae2a76fb4f35186b0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-281a996be46018e2d135: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-81c16eaa001ea073cb3c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e444d452f19d9e63253f: Cannot confirm one product on the discovered URL
+- new-product / candidate-bb97cab7bdba4ad77205: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7a7fe55797c99c981579: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-676ef5aee357c885f8ec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-fc9a2e48f4dc02a77faf: No verified product image URL
-- new-product / candidate-e0244c4b7721adf0586c: Nightly time budget reached; remaining values retained
 - new-product / candidate-faf4da85eeaf97a7ac51: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-12431807a6d758118e35: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bfe8cecd283f3f6e91fb: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e1bb1af36a9c53b47f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-857b3877986310b426a0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f5e59439c77a5c0e0e03: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bfe8cecd283f3f6e91fb: Cannot confirm one product on the discovered URL
+- new-product / candidate-0315cca282308671f54e: Cannot confirm one product on the discovered URL
+- new-product / candidate-68f030beea72f2a0586c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-110ad2f05ae425378118: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-59c83eebe6620929f903: No single GBP offer for the exact product
 - new-product / candidate-0017f83f407a5ad21f0b: No verified product image URL
-- new-product / candidate-4f9010eea34c56d0a27d: Nightly time budget reached; remaining values retained
 - new-product / candidate-ba25d5f49f291865ae94: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d69d46d64b1ab2ef4c64: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-830fa4205828629e3b86: Nightly time budget reached; remaining values retained
-- new-product / candidate-64f918749ad8c8e4aba6: Nightly time budget reached; remaining values retained
-- new-product / candidate-c283486bf4ee82f766ed: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22ad9a3b1416906ec222: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-830fa4205828629e3b86: Cannot confirm one product on the discovered URL
+- new-product / candidate-9b623effb38e7245a59f: Cannot confirm one product on the discovered URL
+- new-product / candidate-c524ddec67d9b21650db: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-22a97f427cf8c6d170c2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f3d04f0e84ef13411770: No single GBP offer for the exact product
 - new-product / candidate-d629a476338399b0eebc: No verified product image URL
-- new-product / candidate-f8fa70509e2d10dd81e7: Nightly time budget reached; remaining values retained
 - new-product / candidate-67be2d87618689ee9115: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5047f4f3485f8803502b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f6429d46d4b962467385: Nightly time budget reached; remaining values retained
-- new-product / candidate-37d5f7b48ceea588d420: Nightly time budget reached; remaining values retained
-- new-product / candidate-f28721132af0f4fa9adb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c2f71e934fdd149f9d48: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f6429d46d4b962467385: Cannot confirm one product on the discovered URL
+- new-product / candidate-8783b70f2145d351b3f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-1ab7234329ddd83091cf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-66e69f778fc2d4e0a08f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-39eeec5fa7a328231940: No single GBP offer for the exact product
 - new-product / candidate-f1f50cb087ffeec9f8c2: Pack weight is ambiguous; listing skipped
-- new-product / candidate-0714f52044b947b58db9: Nightly time budget reached; remaining values retained
 - new-product / candidate-0bd1cd4f1f0cde9fb0f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4189259ecacd0db29a37: Nightly time budget reached; remaining values retained
-- new-product / candidate-6979663f19f51863d0b2: Nightly time budget reached; remaining values retained
-- new-product / candidate-9c484242f1057176db80: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c87c501e4d3570b75cd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4189259ecacd0db29a37: Cannot confirm one product on the discovered URL
+- new-product / candidate-cdb627f2a69941d66a9c: Cannot confirm one product on the discovered URL
+- new-product / candidate-dda1c9e219c8a2ab271c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1fe64e13d501520302e5: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0244c4b7721adf0586c: No single GBP offer for the exact product
 - new-product / candidate-33ed1c5e3769e31cc24b: No verified product image URL
-- new-product / candidate-a59456a903a907b535ec: Nightly time budget reached; remaining values retained
 - new-product / candidate-35d0223b23abddfd1622: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f1533dd155b87ccd6c1b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f80529ec58212d82343b: Nightly time budget reached; remaining values retained
-- new-product / candidate-14e70fec0a6e666294bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-e6a46026d93a4879f574: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f4b8f71d66e37272b7c4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f80529ec58212d82343b: Cannot confirm one product on the discovered URL
+- new-product / candidate-e0993b17aba0db333bf7: Cannot confirm one product on the discovered URL
+- new-product / candidate-d00ae2a76fb4f35186b0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-281a996be46018e2d135: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4f9010eea34c56d0a27d: No single GBP offer for the exact product
 - new-product / candidate-58faddeb1d3abfaebc79: No verified product image URL
-- new-product / candidate-b46bdd1d799c90c5d417: Nightly time budget reached; remaining values retained
 - new-product / candidate-aaec959c7c6c8c61d938: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-33c55669800c27a14366: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-651d2f4970716ccedbdf: Nightly time budget reached; remaining values retained
-- new-product / candidate-c3aa7e6d44d4f16b8d70: Nightly time budget reached; remaining values retained
-- new-product / candidate-b55768d46a25a24d2a7c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-651d2f4970716ccedbdf: Cannot confirm one product on the discovered URL
+- new-product / candidate-f0c9e2a40ce27be217f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-857b3877986310b426a0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f5e59439c77a5c0e0e03: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f8fa70509e2d10dd81e7: HTTP Error 404: Not Found
 - new-product / candidate-c999335b3d631a743a74: No verified product image URL
-- new-product / candidate-d4e9bc26003151ad952f: Nightly time budget reached; remaining values retained
 - new-product / candidate-1d448c6757cbc530df7c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c47fccb1b2ce57eb1728: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-317dc533fa01770964f6: Nightly time budget reached; remaining values retained
-- new-product / candidate-6557764b1b955669980f: Nightly time budget reached; remaining values retained
-- new-product / candidate-d25fd14ccb70a8f8a89d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9ece5e5cd77c4c805323: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-317dc533fa01770964f6: Cannot confirm one product on the discovered URL
+- new-product / candidate-b4e9d6a9dcfde993cbdc: Cannot confirm one product on the discovered URL
+- new-product / candidate-c283486bf4ee82f766ed: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22ad9a3b1416906ec222: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0714f52044b947b58db9: No single GBP offer for the exact product
 - new-product / candidate-987b55b61f5b8e284a2a: No verified product image URL
-- new-product / candidate-1a03983af58bd402fa90: Nightly time budget reached; remaining values retained
 - new-product / candidate-77fde952dbcc0933aa5e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b04146a14e2e1789acb3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5de5500c1331ff47a789: Nightly time budget reached; remaining values retained
-- new-product / candidate-f4df21f920b40270e672: Nightly time budget reached; remaining values retained
-- new-product / candidate-ea57ad4ef04e36eded91: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-be856752e254ee46bb7e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5de5500c1331ff47a789: Cannot confirm one product on the discovered URL
+- new-product / candidate-e27fceb2b6d0a3d1f210: Cannot confirm one product on the discovered URL
+- new-product / candidate-f28721132af0f4fa9adb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c2f71e934fdd149f9d48: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a59456a903a907b535ec: No single GBP offer for the exact product
 - new-product / candidate-fe895ce810a554661322: No verified product image URL
-- new-product / candidate-3c5199a4eab074681f3e: Nightly time budget reached; remaining values retained
 - new-product / candidate-cace126efb228bd979c8: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e808ed54e763b16a79ed: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-13ab6a0206c62a31e233: Nightly time budget reached; remaining values retained
-- new-product / candidate-2f7cbc4b2c0d094f3e11: Nightly time budget reached; remaining values retained
-- new-product / candidate-c693d052c0aeb6ca463b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9677bf52abd6af390ed4: No verified product image URL
+- new-product / candidate-13ab6a0206c62a31e233: Cannot confirm one product on the discovered URL
+- new-product / candidate-1da2ad251e9830cdfb89: Cannot confirm one product on the discovered URL
+- new-product / candidate-9c484242f1057176db80: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1c87c501e4d3570b75cd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b46bdd1d799c90c5d417: Cannot confirm that the product is a material or printer
 - new-product / candidate-ff9db50ba64f6b98e498: No verified product image URL
-- new-product / candidate-b2421ec58afd17415b02: Nightly time budget reached; remaining values retained
 - new-product / candidate-e25c489221f4a2c3083d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-feed1c1748ee02b23c52: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c66d74795e6cd9c63d4a: Nightly time budget reached; remaining values retained
-- new-product / candidate-338652c7e31eacfb8512: Nightly time budget reached; remaining values retained
-- new-product / candidate-58d68c918afae2635940: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ac95a9ad32325639ef9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c66d74795e6cd9c63d4a: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f6a89e4db7c38385c8a: Cannot confirm one product on the discovered URL
+- new-product / candidate-e6a46026d93a4879f574: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f4b8f71d66e37272b7c4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d4e9bc26003151ad952f: No single GBP offer for the exact product
 - new-product / candidate-214d4ec2957152916d9f: No verified product image URL
-- new-product / candidate-31e7bae76fb6a3ca0c4c: Nightly time budget reached; remaining values retained
 - new-product / candidate-9b62a2b48b7e87b3d173: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8a4ea4afa7a3c96e72d0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f0c4f20619efdcca39e0: Nightly time budget reached; remaining values retained
-- new-product / candidate-959c9fab18fd94e6eb91: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e233d1a1c6295ff2e58: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-23b0dcd87d99cc2eb269: Cannot confirm that the product is a material or printer
+- new-product / candidate-f0c4f20619efdcca39e0: Cannot confirm one product on the discovered URL
+- new-product / candidate-30773eba72f0cb50cab7: Cannot confirm one product on the discovered URL
+- new-product / candidate-b55768d46a25a24d2a7c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1a03983af58bd402fa90: Source does not state the material pack weight; listing skipped
 - new-product / candidate-47593d570fbfec6d0674: No verified product image URL
-- new-product / candidate-604bdfa7a40ce110f5fe: Nightly time budget reached; remaining values retained
 - new-product / candidate-9ee1d76653aa215aa7d0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7a36d0a6ecf9b1602bfe: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2cf4652d81c6b07546fe: Nightly time budget reached; remaining values retained
-- new-product / candidate-3a533ea6835ce07de803: Nightly time budget reached; remaining values retained
-- new-product / candidate-cda082eb202185db9bc0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dbc9fbb941b0bff12abb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2cf4652d81c6b07546fe: Cannot confirm one product on the discovered URL
+- new-product / candidate-0dbd24102b8071f5f9e2: Cannot confirm one product on the discovered URL
+- new-product / candidate-d25fd14ccb70a8f8a89d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9ece5e5cd77c4c805323: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3c5199a4eab074681f3e: No single GBP offer for the exact product
 - new-product / candidate-d1b7307b4e88f6a07eba: No verified product image URL
-- new-product / candidate-a7c1ae724ff4ac0615c2: Nightly time budget reached; remaining values retained
 - new-product / candidate-56499c0ed78e202a8de4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6a7751657a37144f1307: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-53285b641dcddf16f42d: Nightly time budget reached; remaining values retained
-- new-product / candidate-53bfe553fc4aa9a828d8: Nightly time budget reached; remaining values retained
-- new-product / candidate-77bd52a60b3ec159b472: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ffcdbce94f7ddf17f249: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-53285b641dcddf16f42d: Cannot confirm one product on the discovered URL
+- new-product / candidate-810ea5ba605bd1a483d6: Cannot confirm one product on the discovered URL
+- new-product / candidate-ea57ad4ef04e36eded91: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b2421ec58afd17415b02: No single GBP offer for the exact product
 - new-product / candidate-15016709f6a9893027dd: No verified product image URL
-- new-product / candidate-4eb8d2a601d99a09146d: Nightly time budget reached; remaining values retained
 - new-product / candidate-d0f106cd6e57abba4ab2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ef15bb015de982b28075: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1cb740f484b1d43f5c7a: Nightly time budget reached; remaining values retained
-- new-product / candidate-10b5accc22a3649435ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-2fc4808153b1061805de: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-16b2fd6f5d2fc9226161: No verified product image URL
+- new-product / candidate-1cb740f484b1d43f5c7a: Cannot confirm one product on the discovered URL
+- new-product / candidate-cfb5beda66d61e9e7d8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-c693d052c0aeb6ca463b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-020368a535bf9a84127a: No verified product image URL
+- new-product / candidate-31e7bae76fb6a3ca0c4c: Source does not state the material pack weight; listing skipped
 - new-product / candidate-580c7dd1f31d8bfa6c03: No verified product image URL
-- new-product / candidate-7b26d0169b3bb96cb6c0: Nightly time budget reached; remaining values retained
 - new-product / candidate-4993e6418bb18e01bf13: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4372602e64deb6c1fc94: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-974b8b9a821d97974f17: Nightly time budget reached; remaining values retained
-- new-product / candidate-7a0d6669e63068973a1f: Nightly time budget reached; remaining values retained
-- new-product / candidate-97924c96591680c43ffc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5730d5d4ece6f6d22194: No verified product image URL
+- new-product / candidate-974b8b9a821d97974f17: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fa633daf4760cd29e0c: Cannot confirm one product on the discovered URL
+- new-product / candidate-58d68c918afae2635940: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-17a88bd3d58c2e784dbd: No verified product image URL
+- new-product / candidate-604bdfa7a40ce110f5fe: Source does not state the material pack weight; listing skipped
 - new-product / candidate-8d3b71fdfa225502fba6: No verified product image URL
-- new-product / candidate-91e59c5616fba3c457e5: Nightly time budget reached; remaining values retained
 - new-product / candidate-18c8a1acd19eb0cf36ab: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5c4ce40904a5e4f02719: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-881d741e61b09ad6918f: Nightly time budget reached; remaining values retained
-- new-product / candidate-11e96a3e83796114f4a9: Nightly time budget reached; remaining values retained
-- new-product / candidate-20e5c649062998a3c3fa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-49de0ad4b1b4b5e0a28c: No verified product image URL
+- new-product / candidate-881d741e61b09ad6918f: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b50f776f183a2f9ba3c: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e233d1a1c6295ff2e58: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-448c7f2f227940cc3a89: No verified product image URL
+- new-product / candidate-a7c1ae724ff4ac0615c2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b55a31c4955ba9348b82: No verified product image URL
-- new-product / candidate-302e3c604287a9c6064a: Nightly time budget reached; remaining values retained
 - new-product / candidate-09a2d2a3c795cd023e9b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4603e23c2dc154d5bc2e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1e1773ef2eed1ea48cb4: Nightly time budget reached; remaining values retained
-- new-product / candidate-7919cf67ad67883165fb: Nightly time budget reached; remaining values retained
-- new-product / candidate-c1278476c36c046887eb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-1e1773ef2eed1ea48cb4: Cannot confirm one product on the discovered URL
+- new-product / candidate-55fd5f20d3ca848e64f4: Cannot confirm one product on the discovered URL
+- new-product / candidate-cda082eb202185db9bc0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6b7bbc01fce744638cdf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4eb8d2a601d99a09146d: No single GBP offer for the exact product
 - new-product / candidate-adaa6ca54844fbb30b3d: No verified product image URL
-- new-product / candidate-8f23641d310ff6e4bf1a: Nightly time budget reached; remaining values retained
 - new-product / candidate-791be3c99b87fe668f0d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4c1eb24b13d4de968cbb: Nightly time budget reached; remaining values retained
-- new-product / candidate-a8f94980ff82193b68be: Nightly time budget reached; remaining values retained
-- new-product / candidate-ddb19b77b041d479e488: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-60ccab9ee99a42e06bc5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4c1eb24b13d4de968cbb: Cannot confirm one product on the discovered URL
+- new-product / candidate-7d63f60cbc7176377dc9: Cannot confirm one product on the discovered URL
+- new-product / candidate-77bd52a60b3ec159b472: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4142c361e09c9fcca462: Cannot confirm that the product is a material or printer
+- new-product / candidate-7b26d0169b3bb96cb6c0: No single GBP offer for the exact product
 - new-product / candidate-234ef6860c140118470b: No verified product image URL
-- new-product / candidate-67318b2ec697a9d45205: Nightly time budget reached; remaining values retained
 - new-product / candidate-e44728c1d0879728121c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-363a403895c30def96bb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dddcd5bd2636ed8e55c4: Nightly time budget reached; remaining values retained
-- new-product / candidate-61ef0b3f4f0afa6d1198: Nightly time budget reached; remaining values retained
-- new-product / candidate-d89ce8e0762e22833a2c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4f0e07ed91f9aaffd47c: No verified product image URL
+- new-product / candidate-dddcd5bd2636ed8e55c4: Cannot confirm one product on the discovered URL
+- new-product / candidate-a58ca7e255d5de9781ab: Cannot confirm one product on the discovered URL
+- new-product / candidate-2fc4808153b1061805de: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-dbc9fbb941b0bff12abb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-91e59c5616fba3c457e5: No single GBP offer for the exact product
 - new-product / candidate-791ae4cb3c0e4a1561b9: No verified product image URL
-- new-product / candidate-15b29c1c5c6f83ba680b: Nightly time budget reached; remaining values retained
 - new-product / candidate-17c739ae2b6029c95d94: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4197fd0a369cf13a2cdc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-300bd374b3fa284c1c6c: Nightly time budget reached; remaining values retained
-- new-product / candidate-d129d1940b03ad75047f: Nightly time budget reached; remaining values retained
-- new-product / candidate-8f2232b13c7dfd0783f7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-132d50415a51c00b9857: No verified product image URL
+- new-product / candidate-300bd374b3fa284c1c6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-771c25ca7f9db97349d8: Cannot confirm one product on the discovered URL
+- new-product / candidate-97924c96591680c43ffc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ffcdbce94f7ddf17f249: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-302e3c604287a9c6064a: No single GBP offer for the exact product
 - new-product / candidate-dbe431a8de87311bfde0: No verified product image URL
-- new-product / candidate-aad4385e3ba369b98d51: Nightly time budget reached; remaining values retained
 - new-product / candidate-6bdba548d4759412448a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d39e10b91a3435b678e8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-174e0dd61c05f38c9f8e: Nightly time budget reached; remaining values retained
-- new-product / candidate-c9aa0ce7261d4a42b244: Nightly time budget reached; remaining values retained
-- new-product / candidate-032985f3317d9d4c96e6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c7c37e567127625545b7: Pack weight is ambiguous; listing skipped
+- new-product / candidate-174e0dd61c05f38c9f8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-afe7c7858ae6ae4d1b33: Cannot confirm one product on the discovered URL
+- new-product / candidate-20e5c649062998a3c3fa: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-16b2fd6f5d2fc9226161: No verified product image URL
+- new-product / candidate-8f23641d310ff6e4bf1a: No single GBP offer for the exact product
 - new-product / candidate-cd9cb69caa9ad6e25b44: No verified product image URL
-- new-product / candidate-5f87bf8e74f08cbf4125: Nightly time budget reached; remaining values retained
 - new-product / candidate-738d2e7f43906112b195: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-71639ad41fdae04690ca: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d0f956716145cfad60bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-205e2807918ed43f64ec: Nightly time budget reached; remaining values retained
-- new-product / candidate-d2a3a79e0c9c44ebacc9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-90bb41b0060fde65eebb: No verified product image URL
+- new-product / candidate-d0f956716145cfad60bf: Cannot confirm one product on the discovered URL
+- new-product / candidate-52fccd4a70245f7dc6a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1278476c36c046887eb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5730d5d4ece6f6d22194: No verified product image URL
+- new-product / candidate-67318b2ec697a9d45205: Cannot confirm that the product is a material or printer
 - new-product / candidate-fcf1fc521f2e725922af: No verified product image URL
-- new-product / candidate-ba6d6b7d6e46ae7b5c7e: Nightly time budget reached; remaining values retained
 - new-product / candidate-3f40b902b2dc8b23b433: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2b6293b8703e09b44582: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-36505c75a928e473ec7c: Nightly time budget reached; remaining values retained
-- new-product / candidate-1fb28ccf71680337ebc6: Nightly time budget reached; remaining values retained
-- new-product / candidate-76f38227fa9512e8807d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ff8dd0373858adf1d70a: No verified product image URL
+- new-product / candidate-36505c75a928e473ec7c: Cannot confirm one product on the discovered URL
+- new-product / candidate-14106f669450c5926b0a: Cannot confirm one product on the discovered URL
+- new-product / candidate-ddb19b77b041d479e488: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49de0ad4b1b4b5e0a28c: No verified product image URL
+- new-product / candidate-15b29c1c5c6f83ba680b: No single GBP offer for the exact product
 - new-product / candidate-13598ab75c72f9cc8425: No verified product image URL
-- new-product / candidate-d97580f15f0e0f213587: Nightly time budget reached; remaining values retained
 - new-product / candidate-a9be6ca5937402c8df4e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f3d8a47f535740ae534d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-97ec895a937582cf8d5a: Nightly time budget reached; remaining values retained
-- new-product / candidate-b8e239c5f558355aadd6: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6ce473875faf985f930: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0a568e8d9a73be5916aa: No verified product image URL
+- new-product / candidate-97ec895a937582cf8d5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-a669d4167c0079c5f6f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-d89ce8e0762e22833a2c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d9d0f4c361f89a0b9fce: Cannot confirm that the product is a material or printer
+- new-product / candidate-aad4385e3ba369b98d51: No single GBP offer for the exact product
 - new-product / candidate-804ff80fceadddddb437: No verified product image URL
-- new-product / candidate-a7c36a6e2fac59ca8f9d: Nightly time budget reached; remaining values retained
 - new-product / candidate-c0f46b499a91a2574da2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b11d554ca4115841ff65: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3595dca6df48eb7ffce4: Nightly time budget reached; remaining values retained
-- new-product / candidate-cef32f27d283000ae467: Nightly time budget reached; remaining values retained
-- new-product / candidate-ac6198184e56972b5812: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-005e4075135be82542e2: No verified product image URL
+- new-product / candidate-3595dca6df48eb7ffce4: Cannot confirm one product on the discovered URL
+- new-product / candidate-898d0b6412bd55ccd763: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f2232b13c7dfd0783f7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-60ccab9ee99a42e06bc5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5f87bf8e74f08cbf4125: No single GBP offer for the exact product
 - new-product / candidate-dc5957a5dfc2626106a8: No verified product image URL
-- new-product / candidate-5e6f5dc53ca11a6c89aa: Nightly time budget reached; remaining values retained
 - new-product / candidate-99bd9864f2d8da860be5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-812cb1b53f99ec9c3ac5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7a6d08d7f98ee645a13a: Nightly time budget reached; remaining values retained
-- new-product / candidate-0822fce7be9da40314c5: Nightly time budget reached; remaining values retained
-- new-product / candidate-7056d558c7ab533a29f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5394355f4fbe38397cb7: No verified product image URL
+- new-product / candidate-7a6d08d7f98ee645a13a: Cannot confirm one product on the discovered URL
+- new-product / candidate-5425cb666af2227424bb: Cannot confirm one product on the discovered URL
+- new-product / candidate-032985f3317d9d4c96e6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4f0e07ed91f9aaffd47c: No verified product image URL
+- new-product / candidate-ba6d6b7d6e46ae7b5c7e: Source does not state the material pack weight; listing skipped
 - new-product / candidate-4157eb0f9d1455ccc442: No verified product image URL
-- new-product / candidate-a88ed9a3b3af8e51602a: Nightly time budget reached; remaining values retained
 - new-product / candidate-13bdb55bbaa2096aebdb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c8c97f1ca608381f3bce: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f304ddce8940b46ce724: Nightly time budget reached; remaining values retained
-- new-product / candidate-4bc86c5e9ec0af27bd60: Nightly time budget reached; remaining values retained
-- new-product / candidate-50f553dae7a4d9e5670e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c0c178e339f1108411c9: Pack weight is ambiguous; listing skipped
+- new-product / candidate-f304ddce8940b46ce724: Cannot confirm one product on the discovered URL
+- new-product / candidate-c78675d17a8f2ee95b4b: Cannot confirm one product on the discovered URL
+- new-product / candidate-d2a3a79e0c9c44ebacc9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-132d50415a51c00b9857: No verified product image URL
+- new-product / candidate-d97580f15f0e0f213587: Source does not state the material pack weight; listing skipped
 - new-product / candidate-cffce01996eacf8cd571: No verified product image URL
-- new-product / candidate-e373499f15a7879d5c46: Nightly time budget reached; remaining values retained
 - new-product / candidate-34e52cda09b9f90f30f5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-26dd6476fdc920eddae2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9c7b60c8a45a899f2cf6: Nightly time budget reached; remaining values retained
-- new-product / candidate-34c1bd7dc2a4b416bca7: Nightly time budget reached; remaining values retained
-- new-product / candidate-545792d0fb0e485b729c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f32c1331f5ae7738ff06: No verified product image URL
+- new-product / candidate-9c7b60c8a45a899f2cf6: Cannot confirm one product on the discovered URL
+- new-product / candidate-d85221b0cd49ba46b43a: Cannot confirm one product on the discovered URL
+- new-product / candidate-76f38227fa9512e8807d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c7c37e567127625545b7: Pack weight is ambiguous; listing skipped
+- new-product / candidate-a7c36a6e2fac59ca8f9d: No single GBP offer for the exact product
 - new-product / candidate-e799a27c08049e423668: No verified product image URL
-- new-product / candidate-c89cec79869695388e86: Nightly time budget reached; remaining values retained
 - new-product / candidate-04eda8b9960ebc101b41: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc61cedf25801d1c1a89: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d965488037324cdcfa6: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ded3933c0e5f220ff77: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-730cc60d115be07d7848: No verified product image URL
+- new-product / candidate-bc61cedf25801d1c1a89: Cannot confirm one product on the discovered URL
+- new-product / candidate-31a63ebebfaef390b96e: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6ce473875faf985f930: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-90bb41b0060fde65eebb: No verified product image URL
+- new-product / candidate-5e6f5dc53ca11a6c89aa: Source does not state the material pack weight; listing skipped
 - new-product / candidate-03b34f54f4f09936cd67: No verified product image URL
-- new-product / candidate-5fc44552e4e532b81d9d: Nightly time budget reached; remaining values retained
 - new-product / candidate-7faec6d3d7fee6406bb6: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-81748626b80e31d8f0f4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c245e2a05eecf35eab33: Nightly time budget reached; remaining values retained
-- new-product / candidate-58dfa4d32ee9c9087160: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f067abb67b3e9726d91: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1b8bcf237a433becf78d: No verified product image URL
+- new-product / candidate-c245e2a05eecf35eab33: Cannot confirm one product on the discovered URL
+- new-product / candidate-115cd76a98229ae7712b: Cannot confirm one product on the discovered URL
+- new-product / candidate-ac6198184e56972b5812: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ff8dd0373858adf1d70a: No verified product image URL
+- new-product / candidate-a88ed9a3b3af8e51602a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-be4b9f14b2075c233afd: No verified product image URL
-- new-product / candidate-e3936e1db1f0d8b3c1e7: Nightly time budget reached; remaining values retained
 - new-product / candidate-a4e984b17fe6c5818ca6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4229cba7be2bc7757f06: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20515f60fd555e9657a4: Nightly time budget reached; remaining values retained
-- new-product / candidate-53702eb9709aabb24edf: Nightly time budget reached; remaining values retained
-- new-product / candidate-047273d0f8432f313ff0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8ecba29b5c2b70919f00: No verified product image URL
+- new-product / candidate-20515f60fd555e9657a4: Cannot confirm one product on the discovered URL
+- new-product / candidate-e3bfd70c7a087619b509: Cannot confirm one product on the discovered URL
+- new-product / candidate-7056d558c7ab533a29f1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0a568e8d9a73be5916aa: No verified product image URL
+- new-product / candidate-e373499f15a7879d5c46: Source does not state the material pack weight; listing skipped
 - new-product / candidate-7140d31bd3e28f3399f2: No verified product image URL
-- new-product / candidate-bbb3cc2f21fb5249bdf4: Nightly time budget reached; remaining values retained
 - new-product / candidate-84e50ab57a8f2f7470e3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-182e51b6dc9f0b5770c0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-efc5bb90f54b7c6bd2c2: Nightly time budget reached; remaining values retained
-- new-product / candidate-1ee65fab1e183b087eed: Nightly time budget reached; remaining values retained
-- new-product / candidate-8fec6dd0334870a40000: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1330633863e1a21bbf47: No verified product image URL
+- new-product / candidate-efc5bb90f54b7c6bd2c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-2137f67e1c51e7c51e50: Cannot confirm one product on the discovered URL
+- new-product / candidate-50f553dae7a4d9e5670e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-005e4075135be82542e2: No verified product image URL
+- new-product / candidate-c89cec79869695388e86: Source does not state the material pack weight; listing skipped
 - new-product / candidate-84656d78fbe42bc383e0: No verified product image URL
-- new-product / candidate-640c95584d6758a95a31: Nightly time budget reached; remaining values retained
 - new-product / candidate-1fc6e4b511ecc56f5cf2: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-599afcdae73e88cea15a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3ada5aa854c61302f84e: Nightly time budget reached; remaining values retained
-- new-product / candidate-1c2c8beb9bf62f1c4d4e: Nightly time budget reached; remaining values retained
-- new-product / candidate-5258b9567d68940c1de6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9a1d07903faf0ba7486c: No verified product image URL
+- new-product / candidate-3ada5aa854c61302f84e: Cannot confirm one product on the discovered URL
+- new-product / candidate-6fc4d6ad7127c052f387: Cannot confirm one product on the discovered URL
+- new-product / candidate-545792d0fb0e485b729c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5394355f4fbe38397cb7: No verified product image URL
+- new-product / candidate-5fc44552e4e532b81d9d: Cannot confirm that the product is a material or printer
 - new-product / candidate-3feb1798cf88e6f8645f: No verified product image URL
-- new-product / candidate-47f109e674bd0d00778e: Nightly time budget reached; remaining values retained
 - new-product / candidate-91d762fbfdfe99fff412: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-befce37ab6ae01a313f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-54a6cdcc2edc29b27ef0: Nightly time budget reached; remaining values retained
-- new-product / candidate-09bf464f129e06c71f20: Nightly time budget reached; remaining values retained
-- new-product / candidate-2d51cae6556dd16074c4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fee7c5f54bdd8fa05ce7: No verified product image URL
+- new-product / candidate-54a6cdcc2edc29b27ef0: Cannot confirm one product on the discovered URL
+- new-product / candidate-88c7242633694034eca1: Cannot confirm one product on the discovered URL
+- new-product / candidate-4ded3933c0e5f220ff77: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c0c178e339f1108411c9: Pack weight is ambiguous; listing skipped
+- new-product / candidate-e3936e1db1f0d8b3c1e7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3abb781f30d8d606811f: No verified product image URL
-- new-product / candidate-c9540d70bf07e306e5dc: Nightly time budget reached; remaining values retained
 - new-product / candidate-937a590e05129e2f1f42: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4df85ef102c5acc5dfa5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef31139ee4044bf95d67: Nightly time budget reached; remaining values retained
-- new-product / candidate-b6ad818195fbff8d0b70: Nightly time budget reached; remaining values retained
-- new-product / candidate-7f5e8cf5532b1d0e13c3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d47ab03e965e2ef369cf: No verified product image URL
+- new-product / candidate-ef31139ee4044bf95d67: Cannot confirm one product on the discovered URL
+- new-product / candidate-1bc979f5859e3c2d8101: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f067abb67b3e9726d91: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f32c1331f5ae7738ff06: No verified product image URL
+- new-product / candidate-bbb3cc2f21fb5249bdf4: Cannot confirm that the product is a material or printer
 - new-product / candidate-0ba5c3b5d034da231db6: No verified product image URL
-- new-product / candidate-442689fa5fc9810dfda6: Nightly time budget reached; remaining values retained
 - new-product / candidate-d9f965efeded4fa54646: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b8412884af54aa6bc874: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5c54d7f1932994a9b52e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f2e0ce72ce5e2f029af6: Nightly time budget reached; remaining values retained
-- new-product / candidate-398b58e0eedba7a17d09: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7c792f3e999c7f23cd9d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5c54d7f1932994a9b52e: Cannot confirm one product on the discovered URL
+- new-product / candidate-3fc160e3def2ca7ec2f5: Cannot confirm one product on the discovered URL
+- new-product / candidate-047273d0f8432f313ff0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-730cc60d115be07d7848: No verified product image URL
+- new-product / candidate-640c95584d6758a95a31: No single GBP offer for the exact product
 - new-product / candidate-da99e16e60efc731da53: No verified product image URL
-- new-product / candidate-d69ef02b1d9d41c32ce5: Nightly time budget reached; remaining values retained
 - new-product / candidate-eb27e5799b2600efdfb1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c69c34b278ef70fa5c90: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e4705c4e9c47922361c3: Nightly time budget reached; remaining values retained
-- new-product / candidate-ee3fe9cc8d9d29e142f0: Nightly time budget reached; remaining values retained
-- new-product / candidate-004c80c01969edf46759: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-89c5a94ed209f93477d6: Nightly time budget reached; remaining values retained
+- new-product / candidate-e4705c4e9c47922361c3: Cannot confirm one product on the discovered URL
+- new-product / candidate-6fd2ac9a22a6041b6d5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-8fec6dd0334870a40000: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1b8bcf237a433becf78d: No verified product image URL
+- new-product / candidate-47f109e674bd0d00778e: No single GBP offer for the exact product
 - new-product / candidate-f01023d9dc66dfc629d4: No verified product image URL
-- new-product / candidate-774d75de4ed001226677: Nightly time budget reached; remaining values retained
 - new-product / candidate-377b1148fa207b083ba7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0c203d02048d604cf1c3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f1526713b25888c9a839: Nightly time budget reached; remaining values retained
-- new-product / candidate-4b2a30b6868fc0ef86f4: Nightly time budget reached; remaining values retained
-- new-product / candidate-5dbfdb15dc163ed58651: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-dff5f43c1258152b5d36: Nightly time budget reached; remaining values retained
+- new-product / candidate-f1526713b25888c9a839: Cannot confirm one product on the discovered URL
+- new-product / candidate-8ed7e6b1ffcbd4ad39d1: Cannot confirm one product on the discovered URL
+- new-product / candidate-5258b9567d68940c1de6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8ecba29b5c2b70919f00: No verified product image URL
+- new-product / candidate-c9540d70bf07e306e5dc: No single GBP offer for the exact product
 - new-product / candidate-8e31a7384b0a89008595: No verified product image URL
-- new-product / candidate-2f28e267611110ae7c2c: Nightly time budget reached; remaining values retained
 - new-product / candidate-8a4e20fa5d951f1c1359: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a1c9f8437fa5e46d79f5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e3da88082de26130a026: Nightly time budget reached; remaining values retained
-- new-product / candidate-88ee8d03e48ee6315f09: Nightly time budget reached; remaining values retained
-- new-product / candidate-a34d11c7eb0888addfa8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e712b7069440c8a7d7ba: Nightly time budget reached; remaining values retained
+- new-product / candidate-e3da88082de26130a026: Cannot confirm one product on the discovered URL
+- new-product / candidate-b16228d4208a66364b19: Cannot confirm one product on the discovered URL
+- new-product / candidate-2d51cae6556dd16074c4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1330633863e1a21bbf47: No verified product image URL
+- new-product / candidate-442689fa5fc9810dfda6: No single GBP offer for the exact product
 - new-product / candidate-c8d80d61b82a3f634863: No verified product image URL
-- new-product / candidate-9886b6ae1c7187d3bd25: Approved URL is outside its recorded retailer
 - new-product / candidate-80796f2b2b885062c03c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cf89ad0741e7d9196ad4: Nightly time budget reached; remaining values retained
-- new-product / candidate-cadfa4dae3b0fe7da411: Nightly time budget reached; remaining values retained
-- new-product / candidate-b6ed4d37bfe0dda87e1b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-644de258a6e8c2a8a4e6: No verified product image URL
+- new-product / candidate-cf89ad0741e7d9196ad4: Cannot confirm one product on the discovered URL
+- new-product / candidate-8636cc2d1cff85d7c779: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f5e8cf5532b1d0e13c3: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9a1d07903faf0ba7486c: No verified product image URL
+- new-product / candidate-d69ef02b1d9d41c32ce5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-ec498ca470b727e64e4a: No verified product image URL
-- new-product / candidate-cb7b4aca369e6577277f: Nightly time budget reached; remaining values retained
 - new-product / candidate-d708922ed9259445c88a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-c8aaeaaa6c2e3c03e4f6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8b4e79a33821657e6470: Nightly time budget reached; remaining values retained
-- new-product / candidate-a9b549297fea18ebaa4c: Nightly time budget reached; remaining values retained
-- new-product / candidate-18ad9f308c5e80e76f6e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-405aa32d7c95f5dc0b07: Nightly time budget reached; remaining values retained
+- new-product / candidate-8b4e79a33821657e6470: Cannot confirm one product on the discovered URL
+- new-product / candidate-d7b0e54370027ff17b09: Cannot confirm one product on the discovered URL
+- new-product / candidate-398b58e0eedba7a17d09: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fee7c5f54bdd8fa05ce7: No verified product image URL
+- new-product / candidate-774d75de4ed001226677: Source does not state the material pack weight; listing skipped
 - new-product / candidate-03f86a55bb36dab03c34: No verified product image URL
-- new-product / candidate-c3ea99ff5e0fd53f6836: Nightly time budget reached; remaining values retained
 - new-product / candidate-c1c182fb6d0370d8244d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-af0b361296e7cffcbdac: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-41fd62b6b46fa4fe9c56: Nightly time budget reached; remaining values retained
-- new-product / candidate-05fcb58b8710ea518822: Nightly time budget reached; remaining values retained
-- new-product / candidate-e31971f239be4e9649ae: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8abc2aaed277ce56d1a5: Nightly time budget reached; remaining values retained
+- new-product / candidate-41fd62b6b46fa4fe9c56: Cannot confirm one product on the discovered URL
+- new-product / candidate-5fe360dea4415758ba90: Cannot confirm one product on the discovered URL
+- new-product / candidate-004c80c01969edf46759: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d47ab03e965e2ef369cf: No verified product image URL
+- new-product / candidate-2f28e267611110ae7c2c: No single GBP offer for the exact product
 - new-product / candidate-13f83022b19f2a7a18a7: No verified product image URL
-- new-product / candidate-d6cdccc24dfb9f0135d3: Nightly time budget reached; remaining values retained
 - new-product / candidate-3c83c55b565d8607c3b5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0221466ff8410c637ffd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22f4fb18eebf0e57359f: Nightly time budget reached; remaining values retained
-- new-product / candidate-378b9f9bbcf3bda5fff0: Nightly time budget reached; remaining values retained
-- new-product / candidate-dc021b923561d8586293: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-396f3c30b8fc86af3083: Nightly time budget reached; remaining values retained
+- new-product / candidate-22f4fb18eebf0e57359f: Cannot confirm one product on the discovered URL
+- new-product / candidate-de88879341653a332e87: Cannot confirm one product on the discovered URL
+- new-product / candidate-5dbfdb15dc163ed58651: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7c792f3e999c7f23cd9d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9886b6ae1c7187d3bd25: Approved URL is outside its recorded retailer
 - new-product / candidate-3e962299821887083d15: No verified product image URL
-- new-product / candidate-30aac989e7eb1fcb24e9: Nightly time budget reached; remaining values retained
 - new-product / candidate-3e4fee6041a9c43a67df: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-caea6f0c92059f293eb3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f4b472907a3e4947ea57: Nightly time budget reached; remaining values retained
-- new-product / candidate-2d790d9250ed153e8373: Nightly time budget reached; remaining values retained
-- new-product / candidate-a1155784b3ad311e1cc4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6ae46622eb56abedc6e0: Nightly time budget reached; remaining values retained
+- new-product / candidate-f4b472907a3e4947ea57: Cannot confirm one product on the discovered URL
+- new-product / candidate-727a1035a62d144e460b: Cannot confirm one product on the discovered URL
+- new-product / candidate-a34d11c7eb0888addfa8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-cb7b4aca369e6577277f: No single GBP offer for the exact product
 - new-product / candidate-591b29be98c38bd6d258: No verified product image URL
-- new-product / candidate-8a2738c785c00ec420af: Nightly time budget reached; remaining values retained
 - new-product / candidate-7c9755d10ef425f6017e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-226ed4ba07db3028da97: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b29d73690d616a383d6d: Nightly time budget reached; remaining values retained
-- new-product / candidate-360e24028d96a37f89b7: Nightly time budget reached; remaining values retained
-- new-product / candidate-5ad71ab73c1d946aca4a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-629b9c22d65716e73195: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b29d73690d616a383d6d: Cannot confirm one product on the discovered URL
+- new-product / candidate-53d2ff40e9bae154e076: Cannot confirm one product on the discovered URL
+- new-product / candidate-b6ed4d37bfe0dda87e1b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c3ea99ff5e0fd53f6836: No single GBP offer for the exact product
 - new-product / candidate-13ba96e0c5957eb58e6c: No verified product image URL
-- new-product / candidate-09302f2ce4ae8e76339a: Nightly time budget reached; remaining values retained
 - new-product / candidate-7132556d9be11a562287: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6a6d79f4dee1b4763883: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5d71d2c08d03af45e296: Nightly time budget reached; remaining values retained
-- new-product / candidate-3d1f86658f24796dfea3: Nightly time budget reached; remaining values retained
-- new-product / candidate-9c2f126f8adf651e7e4b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-026436a5ec046e0d90fe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5d71d2c08d03af45e296: Cannot confirm one product on the discovered URL
+- new-product / candidate-b78228d5e6437c403b9f: Cannot confirm one product on the discovered URL
+- new-product / candidate-18ad9f308c5e80e76f6e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d6cdccc24dfb9f0135d3: Cannot confirm that the product is a material or printer
 - new-product / candidate-6fb4e5dfebbb4a21bb37: No verified product image URL
-- new-product / candidate-6ce503402c519ed5b05f: Nightly time budget reached; remaining values retained
 - new-product / candidate-b3f329c36da4b4fd3daa: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6061fabe546cbca399f6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8e585897643c22a1e159: Nightly time budget reached; remaining values retained
-- new-product / candidate-c8753a3076baf7d438ee: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-953e5181b6426dfd5065: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f6ff1bfd3bc457c17edb: Cannot confirm one product on the discovered URL
+- new-product / candidate-e31971f239be4e9649ae: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-378f4c930e9428e4925b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-30aac989e7eb1fcb24e9: No single GBP offer for the exact product
 - new-product / candidate-6d6b82c19d795aa7ed84: No verified product image URL
-- new-product / candidate-3b7add0b1e948767c3bc: Nightly time budget reached; remaining values retained
 - new-product / candidate-5f9c69f1c2e6c625e99b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-34e26e560559ea1fc647: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-448782ec5afc362fef59: Nightly time budget reached; remaining values retained
-- new-product / candidate-a61111843620f821888e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f20cab6ecc61ddd72d41: Source does not state the material pack weight; listing skipped
+- new-product / candidate-69778d3dca8fb1f8a7f7: Cannot confirm one product on the discovered URL
+- new-product / candidate-dc021b923561d8586293: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c3972efcfd48dad91c21: No verified product image URL
+- new-product / candidate-8a2738c785c00ec420af: No single GBP offer for the exact product
 - new-product / candidate-d1cd842488dffaaa0358: No verified product image URL
-- new-product / candidate-dd5470e54c9c00b43aca: Nightly time budget reached; remaining values retained
 - new-product / candidate-23c23d5aa950cf5effe5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-04f80d77890680d6ede8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4ad9b4bddf12c79ce1a5: Nightly time budget reached; remaining values retained
-- new-product / candidate-83a15269ea5f9a05a039: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-762f2a43f2b832920454: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a0f113a3df7b693aa269: Cannot confirm one product on the discovered URL
+- new-product / candidate-a1155784b3ad311e1cc4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3ef3d33637c79da4a1ad: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-09302f2ce4ae8e76339a: No single GBP offer for the exact product
 - new-product / candidate-97dd2e44f7fc2009846a: No verified product image URL
-- new-product / candidate-c690e00391f47e65af3e: Nightly time budget reached; remaining values retained
 - new-product / candidate-8cc281b3c76e55edc65d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d9070b71635b53238f9c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4470d3026829ea85300e: Nightly time budget reached; remaining values retained
-- new-product / candidate-d28c822feba1fa6e9bc8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-27f5ca4e7df2aa27bb47: No verified product image URL
+- new-product / candidate-7705c36be2e37c22cfa3: Cannot confirm one product on the discovered URL
+- new-product / candidate-5ad71ab73c1d946aca4a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-eb48d283c9a6db608ab7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6ce503402c519ed5b05f: No single GBP offer for the exact product
 - new-product / candidate-68b6649390a135b5c932: No verified product image URL
-- new-product / candidate-c0ee2e37d3d8b392768f: Nightly time budget reached; remaining values retained
 - new-product / candidate-859e619bbe9c2d1bb576: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20efd5cb981b67a87031: Nightly time budget reached; remaining values retained
-- new-product / candidate-3c8f3924f2dc9b1b09b2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7a9200b1f10e0ce06e09: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-13d3946e89065f3a3ef4: Cannot confirm one product on the discovered URL
+- new-product / candidate-9c2f126f8adf651e7e4b: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3b7add0b1e948767c3bc: No single GBP offer for the exact product
 - new-product / candidate-f636821522c67fb9b86e: No verified product image URL
-- new-product / candidate-5d9f2d389691b9ae8ce9: Nightly time budget reached; remaining values retained
 - new-product / candidate-b2cc66c85c6a11d831c6: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-df744b6a9b1f41ebc606: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a85d03424d836edb3513: Nightly time budget reached; remaining values retained
-- new-product / candidate-4860a481c16f9bb4d548: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9b2f8fd9c3347acf35e0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-902e376c0a9228872c2c: Cannot confirm one product on the discovered URL
+- new-product / candidate-c8753a3076baf7d438ee: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-373ce877d9c23ac717ca: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dd5470e54c9c00b43aca: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e45cfb3b6afe25b9055: No verified product image URL
-- new-product / candidate-1e7e817f10ecc735d383: Nightly time budget reached; remaining values retained
 - new-product / candidate-1c074f499cab7053bac1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c395fde4a85b0aeaae49: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6ae03a7d2bb6e9373ccf: Nightly time budget reached; remaining values retained
-- new-product / candidate-4f75c3b24b5fdd343d31: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-06ae694c593710cc2089: Source does not state the material pack weight; listing skipped
+- new-product / candidate-22715a90adf7d0d8860e: Cannot confirm one product on the discovered URL
+- new-product / candidate-a61111843620f821888e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c690e00391f47e65af3e: Cannot confirm that the product is a material or printer
 - new-product / candidate-80e519d36e2161d77e8a: No verified product image URL
-- new-product / candidate-a2146b0e600a98a68b1a: Nightly time budget reached; remaining values retained
 - new-product / candidate-832d2b7c360b5a332250: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6840d88556b945b43a11: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2744228fd9a53a08e974: Nightly time budget reached; remaining values retained
-- new-product / candidate-4f437eac876fe56ef963: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4889a614fe020667c4c7: Cannot confirm one product on the discovered URL
+- new-product / candidate-83a15269ea5f9a05a039: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c0ee2e37d3d8b392768f: No single GBP offer for the exact product
 - new-product / candidate-9b25072e8eb71a073c12: No verified product image URL
-- new-product / candidate-bf44e9ef649dd8edad8e: Nightly time budget reached; remaining values retained
 - new-product / candidate-2c4850e9680bd8251e6c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d246c0f654fe0f4b9e87: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8011af957dd12a876438: Nightly time budget reached; remaining values retained
-- new-product / candidate-a5aea53bd4e011209b2d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-99a1fe406e98faa6bb25: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5c84d9a6d53a69b1ffd8: Cannot confirm one product on the discovered URL
+- new-product / candidate-d28c822feba1fa6e9bc8: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d9f2d389691b9ae8ce9: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c1fa26efce67e4dd4325: No verified product image URL
-- new-product / candidate-6b167ee7e0f19e83f658: Nightly time budget reached; remaining values retained
 - new-product / candidate-d0b9365ee31dd0a39346: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b318f9954cfa809b266f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7ca3aac56aee43c1dce9: Nightly time budget reached; remaining values retained
-- new-product / candidate-91e1827395e2d3cf72d4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-22abe44587f438ac79f2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a75d80e41e2dd37ec90b: Cannot confirm one product on the discovered URL
+- new-product / candidate-3c8f3924f2dc9b1b09b2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3ac6682e6ee7a4ff6af8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1e7e817f10ecc735d383: Source does not state the material pack weight; listing skipped
 - new-product / candidate-916e6598eabe6c4bc8e6: No verified product image URL
-- new-product / candidate-eaa351480cf030e0a810: Nightly time budget reached; remaining values retained
 - new-product / candidate-67c28affb88232dbb894: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1f14de0df47f06472337: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6b55903370b438b89ce6: Nightly time budget reached; remaining values retained
-- new-product / candidate-a92eebb6e6f83a32cc9c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-039738623a740de788d3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-77b3f0b58087837d9557: Cannot confirm one product on the discovered URL
+- new-product / candidate-4860a481c16f9bb4d548: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-38d37a8e52bbc00016d1: No verified product image URL
+- new-product / candidate-a2146b0e600a98a68b1a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d1c186cab1a5cda12296: No verified product image URL
-- new-product / candidate-77e8352f56fa74870093: Nightly time budget reached; remaining values retained
 - new-product / candidate-10ddc7a0bd2cb8bdd3b5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-613e4933b8f673442579: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0f92c022fdf2778d1c34: Nightly time budget reached; remaining values retained
-- new-product / candidate-1723727d1996971ba115: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-afb212a1f423b5b09efe: No verified product image URL
+- new-product / candidate-bd6e210739cffa36928b: Cannot confirm one product on the discovered URL
+- new-product / candidate-4f75c3b24b5fdd343d31: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4ad872479d24a53a68e0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bf44e9ef649dd8edad8e: No single GBP offer for the exact product
 - new-product / candidate-a10c2e32e11f3cf803e1: No verified product image URL
-- new-product / candidate-05e9f7cae833716567d8: Nightly time budget reached; remaining values retained
 - new-product / candidate-f13a9d257f844905a75f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fedc5bc3b6fd5296c2d0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c8ae683e4d8fc0b6b01d: Nightly time budget reached; remaining values retained
-- new-product / candidate-fd53beb29f63e4c2c145: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-03b3ea75109523fcd073: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-33e1a4ccb6917ae81c72: Cannot confirm one product on the discovered URL
+- new-product / candidate-4f437eac876fe56ef963: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-adf858b2817d30f707e4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6b167ee7e0f19e83f658: Source does not state the material pack weight; listing skipped
 - new-product / candidate-20c992d9adcdf142b734: No verified product image URL
-- new-product / candidate-411b24ab54d2318e9f60: Nightly time budget reached; remaining values retained
 - new-product / candidate-549e6a0431cd32e4b729: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7b82a40626f38e363e57: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2d44387bc4b2efade72e: Nightly time budget reached; remaining values retained
-- new-product / candidate-bef27b60dd7ee9670fc0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f251681775a26893549e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-36b4534f2c0d408d48d6: Cannot confirm one product on the discovered URL
+- new-product / candidate-a5aea53bd4e011209b2d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-633c9eb836ea423a78f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-eaa351480cf030e0a810: Cannot confirm that the product is a material or printer
 - new-product / candidate-dcacf92832ca0bae31db: No verified product image URL
-- new-product / candidate-cb2fa022b9551413b477: Nightly time budget reached; remaining values retained
 - new-product / candidate-2b6b06fdd59e3eda6c60: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a13efaac9efb7032acbf: Nightly time budget reached; remaining values retained
-- new-product / candidate-c77f6998028203fbbace: Nightly time budget reached; remaining values retained
-- new-product / candidate-0bb392b13e1e2d7768a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-221e57e00a0eedd0b61b: Cannot confirm one product on the discovered URL
+- new-product / candidate-91e1827395e2d3cf72d4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0afa5f93320b13c11a78: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-77e8352f56fa74870093: No single GBP offer for the exact product
 - new-product / candidate-8a188de530e84d2fa347: No verified product image URL
-- new-product / candidate-a663f77521330556ac52: Nightly time budget reached; remaining values retained
 - new-product / candidate-c24e2dbc14fc7089780d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d69811a3098d41783289: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-245d028134c432abd1ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-d82522117bc2b7af82ac: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-683091ec8441ccf9e0be: No verified product image URL
+- new-product / candidate-16ad9ab6556d39f06b59: Cannot confirm one product on the discovered URL
+- new-product / candidate-a92eebb6e6f83a32cc9c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2a5bc34208c781b625b1: Source does not state the material pack weight; listing skipped
+- new-product / candidate-05e9f7cae833716567d8: Cannot confirm that the product is a material or printer
 - new-product / candidate-34161e132f40ec9f1cad: No verified product image URL
-- new-product / candidate-62efcc460b98d13007f1: Nightly time budget reached; remaining values retained
 - new-product / candidate-978054ac5ee5031820a2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-096539fb91e0517dcc85: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-edcbfd13c3a30b292dea: Nightly time budget reached; remaining values retained
-- new-product / candidate-77ab8106fdb17e17a3e4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-342668b51d5f52a949cd: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ac0649fb975faec699aa: Cannot confirm one product on the discovered URL
+- new-product / candidate-1723727d1996971ba115: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-99a1fe406e98faa6bb25: Source does not state the material pack weight; listing skipped
+- new-product / candidate-411b24ab54d2318e9f60: No single GBP offer for the exact product
 - new-product / candidate-6d719d11f5a8ea002927: No verified product image URL
-- new-product / candidate-929c2e44c03619eb3263: Nightly time budget reached; remaining values retained
 - new-product / candidate-8115d591c1a6dbd48e71: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-466c52a6f8b721f9d674: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fbe27285afac114ee319: Nightly time budget reached; remaining values retained
-- new-product / candidate-259b1c1bf62a8d536f75: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f8fe78ae4f7820bd26a4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9b0f88baab99e9393acc: Cannot confirm one product on the discovered URL
+- new-product / candidate-fd53beb29f63e4c2c145: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-22abe44587f438ac79f2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cb2fa022b9551413b477: No single GBP offer for the exact product
 - new-product / candidate-b7d955591dd1a49bfcd0: No verified product image URL
-- new-product / candidate-968101ab868b1a458c81: Nightly time budget reached; remaining values retained
 - new-product / candidate-9751ea973075a0228688: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7f52aee5e833aa721cd6: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d382c1ef322fe7cf6f09: Nightly time budget reached; remaining values retained
-- new-product / candidate-a9c0277731f51e4f5fce: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-78f1d32a1abe5785a543: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e62afe5bbb8b6e8dbaed: Cannot confirm one product on the discovered URL
+- new-product / candidate-bef27b60dd7ee9670fc0: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-039738623a740de788d3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a663f77521330556ac52: No single GBP offer for the exact product
 - new-product / candidate-3133c36e3e527a204419: No verified product image URL
-- new-product / candidate-cf886d93a5ba1933790d: Nightly time budget reached; remaining values retained
 - new-product / candidate-03fcb258831f4c7fea4d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-84e73bf4231d5db14ec0: No verified product image URL
-- new-product / candidate-dea3fd2b4a99b4afb4de: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc139440d73ba242beaa: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ecd758d7f6f0b2480ec4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9b684add7b9656f17cc2: Cannot confirm one product on the discovered URL
+- new-product / candidate-e45aa0ee276186ec25e2: Pack weight outside the supported range
+- new-product / candidate-afb212a1f423b5b09efe: No verified product image URL
+- new-product / candidate-62efcc460b98d13007f1: Source does not state the material pack weight; listing skipped
 - new-product / candidate-655e8b446762a4798714: No verified product image URL
-- new-product / candidate-787703ef55122a632030: Nightly time budget reached; remaining values retained
 - new-product / candidate-0274b62a44e635685e88: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c0cf16647e5c7eb70070: No verified product image URL
-- new-product / candidate-828ac2cab2654d39e0ce: Nightly time budget reached; remaining values retained
-- new-product / candidate-e659cb3110504c218e85: No verified product image URL
-- new-product / candidate-3f98785145ed4e7c0b98: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a16d115359d02cacf239: Cannot confirm one product on the discovered URL
+- new-product / candidate-03b3ea75109523fcd073: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-929c2e44c03619eb3263: Source does not state the material pack weight; listing skipped
 - new-product / candidate-1a9e69546d1c68d320a9: No verified product image URL
-- new-product / candidate-a2d198fdb17acf231ab3: Nightly time budget reached; remaining values retained
 - new-product / candidate-7d18599a93ffd7f88f0b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f5d920490fce94c6470d: No verified product image URL
-- new-product / candidate-5b3acf58775670379089: Nightly time budget reached; remaining values retained
-- new-product / candidate-714f1d8730daa1edc04a: No verified product image URL
-- new-product / candidate-a72770fb3e2ea47e40d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-90bbd97554f62f3914ca: Cannot confirm one product on the discovered URL
+- new-product / candidate-f251681775a26893549e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-968101ab868b1a458c81: Cannot confirm that the product is a material or printer
 - new-product / candidate-103c6012c574e3257cff: No verified product image URL
-- new-product / candidate-0a4c63cce667c2fcec35: Nightly time budget reached; remaining values retained
 - new-product / candidate-43c581adaaa648ecbec7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f878d90a928f0c2c552e: No verified product image URL
-- new-product / candidate-7730e067b44f952a7ec7: Nightly time budget reached; remaining values retained
-- new-product / candidate-c0dd904aaa7c4a346b41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c9567da6da608db7cbfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8a3ed87967b0eb3c0ae4: Cannot confirm one product on the discovered URL
+- new-product / candidate-0bb392b13e1e2d7768a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cf886d93a5ba1933790d: No single GBP offer for the exact product
 - new-product / candidate-c7f474501c93e6bc2322: No verified product image URL
-- new-product / candidate-68b41fbb54001b9934ca: Nightly time budget reached; remaining values retained
 - new-product / candidate-4a6eb628edcae9244223: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fa087b5eff260c7ed8bd: No verified product image URL
-- new-product / candidate-5dbf4783232b93bc80d4: Nightly time budget reached; remaining values retained
-- new-product / candidate-86793f88506691c9f255: No verified product image URL
-- new-product / candidate-40c31bfe5b31aabaf15a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6896e670f807b78a4d55: Cannot confirm one product on the discovered URL
+- new-product / candidate-683091ec8441ccf9e0be: No verified product image URL
+- new-product / candidate-787703ef55122a632030: No single GBP offer for the exact product
 - new-product / candidate-69112727eb23cb18fd31: No verified product image URL
-- new-product / candidate-61b78171263bada7bf01: Nightly time budget reached; remaining values retained
 - new-product / candidate-1d6c9d5457673ee8d700: No verified product image URL
-- new-product / candidate-b50e8d9c75c2f9cad726: Nightly time budget reached; remaining values retained
-- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-245307d6a03a730d8a30: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f20b4ea2499ebf0e0660: Cannot confirm one product on the discovered URL
+- new-product / candidate-b36d078e84d6a7a2a56e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f8fe78ae4f7820bd26a4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a2d198fdb17acf231ab3: No single GBP offer for the exact product
 - new-product / candidate-904bf8c0e3b160f7b305: No verified product image URL
-- new-product / candidate-d9e139afadf6ac696e1f: Nightly time budget reached; remaining values retained
 - new-product / candidate-8e526b7b0489370e33a0: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9787a2f138fc7627ebb8: No verified product image URL
-- new-product / candidate-3b72f6b4a476e4fbf9b4: Nightly time budget reached; remaining values retained
-- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-86b120a600cf22ca5770: Source does not state the material pack weight; listing skipped
+- new-product / candidate-11aedc5f2e6d29ea681c: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6afaf71dde181467738: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-78f1d32a1abe5785a543: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0a4c63cce667c2fcec35: No single GBP offer for the exact product
 - new-product / candidate-95a2d6df54444ee54ea6: No verified product image URL
-- new-product / candidate-52d78e51b4f98925ca31: Nightly time budget reached; remaining values retained
 - new-product / candidate-4d71d8ce5e7056c88c01: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b35b8d9b49ee99a4054c: No verified product image URL
-- new-product / candidate-2d1991174e0e0b4c6bcd: Nightly time budget reached; remaining values retained
-- new-product / candidate-3817e7c486c0c8ce3f50: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-43e258f3cceb2d1a411e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-79fe962e563bbaf7a3f9: Cannot confirm one product on the discovered URL
+- new-product / candidate-5e7b6547c3693620e7e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ecd758d7f6f0b2480ec4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-68b41fbb54001b9934ca: No single GBP offer for the exact product
 - new-product / candidate-dd466fc8e8ad02da5401: No verified product image URL
-- new-product / candidate-9a8583979c2abfad3cec: Nightly time budget reached; remaining values retained
 - new-product / candidate-0de5b8e387a1871c3d30: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dc26479b64609e951e25: Cannot confirm that the product is a material or printer
-- new-product / candidate-4a3cc99cf27e8c4616a1: Nightly time budget reached; remaining values retained
-- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-12a03513e880b0507e77: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3e243c1860b8b731bbcf: Cannot confirm one product on the discovered URL
+- new-product / candidate-c1b9da871e5f953d97bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3f98785145ed4e7c0b98: Source does not state the material pack weight; listing skipped
+- new-product / candidate-61b78171263bada7bf01: No single GBP offer for the exact product
 - new-product / candidate-000a74467fb21eea39de: No verified product image URL
-- new-product / candidate-4c5c851b44d08bb45aa3: Nightly time budget reached; remaining values retained
 - new-product / candidate-87d7f73e509f6f86a87a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a04f84f41b0ca735cd11: No verified product image URL
-- new-product / candidate-5471c8d9cbdcb283ea2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-9f19854fd769ba4696bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ac53294a972a6f2fec39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f459adbd122c0e1de771: Cannot confirm one product on the discovered URL
+- new-product / candidate-1e68d5aebee5bfaef600: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a72770fb3e2ea47e40d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d9e139afadf6ac696e1f: No single GBP offer for the exact product
 - new-product / candidate-6a525ff33b978af56dcd: No verified product image URL
-- new-product / candidate-91f579999c8e92e4ad78: Approved URL is outside its recorded retailer
 - new-product / candidate-1c00bb0b7d1f35e4cbbf: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4e1a45f742c0451281a0: No verified product image URL
-- new-product / candidate-026790b56c3e0409b5da: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a9c2eb5b9c30b8b9ff9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-325e934abca8d4999d76: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3bd6011fbef85b3389c1: Cannot confirm one product on the discovered URL
+- new-product / candidate-aeb0960ef3765d585e49: No verified product image URL
+- new-product / candidate-c9567da6da608db7cbfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-52d78e51b4f98925ca31: Source does not state the material pack weight; listing skipped
 - new-product / candidate-356ef2f264c3afc061e7: No verified product image URL
-- new-product / candidate-103fb274255f286ae1d3: Nightly time budget reached; remaining values retained
 - new-product / candidate-ac2792fe910a93fdaf56: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1141cf67f4b2c98e90e6: No verified product image URL
-- new-product / candidate-121580a2d3378ce392bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6e9b28d5eb418dbb4f9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3d86852c3f938faccd91: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9ae81aed960501ad7020: Cannot confirm one product on the discovered URL
+- new-product / candidate-5b81ff37d044b112ff26: No verified product image URL
+- new-product / candidate-40c31bfe5b31aabaf15a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9a8583979c2abfad3cec: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d19fe43f42e069e5aef3: No verified product image URL
-- new-product / candidate-7fca3c17be29703fccb1: Nightly time budget reached; remaining values retained
 - new-product / candidate-d072d815cb4752b7d23c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-cdd05cea962d5ff65196: No verified product image URL
-- new-product / candidate-2d8e386bb42df8082d89: Nightly time budget reached; remaining values retained
-- new-product / candidate-6c0153b93dd31370961a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6596f3720470f6765ab5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d2d93c8c8b83c04acbfa: Cannot confirm one product on the discovered URL
+- new-product / candidate-037c05896107c410f796: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-245307d6a03a730d8a30: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4c5c851b44d08bb45aa3: No single GBP offer for the exact product
 - new-product / candidate-590de692ef5c569ce167: No verified product image URL
-- new-product / candidate-1e09980934f83ca058c4: Approved URL is outside its recorded retailer
 - new-product / candidate-f890da2eea1edee809fb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-334390e4a7d17279becb: No verified product image URL
-- new-product / candidate-a4fd4084ef21fd45ed06: Nightly time budget reached; remaining values retained
-- new-product / candidate-1173ddafec345d3af7d4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d0f05cbf66f04568b3c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a8763c87f70757cbb894: Cannot confirm one product on the discovered URL
+- new-product / candidate-b93c5d6c4c9c4c04e960: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86b120a600cf22ca5770: Source does not state the material pack weight; listing skipped
+- new-product / candidate-91f579999c8e92e4ad78: Approved URL is outside its recorded retailer
 - new-product / candidate-84e60fcd70a8f2c03598: No verified product image URL
-- new-product / candidate-e33212c35d37153ecd80: Nightly time budget reached; remaining values retained
 - new-product / candidate-9ff5e5e54d8028c56b8d: No verified product image URL
-- new-product / candidate-10cbe178482e67aeaf4d: Nightly time budget reached; remaining values retained
-- new-product / candidate-019493ddfe723eb03083: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dc06fa1e1c4953f57418: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-976780a5db55038fad1f: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e9781d56f6c71868dfd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-43e258f3cceb2d1a411e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-103fb274255f286ae1d3: No single GBP offer for the exact product
 - new-product / candidate-1a66b8a1f1b1fb7e0556: No verified product image URL
-- new-product / candidate-97c1246dcad0dd050314: Approved URL is outside its recorded retailer
 - new-product / candidate-eb793a976cd9538b296f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a882fb1263f46f1e5c24: No verified product image URL
-- new-product / candidate-705a156fbf04d03dae4e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f60bea7548fc11656519: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fb9d29176d1e95d8f8e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-40466b6dcfea22c08efe: Cannot confirm one product on the discovered URL
+- new-product / candidate-d036c3b7b7f34b712ee5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-12a03513e880b0507e77: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7fca3c17be29703fccb1: No single GBP offer for the exact product
 - new-product / candidate-45e1288d6a7863a6c26f: No verified product image URL
-- new-product / candidate-6fd2a0be280598657192: Nightly time budget reached; remaining values retained
 - new-product / candidate-9eb70002acebf7112098: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f0c4086038d681afa229: No verified product image URL
-- new-product / candidate-67127aa8130e99c049ad: Nightly time budget reached; remaining values retained
-- new-product / candidate-d26cbc8b9b349baafa8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-251c1751573c74a79cb9: Cannot confirm one product on the discovered URL
+- new-product / candidate-592341d52e8aae13a4e1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ac53294a972a6f2fec39: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1e09980934f83ca058c4: Approved URL is outside its recorded retailer
 - new-product / candidate-88dd720baafdd634515d: No verified product image URL
-- new-product / candidate-3c030e4a392fed2cfccc: Approved URL is outside its recorded retailer
 - new-product / candidate-99d8b59084f772f90d63: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-59381d176bfc81b08092: Source does not state the material pack weight; listing skipped
-- new-product / candidate-78bb8e9c805001512fc8: Nightly time budget reached; remaining values retained
-- new-product / candidate-360ddb6770a57453861d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a4e8af738d0d555a9fe: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97672a2406b5ed863a28: Cannot confirm one product on the discovered URL
+- new-product / candidate-be247ee3bf0ea7d87719: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-325e934abca8d4999d76: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e33212c35d37153ecd80: HTTP Error 404: Not Found
 - new-product / candidate-927658b5f057fa8a341e: No verified product image URL
-- new-product / candidate-3a0d717ec197f48a2c44: Nightly time budget reached; remaining values retained
 - new-product / candidate-1af056c09ef5ae31d148: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d82e35565229328f5ff5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a47540387bd5447ec0e8: Nightly time budget reached; remaining values retained
-- new-product / candidate-0183b09cc1771cd2b55c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-882bf0709c0e2eccef77: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4ada7bd70ad8b469cec6: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a0393f41cd8c8e41040: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d86852c3f938faccd91: Source does not state the material pack weight; listing skipped
+- new-product / candidate-97c1246dcad0dd050314: Approved URL is outside its recorded retailer
 - new-product / candidate-65fc84c56cd151bb1166: No verified product image URL
-- new-product / candidate-5b47f1616bdb4cb13908: Approved URL is outside its recorded retailer
 - new-product / candidate-92ff7b385724debbe44f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-75cdab8322f97eaedf0b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-bd4341b24f651856b230: Nightly time budget reached; remaining values retained
-- new-product / candidate-29946943d6bfc823d2b8: No verified product image URL
-- new-product / candidate-3b9afd8a62f78e3c7906: No verified product image URL
+- new-product / candidate-29348cf1779d7634ef21: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f19854fd769ba4696bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6596f3720470f6765ab5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6fd2a0be280598657192: No single GBP offer for the exact product
 - new-product / candidate-ace8a94b7f4211d5f230: No verified product image URL
-- new-product / candidate-7b14b33ae1d3c83a69ee: Nightly time budget reached; remaining values retained
 - new-product / candidate-5778c376f903d1159530: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fb5c40ec1a4e1077c7cb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b837cf76b35f9a82c94f: Nightly time budget reached; remaining values retained
-- new-product / candidate-5950a706ab28ea74ed18: Pack weight outside the supported range
-- new-product / candidate-88dd7c124254eb1e419e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-abcb1d56704220914b75: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6e9b28d5eb418dbb4f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0f05cbf66f04568b3c9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3c030e4a392fed2cfccc: Approved URL is outside its recorded retailer
 - new-product / candidate-cc3c7eaf6001d41779af: No verified product image URL
-- new-product / candidate-07ff212ee54855c1d32f: Nightly time budget reached; remaining values retained
 - new-product / candidate-589573428461a546ae7f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a32ca92493671cf89317: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1bf02f52da0b9bb16999: Nightly time budget reached; remaining values retained
-- new-product / candidate-0adb0dbee1c1019fe2cf: No verified product image URL
-- new-product / candidate-bd08183c77b67e90e9ac: Cannot confirm that the product is a material or printer
+- new-product / candidate-4de7c58285e846b1b81a: Cannot confirm one product on the discovered URL
+- new-product / candidate-cfe11be06521ccb2abf3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc06fa1e1c4953f57418: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3a0d717ec197f48a2c44: No single GBP offer for the exact product
 - new-product / candidate-f390b14a37be9faeec3c: No verified product image URL
-- new-product / candidate-83ddb0b4c6d69245f00a: Approved URL is outside its recorded retailer
 - new-product / candidate-795deb09de41c52e9157: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cfa8fbb1563eda68369d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5f26b4af8b56789b9bc4: Nightly time budget reached; remaining values retained
-- new-product / candidate-26281e65c0220fe865e5: No verified product image URL
-- new-product / candidate-6fadb43d6ca89857706e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e58ff9364aba1bab3c6e: Cannot confirm one product on the discovered URL
+- new-product / candidate-64a352756f7c9edc525a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fb9d29176d1e95d8f8e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5b47f1616bdb4cb13908: Approved URL is outside its recorded retailer
 - new-product / candidate-0d40e52650b5bf195e9d: No verified product image URL
-- new-product / candidate-0bd2c0433ea748c4d25b: Approved URL is outside its recorded retailer
 - new-product / candidate-4404ffa74b6d72f2d045: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c5e8b007dd0b2a42d60c: Nightly time budget reached; remaining values retained
-- new-product / candidate-fe6fa158bb9b0dffec20: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6bb8c8d821e10facaa66: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f9549f9b6641b146fd2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-8a2d43dc4086f86841bf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7b14b33ae1d3c83a69ee: No single GBP offer for the exact product
 - new-product / candidate-af06aeee8cccd9c1a9ed: No verified product image URL
-- new-product / candidate-f6f418d21e9e66887345: Nightly time budget reached; remaining values retained
 - new-product / candidate-55fb4b62c3e7a09df1a8: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4e4674857556bcf74883: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1f2c5432302a3a3f89b: Nightly time budget reached; remaining values retained
-- new-product / candidate-590b38771d1226e55ccf: No verified product image URL
-- new-product / candidate-e48e5aefa88d404ec897: No verified product image URL
+- new-product / candidate-56bdaff4ec8a8f42aac5: Cannot confirm one product on the discovered URL
+- new-product / candidate-9f899fea9ae195b38ced: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a4e8af738d0d555a9fe: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-07ff212ee54855c1d32f: No single GBP offer for the exact product
 - new-product / candidate-d7d4d0e76e66907e6358: No verified product image URL
-- new-product / candidate-b7805bd72cc63c456d06: Nightly time budget reached; remaining values retained
 - new-product / candidate-70ed8d7d3b0b9df0323c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bcac890cbc8cfc2e37ee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5d2b84b1db19f5ef2d2f: Nightly time budget reached; remaining values retained
-- new-product / candidate-df13c6fa6473b4a566d2: No verified product image URL
-- new-product / candidate-d0f12bf3339b17e6bcf8: No verified product image URL
+- new-product / candidate-dff4157a40f08f52e309: Cannot confirm one product on the discovered URL
+- new-product / candidate-d26cbc8b9b349baafa8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-83ddb0b4c6d69245f00a: Approved URL is outside its recorded retailer
 - new-product / candidate-ae73a9d1a7710a7cdd63: No verified product image URL
-- new-product / candidate-f79bd18fd59d086e6732: Nightly time budget reached; remaining values retained
 - new-product / candidate-2daed4e367941f12f95e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-947b8bea46eb7ec0406c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cec638ead04f6c5490d6: Nightly time budget reached; remaining values retained
-- new-product / candidate-f26ef9fc9c48fbf93328: No verified product image URL
-- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
+- new-product / candidate-d9af3ade66eeeb173c59: Cannot confirm one product on the discovered URL
+- new-product / candidate-f7ffee6e62ecaef674ee: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-71f3e033eda8f3f57b82: No verified product image URL
+- new-product / candidate-0bd2c0433ea748c4d25b: Approved URL is outside its recorded retailer
 - new-product / candidate-9d8fc5415d54a88868ea: No verified product image URL
-- new-product / candidate-f25fe893f5112a67f221: Nightly time budget reached; remaining values retained
 - new-product / candidate-58f07379bd87eb7f2265: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9a62fe895dfcb10ae158: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8d0ccdd272bd3d2a0a27: Nightly time budget reached; remaining values retained
-- new-product / candidate-f6b67ce3ca748f907282: No verified product image URL
-- new-product / candidate-397f3622667850737811: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86206b446b83621ff271: Cannot confirm one product on the discovered URL
+- new-product / candidate-0183b09cc1771cd2b55c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3b9afd8a62f78e3c7906: No verified product image URL
+- new-product / candidate-f6f418d21e9e66887345: Source does not state the material pack weight; listing skipped
 - new-product / candidate-78c49c12fc47b4e4b145: No verified product image URL
-- new-product / candidate-62012260c7194f8cca38: Nightly time budget reached; remaining values retained
 - new-product / candidate-d984fa6dd11b5982609b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dc214e956c5a301f0eb9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a6d9d4ba705b70ed8bef: Nightly time budget reached; remaining values retained
-- new-product / candidate-63bc853075ae1c7d65f4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-291d5a8f92422711a6ec: No verified product image URL
+- new-product / candidate-a380c7cc396d7abf7998: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee3ddf63ef4b15d3848f: No verified product image URL
+- new-product / candidate-bac0d259e0cceafe9787: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b7805bd72cc63c456d06: Source does not state the material pack weight; listing skipped
 - new-product / candidate-39a0579d237ac0ed6d13: No verified product image URL
-- new-product / candidate-21ffbddbbf84f7cce07a: Nightly time budget reached; remaining values retained
 - new-product / candidate-9814f9d1d9e0daae37aa: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-efcf7922f1ac9034f349: Source does not state the material pack weight; listing skipped
-- new-product / candidate-21207bf6dfac79059cf4: Nightly time budget reached; remaining values retained
-- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fa96312432ce4db7b4a1: Pack weight is ambiguous; listing skipped
+- new-product / candidate-3a9ff871e9e9c977bae3: Cannot confirm one product on the discovered URL
+- new-product / candidate-5950a706ab28ea74ed18: Pack weight outside the supported range
+- new-product / candidate-bd08183c77b67e90e9ac: Cannot confirm that the product is a material or printer
+- new-product / candidate-f79bd18fd59d086e6732: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d8f80f1374aa6457f592: No verified product image URL
-- new-product / candidate-b9bef9d2bd2769cc5912: Nightly time budget reached; remaining values retained
 - new-product / candidate-aeea8d2f0434b6d3d268: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f7baa2c112f02c5412cd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-212634e36b2fbe1ef4dc: Nightly time budget reached; remaining values retained
-- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1bde3ac2509f33038c08: No verified product image URL
+- new-product / candidate-ac4f099742ceebac0171: Cannot confirm one product on the discovered URL
+- new-product / candidate-590b38771d1226e55ccf: No verified product image URL
+- new-product / candidate-6fadb43d6ca89857706e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f25fe893f5112a67f221: Source does not state the material pack weight; listing skipped
 - new-product / candidate-f19827c834780b528468: No verified product image URL
-- new-product / candidate-15415b92734d4ee8c2ac: Nightly time budget reached; remaining values retained
 - new-product / candidate-ed5ac68ba92470676577: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e59e3614103ad3b7203d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b5a036d20612f61597af: Nightly time budget reached; remaining values retained
-- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ebafb332e81e4d6a5707: No verified product image URL
+- new-product / candidate-b6d88538beeb1a896874: Cannot confirm one product on the discovered URL
+- new-product / candidate-26281e65c0220fe865e5: No verified product image URL
+- new-product / candidate-6bb8c8d821e10facaa66: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-62012260c7194f8cca38: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a2b3f6799104aae267c8: No verified product image URL
-- new-product / candidate-bb5ea712215ce946b6f3: Nightly time budget reached; remaining values retained
 - new-product / candidate-243e88a7f1a4a8bc4d85: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8dc6fef50aefaa3c4673: Nightly time budget reached; remaining values retained
-- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4da39cc9d94c906b2cb5: No verified product image URL
+- new-product / candidate-70b9c9770994453187c9: Cannot confirm one product on the discovered URL
+- new-product / candidate-df13c6fa6473b4a566d2: No verified product image URL
+- new-product / candidate-e48e5aefa88d404ec897: No verified product image URL
+- new-product / candidate-21ffbddbbf84f7cce07a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-c674944f7ce683c5287f: No verified product image URL
-- new-product / candidate-7c3912057e8e18d1f86d: Nightly time budget reached; remaining values retained
 - new-product / candidate-5b85b65509017d9a1bcf: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-df2d1d4785065f82f482: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e421e907c307492c57ff: Nightly time budget reached; remaining values retained
-- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4a5fa4ce54e54ec66bdc: Pack weight is ambiguous; listing skipped
+- new-product / candidate-9c3506c3427aa41d36a1: Cannot confirm one product on the discovered URL
+- new-product / candidate-f26ef9fc9c48fbf93328: No verified product image URL
+- new-product / candidate-d0f12bf3339b17e6bcf8: No verified product image URL
+- new-product / candidate-b9bef9d2bd2769cc5912: Source does not state the material pack weight; listing skipped
 - new-product / candidate-3c0be50798e171353c7f: No verified product image URL
-- new-product / candidate-2177f4aabd757213666e: Nightly time budget reached; remaining values retained
 - new-product / candidate-8a6358f51090c8775425: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-821412cfbd49284ef63c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-de48c01daa2e1a468695: Nightly time budget reached; remaining values retained
-- new-product / candidate-a54ef3eb51d7c5f0c0bb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-12013c7d944f1567c4b5: No verified product image URL
+- new-product / candidate-b6dead035e719e1f7bab: Cannot confirm one product on the discovered URL
+- new-product / candidate-fe6fa158bb9b0dffec20: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f8b52928ed626b3eec04: Cannot confirm that the product is a material or printer
+- new-product / candidate-15415b92734d4ee8c2ac: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-200ba8a4f290c987b14c: No verified product image URL
-- new-product / candidate-8aa5e79df4244574ef9c: Nightly time budget reached; remaining values retained
 - new-product / candidate-4c33e6fd557b7c5829c1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-86fd18717ec7cf25147f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f828c29612b099794a08: Nightly time budget reached; remaining values retained
-- new-product / candidate-809159c15b2d5f3a743e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-51b3a58880a42aa2be12: No verified product image URL
+- new-product / candidate-e236228b2cd9fbab4723: Cannot confirm one product on the discovered URL
+- new-product / candidate-6cd81d8480fa7de771e7: No verified product image URL
+- new-product / candidate-397f3622667850737811: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bb5ea712215ce946b6f3: No single GBP offer for the exact product
 - new-product / candidate-8bd42abcbe33b2395f63: No verified product image URL
-- new-product / candidate-a9f30c980d2a913601f2: Nightly time budget reached; remaining values retained
 - new-product / candidate-4dc1bf2ea2f50aba6248: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e65c70877730cc089c2b: No verified product image URL
-- new-product / candidate-3d2fd3d258b2244b4b31: Nightly time budget reached; remaining values retained
-- new-product / candidate-14ea0889198d38d5bd3e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-99699604b44a1bd53062: No verified product image URL
+- new-product / candidate-bc94c1289b1d03b2fa05: Cannot confirm one product on the discovered URL
+- new-product / candidate-63bc853075ae1c7d65f4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-291d5a8f92422711a6ec: No verified product image URL
+- new-product / candidate-7c3912057e8e18d1f86d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c261253cb8a093112d6d: No verified product image URL
-- new-product / candidate-aeab6f0ffec0bcadc1be: Nightly time budget reached; remaining values retained
 - new-product / candidate-dc060d0f5872f997e5ed: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9b1f8aa72e9495e5f279: No verified product image URL
-- new-product / candidate-8f8381b5a63daadf9275: Nightly time budget reached; remaining values retained
-- new-product / candidate-8c82f1852c41a09cd43d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0908099e489576ef6b9e: No verified product image URL
+- new-product / candidate-f1216b1bcfcb414fcb5a: Cannot confirm one product on the discovered URL
+- new-product / candidate-f6b67ce3ca748f907282: No verified product image URL
+- new-product / candidate-fa96312432ce4db7b4a1: Pack weight is ambiguous; listing skipped
+- new-product / candidate-2177f4aabd757213666e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-82b59ee1fd70dc6c8b65: No verified product image URL
-- new-product / candidate-b146080ee197e23b2ae7: Nightly time budget reached; remaining values retained
 - new-product / candidate-8f9fc269acf8810b26cd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9a262dbc77c2e2d189ba: No verified product image URL
-- new-product / candidate-b97901399b7310d55013: Nightly time budget reached; remaining values retained
-- new-product / candidate-9af75bc8fd1519197427: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a3f2892c8b04172cf21c: No verified product image URL
+- new-product / candidate-0742f1eee95d85be9e5f: Cannot confirm one product on the discovered URL
+- new-product / candidate-e51d4c379d621e278907: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1bde3ac2509f33038c08: No verified product image URL
+- new-product / candidate-8aa5e79df4244574ef9c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-24a408f9259bb3e2fd79: No verified product image URL
-- new-product / candidate-988de57f480d280f7e18: Nightly time budget reached; remaining values retained
 - new-product / candidate-b34da1134d25327fd8c4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-92e523e4290c7506f3c6: No verified product image URL
-- new-product / candidate-08044c270f2f70f38d47: Nightly time budget reached; remaining values retained
-- new-product / candidate-c4d76c91690479ed7624: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a18b9ec716e3ef1e32b3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f31790fb123e1235f99f: Cannot confirm one product on the discovered URL
+- new-product / candidate-7f07c0bf472c90bfaeec: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ebafb332e81e4d6a5707: No verified product image URL
+- new-product / candidate-a9f30c980d2a913601f2: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-70efa157254481712777: No verified product image URL
-- new-product / candidate-b3ca862ea855d13ea59f: Nightly time budget reached; remaining values retained
 - new-product / candidate-ec6be2f69b1139c8dc98: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-48b4791f5c089cd3ccc3: Cannot confirm that the product is a material or printer
-- new-product / candidate-7e8cae8ca70e5da7e9a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-4d5ae4086401745fe83b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-be503c74b7ce6d1fe60b: Nightly time budget reached; remaining values retained
+- new-product / candidate-c541a67bc59e645d76f3: Cannot confirm one product on the discovered URL
+- new-product / candidate-8f6f309391516e868e70: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4da39cc9d94c906b2cb5: No verified product image URL
+- new-product / candidate-aeab6f0ffec0bcadc1be: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-24c84643b24607e9fbb8: No verified product image URL
-- new-product / candidate-ff3104527c622b63a320: Nightly time budget reached; remaining values retained
 - new-product / candidate-d50d67fbd020f62e0ab2: No verified product image URL
-- new-product / candidate-cc04565afe0829714102: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc3a100df0c5797a12d3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f6e5ca76415cce74cd1a: Nightly time budget reached; remaining values retained
+- new-product / candidate-7a243d8a5d75cefb19b6: Cannot confirm one product on the discovered URL
+- new-product / candidate-ef66acaf33617d8e08a6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4a5fa4ce54e54ec66bdc: Pack weight is ambiguous; listing skipped
+- new-product / candidate-b146080ee197e23b2ae7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-83012da9b3f958c64a68: No verified product image URL
-- new-product / candidate-7a9b2e90e610a4e8a96a: Nightly time budget reached; remaining values retained
 - new-product / candidate-31a8d516970a7712fc32: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e23c43f6d040c12c1c2f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d020c83297701441fb69: Nightly time budget reached; remaining values retained
-- new-product / candidate-776068545ae934d76961: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e41fd5c9902ad0c50888: Nightly time budget reached; remaining values retained
+- new-product / candidate-828050d911b53fd2b88d: Cannot confirm one product on the discovered URL
+- new-product / candidate-33e85f19df8250f9004f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-12013c7d944f1567c4b5: No verified product image URL
+- new-product / candidate-988de57f480d280f7e18: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ecfcb89019de050923b9: No verified product image URL
 - new-product / candidate-a9167743b42cd292d4bd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-cc04fe92a863155dd99c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-187c5b4e772275b703ab: Nightly time budget reached; remaining values retained
-- new-product / candidate-00b2f425a72a76396a29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-92724fa598ae156ca9e2: No verified product image URL
+- new-product / candidate-fd82250b496ecdf3691a: Cannot confirm one product on the discovered URL
+- new-product / candidate-a54ef3eb51d7c5f0c0bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-51b3a58880a42aa2be12: No verified product image URL
+- new-product / candidate-b3ca862ea855d13ea59f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8a76138d3f4c2444bb73: No verified product image URL
 - new-product / candidate-e5b5ec04e489292f3f6a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a7e0c83c229f83ece71e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ba05b400a5fdccc8deff: Nightly time budget reached; remaining values retained
-- new-product / candidate-3872da13a8dafa98c77e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ff49dd45ccda3ce51cc5: Nightly time budget reached; remaining values retained
+- new-product / candidate-5d706c2f5d789fb400e4: Cannot confirm one product on the discovered URL
+- new-product / candidate-809159c15b2d5f3a743e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-99699604b44a1bd53062: No verified product image URL
+- new-product / candidate-ff3104527c622b63a320: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0315857f9cabffac9357: No verified product image URL
 - new-product / candidate-593230ba19be477d147d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7f89ef9848008eea0377: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c82d814b8d8cd4ab39cc: Nightly time budget reached; remaining values retained
-- new-product / candidate-eb537783c2604fe54625: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4290ecc47a9745e57e52: Nightly time budget reached; remaining values retained
+- new-product / candidate-ec2fad59c556f4793798: Cannot confirm one product on the discovered URL
+- new-product / candidate-14ea0889198d38d5bd3e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0908099e489576ef6b9e: No verified product image URL
+- new-product / candidate-7a9b2e90e610a4e8a96a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f40cc007a491285d0a54: No verified product image URL
 - new-product / candidate-ddec7c53ca8419cc5615: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-745b71a17fdb94d8d0b4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c75cbaf44ab525a9a777: Nightly time budget reached; remaining values retained
-- new-product / candidate-356f948f5fa5eadf12ba: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e6c1035a622d9d22fcf1: Nightly time budget reached; remaining values retained
+- new-product / candidate-3f272603c89e17da600d: Cannot confirm one product on the discovered URL
+- new-product / candidate-8c82f1852c41a09cd43d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a3f2892c8b04172cf21c: No verified product image URL
 - new-product / candidate-a69797916fdd5154d965: No verified product image URL
 - new-product / candidate-58804dd47840fa69052b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-9c6518dcb8f774c9822b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-41dcfd27fbfec2ddd664: Nightly time budget reached; remaining values retained
-- new-product / candidate-f59bd8118956cc83a9f2: Pack weight outside the supported range
-- new-product / candidate-b55e3bc6b2ead955888d: Nightly time budget reached; remaining values retained
+- new-product / candidate-fcd8b02bcf567401619f: Cannot confirm one product on the discovered URL
+- new-product / candidate-9af75bc8fd1519197427: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a18b9ec716e3ef1e32b3: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bc2766198c19e0efa4f0: No verified product image URL
 - new-product / candidate-c72bd9b1dbf81f373a0b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-bb1911d918836bef9be7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f8f22e595fd1d735f701: Nightly time budget reached; remaining values retained
-- new-product / candidate-31e21cf5a43dcd2c42ad: Pack weight outside the supported range
-- new-product / candidate-5b0547ebae145a9746e3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-82b348fb5928e0c9cefa: Cannot confirm one product on the discovered URL
+- new-product / candidate-c4d76c91690479ed7624: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e7e04c11fb600c6a26cb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a0d23d2a3613421cc897: Nightly time budget reached; remaining values retained
-- new-product / candidate-abc71a9063b38fea28d4: Pack weight outside the supported range
-- new-product / candidate-82168e1644b114b50894: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3d6ac619dc5997c86cdc: Cannot confirm one product on the discovered URL
+- new-product / candidate-4d5ae4086401745fe83b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f4ea88278c3b6e03ec6a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d10e1861533de0779ed7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-89d46f54df6944ea4162: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a7f5ba18e0064cf8d42: Pack weight outside the supported range
-- new-product / candidate-8dc7f8420da0c1a2b707: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-432e457799727f24a0b2: Cannot confirm one product on the discovered URL
+- new-product / candidate-cc3a100df0c5797a12d3: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-40cd4f3dc85af597088e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3b938f178b30755abbab: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7fb2a9b1b703a3643a91: Nightly time budget reached; remaining values retained
-- new-product / candidate-74fe631e433221246e04: Pack weight outside the supported range
-- new-product / candidate-5257b819df179cddfdbc: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c0aeb1e0fdbde8c520c2: Cannot confirm one product on the discovered URL
+- new-product / candidate-776068545ae934d76961: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-342668b51d5f52a949cd: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2a557f456ab4eed3d493: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-396f6157daaeb3c5b8d6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7fda80ac1a523fdf51a6: Nightly time budget reached; remaining values retained
-- new-product / candidate-a69debb0647c702d8721: No verified product image URL
-- new-product / candidate-b81caa5efdb417ffb7bf: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-aa4dc1141c1a498ad340: Cannot confirm one product on the discovered URL
+- new-product / candidate-00b2f425a72a76396a29: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-945ee2e9408a2065bc1e: No verified product image URL
 - new-product / candidate-099c9025c93530502cd9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b2d7df41cdaf71425d94: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1992ecd08cc6665e7eef: Nightly time budget reached; remaining values retained
-- new-product / candidate-7e188d72855ceef6ac6c: No verified product image URL
-- new-product / candidate-0365a71211559e11c2cb: No verified product image URL
+- new-product / candidate-0ba92ed2828fbe9c4af5: Cannot confirm one product on the discovered URL
+- new-product / candidate-3872da13a8dafa98c77e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ca29caa2f2fbe9edc643: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-03e8e0cbec149184b600: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-897290b68b6c7ed894e1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ecb70b601ce717fcd655: Nightly time budget reached; remaining values retained
-- new-product / candidate-d409ba791510007421ca: Pack weight outside the supported range
-- new-product / candidate-fb8086d4e4dd08cc4297: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-420f21c87cf37a7d252d: Cannot confirm one product on the discovered URL
+- new-product / candidate-eb537783c2604fe54625: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a9779f0e6354e50caea5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-6ac42cbe4cf2881c0573: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-040fbae274a46d716a20: No verified product image URL
-- new-product / candidate-272b508e3cc267b9eff0: Nightly time budget reached; remaining values retained
-- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
-- new-product / candidate-c3a30bf561031d5b5ad6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e7a4fa33583aa1311ce1: Cannot confirm one product on the discovered URL
+- new-product / candidate-356f948f5fa5eadf12ba: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4acd0b11dee19ae0c671: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8490359567e80aae61f6: No verified product image URL
-- new-product / candidate-056c63b9ede6185f09c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-871e328ca17eb238ed70: Pack weight outside the supported range
-- new-product / candidate-abb62607bf55e95abe03: Source does not state the material pack weight; listing skipped
+- new-product / candidate-354b8c5cf711a499171b: Cannot confirm one product on the discovered URL
+- new-product / candidate-f59bd8118956cc83a9f2: Pack weight outside the supported range
+- new-product / candidate-8d8afb60e358dc8b2637: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-5cbdb52281b4cf26590b: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5cf18f2612e2b3151fee: Cannot confirm that the product is a material or printer
-- new-product / candidate-ab51e5350986d316d3de: Nightly time budget reached; remaining values retained
-- new-product / candidate-6102ad1a874597d96f05: Pack weight outside the supported range
-- new-product / candidate-5502c39c3852ce338033: Source does not state the material pack weight; listing skipped
+- new-product / candidate-cfd055e14c702d0a448c: Cannot confirm one product on the discovered URL
+- new-product / candidate-31e21cf5a43dcd2c42ad: Pack weight outside the supported range
 - new-product / candidate-66bb8f5150abef8740e3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5e2c4ab5203867101c95: No verified product image URL
-- new-product / candidate-ba6364a5e718bb1f9197: Nightly time budget reached; remaining values retained
-- new-product / candidate-6a22f7e3ef3ec4cc9304: No verified product image URL
-- new-product / candidate-ff6539216748bccfda06: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ad5b599da526f207cd64: Cannot confirm one product on the discovered URL
+- new-product / candidate-abc71a9063b38fea28d4: Pack weight outside the supported range
 - new-product / candidate-574dd5c964ca44662745: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-28dccdb0dff381b670c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0c15b3cb275b8e7ae82c: Nightly time budget reached; remaining values retained
-- new-product / candidate-7337533419a2d060f3a9: No verified product image URL
-- new-product / candidate-69e1bb131d902f291b08: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d5559a8e487a6e8b22fa: Cannot confirm one product on the discovered URL
+- new-product / candidate-4a7f5ba18e0064cf8d42: Pack weight outside the supported range
 - new-product / candidate-30799b4253006e10df70: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0d157aad4ae8f62229be: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6888c42c7bfa9d9c4983: Nightly time budget reached; remaining values retained
-- new-product / candidate-96feca143abec9a69fe6: No verified product image URL
-- new-product / candidate-eff4206a4d0453dbf506: No verified product image URL
+- new-product / candidate-3d62d28d72a08f189e8a: Cannot confirm one product on the discovered URL
+- new-product / candidate-74fe631e433221246e04: Pack weight outside the supported range
+- new-product / candidate-61316cca0dc8fe56a182: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0ba61256e3e7533914e4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dab9111025d6b42858f1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-14860a3aee1e8e1bfbc3: Nightly time budget reached; remaining values retained
-- new-product / candidate-f13af1f3e9de488fd0a5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dc870c028fcb8dc5a5df: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f0afc9296a27923681ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-a69debb0647c702d8721: No verified product image URL
+- new-product / candidate-0365a71211559e11c2cb: No verified product image URL
 - new-product / candidate-716b5698e5eb11144a15: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-89d57b8522bc5bf89fba: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a61e023f0ba241524bf1: Nightly time budget reached; remaining values retained
-- new-product / candidate-728761a59c2a93d4de4b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5f02637780a36a2d1899: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9dbe3a57cee34b689678: Cannot confirm one product on the discovered URL
+- new-product / candidate-7e188d72855ceef6ac6c: No verified product image URL
+- new-product / candidate-1635b3d61136f35d92a9: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-49568bc3ffce4106eb4f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-20d6b552abc71618c70e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d00f6f2adc244d876ef3: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fec11d1d04a822d857c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-711a27cb0e2958b0b644: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e8133d5082fce5b37f04: Cannot confirm one product on the discovered URL
+- new-product / candidate-d409ba791510007421ca: Pack weight outside the supported range
+- new-product / candidate-0382a40137752ff77d7f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-404f72a0f4d7099f41e6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8b4be3e7450840bef838: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5a3dc8556ebcabc3436f: Nightly time budget reached; remaining values retained
-- new-product / candidate-34f19a2f520c35f22476: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2d52ddec45ea55d1d80b: No verified product image URL
+- new-product / candidate-e38ba80b9081dfd17d75: Cannot confirm one product on the discovered URL
+- new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
+- new-product / candidate-abb62607bf55e95abe03: Source does not state the material pack weight; listing skipped
 - new-product / candidate-a54d5eeeb4b6fa0a0b2f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-677532f3ef735bdd05d5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4a33b24f5e3c98054f39: Nightly time budget reached; remaining values retained
-- new-product / candidate-972cba4fa698a5128af9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ae8c4e066fd878dc4563: Source does not state the material pack weight; listing skipped
+- new-product / candidate-d2027aaeb631d39f1e4c: Cannot confirm one product on the discovered URL
+- new-product / candidate-871e328ca17eb238ed70: Pack weight outside the supported range
+- new-product / candidate-dff76aa660f4bcff0b38: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0589712ebf0f7a3776d4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-3dc09920e79d23ff0a0b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-670ecf4fb823442d1e16: Nightly time budget reached; remaining values retained
-- new-product / candidate-165657b3a050c746e97b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-60528a99dad457792948: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c1689a0655597e52dcbd: Cannot confirm one product on the discovered URL
+- new-product / candidate-6102ad1a874597d96f05: Pack weight outside the supported range
+- new-product / candidate-5502c39c3852ce338033: Source does not state the material pack weight; listing skipped
 - new-product / candidate-685ce6906121f449f5ed: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7018f92882db8555049b: No verified product image URL
-- new-product / candidate-5fd4718e99fb53ab1570: Nightly time budget reached; remaining values retained
-- new-product / candidate-08cd8e0d89d1ce0c80d8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a6a1eb6c445ef429dd2b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-63bab2caf6e9e395a2cd: Cannot confirm one product on the discovered URL
+- new-product / candidate-6a22f7e3ef3ec4cc9304: No verified product image URL
+- new-product / candidate-ff6539216748bccfda06: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d9d1e599d6eb1c40a2e4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-40389e056cb5d200fa60: No verified product image URL
-- new-product / candidate-cfd7688d0f7f406c00be: Nightly time budget reached; remaining values retained
-- new-product / candidate-44f385a42af295a76730: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-191f94ea2533b2ece370: Source does not state the material pack weight; listing skipped
+- new-product / candidate-692de496c4a5f3ee65d0: Cannot confirm one product on the discovered URL
+- new-product / candidate-7337533419a2d060f3a9: No verified product image URL
+- new-product / candidate-69e1bb131d902f291b08: Source does not state the material pack weight; listing skipped
 - new-product / candidate-9cc44b0fce00da06036d: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c3a4275960fc62d1cb7c: Cannot confirm that the product is a material or printer
-- new-product / candidate-f50b25243a056fb01bef: Nightly time budget reached; remaining values retained
-- new-product / candidate-a14a2d450d2503bc37cd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bbd095223fefe0742ee5: Source does not state the material pack weight; listing skipped
+- new-product / candidate-811cedf5af4861a5fa6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-96feca143abec9a69fe6: No verified product image URL
+- new-product / candidate-eff4206a4d0453dbf506: No verified product image URL
 - new-product / candidate-04bfadb256c4801bd8ba: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-51c30e4cf42442c37030: No verified product image URL
-- new-product / candidate-e869e5f26bec04071f27: Nightly time budget reached; remaining values retained
-- new-product / candidate-65d61d668f4f9cefaa9e: No verified product image URL
-- new-product / candidate-0dc89928ff8a7b0533e4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-97f8a20400e7dfab1e8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-17a9d5911f457a8d2122: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dc870c028fcb8dc5a5df: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e66c4822f5fb03078209: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6946bb8d44a0826124ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-db1021a8cc394447501d: Nightly time budget reached; remaining values retained
-- new-product / candidate-876e2db13a6ce54359c7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8a482b7450ce1025b6e2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3625f4e304d59ee8bbf7: Cannot confirm one product on the discovered URL
+- new-product / candidate-24b8e3c8a6f610a76a08: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5f02637780a36a2d1899: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-774cd9fda4e61f8a0512: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-fa57f8625c8df5a36373: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e5080377bad133f8f5cd: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d5c2fd5b0f003876fca: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c4323701e3ec78f83183: Source does not state the material pack weight; listing skipped
+- new-product / candidate-10f3661b381efda729c6: Cannot confirm one product on the discovered URL
+- new-product / candidate-0fec11d1d04a822d857c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-711a27cb0e2958b0b644: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-693d6efd9fccd8947b20: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e088199f3cc5c7b97edd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a6ebc3887dff17c6cd2d: Nightly time budget reached; remaining values retained
-- new-product / candidate-6b86e5c60a28424e0e3b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d3d7c590b6f3153989ef: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7ae283cb9405ab21e6ab: Cannot confirm one product on the discovered URL
+- new-product / candidate-b5784ab169e5a102c3c0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2d52ddec45ea55d1d80b: No verified product image URL
 - new-product / candidate-589e6870d3cbb2a05851: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b7b6f1e9fb1aec99ca8a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-77bb235101e26c6bebff: Nightly time budget reached; remaining values retained
-- new-product / candidate-b215a11d4be50a3dcdcf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-83361280b7fc5255a6d3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-132f335ca6d7b410fa48: Cannot confirm one product on the discovered URL
+- new-product / candidate-489eccaa4bc33a18ff56: Source does not state the material pack weight; listing skipped
+- new-product / candidate-60528a99dad457792948: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b8b4e689689ffc45abd1: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c0c8776d44dfd7a402c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d49effd6e6ea61fafe3d: Nightly time budget reached; remaining values retained
-- new-product / candidate-6d481b9ca8cbea54c11e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2cf4fb24cfed5fbf889b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-b2b5f39d77c5c0b681b8: Cannot confirm one product on the discovered URL
+- new-product / candidate-165657b3a050c746e97b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a6a1eb6c445ef429dd2b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-dcb33189eabac6bd10cb: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0bf55065a2517ec452b1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a8e56629a3551293b5da: Nightly time budget reached; remaining values retained
-- new-product / candidate-0e3e03164a99c6f76634: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b3d7b405c3f4af05347a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-37d8cab5ed965e83b838: Cannot confirm one product on the discovered URL
+- new-product / candidate-08cd8e0d89d1ce0c80d8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-191f94ea2533b2ece370: Source does not state the material pack weight; listing skipped
 - new-product / candidate-797fc29a150cd244b5e7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a5bc33d5d82501f717a1: No verified product image URL
-- new-product / candidate-997c3067a37155438ffc: Nightly time budget reached; remaining values retained
-- new-product / candidate-129998fa4e0985d5f37a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d71c9092d4303b3ec498: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4feea9e2ec9627098d2e: Cannot confirm one product on the discovered URL
+- new-product / candidate-44f385a42af295a76730: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bbd095223fefe0742ee5: Source does not state the material pack weight; listing skipped
 - new-product / candidate-5c984f0cd3fdc0cb7f31: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2e05cd6040ce09589af7: No verified product image URL
-- new-product / candidate-0020f0732f78ab50296d: Nightly time budget reached; remaining values retained
-- new-product / candidate-809279eacdaac88669fc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ddca876013bebc2eb018: Source does not state the material pack weight; listing skipped
+- new-product / candidate-23d0652c172096273a65: Cannot confirm one product on the discovered URL
+- new-product / candidate-a14a2d450d2503bc37cd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0dc89928ff8a7b0533e4: Source does not state the material pack weight; listing skipped
 - new-product / candidate-b0e55ca1988be03753cc: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c36cfe410fdb7d65765f: Cannot confirm that the product is a material or printer
-- new-product / candidate-dd36df6e3f512c50b811: Nightly time budget reached; remaining values retained
-- new-product / candidate-9a4a2bd5a4cee822aa13: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-57015646a7bbb9e22fb7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-41f7254c0586db177e52: Cannot confirm one product on the discovered URL
+- new-product / candidate-65d61d668f4f9cefaa9e: No verified product image URL
+- new-product / candidate-8a482b7450ce1025b6e2: Source does not state the material pack weight; listing skipped
 - new-product / candidate-aa73c4b828dadf358158: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b16cab0fa3f85c5919b9: No verified product image URL
-- new-product / candidate-3c79f7b2a560afe800a2: Nightly time budget reached; remaining values retained
-- new-product / candidate-f633aed88faa6aa03e38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ad714d865f6ace820b1f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1f62091d59fcf327e076: Cannot confirm one product on the discovered URL
+- new-product / candidate-876e2db13a6ce54359c7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c4323701e3ec78f83183: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bfe467beb2e325c3dea8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-27fc967c2c0a58920c37: Source does not state the material pack weight; listing skipped
-- new-product / candidate-218a343a57010e268fd6: Nightly time budget reached; remaining values retained
-- new-product / candidate-cddd51a1367f11cd4402: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f7a32d2b5470dced87b7: Cannot confirm one product on the discovered URL
+- new-product / candidate-0cddb062aeb7c2cf9fb0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d3d7c590b6f3153989ef: Source does not state the material pack weight; listing skipped
 - new-product / candidate-758b81986c3a5a2e66fd: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7e7e523a9196a0526ae3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2d6801b72e196a59311d: Nightly time budget reached; remaining values retained
-- new-product / candidate-4a3517498225ff75afad: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-41173ede1f8375dad94c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c6c66e9f18c56a5fd697: Cannot confirm one product on the discovered URL
+- new-product / candidate-06f78cd7baec8689a4e9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-83361280b7fc5255a6d3: Source does not state the material pack weight; listing skipped
 - new-product / candidate-bac5769ef22924cce639: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-516974d8c9c741fe26de: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d652607e64d291f3f648: Nightly time budget reached; remaining values retained
-- new-product / candidate-28bd66b426ab04b9c2f8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d2c1cd4a4a17c3c73d8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0be2b642945ef8f72336: Cannot confirm one product on the discovered URL
+- new-product / candidate-972a668a99fabdd57670: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2cf4fb24cfed5fbf889b: Source does not state the material pack weight; listing skipped
 - new-product / candidate-188650da393284f1ed73: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-5da6ec5f2d2373d7b9bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-94d27f44d243c84cf3af: Nightly time budget reached; remaining values retained
-- new-product / candidate-c26870f56874ac2f6889: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-818dbba01490c54429df: No verified product image URL
+- new-product / candidate-0770ef51b53630b8a790: Cannot confirm one product on the discovered URL
+- new-product / candidate-289b24539950d3280b4a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b3d7b405c3f4af05347a: Source does not state the material pack weight; listing skipped
 - new-product / candidate-0c5a6d0c24daee89bf97: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-422d5fe4fc43f0e55186: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e30df97b0d8ee972f910: Nightly time budget reached; remaining values retained
-- new-product / candidate-7f1ef34e7373e31048dd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6e353a4e8ca8ef016ea6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e1c42fe15b47db7d759a: Cannot confirm one product on the discovered URL
+- new-product / candidate-277840bc09da9e462809: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d71c9092d4303b3ec498: Source does not state the material pack weight; listing skipped
 - new-product / candidate-d645f1cd020fb1bab1c5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-db7543b5945362643cda: No verified product image URL
-- new-product / candidate-d52ff1f15ed8bcec0f3f: Nightly time budget reached; remaining values retained
-- new-product / candidate-31928cd70632f8de114a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-98d286c5fb100ceb6f3e: Cannot confirm that the product is a material or printer
+- new-product / candidate-2c876451689908969e8e: Cannot confirm one product on the discovered URL
+- new-product / candidate-c809253c9915bc3a14ec: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ddca876013bebc2eb018: Source does not state the material pack weight; listing skipped
 - new-product / candidate-e1321de48293f1908ef5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f205b27d1aaebd06c027: No verified product image URL
-- new-product / candidate-ec5eb9018509124f2df6: Nightly time budget reached; remaining values retained
-- new-product / candidate-2c140576c4c9693ff27a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2cb5d2a86b4e692ca05c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a1f720fabe05e007602c: Cannot confirm one product on the discovered URL
+- new-product / candidate-e75b9f9a34f504a6e1be: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-57015646a7bbb9e22fb7: Source does not state the material pack weight; listing skipped
 - new-product / candidate-42ec851ee9fdce4479ba: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e42ca32d270c3e0e5901: Cannot confirm that the product is a material or printer
-- new-product / candidate-f257e150f13687ef23c5: Nightly time budget reached; remaining values retained
-- new-product / candidate-cb48a3c1ba1c141f6915: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7574a0dad2265a52711c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3fa911c5acbf25f144a6: Cannot confirm one product on the discovered URL
+- new-product / candidate-3266b8a439a85ca2dcb6: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ad714d865f6ace820b1f: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f1399cd96ae3da8c1eab: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-150cbc0f86310251af99: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4e0363838696d9e4a083: Nightly time budget reached; remaining values retained
-- new-product / candidate-65e6f19a083b31441ac3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
+- new-product / candidate-e98c6c61d48a02e1b602: Cannot confirm one product on the discovered URL
+- new-product / candidate-707c8e78f2ce4f105412: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e42c6eadc005d9cfa6e8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-74f7f9bd6191e2c8d797: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9c291422007dd9127a8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-960e927e8f91b64e6e7e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b4a20a0d12b6942f1358: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-87d24681d6b9e15ba544: Cannot confirm one product on the discovered URL
+- new-product / candidate-0591c21ab45278252a10: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-41173ede1f8375dad94c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f3fa123099cf135ae147: Source does not state the material pack weight; listing skipped
-- new-product / candidate-457b71cac1e0f6910a6c: Nightly time budget reached; remaining values retained
-- new-product / candidate-856714b8cefb1dddcfdb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e0fa1d31f71d69c9129f: No verified product image URL
+- new-product / candidate-c5476950bf04d695a687: Cannot confirm one product on the discovered URL
+- new-product / candidate-0f1dec51325c85a3e4ad: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a9eb85694339000d306f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-71a64992cb5ae97d7aa9: Nightly time budget reached; remaining values retained
-- new-product / candidate-a5aa2cb92cd80f803a4a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5d65120fd3f6a414f3b9: Pack weight is ambiguous; listing skipped
+- new-product / candidate-a15810f5416ea0cb9a06: Cannot confirm one product on the discovered URL
+- new-product / candidate-f60b3d66903bd6aae373: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7793d9701809a2b97ff8: No verified product image URL
 - new-product / candidate-117ef85b19e561b8198b: No verified product image URL
-- new-product / candidate-3641133382ff2948355e: Nightly time budget reached; remaining values retained
-- new-product / candidate-fdd64775217c670fe619: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-063dbcdc9e291aae2dd7: No verified product image URL
+- new-product / candidate-6dc9ce073b0c50051253: Cannot confirm one product on the discovered URL
+- new-product / candidate-1beafc80d6b1d3d15e6a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-818dbba01490c54429df: No verified product image URL
 - new-product / candidate-84434963cb9903b537c4: No verified product image URL
-- new-product / candidate-e9b6c1331a738ab5f2f5: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ec29cad1745fb3176e7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9e004f1c313d19769036: No verified product image URL
+- new-product / candidate-bca45f9c22482c7fb783: Cannot confirm one product on the discovered URL
+- new-product / candidate-d00dd5e9e4dd8b659147: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-86740f0b5e4fb5b70a3a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-afe136c84e0ef50cc338: Cannot confirm that the product is a material or printer
-- new-product / candidate-0ed6f669a7d0792ac04d: Nightly time budget reached; remaining values retained
-- new-product / candidate-f2f0c352b04e92958ed4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c3816a7b733db3388ebc: No verified product image URL
+- new-product / candidate-c897ed754b95491f2910: Cannot confirm one product on the discovered URL
+- new-product / candidate-865f96b5e585a998f1bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-98d286c5fb100ceb6f3e: Cannot confirm that the product is a material or printer
 - new-product / candidate-18ccb23b7471af5734a4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-307930ca28a49c9b54c6: Nightly time budget reached; remaining values retained
-- new-product / candidate-90cbb7b907d1e56854bf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-44291b5c33b7afb19589: Pack weight is ambiguous; listing skipped
+- new-product / candidate-6b1a0e3e1aeb8aef25a4: Cannot confirm one product on the discovered URL
+- new-product / candidate-5f3bf390c8a3f2d23f06: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2cb5d2a86b4e692ca05c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-320bf3eb1697f843e18b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f30ac14163f541bd548f: Nightly time budget reached; remaining values retained
-- new-product / candidate-392058d18379d314b779: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7731a9043ff7f8990fb3: No verified product image URL
+- new-product / candidate-116f70179f78ec63d2b0: Cannot confirm one product on the discovered URL
+- new-product / candidate-74896be4adff8180d99a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7574a0dad2265a52711c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-8522cd5647ff677f8651: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fab406185bf5cb4d3440: Nightly time budget reached; remaining values retained
-- new-product / candidate-53990cfb72cab53042c5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ef8a58728033d5ebadf6: No verified product image URL
+- new-product / candidate-8b56624f268aa9fb90c5: Cannot confirm one product on the discovered URL
+- new-product / candidate-65e6f19a083b31441ac3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0f6a0cbc8dcb23f2ba2e: Cannot confirm that the product is a material or printer
 - new-product / candidate-94afede683a826e088a4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-339f6368bddd026ba4af: Nightly time budget reached; remaining values retained
-- new-product / candidate-bc227547cbdd79f10a80: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9699e6ae48fcc2ca3e44: No verified product image URL
+- new-product / candidate-03a6f07ec50c09226187: Cannot confirm one product on the discovered URL
+- new-product / candidate-3b8f8848978c958f9962: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b4a20a0d12b6942f1358: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-afcd98f9bf3847678fe2: No verified product image URL
-- new-product / candidate-dc2001727c85c4a8646a: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e76299c849658201f00: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3c6950bdd47c886e0794: No verified product image URL
+- new-product / candidate-8bb76130856075f69976: Cannot confirm one product on the discovered URL
+- new-product / candidate-b9ae04d1467f170a7da7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e0fa1d31f71d69c9129f: No verified product image URL
 - new-product / candidate-263edf7db2730c9e30bb: Cannot confirm that the product is a material or printer
-- new-product / candidate-47f9fa9f9a23738232b7: Nightly time budget reached; remaining values retained
-- new-product / candidate-3cb7a2e3428d087347a3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bc258083ed95b2d9605e: No verified product image URL
+- new-product / candidate-31658aa8710646e2df66: Cannot confirm one product on the discovered URL
+- new-product / candidate-d040db12d6e922d926b1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5d65120fd3f6a414f3b9: Pack weight is ambiguous; listing skipped
 - new-product / candidate-cbcdb800c4e7bc56f6b9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b89eac04b3dc053a9e2e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f7249a7acb731a559919: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2895d1ef6a21ffabac57: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e807525b1f500253779b: Cannot confirm one product on the discovered URL
+- new-product / candidate-b5ff7e21c4adb312af02: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-063dbcdc9e291aae2dd7: No verified product image URL
 - new-product / candidate-70f7a2ba756a94301190: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b515999133b121704cfe: Nightly time budget reached; remaining values retained
-- new-product / candidate-9eef1b9febec0f338e2f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6d99c0e1cabd49d9fa66: Nightly time budget reached; remaining values retained
+- new-product / candidate-d1caa6d65b3d034fad3e: Cannot confirm one product on the discovered URL
+- new-product / candidate-31fd9b395897cdbbaf80: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9e004f1c313d19769036: No verified product image URL
 - new-product / candidate-48a6194b85f9fca2f154: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1dd0d9ad957b81fdf7df: Nightly time budget reached; remaining values retained
-- new-product / candidate-b2af858bfbf6a9e416f1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a8eb7aa9186c349adba7: Nightly time budget reached; remaining values retained
+- new-product / candidate-a92f1da5dfea208f8c6c: Cannot confirm one product on the discovered URL
+- new-product / candidate-90456e949439ac4ce09a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c3816a7b733db3388ebc: No verified product image URL
 - new-product / candidate-4854ed193af67cd99495: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4e67549a3fd5fb1fb9c8: Nightly time budget reached; remaining values retained
-- new-product / candidate-561a49dd2ba89d5c3f57: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b41f01f68d0730bb1af0: Nightly time budget reached; remaining values retained
+- new-product / candidate-f1517af8c45a24738ff6: Cannot confirm one product on the discovered URL
+- new-product / candidate-555802b9d6320be815f4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-44291b5c33b7afb19589: Pack weight is ambiguous; listing skipped
 - new-product / candidate-e8300985d01646302a3b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c04e8b756497869d12ef: Nightly time budget reached; remaining values retained
-- new-product / candidate-a345473f7a1760177441: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7b7b67d8e99734d8ed93: No verified product image URL
+- new-product / candidate-272e16a9147b9fcaf06a: Cannot confirm one product on the discovered URL
+- new-product / candidate-57a9a72c5bd9f1021b3f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7731a9043ff7f8990fb3: No verified product image URL
 - new-product / candidate-4a4d12d2e55ca021d2ed: Source does not state the material pack weight; listing skipped
-- new-product / candidate-75abc256d032eaee9810: Nightly time budget reached; remaining values retained
-- new-product / candidate-c7ecb0d05c98dca8b17f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-56c50849a48a47c9d8bb: Nightly time budget reached; remaining values retained
+- new-product / candidate-b75089f493c2fb348370: Cannot confirm one product on the discovered URL
+- new-product / candidate-02e2e9d4f2295e17a96d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ef8a58728033d5ebadf6: No verified product image URL
 - new-product / candidate-0e7c57b6dc8db6568642: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7ee85b790488d1101020: Nightly time budget reached; remaining values retained
-- new-product / candidate-ee83335c1e54b23dd57a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1b78e3aeed0117127bd5: Nightly time budget reached; remaining values retained
+- new-product / candidate-c9338e3daf3c98af8731: Cannot confirm one product on the discovered URL
+- new-product / candidate-10fc6cadb34b177d616f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9699e6ae48fcc2ca3e44: No verified product image URL
 - new-product / candidate-00a875fc6088a32710e1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c16e35ff9316fd9bcfa5: Nightly time budget reached; remaining values retained
-- new-product / candidate-c3ca0e496dce7c168819: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-967d72718119c66bb7c9: Nightly time budget reached; remaining values retained
+- new-product / candidate-a601d8b49fa920fcb3ec: Cannot confirm one product on the discovered URL
+- new-product / candidate-62b28781388c3ccdf315: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3c6950bdd47c886e0794: No verified product image URL
 - new-product / candidate-441fb48bb80567cfa6db: Source does not state the material pack weight; listing skipped
-- new-product / candidate-750299a7ae450302bc7b: Nightly time budget reached; remaining values retained
-- new-product / candidate-e11f5e6441f84ac5e02f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f61df8a22cf6d6a54518: Nightly time budget reached; remaining values retained
+- new-product / candidate-fc1a7b8a55c01003f1a5: Cannot confirm one product on the discovered URL
+- new-product / candidate-adf66d00594cdcc36057: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-bc258083ed95b2d9605e: No verified product image URL
 - new-product / candidate-850f09239873396923c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-efdb4c492a3ac91bf800: Nightly time budget reached; remaining values retained
-- new-product / candidate-72c004a9f3d051d8bb7b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-41c837c88cccf2629f14: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0ad1db587a039b8368d4: Cannot confirm one product on the discovered URL
+- new-product / candidate-c0e53500afc623b1a0e4: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2895d1ef6a21ffabac57: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-ee712d20e65cd0479d16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1a88cd72ce257a8ee6e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f0a4ca196d834b0cd613: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-28ea63d34663f7b0c11b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-343335ac77d259c9805a: Cannot confirm one product on the discovered URL
+- new-product / candidate-561a49dd2ba89d5c3f57: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2cd8d60828277a820018: Source does not state the material pack weight; listing skipped
-- new-product / candidate-38d451a9fbb27ada9ba2: Nightly time budget reached; remaining values retained
-- new-product / candidate-f723b333f952fac237a2: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3818454c9152b46d8ca9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a14dccbc8d113bcb565c: Cannot confirm one product on the discovered URL
+- new-product / candidate-bc227547cbdd79f10a80: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6b42bed2124b6c5d8761: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0a3e638acb8f8b0b8322: Nightly time budget reached; remaining values retained
-- new-product / candidate-45f51f66f0b0a8743bfd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-76f4e8e125381f0262f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-23a63ee254bf58f95e98: Cannot confirm one product on the discovered URL
+- new-product / candidate-3e76299c849658201f00: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-79add83e77513618c085: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0c06df73f24dc93084b3: Nightly time budget reached; remaining values retained
-- new-product / candidate-90e6a0d4b554684deccc: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-689fe6dcaae289682153: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e7e01c8f44095b076f72: Cannot confirm one product on the discovered URL
+- new-product / candidate-b2af858bfbf6a9e416f1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ae8c4e066fd878dc4563: Source does not state the material pack weight; listing skipped
 - new-product / candidate-2e4985e14d1ecabe9a36: Source does not state the material pack weight; listing skipped
-- new-product / candidate-01cedb2fe4ae10279b98: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0d31fb14d4e4f4957c5: Cannot confirm one product on the discovered URL
+- new-product / candidate-c7ecb0d05c98dca8b17f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5c46365c2bbede10c471: No verified product image URL
+- new-product / candidate-14c85bef7f3b5d497f9f: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3683c989cd75950ab9ce: Cannot confirm one product on the discovered URL
+- new-product / candidate-ee83335c1e54b23dd57a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dbcf658adb76e84b48bb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f94885149856eaacc0eb: Source does not state the material pack weight; listing skipped
+- new-product / candidate-68883a8bf8aeb513799a: Cannot confirm one product on the discovered URL
+- new-product / candidate-c3ca0e496dce7c168819: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97e2e73aff684a2426b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5ca1cabde0d0725aa3d5: Cannot confirm one product on the discovered URL
+- new-product / candidate-e11f5e6441f84ac5e02f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-156cb210c46355caa815: Cannot confirm one product on the discovered URL
+- new-product / candidate-72c004a9f3d051d8bb7b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b02126f6304eb0101a88: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e5ace3e9e5ea0d4b69da: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0a4ca196d834b0cd613: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f9aaac7b2427f73d19b6: Nightly time budget reached; remaining values retained
+- new-product / candidate-f723b333f952fac237a2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5b7f1f54e2ae2b0e6dd5: Nightly time budget reached; remaining values retained
+- new-product / candidate-180a2c1d8b603a9d3c92: Nightly time budget reached; remaining values retained
+- new-product / candidate-45f51f66f0b0a8743bfd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3305572ab8a6fdd7b0eb: Nightly time budget reached; remaining values retained
+- new-product / candidate-f07b91f3ce437bd777b3: Nightly time budget reached; remaining values retained
+- new-product / candidate-90e6a0d4b554684deccc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c92ae9359f2ed0e97bfe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9b5640fcac50a2cebcfd: Nightly time budget reached; remaining values retained
 - new-product / candidate-c36453033169fdadad45: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2e60483896c781886ece: No verified product image URL
-- new-product / candidate-14c85bef7f3b5d497f9f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-adb2c769a64134e11e7c: Nightly time budget reached; remaining values retained
+- new-product / candidate-ecf4cf8b07c3ec8d2d98: Nightly time budget reached; remaining values retained
 - new-product / candidate-045035e7e3b33fd42ef3: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-873cd3c3d723f2e905a1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f94885149856eaacc0eb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e831fc38bb5ddf0a3547: Nightly time budget reached; remaining values retained
+- new-product / candidate-ff158362b14765e673c8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7bb34d8a17c1ec6d635c: Nightly time budget reached; remaining values retained
 - new-product / candidate-e3a9e3830828ffd9ebe1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b20dd87b27341199906a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-80e92a410dd28f3e96f3: Nightly time budget reached; remaining values retained
+- new-product / candidate-efae28091696448345b7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5af446e86a1e673545d3: Nightly time budget reached; remaining values retained
 - new-product / candidate-6220f2cb7a8fd1f59f63: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ce2249dcdfde5ea18239: Source does not state the material pack weight; listing skipped
-- new-product / candidate-71ff513a20d725954fde: Nightly time budget reached; remaining values retained
+- new-product / candidate-311362b0dcaf0e2ed933: Nightly time budget reached; remaining values retained
 - new-product / candidate-6ae6884364216fb7b6f4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e202d6520a6577211cd8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c199c0c3b5703d950570: Nightly time budget reached; remaining values retained
+- new-product / candidate-6f7cb75934b81620177c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ff2536e6be11ddc9d0ee: Nightly time budget reached; remaining values retained
 - new-product / candidate-b4c929f64316efd0738a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e1304460f444a6cb82e9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a33c782d7610f92cef66: Nightly time budget reached; remaining values retained
+- new-product / candidate-e202d6520a6577211cd8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-04a9ba2b4c5948e4d351: Nightly time budget reached; remaining values retained
 - new-product / candidate-e3fb406b13d187c2f4fa: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-38e92cb1d264102063fa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-039c30f8b93d0670f864: Nightly time budget reached; remaining values retained
+- new-product / candidate-e1304460f444a6cb82e9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a16ad247d079eba10a8d: Nightly time budget reached; remaining values retained
 - new-product / candidate-eab1b13172f0ae5eccd7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-84c1c90423fc2ae4b6b0: No verified product image URL
-- new-product / candidate-f83cfe8596df038076c7: Nightly time budget reached; remaining values retained
+- new-product / candidate-38e92cb1d264102063fa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-86f91480d14846222428: Nightly time budget reached; remaining values retained
 - new-product / candidate-69757a5315e186a6599d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-597a6bd41f309dd8c904: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d758cbc3f23d20e28ecd: Nightly time budget reached; remaining values retained
+- new-product / candidate-84c1c90423fc2ae4b6b0: No verified product image URL
+- new-product / candidate-dc814a547ccc4b5d1c7c: Nightly time budget reached; remaining values retained
 - new-product / candidate-29a5fb0318a5cd2f9509: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-041cd129eb9ec964f32c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b77b3d86f5e84f9bb0cd: Nightly time budget reached; remaining values retained
+- new-product / candidate-597a6bd41f309dd8c904: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e46b0ce0718851586538: Nightly time budget reached; remaining values retained
 - new-product / candidate-6f5c5a95e992223e0a2b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4b24dbde8147c1eb7acc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0491d6219aff8bc611e1: Nightly time budget reached; remaining values retained
+- new-product / candidate-041cd129eb9ec964f32c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-214e101346ce8166d56d: Nightly time budget reached; remaining values retained
 - new-product / candidate-602958f07a3ecaf46d84: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-108ea4df2dc5ef33add2: No verified product image URL
-- new-product / candidate-41c6d636cfe79ceeebfb: Nightly time budget reached; remaining values retained
+- new-product / candidate-4b24dbde8147c1eb7acc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f204245dea1b58ef4beb: Nightly time budget reached; remaining values retained
 - new-product / candidate-92a4586f94c3a43fb004: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-75c5dc91f50a869167fe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e625ee370464a4184f80: Nightly time budget reached; remaining values retained
+- new-product / candidate-108ea4df2dc5ef33add2: No verified product image URL
+- new-product / candidate-7cbd2f2f3d5bb83f3976: Nightly time budget reached; remaining values retained
 - new-product / candidate-2789d5e968b93199adf5: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d0b02d2b392def03a8c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5ec79495b3c3d0744ac5: Nightly time budget reached; remaining values retained
+- new-product / candidate-9f6a3b7233beb30630c7: Nightly time budget reached; remaining values retained
 - new-product / candidate-ae3c2e7b7e80bcb5e1e3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-560a6ed04d9f9be7f444: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7337ecbb44c86bfc2954: Nightly time budget reached; remaining values retained
+- new-product / candidate-9ba5fc3f401505d53a73: Nightly time budget reached; remaining values retained
 - new-product / candidate-d33b001aca52b9ca5cc8: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-673d88125378807372ad: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a0759e0041c2885889a0: Nightly time budget reached; remaining values retained
+- new-product / candidate-57b1547b9b84b1988ff4: Nightly time budget reached; remaining values retained
 - new-product / candidate-7ea6cbeff5eba7e57c13: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-311b322c422b6ce152c6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5cfc3fa28de8933a7075: Nightly time budget reached; remaining values retained
+- new-product / candidate-8fbd56e4720b76c96704: Nightly time budget reached; remaining values retained
 - new-product / candidate-048b2e312e47ea3ccd03: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4bb4c509c86bf1f1bc9b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2fe37753f10a9f999125: Nightly time budget reached; remaining values retained
+- new-product / candidate-fb56f0cd357a20653751: Nightly time budget reached; remaining values retained
 - new-product / candidate-407dbf7477b3769647e4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d4d7fa6c6f9de626aea1: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9c74824fcda2aadde0b0: Nightly time budget reached; remaining values retained
+- new-product / candidate-ff7ae8987b1ff5d951ae: Nightly time budget reached; remaining values retained
 - new-product / candidate-589d0452fb29a61499be: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-79b63592bfe425951087: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e08357ccdf94af10d7d7: Nightly time budget reached; remaining values retained
+- new-product / candidate-eca640b0157b8bd03bdf: Nightly time budget reached; remaining values retained
 - new-product / candidate-12ada28306aac061a645: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-ed404ad6326aa363a7be: Source does not state the material pack weight; listing skipped
-- new-product / candidate-049a88e33f00b80a3c0b: Nightly time budget reached; remaining values retained
+- new-product / candidate-e4f30764183603e52b6c: Nightly time budget reached; remaining values retained
 - new-product / candidate-de4699669cc52dd184d7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c12d239a57df3c838b12: Source does not state the material pack weight; listing skipped
-- new-product / candidate-05ea1755af423fc026e5: Nightly time budget reached; remaining values retained
+- new-product / candidate-f5c62fcaa9aaf65dac29: Nightly time budget reached; remaining values retained
 - new-product / candidate-39c2d2de3a263e4b2bd3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7b6cca37f5975f2617fd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-002fd91cfc3411e1af97: Nightly time budget reached; remaining values retained
+- new-product / candidate-129a5b703c501c620492: Nightly time budget reached; remaining values retained
 - new-product / candidate-ab66179eaa5673ca737a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-28eef01b021eaf0908bf: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a0e9c00bbef3ae1c88b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-bb7c1ecc818ecaeeec47: Nightly time budget reached; remaining values retained
 - new-product / candidate-0f9985ceba0f6ae24d23: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2e8d67ff5d86707e3142: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5739d2e732c856d02d2f: Nightly time budget reached; remaining values retained
+- new-product / candidate-ef76043f71413a44f1b8: Nightly time budget reached; remaining values retained
 - new-product / candidate-5f95f0a26033d00ca95e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c5da42ce20ac6857318: Nightly time budget reached; remaining values retained
+- new-product / candidate-8516bc9d717b26ec8538: Nightly time budget reached; remaining values retained
 - new-product / candidate-12bb361dc516d3b1e938: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d4d99025d81c3fa4a7e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e4d4e96d341283058210: Nightly time budget reached; remaining values retained
+- new-product / candidate-c1c05454f07ff9e87508: Nightly time budget reached; remaining values retained
 - new-product / candidate-43de9c1eb490b86f710c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a89ebf6b08f60897adad: No verified product image URL
-- new-product / candidate-cce31fe11292425aae8b: Nightly time budget reached; remaining values retained
+- new-product / candidate-88bbfcc1fa5309568360: Nightly time budget reached; remaining values retained
+- new-product / candidate-62777cb4d92508973a13: Nightly time budget reached; remaining values retained
 - new-product / candidate-c713acf427d4a560ed38: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b3213602aa2773ca9d32: No verified product image URL
-- new-product / candidate-ce2d3616d77e246626c7: Nightly time budget reached; remaining values retained
+- new-product / candidate-1a82e1bde3b33e495acb: No verified product image URL
+- new-product / candidate-e111b5e12c91c04bd7db: Nightly time budget reached; remaining values retained
 - new-product / candidate-b344b97f6b4f67f06797: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4ae4296283fe8060a298: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-307de6cc55d441b7687b: Nightly time budget reached; remaining values retained
+- new-product / candidate-b3213602aa2773ca9d32: No verified product image URL
+- new-product / candidate-de72aab6a2ccdbba096b: Nightly time budget reached; remaining values retained
 - new-product / candidate-c675400a963eb010117d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1aebc1c8312c8adf7906: Cannot confirm that the product is a material or printer
-- new-product / candidate-ef5a7b2bffe49198a392: Nightly time budget reached; remaining values retained
+- new-product / candidate-8254bdf28c8839325d25: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f5a724df5606b8f2b021: Nightly time budget reached; remaining values retained
 - new-product / candidate-51543a0b27a43759f55a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7f05cedbd3edf04dd11e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e7fd999f5d34f091ba79: Nightly time budget reached; remaining values retained
+- new-product / candidate-1aebc1c8312c8adf7906: Cannot confirm that the product is a material or printer
+- new-product / candidate-5af3eb043bf5058df55c: Nightly time budget reached; remaining values retained
 - new-product / candidate-f764ed0f0634ac84ab4d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4230f713b30e301f872f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eaf15c3eda682749fb61: Nightly time budget reached; remaining values retained
+- new-product / candidate-7f05cedbd3edf04dd11e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8c7a14a75da4cfba0a1a: Nightly time budget reached; remaining values retained
 - new-product / candidate-3519f0b7f0ac38ba8c6e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
-- new-product / candidate-a7b02c6d129b0604cf0b: Nightly time budget reached; remaining values retained
+- new-product / candidate-4230f713b30e301f872f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a2f1e77a40a9b9fe768b: Nightly time budget reached; remaining values retained
 - new-product / candidate-ffac242f13599d1b73be: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-39b158624b6890f8a399: No verified product image URL
-- new-product / candidate-a51944af44e6f80c3f1a: Nightly time budget reached; remaining values retained
+- new-product / candidate-9ed7ffa5416cb5cc7402: Cannot confirm that the product is a material or printer
+- new-product / candidate-927dd70cdf2092d345e6: Nightly time budget reached; remaining values retained
 - new-product / candidate-fd8978fbb9d6a26705a0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31869407aa6aaeb99c8c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-119196677b7a6f332524: Nightly time budget reached; remaining values retained
+- new-product / candidate-39b158624b6890f8a399: No verified product image URL
+- new-product / candidate-9e7f4c2890ef20d83cb0: Nightly time budget reached; remaining values retained
 - new-product / candidate-136f2d5dcd7ff8ae7c1a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4e9257764cb5c87d34e1: No verified product image URL
-- new-product / candidate-55915e633ce51c449e30: Nightly time budget reached; remaining values retained
+- new-product / candidate-31869407aa6aaeb99c8c: Pack weight is ambiguous; listing skipped
+- new-product / candidate-39642b6db16acd79e492: Nightly time budget reached; remaining values retained
 - new-product / candidate-354136fa30e50e9a4700: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4e9257764cb5c87d34e1: No verified product image URL
+- new-product / candidate-5aa58ceab6204e850522: Nightly time budget reached; remaining values retained
+- new-product / candidate-5ebc3b433963af8a4f94: Nightly time budget reached; remaining values retained
 - new-product / candidate-a8dd2a3658540931d8d4: No verified product image URL
-- new-product / candidate-dffdb84e822a26847582: Nightly time budget reached; remaining values retained
-- new-product / candidate-a5b16b450272fb81ce5b: Nightly time budget reached; remaining values retained
+- new-product / candidate-936c392cedbe3651f710: Nightly time budget reached; remaining values retained
+- new-product / candidate-b77f95a954e8c89b8811: Nightly time budget reached; remaining values retained
 - new-product / candidate-d57775a7ea933c321bb8: No verified product image URL
-- new-product / candidate-e91bf7a8549c2b3d035b: Nightly time budget reached; remaining values retained
-- new-product / candidate-17ee941d4dd12d2b0166: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a1c34902dfb4b435674c: Nightly time budget reached; remaining values retained
+- new-product / candidate-5b1f1c78ebd3cb7e900f: Nightly time budget reached; remaining values retained
 - new-product / candidate-71703c930ecf2feccda6: No verified product image URL
-- new-product / candidate-112e0dcc5eec0bd4814f: Nightly time budget reached; remaining values retained
-- new-product / candidate-09a88c47756e0b87b9b0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a3ba049d797931ae7ba7: Nightly time budget reached; remaining values retained
+- new-product / candidate-6ced096d9f7348090e84: Nightly time budget reached; remaining values retained
 - new-product / candidate-b29fddc9440819c396e2: No verified product image URL
-- new-product / candidate-468bb63e64ad422737e8: Nightly time budget reached; remaining values retained
-- new-product / candidate-844be4be0bc5ef1d8964: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d97a88c3e5954c6e1728: Nightly time budget reached; remaining values retained
+- new-product / candidate-21ce8e08538bf33b0466: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-a502959040b876a9afdd: No verified product image URL
-- new-product / candidate-6a84473bc6bdd892d4cc: Nightly time budget reached; remaining values retained
-- new-product / candidate-beb29a47bd1a42dd2c1c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a903baafc1d429ba0e9f: Nightly time budget reached; remaining values retained
+- new-product / candidate-6b508dac07ca638b7901: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-715c789bf3faaf7296b9: No verified product image URL
-- new-product / candidate-89a94736a321d7605036: Nightly time budget reached; remaining values retained
-- new-product / candidate-a355ad91838d7c29f9f9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f7df566aa8660d710711: Nightly time budget reached; remaining values retained
+- new-product / candidate-799909076ab5631f8b30: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-efc7e28f7c698bb46946: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b4ae0ae1088333383e3f: Nightly time budget reached; remaining values retained
-- new-product / candidate-c91f950453daf968daa0: No verified product image URL
-- new-product / candidate-1a8096b87665bcd63eef: Nightly time budget reached; remaining values retained
-- new-product / candidate-146fede7fe88ac5855d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-fcf9f5db9356f4865563: No verified product image URL
-- new-product / candidate-5fb7d8d5cfe66b6b64f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-6eeabb9b44afb0b041ae: Nightly time budget reached; remaining values retained
-- new-product / candidate-e80a4bc98f22cd813cb8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0c7a36370028d963451e: Nightly time budget reached; remaining values retained
-- new-product / candidate-a871855e07d021e00b35: Nightly time budget reached; remaining values retained
-- new-product / candidate-921c52a21288223b5e56: No verified product image URL
-- new-product / candidate-ff1a3cdf79873499d520: No verified product image URL
-- new-product / candidate-95b7fd6275f11ab0b7e9: Nightly time budget reached; remaining values retained
+- new-product / candidate-e539184658e6045edf4c: Nightly time budget reached; remaining values retained
+- new-product / candidate-6280151d9410ef8694dc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-64e3cd79cdc573d63eba: Nightly time budget reached; remaining values retained
+- new-product / candidate-ee587f0d6846760c7a67: Nightly time budget reached; remaining values retained
+- new-product / candidate-a639d073d05d4b0b6f51: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9c2169e17ff420b134f1: Nightly time budget reached; remaining values retained
+- new-product / candidate-1b17c4f39af742aea6df: Nightly time budget reached; remaining values retained
+- new-product / candidate-910088aacaf675814936: No verified product image URL
+- new-product / candidate-e362a3ae8551ebcf2ce1: Nightly time budget reached; remaining values retained
+- new-product / candidate-1c53a462c06812c32ac6: Nightly time budget reached; remaining values retained
+- new-product / candidate-780b66432fa1958d2351: No verified product image URL
+- new-product / candidate-75c5dc91f50a869167fe: Source does not state the material pack weight; listing skipped
+- new-product / candidate-980642f1ad3ab7da2940: Nightly time budget reached; remaining values retained
+- new-product / candidate-c13c1d14dcaa4677400f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-591c2fa6b7c849010298: No verified product image URL
+- new-product / candidate-b57d308ddbd80df15ddc: Nightly time budget reached; remaining values retained
+- new-product / candidate-cdcab36f46531ee410a2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97979d3fb5805579f185: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f2ac092e30536a5a2d3: Nightly time budget reached; remaining values retained
+- new-product / candidate-29d74fbbf0864ea4c82e: No verified product image URL
+- new-product / candidate-df99df715dfb9a8092c0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5ff090f37df00ddc14dd: Nightly time budget reached; remaining values retained
 - new-product / candidate-1b4362e98a79d90dd834: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-20bdc154937896dc0590: Nightly time budget reached; remaining values retained
-- new-product / candidate-b9a4c80a972cd3f29d36: Nightly time budget reached; remaining values retained
+- new-product / candidate-ba22abdaceb1db226207: Nightly time budget reached; remaining values retained
+- new-product / candidate-0ae20f307c2a7ec62715: Nightly time budget reached; remaining values retained
 - new-product / candidate-0e9630f081027e1957c4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9fb5dfa71607403b69bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-dec1cc987f637ba645f2: Nightly time budget reached; remaining values retained
+- new-product / candidate-a045c82bc41c556f8293: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7cb7661f048c861dd29b: Nightly time budget reached; remaining values retained
 - new-product / candidate-1388d9c0d524be1cf679: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4e22e3a6799f0cd56f71: Nightly time budget reached; remaining values retained
-- new-product / candidate-821985bc0e8b03baa714: Nightly time budget reached; remaining values retained
+- new-product / candidate-4fc96ec636573da967c6: Nightly time budget reached; remaining values retained
+- new-product / candidate-4723edaf2b974b437e18: Nightly time budget reached; remaining values retained
 - new-product / candidate-7aa684bc0262dd122f19: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-730b8a43207d3cde9da2: Nightly time budget reached; remaining values retained
-- new-product / candidate-c87e4659acca5f827688: Nightly time budget reached; remaining values retained
+- new-product / candidate-fde4dc739e5785700ea7: Nightly time budget reached; remaining values retained
+- new-product / candidate-2e0eb957484d25c04311: Nightly time budget reached; remaining values retained
 - new-product / candidate-04f467e2abaf271bca5a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0f86c3790beca029d3cb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f87e39dd8d5ae749a77e: Nightly time budget reached; remaining values retained
-- new-product / candidate-a410baa2b1d5b26aedbd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ab81e1abfcba9946417c: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fe6cfe891decd873ab64: Nightly time budget reached; remaining values retained
+- new-product / candidate-ab03c61457f6d968b6f8: Nightly time budget reached; remaining values retained
+- new-product / candidate-fe2ba0610d589ef17ba5: Nightly time budget reached; remaining values retained
 - new-product / candidate-e0e620db44ab3b12ad11: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7002453cb4743d08e29d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-af71a08a06c03e95b93d: Nightly time budget reached; remaining values retained
-- new-product / candidate-dd9153bd1675ef91ff96: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2f9e17b1ab4d40d9170f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2a8ba191dc752a2e7e58: Nightly time budget reached; remaining values retained
-- new-product / candidate-e487bfc7c64b51889ec9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bf70c6199a7d623bc9ec: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6535fa75f07708eccdf3: Nightly time budget reached; remaining values retained
-- new-product / candidate-3454f64836a3295a0a86: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eefe9e642346c3b6116b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-9810f7700eccab5b0a4b: Nightly time budget reached; remaining values retained
+- new-product / candidate-0f892904cb0562a9073d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bfed37a78275231b98c5: No verified product image URL
-- new-product / candidate-94960042f18fcce82fa9: Nightly time budget reached; remaining values retained
-- new-product / candidate-35f4ceaa3c19f6fc66e1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-01aa948e6767a7ee2112: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-17183adf125ab3c3dd78: Nightly time budget reached; remaining values retained
-- new-product / candidate-de6333c720e502c59b2b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d0444530e0cc769dba71: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0df9b3c9215c2b313f11: Nightly time budget reached; remaining values retained
-- new-product / candidate-c18fd94bbde8eba100d9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-48b1fb770f9df4d88988: Nightly time budget reached; remaining values retained
+- new-product / candidate-88ed1e06e987181659fe: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2edca41b0293d2b93485: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9f540240003341dd480e: Nightly time budget reached; remaining values retained
+- new-product / candidate-3454f64836a3295a0a86: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1dab6a6a341f70d0119c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e3edc58d2ef20d71207a: Nightly time budget reached; remaining values retained
+- new-product / candidate-e6a904a2928cd714a3bb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-3bea745fc35b2df853a3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-71b38f97022c3f116860: Nightly time budget reached; remaining values retained
-- new-product / candidate-edefc3a49cf8604d8ceb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1e456c75198f95bac66a: Nightly time budget reached; remaining values retained
+- new-product / candidate-de6333c720e502c59b2b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8685ae813cbdb26cda3e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-55b6ea94e19beb72e52b: Nightly time budget reached; remaining values retained
+- new-product / candidate-0d8521aaddd562776c1b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-f2041e1a239e97598bc5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-09615458c1347d7c52bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-cd52606d7d38055e871d: No verified product image URL
+- new-product / candidate-5029c01233568928f062: Nightly time budget reached; remaining values retained
+- new-product / candidate-edefc3a49cf8604d8ceb: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-851dc4127bed6369adee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-cbe905cb7ee7e15879ce: Nightly time budget reached; remaining values retained
-- new-product / candidate-d7bc47c15f245f1c9c7f: Pack weight outside the supported range
+- new-product / candidate-0fe54ee16335257c7db6: Nightly time budget reached; remaining values retained
+- new-product / candidate-0c04baeded29aa282516: No verified product image URL
 - new-product / candidate-e3749e6622328db3eb35: Source does not state the material pack weight; listing skipped
-- new-product / candidate-130898a9222562a5daaf: Nightly time budget reached; remaining values retained
-- new-product / candidate-0adb0dbee1c1019fe2cf: No verified product image URL
+- new-product / candidate-1e59425e594c21fccae5: Nightly time budget reached; remaining values retained
+- new-product / candidate-d7bc47c15f245f1c9c7f: Pack weight outside the supported range
 - new-product / candidate-13629718ae0358645928: No verified product image URL
-- new-product / candidate-5d400774589eac75af8f: Nightly time budget reached; remaining values retained
-- new-product / candidate-d21313e607a7a2dd2722: No verified product image URL
-- new-product / candidate-5623e8af3194eb899c43: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-578541b039872698ae4f: Nightly time budget reached; remaining values retained
-- new-product / candidate-d692b6bad9161551aa4b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a6c9f104fc382e9d1bd7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d1e0a20ee4452010c627: Nightly time budget reached; remaining values retained
+- new-product / candidate-3edc54e615f91fff2874: Nightly time budget reached; remaining values retained
 - new-product / candidate-3f4391ff9aea1f92d259: No verified product image URL
-- new-product / candidate-5586aa997c9127245cb3: No verified product image URL
-- new-product / candidate-770dc76c64e23b6d8c4b: Nightly time budget reached; remaining values retained
+- new-product / candidate-5623e8af3194eb899c43: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-22219456e9b7004efbeb: Nightly time budget reached; remaining values retained
+- new-product / candidate-d21313e607a7a2dd2722: No verified product image URL
+- new-product / candidate-a6c9f104fc382e9d1bd7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d2880be4a0f5c638595: Nightly time budget reached; remaining values retained
 - new-product / candidate-8482830aa45b7db85485: No verified product image URL
-- new-product / candidate-47ae18411c6eb8970f65: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c1e2671f407573e072da: Nightly time budget reached; remaining values retained
+- new-product / candidate-5586aa997c9127245cb3: No verified product image URL
+- new-product / candidate-a8de9774e9f5068ca2fc: Nightly time budget reached; remaining values retained
 - new-product / candidate-cc5dc61be5277f61d74c: No verified product image URL
 - new-product / candidate-f5e8a1457fed78d5283e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c07ed39816a8b46ab724: Nightly time budget reached; remaining values retained
-- new-product / candidate-3ce3ee5590730e43e001: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-da1e0190a80405c316bf: Nightly time budget reached; remaining values retained
+- new-product / candidate-d692b6bad9161551aa4b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-45721675cb87d3facc68: Source does not state the material pack weight; listing skipped
-- new-product / candidate-59077529da54a80750a8: Nightly time budget reached; remaining values retained
-- new-product / candidate-6b33698bf139e8451843: No verified product image URL
+- new-product / candidate-30791d9c59e5513f338b: Nightly time budget reached; remaining values retained
+- new-product / candidate-50676104cf3b4bc0cbcf: No verified product image URL
 - new-product / candidate-cac0412a108315b86209: Source does not state the material pack weight; listing skipped
-- new-product / candidate-79f51095d5045b0d0f2c: Nightly time budget reached; remaining values retained
-- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-558f6bbb4512863c3ae0: Nightly time budget reached; remaining values retained
+- new-product / candidate-6b33698bf139e8451843: No verified product image URL
 - new-product / candidate-621f2cd559d37c725d62: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4c8d33863bbbbcf1b91a: Nightly time budget reached; remaining values retained
-- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-eccd5480da74a2103dda: Nightly time budget reached; remaining values retained
+- new-product / candidate-3ce3ee5590730e43e001: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0da334e429eef7442292: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1e91ec0b709f3d84558d: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-619101fde5151d25530d: Nightly time budget reached; remaining values retained
+- new-product / candidate-e7ee16af773dfacc79e9: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-145b2a91993f82587d1f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0ba326ad3739dc941802: Nightly time budget reached; remaining values retained
-- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-61e034e03dce67ed3059: Nightly time budget reached; remaining values retained
+- new-product / candidate-04417df9008f69d6f19f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-b5ecf911faee80efa386: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9e8526552f91d751a07b: Nightly time budget reached; remaining values retained
-- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee61551f263bc8ce41fc: Nightly time budget reached; remaining values retained
+- new-product / candidate-0b47c48909e76c01d0b5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-fe0bb71e2cad9df304aa: Source does not state the material pack weight; listing skipped
-- new-product / candidate-237e116580f53af1e65e: Nightly time budget reached; remaining values retained
-- new-product / candidate-b58d44c815900cb5f9fc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-29b2de4f18b3966e003c: Nightly time budget reached; remaining values retained
+- new-product / candidate-b9c120ac93798ad7632b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e26c76728d47bcb29680: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0c77f6363f415f59805d: Nightly time budget reached; remaining values retained
+- new-product / candidate-aaba3d05aba0844e979e: Nightly time budget reached; remaining values retained
+- new-product / candidate-c1a4b86a305d2dc52fa0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-deb8b15148895ab98ebd: Nightly time budget reached; remaining values retained
+- new-product / candidate-b58d44c815900cb5f9fc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-385c68d5917b657fc5ad: Nightly time budget reached; remaining values retained
+- new-product / candidate-67e6925e046194ab0737: Nightly time budget reached; remaining values retained
 - new-product / candidate-11cc37ce91c77266c6ab: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9855444241884094ddda: Nightly time budget reached; remaining values retained
+- new-product / candidate-3a7642eae8c5fbc9ab44: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6cfb36d738b744bc271c: Nightly time budget reached; remaining values retained
 - new-product / candidate-b2a73ec04aa77177f383: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4a34b9ecabe4f5858210: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a611898cbddeaac1e5c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-dabf077837e92424522f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-78aedc8b9b2e18ef121a: No verified product image URL
-- new-product / candidate-012d48d4129cd00e0f84: Nightly time budget reached; remaining values retained
+- new-product / candidate-82a9f385fecdf97062eb: Nightly time budget reached; remaining values retained
+- new-product / candidate-dabf077837e92424522f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-946da20c7b32a5df84e5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7d7ee0b69a81c711a92b: Nightly time budget reached; remaining values retained
 - new-product / candidate-fb015bbca405e7fe6f45: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-22a18d54f8b6154dde0d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ae8c2e785426e4123458: Nightly time budget reached; remaining values retained
-- new-product / candidate-a2f3e2505c110024e546: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-fd88792867f3ef7e6869: Cannot confirm that the product is a material or printer
-- new-product / candidate-3b75877de62d380e7374: Nightly time budget reached; remaining values retained
-- new-product / candidate-46dcdf53e33a4809194b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4660d6bb6e23b8be213e: Nightly time budget reached; remaining values retained
+- new-product / candidate-a2f3e2505c110024e546: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-128b101e444b6b2eaa53: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ddf95a54f1a3d07df2f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-4672ef27412b01ace58f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4bee37ddb89c495cf5f4: Nightly time budget reached; remaining values retained
+- new-product / candidate-46dcdf53e33a4809194b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6e230ff507b7f2627067: No verified product image URL
-- new-product / candidate-612a723c45ea22f328ae: Nightly time budget reached; remaining values retained
-- new-product / candidate-36ce8d38cec5e657808d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee881efb90b957d14a1c: Nightly time budget reached; remaining values retained
+- new-product / candidate-4672ef27412b01ace58f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-abdeaa25795247f2d3c4: Pack weight is ambiguous; listing skipped
-- new-product / candidate-99032485711f93217fd2: Nightly time budget reached; remaining values retained
-- new-product / candidate-f156615ba1989a94552e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2eb3f767cc674010c0f6: Nightly time budget reached; remaining values retained
+- new-product / candidate-36ce8d38cec5e657808d: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9588575c86d98f7b1f56: No verified product image URL
-- new-product / candidate-dfc971665e98c8c6aeb3: Nightly time budget reached; remaining values retained
-- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a927a454d677a057b772: Nightly time budget reached; remaining values retained
+- new-product / candidate-f156615ba1989a94552e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-b10b59c18db828754b64: No verified product image URL
-- new-product / candidate-04c41ccef24fac949d13: Nightly time budget reached; remaining values retained
-- new-product / candidate-065eb5a2265d67f1b9f4: Pack weight outside the supported range
+- new-product / candidate-b2ab43f8f828ad5eb591: Nightly time budget reached; remaining values retained
+- new-product / candidate-f461f0ca9f1b9a9e9d5b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-be9d7950ddc740f3d2c5: No verified product image URL
-- new-product / candidate-4cbd1bc71de661e5cde5: Nightly time budget reached; remaining values retained
-- new-product / candidate-31a95ee7eaf353646489: Pack weight outside the supported range
+- new-product / candidate-d8bc118723338c4c6d68: Nightly time budget reached; remaining values retained
+- new-product / candidate-065eb5a2265d67f1b9f4: Pack weight outside the supported range
 - new-product / candidate-8c42a036a9372f134bfc: No verified product image URL
-- new-product / candidate-6e596a10b96bb157959c: Nightly time budget reached; remaining values retained
-- new-product / candidate-999cd002046a0f0a106f: Pack weight outside the supported range
+- new-product / candidate-6c2c99cfa03efb1fe363: Nightly time budget reached; remaining values retained
+- new-product / candidate-31a95ee7eaf353646489: Pack weight outside the supported range
 - new-product / candidate-839d79fc21f4d5217797: No verified product image URL
-- new-product / candidate-2cf5d353f5109e6596f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-d46dd3712e2986488c7b: Pack weight outside the supported range
+- new-product / candidate-0808b5daa14bd77d269c: Nightly time budget reached; remaining values retained
+- new-product / candidate-999cd002046a0f0a106f: Pack weight outside the supported range
 - new-product / candidate-5727caaebb156f6085df: No verified product image URL
-- new-product / candidate-e8799299f8446c80febe: Nightly time budget reached; remaining values retained
-- new-product / candidate-3b642b714f76a825ce73: Pack weight outside the supported range
+- new-product / candidate-1a2d84f99c636b9621f8: Nightly time budget reached; remaining values retained
+- new-product / candidate-d46dd3712e2986488c7b: Pack weight outside the supported range
 - new-product / candidate-df2a646e7539f00af824: No verified product image URL
-- new-product / candidate-52e539c79496d1eaf4d4: Nightly time budget reached; remaining values retained
-- new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
+- new-product / candidate-da7baad9c34728293243: Nightly time budget reached; remaining values retained
+- new-product / candidate-3b642b714f76a825ce73: Pack weight outside the supported range
 - new-product / candidate-cdb3767d138d2d7c6180: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4e09805636030141193d: Nightly time budget reached; remaining values retained
+- new-product / candidate-2a6159c4f6736d8b783d: Nightly time budget reached; remaining values retained
+- new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
+- new-product / candidate-2e7687e037c383772456: Nightly time budget reached; remaining values retained
+- new-product / candidate-f8b071d522bdc08fa9db: Nightly time budget reached; remaining values retained
 - new-product / candidate-3c2c78386f8cd6b0e666: No verified product image URL
-- new-product / candidate-ecf9f853252521beb95f: Nightly time budget reached; remaining values retained
-- new-product / candidate-8bd001b6f5dd4e5819d4: Nightly time budget reached; remaining values retained
+- new-product / candidate-b8dc628d33d4b33e560b: Nightly time budget reached; remaining values retained
+- new-product / candidate-0ac3845501da5b0081cf: Nightly time budget reached; remaining values retained
 - new-product / candidate-620e3d78d034ae3226b2: No verified product image URL
-- new-product / candidate-c3a9df7b63bb3b4b7ba1: Nightly time budget reached; remaining values retained
-- new-product / candidate-65a780a6857c0111383a: Nightly time budget reached; remaining values retained
+- new-product / candidate-38c5954194f573289b81: Nightly time budget reached; remaining values retained
+- new-product / candidate-0c736c04416b55b159f9: Nightly time budget reached; remaining values retained
 - new-product / candidate-c73ac6100a7028f21186: No verified product image URL
-- new-product / candidate-c39792a595c34b0870fa: Nightly time budget reached; remaining values retained
-- new-product / candidate-9427b33dda9221749139: Nightly time budget reached; remaining values retained
+- new-product / candidate-47ae18411c6eb8970f65: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6eda5e054d987665dfab: Nightly time budget reached; remaining values retained
 - new-product / candidate-55f5e7d12814c741b256: No verified product image URL
-- new-product / candidate-1788b919e73f291462be: No verified product image URL
-- new-product / candidate-5226397f40731ed0ae9f: Nightly time budget reached; remaining values retained
+- new-product / candidate-efb849c61da51046936b: No verified product image URL
+- new-product / candidate-06dfd09b01af5de6773e: Nightly time budget reached; remaining values retained
 - new-product / candidate-677ae4a4d0538a87333d: No verified product image URL
-- new-product / candidate-19ad08849466ebdf8336: Nightly time budget reached; remaining values retained
-- new-product / candidate-05df455f188f787400e6: Nightly time budget reached; remaining values retained
-- new-product / candidate-82c4cdad5ceff68125ae: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-579ff95d9328af8e653a: Nightly time budget reached; remaining values retained
-- new-product / candidate-483fd438418af474822d: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1496a24e2128542bfef: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0ce9a99780ae158a2661: Nightly time budget reached; remaining values retained
-- new-product / candidate-b84b2e60e0d3ba0ea731: Nightly time budget reached; remaining values retained
+- new-product / candidate-a65ac7e238d36d40c92a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc1134b622a3ad2a5d04: Nightly time budget reached; remaining values retained
+- new-product / candidate-701c608a8b497714ed7a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1d9e794ab690cedf7452: Source does not state the material pack weight; listing skipped
+- new-product / candidate-663a6187b80470223aa6: Nightly time budget reached; remaining values retained
+- new-product / candidate-49229f1599bc5ebcf3a0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-10e8af60f2ec3b4c4163: Nightly time budget reached; remaining values retained
+- new-product / candidate-61b3e1766758cbb27ee8: Nightly time budget reached; remaining values retained
 - new-product / candidate-6e57ee4aeda7b7866fa2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cc53908311a1fe92ca33: Nightly time budget reached; remaining values retained
-- new-product / candidate-7ab2f98bdf84ba2c2521: Nightly time budget reached; remaining values retained
+- new-product / candidate-0e92db8ccc4303c8246e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b37c3c0d5a810bf20325: Nightly time budget reached; remaining values retained
 - new-product / candidate-e44293644f88d8c76ff1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8f55f11524d759acbbb6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9c25a7224389a1d001af: Nightly time budget reached; remaining values retained
+- new-product / candidate-2d20a2907aacba027a84: Nightly time budget reached; remaining values retained
+- new-product / candidate-2ed86cd4b5656fa20afe: Nightly time budget reached; remaining values retained
 - new-product / candidate-280b6a389a5d88475a39: Source does not state the material pack weight; listing skipped
-- new-product / candidate-97270fe702a0570f2170: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3160ebf0ace71c3fb434: Nightly time budget reached; remaining values retained
+- new-product / candidate-972c680fa343da0a73a7: Nightly time budget reached; remaining values retained
+- new-product / candidate-3e2873399024552afd6b: Nightly time budget reached; remaining values retained
 - new-product / candidate-2fca4dd1dd1c0d2c858e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-731ac28da9ffc51ae67f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-72420c1b5c7034475801: Nightly time budget reached; remaining values retained
+- new-product / candidate-5c90a51d0c463414436d: Nightly time budget reached; remaining values retained
+- new-product / candidate-c3e1871cc7aa7e67a05b: Nightly time budget reached; remaining values retained
 - new-product / candidate-2bd66a5c466585a12a37: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-36a7e12a8126a1ad58b5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-934928f19043daf88d46: Nightly time budget reached; remaining values retained
+- new-product / candidate-40cb06fe68a834e6e384: Source does not state the material pack weight; listing skipped
+- new-product / candidate-dac0c695fd3e71f94a69: Nightly time budget reached; remaining values retained
 - new-product / candidate-5604a35c460b480d71b8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-922db40e7d4704a480f3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1a9c9e8a0ddd6f76ba62: Nightly time budget reached; remaining values retained
-- new-product / candidate-87ae66d70c32fe1a9264: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-27c4f2dcdb0e8222a33e: No verified product image URL
-- new-product / candidate-1a5e0424d0a7454bb47a: Nightly time budget reached; remaining values retained
-- new-product / candidate-5b7a305b516340c4aab5: No verified product image URL
+- new-product / candidate-73109d6c2d6ecce061b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-87ae66d70c32fe1a9264: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-8fd413ee8711e32aa42c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9dac03934f5f229e0872: Nightly time budget reached; remaining values retained
+- new-product / candidate-75f8ff4adf04a6c84e66: Nightly time budget reached; remaining values retained
+- new-product / candidate-5b7a305b516340c4aab5: No verified product image URL
+- new-product / candidate-29ca89dedc7aa5d3830f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c46e806853d67266adf6: Nightly time budget reached; remaining values retained
 - new-product / candidate-3a2fa3a0a7c37d6cb567: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b4d94119f9d5e15abd5b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3cf8c8c3c0cc59024287: Nightly time budget reached; remaining values retained
-- new-product / candidate-dccdb54e513e1f84e81b: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-0929aeeaa4018af60ad4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b7b914df0a1c6a8af703: Nightly time budget reached; remaining values retained
-- new-product / candidate-521c9adc52945ca6f412: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-924580cc4703893e5e3a: Nightly time budget reached; remaining values retained
+- new-product / candidate-dcad009f116d1d38eead: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0d37b2ed627f8c1fde46: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1c2ef77f900c64569aa1: Nightly time budget reached; remaining values retained
+- new-product / candidate-c35295387c0ab58938be: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-b215ae86a892dabf3fda: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8d8c1011532ca2bfb7fd: Nightly time budget reached; remaining values retained
-- new-product / candidate-029a032eb98dcf2a660f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e861f17f33b8d7dacaec: Nightly time budget reached; remaining values retained
+- new-product / candidate-a5a50097cdbeb7eea750: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-dce69ac64ef314ebd831: Source does not state the material pack weight; listing skipped
-- new-product / candidate-6c6fa798429e1f13f562: Nightly time budget reached; remaining values retained
-- new-product / candidate-86f31d02e34958e23e59: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0e85c3bd6414a75782c5: Nightly time budget reached; remaining values retained
+- new-product / candidate-0f978878dbc2e5e56e18: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-c1eefd073d0374ad8d16: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f541e40e05811f541c62: Nightly time budget reached; remaining values retained
-- new-product / candidate-a9788c0093cc617f5bce: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-df50815aeb469d0541a9: Nightly time budget reached; remaining values retained
+- new-product / candidate-c622e07b9fec5413930c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-19fc14ffc3ff0cb7a86b: No verified product image URL
-- new-product / candidate-be3fe21add3b5dbfb366: Nightly time budget reached; remaining values retained
-- new-product / candidate-1a8c7f3a92315781c0ea: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4279b0e4ef2aca3fcf16: Nightly time budget reached; remaining values retained
+- new-product / candidate-170a1535f38514c672f6: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-218088aa5bc071c0915f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9cc0252baa61024a3304: Nightly time budget reached; remaining values retained
-- new-product / candidate-9da74ccd517c5c2a80c1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7fc78489fa689406aa67: Nightly time budget reached; remaining values retained
+- new-product / candidate-618dca6b26ee52014d85: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0f56bd5008e06cced2f1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1ff94531cc6b00501c01: Nightly time budget reached; remaining values retained
-- new-product / candidate-60219932971f5b1dec21: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-70c1cda069b52d536983: Nightly time budget reached; remaining values retained
+- new-product / candidate-1b471221656270773467: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-df7590df8ad58827846c: No verified product image URL
-- new-product / candidate-b27a2b8c53bf87dcf8c1: Nightly time budget reached; remaining values retained
-- new-product / candidate-0176c063914cf52d4165: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-3a6af156a785db51b6a2: Nightly time budget reached; remaining values retained
+- new-product / candidate-ff25e4db96a5613f28e9: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-190dd0386d9a61b960c4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e55d1c132be53c50eaee: Nightly time budget reached; remaining values retained
-- new-product / candidate-760d9e194473c3edf584: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-49b2355203ec3ddc860d: Nightly time budget reached; remaining values retained
+- new-product / candidate-be8c45bb6c4e65db5e27: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-a442a751bb2a7381c2c9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2dfdb687d85fb9954e76: Nightly time budget reached; remaining values retained
-- new-product / candidate-0735c6c15dd9affe1a57: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-80b6abc86d00163dc542: Nightly time budget reached; remaining values retained
+- new-product / candidate-5447481363d83d5ae138: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6fa02e44a372d4e50480: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ede6bb29a2c25d6d1cdd: Nightly time budget reached; remaining values retained
-- new-product / candidate-6cdafb1bfe0affbf1f62: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ae97d6f9d2ce50e971af: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0b24c872652a75abf02: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1cff3f67e95da1afe9e8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-fbe0f9c50813c07de0de: Nightly time budget reached; remaining values retained
-- new-product / candidate-55206a75ecc17cf45b9a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ae53a190f5415190491e: Nightly time budget reached; remaining values retained
+- new-product / candidate-efa0aebd15797290ff57: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-4dce5cec9058f5fd89fe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-eac0332810c95efa7334: Nightly time budget reached; remaining values retained
-- new-product / candidate-8b0acff91b0e05b12111: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-76d835a67cc2db3e1150: Nightly time budget reached; remaining values retained
+- new-product / candidate-7e290310b307e21280ec: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-82acc0fddd07d1043366: Source does not state the material pack weight; listing skipped
-- new-product / candidate-81659feb809872daf812: Nightly time budget reached; remaining values retained
-- new-product / candidate-4e59d9f7e58630b66d2a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8a30eb2fb72b166a6192: Nightly time budget reached; remaining values retained
+- new-product / candidate-1e8667644f6e1e78f29c: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bb8c7bd9d2abe874bd38: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3d1bcdddbe5a20978543: Nightly time budget reached; remaining values retained
-- new-product / candidate-3ab237e861dee9b829bc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f6054a0a75b2cd2c5965: Nightly time budget reached; remaining values retained
+- new-product / candidate-e6b232f5fd1423391295: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e1018ed7789958ed6ff5: Source does not state the material pack weight; listing skipped
-- new-product / candidate-292b2de031a5af62c2e3: Nightly time budget reached; remaining values retained
-- new-product / candidate-1ea4fdff2f4a43addfc2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ae4f89c39e4632a2e7fe: Nightly time budget reached; remaining values retained
+- new-product / candidate-e615d9b1bcf217f4343a: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-4c5a958cd1ea5a42d782: Source does not state the material pack weight; listing skipped
-- new-product / candidate-1f18a2d6092e41739cc4: Nightly time budget reached; remaining values retained
+- new-product / candidate-34c82228e55fa9e61820: Nightly time budget reached; remaining values retained
 - new-product / candidate-42e3addaa44d6520d6fd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-921ba92247118a948b55: Nightly time budget reached; remaining values retained
-- new-product / candidate-a95329584a95ff430ced: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-93a0743499faa4bf8110: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f40acace80afcd622359: Nightly time budget reached; remaining values retained
-- new-product / candidate-8e396e1e902e4ba24e08: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9f4ac2fc51ca0434193c: Nightly time budget reached; remaining values retained
+- new-product / candidate-b79a3167dbbf1e9ee2ea: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3c0b229983bbb8ff98d3: Nightly time budget reached; remaining values retained
+- new-product / candidate-9b562211a71021019474: Nightly time budget reached; remaining values retained
+- new-product / candidate-067cdeebd74ef42117f1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0e14ae810124d2f4a485: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d0298a53022c0c36ba1b: Nightly time budget reached; remaining values retained
+- new-product / candidate-28250dbd35ce05a64ad3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8533d1e1b49e569ef7a1: No verified product image URL
-- new-product / candidate-c2cc7b9299d835ab0881: Nightly time budget reached; remaining values retained
-- new-product / candidate-ace613e2ef15c0d1740a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3d797c72fac8ea781261: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6f25be223736687d5ac3: Nightly time budget reached; remaining values retained
-- new-product / candidate-4799e3c0ae1037c7aa6f: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e1c2e0afd55cae7fe374: Nightly time budget reached; remaining values retained
+- new-product / candidate-197f75f70fb53722f65d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-50204ace7ef5854fe995: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-786d90592e17a60d9ab4: Nightly time budget reached; remaining values retained
+- new-product / candidate-dd47dee76f815ec6954a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-d3fc34120af6820bb5c8: Cannot confirm that the product is a material or printer
-- new-product / candidate-e7d66034e7559367c731: Nightly time budget reached; remaining values retained
-- new-product / candidate-9cce5a05459806ad0fcb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0daa2396cd3596f03df0: Nightly time budget reached; remaining values retained
+- new-product / candidate-a662ac6ce3ae79bb9dca: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-49f39ed207cee461ac2b: No verified product image URL
-- new-product / candidate-6d2d90facf21f2620b1e: Nightly time budget reached; remaining values retained
-- new-product / candidate-d94531fc26499cabfcfb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d48d9f7a59297a82c717: Nightly time budget reached; remaining values retained
+- new-product / candidate-3cce4a0d29789edb0a68: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-10a4c2ba156f96ee184b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-389650d7e427f12db234: Nightly time budget reached; remaining values retained
-- new-product / candidate-858318d82c2ec0a65eb1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8bc10314c12966537fc5: Nightly time budget reached; remaining values retained
+- new-product / candidate-22d4958aa4ea186bed0c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-93e068de4a0df62c9511: No verified product image URL
-- new-product / candidate-aa624290683b3ff69897: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ae0fbfca545f9fbf5e9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1f4786ba0fca47169e31: Nightly time budget reached; remaining values retained
+- new-product / candidate-dd2a45ac7c9ac316b2f3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-65419b7f4f83d183280c: No verified product image URL
-- new-product / candidate-54000a550f3623b62410: Nightly time budget reached; remaining values retained
-- new-product / candidate-bbba60d66bfb16c33073: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-87e4f098927a5d528e7c: No verified product image URL
-- new-product / candidate-02d0d56837724742c645: Nightly time budget reached; remaining values retained
-- new-product / candidate-494ba60c2aea2f73c28e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8a6fa22808a9df5d1e37: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3327b5615369f9e6987b: Nightly time budget reached; remaining values retained
-- new-product / candidate-5ba9b308837cfd4d0816: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f5273f4391321b0a7ee3: Nightly time budget reached; remaining values retained
-- new-product / candidate-746a8c4836234c8a3178: Nightly time budget reached; remaining values retained
+- new-product / candidate-9f211d60966ba3b47761: Nightly time budget reached; remaining values retained
 - new-product / candidate-d2db8c6642c6ed6b3289: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-913d157003c7f4d58471: Nightly time budget reached; remaining values retained
-- new-product / candidate-0a243655dbb426ed6967: Nightly time budget reached; remaining values retained
+- new-product / candidate-87e4f098927a5d528e7c: No verified product image URL
+- new-product / candidate-f918ad9110b48b5c7805: Nightly time budget reached; remaining values retained
 - new-product / candidate-575aec58452292dcd7d5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a9416bcba6fa28500b15: Nightly time budget reached; remaining values retained
-- new-product / candidate-e7b1c0eb8afe865de8f0: Nightly time budget reached; remaining values retained
+- new-product / candidate-8a6fa22808a9df5d1e37: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8ff5c4211666bdd89ace: Nightly time budget reached; remaining values retained
 - new-product / candidate-298663a97dfaf195336b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7cd0c9f569e8700bdd1d: No verified product image URL
-- new-product / candidate-e6cb8fb4ddd068465d79: Nightly time budget reached; remaining values retained
-- new-product / candidate-33e5ebf1047ecd216c79: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-75ac5f77efbe24c44344: Nightly time budget reached; remaining values retained
-- new-product / candidate-5f76de0ccd3b15e4b03e: Nightly time budget reached; remaining values retained
-- new-product / candidate-92323e9f8286c40473a7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-20490320dac3c124e0c7: Nightly time budget reached; remaining values retained
-- new-product / candidate-56881cfb902e582d837f: Nightly time budget reached; remaining values retained
+- new-product / candidate-547e96d95bc7836d63c5: Nightly time budget reached; remaining values retained
+- new-product / candidate-5e3c0bc6e85ecb0a69ca: Nightly time budget reached; remaining values retained
 - new-product / candidate-84612e6df55d63d920da: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ed6125d429c0a1b4f278: Nightly time budget reached; remaining values retained
-- new-product / candidate-e3296f516c272cea1dc8: Nightly time budget reached; remaining values retained
+- new-product / candidate-8f27a4dc76432b014e1f: Nightly time budget reached; remaining values retained
+- new-product / candidate-cc98ccf9664141c4ce22: Nightly time budget reached; remaining values retained
+- new-product / candidate-92323e9f8286c40473a7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b7ecc237a5718ff0c9b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-da3b46eaa7424d9f6b03: Nightly time budget reached; remaining values retained
+- new-product / candidate-494ba60c2aea2f73c28e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7d223fc7cbedd1fd9497: No verified product image URL
+- new-product / candidate-a45bfb0d80b0d9e0df7c: Nightly time budget reached; remaining values retained
+- new-product / candidate-5ba9b308837cfd4d0816: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0e7de98e48e29bfe5115: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-18a6ca7bfc5200abb316: Nightly time budget reached; remaining values retained
+- new-product / candidate-33e5ebf1047ecd216c79: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9f6913e7a2aedc38a061: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e469eb1051600c1dfada: Nightly time budget reached; remaining values retained
 - new-product / candidate-1c51362ea4baf097ec42: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5aed74784add7c026c75: Nightly time budget reached; remaining values retained
-- new-product / candidate-cefa9a6075de70587c0d: Nightly time budget reached; remaining values retained
+- new-product / candidate-407efda6e3d4de843423: Nightly time budget reached; remaining values retained
+- new-product / candidate-060b002e328cb02570dc: Nightly time budget reached; remaining values retained
 - new-product / candidate-2c13fd9ec3a082456637: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-53bf81140bbd978fad5f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fcddc7739ff4d56519f4: Nightly time budget reached; remaining values retained
+- new-product / candidate-2c8983f68d911b153177: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5577ca5357f1b0c48def: Nightly time budget reached; remaining values retained
 - new-product / candidate-d2260559bbb0b99229cf: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5cd037a586501279f60a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-652b6ccbfdb9066e309d: Nightly time budget reached; remaining values retained
+- new-product / candidate-9ce0676a3b0b469ab0ae: Nightly time budget reached; remaining values retained
+- new-product / candidate-4d53cfc108e52c7d3321: Nightly time budget reached; remaining values retained
 - new-product / candidate-12a34970292b027d7336: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f8456ae2a0f2e70a9ab2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f5afec960e1c8768853f: Nightly time budget reached; remaining values retained
+- new-product / candidate-850cc0a9178baf6153e6: Nightly time budget reached; remaining values retained
+- new-product / candidate-a34799dbddac2203d2f9: Nightly time budget reached; remaining values retained
 - new-product / candidate-71971d53204fa303e61e: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-cc52d925e01a43136952: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7407c91870e0d8933d0a: Nightly time budget reached; remaining values retained
+- new-product / candidate-2ecf666325691d6e5178: Nightly time budget reached; remaining values retained
+- new-product / candidate-3b651b52f2e0034ad904: Nightly time budget reached; remaining values retained
 - new-product / candidate-a7a57bb0f0c5016858e5: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-ee1c57c3c02d2a042a1f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8f3451c40e12c9b66cb5: Nightly time budget reached; remaining values retained
+- new-product / candidate-22068e1f0dead15d7c5c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1cc2e919c5f1ebb7c05e: Nightly time budget reached; remaining values retained
 - new-product / candidate-5a4ff0aae40fd79d9ab4: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-911ed296d1e0706b5e53: No verified product image URL
-- new-product / candidate-5b281e9894133fe4a7e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-5a98a3276b93fa3bab73: Nightly time budget reached; remaining values retained
 - new-product / candidate-04917eb1f6b278e2e99e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-97d78d83285eeac360a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8222ccd04ae6e1e35f5e: Nightly time budget reached; remaining values retained
+- new-product / candidate-5d04b11f75c20f30a78f: Nightly time budget reached; remaining values retained
 - new-product / candidate-e1979a4a91c19adb30e4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4e19c7ba5ea4db4ad641: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-544f8971620496935bcc: Nightly time budget reached; remaining values retained
+- new-product / candidate-63e34b8ceb41c310e429: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f8bb1e4919f5778f6fbb: Nightly time budget reached; remaining values retained
 - new-product / candidate-e81dbebccf99cb2da4d7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-35e18b38e9c22a973f4d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-456efc9bd0cf24e417d0: Nightly time budget reached; remaining values retained
+- new-product / candidate-bb6bc5ccce61bb84ebe1: Nightly time budget reached; remaining values retained
 - new-product / candidate-ed1449e689953baa758b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-01a3a6229640e1c16d2e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c392a6255ce41b517a66: Nightly time budget reached; remaining values retained
+- new-product / candidate-177480d7c2b951a5415c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2b0cd3bca43b6d3b9882: Nightly time budget reached; remaining values retained
 - new-product / candidate-5afee14736454d88fc60: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8a7a128cf8f684c7e1f9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-375c226659dd9d5eca20: Nightly time budget reached; remaining values retained
+- new-product / candidate-01a3a6229640e1c16d2e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5fef55f47a22e34c52d2: Nightly time budget reached; remaining values retained
 - new-product / candidate-dc78f6edbe02fc40e1f7: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0add8859eddb3a16c161: No verified product image URL
-- new-product / candidate-8f02cadf1f46d5d9ac50: Nightly time budget reached; remaining values retained
+- new-product / candidate-8a7a128cf8f684c7e1f9: Source does not state the material pack weight; listing skipped
+- new-product / candidate-679c7f9a395a98ba199d: Nightly time budget reached; remaining values retained
 - new-product / candidate-6822006f55a9798d645b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d9aed750e18c20317f4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-47ff6646d393ebf52f3f: Nightly time budget reached; remaining values retained
+- new-product / candidate-0add8859eddb3a16c161: No verified product image URL
+- new-product / candidate-006f31cdcf938f4038ea: Nightly time budget reached; remaining values retained
 - new-product / candidate-3e14911085f0e6f34583: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-511351e39ed99471b8b7: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7e00bb20e1fb82cc671d: Nightly time budget reached; remaining values retained
+- new-product / candidate-0d9aed750e18c20317f4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-a698500b4133d9d89f4c: Nightly time budget reached; remaining values retained
 - new-product / candidate-f74ed033086093348128: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-131e3d9f0f313e69bd63: Source does not state the material pack weight; listing skipped
-- new-product / candidate-40f2a8cb8378960826f5: Nightly time budget reached; remaining values retained
+- new-product / candidate-511351e39ed99471b8b7: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ec9be1f8ccfbfba6c412: Nightly time budget reached; remaining values retained
 - new-product / candidate-996e4bc5849cde77a140: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c4bbb190ee77f6b38f1b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-131008220bb684839d60: Nightly time budget reached; remaining values retained
+- new-product / candidate-131e3d9f0f313e69bd63: Source does not state the material pack weight; listing skipped
+- new-product / candidate-278641c6c28248d1c6df: Nightly time budget reached; remaining values retained
 - new-product / candidate-586f98236ab9c9055895: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-75a4b56301e25645073a: Source does not state the material pack weight; listing skipped
-- new-product / candidate-74cd30a2695a022a4d13: Nightly time budget reached; remaining values retained
+- new-product / candidate-c4bbb190ee77f6b38f1b: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f7801bbc723e79efcc2d: Nightly time budget reached; remaining values retained
 - new-product / candidate-da7e23e0a9e8eb10a4f3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cf09e39db656682aaa04: Source does not state the material pack weight; listing skipped
-- new-product / candidate-17588ad0ab4133a281a9: Nightly time budget reached; remaining values retained
+- new-product / candidate-75a4b56301e25645073a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3ad862b64a1afb2059e7: Nightly time budget reached; remaining values retained
 - new-product / candidate-3cb41463e53b59802e2c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6cf12ecca6d44ed8aa14: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e1ba0d33f5fb459f918c: Nightly time budget reached; remaining values retained
+- new-product / candidate-cf09e39db656682aaa04: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5c2e8bdb5cc19ca1ebd8: Nightly time budget reached; remaining values retained
 - new-product / candidate-7539feb6f8c680f41c19: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c7b0de5fb7261e1b6a45: Nightly time budget reached; remaining values retained
+- new-product / candidate-6cf12ecca6d44ed8aa14: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1c4676643a0a3641e433: Nightly time budget reached; remaining values retained
 - new-product / candidate-bf1f1be3aadcd229b530: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fb423e6f32377fb7bf66: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5df4de585b656bfbc137: Nightly time budget reached; remaining values retained
+- new-product / candidate-1e937c6faf43f132613c: Nightly time budget reached; remaining values retained
 - new-product / candidate-901becf30900f431b126: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7cc1cafb3bebb08dc731: No verified product image URL
-- new-product / candidate-12790c571f417a68bce3: Nightly time budget reached; remaining values retained
+- new-product / candidate-dea99c37345d4a790cdd: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0655fa07ded7f2169c1: Nightly time budget reached; remaining values retained
 - new-product / candidate-310bd2417a8d666ccc7d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-240ff13c7f91190e9ebe: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eb9bcce853d981091b83: Nightly time budget reached; remaining values retained
+- new-product / candidate-71f3e033eda8f3f57b82: No verified product image URL
+- new-product / candidate-14fec269223dda324074: Nightly time budget reached; remaining values retained
 - new-product / candidate-b90bb2aceedd36d36f06: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7cc1cafb3bebb08dc731: No verified product image URL
+- new-product / candidate-1131fda08e05503279ea: Nightly time budget reached; remaining values retained
+- new-product / candidate-1a96f59cd167ba64c6fc: Nightly time budget reached; remaining values retained
+- new-product / candidate-3d79dcb5a20d129b2e15: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8751953b82121fe18765: Nightly time budget reached; remaining values retained
+- new-product / candidate-7019452a05a906d45835: Nightly time budget reached; remaining values retained
 - new-product / candidate-98065dad2d0c1fcd7cb4: Cannot confirm that the product is a material or printer
-- new-product / candidate-82dbaf76aa18d727f9be: Nightly time budget reached; remaining values retained
-- new-product / candidate-97b9c15bc1f2b379639e: Nightly time budget reached; remaining values retained
+- new-product / candidate-b8db8098bcc7ee01b0a6: Nightly time budget reached; remaining values retained
+- new-product / candidate-3dd70d44b8015a8a5d91: Nightly time budget reached; remaining values retained
 - new-product / candidate-1f46194391eaa53ba53b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-b5aea1ff649d09e0a217: Nightly time budget reached; remaining values retained
-- new-product / candidate-1bcdd0cfc23954e2be66: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8e491862b4bb134262c4: Nightly time budget reached; remaining values retained
+- new-product / candidate-9a8ca8c20aeba0cf0fea: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-6e1ecce341e24eb7ebcd: No verified product image URL
-- new-product / candidate-99a0b39f0a2de2968e03: Nightly time budget reached; remaining values retained
-- new-product / candidate-1bb043a1872050e6bbc4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1be54686fde8e4632e74: Nightly time budget reached; remaining values retained
+- new-product / candidate-3396b1f6bebba4170588: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-e2e322e447a0ed39ce5b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cf8dfc6c58fd41cb33f3: Nightly time budget reached; remaining values retained
-- new-product / candidate-a14e15c8227d79acb53c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b3a5f29c82bfd65fa020: Nightly time budget reached; remaining values retained
-- new-product / candidate-623d1315a994d69ac1a6: Nightly time budget reached; remaining values retained
-- new-product / candidate-ae7308bb7c1d041b01e7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-609bcda453cd9277b945: Nightly time budget reached; remaining values retained
-- new-product / candidate-27de45b67c26cc0be0a8: Nightly time budget reached; remaining values retained
-- new-product / candidate-5663ca3eab2a4101c918: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ab55ea5298f750408902: Nightly time budget reached; remaining values retained
-- new-product / candidate-c56febb224875e6c43b4: Nightly time budget reached; remaining values retained
-- new-product / candidate-158829ef68ad27724685: No verified product image URL
-- new-product / candidate-1bc9ef1035ac98511396: No verified product image URL
-- new-product / candidate-30d978330f4a3c8d7c4f: Nightly time budget reached; remaining values retained
-- new-product / candidate-52bfd57a0f44c51cd082: No verified product image URL
-- new-product / candidate-1c8f7153a14751ec69bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-083a0ed69d4e7cc9ee89: Nightly time budget reached; remaining values retained
-- new-product / candidate-fd50a2b1590a2805869e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fc17746d13c31a087b19: Nightly time budget reached; remaining values retained
-- new-product / candidate-e36b51081983531e117b: Nightly time budget reached; remaining values retained
-- new-product / candidate-5453e9eb0b7f236e65a2: No verified product image URL
-- new-product / candidate-25c16611477a0664e5b0: Nightly time budget reached; remaining values retained
-- new-product / candidate-7fa69f57706d11443994: Nightly time budget reached; remaining values retained
+- new-product / candidate-55e650d0791adfcf22bd: Nightly time budget reached; remaining values retained
+- new-product / candidate-6306a9afc85db1cc146a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6b459b3136d23480056d: Nightly time budget reached; remaining values retained
+- new-product / candidate-88ae26a196c4ee64fcb2: Nightly time budget reached; remaining values retained
+- new-product / candidate-e1d4a12f5f433c52c7f6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cf2ae60c6a54f63fabc5: Nightly time budget reached; remaining values retained
+- new-product / candidate-50f1cc3add7bbf414657: Nightly time budget reached; remaining values retained
+- new-product / candidate-4b99e6379deb16e748d1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6dd12105bd18c2511629: Nightly time budget reached; remaining values retained
+- new-product / candidate-4ac767729b82f401f4e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-28d8517d0cea538cf517: No verified product image URL
+- new-product / candidate-88c773c5c56597cc05db: No verified product image URL
+- new-product / candidate-1b3ff032ebaa6dd612c6: Nightly time budget reached; remaining values retained
+- new-product / candidate-daadbf0d5d8ebae62fd4: No verified product image URL
+- new-product / candidate-dc65c2659389bd4f21f5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1389e4b999522f6f25fd: Nightly time budget reached; remaining values retained
+- new-product / candidate-479881a60d086895fd57: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-724e54df09e63228daca: Source does not state the material pack weight; listing skipped
+- new-product / candidate-ef05ae6cb907492fa5ea: Nightly time budget reached; remaining values retained
+- new-product / candidate-e7cdd785715f09a16428: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1743acc78038deef5da9: Nightly time budget reached; remaining values retained
+- new-product / candidate-560d2cf4841eba5ef184: Nightly time budget reached; remaining values retained
+- new-product / candidate-87cdbbf89b15adebafd5: No verified product image URL
+- new-product / candidate-f9cc51861420b3767181: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ee03cfaafd5fba023429: Nightly time budget reached; remaining values retained
 - new-product / candidate-0234a874fc6e75cf7ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a0744bfd6325d0842b9f: Nightly time budget reached; remaining values retained
-- new-product / candidate-b5d13e7e43e005a384a2: Nightly time budget reached; remaining values retained
+- new-product / candidate-cdf2ac3ad3b4dcf6ee82: Nightly time budget reached; remaining values retained
+- new-product / candidate-fa43aab481c8e7d9bfb6: Nightly time budget reached; remaining values retained
 - new-product / candidate-2319b4be81d888c3f990: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1dfb96a248b5db33fe0b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8c21f5417453c2012deb: Nightly time budget reached; remaining values retained
+- new-product / candidate-d90cbca0d338eacc3a0f: Nightly time budget reached; remaining values retained
+- new-product / candidate-4950fdc019cc1f504d6c: Nightly time budget reached; remaining values retained
 - new-product / candidate-eadcd7a067161d6ec25a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9c35cd246dc3027a9602: Source does not state the material pack weight; listing skipped
-- new-product / candidate-70119af1e4925715632e: Nightly time budget reached; remaining values retained
+- new-product / candidate-279935557efa462efc9c: Nightly time budget reached; remaining values retained
+- new-product / candidate-72386c5e55380548dafc: Nightly time budget reached; remaining values retained
 - new-product / candidate-5470c37cfe057b82fd58: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d6c66b329e8729799f54: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7b17b64e3ee289a5f965: Nightly time budget reached; remaining values retained
+- new-product / candidate-114147dccea258525097: Source does not state the material pack weight; listing skipped
+- new-product / candidate-e4f85f634b2845149e41: Nightly time budget reached; remaining values retained
 - new-product / candidate-5e0d03a54c205b4f80d0: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-95bb45c2beaabcd3dd50: Source does not state the material pack weight; listing skipped
-- new-product / candidate-64259a13a43d2c166359: Nightly time budget reached; remaining values retained
-- new-product / candidate-d5c0ee4326d4211a7ceb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-414abea4ed87c5bd3ce4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-65024e5e38afd10f4c8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-f8c2353f962e5fcbfa4f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-bb223be74b046f09b4d3: No verified product image URL
-- new-product / candidate-116509885d7fd4629bf3: Nightly time budget reached; remaining values retained
-- new-product / candidate-cd00f6988046adf110a7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c628083d74a7af5421de: Nightly time budget reached; remaining values retained
+- new-product / candidate-f8c2353f962e5fcbfa4f: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-1d09b5d94a4aa78db580: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-09f1c8bdf9624f412106: Nightly time budget reached; remaining values retained
-- new-product / candidate-487b5f030bfe10394483: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-14478100128b651f96b6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9d2e03782152cd45bbcd: Nightly time budget reached; remaining values retained
-- new-product / candidate-e03ec3f5867183c9d545: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-50e898965b025535aa55: Nightly time budget reached; remaining values retained
+- new-product / candidate-ef1fe0d11e7955bf92ba: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3fcf49ca4a9fed4fcf70: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-97c8937ba7b706e3446f: Nightly time budget reached; remaining values retained
+- new-product / candidate-98faf927374a914803f5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-22036b7e32910ac14036: Source does not state the material pack weight; listing skipped
-- new-product / candidate-60970b458637c5396152: Nightly time budget reached; remaining values retained
-- new-product / candidate-4c429694c9db80cada35: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-31970f68b9ddda14e579: Nightly time budget reached; remaining values retained
+- new-product / candidate-e03ec3f5867183c9d545: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ec35b22d30ae012b17d0: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-672d27d4b4f9c3655a7b: Nightly time budget reached; remaining values retained
+- new-product / candidate-36adf1311b3f79c38ef7: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-773891648e0351b28856: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d326e6eda74850241893: Nightly time budget reached; remaining values retained
+- new-product / candidate-a39e9afeeb6747d1bced: Nightly time budget reached; remaining values retained
 - new-product / candidate-afd1af4380bd2f92a11e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-60baa3eb48d5bd28e09e: No verified product image URL
-- new-product / candidate-4d5394f55f38f9d7a57c: Nightly time budget reached; remaining values retained
-- new-product / candidate-1eddf2a616f7f77c9f57: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e3437bc0dbd6e028776b: Nightly time budget reached; remaining values retained
+- new-product / candidate-47750fd49c8f9d952607: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-9698e0ac5c964708c259: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3d27af30ea8e012ec5b1: Nightly time budget reached; remaining values retained
+- new-product / candidate-31a9acb62ea46f5adb0f: Nightly time budget reached; remaining values retained
 - new-product / candidate-0991882b948dd2b1962e: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-355e0b75c82c51b337c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e21d9bfc6ffe39d310f4: Nightly time budget reached; remaining values retained
-- new-product / candidate-710f40be91a3449cda6e: No verified product image URL
+- new-product / candidate-f2dda36e72f2482a17b2: Nightly time budget reached; remaining values retained
+- new-product / candidate-0936aa81d696a31f8182: No verified product image URL
 - new-product / candidate-6bc3c37bd3471536e2c0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c987a9f1e82809877f1c: Nightly time budget reached; remaining values retained
+- new-product / candidate-f3e7f0d63e275afe76f1: Nightly time budget reached; remaining values retained
 - new-product / candidate-1e96e17800019cba7353: Pack weight outside the supported range
 - new-product / candidate-4131619f8fd6e8e238e2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e8dd70cb6832c4614b5f: Nightly time budget reached; remaining values retained
-- new-product / candidate-50676104cf3b4bc0cbcf: No verified product image URL
-- new-product / candidate-34fcb47a90a6827b593e: Nightly time budget reached; remaining values retained
-- new-product / candidate-03d0494d30d03806970a: No verified product image URL
-- new-product / candidate-45ead8046fb84e58050d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b8c844258f186fb3e183: Nightly time budget reached; remaining values retained
-- new-product / candidate-79eff769d78f1522af1a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cbe9e290f1db39bd4e14: No verified product image URL
-- new-product / candidate-c4f99b1a7128fb405bcb: Nightly time budget reached; remaining values retained
+- new-product / candidate-83d7d166f961213bed56: Nightly time budget reached; remaining values retained
 - new-product / candidate-d6feb2d9b97f9bd87481: No verified product image URL
-- new-product / candidate-12a08c85ca9353956648: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-90d09528a220af54e5a1: Nightly time budget reached; remaining values retained
+- new-product / candidate-df0171f4d7ba316b6d61: Nightly time budget reached; remaining values retained
+- new-product / candidate-03d0494d30d03806970a: No verified product image URL
+- new-product / candidate-9727f6736efd3d780ecf: Nightly time budget reached; remaining values retained
+- new-product / candidate-a24c473802dffe1f45e0: Nightly time budget reached; remaining values retained
 - new-product / candidate-3ae6e9e1e2e26f610bb9: No verified product image URL
-- new-product / candidate-8ffe502e3061da5c0f8d: Cannot confirm that the product is a material or printer
-- new-product / candidate-764537a970c23992ab03: Nightly time budget reached; remaining values retained
+- new-product / candidate-351edc4dc4ed0c9c01a8: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5cd497c859b48cf0cb57: Nightly time budget reached; remaining values retained
 - new-product / candidate-c58be09870e7a2c9263d: No verified product image URL
+- new-product / candidate-cbe9e290f1db39bd4e14: No verified product image URL
+- new-product / candidate-da738bfef2d8712cdd12: Nightly time budget reached; remaining values retained
+- new-product / candidate-79eff769d78f1522af1a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c14fe8f6e1339c5fdc9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-9d28c8af9a2be64d3119: Nightly time budget reached; remaining values retained
+- new-product / candidate-50676104cf3b4bc0cbcf: No verified product image URL
+- new-product / candidate-8ffe502e3061da5c0f8d: Cannot confirm that the product is a material or printer
+- new-product / candidate-5d8b875d36bca46ea2db: Nightly time budget reached; remaining values retained
+- new-product / candidate-434e8e5937db89d18d45: No verified product image URL
 - new-product / candidate-752e897630bfc7230c5c: Pack weight is ambiguous; listing skipped
-- new-product / candidate-8a0c5e3e260f387f6026: Nightly time budget reached; remaining values retained
+- new-product / candidate-c6375edd841c50e4f49a: Nightly time budget reached; remaining values retained
 - new-product / candidate-2b03e707d0e4de80cc21: No verified product image URL
 - new-product / candidate-6d8d57cad65ba6bf0221: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-110c5413faeb67d03d74: Nightly time budget reached; remaining values retained
-- new-product / candidate-434e8e5937db89d18d45: No verified product image URL
-- new-product / candidate-f50d97d2ddbd72dc3f3b: Nightly time budget reached; remaining values retained
-- new-product / candidate-3225feec0f036cc499e5: Nightly time budget reached; remaining values retained
+- new-product / candidate-9eb316356a5ac0ce4581: Nightly time budget reached; remaining values retained
 - new-product / candidate-797d433de58d580eedad: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2234164dae1fdeb1f766: Nightly time budget reached; remaining values retained
-- new-product / candidate-ca173abab0c47ff1a028: Nightly time budget reached; remaining values retained
+- new-product / candidate-b7279f59461a7290a755: Nightly time budget reached; remaining values retained
+- new-product / candidate-925dfa20232a3c5b7b68: Nightly time budget reached; remaining values retained
 - new-product / candidate-9cc14bbfd90eb87d64c9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fd40657851bfa714be13: Nightly time budget reached; remaining values retained
-- new-product / candidate-f932155c4a0612a04145: Nightly time budget reached; remaining values retained
+- new-product / candidate-14ead164e599dcd8e44c: Nightly time budget reached; remaining values retained
+- new-product / candidate-785cfb4d33d675b00fea: Nightly time budget reached; remaining values retained
 - new-product / candidate-e6d1b7b4a7b3c1be7169: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a9c0ae0d99554d68f7f9: No verified product image URL
-- new-product / candidate-c68db1c230f4a3697c80: Nightly time budget reached; remaining values retained
+- new-product / candidate-fe8cf72ce7104587013d: Nightly time budget reached; remaining values retained
+- new-product / candidate-27311188b06db6982e22: Nightly time budget reached; remaining values retained
 - new-product / candidate-c6800d36db5ebaf7d7e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7ff859b015f810c45ddb: Nightly time budget reached; remaining values retained
-- new-product / candidate-709ce030713e4b227508: Nightly time budget reached; remaining values retained
+- new-product / candidate-583df13aed7c00108aba: No verified product image URL
+- new-product / candidate-92050a2e31087b8ee756: Nightly time budget reached; remaining values retained
 - new-product / candidate-a29cff698e526d1c1db6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e6367f295564c879cf77: Nightly time budget reached; remaining values retained
-- new-product / candidate-2a5971040405077301a7: Nightly time budget reached; remaining values retained
+- new-product / candidate-bd4cf1781a441f13c515: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-762fa4dc7ab8f5a37cf9: Nightly time budget reached; remaining values retained
 - new-product / candidate-5bb21d6b104dc11a2657: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5fc857924936aca7dc4e: Nightly time budget reached; remaining values retained
-- new-product / candidate-9263b2655207aafc0301: Nightly time budget reached; remaining values retained
+- new-product / candidate-1bce5b0b40ea7e86a71a: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1a17f63852f1a24c61bc: Nightly time budget reached; remaining values retained
 - new-product / candidate-2727035069b99f595386: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-53785c48ab5f440a8083: Nightly time budget reached; remaining values retained
-- new-product / candidate-208d82195d3c8284fb9e: Nightly time budget reached; remaining values retained
+- new-product / candidate-54544fef6902f2c8adb4: Nightly time budget reached; remaining values retained
+- new-product / candidate-65ad67920580a0fc35e1: Nightly time budget reached; remaining values retained
 - new-product / candidate-b67b1bcdbeb650b2235a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-dae793899d60ad3a9be8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-94246ee860c4628289ba: Nightly time budget reached; remaining values retained
+- new-product / candidate-fc0b379a26737ba6e7d1: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-2eca390886a78abc021f: Nightly time budget reached; remaining values retained
 - new-product / candidate-7d69620c0b039a255fa4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b6607989091c6976c1dd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-30acec3c591ad8a5e1d2: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d209c62f0f04ed9d73a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-65e62cea7a491f492745: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-214b0823fc6f1cb0c558: Nightly time budget reached; remaining values retained
+- new-product / candidate-435a72958cc3eadaa602: Nightly time budget reached; remaining values retained
+- new-product / candidate-3a773bb73ce9ad8ee988: Nightly time budget reached; remaining values retained
+- new-product / candidate-dfd21c9a04e0bf9c0078: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dd00a298847d2398ace6: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0858a758ef7bd47469c: Nightly time budget reached; remaining values retained
 - new-product / candidate-865d683b6f17bc55ed88: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-07deda5d451d6349b6b3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-3b037a1b6e7cd00e0311: Nightly time budget reached; remaining values retained
+- new-product / candidate-56e1101fb99bc1e56df5: Nightly time budget reached; remaining values retained
+- new-product / candidate-0acfdd67a74a8c59b793: Nightly time budget reached; remaining values retained
 - new-product / candidate-371b686467373b3f2e9c: Pack weight outside the supported range
-- new-product / candidate-48945ec2160edfb3d1fd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1279804bb0a9d3227a24: Nightly time budget reached; remaining values retained
+- new-product / candidate-9fb91e376b1f8770f856: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f7c07c14e51ab6f73eda: Nightly time budget reached; remaining values retained
 - new-product / candidate-5164eb8f2a6240c24df2: Pack weight outside the supported range
 - new-product / candidate-e7e9679b35697227a80b: No verified product image URL
-- new-product / candidate-3d38063bdc84d60bc890: Nightly time budget reached; remaining values retained
+- new-product / candidate-4e8a30c999b9d1bfd17a: Nightly time budget reached; remaining values retained
 - new-product / candidate-a4bee4da1967d5788220: Pack weight outside the supported range
 - new-product / candidate-7615f3ee3212bd8b95bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-530ddc399299613fee68: Nightly time budget reached; remaining values retained
+- new-product / candidate-c2bae8a17fc41f41133b: Nightly time budget reached; remaining values retained
 - new-product / candidate-0264bc7afc19bf0f5e65: Pack weight outside the supported range
-- new-product / candidate-9d7dc42671e7dbc45125: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cd5e5444d40566bcbf70: Nightly time budget reached; remaining values retained
+- new-product / candidate-905bb0e835edb185b66b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-16ca2cf91289a4e865af: Nightly time budget reached; remaining values retained
 - new-product / candidate-7dfb7f9c4b61dee79ad5: No verified product image URL
 - new-product / candidate-048155a99f4fce11441f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b309fafa014784a46c81: Nightly time budget reached; remaining values retained
+- new-product / candidate-95cb853b5e05ccce35c7: Nightly time budget reached; remaining values retained
 - new-product / candidate-3c2c78386f8cd6b0e666: No verified product image URL
-- new-product / candidate-e87494241b1aa1654fc2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9676ebee3fb71bd8a3f7: Nightly time budget reached; remaining values retained
+- new-product / candidate-d6c2ca4a9a688bcc79d6: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b60b102f8d71568305df: Nightly time budget reached; remaining values retained
 - new-product / candidate-7f935462c912140d0de8: No verified product image URL
-- new-product / candidate-22f0d3a8e5997786947e: No verified product image URL
-- new-product / candidate-a50630b91f012daba2df: Nightly time budget reached; remaining values retained
+- new-product / candidate-e87494241b1aa1654fc2: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6a0d374890bd56b00394: Nightly time budget reached; remaining values retained
 - new-product / candidate-b936314ee2db99e213b6: No verified product image URL
+- new-product / candidate-22f0d3a8e5997786947e: No verified product image URL
+- new-product / candidate-9e202fd518407eaeb8fa: Nightly time budget reached; remaining values retained
+- new-product / candidate-32aacbd8ae3320d8c7b8: Nightly time budget reached; remaining values retained
 - new-product / candidate-16c80c8729f964c79ee4: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d6e08727e1d8dabba597: Nightly time budget reached; remaining values retained
-- new-product / candidate-b1d0d2d3dc1a0e94b29e: Nightly time budget reached; remaining values retained
+- new-product / candidate-461ce801a28a175d36ee: Nightly time budget reached; remaining values retained
+- new-product / candidate-1975c14e3a1dd5549dc0: Nightly time budget reached; remaining values retained
 - new-product / candidate-b962c14d0b6c193d739d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-aeac2c2ba313169dd7b3: Nightly time budget reached; remaining values retained
-- new-product / candidate-8fe5853f5e117445fdc0: Nightly time budget reached; remaining values retained
+- new-product / candidate-217f183f1a14a5254616: Nightly time budget reached; remaining values retained
+- new-product / candidate-c60920a2a9d71ddcfdd5: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-587cc0b24ba5ee2c49f3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c4fed0c60e5512e81cd4: Nightly time budget reached; remaining values retained
-- new-product / candidate-bae4195fe76da3e21b85: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0598aaaa35f9221e05e4: Nightly time budget reached; remaining values retained
-- new-product / candidate-172a031e44f899aa3a83: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-17a88bd3d58c2e784dbd: No verified product image URL
-- new-product / candidate-2b50d8e47ef4a97d084b: Nightly time budget reached; remaining values retained
+- new-product / candidate-cf76be93ccaea2712bce: Nightly time budget reached; remaining values retained
+- new-product / candidate-8aa1c7ac02a61a2971a5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-149d3c270b445012c65f: Nightly time budget reached; remaining values retained
 - new-product / candidate-0997eb7543eca6ec71b2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f6f5272de9e92939651e: No verified product image URL
-- new-product / candidate-f942b1314f7c80220937: Nightly time budget reached; remaining values retained
+- new-product / candidate-19163500c2994f9fc1f8: Nightly time budget reached; remaining values retained
+- new-product / candidate-72785b882bf999fa66cb: Nightly time budget reached; remaining values retained
 - new-product / candidate-2e503e165b5b5f9e37d6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a7a891c42296ba1f349a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7a731441bc1da2f7abae: Nightly time budget reached; remaining values retained
+- new-product / candidate-1f6f6fb217bf78cebb98: No verified product image URL
+- new-product / candidate-a24f1442afb9fac3a856: Nightly time budget reached; remaining values retained
 - new-product / candidate-22be3308632160b47954: Source does not state the material pack weight; listing skipped
-- new-product / candidate-da7c0e3b11ed4a4988c5: Cannot confirm that the product is a material or printer
-- new-product / candidate-d4e70e3046ea343e0edb: Nightly time budget reached; remaining values retained
+- new-product / candidate-f6f5272de9e92939651e: No verified product image URL
+- new-product / candidate-a6734ffdd5010228c008: Nightly time budget reached; remaining values retained
 - new-product / candidate-777f76d4b3bc677652fc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d8eb2a0ac9889d5e3041: Pack weight is ambiguous; listing skipped
-- new-product / candidate-092cf3abd4e38ad941c3: Nightly time budget reached; remaining values retained
+- new-product / candidate-830fecb8fd0c4123e82d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b2acd7441d2bf1e7f01f: Nightly time budget reached; remaining values retained
 - new-product / candidate-56b3a5930637f992af55: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fc18a1faa755683d49bd: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-15accafeb91cf56614bb: Nightly time budget reached; remaining values retained
+- new-product / candidate-da7c0e3b11ed4a4988c5: Cannot confirm that the product is a material or printer
+- new-product / candidate-ff313a50723c728b9763: Nightly time budget reached; remaining values retained
 - new-product / candidate-d48520b89076b64e3976: Source does not state the material pack weight; listing skipped
-- new-product / candidate-39105ba85d53135d7c5e: Nightly time budget reached; remaining values retained
-- new-product / candidate-9009e649f262d2dad2ba: Nightly time budget reached; remaining values retained
-- new-product / candidate-893c9e9f7ed0ca4b3f95: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8d0f92c42c069fe0256f: Nightly time budget reached; remaining values retained
-- new-product / candidate-3f75452a9494e34c615e: Nightly time budget reached; remaining values retained
-- new-product / candidate-ca777d8ba67b83850315: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-2fb82087a15f8614d58f: Nightly time budget reached; remaining values retained
-- new-product / candidate-186bbc6ed3554498ed96: Nightly time budget reached; remaining values retained
-- new-product / candidate-bd6df067d16b352dc67b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-437cbf6a649282a2afed: No verified product image URL
-- new-product / candidate-cc845c3543e9de328843: Nightly time budget reached; remaining values retained
-- new-product / candidate-fb619b73e19b3e511ad8: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-849842d98de9f0d5bede: Nightly time budget reached; remaining values retained
-- new-product / candidate-79ca843117679ed34bae: Nightly time budget reached; remaining values retained
-- new-product / candidate-9548d34890964d3c7803: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c7a1bf476dd7fd9c2c9c: Nightly time budget reached; remaining values retained
-- new-product / candidate-0a420f82b428647f6531: Nightly time budget reached; remaining values retained
-- new-product / candidate-bf85e377f1b5665b0aaf: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b9ead81e86ade60247af: Nightly time budget reached; remaining values retained
-- new-product / candidate-4e4850b0a78fb88a1916: Nightly time budget reached; remaining values retained
-- new-product / candidate-3429ae55d58c91e274c4: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-441bc557d705bb2f5d33: Nightly time budget reached; remaining values retained
-- new-product / candidate-c340b01164d308876944: Nightly time budget reached; remaining values retained
-- new-product / candidate-7ed120f4097bd28074c1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-59aa87fa51c2e0d5fb65: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ac9344fe6fe4ce0e44f8: Nightly time budget reached; remaining values retained
-- new-product / candidate-c6afadb31fde60286c0d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-332554f9c3813a4cf508: Source does not state the material pack weight; listing skipped
-- new-product / candidate-7d69e2e9796ee7c70bcf: Nightly time budget reached; remaining values retained
-- new-product / candidate-7e88dd1b9e40f3979028: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f93594bb407eb83ff3b2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5f4e3c3788784f04744e: Nightly time budget reached; remaining values retained
-- new-product / candidate-8fccc92d29d131812e19: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-58931033c6eda04a9e20: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8fe1d694d96d31c43993: Nightly time budget reached; remaining values retained
-- new-product / candidate-eb4fa1216a4deef2c97f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fc0f220f75469acdbe21: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-653241de97f308bb3901: Nightly time budget reached; remaining values retained
-- new-product / candidate-f3c328e4e315bf50ef92: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-d8eb2a0ac9889d5e3041: Pack weight is ambiguous; listing skipped
+- new-product / candidate-4d52568f3f8bd6270f80: Nightly time budget reached; remaining values retained
+- new-product / candidate-abbcc1b30e429172df95: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-fc18a1faa755683d49bd: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4e509e2d97e291e62772: Nightly time budget reached; remaining values retained
+- new-product / candidate-5eb2e1a7530ae6a8de4a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-6d99e0713b7557dfbd47: Nightly time budget reached; remaining values retained
+- new-product / candidate-ed361df30a91317dba0d: Nightly time budget reached; remaining values retained
+- new-product / candidate-10af3f42fa88a9e9c02e: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e67a7e7b71621e5d06e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-d61ead2bad598ea7bb95: Nightly time budget reached; remaining values retained
+- new-product / candidate-9c0f9a7d65056fd88593: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ff6d907ae232a93da88b: Nightly time budget reached; remaining values retained
+- new-product / candidate-4c2850e223ed82212dde: Nightly time budget reached; remaining values retained
+- new-product / candidate-d4d35e1701ed55edbd54: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-08e2a8913562f82a81d3: No verified product image URL
+- new-product / candidate-7c25bd8c4ee14f5a7103: Nightly time budget reached; remaining values retained
+- new-product / candidate-f5e9bd255fbca351aa12: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-451696d0a41ba7e7658e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bb3603ffc028af17be45: Nightly time budget reached; remaining values retained
+- new-product / candidate-d018f3b261ef7c639742: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-7987349b11318d5d7122: Source does not state the material pack weight; listing skipped
+- new-product / candidate-07c7179392ee860a7e2c: Nightly time budget reached; remaining values retained
+- new-product / candidate-3313dc14f6f5115245ba: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-17e70ca759ba46f636ea: Nightly time budget reached; remaining values retained
+- new-product / candidate-086d4d114e33e7f81c4c: Nightly time budget reached; remaining values retained
+- new-product / candidate-c5f37b3fa43b2ea8b72d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-a15702565d0583420e5e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-295efb5b11b09c58c634: Nightly time budget reached; remaining values retained
+- new-product / candidate-9ad829ea4028fdf855bc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-994cc29304d526198f6f: Nightly time budget reached; remaining values retained
+- new-product / candidate-591840aaf6a949e83359: Nightly time budget reached; remaining values retained
+- new-product / candidate-993c285ee1d1d2a518bb: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-db889de03381ab339180: Nightly time budget reached; remaining values retained
+- new-product / candidate-8ae836105b2d455c4f14: Nightly time budget reached; remaining values retained
+- new-product / candidate-84d730f478fa35f23c23: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-f54360c44fba851f41d0: Nightly time budget reached; remaining values retained
+- new-product / candidate-4fc2882840ca740b1654: Nightly time budget reached; remaining values retained
+- new-product / candidate-040ee27ca28d2943a0f2: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-1de3a6a4fb01c351e336: Source does not state the material pack weight; listing skipped
+- new-product / candidate-f9e4ef71f811cfb86d7b: Nightly time budget reached; remaining values retained
+- new-product / candidate-82d844f3ef88200ad93e: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-711595e94450f8c00d08: No verified product image URL
-- new-product / candidate-2cfd0213755d6502b98e: Nightly time budget reached; remaining values retained
-- new-product / candidate-d263ca12b164c4194600: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-82a2f7f56662d924c0dd: Nightly time budget reached; remaining values retained
+- new-product / candidate-d01a99ee3ecd5ba5cf00: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-1e955ccf6baabd111047: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2a5ec6e6e88a800ccf5a: Nightly time budget reached; remaining values retained
-- new-product / candidate-291d631cb95400885c7f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-5a3e3a11a304fcc63496: Nightly time budget reached; remaining values retained
+- new-product / candidate-4a4711d217cc9d14fbae: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-fd4911b312a77d9bb190: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e91b52e136f44e9c1d56: Nightly time budget reached; remaining values retained
-- new-product / candidate-99440aac98d5b3eaff0f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-ccea4245710602875b1d: Nightly time budget reached; remaining values retained
+- new-product / candidate-0cb4b39a7b3b664b4753: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-418fb9a9cf6db0008bee: Source does not state the material pack weight; listing skipped
-- new-product / candidate-ac67f3bc2eaee5092f7b: Nightly time budget reached; remaining values retained
-- new-product / candidate-1f22f45f155c17e83b41: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-287f9e321ada63a6c36e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f2ec4aee34c869a501c3: Nightly time budget reached; remaining values retained
+- new-product / candidate-f29a45726bc92fb41a49: Nightly time budget reached; remaining values retained
 - new-product / candidate-92b527b60b4e57c9065b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d4cb88348a4fbc0a3c80: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-da34b6f5db32df08fdf6: Nightly time budget reached; remaining values retained
+- new-product / candidate-19115da25f9cc78d0d01: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-287f9e321ada63a6c36e: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c4748819b2023d30bcd6: Nightly time budget reached; remaining values retained
+- new-product / candidate-ef6ea85a2e5e5b2ec92c: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-01687b011525f354a7a4: No verified product image URL
-- new-product / candidate-44b1eff58140dd76cf75: Nightly time budget reached; remaining values retained
-- new-product / candidate-133b384d1de63868808e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8a7058a1c9731d1ba9db: Nightly time budget reached; remaining values retained
+- new-product / candidate-f104d8cd54aa13d6cfc0: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8512b041a2ecc6543e8d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-59cd62ca996288ed08bb: Nightly time budget reached; remaining values retained
-- new-product / candidate-9b69d23b21640a508b44: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5c5051b78392a1aab82f: Nightly time budget reached; remaining values retained
+- new-product / candidate-e5adec06823c7bb17e02: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-f7d93b556fa9c8afe4ef: Source does not state the material pack weight; listing skipped
-- new-product / candidate-5e051c486b20181f147d: Nightly time budget reached; remaining values retained
-- new-product / candidate-7f0561afad2adcaf648f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c192d6f9d0b8828c0670: Nightly time budget reached; remaining values retained
-- new-product / candidate-5edb3d3086380c613f85: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31b1427cf8cb09dbc49d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-78d2edbda7017715cd58: Nightly time budget reached; remaining values retained
-- new-product / candidate-1255996e411d85b1c90c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-fa06ce31ca808693ac6a: No verified product image URL
-- new-product / candidate-08622eb9ccd68f60c62b: Nightly time budget reached; remaining values retained
-- new-product / candidate-7557e41d8f21a4bceec1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-95fe56717b2fa14bf400: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bc25255794ecd82609d9: Nightly time budget reached; remaining values retained
-- new-product / candidate-64abd9df351f5ed97c66: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b43ef0360c2f3da5615c: Cannot confirm that the product is a material or printer
-- new-product / candidate-6bc381504ecb65eaf15e: Nightly time budget reached; remaining values retained
+- new-product / candidate-52afaf8831cb27d3fa66: Nightly time budget reached; remaining values retained
+- new-product / candidate-777e7ff01ce281c7fc7c: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-2cdea4149146988dbe15: Nightly time budget reached; remaining values retained
 - new-product / candidate-06dac85064895d98c49f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c045a4b24e482cb5425b: Pack weight is ambiguous; listing skipped
-- new-product / candidate-3c1ab150b553bb28490b: Nightly time budget reached; remaining values retained
+- new-product / candidate-43d05c93a7f721c1060f: Nightly time budget reached; remaining values retained
+- new-product / candidate-70212945614840965ab1: Nightly time budget reached; remaining values retained
 - new-product / candidate-de719882ef81870d72ce: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f0ca27274fb11bb8c03f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8ba364935938cac0fca6: Nightly time budget reached; remaining values retained
-- new-product / candidate-50e44782ae4641241fe1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b38008e9dda695ba9cdc: Nightly time budget reached; remaining values retained
-- new-product / candidate-315844ed4dc188d0ddf2: Nightly time budget reached; remaining values retained
-- new-product / candidate-05dec9ee9e7addab9d73: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e39b5f27dd19f8a2e7c9: Nightly time budget reached; remaining values retained
-- new-product / candidate-fbd560c03107f0d8d868: Nightly time budget reached; remaining values retained
+- new-product / candidate-ebd5042993c121b91745: No verified product image URL
+- new-product / candidate-bce3e1b78b17f3689d22: Nightly time budget reached; remaining values retained
+- new-product / candidate-1dc2a59a37b5d8199a20: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fa06ce31ca808693ac6a: No verified product image URL
+- new-product / candidate-7f968c14e81d37bea4d8: Nightly time budget reached; remaining values retained
+- new-product / candidate-64abd9df351f5ed97c66: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-43307eb63ce7e237c4d7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-efd0611ba4d52bfb65a2: Nightly time budget reached; remaining values retained
 - new-product / candidate-ea77189f458f0e9ac5fb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6b5b000e5aec07af930d: Nightly time budget reached; remaining values retained
-- new-product / candidate-e32a77d29e0861e7553c: Nightly time budget reached; remaining values retained
+- new-product / candidate-b43ef0360c2f3da5615c: Cannot confirm that the product is a material or printer
+- new-product / candidate-48a07b0390e23dbbfd2a: Nightly time budget reached; remaining values retained
 - new-product / candidate-007bff64f2313f82100a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1a60a632b2dde82118f2: No verified product image URL
-- new-product / candidate-3411f4a8011f2bac7018: Nightly time budget reached; remaining values retained
+- new-product / candidate-c045a4b24e482cb5425b: Pack weight is ambiguous; listing skipped
+- new-product / candidate-179cf96abad18f51d80a: Nightly time budget reached; remaining values retained
 - new-product / candidate-f41e0ad6c1fb4a8198bd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-13808a118f509c92520e: Nightly time budget reached; remaining values retained
-- new-product / candidate-aabb0b624f6445011695: Nightly time budget reached; remaining values retained
-- new-product / candidate-9502c785d8b5b14b9545: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1e638ef4627348715952: Nightly time budget reached; remaining values retained
-- new-product / candidate-5bca4b0c93b450f32786: Nightly time budget reached; remaining values retained
-- new-product / candidate-5a0397992287b58db42d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e3f8ee22fe27f29de29e: Nightly time budget reached; remaining values retained
-- new-product / candidate-0ec6036520955e4df657: Nightly time budget reached; remaining values retained
+- new-product / candidate-f0ca27274fb11bb8c03f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-73c6ea934c36722e82e7: Nightly time budget reached; remaining values retained
 - new-product / candidate-644adc58155a006b1d7d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-97da5a471c99cf1d93bf: Nightly time budget reached; remaining values retained
-- new-product / candidate-a3db6f153eaf4939d8d8: Nightly time budget reached; remaining values retained
+- new-product / candidate-c460eade164053b691c7: Nightly time budget reached; remaining values retained
+- new-product / candidate-7fc919cbc9eecf6e1510: Nightly time budget reached; remaining values retained
+- new-product / candidate-5a0397992287b58db42d: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9c89d92a9e3a3cce2eb9: Nightly time budget reached; remaining values retained
+- new-product / candidate-c0c6192e0f30b03f25de: Nightly time budget reached; remaining values retained
+- new-product / candidate-50e44782ae4641241fe1: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-8de431008ad7a15d09cd: Nightly time budget reached; remaining values retained
+- new-product / candidate-34e94512eb0775555cf4: Nightly time budget reached; remaining values retained
+- new-product / candidate-05dec9ee9e7addab9d73: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-b137ed8e344fa82c8241: No verified product image URL
+- new-product / candidate-e5725cc399b2372593ce: Nightly time budget reached; remaining values retained
+- new-product / candidate-9502c785d8b5b14b9545: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c97895d254efda03234d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-52447f7bd2f69b449c72: Nightly time budget reached; remaining values retained
 - new-product / candidate-9c8c0e35ddf932b10964: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bc3f8734d198d923ec6e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-03fd8bab4dd43942fa0a: Nightly time budget reached; remaining values retained
+- new-product / candidate-9d26602430440dbec46c: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bf74e9cf46b01e28bd37: Nightly time budget reached; remaining values retained
 - new-product / candidate-4aee272d602fef188df4: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-658404b5093d42c952fe: Source does not state the material pack weight; listing skipped
-- new-product / candidate-2adb8af8c5a19aa2f076: Nightly time budget reached; remaining values retained
+- new-product / candidate-fd57357d0467b1c09371: Nightly time budget reached; remaining values retained
+- new-product / candidate-4c00444ccad452edc163: Nightly time budget reached; remaining values retained
 - new-product / candidate-9a70df6ad489587e9c56: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b4c9337cac06be500428: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c09577b648562e816820: Nightly time budget reached; remaining values retained
+- new-product / candidate-15236f53a693da024973: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-bf0b1c699b98f32c1781: Nightly time budget reached; remaining values retained
 - new-product / candidate-16c7cdaeb86a3cf52823: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d9e1587259a092803bbb: Source does not state the material pack weight; listing skipped
-- new-product / candidate-28a67ec1ed3ae8f6a551: Nightly time budget reached; remaining values retained
+- new-product / candidate-dfb502bf3dba2153dfac: Nightly time budget reached; remaining values retained
+- new-product / candidate-bdd02d14b7eaf1ead088: Nightly time budget reached; remaining values retained
 - new-product / candidate-3c496906b17f931cdf0f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bb8de21a19982705a3f2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6d76dfa7f286518ebe57: Nightly time budget reached; remaining values retained
+- new-product / candidate-04d5d21a6c6006176096: Nightly time budget reached; remaining values retained
+- new-product / candidate-f46e92ba3e7d55039dd9: Nightly time budget reached; remaining values retained
 - new-product / candidate-005812f1e9559d038380: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0f13da661de063027162: No verified product image URL
-- new-product / candidate-f7ccd7a1ae08736f1245: Nightly time budget reached; remaining values retained
+- new-product / candidate-a4d5e6ed5b28da95ca76: Nightly time budget reached; remaining values retained
+- new-product / candidate-e841f7b9f51475e47077: Nightly time budget reached; remaining values retained
 - new-product / candidate-826e185d6413ca41efde: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f94d609e6c5072de25a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0ecd09cb159588c73ac4: Nightly time budget reached; remaining values retained
+- new-product / candidate-50551052c14ff9c40cfa: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bfc75225e829d9866665: Nightly time budget reached; remaining values retained
 - new-product / candidate-375e3f74347e58a32e1a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-a37ed11c047cc0f834da: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f9fcc7a35c6097e6a10a: Nightly time budget reached; remaining values retained
+- new-product / candidate-0f13da661de063027162: No verified product image URL
+- new-product / candidate-4ae1d42009ef3e9f6036: Nightly time budget reached; remaining values retained
 - new-product / candidate-7af7eb1bce91cbdcf85c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5bf6a6a391a78cf2f15d: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f32311eea2bb9fa5f758: Nightly time budget reached; remaining values retained
+- new-product / candidate-f94d609e6c5072de25a9: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6def3569c6aa136af796: Nightly time budget reached; remaining values retained
 - new-product / candidate-855fb8562fd03578fa6c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-5d696f76294ac44ee885: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e5ecb7032f79ab023441: Nightly time budget reached; remaining values retained
+- new-product / candidate-a37ed11c047cc0f834da: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cdc64a2765469fad7fc3: Nightly time budget reached; remaining values retained
 - new-product / candidate-068d3a0c74126fd1d016: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8df8022e8f11787fc851: No verified product image URL
-- new-product / candidate-c21aceb3a0212b023d04: Nightly time budget reached; remaining values retained
+- new-product / candidate-5bf6a6a391a78cf2f15d: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4cf2dc6100e02a17256a: Nightly time budget reached; remaining values retained
 - new-product / candidate-a5d99b0f51fdc0bfcc47: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1bc30a6e2f506c3bfe61: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0fce5de3e6d1139a072d: Nightly time budget reached; remaining values retained
+- new-product / candidate-bb8de21a19982705a3f2: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0849a272b4051710857d: Nightly time budget reached; remaining values retained
 - new-product / candidate-f94929effa7a300103c9: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-e428205b7de6779ce969: Source does not state the material pack weight; listing skipped
-- new-product / candidate-53b02176f0596cfed320: Nightly time budget reached; remaining values retained
+- new-product / candidate-5d696f76294ac44ee885: Source does not state the material pack weight; listing skipped
+- new-product / candidate-304118710b5808d53db8: Nightly time budget reached; remaining values retained
 - new-product / candidate-986672534d394a25feda: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-378d5c021c29c9414ba4: Nightly time budget reached; remaining values retained
-- new-product / candidate-c705ca20d0ba544f182f: Nightly time budget reached; remaining values retained
-- new-product / candidate-bec408aeac80e25c405c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ed485338fef84652dadc: Nightly time budget reached; remaining values retained
-- new-product / candidate-9d7eda8d6cad79d9be9a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8df8022e8f11787fc851: No verified product image URL
+- new-product / candidate-7f5298a2544c646c1df3: Nightly time budget reached; remaining values retained
+- new-product / candidate-4dc0e53c2eb3148c292e: Nightly time budget reached; remaining values retained
+- new-product / candidate-1bc30a6e2f506c3bfe61: Source does not state the material pack weight; listing skipped
+- new-product / candidate-8051641264b9cb4f42f2: Nightly time budget reached; remaining values retained
+- new-product / candidate-2d49e95ec667d3649d1a: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e428205b7de6779ce969: Source does not state the material pack weight; listing skipped
+- new-product / candidate-6972d913cd3b2829f465: Nightly time budget reached; remaining values retained
+- new-product / candidate-75c88980b134f1373888: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b7e9bda61ca51206eacc: Nightly time budget reached; remaining values retained
+- new-product / candidate-4a8264e493543ff617f5: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-552105defa06aaeda9c0: Nightly time budget reached; remaining values retained
+- new-product / candidate-f48cb3aaaafaf9cfb115: Nightly time budget reached; remaining values retained
+- new-product / candidate-d459ef11a7c70e8ce2ff: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f3db4c06a57f89d4c75e: No verified product image URL
+- new-product / candidate-fec66ff719a183cfeb26: Nightly time budget reached; remaining values retained
+- new-product / candidate-8a0357dd19d77bcf94c3: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-b3ecbd0217cfbc695aa6: No verified product image URL
-- new-product / candidate-d8fdbe3fbe5511c727a3: Nightly time budget reached; remaining values retained
-- new-product / candidate-cd067152f6610a6c86f6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c19d90b72fe28d3d0b8e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-0e12bcd1e8bb67a04062: Nightly time budget reached; remaining values retained
-- new-product / candidate-81131d17b45f154ab110: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-f20668881e05e0837c10: Nightly time budget reached; remaining values retained
+- new-product / candidate-c754f66ab337509f8126: No verified product image URL
+- new-product / candidate-8b65b60365b9b33b9037: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-b9fa76de105f7d6aebc4: Nightly time budget reached; remaining values retained
+- new-product / candidate-d8df7fa4f9296de61bcc: No verified product image URL
 - new-product / candidate-e69a4e62276dd66c9b07: Cannot confirm that the product is a material or printer
-- new-product / candidate-1ec2b1bc3f98b70f47e9: Nightly time budget reached; remaining values retained
-- new-product / candidate-2282fbde10b5e92bc10c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0bcc9263aa00dee0db58: Nightly time budget reached; remaining values retained
+- new-product / candidate-ec83c3847838565db5d1: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-292fc7f09cd4bb63ebca: Pack weight is ambiguous; listing skipped
-- new-product / candidate-0048fc746bfd7e543d99: Nightly time budget reached; remaining values retained
-- new-product / candidate-a499be2290750c207feb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0aa92f391fc0f3837e6e: Nightly time budget reached; remaining values retained
+- new-product / candidate-726cda600e280a0a4f85: Exact variant no longer appears in the retailer catalogue
 - new-product / candidate-d7d2edc50ad51a9f9ac1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-f314bd7751420ac86c7b: Nightly time budget reached; remaining values retained
-- new-product / candidate-7147d1e89774442c5fba: No verified product image URL
-- new-product / candidate-71532160f77be0a9da82: Nightly time budget reached; remaining values retained
-- new-product / candidate-83b4edff7e3c7c225b54: Nightly time budget reached; remaining values retained
-- new-product / candidate-1e4001f3d3006fec2d77: No verified product image URL
-- new-product / candidate-fc1a71801a650acdcdd1: Nightly time budget reached; remaining values retained
-- new-product / candidate-a4b6a58416fd4ee5434e: Nightly time budget reached; remaining values retained
-- new-product / candidate-ee3d0574ca92381edf5e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3b100d222195bee77c8b: Nightly time budget reached; remaining values retained
-- new-product / candidate-953b181bdd4ce169cb5d: Nightly time budget reached; remaining values retained
-- new-product / candidate-4ca76683ed61d1fc02ed: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e8a2db26a12f1d937e3a: No verified product image URL
-- new-product / candidate-7e0f1863c2d5d23ea782: Nightly time budget reached; remaining values retained
+- new-product / candidate-847092292aa933808cfb: Nightly time budget reached; remaining values retained
+- new-product / candidate-f59be60f03df71f55f26: No verified product image URL
+- new-product / candidate-ea722f50e495a65b5166: Nightly time budget reached; remaining values retained
+- new-product / candidate-ed8e325f486a40aaa2af: Nightly time budget reached; remaining values retained
 - new-product / candidate-9495b557932f11ac99b3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a901926bc252b1a59e9: Nightly time budget reached; remaining values retained
-- new-product / candidate-7d477b7d0b906f88ec21: Nightly time budget reached; remaining values retained
+- new-product / candidate-5648feb132045ffe76c5: Nightly time budget reached; remaining values retained
+- new-product / candidate-97b93cd63229d3c6f068: Nightly time budget reached; remaining values retained
 - new-product / candidate-6c2c5838ed6c97f3a97e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-48f329b4704c1a71e737: Nightly time budget reached; remaining values retained
-- new-product / candidate-f76bfd4bcb29e3300db4: Nightly time budget reached; remaining values retained
+- new-product / candidate-ec2fcb6a148377098f44: Nightly time budget reached; remaining values retained
+- new-product / candidate-491604bc352fb024b19d: Nightly time budget reached; remaining values retained
 - new-product / candidate-5761be978497cc54b18c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-793da551724b670ecfdb: Nightly time budget reached; remaining values retained
-- new-product / candidate-6d1aeaea818048b66e42: Nightly time budget reached; remaining values retained
+- new-product / candidate-39224bf55b353bf99c99: No verified product image URL
+- new-product / candidate-20236c701883efda4fa1: Nightly time budget reached; remaining values retained
 - new-product / candidate-720e31d1c717e75d3c4c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-00b2b0ff6ba9b6c8dd07: Nightly time budget reached; remaining values retained
-- new-product / candidate-85de058bc2fd3ddb1111: Nightly time budget reached; remaining values retained
+- new-product / candidate-becb6bd1c4a3d39846ff: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6d854db8b7e21d0ca47b: Nightly time budget reached; remaining values retained
 - new-product / candidate-aadb0934ee32520cef90: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8829d333015c8396dc5a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-76038eeabdf8de2121cc: Nightly time budget reached; remaining values retained
-- new-product / candidate-0b5b625e1b211b7b7d7c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-64aa54c99b907c55df98: Source does not state the material pack weight; listing skipped
-- new-product / candidate-a32037b1b99f20211ba3: Nightly time budget reached; remaining values retained
+- new-product / candidate-7db67dad28b40d6801f0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-7156aea95a3a897ea086: Nightly time budget reached; remaining values retained
 - new-product / candidate-2ff7fe423e28f6e27f34: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9842f3f19768abb0b531: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fe58a3d7ebbd6dfcfded: Nightly time budget reached; remaining values retained
-- new-product / candidate-528cf08aec941f19eb90: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-76a75cda2169eda00188: Source does not state the material pack weight; listing skipped
-- new-product / candidate-74f3e1a78452f15640de: Nightly time budget reached; remaining values retained
+- new-product / candidate-f7819fea2efe5fcf7dec: Nightly time budget reached; remaining values retained
+- new-product / candidate-d9d414ea3ebf295a725b: Nightly time budget reached; remaining values retained
+- new-product / candidate-ef61457858a79108956c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e1bb100f22290c1fb957: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-d77d4c89a38d1d9bf819: Nightly time budget reached; remaining values retained
 - new-product / candidate-2df06a2570a305b6cc45: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-596995e107d9c516cb19: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-85efa26c52ec3b0933fa: Nightly time budget reached; remaining values retained
+- new-product / candidate-fd4a775ec80d25a91409: Nightly time budget reached; remaining values retained
+- new-product / candidate-ce48064a8479be945f80: Nightly time budget reached; remaining values retained
 - new-product / candidate-5702be98bf84e7034db5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7279b8e848bb964c84ee: No verified product image URL
-- new-product / candidate-7f21008fc33da750bcb0: Nightly time budget reached; remaining values retained
+- new-product / candidate-c2be2bb7e4979803af4a: Nightly time budget reached; remaining values retained
+- new-product / candidate-4a632f81a5a31bbcc101: Nightly time budget reached; remaining values retained
 - new-product / candidate-fcf3cdfa0dc6bd02dde3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a5f34a31f46b50bc38eb: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-b8affb22eeabfc0a2ea7: Nightly time budget reached; remaining values retained
+- new-product / candidate-bbd18e049c5870255396: Nightly time budget reached; remaining values retained
+- new-product / candidate-5cbd7fb1f2cdd3b1dab9: Nightly time budget reached; remaining values retained
 - new-product / candidate-f2fe8417728f7444bd8b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3d3968e4a57e1cbadb29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8b870baf0161432fcebf: Nightly time budget reached; remaining values retained
+- new-product / candidate-c55b5b3323b622fcaa86: Source does not state the material pack weight; listing skipped
+- new-product / candidate-1515d5cc218b80a3369a: Nightly time budget reached; remaining values retained
 - new-product / candidate-70367aa5e53315b126d6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-d4893214bc6f5ae070a0: Source does not state the material pack weight; listing skipped
-- new-product / candidate-c71da86e8f3ee760a714: Nightly time budget reached; remaining values retained
+- new-product / candidate-7279b8e848bb964c84ee: No verified product image URL
+- new-product / candidate-72ca37be4f92d3b2e6fe: Nightly time budget reached; remaining values retained
 - new-product / candidate-beb111769687433bba7e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ba737588e74d98d321d8: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d1e6b7896ee9c8d83add: Nightly time budget reached; remaining values retained
+- new-product / candidate-a5f34a31f46b50bc38eb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0afe7e73afdc18ae9a9d: Nightly time budget reached; remaining values retained
 - new-product / candidate-eb13b7f93b8392b3c518: No verified product image URL
-- new-product / candidate-2bf63c9d781a598a2e4d: No verified product image URL
-- new-product / candidate-adc53be157ba10c7e397: Nightly time budget reached; remaining values retained
+- new-product / candidate-3d3968e4a57e1cbadb29: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-52b260170b5d66ee88b3: Nightly time budget reached; remaining values retained
 - new-product / candidate-2b6b7dac57e389947fee: Pack weight outside the supported range
-- new-product / candidate-4d8f5eb18b2e6f061700: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b819d1188bbd75478526: Nightly time budget reached; remaining values retained
-- new-product / candidate-6cd81d8480fa7de771e7: No verified product image URL
-- new-product / candidate-488002b6bccfb6564ef3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-0b6626304a834619f80c: Nightly time budget reached; remaining values retained
-- new-product / candidate-15f580458911fce9ca3b: No verified product image URL
-- new-product / candidate-a4bc67a1ce5104ba9561: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-4d6d793d8f5e9dfdea0c: Nightly time budget reached; remaining values retained
-- new-product / candidate-0c546a8ed0bee1a6fb03: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-401eb8fa113f4cfdc0a8: No verified product image URL
-- new-product / candidate-e71d0c39f44fbf33e35b: Nightly time budget reached; remaining values retained
+- new-product / candidate-d4893214bc6f5ae070a0: Source does not state the material pack weight; listing skipped
+- new-product / candidate-39f4b1b2cbe88d0ec8aa: Nightly time budget reached; remaining values retained
 - new-product / candidate-51bdde145c0f6046edcd: No verified product image URL
-- new-product / candidate-288e3071f4eacc6c638c: No verified product image URL
-- new-product / candidate-acdd87d2084dcdbd35e4: Nightly time budget reached; remaining values retained
+- new-product / candidate-596995e107d9c516cb19: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-908c1b988fbc9458f138: Nightly time budget reached; remaining values retained
+- new-product / candidate-15f580458911fce9ca3b: No verified product image URL
+- new-product / candidate-ba737588e74d98d321d8: Source does not state the material pack weight; listing skipped
+- new-product / candidate-5fa3b7ebe056bcb46a1c: Nightly time budget reached; remaining values retained
 - new-product / candidate-3ae6e9e1e2e26f610bb9: No verified product image URL
-- new-product / candidate-a2b05c64a07100f1dc64: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-1de3b6bdde3b53acf18c: Nightly time budget reached; remaining values retained
+- new-product / candidate-2bf63c9d781a598a2e4d: No verified product image URL
+- new-product / candidate-857ba69d4febd48a9946: Nightly time budget reached; remaining values retained
 - new-product / candidate-c58be09870e7a2c9263d: No verified product image URL
-- new-product / candidate-fc8210beb071eceaa23c: Cannot confirm that the product is a material or printer
-- new-product / candidate-1efa43b2316f098dbcfe: Nightly time budget reached; remaining values retained
-- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
-- new-product / candidate-7f033ffe03adf9c799a8: Pack weight is ambiguous; listing skipped
-- new-product / candidate-dd4f84c5b9195401e38f: Nightly time budget reached; remaining values retained
+- new-product / candidate-4d8f5eb18b2e6f061700: Source does not state the material pack weight; listing skipped
+- new-product / candidate-0908a489e0dc38092edd: Nightly time budget reached; remaining values retained
+- new-product / candidate-0c546a8ed0bee1a6fb03: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-488002b6bccfb6564ef3: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c42adaa76d8a8fbe2e7c: Nightly time budget reached; remaining values retained
+- new-product / candidate-6cd81d8480fa7de771e7: No verified product image URL
+- new-product / candidate-0bb074b0ae383cfad55e: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4a034c9dc8e4cac41881: Nightly time budget reached; remaining values retained
 - new-product / candidate-434e8e5937db89d18d45: No verified product image URL
-- new-product / candidate-cc0c5c9f3391a76af80b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-82989a7ecd5e1e6d5ef4: Nightly time budget reached; remaining values retained
+- new-product / candidate-788310b1721bfa55decd: Nightly time budget reached; remaining values retained
+- new-product / candidate-1c1aa8e06e232add6398: Nightly time budget reached; remaining values retained
+- new-product / candidate-180b2c5e3e0b17af0b2b: No verified product image URL
+- new-product / candidate-bd47b28aff182afafcaf: No verified product image URL
+- new-product / candidate-07cd0d140ff25b9228d5: Nightly time budget reached; remaining values retained
 - new-product / candidate-1e9929e3aefcbf552f29: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8a29ae5b8e308c817cd7: Nightly time budget reached; remaining values retained
-- new-product / candidate-fa5ba7a194389535a208: Nightly time budget reached; remaining values retained
+- new-product / candidate-288e3071f4eacc6c638c: No verified product image URL
+- new-product / candidate-6edd6a6f28e706a511e1: Nightly time budget reached; remaining values retained
 - new-product / candidate-394cbae7c1b77f43c6e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-a0ab31f8170032691cbd: Nightly time budget reached; remaining values retained
-- new-product / candidate-b985eaf0579ee775c8ed: Nightly time budget reached; remaining values retained
+- new-product / candidate-a2b05c64a07100f1dc64: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-6f45f6d896d92a3f8c80: Nightly time budget reached; remaining values retained
 - new-product / candidate-aa32db1b70ab3b95e76c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bb752473644a1bf3ac29: Nightly time budget reached; remaining values retained
-- new-product / candidate-eca03f9862863d4fbd3b: Nightly time budget reached; remaining values retained
+- new-product / candidate-fc8210beb071eceaa23c: Cannot confirm that the product is a material or printer
+- new-product / candidate-4d310e21005f1fad6730: Nightly time budget reached; remaining values retained
 - new-product / candidate-c7916d8c0ec9f102f424: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-15e62098f738d86499f4: No verified product image URL
-- new-product / candidate-599fb1a08622452f3da8: Nightly time budget reached; remaining values retained
-- new-product / candidate-b08dd43bd97363bacb08: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-904d94413f539840697e: Nightly time budget reached; remaining values retained
-- new-product / candidate-09693440fd3e8083a8c2: Nightly time budget reached; remaining values retained
+- new-product / candidate-7f033ffe03adf9c799a8: Pack weight is ambiguous; listing skipped
+- new-product / candidate-6881459c6d2922f0c71d: Nightly time budget reached; remaining values retained
+- new-product / candidate-ec85e40324d27be03521: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-cc0c5c9f3391a76af80b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-59999a1c402120056a24: Nightly time budget reached; remaining values retained
 - new-product / candidate-c900123fcd13260398a2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eb87c7050a196efde7a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-735a9f884f75ecf9dd55: Nightly time budget reached; remaining values retained
+- new-product / candidate-b1d3b95c1ebfbbffb135: Nightly time budget reached; remaining values retained
+- new-product / candidate-51c74e24358e8b3e1d17: Nightly time budget reached; remaining values retained
 - new-product / candidate-81c6376b6619624a04e3: Pack weight outside the supported range
-- new-product / candidate-700e01683fb154e15b7f: Nightly time budget reached; remaining values retained
-- new-product / candidate-d0a397160b2bf6d50d7d: Nightly time budget reached; remaining values retained
+- new-product / candidate-cfd8573c1add024f98c4: Nightly time budget reached; remaining values retained
+- new-product / candidate-853b8b4d6abf677b5f27: Nightly time budget reached; remaining values retained
 - new-product / candidate-a69debb0647c702d8721: No verified product image URL
-- new-product / candidate-ad8c308ae7ce3aaf29ce: Nightly time budget reached; remaining values retained
-- new-product / candidate-615a4ced9f064ec0d1ca: Nightly time budget reached; remaining values retained
+- new-product / candidate-fe1521b714d1a5b3887e: Nightly time budget reached; remaining values retained
+- new-product / candidate-db26168369421c535d84: Nightly time budget reached; remaining values retained
 - new-product / candidate-7e188d72855ceef6ac6c: No verified product image URL
-- new-product / candidate-8ddd22f312adc40ea27c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c4ef77da9817468f117e: Nightly time budget reached; remaining values retained
+- new-product / candidate-d81f5761b66c6d2f1f36: No verified product image URL
+- new-product / candidate-e337a7c180ceb5fb9fd2: Nightly time budget reached; remaining values retained
 - new-product / candidate-ea499154b1663be3a451: No verified product image URL
-- new-product / candidate-885b6385ff74bb031698: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f8b480c392302ae7e2a9: Nightly time budget reached; remaining values retained
-- new-product / candidate-c13b30dd0f8bdedb85a0: Nightly time budget reached; remaining values retained
-- new-product / candidate-039f33fb4de040b4650f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6ee1f19b76dc13746b80: Nightly time budget reached; remaining values retained
-- new-product / candidate-04b3ea25b9d26b69c5b1: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5d8890a323392d54647f: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e144df4cf82c73a53ce5: Nightly time budget reached; remaining values retained
-- new-product / candidate-f098396d8a5bb58cfed5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ce0c1af6746bd9a02a9b: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-22c3cecafb9cefc1a65f: Nightly time budget reached; remaining values retained
+- new-product / candidate-f81cecb043c0bfaee8dc: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-1998f32a45bcd7ba7058: Nightly time budget reached; remaining values retained
+- new-product / candidate-3280c0fb42641f47d2ed: Nightly time budget reached; remaining values retained
+- new-product / candidate-57d82f510cd13730b768: Source does not state the material pack weight; listing skipped
+- new-product / candidate-c7834c34d5aa9de2ff86: Nightly time budget reached; remaining values retained
+- new-product / candidate-8fe5853f5e117445fdc0: Nightly time budget reached; remaining values retained
+- new-product / candidate-4ec14787197a3915f43e: Nightly time budget reached; remaining values retained
+- new-product / candidate-1e0a9a514b8bf7cc7ced: Nightly time budget reached; remaining values retained
+- new-product / candidate-40df86177907f2f14ecb: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8bb5d6d2f0ffefc306c4: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e4d49f30ade41180c261: Nightly time budget reached; remaining values retained
+- new-product / candidate-9756d9b1850b2d84afa7: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-dfd193f6d36b1da953cf: Nightly time budget reached; remaining values retained
+- new-product / candidate-537566a8c01799d74eb2: Nightly time budget reached; remaining values retained
 - new-product / candidate-096d7d6279698586e5b3: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-284f4f7fb242a5b445a7: No verified product image URL
-- new-product / candidate-2747715829b4b28e058e: Nightly time budget reached; remaining values retained
+- new-product / candidate-285e6e8459b6a4e333a1: Nightly time budget reached; remaining values retained
+- new-product / candidate-331162696a548aa1db65: Nightly time budget reached; remaining values retained
 - new-product / candidate-c4ee0c480bc3d4fc0e9f: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-bea7da5363290b40fc8c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-e8651b41f98a333a4afd: Nightly time budget reached; remaining values retained
+- new-product / candidate-082510520cb3117d0051: Nightly time budget reached; remaining values retained
+- new-product / candidate-4231a0f69ccfbf53bdde: Nightly time budget reached; remaining values retained
 - new-product / candidate-285d26be413bb754c520: Source does not state the material pack weight; listing skipped
-- new-product / candidate-4ed383a22287ebfe05ce: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-eed80590e1f9966eb40e: Nightly time budget reached; remaining values retained
+- new-product / candidate-01422a14af670c303334: Source does not state the material pack weight; listing skipped
+- new-product / candidate-3f262f790a2760a367e7: Nightly time budget reached; remaining values retained
 - new-product / candidate-66f1d00bb3ed784c2df5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c70644f9a54cf8060353: Source does not state the material pack weight; listing skipped
-- new-product / candidate-f22ba930392802621f02: Nightly time budget reached; remaining values retained
+- new-product / candidate-284f4f7fb242a5b445a7: No verified product image URL
+- new-product / candidate-fb1a3c6cc56411d853fb: Nightly time budget reached; remaining values retained
 - new-product / candidate-c7e1a546f2f1a0ecf2c4: Source does not state the material pack weight; listing skipped
+- new-product / candidate-bea7da5363290b40fc8c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-a3d5bd487c38b98e654c: Nightly time budget reached; remaining values retained
+- new-product / candidate-43f37d5391f5c868769d: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-4ed383a22287ebfe05ce: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-0eed7c5f9c3b0989ecb1: Nightly time budget reached; remaining values retained
+- new-product / candidate-36499921769bbe177f17: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-c70644f9a54cf8060353: Source does not state the material pack weight; listing skipped
+- new-product / candidate-32a28a610940a8c0daf4: Nightly time budget reached; remaining values retained
+- new-product / candidate-494b938d13d930362085: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-ce0c1af6746bd9a02a9b: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-95a47d397da2249df42e: Nightly time budget reached; remaining values retained
+- new-product / candidate-c25da38d8be27e36e92a: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-0a097e7a2219147416a6: Source does not state the material pack weight; listing skipped
-- new-product / candidate-9a4d91cddf15ac9162a5: Nightly time budget reached; remaining values retained
-- new-product / candidate-2969d15e4a88fffc083c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3d5cc6ac389ca6efb3d9: Nightly time budget reached; remaining values retained
+- new-product / candidate-8baa28107059d070d5de: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-e4fa897312e0531f8a3b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-d877fdcf4efc8bac0ef5: Nightly time budget reached; remaining values retained
-- new-product / candidate-e1c17621a57f11c83eba: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-494158ef60ceea17b29d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-9a3b025ddbd046600b54: Nightly time budget reached; remaining values retained
-- new-product / candidate-69656e5b44ad9c692f34: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-c4613af32a12a3786c2b: No verified product image URL
-- new-product / candidate-d170dfae8ea0b37c4787: Nightly time budget reached; remaining values retained
-- new-product / candidate-9cedb60bea4c5a3c45be: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-30003e5219272265bfc2: Nightly time budget reached; remaining values retained
+- new-product / candidate-9d6e80d06f310772d7bd: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-fb7b1b563b5c53cbea09: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-3bb2c79d63e46f7b8654: Nightly time budget reached; remaining values retained
+- new-product / candidate-7743019d5f886b77f96a: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-4ecf19b3451d0c863d58: Nightly time budget reached; remaining values retained
+- new-product / candidate-8ddd911752371e90853e: Nightly time budget reached; remaining values retained
+- new-product / candidate-0b0bda7c1d2fd67c5525: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-c26aeca937d3d6e3e4a3: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-742c75908f303348865c: Nightly time budget reached; remaining values retained
+- new-product / candidate-fb67affc6efc5fc9c483: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-2009c3c5e0dd02b1f3e1: No verified product image URL
-- new-product / candidate-72a001ecb509858d1846: Nightly time budget reached; remaining values retained
-- new-product / candidate-1feea14c1d5238f5d482: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-e13bd4c87eae3b422f9e: Nightly time budget reached; remaining values retained
+- new-product / candidate-2ae3efeaedc3a94574b7: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-7d16677297e308f431e5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c14f5fb5e78b0616a56a: Nightly time budget reached; remaining values retained
-- new-product / candidate-8e12f0f2c68e3c1332d7: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-0219cb98233c324b9037: Nightly time budget reached; remaining values retained
+- new-product / candidate-b9388f658df0ccc19238: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-6531d984c1463842fc88: Cannot confirm that the product is a material or printer
-- new-product / candidate-6dcaff2983d8e34f3a1b: Nightly time budget reached; remaining values retained
-- new-product / candidate-4b7cea4f8a9de8d486a9: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-9505b04efeafffcd6f4f: Nightly time budget reached; remaining values retained
+- new-product / candidate-cc7b91a4a15e47c1e9a3: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-8f6d5acb86e5a6351b70: Pack weight is ambiguous; listing skipped
-- new-product / candidate-6545f71873e8a72cc70c: Nightly time budget reached; remaining values retained
-- new-product / candidate-cc6fde485da17154eccc: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-21d14b9c3ad67f8b1a07: Nightly time budget reached; remaining values retained
+- new-product / candidate-7d79e7e0f9d5708a4c70: Accessories and spare parts are not printers or printing materials
 - new-product / candidate-08efdee71302ed32a42d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-5a27a032cda52126b6a7: Nightly time budget reached; remaining values retained
-- new-product / candidate-985d9df80c3ed6e97adb: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d3bae9825bf91e95f9f2: Nightly time budget reached; remaining values retained
-- new-product / candidate-05577a0c697126a707da: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fd0875d1fadce3c733c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3259e2991922b539c3a3: Nightly time budget reached; remaining values retained
-- new-product / candidate-43c44852a9926143561c: Nightly time budget reached; remaining values retained
-- new-product / candidate-9dcc930eefaa4cc035fd: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-0d2f1297f97a01ded185: Nightly time budget reached; remaining values retained
-- new-product / candidate-bff9775f42e8e1833b59: Nightly time budget reached; remaining values retained
-- new-product / candidate-07c56997d80320bfa71d: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6833a6ebf0f92ce33b86: No verified product image URL
-- new-product / candidate-72ea6b42bf38c47471a2: Nightly time budget reached; remaining values retained
-- new-product / candidate-f7519f1eeba1f1ed6f9f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bcd2246ebacaaa83b4cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-0ed69688b5e9ee15e104: Nightly time budget reached; remaining values retained
-- new-product / candidate-dbfb5095224afe76312f: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-8ab9c13b80cb0aa7d306: Nightly time budget reached; remaining values retained
-- new-product / candidate-4980443d65f3dcbb6b9f: Nightly time budget reached; remaining values retained
-- new-product / candidate-231b13d920440fbfef48: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-3c4f214e9e4f76fa397e: Nightly time budget reached; remaining values retained
-- new-product / candidate-244d7445a0918d8a158e: Nightly time budget reached; remaining values retained
+- new-product / candidate-9f5523f635b59d3b839f: Nightly time budget reached; remaining values retained
+- new-product / candidate-c1b0e8812f9b015b3b22: Accessories and spare parts are not printers or printing materials
+- new-product / candidate-5da35aa8d32d3de2b5ff: Nightly time budget reached; remaining values retained
+- new-product / candidate-394a39f9e57abffb6fee: Nightly time budget reached; remaining values retained
+- new-product / candidate-aac598c7f135b5168f07: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-86bf39911552434bd370: Nightly time budget reached; remaining values retained
+- new-product / candidate-cbb664fe6fae6e65bb14: Nightly time budget reached; remaining values retained
 - new-product / candidate-97886512bc4c210e24fc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-010e7c411ebb6fb2c7cf: Nightly time budget reached; remaining values retained
-- new-product / candidate-0cb921d2a02dafcfcb70: Nightly time budget reached; remaining values retained
-- new-product / candidate-f42799b0387fe1a233b5: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6cc04a14b92994f2a451: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-2cbf0d21475ce739155a: Nightly time budget reached; remaining values retained
+- new-product / candidate-3eb43b69f502630f2cb0: Nightly time budget reached; remaining values retained
+- new-product / candidate-c1bbc09dda87061ed4e2: Nightly time budget reached; remaining values retained
+- new-product / candidate-d6d6810f2b9020ab439f: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-e3898b026c2cdaca7c55: No verified product image URL
+- new-product / candidate-420050bb5790ddd67aa5: Nightly time budget reached; remaining values retained
 - new-product / candidate-ac6f51416cd88d8c7e24: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-83e355cc048de8d2b33e: Source does not state the material pack weight; listing skipped
-- new-product / candidate-b59e9bc5cab7c0f35233: Nightly time budget reached; remaining values retained
-- new-product / candidate-26e3d658c3d2f86bff9d: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-32f5730369dee718db45: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-298dde25c82bfcf5fd61: Nightly time budget reached; remaining values retained
-- new-product / candidate-07ac566c6b802df8bf30: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b1e37676dcc4e41b6dc2: Source does not state the material pack weight; listing skipped
-- new-product / candidate-8953a42d42077236ae04: Nightly time budget reached; remaining values retained
-- new-product / candidate-3e193fb6420fee8a693a: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-53afafba08e1af8827ad: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-3c6b072d543b05dc285b: Nightly time budget reached; remaining values retained
-- new-product / candidate-7bd631c24f63e4265133: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-31c77bf42788714e530c: No verified product image URL
-- new-product / candidate-0891d9a5317db77cc181: Nightly time budget reached; remaining values retained
-- new-product / candidate-45996a925535bd1b5bf1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-75a2426554394fb4599c: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-6da776d0a7667ecfa0f6: Nightly time budget reached; remaining values retained
-- new-product / candidate-a8307e3ce6bfee5fa63c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b11c3d3ef2146e0271a6: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-833131d205d708604cf4: Nightly time budget reached; remaining values retained
-- new-product / candidate-7b4d13850ef799894aba: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-aa8b6f33ff9f1b53d556: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e14b44db965b102ec6cb: Nightly time budget reached; remaining values retained
-- new-product / candidate-fe67024681c9c16e548a: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8e747389b807c3f805dd: Source does not state the material pack weight; listing skipped
-- new-product / candidate-18e7b9baa6e49e770adf: Nightly time budget reached; remaining values retained
-- new-product / candidate-7faa789b0ec654810dd0: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-06370358afaeb526b6cc: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-8cf9a02c5947bf6844f5: Nightly time budget reached; remaining values retained
-- new-product / candidate-6ce363bb7d5845ce6286: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-1c102290ebec67c924cc: No verified product image URL
-- new-product / candidate-b60f6d6c4c7dd84bc4ed: Nightly time budget reached; remaining values retained
-- new-product / candidate-e835f8c1d21a1eec6361: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-affef3204a0c8037df74: No verified product image URL
-- new-product / candidate-8a4bca6a1eb9f581b82b: Nightly time budget reached; remaining values retained
-- new-product / candidate-2a506bf069c3f45696d1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-bbae4482ea8839af27a9: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-7febfe8c8a211d1a837e: Nightly time budget reached; remaining values retained
-- new-product / candidate-f119ca1010ec89496cbe: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-6acbf30e1316fe2ca8b2: Cannot confirm that the product is a material or printer
-- new-product / candidate-42d1a726f20f384311d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-caf92da3d4c594c5fb5c: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-de16e05fcf6f3cd1cb89: Nightly time budget reached; remaining values retained
-- new-product / candidate-ed40da72de2832dc9e52: Nightly time budget reached; remaining values retained
-- new-product / candidate-1d7a2baca3cee42ca482: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-b3f44157c56fa9363936: Nightly time budget reached; remaining values retained
-- new-product / candidate-6e933a73f71ecfef9a47: Nightly time budget reached; remaining values retained
-- new-product / candidate-1468879f9ea9d015ad3b: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4dd3355d023bdb377fbb: Nightly time budget reached; remaining values retained
-- new-product / candidate-2960808e36966bc65d9f: Nightly time budget reached; remaining values retained
-- new-product / candidate-0fdf840ed4a935c68780: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-4c654ceb5dc411bf2c7e: No verified product image URL
-- new-product / candidate-a5f2e9d1eafdee24063a: Nightly time budget reached; remaining values retained
-- new-product / candidate-8965fa3fc4a8e4b0b8af: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c1970c21230a3ea8be4e: Nightly time budget reached; remaining values retained
-- new-product / candidate-386632176ad9b02026d7: Nightly time budget reached; remaining values retained
-- new-product / candidate-b0cfba3d4abe8a0e5e92: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-70a92c6ef4d68005ebf7: Nightly time budget reached; remaining values retained
-- new-product / candidate-7c6c1e33aa25070bd5af: Nightly time budget reached; remaining values retained
-- new-product / candidate-4d234c13fc29b19c03f1: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-7e5c14cd9abc1226c28d: Nightly time budget reached; remaining values retained
-- new-product / candidate-ebb3130caa991998bcae: Nightly time budget reached; remaining values retained
-- new-product / candidate-2e15d49336e2323f7442: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-f64a150e3310ace3b2f7: Nightly time budget reached; remaining values retained
-- new-product / candidate-67529e2322c3719fa87c: Nightly time budget reached; remaining values retained
-- new-product / candidate-be18b4b219957a37a381: Accessories and spare parts are not printers or printing materials
-- new-product / candidate-d5e8a63c603e312861a8: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-cc14be1f36394bb42667: Nightly time budget reached; remaining values retained
-- new-product / candidate-9d578a27492c11d8fdbb: Nightly time budget reached; remaining values retained
-- new-product / candidate-b32c4431cac9e4f85bc9: Source does not state the material pack weight; listing skipped
-- new-product / candidate-02809afe7a9e3d894fc5: Nightly time budget reached; remaining values retained
-- new-product / candidate-3a4844230007a6e1f56e: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-19d63fe05316829f33f2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ef2840667ad96c9f7284: Nightly time budget reached; remaining values retained
-- new-product / candidate-c434c083a20c45900d73: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-fe47ed697c1831977d18: Source does not state the material pack weight; listing skipped
-- new-product / candidate-84a9735125cb4ab20eb9: Nightly time budget reached; remaining values retained
-- new-product / candidate-e0b4a4fc6b0cc0508ab7: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-ee7962ccab363f7b8ed2: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-39eff383445b26cabbc6: Nightly time budget reached; remaining values retained
-- new-product / candidate-887cf5b6d8e466939a53: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-32345bfd2e75627672a5: No verified product image URL
-- new-product / candidate-c4de232504890a206ff2: Nightly time budget reached; remaining values retained
-- new-product / candidate-d2ae4be1b8d91577d406: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-c4e5d2a28b7fd05beb94: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-787d8bf236b61c7cabcc: Nightly time budget reached; remaining values retained
-- new-product / candidate-ad171cf6e96d2d2cfd9d: No verified product image URL
-- new-product / candidate-2df43d0a597833139927: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-049821de5c6f4752584f: Nightly time budget reached; remaining values retained
-- new-product / candidate-992db49097dd65b73d97: No verified product image URL
-- new-product / candidate-09c1126dcd0ab4097bc3: Source does not state the material pack weight; listing skipped
-- new-product / candidate-e86b0a0ed0f5865dc638: Nightly time budget reached; remaining values retained
-- new-product / candidate-7513158773154e149013: Exact variant no longer appears in the retailer catalogue
-- new-product / candidate-aae102a1deac47864e6b: Source does not state the material pack weight; listing skipped
-- new-product / candidate-08dbae13cd01674cb4ae: Nightly time budget reached; remaining values retained
+- new-product / candidate-5377af674e4b3894825c: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-7b3bb9cc66bfda79913b: Nightly time budget reached; remaining values retained
+- new-product / candidate-19b3a7d4310a8e067d32: Exact variant no longer appears in the retailer catalogue
+- new-product / candidate-8abba208974d5b85ee19: Source does not state the material pack weight; listing skipped
+- new-product / candidate-4ce4481c4317b6d5ca94: Nightly time budget reached; remaining values retained
+- new-product / candidate-12f59ea7d5b5bc914245: Accessories and spare parts are not printers or printing materials
