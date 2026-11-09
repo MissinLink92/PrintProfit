@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-08T04:34:06.878683+00:00",
+  "checkedAt": "2026-11-09T04:34:11.357640+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -11,7 +11,7 @@
     "fedex: failed; last verified never",
     "depop: failed; last verified 2026-10-29",
     "vinted: review-required; last verified 2026-10-29",
-    "tiktok: review-required; last verified 2026-10-29",
+    "tiktok: failed; last verified 2026-10-29",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2232,
-      "verified": 2227,
+      "listed": 2335,
+      "verified": 2330,
       "categories": {
-        "printer": 942,
-        "filament": 915,
+        "printer": 1040,
+        "filament": 920,
         "resin-material": 335,
         "accessory": 35,
         "equipment": 5
@@ -165,13 +165,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 764,
-      "verified": 724,
+      "listed": 769,
+      "verified": 738,
       "categories": {
-        "filament": 418,
-        "printer": 169,
+        "filament": 428,
+        "printer": 162,
         "resin-material": 136,
-        "accessory": 41
+        "accessory": 43
       }
     },
     {
@@ -211,10 +211,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1764,
-      "verified": 905,
+      "listed": 1756,
+      "verified": 896,
       "categories": {
-        "filament": 1527,
+        "filament": 1519,
         "resin-material": 164,
         "accessory": 63,
         "equipment": 10
