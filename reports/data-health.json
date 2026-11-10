@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T04:34:11.357640+00:00",
+  "checkedAt": "2026-11-10T06:04:10.144380+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -11,7 +11,7 @@
     "fedex: failed; last verified never",
     "depop: failed; last verified 2026-10-29",
     "vinted: review-required; last verified 2026-10-29",
-    "tiktok: failed; last verified 2026-10-29",
+    "tiktok: review-required; last verified 2026-10-29",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2335,
-      "verified": 2330,
+      "listed": 2449,
+      "verified": 2444,
       "categories": {
-        "printer": 1040,
-        "filament": 920,
+        "printer": 1143,
+        "filament": 931,
         "resin-material": 335,
         "accessory": 35,
         "equipment": 5
@@ -165,13 +165,13 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 769,
-      "verified": 738,
+      "listed": 772,
+      "verified": 735,
       "categories": {
-        "filament": 428,
-        "printer": 162,
+        "filament": 431,
+        "printer": 164,
         "resin-material": 136,
-        "accessory": 43
+        "accessory": 41
       }
     },
     {
@@ -186,7 +186,7 @@
     {
       "name": "Flashforge UK",
       "listed": 27,
-      "verified": 27,
+      "verified": 21,
       "categories": {
         "printer": 6,
         "filament": 21
@@ -211,13 +211,13 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1756,
-      "verified": 896,
+      "listed": 1757,
+      "verified": 897,
       "categories": {
         "filament": 1519,
         "resin-material": 164,
         "accessory": 63,
-        "equipment": 10
+        "equipment": 11
       }
     },
     {
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },

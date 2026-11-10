@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-09T04:34:11.357640+00:00
+2026-11-10T06:04:10.144380+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -13,7 +13,7 @@
 - fedex: failed; last verified never
 - depop: failed; last verified 2026-10-29
 - vinted: review-required; last verified 2026-10-29
-- tiktok: failed; last verified 2026-10-29
+- tiktok: review-required; last verified 2026-10-29
 - facebook: failed; last verified never
 - inpost: verification is older than seven days
 - royalmail-first: verification is older than seven days
@@ -44,7 +44,7 @@
 | 3DGBIRE | 629 | 626 |
 | Bambu Lab UK | 234 | 234 |
 | Creality UK | 12 | 6 |
-| ELEGOO UK | 2335 | 2330 |
+| ELEGOO UK | 2449 | 2444 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
@@ -52,12 +52,12 @@
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 769 | 738 |
+| Anycubic UK | 772 | 735 |
 | QIDI UK Store | 124 | 107 |
-| Flashforge UK | 27 | 27 |
+| Flashforge UK | 27 | 21 |
 | Sovol UK | 20 | 20 |
 | Snapmaker UK | 1 | 0 |
-| SUNLU UK | 1756 | 896 |
+| SUNLU UK | 1757 | 897 |
 | Polymaker UK | 0 | 0 |
 | eSUN UK | 0 | 0 |
 | 3DQF UK | 0 | 0 |
