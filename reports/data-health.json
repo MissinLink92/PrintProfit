@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-10T06:04:10.144380+00:00",
+  "checkedAt": "2026-11-11T04:41:33.910256+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -50,12 +50,12 @@
     },
     {
       "name": "123-3D UK",
-      "listed": 1742,
-      "verified": 1734,
+      "listed": 1741,
+      "verified": 1732,
       "categories": {
         "filament": 1551,
         "accessory": 4,
-        "printer": 73,
+        "printer": 72,
         "resin-material": 92,
         "raw-material": 15,
         "equipment": 7
@@ -71,11 +71,11 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 629,
-      "verified": 626,
+      "listed": 633,
+      "verified": 630,
       "categories": {
-        "filament": 537,
-        "printer": 41,
+        "filament": 538,
+        "printer": 44,
         "resin-material": 46,
         "equipment": 3,
         "accessory": 2
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2449,
-      "verified": 2444,
+      "listed": 2526,
+      "verified": 2521,
       "categories": {
-        "printer": 1143,
-        "filament": 931,
+        "printer": 1219,
+        "filament": 932,
         "resin-material": 335,
         "accessory": 35,
         "equipment": 5
@@ -165,11 +165,11 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 772,
-      "verified": 735,
+      "listed": 777,
+      "verified": 740,
       "categories": {
-        "filament": 431,
-        "printer": 164,
+        "filament": 434,
+        "printer": 166,
         "resin-material": 136,
         "accessory": 41
       }
@@ -211,11 +211,11 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1757,
-      "verified": 897,
+      "listed": 1749,
+      "verified": 895,
       "categories": {
-        "filament": 1519,
-        "resin-material": 164,
+        "filament": 1513,
+        "resin-material": 162,
         "accessory": 63,
         "equipment": 11
       }
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
