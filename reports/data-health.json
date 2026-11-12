@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-11T04:41:33.910256+00:00",
+  "checkedAt": "2026-11-12T06:04:09.776783+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -101,14 +101,14 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2526,
-      "verified": 2521,
+      "listed": 2519,
+      "verified": 2514,
       "categories": {
-        "printer": 1219,
+        "printer": 1213,
         "filament": 932,
         "resin-material": 335,
         "accessory": 35,
-        "equipment": 5
+        "equipment": 4
       }
     },
     {
@@ -166,7 +166,7 @@
     {
       "name": "Anycubic UK",
       "listed": 777,
-      "verified": 740,
+      "verified": 736,
       "categories": {
         "filament": 434,
         "printer": 166,
@@ -212,7 +212,7 @@
     {
       "name": "SUNLU UK",
       "listed": 1749,
-      "verified": 895,
+      "verified": 878,
       "categories": {
         "filament": 1513,
         "resin-material": 162,
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
