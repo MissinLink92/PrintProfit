@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-12T06:04:09.776783+00:00
+2026-11-13T05:19:19.332780+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -52,12 +52,12 @@
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 777 | 736 |
+| Anycubic UK | 774 | 733 |
 | QIDI UK Store | 124 | 107 |
 | Flashforge UK | 27 | 21 |
 | Sovol UK | 20 | 20 |
 | Snapmaker UK | 1 | 0 |
-| SUNLU UK | 1749 | 878 |
+| SUNLU UK | 1749 | 854 |
 | Polymaker UK | 0 | 0 |
 | eSUN UK | 0 | 0 |
 | 3DQF UK | 0 | 0 |
