@@ -1488,7 +1488,7 @@
     },
     "elegoo-centauri-2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2.jpg?v=1793852651",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2-2-BFCM.jpg?v=1794558355",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2",
       "variantId": 52496229105945,
       "expectedVariantTitle": "Default Title",
@@ -1512,7 +1512,7 @@
     },
     "elegoo-saturn-4-ultra-16k": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U16.jpg?v=1793706425",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U16-BFCM_64cf3e88-da8b-4973-b236-b634b463c958.jpg?v=1794558207",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 50003946733849,
       "variantId": 50003946733849,
@@ -1521,7 +1521,7 @@
     },
     "elegoo-saturn-4-ultra": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U_028d09f8-0071-4597-8239-312242831000.jpg?v=1756798234",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4U-BFCM.jpg?v=1794558240",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 48897881669913,
       "variantId": 48897881669913,
@@ -1530,7 +1530,7 @@
     },
     "elegoo-saturn-4": {
       "priceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Saturn4frontview.jpg?v=1756798232",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/S4-BFCM.jpg?v=1794558083",
       "imageSourceUrl": "https://uk.elegoo.com/products/saturn-4-12k-10inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 48897886978329,
       "variantId": 48897886978329,
@@ -1557,7 +1557,7 @@
     },
     "elegoo-mars-5-ultra": {
       "priceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/f91c887f39b07095c6453b328b4b84cd_5640e508-b340-4706-8f45-2c5c4285c1f2.jpg?v=1756798213",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M5U-BFCM.jpg?v=1794557805",
       "imageSourceUrl": "https://uk.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer",
       "imageVariantId": 49138509775129,
       "variantId": 49138509775129,
@@ -28708,7 +28708,7 @@
     "candidate-655d1601d1a97a85d73a": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo",
       "variantId": 52496229138713,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2C-_-260811.jpg?v=1786704867",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2C-1-BFCM.jpg?v=1794558418",
       "expectedProductTitle": "Centauri 2 Combo",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo"
@@ -41920,7 +41920,7 @@
     "candidate-d9a2818dcd346d4b61ab": {
       "priceUrl": "https://uk.elegoo.com/products/mars-5-4k-6-6inch-monochrome-lcd-resin-3d-printer",
       "variantId": 49138566594841,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Mars5.jpg?v=1756798212",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M5-BFCM.jpg?v=1794557775",
       "expectedProductTitle": "Mars 5",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/mars-5-4k-6-6inch-monochrome-lcd-resin-3d-printer"
@@ -42128,7 +42128,7 @@
     "candidate-f2ad360985da24e17777": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-mars-4-ultra-msla-resin-3d-printer-with-9k-mono-lcd",
       "variantId": 49137539940633,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/products/elegoo-mars-4-ultra-3d-printer-2.jpg?v=1756798330",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/M4U-XMAS.jpg?v=1794557701",
       "expectedProductTitle": "Mars 4 Ultra",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-mars-4-ultra-msla-resin-3d-printer-with-9k-mono-lcd"
@@ -66121,7 +66121,7 @@
     "candidate-5aef8749aa361131aa25": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo",
       "variantId": 51633178640665,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/20261105101331_80_876.jpg?v=1793844947",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CC2C-BFCM.jpg?v=1794558281",
       "expectedProductTitle": "Centauri Carbon 2 Combo",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo"

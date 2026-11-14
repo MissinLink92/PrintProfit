@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-13T05:19:19.332780+00:00",
+  "checkedAt": "2026-11-14T05:14:05.613180+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -212,7 +212,7 @@
     {
       "name": "SUNLU UK",
       "listed": 1749,
-      "verified": 854,
+      "verified": 774,
       "categories": {
         "filament": 1513,
         "resin-material": 162,
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },

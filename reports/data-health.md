@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-13T05:19:19.332780+00:00
+2026-11-14T05:14:05.613180+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -57,7 +57,7 @@
 | Flashforge UK | 27 | 21 |
 | Sovol UK | 20 | 20 |
 | Snapmaker UK | 1 | 0 |
-| SUNLU UK | 1749 | 854 |
+| SUNLU UK | 1749 | 774 |
 | Polymaker UK | 0 | 0 |
 | eSUN UK | 0 | 0 |
 | 3DQF UK | 0 | 0 |
