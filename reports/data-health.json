@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-16T04:48:24.670574+00:00",
+  "checkedAt": "2026-11-17T06:29:32.640954+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -35,7 +35,7 @@
     {
       "name": "3DJake UK",
       "listed": 7,
-      "verified": 4,
+      "verified": 3,
       "categories": {
         "filament": 7
       }
@@ -51,7 +51,7 @@
     {
       "name": "123-3D UK",
       "listed": 1741,
-      "verified": 1732,
+      "verified": 1722,
       "categories": {
         "filament": 1551,
         "accessory": 4,
@@ -71,12 +71,12 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 634,
-      "verified": 631,
+      "listed": 635,
+      "verified": 632,
       "categories": {
         "filament": 539,
         "printer": 44,
-        "resin-material": 46,
+        "resin-material": 47,
         "equipment": 3,
         "accessory": 2
       }
@@ -101,10 +101,10 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2577,
-      "verified": 2572,
+      "listed": 2621,
+      "verified": 2616,
       "categories": {
-        "printer": 1270,
+        "printer": 1314,
         "filament": 933,
         "resin-material": 335,
         "accessory": 35,
@@ -165,21 +165,21 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 788,
-      "verified": 747,
+      "listed": 795,
+      "verified": 754,
       "categories": {
-        "filament": 439,
-        "printer": 165,
-        "resin-material": 143,
-        "accessory": 41
+        "filament": 444,
+        "printer": 167,
+        "resin-material": 145,
+        "accessory": 39
       }
     },
     {
       "name": "QIDI UK Store",
-      "listed": 124,
-      "verified": 107,
+      "listed": 117,
+      "verified": 100,
       "categories": {
-        "filament": 94,
+        "filament": 87,
         "printer": 30
       }
     },
@@ -211,10 +211,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1750,
-      "verified": 775,
+      "listed": 1760,
+      "verified": 778,
       "categories": {
-        "filament": 1514,
+        "filament": 1524,
         "resin-material": 162,
         "accessory": 63,
         "equipment": 11
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
