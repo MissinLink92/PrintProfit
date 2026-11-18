@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T06:29:32.640954+00:00",
+  "checkedAt": "2026-11-18T05:57:30.432482+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -101,10 +101,10 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2621,
-      "verified": 2616,
+      "listed": 2663,
+      "verified": 2658,
       "categories": {
-        "printer": 1314,
+        "printer": 1356,
         "filament": 933,
         "resin-material": 335,
         "accessory": 35,
@@ -133,14 +133,14 @@
     },
     {
       "name": "NSE Imports",
-      "listed": 467,
+      "listed": 466,
       "verified": 462,
       "categories": {
         "filament": 408,
         "printer": 18,
         "equipment": 2,
-        "accessory": 20,
-        "computer": 19
+        "computer": 19,
+        "accessory": 19
       }
     },
     {
@@ -165,22 +165,22 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 795,
-      "verified": 754,
+      "listed": 801,
+      "verified": 760,
       "categories": {
-        "filament": 444,
-        "printer": 167,
+        "filament": 448,
+        "printer": 169,
         "resin-material": 145,
         "accessory": 39
       }
     },
     {
       "name": "QIDI UK Store",
-      "listed": 117,
-      "verified": 100,
+      "listed": 125,
+      "verified": 108,
       "categories": {
         "filament": 87,
-        "printer": 30
+        "printer": 38
       }
     },
     {
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
