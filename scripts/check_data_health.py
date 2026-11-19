@@ -6,8 +6,8 @@ from pathlib import Path
 import re
 
 root=Path(__file__).resolve().parents[1]
-ref=json.loads((root/'data/reference-data.json').read_text())
-data=json.loads((root/'data/price-finder.json').read_text())
+ref=json.loads((root/'data/reference-data.json').read_text(encoding='utf-8'))
+data=json.loads((root/'data/price-finder.json').read_text(encoding='utf-8'))
 report={'checkedAt':datetime.now(timezone.utc).isoformat(),'warnings':[], 'retailers':[], 'manualVerifications':[]}
 for name,status in ref.get('sourceStatus',{}).items():
  if status.get('status') not in ('verified','manual-verified'):report['warnings'].append(name+': '+status.get('status','unverified')+'; last verified '+str(status.get('lastVerified','never')))
@@ -26,7 +26,7 @@ for source in data['sources']:
  report['retailers'].append({'name':source['name'],'listed':len(ps),'verified':sum(p.get('lastCheckStatus')=='ok' for p in ps),'categories':dict(Counter(p.get('productGroup') or p.get('category') for p in ps))})
  if not ps:report['warnings'].append(source['name']+': no active listings')
 if len({p['id'] for p in data['products']})!=len(data['products']):raise ValueError('Duplicate product IDs in catalogue')
-text=(root/'data/product-offers.js').read_text();match=re.search(r'window\.PRINTPROFIT_OFFERS\s*=\s*(\[[\s\S]*\])\s*;',text)
+text=(root/'data/product-offers.js').read_text(encoding='utf-8');match=re.search(r'window\.PRINTPROFIT_OFFERS\s*=\s*(\[[\s\S]*\])\s*;',text)
 if not match:raise ValueError('Offer data must be a JSON array')
 offers=json.loads(match[1]);ids={str(p['id']) for p in data['products']};now=datetime.now(timezone.utc);active=0
 for i,o in enumerate(offers):
@@ -47,7 +47,7 @@ for i,o in enumerate(offers):
 report['offers']={'configured':len(offers),'activeApproved':active,'checkoutVerified':False}
 if not offers:report['offers']['note']='No approved offers configured. Coupon coverage is not advertised.'
 (root/'reports').mkdir(exist_ok=True)
-(root/'reports/data-health.json').write_text(json.dumps(report,indent=2)+'\n')
+(root/'reports/data-health.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 lines=['# PrintProfit data health','',report['checkedAt'],'','## Attention needed']+['- '+w for w in report['warnings']]
 lines+=['','## Retailer coverage','', '| Retailer | Listings | Verified |','|---|---:|---:|']+[f"| {r['name']} | {r['listed']} | {r['verified']} |" for r in report['retailers']]
-(root/'reports/data-health.md').write_text('\n'.join(lines)+'\n');print(f"Data-health audit: {len(report['warnings'])} warnings; {active} approved active offers")
+(root/'reports/data-health.md').write_text('\n'.join(lines)+'\n',encoding='utf-8');print(f"Data-health audit: {len(report['warnings'])} warnings; {active} approved active offers")

@@ -6,13 +6,14 @@ import math
 from pathlib import Path
 from catalogue_brands import normalise_brand
 from tempfile import TemporaryDirectory
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 HISTORY_PAGE_SIZE = 100
 PRODUCT_FIELDS = frozenset({
     "id", "name", "brand", "retailer", "url", "type", "colour", "colourHex",
     "image", "imageNote", "price", "shippingPrice", "pack", "unit",
-    "availability", "updated", "lastVerified", "lastAttempt", "lastCheckError", "lastCheckStatus", "category", "weightGrams",
+    "availability", "updated", "lastVerified", "lastAttempt", "lastCheckError", "lastCheckStatus", "category", "weightGrams", "volumeMl",
 })
 SUMMARY_FIELDS = ("currency", "updatedAt", "refreshPolicy", "lastRefreshSummary", "sources", "brandDirectory")
 
@@ -46,7 +47,7 @@ def _price_key(product):
         return (math.inf, str(product.get("id", "")))
 
 
-def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
+def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE, locators=None):
     products = data.get("products")
     if not isinstance(products, list) or not products:
         raise ValueError("The comparison catalogue must contain products")
@@ -69,6 +70,12 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
         history = product.get("priceHistory")
         page = index // history_page_size
         row = {key: value for key, value in product.items() if key in PRODUCT_FIELDS}
+        variant_id = product.get('variantId') or (locators or {}).get(product_id, {}).get('variantId')
+        if variant_id and str(variant_id).isdecimal() and row.get('url'):
+            parts = urlsplit(row['url'])
+            query = dict(parse_qsl(parts.query, keep_blank_values=True))
+            query['variant'] = str(variant_id)
+            row['url'] = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
         if row.get("brand"):
             row["brand"] = normalise_brand(row["brand"])
         row["priceHistoryPage"] = page if isinstance(history, list) and history else None
@@ -92,7 +99,9 @@ def build_catalogue(data, history_page_size=HISTORY_PAGE_SIZE):
 
 def write_catalogue(root, data, history_page_size=HISTORY_PAGE_SIZE):
     root = Path(root)
-    summary, history_pages = build_catalogue(data, history_page_size)
+    config_path = root / 'config' / 'nightly-sources.json'
+    locators = json.loads(config_path.read_text(encoding='utf-8')).get('productLocators', {}) if config_path.exists() else {}
+    summary, history_pages = build_catalogue(data, history_page_size, locators)
     destination = root / "data"
     destination.mkdir(parents=True, exist_ok=True)
     (destination / "price-finder-lite.js").write_text(
@@ -148,6 +157,13 @@ def self_test():
     assert summary["products"][20]["priceHistoryPage"] == 1
     assert len(pages) == 2 and len(pages[0]) == 20 and len(pages[1]) == 1
     assert json_safe({"value": math.nan}) == {"value": None}
+    exact, _ = build_catalogue({'products':[{'id':'variant','name':'PLA','price':12,'url':'https://retailer.example/products/pla?ref=keep&variant=old','variantId':42,'brand':'SUNLU.UK'}]})
+    assert exact['products'][0]['url'] == 'https://retailer.example/products/pla?ref=keep&variant=42'
+    assert exact['products'][0]['brand'] == 'SUNLU'
+    exact, _ = build_catalogue({'products':[{'id':'mapped','name':'PLA','price':12,'url':'https://retailer.example/products/pla'}]}, locators={'mapped':{'variantId':43}})
+    assert exact['products'][0]['url'].endswith('?variant=43')
+    volume, _ = build_catalogue({'products':[{'id':'resin-volume','name':'Resin','price':12,'weightGrams':600,'volumeMl':500}]})
+    assert volume['products'][0]['volumeMl'] == 500
     with TemporaryDirectory() as temp:
         root = Path(temp)
         stale = root / "data" / "price-history" / "page-999.json"

@@ -11,7 +11,7 @@ function loadPriceData(){
   if(priceDataPromise)return priceDataPromise;
   priceDataPromise=new Promise(resolve=>{
     const script=document.createElement('script');
-    script.src='./data/price-finder-lite.js?v=20261013-feeds1';
+    script.src='./data/price-finder-lite.js?v=20261119-audit1';
     script.async=true;
     script.onload=()=>{
       const loaded=Array.isArray(window.PRINTPROFIT_PRICE_DATA?.products);
@@ -28,6 +28,10 @@ function typeMatches(item, selectedType, materialType){
   const aliases={'pla basic':'pla','pla plus':'pla+'};
   const a=aliases[norm(selectedType)]||norm(selectedType), b=aliases[norm(item?.type)]||norm(item?.type);
   if(!a||!b)return false;
+  if(window.PRINTPROFIT_COMPARE){
+    const kinds=window.PRINTPROFIT_COMPARE.selectedMaterial(item);
+    if(kinds.length!==1||!window.PRINTPROFIT_COMPARE.matchesSearch(item,a,{material:true}))return false;
+  }
   if(a===b)return true;
   return a===b;
 }
@@ -40,16 +44,19 @@ function findBest(){
   const materialType=type.value;
   const packWeight=Number(pack?.value)||1000;
   const category=materialType==='resin'?'resin':'filament';
-  const cutoff=Date.now()-7*24*60*60*1000;
+  // Resin costing uses ml. A mass-only offer cannot establish a bottle volume.
+  const packSize=p=>Number(materialType==='resin'?p.volumeMl:p.weightGrams);
+  const now=Date.now(),cutoff=now-7*24*60*60*1000;
   const candidates=products().filter(p=>(p.category===category||(category==='resin'&&norm(p.type)==='resin')) &&
-    p.lastCheckStatus==='ok' && p.availability==='In stock' && Date.parse(p.updated)>=cutoff &&
+    p.lastCheckStatus==='ok' && p.availability==='In stock' && Date.parse(p.updated)>=cutoff && Date.parse(p.updated)<=now &&
+    Number.isFinite(packSize(p)) && packSize(p)>0 &&
     typeMatches(p,selected,materialType) && priceOf(p));
   if(!candidates.length)return null;
   return candidates
-    .map(p=>({...p,_price:priceOf(p),_distance:Math.abs((Number(p.weightGrams)||packWeight)-packWeight)}))
+    .map(p=>({...p,_price:priceOf(p),_packSize:packSize(p),_distance:Math.abs(packSize(p)-packWeight)}))
     .sort((a,b)=>{
       if(a._distance!==b._distance)return a._distance-b._distance;
-      return a._price/a._distance===b._price/b._distance ? a._price-b._price : a._price-b._price;
+      return a._price-b._price;
     })[0];
 }
 function status(text){
@@ -73,7 +80,9 @@ async function applyLivePrice(){
     return false;
   }
   const price=best._price;
-  const weight=Number(best.weightGrams)||Number(pack?.value)||1000;
+  const weight=best._packSize;
+  // Update both values before triggering recalculation, for filament and resin.
+  if(pack)pack.value=String(weight);
   cost.dataset.ppLiveWriting='1';
   cost.value=price.toFixed(2);
   cost.dataset.ppMarketSource=best.retailer||best.brand||'Market reference';
@@ -81,11 +90,9 @@ async function applyLivePrice(){
   cost.dispatchEvent(new Event('input',{bubbles:true}));
   cost.dispatchEvent(new Event('change',{bubbles:true}));
   delete cost.dataset.ppLiveWriting;
-  if(pack && weight>0 && materialTypeIsFilament()) pack.value=String(weight);
   status('Live market reference: '+price.toFixed(2)+' — '+(best.retailer||'retailer')+(best.updated?' • checked '+best.updated:'')+'. Enter your actual cost to override.');
   return true;
 }
-function materialTypeIsFilament(){return document.getElementById('materialType')?.value!=='resin';}
 function onMaterialChange(){
   const cost=document.getElementById('materialPackCost');
   if(cost){cost.dataset.ppManual='0';}

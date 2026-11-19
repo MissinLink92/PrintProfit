@@ -4,6 +4,7 @@ from collections import defaultdict, deque
 import hashlib
 import io
 import json
+import math
 import re
 import xml.etree.ElementTree as ET
 from datetime import date
@@ -52,7 +53,7 @@ def offer_price(product, variant_sku=None):
             price = float(offer['price'])
         except (ValueError, TypeError):
             continue
-        if price > 0:
+        if math.isfinite(price) and price > 0:
             options.append((price, offer.get('availability', '')))
     if len(set(options)) != 1:
         raise ValueError('No single GBP offer for the exact product')
@@ -156,7 +157,7 @@ def refresh_item(item, config, reader, root, today, queue, report):
             price, availability = offer_price(products[0], locator.get('expectedOfferSku'))
             photo = image_url(products[0].get('image'), final_url)
         old = float(item['price']) if item.get('price') is not None else None
-        if price <= 0 or price > 100000:
+        if not math.isfinite(price) or price <= 0 or price > 100000:
             raise ValueError('Price outside supported GBP range')
         proposal = {'productId': item['id'], 'oldPrice': old, 'price': price, 'url': price_url, 'currency': 'GBP'}
         review_key = queue.key('price-change', item['id'], proposal)
@@ -219,7 +220,7 @@ def refresh_item(item, config, reader, root, today, queue, report):
         item['lastImageCheckStatus'] = 'retained-unverified'
         report['issues'].append({'area': 'image', 'id': item['id'], 'message': str(exc)})
 
-MATERIAL_PATTERN = r'\b(?:resin|PLA(?:\+|[- ]?(?:CF|GF|Plus))?|PETG(?:[- ]?(?:CF|GF))?|PCTG|ABS|ASA|TPU|TPE|PET|Nylon|PA(?:6|12|612)?(?:[- ]?(?:CF|GF))?|PC(?:[- ]?(?:FR|CF|ABS))?|PVA|BVOH|HIPS|PP|PEEK|PEKK|PEI|PPS(?:[- ]?CF)?)\b'
+MATERIAL_PATTERN = r'\b(?:resin|PLA(?:\+|[- ]?(?:CF|GF|Plus))?|PETG(?:[- ]?(?:CF|GF))?|PCTG|ABS|ASA|TPU|TPE|PET|Nylon|PA(?:6|12|612)?(?:[- ]?(?:CF|GF))?|PC(?:[- ]?(?:FR|CF|ABS))?|PVA|BVOH|HIPS|PP|PEEK|PEKK|PEI|PPS(?:[- ]?CF)?)(?=$|[^a-z0-9])'
 ACCESSORY_PATTERN = r'\b(?:nozzles?|hotends?|extruders?|covers?|plates?|replacement|spares?|accessor(?:y|ies)|parts|dryers?|drying|storage|sensors?|tubes?|adhesive|glue|cleaner|cleaning|screens?|tanks?|vats?)\b'
 
 def relevant(name):
@@ -361,11 +362,15 @@ def automatic_details(candidate, record):
     title = record['name']
     if re.search(ACCESSORY_PATTERN, title + ' ' + str(record.get('type') or ''), re.I):
         raise ValueError('Accessories and spare parts are not printers or printing materials')
-    material = re.search(MATERIAL_PATTERN, title, re.I)
+    selected = re.sub(r'\bHS(?=PLA|PETG)', '', variant, flags=re.I)
+    selected = re.sub(r'\bPLA\s*\+\s*', 'PLA+ ', selected, flags=re.I)
+    material = re.search(MATERIAL_PATTERN, selected, re.I) or re.search(MATERIAL_PATTERN, re.sub(r'\bPLA\s*\+\s*', 'PLA+ ', title, flags=re.I), re.I)
     kind = str(record.get('type') or '')
     explicit_material = bool(re.search(r'\b(?:filaments?|resins?)\b', title + ' ' + kind, re.I))
     explicit_printer = bool(re.search(r'3d.?printers?', kind, re.I))
     printer = explicit_printer or (not explicit_material and bool(re.search(r'3d.?printer', title, re.I)))
+    if material and explicit_material and not re.search(r'\b(?:3d.?printers?|machines?)\b(?:\s+with\b|\s*$)', title, re.I):
+        printer = False
     if not material and re.search(r'\bfilaments?\b', str(record.get('type') or ''), re.I):
         material = re.search(r'filament', 'filament', re.I)
     if not material and not printer:
@@ -458,7 +463,7 @@ def add_approved(data, config, queue, reader, root, report):
                 matches = [p for p in Page(html).products if exact_product(candidate, p)]
                 if len(matches) != 1:
                     raise ValueError('Approved title does not match one exact structured product')
-                price = offer_price(matches[0])[0]
+                price, availability = offer_price(matches[0])
                 photo = image_url(matches[0].get('image'), final_url)
             if candidate.get('category') not in ('printer','filament'):
                 raise ValueError('Product category is not confirmed')
@@ -466,7 +471,10 @@ def add_approved(data, config, queue, reader, root, report):
                 raise ValueError('Exact material pack weight is not confirmed')
             if not 0 < price < 100000:
                 raise ValueError('Invalid GBP product price')
-            candidate.update(price=round(price, 2), updated=report['checkedAt'][:10], currency='GBP',
+            if candidate.get('variantId'):
+                availability = record.get('available')
+            stock = 'In stock' if availability is True or str(availability).endswith('/InStock') else 'Out of stock' if availability is False or str(availability).endswith('/OutOfStock') else 'Check retailer'
+            candidate.update(price=round(price, 2), availability=stock, lastVerified=report['checkedAt'][:10], updated=report['checkedAt'][:10], currency='GBP',
                              autoRefresh=True, lastCheckStatus='ok', lastAttempt=report['checkedAt'][:10], priceHistory=[{'date': report['checkedAt'][:10], 'price': round(price, 2)}])
             if candidate['category'] == 'filament':
                 candidate['unit'] = round(price*1000/float(candidate['weightGrams']), 2)

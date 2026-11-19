@@ -24,6 +24,36 @@ class FakeReader:
 
 
 class FeedChecks(unittest.TestCase):
+    def test_selected_variant_material_precedes_collection_title(self):
+        from nightly_categories import ProductCategories
+        categories = ProductCategories(Path(__file__).resolve().parents[1])
+        for variant,kind,category in [('PLA / Black','PLA','pla-filament'),('PLA+ / Black','PLA+','pla-plus'),('PLA+2.0 / Black','PLA+','pla-plus'),('PETG / Black','PETG','petg-filament')]:
+            candidate = {}
+            automatic_details(candidate, {'name':'SUNLU PLA, PLA+, PETG Filament 1KG','variantTitle':variant,'type':'Filament','options':[],'variantOptions':[]})
+            self.assertEqual(candidate['type'],kind)
+            self.assertEqual(categories.classify(candidate)['id'],category)
+        candidate = {}
+        automatic_details(candidate, {'name':'PLA Filament 1KG','variantTitle':'PLA / Black','type':'3D Printers','options':[],'variantOptions':[]})
+        self.assertEqual(candidate['category'],'filament')
+
+    def test_schema_price_rejects_non_finite_values(self):
+        for price in ['NaN','Infinity','-Infinity']:
+            with self.assertRaises(ValueError):
+                offer_price({'offers':{'@type':'Offer','priceCurrency':'GBP','price':price}})
+
+    def test_new_product_preserves_exact_stock_state(self):
+        for available,expected in [(True,'In stock'),(False,'Out of stock'),(None,'Check retailer')]:
+            queue = ReviewQueue([], {}, 'now')
+            queue('new-product','new',{'id':'new','sourceId':'r','url':'https://retailer.example/products/pla','variantId':11})
+            record = {'name':'PLA Filament 1kg','variantTitle':'Black','type':'Filament','variantId':11,'price':12,'currency':'GBP','available':available,'image':'https://retailer.example/black.png','options':[],'variantOptions':[]}
+            config = {'newProducts':'automatic-verified','reviewDecisions':{},'retailers':{'r':{'allowedHosts':['retailer.example']}}}
+            data = {'products':[]}; report={'checkedAt':'2026-11-19T12:00:00Z','issues':[],'addedProducts':[]}
+            with patch('nightly_products.shopify',return_value=record),patch('nightly_products.refresh_photo'):
+                add_approved(data,config,queue,FakeReader(),Path.cwd(),report)
+            self.assertEqual(len(data['products']),1,report)
+            self.assertEqual(data['products'][0]['availability'],expected)
+            self.assertEqual(data['products'][0]['lastVerified'],'2026-11-19')
+
     def test_material_families_before_more_colours(self):
         entries = [{'kind':'new-product','status':'pending','proposal':{'sourceId':'one','name':name,'url':url}}
                    for name,url in [('PLA Black 1kg','https://example.com/pla'),('PLA White 1kg','https://example.com/pla'),('Resin Grey 1kg','https://example.com/resin')]]

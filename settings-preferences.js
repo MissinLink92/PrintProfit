@@ -53,9 +53,12 @@ const unitFields=['materialPack','materialUsed'];
 // The calculator and standalone pages share one translation catalogue.
 
 function load(){
- try{const stored=Object.assign({},defaults,JSON.parse(localStorage.getItem(KEY)||'{}'));
- if(!['en','pl','de','fr','es','it'].includes(stored.language))stored.language='en';
- return stored;}
+ try{const raw=JSON.parse(localStorage.getItem(KEY)||'{}')||{};
+ const code=Object.hasOwn(currencies,raw.currency)?raw.currency:'GBP',rate=Number(raw.rate);
+ return {dark:typeof raw.dark==='boolean'?raw.dark:defaults.dark,
+  language:['en','pl','de','fr','es','it'].includes(raw.language)?raw.language:'en',
+  units:raw.units==='imperial'?'imperial':'metric',currency:code,
+  rate:code==='GBP'?1:Number.isFinite(rate)&&rate>0?rate:currencies[code].rate};}
  catch(e){return Object.assign({},defaults);}
 }
 let pref=load();
@@ -803,21 +806,22 @@ function applyUnits(){
    if(!p){
     p=document.createElement('input');
     p.id='ppUnit_'+id;p.type='number';p.min='0';
-    p.step=id==='materialPack'?'1':'0.01';p.className='ppPreferenceInput';
+    p.step='0.01';p.className='ppPreferenceInput';
     src.insertAdjacentElement('afterend',p);src.style.display='none';
     p.addEventListener('input',()=>{
      const v=Number(p.value)||0;
-     src.value=String(type==='resin'?v*29.5735295625:v*28.349523125);
+     const resin=document.getElementById('materialType')?.value==='resin';
+     src.value=String(resin?v*29.5735295625:v*28.349523125);
      src.dispatchEvent(new Event('input',{bubbles:true}));
     });
    }
-   p.value=(type==='resin'?Number(src.value||0)/29.5735295625:Number(src.value||0)/28.349523125).toFixed(id==='materialPack'?0:2);
+   p.value=(type==='resin'?Number(src.value||0)/29.5735295625:Number(src.value||0)/28.349523125).toFixed(2);
   }else{
    if(p){p.remove();src.style.display='';}
   }
  });
  const l1=labelFor('materialPack'),l2=labelFor('materialUsed');
- if(l1)l1.textContent=imp?'Spool weight (oz)':type==='resin'?'Bottle volume (ml)':'Spool weight (g)';
+ if(l1)l1.textContent=imp?(type==='resin'?'Bottle volume (fl oz)':'Spool weight (oz)'):type==='resin'?'Bottle volume (ml)':'Spool weight (g)';
  if(l2)l2.textContent=imp?(type==='resin'?'Used per print (fl oz)':'Used per print (oz)'):(type==='resin'?'Used per print (ml)':'Used per print (g)');
 }
 
@@ -926,7 +930,7 @@ function applyDraft(){
   rate:1
  };
  const entered=Number(rate?.value);
- draft.rate=entered>0?entered:(currencies[draft.currency]?.rate||1);
+ draft.rate=draft.currency==='GBP'?1:Number.isFinite(entered)&&entered>0?entered:(currencies[draft.currency]?.rate||1);
 
  // Commit the complete settings object first so every other calculator
  // script sees the same preferences.

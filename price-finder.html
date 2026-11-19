@@ -344,7 +344,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
 </head>
 <body data-pp-standalone-i18n="1" class="pp-compare-page">
-<div id="ppSiteHeader"></div><script src="./site-header.js?v=20261027-panels2"></script>
+<div id="ppSiteHeader"></div><script src="./site-header.js?v=20261119-audit1"></script>
 <div class="wrap">
 
 <section class="hero" id="ppCompareHero">
@@ -370,7 +370,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </style>
 
 <div class="tools">
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. PLA, Neptune 4, Bambu A1…"></div>
+<div class="tool"><label for="search"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. SUNLU black PLA, Bambu A1…"></div>
 <div class="tool"><label for="category"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Subcategory</label><select id="type"><option value="all">All subcategories</option></select></div>
@@ -378,7 +378,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
 </div>
 <div class="extra-tools">
-<div class="tool"><label>Colour</label><select id="colour"><option value="all">All colours</option></select></div>
+<div class="tool"><label for="colour">Colour family</label><select id="colour" aria-describedby="colourHelp"><option value="all">All colours</option></select><small id="colourHelp">Groups shades together. Exact colour stays on each listing.</small></div>
 <div class="tool"><label>Minimum price</label><input id="minPrice" type="number" min="0" step="0.01" placeholder="£0.00"></div>
 <div class="tool"><label>Maximum price</label><input id="maxPrice" type="number" min="0" step="0.01" placeholder="No limit"></div>
 <div class="tool"><label>Availability</label><select id="availability"><option value="all">All stock states</option><option value="in">In stock</option><option value="out">Out of stock</option></select></div>
@@ -404,7 +404,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="compare-overview">
 <div class="insight" id="insight" hidden>
 <div class="insight-card" data-pp-icon="search"><div class="eyebrow">Current filtered set</div><strong id="insightSummary">—</strong><span id="insightSummarySub">—</span></div>
-<div class="insight-card" data-pp-icon="tag"><div class="eyebrow">Lowest current price</div><strong id="insightPrice">—</strong><span id="insightPriceSub">—</span></div>
+<div class="insight-card" data-pp-icon="tag"><div class="eyebrow">Lowest verified in-stock price</div><strong id="insightPrice">—</strong><span id="insightPriceSub">—</span></div>
 <div class="insight-card" data-pp-icon="chart"><div class="eyebrow">Lowest unit cost</div><strong id="insightUnit">—</strong><span id="insightUnitSub">—</span></div>
 </div>
 <aside class="retailer-notice" aria-labelledby="retailerNoticeTitle">
@@ -430,9 +430,9 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <thead><tr><th>Type</th><th>Brand / Product</th><th>Retailer</th><th>Pack / Build</th><th>Price</th><th>Unit cost</th><th>Status</th><th>Checked</th><th></th></tr></thead>
 <tbody id="rows"></tbody>
 </table>
-<div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 </div>
 <div class="card-grid" id="cardGrid"></div>
+<div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
 <div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><nav class="results-pagination" aria-label="Product result pages"><button class="compare-btn secondary" id="previousResults" type="button" disabled>Previous</button><label class="page-picker" for="resultsPage">Page <select id="resultsPage" aria-label="Go to results page"></select> <span id="resultsPageTotal"></span></label><button class="compare-btn secondary" id="nextResults" type="button">Next</button></nav></div>
 
 <div class="compare-bar" id="compareBar" hidden>
@@ -506,17 +506,19 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="footer"><p id="coverage" class="catalogue-coverage">Loading comparison data…</p>PrintProfit — Compare Products • Current listings are reference data, not guarantees of final checkout price. Always verify the live retailer page before purchase.</div>
 </div>
 
-<script defer src="./data/price-finder-lite.js?v=20261012-compact2"></script>
+<script defer src="./data/price-finder-lite.js?v=20261119-audit1"></script>
 <link rel="stylesheet" href="./product-offers.css?v=1">
 <script defer src="./data/product-offers.js?v=1"></script>
 <script defer src="./product-offers.js?v=1"></script>
-<script defer src="./product-categories.js?v=20261030-categories3"></script>
+<script defer src="./product-categories.js?v=20261119-audit1"></script>
+<script defer src="./compare-catalogue.js?v=20261119-1"></script>
 <script>
 window.addEventListener('DOMContentLoaded',()=>{
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id);
-const money=v=>'£'+Number(v).toFixed(2);
+const money=v=>v!=null&&String(v).trim()!==''&&Number.isFinite(Number(v))?'£'+Number(v).toFixed(2):'—';
+const matching=window.PRINTPROFIT_COMPARE;
 
 // Apply referral tracking at render time so nightly catalogue refreshes retain it.
 function retailerLink(value,label,className='link'){
@@ -777,13 +779,13 @@ function renderInsights(rows=filtered()){
  const retailers=new Set();let byPrice=null,bestUnit=null;
  rows.forEach(product=>{
   if(product.retailer)retailers.add(product.retailer);
-  if(product.lastCheckStatus!=='ok'||Date.parse(product.updated)<Date.now()-7*86400000)return;
-  if(product.price!=null&&(!byPrice||Number(product.price)<Number(byPrice.price)))byPrice=product;
-  if(product.unit!=null&&(!bestUnit||Number(product.unit)<Number(bestUnit.unit)))bestUnit=product;
+  if(!matching.currentOffer(product))return;
+  if(!byPrice||matching.amount(product.price)<matching.amount(byPrice.price))byPrice=product;
+  if(categoryInfo(product).material&&Number.isFinite(matching.amount(product.unit))&&(!bestUnit||matching.amount(product.unit)<matching.amount(bestUnit.unit)))bestUnit=product;
  });
  $('insightSummarySub').textContent=retailers.size+' retailer'+(retailers.size===1?'':'s')+' represented';
  $('insightPrice').textContent=byPrice?money(byPrice.price):'—';
- $('insightPriceSub').textContent=byPrice?(byPrice.brand+' • '+byPrice.name):'';
+ $('insightPriceSub').textContent=byPrice?(byPrice.brand+' • '+byPrice.name):'No in-stock price verified in the last 7 days';
  $('insightUnit').textContent=bestUnit?money(bestUnit.unit)+'/kg':'—';
  $('insightUnitSub').textContent=bestUnit?(bestUnit.brand+' • '+bestUnit.name):'Unit cost not available';
 }
@@ -818,8 +820,16 @@ function refreshFilters(){
   return children.length?'<optgroup label="'+esc(group.label)+'">'+children.map(category=>'<option value="'+esc(category.id)+'">'+esc(category.label)+' ('+counts.get(category.id)+')</option>').join('')+'</optgroup>':'';
  }).join('');
  if(counts.has(currentType))typeSelect.value=currentType;
- const colours=[...new Set(visible.map(x=>x.colour).filter(Boolean))];
- populateSelect('colour',colours,'All colours');
+ refreshColours();
+}
+function refreshColours(){
+ const visible=filtered({ignoreColour:true});
+ const counts=new Map();
+ visible.forEach(product=>{const family=matching.colourFamily(product.colour);counts.set(family,(counts.get(family)||0)+1);});
+ const select=$('colour'),current=select.value;
+ // Keep the chosen family available even when another filter produces zero results.
+ select.innerHTML='<option value="all">All colours</option>'+matching.colourLabels.filter(label=>counts.has(label)||label===current).map(label=>'<option translate="no" value="'+esc(label)+'">'+esc(label)+' ('+(counts.get(label)||0)+')</option>').join('');
+ if(current!=='all')select.value=current;
 }
 function priceCheckLabel(product){
  const verified=product.lastCheckStatus==='ok';
@@ -829,50 +839,35 @@ function priceCheckLabel(product){
   (!verified&&product.lastAttempt?'<small>Attempted: '+esc(formatDate(product.lastAttempt))+'</small>':'');
 }
 function stockLabel(v){
- const s=String(v??'').toLowerCase();
- if(s.includes('out'))return '<span class="stock out">Out of stock</span>';
- if(s.includes('in'))return '<span class="stock in">In stock</span>';
+ const s=matching.stockState(v);
+ if(s==='out')return '<span class="stock out">Out of stock</span>';
+ if(s==='in')return '<span class="stock in">In stock</span>';
  return '<span class="stock unknown">Check retailer</span>';
 }
-function searchText(x){
- const aliases={
-  'bambu':'bambu lab','bambu lab':'bambu lab','elegoo':'elegoo','pla plus':'pla+','pla plus filament':'pla+',
-  'pet g':'petg','3d printer':'3d printer','resin printer':'resin','fdm':'fdm','fff':'fdm'
- };
- let s=[x.name,x.brand,x.colour,x.retailer,x.pack,x.type,categoryInfo(x).label,categoryInfo(x).family.label].filter(Boolean).join(' ').toLowerCase();
- for(const [a,b] of Object.entries(aliases)) if(s.includes(a)) s+=' '+b;
- return s;
-}
-function isInStock(x){return String(x.availability??'').toLowerCase().includes('in');}
+function isInStock(x){return matching.stockState(x.availability)==='in';}
 let elegooModelsOnly=false;
 function isStandalonePrinter(x){
  const name=String(x.name||'');
  return !/\b(bundle|with|upgrade kit|accessory|accessories)\b|\s\+\s|:\s/i.test(name);
 }
-function filtered(){
+function filtered({ignoreColour=false}={}){
  const q=$('search').value.trim().toLowerCase(),cat=$('category').value,brand=$('brand').value,type=$('type').value,colour=$('colour').value,retailer=$('retailer').value,availability=$('availability').value;
  const min=Number($('minPrice').value)||0,max=$('maxPrice').value===''?Infinity:Number($('maxPrice').value);
  const view=$('view').value,sort=$('sort').value;
  let rows=db.products.filter(x=>
-  (!q||searchText(x).includes(q)) &&
+  matching.matchesSearch(x,q,categoryInfo(x)) &&
   matchesCategory(x,cat) &&
   (brand==='all'||x.brand===brand) &&
   (type==='all'||categoryInfo(x).id===type) &&
-  (colour==='all'||x.colour===colour) &&
+  (ignoreColour||colour==='all'||matching.colourFamily(x.colour)===colour) &&
   (retailer==='all'||x.retailer===retailer) &&
-  Number(x.price||0)>=min && Number(x.price||0)<=max &&
-  (availability==='all'||(availability==='in'?isInStock(x):String(x.availability||'').toLowerCase().includes('out')))
+  (($('minPrice').value===''&&$('maxPrice').value==='')||(Number.isFinite(matching.amount(x.price))&&matching.amount(x.price)>=min&&matching.amount(x.price)<=max)) &&
+  (availability==='all'||matching.stockState(x.availability)===availability)
  );
  if(elegooModelsOnly)rows=rows.filter(x=>categoryInfo(x).group==='printer'&&x.brand==='ELEGOO'&&isStandalonePrinter(x));
  if(window.__compareSelectedOnly)rows=rows.filter(x=>selectedIds.has(String(x.id)));
  const mode=view==='all'?sort:view;
- rows.sort((a,b)=>{
-  if(mode==='unit')return (a.unit??Infinity)-(b.unit??Infinity);
-  if(mode==='name')return a.name.localeCompare(b.name);
-  if(mode==='retailer')return (a.retailer||'').localeCompare(b.retailer||'')||a.name.localeCompare(b.name);
-  if(mode==='fresh')return String(b.updated||'').localeCompare(String(a.updated||''));
-  return Number(a.price??Infinity)-Number(b.price??Infinity);
- });
+ rows.sort((a,b)=>matching.compareProducts(a,b,mode));
  return rows;
 }
 function renderCards(rows){
@@ -897,6 +892,7 @@ function setResultView(mode,savePreference=true){
 }
 function render(resetPage=true){
  if(resetPage)currentListingPage=0;
+ refreshColours();
  const rows=filtered(),pageCount=Math.max(1,Math.ceil(rows.length/LISTING_PAGE_SIZE));
  currentListingPage=Math.min(currentListingPage,pageCount-1);
  const firstIndex=currentListingPage*LISTING_PAGE_SIZE,visibleRows=rows.slice(firstIndex,firstIndex+LISTING_PAGE_SIZE);
@@ -956,9 +952,15 @@ function loadData(){
   const seenOffers=new Map(),aliases=offerAliases;
   aliases.clear();
   const normalise=value=>String(value||'').trim().toLowerCase().replace(/\s+/g,' ');
-  const products=[];
+  const products=[],brandNames=new Map();
+  const normaliseBrand=value=>{
+   const name=matching.canonicalBrand(value),key=name.toLowerCase();
+   if(!brandNames.has(key))brandNames.set(key,name);
+   return brandNames.get(key);
+  };
   for(const original of payload.products.filter(product=>!product.sourceUnavailable)){
    const product={...original};
+   product.brand=normaliseBrand(product.brand);
    let url=product.url;
    try{const u=new URL(url);u.hash='';for(const key of [...u.searchParams.keys()])if(/^utm_|^(ref|aff|affiliate)$/i.test(key))u.searchParams.delete(key);u.searchParams.sort();url=u.href;}catch(e){}
    const key=[product.retailer,url,product.name,product.colour,product.pack].map(normalise).join('|');
@@ -967,7 +969,7 @@ function loadData(){
    if(!categoryInfo(product).material){product.unit=null;if(/^\d+(?:\.\d+)? kg$/.test(product.pack||''))product.pack='See retailer options';}
   }
   selectedIds=new Set([...selectedIds].map(id=>aliases.get(id)||id));
-  db={...payload,products};
+  db={...payload,products,brandDirectory:[...new Set((payload.brandDirectory||[]).map(normaliseBrand))].sort((a,b)=>a.localeCompare(b))};
   const loading=$('compareLoading');if(loading)loading.hidden=true;
   populateCategories();
   refreshFilters();renderCoverage();render();
@@ -1096,7 +1098,7 @@ updateCompareBar();
 })();
 },{once:true});
 </script>
-<script src="./i18n-extra.js?v=20261013-feeds1"></script>
+<script src="./i18n-extra.js?v=20261119-audit1"></script>
 <link rel="stylesheet" href="./pp-design-system.css?v=20261014-mobile-light1">
 <link rel="stylesheet" href="./pp-target-v1.css?v=1">
 

@@ -52,6 +52,7 @@ console.log('PASS: scanned matches create a reviewable new package; unknown barc
 const html=fs.readFileSync('legacy-index.html','utf8'),calc=html.match(/  function calc\(\)\{[^\r\n]+/)[0],batch=html.match(/  function renderBatch\([^]*?\n  \}/)[0];
 const numbers={qty:10,discount:0,printHours:2,materialPack:1000,materialPackCost:20,materialUsed:100,electricityRate:.3,labourRate:10,labourHours:.5,pack:1,other:.5,delivery:3,sell:20,platform:8,pay:2,fixedFee:.5,deliveryCharge:2};
 const totals={},calculation={Math,Number,state:{},window:{__ppFarmCosts:()=>({powerUsed:p.powerPerItem,depreciation:p.depreciationPerItem,materialMultiplier:p.materialMultiplier,extraLabourHours:p.extraLabourHours})},n:id=>numbers[id]||0,printerData:()=>({watts:100,price:300,lifetime:3000}),document:{getElementById:()=>null},$:()=>null,setValue(){},setText:(k,v)=>totals[k]=v,setProfitClass(){},money:n=>n,renderSingle(){},current:{}};
+calculation.window.PrintProfitPricing=require('../pricing-fees.js');
 vm.createContext(calculation);vm.runInContext(batch+'\n'+calc+'\ncalc();',calculation);assert.ok(Math.abs(totals.batchCost-(26+65+10/6+15+3+.18+.6))<1e-8);
 console.log('PASS: real calculator includes failure material/labour and changeover labour while leaving packaging and delivery on good products.');
 // Every pricing/export tool now uses the core's saved-printer metadata reader.

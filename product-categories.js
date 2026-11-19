@@ -5,7 +5,10 @@ const groups=new Map(catalogue.groups.map(group=>[group.id,group]));
 const categories=catalogue.categories.map(category=>({...category,rules:category.rules.map(rule=>rule.all.map(condition=>({...condition,regex:new RegExp(condition.pattern,'i')})))}));
 function classify(product){
  const name=String(product.name||''),nameBase=name.split(' — ')[0],type=String(product.type||'');
- const fields={name,nameBase,type,legacyCategory:String(product.category||''),materialText:type+' '+nameBase};
+ const variant=name.split(' — ').slice(1).join(' — ').replace(/\bHS(?=PLA|PETG)/gi,'');
+ const selected=/\b(?:PLA|PETG?|PCTG|ABS|ASA|TPU|TPE|Nylon|PA(?:6|12|66)?|PC|PVA|HIPS|resin)(?=$|[^a-z0-9])/i.test(variant)?variant:'';
+ // Collection titles list sibling materials; the selected variant is more precise.
+ const fields={name,nameBase,type,legacyCategory:String(product.category||''),materialText:selected||type+' '+nameBase};
  const category=categories.find(category=>category.rules.some(rule=>rule.every(condition=>condition.regex.test(fields[condition.field]||''))));
  return {...category,family:groups.get(category.group)};
 }

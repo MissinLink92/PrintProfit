@@ -162,6 +162,8 @@ const restore=data=>{
  });
  pending.forEach(el=>el.dispatchEvent(new Event('input',{bubbles:true})));
  pending.forEach(el=>el.dispatchEvent(new Event('change',{bubbles:true})));
+ // Applying a channel resets its delivery-fee defaults. Restore saved overrides last.
+ window.PrintProfitPricing?.restoreControls(document,data);
  const calc=document.getElementById('calc');
  if(calc)setTimeout(()=>calc.click(),60);
 };

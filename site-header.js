@@ -56,7 +56,7 @@ function ensurePanels(){
  if(!panelAssets)panelAssets=(async()=>{
   if(!window.PRINTPROFIT_REFERENCE_DATA)await loadPanelScript('./data/reference-data.js');
   if(!window.__printProfitUIModals)await loadPanelScript('./ui-modals.js?v=20261027-panels2');
-  if(!window.__printProfitPreferencesV3)await loadPanelScript('./settings-preferences.js?v=20261027-panels1');
+  if(!window.__printProfitPreferencesV3)await loadPanelScript('./settings-preferences.js?v=20261119-audit1');
  })().catch(error=>{panelAssets=null;throw error});
  return panelAssets;
 }

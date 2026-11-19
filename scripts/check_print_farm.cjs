@@ -15,9 +15,10 @@ const calc=html.match(/  function calc\(\)\{[^\r\n]+/)[0],batch=html.match(/  fu
 const values={qty:11,discount:0,printHours:2,materialPack:1000,materialPackCost:20,materialUsed:100,electricityRate:.3,labourRate:10,labourHours:.5,pack:1,other:.5,delivery:3,sell:20,platform:8,pay:2,fixedFee:.5,deliveryCharge:2};
 const output={},farm=plan(11,[{...group,machines:2,perBuild:5}]);
 const ctx={Math,Number,state:{},window:{__ppFarmCosts:()=>({powerUsed:farm.powerPerItem,depreciation:farm.depreciationPerItem})},n:id=>values[id]||0,printerData:()=>({watts:100,price:300,lifetime:3000}),document:{getElementById:()=>null},$:()=>null,setValue:()=>{},setText:(id,v)=>output[id]=v,setProfitClass:()=>{},money:n=>Number(n),renderSingle:(...args)=>ctx.single=args,current:{}};
+ctx.window.PrintProfitPricing=require('../pricing-fees.js');
 vm.createContext(ctx);vm.runInContext(batch+'\n'+calc+'\ncalc();',ctx);
 // 11 products * (material 2 + labour 5 + packaging 1 + other .5), plus .27 power, .6 wear and one delivery 3.
-near(output.batchCost,97.37);near(output.batchProfit,220+2-97.37-22.5);
+near(output.batchCost,97.37);near(output.batchProfit,220+2-97.37-22.7);
 near(ctx.current.elec,.27/11);near(ctx.current.depreciation,.6/11);
 // Disabling farm returns the existing single-printer behaviour unchanged.
 ctx.window.__ppFarmCosts=()=>null;vm.runInContext('calc()',ctx);near(ctx.current.elec,.06);near(ctx.current.depreciation,.2);

@@ -22,7 +22,7 @@ module.exports={runtime,textNode};
 if(require.main===module)(async()=>{
  for(const language of languages){
   const {window}=await runtime(language),tr=window.__ppTranslateText;
-  for(const key of ['My Workspace','Sign in','Print Setup','Privacy Notice','Upload your sliced print file']){
+  for(const key of ['My Workspace','Sign in','Print Setup','Privacy Notice','Upload your sliced print file','Colour family','Deals','No verified offers right now.','Platform percentage fee applies to delivery charged']){
    assert.notEqual(tr(key,language),key,language+': '+key);
   }
   assert.notEqual(tr('Page 2 of 116',language),'Page 2 of 116');

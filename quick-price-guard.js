@@ -39,10 +39,10 @@
     const margin=normalizeTarget(target);
     const feeRate=(num('platform')+num('pay'))/100;
     const fixedFee=num('fixedFee');
-    const deliveryCharge=num('deliveryCharge');
+    const deliveryCharge=num('deliveryCharge'),shippingFees=window.PrintProfitPricing.fromControls(document,num);
     const base=baseCost();
     const denominator=1-feeRate-margin;
-    if(!(denominator>0)||base<=0)return null;
+    if(!(denominator>0))return null;
 
     if(mode==='batch'){
       const qty=Math.max(1,Math.floor(num('qty')));
@@ -50,10 +50,10 @@
       const factor=qty*(1-discount);
       if(!(factor>0))return null;
       const batchBase=Math.max(0,base-num('delivery'))*qty+num('delivery');
-      return Math.max(0,(batchBase+fixedFee-deliveryCharge)/denominator)/factor;
+      return Math.max(0,(batchBase+fixedFee-deliveryCharge+shippingFees)/denominator)/factor;
     }
 
-    return Math.max(0,base+fixedFee-deliveryCharge)/denominator;
+    return Math.max(0,base+fixedFee-deliveryCharge+shippingFees)/denominator;
   }
 
   function buttonsFor(mode){
