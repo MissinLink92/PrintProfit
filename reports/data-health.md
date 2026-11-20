@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-19T06:12:06.788616+00:00
+2026-11-20T06:00:20.149069+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -13,7 +13,7 @@
 - fedex: failed; last verified never
 - depop: failed; last verified 2026-10-29
 - vinted: review-required; last verified 2026-10-29
-- tiktok: review-required; last verified 2026-10-29
+- tiktok: failed; last verified 2026-10-29
 - facebook: failed; last verified never
 - inpost: verification is older than seven days
 - royalmail-first: verification is older than seven days
@@ -48,11 +48,11 @@
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
-| NSE Imports | 466 | 462 |
+| NSE Imports | 461 | 457 |
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 802 | 761 |
+| Anycubic UK | 801 | 752 |
 | QIDI UK Store | 125 | 108 |
 | Flashforge UK | 27 | 21 |
 | Sovol UK | 20 | 20 |

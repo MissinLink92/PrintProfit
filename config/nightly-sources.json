@@ -22068,7 +22068,7 @@
     "candidate-5400a5cd73357d6e4ba2": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-4-kg-basic-colors-filament-bundle",
       "variantId": 52024099275033,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2Combo_4kgBasicColorsFilamentBundle_f8e50aaa-2774-4145-a518-74e7caa97584.jpg?v=1789897215",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/CentauriCarbon2EmojiSpoolCombo_1.png?v=1795145743",
       "expectedProductTitle": "Centauri Carbon 2 Combo + 4 kg PLA (RFID) (Basic Colors)",
       "expectedVariantTitle": "Default Title",
       "imageSourceUrl": "https://uk.elegoo.com/products/centauri-carbon-2-combo-4-kg-basic-colors-filament-bundle"
@@ -78501,7 +78501,7 @@
     "candidate-1f00404acdeaeaab8fc9": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46593635287084,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_09ead11b-706a-409a-95bc-6d6ee4aa0f17.png?v=1795076171",
       "expectedProductTitle": "QIDI Q2 3D Printer",
       "expectedVariantTitle": "Q2 Combo / Standard / Pre-Sale",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
@@ -78661,7 +78661,7 @@
     "candidate-f9e910711584d5ae406a": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46593635319852,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_4dc53b5e-4bef-4d2d-b1c2-8bf01793e7d2.png?v=1773473357",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/combo_09ead11b-706a-409a-95bc-6d6ee4aa0f17.png?v=1795076171",
       "expectedProductTitle": "QIDI Q2 3D Printer",
       "expectedVariantTitle": "Q2 Combo / Polar Cooler Bundle / Pre-Sale",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
@@ -78709,7 +78709,7 @@
     "candidate-c60ce354a90da068d7c4": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46593635385388,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/08073c49015932419de25301a89eedd2.png?v=1795076171",
       "expectedProductTitle": "QIDI Q2 3D Printer",
       "expectedVariantTitle": "Q2 / Standard / Pre-Sale",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
@@ -78757,7 +78757,7 @@
     "candidate-9454e1d14e043178da83": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-q2",
       "variantId": 46593635418156,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/Q2_d780d21b-39f0-4edd-8ac0-b26159b2d5ac.png?v=1773473357",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/08073c49015932419de25301a89eedd2.png?v=1795076171",
       "expectedProductTitle": "QIDI Q2 3D Printer",
       "expectedVariantTitle": "Q2 / Polar Cooler Bundle / Pre-Sale",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-q2"
@@ -83301,7 +83301,8 @@
       "variantId": 54498560180537,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/996c0314d3c9f4f6a92e228ed4c8e264.jpg?v=1789727228",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Purple (#6A6DCD) / 10KG"
+      "expectedVariantTitle": "Purple (#6A6DCD) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     }
   },
   "approvedProductDetails": {},

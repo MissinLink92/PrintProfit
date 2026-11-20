@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T06:12:06.788616+00:00",
+  "checkedAt": "2026-11-20T06:00:20.149069+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -11,7 +11,7 @@
     "fedex: failed; last verified never",
     "depop: failed; last verified 2026-10-29",
     "vinted: review-required; last verified 2026-10-29",
-    "tiktok: review-required; last verified 2026-10-29",
+    "tiktok: failed; last verified 2026-10-29",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -133,10 +133,10 @@
     },
     {
       "name": "NSE Imports",
-      "listed": 466,
-      "verified": 462,
+      "listed": 461,
+      "verified": 457,
       "categories": {
-        "filament": 408,
+        "filament": 403,
         "printer": 18,
         "equipment": 2,
         "computer": 19,
@@ -165,10 +165,10 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 802,
-      "verified": 761,
+      "listed": 801,
+      "verified": 752,
       "categories": {
-        "filament": 449,
+        "filament": 448,
         "printer": 169,
         "resin-material": 145,
         "accessory": 39
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
