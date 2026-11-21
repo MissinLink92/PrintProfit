@@ -372,17 +372,17 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <div class="tools">
 <div class="tool"><label for="search"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-search"></use></svg>Search</label><input id="search" type="search" placeholder="e.g. SUNLU black PLA, Bambu A1…"></div>
 <div class="tool"><label for="category"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-cube"></use></svg>Category</label><select id="category"><option value="all">All products</option></select></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Subcategory</label><select id="type"><option value="all">All subcategories</option></select></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-package"></use></svg>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
-<div class="tool"><label><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
+<div class="tool"><label for="brand"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-tag"></use></svg>Brand</label><select id="brand"><option value="all">All brands</option></select></div>
+<div class="tool"><label for="type"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-filament"></use></svg>Subcategory</label><select id="type"><option value="all">All subcategories</option></select></div>
+<div class="tool"><label for="retailer"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-package"></use></svg>Retailer</label><select id="retailer"><option value="all">All retailers</option></select></div>
+<div class="tool"><label for="sort"><svg class="pp-tool-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="./assets/printprofit-icon-master.svg#pp-chart"></use></svg>Sort by</label><select id="sort"><option value="price">Price: low to high</option><option value="unit">Unit cost: low to high</option><option value="name">Name</option><option value="retailer">Retailer</option><option value="updated">Recently checked</option></select></div>
 </div>
 <div class="extra-tools">
 <div class="tool"><label for="colour">Colour family</label><select id="colour" aria-describedby="colourHelp"><option value="all">All colours</option></select><small id="colourHelp">Groups shades together. Exact colour stays on each listing.</small></div>
-<div class="tool"><label>Minimum price</label><input id="minPrice" type="number" min="0" step="0.01" placeholder="£0.00"></div>
-<div class="tool"><label>Maximum price</label><input id="maxPrice" type="number" min="0" step="0.01" placeholder="No limit"></div>
-<div class="tool"><label>Availability</label><select id="availability"><option value="all">All stock states</option><option value="in">In stock</option><option value="out">Out of stock</option></select></div>
-<div class="tool"><label>View</label><select id="view"><option value="all">All results</option><option value="price">Lowest price first</option><option value="unit">Lowest £/kg first</option><option value="fresh">Recently checked</option></select></div>
+<div class="tool"><label for="minPrice">Minimum price</label><input id="minPrice" type="number" min="0" step="0.01" placeholder="£0.00"></div>
+<div class="tool"><label for="maxPrice">Maximum price</label><input id="maxPrice" type="number" min="0" step="0.01" placeholder="No limit"></div>
+<div class="tool"><label for="availability">Availability</label><select id="availability"><option value="all">All stock states</option><option value="in">In stock</option><option value="out">Out of stock</option><option value="unknown">Check retailer</option></select></div>
+<div class="tool"><label for="view">View</label><select id="view"><option value="all">All results</option><option value="price">Lowest price first</option><option value="unit">Lowest £/kg first</option><option value="fresh">Recently checked</option></select></div>
 </div>
 
 <div class="quick-tools" id="quickTools">
@@ -400,6 +400,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <span id="count">0 listings</span>
 
 </div>
+<div id="activeFilters" class="quick-tools" aria-label="Active filters"></div>
 
 <div class="compare-overview">
 <div class="insight" id="insight" hidden>
@@ -432,7 +433,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 </table>
 </div>
 <div class="card-grid" id="cardGrid"></div>
-<div class="empty" id="empty" hidden><strong>No matching listings</strong>Try a broader search or category.</div>
+<div class="empty" id="empty" role="status" aria-live="polite" hidden></div>
 <div class="results-more" id="resultsMore" hidden><span id="resultsShown" role="status" aria-live="polite"></span><nav class="results-pagination" aria-label="Product result pages"><button class="compare-btn secondary" id="previousResults" type="button" disabled>Previous</button><label class="page-picker" for="resultsPage">Page <select id="resultsPage" aria-label="Go to results page"></select> <span id="resultsPageTotal"></span></label><button class="compare-btn secondary" id="nextResults" type="button">Next</button></nav></div>
 
 <div class="compare-bar" id="compareBar" hidden>
@@ -511,7 +512,7 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 <script defer src="./data/product-offers.js?v=1"></script>
 <script defer src="./product-offers.js?v=1"></script>
 <script defer src="./product-categories.js?v=20261119-audit1"></script>
-<script defer src="./compare-catalogue.js?v=20261119-1"></script>
+<script defer src="./compare-catalogue.js?v=20261119-filters2"></script>
 <script>
 window.addEventListener('DOMContentLoaded',()=>{
 (()=>{
@@ -533,7 +534,8 @@ function retailerLink(value,label,className='link'){
  return '<a class="'+className+'" href="'+esc(href)+'" target="_blank" rel="'+(affiliate?'sponsored noopener':'noopener')+'">'+label+(affiliate?' <span class="pp-affiliate-badge">&#128279; Affiliate</span>':'')+'</a>';
 }
 
-let db={products:[],sources:[],brandDirectory:[],updatedAt:''};
+let db={products:[],sources:[],brandDirectory:[],updatedAt:''},dataState='loading';
+let searchFilterCache={source:null,query:'',rows:[]};
 const LISTING_PAGE_SIZE=20;
 let currentListingPage=0,expandSources=false,expandBrands=false;
 const priceHistoryPageCache=new Map(),priceHistoryPageRequests=new Map();
@@ -823,13 +825,71 @@ function refreshFilters(){
  refreshColours();
 }
 function refreshColours(){
- const visible=filtered({ignoreColour:true});
- const counts=new Map();
- visible.forEach(product=>{const family=matching.colourFamily(product.colour);counts.set(family,(counts.get(family)||0)+1);});
- const select=$('colour'),current=select.value;
- // Keep the chosen family available even when another filter produces zero results.
- select.innerHTML='<option value="all">All colours</option>'+matching.colourLabels.filter(label=>counts.has(label)||label===current).map(label=>'<option translate="no" value="'+esc(label)+'">'+esc(label)+' ('+(counts.get(label)||0)+')</option>').join('');
- if(current!=='all')select.value=current;
+ const select=$('colour');
+ // Older pages used exact shades, which browsers can restore after an update.
+ if(select.value&&select.value!=='all'&&!matching.colourLabels.includes(select.value))select.value=matching.colourFamily(select.value);
+ refreshFacet('colour',matching.colourLabels.map(value=>({value,label:value})), 'All colours');
+}
+function refreshFacet(id,options,label,ignore=[id]){
+ const rows=filtered({ignore,sortResults:false}),counts=new Map();
+ for(const product of rows){
+  const value=id==='category'?categoryInfo(product).group:id==='type'?categoryInfo(product).id:id==='colour'?matching.colourFamily(product.colour):id==='availability'?matching.stockState(product.availability):product[id];
+  counts.set(value,(counts.get(value)||0)+1);
+ }
+ const select=$(id),current=select.value||'all';
+ if(current!=='all'&&!options.some(option=>option.value===current))options.push({value:current,label:current});
+ select.innerHTML='<option value="all">'+esc(label)+' ('+rows.length+')</option>'+options.map(option=>{
+  const count=counts.get(option.value)||0;
+  return '<option value="'+esc(option.value)+'" '+(!count&&option.value!==current?'disabled ':'')+(['brand','retailer','colour'].includes(id)?'translate="no" ':'')+'>'+esc(option.label)+' ('+count+')</option>';
+ }).join('');
+ select.value=current;
+}
+function refreshFacets(){
+ refreshColours();
+ refreshFacet('category',catalogue.groups.map(group=>({value:group.id,label:group.label})),'All products',['category','type']);
+ refreshFacet('type',catalogue.categories.filter(category=>db.products.some(product=>categoryInfo(product).id===category.id)).map(category=>({value:category.id,label:category.label})),'All subcategories');
+ for(const [id,label]of [['brand','All brands'],['retailer','All retailers']])refreshFacet(id,[...new Set(db.products.map(product=>product[id]).filter(Boolean))].sort((a,b)=>a.localeCompare(b)).map(value=>({value,label:value})),label);
+ refreshFacet('availability',[{value:'in',label:'In stock'},{value:'out',label:'Out of stock'},{value:'unknown',label:'Check retailer'}],'All stock states');
+}
+function resetComparisonFilters(keepSearch=false){
+ if(!keepSearch)$('search').value='';
+ $('minPrice').value='';$('maxPrice').value='';
+ for(const id of ['category','type','brand','retailer','colour','availability','view'])$(id).value='all';
+ $('sort').value='price';elegooModelsOnly=false;setSelectedOnly(false);
+}
+function setSelectedOnly(value){
+ window.__compareSelectedOnly=!!value;
+ try{localStorage.setItem('printprofit_compare_selected_only',value?'1':'0');}catch(e){}
+ $('selectedOnly').classList.toggle('active',!!value);$('selectedOnly').setAttribute('aria-pressed',String(!!value));
+}
+function removeFilter(id){
+ if(id==='selectedOnly')setSelectedOnly(false);
+ else if(id==='models')elegooModelsOnly=false;
+ else if(id==='price'){$('minPrice').value='';$('maxPrice').value='';}
+ else {$(id).value=id==='search'?'':'all';if(id==='category')$('type').value='all';}
+}
+function renderFilterHelp(rows){
+ const labels={category:'Category',type:'Subcategory',brand:'Brand',retailer:'Retailer',colour:'Colour family',availability:'Availability'},chips=[];
+ for(const [id,label]of Object.entries(labels)){
+  if(!$(id).value||$(id).value==='all')continue;
+  const option=[...$(id).options].find(option=>option.value===$(id).value);
+  chips.push({id,label,value:String(option?.textContent||$(id).value).replace(/ \(\d+\)$/,'')});
+ }
+ if($('minPrice').value!==''||$('maxPrice').value!=='')chips.push({id:'price',label:'Price range',value:($('minPrice').value||'0')+'–'+($('maxPrice').value||'∞')});
+ if(elegooModelsOnly)chips.push({id:'models',label:'ELEGOO printers'});
+ if(window.__compareSelectedOnly)chips.push({id:'selectedOnly',label:'Selected only'});
+ $('activeFilters').innerHTML=chips.map(chip=>'<button class="quick-btn" type="button" data-remove-filter="'+chip.id+'"><span>'+esc(chip.label)+'</span>'+(chip.value==null?'':': <span translate="no">'+esc(chip.value)+'</span>')+' ×</button>').join('');
+ if(rows.length)return;
+ const search=$('search').value.trim(),withoutSearch=search?filtered({ignore:['search'],sortResults:false}).length:0;
+ const searchOnly=db.products.filter(product=>matching.matchesSearch(product,search,categoryInfo(product))).length;
+ const invalidRange=$('minPrice').value!==''&&$('maxPrice').value!==''&&Number($('minPrice').value)>Number($('maxPrice').value);
+ let message=invalidRange?'The minimum price is higher than the maximum price.':window.__compareSelectedOnly?'Selected only is on. Your selected products do not match these filters.':search&&searchOnly===0?'No catalogue listings match this search. Try fewer words.':'These filters have no listings in common. Remove a filter or broaden the price range.';
+ if(!db.products.length)message='The product catalogue is currently empty. Please try again later.';
+ const buttons=[];
+ if(chips.length&&searchOnly)buttons.push('<button class="compare-btn" type="button" data-recover="filters">Clear filters and keep search ('+searchOnly+')</button>');
+ if(withoutSearch)buttons.push('<button class="compare-btn" type="button" data-recover="search">Clear search ('+withoutSearch+')</button>');
+ if(db.products.length)buttons.push('<button class="compare-btn secondary" type="button" data-recover="all">Show all products ('+db.products.length+')</button>');
+ $('empty').innerHTML='<strong>No matching listings</strong><p>'+esc(message)+'</p><div class="quick-tools">'+buttons.join('')+'</div>';
 }
 function priceCheckLabel(product){
  const verified=product.lastCheckStatus==='ok';
@@ -850,24 +910,20 @@ function isStandalonePrinter(x){
  const name=String(x.name||'');
  return !/\b(bundle|with|upgrade kit|accessory|accessories)\b|\s\+\s|:\s/i.test(name);
 }
-function filtered({ignoreColour=false}={}){
- const q=$('search').value.trim().toLowerCase(),cat=$('category').value,brand=$('brand').value,type=$('type').value,colour=$('colour').value,retailer=$('retailer').value,availability=$('availability').value;
- const min=Number($('minPrice').value)||0,max=$('maxPrice').value===''?Infinity:Number($('maxPrice').value);
+function filtered({ignoreColour=false,ignore=[],sortResults=true}={}){
+ const skipped=new Set(ignoreColour?[...ignore,'colour']:ignore);
+ const state=Object.fromEntries(['search','category','type','brand','colour','retailer','availability','minPrice','maxPrice'].map(id=>[id,skipped.has(id)?(['search','minPrice','maxPrice'].includes(id)?'':'all'):$(id).value]));
  const view=$('view').value,sort=$('sort').value;
- let rows=db.products.filter(x=>
-  matching.matchesSearch(x,q,categoryInfo(x)) &&
-  matchesCategory(x,cat) &&
-  (brand==='all'||x.brand===brand) &&
-  (type==='all'||categoryInfo(x).id===type) &&
-  (ignoreColour||colour==='all'||matching.colourFamily(x.colour)===colour) &&
-  (retailer==='all'||x.retailer===retailer) &&
-  (($('minPrice').value===''&&$('maxPrice').value==='')||(Number.isFinite(matching.amount(x.price))&&matching.amount(x.price)>=min&&matching.amount(x.price)<=max)) &&
-  (availability==='all'||matching.stockState(x.availability)===availability)
- );
- if(elegooModelsOnly)rows=rows.filter(x=>categoryInfo(x).group==='printer'&&x.brand==='ELEGOO'&&isStandalonePrinter(x));
- if(window.__compareSelectedOnly)rows=rows.filter(x=>selectedIds.has(String(x.id)));
+ let candidates=db.products;
+ if(state.search){
+  if(searchFilterCache.source!==db.products||searchFilterCache.query!==state.search)searchFilterCache={source:db.products,query:state.search,rows:db.products.filter(product=>matching.matchesSearch(product,state.search,categoryInfo(product)))};
+  candidates=searchFilterCache.rows;state.search='';
+ }
+ let rows=candidates.filter(product=>matching.matchesFilters(product,state,categoryInfo(product)));
+ if(elegooModelsOnly&&!skipped.has('models'))rows=rows.filter(x=>categoryInfo(x).group==='printer'&&x.brand==='ELEGOO'&&isStandalonePrinter(x));
+ if(window.__compareSelectedOnly&&!skipped.has('selectedOnly'))rows=rows.filter(x=>selectedIds.has(String(x.id)));
  const mode=view==='all'?sort:view;
- rows.sort((a,b)=>matching.compareProducts(a,b,mode));
+ if(sortResults)rows.sort((a,b)=>matching.compareProducts(a,b,mode));
  return rows;
 }
 function renderCards(rows){
@@ -891,8 +947,9 @@ function setResultView(mode,savePreference=true){
  }
 }
 function render(resetPage=true){
+ if(dataState!=='ready')return;
  if(resetPage)currentListingPage=0;
- refreshColours();
+ refreshFacets();
  const rows=filtered(),pageCount=Math.max(1,Math.ceil(rows.length/LISTING_PAGE_SIZE));
  currentListingPage=Math.min(currentListingPage,pageCount-1);
  const firstIndex=currentListingPage*LISTING_PAGE_SIZE,visibleRows=rows.slice(firstIndex,firstIndex+LISTING_PAGE_SIZE);
@@ -914,6 +971,7 @@ function render(resetPage=true){
   '<td><div class="product-actions"><button class="link" type="button" data-details-id="'+esc(x.id)+'">Details</button>'+retailerLink(x.url,'Check live ↗','link')+'</div></td>'+
  '</tr>').join('');
  $('empty').hidden=rows.length>0;
+ renderFilterHelp(rows);
  $('count').textContent=rows.length+' '+(rows.length===1?'listing':'listings');
  $('resultSummary').textContent=rows.length+' '+(rows.length===1?'matching listing':'matching listings')+(window.__compareSelectedOnly?' • selected only':'');
  renderCards(visibleRows);
@@ -954,13 +1012,14 @@ function loadData(){
   const normalise=value=>String(value||'').trim().toLowerCase().replace(/\s+/g,' ');
   const products=[],brandNames=new Map();
   const normaliseBrand=value=>{
-   const name=matching.canonicalBrand(value),key=name.toLowerCase();
+   const name=matching.canonicalBrand(value)||'Unspecified',key=name.toLowerCase();
    if(!brandNames.has(key))brandNames.set(key,name);
    return brandNames.get(key);
   };
   for(const original of payload.products.filter(product=>!product.sourceUnavailable)){
    const product={...original};
-   product.brand=normaliseBrand(product.brand);
+   const inferredBrand=!product.brand&&(payload.brandDirectory||[]).filter(Boolean).sort((a,b)=>b.length-a.length).find(brand=>normalise(product.name).startsWith(normalise(brand)+' '));
+   product.brand=normaliseBrand(product.brand||inferredBrand);
    let url=product.url;
    try{const u=new URL(url);u.hash='';for(const key of [...u.searchParams.keys()])if(/^utm_|^(ref|aff|affiliate)$/i.test(key))u.searchParams.delete(key);u.searchParams.sort();url=u.href;}catch(e){}
    const key=[product.retailer,url,product.name,product.colour,product.pack].map(normalise).join('|');
@@ -972,8 +1031,9 @@ function loadData(){
   db={...payload,products,brandDirectory:[...new Set((payload.brandDirectory||[]).map(normaliseBrand))].sort((a,b)=>a.localeCompare(b))};
   const loading=$('compareLoading');if(loading)loading.hidden=true;
   populateCategories();
-  refreshFilters();renderCoverage();render();
+  dataState='ready';refreshFilters();renderCoverage();render();
  }catch(err){
+  dataState='failed';
   console.error('PrintProfit Compare Products data load failed:',err);
   db={products:[],sources:[],brandDirectory:[],updatedAt:''};
   const loading=$('compareLoading');if(loading)loading.hidden=true;
@@ -987,6 +1047,9 @@ function loadData(){
 }
 }
 document.addEventListener('click',e=>{
+ const remove=e.target.closest('[data-remove-filter]'),recover=e.target.closest('[data-recover]');
+ if(remove){removeFilter(remove.dataset.removeFilter);render();return;}
+ if(recover){if(recover.dataset.recover==='search')removeFilter('search');else resetComparisonFilters(recover.dataset.recover==='filters');render();return;}
  const btn=e.target.closest('[data-details-id]');
  if(btn && (btn.closest('#rows')||btn.closest('#cardGrid')))openDetailsModal(btn.dataset.detailsId);
 });
@@ -1013,17 +1076,16 @@ $('quickTools').addEventListener('click',e=>{
  const btn=e.target.closest('[data-quick]');if(!btn)return;
  const mode=btn.dataset.quick;
  if(mode==='elegoo-printers'){
-  elegooModelsOnly=!elegooModelsOnly;
-  if(elegooModelsOnly){$('search').value='';$('category').value='printer';$('type').value='all';refreshFilters();$('brand').value='ELEGOO';$('retailer').value='all';$('colour').value='all';$('minPrice').value='';$('maxPrice').value='';$('availability').value='all';$('view').value='all';$('sort').value='name';}
+  const enable=!elegooModelsOnly;
+  if(enable){resetComparisonFilters();elegooModelsOnly=true;$('category').value='printer';refreshFilters();$('brand').value='ELEGOO';$('sort').value='name';}
+  else elegooModelsOnly=false;
   render();return;
  }
- elegooModelsOnly=false;
- if(['filament','printing-resin','printer','accessory'].includes(mode)){$('category').value=mode==='printing-resin'?'resin-material':mode;$('type').value='all';refreshFilters();}
+ if(['filament','printing-resin','printer','accessory'].includes(mode)){elegooModelsOnly=false;$('category').value=mode==='printing-resin'?'resin-material':mode;$('type').value='all';refreshFilters();}
  else if(mode==='in')$('availability').value='in';
  else if(mode==='under20')$('maxPrice').value='20';
  else if(mode==='clear'){
-  $('search').value='';$('minPrice').value='';$('maxPrice').value='';
-  ['category','brand','type','colour','retailer','availability','view','sort'].forEach(id=>$(id).value=id==='sort'?'price':'all');
+  resetComparisonFilters();
   refreshFilters();
  }
  render();
@@ -1073,10 +1135,7 @@ mobileCompareView.addEventListener('change',event=>setResultView(event.matches?'
 $('tableView').addEventListener('click',()=>setResultView('table'));
 $('cardView').addEventListener('click',()=>setResultView('cards'));
 $('selectedOnly').addEventListener('click',()=>{
- window.__compareSelectedOnly=!window.__compareSelectedOnly;
- try{localStorage.setItem('printprofit_compare_selected_only',window.__compareSelectedOnly?'1':'0');}catch(e){}
- $('selectedOnly').classList.toggle('active',window.__compareSelectedOnly);
- $('selectedOnly').setAttribute('aria-pressed',String(window.__compareSelectedOnly));
+ setSelectedOnly(!window.__compareSelectedOnly);
  render();
 });
 $('cardGrid').addEventListener('click',e=>{
@@ -1098,7 +1157,7 @@ updateCompareBar();
 })();
 },{once:true});
 </script>
-<script src="./i18n-extra.js?v=20261119-audit1"></script>
+<script src="./i18n-extra.js?v=20261119-filters2"></script>
 <link rel="stylesheet" href="./pp-design-system.css?v=20261014-mobile-light1">
 <link rel="stylesheet" href="./pp-target-v1.css?v=1">
 

@@ -5,6 +5,7 @@ const normalise=value=>String(value??'').normalize('NFKC').toLowerCase()
  .replace(/\bhs(?=pla|petg)/g,'')
  .replace(/\bpla\s*(?:plus|pro)\b/g,'pla+').replace(/\bpla\s*\+\s*/g,'pla+ ').replace(/\bpet\s+g\b/g,'petg')
  .replace(/\bfff\b/g,'fdm').replace(/\bgray\b/g,'grey').replace(/\bsunlu(?:\.uk| uk store| uk)\b/g,'sunlu')
+ .replace(/\bcreality\s*3d\b/g,'creality').replace(/\bbedrock\s+3d\b/g,'bedrock3d').replace(/\beasy\s+threed\b/g,'easythreed')
  .replace(/(\d)\s*(kg|mm|g)\b/g,'$1$2');
 const tokens=value=>normalise(value).match(/[\p{L}\p{N}]+(?:\.[\p{L}\p{N}]+)*(?:\+)?/gu)||[];
 function canonicalBrand(value){
@@ -19,17 +20,19 @@ function selectedMaterial(product){
  return selected.length?selected:materialKinds(base).length?materialKinds(base):materialKinds(product.type);
 }
 const searchCache=new WeakMap();
-let previousQuery=null,queryTokens=[];
+let previousQuery=null,queryTokens=[],normalisedQuery='';
 function matchesSearch(product,query,category){
  const queryText=String(query??'');
- if(queryText!==previousQuery){previousQuery=queryText;queryTokens=tokens(queryText);}
+ if(queryText!==previousQuery){previousQuery=queryText;queryTokens=tokens(queryText);normalisedQuery=normalise(queryText).trim();}
  const wanted=queryTokens;if(!wanted.length)return true;
  // Category labels may mention sibling materials. They are navigation, not product identity.
  const text=[product.name,product.brand,product.colour,product.retailer,product.pack,product.type,
   category?.group==='printer'?category.label:''].filter(Boolean).join(' ');
  const signature=String(!!category?.material)+'|'+text;
  let cached=searchCache.get(product);
- if(cached?.signature!==signature){cached={signature,haystack:new Set(tokens(text)),materials:category?.material?selectedMaterial(product):null};searchCache.set(product,cached);}
+ if(cached?.signature!==signature){cached={signature,name:normalise(product.name).trim(),haystack:new Set(tokens(text)),materials:category?.material?selectedMaterial(product):null};searchCache.set(product,cached);}
+ // A copied complete listing title identifies the exact selected variant.
+ if(normalisedQuery===cached.name)return true;
  const {haystack,materials}=cached;
  return wanted.every(token=>{
   if(materials&&materialKinds(token).includes(token))return materials.length===1&&materials[0]===token;
@@ -37,7 +40,13 @@ function matchesSearch(product,query,category){
  });
 }
 const colourLabels=['Black','White','Grey','Blue','Red','Green','Yellow','Orange','Purple','Pink','Brown','Beige','Gold','Silver','Clear','Multicolour','Other / unspecified'];
+const colourCache=new Map();
 function colourFamily(value){
+ const key=String(value??'');
+ if(colourCache.has(key))return colourCache.get(key);
+ const result=classifyColour(key);colourCache.set(key,result);return result;
+}
+function classifyColour(value){
  let text=normalise(value).replace(/blue[ -]grey/g,'grey').replace(/rose[ -]gold/g,'gold');
  if(/\b(?:rainbow|multicolou?r|assorted|random|dual[ -]colou?r|tri[ -]colou?r)\b/.test(text))return 'Multicolour';
  if(/\b(?:clear|transparent|translucent)\b/.test(text))return 'Clear';
@@ -56,6 +65,21 @@ function amount(value){
  if(value==null||typeof value==='boolean'||String(value).trim()==='')return Infinity;
  const number=Number(value);return Number.isFinite(number)&&number>0?number:Infinity;
 }
+function matchesFilters(product,state,category){
+ const chosen=value=>value&&value!=='all';
+ if(state.search&&!matchesSearch(product,state.search,category))return false;
+ if(chosen(state.category)&&state.category!==category.id&&state.category!==category.group)return false;
+ if(chosen(state.type)&&state.type!==category.id)return false;
+ if(chosen(state.brand)&&state.brand!==product.brand)return false;
+ if(chosen(state.retailer)&&state.retailer!==product.retailer)return false;
+ if(chosen(state.colour)&&state.colour!==colourFamily(product.colour))return false;
+ if(chosen(state.availability)&&state.availability!==stockState(product.availability))return false;
+ if(state.minPrice!==''&&state.minPrice!=null||state.maxPrice!==''&&state.maxPrice!=null){
+  const price=amount(product.price),min=state.minPrice===''||state.minPrice==null?0:Number(state.minPrice),max=state.maxPrice===''||state.maxPrice==null?Infinity:Number(state.maxPrice);
+  if(!Number.isFinite(price)||!(price>=min&&price<=max))return false;
+ }
+ return true;
+}
 function currentOffer(product,now=Date.now()){
  const checked=Date.parse(product.updated);
  return !product.sourceUnavailable&&product.lastCheckStatus==='ok'&&stockState(product.availability)==='in'&&
@@ -73,7 +97,7 @@ function compareProducts(a,b,mode){
  }
  return fallback();
 }
-const api={normalise,tokens,canonicalBrand,selectedMaterial,matchesSearch,colourLabels,colourFamily,stockState,amount,currentOffer,compareProducts};
+const api={normalise,tokens,canonicalBrand,selectedMaterial,matchesSearch,matchesFilters,colourLabels,colourFamily,stockState,amount,currentOffer,compareProducts};
 if(typeof module==='object'&&module.exports)module.exports=api;
 if(typeof window==='object')window.PRINTPROFIT_COMPARE=api;
 })();

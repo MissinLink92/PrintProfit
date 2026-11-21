@@ -29,6 +29,8 @@ jobs:
         run: node scripts/check_product_categories.cjs
       - name: Check comparison search, colours, prices and stock
         run: node scripts/check_compare_products.cjs
+      - name: Check all feasible filter combinations and recovery
+        run: node scripts/check_compare_combinations.cjs
       - name: Check coupon validity and live expiry
         run: node scripts/check_coupon_expiry.cjs
       - name: Check business exports and material barcodes

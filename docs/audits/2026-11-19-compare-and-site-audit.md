@@ -77,3 +77,22 @@ Pro workflow UI was exercised in an isolated local browser with billing disabled
 - The generated catalogue/history diff is large. Review source logic separately from audited snapshot changes. No changes are live until separately reviewed and released.
 
 Compact source/coverage evidence is in `reports/compare-audit-2026-11-19.json`. Browser and external checks were performed against this branch on 19 November; GitHub PR checks provide independent CI validation after upload.
+
+
+## Follow-up filter audit — 21 November 2026
+
+The original 19 November snapshot and external audit above are historical. This follow-up preserves the newer main-branch catalogue at `42b77e9d61ae453db7fe1e987074b30d7d4e725f`, including its 20–21 November prices, availability and history. Older audit snapshots do not overwrite those newer records. The raw catalogue has 8,525 active offers; 8,523 distinct display offers remain after removing two identical offers. The nightly snapshot reports 7,415 verified and 1,110 unverified prices; no second independent merchant recheck is claimed for 21 November.
+
+Every filter now displays counts based on the other active restrictions. Zero-result choices are disabled while a current conflicting value remains visible and removable. Category counts account for the subcategory reset that occurs when the parent category changes. Active filter buttons, a clear-filters/keep-search action, clear-search action and show-all action make conflicting filters recoverable without pretending a product exists.
+
+Clear filters and removal of Selected only now persist that mode being off after reload, while preserving the selected product list. The ELEGOO printer preset clears an old selected-only restriction and keeps its model restriction when applying stock/price shortcuts. Browser-restored legacy colours such as `#Black` map to the current family before other facet counts are calculated. Data-load failures remain distinct from an empty search. Copied full listing titles and known brand spelling aliases match; missing brand metadata uses an explicit known title prefix or a clearly unspecified fallback.
+
+Validation on the current catalogue:
+
+- 33,806 distinct feasible combinations of all six discrete catalogue facets, plus 9,667 exhaustive pairwise combinations including incompatible choices.
+- 545,472 product/subset checks, 27,722 facet option count/disabled-state checks, 34,092 price boundaries and 25,569 listing-title/brand identity searches.
+- 800 sort/view/stock/price/selected-only combinations with membership and ordering assertions.
+- All 160 available options and all 49 quick-filter pairs exercised in actual desktop and phone browser views, including both result layouts, German recovery messages, restored legacy colours, preserved selections, persistence after reload and simulated data-loading failure.
+- All 23 JavaScript check scripts, 38 backend tests, 25 feed tests, three source-reliability tests, FX and builder checks passed locally. The expanded matrix is now a required CI step.
+
+The matrix exhausts valid combinations of the finite catalogue facets and every pair, rather than claiming to exhaust arbitrary text, continuous price values or every external-service/device state. Shipping/channel reference warnings, unverified offers, live account/cloud/billing transport and physical-device checks remain disclosed. Release and GitHub check status are recorded in [PR #135](https://github.com/MissinLink92/PrintProfit/pull/135). Machine-readable follow-up evidence: `reports/compare-filter-audit-2026-11-21.json`.

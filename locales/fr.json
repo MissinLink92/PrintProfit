@@ -925,5 +925,16 @@
   "Shop ELEGOO UK": "Acheter chez ELEGOO UK",
   "The “Ad” link is an affiliate link. PrintProfit may earn a commission if you buy through it, at no extra cost to you. It opens ELEGOO's shop, not a guaranteed M1 Ultra product page.": "Le lien « Ad » est un lien d’affiliation. PrintProfit peut toucher une commission si vous achetez via ce lien, sans frais supplémentaires. Il ouvre la boutique ELEGOO, sans garantir une page dédiée au M1 Ultra.",
   "Purchases and checkout are handled by the retailer.": "Les achats et le paiement sont gérés par le vendeur.",
-  "How affiliate links work": "Fonctionnement des liens affiliés"
+  "How affiliate links work": "Fonctionnement des liens affiliés",
+  "Active filters": "Filtres actifs",
+  "Price range": "Fourchette de prix",
+  "Unspecified": "Non précisé",
+  "The minimum price is higher than the maximum price.": "Le prix minimum est supérieur au prix maximum.",
+  "Selected only is on. Your selected products do not match these filters.": "Seuls les produits sélectionnés sont affichés. Ils ne correspondent pas à ces filtres.",
+  "No catalogue listings match this search. Try fewer words.": "Aucune offre du catalogue ne correspond à cette recherche. Essayez moins de mots.",
+  "These filters have no listings in common. Remove a filter or broaden the price range.": "Ces filtres ne donnent aucune offre en commun. Retirez un filtre ou élargissez la fourchette de prix.",
+  "The product catalogue is currently empty. Please try again later.": "Le catalogue est actuellement vide. Réessayez plus tard.",
+  "Clear filters and keep search ({count})": "Effacer les filtres et garder la recherche ({count})",
+  "Clear search ({count})": "Effacer la recherche ({count})",
+  "Show all products ({count})": "Afficher tous les produits ({count})"
 }

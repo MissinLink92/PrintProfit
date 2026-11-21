@@ -32,7 +32,7 @@ assert.equal([{...base,id:'missing',unit:''},base,{...base,id:'bulk',price:40,un
 
 class Element{
  constructor(value=''){this.value=value;this.options=[];this.textContent='';this.dataset={};this.style={};this.classList={toggle(){},contains(){return false;}};}
- set innerHTML(html){this.html=html;this.options=[...html.matchAll(/<option[^>]*value="([^"]*)"[^>]*>([^<]*)/g)].map(m=>({value:m[1],textContent:m[2]}));if(this.options.length)this.value=this.options[0].value;}
+ set innerHTML(html){this.html=html;this.options=[...html.matchAll(/<option[^>]*value="([^"]*)"([^>]*)>([^<]*)/g)].map(m=>({value:m[1],textContent:m[3],disabled:/\bdisabled\b/.test(m[2])}));if(this.options.length)this.value=this.options[0].value;}
  get innerHTML(){return this.html||'';}
  setAttribute(){}
 }
@@ -45,7 +45,7 @@ vm.createContext(context);
 vm.runInContext(fs.readFileSync('product-categories.js','utf8'),context);
 const script=html.match(/<script>\s*window.addEventListener\('DOMContentLoaded',[\s\S]*?<\/script>/)[0];
 const code=script.slice(script.indexOf("'use strict';"),script.indexOf("document.addEventListener('click',e=>{"));
-vm.runInContext(code+`\nglobalThis.audit={filtered,refreshFilters,render,renderInsights,loadData,stockLabel,setProducts:p=>db.products=p};`,context);
+vm.runInContext(code+`\nglobalThis.audit={filtered,refreshFilters,render,renderInsights,loadData,stockLabel,resetComparisonFilters,removeFilter,refreshFacets,setProducts:p=>{db.products=p;dataState='ready'}};`,context);
 const A=context.audit;
 const rows=[base,{...plus,id:'plus',price:10},{...collection,id:'petg',price:7},
  {...base,id:'shade',colour:'Black (10101)',price:10},
@@ -87,6 +87,12 @@ assert.equal(controls.brand.options.length,2);
 assert.equal((controls.brandCloud.innerHTML.match(/>SUNLU<\//g)||[]).length,1,'Coverage brands must merge aliases too');
 for(const brand of ['Creality','creality','Creality3D','Creality 3D'])assert.equal(M.canonicalBrand(brand),'Creality');
 for(const brand of ['BEDROCK3D','Bedrock3D'])assert.equal(M.canonicalBrand(brand),'Bedrock3D');
+assert.ok(M.matchesSearch({...base,name:'Creality Ender 3 Printer',brand:'Creality'},'Creality3D'));
+assert.ok(M.matchesSearch({...base,name:'Creality Ender 3 Printer',brand:'Creality'},'Creality 3D'));
+context.window.PRINTPROFIT_PRICE_DATA={products:[{...base,id:'inferred',brand:'',name:'Polymaker PolyLite PETG Blue'},{...base,id:'unknown-brand',brand:'',name:'Polymaker-ish unknown material'}],sources:[],brandDirectory:['Polymaker']};
+A.loadData();
+assert.equal(vm.runInContext('db.products.find(p=>p.id==="inferred").brand',context),'Polymaker');
+assert.equal(vm.runInContext('db.products.find(p=>p.id==="unknown-brand").brand',context),'Unspecified');
 const compactContext={window:{}};vm.createContext(compactContext);vm.runInContext(fs.readFileSync('data/price-finder-lite.js','utf8'),compactContext);
 const products=compactContext.window.PRINTPROFIT_PRICE_DATA.products;
 assert.ok(products.length>0);
