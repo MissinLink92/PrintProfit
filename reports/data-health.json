@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-21T08:33:53.640054+00:00",
+  "checkedAt": "2026-11-21T09:16:21.642655+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -101,12 +101,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2614,
-      "verified": 2607,
+      "listed": 2655,
+      "verified": 2547,
       "categories": {
-        "printer": 1350,
-        "filament": 915,
-        "resin-material": 310,
+        "printer": 1356,
+        "filament": 917,
+        "resin-material": 343,
         "accessory": 35,
         "equipment": 4
       }
@@ -134,7 +134,7 @@
     {
       "name": "NSE Imports",
       "listed": 461,
-      "verified": 457,
+      "verified": 449,
       "categories": {
         "filament": 403,
         "printer": 18,
@@ -165,11 +165,11 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 799,
-      "verified": 750,
+      "listed": 807,
+      "verified": 758,
       "categories": {
-        "filament": 448,
-        "printer": 167,
+        "filament": 474,
+        "printer": 149,
         "resin-material": 145,
         "accessory": 39
       }
@@ -211,10 +211,10 @@
     },
     {
       "name": "SUNLU UK",
-      "listed": 1760,
-      "verified": 778,
+      "listed": 1763,
+      "verified": 372,
       "categories": {
-        "filament": 1524,
+        "filament": 1527,
         "resin-material": 162,
         "accessory": 63,
         "equipment": 11

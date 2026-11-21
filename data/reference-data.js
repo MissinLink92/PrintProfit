@@ -1134,14 +1134,14 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "url": "https://www.ebay.co.uk/help/selling/fees-credits-invoices/store-selling-fees?id=4809",
       "lastAttempt": "2026-11-21",
       "status": "verified",
-      "contentHash": "675b4a62d2db99e0fc929bed98c8a3f057e570d319bb53c8e2f131e0c841e44b",
+      "contentHash": "8044faa13b728067847eeec42ae88a5f3caef8c2363b9a373f3e45d910791844",
       "lastVerified": "2026-11-21"
     },
     "amazon": {
       "url": "https://sell.amazon.co.uk/programmes/handmade",
       "lastAttempt": "2026-11-21",
       "status": "verified",
-      "contentHash": "0f5ccafec3acb738a83611e399f0b957d0d1ccc52d12715992fe576b60839b17",
+      "contentHash": "ba8b57f1fc00708a89de4731638b00cc7ff7e608317583ee91f9ae55eae05dce",
       "lastVerified": "2026-11-21"
     },
     "depop": {
@@ -1220,7 +1220,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "lastVerified": "2026-11-21"
     }
   },
-  "lastAttempt": "2026-11-21T05:12:21+00:00",
+  "lastAttempt": "2026-11-21T08:51:32+00:00",
   "exchangeRates": {
     "base": "GBP",
     "date": "2026-11-20",
@@ -1247,7 +1247,7 @@ window.PRINTPROFIT_REFERENCE_DATA={
       "ZAR": 22.92792739
     },
     "note": "ECB reference rates, not a bank or payment-provider quote.",
-    "lastAttempt": "2026-11-21T05:12:21+00:00",
+    "lastAttempt": "2026-11-21T08:51:32+00:00",
     "status": "verified"
   }
 };
