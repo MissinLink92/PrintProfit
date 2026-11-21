@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-20T06:00:20.149069+00:00",
+  "checkedAt": "2026-11-21T05:52:30.873340+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -11,7 +11,7 @@
     "fedex: failed; last verified never",
     "depop: failed; last verified 2026-10-29",
     "vinted: review-required; last verified 2026-10-29",
-    "tiktok: failed; last verified 2026-10-29",
+    "tiktok: review-required; last verified 2026-10-29",
     "facebook: failed; last verified never",
     "inpost: verification is older than seven days",
     "royalmail-first: verification is older than seven days",
@@ -101,12 +101,12 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2657,
-      "verified": 2651,
+      "listed": 2614,
+      "verified": 2607,
       "categories": {
         "printer": 1350,
-        "filament": 933,
-        "resin-material": 335,
+        "filament": 915,
+        "resin-material": 310,
         "accessory": 35,
         "equipment": 4
       }
@@ -165,11 +165,11 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 801,
-      "verified": 752,
+      "listed": 799,
+      "verified": 750,
       "categories": {
         "filament": 448,
-        "printer": 169,
+        "printer": 167,
         "resin-material": 145,
         "accessory": 39
       }
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
