@@ -13,8 +13,10 @@ class ProductCategories:
         name = str(product.get('name') or '')
         base = name.split(' — ')[0]
         kind = str(product.get('type') or '')
+        variant = re.sub(r'\bHS(?=PLA|PETG)', '', ' — '.join(name.split(' — ')[1:]), flags=re.I)
+        selected = variant if re.search(r'\b(?:PLA|PETG?|PCTG|ABS|ASA|TPU|TPE|Nylon|PA(?:6|12|66)?|PC|PVA|HIPS|resin)(?=$|[^a-z0-9])', variant, re.I) else ''
         fields = {'name': name, 'nameBase': base, 'type': kind,
-                  'legacyCategory': str(product.get('category') or ''), 'materialText': kind + ' ' + base}
+                  'legacyCategory': str(product.get('category') or ''), 'materialText': selected or kind + ' ' + base}
         for category, rules in self.rules:
             if any(all(pattern.search(fields.get(field, '')) for field, pattern in rule) for rule in rules):
                 return category

@@ -149,9 +149,12 @@ window.__ppCheckBillingDeletion=async()=>{
 if(!window.PRINTPROFIT_BILLING_CONFIG?.enabled)return;
 window.__ppRequirePro=requirePro;
 const approved=new WeakSet(),checking=new WeakSet();
+window.__ppProGateActive=true;
+window.__ppIsApprovedProClick=target=>approved.has(target);
 document.addEventListener('click',async event=>{
  const target=event.target.closest('#ppWorkspacePro [data-pp-pro-tool]:not([data-pp-pro-tool="subscription"]),#ppFarmEnabled,[data-mark-printed],[data-pp-material-scanner-toggle],#ppBusinessTools [data-pp-pro-action],#ppMaterialScan [data-pp-pro-action]');
- if(!target||approved.has(target)||checking.has(target))return;
+ if(!target||approved.has(target))return;
+ if(checking.has(target)){event.preventDefault();event.stopImmediatePropagation();return;}
  if(target.dataset.ppProAction==='quote'&&window.__ppProTier==='pro'&&Date.now()-window.__ppProVerifiedAt<5000)return;
  event.preventDefault();event.stopImmediatePropagation();checking.add(target);
  try{

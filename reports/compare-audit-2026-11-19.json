@@ -1,0 +1,827 @@
+{
+  "date": "2026-11-19",
+  "baseCommit": "9eecb3df9e7370d023918d6c3b5a34582d62dbb8",
+  "scope": "Proposed branch changes; no merge or deployment",
+  "catalogue": {
+    "initiallyActive": 8576,
+    "active": 8575,
+    "verified": 6956,
+    "retainedUnverified": 1619,
+    "archived": 1804,
+    "priceChanges": 130,
+    "availabilityChanges": 2,
+    "newlyArchived": 1,
+    "invalidActivePrices": 0,
+    "availability": {
+      "In stock": 5998,
+      "Unknown": 25,
+      "Out of stock": 2552
+    },
+    "sources": [
+      {
+        "id": "idig3dprinting",
+        "name": "iDig3Dprinting",
+        "checked": 4,
+        "verified": 1,
+        "retained": 3,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 3
+        }
+      },
+      {
+        "id": "3djake-uk",
+        "name": "3DJake UK",
+        "checked": 7,
+        "verified": 3,
+        "retained": 4,
+        "missing": 0,
+        "errors": {
+          "Price URL does not belong to the recorded UK retailer": 2,
+          "Exact model/colour/pack product offer unavailable on the recorded page": 2
+        }
+      },
+      {
+        "id": "bambu-uk",
+        "name": "Bambu Lab UK",
+        "checked": 234,
+        "verified": 234,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "3dgbire",
+        "name": "3DGBIRE",
+        "checked": 633,
+        "verified": 630,
+        "retained": 3,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 1,
+          "Accessories and spare parts are not printers or printing materials": 2
+        }
+      },
+      {
+        "id": "elegoo-uk",
+        "name": "ELEGOO UK",
+        "checked": 2657,
+        "verified": 2550,
+        "retained": 107,
+        "missing": 0,
+        "errors": {
+          "Recorded variant title changed; review the colour/pack before updating": 6,
+          "Source does not state the material pack weight; listing skipped": 101
+        }
+      },
+      {
+        "id": "amazon-uk",
+        "name": "Amazon UK",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "prusa",
+        "name": "Prusa Research",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "3dprima-uk",
+        "name": "3D Prima UK",
+        "checked": 17,
+        "verified": 11,
+        "retained": 6,
+        "missing": 0,
+        "errors": {
+          "HTTP Error 403: Forbidden": 4,
+          "HTTP Error 404: Not Found": 1,
+          "Exact model/colour/pack product offer unavailable on the recorded page": 1
+        }
+      },
+      {
+        "id": "123-3d-uk",
+        "name": "123-3D UK",
+        "checked": 1741,
+        "verified": 1722,
+        "retained": 19,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 2,
+          "Accessories and spare parts are not printers or printing materials": 4,
+          "Recorded model title changed; product identity needs review": 13
+        }
+      },
+      {
+        "id": "nse-imports",
+        "name": "NSE Imports",
+        "checked": 466,
+        "verified": 454,
+        "retained": 12,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 1,
+          "Accessories and spare parts are not printers or printing materials": 3,
+          "Pack weight is ambiguous; listing skipped": 8
+        }
+      },
+      {
+        "id": "ooznest",
+        "name": "Ooznest",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "3d-filaprint",
+        "name": "3D FilaPrint",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "subliblanks",
+        "name": "Subliblanks",
+        "checked": 6,
+        "verified": 6,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "creality-uk",
+        "name": "Creality UK",
+        "checked": 12,
+        "verified": 6,
+        "retained": 6,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 4,
+          "HTTP Error 404: Not Found": 1,
+          "No single GBP offer for the exact product": 1
+        }
+      },
+      {
+        "id": "flashforge-uk",
+        "name": "Flashforge UK",
+        "checked": 27,
+        "verified": 21,
+        "retained": 6,
+        "missing": 0,
+        "errors": {
+          "Recorded model title changed; product identity needs review": 6
+        }
+      },
+      {
+        "id": "qidi-uk",
+        "name": "QIDI UK Store",
+        "checked": 125,
+        "verified": 108,
+        "retained": 17,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 9,
+          "Recorded variant title changed; review the colour/pack before updating": 8
+        }
+      },
+      {
+        "id": "sovol-uk",
+        "name": "Sovol UK",
+        "checked": 20,
+        "verified": 20,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "snapmaker-uk",
+        "name": "Snapmaker UK",
+        "checked": 1,
+        "verified": 0,
+        "retained": 1,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 1
+        }
+      },
+      {
+        "id": "polymaker-uk",
+        "name": "Polymaker UK",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "esun-uk",
+        "name": "eSUN UK",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "3dqf-uk",
+        "name": "3DQF UK",
+        "checked": 0,
+        "verified": 0,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "anycubic-uk",
+        "name": "Anycubic UK",
+        "checked": 802,
+        "verified": 760,
+        "retained": 41,
+        "missing": 1,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 3,
+          "Recorded variant title changed; review the colour/pack before updating": 38
+        }
+      },
+      {
+        "id": "sunlu-uk",
+        "name": "SUNLU UK",
+        "checked": 1760,
+        "verified": 369,
+        "retained": 1391,
+        "missing": 0,
+        "errors": {
+          "Recorded model title changed; product identity needs review": 126,
+          "Recorded variant title changed; review the colour/pack before updating": 856,
+          "Pack weight is ambiguous; listing skipped": 352,
+          "Source does not state the material pack weight; listing skipped": 57
+        }
+      },
+      {
+        "id": "3d-printz",
+        "name": "3D Printz",
+        "checked": 51,
+        "verified": 51,
+        "retained": 0,
+        "missing": 0,
+        "errors": {}
+      },
+      {
+        "id": "additive-x",
+        "name": "Additive-X",
+        "checked": 13,
+        "verified": 10,
+        "retained": 3,
+        "missing": 0,
+        "errors": {
+          "Exact model/colour/pack product offer unavailable on the recorded page": 3
+        }
+      }
+    ],
+    "method": "Existing guarded public readers; exact recorded variants/packs; discovery and image updates disabled. No physical stock quantity or checkout confirmation."
+  },
+  "dataHealth": {
+    "warningCount": 29,
+    "warnings": [
+      "inpost: failed; last verified 2026-10-29",
+      "royalmail-first: failed; last verified 2026-10-29",
+      "royalmail-second: failed; last verified 2026-10-29",
+      "parcelforce: failed; last verified never",
+      "dpd: failed; last verified 2026-10-29",
+      "dhl: failed; last verified 2026-10-29",
+      "ups: failed; last verified never",
+      "fedex: failed; last verified never",
+      "depop: failed; last verified 2026-10-29",
+      "vinted: review-required; last verified 2026-10-29",
+      "tiktok: review-required; last verified 2026-10-29",
+      "facebook: failed; last verified never",
+      "inpost: verification is older than seven days",
+      "royalmail-first: verification is older than seven days",
+      "royalmail-second: verification is older than seven days",
+      "dpd: verification is older than seven days",
+      "dhl: verification is older than seven days",
+      "depop: verification is older than seven days",
+      "vinted: verification is older than seven days",
+      "tiktok: verification is older than seven days",
+      "Amazon UK: no active listings",
+      "Prusa Research: no active listings",
+      "Ooznest: no active listings",
+      "3D FilaPrint: no active listings",
+      "Polymaker UK: no active listings",
+      "eSUN UK: no active listings",
+      "3DQF UK: no active listings",
+      "Offer 0: last checked over seven days ago; retailer confirmation needed",
+      "Offer 1: last checked over seven days ago; retailer confirmation needed"
+    ],
+    "offers": {
+      "configured": 2,
+      "activeApproved": 0,
+      "checkoutVerified": false
+    }
+  },
+  "automated": {
+    "javascriptScripts": 22,
+    "backendTests": 38,
+    "retailerTests": 25,
+    "sourceReliabilityTests": 3,
+    "fxChecks": "passed",
+    "builderSelfTest": "passed",
+    "calculatorCombinations": 5760,
+    "targetEquations": 34560,
+    "combinedCompareChecks": 360
+  },
+  "browser": {
+    "publicPages": {
+      "pages": [
+        {
+          "name": "index.html",
+          "viewport": 1440,
+          "readyMs": 2037,
+          "navigation": {
+            "ttfbMs": 24,
+            "loadMs": 1104
+          },
+          "resources": 130,
+          "transferredBytes": 5906970,
+          "requests": 127
+        },
+        {
+          "name": "price-finder.html",
+          "viewport": 1440,
+          "readyMs": 1233,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 1124
+          },
+          "resources": 76,
+          "transferredBytes": 9798254,
+          "requests": 77
+        },
+        {
+          "name": "deals.html",
+          "viewport": 1440,
+          "readyMs": 341,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 298
+          },
+          "resources": 14,
+          "transferredBytes": 1751051,
+          "requests": 15
+        },
+        {
+          "name": "guide.html",
+          "viewport": 1440,
+          "readyMs": 412,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 355
+          },
+          "resources": 18,
+          "transferredBytes": 1787453,
+          "requests": 18
+        },
+        {
+          "name": "privacy.html",
+          "viewport": 1440,
+          "readyMs": 386,
+          "navigation": {
+            "ttfbMs": 6,
+            "loadMs": 349
+          },
+          "resources": 15,
+          "transferredBytes": 1776528,
+          "requests": 16
+        },
+        {
+          "name": "terms.html",
+          "viewport": 1440,
+          "readyMs": 342,
+          "navigation": {
+            "ttfbMs": 6,
+            "loadMs": 307
+          },
+          "resources": 14,
+          "transferredBytes": 1755020,
+          "requests": 15
+        },
+        {
+          "name": "index.html",
+          "viewport": 390,
+          "readyMs": 1613,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 635
+          },
+          "resources": 130,
+          "transferredBytes": 5906970,
+          "requests": 127
+        },
+        {
+          "name": "price-finder.html",
+          "viewport": 390,
+          "readyMs": 1168,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 1068
+          },
+          "resources": 38,
+          "transferredBytes": 7929878,
+          "requests": 39
+        },
+        {
+          "name": "deals.html",
+          "viewport": 390,
+          "readyMs": 305,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 264
+          },
+          "resources": 14,
+          "transferredBytes": 1751051,
+          "requests": 15
+        },
+        {
+          "name": "guide.html",
+          "viewport": 390,
+          "readyMs": 330,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 285
+          },
+          "resources": 17,
+          "transferredBytes": 1787153,
+          "requests": 18
+        },
+        {
+          "name": "privacy.html",
+          "viewport": 390,
+          "readyMs": 338,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 306
+          },
+          "resources": 15,
+          "transferredBytes": 1776528,
+          "requests": 16
+        },
+        {
+          "name": "terms.html",
+          "viewport": 390,
+          "readyMs": 267,
+          "navigation": {
+            "ttfbMs": 5,
+            "loadMs": 237
+          },
+          "resources": 14,
+          "transferredBytes": 1755020,
+          "requests": 15
+        }
+      ],
+      "contrastChecks": [
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "light",
+          "selector": ".kicker",
+          "ratio": 8.59,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "light",
+          "selector": "h1",
+          "ratio": 17.54,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "light",
+          "selector": "h1 strong",
+          "ratio": 8.31,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "light",
+          "selector": ".lead",
+          "ratio": 15.6,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "dark",
+          "selector": ".kicker",
+          "ratio": 8.59,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "dark",
+          "selector": "h1",
+          "ratio": 17.54,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "dark",
+          "selector": "h1 strong",
+          "ratio": 8.31,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 1440,
+          "theme": "dark",
+          "selector": ".lead",
+          "ratio": 15.6,
+          "required": 4.5
+        },
+        {
+          "page": "index.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".pvm-kicker",
+          "ratio": 11.66,
+          "required": 4.5
+        },
+        {
+          "page": "index.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".pvm-copy h1",
+          "ratio": 14.27,
+          "required": 3
+        },
+        {
+          "page": "index.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".pvm-copy h1 strong",
+          "ratio": 14.12,
+          "required": 3
+        },
+        {
+          "page": "index.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".pvm-copy > p",
+          "ratio": 12.3,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".kicker",
+          "ratio": 7.15,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": "h1",
+          "ratio": 17.95,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": "h1 strong",
+          "ratio": 6.29,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "light",
+          "selector": ".lead",
+          "ratio": 7.7,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "dark",
+          "selector": ".kicker",
+          "ratio": 7.15,
+          "required": 4.5
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "dark",
+          "selector": "h1",
+          "ratio": 17.95,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "dark",
+          "selector": "h1 strong",
+          "ratio": 6.29,
+          "required": 3
+        },
+        {
+          "page": "price-finder.html",
+          "viewport": 390,
+          "theme": "dark",
+          "selector": ".lead",
+          "ratio": 7.7,
+          "required": 4.5
+        }
+      ],
+      "failures": [],
+      "warnings": [
+        "price-finder.html at 1440px exceeded its download budget",
+        "price-finder.html at 390px exceeded its download budget",
+        "1619 listed prices were not verified in the latest refresh"
+      ],
+      "pricing": {
+        "listed": 8575,
+        "verified": 6956,
+        "retained": 1619,
+        "archived": 1804,
+        "lastRefresh": "2026-11-19T07:11:05.721669+00:00"
+      }
+    },
+    "settings": {
+      "checkedAt": "2026-11-19T07:24:00.994Z",
+      "passed": 912,
+      "dimensions": {
+        "materials": 2,
+        "currencies": 19,
+        "languages": 6,
+        "units": 2,
+        "themes": 2
+      },
+      "reloadPersisted": {
+        "dark": true,
+        "language": "it",
+        "units": "imperial",
+        "currency": "ZAR",
+        "rate": 2
+      },
+      "errors": []
+    },
+    "workflows": {
+      "checkedAt": "2026-11-19T17:49:24.046Z",
+      "checks": [
+        {
+          "name": "Analytics rejection closes the consent banner"
+        },
+        {
+          "name": "Every calculator dropdown option and dependent courier service",
+          "printers": 115,
+          "materials": 46,
+          "brands": 25,
+          "providers": 94,
+          "platforms": 12,
+          "couriers": 10,
+          "services": 74
+        },
+        {
+          "name": "Browser G-code upload fills material and print time"
+        },
+        {
+          "name": "Saved project retains custom delivery-fee basis"
+        },
+        {
+          "name": "Save, rename, duplicate and load a project with its uploaded file"
+        },
+        {
+          "name": "Create, edit and apply a saved material"
+        },
+        {
+          "name": "Create and apply a custom saved printer"
+        },
+        {
+          "name": "Free full-workspace backup download",
+          "projects": 2
+        },
+        {
+          "name": "Backup import and duplicate handling"
+        },
+        {
+          "name": "Signed-out account form, consent and destructive-action gating"
+        },
+        {
+          "name": "Confirmed print deducts the correct saved-stock amount"
+        },
+        {
+          "name": "Save and compare a production scenario"
+        },
+        {
+          "name": "Internal costing CSV download"
+        },
+        {
+          "name": "Customer quotation preview and separation of internal costs"
+        },
+        {
+          "name": "Updated project saves the scenario configuration"
+        },
+        {
+          "name": "Guide dialog opens and closes by keyboard"
+        },
+        {
+          "name": "Inventory survives a browser reload"
+        },
+        {
+          "name": "Calculator reset clears inputs while retaining saved inventory"
+        }
+      ],
+      "errors": [],
+      "limitations": [
+        "Pro tools exercised locally with billing disabled; real payments, authentication and cross-device cloud transport are not simulated as successful."
+      ]
+    },
+    "mobileResetOffline": {
+      "checkedAt": "2026-11-19T17:43:07.437Z",
+      "checks": [
+        {
+          "width": 320,
+          "materialForm": "saved using visible button",
+          "language": "de",
+          "currency": "GBP",
+          "units": "metric"
+        },
+        {
+          "width": 390,
+          "materialForm": "saved using visible button",
+          "language": "de",
+          "currency": "USD",
+          "units": "imperial"
+        },
+        {
+          "width": 768,
+          "materialForm": "saved using visible button",
+          "language": "en",
+          "currency": "GBP",
+          "units": "metric"
+        },
+        {
+          "width": 1440,
+          "materialForm": "saved using visible button",
+          "language": "en",
+          "currency": "GBP",
+          "units": "metric"
+        },
+        {
+          "feature": "Online-first PWA",
+          "offlineMessage": true,
+          "localStorageRetained": true,
+          "reconnect": true
+        },
+        {
+          "page": "admin/index.html",
+          "sourcePreview": "loaded without script errors",
+          "note": "Separate protected admin hosting and non-public review page; no privileged actions performed"
+        },
+        {
+          "page": "reports/review-products.html",
+          "sourcePreview": "loaded without script errors",
+          "note": "Separate protected admin hosting and non-public review page; no privileged actions performed"
+        }
+      ],
+      "errors": [],
+      "resetCombinations": 76
+    }
+  },
+  "livePlanCatalogue": {
+    "productActive": true,
+    "currency": "GBP",
+    "monthly": 2.5,
+    "annual": 24,
+    "readOnly": true,
+    "checkoutTested": false
+  },
+  "limits": [
+    "1619 offer identities/prices remain unverified; seven tracked sources have no active listings.",
+    "External courier/platform references and coupon checks retain data-health warnings.",
+    "No successful live authentication, email verification, TOTP, cross-device cloud transport or production Firestore-rule enforcement check.",
+    "No live checkout, trial, cancellation, renewal, refund or account deletion.",
+    "Local Pro workflow uses isolated billing-disabled state; backend tests use mocks.",
+    "No physical camera, native mobile/install, real print/PDF or assistive-technology check; translations need native editorial review.",
+    "Local uncompressed Compare exceeds the download budget; production compressed performance not measured.",
+    "Recorded matrix and boundary coverage does not exhaust every arbitrary input, file, network or account state."
+  ]
+}

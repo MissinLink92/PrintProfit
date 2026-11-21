@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-21T05:52:30.873340+00:00
+2026-11-21T08:33:53.640054+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29

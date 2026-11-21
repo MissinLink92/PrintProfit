@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-21",
+  "mainBase": "42b77e9d61ae453db7fe1e987074b30d7d4e725f",
+  "catalogue": {
+    "snapshotDate": "2026-11-21",
+    "activeOffers": 8525,
+    "uniqueDisplayedOffers": 8523,
+    "nightlyReportedVerified": 7415,
+    "nightlyReportedUnverified": 1110,
+    "note": "Latest nightly source records preserved; external prices/stock not independently rechecked again on 21 November. Two identical display offers are deduplicated."
+  },
+  "filterMatrix": {
+    "products": 8523,
+    "productSubsetChecks": 545472,
+    "feasibleFilterCombinations": 33806,
+    "pairwiseCombinations": 9667,
+    "facetOptionChecks": 27722,
+    "priceBoundaries": 34092,
+    "searchIdentityChecks": 25569,
+    "sortViewStockPriceSelectionCombinations": 800,
+    "recovery": "passed",
+    "limitations": "All feasible combinations of the six discrete catalogue facets and every pair (including impossible pairs). Search text and numeric prices use identity/boundary cases; arbitrary strings and continuous ranges are not finite."
+  },
+  "browser": {
+    "checks": [
+      {
+        "width": 1440,
+        "optionsSelected": 160,
+        "quickPairs": 49,
+        "selectionPreserved": true,
+        "resetSurvivesReload": true,
+        "conflictingFiltersRecovered": true,
+        "legacyColourRecovered": true,
+        "bothLayouts": true,
+        "germanRecovery": true
+      },
+      {
+        "width": 390,
+        "optionsSelected": 160,
+        "quickPairs": 49,
+        "selectionPreserved": true,
+        "resetSurvivesReload": true,
+        "conflictingFiltersRecovered": true,
+        "legacyColourRecovered": true,
+        "bothLayouts": true,
+        "germanRecovery": true
+      },
+      {
+        "dataLoadFailure": "explicit unavailable message retained after clearing filters"
+      }
+    ],
+    "errors": []
+  },
+  "regressions": {
+    "javascriptScripts": 23,
+    "backendTests": 38,
+    "feedTests": 25,
+    "sourceReliabilityTests": 3,
+    "fx": "passed",
+    "builder": "passed"
+  },
+  "dataHealthWarnings": [
+    "inpost: failed; last verified 2026-10-29",
+    "royalmail-first: failed; last verified 2026-10-29",
+    "royalmail-second: failed; last verified 2026-10-29",
+    "parcelforce: failed; last verified never",
+    "dpd: failed; last verified 2026-10-29",
+    "dhl: failed; last verified 2026-10-29",
+    "ups: failed; last verified never",
+    "fedex: failed; last verified never",
+    "depop: failed; last verified 2026-10-29",
+    "vinted: review-required; last verified 2026-10-29",
+    "tiktok: review-required; last verified 2026-10-29",
+    "facebook: failed; last verified never",
+    "inpost: verification is older than seven days",
+    "royalmail-first: verification is older than seven days",
+    "royalmail-second: verification is older than seven days",
+    "dpd: verification is older than seven days",
+    "dhl: verification is older than seven days",
+    "depop: verification is older than seven days",
+    "vinted: verification is older than seven days",
+    "tiktok: verification is older than seven days",
+    "Amazon UK: no active listings",
+    "Prusa Research: no active listings",
+    "Ooznest: no active listings",
+    "3D FilaPrint: no active listings",
+    "Polymaker UK: no active listings",
+    "eSUN UK: no active listings",
+    "3DQF UK: no active listings",
+    "Offer 0: last checked over seven days ago; retailer confirmation needed",
+    "Offer 1: last checked over seven days ago; retailer confirmation needed"
+  ],
+  "limits": [
+    "Arbitrary search strings and continuous price ranges cannot be exhaustively enumerated.",
+    "Actual missing products/stock and incompatible requested filters still return an honest empty result with recovery controls.",
+    "Production account/cloud/billing lifecycle and physical-device/camera/print behaviour remain unverified.",
+    "Current external price/stock verification is the nightly snapshot status, not a checkout guarantee."
+  ]
+}

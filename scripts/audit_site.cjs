@@ -6,7 +6,7 @@ const { PNG } = require('pngjs');
 const base = process.env.PP_AUDIT_URL || 'https://printprofit.co.uk/';
 const output = path.resolve(process.env.PP_AUDIT_OUTPUT || '.audit-output');
 const languages = ['en', 'pl', 'de', 'fr', 'es', 'it'];
-const pages = ['index.html', 'price-finder.html', 'guide.html', 'privacy.html', 'terms.html'];
+const pages = ['index.html', 'price-finder.html', 'deals.html', 'guide.html', 'privacy.html', 'terms.html'];
 const report = { checkedAt: new Date().toISOString(), base, pages: [], contrastChecks: [], failures: [], warnings: [] };
 const check = (condition, message) => { if (!condition) throw Error(message); };
 
@@ -149,7 +149,7 @@ async function auditPage(browser, name, viewport) {
 
 (async () => {
  await fs.mkdir(output, { recursive: true });
- const browser = await chromium.launch({ headless: true });
+ const browser = await chromium.launch({ headless: true, ...(process.env.PP_AUDIT_BROWSER_CHANNEL ? {channel:process.env.PP_AUDIT_BROWSER_CHANNEL} : {}) });
  try {
   for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }]) {
    for (const name of pages) await auditPage(browser, name, viewport);

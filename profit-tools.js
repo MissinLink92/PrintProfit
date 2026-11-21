@@ -64,16 +64,17 @@ function readState(){
   const sell=n('sell');
   const feeRate=(n('platform')+n('pay'))/100;
   const fixedFee=n('fixedFee');
-  const fees=sell*feeRate+fixedFee;
+  const shippingFees=window.PrintProfitPricing.fromControls(document,n);
+  const fees=sell*feeRate+shippingFees+fixedFee;
   const profit=sell+deliveryCharge-base-fees;
   const margin=sell?profit/sell:0;
   const batchSales=sell*qty*(1-disc);
   const batchProductionBase=Math.max(0,base-delivery);
   const batchCost=batchProductionBase*qty+delivery;
-  const batchFees=batchSales*feeRate+fixedFee;
+  const batchFees=batchSales*feeRate+shippingFees+fixedFee;
   const batchProfit=batchSales+deliveryCharge-batchCost-batchFees;
   const batchMargin=batchSales?batchProfit/batchSales:0;
-  return {p,hours,qty,disc,pack,packPrice,used,materialCost,elec,depreciation,labour,packaging,other,packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee,fees,profit,margin,batchSales,batchCost,batchFees,batchProfit,batchMargin};
+  return {p,hours,qty,disc,pack,packPrice,used,materialCost,elec,depreciation,labour,packaging,other,packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee,shippingFees,fees,profit,margin,batchSales,batchCost,batchFees,batchProfit,batchMargin};
 }
 
 function profileData(){
@@ -241,7 +242,7 @@ function platformRows(state){
     const platform=Number(p?.platform)||0;
     const pay=Number(p?.pay)||0;
     const fixed=Number(p?.fixed)||0;
-    const fee=state.sell*(platform+pay)/100+fixed;
+    const fee=state.sell*(platform+pay)/100+window.PrintProfitPricing.forChannel(state.deliveryCharge,platform,pay,key)+fixed;
     const profit=state.sell+state.deliveryCharge-state.base-fee;
     rows.push({key,name:profileLabel(key),fee,profit});
   });
@@ -273,6 +274,7 @@ function updateWhatIf(state){
   const packSaving=Math.min(Math.max(0,n('ppWhatIfPack')),state.packaging);
   const deliverySaving=Math.min(Math.max(0,n('ppWhatIfDelivery')),state.delivery);
   const sp=scenarioPlatform();
+  const scenarioShipping=sp.key==='custom'?state.shippingFees:window.PrintProfitPricing.forChannel(state.deliveryCharge,sp.platform,sp.pay,sp.key);
 
   const material=state.materialCost*(1-materialReduction);
   const elec=state.elec*(1-timeReduction);
@@ -283,13 +285,13 @@ function updateWhatIf(state){
   const delivery=Math.max(0,state.delivery-deliverySaving);
   const adjustedBase=material+elec+depreciation+labourAdjusted+packagingOther+delivery;
   const feeRate=(sp.platform+sp.pay)/100;
-  const fees=state.sell*feeRate+sp.fixed;
+  const fees=state.sell*feeRate+scenarioShipping+sp.fixed;
   const profit=state.sell+state.deliveryCharge-adjustedBase-fees;
 
   const batchSales=state.sell*state.qty*(1-state.disc);
   const batchProductionBase=Math.max(0,adjustedBase-delivery);
   const batchCost=batchProductionBase*state.qty+delivery;
-  const batchFees=batchSales*feeRate+sp.fixed;
+  const batchFees=batchSales*feeRate+scenarioShipping+sp.fixed;
   const batchProfit=batchSales+state.deliveryCharge-batchCost-batchFees;
 
   const batchView=$('batchResultView')&&!$('batchResultView').hidden;
@@ -299,7 +301,7 @@ function updateWhatIf(state){
 
   const current=$('ppWIBaseProfit'),out=$('ppWIProfit'),deltaOut=$('ppWIDelta'),costOut=$('ppWICost');
   if(current)current.textContent=money(currentProfit);
-  if(out)out.textContent=money(profit);
+  if(out)out.textContent=money(whatIfProfit);
   if(deltaOut){
     deltaOut.textContent=(delta>=0?'+':'')+money(delta);
     deltaOut.className='pp-whatif-delta '+(delta>0?'up':delta<0?'down':'');
@@ -335,7 +337,7 @@ function updateCostBars(state){
 function targetPriceForMargin(state,margin){
   const den=1-state.feeRate-margin;
   if(den<=0)return null;
-  const price=(state.base+state.fixedFee-state.deliveryCharge)/den;
+  const price=(state.base+state.fixedFee-state.deliveryCharge+(state.shippingFees||0))/den;
   return Math.max(0,price);
 }
 
@@ -379,7 +381,7 @@ function updateSellWhere(state){
   if(spKey==='custom'||!profiles[spKey])sp={platform:n('platform'),pay:n('pay'),fixed:n('fixedFee')};
   else sp=profiles[spKey];
   const feeRate=((Number(sp.platform)||0)+(Number(sp.pay)||0))/100;
-  const fee=state.sell*feeRate+(Number(sp.fixed)||0);
+  const fee=state.sell*feeRate+(spKey==='custom'?state.shippingFees:window.PrintProfitPricing.forChannel(state.deliveryCharge,sp.platform,sp.pay,spKey))+(Number(sp.fixed)||0);
   const out=$('ppSellWhereFee');
   if(out)out.textContent=money(fee)+' • '+money(state.sell+state.deliveryCharge-state.base-fee)+' profit';
 

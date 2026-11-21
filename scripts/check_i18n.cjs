@@ -22,10 +22,11 @@ module.exports={runtime,textNode};
 if(require.main===module)(async()=>{
  for(const language of languages){
   const {window}=await runtime(language),tr=window.__ppTranslateText;
-  for(const key of ['My Workspace','Sign in','Print Setup','Privacy Notice','Upload your sliced print file']){
+  for(const key of ['My Workspace','Sign in','Print Setup','Privacy Notice','Upload your sliced print file','Colour family','Deals','No verified offers right now.','Platform percentage fee applies to delivery charged','Active filters','The minimum price is higher than the maximum price.','Selected only is on. Your selected products do not match these filters.','No catalogue listings match this search. Try fewer words.']){
    assert.notEqual(tr(key,language),key,language+': '+key);
   }
   assert.notEqual(tr('Page 2 of 116',language),'Page 2 of 116');
+  for(const key of ['Clear filters and keep search (14)','Clear search (14)','Show all products (14)'])assert.notEqual(tr(key,language),key);
   assert.notEqual(tr('Showing 21–40 of 2314 matching listings',language),'Showing 21–40 of 2314 matching listings');
   const summary=tr('Last update attempt 13/10/2026 • 1995 prices verified • 2314 listings • 20 sources • 40 brands',language);
   assert.ok(!summary.includes('Last update attempt')&&!summary.includes('prices verified'),language+': full summary must translate');

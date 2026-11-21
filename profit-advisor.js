@@ -444,13 +444,14 @@ function snapshot(){
   const base=materialCost+elec+depreciation+labour+packagingOther+delivery;
   const sell=num('sell');
   const feeRate=(num('platform')+num('pay'))/100;
-  const fees=sell*feeRate+num('fixedFee');
+  const shippingFees=window.PrintProfitPricing.fromControls(document,num);
+  const fees=sell*feeRate+shippingFees+num('fixedFee');
   const profit=sell+deliveryCharge-base-fees;
   const margin=sell?profit/sell:0;
   const den=1-feeRate;
-  const breakEven=den>0?Math.max(0,base+num('fixedFee')-deliveryCharge)/den:null;
+  const breakEven=den>0?Math.max(0,base+num('fixedFee')-deliveryCharge+shippingFees)/den:null;
   const target30Den=1-feeRate-.30;
-  const target30=target30Den>0?Math.max(0,base+num('fixedFee')-deliveryCharge)/target30Den:null;
+  const target30=target30Den>0?Math.max(0,base+num('fixedFee')-deliveryCharge+shippingFees)/target30Den:null;
 
   const batchViewForSnapshot=!!document.getElementById('batchResultView')&&!document.getElementById('batchResultView').hidden;
   const resultNode=document.getElementById(batchViewForSnapshot?'batchProfit':'singleProfit');
@@ -463,20 +464,20 @@ function snapshot(){
   const batchProductionBase=Math.max(0,base-delivery);
   const productionSubtotal=batchProductionBase*qty;
   const batchCost=productionSubtotal+delivery;
-  const batchFees=itemSales*feeRate+num('fixedFee');
+  const batchFees=itemSales*feeRate+shippingFees+num('fixedFee');
   const batchProfit=itemSales+deliveryCharge-batchCost-batchFees;
   const batchMargin=itemSales?batchProfit/itemSales:0;
   const batchBreakEvenDen=1-feeRate;
   const batchBreakEven=batchBreakEvenDen>0&&qty*(1-disc)>0
-    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchBreakEvenDen)/(qty*(1-disc))
+    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge+shippingFees)/batchBreakEvenDen)/(qty*(1-disc))
     :null;
   const batchTarget30Den=1-feeRate-.30;
   const batchTarget30=batchTarget30Den>0&&qty*(1-disc)>0
-    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge)/batchTarget30Den)/(qty*(1-disc))
+    ?Math.max(0,(batchProductionBase*qty+delivery+num('fixedFee')-deliveryCharge+shippingFees)/batchTarget30Den)/(qty*(1-disc))
     :null;
 
   const activeMargin=batchViewForSnapshot?batchMargin:(sell?syncedProfit/sell:0);
-  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:activeMargin,batchProfit,batchMargin,batchBreakEven,batchTarget30};
+  return {qty,disc,hours,materialCost,materialPack:pack,materialPackCost:packPrice,materialUsed:used,elec,depreciation,labour,labourHours:num('labourHours'),labourRate:num('labourRate'),packagingOther,delivery,deliveryCharge,base,sell,feeRate,shippingFees,fixedFee:num('fixedFee'),fees,profit:syncedProfit,margin:activeMargin,batchProfit,batchMargin,batchBreakEven,batchTarget30};
 }
 
 function cheapestDelivery(){
@@ -508,7 +509,7 @@ function lowestSellingFee(sell){
       if(key==='custom')return;
       const pct=(Number(p?.platform)||0)+(Number(p?.pay)||0);
       const fixed=Number(p?.fixed)||0;
-      const fee=Math.max(0,sell||0)*pct/100+fixed;
+      const fee=Math.max(0,sell||0)*pct/100+window.PrintProfitPricing.forChannel(num('deliveryCharge'),p.platform,p.pay,key)+fixed;
       if(!best||fee<best.fee)best={platform:key,fee,pct,fixed};
     });
     return best;
@@ -1013,12 +1014,12 @@ function calculateAdvisorScenario(s,sc,batchView){
   const feeRate=s.feeRate;
   const fixed=num('fixedFee');
   const sell=Math.max(0,sc.sellingPrice);
-  const feesSingle=sell*feeRate+fixed;
+  const feesSingle=sell*feeRate+(s.shippingFees||0)+fixed;
   const singleProfit=sell+s.deliveryCharge-base-feesSingle;
   const qty=s.qty;
   const itemSales=sell*qty*(1-s.disc);
   const batchCost=(base-delivery)*qty+delivery;
-  const batchFees=itemSales*feeRate+fixed;
+  const batchFees=itemSales*feeRate+(s.shippingFees||0)+fixed;
   const batchProfit=itemSales+s.deliveryCharge-batchCost-batchFees;
   const profit=batchView?batchProfit:singleProfit;
   const currentProfit=batchView?s.batchProfit:s.profit;

@@ -31,14 +31,14 @@
   }
 
   function targetPrice(target,mode){
-    const feeRate=(number('platform')+number('pay'))/100,base=currentBaseCost(),fixedFee=number('fixedFee'),deliveryCharge=number('deliveryCharge'),den=1-feeRate-target;
-    if(!(den>0)||base<=0)return null;
+    const feeRate=(number('platform')+number('pay'))/100,base=currentBaseCost(),fixedFee=number('fixedFee'),deliveryCharge=number('deliveryCharge'),shippingFees=window.PrintProfitPricing.fromControls(document,number),den=1-feeRate-target;
+    if(!(den>0))return null;
     if(mode==='batch'){
       const qty=Math.max(1,Math.floor(number('qty'))),discount=Math.min(100,number('discount'))/100;
-      const batchProductionBase=Math.max(0,base-number('delivery'));const discountedSales=Math.max(0,(batchProductionBase*qty+number('delivery')+fixedFee-deliveryCharge)/den),factor=qty*(1-discount);
+      const batchProductionBase=Math.max(0,base-number('delivery'));const discountedSales=Math.max(0,(batchProductionBase*qty+number('delivery')+fixedFee-deliveryCharge+shippingFees)/den),factor=qty*(1-discount);
       return factor>0?discountedSales/factor:null;
     }
-    return(Math.max(0,base+fixedFee-deliveryCharge))/den;
+    return(Math.max(0,base+fixedFee-deliveryCharge+shippingFees))/den;
   }
 
   function setResultMode(mode){
@@ -110,7 +110,7 @@
 
   function resetAllFields(){
     const fields=Array.from(document.querySelectorAll('input,select,textarea')).filter(el=>
-      !el.closest('#ppSettingsPanel,#ppGuidePanel,#ppVisualMaster,#ppCleanTop,.header'));
+      !el.closest('#ppSettingsPanel,#ppGuidePanel,#ppVisualMaster,#ppCleanTop,.header,#ppMaterialsPanel,#ppProjectsPanel,#ppMaterialFormPanel,#ppFarmDetails')&&!el.classList?.contains('ppPreferenceInput'));
     fields.forEach(el=>{
       const type=(el.type||'').toLowerCase();
       if(type==='file')el.value='';
@@ -129,6 +129,7 @@
 
     setValue('sell','0');
     setValue('materialPackCost','0');
+    setValue('qty','1');
     manualSellingPrice=0;
     quickMode=null;
     window.__ppClearActiveProject?.();

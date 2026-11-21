@@ -27,6 +27,12 @@ jobs:
           node-version: '22'
       - name: Check product categories
         run: node scripts/check_product_categories.cjs
+      - name: Check comparison search, colours, prices and stock
+        run: node scripts/check_compare_products.cjs
+      - name: Check all feasible filter combinations and recovery
+        run: node scripts/check_compare_combinations.cjs
+      - name: Check coupon validity and live expiry
+        run: node scripts/check_coupon_expiry.cjs
       - name: Check business exports and material barcodes
         run: node scripts/check_business_tools.cjs
       - name: Check uploaded material usage
@@ -37,14 +43,20 @@ jobs:
         run: node scripts/check_labour_time.cjs
       - name: Check calculator arithmetic
         run: node scripts/check_calculator_math.cjs
+      - name: Check calculator and target-price combinations
+        run: node scripts/check_pricing_combinations.cjs
       - name: Check translation initialization and switching
         run: node scripts/check_i18n.cjs
       - name: Check currency labels and calculated values
         run: node scripts/check_currency_labels.cjs
+      - name: Check settings units and saved preferences
+        run: node scripts/check_settings_combinations.cjs
       - name: Check verified material market references
         run: node scripts/check_market_prices.cjs
       - name: Check saved printer options and metadata
         run: node scripts/check_workshop_printers.cjs
+      - name: Check material inventory and stock deduction
+        run: node scripts/check_inventory_stock.cjs
       - name: Check printer model profiles and retail references
         run: node scripts/check_printer_presets.cjs
       - name: Check Workspace popup placement and scroll restoration
@@ -53,11 +65,13 @@ jobs:
         run: node scripts/check_shared_panels.cjs
       - name: Check Pro Workspace routing
         run: node scripts/check_pro_workspace.cjs
+      - name: Check Pro action ordering and stock deduction
+        run: node scripts/check_pro_action_order.cjs
       - name: Check shared site icons
         run: node scripts/check_site_icons.cjs
 
       - name: Test billing backend and Firestore rule contract
-        run: node --test functions/billing-core.test.js functions/billing-handlers.test.js
+        run: node --test functions/*.test.js
       - name: Check Free backups and cloud access gating
         run: node scripts/check_free_pro.cjs
 
