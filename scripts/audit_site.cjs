@@ -90,6 +90,17 @@ async function auditPage(browser, name, viewport) {
    await scope.locator('#ppMaterialsPanel button[data-material-close]').click();
   }
   if (name === 'price-finder.html') {
+   check(!await page.locator('#compareBar').isVisible(), 'Empty comparison bar must stay hidden');
+   await page.locator('.compare-check:visible').first().check();
+   check(await page.locator('#compareBar').isVisible(), 'Selected product must show comparison bar');
+   await page.locator('#clearCompare').click();
+   check(!await page.locator('#compareBar').isVisible(), 'Clearing selection must hide comparison bar');
+   await page.locator('#search').fill('no-catalogue-item-audit-987654');
+   await page.waitForFunction(() => document.querySelector('#count').textContent === '0 listings');
+   check(await page.locator('#empty').isVisible(), 'Empty search explanation must be visible');
+   check(!await page.locator('#insight').isVisible(), 'Empty search must hide old price summaries');
+   await page.locator('[data-recover="all"]').click();
+   check(await page.locator('#insight').isVisible(), 'Recovered results must show current summaries');
    const count = await page.locator('#rows > tr').count();
    check(count > 0 && count <= 20, `Compare rendered ${count} rows; expected 1–20`);
    const firstListing = await page.locator('#rows [data-details-id]').first().getAttribute('data-details-id');
