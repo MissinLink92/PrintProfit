@@ -13,7 +13,6 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "Saturn 3": 219.0,
   "Mars 5 Ultra": 285.0,
   "Jupiter 2": 799.0,
-  "K2": 339.0,
   "K2 Plus": 849.0,
   "Ender-5 Max": 589.0,
   "HALOT-MAGE S 14K": 316.0,
@@ -1544,5 +1543,15 @@ window.PRINTPROFIT_PRINTER_PRICES={
   "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Dark Blue / Dark Blue": 425.96,
   "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Sky Blue / Silk Silver Grey / Brown": 394.96,
   "Centauri 2 Combo: Precision Study Tools Bundle — White / Neon Green / Sea Green": 313.96,
-  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Dark Blue / Pink": 425.96
+  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Dark Blue / Pink": 425.96,
+  "Centauri 2 Combo: Precision Study Tools Bundle — White / Dark Blue / Black": 313.96,
+  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Pink / Yellow": 425.96,
+  "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk Gold / Brown": 394.96,
+  "Centauri 2 Combo: Precision Study Tools Bundle — White / Dark Blue / White": 313.96,
+  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Pink / Dark Blue": 425.96,
+  "Centauri Carbon 2 Combo: Desktop Creator Bundle — Silk Bluish Purple / Silk White / Brown": 394.96,
+  "Centauri 2 Combo: Precision Study Tools Bundle — White / Dark Blue / Grey": 313.96,
+  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — Black / Pink / Pink": 425.96,
+  "Centauri 2 Combo: Precision Study Tools Bundle — White / Dark Blue / Blue": 313.96,
+  "× emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle — White / Red / Yellow": 425.96
 };
