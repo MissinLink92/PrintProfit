@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-22T05:19:23.318537+00:00",
+  "checkedAt": "2026-11-23T05:43:16.707836+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2665,
-      "verified": 2557,
+      "listed": 2710,
+      "verified": 2602,
       "categories": {
-        "printer": 1366,
-        "filament": 917,
+        "printer": 1391,
+        "filament": 937,
         "resin-material": 343,
         "accessory": 35,
         "equipment": 4
@@ -165,10 +165,10 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 807,
-      "verified": 758,
+      "listed": 810,
+      "verified": 761,
       "categories": {
-        "filament": 474,
+        "filament": 477,
         "printer": 149,
         "resin-material": 145,
         "accessory": 39

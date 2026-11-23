@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-22T05:19:23.318537+00:00
+2026-11-23T05:43:16.707836+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -44,7 +44,7 @@
 | 3DGBIRE | 633 | 630 |
 | Bambu Lab UK | 234 | 234 |
 | Creality UK | 12 | 5 |
-| ELEGOO UK | 2665 | 2557 |
+| ELEGOO UK | 2710 | 2602 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
@@ -52,7 +52,7 @@
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |
-| Anycubic UK | 807 | 758 |
+| Anycubic UK | 810 | 761 |
 | QIDI UK Store | 125 | 108 |
 | Flashforge UK | 27 | 21 |
 | Sovol UK | 20 | 20 |
