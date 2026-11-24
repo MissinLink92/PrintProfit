@@ -21292,7 +21292,7 @@
     "candidate-3684780ee5dd95f2c577": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-carbon-fiber-filament-pa12-cf",
       "variantId": 44426520657964,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PA12-CF_447d49b1-d623-4a2f-9973-41f4a8bba908.jpg?v=1772862288",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/pa12-cf_3981d92e-b425-40c7-9409-eba415398637.png?v=1795414012",
       "expectedProductTitle": "PA12-CF Filament",
       "expectedVariantTitle": "1 Kg / PA12-CF / UK",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-carbon-fiber-filament-pa12-cf"
@@ -22780,7 +22780,7 @@
     "candidate-cfad4cb09ef78cf6d416": {
       "priceUrl": "https://uk.qidi3d.com/products/qidi-carbon-fiber-filament-pa12-cf",
       "variantId": 45556008484908,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/PA12-CF_447d49b1-d623-4a2f-9973-41f4a8bba908.jpg?v=1772862288",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0684/6260/8428/files/pa12-cf_3981d92e-b425-40c7-9409-eba415398637.png?v=1795414012",
       "expectedProductTitle": "PA12-CF Filament",
       "expectedVariantTitle": "1 Kg / PA12-CF / China",
       "imageSourceUrl": "https://uk.qidi3d.com/products/qidi-carbon-fiber-filament-pa12-cf"
@@ -83805,336 +83805,566 @@
       "variantId": 54472763343161,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/d09f7325ddad44c5663ad36980e59636_d66de80e-bd50-4eca-b241-c9037813e7ff.jpg?v=1788772767",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Bronze (#7C4D3A) / 10KG"
+      "expectedVariantTitle": "Bronze (#7C4D3A) / 10KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-2af9879c267d30427c37": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822602973465,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1311_PLA_1KG_1.75mm.jpg?v=1795403222",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Oak Wood Color"
+      "expectedVariantTitle": "Oak Wood Color",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-10c480e70267ac55ba87": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674342169,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1311PLA_1KG_1.75mm.jpg?v=1795403373",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Oak Wood Color"
+      "expectedVariantTitle": "Oak Wood Color",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-dff5f43c1258152b5d36": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974457585945,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "White / Red / Sea Green"
+      "expectedVariantTitle": "White / Red / Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-d6177f7a8abbc8b13283": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419143961,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Yellow / Dark Blue"
+      "expectedVariantTitle": "Dark Blue / Yellow / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-5f56171df5a694821aa4": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603006233,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1224_PLA_1KG_1.75mm.jpg?v=1795403233",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Mango Yellow"
+      "expectedVariantTitle": "Mango Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-5814bd3147aa140e66a7": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674374937,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1224PLA_1KG_1.75mm.jpg?v=1795403384",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Mango Yellow"
+      "expectedVariantTitle": "Mango Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-f6e5ca76415cce74cd1a": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974457618713,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Black / Neon Green / Black"
+      "expectedVariantTitle": "Black / Neon Green / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-14443f4dd2194fba2da1": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419176729,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Yellow / Pink"
+      "expectedVariantTitle": "Dark Blue / Yellow / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-19a961f4c3f2cd3acf83": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763375929,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/d09f7325ddad44c5663ad36980e59636_4bea6bd5-8e57-4ef8-9194-ebb8b57e1830.jpg?v=1788772769",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Bronze (#7C4D3A) / 20KG"
+      "expectedVariantTitle": "Bronze (#7C4D3A) / 20KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-d62c51ef9584dc83f242": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603039001,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1312_PLA_1KG_1.75mm.jpg?v=1795403247",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "True Green"
+      "expectedVariantTitle": "True Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-325cc2803b5913786171": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674407705,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1312PLA_1KG_1.75mm.jpg?v=1795403394",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "True Green"
+      "expectedVariantTitle": "True Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-a8eb7aa9186c349adba7": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974457651481,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Black / Neon Green / White"
+      "expectedVariantTitle": "Black / Neon Green / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-74928b148d6f0a248069": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419209497,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Dark Blue / Yellow"
+      "expectedVariantTitle": "Dark Blue / Dark Blue / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-52063f5d4d3bd4955cfe": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603071769,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1227_PLA_1KG_1.75mm.jpg?v=1795403256",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Bone White"
+      "expectedVariantTitle": "Bone White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-d4ca72c4f4b4bd83976a": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674440473,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1227PLA_1KG_1.75mm.jpg?v=1795403403",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Bone White"
+      "expectedVariantTitle": "Bone White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-5fb7d8d5cfe66b6b64f7": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 52974457684249,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Black / Neon Green / Grey"
+      "expectedVariantTitle": "Black / Neon Green / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-91dd14b9a217cfedd149": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419242265,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Dark Blue / Dark Blue"
+      "expectedVariantTitle": "Dark Blue / Dark Blue / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-bc1d591e40b1baa2be46": {
       "priceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer",
       "variantId": 54472763408697,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/Bronze_8ec15854-333b-42db-b131-edf82f5affdb.png?v=1788772935",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Bronze (#7C4D3A) / 50KG"
+      "expectedVariantTitle": "Bronze (#7C4D3A) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-3e5109b738ec14f19f7c": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603104537,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1229_PLA_1KG_1.75mm.jpg?v=1795403272",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Pumpkin Orange"
+      "expectedVariantTitle": "Pumpkin Orange",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-42724ab10f91cca19d5f": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674473241,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1229PLA_1KG_1.75mm.jpg?v=1795403417",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Pumpkin Orange"
+      "expectedVariantTitle": "Pumpkin Orange",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-1ed9afbb7048536664ca": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773408025,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Black"
+      "expectedVariantTitle": "Red / Grey / Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-408f01ba0e480b783ca1": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419275033,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Dark Blue / Pink"
+      "expectedVariantTitle": "Dark Blue / Dark Blue / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-667dda8f4f1cf0ebedb5": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603137305,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1230_PLA_1KG_1.75mm.jpg?v=1795403282",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Sakura Pink"
+      "expectedVariantTitle": "Sakura Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-5de9426f53e19b5d4d80": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674506009,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1230PLA_1KG_1.75mm.jpg?v=1795403426",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Sakura Pink"
+      "expectedVariantTitle": "Sakura Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-85dc81ad543c229f980c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773440793,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / White"
+      "expectedVariantTitle": "Red / Grey / White",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-fca83ccb2e7cc55b47c6": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419307801,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Pink / Yellow"
+      "expectedVariantTitle": "Dark Blue / Pink / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-adaa108a01e2b4c6c243": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603170073,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1232_PLA_1KG_1.75mm.jpg?v=1795403293",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Chocolate Brown"
+      "expectedVariantTitle": "Chocolate Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-145656e0ee86a8605791": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674538777,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1232PLA_1KG_1.75mm.jpg?v=1795403436",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Chocolate Brown"
+      "expectedVariantTitle": "Chocolate Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-51e5a6d7eae894fb7ffd": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773473561,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Grey"
+      "expectedVariantTitle": "Red / Grey / Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-9b0e6b9bd619decb17bd": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419340569,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Pink / Dark Blue"
+      "expectedVariantTitle": "Dark Blue / Pink / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-a9aa93be5b19c36be158": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603202841,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1233_PLA_1KG_1.75mm.jpg?v=1795403303",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Coffee Brown"
+      "expectedVariantTitle": "Coffee Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-aaaeeaf61d11752f0787": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674571545,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1233PLA_1KG_1.75mm.jpg?v=1795403445",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Coffee Brown"
+      "expectedVariantTitle": "Coffee Brown",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-318049b7d1c3deef69ff": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773506329,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Blue"
+      "expectedVariantTitle": "Red / Grey / Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-c4f8b17df41d9448c316": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419373337,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Pink / Pink"
+      "expectedVariantTitle": "Dark Blue / Pink / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-1c7e985c81ac8c1764ab": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603235609,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1234_PLA_1KG_1.75mm.jpg?v=1795403313",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Chestnut Black"
+      "expectedVariantTitle": "Chestnut Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-713efbb2d2863c5a2491": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674604313,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1234PLA_1KG_1.75mm.jpg?v=1795403456",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Chestnut Black"
+      "expectedVariantTitle": "Chestnut Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-bc96171cf8025bca5f69": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773539097,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Red"
+      "expectedVariantTitle": "Red / Grey / Red",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-5275a00d709d5a86a20a": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419406105,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Neon Green / Red / Yellow"
+      "expectedVariantTitle": "Neon Green / Red / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-cc84df3aae9df3bc9d39": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg",
       "variantId": 68822603268377,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1235_PLA_1KG_1.75mm.jpg?v=1795403320",
       "expectedProductTitle": "PLA Plus Filament 5 kg",
-      "expectedVariantTitle": "Midnight Black"
+      "expectedVariantTitle": "Midnight Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-5kg"
     },
     "candidate-717924fe8f76efd54b43": {
       "priceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg",
       "variantId": 68822674637081,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/50.203.1235PLA_1KG_1.75mm.jpg?v=1795403465",
       "expectedProductTitle": "PLA Plus Filament 10 kg",
-      "expectedVariantTitle": "Midnight Black"
+      "expectedVariantTitle": "Midnight Black",
+      "imageSourceUrl": "https://uk.elegoo.com/products/pla-plus-filament-1-75mm-colored-10kg"
     },
     "candidate-48e46d0e65b77b1cac3c": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773571865,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Orange"
+      "expectedVariantTitle": "Red / Grey / Orange",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-cd5de8d67b51660b827f": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419438873,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Neon Green / Red / Dark Blue"
+      "expectedVariantTitle": "Neon Green / Red / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-63c7d0c989e0608c8b5e": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773604633,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Sky Blue"
+      "expectedVariantTitle": "Red / Grey / Sky Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-53ea6bc1561a13e350af": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419602713,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Neon Green / Dark Blue / Yellow"
+      "expectedVariantTitle": "Neon Green / Dark Blue / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-e14fbb2a3444eeb20889": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773637401,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Space Grey"
+      "expectedVariantTitle": "Red / Grey / Space Grey",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
     },
     "candidate-8cebebbf4462d8c59569": {
       "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
       "variantId": 52976419635481,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Neon Green / Dark Blue / Dark Blue"
+      "expectedVariantTitle": "Neon Green / Dark Blue / Dark Blue",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-235037bf590ea7ba5c69": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
       "variantId": 68742773670169,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
       "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
-      "expectedVariantTitle": "Red / Grey / Sea Green"
+      "expectedVariantTitle": "Red / Grey / Sea Green",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools"
+    },
+    "candidate-b5d0e8890f3d6444d35b": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773702937,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Black"
+    },
+    "candidate-8b61935b0517359f62d0": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419668249,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Neon Green / Dark Blue / Pink"
+    },
+    "candidate-542eebef2e1046bc9cba": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773735705,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / White"
+    },
+    "candidate-516e91a8a5d940b5d11f": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419701017,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Neon Green / Pink / Yellow"
+    },
+    "candidate-74f209687e90498297dd": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773768473,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Grey"
+    },
+    "candidate-3ac81ab2d69d188b6ef7": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419733785,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Neon Green / Pink / Dark Blue"
+    },
+    "candidate-626d41c280184c017a7d": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773801241,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Blue"
+    },
+    "candidate-ef91a05cd9bde26dc655": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419766553,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Neon Green / Pink / Pink"
+    },
+    "candidate-a9b7e3f1d1dc55aa20b5": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773834009,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Red"
+    },
+    "candidate-fe7585128ef4b8e21728": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419799321,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Sky Blue / Red / Yellow"
+    },
+    "candidate-7434617816fb68df8a6f": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773866777,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Orange"
+    },
+    "candidate-de9a3ae110a6ebc80c3e": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976419832089,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Sky Blue / Red / Dark Blue"
+    },
+    "candidate-e7f8a063b3796b937574": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773899545,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Sky Blue"
+    },
+    "candidate-dffcb1cf6fe444d3e9be": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417079577,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Red / Dark Blue"
+    },
+    "candidate-6908ce3cb710857e9f55": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773932313,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Space Grey"
+    },
+    "candidate-1810c4e6cae01e8510c8": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417112345,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Red / Pink"
+    },
+    "candidate-62151cac287408c6f829": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773965081,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / White / Sea Green"
+    },
+    "candidate-005c5d0e6e61fe7651df": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417145113,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "White / Yellow / Yellow"
+    },
+    "candidate-f43baf5b33feb3e8c842": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742773997849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / Black / Black"
+    },
+    "candidate-cdf2a943205a6cab4947": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976417997081,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Red / Yellow / Pink"
+    },
+    "candidate-3801eb39b8a46032e48b": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742774030617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / Black / White"
+    },
+    "candidate-76d0ecaaece023ab5b86": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418029849,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Red / Dark Blue / Yellow"
+    },
+    "candidate-64ba81e9b730acc16ffd": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742774063385,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / Black / Grey"
+    },
+    "candidate-bb733499e8293a3071ce": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418062617,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Red / Dark Blue / Dark Blue"
+    },
+    "candidate-e077666f0da7609f3626": {
+      "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
+      "variantId": 68742774096153,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/Centauri2Combo-bundle.jpg?v=1786420919",
+      "expectedProductTitle": "Centauri 2 Combo: Precision Study Tools Bundle",
+      "expectedVariantTitle": "Red / Black / Blue"
+    },
+    "candidate-ee048e2dcc71610b6f16": {
+      "priceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery",
+      "variantId": 52976418095385,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
+      "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
+      "expectedVariantTitle": "Red / Dark Blue / Pink"
     }
   },
   "approvedProductDetails": {},

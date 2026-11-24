@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T05:43:16.707836+00:00",
+  "checkedAt": "2026-11-24T08:21:46.522849+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -71,12 +71,12 @@
     },
     {
       "name": "3DGBIRE",
-      "listed": 633,
-      "verified": 630,
+      "listed": 630,
+      "verified": 627,
       "categories": {
-        "filament": 537,
+        "filament": 535,
         "printer": 44,
-        "resin-material": 47,
+        "resin-material": 46,
         "equipment": 3,
         "accessory": 2
       }
@@ -101,11 +101,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2710,
-      "verified": 2602,
+      "listed": 2748,
+      "verified": 2640,
       "categories": {
-        "printer": 1391,
-        "filament": 937,
+        "printer": 1417,
+        "filament": 949,
         "resin-material": 343,
         "accessory": 35,
         "equipment": 4
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-20",
+    "date": "2026-11-23",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },

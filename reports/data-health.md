@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-23T05:43:16.707836+00:00
+2026-11-24T08:21:46.522849+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -41,10 +41,10 @@
 | 3D Prima UK | 17 | 11 |
 | 123-3D UK | 1741 | 1722 |
 | iDig3Dprinting | 4 | 1 |
-| 3DGBIRE | 633 | 630 |
+| 3DGBIRE | 630 | 627 |
 | Bambu Lab UK | 234 | 234 |
 | Creality UK | 12 | 5 |
-| ELEGOO UK | 2710 | 2602 |
+| ELEGOO UK | 2748 | 2640 |
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
