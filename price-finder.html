@@ -363,8 +363,11 @@ body.pp-light .kind.accessory .pp-shared-icon{color:#7242a0!important}
 
 <aside class="pp-affiliate-notice" aria-label="Affiliate disclosure">
 <p>We may earn a commission if you buy through links marked <strong>Affiliate</strong>, at no extra cost to you. <a href="./guide.html#affiliate-links">About affiliate links</a></p>
+<p>As an Amazon Associate I earn from qualifying purchases.</p>
 <a class="pp-affiliate-shop" href="https://elegoo.sjv.io/9VPWqE" target="_blank" rel="sponsored noopener">Shop ELEGOO UK <span class="pp-affiliate-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"/></svg> Affiliate</span><span class="sr-only"> (opens in a new tab)</span></a>
 <a class="pp-affiliate-shop" href="https://uk.anycubic3d.com/?ref=CONNORJONES" target="_blank" rel="sponsored noopener">Shop Anycubic UK <span class="pp-affiliate-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"/></svg> Affiliate</span><span class="sr-only"> (opens in a new tab)</span></a>
+<a class="pp-affiliate-shop" href="https://www.amazon.co.uk/s?k=3d+printing&amp;tag=printprofit-21" target="_blank" rel="sponsored noopener">Shop Amazon UK <span class="pp-affiliate-badge">Affiliate</span><span class="sr-only"> (opens in a new tab)</span></a>
+<p style="margin:12px 0 0">Browse 3D printers, filament, resin and accessories on Amazon UK. Check prices and availability on Amazon; Amazon prices are not included in our comparison results.</p>
 </aside>
 <style>
 .pp-affiliate-notice{margin:0 0 20px;padding:16px;border:1px solid var(--line);border-radius:12px;color:var(--text);background:var(--panel,transparent);font-size:14px;line-height:1.6}.pp-affiliate-notice p{margin:0 0 12px}.pp-affiliate-notice a{color:inherit;text-decoration:underline;text-underline-offset:3px}.pp-affiliate-shop{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid currentColor;border-radius:8px;font-weight:700}.pp-affiliate-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px}.pp-affiliate-shop:focus-visible{outline:3px solid #009fef;outline-offset:4px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -529,6 +532,9 @@ function retailerLink(value,label,className='link'){
   const url=new URL(value);
   if(url.protocol==='https:'&&url.hostname==='uk.anycubic3d.com'){
    url.searchParams.set('ref','CONNORJONES');
+   href=url.href;affiliate=true;
+  }else if(url.protocol==='https:'&&(url.hostname==='www.amazon.co.uk'||url.hostname==='amazon.co.uk')){
+   url.searchParams.set('tag','printprofit-21');
    href=url.href;affiliate=true;
   }
  }catch(e){}
