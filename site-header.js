@@ -7,16 +7,17 @@ const links=[
  {key:'home',label:'Home',href:'./index.html',icon:'home'},
  {key:'workspace',label:'My Workspace',href:'./index.html?open=workspace',icon:'folder'},
  {key:'compare',label:'Compare Products',href:'./price-finder.html',icon:'compare'},
+ {key:'forum',label:'Forum',href:'./forum.html',icon:'forum'},
  {key:'guide',label:'Guide & Help',href:'./guide.html',icon:'book'},
  {key:'settings',label:'Settings',href:'./index.html?open=settings',icon:'settings'},
  {key:'account',label:'Sign in',href:'./index.html?open=account',icon:'account'}
 ];
 const page=location.pathname.toLowerCase();
-const active=page.endsWith('/price-finder.html')?'compare':(page.endsWith('/guide.html')||page.endsWith('/privacy.html')||page.endsWith('/terms.html'))?'guide':(page==='/'||page.endsWith('/index.html'))?'home':'';
+const active=page.endsWith('/forum.html')?'forum':page.endsWith('/price-finder.html')?'compare':(page.endsWith('/guide.html')||page.endsWith('/privacy.html')||page.endsWith('/terms.html'))?'guide':(page==='/'||page.endsWith('/index.html'))?'home':'';
 const navArt={home:0,workspace:1,compare:2,guide:3,settings:4};
 const nav=links.map(item=>{
  const current=item.key===active;
- const graphic=item.icon==='account'?signInIcon:'';
+ const graphic=item.icon==='account'?signInIcon:item.icon==='forum'?'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M8 8h32v24H22L10 41v-9H8z"/><path d="M15 16h18M15 24h12"/></svg>':'';
  const artIndex=navArt[item.key];
  const artStyle=Number.isInteger(artIndex)?' style="background-image:url(\'./assets/printprofit-nav-icons.webp?v=1\');background-position:'+((artIndex/4)*100)+'% center"':'';
  return '<a href="'+item.href+'" '+(current?'aria-current="page"':'')+(item.key==='account'?' class="pvm-sign-in"':'')+'><span class="pvm-icon"'+artStyle+'>'+graphic+'</span><span>'+item.label+'</span></a>';
