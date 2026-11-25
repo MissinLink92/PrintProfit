@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-24T08:21:46.522849+00:00",
+  "checkedAt": "2026-11-25T07:02:47.658369+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -51,7 +51,7 @@
     {
       "name": "123-3D UK",
       "listed": 1741,
-      "verified": 1722,
+      "verified": 1715,
       "categories": {
         "filament": 1551,
         "accessory": 4,
@@ -101,10 +101,10 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2748,
-      "verified": 2640,
+      "listed": 2739,
+      "verified": 2631,
       "categories": {
-        "printer": 1417,
+        "printer": 1408,
         "filament": 949,
         "resin-material": 343,
         "accessory": 35,
@@ -165,10 +165,10 @@
     },
     {
       "name": "Anycubic UK",
-      "listed": 810,
-      "verified": 761,
+      "listed": 811,
+      "verified": 762,
       "categories": {
-        "filament": 477,
+        "filament": 478,
         "printer": 149,
         "resin-material": 145,
         "accessory": 39
@@ -240,17 +240,17 @@
     },
     {
       "name": "3D Printz",
-      "listed": 51,
-      "verified": 51,
+      "listed": 46,
+      "verified": 46,
       "categories": {
-        "filament": 49,
+        "filament": 44,
         "resin-material": 2
       }
     }
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
