@@ -328,7 +328,7 @@
     },
     "polymaker-polyterra-pla-cotton-white": {
       "priceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
-      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/23619_28607dbe.128x128.jpg",
+      "imageUrl": "https://3d.nice-cdn.com/upload/image/product/large/default/23619_fab9a539.128x128.png",
       "imageSourceUrl": "https://www.3djake.uk/polymaker/polyterra-pla-cotton-white",
       "expectedProductTitle": "Polymaker PolyTerra PLA Cotton White, 1.75 mm / 1000 g",
       "expectedSku": "PM-70822"
@@ -84396,7 +84396,8 @@
       "variantId": 68857632686361,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/C2C-1-BFCM.jpg?v=1794558418",
       "expectedProductTitle": "Centauri 2 Combo",
-      "expectedVariantTitle": "Default Title"
+      "expectedVariantTitle": "Default Title",
+      "imageSourceUrl": "https://uk.elegoo.com/products/centauri-2-combo"
     },
     "candidate-3672999c9795d4714eb3": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
@@ -84410,7 +84411,8 @@
       "variantId": 52976419078425,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Red / Pink"
+      "expectedVariantTitle": "Dark Blue / Red / Pink",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-6026bae81df75036c570": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
@@ -84424,7 +84426,8 @@
       "variantId": 52976419111193,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0766/1715/4841/files/emoji_CentauriCarbon2Combo-bundle_B.jpg?v=1786517366",
       "expectedProductTitle": "ELEGOO × emoji® Centauri Carbon 2 Combo: Custom Desk Stationery Bundle",
-      "expectedVariantTitle": "Dark Blue / Yellow / Yellow"
+      "expectedVariantTitle": "Dark Blue / Yellow / Yellow",
+      "imageSourceUrl": "https://uk.elegoo.com/products/elegoo-emoji-centauri-carbon-2-combo-custom-desk-stationery"
     },
     "candidate-aa45e919c151e795b12d": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
@@ -84445,7 +84448,8 @@
       "variantId": 54472762753337,
       "imageUrl": "https://cdn.shopify.com/s/files/1/1010/7581/2665/files/SpringLeaf_eb6378eb-eab6-4d2c-9932-f1401c40ea02.png?v=1788772933",
       "expectedProductTitle": "PLA Basic 10-100KG Deals",
-      "expectedVariantTitle": "Spring Leaf (#89A84F) / 50KG"
+      "expectedVariantTitle": "Spring Leaf (#89A84F) / 50KG",
+      "imageSourceUrl": "https://uk.anycubic3d.com/products/1-75mm-pla-sale-for-filament-3d-printer"
     },
     "candidate-7d4d526c5394bcb222a9": {
       "priceUrl": "https://uk.elegoo.com/products/centauri-2-combo-precision-study-tools",
