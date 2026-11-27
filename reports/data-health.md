@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-26T07:05:50.225348+00:00
+2026-11-27T06:55:43.972828+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -48,7 +48,7 @@
 | Amazon UK | 0 | 0 |
 | Prusa Research | 0 | 0 |
 | Subliblanks | 6 | 6 |
-| NSE Imports | 461 | 449 |
+| NSE Imports | 455 | 443 |
 | Additive-X | 13 | 10 |
 | Ooznest | 0 | 0 |
 | 3D FilaPrint | 0 | 0 |

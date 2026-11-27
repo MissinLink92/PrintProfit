@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-26T07:05:50.225348+00:00",
+  "checkedAt": "2026-11-27T06:55:43.972828+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -133,11 +133,11 @@
     },
     {
       "name": "NSE Imports",
-      "listed": 461,
-      "verified": 449,
+      "listed": 455,
+      "verified": 443,
       "categories": {
         "filament": 403,
-        "printer": 18,
+        "printer": 12,
         "equipment": 2,
         "computer": 19,
         "accessory": 19
@@ -250,7 +250,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
