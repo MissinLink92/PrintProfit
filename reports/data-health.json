@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-27T06:55:43.972828+00:00",
+  "checkedAt": "2026-11-27T16:52:09.196947+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -27,9 +27,7 @@
     "3D FilaPrint: no active listings",
     "Polymaker UK: no active listings",
     "eSUN UK: no active listings",
-    "3DQF UK: no active listings",
-    "Offer 0: last checked over seven days ago; retailer confirmation needed",
-    "Offer 1: last checked over seven days ago; retailer confirmation needed"
+    "3DQF UK: no active listings"
   ],
   "retailers": [
     {
@@ -255,8 +253,8 @@
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
   "offers": {
-    "configured": 2,
-    "activeApproved": 0,
+    "configured": 7,
+    "activeApproved": 7,
     "checkoutVerified": false
   }
 }
