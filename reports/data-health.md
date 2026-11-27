@@ -1,6 +1,6 @@
 # PrintProfit data health
 
-2026-11-27T06:55:43.972828+00:00
+2026-11-27T16:52:09.196947+00:00
 
 ## Attention needed
 - inpost: failed; last verified 2026-10-29
@@ -30,8 +30,6 @@
 - Polymaker UK: no active listings
 - eSUN UK: no active listings
 - 3DQF UK: no active listings
-- Offer 0: last checked over seven days ago; retailer confirmation needed
-- Offer 1: last checked over seven days ago; retailer confirmation needed
 
 ## Retailer coverage
 

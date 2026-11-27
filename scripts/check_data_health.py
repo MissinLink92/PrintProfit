@@ -30,11 +30,16 @@ text=(root/'data/product-offers.js').read_text(encoding='utf-8');match=re.search
 if not match:raise ValueError('Offer data must be a JSON array')
 offers=json.loads(match[1]);ids={str(p['id']) for p in data['products']};now=datetime.now(timezone.utc);active=0
 for i,o in enumerate(offers):
- for key in ['retailer','productIds','title','terms','expiresAt','lastChecked','url']:
+ for key in ['retailer','title','terms','lastChecked','url']:
   if not o.get(key):raise ValueError(f'Offer {i}: missing {key}')
  if not o['url'].startswith('https://'):raise ValueError(f'Offer {i}: HTTPS URL required')
+ if not isinstance(o.get('productIds'),list):raise ValueError(f'Offer {i}: productIds must be a list')
+ if not o['productIds'] and o.get('scope')!='retailer':raise ValueError(f'Offer {i}: exact products or explicit retailer scope required')
  if not all(str(p) in ids for p in o['productIds']):raise ValueError(f'Offer {i}: unknown product ID')
- expiry=datetime.fromisoformat(o['expiresAt'].replace('Z','+00:00'))
+ if any(p['retailer']!=o['retailer'] for p in data['products'] if str(p['id']) in o['productIds']):raise ValueError(f'Offer {i}: product belongs to another retailer')
+ cutoff=o.get('expiresAt') or o.get('reviewBy')
+ if not cutoff:raise ValueError(f'Offer {i}: published expiry or recheck deadline required')
+ expiry=datetime.fromisoformat(cutoff.replace('Z','+00:00'))
  if expiry.tzinfo is None:raise ValueError(f'Offer {i}: expiry timezone required')
  checked=datetime.fromisoformat(o['lastChecked'].replace('Z','+00:00'))
  if (now.date()-checked.date()).days>7:report['warnings'].append(f'Offer {i}: last checked over seven days ago; retailer confirmation needed')
@@ -43,7 +48,7 @@ for i,o in enumerate(offers):
  if checked>now:raise ValueError(f'Offer {i}: lastChecked cannot be in the future')
  if start>expiry:raise ValueError(f'Offer {i}: start date follows expiry')
  if not isinstance(o.get('approved'),bool):raise ValueError(f'Offer {i}: explicit approval status required')
- if expiry>now>=start and o.get('approved') is True:active+=1
+ if expiry>now>=start and o.get('approved') is True and (now-checked).total_seconds()<=7*86400:active+=1
 report['offers']={'configured':len(offers),'activeApproved':active,'checkoutVerified':False}
 if not offers:report['offers']['note']='No approved offers configured. Coupon coverage is not advertised.'
 (root/'reports').mkdir(exist_ok=True)

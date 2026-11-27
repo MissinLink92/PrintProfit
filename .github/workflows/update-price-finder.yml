@@ -7,9 +7,6 @@ on:
       - 'scripts/nightly_*.py'
       - 'config/nightly-sources.json'
       - 'config/catalogue-expansion.json'
-      - 'data/product-offers.js'
-      - 'scripts/check_data_health.py'
-      - '.github/workflows/update-price-finder.yml'
   schedule:
     - cron: '0 0 * * *'
       timezone: Europe/London

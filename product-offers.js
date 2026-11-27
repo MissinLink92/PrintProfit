@@ -5,7 +5,7 @@ const safeUrl=value=>{try{const u=new URL(value);return u.protocol==='https:'?u.
 function matching(product,now=Date.now()){
  return offers().filter(o=>o.approved===true&&o.retailer===product.retailer&&
   Array.isArray(o.productIds)&&o.productIds.includes(String(product.id))&&
-  Number.isFinite(Date.parse(o.expiresAt))&&Date.parse(o.expiresAt)>now&&
+  Number.isFinite(Date.parse(o.expiresAt||o.reviewBy))&&Date.parse(o.expiresAt||o.reviewBy)>now&&
   (!o.startsAt||(Number.isFinite(Date.parse(o.startsAt))&&Date.parse(o.startsAt)<=now))&&
   o.title&&o.terms&&Number.isFinite(Date.parse(o.lastChecked))&&
   Date.parse(o.lastChecked)<=now&&now-Date.parse(o.lastChecked)<=7*86400000&&safeUrl(o.url));
@@ -26,8 +26,10 @@ function start(){
    if(o.code){const row=make('p');row.append(make('code',o.code));const copy=make('button','Copy code');copy.type='button';copy.onclick=async()=>{
     try{await navigator.clipboard.writeText(o.code);dialog.querySelector('.pp-offers-status').textContent='Code copied.';}
     catch{dialog.querySelector('.pp-offers-status').textContent='Copy unavailable. Select and copy the visible code manually.';}
-   };row.append(copy);card.append(row);}else card.append(make('p','No code needed.'));
-   card.append(make('p','Expires: '+new Date(o.expiresAt).toLocaleString('en-GB')+' • Last checked: '+o.lastChecked));
+   };row.append(copy);card.append(row);}else card.append(make('p',o.redemption||'No code needed.'));
+   card.append(make('p',(o.expiresAt?'Expires: ':'Recheck by: ')+new Date(o.expiresAt||o.reviewBy).toLocaleString('en-GB',{timeZone:'Europe/London',timeZoneName:'short'})+' • Last checked: '+new Date(o.lastChecked).toLocaleDateString('en-GB')));
+   card.append(make('p','Checked against the retailer’s published offer. Checkout has not been tested.'));
+   if(safeUrl(o.sourceUrl)){const source=make('a','Retailer offer & terms');source.href=safeUrl(o.sourceUrl);source.target='_blank';source.rel='noopener';card.append(source);}
    if(o.affiliate)card.append(make('p','Ad: we may earn commission if you buy through this link, at no extra cost to you.'));
    const link=make('a',(o.affiliate?'Ad · ':'')+'Visit retailer ↗');link.href=safeUrl(o.url);link.target='_blank';link.rel=o.affiliate?'sponsored noopener':'noopener';card.append(link);list.append(card);
   });

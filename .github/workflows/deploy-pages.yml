@@ -9,6 +9,13 @@ on:
       - 'legacy-index.html'
       - 'print-farm.js'
       - 'price-finder.html'
+      - 'deals.html'
+      - 'deals.js'
+      - 'deals.css'
+      - 'product-offers.js'
+      - 'data/product-offers.js'
+      - 'scripts/check_coupon_expiry.cjs'
+      - 'scripts/check_data_health.py'
       - 'product-categories.js'
       - 'guide.html'
       - 'privacy.html'
@@ -48,6 +55,13 @@ jobs:
           python-version: '3.12'
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check coupon validity and live expiry
+        run: node scripts/check_coupon_expiry.cjs
+      - name: Check offer records and catalogue ownership
+        run: python scripts/check_data_health.py
       - name: Prepare the public website
         run: python scripts/build_pages.py
       - name: Upload website
