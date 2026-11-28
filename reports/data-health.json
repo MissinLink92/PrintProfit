@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-27T16:52:09.196947+00:00",
+  "checkedAt": "2026-11-28T06:35:04.226136+00:00",
   "warnings": [
     "inpost: failed; last verified 2026-10-29",
     "royalmail-first: failed; last verified 2026-10-29",
@@ -91,7 +91,7 @@
     {
       "name": "Creality UK",
       "listed": 12,
-      "verified": 5,
+      "verified": 6,
       "categories": {
         "filament": 1,
         "printer": 11
@@ -99,11 +99,11 @@
     },
     {
       "name": "ELEGOO UK",
-      "listed": 2499,
-      "verified": 2391,
+      "listed": 2739,
+      "verified": 2631,
       "categories": {
-        "printer": 1197,
-        "filament": 920,
+        "printer": 1408,
+        "filament": 949,
         "resin-material": 343,
         "accessory": 35,
         "equipment": 4
@@ -248,7 +248,7 @@
   ],
   "manualVerifications": [],
   "exchangeRates": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "status": "verified",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   },
